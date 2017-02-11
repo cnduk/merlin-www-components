@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        {{# page.theme }}
+            <style type="text/css">
+                {{{ page.theme }}}
+            </style>
+        {{/ page.theme }}
+    </head>
+    <body>
+        {{{ page.component }}}
+
+        <script type="text/javascript">
+            function __RESIZE(){
+                window.parent.postMessage(JSON.stringify({
+                    'height': document.documentElement.offsetHeight,
+                    'width': document.documentElement.offsetWidth,
+                    'type': 'resize'
+                }), '*');
+            }
+            var resizeBind = __RESIZE.bind(this);
+            window.addEventListener('resize', resizeBind);
+            window.addEventListener('load', resizeBind);
+            window.addEventListener('DOMContentLoaded', resizeBind);
+        </script>
+    </body>
+</html>

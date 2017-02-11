@@ -1,0 +1,54 @@
+#!/usr/bin/env node
+
+const path = require('path');
+
+const package = require('../package.json');
+const cli = require('commander');
+const MerlinComponentDemoServer = require('../lib/index');
+
+cli
+    .version(package.version)
+    .usage('[options]')
+    .option('-p, --port <number>', 'Server port')
+    .option('--data <path>', 'Directory pattern for data files')
+    .option('--partial <path>', 'Directory pattern for partial files')
+    .option('--template <path>', 'Directory pattern for template files')
+    .option('--theme <path>', 'Directory pattern for sass files')
+    .option('-v, --verbose', 'Verbose mode')
+    .parse(process.argv);
+
+
+MerlinComponentDemoServer.LOGGER.enabled = cli.verbose;
+
+Promise.all([
+    loadDatas(cli.data),
+    loadTemplates(cli.partial),
+    loadTemplates(cli.template),
+    loadSass(cli.theme)
+]).then((results) => {
+    const server = new MerlinComponentDemoServer({
+        data: results[0],
+        partials: results[1],
+        templates: results[2],
+        themes: results[3]
+    }, cli.port || 3000);
+}, (err) => {
+    console.error(err);
+    process.exit(1);
+});
+
+
+function loadDatas(dir){
+    if(dir) return MerlinComponentDemoServer.loadJSON(path.resolve(dir));
+    return Promise.resolve({});
+}
+
+function loadTemplates(dir){
+    if(dir) return MerlinComponentDemoServer.loadTemplates(path.resolve(dir));
+    return Promise.resolve({});
+}
+
+function loadSass(dir){
+    if(dir) return MerlinComponentDemoServer.loadSass(path.resolve(dir));
+    return Promise.resolve({});
+}
