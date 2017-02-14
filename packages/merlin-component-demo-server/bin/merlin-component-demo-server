@@ -10,32 +10,50 @@ cli
     .version(package.version)
     .usage('[options]')
     .option('-p, --port <number>', 'Server port')
-    .option('--data <path>', 'Directory pattern for data files')
-    .option('--partial <path>', 'Directory pattern for partial files')
-    .option('--template <path>', 'Directory pattern for template files')
-    .option('--theme <path>', 'Directory pattern for sass files')
+    .option('--data-dir <path>', 'Directory pattern for data files')
+    .option('--partial-dir <path>', 'Directory pattern for partial files')
+    .option('--template-dir <path>', 'Directory pattern for template files')
+    .option('--theme-dir <path>', 'Directory pattern for sass files')
+    .option('-c, --config <path>', 'Merlin json config file')
     .option('-v, --verbose', 'Verbose mode')
     .parse(process.argv);
 
 
 MerlinComponentDemoServer.LOGGER.enabled = cli.verbose;
 
-Promise.all([
-    loadDatas(cli.data),
-    loadTemplates(cli.partial),
-    loadTemplates(cli.template),
-    loadSass(cli.theme)
-]).then((results) => {
-    const server = new MerlinComponentDemoServer({
-        data: results[0],
-        partials: results[1],
-        templates: results[2],
-        themes: results[3]
-    }, cli.port || 3000);
-}, (err) => {
-    console.error(err);
-    process.exit(1);
-});
+if(cli.config){
+    loadMerlinConfig(cli.config).then((data) => {
+        const merlinData = data.merlin;
+        // Update cli values
+        cli.dataDir = merlinData.data_dir || cli.dataDir;
+        cli.partialDir = merlinData.partial_dir || cli.partialDir;
+        cli.templateDir = merlinData.template_dir || cli.templateDir;
+        cli.themeDir = merlinData.theme_dir || cli.themeDir;
+        // Load configs
+        loadCliValues(cli)
+            .then((results) => {
+                results[0] = filter(results[0], cli.data || []);
+                results[3] = filter(results[3], cli.themes || []);
+                const server = new MerlinComponentDemoServer({
+                    data: results[0],
+                    partials: results[1],
+                    templates: results[2],
+                    themes: results[3]
+                }, cli.port || 3000);
+            }, promiseError);
+    }, promiseError);
+} else {
+    loadCliValues(cli).then((results) => {
+        const server = new MerlinComponentDemoServer({
+            data: results[0],
+            partials: results[1],
+            templates: results[2],
+            themes: results[3]
+        }, cli.port || 3000);
+    }, promiseError);
+}
+
+
 
 
 function loadDatas(dir){
@@ -51,4 +69,32 @@ function loadTemplates(dir){
 function loadSass(dir){
     if(dir) return MerlinComponentDemoServer.loadSass(path.resolve(dir));
     return Promise.resolve({});
+}
+
+function loadMerlinConfig(dir){
+    return MerlinComponentDemoServer.loadJSON(path.resolve(dir));
+}
+
+function loadCliValues(cli){
+    return Promise.all([
+        loadDatas(cli.dataDir),
+        loadTemplates(cli.partialDir),
+        loadTemplates(cli.templateDir),
+        loadSass(cli.themeDir)
+    ]);
+}
+
+function filter(o, names){
+    const output = {};
+    Object.keys(o).forEach((key) => {
+        if(names.length === 0 || names.indexOf(key) !== -1){
+            output[key] = o[key];
+        }
+    });
+    return output;
+}
+
+function promiseError(err){
+    console.error(err);
+    process.exit(1);
 }
