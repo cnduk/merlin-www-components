@@ -14,6 +14,7 @@ cli
     .option('--partial-dir <path>', 'Directory pattern for partial files')
     .option('--template-dir <path>', 'Directory pattern for template files')
     .option('--theme-dir <path>', 'Directory pattern for sass files')
+    .option('--js <path>', 'Custom js file')
     .option('-c, --config <path>', 'Merlin json config file')
     .option('-v, --verbose', 'Verbose mode')
     .parse(process.argv);
@@ -25,10 +26,11 @@ if(cli.config){
     loadMerlinConfig(cli.config).then((data) => {
         const merlinData = data.merlin;
         // Update cli values
-        cli.dataDir = merlinData.data_dir || cli.dataDir;
-        cli.partialDir = merlinData.partial_dir || cli.partialDir;
-        cli.templateDir = merlinData.template_dir || cli.templateDir;
-        cli.themeDir = merlinData.theme_dir || cli.themeDir;
+        cli.dataDir = merlinData.data_dir || cli.dataDir || null;
+        cli.partialDir = merlinData.partial_dir || cli.partialDir || null;
+        cli.templateDir = merlinData.template_dir || cli.templateDir || null;
+        cli.themeDir = merlinData.theme_dir || cli.themeDir || null;
+        cli.js = merlinData.js || cli.js || null;
         // Load configs
         loadCliValues(cli)
             .then((results) => {
@@ -38,7 +40,8 @@ if(cli.config){
                     data: results[0],
                     partials: results[1],
                     templates: results[2],
-                    themes: results[3]
+                    themes: results[3],
+                    js: cli.js
                 }, cli.port || 3000);
             }, promiseError);
     }, promiseError);

@@ -11,6 +11,10 @@
     <body>
         {{{ page.component }}}
 
+        {{# page.js }}
+            <script type="text/javascript">{{{ page.js }}}</script>
+        {{/ page.js }}
+
         <script type="text/javascript">
             function __RESIZE(){
                 window.parent.postMessage(JSON.stringify({

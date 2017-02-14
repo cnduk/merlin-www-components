@@ -8,6 +8,8 @@ const express = require('express');
 const glob = require('glob');
 const mustache = require('mustache');
 const sass = require('node-sass');
+const webpack = require('webpack');
+
 
 const LOGGER = {
     'enabled': false,
@@ -29,10 +31,48 @@ const LOGGER = {
     },
     'SERVER': function(...args){
         console.log(chalk.bold.green(...args));
+    },
+    'JS': function(...args){
+        console.log(chalk.blue(...args));
     }
 };
 
 class MerlinComponentDemoServer {
+
+    _buildJs(){
+        if(this.customJs !== null){
+            LOGGER.log('JS', `Building js - ${getKeyFromPath(this.customJs)}`);
+            return new Promise((resolve, reject) => {
+                webpack(getWebpackConfig(this.customJs), (err, stats) => {
+                    if (err) {
+                        console.error(err.stack || err);
+                        if (err.details) {
+                            console.error(err.details);
+                        }
+                        process.exit(1);
+                    }
+
+                    const info = stats.toJson();
+
+                    if (stats.hasErrors()) {
+                        info.errors.forEach((err)=>{
+                            console.error(chalk.bold.red(err));
+                        });
+                        process.exit(1);
+                    }
+
+                    if (stats.hasWarnings()) {
+                        info.warnings.forEach((w)=>{
+                            console.warn(chalk.bold.yellow(w));
+                        });
+                    }
+
+                    resolve();
+                });
+            });
+        }
+        return Promise.resolve();
+    }
 
     _init(){
         // Load app related templates
@@ -95,7 +135,6 @@ class MerlinComponentDemoServer {
                     }
                 });
             });
-            console.log(view);
             const indexPage = mustache.render(this._templates.page, view);
 
             LOGGER.log('SERVER', 'Index page loaded');
@@ -112,6 +151,7 @@ class MerlinComponentDemoServer {
                 this._templates.component, {
                     "page": {
                         "component": componentTemplate,
+                        "js": this._js,
                         "theme": theme
                     }
                 });
@@ -123,16 +163,27 @@ class MerlinComponentDemoServer {
 
     constructor(config={}, port=null){
         this._app = null;
+        this._js = '';
         this._isListening = false;
         this._templates = null;
 
         this.data = config.data || {};
+        this.customJs = config.js || null;
         this.partials = config.partials || {};
         this.port = null;
         this.templates = config.templates || {};
         this.themes = config.themes || {};
 
         this._init();
+        this._buildJs()
+            .then(
+                () => {
+                    return loadFile(`${path.dirname(this.customJs)}/demo.build.js`);
+                },
+                promiseError
+            ).then((contents) => {
+                this._js = contents;
+            }, promiseError);
 
         if(port !== null) this.listen(port);
     }
@@ -310,6 +361,26 @@ function promiseSass(...args){
 function getKeyFromPath(filepath){
     const breakdown = path.parse(filepath);
     return breakdown.name;
+}
+
+function getWebpackConfig(js){
+    return {
+        'entry': {
+            'demo': js
+        },
+        'module': {},
+        'plugins': [],
+        'output': {
+            'filename': 'demo.build.js',
+            'path': './demo'
+        },
+        "stats": "verbose"
+    };
+}
+
+function promiseError(err){
+    console.error(err);
+    process.exit(1);
 }
 
 
