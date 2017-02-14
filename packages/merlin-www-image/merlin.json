@@ -1,0 +1,24 @@
+{
+    "data_dir": "./demo/data/*.json",
+    "theme_dir": "./sass/**/*.scss",
+    "template_dir": "./templates/*.html",
+    "partial_dir": "./templates/partials/*.html",
+    "js": "./demo/demo.js",
+    "data": [
+        "image",
+        "image-lazyload",
+        "picture",
+        "picture-lazyload",
+        "linked-image",
+        "linked-image-lazyload",
+        "static-image",
+        "static-image-lazyload",
+        "svg"
+    ],
+    "themes": [
+        "wireframe",
+        "vogue",
+        "glamour",
+        "wired"
+    ]
+}

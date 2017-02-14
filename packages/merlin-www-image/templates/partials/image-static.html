@@ -1,0 +1,9 @@
+{{# data.lazyload }}
+    <img src="/static/img/tiny.gif" data-src="{{ data.image_url }}" class="global__image {{ style.cls }}" />
+    <noscript>
+        <img src="{{ data.image_url }}" class="global__image {{ style.cls }}" />
+    </noscript>
+{{/ data.lazyload }}
+{{^ data.lazyload }}
+    <img src="{{ data.image_url }}" class="global__image {{ style.cls }}" />
+{{/ data.lazyload }}

@@ -1,0 +1,25 @@
+{{# state.is_lazyload }}
+    <picture>
+        <!--[if IE 9]><video style="display: none"><![endif]-->
+            {{# data.sources }}
+                <source media="{{ media }}" data-srcset="{{ srcset }}" />
+            {{/ data.sources }}
+        <!--[if IE 9]></video><![endif]-->
+
+        <img src="/static/img/tiny.gif" data-src="{{ data.image_url }}" class="global__image {{ style.cls }}" {{# data.alt_text }} alt="{{ data.alt_text }}" {{/ data.alt_text }} />
+    </picture>
+    <noscript>
+        <img src="{{ data.image_url }}" class="global__image {{ style.cls }}" {{# data.alt_text }} alt="{{ data.alt_text }}" {{/ data.alt_text }} />
+    </noscript>
+{{/ state.is_lazyload }}
+{{^ state.is_lazyload }}
+    <picture>
+        <!--[if IE 9]><video style="display: none"><![endif]-->
+            {{# data.sources }}
+                <source media="{{ media }}" srcset="{{ srcset }}" />
+            {{/ data.sources }}
+        <!--[if IE 9]></video><![endif]-->
+
+        <img src="{{ data.image_url }}" class="global__image {{ style.cls }}" {{# data.alt_text }} alt="{{ data.alt_text }}" {{/ data.alt_text }} />
+    </picture>
+{{/ state.is_lazyload }}

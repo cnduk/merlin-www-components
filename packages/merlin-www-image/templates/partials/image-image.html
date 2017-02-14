@@ -1,0 +1,9 @@
+{{# state.is_lazyload }}
+    <img src="/static/img/tiny.gif" data-src="{{ data.image_url }}" data-srcset="{{ data.srcset }}" data-sizes="auto" class="global__image {{ style.cls }}" {{# data.alt_text }} alt="{{ data.alt_text }}" {{/ data.alt_text }} />
+    <noscript>
+        <img src="{{ data.image_url }}" class="{{ style.cls }}" {{# data.alt_text }} alt="{{ data.alt_text }}" {{/ data.alt_text }} />
+    </noscript>
+{{/ state.is_lazyload }}
+{{^ state.is_lazyload }}
+    <img src="{{ data.image_url }}" srcset="{{ data.srcset }}" class="global__image {{ style.cls }}" {{# data.alt_text }} alt="{{ data.alt_text }}" {{/ data.alt_text }} />
+{{/ state.is_lazyload }}

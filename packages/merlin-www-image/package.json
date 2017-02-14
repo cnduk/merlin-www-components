@@ -1,0 +1,15 @@
+{
+  "name": "@cnbritain/merlin-www-image",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "demo": "merlin-component-demo-server --config=merlin.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cnbritain/merlin-component-demo-server": "^1.0.1",
+    "lazysizes": "^1.4.0"
+  }
+}
