@@ -2,14 +2,16 @@
   "name": "@cnbritain/merlin-www-image",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "js/index.js",
   "scripts": {
-    "demo": "merlin-component-demo-server --config=merlin.json"
+    "demo": "merlin-component-demo-server merlin.json"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-component-demo-server": "^1.2.0",
     "lazysizes": "^1.4.0"
+  },
+  "devDependencies": {
+    "@cnbritain/merlin-component-demo-server": "^2.0.0"
   }
 }

@@ -1,24 +1,34 @@
 {
-    "data_dir": "./demo/data/*.json",
-    "theme_dir": "./sass/**/*.scss",
-    "template_dir": "./templates/*.html",
-    "partial_dir": "./templates/partials/*.html",
-    "js": "./demo/demo.js",
-    "data": [
-        "image",
-        "image-lazyload",
-        "picture",
-        "picture-lazyload",
-        "linked-image",
-        "linked-image-lazyload",
-        "static-image",
-        "static-image-lazyload",
-        "svg"
-    ],
-    "themes": [
-        "wireframe",
-        "vogue",
-        "glamour",
-        "wired"
-    ]
+    "name": "@cnbritain/merlin-www-image",
+    "main": "image",
+    "data": {
+        "image": "demo/data/image.json",
+        "image-lazyload": "demo/data/image-lazyload.json",
+        "picture": "demo/data/picture.json",
+        "picture-lazyload": "demo/data/picture-lazyload.json",
+        "linked-image": "demo/data/linked-image.json",
+        "linked-image-lazyload": "demo/data/linked-image-lazyload.json",
+        "static-image": "demo/data/image-static.json",
+        "static-image-lazyload": "demo/data/image-static-lazyload.json",
+        "svg": "demo/data/svg.json"
+    },
+    "js": {
+        "demo": "demo/demo.js"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "wired": "sass/wired/wired.scss",
+        "glamour": "sass/glamour/glamour.scss"
+    },
+    "partials": {
+        "image": "templates/image.html",
+        "image-base": "templates/partials/image-base.html",
+        "image-image": "templates/partials/image-image.html",
+        "image-linked": "templates/partials/image-linked.html",
+        "image-picture": "templates/partials/image-picture.html",
+        "image-static": "templates/partials/image-static.html",
+        "image-svg": "templates/partials/image-svg.html"
+    },
+    "dependencies": []
 }
