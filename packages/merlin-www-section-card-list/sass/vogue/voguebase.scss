@@ -1,0 +1,255 @@
+@import "../wireframe/wireframe";
+
+@import "@cnbritain/merlin-www-common:vogue";
+@import "@cnbritain/merlin-www-topic-strip:vogue";
+@import "@cnbritain/merlin-www-buttons:vogue";
+@import "@cnbritain/merlin-www-card-list:vogue";
+@import "@cnbritain/merlin-www-card:vogue";
+
+.c-card-section {
+    margin-top: $MOBILE_SLICE_MARGIN;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $TABLET_SLICE_MARGIN;
+        margin-bottom: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $DESKTOP_SLICE_MARGIN;
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+    }
+}
+
+.c-card-section--c-curated,
+.c-card-section--c-contributors,
+.c-card-section--c-tag {
+    .c-card-section__title {
+        @include font('NOBEL', 20px);
+        @include font-weight('BOLD')
+        margin-bottom: $MARGIN_MEDIUM;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            @include font-size(25px);
+            position: relative;
+
+            span {
+                background-color: #fff;
+                padding: 0 50px;
+                position: relative;
+            }
+
+            &:before {
+                @include dotted-line($COLOR_BORDER_DOTTED, 1px, 3px);
+                content: '';
+                height: 1px;
+                left: 0;
+                margin-top: -4px;
+                position: absolute;
+                right: 0;
+                top: 100%;
+            }
+
+        }
+    }
+}
+.c-card-section--mag-articles {}
+.c-card-section--s-results {}
+.c-card-section--v-genre-articles {}
+
+.c-card-section--c-video-articles {
+    background-color: $COLOUR_BG_DARK;
+    max-width: none;
+    padding: 40px $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 80px $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 80px $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.c-card-section--sh-latest-articles {}
+
+.c-card-section--a-recommended,
+.c-card-section--g-recommended {
+    .c-card-section__title {
+        @include font('NOBEL', 15px);
+        margin-bottom: $MARGIN_MEDIUM;
+        padding-bottom: 10px;
+        position: relative;
+        text-align: left;
+
+        &:after {
+            @include dotted-line($COLOR_BORDER_DOTTED, 1px, 3px);
+            content: '';
+            height: 1px;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 100%;
+        }
+    }
+}
+
+.c-card-section--c-magazine-articles {}
+.c-card-section--mag-magazines {}
+.c-card-section--sh-shows {}
+.c-card-section--tg-articles {}
+.c-card-section--sh-articles {}
+.c-card-section--v-articles {}
+.c-card-section--tg-header-articles {}
+
+
+%c-card-section--right-sidebar {
+    .c-card-list {
+        text-align: left;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-right: 340px;
+            position: relative;
+        }
+    }
+}
+
+// %c-card-section--recirculation {
+//     background-color: $COLOUR_BG_ACCENT2;
+//     padding-bottom: $PADDING_LARGE;
+//     padding-top: $PADDING_LARGE;
+//     margin-bottom: 0;
+//     margin-top: 0;
+//     max-width: none;
+
+//     .c-card-section__constrain {
+//         max-width: $ARTICLE_TOTAL;
+//     }
+
+//     .c-card-section__title {
+//         @include font('NOBEL', 15px);
+//         margin-bottom: $MARGIN_SMALL;
+//         padding-bottom: 10px;
+//         position: relative;
+//         text-align: left;
+
+//         &:after {
+//             @include dotted-line($COLOR_BORDER_DOTTED, 1px, 3px);
+//             content: '';
+//             height: 1px;
+//             left: 0;
+//             position: absolute;
+//             right: 0;
+//             top: 100%;
+//         }
+//     }
+
+//     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+//         padding-bottom: $PADDING_X_LARGE;
+//         padding-top: $PADDING_X_LARGE;
+
+//         .c-card-section__title {
+//             margin-bottom: $MARGIN_MEDIUM;
+//         }
+//     }
+
+//     .c-card__meta {
+//         border-top-color: $COLOR_BORDER_SOLID_ACCENT1;
+//     }
+
+//     .c-card__image__icon {
+//         background-color: $COLOUR_BG_ACCENT2;
+//     }
+
+//     li.c-card__meta-item + li.c-card__meta-item {
+//         border-left-color: $COLOR_BORDER_SOLID_ACCENT1;
+//     }
+
+//     // This bitch needs to be simplified
+//     .c-card-list__item + .c-card-list__item .c-card:not(.c-card--magazine) {
+//         border-top-color: $COLOR_BORDER_SOLID_ACCENT1;
+//     }
+
+//     & + .c-card-section--recirculation {
+//         padding-top: 0;
+//     }
+// }
+
+// %c-card-section--magazine {
+//     .c-card-section__constrain {
+//         max-width: $MAXIMUM_PAGE_WIDTH;
+//     }
+
+//     @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+//         .c-card-list__item {
+//             width: 50%;
+//         }
+//     }
+// }
+
+// %c-card-section--show {
+//     .c-card-list__item {
+//         @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT - 1) {
+//             width: 50%;
+
+//             //Single column layout overwritten
+//             //Second to last card needs margin removed
+//             &:nth-last-child(2) {
+//                 margin-bottom: 0;
+//             }
+
+//             &:nth-child(odd) {
+//                 padding-right: 10px;
+//             }
+
+//             &:nth-child(even) {
+//                 padding-left: 10px;
+//             }
+//         }
+//     }
+
+//     & + .c-card-section--show {
+//         // Reduces distance between two show sections to 20px
+//         margin-top: -20px;
+
+//         @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+//             margin-top: -30px;
+//         }
+//     }
+// }
+
+.c-card-section__logo {
+    height: 30px;
+    margin-bottom: 30px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        height: 40px;
+        margin-bottom: 60px;
+    }
+
+    text-align: center;
+
+    svg {
+        display: inline-block;
+        height: 100%;
+        width: auto;
+
+        path {
+            fill: $COLOR_MAIN_PAGE;
+        }
+    }
+}
+
+.c-card-section__btn {
+    display: inline-block;
+    width: auto;
+
+    @extend %btn-group;
+    @extend %btn-group--light;
+
+    &:hover {
+        @extend %btn-group--light--hover;
+    }
+}

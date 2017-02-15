@@ -1,0 +1,52 @@
+@import "@cnbritain/merlin-www-common:wireframe";
+@import "@cnbritain/merlin-www-topic-strip:wireframe";
+@import "@cnbritain/merlin-www-buttons:wireframe";
+@import "@cnbritain/merlin-www-card-list:wireframe";
+@import "@cnbritain/merlin-www-card:wireframe";
+
+.c-card-section {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.c-card-section__constrain {
+    margin: 0 auto;
+    max-width: 1440px;
+    position: relative; //Used by topics
+    width: 100%;
+}
+
+.c-card-section__logo {}
+.c-card-section__title {
+    text-align: center;
+}
+
+.c-card-section__topics {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.c-card-section__btn {
+    box-sizing: border-box;
+    margin-top: 30px;
+    width: 100%;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 35px;
+        max-width: 170px;
+    }
+}

@@ -1,0 +1,39 @@
+{%- from "macros/beta/wc_card_list.html" import card_list -%}
+{%- from "macros/beta/wc_topic_strip.html" import topic_strip -%}
+{%- from "macros/beta/wc_image.html" import image -%}
+
+{%- macro section_card_list_link(model) -%}
+    <div class='global__a--center'>
+        <a href="{{ model['data']['url'] }}" class="c-card-section__btn {{ model['style']['cls'] }}">{{ model['data']['title'] }}</a>
+    </div>
+{%- endmacro -%}
+
+{%- macro section_card_list(model) -%}
+    <section class="c-card-section {{ model['style']['cls'] }}">
+        <div class="c-card-section__constrain">
+            {%- if model['data']['logo'] -%}
+                <div class="c-card-section__logo">
+                    {{ image(model['data']['logo']) }}
+                </div>
+            {%- endif -%}
+
+            {%- if model['data']['title'] -%}
+                <h3 class="c-card-section__title">
+                    <span>{{ model['data']['title'] }}</span>
+                </h3>
+            {%- endif -%}
+
+            {%- if model['data']['navigation_strip'] -%}
+                {{ topic_strip(model['data']['navigation_strip']) }}
+            {%- endif -%}
+
+            {%- if model['data']['card_list'] -%}
+                {{ card_list(model['data']['card_list']) }}
+            {%- endif -%}
+
+            {%- if model['data']['link'] -%}
+                {{ section_card_list_link(model['data']['link']) }}
+            {%- endif -%}
+        </div>
+    </section>
+{%- endmacro -%}
