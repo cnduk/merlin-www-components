@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-section-feature",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "main": "js/index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "@cnbritain/merlin-www-image": "^1.0.0"
   },
   "devDependencies": {
-    "@cnbritain/merlin-component-demo-server": "^2.0.0",
+    "@cnbritain/merlin-component-demo-server": "^2.1.2",
     "@cnbritain/merlin-www-common": "^0.1.0"
   }
 }
