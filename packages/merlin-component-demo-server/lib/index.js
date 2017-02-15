@@ -412,6 +412,11 @@ function resolveDependency(config, merlinDir, ignore={ sass: false, data: false,
                     process.exit(1);
                 }
                 dependencyConfig.main = `${config.name}/${config.main}`;
+                // Add the main partial under config.name
+                dependencyConfig.partials.set(
+                    config.name,
+                    dependencyConfig.partials.get(`${config.name}/${config.main}`)
+                );
 
                 dependencyConfig.currentTheme = config.currentTheme;
 
