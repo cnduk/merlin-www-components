@@ -1,0 +1,24 @@
+.c-card-list {}
+
+.c-card-list--cols {
+    .c-card-list__item {
+        display: inline-block;
+    }
+}
+
+.c-card-list__item {
+    box-sizing: border-box;
+    vertical-align: top;
+    width: 100%;
+}
+//Li specificty required to overwrite padding
+li.c-card-list__item--ad {
+    &.is-hidden {
+        height: 0;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        visibility: hidden;
+        width: 0;
+    }
+}
