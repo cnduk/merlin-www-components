@@ -1,0 +1,73 @@
+<article class="c-card {{ style.cls }}">
+	{{# data.link }}
+		<a href="{{ &data.url }}" class="c-card__link c-card__link--article {{ style.cls }}">{{ data.title }}</a>
+	{{/ data.link }}
+
+	<div class="c-card__obj">
+		<div class="c-card__obj__header">
+			<div class="c-card__images">
+			{{# data.image_list }}
+				{{# data.items }}
+					<div class="c-card__image {{ style.cls }} ">
+						{{# data.item }}
+							{{> @cnbritain/merlin-www-image }}
+						{{/ data.item }}
+					</div>
+				{{/ data.items }}
+			{{/ data.image_list }}
+			{{# data.icon }}
+				<div class="c-card__image__icon">
+					{{> @cnbritain/merlin-www-image }}
+				</div>
+			{{/ data.icon }}
+			</div>
+		</div>
+
+		<div class="c-card__obj__body">
+		{{# data.title }}
+			<h3 class="c-card__title">
+			    <span>{{ data.title }}</span>
+			</h3>
+		{{/ data.title }}
+
+		{{# data.teaser }}
+			<p class="c-card__teaser">
+			    {{ data.teaser }}
+			</p>
+		{{/ data.teaser }}
+
+			<hr class="c-card__separator" />
+
+		{{# data.review_information }}
+
+		{{/ data.review_information }}
+
+		{{# data.sponsor }}
+		    <p class="c-card__byline c-card__byline--sponsorship {{ style.cls }}">
+		        <span class="c-card__byline-prefix">In partnership with </span>
+		        <span class="c-card__byline-name">{{ data.title }}</span>
+		    </p>
+		{{/ data.sponsor }}
+		{{^ data.sponsor }}
+		    {{# data.byline }}
+		        <p class="c-card__byline">
+		            <span class="c-card__byline-prefix">By</span>
+		            <span class="c-card__byline-name">{{ data.byline }}</span>
+		        </p>
+		    {{/ data.byline }}
+		{{/ data.sponsor }}
+
+		{{# data.meta_list }}
+		    <ul class="global__list-reset c-card__meta {{ style.cls }}">
+		        {{# data.items }}
+		            <li class="c-card__meta-item {{ style.cls }} c-card__meta-item--{{ data.item.data.meta_type  }}">
+		                {{# data.item }}
+		                    <span class="{{ style.cls }}">{{ data.title }}</span>
+		                {{/ data.item }}
+		            </li>
+		        {{/ data.items }}
+		    </ul>
+		{{/ data.meta_list }}
+		</div>
+	</div>
+</article>
