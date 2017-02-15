@@ -1,0 +1,28 @@
+{%- macro topic(model) -%}
+    <a href="{{ model['data']['url'] }}" class="c-topic-strip__btn {{ model['style']['cls'] }}">{{ model['data']['title'] }}</a>
+{%- endmacro -%}
+
+{%- macro topic_strip_list_item(model) -%}
+    <li class="c-topic-strip__item {{ model['style']['cls'] }}">
+        {{ topic(model['data']['item']) }}
+    </li>
+{%- endmacro -%}
+
+{%- macro topic_strip_list(model) -%}
+    <ul class="global__list-reset c-topic-strip__list {{ model['style']['cls'] }}">
+    {%- for item in model['data']['items'] -%}
+        {{ topic_strip_list_item(item) }}
+    {%- endfor -%}
+    </ul>
+{%- endmacro -%}
+
+{%- macro topic_strip(model) -%}
+    <aside class="c-topic-strip {{ model['style']['cls'] }}">
+        {%- if model['data']['title'] -%}
+            <div class="c-topic-strip__title">{{ model['data']['title'] }}</div>
+        {%- endif -%}
+        {%- if model['data']['topic_list'] -%}
+            {{ topic_strip_list(model['data']['topic_list']) }}
+        {%- endif -%}
+    </aside>
+{%- endmacro -%}

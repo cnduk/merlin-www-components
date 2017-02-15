@@ -1,0 +1,93 @@
+@import "../wireframe/wireframe";
+
+@import "@cnbritain/merlin-www-common:vogue";
+@import "@cnbritain/merlin-www-buttons:vogue";
+
+.c-topic-strip {}
+
+.c-topic-strip--bleed {
+    @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$MOBILE_SIDE_GUTTER;
+        margin-right: -$MOBILE_SIDE_GUTTER;
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
+
+        .c-topic-strip__list {
+            display: inline-block;
+            margin-left: -$MOBILE_SIDE_GUTTER;
+            margin-right: -$MOBILE_SIDE_GUTTER;
+            padding-left: $MOBILE_SIDE_GUTTER;
+            padding-right: $MOBILE_SIDE_GUTTER;
+        }
+    }
+}
+
+.c-topic-strip--c-card-section {
+    @include font-size(10px);
+    padding-bottom: $PADDING_SMALL;
+    text-align: left;
+
+    .c-topic-strip__item a {
+        @include font-size(10px);
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(11px);
+        padding-bottom: $PADDING_MEDIUM;
+        text-align: center;
+
+        .c-topic-strip__item a {
+            @include font-size(11px);
+        }
+    }
+}
+
+//li added due to specificity of .global__list-reset li setting margin to 0
+li.c-topic-strip__item {
+    & + & {
+        margin-left: $MARGIN_XX_SMALL;
+
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            margin-left: $MARGIN_X_SMALL;
+        }
+    }
+}
+
+.c-topic-strip__title {
+    color: $COLOR_MAIN_PRIMARY;
+    @include font('NOBEL', 11px, 700, 11px);
+    padding-right: $PADDING_XXX_SMALL;
+    text-transform: uppercase;
+}
+
+.c-topic-strip--article-related {
+    text-align: left;
+
+    .c-topic-strip__item + .c-topic-strip__item {
+        margin-left: $MARGIN_XX_SMALL;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        white-space: normal;
+        margin-bottom: -$MARGIN_XX_SMALL;
+
+        .c-topic-strip__item {
+            margin-bottom: $MARGIN_XX_SMALL;
+            margin-right: $MARGIN_XX_SMALL;
+        }
+        .c-topic-strip__item + .c-topic-strip__item {
+            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.c-topic-strip__btn {
+    @extend %btn-group;
+    @extend %btn-group--light;
+
+    &:hover {
+        @extend %btn-group--light--hover;
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "name": "@cnbritain/merlin-www-topic-strip",
+    "main": "topic",
+    "currentTheme": null,
+    "data": {
+        "topic": "demo/data/topic.json"
+    },
+    "js": {
+        "demo": "demo/demo.js"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
+        "wired": "sass/wired/wired.scss",
+        "glamour": "sass/glamour/glamour.scss"
+    },
+    "partials": {
+        "topic": "templates/topic-strip.html"
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-image"
+    ]
+}
