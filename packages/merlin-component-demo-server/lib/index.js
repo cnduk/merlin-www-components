@@ -7,10 +7,11 @@ const chalk = require('chalk');
 const express = require('express');
 const mustache = require('mustache');
 const sass = require('node-sass');
+const sassImporter = require('@cnbritain/merlin-sass-custom-importer');
 const webpack = require('webpack');
 
-
 const COMPONENTS = new Map();
+let MASTER_CONFIG = null;
 let MASTER_COMPONENT = null;
 const PARTIALS = {};
 const THEMES = {};
@@ -50,13 +51,13 @@ const LOGGER = {
 
 class ComponentConfig {
     constructor(name){
+        this.currentTheme = null;
         this.data = new Map();
         this.isMaster = false;
         this.js = new Map();
         this.main = null;
         this.name = name;
         this.partials = new Map();
-        this.templates = new Map();
         this.themes = new Map();
     }
 }
@@ -163,6 +164,8 @@ class MerlinComponentDemoServer {
 
         this.port = null;
 
+        MASTER_CONFIG = config;
+
         resolveDependency(config, '.')
             .then(() => {
                 COMPONENTS.get(config.name).isMaster = true;
@@ -240,11 +243,16 @@ function loadTemplate(file){
 
 function loadSass(file){
     return new Promise((resolve, reject) => {
-        promiseSass({ file })
-            .then((sassContents) => {
-                LOGGER.log('SASS', `Loaded sass - '${file}'`);
-                resolve(sassContents.css.toString());
-            }, promiseError);
+        const importer = sassImporter(MASTER_CONFIG, MASTER_CONFIG.name);
+        promiseSass({
+            file,
+            importer
+        })
+        .then((sassContents) => {
+            LOGGER.log('SASS', `Loaded sass - '${file}'`);
+            importer.SESSION.reset();
+            resolve(sassContents.css.toString());
+        }, promiseError);
     });
 }
 
@@ -383,6 +391,8 @@ function resolveDependency(config, merlinDir){
                     process.exit(1);
                 }
                 dependencyConfig.main = `${config.name}/${config.main}`;
+
+                dependencyConfig.currentTheme = config.currentTheme;
 
                 // Add config to COMPONENTS
                 COMPONENTS.set(config.name, dependencyConfig);
