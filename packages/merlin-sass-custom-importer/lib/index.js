@@ -40,6 +40,35 @@ const THEME_KEY = {
         return path.resolve(baseUrl, `sass/${theme}/${theme}.scss`);
     }
 };
+const BRAND_KEY = {
+    key: null,
+    length: null,
+    contains: function(url){
+        return BRAND_THEMES.some((brand) => url.endsWith(`:${brand}`));
+    },
+    resolve: function(url){
+        let theme = null;
+        let len = BRAND_THEMES.length;
+        while(len--){
+            if(url.endsWith(`:${BRAND_THEMES[len]}`)){
+                theme = BRAND_THEMES[len];
+                break;
+            }
+        }
+
+        const baseUrl = url.substr(0, url.length - theme.length - 1);
+        return path.resolve(baseUrl, `sass/${theme}/${theme}.scss`);
+    }
+};
+
+const BRAND_THEMES = [
+    "vogue",
+    "wired",
+    "glamour",
+    "gq",
+    "tatler",
+    "traveller"
+];
 
 module.exports = function(merlinConfig={}, scopeName=null){
 
@@ -60,18 +89,8 @@ module.exports = function(merlinConfig={}, scopeName=null){
 
         // Check if path begins with @, update url to be component based
         if(url.startsWith('@')){
-
             let customUrl = path.resolve(COMPONENTS_DIR, url);
-
-            // Check if we're using our keywords - theme, wireframe. If so, resolve
-            // the sass location
-            if(WIREFRAME_KEY.contains(customUrl)){
-                sassUrl = WIREFRAME_KEY.resolve(customUrl);
-            } else if(THEME_KEY.contains(customUrl)){
-                sassUrl = THEME_KEY.resolve(customUrl, merlinConfig.currentTheme);
-            } else {
-                sassUrl = customUrl;
-            }
+            sassUrl = resolveComponentTheme(customUrl);
 
         // Resolve url normally, relatively
         } else {
@@ -108,4 +127,18 @@ function correctSassPartials(url){
         filename = filename.slice(1);
     }
     return path.resolve(urlPieces.join(path.sep), filename);
+}
+
+function resolveComponentTheme(url){
+    // Check if we're using our keywords - theme, wireframe. If so, resolve
+    // the sass location
+    if(WIREFRAME_KEY.contains(url)){
+        return WIREFRAME_KEY.resolve(url);
+    } else if(THEME_KEY.contains(url)){
+        return THEME_KEY.resolve(url, merlinConfig.currentTheme);
+    } else if(BRAND_KEY.contains(url)){
+        return BRAND_KEY.resolve(url);
+    } else {
+        return url;
+    }
 }
