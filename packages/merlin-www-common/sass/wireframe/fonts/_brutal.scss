@@ -1,0 +1,49 @@
+@import "../_fonts";
+
+$BRUTAL_FONT_DIR: '/static/fonts/brutal-type/';
+
+// Brutal
+// Light
+@font-face {
+  font-family: 'Brutal';
+  font-style: normal;
+  font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
+  src: url($BRUTAL_FONT_DIR + 'BrutalType-Light.woff2') format('woff2'),
+       url($BRUTAL_FONT_DIR + 'BrutalType-Light.woff') format('woff');
+}
+
+// Medium
+@font-face {
+  font-family: 'Brutal';
+  font-style: normal;
+  font-weight: map-get($FONT_WEIGHTS, 'MEDIUM');
+  src: url($BRUTAL_FONT_DIR + 'BrutalType-Medium.woff2') format('woff2'),
+       url($BRUTAL_FONT_DIR + 'BrutalType-Medium.woff') format('woff');
+}
+
+// Bold
+@font-face {
+  font-family: 'Brutal';
+  font-style: normal;
+  font-weight: map-get($FONT_WEIGHTS, 'BOLD');
+  src: url($BRUTAL_FONT_DIR + 'BrutalType-Bold.woff2') format('woff2'),
+       url($BRUTAL_FONT_DIR + 'BrutalType-Bold.woff') format('woff');
+}
+
+// Extra bold
+@font-face {
+  font-family: 'Brutal';
+  font-style: normal;
+  font-weight: map-get($FONT_WEIGHTS, 'EXTRA BOLD');
+  src: url($BRUTAL_FONT_DIR + 'BrutalType-ExtraBold.woff2') format('woff2'),
+       url($BRUTAL_FONT_DIR + 'BrutalType-ExtraBold.woff') format('woff');
+}
+
+// Font configs
+$_FONT_FAMILY: Brutal, sans-serif;
+$_FONT_BRUTAL: map-merge($FONT_GROUP_DEFAULT, (
+    'FAMILY': $_FONT_FAMILY,
+    'LETTER SPACING': normal,
+    'LINE HEIGHT': 1.3em
+));
+$FONT_GROUPS: map-merge($FONT_GROUPS, ('BRUTAL': $_FONT_BRUTAL));

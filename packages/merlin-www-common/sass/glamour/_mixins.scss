@@ -1,0 +1,344 @@
+@import '../wireframe/_mixins';
+
+// Byline mixins so we can set the font and
+// other shared stuff in one place...
+//
+// NOTE: Placeholders would result in much neater output, but the hoisting
+// that sass does causes some specifity issues that makes using mixins the
+// easiest way for things to function as expected.
+
+@mixin byline {
+    @include font('GRAPHIK', 12px, 'NORMAL', 13px, 20);
+}
+
+@mixin byline-desktop {
+    @include font('GRAPHIK', 14px, 'NORMAL', 21px, 0);
+}
+
+@mixin byline-name {
+    @include font-weight('SEMI BOLD');
+}
+
+@mixin byline-prefix {
+    @include font-weight('NORMAL');
+}
+
+
+
+
+@mixin link-styles(){
+    box-shadow: 0px 2px 0px #57b1ff;
+    color: #000;
+    padding-top: 6px;
+    position: relative;
+    text-decoration: none;
+
+    &:hover {
+        background-color: #57b1ff;
+        color: #fff;
+    }
+}
+
+
+
+
+@mixin meta-default {
+    @include font('GRAPHIK', 12px, 'NORMAL', 14px, 20);
+
+    font-size: 0; // Remove the display: inline-block gap
+}
+
+@mixin meta-item {
+    @include font('GRAPHIK', 12px, 'NORMAL', 14px, 20);
+}
+
+@mixin meta-item-tag {
+    color: $COLOUR_MAIN;
+}
+
+
+@mixin global-meta-item() {
+    @include meta-item;
+
+    padding-right: 7px;
+
+    @include desktop-size {
+        padding-right: 8px;
+    }
+
+    & + & {
+        border-left: 1px solid $COLOUR_SEPARATOR_ALT;
+        line-height: 13px;
+        padding-left: 7px;
+    }
+}
+
+@mixin meta-item-dark() {
+    @include meta-item;
+
+    padding-right: 7px;
+
+    @include desktop-size {
+        padding-right: 8px;
+    }
+}
+
+@mixin meta-item-dark-sibling() {
+    border-left: 1px solid $COLOUR_SEPARATOR_ALT_DARK;
+    line-height: 13px;
+    padding-left: 7px;
+}
+
+@mixin global-meta-item-dark() {
+    @include meta-item-dark;
+
+    & + & {
+        @include meta-item-dark-sibling;
+    }
+}
+
+
+
+// Handy helpers for most commonly used breakpoints
+@mixin desktop-size {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @content;
+    }
+}
+
+@mixin tablet-size {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @content;
+    }
+}
+
+@mixin large-article-size {
+    @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT) {
+        @content;
+    }
+}
+
+@mixin article-total-size {
+    @include min-screen($ARTICLE_TOTAL) {
+        @content;
+    }
+}
+
+@mixin common-medium-size(){
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @content
+    }
+}
+
+@mixin common-large-size(){
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @content
+    }
+}
+
+@mixin article-medium-size(){
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @content
+    }
+}
+
+@mixin article-large-size(){
+    @include min-screen($ARTICLE_TOTAL){
+        @content
+    }
+}
+
+@mixin card-portrait-to-landscape-size(){
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @content
+    }
+}
+
+@mixin one-column-size(){
+    @include max-screen($CARD_LIST_2_COLUMN_BREAKPOINT - 1){
+        @content
+    }
+}
+
+@mixin two-column-size(){
+    @include min-screen($CARD_LIST_2_COLUMN_BREAKPOINT){
+        @content
+    }
+}
+
+@mixin three-column-size(){
+    @include min-screen($CARD_LIST_3_COLUMN_BREAKPOINT){
+        @content
+    }
+}
+
+@mixin four-column-size(){
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT){
+        @content
+    }
+}
+
+@mixin five-column-size(){
+    @include min-screen($CARD_LIST_5_COLUMN_BREAKPOINT){
+        @content
+    }
+}
+
+
+
+// Needs to be a mixin cos placeholder classes ain't specific enough ;(
+@mixin section-margins {
+    margin: $MOBILE_SLICE_MARGIN auto;
+
+    @include tablet-size {
+        margin-bottom: $TABLET_SLICE_MARGIN;
+        margin-top: $TABLET_SLICE_MARGIN;
+    }
+
+    @include desktop-size {
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+        margin-top: $DESKTOP_SLICE_MARGIN;
+    }
+}
+
+
+
+
+@mixin show-card-label($label_text, $colour: $COLOUR_MAIN, $background: $COLOUR_BG_MAIN, $bottom: 30px, $gutter: 30px) {
+    @include font('GRAPHIK', 12px, 500, 20px);
+    background-color: $background;
+    bottom: $bottom;
+    box-sizing: border-box;
+    color: $colour;
+    content: $label_text;
+    display: inline-block;
+    left: $gutter;
+    letter-spacing: 0.02em;
+    padding: 5px;
+    position: absolute;
+    right: $gutter;
+    text-align: center;
+    z-index: 1;
+}
+
+
+
+
+// Use these mixins to set title fonts in one handy place...
+// The names are probably confusing :(
+
+
+////////////////////
+// GRAPHIK TITLES //
+////////////////////
+@mixin title-share {
+    // 14/14 GSB 0T
+    @include font('GRAPHIK', 13px, 'SEMI BOLD', 14px, 20);
+}
+
+@mixin title-image-credit {
+    // 15/19 GSB 20T
+    @include font('GRAPHIK', 15px, 'SEMI BOLD', 19px, 20);
+}
+
+@mixin title-gallery-inline {
+    // 17/19 GSB 0T
+    @include font('GRAPHIK', 15px, 'SEMI BOLD', 19px);
+}
+
+
+///////////////////////////
+// CENTURY GOTHIC TITLES //
+///////////////////////////
+@mixin title-related-content {
+    // 17/20 CGB 30T
+    @include font('CENTURY_GOTHIC', 16px, 'BOLD', 19px, 30);
+}
+
+@mixin title-feature {
+    // 25/28 CGB 20T
+    @include font('CENTURY_GOTHIC', 25px, 'BOLD', 28px, 20);
+}
+
+@mixin title-article {
+    // 26/29 CGB 5T
+    @include font('CENTURY_GOTHIC', 28px, 'BOLD', 31px, 5);
+}
+
+@mixin title-card-landscape {
+    // 21/25 CGB 5T
+    @include font('CENTURY_GOTHIC', 16px, 'BOLD', 19px, 5);
+}
+
+@mixin title-card-portrait {
+    // 21/25 CGB 5T
+    @include font('CENTURY_GOTHIC', 21px, 'BOLD', 25px, 5);
+}
+
+@mixin title-feature-desktop {
+    // 35/38 CGB 5T
+    @include font('CENTURY_GOTHIC', 27px, 'BOLD', 32px, 5);
+}
+
+@mixin title-article-desktop {
+    // 55/60 CGB 0T
+    @include font('CENTURY_GOTHIC', 49px, 'BOLD', 54px);
+}
+
+
+/////////////////////////////////
+// MILLER DISPLAY ROMAN TITLES //
+/////////////////////////////////
+
+@mixin title-list {
+    // 17/20 MDR 0T
+    @include font('MILLER_DISPLAY', 17px, 'NORMAL', 20px);
+}
+
+@mixin title-list-desktop {
+    // 25/25 MDR 0T
+    @include font('MILLER_DISPLAY', 25px, 'NORMAL', 25px);
+}
+
+@mixin title-section {
+    // 20/20 MDR 100T
+    @include font('MILLER_DISPLAY', 20px, 'NORMAL', 20px, 20);
+}
+
+@mixin title-section-desktop {
+    // 25/22 MDR 100T
+    @include font('MILLER_DISPLAY', 25px, 'NORMAL', 22px, 20);
+}
+
+
+////////////////////////////////
+// MILLER DISPLAY BOLD TITLES //
+////////////////////////////////
+@mixin title-show-season {
+    @include font('MILLER_DISPLAY', 17px, 'NORMAL', 18px, 50);
+}
+
+@mixin title-show-season-desktop {
+    @include font('MILLER_DISPLAY', 20px, 'NORMAL', 25px, 50);
+}
+
+@mixin title-gallery-alt {
+    // 20/20 MDB 0T
+    @include font('MILLER_DISPLAY', 20px, 'SEMI BOLD', 20px);
+}
+
+@mixin title-gallery-alt-desktop {
+    // 22/22 MDB 0T
+    @include font('MILLER_DISPLAY', 22px, 'SEMI BOLD', 22px);
+}
+
+@mixin title-magazine {
+    // 25/28 MDB 20T
+    @include font('MILLER_DISPLAY', 25px, 'SEMI BOLD', 28px, 20);
+}
+
+@mixin title-magazine-desktop {
+    // 35/38 MDB 5T
+    @include font('MILLER_DISPLAY', 30px, 'SEMI BOLD', 38px, 5);
+}
+

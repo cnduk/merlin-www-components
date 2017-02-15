@@ -1,0 +1,48 @@
+@import "../_fonts";
+
+/**
+ * Fonts hosted on s3 but served through cloud.typography.com:
+ * http://digital-assets.condenast.co.uk.s3.amazonaws.com/fonts/455689
+ * <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7985974/7077752/css/fonts.css" />
+ *
+ * NOTE: Currently Exchange is broken in Firefox on PC. Whilst we wait
+ * for cloud typography to fix this, we are using self hosted.
+ *
+ */
+
+$EXCHANGE_FONT_DIR: '/static/fonts/exchange-web/';
+
+@font-face {
+  font-family: 'Exchange Web';
+  src: url($EXCHANGE_FONT_DIR + 'Exchange-Web-Italic.woff2') format('woff2'),
+       url($EXCHANGE_FONT_DIR + 'Exchange-Web-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Exchange Web';
+  src: url($EXCHANGE_FONT_DIR + 'Exchange-Web-Roman.woff2') format('woff2'),
+       url($EXCHANGE_FONT_DIR + 'Exchange-Web-Roman.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Exchange Web';
+  src: url($EXCHANGE_FONT_DIR + 'Exchange-Web-Semibold.woff2') format('woff2'),
+       url($EXCHANGE_FONT_DIR + 'Exchange-Web-Semibold.woff') format('woff');
+  font-weight: map-get($FONT_WEIGHTS, 'SEMI BOLD');
+  font-style: normal;
+}
+
+
+// Font configs
+// $_FONT_FAMILY: "Exchange SSm A", "Exchange SSm B", serif;
+$_FONT_FAMILY: "Exchange Web", serif;
+$_FONT_EXCHANGE_WEB: map-merge($FONT_GROUP_DEFAULT, (
+    'FAMILY': $_FONT_FAMILY,
+    'LETTER SPACING': normal,
+    'LINE HEIGHT': 1.45em
+));
+$FONT_GROUPS: map-merge($FONT_GROUPS, ('EXCHANGE WEB': $_FONT_EXCHANGE_WEB));

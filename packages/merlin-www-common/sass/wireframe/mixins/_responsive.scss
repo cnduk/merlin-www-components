@@ -1,0 +1,46 @@
+////
+/// Media query and screen-size/orientation helpers
+///
+/// @group wc-sass-mixins
+/// @author https://github.com/cnduk/
+////
+
+/// max-screen media query helper
+///
+/// @require em
+/// @require MASTER_FONT_SIZE
+@mixin max-screen($res) {
+    @media screen and (max-width: em($res, $MASTER_FONT_SIZE)) {
+        @content;
+    }
+}
+
+/// min-screen media query helper
+/// @require em
+/// @require MASTER_FONT_SIZE
+@mixin min-screen($res) {
+    @media screen and (min-width: em($res, $MASTER_FONT_SIZE)) {
+        @content;
+    }
+}
+
+
+/// screen size with orientation support media query helper
+///
+/// @require em
+/// @require MASTER_FONT_SIZE
+@mixin screen($res-min, $res-max, $orientation: false) {
+    @if $orientation {
+        @media screen and (min-width: em($res-min, $MASTER_FONT_SIZE))
+                      and (max-width: em($res-max, $MASTER_FONT_SIZE))
+                      and (orientation:#{$orientation}) {
+            @content;
+        }
+    }
+    @else {
+        @media screen and (min-width: em($res-min, $MASTER_FONT_SIZE))
+                      and (max-width: em($res-max, $MASTER_FONT_SIZE)) {
+            @content;
+        }
+    }
+}

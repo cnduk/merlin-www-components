@@ -1,0 +1,282 @@
+////
+/// Typography thingies
+///
+/// @group wc-sass-mixins
+/// @author https://github.com/cnduk/
+////
+
+
+// Helper to add a fancy stroke and drop-shadow effect to text, the stroke
+// effect tends to break when it's bigger than 1px but I can't think of a better
+// way of doing this...
+//
+// @param {size} $stroke - The width of the stroke around the text
+// @param {size} $offsetX - The x offset of the drop shadow
+// @param {size} $offsetY - The y offset of the drop shadow
+// @param {colour} $strokeColour - The colour of the text stroke
+// @param {colour} $shadowColour - The colour of the drop shadow
+@mixin stroke-shadow($stroke: 1px, $offsetX: 10px, $offsetY: 10px, $strokeColour: #000, $shadowColour: #000) {
+    $shadow: (($offsetX $offsetY 0 $shadowColour), );
+    $minX: $stroke * -1;
+    $minY: $stroke * -1;
+
+    // Bulk up that text
+    $shadow: append($shadow, ((2px 0 0 $strokeColour),), 'comma');
+    $shadow: append($shadow, ((2px 2px 0 $strokeColour),), 'comma');
+
+    @for $x from $stroke through $minX {
+        @for $y from $stroke through $minY {
+            @if ($x == $minX or $x == $stroke or $y == $minY or $y == $stroke) {
+                $shadow: append($shadow, (($x $y 0 $strokeColour),), 'comma');
+            }
+        }
+    }
+
+    // Removed this as the stroke overlaps when the letters are close together :(
+    // // Makes the stroke look a little better on browsers that support it...
+    // // Intentionally left at 1px because it seems to stroke from the center of the text
+    // // http://caniuse.com/#search=text-stroke
+    // -webkit-text-stroke: 1px $strokeColour;
+    text-shadow: $shadow;
+}
+
+
+/// Helper mixin that masks out the parts of the fancy underline we don't want to see
+///
+/// @param {colour} $color - The background colour used to mask off the underline
+///
+/// @access private
+@mixin _fancy-underlines-crop($colour) {
+    text-shadow: .03em 0 $colour,
+                 -.03em 0 $colour,
+                 0 .03em $colour,
+                 0 -.03em $colour,
+                 .05em 0 $colour,
+                 -.05em 0 $colour;
+}
+
+
+/// Draw a fancy underline which is masked by descenders and can be styled nice.
+///
+/// @param {colour} $backgroundColour - The colour of the background the underlined text will sit above (this will be used to mask the underline).
+/// @param {colour} $textColour - The text colour
+/// @param {colour} $lineColour [$textColour] - The colour of the underline.
+/// @param {colour} $selectionColour [#000] - The highlight/selection colour.
+/// @param {px} $lineWidth [2px] - The underline thickness.
+/// @param {%} $lineYOffset [85%] - The underline offset.
+///
+/// @require _fancy-underlines-crop
+///
+/// @link https://eager.io/blog/smarter-link-underlines/ Taken from here.
+/// @link https://www.youtube.com/watch?v=Ll9nfNlDLII u smart, u loyal
+@mixin fancy-underlines($backgroundColor, $textColor, $lineColor: $textColor, $selectionColor: #000, $lineWidth: 2px, $lineYOffset: 85%) {
+    @include _fancy-underlines-crop($backgroundColor);
+
+    background-image: linear-gradient($backgroundColor, $backgroundColor),
+                      linear-gradient($backgroundColor, $backgroundColor),
+                      linear-gradient($lineColor, $lineColor);
+    background-position: 0% $lineYOffset, 100% $lineYOffset, 0% $lineYOffset;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-size: .05em $lineWidth, .05em $lineWidth, 1px $lineWidth;
+    color: $textColor;
+    text-decoration: none;
+
+    &::selection {
+        @include _fancy-underlines-crop($selectionColor);
+
+        background: $selectionColor;
+    }
+
+    &::-moz-selection {
+        @include _fancy-underlines-crop($selectionColor);
+
+        background: $selectionColor;
+    }
+
+    &:before,
+    &:after,
+    *,
+    *:before,
+    *:after {
+        text-shadow: none;
+    }
+
+    &:visited {
+        color: $textColor;
+    }
+}
+
+/// Helper to set "responsive (rem)" ```font-size```
+///
+/// @param {size} $size - The font size
+/// @param {boolean} $important [false] - Whether to force the font size with ```!important```
+///
+/// @require rem
+@mixin font-size($size, $important: false) {
+    @if ($important) {
+        font-size: $size !important;
+        font-size: rem($size) !important;
+    }
+    @else {
+        font-size: $size;
+        font-size: rem($size);
+    }
+}
+
+/// Helper to set "responsive (rem)" ```line-height```
+///
+/// @param {size} $size - The line-height
+///
+/// @require rem
+@mixin line-height($size) {
+    line-height: $size;
+    line-height: rem($size);
+}
+
+
+/// Return the font-family property for a given font-group
+///
+/// @param {string} $family - The font family/group name.
+///
+/// @require font-group
+@mixin font-family($family) {
+    font-family: map-get(font-group($family), 'FAMILY');
+}
+
+/// Return a weight from the $FONT_WEIGHTS map. If the weight does not exist in the font group's weight map, the entered value will be returned as the value of ```font-weight```.
+///
+/// @param {string} $weight [null] - The font weight
+@mixin font-weight($weight: null) {
+    $weight: if($weight, $weight, 'NORMAL');
+
+    @if (map-has-key($FONT_WEIGHTS, $weight)) {
+        font-weight: map-get($FONT_WEIGHTS, $weight);
+    }
+    @else {
+        font-weight: $weight;
+    }
+}
+
+/// Return a ```line-height``` from the font-group's map.
+///
+/// @param {string} $family - The family/group name.
+///
+/// @require font-group
+@mixin font-line-height($family) {
+    $font_group: font-group($family);
+
+    @if (map-has-key($font_group, 'LINE HEIGHT')) {
+        line-height: map-get($font_group, 'LINE HEIGHT');
+    }
+    @else {
+        @warn 'No line-height set for font group `#{$family}`, using default line-height.';
+        line-height: map-get($FONT_GROUP_DEFAULT, 'LINE HEIGHT');
+    }
+}
+
+/// Return a ```letter-spacing``` from the font-group's map.
+///
+/// @param {string} $family - The family/group name.
+///
+/// @require font-group
+@mixin font-tracking($family) {
+    $font_group: font-group($family);
+
+    @if (map-has-key($font_group, 'LETTER SPACING')) {
+        letter-spacing: map-get($font_group, 'LETTER SPACING');
+    }
+    @else {
+        @warn 'No letter-spacing(tracking) set for font group `#{$family}`, using default letter-spacing.';
+        letter-spacing: map-get($FONT_GROUP_DEFAULT, 'LETTER SPACING');
+    }
+}
+
+/// All purpose font-group mixin to try and make setting the font a bit neater and prevent repeating yoself.
+///
+/// @example scss - Simplest Usage
+///   span {
+///    @include font('CENTURY_GOTHIC');
+///   }
+///
+/// @example css - Simplest Usage - Output
+///   span {
+///     font-family: CenturyGothic, sans-serif;
+///     line-height: 1em;
+///     letter-spacing: normal;
+///  }
+///
+/// @example scss - Family, size, weight, line-height and tracking
+///   span {
+///     @include font('CENTURY_GOTHIC', 15px, 'BOLD', 15px, 25);
+///   }
+///
+/// @example css - Family, size, weight, line-height and tracking - Output
+///   span {
+///     font-family: CenturyGothic, sans-serif;
+///     font-size: 15px;
+///     font-size: 0.9375rem;
+///     font-weight: 700;
+///     line-height: 15px;
+///     line-height: 0.9375rem;
+///     letter-spacing: 0.025em;
+///   }
+///
+/// @example scss - Named arguments
+///   span {
+///     @include font('CENTURY_GOTHIC', 15px, $tracking: 25);
+///   }
+///
+/// @example css - Named arguments - Output
+///   span {
+///     font-family: CenturyGothic, sans-serif;
+///     font-size: 15px;
+///     font-size: 0.9375rem;
+///     line-height: 1em;
+///     letter-spacing: 0.025em;
+///   }
+///
+/// @param {string} $family - The name of the font group to use.
+/// @param {size} $size - The font size.
+/// @param {string} $weight [null] - The font weight.
+/// @param {size} $line-height [null] - The line height.
+/// @param {int} $tracking [null] - The tracking value from Adobe software.
+///
+/// @require font-size
+/// @require font-weight
+/// @require font-line-height
+/// @require line-height
+/// @require font-line-height
+/// @require font-tracking
+@mixin font($family, $size: null, $weight: null, $line-height: null, $tracking: null) {
+    @include font-family($family);
+
+    @if ($size) {
+        @include font-size($size);
+    }
+
+    @if ($weight) {
+        @include font-weight($weight);
+    }
+
+    @if ($line-height) {
+        @include line-height($line-height);
+    }
+    @else {
+        @include font-line-height($family);
+    }
+
+    @if ($tracking) {
+        letter-spacing: tracking($tracking);
+    }
+    @else {
+        @include font-tracking($family);
+    }
+}
+
+/// Fancy dotted background
+@mixin dot-background() {
+    $dot: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAASCAQAAADFoPeHAAAATElEQVR4AWMAAm6GUoZFDGUMfAwogJnhGMN/MLzAwIEsEQ4UgsFYZIlSJIkqZAlzhn9wCTtUW+oZ/jL8B0p3MmAAFYZABjUG/GAUAAB5IBvqKpUd3wAAAABJRU5ErkJggg==';
+
+    background: url($dot) top left repeat;
+    background-size: 6px 9px;
+}

@@ -1,0 +1,360 @@
+@import '../wireframe/_mixins';
+
+@mixin c-card-title {
+    @include c-card-title-small;
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include c-card-title-medium;
+    }
+}
+@mixin c-card-title-small {
+    @include font('ITC CASLON', 17px, null, 20px);
+}
+@mixin c-card-title-medium {
+    @include font-size(20px);
+    @include line-height(25px);
+}
+@mixin c-card-inline-title {
+    @include c-card-inline-title-small;
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include c-card-inline-title-medium;
+    }
+}
+@mixin c-card-inline-title-small {
+    @include font('ADOBE CASLON', 15px, 700, 18px);
+}
+@mixin c-card-inline-title-medium {
+    @include font('ADOBE CASLON', 17px, 700, 20px);
+}
+@mixin c-card-thumbnail-title {
+    @include font('ITC CASLON', 20px, 400, 24px);
+}
+@mixin c-card-hero-title {
+    @include font-size(20px);
+    @include line-height(24px);
+}
+
+@mixin c-card-description {
+    color: $COLOR_TYPE_META;
+    @include font('ADOBE CASLON', 15px);
+}
+
+@mixin c-card-rating {
+    @include font('NOBEL', 11px, 'BOLD');
+}
+
+@mixin c-card-byline {
+    @include c-card-byline-small;
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include c-card-byline-medium;
+    }
+}
+@mixin c-card-byline-small {
+    @include font-size(10px);
+    @include line-height(14px);
+}
+@mixin c-card-byline-medium {
+    @include font-size(11px);
+    @include line-height(15px);
+}
+
+@mixin c-card-byline-prefix {
+    color: $COLOR_TYPE_META;
+    @include font('ADOBE CASLON', 12px);
+    font-style: italic;
+    text-transform: lowercase;
+}
+
+@mixin c-card-byline-name {
+    @include c-card-byline-name-small;
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include c-card-byline-name-medium;
+    }
+}
+@mixin c-card-byline-name-small {
+    color: $COLOR_TYPE_HEADING;
+    @include font('NOBEL', 10px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+@mixin c-card-byline-name-medium {
+    @include font-size(11px);
+}
+
+@mixin c-card-sponsor {
+    @include c-card-sponsor-small;
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include c-card-sponsor-medium;
+    }
+}
+@mixin c-card-sponsor-small {
+    @include font-size(10px);
+    @include line-height(14px);
+}
+@mixin c-card-sponsor-medium {
+    @include font-size(11px);
+    @include line-height(15px);
+}
+
+@mixin c-card-sponsor-prefix {
+    color: $COLOR_TYPE_META;
+    @include font('ADOBE CASLON', 12px);
+    font-style: italic;
+    text-transform: lowercase;
+}
+
+@mixin c-card-meta {
+    @include c-card-meta-small;
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include c-card-meta-medium;
+    }
+}
+@mixin c-card-meta-small {
+    color: $COLOR_TYPE_META;
+    @include font('NOBEL', 10px, null, 16px);
+}
+@mixin c-card-meta-medium {
+    border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+    @include font-size(11px);
+    @include line-height(20px);
+}
+
+@mixin c-card-thumbnail-meta {
+    @include c-card-thumbnail-meta-small;
+    @include min-screen($CARD_LIST_3_COLUMN_BREAKPOINT) {
+        @include c-card-thumbnail-meta-medium;
+    }
+}
+@mixin c-card-thumbnail-meta-small {
+    @include font('NOBEL', 10px, null, 16px);
+}
+@mixin c-card-thumbnail-meta-medium {
+    @include font-size(11px);
+    @include line-height(20px);
+}
+
+@mixin c-card-meta-tag {
+    color: $COLOR_TYPE_LINK;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+@mixin c-card-more {
+    @include font('NOBEL', 10px);
+    text-transform: uppercase;
+}
+
+@mixin c-card-thumbnail-image-remaining {
+    background-color: rgba(0, 0, 0, 0.38);
+    @include font('NOBEL', 24px, null, 25px);
+}
+
+@mixin c-card-label($bg, $color, $label: null, $bottom: 30px){
+    background-color: $bg;
+    bottom: $bottom;
+    color: $color;
+    @if $label != null { content: $label; }
+    display: inline-block;
+    @include font('NOBEL', 12px);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    left: 50%;
+    padding: 8px 6px 6px 8px;
+    position: absolute;
+    text-align: center;
+    @include vendor-prefix(transform, translateX(-50%));
+    z-index: 1;
+}
+
+//TODO - DARK CARD
+
+/**
+ * We do not have a bold version of ITC Caslon so we fake it by switching the
+ * bold version to Adobe Caslon. Not the best but hey ¯\_(ツ)_/¯
+ */
+@mixin font-weight-fix(){
+    @include font-family('ADOBE CASLON');
+    @include font-weight('BOLD');
+}
+
+
+@mixin adobe-caslon-underline($color, $y: 1.25em, $line-weight: 1px){
+    background: linear-gradient(transparent, $color, transparent);
+    background-position: 0 $y;
+    background-repeat: repeat-x;
+    background-size: $line-weight 1px;
+}
+
+
+
+
+
+@mixin body-links-normal(){
+    @include adobe-caslon-underline(rgba($COLOR_TYPE_LINK, 0.2));
+}
+@mixin body-links-hover(){
+    @include adobe-caslon-underline(rgba($COLOR_TYPE_LINK, 1));
+    text-decoration: none;
+}
+@mixin body-links($include-hover: true){
+    @include body-links-normal();
+
+    @if $include-hover {
+        &:hover,
+        &:focus {
+            @include body-links-hover();
+        }
+    }
+}
+
+
+
+
+@mixin aside-links-normal(){}
+@mixin aside-links-hover(){
+    border-bottom: 1px solid;
+    text-decoration: none;
+}
+@mixin aside-links($include-hover: true){
+    @include aside-links-normal();
+
+    @if $include-hover {
+        &:hover,
+        &:focus {
+            @include aside-links-hover();
+        }
+    }
+}
+
+
+
+@mixin secondary-links-normal(){
+    @include adobe-caslon-underline(rgba($COLOR_TYPE_META, 0.2));
+    color: $COLOR_TYPE_META;
+}
+@mixin secondary-links-hover(){
+    @include adobe-caslon-underline(rgba($COLOR_TYPE_META, 1));
+    text-decoration: none;
+}
+@mixin secondary-links($include-hover: true){
+    @include secondary-links-normal();
+
+    @if $include-hover {
+        &:hover,
+        &:focus {
+            @include secondary-links-hover();
+        }
+    }
+}
+
+
+
+
+
+@mixin card-text-links-normal(){}
+@mixin card-text-links-hover(){
+    opacity: 0.7;
+    text-decoration: none;
+}
+@mixin card-text-links($include-hover: true){
+    @include card-text-links-normal();
+
+    @if $include-hover {
+        &:hover,
+        &:focus {
+            @include card-text-links-hover();
+        }
+  }
+}
+
+
+
+
+@mixin card-image-links-normal(){
+    @include opacity(1);
+}
+@mixin card-image-links-hover(){
+    @include opacity(0.8);
+}
+@mixin card-image-links($include-hover: true){
+    @include card-image-links-normal();
+
+    @if $include-hover {
+        &:hover,
+        &:focus {
+            @include card-image-links-hover();
+        }
+    }
+}
+
+
+@mixin desktop-size {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @content;
+    }
+}
+
+@mixin tablet-size {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @content;
+    }
+}
+
+@mixin common-medium-size(){
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @content
+    }
+}
+
+@mixin common-large-size(){
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @content
+    }
+}
+
+@mixin article-medium-size(){
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @content
+    }
+}
+
+@mixin article-large-size(){
+    @include min-screen($ARTICLE_TOTAL){
+        @content
+    }
+}
+
+@mixin card-portrait-to-landscape-size(){
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @content
+    }
+}
+
+@mixin one-column-size(){
+    @include max-screen($CARD_LIST_2_COLUMN_BREAKPOINT - 1){
+        @content
+    }
+}
+
+@mixin two-column-size(){
+    @include min-screen($CARD_LIST_2_COLUMN_BREAKPOINT){
+        @content
+    }
+}
+
+@mixin three-column-size(){
+    @include min-screen($CARD_LIST_3_COLUMN_BREAKPOINT){
+        @content
+    }
+}
+
+@mixin four-column-size(){
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT){
+        @content
+    }
+}
+
+@mixin five-column-size(){
+    @include min-screen($CARD_LIST_5_COLUMN_BREAKPOINT){
+        @content
+    }
+}

@@ -1,0 +1,26 @@
+@import "../_fonts";
+
+/**
+ * These fonts are self hosted in the static directory of the brand
+ */
+
+$FONT_DIR: '/static/fonts/ITCCaslon/';
+
+// ITC Caslon
+// Regular italic
+@font-face {
+  font-family: 'ITC Caslon';
+  font-style: normal;
+  font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
+  src: url($FONT_DIR + 'ITCCaslon-Regular.woff2') format('woff2'),
+       url($FONT_DIR + 'ITCCaslon-Regular.woff') format('woff');
+}
+
+// Font configs
+$_FONT: 'ITC Caslon', Georgia, serif;
+$FONT_ITC_CASLON: map-merge($FONT_GROUP_DEFAULT, (
+    'FAMILY': $_FONT,
+    'LETTER SPACING': -0.01em,
+    'LINE HEIGHT': 1.1em
+));
+$FONT_GROUPS: map-merge($FONT_GROUPS, ('ITC CASLON': $FONT_ITC_CASLON));

@@ -1,0 +1,197 @@
+@import '../wireframe/_variables';
+
+/**
+ * COLOURS
+ * =============================================================================
+ * MAIN
+ */
+$COLOR_MAIN_PRIMARY: #111;
+$COLOR_MAIN_SECONDARY: #333;
+$COLOR_MAIN_TERTIARY: #666;
+$COLOR_MAIN_INACTIVE: #BDBDBD;
+$COLOR_MAIN_ACCENT1: #EAEAEA;
+$COLOR_MAIN_ACCENT2: #F4F4F4;
+$COLOR_MAIN_PAGE: #FFF;
+$COLOR_MAIN_HIGHLIGHT: #C00000;
+
+/**
+ * =============================================================================
+ * BACKGROUNDS
+ */
+$COLOUR_BG_DARK: #222;
+$COLOUR_BG_ACCENT1: #EAEAEA;
+$COLOUR_BG_ACCENT2: #F4F4F4;
+$COLOUR_BG_ADVERT: #F9F9F9;
+$COLOUR_BG_MASTHEAD: #FCFCFC;
+$COLOUR_BG_PAGE: #FFF;
+$COLOUR_BG_FEATURE: #F4F4F4 !default;
+$COLOUR_BG_GALLERY: #F4F4F4 !default;
+$COLOUR_BG_EVENTS: transparent !default;
+
+/**
+ * =============================================================================
+ * TYPOGRAPHY
+ */
+$COLOR_TYPE_HEADING: $COLOR_MAIN_PRIMARY;
+$COLOR_TYPE_BODY: $COLOR_MAIN_SECONDARY;
+$COLOR_TYPE_META: $COLOR_MAIN_TERTIARY;
+$COLOR_TYPE_LINK: $COLOR_MAIN_HIGHLIGHT;
+
+/**
+ * =============================================================================
+ * BORDERS
+ */
+$COLOR_BORDER_DOTTED: #666;
+$COLOR_BORDER_SOLID_ACCENT1: #E0E0E0;
+$COLOR_BORDER_SOLID_ACCENT2: #EAEAEA;
+
+/**
+ * =============================================================================
+ * BUTTONS
+ */
+$COLOR_BUTTON_CTA_LIGHT: $COLOR_MAIN_HIGHLIGHT;
+$COLOR_BUTTON_CTA_DARK: #FFF;
+$COLOR_BUTTON_ACTION_ACTIVE: #111;
+$COLOR_BUTTON_ACTION_INACTIVE: #BDBDBD;
+
+/**
+ * =============================================================================
+ * ICONS
+ */
+$COLOR_ICON_DEFAULT: #666;
+$COLOR_ICON_TWITTER: #55ACEE;
+$COLOR_ICON_FACEBOOK: #3B5998;
+$COLOR_ICON_WHATSAPP: #52B44F;
+$COLOR_ICON_YOUTUBE: #E52D27;
+$COLOR_ICON_INSTAGRAM: #833AB4;
+$COLOR_ICON_PINTEREST: #BD081C;
+$COLOR_ICON_GOOGLE_PLUS: #DC4E41;
+
+/**
+ * MARGINS
+ * =============================================================================
+ */
+$MARGIN_XXX_LARGE: 120px;
+$MARGIN_XX_LARGE: 80px;
+$MARGIN_X_LARGE: 60px;
+$MARGIN_LARGE: 40px;
+$MARGIN_MEDIUM: 30px;
+$MARGIN_SMALL: 20px;
+$MARGIN_X_SMALL: 15px;
+$MARGIN_XX_SMALL: 10px;
+$MARGIN_XXX_SMALL: 5px;
+$MARGIN_NONE: 0;
+
+/**
+ * PADDINGS
+ * =============================================================================
+ */
+$PADDING_XXX_LARGE: 120px;
+$PADDING_XX_LARGE: 80px;
+$PADDING_X_LARGE: 60px;
+$PADDING_LARGE: 40px;
+$PADDING_MEDIUM: 30px;
+$PADDING_SMALL: 20px;
+$PADDING_X_SMALL: 15px;
+$PADDING_XX_SMALL: 10px;
+$PADDING_XXX_SMALL: 5px;
+$PADDING_NONE: 0;
+
+/**
+ * Social colours
+ * ============================================================================
+ */
+$COLOUR_EMAIL: $COLOR_ICON_DEFAULT;
+$COLOUR_EMAIL_DARK: $COLOR_ICON_DEFAULT;
+
+$COLOUR_FACEBOOK: $COLOR_ICON_FACEBOOK;
+$COLOUR_FACEBOOK_DARK: $COLOR_ICON_FACEBOOK;
+
+$COLOUR_INSTAGRAM: $COLOR_ICON_INSTAGRAM;
+$COLOUR_INSTAGRAM_DARK: $COLOR_ICON_INSTAGRAM;
+
+$COLOUR_PINTEREST: $COLOR_ICON_PINTEREST;
+$COLOUR_PINTEREST_DARK: $COLOR_ICON_PINTEREST;
+
+$COLOUR_TWITTER: $COLOR_ICON_TWITTER;
+$COLOUR_TWITTER_DARK: $COLOR_ICON_TWITTER;
+
+$COLOUR_YOUTUBE: $COLOR_ICON_YOUTUBE;
+$COLOUR_YOUTUBE_DARK: $COLOR_ICON_YOUTUBE;
+
+$COLOUR_WHATSAPP: $COLOR_ICON_WHATSAPP;
+$COLOUR_WHATSAPP_DARK: $COLOR_ICON_WHATSAPP;
+
+$COLOUR_SOCIAL: (
+    "email": $COLOUR_EMAIL,
+    "facebook": $COLOUR_FACEBOOK,
+    "instagram": $COLOUR_INSTAGRAM,
+    "pinterest": $COLOUR_PINTEREST,
+    "twitter": $COLOUR_TWITTER,
+    "youtube": $COLOUR_YOUTUBE,
+    "whatsapp": $COLOUR_WHATSAPP
+);
+
+$COLOUR_SOCIAL_DARK: (
+    "email": $COLOUR_EMAIL_DARK,
+    "facebook": $COLOUR_FACEBOOK_DARK,
+    "instagram": $COLOUR_INSTAGRAM_DARK,
+    "pinterest": $COLOUR_PINTEREST_DARK,
+    "twitter": $COLOUR_TWITTER_DARK,
+    "youtube": $COLOUR_YOUTUBE_DARK,
+    "whatsapp": $COLOUR_WHATSAPP_DARK
+);
+
+$COLOUR_SOCIAL_LIGHT: $COLOUR_SOCIAL;
+
+/**
+ * =============================================================================
+ * Card list
+ */
+$CARD_LIST_5_COLUMN_BREAKPOINT: 1024px;
+
+/**
+ * Module variables
+ * ============================================================================
+ */
+
+/**
+ * Gallery slice
+ * ============================================================================
+ */
+$GALLERY_MEDIUM_BREAKPOINT: 800px;
+
+// Gutters to use on the desktop sized site
+$DESKTOP_SIDE_GUTTER: $MARGIN_X_LARGE;
+// Gutters to use on the tablet sized site
+$TABLET_SIDE_GUTTER: $MARGIN_X_LARGE;
+// Gutters to use on the mobile sized site
+$MOBILE_SIDE_GUTTER: $MARGIN_SMALL;
+// Margins to use on the desktop sized site
+$DESKTOP_SLICE_MARGIN: $MARGIN_X_LARGE;
+// Margins to use on the tablet sized site
+$TABLET_SLICE_MARGIN: $MARGIN_X_LARGE;
+// Margins to use on the mobile sized site
+$MOBILE_SLICE_MARGIN: $MARGIN_LARGE;
+
+/**
+ * Article
+ * ============================================================================
+ */
+
+// Article left column - author, related articles
+$ARTICLE_LEFT_COLUMN_WIDTH: 170px;
+// Article center column - copy
+$ARTICLE_CENTER_COLUMN_WIDTH: 620px;
+// Article right column - ads
+$ARTICLE_RIGHT_COLUMN_WIDTH: 300px;
+// Margin between the left column and center column
+$ARTICLE_LEFT_COLUMN_MARGIN: 60px;
+// Margin between the right column and center column
+$ARTICLE_RIGHT_COLUMN_MARGIN: 60px;
+// Total occupied space of left column
+$ARTICLE_LEFT_TOTAL: $ARTICLE_LEFT_COLUMN_WIDTH+$ARTICLE_LEFT_COLUMN_MARGIN;
+// Total occupied space of right column
+$ARTICLE_RIGHT_TOTAL: $ARTICLE_RIGHT_COLUMN_WIDTH+$ARTICLE_RIGHT_COLUMN_MARGIN;
+// Total width of all the columns and margins
+$ARTICLE_TOTAL: $ARTICLE_LEFT_COLUMN_WIDTH + $ARTICLE_LEFT_COLUMN_MARGIN + $ARTICLE_CENTER_COLUMN_WIDTH + $ARTICLE_RIGHT_COLUMN_MARGIN + $ARTICLE_RIGHT_COLUMN_WIDTH;

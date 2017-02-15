@@ -1,0 +1,30 @@
+////
+/// Mixins that do fancy things with background
+///
+/// @group wc-sass-mixins
+/// @author https://github.com/cnduk/
+////
+
+
+/// Creates a dotted line/border - horizontally or vertically.
+/// CSS border dotted property is a piece of shit so this allows us flexibility
+/// in changing the spacing and size of the dot.
+///
+/// @param {color} $color [#000] - Color of the dot
+/// @param {px} $size [1px] - The size of the dot
+/// @param {px} $spacing [5px] - The space between each dot
+/// @param {position} $position [top] - The y offset of the drop shadow
+/// @param {string} $orientation [horizontal] - The orientation of the line
+@mixin dotted-line($color: #000, $size: 1px, $spacing: 5px, $position: top, $orientation: horizontal) {
+    background-position: $position;
+    @if $orientation == horizontal {
+        background-image: linear-gradient(to right, $color $size/$spacing * 100%, rgba(255,255,255,0) 0%);
+        background-repeat: repeat-x;
+        background-size: $spacing $size;
+    }
+    @else {
+        background-image: linear-gradient($color $size/$spacing * 100%, rgba(255,255,255,0) 0%);
+        background-repeat: repeat-y;
+        background-size: $size $spacing;
+    }
+}

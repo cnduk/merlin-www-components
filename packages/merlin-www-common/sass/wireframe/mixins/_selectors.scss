@@ -1,0 +1,31 @@
+// Helper to select either the first item or n amount of items
+//
+// @param {number} $num - Amount of items to select
+@mixin first($num) {
+  @if $num == 1 {
+    &:first-child {
+      @content;
+    }
+  }
+  @else {
+    &:nth-child(-n + #{$num}) {
+      @content;
+    }
+  }
+}
+
+// Helper to select either the last item or n amount of last items
+//
+// @param {number} $num - Amount of items to select
+@mixin last($num) {
+  @if $num == 1 {
+    &:last-child {
+      @content
+    }
+  }
+  @else {
+    &:nth-last-child(-n + #{$num}) {
+      @content;
+    }
+  }
+}

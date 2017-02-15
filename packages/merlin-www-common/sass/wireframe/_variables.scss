@@ -1,0 +1,268 @@
+/**
+ * Typography
+ * ============================================================================
+ */
+/// The default master font size used for conversion in media-query mixins
+$MASTER_FONT_SIZE: 16px;
+$TYPE_FONT_SIZE: $MASTER_FONT_SIZE !default;
+$TYPE_LINE_HEIGHT: 24px !default;
+$TYPE_MEDIUM_COPY_WIDTH: 700px !default;
+$TYPE_LARGE_COPY_WIDTH: 1024px !default;
+
+
+/**
+ * Social colours
+ * ============================================================================
+ */
+$COLOUR_EMAIL: #000000 !default;
+$COLOUR_EMAIL_DARK: #666 !default;
+
+$COLOUR_FACEBOOK: #547bbd !default;
+$COLOUR_FACEBOOK_DARK: #547bbd !default;
+
+$COLOUR_INSTAGRAM: #e1306c !default;
+$COLOUR_INSTAGRAM_DARK: #e1306c !default;
+
+$COLOUR_PINTEREST: #eb5655 !default;
+$COLOUR_PINTEREST_DARK: #eb5655 !default;
+
+$COLOUR_TWITTER: #55acee !default;
+$COLOUR_TWITTER_DARK: #55acee !default;
+
+$COLOUR_YOUTUBE: #cd201f !default;
+$COLOUR_YOUTUBE_DARK: #cd201f !default;
+
+$COLOUR_WHATSAPP: #43d854 !default;
+$COLOUR_WHATSAPP_DARK: #43d854 !default;
+
+$COLOUR_SOCIAL: (
+    "email": $COLOUR_EMAIL,
+    "facebook": $COLOUR_FACEBOOK,
+    "instagram": $COLOUR_INSTAGRAM,
+    "pinterest": $COLOUR_PINTEREST,
+    "twitter": $COLOUR_TWITTER,
+    "youtube": $COLOUR_YOUTUBE,
+    "whatsapp": $COLOUR_WHATSAPP
+);
+
+$COLOUR_SOCIAL_DARK: (
+    "email": $COLOUR_EMAIL_DARK,
+    "facebook": $COLOUR_FACEBOOK_DARK,
+    "instagram": $COLOUR_INSTAGRAM_DARK,
+    "pinterest": $COLOUR_PINTEREST_DARK,
+    "twitter": $COLOUR_TWITTER_DARK,
+    "youtube": $COLOUR_YOUTUBE_DARK,
+    "whatsapp": $COLOUR_WHATSAPP_DARK
+);
+
+$COLOUR_SOCIAL_LIGHT: $COLOUR_SOCIAL;
+
+/**
+ * Tag colours
+ * (BACKGROUND, FOREGROUND)
+ * ============================================================================
+ */
+$COLOUR_TAG_DEFAULT: (#000000, #ffffff) !default;
+
+$COLOUR_TAG: (
+    "default": $COLOUR_TAG_DEFAULT
+);
+
+
+/**
+ * MARGINS
+ * =============================================================================
+ */
+$MARGIN_XXX_LARGE: 120px !default;
+$MARGIN_XX_LARGE: 80px !default;
+$MARGIN_X_LARGE: 60px !default;
+$MARGIN_LARGE: 40px !default;
+$MARGIN_MEDIUM: 30px !default;
+$MARGIN_SMALL: 20px !default;
+$MARGIN_X_SMALL: 15px !default;
+$MARGIN_XX_SMALL: 10px !default;
+$MARGIN_XXX_SMALL: 5px !default;
+$MARGIN_NONE: 0 !default;
+
+/**
+ * PADDINGS
+ * =============================================================================
+ */
+$PADDING_XXX_LARGE: 120px !default;
+$PADDING_XX_LARGE: 80px !default;
+$PADDING_X_LARGE: 60px !default;
+$PADDING_LARGE: 40px !default;
+$PADDING_MEDIUM: 30px !default;
+$PADDING_SMALL: 20px !default;
+$PADDING_X_SMALL: 15px !default;
+$PADDING_XX_SMALL: 10px !default;
+$PADDING_XXX_SMALL: 5px !default;
+$PADDING_NONE: 0 !default;
+
+/**
+ * Module variables
+ * ============================================================================
+ */
+
+// Gutters to use on the desktop sized site
+$DESKTOP_SIDE_GUTTER: 50px !default;
+// Gutters to use on the tablet sized site
+$TABLET_SIDE_GUTTER: 40px !default;
+// Gutters to use on the mobile sized site
+$MOBILE_SIDE_GUTTER: 20px !default;
+// Margins to use on the desktop sized site
+$DESKTOP_SLICE_MARGIN: 50px !default;
+// Margins to use on the tablet sized site
+$TABLET_SLICE_MARGIN: 40px !default;
+// Margins to use on the mobile sized site
+$MOBILE_SLICE_MARGIN: 20px !default;
+// Breakpoint to change the tablet gutters into desktop
+$DESKTOP_SIDE_GUTTER_BREAKPOINT: 1024px !default;
+// Breakpoint to change the mobile gutter into tablet
+$TABLET_SIDE_GUTTER_BREAKPOINT: 700px !default;
+// Maximum page width
+$MAXIMUM_PAGE_WIDTH: 1440px !default;
+// Old crazy landscape aspect ratio used by GQ. This can probably be removed
+$LANDSCAPE_RATIO: 60.76%;
+
+
+/**
+ * Card
+ * ============================================================================
+ */
+
+// The width the card should switch between landscape and portrait layouts
+$CARD_SWITCHER_WIDTH: 600px !default;
+
+
+/**
+ * Gallery slice
+ * ============================================================================
+ */
+
+// Breakpoint for when the gallery slice should switch to a medium view
+$GALLERY_MEDIUM_BREAKPOINT: 600px !default;
+// Breakpoing for when the gallery slice should switch to a larger view
+$GALLERY_LARGE_BREAKPOINT: 1024px !default;
+
+/**
+ * Feature slice
+ * ============================================================================
+ */
+
+// Breakpoint for when the feature needs to change into its bigger version
+$FEATURE_LARGE_BREAKPOINT: 800px !default;
+
+
+/**
+ * Super feature slice
+ * ============================================================================
+ */
+
+// Breakpoint for when the super feature gets a bit bigger
+$SUPERFEATURE_MEDIUM_BREAKPOINT: 800px !default;
+// Breakpoint for when ther super feature is at its biggest
+$SUPERFEATURE_LARGE_BREAKPOINT: 1024px !default;
+
+
+/**
+ * Magazine slice
+ * ============================================================================
+ */
+
+// Breakpoint for when the magazine slice needs to get bigger
+$MAGAZINE_LARGE_BREAKPOINT: 800px !default;
+
+
+/**
+ * Subscribe slice
+ * ============================================================================
+ */
+
+// Breakpoint for when the subscribe slice needs to get bigger
+$SUBSCRIBE_LARGE_BREAKPOINT: 900px !default;
+
+
+/**
+ * Card list
+ * ============================================================================
+ */
+
+//Breakpoints for card list configurations
+$CARD_LIST_2_COLUMN_BREAKPOINT: 600px  !default;
+$CARD_LIST_3_COLUMN_BREAKPOINT: 940px  !default;
+$CARD_LIST_4_COLUMN_BREAKPOINT: 1100px !default;
+$CARD_LIST_5_COLUMN_BREAKPOINT: 1200px !default;
+
+
+/**
+ * Article header
+ * ============================================================================
+ */
+
+// Breakpoint for when the header is big enough to have larger type
+$ARTICLE_HEADER_LARGE_BREAKPOINT: 600px !default;
+
+
+/**
+ * Article
+ * ============================================================================
+ */
+
+// Article left column - author, related articles
+$ARTICLE_LEFT_COLUMN_WIDTH: 170px !default;
+// Article center column - copy
+$ARTICLE_CENTER_COLUMN_WIDTH: 620px !default;
+// Article right column - ads
+$ARTICLE_RIGHT_COLUMN_WIDTH: 300px !default;
+// Margin between the left column and center column
+$ARTICLE_LEFT_COLUMN_MARGIN: 50px !default;
+// Margin between the right column and center column
+$ARTICLE_RIGHT_COLUMN_MARGIN: 50px !default;
+// Total occupied space of left column
+$ARTICLE_LEFT_TOTAL: $ARTICLE_LEFT_COLUMN_WIDTH+$ARTICLE_LEFT_COLUMN_MARGIN;
+// Total occupied space of right column
+$ARTICLE_RIGHT_TOTAL: $ARTICLE_RIGHT_COLUMN_WIDTH+$ARTICLE_RIGHT_COLUMN_MARGIN;
+// Total width of all the columns and margins
+$ARTICLE_TOTAL: $ARTICLE_LEFT_COLUMN_WIDTH + $ARTICLE_LEFT_COLUMN_MARGIN + $ARTICLE_CENTER_COLUMN_WIDTH + $ARTICLE_RIGHT_COLUMN_MARGIN + $ARTICLE_RIGHT_COLUMN_WIDTH;
+
+
+/**
+ * Main navigation
+ * ============================================================================
+ */
+
+// The height of the navigation bar - not including the BIIIIG logo
+$MAIN_NAVIGATION_HEIGHT: 60px !default;
+// The breakpoint of when to swap into a 'mobile' nav
+$MAIN_NAVIGATION_MOBILE_BREAKPOINT: 1024px !default;
+
+
+/**
+ * Magazine subscribe
+ * ============================================================================
+ */
+
+// The width of the magazine covers when on small screens
+$MAGAZINE_SUBSCRIBE_COVER_SMALL: 100px !default;
+// The width of the magazine covers when on larger screens
+$MAGAZINE_SUBSCRIBE_COVER_LARGE: 125px !default;
+
+
+/**
+ * Top stories
+ * ============================================================================
+ */
+
+// The width of when to display the top stories bar on desktop
+$TOP_STORIES_DESKTOP_BREAKPOINT: 1024px !default;
+
+
+/**
+ * Shows
+ * ============================================================================
+ */
+
+// The breakpoing at which the season hub should change from small to large
+$SHOWS_SEASON_HUB_LARGE_BREAKPOINT: 1200px !default;
+$SEASON_HUB_TAB_HEIGHT: 45px !default;

@@ -1,0 +1,157 @@
+@import "./_mixins";
+
+@mixin global__flag($base-cls: 'global__flag'){
+    display: table;
+    width: 100%;
+}
+@mixin global__flag__body($base-cls: 'global__flag'){
+    width: 100%;
+}
+@mixin global__flag__content($base-cls: 'global__flag'){
+    display: table-cell;
+    vertical-align: middle;
+
+    .#{$base-cls}--top & {
+        vertical-align: top;
+    }
+
+    .#{$base-cls}--bottom & {
+        vertical-align: bottom;
+    }
+}
+@mixin global__flag__image($base-cls: 'global__flag'){
+    padding-right: 10px;
+
+    > img {
+        display: block;
+        max-width: none;
+    }
+
+    .#{$base-cls}--rev & {
+        padding-right: 0;
+        padding-left: 10px;
+    }
+}
+
+.global__button-reset {
+    @include vendor-prefix( appearance, none );
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    padding: 0;
+}
+
+.global__fake-clear {
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+}
+
+.global__group {
+    zoom: 1;
+
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+}
+
+.global__hidden {
+    display: none !important;
+}
+
+.global__image {
+    display: block;
+    max-width: 100%;
+}
+
+.global__list-reset {
+    font-weight: normal;
+    line-height: normal;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    // This is to fix if we apply a :before to any li elements
+    li:before {
+        background: none;
+        border-radius: 0;
+        content: none;
+        height: auto;
+        left: 0;
+        position: initial;
+        top: 0;
+        width: auto;
+    }
+
+    li {
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+.global__a--left {
+    text-align: left;
+}
+.global__a--center {
+    text-align: center;
+}
+.global__a--right {
+    text-align: right;
+}
+
+.global__fl--left {
+    float: left;
+}
+.global__fl--right {
+    float: right;
+}
+
+.global__no-transition {
+    @include transition( none );
+}
+
+.global__mb,
+.global__mb__body {
+    overflow: hidden;
+    _overflow: visible;
+    zoom: 1;
+}
+.global__mb__float--left {
+    float: left;
+}
+.global__mb__float--right {
+    float: right;
+}
+
+.global__table {
+    display: table;
+    width: 100%;
+}
+.global__table__cell {
+    display: table-cell;
+}
+
+
+.global__flag {
+    @include global__flag();
+}
+.global__flag__image,
+.global__flag__body {
+    @include global__flag__content();
+}
+
+.global__flag__image {
+    @include global__flag__image();
+}
+
+.global__flag__body {
+    @include global__flag__body();
+}

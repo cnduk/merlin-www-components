@@ -1,0 +1,72 @@
+@import "../_fonts";
+
+@font-face {
+    font-family: 'MillerDisplay';
+    font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
+    font-style: italic;
+    src: url('/static/fonts/MillerDisplay/MillerDisplay-LightItalic.eot');
+    src: url('/static/fonts/MillerDisplay/MillerDisplay-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('/static/fonts/MillerDisplay/MillerDisplay-LightItalic.woff2') format('woff2'),
+        url('/static/fonts/MillerDisplay/MillerDisplay-LightItalic.woff') format('woff'),
+        url('/static/fonts/MillerDisplay/MillerDisplay-LightItalic.ttf') format('truetype'),
+        url('/static/fonts/MillerDisplay/MillerDisplay-LightItalic.svg#MillerDisplay-LightItalic') format('svg');
+}
+
+@font-face {
+    font-family: 'MillerDisplay';
+    font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
+    font-style: normal;
+    src: url('/static/fonts/MillerDisplay/MillerDisplay-Roman.eot');
+    src: url('/static/fonts/MillerDisplay/MillerDisplay-Roman.eot?#iefix') format('embedded-opentype'),
+        url('/static/fonts/MillerDisplay/MillerDisplay-Roman.woff2') format('woff2'),
+        url('/static/fonts/MillerDisplay/MillerDisplay-Roman.woff') format('woff'),
+        url('/static/fonts/MillerDisplay/MillerDisplay-Roman.ttf') format('truetype'),
+        url('/static/fonts/MillerDisplay/MillerDisplay-Roman.svg#MillerDisplay-Roman') format('svg');
+}
+
+@font-face {
+    font-family: 'MillerDisplay';
+    font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
+    font-style: italic;
+    src: url('/static/fonts/MillerDisplay/MillerDisplay-Italic.eot');
+    src: url('/static/fonts/MillerDisplay/MillerDisplay-Italic.eot?#iefix') format('embedded-opentype'),
+        url('/static/fonts/MillerDisplay/MillerDisplay-Italic.woff2') format('woff2'),
+        url('/static/fonts/MillerDisplay/MillerDisplay-Italic.woff') format('woff'),
+        url('/static/fonts/MillerDisplay/MillerDisplay-Italic.ttf') format('truetype'),
+        url('/static/fonts/MillerDisplay/MillerDisplay-Italic.svg#MillerDisplay-Italic') format('svg');
+}
+
+@font-face {
+    font-family: 'MillerDisplay';
+    font-weight: map-get($FONT_WEIGHTS, 'SEMI BOLD');
+    font-style: normal;
+    src: url('/static/fonts/MillerDisplay/MillerDisplay-Semibold.eot');
+    src: url('/static/fonts/MillerDisplay/MillerDisplay-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('/static/fonts/MillerDisplay/MillerDisplay-Semibold.woff2') format('woff2'),
+        url('/static/fonts/MillerDisplay/MillerDisplay-Semibold.woff') format('woff'),
+        url('/static/fonts/MillerDisplay/MillerDisplay-Semibold.ttf') format('truetype'),
+        url('/static/fonts/MillerDisplay/MillerDisplay-Semibold.svg#MillerDisplay-Semibold') format('svg');
+}
+
+
+@font-face {
+    font-family: 'MillerDisplay';
+    font-weight: map-get($FONT_WEIGHTS, 'BOLD');
+    font-style: normal;
+    src: url('/static/fonts/MillerDisplay/MillerDisplay-Bold.eot');
+    src: url('/static/fonts/MillerDisplay/MillerDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/static/fonts/MillerDisplay/MillerDisplay-Bold.woff2') format('woff2'),
+        url('/static/fonts/MillerDisplay/MillerDisplay-Bold.woff') format('woff'),
+        url('/static/fonts/MillerDisplay/MillerDisplay-Bold.ttf') format('truetype'),
+        url('/static/fonts/MillerDisplay/MillerDisplay-Bold.svg#MillerDisplay-Bold') format('svg');
+}
+
+
+// Font configs
+$_FONT_FAMILY: MillerDisplay, sans-serif;
+$_FONT_MILLER_DISPLAY: map-merge($FONT_GROUP_DEFAULT, (
+    'FAMILY': $_FONT_FAMILY,
+    'LETTER SPACING': 0.02em,
+    'LINE HEIGHT': 1em
+));
+$FONT_GROUPS: map-merge($FONT_GROUPS, ('MILLER_DISPLAY': $_FONT_MILLER_DISPLAY));

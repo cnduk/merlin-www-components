@@ -1,0 +1,31 @@
+@import "../_fonts";
+
+$GROTESK_FONT_DIR: '/static/fonts/new-grotesk-square/';
+
+// New Grotesk Square
+// Light
+@font-face {
+  font-family: 'New Grotesk Square';
+  font-style: normal;
+  font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
+  src: url($GROTESK_FONT_DIR + 'New-Grotesk-Square-Light.woff2') format('woff2'),
+       url($GROTESK_FONT_DIR + 'New-Grotesk-Square-Light.woff') format('woff');
+}
+
+// Bold
+@font-face {
+  font-family: 'New Grotesk Square';
+  font-style: normal;
+  font-weight: map-get($FONT_WEIGHTS, 'BOLD');
+  src: url($GROTESK_FONT_DIR + 'New-Grotesk-Square-Bold.woff2') format('woff2'),
+       url($GROTESK_FONT_DIR + 'New-Grotesk-Square-Bold.woff') format('woff');
+}
+
+// Font configs
+$_FONT_FAMILY: New Grotesk Square, sans-serif;
+$_FONT_GROTESK: map-merge($FONT_GROUP_DEFAULT, (
+    'FAMILY': $_FONT_FAMILY,
+    'LETTER SPACING': 0.025em,
+    'LINE HEIGHT': 1em
+));
+$FONT_GROUPS: map-merge($FONT_GROUPS, ('NEW GROTESK SQUARE': $_FONT_GROTESK));

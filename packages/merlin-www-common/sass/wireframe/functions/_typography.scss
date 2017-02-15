@@ -1,0 +1,68 @@
+////
+/// Functions used mostly for typography.
+///
+/// @group wc-sass-mixins
+/// @author https://github.com/cnduk/
+////
+
+/// Takes a pixel value and returns a lovely responsive em value instead.
+///
+/// @param {pixel value} $px - The pixel value (including `px`)
+/// @param {pixel value} $base [16px] - The base font size to use for em conversion.
+///
+/// @example scss - em function
+///   em(10px)
+///   // 0.625em
+///   em(10px, 20px)
+///   // 0.5em
+///
+@function em($px, $base: 16px){
+    @return ($px / $base) * 1em;
+}
+
+/// Takes a pixel value and returns an even more lovely responsive rem value instead.
+///
+/// @param {pixel value} $px - The pixel value (including `px`)
+///
+/// @example scss - rem function
+///   rem(10px)
+///   // 0.625rem
+///   rem(16px)
+///   // 1rem
+@function rem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+
+/// InDesign (and the rest) measure tracking in thousandths of an em. Use this
+/// function to quickly turn the values from Adobe software into usable letter-spacing
+/// values we can use in css.
+///
+/// @param {tracking value} $value - Tracking value straight out of Adobe software.
+///
+/// @link http://stackoverflow.com/questions/2760784/how-to-calculate-css-letter-spacing-v-s-tracking-in-typography#answer-36612356
+///
+/// @example scss - tracking function
+///   tracking(50)
+///   // 0.05em
+///   tracking(1000)
+///   // 1em
+@function tracking($value) {
+    @return ($value / 1000) * 1em;
+}
+
+
+/// Return the font-group map so we can get font defaults more easily
+///
+/// @param {string} $group - Font group map key value
+///
+/// @link https://github.com/cnduk/wc-sass-fonts Require $FONT_GROUPS and $FONT_GROUP_DEFAULT from https://github.com/cnduk/wc-sass-fonts
+@function font-group($group) {
+    @if (map-has-key($FONT_GROUPS, $group)) {
+        @return map-get($FONT_GROUPS, $group);
+    }
+    @else {
+        @warn 'No such font group: `#{$group}`. Falling back to default.';
+        @return $FONT_GROUP_DEFAULT;
+    }
+}

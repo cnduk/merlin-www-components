@@ -1,0 +1,265 @@
+@import './_variables';
+@import './_mixins';
+@import './_fonts';
+
+@import "../wireframe/_defaults";
+
+$_FONT_BRUTAL: map-get($FONT_GROUPS, 'BRUTAL');
+$_FONT_EXCHANGE: map-get($FONT_GROUPS, 'EXCHANGE WEB');
+$_FONT_GROTESK: map-get($FONT_GROUPS, 'NEW GROTESK SQUARE');
+
+a {
+    border-bottom: 1px solid transparent;
+    color: #167AC6;
+    padding-bottom: 2px;
+    text-decoration: none;
+    @include transition(border 0.2s ease-in-out);
+
+    &:hover {
+        border-bottom: 1px solid rgba(22, 122, 198, 0.3);
+    }
+}
+
+abbr {
+    text-decoration: underline;
+}
+
+blockquote {
+    border-left: 1px solid #000;
+    color: #7e7e7f;
+    font-family: map-get($_FONT_BRUTAL, 'FAMILY');
+    @include font-size(16px);
+    font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
+    line-height: map-get($_FONT_BRUTAL, 'LINE HEIGHT');
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 0 0 20px;
+
+    // We have to assign type bits here too as the later p selector always
+    // overwrites the properties
+    p {
+        font-family: map-get($_FONT_BRUTAL, 'FAMILY');
+        @include font-size(16px);
+        font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
+        line-height: map-get($_FONT_BRUTAL, 'LINE HEIGHT');
+    }
+
+}
+.blockquote__separator {
+    border: none;
+    border-bottom: 1px solid #000;
+    margin: 15px 0;
+    width: 20px;
+}
+.blockquote__credit {
+    font-family: map-get($_FONT_BRUTAL, 'FAMILY');
+    @include font-size(16px);
+    font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    @include vendor-prefix(text-size-adjust, none);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: map-get($_FONT_GROTESK, 'FAMILY');
+    //Forces ligatures on Firefox
+    font-variant-ligatures: common-ligatures;
+    font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
+    letter-spacing: map-get($_FONT_GROTESK, 'LETTER SPACING');
+    line-height: map-get($_FONT_GROTESK, 'LINE HEIGHT');
+    // 15px is the same margin as <p>
+    margin: 40px 0 15px 0;
+}
+
+%h-alpha {
+    @include font-size(40px);
+    @include min-screen($TYPE_MEDIUM_COPY_WIDTH){
+        @include font-size(70px);
+    }
+    @include min-screen($TYPE_LARGE_COPY_WIDTH){
+        @include font-size(100px);
+    }
+}
+%h-beta {
+    @include font-size(45px);
+    @include min-screen($TYPE_MEDIUM_COPY_WIDTH){
+        @include font-size(60px);
+    }
+    @include min-screen($TYPE_LARGE_COPY_WIDTH){
+        @include font-size(65px);
+    }
+}
+%h-gamma {
+    @include font-size(40px);
+    @include min-screen($TYPE_MEDIUM_COPY_WIDTH){}
+    @include min-screen($TYPE_LARGE_COPY_WIDTH){
+        @include font-size(45px);
+    }
+}
+%h-delta {
+    @include font-size(35px);
+    @include min-screen($TYPE_MEDIUM_COPY_WIDTH){}
+    @include min-screen($TYPE_LARGE_COPY_WIDTH){
+        @include font-size(40px);
+    }
+}
+%h-epsilon {
+    @include font-size(30px);
+    @include min-screen($TYPE_MEDIUM_COPY_WIDTH){}
+    @include min-screen($TYPE_LARGE_COPY_WIDTH){
+        @include font-size(35px);
+    }
+}
+%h-zeta {
+    @include font(BRUTAL, 22px, BOLD);
+    text-transform: uppercase;
+    @include min-screen($TYPE_MEDIUM_COPY_WIDTH){}
+    @include min-screen($TYPE_LARGE_COPY_WIDTH){
+        @include font-size(22px);
+    }
+}
+
+h1, .h-alpha {
+    @extend %h-alpha;
+}
+h2, .h-beta {
+    @extend %h-beta;
+}
+h3, .h-gamma {
+    @extend %h-gamma;
+}
+h4, .h-delta {
+    @extend %h-delta;
+}
+h5, .h-epsilon {
+    @extend %h-epsilon;
+}
+h6, .h-zeta {
+    @extend %h-zeta;
+}
+
+hr {
+    border-top: 1px solid #000;
+    height: 0;
+    margin: 10px 0;
+}
+
+input {
+    font-family: map-get($_FONT_EXCHANGE, 'FAMILY');
+}
+
+input[type=text] {
+    @include font('BRUTAL', 15px, 'MEDIUM');
+}
+
+mark {
+    background-color: #e6e7e8;
+    padding: 4px 0;
+}
+
+p {
+    font-family: map-get($_FONT_EXCHANGE, 'FAMILY');
+    @include font-size($TYPE_FONT_SIZE);
+    line-height: map-get($_FONT_EXCHANGE, 'LINE HEIGHT');
+    margin: 0.8em 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH){
+        @include font-size(19px);
+    }
+}
+
+q {
+    display: block;
+    font-family: map-get($_FONT_GROTESK, 'FAMILY');
+    @include font-size(35px);
+    font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
+    letter-spacing: map-get($_FONT_GROTESK, 'LETTER SPACING');
+    line-height: map-get($_FONT_GROTESK, 'LINE HEIGHT');
+    text-align: center;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH){
+        @include font-size(48px);
+    }
+}
+.quote__separator {
+    border: none;
+    border-bottom: 1px solid #000;
+    margin: 20px auto;
+    width: 40px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH){
+        width: 50px;
+    }
+}
+.quote__credit {
+    font-family: map-get($_FONT_BRUTAL, 'FAMILY');
+    @include font-size(13px);
+    font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
+    line-height: map-get($_FONT_BRUTAL, 'LINE HEIGHT');
+    text-align: center;
+}
+
+small {
+    font-family: map-get($_FONT_BRUTAL, 'FAMILY');
+    @include font-size(12px);
+    font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
+    line-height: map-get($_FONT_BRUTAL, 'LINE HEIGHT');
+}
+
+ul, ol {
+    font-family: map-get($_FONT_BRUTAL, 'FAMILY');
+    @include font-size($TYPE_FONT_SIZE);
+    font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
+    line-height: map-get($_FONT_BRUTAL, 'LINE HEIGHT');
+    margin: 30px 0;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+        margin: 40px 0;
+    }
+}
+
+li {
+    margin: 0.5em 0;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 30px;
+
+    li {
+        position: relative;
+    }
+
+    li:before {
+        background: #000;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: 10px;
+        left: -30px;
+        position: absolute;
+        top: 7px;
+        width: 10px;
+    }
+}
+
+ol {
+    counter-reset: section;
+    list-style-type: none;
+    padding-left: 30px;
+
+    li {
+        position: relative;
+    }
+
+    li:before {
+        counter-increment: section;
+        content: counters(section,".")".";
+        font-weight: bold;
+        left: -30px;
+        position: absolute;
+    }
+}

@@ -1,0 +1,35 @@
+@import "../_fonts";
+
+@font-face {
+    font-family: 'CenturyGothic';
+    font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
+    font-style: normal;
+    src: url('/static/fonts/CenturyGothic/CenturyGothic.eot');
+    src: url('/static/fonts/CenturyGothic/CenturyGothic.eot?#iefix') format('embedded-opentype'),
+        url('/static/fonts/CenturyGothic/CenturyGothic.woff2') format('woff2'),
+        url('/static/fonts/CenturyGothic/CenturyGothic.woff') format('woff'),
+        url('/static/fonts/CenturyGothic/CenturyGothic.ttf') format('truetype'),
+        url('/static/fonts/CenturyGothic/CenturyGothic.svg#CenturyGothic') format('svg');
+}
+
+@font-face {
+    font-family: 'CenturyGothic';
+    font-weight: map-get($FONT_WEIGHTS, 'BOLD');
+    font-style: normal;
+    src: url('/static/fonts/CenturyGothic/CenturyGothic-Bold.eot');
+    src: url('/static/fonts/CenturyGothic/CenturyGothic-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/static/fonts/CenturyGothic/CenturyGothic-Bold.woff2') format('woff2'),
+        url('/static/fonts/CenturyGothic/CenturyGothic-Bold.woff') format('woff'),
+        url('/static/fonts/CenturyGothic/CenturyGothic-Bold.ttf') format('truetype'),
+        url('/static/fonts/CenturyGothic/CenturyGothic-Bold.svg#CenturyGothic-Bold') format('svg');
+}
+
+
+// Font configs
+$_FONT_FAMILY: CenturyGothic, sans-serif;
+$_FONT_CENTURY_GOTHIC: map-merge($FONT_GROUP_DEFAULT, (
+    'FAMILY': $_FONT_FAMILY,
+    'LETTER SPACING': normal,
+    'LINE HEIGHT': 1em
+));
+$FONT_GROUPS: map-merge($FONT_GROUPS, ('CENTURY_GOTHIC': $_FONT_CENTURY_GOTHIC));

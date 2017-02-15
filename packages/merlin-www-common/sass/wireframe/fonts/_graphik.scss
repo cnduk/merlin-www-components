@@ -1,0 +1,95 @@
+@import "../_fonts";
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
+  font-style: normal;
+  src: url('/static/fonts/Graphik/Graphik-Light.eot');
+  src: url('/static/fonts/Graphik/Graphik-Light.eot?#iefix') format('embedded-opentype'),
+    url('/static/fonts/Graphik/Graphik-Light.woff2') format('woff2'),
+    url('/static/fonts/Graphik/Graphik-Light.woff') format('woff'),
+    url('/static/fonts/Graphik/Graphik-Light.ttf') format('truetype'),
+    url('/static/fonts/Graphik/Graphik-Light.svg#Graphik-Light') format('svg');
+}
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
+  font-style: italic;
+  src: url('/static/fonts/Graphik/Graphik-LightItalic.eot');
+  src: url('/static/fonts/Graphik/Graphik-LightItalic.eot?#iefix') format('embedded-opentype'),
+    url('/static/fonts/Graphik/Graphik-LightItalic.woff2') format('woff2'),
+    url('/static/fonts/Graphik/Graphik-LightItalic.woff') format('woff'),
+    url('/static/fonts/Graphik/Graphik-LightItalic.ttf') format('truetype'),
+    url('/static/fonts/Graphik/Graphik-LightItalic.svg#Graphik-LightItalic') format('svg');
+}
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
+  font-style: normal;
+  src: url('/static/fonts/Graphik/Graphik-Regular.eot');
+  src: url('/static/fonts/Graphik/Graphik-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/static/fonts/Graphik/Graphik-Regular.woff2') format('woff2'),
+    url('/static/fonts/Graphik/Graphik-Regular.woff') format('woff'),
+    url('/static/fonts/Graphik/Graphik-Regular.ttf') format('truetype'),
+    url('/static/fonts/Graphik/Graphik-Regular.svg#Graphik-Regular') format('svg');
+}
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
+  font-style: italic;
+  src: url('/static/fonts/Graphik/Graphik-RegularItalic.eot');
+  src: url('/static/fonts/Graphik/Graphik-RegularItalic.eot?#iefix') format('embedded-opentype'),
+    url('/static/fonts/Graphik/Graphik-RegularItalic.woff2') format('woff2'),
+    url('/static/fonts/Graphik/Graphik-RegularItalic.woff') format('woff'),
+    url('/static/fonts/Graphik/Graphik-RegularItalic.ttf') format('truetype'),
+    url('/static/fonts/Graphik/Graphik-RegularItalic.svg#Graphik-RegularItalic') format('svg');
+}
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: map-get($FONT_WEIGHTS, 'MEDIUM');
+  font-style: normal;
+  src: url('/static/fonts/Graphik/Graphik-Medium.eot');
+  src: url('/static/fonts/Graphik/Graphik-Medium.eot?#iefix') format('embedded-opentype'),
+    url('/static/fonts/Graphik/Graphik-Medium.woff2') format('woff2'),
+    url('/static/fonts/Graphik/Graphik-Medium.woff') format('woff'),
+    url('/static/fonts/Graphik/Graphik-Medium.ttf') format('truetype'),
+    url('/static/fonts/Graphik/Graphik-Medium.svg#Graphik-Medium') format('svg');
+}
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: map-get($FONT_WEIGHTS, 'SEMI BOLD');
+  font-style: normal;
+  src: url('/static/fonts/Graphik/Graphik-Semibold.eot');
+  src: url('/static/fonts/Graphik/Graphik-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('/static/fonts/Graphik/Graphik-Semibold.woff2') format('woff2'),
+    url('/static/fonts/Graphik/Graphik-Semibold.woff') format('woff'),
+    url('/static/fonts/Graphik/Graphik-Semibold.ttf') format('truetype'),
+    url('/static/fonts/Graphik/Graphik-Semibold.svg#Graphik-Semibold') format('svg');
+}
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: map-get($FONT_WEIGHTS, 'ULTRA');
+  font-style: normal;
+  src: url('/static/fonts/Graphik/Graphik-Black.eot');
+  src: url('/static/fonts/Graphik/Graphik-Black.eot?#iefix') format('embedded-opentype'),
+    url('/static/fonts/Graphik/Graphik-Black.woff2') format('woff2'),
+    url('/static/fonts/Graphik/Graphik-Black.woff') format('woff'),
+    url('/static/fonts/Graphik/Graphik-Black.ttf') format('truetype'),
+    url('/static/fonts/Graphik/Graphik-Black.svg#Graphik-Black') format('svg');
+}
+
+// Font configs
+$_FONT_FAMILY: Graphik, sans-serif;
+$_FONT_GRAPHIK: map-merge($FONT_GROUP_DEFAULT, (
+    'FAMILY': $_FONT_FAMILY,
+    'LETTER SPACING': normal,
+    'LINE HEIGHT': 1em
+));
+$FONT_GROUPS: map-merge($FONT_GROUPS, ('GRAPHIK': $_FONT_GRAPHIK));
+
