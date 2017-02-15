@@ -1,0 +1,18 @@
+.c-card--landscape {
+
+    .c-card__obj {
+        @include global__flag('c-card__obj');
+    }
+    .c-card__obj__header,
+    .c-card__obj__body {
+        @include global__flag__content('c-card__obj');
+    }
+    .c-card__obj__header {
+        @include global__flag__image('c-card__obj');
+        width: 33.33%;
+    }
+    .c-card__obj__body {
+        @include global__flag__body('c-card__obj');
+    }
+
+}

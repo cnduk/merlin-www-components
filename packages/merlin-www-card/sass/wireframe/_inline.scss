@@ -1,0 +1,45 @@
+.c-card--inline {
+	background-color: #f5f5f5;
+	padding: 10px;
+
+    .c-card__obj {
+        @include global__flag('c-card__obj');
+    }
+    .c-card__obj__header,
+    .c-card__obj__body {
+        @include global__flag__content('c-card__obj');
+    }
+    .c-card__obj__header {
+        @include global__flag__image('c-card__obj');
+        width: 33.33%;
+    }
+    .c-card__obj__body {
+        @include global__flag__body('c-card__obj');
+    }
+
+    .c-card__more {}
+
+    @include min-screen( $CARD_SWITCHER_WIDTH ) {
+    	background-color: #fff;
+    	padding: 0;
+    	clear: left;
+    	float: left;
+    	margin: 0 55px 55px 0;
+    	width: 150px;
+
+        .c-card__obj__header,
+        .c-card__obj__body {
+            display: block;
+            width: 100%;
+        }
+
+        .c-card__obj__body {
+            padding-left: 0;
+        }
+
+        .c-card__image {
+            margin-bottom: 0;
+        }
+    }
+
+}

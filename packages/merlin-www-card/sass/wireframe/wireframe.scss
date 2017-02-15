@@ -1,0 +1,82 @@
+@import "@cnbritain/merlin-www-common:wireframe";
+
+@import "_base";
+@import "_portrait";
+@import "_landscape";
+@import "_switcher";
+@import "_inline";
+@import "_thumbnail";
+
+.c-card {
+    color: #000;
+    position: relative;
+}
+
+.c-card__link {}
+.c-card__link--article {
+    background-color: rgba(255,255,255,0.01);
+    bottom: 0;
+    font-size: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.c-card__images {
+    position: relative;
+}
+.c-card__image {
+    display: block;
+    position: relative;
+    width: 100%;
+
+    img {
+        display: block;
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+
+}
+.c-card__image--landscape {
+    padding-top: 66.66666667%;
+}
+.c-card__image--portrait {
+    padding-top: 150%;
+}
+.c-card__image--square {
+    padding-top: 100%;
+}
+
+
+.c-card__image__icon {
+    position: absolute;
+}
+
+.c-card__title {}
+
+.c-card__teaser {}
+
+.c-card__rating {}
+.c-card__rating-label {}
+.c-card__rating-mark {}
+.c-card__rating-mark--fill {}
+
+.c-card__byline {
+    @include font-size(12px);
+}
+
+.c-card__meta {
+    @include font-size(12px);
+}
+// Need to be specific to overwrite global__list-reset
+li.c-card__meta-item {
+    display: inline-block;
+}
