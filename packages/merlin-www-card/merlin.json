@@ -3,7 +3,9 @@
     "main": "card",
     "currentTheme": null,
     "data": {
-        "card": "demo/data/card.json"
+        "landscape": "demo/data/landscape.json",
+        "portrait": "demo/data/portrait.json",
+        "switcher": "demo/data/switcher.json"
     },
     "js": {
         "demo": "demo/demo.js"
