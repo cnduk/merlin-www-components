@@ -67,7 +67,8 @@ const BRAND_THEMES = [
     "glamour",
     "gq",
     "tatler",
-    "traveller"
+    "traveller",
+    "missvogue"
 ];
 
 module.exports = function(merlinConfig={}, scopeName=null){
