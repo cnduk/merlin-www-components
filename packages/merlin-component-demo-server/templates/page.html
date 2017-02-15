@@ -2,6 +2,12 @@
 <html>
     <head>
         <title></title>
+        <style type="text/css">
+            h2 {
+                font-family: comic sans ms;
+                font-size: 1em;
+            }
+        </style>
     </head>
     <body>
         <script type="text/javascript">
@@ -38,8 +44,8 @@
             }
         </script>
         {{# data.components }}
-            <h1><a href="/{{ name }}/{{ data }}/{{ theme }}">{{ name }} - {{ data }} - {{ theme }}</a></h1>
-            <iframe src="/{{ name }}/{{ data }}/{{ theme }}" frameborder="0" marginheight="0" marginwidth="0" width="100%"></iframe>
+            <h2><a href="/{{ escaped_data }}/{{ escaped_theme }}">{{ name }} - {{ data }} - {{ theme }}</a></h2>
+            <iframe src="/{{ escaped_data }}/{{ escaped_theme }}" frameborder="0" marginheight="0" marginwidth="0" width="100%"></iframe>
             <hr />
         {{/ data.components }}
     </body>

@@ -5,10 +5,17 @@ const path = require('path');
 
 const chalk = require('chalk');
 const express = require('express');
-const glob = require('glob');
 const mustache = require('mustache');
 const sass = require('node-sass');
 const webpack = require('webpack');
+
+
+const COMPONENTS = new Map();
+let MASTER_COMPONENT = null;
+const PARTIALS = {};
+const THEMES = {};
+const JS = {};
+const DATA = {};
 
 
 const LOGGER = {
@@ -34,49 +41,38 @@ const LOGGER = {
     },
     'JS': function(...args){
         console.log(chalk.blue(...args));
+    },
+    'COMPONENT': function(...args){
+        console.log(chalk.italic(...args));
     }
 };
 
+
+class ComponentConfig {
+    constructor(name){
+        this.data = new Map();
+        this.isMaster = false;
+        this.js = new Map();
+        this.main = null;
+        this.name = name;
+        this.partials = new Map();
+        this.templates = new Map();
+        this.themes = new Map();
+    }
+}
+
+
 class MerlinComponentDemoServer {
 
-    _buildJs(){
-        if(this.customJs !== null){
-            LOGGER.log('JS', `Building js - ${getKeyFromPath(this.customJs)}`);
-            return new Promise((resolve, reject) => {
-                webpack(getWebpackConfig(this.customJs), (err, stats) => {
-                    if (err) {
-                        console.error(err.stack || err);
-                        if (err.details) {
-                            console.error(err.details);
-                        }
-                        process.exit(1);
-                    }
-
-                    const info = stats.toJson();
-
-                    if (stats.hasErrors()) {
-                        info.errors.forEach((err)=>{
-                            console.error(chalk.bold.red(err));
-                        });
-                        process.exit(1);
-                    }
-
-                    if (stats.hasWarnings()) {
-                        info.warnings.forEach((w)=>{
-                            console.warn(chalk.bold.yellow(w));
-                        });
-                    }
-
-                    resolve();
-                });
-            });
-        }
-        return Promise.resolve();
-    }
-
     _init(){
-        // Load app related templates
-        this._templates = loadTemplates(`${__dirname}/../templates/*.html`, false);
+        // Load app templates
+        Promise.all([
+            loadTemplate(path.resolve(__dirname, '../templates/component.html')),
+            loadTemplate(path.resolve(__dirname, '../templates/page.html'))
+        ]).then((templates) => {
+            this._partials.component = templates[0];
+            this._partials.page = templates[1];
+        }, promiseError);
 
         // Create the app
         const app = express();
@@ -84,108 +80,98 @@ class MerlinComponentDemoServer {
         this._routes();
     }
 
-    _renderComponent(componentKey, dataKey){
-        if(!this.templates.hasOwnProperty(componentKey)){
-            const msg = `Unknown template - ${componentKey}`;
-            LOGGER.log('SERVER', msg);
-            return msg;
-        }
-
-        if(!this.data.hasOwnProperty(dataKey)){
+    _renderComponent(dataKey){
+        if(!DATA.hasOwnProperty(dataKey)){
             const msg = `Unknown data - ${dataKey}`;
             LOGGER.log('SERVER', msg);
             return msg;
         }
 
         return mustache.render(
-            this.templates[componentKey],
-            this.data[dataKey],
-            this.partials
+            PARTIALS[MASTER_COMPONENT.main],
+            DATA[dataKey],
+            PARTIALS
         );
     }
 
     _routes(){
         this._app.get('/', (req, res) => {
 
-            const templates = Object.keys(this.templates);
-            const themes = Object.keys(this.themes);
-            const datas = Object.keys(this.data);
+            const datas = Object.keys(MASTER_COMPONENT.data);
+            const themes = Object.keys(MASTER_COMPONENT.themes);
 
             const view = {
                 "data": {
                     "components": []
                 }
             };
-            templates.forEach((template) => {
-                datas.forEach((data) => {
-                    if(themes.length === 0){
+            MASTER_COMPONENT.data.forEach((_, dataKey) => {
+                if(MASTER_COMPONENT.themes.size === 0){
+                    view.data.components.push({
+                        "escaped_name": encodeURIComponent(MASTER_COMPONENT.main),
+                        "name": MASTER_COMPONENT.main,
+                        "escaped_theme": null,
+                        "theme": null,
+                        "escaped_data": encodeURIComponent(dataKey),
+                        "data": dataKey
+                    });
+                } else {
+                    MASTER_COMPONENT.themes.forEach((_, themeKey) => {
                         view.data.components.push({
-                            "name": template,
-                            "theme": null,
-                            "data": data
+                            "escaped_name": encodeURIComponent(MASTER_COMPONENT.main),
+                            "name": MASTER_COMPONENT.main,
+                            "escaped_theme": encodeURIComponent(themeKey),
+                            "theme": themeKey,
+                            "escaped_data": encodeURIComponent(dataKey),
+                            "data": dataKey
                         });
-                    } else {
-                        themes.forEach((theme) => {
-                            view.data.components.push({
-                                "name": template,
-                                "theme": theme,
-                                "data": data
-                            });
-                        });
-                    }
-                });
+                    });
+                }
             });
-            const indexPage = mustache.render(this._templates.page, view);
+
+            const indexPage = mustache.render(this._partials.page, view);
 
             LOGGER.log('SERVER', 'Index page loaded');
             res.send(indexPage);
         });
-        this._app.get('/:component/:data/:theme', (req, res) => {
-            const params = req.params;
+        this._app.get('/:data/:theme', (req, res) => {
+            const dataKey = decodeURIComponent(req.params.data);
+            const themeKey = decodeURIComponent(req.params.theme);
 
-            const componentTemplate = this._renderComponent(
-                params.component, params.data);
-            const theme = this.themes[params.theme];
+            const componentTemplate = this._renderComponent(dataKey);
+            const theme = THEMES[themeKey];
 
             const componentPage = mustache.render(
-                this._templates.component, {
+                this._partials.component, {
                     "page": {
                         "component": componentTemplate,
-                        "js": this._js,
+                        "js": MASTER_COMPONENT.js.get(`${MASTER_COMPONENT.name}/demo`) || false,
                         "theme": theme
                     }
                 });
 
-            LOGGER.log('SERVER', `Component page loaded - ${params.component}/${params.theme}/${params.data}`);
+            LOGGER.log('SERVER', `Component page loaded - ${themeKey}/${dataKey}`);
             res.send(componentPage);
         });
     }
 
     constructor(config={}, port=null){
+
         this._app = null;
-        this._js = '';
         this._isListening = false;
-        this._templates = null;
+        this._partials = {};
 
-        this.data = config.data || {};
-        this.customJs = config.js || null;
-        this.partials = config.partials || {};
         this.port = null;
-        this.templates = config.templates || {};
-        this.themes = config.themes || {};
 
-        this._init();
-        this._buildJs()
-            .then(
-                () => {
-                    return loadFile(`${path.dirname(this.customJs)}/demo.build.js`);
-                },
-                promiseError
-            ).then((contents) => {
-                this._js = contents;
+        resolveDependency(config, '.')
+            .then(() => {
+                COMPONENTS.get(config.name).isMaster = true;
+                MASTER_COMPONENT = COMPONENTS.get(config.name);
+                buildComponentDicts();
+                this._init();
+                if(port !== null) this.listen(port);
             }, promiseError);
 
-        if(port !== null) this.listen(port);
     }
 
     get isListening(){
@@ -200,149 +186,65 @@ class MerlinComponentDemoServer {
         LOGGER.log('SERVER', `Now listening on port ${port}`);
     }
 
-    static loadJSON(dir, async=true){
-        return loadJSON(dir, async);
+    static loadJSON(file){
+        return loadJSON(file);
     }
 
-    static loadTemplates(dir, async=true){
-        return loadTemplates(dir, async);
+    static loadTemplate(file){
+        return loadTemplates(file);
     }
 
-    static loadSass(dir, async=true){
-        return loadSass(dir, async);
+    static loadSass(file){
+        return loadSass(sass);
     }
 
 }
 
-function loadFile(filename, encoding='utf8', async=true){
-    if(async){
-        return new Promise((resolve, reject) => {
-            fs.readFile(filename, { encoding }, (err, data) => {
-                if(err){
+function loadFile(filename, encoding='utf8'){
+    return new Promise((resolve, reject) => {
+        fs.readFile(filename, { encoding }, (err, data) => {
+            if(err){
+                reject(err);
+            } else {
+                resolve(data);
+            }
+        });
+    });
+}
+
+function loadJSON(file){
+    return new Promise((resolve, reject) => {
+        loadFile(file)
+            .then((data) => {
+                try {
+                    const json = JSON.parse(data);
+                    LOGGER.log('DATA', `Loaded data - '${file}'`);
+                    resolve(json);
+                } catch(err){
                     reject(err);
-                } else {
-                    resolve(data);
                 }
-            });
-        });
-    }
-    return fs.readFileSync(filename, { encoding });
-}
-
-function loadJSON(dir, async=true){
-    if(async){
-        return new Promise((resolve, reject) => {
-            glob(dir, { nodir: true }, (err, files) => {
-                if(err) return reject(err);
-
-                const output = {};
-                const chain = [];
-                const keys = [];
-                files.forEach((file) => {
-                    keys.push(getKeyFromPath(file));
-                    chain.push(loadFile(file));
-                });
-                Promise.all(chain)
-                    .then((datas) => {
-                        datas.forEach((data, i) => {
-                            try {
-                                const json = JSON.parse(data);
-                                LOGGER.log('DATA', `Loaded and parsed data - '${keys[i]}'`);
-                                output[keys[i]] = json;
-                            } catch(err){
-                                reject(err);
-                            }
-                        });
-                        resolve(output);
-                    }, (err) => reject(err));
-            });
-        });
-    }
-
-    const files = glob.sync(dir, { nodir: true });
-    const output = {};
-    files.forEach((file) => {
-        const key = getKeyFromPath(file);
-        const json = JSON.parse(loadFile(file, 'utf8', false));
-        LOGGER.log('DATA', `Loaded and parsed data -'${key}'`);
-        output[key] = json;
+            }, promiseError);
     });
-    return output;
 }
 
-function loadTemplates(dir, async=true){
-    if(async){
-        return new Promise((resolve, reject) => {
-            glob(dir, { nodir: true }, (err, files) => {
-                if(err) return reject(err);
-
-                const output = {};
-                const keys = [];
-                const chain = [];
-                files.forEach((file) => {
-                    keys.push(getKeyFromPath(file));
-                    chain.push(loadFile(file));
-                });
-                Promise.all(chain)
-                    .then((datas) => {
-                        datas.forEach((data, i) => {
-                            mustache.parse(data);
-                            LOGGER.log('TEMPLATE', `Loaded and parsed template - '${keys[i]}'`);
-                            output[keys[i]] = data;
-                        });
-                        resolve(output);
-                    }, (err) => reject(err));
-            });
-        });
-    }
-
-    const files = glob.sync(dir, { nodir: true });
-    const output = {};
-    files.forEach((file) => {
-        const key = getKeyFromPath(file);
-        const template = loadFile(file, 'utf8', false);
-        mustache.parse(template);
-        LOGGER.log('TEMPLATE', `Loaded and parsed template - '${key}'`);
-        output[key] = template;
+function loadTemplate(file){
+    return new Promise((resolve, reject) => {
+        loadFile(file)
+            .then((template) => {
+                mustache.parse(template);
+                LOGGER.log('TEMPLATE', `Loaded template - '${file}'`);
+                resolve(template);
+            }, promiseError);
     });
-    return output;
 }
 
-// TODO: do it
-function loadSass(dir, async=true){
-    if(async){
-        return new Promise((resolve, reject) => {
-            glob(dir, (err, files) => {
-                if(err) return reject(err);
-
-                const output = {};
-                const keys = [];
-                const chain = [];
-                files.forEach((file) => {
-                    keys.push(getKeyFromPath(file));
-                    chain.push(promiseSass({ file }));
-                });
-                Promise.all(chain)
-                    .then((datas) => {
-                        datas.forEach((data, i) => {
-                            LOGGER.log('SASS', `Loaded and compiled sass - '${keys[i]}'`);
-                            output[keys[i]] = data.css.toString();
-                        });
-                        resolve(output);
-                    }, (err) => reject(err));
-            });
-        });
-    }
-
-    const files = glob.sync(dir);
-    const output = {};
-    files.forEach((file) => {
-        const key = getKeyFromPath(file);
-        const result = sass.renderSync({
-            'file': file
-        });
-        LOGGER.log('SASS', `Loaded and compiled sass - '${key}'`);
-        output[key] = result;
+function loadSass(file){
+    return new Promise((resolve, reject) => {
+        promiseSass({ file })
+            .then((sassContents) => {
+                LOGGER.log('SASS', `Loaded sass - '${file}'`);
+                resolve(sassContents.css.toString());
+            }, promiseError);
     });
 }
 
@@ -358,21 +260,56 @@ function promiseSass(...args){
     });
 }
 
-function getKeyFromPath(filepath){
-    const breakdown = path.parse(filepath);
-    return breakdown.name;
+function compileJs(key, file){
+    return new Promise((resolve, reject) => {
+        webpack(getWebpackConfig(key, file), (err, stats) => {
+            if (err) {
+                console.error(err.stack || err);
+                if (err.details) {
+                    console.error(err.details);
+                }
+                process.exit(1);
+            }
+
+            const info = stats.toJson();
+
+            if (stats.hasErrors()) {
+                info.errors.forEach((err)=>{
+                    console.error(chalk.bold.red(err));
+                });
+                process.exit(1);
+            }
+
+            if (stats.hasWarnings()) {
+                info.warnings.forEach((w)=>{
+                    console.warn(chalk.bold.yellow(w));
+                });
+            }
+
+            // Load file
+            const buildFile = info.assetsByChunkName[key];
+            loadFile(buildFile)
+                .then((fileContents) => {
+                    // Delete build file
+                    fs.unlink(buildFile, () => {
+                        LOGGER.log('JS', `Loaded js - ${file}`);
+                        resolve(fileContents);
+                    });
+                }, promiseError);
+        });
+    });
 }
 
-function getWebpackConfig(js){
+
+function getWebpackConfig(key, file){
     return {
         'entry': {
-            'demo': js
+            [key]: file
         },
         'module': {},
         'plugins': [],
         'output': {
-            'filename': 'demo.build.js',
-            'path': './demo'
+            'filename': '[name].build.js'
         },
         "stats": "verbose"
     };
@@ -383,6 +320,178 @@ function promiseError(err){
     process.exit(1);
 }
 
+function resolveDependencies(dependencies){
+    return Promise.all(dependencies.map((filename) => {
+        return new Promise((resolve, reject) => {
+            const merlinDir = path.resolve('node_modules', filename);
+            const merlinFile = path.resolve(merlinDir, 'merlin.json');
+
+            // Load merlin dependency
+            loadJSON(merlinFile)
+                .then((config) => {
+                    resolveDependency(config, merlinDir)
+                        .then(resolve, reject);
+                }, promiseError);
+        });
+    }));
+}
+
+function resolveDependency(config, merlinDir){
+    return new Promise((resolve, reject) => {
+        // Check if we've already loaded this component
+        if(COMPONENTS.has(config.name)){
+            LOGGER.log('COMPONENT', `Component already loaded - ${config.name}`);
+            resolve();
+        } else {
+            LOGGER.log('COMPONENT', `Loading component - ${config.name}`);
+            Promise.all([
+                resolveDependencyData(merlinDir, config.data),
+                resolveDependencyPartials(merlinDir, config.partials),
+                resolveDependencyThemes(merlinDir, config.themes),
+                resolveDependencyJs(merlinDir, config.js)
+            ]).then((results) => {
+
+                const dependencyConfig = new ComponentConfig(config.name);
+                // Data
+                if(results[0] !== null){
+                    results[0].forEach((value, key) => {
+                        dependencyConfig.data.set(`${config.name}/${key}`, value);
+                    });
+                }
+                // Partials
+                if(results[1] !== null){
+                    results[1].forEach((value, key) => {
+                        dependencyConfig.partials.set(`${config.name}/${key}`, value);
+                    });
+                }
+                // Themes
+                if(results[2] !== null){
+                    results[2].forEach((value, key) => {
+                        dependencyConfig.themes.set(`${config.name}/${key}`, value);
+                    });
+                }
+                // JS
+                if(results[3] !== null){
+                    results[3].forEach((value, key) => {
+                        dependencyConfig.js.set(`${config.name}/${key}`, value);
+                    });
+                }
+
+                // Assign the main
+                if(!config.hasOwnProperty('main') && typeof config.main !== 'string' ){
+                    console.error(`No main file found in ${config.name}`);
+                    process.exit(1);
+                }
+                dependencyConfig.main = `${config.name}/${config.main}`;
+
+                // Add config to COMPONENTS
+                COMPONENTS.set(config.name, dependencyConfig);
+
+                // Resolve dependency dependencies
+                if(Array.isArray(config.dependencies)){
+                    resolveDependencies(config.dependencies)
+                        .then(resolve, reject);
+                } else {
+                    resolve();
+                }
+
+            }, promiseError);
+        }
+    });
+}
+
+function resolveDependencyData(merlinDir, dataConfig){
+    if(!dataConfig) return Promise.resolve(null);
+    if(Object.keys(dataConfig).length === 0) return Promise.resolve(null);
+    return new Promise((resolve, reject) => {
+        Promise.all(Object.keys(dataConfig).map((key) => {
+            return loadJSON(path.resolve(merlinDir, dataConfig[key]))
+                .then((json) => {
+                    return Promise.resolve({ key, json });
+                }, promiseError);
+        })).then((files) => {
+            const dataMap = new Map();
+            files.forEach((file) => {
+                dataMap.set(file.key, file.json);
+            });
+            resolve(dataMap);
+        }, promiseError);
+    });
+}
+
+function resolveDependencyPartials(merlinDir, partialsConfig){
+    if(!partialsConfig) return Promise.resolve(null);
+    if(Object.keys(partialsConfig).length === 0) return Promise.resolve(null);
+    return new Promise((resolve, reject) => {
+        Promise.all(Object.keys(partialsConfig).map((key) => {
+            return loadTemplate(path.resolve(merlinDir, partialsConfig[key]))
+                .then((template) => {
+                    return Promise.resolve({ key, template });
+                }, promiseError);
+        })).then((templates) => {
+            const templateMap = new Map();
+            templates.forEach((template) => {
+                templateMap.set(template.key, template.template);
+            });
+            resolve(templateMap);
+        }, promiseError);
+    });
+}
+
+function resolveDependencyThemes(merlinDir, themesConfig){
+    if(!themesConfig) return Promise.resolve(null);
+    if(Object.keys(themesConfig).length === 0) return Promise.resolve(null);
+    return new Promise((resolve, reject) => {
+        Promise.all(Object.keys(themesConfig).map((key) => {
+            return loadSass(path.resolve(merlinDir, themesConfig[key]))
+                .then((sass) => {
+                    return Promise.resolve({ key, sass });
+                }, promiseError);
+        })).then((sassContents) => {
+            const sassMap = new Map();
+            sassContents.forEach((content) => {
+                sassMap.set(content.key, content.sass);
+            });
+            resolve(sassMap);
+        }, promiseError);
+    });
+}
+
+function resolveDependencyJs(merlinDir, jsConfig){
+    if(!jsConfig) return Promise.resolve(null);
+    if(Object.keys(jsConfig).length === 0) return Promise.resolve(null);
+    return new Promise((resolve, reject) => {
+        Promise.all(Object.keys(jsConfig).map((key) => {
+            return compileJs(key, path.resolve(merlinDir, jsConfig[key]))
+                .then((js) => {
+                    return Promise.resolve({ key, js });
+                }, promiseError);
+        })).then((jsContents) => {
+            const jsMap = new Map();
+            jsContents.forEach((content) => {
+                jsMap.set(content.key, content.js);
+            });
+            resolve(jsMap);
+        });
+    });
+}
+
+function buildComponentDicts(){
+    COMPONENTS.forEach((component) => {
+        component.partials.forEach((value, key) => {
+            PARTIALS[key] = value;
+        });
+        component.themes.forEach((value, key) => {
+            THEMES[key] = value;
+        });
+        component.js.forEach((value, key) => {
+            JS[key] = value;
+        });
+        component.data.forEach((value, key) => {
+            DATA[key] = value;
+        });
+    });
+}
 
 module.exports = MerlinComponentDemoServer;
 module.exports.LOGGER = LOGGER;
