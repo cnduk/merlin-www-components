@@ -1,0 +1,21 @@
+{
+    "name": "@cnbritain/merlin-www-section-superfeature",
+    "main": "superfeature",
+    "currentTheme": null,
+    "data": {
+        "superfeature": "demo/data/superfeature.json"
+    },
+    "js": {
+        "demo": "demo/demo.js"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "vogue": "sass/vogue/vogue.scss"
+    },
+    "partials": {
+        "superfeature": "templates/section-superfeature.html"
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-image"
+    ]
+}
