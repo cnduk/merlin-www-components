@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "demo": "merlin-component-demo-server merlin.json"
+  },
+  "dependencies": {
+    "@cnbritain/merlin-www-image": "^1.0.0",
+    "@cnbritain/merlin-www-common": "^0.1.0"
+  },
+  "devDependencies": {
+    "@cnbritain/merlin-component-demo-server": "^2.1.2"
   },
   "author": "",
   "license": "ISC"
