@@ -337,14 +337,14 @@ function resolveDependencies(dependencies){
             // Load merlin dependency
             loadJSON(merlinFile)
                 .then((config) => {
-                    resolveDependency(config, merlinDir)
+                    resolveDependency(config, merlinDir, { sass: true, data: true, js: true })
                         .then(resolve, reject);
                 }, promiseError);
         });
     }));
 }
 
-function resolveDependency(config, merlinDir){
+function resolveDependency(config, merlinDir, ignore={ sass: false, data: false, js: false }){
     return new Promise((resolve, reject) => {
         // Check if we've already loaded this component
         if(COMPONENTS.has(config.name)){
@@ -352,12 +352,33 @@ function resolveDependency(config, merlinDir){
             resolve();
         } else {
             LOGGER.log('COMPONENT', `Loading component - ${config.name}`);
-            Promise.all([
-                resolveDependencyData(merlinDir, config.data),
-                resolveDependencyPartials(merlinDir, config.partials),
-                resolveDependencyThemes(merlinDir, config.themes),
-                resolveDependencyJs(merlinDir, config.js)
-            ]).then((results) => {
+
+            const allPromises = [];
+
+            if(ignore.data){
+                allPromises.push(Promise.resolve(null));
+            } else {
+                allPromises.push(resolveDependencyData(merlinDir, config.data));
+            }
+
+            // ALWAYS LOAD DA PARTIALS
+            allPromises.push(resolveDependencyPartials(merlinDir, config.partials));
+
+            if(ignore.sass){
+                allPromises.push(Promise.resolve(null));
+            } else {
+                allPromises.push(resolveDependencyThemes(merlinDir, config.themes));
+            }
+
+            if(ignore.js){
+                allPromises.push(Promise.resolve(null));
+            } else {
+                allPromises.push(resolveDependencyJs(merlinDir, config.js));
+            }
+
+
+
+            Promise.all(allPromises).then((results) => {
 
                 const dependencyConfig = new ComponentConfig(config.name);
                 // Data
