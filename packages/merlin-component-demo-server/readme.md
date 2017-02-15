@@ -1,4 +1,4 @@
-# merlin-womponent-demo-server
+# merlin-component-demo-server
 
 > Mustache server used to demo merlin-www-components
 
