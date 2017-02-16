@@ -1,0 +1,45 @@
+@import '@cnbritain/merlin-www-common:wireframe';
+@import '@cnbritain/merlin-www-image:wireframe';
+@import '@cnbritain/merlin-www-buttons:wireframe';
+
+.c-show-summary-section {}
+.c-show-summary-section__wrapper {}
+.c-show-summary-section__images {
+	display: table;
+	width: 100%;
+}
+.c-show-summary-section__image {
+	display: table-cell;
+	vertical-align: top;
+
+	@include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT - 1) {
+		&:nth-child(n+3) {
+			display: none;
+		}
+	}
+}
+.c-show-summary-section__image__image {
+	padding-top: 150%;
+	position: relative;
+	width: 100%;
+
+	img {
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+	}
+}
+.c-show-summary-section__image__picture {
+	img {
+		width: 100%;
+	}
+}
+
+.c-show-summary-section__content {}
+.c-show-summary-section__title {}
+.c-show-summary-section__meta {}
+.c-show-summary-section__meta-item {
+	display: inline-block;
+}

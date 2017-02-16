@@ -1,0 +1,49 @@
+<section class="c-show-summary-section">
+	<div class="c-show-summary-section__wrapper">
+		{{# data.link }}
+			<a href="{{ &data.url }}" class="c-show-summary-section__link {{ style.cls }}"></a>
+		{{/ data.link }}
+
+		{{# data.image_list }}
+			<div class="c-show-summary-section__images {{ style.cls }} ">
+            {{# data.items }}
+				<div class="c-show-summary-section__image {{ style.cls }} ">
+	                {{# data.item }}
+	                	{{# state.is_image }}
+							<div class="c-show-summary-section__image__image {{ style.cls }}">
+								{{> @cnbritain/merlin-www-image }}
+							</div>
+	                	{{/ state.is_image }}
+
+	                	{{# state.is_picture }}
+							<div class="c-show-summary-section__image__picture {{ style.cls }}">
+								{{> @cnbritain/merlin-www-image }}
+							</div>
+	                	{{/ state.is_picture }}
+	                {{/ data.item }}
+                </div>
+            {{/ data.items }}
+			</div>
+		{{/ data.image_list }}
+
+		<div class="c-show-summary-section__content">
+			{{# data.title }}
+			    <h3 class="c-show-summary-section__title"><span>{{ data.title }}</span></h3>
+		    {{/ data.title }}
+
+		    <ul class="global__list-reset c-show-summary-section__meta {{ style.cls }}">
+		    {{# data.season_tag }}
+		        <li class="c-show-summary-section__meta-item c-show-summary-section__meta-item--season {{ style.cls }}">
+    				<span class="{{ style.cls }}">{{ data.title }}</span>
+		        </li>
+		    {{/ data.season_tag }}
+
+		    {{# data.show_type_tag }}
+		        <li class="c-show-summary-section__meta-item c-show-summary-section__meta-item--show-type {{ style.cls }}">
+		        	<span class="{{ style.cls }}">{{ data.title }}</span>
+		        </li>
+		    {{/ data.show_type_tag }}
+		    </ul>
+		</div>
+	</div>
+</section>
