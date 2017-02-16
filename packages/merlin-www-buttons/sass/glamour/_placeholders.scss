@@ -1,0 +1,79 @@
+@import './_mixins';
+
+%btn-single {
+    @include button-single();
+}
+
+%btn-single--light {
+    @include button-single-light();
+}
+
+%btn-single--light-hover {
+    @include button-single-light-hover();
+}
+
+%btn-single--dark {
+    @include button-single-dark();
+}
+
+%btn-single--dark--hover {
+    @include button-single-dark-hover();
+}
+
+%btn-group {
+    @include button-group();
+}
+
+%btn-group--light {
+    @include button-group-light();
+}
+
+%btn-group--light--hover {
+    @include button-group-light-hover();
+}
+
+%btn-group--dark {
+    @include button-group-dark();
+}
+
+%btn-group--dark--hover {
+    @include button-group-dark-hover();
+}
+
+%btn-top-stories {
+    @include button-top-stories();
+}
+
+%btn-top-stories--hover {
+    @include button-top-stories-hover();
+}
+
+%btn-top-stories--disabled {
+    @include button-top-stories-disabled();
+}
+
+%btn-share {
+    @include button-share();
+}
+
+@each $name, $color in $COLOUR_SOCIAL {
+    %btn-share--#{$name}--hover {
+        @include button-share-light-hover($name);
+    }
+}
+
+%btn-trend {
+    @include button-trend();
+}
+
+%btn-trend-hover {
+    @include button-trend-hover();
+}
+
+%btn-related {
+    @include button-related();
+}
+
+%btn-related-hover {
+    @include button-related-hover();
+}

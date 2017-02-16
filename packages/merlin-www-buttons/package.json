@@ -1,0 +1,17 @@
+{
+  "name": "@cnbritain/merlin-www-buttons",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "demo": "merlin-component-demo-server merlin.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cnbritain/merlin-www-common": "^0.1.1"
+  },
+  "devDependencies": {
+    "@cnbritain/merlin-component-demo-server": "^2.1.3"
+  }
+}

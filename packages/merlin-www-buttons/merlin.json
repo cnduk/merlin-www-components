@@ -1,0 +1,32 @@
+{
+    "name": "@cnbritain/merlin-www-buttons",
+    "main": "button",
+    "currentTheme": null,
+    "data": {
+        "single": "demo/data/single.json",
+        "single-light": "demo/data/single-light.json",
+        "single-dark": "demo/data/single-dark.json",
+        "group": "demo/data/group.json",
+        "group-light": "demo/data/group-light.json",
+        "group-dark": "demo/data/group-dark.json",
+        "top-stories": "demo/data/top-stories.json",
+        "related": "demo/data/related.json",
+        "share": "demo/data/share.json",
+        "share-light": "demo/data/share-light.json",
+        "share-dark": "demo/data/share-dark.json"
+    },
+    "js": {},
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "wired": "sass/wired/wired.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "missvogue": "sass/missvogue/missvogue.scss"
+    },
+    "partials": {
+        "button": "templates/button.html"
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-common"
+    ]
+}

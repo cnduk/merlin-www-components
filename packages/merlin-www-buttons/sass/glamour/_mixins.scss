@@ -1,0 +1,153 @@
+@import '@cnbritain/merlin-www-common:glamour';
+
+@mixin button-single(){
+    @include font('GRAPHIK', 13px, 'MEDIUM', 14px, 20);
+    padding: 10px;
+    transition: all .1s ease-in-out;
+}
+
+@mixin button-single-light() {
+    background-color: $COLOUR_BUTTON_LIGHT_BG;
+    border: 1px solid $COLOUR_BUTTON_LIGHT_BORDER;
+    color: $COLOUR_BUTTON_LIGHT;
+}
+
+@mixin button-single-light-hover() {
+    background-color: $COLOUR_BUTTON_LIGHT_BG_HOVER;
+    border: 1px solid $COLOUR_BUTTON_LIGHT_BORDER_HOVER;
+    color: $COLOUR_BUTTON_LIGHT_HOVER;
+}
+
+
+@mixin button-single-dark() {
+    background-color: $COLOUR_BUTTON_DARK_BG;
+    border: 1px solid $COLOUR_BUTTON_DARK_BORDER;
+    color: $COLOUR_BUTTON_DARK;
+}
+
+@mixin button-single-dark-hover() {
+    background-color: $COLOUR_BUTTON_DARK_BG_HOVER;
+    border: 1px solid $COLOUR_BUTTON_DARK_BORDER_HOVER;
+    color: $COLOUR_BUTTON_DARK_HOVER;
+}
+
+@mixin button-group(){
+    @include font('GRAPHIK', 13px, 'SEMIBOLD', 16px);
+
+    padding: 10px;
+    text-align: center;
+    @include transition(all .1s ease-in-out);
+}
+
+@mixin button-group-light(){
+    background-color: $COLOUR_BUTTON_GROUP_LIGHT_BG;
+    color: $COLOUR_BUTTON_GROUP_LIGHT;
+}
+
+@mixin button-group-light-hover(){
+    background-color: $COLOUR_BUTTON_GROUP_LIGHT_HOVER_BG;
+    color: $COLOUR_BUTTON_GROUP_LIGHT_HOVER;
+}
+
+@mixin button-group-dark() {
+    background-color: $COLOUR_BUTTON_DARK_BG;
+    color: $COLOUR_BUTTON_DARK;
+}
+
+@mixin button-group-dark-hover() {
+    background-color: $COLOUR_BUTTON_DARK_BG_HOVER;
+    color: $COLOUR_BUTTON_DARK_HOVER;
+}
+
+@mixin button-top-stories() {
+    background: #fff;
+    height: 50%;
+    transition: opacity .1s ease-in-out;
+    width: 60px;
+
+    svg {
+        height: 100%;
+        width: 15px;
+    }
+
+    svg,
+    path {
+        fill: #000;
+        transition: all .1s ease-in-out;
+    }
+}
+
+@mixin button-top-stories-hover() {
+    background: #f5f5f5;
+
+    svg,
+    path {
+        fill: #000;
+    }
+}
+
+@mixin button-top-stories-disabled() {
+    background: #fff;
+
+    svg,
+    path {
+        fill: #000;
+        opacity: 0.3;
+    }
+}
+
+@mixin button-share {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding-bottom: 0;
+    width: 40px;
+
+    svg {
+        height: 100%;
+        width: 50%;
+    }
+}
+
+@mixin button-share-light($name){
+    background-color: $COLOUR_SOCIAL_ICON;
+    fill: map-get($COLOUR_SOCIAL, $name);
+}
+
+@mixin button-share-light-hover($name){
+    background-color: map-get($COLOUR_SOCIAL, $name);
+    fill: $COLOUR_SOCIAL_ICON;
+}
+
+@mixin button-share-dark($name){}
+
+@mixin button-share-dark-hover($name){}
+
+@mixin button-trend(){
+    background: $COLOUR_BG_SECONDARY;
+    border: 0;
+    color: $COLOUR_MAIN;
+}
+
+@mixin button-trend-hover(){
+    background: $COLOUR_MAIN_HIGHLIGHT;
+    border: 0;
+    color: $COLOUR_MAIN_DARK;
+}
+
+@mixin button-related() {
+    background: $COLOUR_BG_SECONDARY;
+    border: 0;
+    color: $COLOUR_MAIN;
+    display: inline-block;
+    @include font('GRAPHIK', 13px, 'MEDIUM');
+    padding: 10px;
+    @include transition(all 0.1s ease-in-out);
+}
+
+@mixin button-related-hover(){
+    background: $COLOUR_BG_DARK;
+    border: 0;
+    color: $COLOUR_MAIN_DARK;
+    text-decoration: none;
+}

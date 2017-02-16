@@ -1,0 +1,145 @@
+@import '@cnbritain/merlin-www-common:vogue';
+
+@mixin button-single(){
+    @include font('NOBEL', 12px);
+    letter-spacing: 1px;
+    padding: $PADDING_X_SMALL;
+    text-transform: uppercase;
+    @include transition(all 0.1s ease-in-out);
+}
+
+@mixin button-single-light() {
+    border: $_VOGUE_BORDER_WIDTH solid $COLOR_BUTTON_CTA_LIGHT;
+    color: $COLOR_BUTTON_CTA_LIGHT;
+}
+
+@mixin button-single-light-hover() {
+    background-color: $COLOR_BUTTON_CTA_LIGHT;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+@mixin button-single-dark() {
+    border: $_VOGUE_BORDER_WIDTH solid $COLOR_BUTTON_CTA_DARK;
+    color: $COLOR_BUTTON_CTA_DARK;
+}
+
+@mixin button-single-dark-hover() {
+    background-color: $COLOR_BUTTON_CTA_DARK;
+    color: $COLOR_TYPE_HEADING;
+    text-decoration: none;
+}
+
+@mixin button-group(){
+    @include font('NOBEL', 10px);
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(11px);
+    }
+    padding: $PADDING_XX_SMALL;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    @include transition(all 0.1s ease-in-out);
+}
+
+@mixin button-group-light(){
+    border: $_VOGUE_BORDER_WIDTH solid $COLOR_BUTTON_CTA_LIGHT;
+    color: $COLOR_BUTTON_CTA_LIGHT;
+}
+
+@mixin button-group-light-hover(){
+    background-color: $COLOR_BUTTON_CTA_LIGHT;
+    color: #fff;
+    text-decoration: none;
+}
+
+@mixin button-group-dark() {
+    border: $_VOGUE_BORDER_WIDTH solid $COLOR_BUTTON_CTA_DARK;
+    color: $COLOR_BUTTON_CTA_DARK;
+}
+
+@mixin button-group-dark-hover() {
+    background-color: $COLOR_BUTTON_CTA_DARK;
+    color: $COLOR_TYPE_HEADING;
+    text-decoration: none;
+}
+
+@mixin button-top-stories() {
+    background-color: $COLOUR_BG_ACCENT2;
+    height: 50%;
+    @include transition(all 0.1s ease-in-out);
+    width: 60px;
+
+    svg {
+        height: 100%;
+        width: 11px;
+    }
+
+    svg, path {
+        fill: $COLOR_BUTTON_ACTION_ACTIVE;
+        @include transition(all 0.1s ease-in-out);
+    }
+}
+
+@mixin button-top-stories-hover() {
+    background: $COLOR_MAIN_ACCENT1;
+}
+
+@mixin button-top-stories-disabled() {
+    svg, path {
+        fill: $COLOR_BUTTON_ACTION_INACTIVE;
+    }
+}
+
+@mixin button-share {
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+    //Overwrites defaults padding bottom 2px
+    padding-bottom: 0;
+    text-align: center;
+    width: 45px;
+
+    svg {
+        height: 100%;
+        fill: #fff;
+        width: 16px;
+    }
+}
+
+@mixin button-share-light($name){
+    path {
+        fill: map-get($COLOUR_SOCIAL_DARK, $name);
+    }
+}
+
+@mixin button-share-light-hover($name){
+    background-color: map-get($COLOUR_SOCIAL_DARK, $name);
+    path {
+        fill: #fff;
+    }
+}
+
+@mixin button-share-dark($name){
+    background-color: #3e3e3e;
+}
+
+@mixin button-share-dark-hover($name){
+    background-color: map-get($COLOUR_SOCIAL_DARK, $name);
+}
+
+@mixin button-related() {
+    border: $_VOGUE_BORDER_WIDTH solid $COLOR_BORDER_SOLID_ACCENT2;
+    color: $COLOR_MAIN_TERTIARY;
+    @include font('NOBEL', 11px);
+    letter-spacing: 1px;
+    padding: $PADDING_XX_SMALL;
+    text-transform: uppercase;
+    @include transition(all 0.1s ease-in-out);
+}
+
+@mixin button-related-hover(){
+    border-color: $COLOR_BORDER_DOTTED;
+    text-decoration: none;
+}
