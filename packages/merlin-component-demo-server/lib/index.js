@@ -356,10 +356,10 @@ function promiseError(err){
     process.exit(1);
 }
 
-function resolveDependencies(dependencies){
+function resolveDependencies(dependencies, previousDir='.'){
     return Promise.all(dependencies.map((filename) => {
         return new Promise((resolve, reject) => {
-            const merlinDir = path.resolve('node_modules', filename);
+            const merlinDir = path.resolve(previousDir, 'node_modules', filename);
             const merlinFile = path.resolve(merlinDir, 'merlin.json');
 
             // Load merlin dependency
@@ -374,6 +374,8 @@ function resolveDependencies(dependencies){
 
 function resolveDependency(config, merlinDir, ignore={ sass: false, data: false, js: false }){
     return new Promise((resolve, reject) => {
+        const realMerlinDir = fs.realpathSync(merlinDir);
+
         // Check if we've already loaded this component
         if(COMPONENTS.has(config.name)){
             LOGGER.log('COMPONENT', `Component already loaded - ${config.name}`);
@@ -386,22 +388,22 @@ function resolveDependency(config, merlinDir, ignore={ sass: false, data: false,
             if(ignore.data){
                 allPromises.push(Promise.resolve(null));
             } else {
-                allPromises.push(resolveDependencyData(merlinDir, config.data));
+                allPromises.push(resolveDependencyData(realMerlinDir, config.data));
             }
 
             // ALWAYS LOAD DA PARTIALS
-            allPromises.push(resolveDependencyPartials(merlinDir, config.partials));
+            allPromises.push(resolveDependencyPartials(realMerlinDir, config.partials));
 
             if(ignore.sass){
                 allPromises.push(Promise.resolve(null));
             } else {
-                allPromises.push(resolveDependencyThemes(merlinDir, config.themes));
+                allPromises.push(resolveDependencyThemes(realMerlinDir, config.themes));
             }
 
             if(ignore.js){
                 allPromises.push(Promise.resolve(null));
             } else {
-                allPromises.push(resolveDependencyJs(merlinDir, config.js));
+                allPromises.push(resolveDependencyJs(realMerlinDir, config.js));
             }
 
 
@@ -453,7 +455,7 @@ function resolveDependency(config, merlinDir, ignore={ sass: false, data: false,
 
                 // Resolve dependency dependencies
                 if(Array.isArray(config.dependencies)){
-                    resolveDependencies(config.dependencies)
+                    resolveDependencies(config.dependencies, merlinDir)
                         .then(resolve, reject);
                 } else {
                     resolve();
