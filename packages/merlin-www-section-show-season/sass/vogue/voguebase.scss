@@ -1,0 +1,146 @@
+@import "../wireframe/wireframe";
+
+.c-show-season-section {
+    padding: 0 $MOBILE_SIDE_GUTTER;
+    position: relative;
+
+    margin-top: $MOBILE_SLICE_MARGIN;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0 $TABLET_SIDE_GUTTER;
+        margin-top: $TABLET_SLICE_MARGIN;
+        margin-bottom: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0 $DESKTOP_SIDE_GUTTER;
+        margin-top: $DESKTOP_SLICE_MARGIN;
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+    }
+}
+
+.c-show-season-section__wrapper {
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    text-align: center;
+}
+
+
+.c-show-season-section__title {
+    @include font('NOBEL', 20px, 'BOLD');
+    margin-bottom: $MARGIN_XX_SMALL;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+        @include font-size(25px);
+        position: relative;
+
+        span {
+            background-color: #fff;
+            padding: 0 50px;
+            position: relative;
+        }
+
+        &:before {
+            @include dotted-line($COLOR_BORDER_DOTTED, 1px, 3px);
+            content: '';
+            height: 1px;
+            left: 0;
+            margin-top: -4px;
+            position: absolute;
+            right: 0;
+            top: 100%;
+        }
+
+    }
+}
+.c-show-season-section__link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.c-show-season-section__meta {
+    @include c-card-meta;
+    border-top: none;
+    display: inline-block;
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        border-top: none;
+        padding-top: 8px;
+    }
+}
+.c-show-season-section__meta-item {
+    display: inline-block;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    &--season {
+        color: $COLOR_MAIN_HIGHLIGHT;
+    }
+
+    &--show-type {
+        color: $COLOR_MAIN_TERTIARY;
+    }
+
+    &:not(:last-child) {
+        padding-right: $PADDING_XX_SMALL;
+    }
+
+    & + .c-show-season-section__meta-item {
+        border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+        padding-left: $PADDING_XX_SMALL;
+    }
+}
+
+
+.c-show-season-section__card-list {
+    margin: $MARGIN_MEDIUM -20px 0 -20px;
+}
+li.c-show-season-section__card-list-item {
+    box-sizing: border-box;
+    padding: 0 20px;
+    @include max-screen($CARD_SWITCHER_WIDTH - 1) {
+        &:nth-child(odd) {
+            padding-right: 10px;
+        }
+
+        &:nth-child(even) {
+            padding-left: 10px;
+        }
+    }
+    width: 50%;
+
+    &:nth-child(-n+2){
+        margin-bottom: 30px;
+    }
+
+    @include min-screen(900px) {
+        width: 25%;
+
+        &:nth-child(-n+2){
+            margin-bottom: 0;
+        }
+    }
+}
+
+.c-show-season-section__btn__wrapper {
+    text-align: center;
+}
+.c-show-season-section__btn {
+    display: inline-block;
+    margin-top: 35px;
+    width: auto;
+
+    // @include button-group;
+    // @include button-group--light;
+
+    // &:hover {
+    //     @extend %btn-group--light--hover;
+    // }
+}

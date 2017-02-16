@@ -1,0 +1,75 @@
+<section class="c-show-season-section {{ style.cls }}">
+    <div class="c-show-season-section__wrapper">
+    {{# data.title }}
+        <h3 class="c-show-season-section__title"><span>{{ data.title }}</span></h3>
+    {{/ data.title }}
+
+    <ul class="global__list-reset c-show-season-section__meta {{ style.cls }}">
+        {{# data.season_tag }}
+            <li class="c-show-season-section__meta-item c-show-season-section__meta-item--season {{ style.cls }}">
+                <span class="{{ style.cls }}">{{ data.title }}</span>
+            </li>
+        {{/ data.season_tag }}
+
+        {{# data.show_type_tag }}
+            <li class="c-show-season-section__meta-item c-show-season-section__meta-item--show-type {{ style.cls }}">
+                <span class="{{ style.cls }}">{{ data.title }}</span>
+            </li>
+        {{/ data.show_type_tag }}
+    </ul>
+
+    {{# data.card_list }}
+        <ul class="global__list-reset c-show-season-section__card-list js-c-show-season-section__card-list {{ style.cls }}">
+            {{# data.items }}
+                <li class="c-show-season-section__card-list-item js-c-show-season-section__card-list-item {{ style.cls }}">
+                    {{# data.item }}
+                        <article class="c-card {{ style.cls }}">
+                            {{# data.link }}
+                                <a href="{{ &data.url }}" class="c-card__link c-card__link--article {{ style.cls }}">{{ data.title }}</a>
+                            {{/ data.link }}
+
+                            <div class="c-card__obj">
+                                <div class="c-card__obj__header">
+                                    <div class="c-card__images">
+                                    {{# data.image_list }}
+                                        {{# data.items }}
+                                            <div class="c-card__image {{ style.cls }} ">
+                                                {{# data.item }}
+                                                    {{> @cnbritain/merlin-www-image }}
+                                                {{/ data.item }}
+                                            </div>
+                                        {{/ data.items }}
+                                    {{/ data.image_list }}
+
+                                    {{# state.is_featured }}
+                                        <div class='c-card__image-label c-card__image-label--featured'>Featured</div>
+                                    {{/ state.is_featured }}
+
+                                    {{# state.is_latest }}
+                                        <div class='c-card__image-label c-card__image-label--latest'>Latest</div>
+                                    {{/ state.is_latest }}
+                                    </div>
+                                </div>
+
+                                <div class="c-card__obj__body">
+                                {{# data.title }}
+                                    <h3 class="c-card__title">
+                                        <span>{{ data.title }}</span>
+                                    </h3>
+                                {{/ data.title }}
+                                </div>
+                            </div>
+                        </article>
+                    {{/ data.item }}
+                </li>
+            {{/ data.items }}
+        </ul>
+    {{/ data.card_list }}
+
+    {{# data.link }}
+        <div class='global__a--center'>
+            <a href="{{ data.url }}" class="c-show-season-section__btn {{ style.cls }}">{{ data.title }}</a>
+        </div>
+    {{/ data.link }}
+    </div>
+</section>

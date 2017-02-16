@@ -1,0 +1,56 @@
+@import '@cnbritain/merlin-www-common:wireframe';
+@import '@cnbritain/merlin-www-image:wireframe';
+@import '@cnbritain/merlin-www-buttons:wireframe';
+
+.c-show-season-section {
+    position: relative;
+}
+.c-show-season-section__wrapper {}
+.c-show-season-section__title {}
+.c-show-season-section__link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+.c-show-season-section__meta {}
+.c-show-season-section__meta-item {
+    display: inline-block;
+}
+
+.c-show-season-section__card-list {
+    margin: 0 -10px;
+}
+li.c-show-season-section__card-list-item {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 10px;
+    width: 50%;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        width: 25%;
+    }
+}
+
+.c-show-season-section__card {}
+.c-show-season-section__card__image {
+    position: relative;
+    padding-top: 150%;
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+}
+
+.c-show-season-section__card__label {}
+.c-show-season-section__card__title {}
+
+.c-show-season-section__btn__wrapper {}
+.c-show-season-section__btn {}
