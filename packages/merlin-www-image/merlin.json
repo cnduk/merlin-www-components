@@ -31,5 +31,7 @@
         "image-static": "templates/partials/image-static.html",
         "image-svg": "templates/partials/image-svg.html"
     },
-    "dependencies": []
+    "dependencies": [
+        "@cnbritain/merlin-www-assets"
+    ]
 }
