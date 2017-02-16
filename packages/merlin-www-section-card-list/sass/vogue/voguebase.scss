@@ -1,10 +1,9 @@
-@import "../wireframe/wireframe";
-
-@import "@cnbritain/merlin-www-common:vogue";
 @import "@cnbritain/merlin-www-topic-strip:vogue";
 @import "@cnbritain/merlin-www-buttons:vogue";
 @import "@cnbritain/merlin-www-card-list:vogue";
 @import "@cnbritain/merlin-www-card:vogue";
+
+@import "../wireframe/wireframe";
 
 .c-card-section {
     margin-top: $MOBILE_SLICE_MARGIN;

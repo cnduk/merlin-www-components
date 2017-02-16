@@ -10,15 +10,15 @@
     },
     "themes": {
         "wireframe": "sass/wireframe/wireframe.scss",
-        "vogue": "sass/vogue/vogue.scss",
-        "missvogue": "sass/missvogue/missvogue.scss",
-        "wired": "sass/wired/wired.scss",
-        "glamour": "sass/glamour/glamour.scss"
+        "vogue": "sass/vogue/vogue.scss"
     },
     "partials": {
         "section": "templates/section-card-list.html"
     },
     "dependencies": [
-        "@cnbritain/merlin-www-image"
+        "@cnbritain/merlin-www-image",
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-card-list",
+        "@cnbritain/merlin-www-topic-strip"
     ]
 }
