@@ -1,0 +1,42 @@
+<section class="c-magazine">
+    <div class='c-magazine__wrapper'>
+        <div class="c-magazine__title">Magazine</div>
+
+        <div class="c-magazine__covers">
+            <div class="c-magazine__covers__wrapper">
+            {{# data.magazine }}
+                {{# data.image }}
+                    <div class="c-magazine__cover c-magazine__cover--print">
+                        <div class="c-magazine__cover__image">
+                            {{> @cnbritain/merlin-www-image }}
+                        </div>
+                    </div>
+                    <div class="c-magazine__cover c-magazine__cover--tablet">
+                        <div class="c-magazine__cover__image">
+                            {{> @cnbritain/merlin-www-image }}
+                        </div>
+                    </div>
+                {{/ data.image }}
+            {{/ data.magazine }}
+            </div>
+        </div>
+        <div class="c-magazine__content">
+            <div class="c-magazine__content__wrapper">
+                <div class="c-magazine__content__title">Magazine</div>
+                {{# data.magazine }}
+                    <div class="c-magazine__content__date">{{ data.month_title }} {{ data.year }}</div>
+                {{/ data.magazine }}
+
+                {{# data.card_list }}
+                    {{> @cnbritain/merlin-www-card-list }}
+                {{/ data.card_list }}
+
+                {{# data.link }}
+                    <div class="global__a--center">
+                        <a href="{{ &data.url }}" class="global__button-reset c-magazine__btn {{ style.cls }}">{{ data.title }}</a>
+                    </div>
+                {{/ data.link }}
+            </div>
+        </div>
+    </div>
+</section>

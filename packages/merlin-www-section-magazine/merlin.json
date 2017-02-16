@@ -1,0 +1,28 @@
+{
+    "name": "@cnbritain/merlin-www-section-magazine",
+    "main": "section",
+    "currentTheme": null,
+    "data": {
+        "magazine-with-articles": "demo/data/magazine-with-articles.json",
+        "magazine-without-articles": "demo/data/magazine-without-articles.json"
+    },
+    "js": {
+        "demo": "demo/demo.js"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "wired": "sass/wired/wired.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "missvogue": "sass/missvogue/missvogue.scss"
+    },
+    "partials": {
+        "section": "templates/section.html"
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-buttons",
+        "@cnbritain/merlin-www-image",
+        "@cnbritain/merlin-www-card-list"
+    ]
+}

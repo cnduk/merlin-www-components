@@ -1,0 +1,71 @@
+{
+  "data": {
+    "card_list": {
+      "data": {
+        "items": [],
+        "length": 0
+      },
+      "state": {},
+      "style": {
+        "cls": "c-card-list--c-magazine-articles"
+      },
+      "type": "List"
+    },
+    "link": {
+      "data": {
+        "title": "View issue",
+        "url": "/magazine/March-2017/"
+      },
+      "state": {},
+      "style": {
+        "cls": ""
+      },
+      "type": "Link"
+    },
+    "magazine": {
+      "data": {
+        "editor": "Alexandra Shulman",
+        "image": {
+          "data": {
+            "alt_text": null,
+            "credit": null,
+            "description": "",
+            "image_url": "https://vg-images.condecdn.net/image/NdLzAaJnZM8/crop/405/1.31730769231",
+            "lazyload": true,
+            "look_number": null,
+            "orientation": "104:137",
+            "srcset": "https://vg-images.condecdn.net/image/NdLzAaJnZM8/crop/405/1.31730769231 405w, https://vg-images.condecdn.net/image/NdLzAaJnZM8/crop/810/1.31730769231 810w, https://vg-images.condecdn.net/image/NdLzAaJnZM8/crop/1020/1.31730769231 1020w, https://vg-images.condecdn.net/image/NdLzAaJnZM8/crop/1440/1.31730769231 1440w, https://vg-images.condecdn.net/image/NdLzAaJnZM8/crop/1620/1.31730769231 1620w",
+            "title": ""
+          },
+          "state": {
+            "is_image": true,
+            "is_linked": false,
+            "is_picture": false,
+            "is_static": false,
+            "is_svg": false
+          },
+          "style": {
+            "cls": "img-lazyload "
+          },
+          "type": "Image"
+        },
+        "issue_number": "",
+        "month": 3,
+        "month_title": "March",
+        "teaser": "Gigi Hadid wears Fendi. Make-up: Tom Pecheux. Fashion Editor: Lucinda Chambers. Photographer: Mario Testino.",
+        "title": "March 2017",
+        "year": 2017
+      },
+      "state": {},
+      "style": {
+        "cls": ""
+      },
+      "type": "Magazine"
+    }
+  },
+  "state": {},
+  "style": {
+    "cls": ""
+  },
+  "type": "SectionMagazine"
+}

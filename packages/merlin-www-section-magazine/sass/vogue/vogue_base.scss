@@ -1,0 +1,121 @@
+.c-magazine {
+    background-color: #f5f5f5;
+    margin: $MOBILE_SLICE_MARGIN auto;
+    @include tablet-size {
+        margin-bottom: $TABLET_SLICE_MARGIN;
+        margin-top: $TABLET_SLICE_MARGIN;
+    }
+    @include desktop-size {
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+        margin-top: $DESKTOP_SLICE_MARGIN;
+    }
+}
+.c-magazine__wrapper {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    padding: 40px 20px;
+    @include tablet-size {
+        padding: 80px 60px;
+    }
+    @include desktop-size {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
+}
+.c-magazine__link {}
+.c-magazine__title {
+    @include font('NOBEL', 11px, 'BOOK', 12px);
+    color: $COLOR_MAIN_HIGHLIGHT;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    @include tablet-size {
+        display: none;
+    }
+}
+.c-magazine__covers {
+    position: relative;
+    @include tablet-size {
+        display: table-cell;
+        width: 50%;
+        vertical-align: middle;
+    }
+}
+.c-magazine__covers__wrapper {
+    @include tablet-size {
+        padding-right: 70px;
+    }
+}
+.c-magazine__cover {
+    position: relative;
+}
+.c-magazine__cover--print {
+    img {
+        width: 60%;
+        margin-left: $MOBILE_SIDE_GUTTER;
+        @include tablet-size {
+            margin-left: 0;
+        }
+    }
+}
+.c-magazine__cover--tablet {
+    img {
+        background-color: #000;
+        border-radius: 7px;
+        padding: 15px 8px;
+        width: 40%;
+        position: absolute;
+        right: $MOBILE_SIDE_GUTTER;
+        bottom: 0;
+        @include desktop-size {
+            border-radius: 15px;
+            padding: 30px 20px;
+            width: 45%;
+        }
+    }
+}
+.c-magazine__cover__image {}
+.c-magazine__content {
+    @include tablet-size {
+        display: table-cell;
+        width: 50%;
+        vertical-align: middle;
+    }
+}
+.c-magazine__content__wrapper {}
+.c-magazine__content__date {
+    @include font('ITC CASLON', 29px, null, 32px);
+    margin: 15px 0;
+    text-align: center;
+    text-transform: capitalize;
+    @include tablet-size {
+        @include font-size(41px);
+        @include line-height(45px);
+        margin-bottom: 20px;
+        text-align: left;
+    }
+}
+.c-magazine__content__title {
+    color: $COLOR_MAIN_HIGHLIGHT;
+    @include font('NOBEL', 12px, 'BOOK', 12px);
+    display: none;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    @include tablet-size {
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+.c-magazine__content__subtitle {}
+.c-magazine__btn {
+    display: inline-block;
+    margin-top: 30px;
+    width: auto;
+
+    @include button-single();
+    @include button-single-light();
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
