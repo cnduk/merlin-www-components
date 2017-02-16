@@ -5,7 +5,7 @@ const chalk = require('chalk');
 
 const COMPONENTS_DIR = path.normalize('node_modules');
 const LOGGER = {
-    'enabled': true,
+    'enabled': false,
     'log': function(mode, ...args){
         if(!this.enabled) return;
         this[mode](...args);
