@@ -1,0 +1,64 @@
+@import '@cnbritain/merlin-www-common:glamour';
+@import '@cnbritain/merlin-www-section-card-list:glamour';
+
+@import "../wireframe/wireframe";
+
+.c-card-section--contributors {
+    background-color: $COLOUR_BG_SECONDARY;
+    position: relative;
+    z-index: 0;
+
+    .c-card-section__constrain {
+        padding: 30px 0px;
+    }
+
+    .c-card__image,
+    .c-card__image img {
+        border-radius: 50%;
+        overflow: hidden;
+        &::after {
+            border-radius: 50%;
+        }
+    }
+
+    @include tablet-size {
+        text-align: center;
+
+        .c-card__separator {
+            margin: 0 auto 15px;
+        }
+
+        .c-card__byline {
+            margin-bottom: 0;
+        }
+
+        .c-card__byline-prefix {
+
+        }
+    }
+
+    @include desktop-size {
+        .c-card-section__constrain {
+            padding: 60px 0px;
+        }
+
+        .c-card-section__title {
+            span {
+                background-color: $COLOUR_BG_SECONDARY;
+            }
+        }
+    }
+
+    @include min-screen($CARD_SWITCHER_WIDTH){
+        .c-card__obj__header {
+            margin: 0 auto;
+            padding-right: 0;
+            width: 70%;
+        }
+
+        .c-card-list {
+            margin: 0 auto;
+            max-width: 900px;
+        }
+    }
+}

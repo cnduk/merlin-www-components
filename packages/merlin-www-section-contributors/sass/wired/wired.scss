@@ -1,0 +1,29 @@
+@import '@cnbritain/merlin-www-common:wired';
+@import '@cnbritain/merlin-www-section-card-list:wired';
+
+@import "../wireframe/wireframe";
+
+.c-card-section--contributors {
+    @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ) {
+        text-align: center;
+    }
+
+    .c-card__separator {
+        @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ) {
+            margin: 0 auto 15px auto;
+        }
+    }
+
+    .c-card__byline {
+        @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ) {
+            margin-bottom: 40px;
+        }
+    }
+
+    .c-card__byline-prefix {
+        @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ) {
+            display: block;
+            margin-bottom: 7px;
+        }
+    }
+}

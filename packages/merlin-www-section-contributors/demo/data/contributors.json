@@ -1,0 +1,568 @@
+{
+  "data": {
+    "card_list": {
+      "data": {
+        "items": [{
+          "data": {
+            "item": {
+              "data": {
+                "byline": "Katie Berrington and Alastair Nicol",
+                "event_information": null,
+                "icon": {
+                  "data": {
+                    "alt_text": null,
+                    "credit": null,
+                    "description": null,
+                    "lazyload": true,
+                    "look_number": null,
+                    "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
+                    "title": null
+                  },
+                  "state": {
+                    "is_image": false,
+                    "is_linked": false,
+                    "is_picture": false,
+                    "is_static": false,
+                    "is_svg": true
+                  },
+                  "style": {
+                    "cls": "img-lazyload "
+                  },
+                  "type": "SVG"
+                },
+                "image_list": {
+                  "data": {
+                    "items": [{
+                      "data": {
+                        "item": {
+                          "data": {
+                            "alt_text": null,
+                            "credit": null,
+                            "description": null,
+                            "image_url": "http://localhost:3000/static/img/image_square_fallback.jpg",
+                            "lazyload": true,
+                            "look_number": null,
+                            "title": null
+                          },
+                          "state": {
+                            "is_image": false,
+                            "is_linked": false,
+                            "is_picture": false,
+                            "is_static": true,
+                            "is_svg": false
+                          },
+                          "style": {
+                            "cls": "img-lazyload "
+                          },
+                          "type": "StaticImage"
+                        }
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "ListItem"
+                    }],
+                    "length": 1
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "List"
+                },
+                "link": {
+                  "data": {
+                    "title": "Daily Style Directory - 12/12/2016",
+                    "url": "/gallery/daily-style-directory-12122016"
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "Link"
+                },
+                "meta_list": {
+                  "data": {
+                    "items": [{
+                      "data": {
+                        "item": {
+                          "data": {
+                            "icon": null,
+                            "link": {
+                              "data": {
+                                "title": "People & Parties",
+                                "url": "http://localhost:3000/topic/celebrity-photos/"
+                              },
+                              "state": {},
+                              "style": {
+                                "cls": ""
+                              },
+                              "type": "Link"
+                            },
+                            "meta_type": "tag",
+                            "title": "People & Parties"
+                          },
+                          "state": {},
+                          "style": {
+                            "cls": ""
+                          },
+                          "type": "Meta"
+                        }
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "ListItem"
+                    }, {
+                      "data": {
+                        "item": {
+                          "data": {
+                            "icon": {
+                              "data": {
+                                "alt_text": null,
+                                "credit": null,
+                                "description": null,
+                                "lazyload": true,
+                                "look_number": null,
+                                "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
+                                "title": null
+                              },
+                              "state": {
+                                "is_image": false,
+                                "is_linked": false,
+                                "is_picture": false,
+                                "is_static": false,
+                                "is_svg": true
+                              },
+                              "style": {
+                                "cls": "img-lazyload "
+                              },
+                              "type": "SVG"
+                            },
+                            "link": null,
+                            "meta_type": "gallery",
+                            "title": "31 items"
+                          },
+                          "state": {},
+                          "style": {
+                            "cls": ""
+                          },
+                          "type": "Meta"
+                        }
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "ListItem"
+                    }, {
+                      "data": {
+                        "item": {
+                          "data": {
+                            "icon": null,
+                            "link": null,
+                            "meta_type": "date",
+                            "title": "16 Dec 2016"
+                          },
+                          "state": {},
+                          "style": {
+                            "cls": ""
+                          },
+                          "type": "Meta"
+                        }
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "ListItem"
+                    }],
+                    "length": 3
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "List"
+                },
+                "review_information": null,
+                "sponsor": null,
+                "tag": {
+                  "data": {
+                    "event_information": null,
+                    "link": {
+                      "data": {
+                        "title": "People & Parties",
+                        "url": "http://localhost:3000/topic/celebrity-photos/"
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "Link"
+                    },
+                    "title": "People & Parties"
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "Tag"
+                },
+                "teaser": "See what the stars are wearing out and about this week",
+                "title": "Daily Style Directory - 12/12/2016"
+              },
+              "state": {},
+              "style": {
+                "cls": "c-card--contributor"
+              },
+              "type": "ContributorCard"
+            }
+          },
+          "state": {},
+          "style": {
+            "cls": ""
+          },
+          "type": "ListItem"
+        }, {
+          "data": {
+            "item": {
+              "data": {
+                "byline": "Alexa Chung",
+                "event_information": null,
+                "icon": null,
+                "image_list": {
+                  "data": {
+                    "items": [{
+                      "data": {
+                        "item": {
+                          "data": {
+                            "alt_text": null,
+                            "credit": null,
+                            "description": null,
+                            "image_url": "http://localhost:3000/static/img/image_square_fallback.jpg",
+                            "lazyload": true,
+                            "look_number": null,
+                            "title": null
+                          },
+                          "state": {
+                            "is_image": false,
+                            "is_linked": false,
+                            "is_picture": false,
+                            "is_static": true,
+                            "is_svg": false
+                          },
+                          "style": {
+                            "cls": "img-lazyload "
+                          },
+                          "type": "StaticImage"
+                        }
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "ListItem"
+                    }],
+                    "length": 1
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "List"
+                },
+                "link": {
+                  "data": {
+                    "title": "Kate Upton: Venus Rising ",
+                    "url": "/article/kate-upton-shoot-and-interview-june-2014-issue-alexa-chung"
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "Link"
+                },
+                "meta_list": {
+                  "data": {
+                    "items": [{
+                      "data": {
+                        "item": {
+                          "data": {
+                            "icon": null,
+                            "link": {
+                              "data": {
+                                "title": "Alexa Chung",
+                                "url": "http://localhost:3000/person/alexa-chung/"
+                              },
+                              "state": {},
+                              "style": {
+                                "cls": ""
+                              },
+                              "type": "Link"
+                            },
+                            "meta_type": "tag",
+                            "title": "Alexa Chung"
+                          },
+                          "state": {},
+                          "style": {
+                            "cls": ""
+                          },
+                          "type": "Meta"
+                        }
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "ListItem"
+                    }, {
+                      "data": {
+                        "item": {
+                          "data": {
+                            "icon": null,
+                            "link": null,
+                            "meta_type": "date",
+                            "title": "07 Apr 2015"
+                          },
+                          "state": {},
+                          "style": {
+                            "cls": ""
+                          },
+                          "type": "Meta"
+                        }
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "ListItem"
+                    }],
+                    "length": 2
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "List"
+                },
+                "review_information": null,
+                "sponsor": null,
+                "tag": {
+                  "data": {
+                    "event_information": null,
+                    "link": {
+                      "data": {
+                        "title": "Alexa Chung",
+                        "url": "http://localhost:3000/person/alexa-chung/"
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "Link"
+                    },
+                    "title": "Alexa Chung"
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "Tag"
+                },
+                "teaser": "The model and actress talked to Alexa Chung for the June 2014 issue",
+                "title": "Kate Upton: Venus Rising "
+              },
+              "state": {},
+              "style": {
+                "cls": "c-card--contributor"
+              },
+              "type": "ContributorCard"
+            }
+          },
+          "state": {},
+          "style": {
+            "cls": ""
+          },
+          "type": "ListItem"
+        }, {
+          "data": {
+            "item": {
+              "data": {
+                "byline": "Alexandra Shulman",
+                "event_information": null,
+                "icon": null,
+                "image_list": {
+                  "data": {
+                    "items": [{
+                      "data": {
+                        "item": {
+                          "data": {
+                            "alt_text": null,
+                            "credit": null,
+                            "description": null,
+                            "image_url": "http://localhost:3000/static/img/image_square_fallback.jpg",
+                            "lazyload": true,
+                            "look_number": null,
+                            "title": null
+                          },
+                          "state": {
+                            "is_image": false,
+                            "is_linked": false,
+                            "is_picture": false,
+                            "is_static": true,
+                            "is_svg": false
+                          },
+                          "style": {
+                            "cls": "img-lazyload "
+                          },
+                          "type": "StaticImage"
+                        }
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "ListItem"
+                    }],
+                    "length": 1
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "List"
+                },
+                "link": {
+                  "data": {
+                    "title": "Chanel's M\u00e9tiers D'Art: An Editor's Diary",
+                    "url": "/article/chanel-metiers-dart-2017-review"
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "Link"
+                },
+                "meta_list": {
+                  "data": {
+                    "items": [{
+                      "data": {
+                        "item": {
+                          "data": {
+                            "icon": null,
+                            "link": {
+                              "data": {
+                                "title": "Chanel",
+                                "url": "http://localhost:3000/brand/chanel/"
+                              },
+                              "state": {},
+                              "style": {
+                                "cls": ""
+                              },
+                              "type": "Link"
+                            },
+                            "meta_type": "tag",
+                            "title": "Chanel"
+                          },
+                          "state": {},
+                          "style": {
+                            "cls": ""
+                          },
+                          "type": "Meta"
+                        }
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "ListItem"
+                    }, {
+                      "data": {
+                        "item": {
+                          "data": {
+                            "icon": null,
+                            "link": null,
+                            "meta_type": "date",
+                            "title": "07 Dec 2016"
+                          },
+                          "state": {},
+                          "style": {
+                            "cls": ""
+                          },
+                          "type": "Meta"
+                        }
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "ListItem"
+                    }],
+                    "length": 2
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "List"
+                },
+                "review_information": null,
+                "sponsor": null,
+                "tag": {
+                  "data": {
+                    "event_information": null,
+                    "link": {
+                      "data": {
+                        "title": "Chanel",
+                        "url": "http://localhost:3000/brand/chanel/"
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "Link"
+                    },
+                    "title": "Chanel"
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "Tag"
+                },
+                "teaser": "",
+                "title": "Chanel's M\u00e9tiers D'Art: An Editor's Diary"
+              },
+              "state": {},
+              "style": {
+                "cls": "c-card--contributor"
+              },
+              "type": "ContributorCard"
+            }
+          },
+          "state": {},
+          "style": {
+            "cls": ""
+          },
+          "type": "ListItem"
+        }],
+        "length": 3
+      },
+      "state": {},
+      "style": {
+        "cls": "c-card-list--c-contributors"
+      },
+      "type": "List"
+    },
+    "link": null,
+    "title": "Contributors"
+  },
+  "state": {},
+  "style": {
+    "cls": "c-card-section--c-contributors"
+  },
+  "type": "SectionContributors"
+}
