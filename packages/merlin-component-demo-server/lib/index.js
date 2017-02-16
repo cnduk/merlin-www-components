@@ -97,13 +97,10 @@ class MerlinComponentDemoServer {
 
     _routes(){
         this._app.get('/', (req, res) => {
-
-            const datas = Object.keys(MASTER_COMPONENT.data);
-            const themes = Object.keys(MASTER_COMPONENT.themes);
-
             const view = {
                 "data": {
-                    "components": []
+                    "components": [],
+                    "title": "All themes"
                 }
             };
             MASTER_COMPONENT.data.forEach((_, dataKey) => {
@@ -133,6 +130,30 @@ class MerlinComponentDemoServer {
             const indexPage = mustache.render(this._partials.page, view);
 
             LOGGER.log('SERVER', 'Index page loaded');
+            res.send(indexPage);
+        });
+        this._app.get('/:theme', (req, res) => {
+            const theme = `${MASTER_COMPONENT.name}/${decodeURIComponent(req.params.theme)}`;
+            const view = {
+                "data": {
+                    "components": [],
+                    "title": `${req.params.theme} theme page`
+                }
+            };
+            MASTER_COMPONENT.data.forEach((_, dataKey) => {
+                view.data.components.push({
+                    "escaped_name": encodeURIComponent(MASTER_COMPONENT.main),
+                    "name": MASTER_COMPONENT.main,
+                    "escaped_theme": encodeURIComponent(theme),
+                    "theme": theme,
+                    "escaped_data": encodeURIComponent(dataKey),
+                    "data": dataKey
+                });
+            });
+
+            const indexPage = mustache.render(this._partials.page, view);
+
+            LOGGER.log('SERVER', 'Theme page loaded');
             res.send(indexPage);
         });
         this._app.get('/:data/:theme', (req, res) => {
