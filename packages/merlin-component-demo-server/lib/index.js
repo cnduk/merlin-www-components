@@ -62,6 +62,7 @@ class ComponentConfig {
         this.data = new Map();
         this.isMaster = false;
         this.js = new Map();
+        this.location = null;
         this.main = null;
         this.name = name;
         this.partials = new Map();
@@ -84,6 +85,11 @@ class MerlinComponentDemoServer {
 
         // Create the app
         const app = express();
+        // Check if assets were installed. If so, setup the assets folder
+        if(COMPONENTS.has('@cnbritain/merlin-www-assets')){
+            const assetComponent = COMPONENTS.get('@cnbritain/merlin-www-assets');
+            app.use('/assets', express.static(`${assetComponent.location}/static`));
+        }
         this._app = app;
         this._routes();
     }
@@ -103,6 +109,19 @@ class MerlinComponentDemoServer {
     }
 
     _routes(){
+        this._app.get('/static/*', (req, res) => {
+
+            if(!req.headers.referer) return res.send('broke');
+
+            const decodedReferer = decodeURIComponent(req.headers.referer);
+            const matches = decodedReferer.match(/(@cnbritain\/[-\w]+\/([-\w]+))$/);
+            if(!matches) return res.send('broke');
+
+            const THEME_KEY = matches[1];
+            if(!THEMES.hasOwnProperty(THEME_KEY)) return res.send('broke');
+
+            res.redirect(`/assets/${matches[2]}/${req.params[0]}`);
+        });
         this._app.get('/', (req, res) => {
             const view = {
                 "data": {
@@ -442,6 +461,7 @@ function resolveDependency(config, merlinDir, ignore={ sass: false, data: false,
                     process.exit(1);
                 }
                 dependencyConfig.main = `${config.name}/${config.main}`;
+                dependencyConfig.location = fs.realpathSync(merlinDir);
                 // Add the main partial under config.name
                 dependencyConfig.partials.set(
                     config.name,
