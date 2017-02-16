@@ -1,0 +1,45 @@
+@import '@cnbritain/merlin-www-common:wired';
+
+@import "../wireframe/wireframe";
+
+.c-topic-strip {}
+
+.c-topic-strip--bleed {
+    @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$MOBILE_SIDE_GUTTER;
+        margin-right: -$MOBILE_SIDE_GUTTER;
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
+
+        ul {
+            display: inline-block;
+            margin-left: -$MOBILE_SIDE_GUTTER;
+            margin-right: -$MOBILE_SIDE_GUTTER;
+            padding-left: $MOBILE_SIDE_GUTTER;
+            padding-right: $MOBILE_SIDE_GUTTER;
+        }
+    }
+}
+
+//li added due to specificity of .global__list-reset li setting margin to 0
+li.c-topic-strip__item {}
+li.c-topic-strip__item--title {
+    font-family: Brutal, serif;
+    @include font-size(12px);
+    @include line-height(12px);
+    font-weight: map-get($FONT_WEIGHTS, 'EXTRA BOLD');
+    text-transform: uppercase;
+}
+
+li.c-topic-strip__item--topic {
+    font-family: Exchange Web, serif;
+    margin-left: 10px;
+
+    @include font-size(12px);
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: 15px;
+
+        @include font-size(13px);
+    }
+}

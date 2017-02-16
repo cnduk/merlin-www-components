@@ -1,0 +1,97 @@
+{
+  "data": {
+    "title": "Topics",
+    "topic_list": {
+      "data": {
+        "items": [{
+          "data": {
+            "item": {
+              "data": {
+                "title": "Bafta Awards",
+                "url": "/event/bafta-awards/"
+              },
+              "state": {},
+              "style": {
+                "cls": ""
+              },
+              "type": "Link"
+            }
+          },
+          "state": {},
+          "style": {
+            "cls": ""
+          },
+          "type": "ListItem"
+        }, {
+          "data": {
+            "item": {
+              "data": {
+                "title": "This Week In Pictures",
+                "url": "/topic/this-week-in-pictures/"
+              },
+              "state": {},
+              "style": {
+                "cls": ""
+              },
+              "type": "Link"
+            }
+          },
+          "state": {},
+          "style": {
+            "cls": ""
+          },
+          "type": "ListItem"
+        }, {
+          "data": {
+            "item": {
+              "data": {
+                "title": "Gigi Hadid",
+                "url": "/person/gigi-hadid/"
+              },
+              "state": {},
+              "style": {
+                "cls": ""
+              },
+              "type": "Link"
+            }
+          },
+          "state": {},
+          "style": {
+            "cls": ""
+          },
+          "type": "ListItem"
+        }, {
+          "data": {
+            "item": {
+              "data": {
+                "title": "New York Fashion Week",
+                "url": "/event/new-york-fashion-week/"
+              },
+              "state": {},
+              "style": {
+                "cls": ""
+              },
+              "type": "Link"
+            }
+          },
+          "state": {},
+          "style": {
+            "cls": ""
+          },
+          "type": "ListItem"
+        }],
+        "length": 4
+      },
+      "state": {},
+      "style": {
+        "cls": ""
+      },
+      "type": "List"
+    }
+  },
+  "state": {},
+  "style": {
+    "cls": "c-topic-strip--bleed c-topic-strip--c-card-section"
+  },
+  "type": "TopicStrip"
+}

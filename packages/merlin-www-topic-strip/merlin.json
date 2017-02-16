@@ -3,15 +3,13 @@
     "main": "topic",
     "currentTheme": null,
     "data": {
-        "topic": "demo/data/topic.json"
+        "topic": "demo/data/topic.json",
+        "topic-with-title": "demo/data/topic-with-title.json"
     },
-    "js": {
-        "demo": "demo/demo.js"
-    },
+    "js": {},
     "themes": {
         "wireframe": "sass/wireframe/wireframe.scss",
         "vogue": "sass/vogue/vogue.scss",
-        "missvogue": "sass/missvogue/missvogue.scss",
         "wired": "sass/wired/wired.scss",
         "glamour": "sass/glamour/glamour.scss"
     },
@@ -19,6 +17,7 @@
         "topic": "templates/topic-strip.html"
     },
     "dependencies": [
-        "@cnbritain/merlin-www-image"
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-buttons"
     ]
 }

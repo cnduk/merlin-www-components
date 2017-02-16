@@ -1,28 +1,19 @@
-{%- macro topic(model) -%}
-    <a href="{{ model['data']['url'] }}" class="c-topic-strip__btn {{ model['style']['cls'] }}">{{ model['data']['title'] }}</a>
-{%- endmacro -%}
+<aside class="c-topic-strip {{ style.cls }}">
 
-{%- macro topic_strip_list_item(model) -%}
-    <li class="c-topic-strip__item {{ model['style']['cls'] }}">
-        {{ topic(model['data']['item']) }}
-    </li>
-{%- endmacro -%}
+    {{# data.title }}
+        <div class="c-topic-strip__title">{{ data.title }}</div>
+    {{/ data.title }}
 
-{%- macro topic_strip_list(model) -%}
-    <ul class="global__list-reset c-topic-strip__list {{ model['style']['cls'] }}">
-    {%- for item in model['data']['items'] -%}
-        {{ topic_strip_list_item(item) }}
-    {%- endfor -%}
-    </ul>
-{%- endmacro -%}
+    {{# data.topic_list }}
+        <ul class="global__list-reset c-topic-strip__list {{ style.cls }}">
+            {{# data.items }}
+                <li class="c-topic-strip__item {{ style.cls }}">
+                    {{# data.item }}
+                        <a href="{{ &data.url }}" class="c-topic-strip__btn {{ style.cls }}">{{ data.title }}</a>
+                    {{/ data.item }}
+                </li>
+            {{/ data.items }}
+        </ul>
+    {{/ data.topic_list }}
 
-{%- macro topic_strip(model) -%}
-    <aside class="c-topic-strip {{ model['style']['cls'] }}">
-        {%- if model['data']['title'] -%}
-            <div class="c-topic-strip__title">{{ model['data']['title'] }}</div>
-        {%- endif -%}
-        {%- if model['data']['topic_list'] -%}
-            {{ topic_strip_list(model['data']['topic_list']) }}
-        {%- endif -%}
-    </aside>
-{%- endmacro -%}
+</aside>
