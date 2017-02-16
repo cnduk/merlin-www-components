@@ -12,12 +12,16 @@
     },
     "themes": {
         "wireframe": "sass/wireframe/wireframe.scss",
-        "vogue": "sass/vogue/vogue.scss"
+        "vogue": "sass/vogue/vogue.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
+        "wired": "sass/wired/wired.scss",
+        "glamour": "sass/glamour/glamour.scss"
     },
     "partials": {
         "card": "templates/card.html"
     },
     "dependencies": [
-        "@cnbritain/merlin-www-image"
+        "@cnbritain/merlin-www-image",
+        "@cnbritain/merlin-www-common"
     ]
 }

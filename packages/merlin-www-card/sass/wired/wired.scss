@@ -1,0 +1,464 @@
+@import "@cnbritain/merlin-www-common:wired";
+
+@import "../wireframe/wireframe";
+
+$FONT_GROTESK: map-get($FONT_GROUPS, 'NEW GROTESK SQUARE');
+$FONT_BRUTAL: map-get($FONT_GROUPS, 'BRUTAL');
+$FONT_EXCHANGE: map-get($FONT_GROUPS, 'EXCHANGE WEB');
+
+.c-card {
+    &:hover,
+    &:focus {
+        .c-card__title span {
+            @include fancy-underlines(#fff, #000, #000, transparent);
+        }
+    }
+}
+
+.c-card__image {
+    background: #f5f5f5;
+    margin-bottom: 15px;
+}
+
+.c-card__image__icon {
+    background-color: #000;
+    bottom: 0;
+    height: 40px;
+    left: 50%;
+    line-height: 40px;
+    margin: -20px 0 0 -20px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 40px;
+
+    svg {
+        display: block;
+        height: 100%;
+        margin: 0 auto;
+        vertical-align: middle;
+        width: 20px;
+    }
+
+    path {
+        fill: #fff;
+    }
+
+}
+
+.c-card__title {
+    font-family: map-get($FONT_GROTESK, 'FAMILY');
+    font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
+    letter-spacing: map-get($FONT_GROTESK, 'LETTER SPACING');
+    line-height: map-get($FONT_GROTESK, 'LINE HEIGHT');
+}
+
+.c-card__teaser {
+    font-family: map-get($FONT_BRUTAL, 'FAMILY');
+    @include font-size(15px);
+    font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
+    line-height: map-get($FONT_BRUTAL, 'LINE HEIGHT');
+    margin: 0 0 15px 0;
+}
+
+.c-card__separator {
+    border: none;
+    border-bottom: 1px solid #000;
+    text-align: left;
+    width: 20px;
+}
+
+.c-card__sponsor {
+    @include font-size(12px);
+    margin: 15px 0 3px 0;
+}
+.c-card__sponsor-label {
+    font-family: map-get($FONT_EXCHANGE, 'FAMILY');
+    font-style: italic;
+}
+.c-card__sponsor-title {
+    font-family: map-get($FONT_BRUTAL, 'FAMILY');
+    font-weight: map-get($FONT_WEIGHTS, 'BOLD');
+    text-transform: uppercase;
+}
+
+.c-card__rating {
+    font-family: map-get($FONT_BRUTAL, 'FAMILY');
+    @include font-size(12px);
+    font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
+    line-height: map-get($FONT_BRUTAL, 'LINE HEIGHT');
+    margin-bottom: 8px;
+    margin-top: 8px;
+
+    li {
+        display: inline-block;
+        margin-right: 3px;
+        vertical-align: middle;
+
+        //c-card__rating-label
+        &:last-child {
+            @include font('BRUTAL', 12px, 400, 10px);
+            margin-left: 7px;
+        }
+    }
+}
+
+.c-card__rating-mark {
+    background-color: #BFBFBF;
+    height: 10px;
+    width: 10px;
+}
+.c-card__rating-mark--fill {
+    background-color: #333;
+}
+
+.c-card__byline-prefix {
+    font-family: map-get($FONT_EXCHANGE, 'FAMILY');
+    font-style: italic;
+    line-height: map-get($FONT_EXCHANGE, 'LINE HEIGHT');
+}
+.c-card__byline-name {
+    font-family: map-get($FONT_BRUTAL, 'FAMILY');
+    line-height: map-get($FONT_BRUTAL, 'LINE HEIGHT');
+    text-transform: uppercase;
+}
+
+.c-card__meta {
+    font-family: map-get($FONT_EXCHANGE, 'FAMILY');
+    line-height: map-get($FONT_EXCHANGE, 'LINE HEIGHT');
+}
+
+// Need to be specific to overwrite global__list-reset
+li.c-card__meta-item {
+    &:not(:last-child) {
+        padding-right: 10px;
+    }
+
+    & + li.c-card__meta-item {
+        border-left: 1px solid rgba(0,0,0,0.2);
+        padding-left: 10px;
+    }
+}
+
+.c-card__meta-item--date {}
+
+.c-card__meta-item--gallery {
+    svg {
+        height: 10px;
+        margin-right: 3px;
+        vertical-align: middle;
+        width: 10px;
+    }
+    path {
+        fill: #000;
+    }
+}
+
+.c-card__meta-item--video {
+    svg {
+        height: 9px;
+        margin-right: 3px;
+        width: 9px;
+    }
+    path {
+        fill: #000;
+    }
+}
+
+.c-card__meta-item--live {
+    span {
+        @include font-size(12px);
+        padding-right: 2px;
+        vertical-align: middle;
+    }
+}
+
+.c-card__more {
+    font-family: map-get($FONT_BRUTAL, 'FAMILY');
+    @include font-size(12px);
+    font-weight: map-get($FONT_WEIGHTS, 'BOLD');
+    letter-spacing: map-get($FONT_BRUTAL, 'LETTER SPACING');
+    line-height: map-get($FONT_BRUTAL, 'LINE HEIGHT');
+    margin: 15px 0 0 0;
+}
+
+
+
+
+@mixin placeholder_portrait($border: true) {
+    @if $border {
+        border-top: 1px solid #000;
+        padding-top: 20px;
+    }
+
+    .c-card__image {
+        margin-bottom: 15px;
+    }
+
+    .c-card__title {
+        @include font-size(33px);
+        margin-bottom: 3px;
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            @include font-size(30px);
+            margin-bottom: 5px;
+        }
+        margin-top: 0;
+    }
+
+    .c-card__separator {
+        margin: 10px 0;
+    }
+    .c-card__separator--sponsor {
+        display: none;
+    }
+
+    .c-card__byline {
+        letter-spacing: 0.020em;
+        margin-bottom: 3px;
+    }
+
+    .c-card__meta {}
+
+    // Need to be specific to overwrite global__list-reset
+    li.c-card__meta-item {
+        @include font-size(11px);
+        letter-spacing: 0.020em;
+    }
+
+}
+
+
+@mixin placeholder_landscape($border: true) {
+    @if $border {
+        border-top: 1px solid #000;
+        padding-top: 20px;
+    }
+
+    .c-card__obj__header {
+        vertical-align: top;
+    }
+    .c-card__obj__body {
+        padding-left: 10px;
+        vertical-align: top;
+    }
+
+    .c-card__image {
+        margin-bottom: 0;
+    }
+
+    .c-card__title {
+        @include font-size(25px);
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+
+    .c-card__separator {
+        margin: 10px 0;
+        width: 15px;
+    }
+
+    .c-card__byline {
+        @include font-size(11px);
+        margin-bottom: 3px;
+    }
+
+    .c-card__meta {
+        margin-bottom: 3px;
+    }
+
+    // Need to be specific to overwrite global__list-reset
+    li.c-card__meta-item {
+        @include font-size(11px);
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+
+.c-card--portrait {
+    @include placeholder_portrait;
+}
+
+.c-card--landscape {
+    @include placeholder_landscape;
+}
+
+.c-card--switcher {
+
+    .c-card__obj__header {
+        max-width: 120px;
+        vertical-align: top;
+    }
+
+    .c-card__obj__body {
+        padding-left: 10px;
+        vertical-align: top;
+    }
+
+    .c-card__image {
+        padding-top: 100%;
+    }
+
+    @include placeholder_landscape;
+
+    @include min-screen( $CARD_SWITCHER_WIDTH ){
+        .c-card__obj__header {
+            float: none;
+            max-width: none;
+            width: 100%;
+        }
+        .c-card__obj__body {
+            padding-left: 0;
+        }
+        .c-card__image {
+            padding-top: 66.67%;
+        }
+
+        @include placeholder_portrait;
+    }
+
+}
+
+.c-card--magazine {
+    .c-card__title {
+        @include font('BRUTAL', 15px, 700, 22px);
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    //Overwrite fancy underline
+    &:hover .c-card__title span {
+        text-shadow: none;
+        background-image: none;
+        border-bottom: 1px solid #000;
+    }
+
+    .c-card__title span {
+        border-bottom: 1px solid transparent;
+        padding-bottom: 2px;
+        @include vendor-prefix(transition, border 200ms ease-in-out);
+    }
+
+    .c-card__separator {
+        display: none;
+    }
+}
+
+.c-card--inline {
+    @include placeholder_landscape(false);
+    margin: 40px 0;
+
+    .c-card__more {
+        margin: 12px 0 20px 0;
+    }
+
+    .c-card__image {
+        padding-top: 100%;
+    }
+
+    @include min-screen( $CARD_SWITCHER_WIDTH ){
+        margin: 5px 43px 33px 0;
+
+        .c-card__obj__header {
+            float: none;
+            width: 100%;
+        }
+        .c-card__obj__body {
+            padding-left: 0;
+        }
+
+        @include placeholder_portrait(false);
+
+        .c-card__image {
+            padding-top: 66.67%;
+        }
+
+        .c-card__title {
+            @include font-size(24px);
+        }
+
+        .c-card__separator {
+            margin: 9px 0 12px 0;
+        }
+
+    }
+}
+
+.c-card--thumbnail {
+    @include placeholder_portrait;
+
+    .c-card__image {
+        background-color: #000;
+    }
+}
+
+.c-card__image__remaining {
+    .c-card__image__remaining__text {
+        .c-card__image__remaining__value {
+            font-family: map-get($FONT_BRUTAL, 'FAMILY');
+            font-weight: map-get($FONT_WEIGHTS, 'BOLD');
+            @include font-size(17px);
+            @include line-height(23px);
+
+            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+                @include font-size(21px);
+                @include line-height(28px);
+            }
+        }
+    }
+}
+
+.c-card--dark {
+    &.c-card--inline {
+        background-color: transparent;
+    }
+
+    &.c-card--landscape,
+    &.c-card--portrait,
+    &.c-card--switcher,
+    &.c-card--inline,
+    &.c-card--thumbnail {
+        border-top-color: #fff;
+
+        &:hover,
+        &:focus {
+            .c-card__title span {
+                @include fancy-underlines(#000, #fff, #fff, transparent);
+            }
+        }
+
+        .c-card__title,
+        .c-card__meta,
+        .c-card__byline,
+        .c-card__sponsor {
+            color: #fff;
+        }
+
+        .c-card__separator {
+            border-bottom-color: #fff;
+        }
+
+        // Need to be specific to overwrite global__list-reset
+        li.c-card__meta-item {
+            & + li.c-card__meta-item {
+                border-left: 1px solid rgba(255, 255, 255, 0.4);
+            }
+        }
+
+        .c-card__meta-item--gallery {
+            path {
+                fill: #fff;
+            }
+        }
+
+        .c-card__meta-item--video {
+            path {
+                fill: #fff;
+            }
+        }
+
+    }
+
+}
