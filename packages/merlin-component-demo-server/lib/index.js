@@ -20,7 +20,14 @@ const DATA = {};
 
 
 const LOGGER = {
-    'enabled': false,
+    _enabled: false,
+    get enabled(){
+        return this._enabled;
+    },
+    set enabled(value){
+        this._enabled = value;
+        sassImporter.LOGGER.enabled = value;
+    },
     'log': function(mode, ...args){
         if(!this.enabled) return;
         this[mode](...args);
