@@ -1,0 +1,26 @@
+##Icons
+
+- arrowdown.svg - Gallery menu
+- arrowleft.svg - Top stories
+- arrowright.svg - Top stories
+- arrowup.svg - Gallery menu
+- close.svg - Main navigation
+- expand.svg - Gallery thumbnails
+- gallery.svg - Cards, embed gallery
+- grid.svg - Gallery nav
+- home.svg - Gallery nav
+- list.svg - Gallery nav
+- play.svg - Cards, podcasts
+- search.svg - Search nav
+- share-email.svg - Share button
+- share-facebook.svg - Share button
+- share-googleplus.svg - Share button
+- share-instagram.svg - Share button
+- share-linkedin.svg - Share button
+- share-menu.svg - Main navigation
+- share-pinterest.svg - Share button
+- share-twitter.svg - Share button
+- share-whatsapp.svg - Share button
+- share-youtube.svg - Share button
+- video.svg - Cards, video
+- zoom.svg - Gallery images
