@@ -1,0 +1,128 @@
+@import "@cnbritain/merlin-www-common:glamour";
+@import "@cnbritain/merlin-www-image:glamour";
+
+@import "../wireframe/wireframe";
+
+$SUPERFEATURE_MEDIUM_VIEW: 800px;
+$SUPERFEATURE_LARGE_VIEW: 1024px;
+
+.c-superfeature {
+    margin-top: $MOBILE_SLICE_MARGIN;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $TABLET_SLICE_MARGIN;
+        margin-bottom: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $DESKTOP_SLICE_MARGIN;
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+    }
+
+    text-align: left;
+}
+
+.c-superfeature__image {
+    img {
+        width: 100%;
+    }
+}
+
+.c-superfeature__byline {
+    @include byline;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.c-superfeature__byline-name {
+    @include byline-name;
+}
+
+.c-superfeature__byline-prefix {
+    @include byline-prefix;
+}
+
+.c-superfeature__byline--sponsorship {
+    .c-superfeature__byline-prefix {
+        font-style: italic;
+    }
+}
+
+.c-superfeature__content {
+    background: $COLOUR_SECTION_SUPERFEATURE;
+    color: $COLOUR_MAIN_DARK;
+    padding: 30px 20px;
+    text-align: center;
+
+    @include min-screen($SUPERFEATURE_MEDIUM_VIEW) {
+        padding: 30px 80px 40px;
+        text-align: left;
+    }
+
+    @include min-screen($SUPERFEATURE_LARGE_VIEW) {
+        background: $COLOUR_SECTION_SUPERFEATURE;
+        box-sizing: border-box;
+        color: $COLOUR_MAIN_DARK;
+        bottom: 0px;
+        padding: 60px;
+        position: absolute;
+        right: 0px;
+        text-align: left;
+        width: 50%;
+    }
+
+}
+
+.c-superfeature__teaser {
+    @include font('GRAPHIK', 15px, 'NORMAL', 20px);
+    margin-bottom: 15px;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font('GRAPHIK', 17px, 'LIGHT', 32px);
+        margin-bottom: 15px;
+        margin-top: 8px;
+    }
+}
+
+.c-superfeature__meta {
+    @include meta-default;
+    line-height: 18px;
+}
+
+li.c-superfeature__meta-item {
+    @include meta-item-dark;
+
+    margin-bottom: 0;
+}
+
+li.c-superfeature__meta-item + li.c-superfeature__meta-item {
+    @include meta-item-dark-sibling;
+}
+
+.c-superfeature__meta-item--tag {
+    @include meta-item-tag;
+
+    color: $COLOUR_MAIN_DARK;
+}
+
+.c-superfeature__separator {
+    display: none;
+}
+
+.c-superfeature__title {
+    @include title-feature;
+
+    margin: 0 0 10px;
+
+    @include min-screen($SUPERFEATURE_MEDIUM_VIEW) {
+        @include title-feature-desktop;
+
+        margin-bottom: 20px;
+    }
+
+    @include min-screen($SUPERFEATURE_LARGE_VIEW) {
+        @include title-feature-desktop;
+        margin-bottom: 8px;
+    }
+}
