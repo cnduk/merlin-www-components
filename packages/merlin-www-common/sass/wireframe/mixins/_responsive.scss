@@ -44,3 +44,75 @@
         }
     }
 }
+
+@mixin desktop-size {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @content;
+    }
+}
+
+@mixin tablet-size {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @content;
+    }
+}
+
+@mixin common-medium-size(){
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @content
+    }
+}
+
+@mixin common-large-size(){
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @content
+    }
+}
+
+@mixin article-medium-size(){
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @content
+    }
+}
+
+@mixin article-large-size(){
+    @include min-screen($ARTICLE_TOTAL){
+        @content
+    }
+}
+
+@mixin card-portrait-to-landscape-size(){
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @content
+    }
+}
+
+@mixin one-column-size(){
+    @include max-screen($CARD_LIST_2_COLUMN_BREAKPOINT - 1){
+        @content
+    }
+}
+
+@mixin two-column-size(){
+    @include min-screen($CARD_LIST_2_COLUMN_BREAKPOINT){
+        @content
+    }
+}
+
+@mixin three-column-size(){
+    @include min-screen($CARD_LIST_3_COLUMN_BREAKPOINT){
+        @content
+    }
+}
+
+@mixin four-column-size(){
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT){
+        @content
+    }
+}
+
+@mixin five-column-size(){
+    @include min-screen($CARD_LIST_5_COLUMN_BREAKPOINT){
+        @content
+    }
+}
