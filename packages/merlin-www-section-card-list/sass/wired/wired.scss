@@ -1,0 +1,64 @@
+@import "@cnbritain/merlin-www-topic-strip:wired";
+@import "@cnbritain/merlin-www-buttons:wired";
+@import "@cnbritain/merlin-www-card-list:wired";
+@import "@cnbritain/merlin-www-card:wired";
+
+@import "../wireframe/wireframe";
+
+$_FONT_BRUTAL: map-get($FONT_GROUPS, 'BRUTAL');
+
+.c-card-section {
+    margin-top: $MOBILE_SLICE_MARGIN;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $TABLET_SLICE_MARGIN;
+        margin-bottom: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $DESKTOP_SLICE_MARGIN;
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+    }
+}
+
+.c-card-section--dark {
+    color: #fff;
+}
+
+.c-card-section--right-sidebar {
+    @include min-screen($CARD_LIST_3_COLUMN_BREAKPOINT){
+        .c-card-list {
+            margin-right: 310px;
+            position: relative;
+        }
+    }
+}
+
+.c-card-section__title {
+    font-family: map-get($_FONT_BRUTAL, 'FAMILY');
+    line-height: map-get($_FONT_BRUTAL, 'LINE HEIGHT');
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.c-card-section__title--list {
+    @include font-size(15px);
+    @include line-height(15px);
+}
+
+.c-card-section__topics {
+    padding-bottom: 20px;
+    padding-top: 10px;
+    text-align: left;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+        padding-bottom: 0;
+        padding-top: 0;
+        position: absolute;
+        right: 0;
+        text-align: right;
+        top: -23px;
+        width: auto;
+    }
+}

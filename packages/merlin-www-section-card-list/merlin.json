@@ -10,7 +10,10 @@
     },
     "themes": {
         "wireframe": "sass/wireframe/wireframe.scss",
-        "vogue": "sass/vogue/vogue.scss"
+        "vogue": "sass/vogue/vogue.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
+        "wired": "sass/wired/wired.scss",
+        "glamour": "sass/glamour/glamour.scss"
     },
     "partials": {
         "section": "templates/section-card-list.html"
@@ -19,6 +22,8 @@
         "@cnbritain/merlin-www-image",
         "@cnbritain/merlin-www-common",
         "@cnbritain/merlin-www-card-list",
-        "@cnbritain/merlin-www-topic-strip"
+        "@cnbritain/merlin-www-card",
+        "@cnbritain/merlin-www-topic-strip",
+        "@cnbritain/merlin-www-buttons"
     ]
 }
