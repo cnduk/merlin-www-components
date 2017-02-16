@@ -1,54 +1,39 @@
 {
   "data": {
-    "byline": "Vogue",
-    "icon": null,
-    "image_list": {
+    "byline": "Katie Berrington and Sam Rogers",
+    "image": {
       "data": {
-        "items": [{
-          "data": {
-            "item": {
-              "data": {
-                "alt_text": null,
-                "credit": null,
-                "description": "",
-                "image_url": "https://vg-images.condecdn.net/image/xzWkzDBr6QM/crop/405",
-                "lazyload": true,
-                "look_number": null,
-                "orientation": "landscape",
-                "srcset": "https://vg-images.condecdn.net/image/xzWkzDBr6QM/crop/405 405w, https://vg-images.condecdn.net/image/xzWkzDBr6QM/crop/810 810w",
-                "title": ""
-              },
-              "state": {
-                "is_image": true,
-                "is_linked": false,
-                "is_picture": false,
-                "is_static": false,
-                "is_svg": false
-              },
-              "style": {
-                "cls": "img-lazyload "
-              },
-              "type": "Image"
-            }
-          },
-          "state": {},
-          "style": {
-            "cls": "c-feature__image--landscape"
-          },
-          "type": "ListItem"
+        "alt_text": null,
+        "credit": null,
+        "description": "",
+        "image_url": "http://vg.staging.www.condenet.co.uk/image/wb1WgznWwr8/crop/405",
+        "lazyload": true,
+        "look_number": null,
+        "sources": [{
+          "media": "(min-width: 800px)",
+          "srcset": "http://vg.staging.www.condenet.co.uk/image/wb1WgznWwr8/crop/405/0.5625 405w, http://vg.staging.www.condenet.co.uk/image/wb1WgznWwr8/crop/810/0.5625 810w, http://vg.staging.www.condenet.co.uk/image/wb1WgznWwr8/crop/1020/0.5625 1020w, http://vg.staging.www.condenet.co.uk/image/wb1WgznWwr8/crop/1440/0.5625 1440w, http://vg.staging.www.condenet.co.uk/image/wb1WgznWwr8/crop/1620/0.5625 1620w"
+        }, {
+          "media": "(min-width: 0px)",
+          "srcset": "http://vg.staging.www.condenet.co.uk/image/wb1WgznWwr8/crop/405 405w, http://vg.staging.www.condenet.co.uk/image/wb1WgznWwr8/crop/810 810w, http://vg.staging.www.condenet.co.uk/image/wb1WgznWwr8/crop/1020 1020w, http://vg.staging.www.condenet.co.uk/image/wb1WgznWwr8/crop/1440 1440w, http://vg.staging.www.condenet.co.uk/image/wb1WgznWwr8/crop/1620 1620w"
         }],
-        "length": 1
+        "title": ""
       },
-      "state": {},
+      "state": {
+        "is_image": false,
+        "is_linked": false,
+        "is_picture": true,
+        "is_static": false,
+        "is_svg": false
+      },
       "style": {
-        "cls": ""
+        "cls": "img-lazyload "
       },
-      "type": "List"
+      "type": "Picture"
     },
     "link": {
       "data": {
-        "title": "February Vogue: Welcome Back, Kitten Heels",
-        "url": "http://localhost:3000/article/kitten-heels-are-back-in-fashion-vogue"
+        "title": "Golden Globes 2017",
+        "url": "http://vg.staging.www.condenet.co.uk/gallery/golden-globe-awards-2017"
       },
       "state": {},
       "style": {
@@ -65,8 +50,8 @@
                 "icon": null,
                 "link": {
                   "data": {
-                    "title": "Shoes",
-                    "url": "http://localhost:3000/topic/shoes/"
+                    "title": "Golden Globes",
+                    "url": "http://vg.staging.www.condenet.co.uk/event/golden-globes/"
                   },
                   "state": {},
                   "style": {
@@ -75,7 +60,7 @@
                   "type": "Link"
                 },
                 "meta_type": "tag",
-                "title": "Shoes"
+                "title": "Golden Globes"
               },
               "state": {},
               "style": {
@@ -96,7 +81,7 @@
                 "icon": null,
                 "link": null,
                 "meta_type": "date",
-                "title": "05 Jan 2017"
+                "title": "09 Jan 2017"
               },
               "state": {},
               "style": {
@@ -121,11 +106,11 @@
     },
     "profiles": [{
       "data": {
-        "bio": "",
+        "bio": "Katie is the acting news editor of Vogue.co.uk",
         "link": {
           "data": {
-            "title": "Vogue",
-            "url": "http://localhost:3000/profile/vogue/"
+            "title": "Katie Berrington",
+            "url": "http://vg.staging.www.condenet.co.uk/profile/katie-berrington/"
           },
           "state": {},
           "style": {
@@ -133,8 +118,30 @@
           },
           "type": "Link"
         },
-        "name": "Vogue",
-        "teaser": ""
+        "name": "Katie Berrington",
+        "teaser": "Katie is the acting news editor of Vogue.co.uk"
+      },
+      "state": {},
+      "style": {
+        "cls": ""
+      },
+      "type": "Profile"
+    }, {
+      "data": {
+        "bio": "Sam is acting editor of Vogue.co.uk",
+        "link": {
+          "data": {
+            "title": "Sam Rogers",
+            "url": "http://vg.staging.www.condenet.co.uk/profile/sam-rogers/"
+          },
+          "state": {},
+          "style": {
+            "cls": ""
+          },
+          "type": "Link"
+        },
+        "name": "Sam Rogers",
+        "teaser": "Sam is acting editor of Vogue.co.uk"
       },
       "state": {},
       "style": {
@@ -148,8 +155,8 @@
         "event_information": null,
         "link": {
           "data": {
-            "title": "Shoes",
-            "url": "http://localhost:3000/topic/shoes/"
+            "title": "Golden Globes",
+            "url": "http://vg.staging.www.condenet.co.uk/event/golden-globes/"
           },
           "state": {},
           "style": {
@@ -157,7 +164,7 @@
           },
           "type": "Link"
         },
-        "title": "Shoes"
+        "title": "Golden Globes"
       },
       "state": {},
       "style": {
@@ -165,12 +172,12 @@
       },
       "type": "Tag"
     },
-    "teaser": "",
-    "title": "February Vogue: Welcome Back, Kitten Heels"
+    "teaser": "Catch up with all the red-carpet action from the Golden Globes 2017",
+    "title": "Golden Globes 2017"
   },
   "state": {},
   "style": {
-    "cls": "c-feature--left"
+    "cls": ""
   },
-  "type": "SectionFeature"
+  "type": "SectionSuperfeature"
 }

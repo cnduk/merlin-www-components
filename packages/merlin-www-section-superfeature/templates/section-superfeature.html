@@ -1,69 +1,48 @@
-{%- from "macros/beta/wc_image.html" import image -%}
+<section class="c-superfeature {{ style.cls }}">
+	{{# data.link }}
+		<a href="{{ &data.url }}" class="c-superfeature__link c-superfeature__link--article style.cls }}">{{ data.title }}</a>
+	{{/ data.link }}
 
-{%- macro section_superfeature_meta(model) -%}
-	<span class="{{ model['style']['cls'] }}">{{ model['data']['title'] }}</span>
-{%- endmacro -%}
-
-{%- macro section_superfeature_meta_list_item(model) -%}
-	<li class="c-superfeature__meta-item {{- model['style']['cls'] }} c-superfeature__meta-item--{{ model['data']['item']['data']['meta_type'] -}}">{{ section_superfeature_meta(model['data']['item'] )}}</li>
-{%- endmacro -%}
-
-{%- macro section_superfeature_meta_list(model) -%}
-	<ul class="global__list-reset c-superfeature__meta {{ model['style']['cls'] }}">
-	{%- for item in model['data']['items'] -%}
-	    {{ section_superfeature_meta_list_item(item) }}
-	{%- endfor -%}
-	</ul>
-{%- endmacro -%}
-
-{%- macro section_superfeature_sponsor(model) -%}
-	<p class="c-superfeature__byline c-superfeature__byline--sponsorship {{ model['style']['cls'] }}">
-		<span class="c-superfeature__byline-prefix">In partnership with </span>
-		<span class="c-superfeature__byline-name">{{ model['data']['title'] }}</span>
-	</p>
-{%- endmacro -%}
-
-{%- macro section_superfeature_image(model) -%}
-	<div class="c-superfeature__image {{ model['style']['cls'] }}">
-		{{ image(model) }}
-	</div>
-{%- endmacro -%}
-
-{%- macro section_superfeature_link(model) -%}
-	<a href="{{ model['data']['url'] }}" class="c-superfeature__link c-superfeature__link--article {{ model['style']['cls'] }}">{{ model['data']['title'] }}</a>
-{%- endmacro -%}
-
-{%- macro section_superfeature(model) -%}
-	<section class="c-superfeature {{ model['style']['cls'] }}">
-		{%- if model['data']['link'] -%}
-			{{ section_superfeature_link(model['data']['link']) }}
-		{%- endif -%}
-
-		{%- if model['data']['image'] -%}
-			{{ section_superfeature_image(model['data']['image']) }}
-		{%- endif -%}
-
-        <div class="c-superfeature__content">
-			{%- if model['data']['title'] -%}
-	            <h3 class="c-superfeature__title"><span>{{ model['data']['title'] }}</span></h3>
-			{%- endif -%}
-
-			{%- if model['data']['teaser'] -%}
-		    	<p class="c-superfeature__teaser">{{ model['data']['teaser'] }}</p>
-		    {%- endif -%}
-
-			{%- if model['data']['sponsor'] -%}
-				{{ section_superfeature_sponsor(model['data']['sponsor']) }}
-			{%- elif model['data']['byline'] -%}
-				<p class="c-superfeature__byline">
-					<span class="c-superfeature__byline-prefix">By</span>
-					<span class="c-superfeature__byline-name">{{ model['data']['byline'] }}</span>
-				</p>
-			{%- endif -%}
-
-			{%- if model['data']['meta_list'] -%}
-				{{ section_superfeature_meta_list(model['data']['meta_list']) }}
-			{%- endif -%}
+	{{# data.image }}
+		<div class="c-superfeature__image {{ style.cls }}">
+			{{> @cnbritain/merlin-www-image }}
 		</div>
-	</section>
-{%- endmacro -%}
+	{{/ data.image }}
+
+    <div class="c-superfeature__content">
+    	{{# data.title }}
+            <h3 class="c-superfeature__title"><span>{{ data.title }}</span></h3>
+    	{{/ data.title }}
+
+    	{{# data.teaser }}
+            <h3 class="c-superfeature__teaser"><span>{{ data.teaser }}</span></h3>
+    	{{/ data.teaser }}
+
+        {{# data.sponsor }}
+            <p class="c-superfeature__byline c-superfeature__byline--sponsorship {{ style.cls }}">
+                <span class="c-superfeature__byline-prefix">In partnership with </span>
+                <span class="c-superfeature__byline-name">{{ data.title }}</span>
+            </p>
+        {{/ data.sponsor }}
+        {{^ data.sponsor }}
+            {{# data.byline }}
+                <p class="c-superfeature__byline">
+                    <span class="c-superfeature__byline-prefix">By</span>
+                    <span class="c-superfeature__byline-name">{{ data.byline }}</span>
+                </p>
+            {{/ data.byline }}
+        {{/ data.sponsor }}
+
+        {{# data.meta_list }}
+            <ul class="global__list-reset c-superfeature__meta {{ style.cls }}">
+                {{# data.items }}
+                    <li class="c-superfeature__meta-item {{ style.cls }} c-superfeature__meta-item--{{ data.item.data.meta_type  }}">
+                        {{# data.item }}
+                            <span class="{{ style.cls }}">{{ data.title }}</span>
+                        {{/ data.item }}
+                    </li>
+                {{/ data.items }}
+            </ul>
+        {{/ data.meta_list }}
+    </div>
+</section>
