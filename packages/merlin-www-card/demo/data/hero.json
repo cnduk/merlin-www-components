@@ -55,7 +55,7 @@
 					},
 					"state": {},
 					"style": {
-						"cls": "c-card__image--square"
+						"cls": "c-card__image--portrait c-card__image--hero"
 					},
 					"type": "ListItem"
 				}],
@@ -212,7 +212,7 @@
 	},
 	"state": {},
 	"style": {
-		"cls": "c-card--switcher"
+		"cls": "c-card--hero"
 	},
-	"type": "SwitcherCard"
+	"type": "HeroCard"
 }

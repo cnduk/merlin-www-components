@@ -1,8 +1,29 @@
 {
 	"data": {
-		"byline": "Matt Kamen",
+		"byline": "Katie Berrington",
 		"event_information": null,
-		"icon": null,
+		"icon": {
+			"data": {
+				"alt_text": null,
+				"credit": null,
+				"description": null,
+				"lazyload": true,
+				"look_number": null,
+				"svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
+				"title": null
+			},
+			"state": {
+				"is_image": false,
+				"is_linked": false,
+				"is_picture": false,
+				"is_static": false,
+				"is_svg": true
+			},
+			"style": {
+				"cls": "img-lazyload "
+			},
+			"type": "SVG"
+		},
 		"image_list": {
 			"data": {
 				"items": [{
@@ -12,11 +33,11 @@
 								"alt_text": null,
 								"credit": null,
 								"description": "",
-								"image_url": "http://wi.staging.www.condenet.co.uk/image/QyWgG0naMQm/crop/405",
+								"image_url": "http://vg.staging.www.condenet.co.uk/image/y32pLDx0rje/crop/405/landscape",
 								"lazyload": true,
 								"look_number": null,
 								"orientation": "landscape",
-								"srcset": "http://wi.staging.www.condenet.co.uk/image/QyWgG0naMQm/crop/405 405w",
+								"srcset": "http://vg.staging.www.condenet.co.uk/image/y32pLDx0rje/crop/405/landscape 405w",
 								"title": ""
 							},
 							"state": {
@@ -48,8 +69,8 @@
 		},
 		"link": {
 			"data": {
-				"title": "Dragon Quest VIII comes with two new characters. Meet Red and Morrie",
-				"url": "/article/dragon-quest-8-new-characters-explained"
+				"title": "Golden Globe Winners 2017",
+				"url": "/gallery/golden-globe-winners-2017"
 			},
 			"state": {},
 			"style": {
@@ -66,8 +87,8 @@
 								"icon": null,
 								"link": {
 									"data": {
-										"title": "Gaming",
-										"url": "http://wi.staging.www.condenet.co.uk/topic/gaming/"
+										"title": "Golden Globes",
+										"url": "http://vg.staging.www.condenet.co.uk/event/golden-globes/"
 									},
 									"state": {},
 									"style": {
@@ -76,7 +97,49 @@
 									"type": "Link"
 								},
 								"meta_type": "tag",
-								"title": "Gaming"
+								"title": "Golden Globes"
+							},
+							"state": {},
+							"style": {
+								"cls": ""
+							},
+							"type": "Meta"
+						}
+					},
+					"state": {},
+					"style": {
+						"cls": ""
+					},
+					"type": "ListItem"
+				}, {
+					"data": {
+						"item": {
+							"data": {
+								"icon": {
+									"data": {
+										"alt_text": null,
+										"credit": null,
+										"description": null,
+										"lazyload": true,
+										"look_number": null,
+										"svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
+										"title": null
+									},
+									"state": {
+										"is_image": false,
+										"is_linked": false,
+										"is_picture": false,
+										"is_static": false,
+										"is_svg": true
+									},
+									"style": {
+										"cls": "img-lazyload "
+									},
+									"type": "SVG"
+								},
+								"link": null,
+								"meta_type": "gallery",
+								"title": "25 items"
 							},
 							"state": {},
 							"style": {
@@ -97,7 +160,7 @@
 								"icon": null,
 								"link": null,
 								"meta_type": "date",
-								"title": "11 Jan 2017"
+								"title": "09 Jan 2017"
 							},
 							"state": {},
 							"style": {
@@ -112,7 +175,7 @@
 					},
 					"type": "ListItem"
 				}],
-				"length": 2
+				"length": 3
 			},
 			"state": {},
 			"style": {
@@ -127,8 +190,8 @@
 				"event_information": null,
 				"link": {
 					"data": {
-						"title": "Gaming",
-						"url": "http://wi.staging.www.condenet.co.uk/topic/gaming/"
+						"title": "Golden Globes",
+						"url": "http://vg.staging.www.condenet.co.uk/event/golden-globes/"
 					},
 					"state": {},
 					"style": {
@@ -136,7 +199,7 @@
 					},
 					"type": "Link"
 				},
-				"title": "Gaming"
+				"title": "Golden Globes"
 			},
 			"state": {},
 			"style": {
@@ -144,12 +207,12 @@
 			},
 			"type": "Tag"
 		},
-		"teaser": "",
-		"title": "Dragon Quest VIII comes with two new characters. Meet Red and Morrie"
+		"teaser": "From Ryan Gosling to Emma Stone, see the full list of winners from the Golden Globes 2017.",
+		"title": "Golden Globe Winners 2017"
 	},
 	"state": {},
 	"style": {
 		"cls": "c-card--landscape"
 	},
-	"type": "SwitcherCard"
+	"type": "LandscapeCard"
 }
