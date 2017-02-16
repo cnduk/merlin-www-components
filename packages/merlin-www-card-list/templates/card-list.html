@@ -1,15 +1,9 @@
-{%- from "macros/beta/wc_card.html" import card -%}
-
-{%- macro card_list_item(model) -%}
-    <li class="c-card-list__item js-c-card-list__item {{ model['style']['cls'] }}">
-        {{ card(model['data']['item'] )}}
-    </li>
-{%- endmacro -%}
-
-{%- macro card_list(model) -%}
-    <ul class="global__list-reset c-card-list js-c-card-list {{ model['style']['cls'] }}">
-    {%- for item in model['data']['items'] -%}
-        {{ card_list_item(item) }}
-    {%- endfor -%}
-    </ul>
-{%- endmacro -%}
+<ul class="global__list-reset c-card-list js-c-card-list {{ style.cls }}">
+    {{# data.items }}
+        <li class="c-card-list__item js-c-card-list__item {{ style.cls }}">
+            {{# data.item }}
+                {{> @cnbritain/merlin-www-card }}
+            {{/ data.item }}
+        </li>
+    {{/ data.items }}
+</ul>

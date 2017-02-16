@@ -11,6 +11,7 @@
     vertical-align: top;
     width: 100%;
 }
+
 //Li specificty required to overwrite padding
 li.c-card-list__item--ad {
     &.is-hidden {

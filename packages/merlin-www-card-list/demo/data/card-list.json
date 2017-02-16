@@ -1,0 +1,789 @@
+{
+  "data": {
+    "items": [{
+      "data": {
+        "item": {
+          "data": {
+            "byline": "Katie Berrington",
+            "event_information": null,
+            "icon": {
+              "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "lazyload": true,
+                "look_number": null,
+                "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
+                "title": null
+              },
+              "state": {
+                "is_image": false,
+                "is_linked": false,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": true
+              },
+              "style": {
+                "cls": "img-lazyload "
+              },
+              "type": "SVG"
+            },
+            "image_list": {
+              "data": {
+                "items": [{
+                  "data": {
+                    "item": {
+                      "data": {
+                        "alt_text": null,
+                        "credit": null,
+                        "description": "",
+                        "image_url": "https://vg-images.condecdn.net/image/y32pLDx0rje/crop/405/landscape",
+                        "lazyload": true,
+                        "look_number": null,
+                        "orientation": "landscape",
+                        "srcset": "https://vg-images.condecdn.net/image/y32pLDx0rje/crop/405/landscape 405w",
+                        "title": ""
+                      },
+                      "state": {
+                        "is_image": true,
+                        "is_linked": false,
+                        "is_picture": false,
+                        "is_static": false,
+                        "is_svg": false
+                      },
+                      "style": {
+                        "cls": "img-lazyload "
+                      },
+                      "type": "Image"
+                    }
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": "c-card__image--landscape"
+                  },
+                  "type": "ListItem"
+                }],
+                "length": 1
+              },
+              "state": {},
+              "style": {
+                "cls": ""
+              },
+              "type": "List"
+            },
+            "link": {
+              "data": {
+                "title": "Golden Globe Winners 2017",
+                "url": "/gallery/golden-globe-winners-2017"
+              },
+              "state": {},
+              "style": {
+                "cls": ""
+              },
+              "type": "Link"
+            },
+            "meta_list": {
+              "data": {
+                "items": [{
+                  "data": {
+                    "item": {
+                      "data": {
+                        "icon": null,
+                        "link": {
+                          "data": {
+                            "title": "Golden Globes",
+                            "url": "http://localhost:3000/event/golden-globes/"
+                          },
+                          "state": {},
+                          "style": {
+                            "cls": ""
+                          },
+                          "type": "Link"
+                        },
+                        "meta_type": "tag",
+                        "title": "Golden Globes"
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "Meta"
+                    }
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "ListItem"
+                }, {
+                  "data": {
+                    "item": {
+                      "data": {
+                        "icon": {
+                          "data": {
+                            "alt_text": null,
+                            "credit": null,
+                            "description": null,
+                            "lazyload": true,
+                            "look_number": null,
+                            "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
+                            "title": null
+                          },
+                          "state": {
+                            "is_image": false,
+                            "is_linked": false,
+                            "is_picture": false,
+                            "is_static": false,
+                            "is_svg": true
+                          },
+                          "style": {
+                            "cls": "img-lazyload "
+                          },
+                          "type": "SVG"
+                        },
+                        "link": null,
+                        "meta_type": "gallery",
+                        "title": "25 items"
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "Meta"
+                    }
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "ListItem"
+                }, {
+                  "data": {
+                    "item": {
+                      "data": {
+                        "icon": null,
+                        "link": null,
+                        "meta_type": "date",
+                        "title": "09 Jan 2017"
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "Meta"
+                    }
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "ListItem"
+                }],
+                "length": 3
+              },
+              "state": {},
+              "style": {
+                "cls": ""
+              },
+              "type": "List"
+            },
+            "review_information": null,
+            "sponsor": null,
+            "tag": {
+              "data": {
+                "event_information": null,
+                "link": {
+                  "data": {
+                    "title": "Golden Globes",
+                    "url": "http://localhost:3000/event/golden-globes/"
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "Link"
+                },
+                "title": "Golden Globes"
+              },
+              "state": {},
+              "style": {
+                "cls": ""
+              },
+              "type": "Tag"
+            },
+            "teaser": "From Ryan Gosling to Emma Stone, see the full list of winners from the Golden Globes 2017.",
+            "title": "Golden Globe Winners 2017"
+          },
+          "state": {},
+          "style": {
+            "cls": "c-card--switcher"
+          },
+          "type": "SwitcherCard"
+        }
+      },
+      "state": {},
+      "style": {
+        "cls": ""
+      },
+      "type": "ListItem"
+    }, {
+      "data": {
+        "item": {
+          "data": {
+            "byline": "Lisa Niven",
+            "event_information": null,
+            "icon": {
+              "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "lazyload": true,
+                "look_number": null,
+                "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
+                "title": null
+              },
+              "state": {
+                "is_image": false,
+                "is_linked": false,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": true
+              },
+              "style": {
+                "cls": "img-lazyload "
+              },
+              "type": "SVG"
+            },
+            "image_list": {
+              "data": {
+                "items": [{
+                  "data": {
+                    "item": {
+                      "data": {
+                        "alt_text": null,
+                        "credit": null,
+                        "description": "",
+                        "image_url": "https://vg-images.condecdn.net/image/vM4p81368Gz/crop/405/landscape",
+                        "lazyload": true,
+                        "look_number": null,
+                        "orientation": "landscape",
+                        "srcset": "https://vg-images.condecdn.net/image/vM4p81368Gz/crop/405/landscape 405w",
+                        "title": ""
+                      },
+                      "state": {
+                        "is_image": true,
+                        "is_linked": false,
+                        "is_picture": false,
+                        "is_static": false,
+                        "is_svg": false
+                      },
+                      "style": {
+                        "cls": "img-lazyload "
+                      },
+                      "type": "Image"
+                    }
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": "c-card__image--landscape"
+                  },
+                  "type": "ListItem"
+                }],
+                "length": 1
+              },
+              "state": {},
+              "style": {
+                "cls": ""
+              },
+              "type": "List"
+            },
+            "link": {
+              "data": {
+                "title": "Golden Globes Beauty 2017",
+                "url": "/gallery/golden-globes-beauty-2016"
+              },
+              "state": {},
+              "style": {
+                "cls": ""
+              },
+              "type": "Link"
+            },
+            "meta_list": {
+              "data": {
+                "items": [{
+                  "data": {
+                    "item": {
+                      "data": {
+                        "icon": null,
+                        "link": {
+                          "data": {
+                            "title": "Golden Globes",
+                            "url": "http://localhost:3000/event/golden-globes/"
+                          },
+                          "state": {},
+                          "style": {
+                            "cls": ""
+                          },
+                          "type": "Link"
+                        },
+                        "meta_type": "tag",
+                        "title": "Golden Globes"
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "Meta"
+                    }
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "ListItem"
+                }, {
+                  "data": {
+                    "item": {
+                      "data": {
+                        "icon": {
+                          "data": {
+                            "alt_text": null,
+                            "credit": null,
+                            "description": null,
+                            "lazyload": true,
+                            "look_number": null,
+                            "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
+                            "title": null
+                          },
+                          "state": {
+                            "is_image": false,
+                            "is_linked": false,
+                            "is_picture": false,
+                            "is_static": false,
+                            "is_svg": true
+                          },
+                          "style": {
+                            "cls": "img-lazyload "
+                          },
+                          "type": "SVG"
+                        },
+                        "link": null,
+                        "meta_type": "gallery",
+                        "title": "24 items"
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "Meta"
+                    }
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "ListItem"
+                }, {
+                  "data": {
+                    "item": {
+                      "data": {
+                        "icon": null,
+                        "link": null,
+                        "meta_type": "date",
+                        "title": "09 Jan 2017"
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "Meta"
+                    }
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "ListItem"
+                }],
+                "length": 3
+              },
+              "state": {},
+              "style": {
+                "cls": ""
+              },
+              "type": "List"
+            },
+            "review_information": null,
+            "sponsor": null,
+            "tag": {
+              "data": {
+                "event_information": null,
+                "link": {
+                  "data": {
+                    "title": "Golden Globes",
+                    "url": "http://localhost:3000/event/golden-globes/"
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "Link"
+                },
+                "title": "Golden Globes"
+              },
+              "state": {},
+              "style": {
+                "cls": ""
+              },
+              "type": "Tag"
+            },
+            "teaser": "",
+            "title": "Golden Globes Beauty 2017"
+          },
+          "state": {},
+          "style": {
+            "cls": "c-card--switcher"
+          },
+          "type": "SwitcherCard"
+        }
+      },
+      "state": {},
+      "style": {
+        "cls": ""
+      },
+      "type": "ListItem"
+    }, {
+      "data": {
+        "item": {
+          "data": {
+            "byline": "Lauren Milligan",
+            "event_information": null,
+            "icon": null,
+            "image_list": {
+              "data": {
+                "items": [{
+                  "data": {
+                    "item": {
+                      "data": {
+                        "alt_text": null,
+                        "credit": null,
+                        "description": "",
+                        "image_url": "https://vg-images.condecdn.net/image/nNgzNyB84x2/crop/405",
+                        "lazyload": true,
+                        "look_number": null,
+                        "orientation": "landscape",
+                        "srcset": "https://vg-images.condecdn.net/image/nNgzNyB84x2/crop/405 405w",
+                        "title": ""
+                      },
+                      "state": {
+                        "is_image": true,
+                        "is_linked": false,
+                        "is_picture": false,
+                        "is_static": false,
+                        "is_svg": false
+                      },
+                      "style": {
+                        "cls": "img-lazyload "
+                      },
+                      "type": "Image"
+                    }
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": "c-card__image--landscape"
+                  },
+                  "type": "ListItem"
+                }],
+                "length": 1
+              },
+              "state": {},
+              "style": {
+                "cls": ""
+              },
+              "type": "List"
+            },
+            "link": {
+              "data": {
+                "title": "Streep's Globes Speech Attack",
+                "url": "/article/meryl-streep-speech-golden-globes-2017"
+              },
+              "state": {},
+              "style": {
+                "cls": ""
+              },
+              "type": "Link"
+            },
+            "meta_list": {
+              "data": {
+                "items": [{
+                  "data": {
+                    "item": {
+                      "data": {
+                        "icon": null,
+                        "link": {
+                          "data": {
+                            "title": "Golden Globes",
+                            "url": "http://localhost:3000/event/golden-globes/"
+                          },
+                          "state": {},
+                          "style": {
+                            "cls": ""
+                          },
+                          "type": "Link"
+                        },
+                        "meta_type": "tag",
+                        "title": "Golden Globes"
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "Meta"
+                    }
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "ListItem"
+                }, {
+                  "data": {
+                    "item": {
+                      "data": {
+                        "icon": null,
+                        "link": null,
+                        "meta_type": "date",
+                        "title": "09 Jan 2017"
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "Meta"
+                    }
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "ListItem"
+                }],
+                "length": 2
+              },
+              "state": {},
+              "style": {
+                "cls": ""
+              },
+              "type": "List"
+            },
+            "review_information": null,
+            "sponsor": null,
+            "tag": {
+              "data": {
+                "event_information": null,
+                "link": {
+                  "data": {
+                    "title": "Golden Globes",
+                    "url": "http://localhost:3000/event/golden-globes/"
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "Link"
+                },
+                "title": "Golden Globes"
+              },
+              "state": {},
+              "style": {
+                "cls": ""
+              },
+              "type": "Tag"
+            },
+            "teaser": "Streep's Globes Speech Attack",
+            "title": "Streep's Globes Speech Attack"
+          },
+          "state": {},
+          "style": {
+            "cls": "c-card--switcher"
+          },
+          "type": "SwitcherCard"
+        }
+      },
+      "state": {},
+      "style": {
+        "cls": ""
+      },
+      "type": "ListItem"
+    }, {
+      "data": {
+        "item": {
+          "data": {
+            "byline": "Scarlett Conlon",
+            "event_information": null,
+            "icon": null,
+            "image_list": {
+              "data": {
+                "items": [{
+                  "data": {
+                    "item": {
+                      "data": {
+                        "alt_text": null,
+                        "credit": null,
+                        "description": "",
+                        "image_url": "https://vg-images.condecdn.net/image/0RkEMeDl85l/crop/405/landscape",
+                        "lazyload": true,
+                        "look_number": null,
+                        "orientation": "landscape",
+                        "srcset": "https://vg-images.condecdn.net/image/0RkEMeDl85l/crop/405/landscape 405w",
+                        "title": ""
+                      },
+                      "state": {
+                        "is_image": true,
+                        "is_linked": false,
+                        "is_picture": false,
+                        "is_static": false,
+                        "is_svg": false
+                      },
+                      "style": {
+                        "cls": "img-lazyload "
+                      },
+                      "type": "Image"
+                    }
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": "c-card__image--landscape"
+                  },
+                  "type": "ListItem"
+                }],
+                "length": 1
+              },
+              "state": {},
+              "style": {
+                "cls": ""
+              },
+              "type": "List"
+            },
+            "link": {
+              "data": {
+                "title": "16 Arrested Over Kardashian West Robbery",
+                "url": "/article/16-arrested-over-kim-kardashian-west-paris-robbery"
+              },
+              "state": {},
+              "style": {
+                "cls": ""
+              },
+              "type": "Link"
+            },
+            "meta_list": {
+              "data": {
+                "items": [{
+                  "data": {
+                    "item": {
+                      "data": {
+                        "icon": null,
+                        "link": {
+                          "data": {
+                            "title": "Kim Kardashian",
+                            "url": "http://localhost:3000/person/kim-kardashian/"
+                          },
+                          "state": {},
+                          "style": {
+                            "cls": ""
+                          },
+                          "type": "Link"
+                        },
+                        "meta_type": "tag",
+                        "title": "Kim Kardashian"
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "Meta"
+                    }
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "ListItem"
+                }, {
+                  "data": {
+                    "item": {
+                      "data": {
+                        "icon": null,
+                        "link": null,
+                        "meta_type": "date",
+                        "title": "09 Jan 2017"
+                      },
+                      "state": {},
+                      "style": {
+                        "cls": ""
+                      },
+                      "type": "Meta"
+                    }
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "ListItem"
+                }],
+                "length": 2
+              },
+              "state": {},
+              "style": {
+                "cls": ""
+              },
+              "type": "List"
+            },
+            "review_information": null,
+            "sponsor": null,
+            "tag": {
+              "data": {
+                "event_information": null,
+                "link": {
+                  "data": {
+                    "title": "Kim Kardashian",
+                    "url": "http://localhost:3000/person/kim-kardashian/"
+                  },
+                  "state": {},
+                  "style": {
+                    "cls": ""
+                  },
+                  "type": "Link"
+                },
+                "title": "Kim Kardashian"
+              },
+              "state": {},
+              "style": {
+                "cls": ""
+              },
+              "type": "Tag"
+            },
+            "teaser": "16 Arrested Over Kim Kardashian West Paris Robbery",
+            "title": "16 Arrested Over Kardashian West Robbery"
+          },
+          "state": {},
+          "style": {
+            "cls": "c-card--switcher"
+          },
+          "type": "SwitcherCard"
+        }
+      },
+      "state": {},
+      "style": {
+        "cls": ""
+      },
+      "type": "ListItem"
+    }],
+    "length": 4
+  },
+  "state": {},
+  "style": {
+    "cls": "c-card-list--c-curated"
+  },
+  "type": "List"
+}
