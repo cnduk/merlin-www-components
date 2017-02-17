@@ -242,6 +242,8 @@
 }
 
 .c-card-section__btn {
+    width: auto;
+
     @extend %btn-group;
     @extend %btn-group--light;
 
