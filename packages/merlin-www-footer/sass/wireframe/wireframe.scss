@@ -1,0 +1,40 @@
+@import "@cnbritain/merlin-www-common:wireframe";
+
+.c-footer {
+	overflow: hidden;
+
+	@include min-screen( 1100px ) {
+		height: 60px;
+    }
+}
+
+.c-footer__wrapper {}
+
+.c-footer__list-item--links {
+    @include min-screen( 1100px ) {
+        display: inline-block;
+    }
+}
+
+li.c-footer__list-item,
+li.c-footer__list-break {
+    @include min-screen( 1100px ) {
+        display: inline-block;
+    }
+}
+
+li.c-footer__list-item--logo {
+    float: right;
+}
+
+.c-footer__list--left {
+	@include min-screen( 1100px ) {
+		float: left;
+    }
+}
+
+.c-footer__list--right {
+	@include min-screen( 1100px ) {
+		float: right;
+    }
+}

@@ -1,0 +1,121 @@
+@import "@cnbritain/merlin-www-common:glamour";
+@import "@cnbritain/merlin-www-image:glamour";
+
+@import "../wireframe/wireframe";
+
+.c-footer {
+    background-color: $COLOUR_BG_DARK;
+    color: $COLOUR_MAIN_DARK;
+}
+
+.c-footer__wrapper {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.c-footer__list {
+    color: $COLOUR_MAIN_DARK;
+}
+
+.c-footer__list--left {
+    @include min-screen(1100px) {
+        & .c-footer__list-item:first-child {
+            padding-left: 40px;
+        }
+    }
+}
+.c-footer__list--right {
+    @include min-screen(1100px) {
+        & > .c-footer__list-item:last-child {
+            padding-right: 40px;
+        }
+    }
+}
+
+.c-footer__list-item--links {
+    @include max-screen(1099px) {
+        background-color: $COLOUR_BG_DARK;
+    }
+
+    .c-footer__list-item {
+        @include max-screen(1099px) {
+            &:last-child:after {
+                content: none;
+            }
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: calc(100% - #{20px});
+            background-color: $COLOUR_MAIN_SECONDARY;
+
+            @include min-screen(1100px) {
+                display: inline-block;
+                height: 12px;
+                width: 1px;
+                margin: 0 0 0 20px;
+                background-color: rgba(255, 255, 255, 0.4);
+            }
+        }
+    }
+}
+
+li.c-footer__list-item {
+    @include font('GRAPHIK', 13px, 300, 60px, 20);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    height: 60px;
+    letter-spacing: 0.025em;
+    padding-left: 20px;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        border-bottom: none;
+
+        @include min-screen(1100px) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+li.c-footer__list-item--logo {
+    margin-top: -60px;
+    margin-right: 20px;
+
+    svg {
+        height: 60px;
+        width: 30px;
+    }
+
+    @include min-screen( 1100px ) {
+        clear: right;
+        padding-left: 45px;
+        margin-right: 0;
+        margin-top: 0;
+    }
+}
+
+// li.c-footer__list-break {
+//     margin: 0 20px;
+//     height: 1px;
+//     background-color: $COLOR_MAIN_SECONDARY;
+
+//     @include max-screen(1099px) {
+//         &:last-child {
+//             display: none;
+//         }
+//     }
+
+//     @include min-screen(1100px) {
+//         height: 12px;
+//         width: 1px;
+//         margin: 0 0 0 20px;
+//         background-color: rgba(255, 255, 255, 0.4);
+//     }
+// }

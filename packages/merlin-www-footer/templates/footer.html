@@ -1,0 +1,33 @@
+<footer class="c-footer {{ style.cls }}">
+    <div class="c-footer__wrapper">
+        <ul class="global__list-reset c-footer__list c-footer__list--left">
+            <li class="c-footer__list-item">
+                {{# data.left_logo }}
+                    {{> @cnbritain/merlin-www-image }}
+                {{/ data.left_logo }}
+            </li>
+        </ul>
+
+        <ul class="global__list-reset c-footer__list c-footer__list--right">
+            {{# data.link_list }}
+                <div class="c-footer__list-item--links {{ style.cls }}">
+                    {{# data.items }}
+                        <li class="c-footer__list-item {{ style.cls }}">
+                            {{# data.item }}
+                                <a href="{{ &data.url }}" class="{{ style.cls }}">{{ data.title }}</a>
+                            {{/ data.item }}
+                        </li>
+                    {{/ data.items }}
+                </div>
+            {{/ data.link_list }}
+
+            <li class='c-footer__list-item'>&copy; Cond&eacute; Nast UK 2017</li>
+
+            <li class='c-footer__list-item c-footer__list-item--logo'>
+                {{# data.right_logo }}
+                    {{> @cnbritain/merlin-www-image }}
+                {{/ data.right_logo }}
+            </li>
+        </ul>
+    </div>
+</footer>
