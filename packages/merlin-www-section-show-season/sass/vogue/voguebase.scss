@@ -137,10 +137,10 @@ li.c-show-season-section__card-list-item {
     margin-top: 35px;
     width: auto;
 
-    // @include button-group;
-    // @include button-group--light;
+    @extend %btn-group;
+    @extend %btn-group--light;
 
-    // &:hover {
-    //     @extend %btn-group--light--hover;
-    // }
+    &:hover {
+        @extend %btn-group--light--hover;
+    }
 }

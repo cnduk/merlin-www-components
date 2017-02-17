@@ -45,9 +45,11 @@
                                         <div class='c-card__image-label c-card__image-label--featured'>Featured</div>
                                     {{/ state.is_featured }}
 
-                                    {{# state.is_latest }}
-                                        <div class='c-card__image-label c-card__image-label--latest'>Latest</div>
-                                    {{/ state.is_latest }}
+                                    {{^ state.is_featured }}
+                                        {{# state.is_latest }}
+                                            <div class='c-card__image-label c-card__image-label--latest'>Latest</div>
+                                        {{/ state.is_latest }}
+                                    {{/ state.is_featured }}
                                     </div>
                                 </div>
 
