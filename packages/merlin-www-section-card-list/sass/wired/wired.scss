@@ -42,23 +42,14 @@ $_FONT_BRUTAL: map-get($FONT_GROUPS, 'BRUTAL');
     text-align: left;
 }
 
-.c-card-section__title--list {
-    @include font-size(15px);
-    @include line-height(15px);
-}
+.c-card-section__btn {
+    display: inline-block;
+    width: auto;
 
-.c-card-section__topics {
-    padding-bottom: 20px;
-    padding-top: 10px;
-    text-align: left;
+    @include button-single;
+    @include button-single-light;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
-        padding-bottom: 0;
-        padding-top: 0;
-        position: absolute;
-        right: 0;
-        text-align: right;
-        top: -23px;
-        width: auto;
+    &:hover {
+        @include button-single-light-hover;
     }
 }
