@@ -242,9 +242,6 @@
 }
 
 .c-card-section__btn {
-    display: inline-block;
-    width: auto;
-
     @extend %btn-group;
     @extend %btn-group--light;
 

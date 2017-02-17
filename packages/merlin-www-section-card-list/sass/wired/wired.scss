@@ -48,12 +48,6 @@ $_FONT_BRUTAL: map-get($FONT_GROUPS, 'BRUTAL');
     @include font-size(12px);
     @include line-height(12px);
 
-    display: inline-block;
-    width: 100%;
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        max-width: 170px;
-    }
-
     @include button-single;
     @include button-single-light;
 
