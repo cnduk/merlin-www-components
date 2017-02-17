@@ -38,13 +38,21 @@ $_FONT_BRUTAL: map-get($FONT_GROUPS, 'BRUTAL');
 .c-card-section__title {
     font-family: map-get($_FONT_BRUTAL, 'FAMILY');
     line-height: map-get($_FONT_BRUTAL, 'LINE HEIGHT');
+    @include font-size(15px);
+    @include line-height(15px);
     margin-bottom: 15px;
     text-align: left;
 }
 
 .c-card-section__btn {
+    @include font-size(12px);
+    @include line-height(12px);
+
     display: inline-block;
-    width: auto;
+    width: 100%;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        max-width: 170px;
+    }
 
     @include button-single;
     @include button-single-light;
