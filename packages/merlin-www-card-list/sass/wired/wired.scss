@@ -2,98 +2,265 @@
 
 @import "../wireframe/wireframe";
 
-.c-card-list--cols-2 {
+// Common curated, article recommended, magazine articles, search results,
+// video genre articles, shows summary latest articles
+// Contains four cards
+// Goes one, two, four
+.c-card-list--c-curated,
+.c-card-list--c-tag,
+.c-card-list--a-recommended,
+.c-card-list--mag-articles,
+.c-card-list--s-results,
+.c-card-list--v-genre-articles,
+.c-card-list--c-video-articles {
     margin: 0 -10px;
 
     .c-card-list__item {
         padding: 0 10px;
+        width: 100%;
+    }
 
-        @include min-screen($CARD_LIST_2_COLUMN_BREAKPOINT) {
-            width: 50%;
+    @include one-column-size(){
+        .c-card-list__item + .c-card-list__item {
+            margin-top: 30px;
+
+            .c-card {
+                padding-top: 20px;
+
+                &.c-card--dark {
+
+                }
+            }
         }
     }
-}
 
-.c-card-list--cols-3 {
-    margin: 0 -10px;
-
-    .c-card-list__item {
-        padding: 0 10px;
-
-        @include min-screen($CARD_LIST_3_COLUMN_BREAKPOINT) {
-            width: 33.33%;
-        }
-    }
-}
-
-.c-card-list--cols-4 {
-    margin: 0 -10px;
-
-    .c-card-list__item {
-        padding: 0 10px;
-
-        @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT){
-            width: 25%;
-        }
-    }
-}
-
-
-// Shit this gets deep
-.c-card-list--section {
-
-    &.c-card-list--cols {
+    @include two-column-size(){
         .c-card-list__item {
-            &:nth-last-child(1){
+            display: inline-block;
+            margin-bottom: 30px;
+            width: 50%;
+
+            @include last(2){
                 margin-bottom: 0;
             }
         }
     }
 
-    &.c-card-list--cols-2 {
-        @include min-screen($CARD_LIST_2_COLUMN_BREAKPOINT){
-            margin: 0 -10px 0 -10px;
-            .c-card-list__item {
-                &:nth-last-child(1),
-                &:nth-last-child(2){
-                    margin-bottom: 0;
-                }
+    @include four-column-size(){
+        .c-card-list__item {
+            // Eight cards are displayed on the homepage for
+            // .c-card-list--c-curated
+            @include last(4){
+                margin-bottom: 0;
             }
+            width: 25%;
         }
     }
-    &.c-card-list--cols-3 {
-        @include min-screen($CARD_LIST_3_COLUMN_BREAKPOINT){
-            margin: 0 -10px 0 -10px;
-            .c-card-list__item {
-                &:nth-last-child(1),
-                &:nth-last-child(2),
-                &:nth-last-child(3){
-                    margin-bottom: 0;
-                }
-            }
-        }
-    }
-    &.c-card-list--cols-4 {
-        @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT){
-            margin: 0 -10px 0 -10px;
-            .c-card-list__item {
-                &:nth-last-child(1),
-                &:nth-last-child(2),
-                &:nth-last-child(3),
-                &:nth-last-child(4){
-                    margin-bottom: 0;
-                }
-            }
-        }
-    }
+}
+
+// Gallery recommended
+// Contains 3 cards
+// Goes one, three
+.c-card-list--g-recommended {
+    margin: 0 -10px;
 
     .c-card-list__item {
-        margin-bottom: 30px;
-
-        @include min-screen($CARD_LIST_2_COLUMN_BREAKPOINT){
-            padding: 0 10px;
-        }
-
+        padding: 0 10px;
+        width: 100%;
     }
 
+    @include three-column-size(){
+        .c-card-list__item {
+            display: inline-block;
+            margin-top: 0;
+            width: 33.3%;
+        }
+    }
+}
+
+.c-card-list--c-magazine-articles {
+    @include tablet-size {
+        .c-card-list__item {
+            .c-card {
+                .c-card__obj {
+                    table-layout: fixed;
+                }
+
+                .c-card__obj__header {
+                    width: 70px;
+                }
+            }
+
+            .c-card__title {
+
+            }
+        }
+    }
+
+    .c-card-list__item + .c-card-list__item {
+        margin-top: 20px;
+    }
+}
+
+// Magazine magazines
+// Contains four columns
+// Goes two, four
+.c-card-list--mag-magazines {
+    margin: 0 -10px;
+
+    .c-card-list__item {
+        display: inline-block;
+        margin-bottom: 30px;
+        padding: 0 10px;
+        width: 50%;
+    }
+
+    @include four-column-size(){
+        .c-card-list__item {
+            margin-bottom: 30px;
+            width: 25%;
+
+            @include last(4){
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// Tagpage articles, show season articles, video articles
+// This has to be done a little bit differently as an ad might be between
+// each .c-card-list__item
+// Contains one column
+// Goes one
+.c-card-list--tg-articles {
+    margin: 0 -10px;
+
+    .c-card-list__item {
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    @include one-column-size(){
+        .c-card-list__item + .c-card-list__item {
+            margin-top: 30px;
+
+            .c-card {
+                padding-top: 20px;
+
+                &.c-card--dark {
+
+                }
+            }
+        }
+    }
+
+    @include two-column-size(){
+        .c-card-list__item {
+            display: inline-block;
+            margin-bottom: 30px;
+            width: 50%;
+
+            @include last(2){
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @include three-column-size(){
+        .c-card-list__item {
+            display: inline-block;
+            width: 33.3%;
+
+            @include last(3){
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// Video articles
+// Contains three columns
+// Goes one, two, three
+.c-card-list--v-articles {
+    margin: 0 -10px;
+
+    .c-card-list__item {
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    @include one-column-size(){
+        .c-card-list__item + .c-card-list__item {
+            margin-top: 30px;
+
+            .c-card {
+                padding-top: 20px;
+
+                &.c-card--dark {
+
+                }
+            }
+        }
+    }
+
+    @include two-column-size(){
+        .c-card-list__item {
+            display: inline-block;
+            margin-bottom: 30px;
+            width: 50%;
+
+            @include last(2){
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    // This is suppose to be a 4 column trigger with 33.33%
+    @include four-column-size(){
+        .c-card-list__item {
+            width: 33.33%;
+
+            @include last(3){
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// Tag header articles
+// Contains 3 cards
+// Goes one, three
+.c-card-list--tg-header-articles {
+    margin: 0 -10px;
+    text-align: center;
+
+    .c-card-list__item {
+        padding: 0 10px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .c-card-list__item + .c-card-list__item {
+        margin-top: 30px;
+
+        .c-card {
+            padding-top: 30px;
+
+            &.c-card--dark {
+
+            }
+        }
+    }
+
+    @include three-column-size(){
+        .c-card-list__item {
+            margin-bottom: 0;
+            margin-top: 30px;
+            width: 33.33%;
+
+            .c-card {
+                padding-top: 30px;
+            }
+        }
+    }
 }
