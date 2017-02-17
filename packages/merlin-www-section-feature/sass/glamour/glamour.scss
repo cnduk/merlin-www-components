@@ -61,11 +61,6 @@
 .c-feature__image--portrait {
     display: inline-block;
     width: 50%;
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        display: table-cell;
-        width: 25%;
-    }
 }
 
 .c-feature__title {
@@ -155,17 +150,13 @@ li.c-feature__meta-item {
             }
         }
     }
-    .c-feature__image,
+    .c-feature__images,
     .c-feature__content {
         direction: ltr;
         display: table-cell;
         position: static;
         vertical-align: middle;
         width: 50%;
-    }
-    .c-feature__image--portrait {
-        display: table-cell;
-        width: 25%;
     }
     .c-feature__byline {
         margin-bottom: 5px;

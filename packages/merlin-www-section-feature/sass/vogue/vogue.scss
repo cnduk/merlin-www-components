@@ -52,7 +52,6 @@
     }
 }
 .c-feature__images,
-// .c-feature__image,
 .c-feature__content {
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         background: none;
@@ -70,10 +69,6 @@
 .c-feature__image--portrait {
     display: inline-block;
     width: 50%;
-    // @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-    //     display: table-cell;
-    //     width: 25%;
-    // }
 }
 .c-feature__content-center {
     padding: $PADDING_LARGE $PADDING_MEDIUM;
