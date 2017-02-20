@@ -45,7 +45,6 @@
     }
 }
 
-.c-gallery__image-remaining {}
 .c-gallery__image-remaining {
     @include font('GRAPHIK', 23px, 'SEMI BOLD');
     white-space: nowrap;
@@ -63,7 +62,6 @@
 }
 
 .c-gallery__images {}
-
 .c-gallery__meta {
     @include meta-default;
     line-height: 18px;
