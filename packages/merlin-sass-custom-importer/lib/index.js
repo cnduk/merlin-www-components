@@ -26,7 +26,10 @@ const WIREFRAME_KEY = {
         return url.endsWith(this.key);
     },
     resolve: function(url, previous){
-        const previousDir = getComponentDirFromPath(previous);
+        let previousDir = getComponentDirFromPath(previous);
+        if(!previousDir){
+            previousDir = process.cwd();
+        }
         const baseUrl = url.substr(0, url.length - this.length);
         return path.resolve(previousDir, 'node_modules', baseUrl, this.file);
     }
@@ -38,7 +41,10 @@ const THEME_KEY = {
         return url.endsWith(this.key);
     },
     resolve: function(url, previous, theme){
-        const previousDir = getComponentDirFromPath(previous);
+        let previousDir = getComponentDirFromPath(previous);
+        if(!previousDir){
+            previousDir = process.cwd();
+        }
         const baseUrl = url.substr(0, url.length - this.length);
         return path.resolve(previousDir, 'node_modules', baseUrl, `sass/${theme}/${theme}.scss`);
     }
@@ -59,7 +65,10 @@ const BRAND_KEY = {
             }
         }
 
-        const previousDir = getComponentDirFromPath(previous);
+        let previousDir = getComponentDirFromPath(previous);
+        if(!previousDir){
+            previousDir = process.cwd();
+        }
         const baseUrl = url.substr(0, url.length - theme.length - 1);
         return path.resolve(previousDir, 'node_modules', baseUrl, `sass/${theme}/${theme}.scss`);
     }
@@ -95,7 +104,7 @@ module.exports = function(merlinConfig={}, scopeName=null){
 
         // Check if path begins with @, update url to be component based
         if(url.startsWith('@')){
-            sassUrl = resolveComponentTheme(url, realPrevious);
+            sassUrl = resolveComponentTheme(url, realPrevious, merlinConfig);
 
         // Resolve url normally, relatively
         } else {
@@ -134,7 +143,7 @@ function correctSassPartials(url){
     return path.resolve(urlPieces.join(path.sep), filename);
 }
 
-function resolveComponentTheme(url, previous){
+function resolveComponentTheme(url, previous, merlinConfig){
     // Check if we're using our keywords - theme, wireframe. If so, resolve
     // the sass location
     if(WIREFRAME_KEY.contains(url)){
@@ -154,5 +163,5 @@ function getComponentDirFromPath(p){
     if(matches){
         return matches[1];
     }
-    throw new Error(`Cannot find component name in path: ${p}`);
+    return false;
 }
