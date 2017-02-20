@@ -1,0 +1,23 @@
+{
+    "name": "@cnbritain/merlin-www-section-gallery",
+    "main": "section",
+    "currentTheme": null,
+    "data": {
+        "gallery": "demo/data/gallery.json"
+    },
+    "js": {
+        "demo": "demo/demo.js"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "missvogue": "sass/missvogue/missvogue.scss"
+    },
+    "partials": {
+        "section": "templates/section-gallery.html"
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-image"
+    ]
+}

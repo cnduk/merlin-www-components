@@ -1,0 +1,142 @@
+@import '@cnbritain/merlin-www-common:wireframe';
+@import '@cnbritain/merlin-www-image:wireframe';
+
+@mixin gallery-slice-at-medium() {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @content;
+    }
+}
+
+@mixin gallery-slice-at-large() {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @content;
+    }
+}
+
+.c-gallery {
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    position: relative;
+}
+
+.c-gallery__byline {}
+.c-gallery__teaser {}
+
+.c-gallery__images {
+    display: block;
+    @include gallery-slice-at-medium(){
+        display: table-cell;
+        vertical-align: middle;
+        width: 50%;
+    }
+
+    @include gallery-slice-at-large(){
+
+    }
+}
+
+.c-gallery__image-remaining {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 100%;
+}
+
+.c-gallery__image-remaining__text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include vendor-prefix(transform, translate(-50%, -50%));
+}
+
+.c-gallery__image-list {
+    font-size: 0;
+    position: relative;
+}
+
+li.c-gallery__image-item {
+    font-size: initial;
+    display: inline-block;
+    width: 25%;
+    position: relative;
+
+    @include gallery-slice-at-medium(){
+        width: 33.33333%;
+
+        &:first-child() {
+            width: 100%;
+        }
+    }
+
+    @include gallery-slice-at-large(){
+        float: left;
+        width: 25%;
+
+        &:first-child() {
+            width: 75%;
+        }
+    }
+}
+
+.c-gallery__image {
+    position: relative;
+    padding-top: 100%;
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.c-gallery__link {}
+.c-gallery__link--article {
+    bottom: 0;
+    font-size: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.c-gallery__meta {
+
+}
+
+.c-gallery__meta-item {
+    display: inline-block;
+}
+
+.c-gallery__text {
+    display: block;
+    @include gallery-slice-at-medium(){
+        display: table-cell;
+        vertical-align: middle;
+        width: 50%;
+    }
+
+    @include gallery-slice-at-large(){
+
+    }
+}
+
+.c-gallery__title {
+    svg {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+.c-gallery__wrapper {
+    @include gallery-slice-at-medium(){
+        display: table;
+        width: 100%;
+    }
+}

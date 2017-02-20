@@ -1,0 +1,60 @@
+<section class="c-gallery">
+	{{# data.link }}
+		<a href="{{ &data.url }}" class="c-gallery__link c-gallery__link--article {{ style.cls }}"></a>
+	{{/ data.link }}
+
+    <div class="c-gallery__wrapper">
+        <div class="c-gallery__images">
+        	<ul class="global__list-reset c-gallery__image-list">
+	        	{{# data.image_list }}
+	        		<li class="c-gallery__image-item">
+	        			<div class="c-gallery__image">{{> @cnbritain/merlin-www-image }}</div>
+        			</li>
+	        	{{/ data.image_list }}
+        	</ul>
+        </div>
+
+        <div class="c-gallery__text">
+            <div class='c-gallery__text__wrapper'>
+	            {{# data.title }}
+		            <h3 class="c-gallery__title">
+		                {{# data.icon }}
+		                	{{> @cnbritain/merlin-www-image }}
+		                {{/ data.icon }}
+		                <span>{{ data.title }}</span>
+		            </h3>
+	            {{/ data.title }}
+
+	            {{# data.sponsor }}
+
+	            {{/ data.sponsor }}
+	            {{^ data.sponsor }}
+	                {{# data.byline }}
+	                    <p class="c-gallery__byline">
+	                        <span class="c-gallery__byline-prefix">By</span>
+	                        <span class="c-gallery__byline-name">{{ data.byline }}</span>
+	                    </p>
+	                {{/ data.byline }}
+	            {{/ data.sponsor }}
+
+	            {{# data.teaser }}
+	                <p class="c-gallery__teaser">{{ data.teaser }}</p>
+	            {{/ data.teaser }}
+
+	            <hr class="c-gallery__separator" />
+
+				{{# data.meta_list }}
+				    <ul class="global__list-reset c-gallery__meta {{ style.cls }}">
+				        {{# data.items }}
+				            <li class="c-gallery__meta-item {{ style.cls }} c-gallery__meta-item--{{ data.item.data.meta_type  }}">
+				                {{# data.item }}
+				                    <span class="{{ style.cls }}">{{ data.title }}</span>
+				                {{/ data.item }}
+				            </li>
+				        {{/ data.items }}
+				    </ul>
+				{{/ data.meta_list }}
+            </div>
+        </div>
+    </div>
+</section>
