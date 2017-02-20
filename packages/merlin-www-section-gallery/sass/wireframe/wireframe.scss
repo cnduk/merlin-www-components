@@ -24,6 +24,7 @@
 
 .c-gallery__images {
     display: block;
+    position: relative;
     @include gallery-slice-at-medium(){
         display: table-cell;
         vertical-align: middle;
@@ -39,8 +40,18 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 100%;
-    padding-top: 100%;
+    width: 25%;
+    height: 100%;
+
+    @include gallery-slice-at-medium(){
+        width: 33.33333%;
+        height: 25%;
+    }
+
+    @include gallery-slice-at-large(){
+        width: 25%;
+        height: 33.33333%;
+    }
 }
 
 .c-gallery__image-remaining__text {

@@ -12,6 +12,13 @@
         			</li>
 	        	{{/ data.image_list }}
         	</ul>
+			{{# data.image_remaining }}
+				<div class="c-gallery__image-remaining">
+    				<div class="c-gallery__image-remaining__text">
+    					+ {{ data.image_remaining }}
+    				</div>
+    			</div>
+			{{/ data.image_remaining }}
         </div>
 
         <div class="c-gallery__text">
