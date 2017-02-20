@@ -64,7 +64,7 @@ li.c-gallery__image-item {
     @include gallery-slice-at-medium(){
         width: 33.33333%;
 
-        &:first-child() {
+        &:first-child {
             width: 100%;
         }
     }
@@ -73,7 +73,7 @@ li.c-gallery__image-item {
         float: left;
         width: 25%;
 
-        &:first-child() {
+        &:first-child {
             width: 75%;
         }
     }
