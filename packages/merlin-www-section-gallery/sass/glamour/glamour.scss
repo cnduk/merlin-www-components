@@ -2,3 +2,132 @@
 @import "@cnbritain/merlin-www-image:glamour";
 
 @import "../wireframe/wireframe";
+
+.c-gallery {
+    @include section-margins;
+
+    padding-left: 0;
+    padding-right: 0;
+
+    @include tablet-size {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include desktop-size {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.c-gallery__byline {
+    @include byline;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.c-gallery__byline-name {
+    @include byline-name;
+}
+
+.c-gallery__byline-prefix {
+    @include byline-prefix;
+}
+
+.c-gallery__teaser {
+    @include font('GRAPHIK', 15px, 'NORMAL', 20px);
+    margin-bottom: 15px;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font('GRAPHIK', 17px, 'LIGHT', 23px);
+        margin-bottom: 15px;
+        margin-top: 8px;
+    }
+}
+
+.c-gallery__image-remaining {}
+.c-gallery__image-remaining {
+    @include font('GRAPHIK', 23px, 'SEMI BOLD');
+    white-space: nowrap;
+    &:before {
+	    background-color: $COLOUR_BG_GALLERY_REMAINING;
+	    color: $COLOUR_MAIN;
+    	content: '';
+    	padding: 40%;
+    	position: absolute;
+    	left: 50%;
+    	top: 50%;
+    	@include vendor-prefix(transform, translate(-50%, -50%));
+    	border-radius: 50%;
+    }
+}
+
+.c-gallery__images {}
+
+.c-gallery__meta {
+    @include meta-default;
+    line-height: 18px;
+}
+li.c-gallery__meta-item {
+    @include meta-item;
+    @include global-meta-item;
+
+    &:last-child {
+        padding-right: 0;
+    }
+}
+
+
+.c-gallery__separator {
+    display: none;
+}
+
+.c-gallery__text {
+    background-color: $COLOUR_SECTION_GALLERY;
+    color: $COLOUR_MAIN;
+    text-align: center;
+}
+
+.c-gallery__text__wrapper {
+    padding: 30px 20px;
+
+	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+		padding: 20px 60px;
+	}
+}
+
+.c-gallery__title {
+    @include title-feature;
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    svg {
+        display: block;
+        height: 19px;
+        margin: 0 auto;
+        margin-bottom: 13px;
+        padding-top: 5px;
+        vertical-align: top;
+        width: 24px;
+    }
+    path {
+        fill: $COLOUR_MAIN;
+    }
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+	    @include title-feature-desktop;
+	    margin-bottom: 8px;
+
+	    svg {
+	        height: 21px;
+	        display: inline;
+	        margin-bottom: 0;
+	        padding-right: 5px;
+	        width: 21px;
+	    }
+    }
+}
+
+.c-gallery__wrapper {
+    background-color: $COLOUR_BG_SECONDARY;
+}
