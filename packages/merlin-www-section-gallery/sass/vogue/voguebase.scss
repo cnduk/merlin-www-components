@@ -97,9 +97,9 @@
         padding: $PADDING_LARGE $PADDING_X_LARGE;
     }
 
-    @include gallery-slice-at-large(){
-        padding: $PADDING_X_LARGE $PADDING_X_LARGE;
-    }
+    // @include gallery-slice-at-large(){
+    //     padding: $PADDING_X_LARGE $PADDING_X_LARGE;
+    // }
 }
 
 .c-gallery__title {

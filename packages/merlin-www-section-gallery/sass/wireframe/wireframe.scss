@@ -1,18 +1,6 @@
 @import '@cnbritain/merlin-www-common:wireframe';
 @import '@cnbritain/merlin-www-image:wireframe';
 
-@mixin gallery-slice-at-medium() {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        @content;
-    }
-}
-
-@mixin gallery-slice-at-large() {
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @content;
-    }
-}
-
 .c-gallery {
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
@@ -25,14 +13,10 @@
 .c-gallery__images {
     display: block;
     position: relative;
-    @include gallery-slice-at-medium(){
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         display: table-cell;
         vertical-align: middle;
         width: 50%;
-    }
-
-    @include gallery-slice-at-large(){
-
     }
 }
 
@@ -40,15 +24,10 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 25%;
-    height: 100%;
+    width: 33.33333%;
+    height: 50%;
 
-    @include gallery-slice-at-medium(){
-        width: 33.33333%;
-        height: 25%;
-    }
-
-    @include gallery-slice-at-large(){
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         width: 25%;
         height: 33.33333%;
     }
@@ -62,30 +41,29 @@
 }
 
 .c-gallery__image-list {
-    font-size: 0;
     position: relative;
+    overflow: hidden;
 }
 
 li.c-gallery__image-item {
-    font-size: initial;
-    display: inline-block;
-    width: 25%;
     position: relative;
+    float: left;
 
-    @include gallery-slice-at-medium(){
-        width: 33.33333%;
-
-        &:first-child {
-            width: 100%;
-        }
+    width: 33.33333%;
+    &:first-child {
+        width: 66.66666%;
+    }
+    &:nth-last-child(2) {
+        display: none;
     }
 
-    @include gallery-slice-at-large(){
-        float: left;
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         width: 25%;
-
         &:first-child {
             width: 75%;
+        }
+        &:nth-last-child(2) {
+            display: block;
         }
     }
 }
@@ -127,14 +105,10 @@ li.c-gallery__image-item {
 
 .c-gallery__text {
     display: block;
-    @include gallery-slice-at-medium(){
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         display: table-cell;
         vertical-align: middle;
         width: 50%;
-    }
-
-    @include gallery-slice-at-large(){
-
     }
 }
 
@@ -146,8 +120,9 @@ li.c-gallery__image-item {
 }
 
 .c-gallery__wrapper {
-    @include gallery-slice-at-medium(){
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         display: table;
+        vertical-align: middle;
         width: 100%;
     }
 }

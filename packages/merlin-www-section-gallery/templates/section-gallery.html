@@ -11,14 +11,14 @@
 	        			<div class="c-gallery__image">{{> @cnbritain/merlin-www-image }}</div>
         			</li>
 	        	{{/ data.image_list }}
+				{{# data.image_remaining }}
+					<div class="c-gallery__image-remaining">
+	    				<div class="c-gallery__image-remaining__text">
+	    					+ {{ data.image_remaining }}
+	    				</div>
+	    			</div>
+				{{/ data.image_remaining }}
         	</ul>
-			{{# data.image_remaining }}
-				<div class="c-gallery__image-remaining">
-    				<div class="c-gallery__image-remaining__text">
-    					+ {{ data.image_remaining }}
-    				</div>
-    			</div>
-			{{/ data.image_remaining }}
         </div>
 
         <div class="c-gallery__text">
