@@ -1,0 +1,155 @@
+@import "@cnbritain/merlin-www-common:glamour";
+@import "@cnbritain/merlin-www-buttons:glamour";
+
+@import "../wireframe/wireframe";
+
+.c-newsletter {
+    @include section-margins;
+
+    box-sizing: border-box;
+    color: $COLOUR_MAIN;
+    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    padding: 0 $MOBILE_SIDE_GUTTER;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    @include tablet-size {
+        padding: 0 $TABLET_SIDE_GUTTER;
+    }
+
+    @include desktop-size {
+        padding: 0 $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.c-newsletter__wrapper {
+    border-bottom: 2px solid $COLOUR_BORDER_SOLID;
+    border-top: 2px solid $COLOUR_BORDER_SOLID;
+    padding: 30px 0;
+
+    @include tablet-size {
+        border-bottom: 2px solid $COLOUR_BORDER_SOLID;
+        border-top: 2px solid $COLOUR_BORDER_SOLID;
+        padding: 50px 0px;
+    }
+}
+
+.c-newsletter__logo {
+    display: none;
+}
+
+.c-newsletter__title {
+    @include title-magazine;
+    color: $COLOUR_MAIN;
+    font-weight: 800;
+    letter-spacing: 0.0em;
+    margin: 0 0 15px;
+
+    @include tablet-size {
+        @include title-magazine-desktop;
+
+        margin: 0 0 20px;
+    }
+}
+
+.c-newsletter__description {
+    @include font('GRAPHIK', 15px, $line-height: 19px);
+    margin-bottom: 20px;
+    margin: 0 auto;
+    max-width: 760px;
+
+    @include tablet-size {
+        @include font-size(17px);
+        @include line-height(22px);
+        margin-bottom: 40px;
+    }
+}
+
+.c-newsletter__form {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    width: 100%;
+
+    @include tablet-size {
+        display: inline-block;
+        height: 40px;
+        margin-bottom: 40px;
+        margin-top: 0;
+        width: auto;
+    }
+}
+
+.c-newsletter__form__text {
+    @include font('GRAPHIK', 17px, 400, 17px, 20);
+
+    background: $COLOUR_BG_MAIN;
+    border: 0;
+    border-bottom: 1px solid $COLOUR_BORDER_INPUT;
+    border-radius: 0;
+    box-sizing: border-box;
+    display: block;
+    height: 40px;
+    letter-spacing: 0.05em;
+    margin-bottom: 15px;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+
+    @include tablet-size {
+        float: left;
+        margin-bottom: 0;
+        padding-left: 10px;
+        text-align: left;
+        width: 420px;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+.c-newsletter__form__btn {
+    @include button-single();
+    @include button-single-light();
+    @include font('GRAPHIK', 13px, 'SEMI BOLD', 13px, 20);
+
+    display: block;
+    height: 40px;
+    margin-top: 15px;
+    padding: 0;
+    text-transform: none;
+    width: 100%;
+
+    @include tablet-size {
+        @include font-size(13px);
+        float: left;
+        margin-left: 20px;
+        margin-top: 0px;
+        padding: 10px;
+        width: 110px;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
+
+.c-newsletter__legal {
+    @include font('GRAPHIK', 11px, $line-height: 15px);
+    margin: 0;
+    width: 100%;
+
+    a:hover {
+        border: 0;
+    }
+}
+
+.c-newsletter__privacy {
+    color: $COLOUR_MAIN;
+    text-decoration: underline;
+}

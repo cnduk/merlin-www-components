@@ -1,0 +1,19 @@
+{
+  "name": "@cnbritain/merlin-www-section-newsletter",
+  "version": "0.0.1",
+  "description": "",
+  "main": "js/index.js",
+  "scripts": {
+    "demo": "merlin-component-demo-server merlin.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cnbritain/merlin-www-buttons": "^1.0.0",
+    "@cnbritain/merlin-www-common": "^0.1.2",
+    "@cnbritain/merlin-www-image": "^1.0.3"
+  },
+  "devDependencies": {
+    "@cnbritain/merlin-component-demo-server": "^2.2.2"
+  }
+}

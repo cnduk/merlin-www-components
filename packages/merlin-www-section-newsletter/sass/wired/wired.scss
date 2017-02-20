@@ -1,0 +1,155 @@
+@import "@cnbritain/merlin-www-common:wired";
+@import "@cnbritain/merlin-www-buttons:wired";
+
+@import "../wireframe/wireframe";
+
+.c-newsletter {
+    background-color: #fff;
+    box-sizing: border-box;
+    margin: $MOBILE_SLICE_MARGIN auto;
+    max-width: 1440px;
+    padding: 20px 20px 40px 20px;
+    text-align: center;
+
+    @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ){
+        margin-top: $MOBILE_SLICE_MARGIN;
+        margin-bottom: $MOBILE_SLICE_MARGIN;
+        padding: $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen( $DESKTOP_SIDE_GUTTER_BREAKPOINT ){
+        margin-top: $DESKTOP_SLICE_MARGIN;
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+        padding: $DESKTOP_SIDE_GUTTER;
+    }
+}
+.c-newsletter__wrapper {
+}
+.c-newsletter__logo {
+    margin-bottom: 20px;
+
+    @include min-screen ( $TABLET_SIDE_GUTTER_BREAKPOINT ) {
+        margin-bottom: 30px;
+    }
+
+    svg {
+        width: 85px;
+        height: 85px;
+
+        @include min-screen ( $TABLET_SIDE_GUTTER_BREAKPOINT ) {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+.c-newsletter__title {
+    @include font('NEW GROTESK SQUARE', 30px, 700, 30px);
+
+    @include min-screen ( $TABLET_SIDE_GUTTER_BREAKPOINT ) {
+        @include font('NEW GROTESK SQUARE', 40px, 700, 40px);
+
+        margin: 0 0 30px 0;
+    }
+
+    margin: 0 0 15px 0;
+
+    text-transform: uppercase;
+}
+.c-newsletter__description {
+    @include font('EXCHANGE WEB', 17px, null, 23px);
+
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    @include min-screen ( $TABLET_SIDE_GUTTER_BREAKPOINT ) {
+        margin-bottom: 35px;
+    }
+
+    max-width: 760px;
+}
+.c-newsletter__form {
+    margin: 0 auto;
+    margin-bottom: 15px;
+
+    @include min-screen ( $TABLET_SIDE_GUTTER_BREAKPOINT ) {
+        display: inline-block;
+
+        height: 40px;
+        margin-bottom: 40px;
+
+        width: auto;
+    }
+
+    width: 100%;
+}
+.c-newsletter__form__text {
+    background-color: #f5f5f5;
+
+    border: none;
+    border-radius: 0;
+
+    display: block;
+
+    @include font('BRUTAL', 14px, 'LIGHT', 17px);
+
+    letter-spacing: 0.020em;
+
+    margin-bottom: 10px;
+
+    width: 100%;
+    height: 40px;
+
+    padding: 10px;
+    box-sizing: border-box;
+
+    @include min-screen ( $TABLET_SIDE_GUTTER_BREAKPOINT ) {
+        float: left;
+        margin-bottom: 0;
+        width: 420px;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+.c-newsletter__form__btn {
+    @include button-single();
+    @include button-single-light();
+    @include font('BRUTAL', 12px, 'BOLD', 12px);
+
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    text-transform: uppercase;
+
+    @include min-screen ( $TABLET_SIDE_GUTTER_BREAKPOINT ) {
+        float: left;
+        margin-left: 20px;
+        width: 140px;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
+.c-newsletter__legal {
+    @include font('BRUTAL', 12px, null, 15px);
+
+    @include min-screen ( $TABLET_SIDE_GUTTER_BREAKPOINT ) {
+        @include font-size(13px);
+    }
+
+    margin: 0;
+
+    a {
+        border: none;
+    }
+}
+.c-newsletter__privacy {
+    color: #000;
+    text-decoration: underline;
+}

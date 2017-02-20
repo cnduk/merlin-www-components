@@ -1,0 +1,29 @@
+{
+    "name": "@cnbritain/merlin-www-section-newsletter",
+    "main": "section",
+    "currentTheme": null,
+    "data": {
+        "newsletter": "demo/data/newsletter.json",
+        "newsletter-no-title": "demo/data/newsletter-no-title.json",
+        "newsletter-no-description": "demo/data/newsletter-no-description.json",
+        "newsletter-nothing": "demo/data/newsletter-nothing.json"
+    },
+    "js": {
+        "demo": "demo/demo.js"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "wired": "sass/wired/wired.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "missvogue": "sass/missvogue/missvogue.scss"
+    },
+    "partials": {
+        "section": "templates/section.html"
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-buttons",
+        "@cnbritain/merlin-www-image"
+    ]
+}
