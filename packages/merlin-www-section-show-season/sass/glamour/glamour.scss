@@ -1,0 +1,141 @@
+@import "@cnbritain/merlin-www-common:glamour";
+@import "@cnbritain/merlin-www-image:glamour";
+@import "@cnbritain/merlin-www-buttons:glamour";
+// TODO: glamour card
+// @import "@cnbritain/merlin-www-card:glamour";
+
+@import '../wireframe/wireframe';
+
+.c-show-season-section {
+    @include section-margins;
+    box-sizing: border-box;
+    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    padding: 0 20px;
+
+    @include tablet-size {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include desktop-size {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
+
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.c-show-season-section__wrapper {}
+.c-show-season-section__title {
+    @include title-show-season;
+
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+
+    @include desktop-size {
+        @include title-show-season-desktop;
+
+        margin-bottom: 25px;
+        position: relative;
+        text-align: center;
+        width: 100%;
+
+        &:before {
+            background-color: #000;
+            content: '';
+            height: 2px;
+            left: 0;
+            margin-top: -14px;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            z-index: -1;
+        }
+
+        span {
+            background-color: $COLOUR_BG_MAIN;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}
+
+.c-show-season-section__link {}
+.c-show-season-section__meta {
+    text-align: center;
+    text-transform: uppercase;
+
+    margin: 0 0 20px;
+
+    @include desktop-size {
+        margin: 0 0 30px;
+    }
+}
+li.c-show-season-section__meta-item {
+    @include global-meta-item;
+
+    &:last-child {
+        padding-right: 0;
+    }
+}
+
+.c-show-season-section__meta-item--season {
+    @include font('GRAPHIK', 13px, 'NORMAL', 17px);
+}
+
+.c-show-season-section__meta-item--show-type {
+    @include font('GRAPHIK', 13px, 'SEMI BOLD', 17px);
+}
+
+.c-show-season-section__card-list {
+    margin: 0;
+}
+li.c-show-season-section__card-list-item {
+    padding: 0;
+
+    @include max-screen($CARD_SWITCHER_WIDTH - 1) {
+        &:nth-child(-n+2) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .c-card__title {
+
+    }
+
+    .c-card__image {
+        margin: 0;
+    }
+}
+
+.c-show-season-section__card {}
+.c-show-season-section__card__image {}
+
+.c-show-season-section__card__label {}
+.c-show-season-section__card__title {}
+
+.c-show-season-section__btn__wrapper {
+    text-align: center;
+}
+
+.c-show-season-section__btn {
+    box-sizing: border-box;
+    margin-top: 30px;
+    width: 100%;
+
+    @include button-single();
+    @include button-single-light();
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+
+    @include tablet-size {
+        margin-top: 40px;
+        max-width: 170px;
+    }
+}
