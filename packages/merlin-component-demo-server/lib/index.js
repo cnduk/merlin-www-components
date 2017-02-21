@@ -203,14 +203,13 @@ function loadTemplate(file){
 function loadSass(file){
     return new Promise((resolve, reject) => {
         const importer = sassImporter(MASTER_CONFIG, MASTER_CONFIG.name);
-        promiseSass({
-            file,
-            importer
-        })
-        .then((sassContents) => {
+
+        promiseSass({ file, importer }).then((sassContents) => {
+
             LOGGER.log('SASS', `Loaded sass - '${file}'`);
             importer.SESSION.reset();
             resolve(sassContents.css.toString());
+
         }, promiseError);
     });
 }
@@ -296,8 +295,11 @@ function resolveDependencies(dependencies, previousDir='.'){
             // Load merlin dependency
             loadJSON(merlinFile)
                 .then((config) => {
-                    resolveDependency(config, merlinDir, { sass: true, data: true, js: true })
-                        .then(resolve, reject);
+                    resolveDependency(config, merlinDir, {
+                        sass: true,
+                        data: true,
+                        js: true
+                    }).then(resolve, reject);
                 }, promiseError);
         });
     }));
@@ -401,13 +403,16 @@ function resolveDependency(config, merlinDir, ignore={ sass: false, data: false,
 function resolveDependencyData(merlinDir, dataConfig){
     if(!dataConfig) return Promise.resolve(null);
     if(Object.keys(dataConfig).length === 0) return Promise.resolve(null);
+
     return new Promise((resolve, reject) => {
-        Promise.all(Object.keys(dataConfig).map((key) => {
+        const dataPromises = Object.keys(dataConfig).map((key) => {
             return loadJSON(path.resolve(merlinDir, dataConfig[key]))
                 .then((json) => {
                     return Promise.resolve({ key, json });
                 }, promiseError);
-        })).then((files) => {
+        });
+
+        Promise.all(dataPromises).then((files) => {
             const dataMap = new Map();
             files.forEach((file) => {
                 dataMap.set(file.key, file.json);
@@ -420,13 +425,16 @@ function resolveDependencyData(merlinDir, dataConfig){
 function resolveDependencyPartials(merlinDir, partialsConfig){
     if(!partialsConfig) return Promise.resolve(null);
     if(Object.keys(partialsConfig).length === 0) return Promise.resolve(null);
+
     return new Promise((resolve, reject) => {
-        Promise.all(Object.keys(partialsConfig).map((key) => {
+        const partialPromises = Object.keys(partialsConfig).map((key) => {
             return loadTemplate(path.resolve(merlinDir, partialsConfig[key]))
                 .then((template) => {
                     return Promise.resolve({ key, template });
                 }, promiseError);
-        })).then((templates) => {
+        });
+
+        Promise.all(partialPromises).then((templates) => {
             const templateMap = new Map();
             templates.forEach((template) => {
                 templateMap.set(template.key, template.template);
@@ -439,13 +447,16 @@ function resolveDependencyPartials(merlinDir, partialsConfig){
 function resolveDependencyThemes(merlinDir, themesConfig){
     if(!themesConfig) return Promise.resolve(null);
     if(Object.keys(themesConfig).length === 0) return Promise.resolve(null);
+
     return new Promise((resolve, reject) => {
-        Promise.all(Object.keys(themesConfig).map((key) => {
+        const themePromises = Object.keys(themesConfig).map((key) => {
             return loadSass(path.resolve(merlinDir, themesConfig[key]))
                 .then((sass) => {
                     return Promise.resolve({ key, sass });
                 }, promiseError);
-        })).then((sassContents) => {
+        });
+
+        Promise.all(themePromises).then((sassContents) => {
             const sassMap = new Map();
             sassContents.forEach((content) => {
                 sassMap.set(content.key, content.sass);
@@ -458,13 +469,16 @@ function resolveDependencyThemes(merlinDir, themesConfig){
 function resolveDependencyJs(merlinDir, jsConfig){
     if(!jsConfig) return Promise.resolve(null);
     if(Object.keys(jsConfig).length === 0) return Promise.resolve(null);
+
     return new Promise((resolve, reject) => {
-        Promise.all(Object.keys(jsConfig).map((key) => {
+        const dependencyPromises = Object.keys(jsConfig).map((key) => {
             return compileJs(key, path.resolve(merlinDir, jsConfig[key]))
                 .then((js) => {
                     return Promise.resolve({ key, js });
                 }, promiseError);
-        })).then((jsContents) => {
+        });
+
+        Promise.all(dependencyPromises).then((jsContents) => {
             const jsMap = new Map();
             jsContents.forEach((content) => {
                 jsMap.set(content.key, content.js);
