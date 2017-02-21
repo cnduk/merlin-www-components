@@ -22,11 +22,13 @@
 }
 
 .c-show-season-section__card-list {
+    font-size: 0;
     margin: 0 -10px;
 }
 li.c-show-season-section__card-list-item {
     box-sizing: border-box;
     display: inline-block;
+    font-size: initial;
     vertical-align: top;
     padding: 0 10px;
     width: 50%;
