@@ -61,6 +61,12 @@
     }
 }
 
+.c-gallery__image-remaining__text-prefix {
+	@include font-size(19px);
+	margin-right: -2px;
+}
+.c-gallery__image-remaining__text-value {}
+
 .c-gallery__images {}
 .c-gallery__meta {
     @include meta-default;
