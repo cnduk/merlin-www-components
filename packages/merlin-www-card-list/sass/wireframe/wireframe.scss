@@ -1,4 +1,6 @@
-.c-card-list {}
+.c-card-list {
+    font-size: 0;
+}
 
 .c-card-list--cols {
     .c-card-list__item {
@@ -8,6 +10,7 @@
 
 .c-card-list__item {
     box-sizing: border-box;
+    font-size: initial;
     vertical-align: top;
     width: 100%;
 }
