@@ -109,98 +109,10 @@ class MerlinComponentDemoServer {
     }
 
     _routes(){
-        this._app.get('/static/*', (req, res) => {
-
-            if(!req.headers.referer) return res.send('broke');
-
-            const decodedReferer = decodeURIComponent(req.headers.referer);
-            const matches = decodedReferer.match(/(@cnbritain\/[-\w]+\/([-\w]+))$/);
-            if(!matches) return res.send('broke');
-
-            const THEME_KEY = matches[1];
-            if(!THEMES.hasOwnProperty(THEME_KEY)) return res.send('broke');
-
-            res.redirect(`/assets/${matches[2]}/${req.params[0]}`);
-        });
-        this._app.get('/', (req, res) => {
-            const view = {
-                "data": {
-                    "components": [],
-                    "title": "All themes"
-                }
-            };
-            MASTER_COMPONENT.data.forEach((_, dataKey) => {
-                if(MASTER_COMPONENT.themes.size === 0){
-                    view.data.components.push({
-                        "escaped_name": encodeURIComponent(MASTER_COMPONENT.main),
-                        "name": MASTER_COMPONENT.main,
-                        "escaped_theme": null,
-                        "theme": null,
-                        "escaped_data": encodeURIComponent(dataKey),
-                        "data": dataKey
-                    });
-                } else {
-                    MASTER_COMPONENT.themes.forEach((_, themeKey) => {
-                        view.data.components.push({
-                            "escaped_name": encodeURIComponent(MASTER_COMPONENT.main),
-                            "name": MASTER_COMPONENT.main,
-                            "escaped_theme": encodeURIComponent(themeKey),
-                            "theme": themeKey,
-                            "escaped_data": encodeURIComponent(dataKey),
-                            "data": dataKey
-                        });
-                    });
-                }
-            });
-
-            const indexPage = mustache.render(this._partials.page, view);
-
-            LOGGER.log('SERVER', 'Index page loaded');
-            res.send(indexPage);
-        });
-        this._app.get('/:theme', (req, res) => {
-            const theme = `${MASTER_COMPONENT.name}/${decodeURIComponent(req.params.theme)}`;
-            const view = {
-                "data": {
-                    "components": [],
-                    "title": `${req.params.theme} theme page`
-                }
-            };
-            MASTER_COMPONENT.data.forEach((_, dataKey) => {
-                view.data.components.push({
-                    "escaped_name": encodeURIComponent(MASTER_COMPONENT.main),
-                    "name": MASTER_COMPONENT.main,
-                    "escaped_theme": encodeURIComponent(theme),
-                    "theme": theme,
-                    "escaped_data": encodeURIComponent(dataKey),
-                    "data": dataKey
-                });
-            });
-
-            const indexPage = mustache.render(this._partials.page, view);
-
-            LOGGER.log('SERVER', 'Theme page loaded');
-            res.send(indexPage);
-        });
-        this._app.get('/:data/:theme', (req, res) => {
-            const dataKey = decodeURIComponent(req.params.data);
-            const themeKey = decodeURIComponent(req.params.theme);
-
-            const componentTemplate = this._renderComponent(dataKey);
-            const theme = THEMES[themeKey];
-
-            const componentPage = mustache.render(
-                this._partials.component, {
-                    "page": {
-                        "component": componentTemplate,
-                        "js": MASTER_COMPONENT.js.get(`${MASTER_COMPONENT.name}/demo`) || false,
-                        "theme": theme
-                    }
-                });
-
-            LOGGER.log('SERVER', `Component page loaded - ${themeKey}/${dataKey}`);
-            res.send(componentPage);
-        });
+        this._app.get('/static/*', routeStatic.bind(this));
+        this._app.get('/', routeIndex.bind(this));
+        this._app.get('/:theme', routeTheme.bind(this));
+        this._app.get('/:data/:theme', routeDataTheme.bind(this));
     }
 
     constructor(config={}, port=null){
@@ -577,6 +489,103 @@ function buildComponentDicts(){
             DATA[key] = value;
         });
     });
+}
+
+function routeStatic(req, res){
+    if(!req.headers.referer) return res.send('broke');
+
+    const decodedReferer = decodeURIComponent(req.headers.referer);
+    const matches = decodedReferer.match(/(@cnbritain\/[-\w]+\/([-\w]+))$/);
+    if(!matches) return res.send('broke');
+
+    const THEME_KEY = matches[1];
+    if(!THEMES.hasOwnProperty(THEME_KEY)) return res.send('broke');
+
+    res.redirect(`/assets/${matches[2]}/${req.params[0]}`);
+}
+
+function routeIndex(req, res){
+    const view = {
+        "data": {
+            "components": [],
+            "title": "All themes"
+        }
+    };
+    MASTER_COMPONENT.data.forEach((_, dataKey) => {
+
+        if(MASTER_COMPONENT.themes.size === 0){
+            view.data.components.push({
+                "escaped_name": encodeURIComponent(MASTER_COMPONENT.main),
+                "name": MASTER_COMPONENT.main,
+                "escaped_theme": null,
+                "theme": null,
+                "escaped_data": encodeURIComponent(dataKey),
+                "data": dataKey
+            });
+        } else {
+            MASTER_COMPONENT.themes.forEach((_, themeKey) => {
+                view.data.components.push({
+                    "escaped_name": encodeURIComponent(MASTER_COMPONENT.main),
+                    "name": MASTER_COMPONENT.main,
+                    "escaped_theme": encodeURIComponent(themeKey),
+                    "theme": themeKey,
+                    "escaped_data": encodeURIComponent(dataKey),
+                    "data": dataKey
+                });
+            });
+        }
+
+    });
+
+    const indexPage = mustache.render(this._partials.page, view);
+
+    LOGGER.log('SERVER', 'Index page loaded');
+    res.send(indexPage);
+}
+
+function routeTheme(req, res){
+    const theme = `${MASTER_COMPONENT.name}/${decodeURIComponent(req.params.theme)}`;
+    const view = {
+        "data": {
+            "components": [],
+            "title": `${req.params.theme} theme page`
+        }
+    };
+    MASTER_COMPONENT.data.forEach((_, dataKey) => {
+        view.data.components.push({
+            "escaped_name": encodeURIComponent(MASTER_COMPONENT.main),
+            "name": MASTER_COMPONENT.main,
+            "escaped_theme": encodeURIComponent(theme),
+            "theme": theme,
+            "escaped_data": encodeURIComponent(dataKey),
+            "data": dataKey
+        });
+    });
+
+    const indexPage = mustache.render(this._partials.page, view);
+
+    LOGGER.log('SERVER', 'Theme page loaded');
+    res.send(indexPage);
+}
+
+function routeDataTheme(req, res){
+    const dataKey = decodeURIComponent(req.params.data);
+    const themeKey = decodeURIComponent(req.params.theme);
+
+    const componentTemplate = this._renderComponent(dataKey);
+    const theme = THEMES[themeKey];
+
+    const componentPage = mustache.render(
+        this._partials.component, {
+            "page": {
+                "component": componentTemplate,
+                "js": MASTER_COMPONENT.js.get(`${MASTER_COMPONENT.name}/demo`) || false,
+                "theme": theme
+            }
+        });
+
+    LOGGER.log('SERVER', `Component page loaded - ${themeKey}/${dataKey}`);
+    res.send(componentPage);
 }
 
 module.exports = MerlinComponentDemoServer;
