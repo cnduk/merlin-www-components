@@ -3,10 +3,6 @@
 
 @import "../wireframe/wireframe";
 
-$_FONT_BRUTAL: map-get($FONT_GROUPS, 'BRUTAL');
-$_FONT_EXCHANGE: map-get($FONT_GROUPS, 'EXCHANGE WEB');
-$_FONT_GROTESK: map-get($FONT_GROUPS, 'NEW GROTESK SQUARE');
-
 .c-gallery {
     margin-top: $MOBILE_SLICE_MARGIN;
     margin-bottom: $MOBILE_SLICE_MARGIN;
@@ -40,12 +36,12 @@ $_FONT_GROTESK: map-get($FONT_GROUPS, 'NEW GROTESK SQUARE');
 }
 
 .c-gallery__byline-name {
-    font-family: map-get($_FONT_BRUTAL, 'FAMILY');
+    @include font("BRUTAL");
     text-transform: uppercase;
 }
 
 .c-gallery__byline-prefix {
-    font-family: map-get($_FONT_EXCHANGE, 'FAMILY');
+    @include font("EXCHANGE WEB");
     font-style: italic;
 }
 
@@ -54,11 +50,10 @@ $_FONT_GROTESK: map-get($FONT_GROUPS, 'NEW GROTESK SQUARE');
 }
 
 .c-gallery__image-remaining {
-	background-color: rgba(0,0,0,0.5);
-	color: #fff;
-    font-family: map-get($_FONT_BRUTAL, 'FAMILY');
-    @include font-size(31px);
-    font-weight: map-get($FONT_WEIGHTS, 'BOLD');
+    @include font("BRUTAL", 31px, 700);
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    white-space: nowrap;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         @include font-size(35px);
@@ -66,9 +61,7 @@ $_FONT_GROTESK: map-get($FONT_GROUPS, 'NEW GROTESK SQUARE');
 }
 
 .c-gallery__meta {
-    font-family: map-get($_FONT_EXCHANGE, 'FAMILY');
-    @include font-size(11px);
-    letter-spacing: 0.02em;
+    @include font("EXCHANGE WEB", 11px, null, null, 20);
 
     .c-gallery__meta-item {
         padding-right: 10px;
@@ -108,12 +101,7 @@ $_FONT_GROTESK: map-get($FONT_GROUPS, 'NEW GROTESK SQUARE');
 }
 
 .c-gallery__title {
-    font-family: map-get($_FONT_GROTESK, 'FAMILY');
-    @include font-size(40px);
-    font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
-    letter-spacing: 0.020em;
-    line-height: map-get($_FONT_GROTESK, 'LINE HEIGHT');
-    // This is 13px due to grotesk visually looking a bit weird
+    @include font("NEW GROTESK SQUARE", 40px, "LIGHT", 40px, 20);
     margin: 0 0 13px 0;
 
     svg {
