@@ -13,8 +13,19 @@
                 padding: 0;
             }
             h2 {
-                font-family: comic sans ms;
+                font-family: monospace;
                 font-size: 1em;
+            }
+            .group {
+                margin: 1em 0;
+                padding: 15px 10px;
+            }
+            .group + .group {
+                border-top: 1px dotted #333;
+            }
+            .group__title {
+                font-family: monospace;
+                margin: 0 0 1em 0;
             }
         </style>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -62,9 +73,10 @@
             <h3>{{ name }}</h3>
 
             {{# demos }}
-                <h2><a href="{{ url }}">{{ title }}</a></h2>
-                <iframe src="{{ url }}" frameborder="0" marginheight="0" marginwidth="0" width="100%"></iframe>
-                <hr />
+                <div class="group">
+                    <h2 class="group__title"><a href="{{ url }}">{{ title }}</a></h2>
+                    <iframe src="{{ url }}" frameborder="0" marginheight="0" marginwidth="0" width="100%"></iframe>
+                </div>
             {{/ demos }}
         {{/ data.groups }}
 
