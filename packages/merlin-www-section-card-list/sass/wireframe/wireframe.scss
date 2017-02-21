@@ -24,7 +24,7 @@
 
 .c-card-section__constrain {
     margin: 0 auto;
-    max-width: 1440px;
+    max-width: $MAXIMUM_PAGE_WIDTH;
     position: relative; //Used by topics
     width: 100%;
 }
@@ -50,4 +50,11 @@
         margin-top: 35px;
         max-width: 170px;
     }
+}
+
+
+
+
+.c-card-section--video {
+    background: #000;
 }

@@ -58,7 +58,7 @@
 .c-card-section--s-results {}
 .c-card-section--v-genre-articles {}
 
-.c-card-section--c-video-articles {
+.c-card-section--video {
     background-color: $COLOUR_BG_DARK;
     max-width: none;
     padding: 40px $MOBILE_SIDE_GUTTER;
@@ -70,6 +70,19 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         padding: 80px $DESKTOP_SIDE_GUTTER;
     }
+
+
+    .c-card-section__btn {
+        width: auto;
+
+        @include button-single();
+        @include button-single-dark();
+
+        &:hover {
+            @include button-single-dark-hover();
+        }
+    }
+
 }
 
 .c-card-section--sh-latest-articles {}
