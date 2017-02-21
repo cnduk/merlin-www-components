@@ -32,6 +32,10 @@
 		            </h3>
 	            {{/ data.title }}
 
+	            {{# data.teaser }}
+	                <p class="c-gallery__teaser">{{ data.teaser }}</p>
+	            {{/ data.teaser }}
+
 	            {{# data.sponsor }}
 
 	            {{/ data.sponsor }}
@@ -43,10 +47,6 @@
 	                    </p>
 	                {{/ data.byline }}
 	            {{/ data.sponsor }}
-
-	            {{# data.teaser }}
-	                <p class="c-gallery__teaser">{{ data.teaser }}</p>
-	            {{/ data.teaser }}
 
 	            <hr class="c-gallery__separator" />
 

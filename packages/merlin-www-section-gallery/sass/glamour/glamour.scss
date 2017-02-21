@@ -52,7 +52,7 @@
 	    background-color: $COLOUR_BG_GALLERY_REMAINING;
 	    color: $COLOUR_MAIN;
     	content: '';
-    	padding: 40%;
+    	padding: 30%;
     	position: absolute;
     	left: 50%;
     	top: 50%;
@@ -75,7 +75,6 @@ li.c-gallery__meta-item {
     }
 }
 
-
 .c-gallery__separator {
     display: none;
 }
@@ -84,6 +83,9 @@ li.c-gallery__meta-item {
     background-color: $COLOUR_SECTION_GALLERY;
     color: $COLOUR_MAIN;
     text-align: center;
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    	text-align: left;
+    }
 }
 
 .c-gallery__text__wrapper {
@@ -108,6 +110,7 @@ li.c-gallery__meta-item {
         vertical-align: top;
         width: 24px;
     }
+
     path {
         fill: $COLOUR_MAIN;
     }
