@@ -57,17 +57,116 @@ const LOGGER = {
 
 
 class ComponentConfig {
-    constructor(name){
+
+    _getDemoUrl(theme, partial, data){
+        const escapedTheme = encodeURIComponent(theme);
+        const escapedPartial = encodeURIComponent(partial);
+        const escapedData = encodeURIComponent(data);
+        return `/${escapedTheme}/${escapedPartial}/${escapedData}`;
+    }
+
+    _prefix(value){
+        return `${this.name}/${value}`;
+    }
+
+    constructor(config){
+        this._config = config;
         this.currentTheme = null;
         this.data = new Map();
+        this.demos = [];
         this.isMaster = false;
         this.js = new Map();
         this.location = null;
         this.main = null;
-        this.name = name;
+        this.name = config.name;
         this.partials = new Map();
         this.themes = new Map();
     }
+
+    createDemos(){
+        const demos = [];
+        if(this._config.hasOwnProperty('demo') && Object.keys(this._config.demo).length > 0){
+            Object.keys(this._config.demo).forEach((demoKey) => {
+                const demoValue = this._config.demo[demoKey];
+                const demoGroup = {
+                    name: demoKey,
+                    demos: []
+                };
+
+                // Quick settings
+                if(typeof demoValue === 'string'){
+                    const dataKey = this._prefix(demoValue);
+
+                    if(!this.data.has(dataKey)){
+                        throw new Error(`unknown data key in demo - ${demoValue}`);
+                    }
+
+                    this.themes.forEach((_, themeKey) => {
+                        demoGroup.demos.push({
+                            data: dataKey,
+                            main: this.main,
+                            theme: themeKey,
+                            title: `${themeKey} - ${this.main} - ${dataKey}`,
+                            url: this._getDemoUrl(themeKey, this.main, dataKey)
+                        });
+                    });
+
+                } else {
+                    const dataKey = this._prefix(demoValue.data);
+                    const partialKey = this._prefix(demoValue.main);
+
+                    // Check data key exists
+                    if(!this.data.has(dataKey)){
+                        throw new Error(`unknown data key in demo - ${demoValue.data}`);
+                    }
+
+                    // Check main exists
+                    if(!this.partials.has(partialKey)){
+                        throw new Error(`unknown partial key in demo - ${demoValue.main}`);
+                    }
+
+                    demoValue.themes.forEach((demoTheme) => {
+                        const themeKey = this._prefix(demoTheme);
+
+                        // Check theme exists
+                        if(!this.themes.has(themeKey)){
+                            throw new Error(`unknown theme key in demo - ${demoTheme}`);
+                        }
+
+                        demoGroup.demos.push({
+                            data: dataKey,
+                            main: partialKey,
+                            theme: themeKey,
+                            title: `${themeKey} - ${partialKey} - ${dataKey}`,
+                            url: this._getDemoUrl(themeKey, partialKey, dataKey)
+                        });
+                    });
+                }
+                demos.push(demoGroup);
+            });
+
+        // No demos so create a default list from data, themes and main
+        } else {
+            const demoGroup = {
+                name: 'All',
+                demos: []
+            };
+            this.data.forEach((_, dataKey) => {
+                this.themes.forEach((_, themeKey) => {
+                    demoGroup.demos.push({
+                        data: dataKey,
+                        main: this.main,
+                        theme: themeKey,
+                        title: `${themeKey} - ${this.main} - ${dataKey}`,
+                        url: this._getDemoUrl(themeKey, this.main, dataKey)
+                    });
+                });
+            });
+            demos.push(demoGroup);
+        }
+        this.demos = demos;
+    }
+
 }
 
 
@@ -94,25 +193,27 @@ class MerlinComponentDemoServer {
         this._routes();
     }
 
-    _renderComponent(dataKey){
+    _renderComponent(partialKey, dataKey){
+        if(!PARTIALS.hasOwnProperty(partialKey)){
+            const msg = `Unknown partial - ${partialKey}`;
+            LOGGER.log('SERVER', msg);
+            return msg;
+        }
+
         if(!DATA.hasOwnProperty(dataKey)){
             const msg = `Unknown data - ${dataKey}`;
             LOGGER.log('SERVER', msg);
             return msg;
         }
 
-        return mustache.render(
-            PARTIALS[MASTER_COMPONENT.main],
-            DATA[dataKey],
-            PARTIALS
-        );
+        return mustache.render(PARTIALS[partialKey], DATA[dataKey], PARTIALS);
     }
 
     _routes(){
         this._app.get('/static/*', routeStatic.bind(this));
         this._app.get('/', routeIndex.bind(this));
-        this._app.get('/:theme', routeTheme.bind(this));
-        this._app.get('/:data/:theme', routeDataTheme.bind(this));
+        // this._app.get('/:theme', routeTheme.bind(this));
+        this._app.get('/:theme/:partial/:data', routeDataTheme.bind(this));
     }
 
     constructor(config={}, port=null){
@@ -129,6 +230,7 @@ class MerlinComponentDemoServer {
             .then(() => {
                 COMPONENTS.get(config.name).isMaster = true;
                 MASTER_COMPONENT = COMPONENTS.get(config.name);
+                MASTER_COMPONENT.createDemos();
                 buildComponentDicts();
                 this._init();
                 if(port !== null) this.listen(port);
@@ -343,7 +445,7 @@ function resolveDependency(config, merlinDir, ignore={ sass: false, data: false,
 
             Promise.all(allPromises).then((results) => {
 
-                const dependencyConfig = new ComponentConfig(config.name);
+                const dependencyConfig = new ComponentConfig(config);
                 // Data
                 if(results[0] !== null){
                     results[0].forEach((value, key) => {
@@ -519,37 +621,13 @@ function routeStatic(req, res){
 }
 
 function routeIndex(req, res){
+
     const view = {
         "data": {
-            "components": [],
+            "groups": MASTER_COMPONENT.demos,
             "title": "All themes"
         }
     };
-    MASTER_COMPONENT.data.forEach((_, dataKey) => {
-
-        if(MASTER_COMPONENT.themes.size === 0){
-            view.data.components.push({
-                "escaped_name": encodeURIComponent(MASTER_COMPONENT.main),
-                "name": MASTER_COMPONENT.main,
-                "escaped_theme": null,
-                "theme": null,
-                "escaped_data": encodeURIComponent(dataKey),
-                "data": dataKey
-            });
-        } else {
-            MASTER_COMPONENT.themes.forEach((_, themeKey) => {
-                view.data.components.push({
-                    "escaped_name": encodeURIComponent(MASTER_COMPONENT.main),
-                    "name": MASTER_COMPONENT.main,
-                    "escaped_theme": encodeURIComponent(themeKey),
-                    "theme": themeKey,
-                    "escaped_data": encodeURIComponent(dataKey),
-                    "data": dataKey
-                });
-            });
-        }
-
-    });
 
     const indexPage = mustache.render(this._partials.page, view);
 
@@ -583,10 +661,11 @@ function routeTheme(req, res){
 }
 
 function routeDataTheme(req, res){
-    const dataKey = decodeURIComponent(req.params.data);
     const themeKey = decodeURIComponent(req.params.theme);
+    const partialKey = decodeURIComponent(req.params.partial);
+    const dataKey = decodeURIComponent(req.params.data);
 
-    const componentTemplate = this._renderComponent(dataKey);
+    const componentTemplate = this._renderComponent(partialKey, dataKey);
     const theme = THEMES[themeKey];
 
     const componentPage = mustache.render(

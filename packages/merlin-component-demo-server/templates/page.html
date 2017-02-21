@@ -53,13 +53,20 @@
                 // iframe.setAttribute('width', data.width);
             }
         </script>
+
         {{# data.title }}
             <h1>{{ data.title }}</h1>
         {{/ data.title }}
-        {{# data.components }}
-            <h2><a href="/{{ escaped_data }}/{{ escaped_theme }}">{{ name }} - {{ data }} - {{ theme }}</a></h2>
-            <iframe src="/{{ escaped_data }}/{{ escaped_theme }}" frameborder="0" marginheight="0" marginwidth="0" width="100%"></iframe>
-            <hr />
-        {{/ data.components }}
+
+        {{# data.groups }}
+            <h3>{{ name }}</h3>
+
+            {{# demos }}
+                <h2><a href="{{ url }}">{{ title }}</a></h2>
+                <iframe src="{{ url }}" frameborder="0" marginheight="0" marginwidth="0" width="100%"></iframe>
+                <hr />
+            {{/ demos }}
+        {{/ data.groups }}
+
     </body>
 </html>
