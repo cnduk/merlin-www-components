@@ -212,7 +212,7 @@ class MerlinComponentDemoServer {
     _routes(){
         this._app.get('/static/*', routeStatic.bind(this));
         this._app.get('/', routeIndex.bind(this));
-        // this._app.get('/:theme', routeTheme.bind(this));
+        this._app.get('/:theme', routeTheme.bind(this));
         this._app.get('/:theme/:partial/:data', routeDataTheme.bind(this));
     }
 
@@ -639,21 +639,20 @@ function routeTheme(req, res){
     const theme = `${MASTER_COMPONENT.name}/${decodeURIComponent(req.params.theme)}`;
     const view = {
         "data": {
-            "components": [],
+            "groups": [],
             "title": `${req.params.theme} theme page`
         }
     };
-    MASTER_COMPONENT.data.forEach((_, dataKey) => {
-        view.data.components.push({
-            "escaped_name": encodeURIComponent(MASTER_COMPONENT.main),
-            "name": MASTER_COMPONENT.main,
-            "escaped_theme": encodeURIComponent(theme),
-            "theme": theme,
-            "escaped_data": encodeURIComponent(dataKey),
-            "data": dataKey
-        });
+    view.data.groups = MASTER_COMPONENT.demos.map((group) => {
+        return {
+            "name": group.name,
+            "demos": group.demos.filter((demo) => {
+                return demo.theme === theme;
+            })
+        };
+    }).filter((group) => {
+        return group.demos.length > 0;
     });
-
     const indexPage = mustache.render(this._partials.page, view);
 
     LOGGER.log('SERVER', 'Theme page loaded');
