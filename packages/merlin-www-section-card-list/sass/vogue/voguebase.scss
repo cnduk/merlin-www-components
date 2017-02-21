@@ -244,10 +244,10 @@
 .c-card-section__btn {
     width: auto;
 
-    @extend %btn-group;
-    @extend %btn-group--light;
+    @include button-single();
+    @include button-single-light();
 
     &:hover {
-        @extend %btn-group--light--hover;
+        @include button-single-light-hover();
     }
 }
