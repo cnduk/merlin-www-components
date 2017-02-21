@@ -40,6 +40,9 @@
     @include vendor-prefix(transform, translate(-50%, -50%));
 }
 
+.c-gallery__image-remaining__text-prefix {}
+.c-gallery__image-remaining__text-value {}
+
 .c-gallery__image-list {
     position: relative;
     overflow: hidden;
