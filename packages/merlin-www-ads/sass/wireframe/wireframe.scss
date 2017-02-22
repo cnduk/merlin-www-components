@@ -1,0 +1,32 @@
+@import "@cnbritain/merlin-www-common:wireframe";
+
+@import "./_debug";
+
+.ad__main {}
+.ad__block {
+    position: relative;
+}
+.ad__container {}
+.ad__container--responsive {
+    iframe {
+        max-width: $MAXIMUM_PAGE_WIDTH;
+    }
+}
+
+.ad__main.is-hidden {
+    //Allows for margin collapse
+    display: inline;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    visibility: hidden;
+
+    .ad__container {
+        height: 0;
+        padding: 0;
+    }
+
+    iframe {
+        width: 0;
+    }
+}

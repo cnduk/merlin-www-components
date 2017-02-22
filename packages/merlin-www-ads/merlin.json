@@ -4,9 +4,13 @@
     "currentTheme": null,
     "data": {},
     "js": {},
-    "themes": {},
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe"
+    },
     "partials": {
         "ad": "templates/ad.html"
     },
-    "dependencies": []
+    "dependencies": [
+        "@cnbritain/merlin-www-common"
+    ]
 }

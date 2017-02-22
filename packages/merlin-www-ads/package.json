@@ -7,5 +7,8 @@
     "demo": "merlin-component-demo-server merlin.json"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@cnbritain/merlin-www-common": "^0.1.0"
+  }
 }

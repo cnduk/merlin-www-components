@@ -1,0 +1,47 @@
+.ad-debug {
+    background: #F2E3A0;
+    bottom: 0;
+    font-family: Arial, sans-serif;
+    left: 0;
+    padding: 10px;
+    opacity: 0.3;
+    overflow: scroll;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+
+    li {
+        font-family: Arial, sans-serif;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    tr {
+        border: 1px solid rgba(0,0,0,0.8);
+        border-width: 1px 0;
+
+        &:hover {
+            background-color: rgba(0,0,0,0.1);
+        }
+    }
+
+    td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+}
+
+.ad-debug__key {
+    font-weight: bold;
+    text-align: left;
+    vertical-align: top;
+}
