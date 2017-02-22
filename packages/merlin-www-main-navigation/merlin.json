@@ -1,0 +1,24 @@
+{
+    "name": "@cnbritain/merlin-www-main-navigation",
+    "main": "main-navigation",
+    "currentTheme": null,
+    "data": {
+        "main-navigation": "demo/data/data.json"
+    },
+    "js": {
+        "demo": "demo/demo.js"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "missvogue": "sass/missvogue/missvogue.scss"
+    },
+    "partials": {
+        "main-navigation": "templates/main-navigation.html"
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-buttons",
+        "@cnbritain/merlin-www-image"
+    ]
+}

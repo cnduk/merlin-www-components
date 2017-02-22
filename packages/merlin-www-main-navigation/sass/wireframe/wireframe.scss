@@ -1,0 +1,165 @@
+@import "@cnbritain/merlin-www-common:wireframe";
+
+.n-main {
+    position: relative;
+}
+
+.n-main__checkbox {
+    left: -100px;
+    position: absolute;
+}
+
+.n-main__wrapper {
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    position: relative;
+}
+
+.n-main__header {
+    a {
+        display: block;
+        height: 100%;
+    }
+}
+.n-main__header-logo {
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.n-main__nav {
+    position: relative;
+}
+.n-main__sticker {
+    position: relative;
+}
+.n-main__sticker-child {}
+.n-main__sticker-child.is-stuck {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.n-main__vr {}
+
+.n-main__nav-logo {}
+
+.n-main__nav-hamburger {}
+
+.n-main__nav-group {
+    bottom: 0;
+    position: absolute;
+    top: 0;
+}
+.n-main__nav-group--left {
+    left: 0;
+}
+.n-main__nav-group--right {
+    right: 0;
+}
+
+.n-main__list {
+    height: $MAIN_NAVIGATION_HEIGHT;
+    text-align: center;
+}
+.n-main__list-item {
+    display: inline-block;
+}
+
+.n-main__nav-signpost {}
+.n-main__nav-title {}
+
+.n-main__dropdown {
+    position: relative;
+}
+.n-main__dropdown-link {
+    &:after {
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #000;
+        content: "";
+        display: inline-block;
+        height: 0;
+        width: 0;
+    }
+}
+.n-main__dropdown-list {
+    display: none;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+
+    &:hover {
+        display: block;
+    }
+
+    .n-main__dropdown-link:hover + & {
+        display: block;
+    }
+}
+.n-main__dropdown-list--left {
+    left: 0;
+}
+.n-main__dropdown-list--right {
+    right: 0;
+}
+.n-main__dropdown-list-item {}
+
+.n-menu {
+    display: none;
+
+    #chkNavHamburger:checked ~ .n-main & {
+        display: block;
+        @include min-screen( $MAIN_NAVIGATION_MOBILE_BREAKPOINT ){
+            display: none;
+        }
+    }
+}
+
+.n-menu__nav {
+    table {
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 100%;
+    }
+    td {
+        width: 50%;
+    }
+    a {
+        color: #000;
+    }
+}
+
+.n-search {
+    background-color: rgba(0,0,0,0.85);
+    display: none;
+
+    #chkNavSearch:checked ~ & {
+        display: block;
+        @include max-screen( $MAIN_NAVIGATION_MOBILE_BREAKPOINT ){
+            display: none;
+        }
+    }
+}
+
+.n-gallery-counter {}
+.n-gallery-counter__current {}
+.n-gallery-counter__slash {}
+.n-gallery-counter__total {}
+
+.n-gallery-toggle {}
+.n-gallery-toggle--list {}
+.n-gallery-toggle--grid {}
+
+.n-visibility--mobile {
+    @include min-screen( $MAIN_NAVIGATION_MOBILE_BREAKPOINT ){
+        display: none;
+    }
+}
+.n-visibility--desktop {
+    display: none;
+    @include min-screen( $MAIN_NAVIGATION_MOBILE_BREAKPOINT ){
+        display: block;
+    }
+}

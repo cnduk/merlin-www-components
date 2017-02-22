@@ -1,0 +1,104 @@
+<input type="checkbox" id="chkNavHamburger" class="n-main__checkbox" hidden />
+<input type="checkbox" id="chkNavSearch" class="n-main__checkbox" hidden />
+
+<header class="n-main">
+    <div class="n-main__wrapper">
+
+        <div class="n-main__sticker">
+            <div class="n-main__sticker-child">
+
+                <nav class="n-main__nav">
+                    <ul class="global__list-reset n-main__list n-visibility--desktop">
+
+                    {{# data.link_list }}
+                        {{! Both states are on the same model }}
+                        {{# state.is_desktop }}{{^ state.is_more }}
+                            <li class="n-main__list-item">
+                                <a class="n-main__nav-link" href="{{ data.url }}"><span>{{ data.title }}</span></a>
+                            </li>
+                        {{/ state.is_more }}{{/ state.is_desktop }}
+                    {{/ data.link_list }}
+
+                        <li class="n-main__list-item n-main__dropdown">
+                            <a href="#" class="n-main__nav-link n-main__dropdown-link"><span>More</span></a>
+                            <ul class="global__list-reset n-main__dropdown-list n-main__dropdown-list--left">
+                                {{# data.link_list }}
+                                    {{! Both states are on the same model }}
+                                    {{# state.is_desktop }}{{# state.is_more }}
+                                        <li class="n-main__dropdown-list-item">
+                                            <a class="n-main__nav-link" href="{{ data.url }}"><span>{{ data.title }}</span></a>
+                                        </li>
+                                    {{/ state.is_more }}{{/ state.is_desktop }}
+                                {{/ data.link_list }}
+                            </ul>
+                        </li>
+                    </ul>
+
+                    {{# data.signpost }}
+                        <div class="n-main__nav-signpost n-visibility--mobile">
+                            <a href="{{ data.url }}">{{ data.title }}</a>
+                        </div>
+                    {{/ data.signpost }}
+
+                    {{# data.logo }}
+                        <div class="n-main__nav-group n-main__nav-group--left">
+                            <div class="n-main__nav-logo">
+                                {{> @cnbritain/merlin-www-image }}
+                            </div>
+                        </div>
+                    {{/ data.logo }}
+
+                    <div class="n-main__nav-group n-main__nav-group--right">
+                        <div class="n-main__nav-hamburger n-visibility--mobile">
+                            <label for="chkNavHamburger" class='n-main__nav-hamburger__icon'>
+                                {{# data.share_menu_icon }}
+                                    {{> @cnbritain/merlin-www-image }}
+                                {{/ data.share_menu_icon }}
+                            </label>
+                            <label for="chkNavHamburger" class='n-main__nav-hamburger__close-icon global__hidden'>
+                                {{# data.nav_menu_close_icon }}
+                                    {{> @cnbritain/merlin-www-image }}
+                                {{/ data.nav_menu_close_icon }}
+                            </label>
+                        </div>
+                        <ul class="global__list-reset n-main__list n-visibility--desktop">
+
+                            <li class="n-main__list-item n-main__dropdown n-main__dropdown--follow">
+                                <a href="#" class="n-main__nav-link n-main__dropdown-link"><span>Follow</span></a>
+                                <ul class="global__list-reset n-main__dropdown-list n-main__dropdown-list--right n-main__dropdown-list--follow">
+                                    <li class="n-main__list-item n-main__dropdown-list-item">
+                                        <div class="n-main__dropdown--follow__group">
+                                            {{# data.social_link_list }}
+                                                {{> @cnbritain/merlin-www-image }}
+                                            {{/ data.social_link_list }}
+                                        </div>
+                                        <div class="n-main__dropdown--follow__group">
+                                            <a href="{{ url_for('marketing.newsletter_signup') }}" class="btn-single btn-single--light">Newsletter Sign Up</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="n-main__list-item">
+                                <div class="n-main__nav-search">
+                                    <label for="chkNavSearch" class="n-main__nav-search__icon">
+                                       {{# data.nav_search_open_icon }}
+                                            {{> @cnbritain/merlin-www-image }}
+                                        {{/ data.nav_search_open_icon }}
+                                    </label>
+                                    <label for="chkNavSearch" class="global__hidden n-main__nav-search__close-icon">
+                                       {{# data.nav_search_close_icon }}
+                                            {{> @cnbritain/merlin-www-image }}
+                                        {{/ data.nav_search_close_icon }}
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    {{! mobile nav }}
+</header>
