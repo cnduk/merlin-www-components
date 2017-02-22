@@ -1,0 +1,21 @@
+<aside class="c-ad is-hidden {{ style.cls }}">
+    <div class="c-ad__block">
+        {{# data.title }}
+            <h5 class="ad-block__title">{{ data.title }}</h5>
+        {{/ data.title }}
+        <div class="c-ad__container"
+            data-ad-unit="{{ data.unit }}"
+            data-ad-zone="{{ data.zone }}"
+            data-ad-lazyload="{{ state.is_lazyload }}"
+            data-ad-sizes="{{ data.sizes }}"
+            data-ad-bidding="{{ state.has_bidding }}"
+            {{# data.sizemap }}data-ad-sizemap="{{ data.sizemap }}"{{/ data.sizemap }}
+            {{# data.position }}data-ad-position="{{ data.position }}"{{/ data.position }}
+            {{# data.key_values }}data-ad-values="{{ data.key_values }}"{{/ data.key_values }}
+            {{# data.placement }}data-ad-placement="{{ data.placement }}"{{/ data.placement }}
+            {{# data.group }}data-ad-group="{{ data.group }}"{{/ data.group }}
+            {{# data.order }}data-ad-order="{{ data.order }}"{{/ data.order }}
+            {{# data.native_style }}data-ad-nativeStyle="{{ data.native_style }}"{{/ data.native_style }}
+        ></div>
+    </div>
+</aside>
