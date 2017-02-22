@@ -1,0 +1,33 @@
+@import '@cnbritain/merlin-www-common:vogue';
+
+.c-card--show {
+
+    .c-card__image {
+        padding-top: 150%;
+    }
+
+    .c-card__image-label {
+        @include font("NOBEL", 12px, 400, 12px, 25)
+        @include vendor-prefix(transform, translate(-50%, 0));
+        bottom: 0;
+        display: inline-block;
+        left: 50%;
+        padding: 8px 6px 6px 8px;
+        position: absolute;
+        text-transform: uppercase;
+
+        &--latest {
+            background-color: $COLOUR_BG_ACCENT2;
+            color: $COLOR_TYPE_HEADING;
+        }
+
+        &--featured {
+            background-color: $COLOR_TYPE_LINK;
+            color: $COLOR_MAIN_PAGE;
+        }
+    }
+
+    .c-card__title {
+        text-align: center;
+    }
+}

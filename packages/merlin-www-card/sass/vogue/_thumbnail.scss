@@ -1,0 +1,21 @@
+@import '@cnbritain/merlin-www-common:vogue';
+
+.c-card--thumbnail {
+
+    .c-card__image-group {
+        @extend .global__group;
+    }
+
+    .c-card__title {
+        @include c-card-thumbnail-title;
+        margin-top: 0;
+    }
+
+    .c-card__meta {
+        @include c-card-thumbnail-meta;
+    }
+
+    .c-card__image__remaining {
+        @include c-card-thumbnail-image-remaining;
+    }
+}

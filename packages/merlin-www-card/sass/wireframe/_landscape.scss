@@ -1,5 +1,4 @@
 .c-card--landscape {
-
     .c-card__obj {
         @include global__flag('c-card__obj');
     }
@@ -14,5 +13,4 @@
     .c-card__obj__body {
         @include global__flag__body('c-card__obj');
     }
-
 }

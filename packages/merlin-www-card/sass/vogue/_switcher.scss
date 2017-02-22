@@ -1,0 +1,18 @@
+@import '@cnbritain/merlin-www-common:vogue';
+@import './_mixins';
+
+.c-card--switcher {
+    @include placeholder_landscape();
+
+    @include card-portrait-to-landscape-size() {
+        @include placeholder_portrait();
+
+        .c-card__obj__header,
+        .c-card__obj__body {
+            display: block;
+            padding-left: 0;
+            padding-right: 0;
+            width: 100%;
+        }
+    }
+}

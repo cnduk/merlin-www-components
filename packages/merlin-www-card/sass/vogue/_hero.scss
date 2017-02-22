@@ -1,0 +1,19 @@
+@import '@cnbritain/merlin-www-common:vogue';
+
+.c-card--hero {
+
+    .c-card__image {
+        padding-top: 66.67%;
+    }
+
+    .c-card__title {
+        @include c-card-hero-title;
+    }
+
+    @include card-portrait-to-landscape-size() {
+        .c-card__image {
+            padding-top: 100%;
+        }
+    }
+
+}

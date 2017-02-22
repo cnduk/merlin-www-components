@@ -1,0 +1,5 @@
+@import './_mixins';
+
+.c-card--landscape {
+    @include placeholder_landscape();
+}
