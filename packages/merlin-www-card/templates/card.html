@@ -6,20 +6,32 @@
 	<div class="c-card__obj">
 		<div class="c-card__obj__header">
 			<div class="c-card__images">
-			{{# data.image_list }}
-				{{# data.items }}
-					<div class="c-card__image {{ style.cls }} ">
-						{{# data.item }}
-							{{> @cnbritain/merlin-www-image }}
-						{{/ data.item }}
+
+				{{# data.image_list }}
+					{{# data.items }}
+						<div class="c-card__image {{ style.cls }} ">
+							{{# data.item }}
+								{{> @cnbritain/merlin-www-image }}
+							{{/ data.item }}
+						</div>
+					{{/ data.items }}
+				{{/ data.image_list }}
+
+				{{# data.icon }}
+					<div class="c-card__image__icon">
+						{{> @cnbritain/merlin-www-image }}
 					</div>
-				{{/ data.items }}
-			{{/ data.image_list }}
-			{{# data.icon }}
-				<div class="c-card__image__icon">
-					{{> @cnbritain/merlin-www-image }}
-				</div>
-			{{/ data.icon }}
+				{{/ data.icon }}
+
+				{{# state.is_featured }}
+				    <div class='c-card__image-label c-card__image-label--featured'>Featured</div>
+				{{/ state.is_featured }}
+				{{^ state.is_featured }}
+				    {{# state.is_latest }}
+				        <div class='c-card__image-label c-card__image-label--latest'>Latest</div>
+				    {{/ state.is_latest }}
+				{{/ state.is_featured }}
+
 			</div>
 		</div>
 
@@ -39,7 +51,7 @@
 			<hr class="c-card__separator" />
 
 		{{# data.review_information }}
-
+			{{! TODO: review information block }}
 		{{/ data.review_information }}
 
 		{{# data.sponsor }}
