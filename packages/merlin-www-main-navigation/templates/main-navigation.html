@@ -4,6 +4,14 @@
 <header class="n-main">
     <div class="n-main__wrapper">
 
+        <div class="n-main__header n-visibility--desktop">
+            <div class="n-main__header-logo">
+                {{# data.masthead }}
+                    {{> @cnbritain/merlin-www-image }}
+                {{/ data.masthead }}
+            </div>
+        </div>
+
         <div class="n-main__sticker">
             <div class="n-main__sticker-child">
 
@@ -100,5 +108,71 @@
         </div>
     </div>
 
-    {{! mobile nav }}
+    <div class="n-menu">
+
+<!--         {# Top stories #}
+        {%- if top_stories -%}
+            <section class="n-menu__top-stories">
+                {{- macro_top_stories(top_stories, brand=brand, nav_buttons=False, title='') -}}
+            </section>
+        {%- endif -%} -->
+
+        <!-- {# Search #} -->
+        <div class="n-menu__search">
+            <div class="n-main__nav-search">
+                <!-- {{ "@cnbritain/wc-assets/import/%s/icons/nav-menu-search.svg"|format(brand)|import_svg_icon }} -->
+            </div>
+            <div class="n-menu__search-textbox">
+                <form method="GET" action="{{ search_url }}">
+                    <input type="search" placeholder="Search" name="q" />
+                </form>
+            </div>
+        </div>
+
+        <!-- {# Menu #} -->
+        <nav class="n-menu__nav">
+            <ul class='n-menu__nav__wrapper global__list-reset'>
+                {{# data.link_list }}
+                    {{! Both states are on the same model }}
+                    {{# state.is_mobile }}{{^ state.is_more }}
+                        <a href="{{ data.url }}">
+                            <li class="n-menu__nav-item">
+                                <div class="n-menu__nav-link"> {{ data.title }}</div>
+                            </li>
+                        </a>
+                    {{/ state.is_more }}{{/ state.is_mobile }}
+                {{/ data.link_list }}
+
+                {{# data.link_list }}
+                    {{! Both states are on the same model }}
+                    {{# state.is_mobile }}{{# state.is_more }}
+                        <a href="{{ data.url }}">
+                            <li class="n-menu__nav-item n-menu__nav-item--more">
+                                <div class="n-menu__nav-link"> {{ data.title }}</div>
+                            </li>
+                        </a>
+                    {{/ state.is_more }}{{/ state.is_mobile }}
+                {{/ data.link_list }}
+            </ul>
+        </nav>
+
+        <!-- {%- if abbr and offer -%}
+            {{ main_navigation_subscribe(abbr, offer) }}
+        {%- endif -%} -->
+
+        <!-- {# Social #} -->
+        <!-- {%- if brand_social_links -%}
+            <div class="n-menu__social">
+                <h4 class="n-menu__social-title">Follow <span class='n-menu__social-brand'>{{ brand }}</span></h4>
+                <ul class="global__list-reset">
+                    {%- for link in brand_social_links -%}
+                        <li class="n-menu__social-item"><a href="{{ link['url'] }}" class="btn-share btn-share--{{ link['provider']|lower }} {% if theme %}btn-share--{{ theme }}{% endif %}">{{ "@cnbritain/wc-assets/import/%s/icons/nav-share-%s.svg"|format(brand, link['provider']|lower)|import_svg_icon }}</a></li>
+                    {%- endfor -%}
+                </ul>
+            </div>
+        {%- endif -%} -->
+
+        <!-- {{ main_navigation_newsletter(text="Newsletter Sign Up") }} -->
+
+    </div>
 </header>
