@@ -2,7 +2,12 @@
     {{# data.items }}
         <li class="c-card-list__item js-c-card-list__item {{ style.cls }}">
             {{# data.item }}
-                {{> @cnbritain/merlin-www-card }}
+                {{^ state.is_ad }}
+                    {{> @cnbritain/merlin-www-card }}
+                {{/ state.is_ad }}
+                {{# state.is_ad }}
+                    {{> @cnbritain/merlin-www-ad }}
+                {{/ state.is_ad }}
             {{/ data.item }}
         </li>
     {{/ data.items }}
