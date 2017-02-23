@@ -1,0 +1,38 @@
+{
+    "name": "@cnbritain/merlin-www-international-redirect",
+    "main": "international-redirect",
+    "currentTheme": null,
+    "data": {
+        "vogue": "data/vogue.json",
+        "glamour": "data/glamour.json"
+    },
+    "demo": {
+        "vogue": {
+            "data": "vogue",
+            "main": "international-redirect",
+            "themes": ["vogue", "missvogue"]
+        },
+        "glamour": {
+            "data": "glamour",
+            "main": "international-redirect",
+            "themes": ["glamour"]
+        }
+    },
+    "js": {
+        "demo": "demo/demo.js"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
+        "glamour": "sass/glamour/glamour.scss"
+    },
+    "partials": {
+        "international-redirect": "templates/international-redirect.html"
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-image",
+        "@cnbritain/merlin-www-js-utils"
+    ]
+}

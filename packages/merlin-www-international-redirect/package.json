@@ -1,0 +1,19 @@
+{
+  "name": "@cnbritain/merlin-www-international-redirect",
+  "version": "0.9.9",
+  "description": "",
+  "main": "js/index.js",
+  "scripts": {
+    "demo": "merlin-component-demo-server merlin.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cnbritain/merlin-www-common": "^0.1.4",
+    "@cnbritain/merlin-www-image": "^1.0.8",
+    "@cnbritain/merlin-www-js-utils": "^1.0.1"
+  },
+  "devDependencies": {
+    "@cnbritain/merlin-component-demo-server": "^2.4.2"
+  }
+}

@@ -1,0 +1,46 @@
+.c-int-redirect {
+    #chkIntRedirectDisplay:checked ~ & {
+        display: none;
+    }
+}
+
+.c-int-redirect__wrapper {
+    margin: 0 auto;
+    position: relative;
+}
+
+.c-int-redirect__btn {
+    cursor: pointer;
+
+    svg {
+        display: inline-block;
+        height: 8px;
+        margin: 0 auto;
+        vertical-align: middle;
+        width: 8px;
+    }
+}
+
+.c-int-redirect__list {
+    display: none;
+    text-align: center;
+
+    #chkIntRedirectList:checked ~ & {
+        display: block;
+    }
+}
+li.c-int-redirect__list__item {
+    display: inline-block;
+}
+
+.c-int-redirect__msg {
+    text-align: center;
+
+    label {
+        cursor: pointer;
+    }
+
+    #chkIntRedirectList:checked ~ & {
+        display: none;
+    }
+}

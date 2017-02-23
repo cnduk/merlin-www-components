@@ -1,0 +1,25 @@
+<input type="checkbox" id="chkIntRedirectDisplay" hidden />
+<div class="c-int-redirect">
+    <div class="c-int-redirect__wrapper">
+
+        <input type="checkbox" id="chkIntRedirectList" hidden />
+        {{# data.close_button }}
+            <label for="chkIntRedirectDisplay" class="c-int-redirect__btn">{{> @cnbritain/merlin-www-image }}</label>
+        {{/ data.close_button }}
+
+        <div class="c-int-redirect__msg">You are viewing the {{ data.brand_name }} website. If you prefer the US or another country&rsquo;s {{ data.short_name }} site, <label for="chkIntRedirectList">select from this list</label></div>
+
+        {{# data.site_links }}
+            <ul class="global__list-reset c-int-redirect__list {{ style.cls }}">
+                {{# data.items }}
+                    <li class="c-int-redirect__list__item {{ style.cls }}">
+                        {{# data.item }}
+                            <a href="{{ &data.url }}" title="{{ data.title }}" class="{{ style.cls }}">{{ data.title }}</a>
+                        {{/ data.item }}
+                    </li>
+                {{/ data.items }}
+            </ul>
+        {{/ data.site_links }}
+
+    </div>
+</div>

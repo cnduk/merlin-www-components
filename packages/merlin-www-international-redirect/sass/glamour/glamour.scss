@@ -1,0 +1,68 @@
+@import "@cnbritain/merlin-www-common:glamour";
+
+@import '../wireframe/wireframe';
+
+$_BUTTON_SIZE: 19px;
+
+.c-int-redirect {
+    background-color: $COLOUR_MAIN_HIGHLIGHT;
+    color: $COLOUR_MAIN_DARK;
+
+    a {
+        color: $COLOUR_MAIN_DARK;
+    }
+}
+
+.c-int-redirect__wrapper {
+    max-width: 1360px;
+    padding: 15px 60px 15px 20px;
+}
+
+.c-int-redirect__btn {
+    border: 1px solid $COLOUR_MAIN_DARK;
+    border-radius: 50%;
+    height: $_BUTTON_SIZE;
+    padding: 0;
+    position: absolute;
+    margin-top: -13px;
+    right: 18px;
+    text-align: center;
+    top: 50%;
+    width: $_BUTTON_SIZE;
+
+    svg {
+        margin: 0 0 1px;
+        height: 9px;
+        width: 9px;
+    }
+
+    path {
+        fill: $COLOUR_MAIN_DARK;
+    }
+
+}
+
+li.c-int-redirect__list__item {
+    border-right: 1px solid $COLOUR_SEPARATOR;
+    @include font('GRAPHIK', 15px, $line-height: 20px);
+    padding: 0 15px;
+
+    &:last-child {
+        border-right: none;
+    }
+}
+
+.c-int-redirect__msg {
+    @include font('GRAPHIK', 12px, $line-height: 16px);
+
+    color: $COLOUR_MAIN_DARK;
+    text-align: left;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        text-align: center;
+    }
+
+    label {
+        text-decoration: underline;
+    }
+}
