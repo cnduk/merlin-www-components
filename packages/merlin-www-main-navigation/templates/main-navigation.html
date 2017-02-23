@@ -112,12 +112,33 @@
 
     <div class="n-menu">
 
-<!--         {# Top stories #}
-        {%- if top_stories -%}
+        {{# data.top_stories }}
             <section class="n-menu__top-stories">
-                {{- macro_top_stories(top_stories, brand=brand, nav_buttons=False, title='') -}}
+                <aside class="c-top-stories">
+                    <div class="c-top-stories__wrapper">
+                        {{# data.title }}
+                            <h4 class="c-top-stories__title">{{ data.title }}</h4>
+                        {{/ data.title }}
+
+                        <!-- {%- if nav_buttons -%}
+                            <div class="c-top-stories__nav">
+                                <button disabled class="global__button-reset btn-disabled c-top-stories__nav-btn c-top-stories__nav-btn--left btn-top-stories">
+                                {{ "@cnbritain/wc-assets/import/%s/icons/arrowleft.svg"|format(brand)|import_svg_icon }}
+                                </button>
+                                <button class="global__button-reset c-top-stories__nav-btn c-top-stories__nav-btn--right btn-top-stories">{{ "@cnbritain/wc-assets/import/%s/icons/arrowright.svg"|format(brand)|import_svg_icon }}
+                                </button>
+                            </div>
+                        {%- endif -%} -->
+
+                        <div class="c-top-stories__overflow">
+                            {{# data.card_list }}
+                                {{> @cnbritain/merlin-www-card-list }}
+                            {{/ data.card_list }}
+                        </div>
+                    </div>
+                </aside>
             </section>
-        {%- endif -%} -->
+        {{/ data.top_stories }}
 
         <div class="n-menu__search">
             <div class="n-main__nav-search">
@@ -162,27 +183,26 @@
             {{ main_navigation_subscribe(abbr, offer) }}
         {%- endif -%} -->
 
-        <!-- {# Social #} -->
-            <div class="n-menu__social">
-                {{# data.social_title }}
-                <h4 class="n-menu__social-title">
-                    <span class='n-menu__social-brand'>{{ data.social_title }}</span>
-                </h4>
-                {{/ data.social_title }}
-                <ul class="global__list-reset">
-                    {{# data.social_link_list }}
-                        <li class="n-menu__social-item">
-                            {{> @cnbritain/merlin-www-image }}
-                        </li>
-                    {{/ data.social_link_list }}
-                </ul>
-            </div>
+        <div class="n-menu__social">
+            {{# data.social_title }}
+            <h4 class="n-menu__social-title">
+                <span class='n-menu__social-brand'>{{ data.social_title }}</span>
+            </h4>
+            {{/ data.social_title }}
+            <ul class="global__list-reset">
+                {{# data.social_link_list }}
+                    <li class="n-menu__social-item">
+                        {{> @cnbritain/merlin-www-image }}
+                    </li>
+                {{/ data.social_link_list }}
+            </ul>
+        </div>
 
-            {{# data.newsletter_link }}
-                <div class="global__a--center">
-                    <a href="{{ data.url }}" class="btn-single btn-single--light n-menu__newsletter-btn">{{ data.title }}</a>
-                </div>
-            {{/ data.newsletter_link }}
+        {{# data.newsletter_link }}
+            <div class="global__a--center">
+                <a href="{{ data.url }}" class="btn-single btn-single--light n-menu__newsletter-btn">{{ data.title }}</a>
+            </div>
+        {{/ data.newsletter_link }}
 
         <!-- {{ main_navigation_newsletter(text="Newsletter Sign Up") }} -->
 
