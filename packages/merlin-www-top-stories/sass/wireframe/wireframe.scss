@@ -1,0 +1,59 @@
+@import "@cnbritain/merlin-www-common:wireframe";
+@import "@cnbritain/merlin-www-card-list:wireframe";
+@import "@cnbritain/merlin-www-card:wireframe";
+
+.c-top-stories {
+    box-sizing: border-box;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+    width: 100%;
+
+    @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ){
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen( $DESKTOP_SIDE_GUTTER_BREAKPOINT ){
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.c-top-stories__wrapper {
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+}
+
+.c-top-stories__title {}
+
+.c-top-stories__nav {
+    display: none;
+}
+
+.c-top-stories__overflow {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.c-card-list--top-stories {
+    white-space: nowrap;
+
+    .c-card-list__item {
+        display: inline-block;
+        margin-right: 20px;
+        white-space: normal;
+        width: 250px;
+
+        &:last-child {
+            margin-right: 0;
+            width: 230px;
+        }
+    }
+
+}
+
+.has-navigation {
+    .c-top-stories__nav {
+        display: block;
+    }
+}

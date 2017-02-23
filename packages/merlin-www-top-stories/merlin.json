@@ -1,0 +1,23 @@
+{
+    "name": "@cnbritain/merlin-www-top-stories",
+    "main": "top-stories",
+    "currentTheme": null,
+    "data": {
+
+    },
+    "js": {
+
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss"
+    },
+    "partials": {
+        "top-stories": "templates/top-stories.html"
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-image",
+        "@cnbritain/merlin-www-card-list",
+        "@cnbritain/merlin-www-card"
+    ]
+}
