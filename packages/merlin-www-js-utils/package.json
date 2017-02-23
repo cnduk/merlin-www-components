@@ -1,0 +1,16 @@
+{
+  "name": "@cnbritain/merlin-www-js-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/index.js",
+  "scripts": {
+    "docs": "jsdoc2md js/*.js > readme.md",
+    "jshint": "jshint js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jsdoc-to-markdown": "^3.0.0",
+    "jshint": "^2.9.4"
+  }
+}
