@@ -81,7 +81,9 @@
                                             {{/ data.social_link_list }}
                                         </div>
                                         <div class="n-main__dropdown--follow__group">
-                                            <a href="{{ url_for('marketing.newsletter_signup') }}" class="btn-single btn-single--light">Newsletter Sign Up</a>
+                                            {{# data.newsletter_link }}
+                                                <a href="{{ data.url }}" class="btn-single btn-single--light">{{ data.title }}</a>
+                                            {{/ data.newsletter_link }}
                                         </div>
                                     </li>
                                 </ul>
@@ -117,10 +119,11 @@
             </section>
         {%- endif -%} -->
 
-        <!-- {# Search #} -->
         <div class="n-menu__search">
             <div class="n-main__nav-search">
-                <!-- {{ "@cnbritain/wc-assets/import/%s/icons/nav-menu-search.svg"|format(brand)|import_svg_icon }} -->
+                {{# data.nav_search_open_icon }}
+                    {{> @cnbritain/merlin-www-image }}
+                {{/ data.nav_search_open_icon }}
             </div>
             <div class="n-menu__search-textbox">
                 <form method="GET" action="{{ search_url }}">
@@ -129,7 +132,6 @@
             </div>
         </div>
 
-        <!-- {# Menu #} -->
         <nav class="n-menu__nav">
             <ul class='n-menu__nav__wrapper global__list-reset'>
                 {{# data.link_list }}
@@ -161,16 +163,26 @@
         {%- endif -%} -->
 
         <!-- {# Social #} -->
-        <!-- {%- if brand_social_links -%}
             <div class="n-menu__social">
-                <h4 class="n-menu__social-title">Follow <span class='n-menu__social-brand'>{{ brand }}</span></h4>
+                {{# data.social_title }}
+                <h4 class="n-menu__social-title">
+                    <span class='n-menu__social-brand'>{{ data.social_title }}</span>
+                </h4>
+                {{/ data.social_title }}
                 <ul class="global__list-reset">
-                    {%- for link in brand_social_links -%}
-                        <li class="n-menu__social-item"><a href="{{ link['url'] }}" class="btn-share btn-share--{{ link['provider']|lower }} {% if theme %}btn-share--{{ theme }}{% endif %}">{{ "@cnbritain/wc-assets/import/%s/icons/nav-share-%s.svg"|format(brand, link['provider']|lower)|import_svg_icon }}</a></li>
-                    {%- endfor -%}
+                    {{# data.social_link_list }}
+                        <li class="n-menu__social-item">
+                            {{> @cnbritain/merlin-www-image }}
+                        </li>
+                    {{/ data.social_link_list }}
                 </ul>
             </div>
-        {%- endif -%} -->
+
+            {{# data.newsletter_link }}
+                <div class="global__a--center">
+                    <a href="{{ data.url }}" class="btn-single btn-single--light n-menu__newsletter-btn">{{ data.title }}</a>
+                </div>
+            {{/ data.newsletter_link }}
 
         <!-- {{ main_navigation_newsletter(text="Newsletter Sign Up") }} -->
 
