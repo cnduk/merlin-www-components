@@ -1,0 +1,14 @@
+<div class="n-main__covers">
+    <div class="n-main__covers__wrapper">
+    	{{# data.covers }}
+    		<div class="n-main__cover">
+        		{{> @cnbritain/merlin-www-image }}
+        	</div>
+    	{{/ data.covers }}
+        <div class="n-main__cover__offer">{{ data.offer }}
+	        {{# data.link }}
+	        	<a href="{{ data.url }}" class="btn-single btn-single--light n-main__cover__btn">{{ data.title }}</a>
+	        {{/ data.link }}
+        </div>
+    </div>
+</div>

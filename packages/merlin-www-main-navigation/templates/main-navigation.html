@@ -3,6 +3,9 @@
 
 <header class="n-main">
     <div class="n-main__wrapper">
+        {{# data.desktop_promo }}
+            {{> @cnbritain/merlin-www-main-navigation/main-navigation-promotion-desktop }}
+        {{/ data.desktop_promo }}
 
         <div class="n-main__header n-visibility--desktop">
             <div class="n-main__header-logo">
@@ -154,9 +157,9 @@
             </ul>
         </nav>
 
-        <!-- {%- if abbr and offer -%}
-            {{ main_navigation_subscribe(abbr, offer) }}
-        {%- endif -%} -->
+        {{# data.mobile_promo }}
+            {{> @cnbritain/merlin-www-main-navigation/main-navigation-promotion-mobile }}
+        {{/ data.mobile_promo }}
 
         <div class="n-menu__social">
             {{# data.social_title }}
@@ -178,8 +181,5 @@
                 <a href="{{ data.url }}" class="btn-single btn-single--light n-menu__newsletter-btn">{{ data.title }}</a>
             </div>
         {{/ data.newsletter_link }}
-
-        <!-- {{ main_navigation_newsletter(text="Newsletter Sign Up") }} -->
-
     </div>
 </header>

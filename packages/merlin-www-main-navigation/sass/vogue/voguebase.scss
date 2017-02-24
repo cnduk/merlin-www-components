@@ -42,12 +42,21 @@ $MASTHEAD_HEIGHT: 90px;
     display: inline-block;
     margin-right: 12px;
     width: 80px;
+
+    img {
+        width: 100%;
+    }
+
+    &:nth-child(2) {
+        display: none;
+    }
 }
 .n-main__cover__offer {
     display: inline-block;
     vertical-align: top;
     @include font('ADOBE CASLON', 12px, null, 15px);
     color: #666;
+    white-space: pre-line;
 }
 .n-main__cover__btn,
 a.n-main__cover__btn {
@@ -291,13 +300,13 @@ a.n-main__cover__btn {
     }
 
     .btn-share {
-    	position: relative;
+        position: relative;
         width: 50px;
         height: 50px;
 
         svg {
-        	display: block;
-        	margin: 0 auto;
+            display: block;
+            margin: 0 auto;
         }
     }
 
@@ -325,7 +334,7 @@ a.n-main__cover__btn {
 }
 .n-main__dropdown-list--right {
     // Offset the border in .n-main__dropdown--list
-    right: -6px;
+    right: -1px;
 }
 .n-main__dropdown-list--follow {
     padding: 0 $PADDING_XX_SMALL $PADDING_XX_SMALL $PADDING_XX_SMALL;
@@ -584,30 +593,24 @@ li.n-menu__social-item {
     //Removes extra padding from img parent
     font-size: 0;
 }
-.n-menu__subscribe-cover {}
-.n-menu__subscribe-cover--print {
-    width: 85px;
-}
-.n-menu__subscribe-cover--tablet {
-    img {
-        background-image: url('../img/template_ipad.png');
-        background-size: 100% auto;
-        background-repeat: no-repeat;
-        padding: 7px 6px;
+.n-menu__subscribe-cover {
+    &:nth-child(1) {
+        width: 85px;
     }
-    position: absolute;
-    left: 60px;
-    bottom: 0;
-    width: 48px;
-}
-.n-menu__subscribe-cover__image {
-    width: 100%;
+
+    &:nth-child(2) {
+        position: absolute;
+        left: 60px;
+        bottom: 0;
+        width: 48px;
+    }
 }
 .n-menu__subscribe-message {
     @include font('ADOBE CASLON', 14px, null, 18px);
     color: $COLOR_MAIN_TERTIARY;
     margin-bottom: $MARGIN_X_SMALL;
     max-width: 240px;
+    white-space: pre-line;
 }
 a.n-menu__subscribe-btn {
     @include button-single-light-hover;
