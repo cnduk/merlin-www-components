@@ -1,0 +1,37 @@
+<section class="c-gallery-strip {{ style.cls }}">
+    <div class="c-gallery-strip__wrapper">
+
+        {{# data.link }}
+            <a class="c-gallery-strip__link {{ style.cls }}" href="{{ data.url }}" title="{{ data.title }}">{{ data.title }}</a>
+        {{/ data.link }}
+
+        {{# data.image_list }}
+            <div class="c-gallery-strip__images">
+                <ul class="global__list-reset c-gallery-strip__list {{ style.cls }}">
+                    {{# data.items }}
+                        <li class="c-gallery-strip__list__item {{ style.cls }}">
+                            {{# data.remaining_count }}
+                                <div class="c-gallery-strip__remaining">
+                                    <div class="c-gallery-strip__remaining__label">
+                                        <span class="c-gallery-strip__remaining__prefix">+</span><span class="c-gallery-strip__remaining__value">{{ data.remaining_count }}</span>
+                                    </div>
+                                </div>
+                            {{/ data.remaining_count }}
+                            {{# data.item }}
+                                {{> @cnbritain/merlin-www-image }}
+                            {{/ data.item }}
+                        </li>
+                    {{/ data.items }}
+                </ul>
+            </div>
+        {{/ data.image_list }}
+
+        <div class="c-gallery-strip__detail">
+            <h3 class="c-gallery-strip__title"><span>{{ data.title }}</span></h3>
+            {{# data.subtitle }}
+                <div class="c-gallery-strip__subtitle">{{ data.subtitle }}</div>
+            {{/ data.subtitle }}
+        </div>
+
+    </div>
+</section>

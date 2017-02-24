@@ -1,0 +1,65 @@
+@import '@cnbritain/merlin-www-common:wireframe';
+
+.c-gallery-strip {}
+
+.c-gallery-strip__wrapper {}
+
+.c-gallery-strip__link {
+    background-color: rgba(255,255,255,0.01);
+    bottom: 0;
+    font-size: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.c-gallery-strip__list {
+    font-size: 0;
+}
+
+.c-gallery-strip__list__item {
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    width: 33.33%;
+}
+.c-gallery-strip__images__image {
+    display: block;
+    width: 100%;
+}
+
+
+.c-gallery-strip__detail {}
+
+.c-gallery-strip__remaining {
+    bottom: 0;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+
+    .c-gallery-strip__list__item:last-child & {
+        display: block;
+    }
+}
+.c-gallery-strip__remaining__label {
+    position: relative;
+    top: 50%;
+    @include vendor-prefix(transform, translateY(-50%));
+}
+.c-gallery-strip__remaining__prefix {}
+.c-gallery-strip__remaining__value {}
+
+.c-gallery-strip__title {}
+.c-gallery-strip__subtitle {}
+
+
+.c-gallery-strip--tag {}
+
+.c-gallery-strip--gutters {}
