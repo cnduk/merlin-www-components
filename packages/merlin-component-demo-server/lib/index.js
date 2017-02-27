@@ -285,6 +285,7 @@ function loadJSON(file){
                     LOGGER.log('DATA', `Loaded data - '${file}'`);
                     resolve(json);
                 } catch(err){
+                    LOGGER.log('DATA', `Failed data - ${file}`);
                     reject(err);
                 }
             }, promiseError);
