@@ -7,13 +7,13 @@
             {{> @cnbritain/merlin-www-main-navigation/main-navigation-promotion-desktop }}
         {{/ data.desktop_promo }}
 
-        <div class="n-main__header n-visibility--desktop">
-            <div class="n-main__header-logo">
-                {{# data.masthead }}
+        {{# data.masthead }}
+            <div class="n-main__header n-visibility--desktop">
+                <div class="n-main__header-logo">
                     {{> @cnbritain/merlin-www-image }}
-                {{/ data.masthead }}
+                </div>
             </div>
-        </div>
+        {{/ data.masthead }}
 
         <div class="n-main__sticker">
             <div class="n-main__sticker-child">
