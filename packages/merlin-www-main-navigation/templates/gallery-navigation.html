@@ -1,0 +1,42 @@
+<div class="n-main__wrapper n-gallery-nav">
+    <nav class="n-main__nav">
+        <div class="n-main__nav-title" title="{{ data.title }}">{{ data.title }}</div>
+
+        {{# data.logo }}
+            <div class="n-main__nav-group n-main__nav-group--left">
+                <div class="n-main__nav-logo">
+                    {{> @cnbritain/merlin-www-image }}
+                </div>
+            </div>
+        {{/ data.logo }}
+
+        <div class="n-main__nav-group n-main__nav-group--right">
+            <ul class="global__list-reset n-main__list">
+                <li class="n-main__list-item">
+                    <div class="n-gallery-counter">
+                        <span class="n-gallery-counter__current">00</span><span class="n-gallery-counter__slash">/</span><span class="n-gallery-counter__total">00</span>
+                    </div>
+                </li><li class="n-main__list-item">
+                    <div class='n-gallery-toggle'>
+                        <button class="global__button-reset n-gallery-toggle--list global__hidden">
+                            {{# data.nav_gallery_list_icon }}
+                                {{> @cnbritain/merlin-www-image }}
+                            {{/ data.nav_gallery_list_icon }}
+                        </button>
+                        <button class="global__button-reset n-gallery-toggle--grid">
+                            {{# data.nav_gallery_grid_icon }}
+                                {{> @cnbritain/merlin-www-image }}
+                            {{/ data.nav_gallery_grid_icon }}
+                        </button>
+                    </div>
+                </li><li class="n-main__list-item">
+                    <a href="{{ homepage_url }}" class="js-gallery-close n-gallery-close">
+                        {{# data.nav_gallery_close_icon }}
+                            {{> @cnbritain/merlin-www-image }}
+                        {{/ data.nav_gallery_close_icon }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

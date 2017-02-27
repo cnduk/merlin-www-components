@@ -14,12 +14,14 @@
         "missvogue": "sass/missvogue/missvogue.scss"
     },
     "partials": {
-        "main-navigation": "templates/main-navigation.html"
+        "main-navigation": "templates/main-navigation.html",
+        "main-navigation-promotion-mobile": "templates/main-navigation-promotion-mobile.html",
+        "main-navigation-promotion-desktop": "templates/main-navigation-promotion-desktop.html",
+        "gallery-navigation": "templates/gallery-navigation.html"
     },
     "dependencies": [
         "@cnbritain/merlin-www-common",
         "@cnbritain/merlin-www-buttons",
-        "@cnbritain/merlin-www-image",
-        "@cnbritain/merlin-www-top-stories"
+        "@cnbritain/merlin-www-image"
     ]
 }
