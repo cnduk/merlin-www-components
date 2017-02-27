@@ -11,13 +11,13 @@
     "themes": {
         "wireframe": "sass/wireframe/wireframe.scss",
         "vogue": "sass/vogue/vogue.scss",
-        "missvogue": "sass/missvogue/missvogue.scss",
-        "glamour": "sass/glamour/glamour.scss"
+        "missvogue": "sass/missvogue/missvogue.scss"
     },
     "partials": {
         "main-navigation": "templates/main-navigation.html",
         "main-navigation-promotion-mobile": "templates/main-navigation-promotion-mobile.html",
-        "main-navigation-promotion-desktop": "templates/main-navigation-promotion-desktop.html"
+        "main-navigation-promotion-desktop": "templates/main-navigation-promotion-desktop.html",
+        "gallery-navigation": "templates/gallery-navigation.html"
     },
     "dependencies": [
         "@cnbritain/merlin-www-common",
