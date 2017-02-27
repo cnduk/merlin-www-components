@@ -1,0 +1,33 @@
+<div class="sh-item-carousel">
+
+    {{# data.title }}
+        <header class="sh-item-carousel__header">
+            <h4 class="sh-item-carousel__title">
+                <span class="sh-item-carousel__title__item sh-item-carousel__title__item--title">{{ data.title }}</span>
+                {{# data.brand_title }}
+                    <span class="sh-item-carousel__title__item sh-item-carousel__title__item--brand">{{ data.brand_title }}</span>
+                {{/ data.brand_title }}
+            </h4>
+        </header>
+    {{/ data.title }}
+
+    {{# state.has_navigation }}
+        <aside class="global__hidden sh-item-carousel__nav">
+            <button disabled class="global__button-reset sh-item-carousel__nav__btn btn-action btn-action--left">{{# style.button_left }}{{> @cnbritain/merlin-www-image }}{{/ style.button_left }}</button>
+            <button class="global__button-reset sh-item-carousel__nav__btn btn-action btn-action--right">{{# style.button_right }}{{> @cnbritain/merlin-www-image }}{{/ style.button_right }}</button>
+        </aside>
+    {{/ state.has_navigation }}
+
+    {{# data.card_list }}
+        <ul class="global__list-reset sh-item-carousel__list {{ style.cls }}">
+            {{# data.items }}
+                <li class="sh-item-carousel__list__item {{ style.cls }}">
+                    {{# data.item }}
+                        {{> @cnbritain/merlin-www-card }}
+                    {{/ data.item }}
+                </li>
+            {{/ data.items }}
+        </ul>
+    {{/ data.card_list }}
+
+</div>

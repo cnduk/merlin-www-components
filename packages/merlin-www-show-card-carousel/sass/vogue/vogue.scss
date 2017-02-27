@@ -1,0 +1,53 @@
+@import '@cnbritain/merlin-www-common:vogue';
+@import '@cnbritain/merlin-www-buttons:vogue';
+@import '@cnbritain/merlin-www-image:vogue';
+@import '@cnbritain/merlin-www-card:vogue';
+@import '../wireframe/wireframe';
+
+$SHOW_ITEM_GUTTER: 10px;
+
+.sh-item-carousel {
+    border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT1;
+    margin-top: 40px;
+    padding-top: 30px;
+
+    // im a terrible person - dan
+    .c-card__image {
+        padding-top: 150%;
+    }
+
+    .c-card__title {
+        text-align: left;
+    }
+}
+
+.sh-item-carousel__header {
+    padding-right: 75px;
+}
+
+.sh-item-carousel__list {
+    margin: 0 -($SHOW_ITEM_GUTTER/2);
+}
+li.sh-item-carousel__list__item {
+    padding: 0 ($SHOW_ITEM_GUTTER/2);
+    width: 190px;
+}
+
+.sh-item-carousel__nav {
+    top: 26px;
+}
+
+.sh-item-carousel__title {
+    @include font('NOBEL', 12px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.sh-item-carousel__title__item {
+    & + & {
+        border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT1;
+        color: $COLOR_TYPE_META;
+    }
+}
+.sh-item-carousel__title__item--title {
+    @include font-weight('BOLD');
+}

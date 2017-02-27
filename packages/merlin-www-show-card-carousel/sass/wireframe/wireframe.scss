@@ -1,0 +1,43 @@
+@import '@cnbritain/merlin-www-common:wireframe';
+@import '@cnbritain/merlin-www-buttons:wireframe';
+@import '@cnbritain/merlin-www-image:wireframe';
+@import '@cnbritain/merlin-www-card:wireframe';
+
+.sh-item-carousel {
+    position: relative;
+}
+
+.sh-item-carousel__header {}
+
+.sh-item-carousel__list {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+
+    &.has-no-scroll {
+        overflow: hidden;
+        -webkit-overflow-scrolling: auto;
+    }
+
+}
+li.sh-item-carousel__list__item {
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal;
+}
+
+.sh-item-carousel__nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.sh-item-carousel__title {
+    margin-top: 0;
+}
+.sh-item-carousel__title__item {
+    & + & {
+        margin-left: 10px;
+        padding-left: 10px;
+    }
+}

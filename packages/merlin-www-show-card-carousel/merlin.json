@@ -1,0 +1,35 @@
+{
+    "name": "@cnbritain/merlin-www-show-card-carousel",
+    "description": null,
+    "main": "index",
+    "currentTheme": null,
+    "data": {
+        "vogue": "data/vogue.json"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "glamour": "sass/glamour/glamour.scss"
+    },
+    "partials": {
+        "index": "partials/index.html"
+    },
+    "js": {
+        "demo": "demo/demo.js"
+    },
+    "demo": {
+        "vogue": {
+            "data": "vogue",
+            "main": "index",
+            "themes": [
+                "vogue", "glamour"
+            ]
+        }
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-buttons",
+        "@cnbritain/merlin-www-card",
+        "@cnbritain/merlin-www-image"
+    ]
+}
