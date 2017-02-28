@@ -184,6 +184,18 @@
     }
 }
 
+@mixin gallery-slice-at-medium(){
+    @include min-screen( $GALLERY_MEDIUM_BREAKPOINT ){
+        @content;
+    }
+}
+@mixin gallery-slice-at-large(){
+    @include min-screen( $GALLERY_LARGE_BREAKPOINT ){
+        @content;
+    }
+}
+
+
 
 
 // Needs to be a mixin cos placeholder classes ain't specific enough ;(
