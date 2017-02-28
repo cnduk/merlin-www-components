@@ -212,6 +212,7 @@ class MerlinComponentDemoServer {
     _routes(){
         this._app.get('/static/*', routeStatic.bind(this));
         this._app.get('/', routeIndex.bind(this));
+        this._app.get('/data/:data', routeData.bind(this));
         this._app.get('/theme/:theme', routeTheme.bind(this));
         this._app.get('/:theme/:partial/:data', routeDataTheme.bind(this));
     }
@@ -657,6 +658,30 @@ function routeTheme(req, res){
     const indexPage = mustache.render(this._partials.page, view);
 
     LOGGER.log('SERVER', 'Theme page loaded');
+    res.send(indexPage);
+}
+
+function routeData(req, res){
+    const data = `${MASTER_COMPONENT.name}/${decodeURIComponent(req.params.data)}`;
+    const view = {
+        "data": {
+            "groups": [],
+            "title": `${req.params.data} data page`
+        }
+    };
+    view.data.groups = MASTER_COMPONENT.demos.map((group) => {
+        return {
+            "name": group.name,
+            "demos": group.demos.filter((demo) => {
+                return demo.data === data;
+            })
+        };
+    }).filter((group) => {
+        return group.demos.length > 0;
+    });
+    const indexPage = mustache.render(this._partials.page, view);
+
+    LOGGER.log('SERVER', 'Data page loaded');
     res.send(indexPage);
 }
 
