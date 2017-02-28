@@ -212,7 +212,7 @@ class MerlinComponentDemoServer {
     _routes(){
         this._app.get('/static/*', routeStatic.bind(this));
         this._app.get('/', routeIndex.bind(this));
-        this._app.get('/:theme', routeTheme.bind(this));
+        this._app.get('/theme/:theme', routeTheme.bind(this));
         this._app.get('/:theme/:partial/:data', routeDataTheme.bind(this));
     }
 
