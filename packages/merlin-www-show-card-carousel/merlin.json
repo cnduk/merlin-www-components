@@ -9,7 +9,8 @@
     "themes": {
         "wireframe": "sass/wireframe/wireframe.scss",
         "vogue": "sass/vogue/vogue.scss",
-        "glamour": "sass/glamour/glamour.scss"
+        "glamour": "sass/glamour/glamour.scss",
+        "missvogue": "themes/missvogue/missvogue.scss"
     },
     "partials": {
         "index": "partials/index.html"
@@ -22,7 +23,8 @@
             "data": "vogue",
             "main": "index",
             "themes": [
-                "vogue", "glamour"
+                "vogue",
+                "glamour"
             ]
         }
     },
