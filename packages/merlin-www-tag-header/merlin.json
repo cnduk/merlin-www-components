@@ -1,0 +1,123 @@
+{
+    "name": "@cnbritain/merlin-www-tag-header",
+    "description": null,
+    "main": "index",
+    "currentTheme": null,
+    "data": {
+        "all": "data/all.json",
+        "image": "data/image.json",
+        "event_information": "data/event_information.json",
+        "navigation_list": "data/navigation_list.json",
+        "card_list": "data/card_list.json",
+        "show_list": "data/show_list.json",
+        "style_file": "data/style_file.json",
+        "hair_file": "data/hair_file.json"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "wired": "sass/wired/wired.scss"
+    },
+    "partials": {
+        "index": "partials/index.html",
+        "event-information": "partials/event-information.html"
+    },
+    "js": {
+        "demo": "demo/demo.js"
+    },
+    "demo": {
+        "all": {
+            "data": "all",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue",
+                "wired"
+            ]
+        },
+        "card_list": {
+            "data": "card_list",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue",
+                "wired"
+            ]
+        },
+        "event_information": {
+            "data": "event_information",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue",
+                "wired"
+            ]
+        },
+        "hair_file": {
+            "data": "hair_file",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue"
+            ]
+        },
+        "style_file": {
+            "data": "style_file",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue"
+            ]
+        },
+        "show_list": {
+            "data": "show_list",
+            "main": "index",
+            "themes": [
+                "vogue",
+                "missvogue"
+            ]
+        },
+        "navigation_list": {
+            "data": "navigation_list",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue",
+                "wired"
+            ]
+        },
+        "image": {
+            "data": "image",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue",
+                "wired"
+            ]
+        }
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-card-list",
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-gallery-strip",
+        "@cnbritain/merlin-www-image",
+        "@cnbritain/merlin-www-show-card-carousel",
+        "@cnbritain/merlin-www-topic-strip"
+    ]
+}

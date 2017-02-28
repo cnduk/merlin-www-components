@@ -1,0 +1,11 @@
+<div class="tg-header__event-meta">
+    {{# data.start_date }}
+        <span class="tg-header__event-meta__start-date">{{ data.label }}</span>
+        {{# data.location }}
+            <span class="tg-header__event-meta__separator">/</span>
+        {{/ data.location }}
+    {{/ data.start_date }}
+    {{# data.location }}
+        <span class="tg-header__event-meta__location">{{ data.location }}</span>
+    {{/ data.location }}
+</div>

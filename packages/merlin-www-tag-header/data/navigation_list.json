@@ -1,0 +1,172 @@
+{
+    "type": "TagHeader",
+    "state": {
+        "is_body_expandable": false
+    },
+    "data": {
+        "body": null,
+        "style_file": null,
+        "title": "Fashion",
+        "navigation_list": {
+            "type": "TopicStrip",
+            "state": {},
+            "data": {
+                "topic_list": {
+                    "type": "List",
+                    "state": {},
+                    "data": {
+                        "items": [{
+                            "type": "ListItem",
+                            "state": {
+                                "is_first": true,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "Link",
+                                    "state": {},
+                                    "data": {
+                                        "url": "/topic/fashion-trends/",
+                                        "title": "Fashion Trends"
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                }
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }, {
+                            "type": "ListItem",
+                            "state": {
+                                "is_first": false,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "Link",
+                                    "state": {},
+                                    "data": {
+                                        "url": "/topic/vogue-favourites/",
+                                        "title": "Vogue Shops"
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                }
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }, {
+                            "type": "ListItem",
+                            "state": {
+                                "is_first": false,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "Link",
+                                    "state": {},
+                                    "data": {
+                                        "url": "/topic/street-chic/",
+                                        "title": "Street Style"
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                }
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }, {
+                            "type": "ListItem",
+                            "state": {
+                                "is_first": false,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "Link",
+                                    "state": {},
+                                    "data": {
+                                        "url": "/topic/jewellery/",
+                                        "title": "Jewellery"
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                }
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }, {
+                            "type": "ListItem",
+                            "state": {
+                                "is_first": false,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "Link",
+                                    "state": {},
+                                    "data": {
+                                        "url": "/topic/weddings/",
+                                        "title": "Weddings"
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                }
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }, {
+                            "type": "ListItem",
+                            "state": {
+                                "is_first": false,
+                                "is_last": true
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "Link",
+                                    "state": {},
+                                    "data": {
+                                        "url": "/person/suzy-menkes-person/",
+                                        "title": "Suzy Menkes"
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                }
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }],
+                        "length": 6
+                    },
+                    "style": {
+                        "cls": ""
+                    }
+                },
+                "title": "Topics"
+            },
+            "style": {
+                "cls": "c-topic-strip--bleed"
+            }
+        },
+        "hair_file": null,
+        "card_list": null,
+        "show_list": null,
+        "event_information": null,
+        "image": null
+    },
+    "style": {
+        "cls": "tg-header--topic"
+    }
+}

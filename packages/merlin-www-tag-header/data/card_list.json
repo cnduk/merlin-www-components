@@ -1,0 +1,615 @@
+{
+    "type": "TagHeader",
+    "state": {
+        "is_body_expandable": false
+    },
+    "data": {
+        "body": null,
+        "style_file": null,
+        "title": "Fashion",
+        "navigation_list": null,
+        "hair_file": null,
+        "card_list": {
+            "type": "List",
+            "state": {},
+            "data": {
+                "items": [{
+                    "type": "ListItem",
+                    "state": {
+                        "is_first": true,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "type": "PortraitCard",
+                            "state": {
+                                "is_contributor": false,
+                                "is_show": false,
+                                "is_hero": false,
+                                "is_switcher": false,
+                                "is_landscape": false,
+                                "is_portrait": true
+                            },
+                            "data": {
+                                "byline": null,
+                                "title": "10 bralettes to get you excited for next season (hurry, sun!)",
+                                "review_information": null,
+                                "meta_list": {
+                                    "type": "List",
+                                    "state": {},
+                                    "data": {
+                                        "items": [{
+                                            "type": "ListItem",
+                                            "state": {
+                                                "is_first": true,
+                                                "is_last": false
+                                            },
+                                            "data": {
+                                                "item": {
+                                                    "type": "Meta",
+                                                    "state": {},
+                                                    "data": {
+                                                        "title": "Shopping",
+                                                        "meta_type": "tag",
+                                                        "link": {
+                                                            "type": "Link",
+                                                            "state": {},
+                                                            "data": {
+                                                                "url": "http://localhost:3000/topic/shopping/",
+                                                                "title": "Shopping"
+                                                            },
+                                                            "style": {
+                                                                "cls": ""
+                                                            }
+                                                        },
+                                                        "icon": null
+                                                    },
+                                                    "style": {
+                                                        "cls": ""
+                                                    }
+                                                }
+                                            },
+                                            "style": {
+                                                "cls": ""
+                                            }
+                                        }],
+                                        "length": 1
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                },
+                                "image_list": {
+                                    "type": "List",
+                                    "state": {},
+                                    "data": {
+                                        "items": [{
+                                            "type": "ListItem",
+                                            "state": {
+                                                "is_first": true,
+                                                "is_last": false
+                                            },
+                                            "data": {
+                                                "item": {
+                                                    "type": "Image",
+                                                    "state": {
+                                                        "is_static": false,
+                                                        "is_image": true,
+                                                        "is_picture": false,
+                                                        "is_linked": false,
+                                                        "is_svg": false
+                                                    },
+                                                    "data": {
+                                                        "alt_text": null,
+                                                        "image_url": "https://gl-images.condecdn.net/image/xjWorbZg1q7/crop/405/landscape",
+                                                        "description": "",
+                                                        "lazyload": true,
+                                                        "title": "",
+                                                        "srcset": "https://gl-images.condecdn.net/image/xjWorbZg1q7/crop/405/landscape 405w",
+                                                        "credit": null,
+                                                        "look_number": null,
+                                                        "orientation": "landscape"
+                                                    },
+                                                    "style": {
+                                                        "cls": "img-lazyload "
+                                                    }
+                                                }
+                                            },
+                                            "style": {
+                                                "cls": "c-card__image--landscape"
+                                            }
+                                        }],
+                                        "length": 1
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                },
+                                "teaser": "Underwear is outerwear, so we say...",
+                                "tag": {
+                                    "type": "Tag",
+                                    "state": {},
+                                    "data": {
+                                        "link": {
+                                            "type": "Link",
+                                            "state": {},
+                                            "data": {
+                                                "url": "http://localhost:3000/topic/shopping/",
+                                                "title": "Shopping"
+                                            },
+                                            "style": {
+                                                "cls": ""
+                                            }
+                                        },
+                                        "event_information": null,
+                                        "title": "Shopping"
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                },
+                                "link": {
+                                    "type": "Link",
+                                    "state": {},
+                                    "data": {
+                                        "url": "/gallery/bralettes-and-bralet-tops",
+                                        "title": "10 bralettes to get you excited for next season (hurry, sun!)"
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                },
+                                "sponsor": null,
+                                "event_information": null,
+                                "icon": {
+                                    "type": "SVG",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_image": false,
+                                        "is_picture": false,
+                                        "is_linked": false,
+                                        "is_svg": true
+                                    },
+                                    "data": {
+                                        "alt_text": null,
+                                        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
+                                        "description": null,
+                                        "lazyload": true,
+                                        "title": null,
+                                        "credit": null,
+                                        "look_number": null
+                                    },
+                                    "style": {
+                                        "cls": "img-lazyload "
+                                    }
+                                }
+                            },
+                            "style": {
+                                "cls": "c-card--portrait"
+                            }
+                        }
+                    },
+                    "style": {
+                        "cls": ""
+                    }
+                }, {
+                    "type": "ListItem",
+                    "state": {
+                        "is_first": false,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "type": "PortraitCard",
+                            "state": {
+                                "is_contributor": false,
+                                "is_show": false,
+                                "is_hero": false,
+                                "is_switcher": false,
+                                "is_landscape": false,
+                                "is_portrait": true
+                            },
+                            "data": {
+                                "byline": null,
+                                "title": "Celebrities at Fashion Week: The most FROW-worthy looks",
+                                "review_information": null,
+                                "meta_list": {
+                                    "type": "List",
+                                    "state": {},
+                                    "data": {
+                                        "items": [{
+                                            "type": "ListItem",
+                                            "state": {
+                                                "is_first": true,
+                                                "is_last": false
+                                            },
+                                            "data": {
+                                                "item": {
+                                                    "type": "Meta",
+                                                    "state": {},
+                                                    "data": {
+                                                        "title": "London Fashion Week",
+                                                        "meta_type": "tag",
+                                                        "link": {
+                                                            "type": "Link",
+                                                            "state": {},
+                                                            "data": {
+                                                                "url": "http://localhost:3000/event/london-fashion-week/",
+                                                                "title": "London Fashion Week"
+                                                            },
+                                                            "style": {
+                                                                "cls": ""
+                                                            }
+                                                        },
+                                                        "icon": null
+                                                    },
+                                                    "style": {
+                                                        "cls": ""
+                                                    }
+                                                }
+                                            },
+                                            "style": {
+                                                "cls": ""
+                                            }
+                                        }, {
+                                            "type": "ListItem",
+                                            "state": {
+                                                "is_first": false,
+                                                "is_last": true
+                                            },
+                                            "data": {
+                                                "item": {
+                                                    "type": "Meta",
+                                                    "state": {},
+                                                    "data": {
+                                                        "title": "3 days ago",
+                                                        "meta_type": "date",
+                                                        "link": null,
+                                                        "icon": null
+                                                    },
+                                                    "style": {
+                                                        "cls": ""
+                                                    }
+                                                }
+                                            },
+                                            "style": {
+                                                "cls": ""
+                                            }
+                                        }],
+                                        "length": 2
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                },
+                                "image_list": {
+                                    "type": "List",
+                                    "state": {},
+                                    "data": {
+                                        "items": [{
+                                            "type": "ListItem",
+                                            "state": {
+                                                "is_first": true,
+                                                "is_last": false
+                                            },
+                                            "data": {
+                                                "item": {
+                                                    "type": "Image",
+                                                    "state": {
+                                                        "is_static": false,
+                                                        "is_image": true,
+                                                        "is_picture": false,
+                                                        "is_linked": false,
+                                                        "is_svg": false
+                                                    },
+                                                    "data": {
+                                                        "alt_text": null,
+                                                        "image_url": "https://gl-images.condecdn.net/image/KMvo4qaNZQn/crop/405/landscape",
+                                                        "description": "",
+                                                        "lazyload": true,
+                                                        "title": "",
+                                                        "srcset": "https://gl-images.condecdn.net/image/KMvo4qaNZQn/crop/405/landscape 405w",
+                                                        "credit": null,
+                                                        "look_number": null,
+                                                        "orientation": "landscape"
+                                                    },
+                                                    "style": {
+                                                        "cls": "img-lazyload "
+                                                    }
+                                                }
+                                            },
+                                            "style": {
+                                                "cls": "c-card__image--landscape"
+                                            }
+                                        }],
+                                        "length": 1
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                },
+                                "teaser": "If there's any place where you need to dress to impress, it's fashion week...",
+                                "tag": {
+                                    "type": "Tag",
+                                    "state": {},
+                                    "data": {
+                                        "link": {
+                                            "type": "Link",
+                                            "state": {},
+                                            "data": {
+                                                "url": "http://localhost:3000/event/london-fashion-week/",
+                                                "title": "London Fashion Week"
+                                            },
+                                            "style": {
+                                                "cls": ""
+                                            }
+                                        },
+                                        "event_information": null,
+                                        "title": "London Fashion Week"
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                },
+                                "link": {
+                                    "type": "Link",
+                                    "state": {},
+                                    "data": {
+                                        "url": "/gallery/celebrities-at-fashion-week",
+                                        "title": "Celebrities at Fashion Week: The most FROW-worthy looks"
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                },
+                                "sponsor": null,
+                                "event_information": null,
+                                "icon": {
+                                    "type": "SVG",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_image": false,
+                                        "is_picture": false,
+                                        "is_linked": false,
+                                        "is_svg": true
+                                    },
+                                    "data": {
+                                        "alt_text": null,
+                                        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
+                                        "description": null,
+                                        "lazyload": true,
+                                        "title": null,
+                                        "credit": null,
+                                        "look_number": null
+                                    },
+                                    "style": {
+                                        "cls": "img-lazyload "
+                                    }
+                                }
+                            },
+                            "style": {
+                                "cls": "c-card--portrait"
+                            }
+                        }
+                    },
+                    "style": {
+                        "cls": ""
+                    }
+                }, {
+                    "type": "ListItem",
+                    "state": {
+                        "is_first": false,
+                        "is_last": true
+                    },
+                    "data": {
+                        "item": {
+                            "type": "PortraitCard",
+                            "state": {
+                                "is_contributor": false,
+                                "is_show": false,
+                                "is_hero": false,
+                                "is_switcher": false,
+                                "is_landscape": false,
+                                "is_portrait": true
+                            },
+                            "data": {
+                                "byline": null,
+                                "title": "All. The. Shoes. Our ultimate spring/summer 2017 edit is here",
+                                "review_information": null,
+                                "meta_list": {
+                                    "type": "List",
+                                    "state": {},
+                                    "data": {
+                                        "items": [{
+                                            "type": "ListItem",
+                                            "state": {
+                                                "is_first": true,
+                                                "is_last": false
+                                            },
+                                            "data": {
+                                                "item": {
+                                                    "type": "Meta",
+                                                    "state": {},
+                                                    "data": {
+                                                        "title": "Shopping",
+                                                        "meta_type": "tag",
+                                                        "link": {
+                                                            "type": "Link",
+                                                            "state": {},
+                                                            "data": {
+                                                                "url": "http://localhost:3000/topic/shopping/",
+                                                                "title": "Shopping"
+                                                            },
+                                                            "style": {
+                                                                "cls": ""
+                                                            }
+                                                        },
+                                                        "icon": null
+                                                    },
+                                                    "style": {
+                                                        "cls": ""
+                                                    }
+                                                }
+                                            },
+                                            "style": {
+                                                "cls": ""
+                                            }
+                                        }, {
+                                            "type": "ListItem",
+                                            "state": {
+                                                "is_first": false,
+                                                "is_last": true
+                                            },
+                                            "data": {
+                                                "item": {
+                                                    "type": "Meta",
+                                                    "state": {},
+                                                    "data": {
+                                                        "title": "22 Feb 2017",
+                                                        "meta_type": "date",
+                                                        "link": null,
+                                                        "icon": null
+                                                    },
+                                                    "style": {
+                                                        "cls": ""
+                                                    }
+                                                }
+                                            },
+                                            "style": {
+                                                "cls": ""
+                                            }
+                                        }],
+                                        "length": 2
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                },
+                                "image_list": {
+                                    "type": "List",
+                                    "state": {},
+                                    "data": {
+                                        "items": [{
+                                            "type": "ListItem",
+                                            "state": {
+                                                "is_first": true,
+                                                "is_last": false
+                                            },
+                                            "data": {
+                                                "item": {
+                                                    "type": "Image",
+                                                    "state": {
+                                                        "is_static": false,
+                                                        "is_image": true,
+                                                        "is_picture": false,
+                                                        "is_linked": false,
+                                                        "is_svg": false
+                                                    },
+                                                    "data": {
+                                                        "alt_text": null,
+                                                        "image_url": "https://gl-images.condecdn.net/image/4mbkoDYpQVn/crop/405/landscape",
+                                                        "description": "",
+                                                        "lazyload": true,
+                                                        "title": "",
+                                                        "srcset": "https://gl-images.condecdn.net/image/4mbkoDYpQVn/crop/405/landscape 405w",
+                                                        "credit": null,
+                                                        "look_number": null,
+                                                        "orientation": "landscape"
+                                                    },
+                                                    "style": {
+                                                        "cls": "img-lazyload "
+                                                    }
+                                                }
+                                            },
+                                            "style": {
+                                                "cls": "c-card__image--landscape"
+                                            }
+                                        }],
+                                        "length": 1
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                },
+                                "teaser": "From boots to sliders, wedges and mules...",
+                                "tag": {
+                                    "type": "Tag",
+                                    "state": {},
+                                    "data": {
+                                        "link": {
+                                            "type": "Link",
+                                            "state": {},
+                                            "data": {
+                                                "url": "http://localhost:3000/topic/shopping/",
+                                                "title": "Shopping"
+                                            },
+                                            "style": {
+                                                "cls": ""
+                                            }
+                                        },
+                                        "event_information": null,
+                                        "title": "Shopping"
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                },
+                                "link": {
+                                    "type": "Link",
+                                    "state": {},
+                                    "data": {
+                                        "url": "/gallery/spring-summer-shoes-and-sandals",
+                                        "title": "All. The. Shoes. Our ultimate spring/summer 2017 edit is here"
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                },
+                                "sponsor": null,
+                                "event_information": null,
+                                "icon": {
+                                    "type": "SVG",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_image": false,
+                                        "is_picture": false,
+                                        "is_linked": false,
+                                        "is_svg": true
+                                    },
+                                    "data": {
+                                        "alt_text": null,
+                                        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
+                                        "description": null,
+                                        "lazyload": true,
+                                        "title": null,
+                                        "credit": null,
+                                        "look_number": null
+                                    },
+                                    "style": {
+                                        "cls": "img-lazyload "
+                                    }
+                                }
+                            },
+                            "style": {
+                                "cls": "c-card--portrait"
+                            }
+                        }
+                    },
+                    "style": {
+                        "cls": ""
+                    }
+                }],
+                "length": 3
+            },
+            "style": {
+                "cls": "c-card-list--tg-header-articles"
+            }
+        },
+        "show_list": null,
+        "event_information": null,
+        "image": null
+    },
+    "style": {
+        "cls": "tg-header--topic"
+    }
+}

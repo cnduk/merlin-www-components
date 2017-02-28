@@ -1,0 +1,128 @@
+@import "@cnbritain/merlin-www-common:wired";
+@import "@cnbritain/merlin-www-card-list:wired";
+// NOTE: wired does not have a gallery strip
+// @import "@cnbritain/merlin-www-gallery-strip:wired";
+@import "@cnbritain/merlin-www-image:wired";
+// NOTE: wired does not have a show card carousel
+// @import "@cnbritain/merlin-www-show-card-carousel:wired";
+@import "@cnbritain/merlin-www-topic-strip:wired";
+
+@import "../wireframe/wireframe";
+
+.tg-header {
+    background-color: #000;
+    color: #fff;
+}
+.tg-header--event {
+    background-color: #f5f5f5;
+    color: #000;
+}
+
+.tg-header__wrapper {
+    padding: 0 $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0 $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0 $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.tg-header__intro {
+    padding: $MOBILE_SIDE_GUTTER 0;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 50px 0;
+    }
+}
+
+.tg-header__intro__image {
+    display: block;
+
+    margin: 0 auto;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        width: 250px;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        width: 250px;
+    }
+
+    width: 160px;
+
+    a:hover {
+        border: none;
+    }
+}
+
+.tg-header__intro__title {
+    @extend %h-beta;
+    margin: 0;
+    text-align: center;
+}
+
+.tg-header__separator {
+    margin: 30px auto;
+    width: 20px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 20px auto;
+        width: 40px;
+    }
+}
+
+.tg-header__intro__description {
+    font-family: Brutal, serif;
+    font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
+
+    margin: 30px auto 0 auto;
+
+    text-align: center;
+
+    @include font-size(15px);
+    @include line-height(17px);
+
+    max-width: 280px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+
+        margin-top: 40px;
+
+        @include font-size(17px);
+        @include line-height(23px);
+
+        max-width: 700px;
+    }
+}
+
+.tg-header__topic-strip {
+    margin: 20px 0 0 0;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin: 40px 0 0 0;
+    }
+}
+
+.tg-header__cards {
+    margin: 0 auto;
+    padding-bottom: 40px;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-bottom: 80px;
+    }
+}
+
+.tg-header__event-meta {
+    @include font('BRUTAL', 17px);
+    margin: 40px 0;
+    text-align: center;
+}
+.tg-header__event-meta__start-date {}
+.tg-header__event-meta__separator {}
+.tg-header__event-meta__location {}

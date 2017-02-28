@@ -1,0 +1,64 @@
+{
+    "type": "TagHeader",
+    "state": {
+        "is_body_expandable": false
+    },
+    "data": {
+        "body": null,
+        "style_file": null,
+        "title": "Fashion",
+        "navigation_list": null,
+        "hair_file": null,
+        "card_list": null,
+        "show_list": null,
+        "event_information": {
+            "type": "EventInformation",
+            "state": {},
+            "data": {
+                "ticket_link": {
+                    "type": "Link",
+                    "state": {},
+                    "data": {
+                        "url": "https://www.eventbrite.co.uk/e/wired-health-2017-tickets-29489764680",
+                        "title": "WIRED Health 2017"
+                    },
+                    "style": {
+                        "cls": ""
+                    }
+                },
+                "location": null,
+                "end_date": {
+                    "type": "Date",
+                    "state": {},
+                    "data": {
+                        "date": null,
+                        "relative_time": "1 minute ago",
+                        "label": "9 March 2017"
+                    },
+                    "style": {
+                        "cls": ""
+                    }
+                },
+                "start_date": {
+                    "type": "Date",
+                    "state": {},
+                    "data": {
+                        "date": null,
+                        "relative_time": "1 minute ago",
+                        "label": "9 March 2017"
+                    },
+                    "style": {
+                        "cls": ""
+                    }
+                }
+            },
+            "style": {
+                "cls": ""
+            }
+        },
+        "image": null
+    },
+    "style": {
+        "cls": "tg-header--topic"
+    }
+}

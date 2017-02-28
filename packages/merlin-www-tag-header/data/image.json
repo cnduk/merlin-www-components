@@ -1,0 +1,43 @@
+{
+    "type": "TagHeader",
+    "state": {
+        "is_body_expandable": false
+    },
+    "data": {
+        "body": null,
+        "style_file": null,
+        "title": "Fashion",
+        "navigation_list": null,
+        "hair_file": null,
+        "card_list": null,
+        "show_list": null,
+        "event_information": null,
+        "image": {
+            "type": "Image",
+            "state": {
+                "is_static": false,
+                "is_image": true,
+                "is_picture": false,
+                "is_linked": false,
+                "is_svg": false
+            },
+            "data": {
+                "alt_text": null,
+                "image_url": "https://vg-images.condecdn.net/image/JLnGBz7r3bP/crop/405",
+                "description": "A fresh-faced Chung wore her hair long and centre-parted in a casual style.",
+                "lazyload": true,
+                "title": "January 2007",
+                "srcset": "https://vg-images.condecdn.net/image/JLnGBz7r3bP/crop/405 405w",
+                "credit": null,
+                "look_number": null,
+                "orientation": "portrait"
+            },
+            "style": {
+                "cls": "img-lazyload tg-header__intro__image"
+            }
+        }
+    },
+    "style": {
+        "cls": "tg-header--topic"
+    }
+}
