@@ -105,6 +105,11 @@ h6,
     @extend %h-zeta;
 }
 
+hr {
+    border-top: 4px double $bon-jour;
+    height: 0;
+}
+
 input {
 
 }
@@ -148,7 +153,8 @@ q {
 
 
 small {
-
+    @include font("GOTHAM", 12px, 400, 20px);
+    color: $oslo-gray;
 }
 
 strong {
