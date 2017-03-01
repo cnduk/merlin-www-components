@@ -1,0 +1,174 @@
+@import './_variables';
+@import './_mixins';
+@import './_fonts';
+
+@import "../wireframe/_defaults";
+
+a {
+    text-decoration: none;
+}
+
+abbr {
+    text-decoration: underline;
+}
+
+
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+}
+
+@mixin heading-scale($default, $medium, $large) {
+    @include font-size($default);
+
+    @include min-screen($TYPE_MEDIUM_COPY_WIDTH) {
+        @include font-size($medium);
+    }
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size($large);
+    }
+}
+
+%h-alpha {
+    @include font-size(28px);
+    @include line-height(31px);
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(49px);
+        @include line-height(54px);
+    }
+}
+
+%h-beta {
+    @include font-size(23px);
+    @include line-height(26px);
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(25px);
+        @include line-height(30px);
+    }
+}
+
+%h-gamma {
+    @include font-size(22px);
+    @include line-height(25px);
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(23px);
+        @include line-height(28px);
+    }
+}
+
+%h-delta {
+    @include font-size(20px);
+    @include line-height(23px);
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(20px);
+        @include line-height(25px);
+    }
+}
+
+%h-epsilon {
+    @include font-size(19px);
+    @include line-height(22px);
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(17px);
+        @include line-height(22px);
+    }
+}
+
+%h-zeta {
+    @include font-size(17px);
+    @include line-height(20px);
+}
+
+h1,
+.h-alpha {
+    @extend %h-alpha;
+}
+
+h2,
+.h-beta {
+    @extend %h-beta;
+}
+
+h3,
+.h-gamma {
+    @extend %h-gamma;
+}
+
+h4,
+.h-delta {
+    @extend %h-delta;
+}
+
+h5,
+.h-epsilon {
+    @extend %h-epsilon;
+}
+
+h6,
+.h-zeta {
+    @extend %h-zeta;
+}
+
+input {
+
+}
+
+mark {
+
+}
+
+p {
+
+}
+
+pre {
+
+}
+
+blockquote {
+
+}
+
+q {
+
+}
+
+
+small {
+
+}
+
+strong {
+
+}
+
+ul,
+ol {
+
+}
+
+li {
+
+}
+
+ul {
+
+}
+
+ol {
+
+}
