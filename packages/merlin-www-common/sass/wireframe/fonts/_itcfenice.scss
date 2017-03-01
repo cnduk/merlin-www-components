@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'ITC_FENICE';
+  font-style: normal;
+  font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
+  src: url('/static/fonts/itc-fenice/FeniceStd-Regular.eot');
+  src: url('/static/fonts/itc-fenice/FeniceStd-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/static/fonts/itc-fenice/FeniceStd-Regular.woff2') format('woff2'),
+    url('/static/fonts/itc-fenice/FeniceStd-Regular.woff') format('woff'),
+    url('/static/fonts/itc-fenice/FeniceStd-Regular.ttf') format('truetype'),
+    url('/static/fonts/itc-fenice/FeniceStd-Regular.svg#FeniceStd-Regular') format('svg');
+}
+
+@font-face {
+  font-family: 'ITC_FENICE';
+  font-style: normal;
+  font-weight: map-get($FONT_WEIGHTS, 'BOLD');
+  src: url('/static/fonts/itc-fenice/FeniceStd-Bold.eot');
+  src: url('/static/fonts/itc-fenice/FeniceStd-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/static/fonts/itc-fenice/FeniceStd-Bold.woff2') format('woff2'),
+    url('/static/fonts/itc-fenice/FeniceStd-Bold.woff') format('woff'),
+    url('/static/fonts/itc-fenice/FeniceStd-Bold.ttf') format('truetype'),
+    url('/static/fonts/itc-fenice/FeniceStd-Bold.svg#FeniceStd-Bold') format('svg');
+}
+
+$_FONT: 'ITC_FENICE', Times, serif;
+$FONT_ITC_FENICE: map-merge($FONT_GROUP_DEFAULT, (
+    'FAMILY': $_FONT
+));
+$FONT_GROUPS: map-merge($FONT_GROUPS, ('ITC_FENICE': $FONT_ITC_FENICE));
