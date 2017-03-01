@@ -3,7 +3,28 @@
     "main": "superfeature",
     "currentTheme": null,
     "data": {
-        "superfeature": "demo/data/superfeature.json"
+        "all": "demo/data/all.json",
+        "gq": "demo/data/gq.json"
+    },
+    "demo": {
+        "all": {
+            "data": "all",
+            "main": "superfeature",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue",
+                "wired"
+            ]
+        },
+        "gq": {
+            "data": "gq",
+            "main": "superfeature",
+            "themes": [
+                "gq"
+            ]
+        }
     },
     "js": {
         "demo": "demo/demo.js"
@@ -13,7 +34,8 @@
         "vogue": "sass/vogue/vogue.scss",
         "missvogue": "sass/missvogue/missvogue.scss",
         "wired": "sass/wired/wired.scss",
-        "glamour": "sass/glamour/glamour.scss"
+        "glamour": "sass/glamour/glamour.scss",
+        "gq": "sass/gq/gq.scss"
     },
     "partials": {
         "superfeature": "templates/section-superfeature.html"

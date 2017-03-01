@@ -1,0 +1,108 @@
+@import "@cnbritain/merlin-www-common:gq";
+@import "@cnbritain/merlin-www-image:gq";
+
+@import "../wireframe/wireframe";
+
+.c-superfeature {
+	background-color: $seashell;
+	padding-bottom: 20px;
+	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+		background-color: initial;
+		padding-bottom: 0;
+	}
+
+	margin-bottom: $MOBILE_SLICE_MARGIN;
+	margin-top: $MOBILE_SLICE_MARGIN;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	    margin-bottom: $TABLET_SLICE_MARGIN;
+	    margin-top: $TABLET_SLICE_MARGIN;
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	    margin-bottom: $DESKTOP_SLICE_MARGIN;
+	    margin-top: $DESKTOP_SLICE_MARGIN;
+	}
+}
+
+.c-superfeature__content {
+    background: $white;
+    border-bottom: 1px solid $bon-jour;
+    margin: -60px 20px 0 20px;
+    padding: 28px 20px;
+    position: relative;
+    text-align: center;
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    	@include vendor-prefix(transform, translateX(-50%));
+    	bottom: 20px;
+    	left: 50%;
+    	margin: 0;
+    	max-width: 570px;
+    	padding: 44px 48px;
+    	position: absolute;
+    }
+}
+
+.c-superfeature__tag {
+    @include font("GOTHAM", 11px, 700, 14px);
+    color: $limed-oak;
+    margin-bottom: 8px;
+    margin-top: 0;
+    text-transform: capitalize;
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font-size(12px);
+        @include line-height(16px);
+        margin-bottom: 12px;
+    }
+}
+
+.c-superfeature__title {
+	color: $woodsmoke;
+	@include font("ITC_FENICE", 24px, 700, 28px, -40);
+	margin-bottom: 14px;
+	margin-top: 0px;
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font-size(32px);
+        @include line-height(36px);
+        margin-bottom: 20px;
+        margin-top: 0px;
+    }
+}
+
+.c-superfeature__byline {
+	@include font("GOTHAM", 9px, null, 16px, 60);
+	margin-bottom: 6px;
+	margin-top: 14px;
+	text-transform: uppercase;
+}
+
+.c-superfeature__byline-prefix {
+    @include font-weight(400);
+}
+
+.c-superfeature__byline-name {
+    @include font-weight(700);
+}
+
+.c-superfeature__meta {
+	@include font("GOTHAM", 9px, null, 14px);
+	color: $oslo-gray;
+	margin-top: 6px;
+}
+
+li.c-superfeature__meta-item {
+	padding-right: 0;
+	& + li.c-superfeature__meta-item {
+	    border-left: none;
+	    padding-left: 0;
+	    &:before {
+	    	background-color: $oslo-gray;
+	    	border-radius: 50%;
+	    	content: "";
+	    	display: inline-block;
+	    	height: 3px;
+	    	margin: 1px 8px;
+	    	width: 3px;
+	    }
+	}
+}
