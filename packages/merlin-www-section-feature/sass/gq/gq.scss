@@ -8,6 +8,8 @@
 
     padding-bottom: $MOBILE_SLICE_MARGIN;
     padding-top: $MOBILE_SLICE_MARGIN;
+    max-width: none;
+
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding-bottom: $TABLET_SLICE_MARGIN;
         padding-top: $TABLET_SLICE_MARGIN;
@@ -68,10 +70,10 @@
     	padding: 0 48px;
 	    &:after {
 	    	@include vendor-prefix(transform, translateX(0%) translateY(-50%));
-	    	border-bottom: 32px solid transparent;
+	    	border-bottom: 22px solid transparent;
 	    	border-left: 32px solid $white;
 	    	border-right: none;
-	    	border-top: 32px solid transparent;
+	    	border-top: 22px solid transparent;
 	    	content: '';
 	    	height: 0;
 	    	left: initial;
@@ -86,7 +88,7 @@
 	color: $woodsmoke;
 	@include font("ITC_FENICE", 24px, 700, 28px, -40);
 	margin-bottom: 14px;
-	margin-top: 8px;
+	margin-top: 0px;
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         @include font-size(32px);
         @include line-height(36px);
