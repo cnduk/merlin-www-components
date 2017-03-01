@@ -113,10 +113,16 @@
     }
 }
 .c-feature__byline {
-	@include font("GOTHAM", 9px, 700, 16px, 60);
+	@include font("GOTHAM", 9px, null, 16px, 60);
 	margin-bottom: 6px;
 	margin-top: 14px;
 	text-transform: uppercase;
+}
+.c-feature__byline-prefix {
+    @include font-weight(400);
+}
+.c-feature__byline-name {
+    @include font-weight(700);
 }
 .c-feature__meta {
 	@include font("GOTHAM", 9px, null, 14px);

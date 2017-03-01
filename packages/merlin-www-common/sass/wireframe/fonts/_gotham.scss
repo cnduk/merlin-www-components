@@ -4,3 +4,9 @@
 @import "../_fonts";
 
 @import url(http://digital-assets.condenast.co.uk.s3.amazonaws.com/fonts/355097/0FAE591D84080AC8B.css);
+
+$_FONT: 'Gotham SSm A', 'Gotham SSm B', Helvetica, sans-serif;
+$FONT_GOTHAM: map-merge($FONT_GROUP_DEFAULT, (
+    'FAMILY': $_FONT
+));
+$FONT_GROUPS: map-merge($FONT_GROUPS, ('GOTHAM': $FONT_GOTHAM));
