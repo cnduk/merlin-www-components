@@ -100,31 +100,3 @@ li.c-feature__meta-item {
         padding-left: 10px;
     }
 }
-.c-feature--left {
-    .c-feature__images {
-        @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-            left: 0;
-            right: 50%;
-        }
-    }
-    .c-feature__content {
-        @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-            left: 50%;
-            right: 0;
-        }
-    }
-}
-.c-feature--right {
-    .c-feature__images {
-        @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-            left: 50%;
-            right: 0;
-        }
-    }
-    .c-feature__content {
-        @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-            left: 0;
-            right: 50%;
-        }
-    }
-}
