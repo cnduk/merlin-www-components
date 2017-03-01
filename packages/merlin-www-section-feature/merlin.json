@@ -3,7 +3,27 @@
     "main": "feature",
     "currentTheme": null,
     "data": {
-        "feature": "demo/data/feature.json"
+        "all": "demo/data/all.json"
+    },
+    "demo": {
+        "all": {
+            "data": "all",
+            "main": "feature",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue",
+                "wired"
+            ]
+        },
+        "gq": {
+            "data": "all",
+            "main": "feature",
+            "themes": [
+                "gq"
+            ]
+        }
     },
     "js": {
         "demo": "demo/demo.js"
