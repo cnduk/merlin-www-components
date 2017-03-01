@@ -3,7 +3,8 @@
     "main": "feature",
     "currentTheme": null,
     "data": {
-        "all": "demo/data/all.json"
+        "all": "demo/data/all.json",
+        "gq": "demo/data/gq.json"
     },
     "demo": {
         "all": {
@@ -18,7 +19,7 @@
             ]
         },
         "gq": {
-            "data": "all",
+            "data": "gq",
             "main": "feature",
             "themes": [
                 "gq"
