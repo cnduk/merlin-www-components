@@ -69,6 +69,15 @@
     }
 }
 
+.c-superfeature__teaser {
+	@include font("GOTHAM", 12px, null, 16px);
+	color: $oslo-gray;
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    	@include font-size(15px);
+    	@include line-height(20px);
+    }
+}
+
 .c-superfeature__byline {
 	@include font("GOTHAM", 9px, null, 16px, 60);
 	margin-bottom: 6px;

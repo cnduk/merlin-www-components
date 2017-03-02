@@ -5,7 +5,6 @@
 
 .c-feature {
 	background-color: $seashell;
-
     padding-bottom: $MOBILE_SLICE_MARGIN;
     padding-top: $MOBILE_SLICE_MARGIN;
     max-width: none;
@@ -14,6 +13,7 @@
         padding-bottom: $TABLET_SLICE_MARGIN;
         padding-top: $TABLET_SLICE_MARGIN;
     }
+
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         padding-bottom: $DESKTOP_SLICE_MARGIN;
         padding-top: $DESKTOP_SLICE_MARGIN;
@@ -46,6 +46,7 @@
         width: 50%;
     }
 }
+
 .c-feature__content {
     background: $white;
     border-bottom: 1px solid $bon-jour;
@@ -84,10 +85,12 @@
 	    }
     }
 }
+
 .c-feature__image--portrait {
     display: inline-block;
     width: 50%;
 }
+
 .c-feature__tag {
     @include font("GOTHAM", 11px, 700, 14px);
     color: $limed-oak;
@@ -100,6 +103,7 @@
         margin-bottom: 12px;
     }
 }
+
 .c-feature__title {
 	color: $woodsmoke;
 	@include font("ITC_FENICE", 24px, 700, 28px, -40);
@@ -112,18 +116,31 @@
         margin-top: 0px;
     }
 }
+
+.c-feature__teaser {
+    @include font("GOTHAM", 12px, null, 16px);
+    color: $oslo-gray;
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font-size(15px);
+        @include line-height(20px);
+    }
+}
+
 .c-feature__byline {
 	@include font("GOTHAM", 9px, null, 16px, 60);
 	margin-bottom: 6px;
 	margin-top: 14px;
 	text-transform: uppercase;
 }
+
 .c-feature__byline-prefix {
     @include font-weight(400);
 }
+
 .c-feature__byline-name {
     @include font-weight(700);
 }
+
 .c-feature__meta {
 	@include font("GOTHAM", 9px, null, 14px);
 	color: $oslo-gray;
