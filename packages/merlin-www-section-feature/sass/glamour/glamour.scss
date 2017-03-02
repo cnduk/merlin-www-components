@@ -24,7 +24,7 @@
     font-size: 0;
 }
 
-.c-feature__image__icon {
+.c-feature__icon {
     svg {
         width: 21px;
     }
@@ -53,7 +53,7 @@
 }
 
 .c-feature__image {
-    .c-feature__image__icon {
+    .c-feature__icon {
         display: none;
     }
 }
@@ -138,7 +138,7 @@ li.c-feature__meta-item {
         padding: 20px 60px;
         text-align: left;
 
-        .c-feature__image__icon {
+        .c-feature__icon {
             display: inline-block;
             margin-right: 10px;
             padding-bottom: 5px;
