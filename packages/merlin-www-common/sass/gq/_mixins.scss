@@ -1,1 +1,34 @@
 @import '../wireframe/_mixins';
+
+@mixin triangle($w, $h, $direction, $color) {
+	width: 0;
+	height: 0;
+
+	@if $direction == 'up' {
+		border-bottom: $w solid $color;
+		border-left: $h solid transparent;
+		border-right: $h solid transparent;
+	  	border-top: none;
+	}
+
+	@else if $direction == 'down' {
+	  	border-bottom: none;
+		border-left: $h solid transparent;
+		border-right: $h solid transparent;
+	  	border-top: $w solid $color;
+	}
+
+	@else if $direction == 'right' {
+	  	border-bottom: $h solid transparent;
+		border-left: $w solid $color;
+		border-top: $h solid transparent;
+	  	border-right: none;
+	}
+
+	@else if $direction == 'left' {
+	  	border-bottom: $h solid transparent;
+		border-left: none;
+		border-top: $h solid transparent;
+	  	border-right: $w solid $color;
+	}
+}
