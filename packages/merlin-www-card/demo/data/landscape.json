@@ -1,6 +1,6 @@
 {
 	"data": {
-		"byline": "Katie Berrington",
+		"byline": "James Temperton",
 		"event_information": null,
 		"icon": {
 			"data": {
@@ -10,7 +10,8 @@
 				"lazyload": true,
 				"look_number": null,
 				"svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
-				"title": null
+				"title": null,
+				"width": null
 			},
 			"state": {
 				"is_image": false,
@@ -33,12 +34,13 @@
 								"alt_text": null,
 								"credit": null,
 								"description": "",
-								"image_url": "http://vg.staging.www.condenet.co.uk/image/y32pLDx0rje/crop/405/landscape",
+								"image_url": "https://wi-images.condecdn.net/image/NodaANZo2WY/crop/405",
 								"lazyload": true,
 								"look_number": null,
 								"orientation": "landscape",
-								"srcset": "http://vg.staging.www.condenet.co.uk/image/y32pLDx0rje/crop/405/landscape 405w",
-								"title": ""
+								"srcset": "https://wi-images.condecdn.net/image/NodaANZo2WY/crop/405 405w",
+								"title": "",
+								"width": null
 							},
 							"state": {
 								"is_image": true,
@@ -53,7 +55,10 @@
 							"type": "Image"
 						}
 					},
-					"state": {},
+					"state": {
+						"is_first": true,
+						"is_last": false
+					},
 					"style": {
 						"cls": "c-card__image--landscape"
 					},
@@ -69,8 +74,8 @@
 		},
 		"link": {
 			"data": {
-				"title": "Golden Globe Winners 2017",
-				"url": "/gallery/golden-globe-winners-2017"
+				"title": "Gallery: Nintendo Switch hardware preview",
+				"url": "/gallery/gallery-nintendo-switch-hardware-preview"
 			},
 			"state": {},
 			"style": {
@@ -87,8 +92,8 @@
 								"icon": null,
 								"link": {
 									"data": {
-										"title": "Golden Globes",
-										"url": "http://vg.staging.www.condenet.co.uk/event/golden-globes/"
+										"title": "Nintendo Switch",
+										"url": "http://localhost:3000/topic/nintendo-switch/"
 									},
 									"state": {},
 									"style": {
@@ -97,7 +102,7 @@
 									"type": "Link"
 								},
 								"meta_type": "tag",
-								"title": "Golden Globes"
+								"title": "Nintendo Switch"
 							},
 							"state": {},
 							"style": {
@@ -106,7 +111,10 @@
 							"type": "Meta"
 						}
 					},
-					"state": {},
+					"state": {
+						"is_first": true,
+						"is_last": false
+					},
 					"style": {
 						"cls": ""
 					},
@@ -123,7 +131,8 @@
 										"lazyload": true,
 										"look_number": null,
 										"svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
-										"title": null
+										"title": null,
+										"width": null
 									},
 									"state": {
 										"is_image": false,
@@ -139,7 +148,7 @@
 								},
 								"link": null,
 								"meta_type": "gallery",
-								"title": "25 items"
+								"title": "8 items"
 							},
 							"state": {},
 							"style": {
@@ -148,34 +157,16 @@
 							"type": "Meta"
 						}
 					},
-					"state": {},
-					"style": {
-						"cls": ""
+					"state": {
+						"is_first": false,
+						"is_last": true
 					},
-					"type": "ListItem"
-				}, {
-					"data": {
-						"item": {
-							"data": {
-								"icon": null,
-								"link": null,
-								"meta_type": "date",
-								"title": "09 Jan 2017"
-							},
-							"state": {},
-							"style": {
-								"cls": ""
-							},
-							"type": "Meta"
-						}
-					},
-					"state": {},
 					"style": {
 						"cls": ""
 					},
 					"type": "ListItem"
 				}],
-				"length": 3
+				"length": 2
 			},
 			"state": {},
 			"style": {
@@ -190,8 +181,8 @@
 				"event_information": null,
 				"link": {
 					"data": {
-						"title": "Golden Globes",
-						"url": "http://vg.staging.www.condenet.co.uk/event/golden-globes/"
+						"title": "Nintendo Switch",
+						"url": "http://localhost:3000/topic/nintendo-switch/"
 					},
 					"state": {},
 					"style": {
@@ -199,7 +190,7 @@
 					},
 					"type": "Link"
 				},
-				"title": "Golden Globes"
+				"title": "Nintendo Switch"
 			},
 			"state": {},
 			"style": {
@@ -207,10 +198,17 @@
 			},
 			"type": "Tag"
 		},
-		"teaser": "From Ryan Gosling to Emma Stone, see the full list of winners from the Golden Globes 2017.",
-		"title": "Golden Globe Winners 2017"
+		"teaser": "",
+		"title": "Gallery: Nintendo Switch hardware preview"
 	},
-	"state": {},
+	"state": {
+		"is_contributor": false,
+		"is_hero": false,
+		"is_landscape": false,
+		"is_portrait": false,
+		"is_show": false,
+		"is_switcher": true
+	},
 	"style": {
 		"cls": "c-card--landscape"
 	},

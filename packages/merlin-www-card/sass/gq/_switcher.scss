@@ -1,0 +1,34 @@
+// -------------------- //
+// Switcher
+// -------------------- //
+@mixin card-switcher() {}
+// @mixin card-switcher-small() {}
+// @mixin card-switcher-large() {}
+
+.c-card--switcher {
+    @include card-switcher();
+    @include card-landscape();
+    @include card-landscape-small();
+    @include min-screen(600px) {
+        @include card-portrait();
+        @include card-portrait-large();
+
+        .c-card__obj__header,
+        .c-card__obj__body {
+            display: block;
+            width: auto;
+        }
+
+        .c-card__obj__header {
+            padding: 0;
+        }
+    }
+}
+
+.c-card--switcher--small {
+    @include card-landscape-small();
+}
+
+.c-card--switcher--large {
+    @include card-portrait-large();
+}
