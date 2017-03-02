@@ -101,27 +101,29 @@
     }
 }
 
+.c-gallery__icon {
+    margin: 0 auto 20px auto;
+    height: 17px;
+    width: 17px;
+
+    svg {
+        display: block;
+        fill: #fff;
+    }
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        margin-bottom: 30px;
+        height: 20px;
+        width: 20px;
+    }
+}
+
 .c-gallery__title {
     @include font("NEW GROTESK SQUARE", 40px, "LIGHT", 40px, 20);
     margin: 0 0 13px 0;
 
-    svg {
-        display: block;
-        height: 17px;
-        margin: 0 auto 20px auto;
-        width: auto;
-        path {
-            fill: #fff;
-        }
-    }
-
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         @include font-size(45px);
         margin: 0 0 20px 0;
-
-        svg {
-            height: 20px;
-            margin-bottom: 30px;
-        }
     }
 }

@@ -1,0 +1,162 @@
+@import '@cnbritain/merlin-www-common:gq';
+@import '../wireframe/wireframe';
+
+.c-gallery {
+	background-color: $seashell;
+    padding: $MOBILE_SLICE_MARGIN;
+    max-width: none;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: $DESKTOP_SLICE_MARGIN;
+    }
+}
+
+.c-gallery__wrapper {
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+}
+
+.c-gallery__image-remaining__text {
+	color: $white;
+	@include font("GOTHAM", 20px, 700, 20px);
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    	@include font-size(24px);
+    	@include line-height(24px);
+    }
+}
+
+.c-gallery__text {
+	background: $white;
+	border-bottom: 1px solid $bon-jour;
+	padding: 28px 20px;
+	position: relative;
+	text-align: center;
+
+    &:after {
+        @include triangle(24px, 16px, 'up', $white);
+        @include vendor-prefix(transform, translateX(-50%));
+        content: '';
+        height: 0;
+        left: 50%;
+        position: absolute;
+        top: -24px;
+        width: 0;
+    }
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    	padding: 0 48px;
+	    &:after {
+            @include triangle(32px, 22px, 'left', $white);
+            @include vendor-prefix(transform, translateX(0%) translateY(-50%));
+            content: '';
+            height: 0;
+            left: -32px;
+            position: absolute;
+            top: 50%;
+            width: 0;
+	    }
+    }
+}
+
+.c-gallery__icon {
+	display: none;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+		border: 1px solid $limed-oak;
+    	display: block;
+    	height: 40px;
+    	margin: 0 auto;
+    	margin-bottom: 32px;
+    	width: 40px;
+
+    	svg {
+		    display: block;
+		    height: 100%;
+		    margin: 0 auto;
+		    vertical-align: middle;
+		    width: 13px;
+    		fill: $limed-oak;
+    	}
+    }
+}
+
+.c-gallery__tag {
+    @include font("GOTHAM", 11px, 700, 14px);
+    color: $limed-oak;
+    margin-bottom: 8px;
+    margin-top: 0;
+    text-transform: capitalize;
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font-size(12px);
+        @include line-height(16px);
+        margin-bottom: 12px;
+    }
+}
+
+.c-gallery__title {
+	color: $woodsmoke;
+	@include font("ITC_FENICE", 24px, 700, 28px, -40);
+	margin-bottom: 14px;
+	margin-top: 0px;
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font-size(32px);
+        @include line-height(36px);
+        margin-bottom: 20px;
+        margin-top: 0px;
+    }
+}
+
+.c-gallery__teaser {
+    @include font("GOTHAM", 12px, null, 16px);
+    color: $oslo-gray;
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font-size(15px);
+        @include line-height(20px);
+    }
+}
+
+.c-gallery__separator {
+	display: none;
+}
+
+.c-gallery__byline {
+	@include font("GOTHAM", 9px, null, 16px, 60);
+	margin-bottom: 6px;
+	margin-top: 14px;
+	text-transform: uppercase;
+}
+
+.c-gallery__byline-prefix {
+    @include font-weight(400);
+}
+
+.c-gallery__byline-name {
+    @include font-weight(700);
+}
+
+.c-gallery__meta {
+	@include font("GOTHAM", 9px, null, 14px);
+	color: $oslo-gray;
+	margin-top: 6px;
+}
+
+li.c-gallery__meta-item {
+	padding-right: 0;
+	& + li.c-gallery__meta-item {
+	    border-left: none;
+	    padding-left: 0;
+	    &:before {
+	    	background-color: $oslo-gray;
+	    	border-radius: 50%;
+	    	content: "";
+	    	display: inline-block;
+	    	height: 3px;
+	    	margin: 1px 8px;
+	    	width: 3px;
+	    }
+	}
+}

@@ -24,13 +24,18 @@
 
         <div class="c-gallery__text">
             <div class='c-gallery__text__wrapper'>
+	            {{# data.icon }}
+	                <div class="c-gallery__icon">
+	                    {{> @cnbritain/merlin-www-image }}
+	                </div>
+	            {{/ data.icon }}
+
+		        {{# data.primary_tag }}
+		            <p class="c-gallery__tag">{{ data.title }}</p>
+		        {{/ data.primary_tag }}
+
 	            {{# data.title }}
-		            <h3 class="c-gallery__title">
-		                {{# data.icon }}
-		                	{{> @cnbritain/merlin-www-image }}
-		                {{/ data.icon }}
-		                <span>{{ data.title }}</span>
-		            </h3>
+		            <h3 class="c-gallery__title"><span>{{ data.title }}</span></h3>
 	            {{/ data.title }}
 
 	            {{# data.teaser }}

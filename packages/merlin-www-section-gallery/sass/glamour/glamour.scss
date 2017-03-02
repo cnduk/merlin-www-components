@@ -102,36 +102,35 @@ li.c-gallery__meta-item {
 	}
 }
 
+.c-gallery__icon {
+    height: 19px;
+    width: 24px;
+    margin: 0 auto;
+    margin-bottom: 13px;
+
+    svg {
+        display: block;
+        vertical-align: top;
+        fill: $COLOUR_MAIN;
+    }
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        display: inline-block;
+        height: 21px;
+        width: 21px;
+        margin-bottom: 0;
+        padding-right: 5px;
+    }
+}
+
 .c-gallery__title {
     @include title-feature;
     margin-top: 0;
     margin-bottom: 10px;
 
-    svg {
-        display: block;
-        height: 19px;
-        margin: 0 auto;
-        margin-bottom: 13px;
-        padding-top: 5px;
-        vertical-align: top;
-        width: 24px;
-    }
-
-    path {
-        fill: $COLOUR_MAIN;
-    }
-
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
 	    @include title-feature-desktop;
 	    margin-bottom: 8px;
-
-	    svg {
-	        height: 21px;
-	        display: inline;
-	        margin-bottom: 0;
-	        padding-right: 5px;
-	        width: 21px;
-	    }
     }
 }
 

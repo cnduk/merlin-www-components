@@ -1,9 +1,30 @@
 {
     "name": "@cnbritain/merlin-www-section-gallery",
-    "main": "section",
+    "main": "gallery",
     "currentTheme": null,
     "data": {
-        "gallery": "demo/data/gallery.json"
+        "all": "demo/data/all.json",
+        "gq": "demo/data/gq.json"
+    },
+    "demo": {
+        "all": {
+            "data": "all",
+            "main": "gallery",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue",
+                "wired"
+            ]
+        },
+        "gq": {
+            "data": "gq",
+            "main": "gallery",
+            "themes": [
+                "gq"
+            ]
+        }
     },
     "js": {
         "demo": "demo/demo.js"
@@ -13,10 +34,11 @@
         "vogue": "sass/vogue/vogue.scss",
         "missvogue": "sass/missvogue/missvogue.scss",
         "wired": "sass/wired/wired.scss",
-        "glamour": "sass/glamour/glamour.scss"
+        "glamour": "sass/glamour/glamour.scss",
+        "gq": "sass/gq/gq.scss"
     },
     "partials": {
-        "section": "templates/section-gallery.html"
+        "gallery": "templates/section-gallery.html"
     },
     "dependencies": [
         "@cnbritain/merlin-www-common",
