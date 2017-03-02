@@ -1,9 +1,9 @@
 <section class="c-gallery">
-	{{# data.link }}
-		<a href="{{ &data.url }}" class="c-gallery__link c-gallery__link--article {{ style.cls }}"></a>
-	{{/ data.link }}
-
     <div class="c-gallery__wrapper">
+    	{{# data.link }}
+    		<a href="{{ &data.url }}" class="c-gallery__link c-gallery__link--article {{ style.cls }}"></a>
+    	{{/ data.link }}
+
         <div class="c-gallery__images">
         	<ul class="global__list-reset c-gallery__image-list">
 	        	{{# data.image_list }}

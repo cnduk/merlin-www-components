@@ -7,6 +7,16 @@
     position: relative;
 }
 
+.c-gallery__wrapper {
+    position: relative;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        display: table;
+        vertical-align: middle;
+        width: 100%;
+    }
+}
+
 .c-gallery__byline {}
 .c-gallery__teaser {}
 
@@ -124,12 +134,4 @@ li.c-gallery__image-item {
 
 .c-gallery__title {
 
-}
-
-.c-gallery__wrapper {
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        display: table;
-        vertical-align: middle;
-        width: 100%;
-    }
 }

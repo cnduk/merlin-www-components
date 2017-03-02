@@ -20,6 +20,12 @@
     max-width: $MAXIMUM_PAGE_WIDTH;
 }
 
+.c-gallery__link:hover ~ .c-gallery__text {
+    .c-gallery__title {
+        text-decoration: underline;
+    }
+}
+
 .c-gallery__image-remaining__text {
 	color: $white;
 	@include font("GOTHAM", 20px, 700, 20px);

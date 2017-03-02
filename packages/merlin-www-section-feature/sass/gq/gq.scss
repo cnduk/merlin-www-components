@@ -36,6 +36,13 @@
         }
     }
 }
+
+.c-feature__link:hover ~ .c-feature__content {
+    .c-feature__title {
+        text-decoration: underline;
+    }
+}
+
 .c-feature__images,
 .c-feature__content {
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
@@ -84,6 +91,28 @@
 .c-feature__image--portrait {
     display: inline-block;
     width: 50%;
+}
+
+.c-feature__icon {
+    display: none;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        border: 1px solid $limed-oak;
+        display: block;
+        height: 40px;
+        margin: 0 auto;
+        margin-bottom: 32px;
+        width: 40px;
+
+        svg {
+            display: block;
+            height: 100%;
+            margin: 0 auto;
+            vertical-align: middle;
+            width: 13px;
+            fill: $limed-oak;
+        }
+    }
 }
 
 .c-feature__tag {
