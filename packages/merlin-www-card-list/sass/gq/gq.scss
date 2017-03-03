@@ -1,3 +1,60 @@
 @import "@cnbritain/merlin-www-common:gq";
 
 @import "../wireframe/wireframe";
+
+.c-card-list--c-curated {}
+.c-card-list--a-recommended {}
+.c-card-list--mag-articles {}
+.c-card-list--s-results {}
+.c-card-list--v-genre-articles {}
+.c-card-list--c-video-articles {}
+.c-card-list--sh-latest-articles {}
+.c-card-list--c-tag {
+	margin: 0 -20px;
+
+	.c-card-list__item {
+	    padding: 0 20px;
+	    width: 100%;
+	}
+
+	@include one-column-size() {
+	    .c-card-list__item + .c-card-list__item {
+	        margin-top: 20px;
+
+	        .c-card {
+	            border-top: 1px solid $bon-jour;
+	            padding-top: 20px;
+	        }
+	    }
+	}
+
+	@include two-column-size() {
+	    .c-card-list__item {
+	        display: inline-block;
+	        width: 50%;
+
+	        @include last(2){
+	            margin-bottom: 0;
+	        }
+	    }
+	}
+
+	@include four-column-size() {
+	    .c-card-list__item {
+	        width: 25%;
+
+	        @include last(4) {
+	            margin-bottom: 0;
+	        }
+	    }
+	}
+}
+
+.c-card-list--g-recommended {}
+.c-card-list--c-magazine-articles {}
+.c-card-list--mag-magazines {}
+.c-card-list--sh-shows {}
+.c-card-list--tg-articles {}
+.c-card-list--sh-articles {}
+.c-card-list--v-articles {}
+.c-card-list--tg-header-articles {}

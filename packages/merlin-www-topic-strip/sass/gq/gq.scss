@@ -7,28 +7,12 @@
     text-align: left;
 }
 
-// .c-topic-strip--bleed {
-//     @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-//         margin-left: -$MOBILE_SIDE_GUTTER;
-//         margin-right: -$MOBILE_SIDE_GUTTER;
-//         padding-left: $MOBILE_SIDE_GUTTER;
-//         padding-right: $MOBILE_SIDE_GUTTER;
-
-//         .c-topic-strip__list {
-//             display: inline-block;
-//             margin-left: -$MOBILE_SIDE_GUTTER;
-//             margin-right: -$MOBILE_SIDE_GUTTER;
-//             padding-left: $MOBILE_SIDE_GUTTER;
-//             padding-right: $MOBILE_SIDE_GUTTER;
-//         }
-//     }
-// }
-
+.c-topic-strip--bleed {}
 .c-topic-strip--c-card-section {
     margin-bottom: 24px;
     margin-top: 32px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         display: inline-block;
         margin: 0;
         position: absolute;
