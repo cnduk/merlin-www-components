@@ -42,21 +42,17 @@
 //     }
 // }
 
-// //li added due to specificity of .global__list-reset li setting margin to 0
-// li.c-topic-strip__item {
-//     & + & {
-//         margin-left: 10px;
+li.c-topic-strip__item {
+    & + & {
+        margin-left: 8px;
+    }
+}
 
-//         @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-//             margin-left: 15px;
-//         }
-//     }
-// }
-
-// .c-topic-strip__title {
-//     padding-right: 5px;
-//     text-transform: uppercase;
-// }
+.c-topic-strip__title {
+	@include font("GOTHAM", 12px, 700, 12px);
+	margin-right: 16px;
+    text-transform: uppercase;
+}
 
 // .c-topic-strip--article-related {
 //     text-align: left;
