@@ -113,7 +113,8 @@ module.exports = function(merlinConfig={}, scopeName=null){
             sassUrl = path.resolve(urlParts.join(path.sep), url);
         }
 
-        correctSassPartials(sassUrl);
+        // sassUrl = correctSassPartials(sassUrl);
+        sassUrl = correctRealPath(sassUrl);
 
         if(SESSION.has(sassUrl)){
             LOGGER.log('SKIP', `SASS${scope}::Skipping ${sassUrl}`);
@@ -141,6 +142,14 @@ function correctSassPartials(url){
         filename = filename.slice(1);
     }
     return path.resolve(urlPieces.join(path.sep), filename);
+}
+
+function correctRealPath(url){
+    if(url.endsWith('.scss')){
+        return fs.realpathSync(url);
+    } else {
+        return fs.realpathSync(`${url}.scss`);
+    }
 }
 
 function resolveComponentTheme(url, previous, merlinConfig){
