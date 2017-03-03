@@ -53,7 +53,7 @@
 
                     {{# data.logo }}
                         <div class="n-main__nav-group n-main__nav-group--left">
-                            <div class="n-main__nav-logo n-main__nav-logo--hidden">
+                            <div class="n-main__nav-logo {{# state.is_hidden }}n-main__nav-logo--hidden{{/ state.is_hidden }}">
                                 {{> @cnbritain/merlin-www-image }}
                             </div>
                         </div>
