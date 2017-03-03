@@ -5,57 +5,62 @@
 
 @import '../wireframe/wireframe';
 
+a.btn-single,
+a.btn-group,
+a.btn-share,
+a.btn-related {
+    border-bottom: none;
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover {
+        border-bottom: none;
+    }
+}
+
 .btn-single,
 a.btn-single {
-    @include button-single();
-}
-
-%btn-single--light {
-
-}
-
-%btn-single--light--hover {
-
+    @include button-single;
 }
 
 .btn-single--light,
 a.btn-single--light {
-    @include button-single-light();
+    @include button-single-light;
 
     &:hover {
-        @include button-single-light-hover();
+        @include button-single-light-hover;
     }
 }
 
 .btn-single--dark,
 a.btn-single--dark {
-    @include button-single-dark();
+    @include button-single-dark;
 
     &:hover {
-        @include button-single-dark-hover();
+        @include button-single-dark-hover;
     }
 }
 
 .btn-group,
 a.btn-group {
-    @include button-group();
+    @include button-group;
 }
 
 .btn-group--light,
 a.btn-group--light {
-    @include button-group-light();
+    @include button-group-light;
 
     &:hover {
-        @include button-group-light-hover();
+        @include button-group-light-hover;
     }
 }
 
 .btn-group--dark,
 a.btn-group--dark {
-    @include button-group-dark();
+    @include button-group-dark;
 
     &:hover {
-        @include button-group-dark-hover();
+        @include button-group-dark-hover;
     }
 }
 
@@ -72,6 +77,7 @@ a.btn-top-stories {
     &[disabled] {
         @include button-top-stories-disabled();
     }
+
 }
 
 .btn-share,
@@ -81,11 +87,10 @@ a.btn-share {
 .btn-share--monotone,
 a.btn-share--monotone {}
 
-// TODO
 // @each $name, $color in $COLOUR_SOCIAL {
-
 //     .btn-share--#{$name},
 //     a.btn-share--#{$name} {
+//         background-color: #{$color};
 
 //         &.btn-share--dark {
 //             @include button-share-dark($name);
@@ -107,31 +112,7 @@ a.btn-share--monotone {}
 //     }
 // }
 
-.btn-action {
-    & + & {
-
-    }
-
-    &.btn-disabled,
-    &[disabled]{
-
-    }
-}
-
-.btn-action--left {
-
-}
-
-.btn-action--right {
-
-}
-
-
 .btn-related,
 a.btn-related {
     @include button-related();
-
-    &:hover {
-        @include button-related-hover();
-    }
 }

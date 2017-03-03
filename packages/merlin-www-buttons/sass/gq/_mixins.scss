@@ -1,44 +1,68 @@
 @import '@cnbritain/merlin-www-common:gq';
 
-@mixin button-single() {
+@mixin button-reset() {
+	border-bottom: none;
+	display: inline-block;
+	text-decoration: none;
 
+	&:hover {
+	    border-bottom: none;
+	}
+}
+
+@mixin button-single() {
+	@include button-reset();
+	@include font("GOTHAM", 12px, 700, 12px, 0);
+	padding: 16px 16px;
 }
 
 @mixin button-single-light() {
-
+	background: $cornflower-blue;
+	color: $white;
 }
 
 @mixin button-single-light-hover() {
-
+	background: $royal-blue;
+	color: $white;
 }
 
 
 @mixin button-single-dark() {
-
+	background: $cornflower-blue;
+	color: $white;
 }
 
 @mixin button-single-dark-hover() {
-
+	background: $royal-blue;
+	color: $white;
 }
 
 @mixin button-group() {
-
+	@include button-reset();
+	@include font("GOTHAM", 12px, 700, 12px, 0);
+	padding: 16px 16px;
 }
 
 @mixin button-group-light() {
-
+	background: $zircon;
+	color: $cornflower-blue;
 }
 
 @mixin button-group-light-hover() {
-
+	background: $cornflower-blue;
+	color: $white;
 }
 
 @mixin button-group-dark() {
-
+	background: transparent;
+	border: 1px solid $mineshaft;
+	color: $white;
 }
 
 @mixin button-group-dark-hover() {
-
+	background: $mineshaft;
+	border: 1px solid $mineshaft;
+	color: $white;
 }
 
 @mixin button-top-stories() {
