@@ -1,0 +1,111 @@
+// -------------------- //
+// Top Stories
+// -------------------- //
+@mixin card-top-stories() {
+	.c-card__obj {
+		display: table;
+		width: 100%;
+	}
+
+	.c-card__obj__header,
+	.c-card__obj__body {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+@mixin card-top-stories-small() {
+	.c-card__obj {
+		background-color: $shark;
+	}
+
+	.c-card__obj__header {
+		width: 66px;
+	}
+
+	.c-card__obj__body {
+
+	}
+
+	.c-card__obj__header {
+	    padding-right: 8px;
+	}
+	.c-card__images {
+	    .c-card__image {
+	    	border-radius: 50%;
+	        padding-top: 100%;
+	        overflow: hidden;
+	    }
+
+	    .c-card__image__icon {}
+	}
+
+	.c-card__obj__body {
+	    padding-left: 8px;
+	}
+
+	.c-card__tag {
+	    display: none;
+	}
+
+	.c-card__title {
+	    @include font("GOTHAM", 12px, 700, 16px, -40);
+	    color: $white;
+	    margin-bottom: 8px;
+	    margin-top: 0px;
+	}
+
+	.c-card__teaser {
+	    display: none;
+	}
+
+	.c-card__separator {
+	    display: none;
+	}
+
+	.c-card__byline {
+		display: none;
+	}
+
+	.c-card__meta {
+	    @include font("GOTHAM", 9px, 500, 14px);
+	    color: $oslo-gray;
+	    margin-top: 8px;
+	    padding-right: 0;
+
+	    li.c-card__meta-item {
+	        & + li.c-card__meta-item {
+	            border-left: none;
+	            padding-left: 0;
+	            &:before {
+	                background-color: $oslo-gray;
+	                border-radius: 50%;
+	                content: "";
+	                display: inline-block;
+	                height: 3px;
+	                margin: 1px 8px;
+	                width: 3px;
+	            }
+	        }
+	    }
+	}
+}
+
+// @mixin card-top-stories-large() {}
+
+.c-card--top-stories {
+	@include card-top-stories();
+	@include card-top-stories-small();
+	// @include min-screen($breakpoint) {
+	// 	@include card-top-stories-large();
+	// }
+}
+
+.c-card--top-stories--small {
+	@include card-top-stories-small();
+}
+
+// .c-card--top-stories--large {
+// 	@include card-top-stories-large();
+// }
+//

@@ -1,0 +1,148 @@
+{
+	"data": {
+		"byline": null,
+		"event_information": null,
+		"icon": null,
+		"image_list": {
+			"data": {
+				"items": [{
+					"data": {
+						"item": {
+							"data": {
+								"alt_text": null,
+								"credit": null,
+								"description": "",
+								"image_url": "https://wi-images.condecdn.net/image/NodaANZo2WY/crop/405",
+								"lazyload": true,
+								"look_number": null,
+								"orientation": "landscape",
+								"srcset": "https://wi-images.condecdn.net/image/NodaANZo2WY/crop/405 405w",
+								"title": "",
+								"width": null
+							},
+							"state": {
+								"is_image": true,
+								"is_linked": false,
+								"is_picture": false,
+								"is_static": false,
+								"is_svg": false
+							},
+							"style": {
+								"cls": "img-lazyload "
+							},
+							"type": "Image"
+						}
+					},
+					"state": {
+						"is_first": true,
+						"is_last": false
+					},
+					"style": {
+						"cls": "c-card__image--landscape"
+					},
+					"type": "ListItem"
+				}],
+				"length": 1
+			},
+			"state": {},
+			"style": {
+				"cls": ""
+			},
+			"type": "List"
+		},
+		"link": {
+			"data": {
+				"title": "Gallery: Nintendo Switch hardware preview",
+				"url": "/gallery/gallery-nintendo-switch-hardware-preview"
+			},
+			"state": {},
+			"style": {
+				"cls": ""
+			},
+			"type": "Link"
+		},
+		"meta_list": {
+			"data": {
+				"items": [{
+					"data": {
+						"item": {
+							"data": {
+								"icon": null,
+								"link": {
+									"data": {
+										"title": "Nintendo Switch",
+										"url": "http://localhost:3000/topic/nintendo-switch/"
+									},
+									"state": {},
+									"style": {
+										"cls": ""
+									},
+									"type": "Link"
+								},
+								"meta_type": "tag",
+								"title": "Nintendo Switch"
+							},
+							"state": {},
+							"style": {
+								"cls": ""
+							},
+							"type": "Meta"
+						}
+					},
+					"state": {
+						"is_first": true,
+						"is_last": false
+					},
+					"style": {
+						"cls": ""
+					},
+					"type": "ListItem"
+				}],
+				"length": 1
+			},
+			"state": {},
+			"style": {
+				"cls": ""
+			},
+			"type": "List"
+		},
+		"review_information": null,
+		"sponsor": null,
+		"tag": {
+			"data": {
+				"event_information": null,
+				"link": {
+					"data": {
+						"title": "Nintendo Switch",
+						"url": "http://localhost:3000/topic/nintendo-switch/"
+					},
+					"state": {},
+					"style": {
+						"cls": ""
+					},
+					"type": "Link"
+				},
+				"title": "Nintendo Switch"
+			},
+			"state": {},
+			"style": {
+				"cls": ""
+			},
+			"type": "Tag"
+		},
+		"teaser": "",
+		"title": "Gallery: Nintendo Switch hardware preview"
+	},
+	"state": {
+		"is_contributor": false,
+		"is_hero": false,
+		"is_landscape": false,
+		"is_portrait": false,
+		"is_show": false,
+		"is_switcher": true
+	},
+	"style": {
+		"cls": "c-card--top-stories"
+	},
+	"type": "TopStoriesCard"
+}
