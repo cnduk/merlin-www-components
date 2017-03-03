@@ -108,16 +108,6 @@ a.btn-share--monotone {}
 // }
 
 .btn-action {
-    height: 20px;
-    width: 30px;
-
-    svg {
-        display: inline-block;
-        fill: #000;
-        height: 15px;
-        vertical-align: bottom;
-    }
-
     & + & {
 
     }
@@ -127,11 +117,13 @@ a.btn-share--monotone {}
 
     }
 }
+
 .btn-action--left {
-    text-align: left;
+
 }
+
 .btn-action--right {
-    text-align: right;
+
 }
 
 
