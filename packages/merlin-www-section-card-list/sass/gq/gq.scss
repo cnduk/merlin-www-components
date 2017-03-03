@@ -1,0 +1,53 @@
+@import "@cnbritain/merlin-www-common:gq";
+@import "@cnbritain/merlin-www-topic-strip:gq";
+@import "@cnbritain/merlin-www-buttons:gq";
+@import "@cnbritain/merlin-www-card-list:gq";
+@import "@cnbritain/merlin-www-card:gq";
+
+@import "../wireframe/wireframe";
+
+.c-card-section--c-curated {}
+.c-card-section--a-recommended {}
+.c-card-section--mag-articles {}
+.c-card-section--s-results {}
+.c-card-section--v-genre-articles {}
+.c-card-section--c-video-articles {}
+.c-card-section--sh-latest-articles {}
+.c-card-section--c-tag {
+	.c-card-section__title {
+		@include font("GOTHAM", 14px, 700, 40px, 60)
+		color: $woodsmoke;
+		height: 40px;
+		margin-bottom: 32px;
+		margin-top: 0;
+		text-align: left;
+
+		span {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		&:before {
+			background-color: $limed-oak;
+			content: '';
+			display: inline-block;
+			height: 40px;
+			margin-right: 12px;
+			width: 20px;
+		}
+	}
+}
+.c-card-section--g-recommended {}
+.c-card-section--c-magazine-articles {}
+.c-card-section--mag-magazines {}
+.c-card-section--sh-shows {}
+.c-card-section--tg-articles {}
+.c-card-section--sh-articles {}
+.c-card-section--v-articles {}
+.c-card-section--tg-header-articles {}
+
+.c-card-section {}
+.c-card-section__constrain {}
+.c-card-section__logo {}
+.c-card-section__title {}
+.c-card-section__btn {}

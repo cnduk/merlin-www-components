@@ -1,9 +1,11 @@
-@import '@cnbritain/merlin-www-common:gq';
+@import "@cnbritain/merlin-www-common:gq";
 @import "@cnbritain/merlin-www-buttons:gq";
 
-@import '../wireframe/wireframe';
+@import "../wireframe/wireframe";
 
-.c-topic-strip {}
+.c-topic-strip {
+    text-align: left;
+}
 
 // .c-topic-strip--bleed {
 //     @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
@@ -22,25 +24,19 @@
 //     }
 // }
 
-// .c-topic-strip--c-card-section {
-//     @include font-size(10px);
-//     padding-bottom: 20px;
-//     text-align: left;
+.c-topic-strip--c-card-section {
+    margin-bottom: 24px;
+    margin-top: 32px;
 
-//     .c-topic-strip__item a {
-//         @include font-size(10px);
-//     }
-
-//     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-//         @include font-size(11px);
-//         padding-bottom: 30px;
-//         text-align: center;
-
-//         .c-topic-strip__item a {
-//             @include font-size(11px);
-//         }
-//     }
-// }
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        display: inline-block;
+        margin: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: auto;
+    }
+}
 
 li.c-topic-strip__item {
     & + & {

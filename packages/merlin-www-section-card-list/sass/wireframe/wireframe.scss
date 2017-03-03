@@ -30,31 +30,5 @@
 }
 
 .c-card-section__logo {}
-.c-card-section__title {
-    text-align: center;
-}
-
-.c-card-section__topics {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-}
-
-.c-card-section__btn {
-    box-sizing: border-box;
-    display: inline-block;
-    margin-top: 30px;
-    width: 100%;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: 35px;
-        max-width: 170px;
-    }
-}
-
-
-
-
-.c-card-section--video {
-    background: #000;
-}
+.c-card-section__title {}
+.c-card-section__btn {}
