@@ -153,14 +153,18 @@ MainNavigation.prototype = {
             });
         }
 
-        addEvent(this.el.querySelector('.n-gallery-toggle'), 'click', function() {
-            //Emits event to tell counter to toggle
-            this._galleryArticle.toggleListView();
+        // Check if we have rendered a gallery navigation
+        var elGalleryToggle = this.el.querySelector('.n-gallery-toggle');
+        if(elGalleryToggle){
+            addEvent(elGalleryToggle, 'click', function() {
+                //Emits event to tell counter to toggle
+                this._galleryArticle.toggleListView();
 
-            //Recalculates gallery bounds
-            //Values used in uppdate to show/hide gallery navigation
-            this._galleryArticle.resize();
-        }.bind(this));
+                //Recalculates gallery bounds
+                //Values used in uppdate to show/hide gallery navigation
+                this._galleryArticle.resize();
+            }.bind(this));
+        }
 
         // If the device is ios or android, make the nav have vanish abilities
         // Yes, we're sniffing useragent to make this judgement
