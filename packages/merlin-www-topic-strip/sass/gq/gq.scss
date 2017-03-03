@@ -2,3 +2,90 @@
 @import "@cnbritain/merlin-www-buttons:gq";
 
 @import '../wireframe/wireframe';
+
+.c-topic-strip {}
+
+// .c-topic-strip--bleed {
+//     @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+//         margin-left: -$MOBILE_SIDE_GUTTER;
+//         margin-right: -$MOBILE_SIDE_GUTTER;
+//         padding-left: $MOBILE_SIDE_GUTTER;
+//         padding-right: $MOBILE_SIDE_GUTTER;
+
+//         .c-topic-strip__list {
+//             display: inline-block;
+//             margin-left: -$MOBILE_SIDE_GUTTER;
+//             margin-right: -$MOBILE_SIDE_GUTTER;
+//             padding-left: $MOBILE_SIDE_GUTTER;
+//             padding-right: $MOBILE_SIDE_GUTTER;
+//         }
+//     }
+// }
+
+// .c-topic-strip--c-card-section {
+//     @include font-size(10px);
+//     padding-bottom: 20px;
+//     text-align: left;
+
+//     .c-topic-strip__item a {
+//         @include font-size(10px);
+//     }
+
+//     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+//         @include font-size(11px);
+//         padding-bottom: 30px;
+//         text-align: center;
+
+//         .c-topic-strip__item a {
+//             @include font-size(11px);
+//         }
+//     }
+// }
+
+// //li added due to specificity of .global__list-reset li setting margin to 0
+// li.c-topic-strip__item {
+//     & + & {
+//         margin-left: 10px;
+
+//         @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+//             margin-left: 15px;
+//         }
+//     }
+// }
+
+// .c-topic-strip__title {
+//     padding-right: 5px;
+//     text-transform: uppercase;
+// }
+
+// .c-topic-strip--article-related {
+//     text-align: left;
+
+//     .c-topic-strip__item + .c-topic-strip__item {
+//         margin-left: 10px;
+//     }
+
+//     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+//         white-space: normal;
+//         margin-bottom: -10px;
+
+//         .c-topic-strip__item {
+//             margin-bottom: 10px;
+//             margin-right: 10px;
+//         }
+//         .c-topic-strip__item + .c-topic-strip__item {
+//             @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+//                 margin-left: 0;
+//             }
+//         }
+//     }
+// }
+
+.c-topic-strip__btn {
+    @include button-group();
+    @include button-group-light();
+
+    &:hover {
+        @include button-group-light-hover();
+    }
+}
