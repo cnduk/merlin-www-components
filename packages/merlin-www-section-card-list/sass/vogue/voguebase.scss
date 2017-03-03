@@ -5,6 +5,17 @@
 
 @import "../wireframe/wireframe";
 
+@mixin section-right-sidebar(){
+    .c-card-list {
+        text-align: left;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-right: 340px;
+            position: relative;
+        }
+    }
+}
+
 .c-card-section {
     margin-top: $MOBILE_SLICE_MARGIN;
     margin-bottom: $MOBILE_SLICE_MARGIN;
@@ -111,22 +122,42 @@
 .c-card-section--c-magazine-articles {}
 .c-card-section--mag-magazines {}
 .c-card-section--sh-shows {}
-.c-card-section--tg-articles {}
+.c-card-section--tg-articles {
+    .c-card-section__title {
+        @include font('NOBEL', 15px);
+        margin-bottom: $MARGIN_MEDIUM;
+        padding-bottom: 10px;
+        position: relative;
+        text-align: left;
+        text-transform: uppercase;
+
+        &:after {
+            @include dotted-line($COLOR_BORDER_DOTTED, 1px, 3px);
+            content: '';
+            height: 1px;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 100%;
+        }
+    }
+    @include section-right-sidebar();
+}
 .c-card-section--sh-articles {}
 .c-card-section--v-articles {}
 .c-card-section--tg-header-articles {}
 
 
-%c-card-section--right-sidebar {
-    .c-card-list {
-        text-align: left;
+// %c-card-section--right-sidebar {
+//     .c-card-list {
+//         text-align: left;
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            margin-right: 340px;
-            position: relative;
-        }
-    }
-}
+//         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+//             margin-right: 340px;
+//             position: relative;
+//         }
+//     }
+// }
 
 // %c-card-section--recirculation {
 //     background-color: $COLOUR_BG_ACCENT2;
