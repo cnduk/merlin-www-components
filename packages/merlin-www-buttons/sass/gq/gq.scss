@@ -41,6 +41,29 @@ a.btn-single--dark {
     }
 }
 
+.btn-single-two,
+a.btn-single-two {
+    @include button-single-two;
+}
+
+.btn-single-two--light,
+a.btn-single-two--light {
+    @include button-single-two-light;
+
+    &:hover {
+        @include button-single-two-light-hover;
+    }
+}
+
+.btn-single-two--dark,
+a.btn-single-two--dark {
+    @include button-single-two-dark;
+
+    &:hover {
+        @include button-single-two-dark-hover;
+    }
+}
+
 .btn-group,
 a.btn-group {
     @include button-group;

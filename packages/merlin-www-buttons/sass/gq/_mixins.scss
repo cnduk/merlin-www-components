@@ -37,10 +37,32 @@
 	color: $white;
 }
 
-@mixin button-group() {
+@mixin button-single-two() {
 	@include button-reset();
 	@include font("GOTHAM", 12px, 700, 12px, 0);
 	padding: 16px 16px;
+}
+
+@mixin button-single-two-light() {
+	background: transparent;
+	color: $cornflower-blue;
+	fill: $cornflower-blue;
+}
+
+@mixin button-single-two-light-hover() {}
+
+@mixin button-single-two-dark() {
+	background: transparent;
+	color: $oslo-gray;
+	fill: $oslo-gray;
+}
+
+@mixin button-single-two-dark-hover() {}
+
+@mixin button-group() {
+	@include button-reset();
+	@include font("GOTHAM", 12px, 700, 12px, 0);
+	padding: 14px 8px;
 }
 
 @mixin button-group-light() {

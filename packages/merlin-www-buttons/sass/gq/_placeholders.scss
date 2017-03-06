@@ -20,6 +20,26 @@
     @include button-single-dark-hover();
 }
 
+%btn-single-two {
+    @include button-single-two();
+}
+
+%btn-single-two--light {
+    @include button-single-two-light();
+}
+
+%btn-single-two--light-hover {
+    @include button-single-two-light-hover();
+}
+
+%btn-single-two--dark {
+    @include button-single-two-dark();
+}
+
+%btn-single-two--dark--hover {
+    @include button-single-two-dark-hover();
+}
+
 %btn-group {
     @include button-group();
 }
