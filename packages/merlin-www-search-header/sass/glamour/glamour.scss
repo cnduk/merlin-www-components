@@ -1,0 +1,56 @@
+@import '@cnbritain/merlin-www-common:glamour';
+
+@import '../wireframe/wireframe';
+
+.srch-main {
+    background-color: $COLOUR_BG_DARK;
+    box-sizing: border-box;
+    color: $COLOUR_MAIN_DARK;
+    overflow: hidden;
+    padding: 0 $MOBILE_SIDE_GUTTER;
+
+    @include tablet-size {
+        padding: 0 $TABLET_SIDE_GUTTER;
+    }
+}
+
+.srch-textbox {
+    @include font('GRAPHIK', 17px, 'NORMAL', 17px);
+
+    appearance: none;
+    background-color: transparent;
+    border: 0;
+    color: $COLOUR_MAIN_DARK;
+    display: block;
+    margin: 40px auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    padding: 10px 20px;
+    width: 100%;
+
+    @include tablet-size {
+        @include font-size(60px);
+
+        margin-bottom: 60px;
+    }
+
+    &::placeholder {
+        color: $COLOUR_MAIN_TERTIARY;
+    }
+
+    &:focus {
+        border-bottom: 1px solid #3a3a3a;
+        outline: none;
+    }
+
+}
+
+.srch-results {
+    @include font('GRAPHIK', 12px, 'LIGHT', 40px, 20);
+
+    display: block;
+    margin-bottom: 40px;
+
+    span {
+        @include font-weight('SEMI BOLD');
+    }
+}

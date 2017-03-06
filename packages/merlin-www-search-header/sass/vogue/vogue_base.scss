@@ -1,0 +1,64 @@
+.srch-main {
+    background-color: $COLOUR_BG_DARK;
+    box-sizing: border-box;
+    color: $COLOR_MAIN_PAGE;
+    overflow: hidden;
+    padding: 55px $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 45px $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 45px $DESKTOP_SIDE_GUTTER;
+    }
+
+    form {
+        border-bottom: 1px solid $COLOR_MAIN_SECONDARY;
+    }
+}
+
+.srch-textbox {
+    @include font('ITC CASLON', 35px, null, 36px);
+    @include vendor-prefix(appearance, none);
+    background-color: transparent;
+    border: none;
+    color: $COLOR_MAIN_PAGE;
+    display: block;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    padding: 10px 20px;
+    width: 100%;
+
+    &::-webkit-input-placeholder {
+       color: $COLOR_MAIN_PAGE;
+    }
+
+    &:-moz-placeholder {
+       color: $COLOR_MAIN_PAGE;
+    }
+
+    &::-moz-placeholder {
+       color: $COLOR_MAIN_PAGE;
+    }
+
+    &:-ms-input-placeholder {
+       color: $COLOR_MAIN_PAGE;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(50px);
+        @include line-height(50px);
+    }
+}
+
+.srch-results {
+    @include font('ADOBE CASLON', 15px, null, 15px);
+    color: $COLOR_MAIN_TERTIARY;
+    margin-top: 10px;
+    text-transform: lowercase;
+}

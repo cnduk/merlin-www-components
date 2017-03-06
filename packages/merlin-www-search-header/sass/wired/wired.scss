@@ -1,0 +1,68 @@
+@import '@cnbritain/merlin-www-common:wired';
+
+@import '../wireframe/wireframe';
+
+$_FONT_EXCHANGE: map-get($FONT_GROUPS, 'EXCHANGE WEB');
+$_FONT_BRUTAL: map-get($FONT_GROUPS, 'BRUTAL');
+
+.srch-main {
+    background-color: #000;
+    box-sizing: border-box;
+    color: #fff;
+    overflow: hidden;
+    padding: 0 $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0 $TABLET_SIDE_GUTTER;
+    }
+}
+.srch-textbox {
+    @include vendor-prefix(appearance, none);
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    display: block;
+    font-family: map-get($_FONT_EXCHANGE, 'FAMILY');
+    @include font-size(17px);
+    line-height: map-get($_FONT_EXCHANGE, 'LINE HEIGHT');
+    margin: 40px auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    padding: 10px 20px;
+    width: 100%;
+
+    &::-webkit-input-placeholder {
+       color: #444;
+    }
+
+    &:-moz-placeholder {
+       color: #444;
+    }
+
+    &::-moz-placeholder {
+       color: #444;
+    }
+
+    &:-ms-input-placeholder {
+       color: #444;
+    }
+
+    @include min-screen( $DESKTOP_SIDE_GUTTER_BREAKPOINT ){
+        @include font-size(40px);
+        padding: 30px 20px;
+    }
+
+    &:focus {
+        outline: 1px solid;
+        outline-color: #000;
+    }
+
+}
+.srch-results {
+    display: block;
+    font-family: map-get($_FONT_BRUTAL, 'FAMILY');
+    font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
+    @include font-size(12px);
+    line-height: map-get($_FONT_BRUTAL, 'LINE HEIGHT');
+    margin-bottom: 40px;
+    letter-spacing: 0.020em;
+}
