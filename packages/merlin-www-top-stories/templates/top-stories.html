@@ -1,25 +1,23 @@
-<section class="n-menu__top-stories">
-    <aside class="c-top-stories">
-        <div class="c-top-stories__wrapper">
-            {{# data.title }}
-                <h4 class="c-top-stories__title">{{ data.title }}</h4>
-            {{/ data.title }}
+<aside class="c-top-stories">
+    <div class="c-top-stories__wrapper">
+        {{# data.title }}
+            <h4 class="c-top-stories__title">{{ data.title }}</h4>
+        {{/ data.title }}
 
-            <!-- {%- if nav_buttons -%}
-                <div class="c-top-stories__nav">
-                    <button disabled class="global__button-reset btn-disabled c-top-stories__nav-btn c-top-stories__nav-btn--left btn-top-stories">
-                    {{ "@cnbritain/wc-assets/import/%s/icons/arrowleft.svg"|format(brand)|import_svg_icon }}
-                    </button>
-                    <button class="global__button-reset c-top-stories__nav-btn c-top-stories__nav-btn--right btn-top-stories">{{ "@cnbritain/wc-assets/import/%s/icons/arrowright.svg"|format(brand)|import_svg_icon }}
-                    </button>
-                </div>
-            {%- endif -%} -->
-
-            <div class="c-top-stories__overflow">
-                {{# data.card_list }}
-                    {{> @cnbritain/merlin-www-card-list }}
-                {{/ data.card_list }}
+        <!-- {%- if nav_buttons -%}
+            <div class="c-top-stories__nav">
+                <button disabled class="global__button-reset btn-disabled c-top-stories__nav-btn c-top-stories__nav-btn--left btn-top-stories">
+                {{ "@cnbritain/wc-assets/import/%s/icons/arrowleft.svg"|format(brand)|import_svg_icon }}
+                </button>
+                <button class="global__button-reset c-top-stories__nav-btn c-top-stories__nav-btn--right btn-top-stories">{{ "@cnbritain/wc-assets/import/%s/icons/arrowright.svg"|format(brand)|import_svg_icon }}
+                </button>
             </div>
+        {%- endif -%} -->
+
+        <div class="c-top-stories__overflow">
+            {{# data.card_list }}
+                {{> @cnbritain/merlin-www-card-list }}
+            {{/ data.card_list }}
         </div>
-    </aside>
-</section>
+    </div>
+</aside>
