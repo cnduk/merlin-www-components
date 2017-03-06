@@ -25,7 +25,7 @@
 .c-topic-strip__title {
     @include font("GOTHAM", 12px, 700, 12px);
     margin-right: 16px;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .c-topic-strip__list {
