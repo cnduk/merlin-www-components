@@ -22,16 +22,22 @@
     }
 }
 
+.c-topic-strip__title {
+    @include font("GOTHAM", 12px, 700, 12px);
+    margin-right: 16px;
+    text-transform: uppercase;
+}
+
+.c-topic-strip__list {
+    font-size: 0;
+}
+
 li.c-topic-strip__item {
+    font-size: initial;
+
     & + & {
         margin-left: 8px;
     }
-}
-
-.c-topic-strip__title {
-	@include font("GOTHAM", 12px, 700, 12px);
-	margin-right: 16px;
-    text-transform: uppercase;
 }
 
 // .c-topic-strip--article-related {
