@@ -1,0 +1,59 @@
+<div class="ad-debug">
+    <table>
+        <tr>
+            <td class="ad-debug__key">Element id:</td>
+            <td>{{ id }}</td>
+        </tr>
+        <tr>
+            <td class="ad-debug__key">DFP:</td>
+            <td>{{ dfp }}</td>
+        </tr>
+        <tr>
+            <td class="ad-debug__key">Creative ID:</td>
+            <td>{{ creativeId }}</td>
+        </tr>
+        <tr>
+            <td class="ad-debug__key">Line item ID:</td>
+            <td>{{ lineItemId }}</td>
+        </tr>
+        <tr>
+            <td class="ad-debug__key">Rendered size:</td>
+            <td>{{ renderedSize }}</td>
+        </tr>
+        <tr>
+            <td class="ad-debug__key">Ad position:</td>
+            <td>{{ position }}</td>
+        </tr>
+        {{# values }}
+            <tr>
+                <td class="ad-debug__key">Ad key values:</td>
+                <td>{{ values }}</td>
+            </tr>
+        {{/ values }}
+        <tr>
+            <td class="ad-debug__key">Ad sizes:</td>
+            <td>
+                <ul class="global__list-reset">
+                    {{# sizes }}
+                        <li>{{ . }}</li>
+                    {{/ sizes }}
+                </ul>
+            </td>
+        </tr>
+        {{# sizeMapping }}
+            <tr>
+                <td class="ad-debug__key">Ad sizeMapping:</td>
+                <td>
+                    {{# values }}
+                        <strong>{{ key }}</strong>
+                        <ul class="global__list-reset">
+                            {{# values }}
+                                <li>{{ . }}</li>
+                            {{/ values }}
+                        </ul>
+                    {{/ values }}
+                </td>
+            </tr>
+        {{/ sizeMapping }}
+    </table>
+</div>
