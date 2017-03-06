@@ -60,11 +60,13 @@
 }
 
 .n-main__list {
+    font-size: 0;
     height: $MAIN_NAVIGATION_HEIGHT;
     text-align: center;
 }
 .n-main__list-item {
     display: inline-block;
+    font-size: initial;
 }
 
 .n-main__nav-signpost {}
