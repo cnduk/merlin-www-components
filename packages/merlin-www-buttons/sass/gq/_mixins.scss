@@ -39,8 +39,9 @@
 
 @mixin button-single-two() {
 	@include button-reset();
-	@include font("GOTHAM", 12px, 700, 12px, 0);
+	@include font("GOTHAM", 9px, 700, 10px, 240);
 	padding: 16px 16px;
+	text-transform: uppercase;
 }
 
 @mixin button-single-two-light() {
