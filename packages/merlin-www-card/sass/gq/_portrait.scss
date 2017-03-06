@@ -6,9 +6,11 @@
 
 @mixin card-portrait-large() {
     .c-card__obj {}
-    .c-card__obj__header,
-    .c-card__obj__body {}
-    .c-card__obj__header {}
+    .c-card__obj__header {
+        display: block;
+        padding: 0;
+        width: auto;
+    }
     .c-card__images {
         .c-card__image {
             padding-top: 66.66666%;
@@ -36,7 +38,19 @@
         border-bottom: 1px solid $bon-jour;
         border-left: 1px solid $bon-jour;
         border-right: 1px solid $bon-jour;
+        box-sizing: border-box;
+        display: table;
+        height: 214px;
         padding: 20px;
+        width: 100%;
+    }
+
+    .c-card__header {
+
+    }
+
+    .c-card__footer {
+        display: table-footer-group;
     }
 
     .c-card__tag {
@@ -52,6 +66,7 @@
         height: 88px;
         margin-bottom: 14px;
         margin-top: 6px;
+        overflow: hidden;
     }
 
     .c-card__teaser {

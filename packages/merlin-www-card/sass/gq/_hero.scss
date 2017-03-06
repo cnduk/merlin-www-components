@@ -13,6 +13,7 @@
         @include card-portrait-large();
         // @include card-hero-large();
     // }
+
     @include max-screen(599px) {
         .c-card__obj__body {
             border-bottom: 0;
@@ -20,6 +21,7 @@
             border-right: 0;
             border-top: 0;
             padding: 20px 0 16px 0;
+            height: auto;
         }
 
         .c-card__title {

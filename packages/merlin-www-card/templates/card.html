@@ -36,62 +36,66 @@
 		</div>
 
 		<div class="c-card__obj__body">
-		{{# data.primary_tag }}
-			<p class="c-card__tag">{{ data.title }}</p>
-		{{/ data.primary_tag }}
+			<div class="c-card__header">
+				{{# data.primary_tag }}
+					<p class="c-card__tag">{{ data.title }}</p>
+				{{/ data.primary_tag }}
 
-		{{# data.title }}
-			<h3 class="c-card__title">
-			    <span>{{ data.title }}</span>
-			</h3>
-		{{/ data.title }}
+				{{# data.title }}
+					<h3 class="c-card__title">
+					    <span>{{ data.title }}</span>
+					</h3>
+				{{/ data.title }}
 
-		{{# data.teaser }}
-			<p class="c-card__teaser">
-			    {{ data.teaser }}
-			</p>
-		{{/ data.teaser }}
+				{{# data.teaser }}
+					<p class="c-card__teaser">
+					    {{ data.teaser }}
+					</p>
+				{{/ data.teaser }}
 
-			<hr class="c-card__separator" />
+				<hr class="c-card__separator" />
+			</div>
 
-		{{# data.review_information }}
-			<ul class="global__list-reset c-card__rating">
-				{{# data.score_positive_count }}}
-					<li class="c-card__rating-mark c-card__rating-mark--fill"></li>
-				{{/ data.score_positive_count }}
-				{{# data.score_negative_count }}}
-					<li class="c-card__rating-mark"></li>
-				{{/ data.score_negative_count }}
-			    <li class="c-card__rating-label">{{ data.score }}/{{ data.max_score }}</li>
-			</ul>
-		{{/ data.review_information }}
+			<div class="c-card__footer">
+				{{# data.review_information }}
+					<ul class="global__list-reset c-card__rating">
+						{{# data.score_positive_count }}}
+							<li class="c-card__rating-mark c-card__rating-mark--fill"></li>
+						{{/ data.score_positive_count }}
+						{{# data.score_negative_count }}}
+							<li class="c-card__rating-mark"></li>
+						{{/ data.score_negative_count }}
+					    <li class="c-card__rating-label">{{ data.score }}/{{ data.max_score }}</li>
+					</ul>
+				{{/ data.review_information }}
 
-		{{# data.sponsor }}
-		    <p class="c-card__byline c-card__byline--sponsorship {{ style.cls }}">
-		        <span class="c-card__byline-prefix">In partnership with </span>
-		        <span class="c-card__byline-name">{{ data.title }}</span>
-		    </p>
-		{{/ data.sponsor }}
-		{{^ data.sponsor }}
-		    {{# data.byline }}
-		        <p class="c-card__byline">
-		            <span class="c-card__byline-prefix">By</span>
-		            <span class="c-card__byline-name">{{ data.byline }}</span>
-		        </p>
-		    {{/ data.byline }}
-		{{/ data.sponsor }}
+				{{# data.sponsor }}
+				    <p class="c-card__byline c-card__byline--sponsorship {{ style.cls }}">
+				        <span class="c-card__byline-prefix">In partnership with </span>
+				        <span class="c-card__byline-name">{{ data.title }}</span>
+				    </p>
+				{{/ data.sponsor }}
+				{{^ data.sponsor }}
+				    {{# data.byline }}
+				        <p class="c-card__byline">
+				            <span class="c-card__byline-prefix">By</span>
+				            <span class="c-card__byline-name">{{ data.byline }}</span>
+				        </p>
+				    {{/ data.byline }}
+				{{/ data.sponsor }}
 
-		{{# data.meta_list }}
-		    <ul class="global__list-reset c-card__meta {{ style.cls }}">
-		        {{# data.items }}
-		            <li class="c-card__meta-item {{ style.cls }} c-card__meta-item--{{ data.item.data.meta_type  }}">
-		                {{# data.item }}
-		                    <span class="{{ style.cls }}">{{ data.title }}</span>
-		                {{/ data.item }}
-		            </li>
-		        {{/ data.items }}
-		    </ul>
-		{{/ data.meta_list }}
+				{{# data.meta_list }}
+				    <ul class="global__list-reset c-card__meta {{ style.cls }}">
+				        {{# data.items }}
+				            <li class="c-card__meta-item {{ style.cls }} c-card__meta-item--{{ data.item.data.meta_type  }}">
+				                {{# data.item }}
+				                    <span class="{{ style.cls }}">{{ data.title }}</span>
+				                {{/ data.item }}
+				            </li>
+				        {{/ data.items }}
+				    </ul>
+				{{/ data.meta_list }}
+			</div>
 		</div>
 	</div>
 </article>

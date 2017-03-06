@@ -12,16 +12,6 @@
     @include min-screen(600px) {
         @include card-portrait();
         @include card-portrait-large();
-
-        .c-card__obj__header,
-        .c-card__obj__body {
-            display: block;
-            width: auto;
-        }
-
-        .c-card__obj__header {
-            padding: 0;
-        }
     }
 }
 
