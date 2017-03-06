@@ -124,18 +124,20 @@
             </section>
         {{/ data.top_stories }}
 
-        <div class="n-menu__search">
-            <div class="n-main__nav-search">
-                {{# data.nav_search_open_icon }}
-                    {{> @cnbritain/merlin-www-image }}
-                {{/ data.nav_search_open_icon }}
+        {{# state.has_search }}
+            <div class="n-menu__search">
+                <div class="n-main__nav-search">
+                    {{# data.nav_search_open_icon }}
+                        {{> @cnbritain/merlin-www-image }}
+                    {{/ data.nav_search_open_icon }}
+                </div>
+                <div class="n-menu__search-textbox">
+                    <form method="GET" action="{{ data.search_overlay.data.form_url }}">
+                        <input type="search" placeholder="{{ data.search_overlay.data.input_placeholder }}" name="q" />
+                    </form>
+                </div>
             </div>
-            <div class="n-menu__search-textbox">
-                <form method="GET" action="{{ search_url }}">
-                    <input type="search" placeholder="Search" name="q" />
-                </form>
-            </div>
-        </div>
+        {{/ state.has_search }}
 
         <nav class="n-menu__nav">
             <ul class='n-menu__nav__wrapper global__list-reset'>
