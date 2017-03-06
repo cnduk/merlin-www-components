@@ -2,7 +2,7 @@
 
 import AdManager from './AdManager';
 import { AD_STATES } from './Utils';
-import template from "../template/debug-ad.mustache";
+import template from "../templates/debug-ad.mustache";
 
 function AdDebugger(){}
 

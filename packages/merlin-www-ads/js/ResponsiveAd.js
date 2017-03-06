@@ -105,7 +105,7 @@ import {
     removeClass,
     removeEvent
 } from '@cnbritain/merlin-www-js-utils/js/functions';
-import template from "../template/responsive-ad.mustache";
+import template from "../templates/responsive-ad.mustache";
 import ResponsiveAdVideo from './ResponsiveAdVideo';
 
 var IGNORE_RESIZE_EVENT = false;
