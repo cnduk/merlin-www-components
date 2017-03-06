@@ -7,9 +7,10 @@
     "demo": "merlin-component-demo-server merlin.json"
   },
   "dependencies": {
-    "@cnbritain/merlin-www-common": "^0.1.6",
     "@cnbritain/merlin-www-buttons": "^1.0.7",
+    "@cnbritain/merlin-www-common": "^0.1.6",
     "@cnbritain/merlin-www-image": "^1.0.9",
+    "@cnbritain/merlin-www-search-header": "^1.0.0",
     "@cnbritain/merlin-www-top-stories": "^0.0.4"
   },
   "devDependencies": {

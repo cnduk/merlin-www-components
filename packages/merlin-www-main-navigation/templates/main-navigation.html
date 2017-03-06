@@ -190,6 +190,8 @@
     </div>
 </header>
 
-<div class="n-search">
-
-</div>
+{{# data.search_overlay }}
+    <div class="n-search">
+        {{> @cnbritain/merlin-www-search-header }}
+    </div>
+{{/ data.search_overlay }}
