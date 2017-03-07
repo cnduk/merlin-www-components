@@ -32,11 +32,57 @@
 	.c-card__obj__body {
 	    padding-left: 10px;
 	}
+
+	.c-card__tag {
+	    display: none;
+	}
+
+	.c-card__teaser {
+	    display: none;
+	}
+
+	.c-card__separator {
+	    display: none;
+	}
+
+	.c-card__byline {
+		display: none;
+	}
 }
 
 @mixin card-magazine-large() {
 	.c-card__obj__header {
-		width: 66px;
+		width: 66%;
+	}
+
+	.c-card__obj__header {
+	    padding-right: 10px;
+	}
+
+	.c-card__images {
+	    .c-card__image {
+	        padding-top: 100%;
+	    }
+	}
+
+	.c-card__obj__body {
+	    padding-left: 10px;
+	}
+
+	.c-card__tag {
+	    display: none;
+	}
+
+	.c-card__teaser {
+	    display: none;
+	}
+
+	.c-card__separator {
+	    display: none;
+	}
+
+	.c-card__byline {
+		display: none;
 	}
 }
 
