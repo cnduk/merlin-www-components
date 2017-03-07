@@ -31,6 +31,35 @@
     text-decoration: none;
 }
 
+@mixin button-single-two(){
+    @include font('NOBEL', 12px);
+    letter-spacing: 1px;
+    padding: $PADDING_X_SMALL;
+    text-transform: uppercase;
+    @include transition(all 0.1s ease-in-out);
+}
+
+@mixin button-single-two-light() {
+    background-color: $COLOR_BUTTON_CTA_LIGHT;
+    border: 1px solid transparent;
+    color: $COLOR_BUTTON_CTA_DARK;
+}
+
+@mixin button-single-two-light-hover() {
+    background-color: transparent;
+    border: $_VOGUE_BORDER_WIDTH solid $COLOR_BUTTON_CTA_LIGHT;
+    color: $COLOR_BUTTON_CTA_LIGHT;
+    text-decoration: none;
+}
+
+@mixin button-single-two-dark() {
+
+}
+
+@mixin button-single-two-dark-hover() {
+
+}
+
 @mixin button-group(){
     @include font('NOBEL', 10px);
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
