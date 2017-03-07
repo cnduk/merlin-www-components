@@ -1,0 +1,107 @@
+// -------------------- //
+// Magazine
+// -------------------- //
+@mixin card-magazine() {
+	.c-card__obj {
+		display: table;
+		width: 100%;
+	}
+
+	.c-card__obj__header,
+	.c-card__obj__body {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+@mixin card-magazine-small() {
+	.c-card__obj {
+
+	}
+
+	.c-card__obj__header {
+		width: 66px;
+	}
+
+	.c-card__obj__body {
+
+	}
+
+	.c-card__obj__header {
+	    padding-right: 8px;
+	}
+	.c-card__images {
+	    .c-card__image {
+	    	border-radius: 50%;
+	        padding-top: 100%;
+	        overflow: hidden;
+	    }
+
+	    .c-card__image__icon {}
+	}
+
+	.c-card__obj__body {
+	    padding-left: 8px;
+	}
+
+	.c-card__tag {
+	    display: none;
+	}
+
+	.c-card__title {
+	    @include font("GOTHAM", 14px, 700, 18px, -10);
+	    margin-bottom: 8px;
+	    margin-top: 0px;
+	}
+
+	.c-card__teaser {
+	    display: none;
+	}
+
+	.c-card__separator {
+	    display: none;
+	}
+
+	.c-card__byline {
+		display: none;
+	}
+
+	.c-card__meta {
+	    @include font("GOTHAM", 9px, 500, 14px);
+	    color: $oslo-gray;
+	    margin-top: 8px;
+	    padding-right: 0;
+
+	    li.c-card__meta-item {
+	        & + li.c-card__meta-item {
+	            border-left: none;
+	            padding-left: 0;
+	            &:before {
+	                background-color: $oslo-gray;
+	                border-radius: 50%;
+	                content: "";
+	                display: inline-block;
+	                height: 3px;
+	                margin: 1px 8px;
+	                width: 3px;
+	            }
+	        }
+	    }
+	}
+}
+// @mixin card-magazine-large() {}
+
+.c-card--magazine {
+    @include card-magazine();
+    @include card-magazine-small();
+    // @include min-screen(800px) {
+        // @include card-magazine-large();
+    // }
+}
+
+.c-card--magazine--small {
+    @include card-magazine-small();
+}
+
+// .c-card--magazine--large {
+//     @include card-magazine-large();
+// }
