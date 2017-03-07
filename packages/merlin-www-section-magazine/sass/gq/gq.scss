@@ -17,7 +17,7 @@
     position: relative;
 
     @include tablet-size {
-        padding: 80px 60px;
+        padding: 60px 60px;
     }
 
     @include desktop-size {
@@ -27,10 +27,31 @@
 }
 
 .c-magazine__title {
-	@include font("GOTHAM", 11px, null, 14px);
+	@include font("GOTHAM", 11px, 700, 14px);
 	color: $limed-oak;
-	margin: 0 0 8px 0;
+	margin: 0 0 16px 0;
 	text-align: center;
+}
+
+.c-magazine__covers__wrapper {
+    @include tablet-size {
+        padding-right: 20px;
+    }
+}
+
+.c-magazine__cover--tablet {
+	img {
+		background-color: #19191b;
+		border-radius: 8px;
+	    padding: 20px 8px;
+	    right: 20px;
+		@include desktop-size {
+			border-radius: 12px;
+			padding: 30px 10px;
+			width: 38%;
+			right: 40px;
+		}
+	}
 }
 
 .c-magazine__content__date {
@@ -46,7 +67,7 @@
 }
 
 .c-magazine__content__title {
-	@include font("GOTHAM", 12px, null, 16px);
+	@include font("GOTHAM", 12px, 700, 16px);
 	color: $limed-oak;
 	margin-bottom: 12px;
 	text-align: left;
@@ -58,7 +79,7 @@
 	&:hover {
 		@include button-single-two-light-hover();
 	}
-	margin-top: 40px;
+	margin-top: 24px;
 	&:after {
 		content: '\2192';
 		display: inline-block;
