@@ -27,7 +27,8 @@
 .c-magazine__title {
     @include font('NOBEL', 11px, 'BOOK', 12px);
     color: $COLOR_MAIN_HIGHLIGHT;
-    margin-bottom: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
     text-transform: uppercase;
     text-align: center;
     @include tablet-size {
@@ -61,7 +62,7 @@
 }
 .c-magazine__cover--tablet {
     img {
-        background-color: #000;
+        background-color: #222;
         border-radius: 7px;
         padding: 15px 8px;
         width: 40%;
@@ -86,13 +87,13 @@
 .c-magazine__content__wrapper {}
 .c-magazine__content__date {
     @include font('ITC CASLON', 29px, null, 32px);
-    margin: 15px 0;
+    margin: 30px 0;
     text-align: center;
     text-transform: capitalize;
     @include tablet-size {
         @include font-size(41px);
         @include line-height(45px);
-        margin-bottom: 20px;
+        margin: 10px 0 30px 0;
         text-align: left;
     }
 }
@@ -100,17 +101,17 @@
     color: $COLOR_MAIN_HIGHLIGHT;
     @include font('NOBEL', 12px, 'BOOK', 12px);
     display: none;
-    margin-bottom: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
     text-transform: uppercase;
     @include tablet-size {
         display: block;
-        margin-bottom: 20px;
     }
 }
 .c-magazine__content__subtitle {}
 .c-magazine__btn {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 40px;
     width: auto;
 
     @include button-single();
