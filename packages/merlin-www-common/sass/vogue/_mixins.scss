@@ -102,6 +102,24 @@
     text-transform: lowercase;
 }
 
+@mixin c-card-primary-tag {
+    @include c-card-meta-small;
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include c-card-primary-tag-medium;
+    }
+    color: $COLOR_TYPE_LINK;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+@mixin c-card-primary-tag-small {
+    color: $COLOR_TYPE_META;
+    @include font('NOBEL', 10px, null, 16px);
+}
+@mixin c-card-primary-tag-medium {
+    @include font-size(11px);
+    @include line-height(20px);
+}
+
 @mixin c-card-meta {
     @include c-card-meta-small;
     @include min-screen($CARD_SWITCHER_WIDTH) {
