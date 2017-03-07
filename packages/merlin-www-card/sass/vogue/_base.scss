@@ -48,6 +48,10 @@
     }
 }
 
+.c-card__tag {
+    @include c-card-primary-tag;
+}
+
 .c-card__title {
     margin: 0 0 6px 0;
     @include c-card-title;

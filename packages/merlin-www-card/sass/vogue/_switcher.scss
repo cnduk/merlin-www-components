@@ -1,18 +1,24 @@
-@import '@cnbritain/merlin-www-common:vogue';
-@import './_mixins';
+// -------------------- //
+// Switcher
+// -------------------- //
+@mixin card-switcher() {}
+// @mixin card-switcher-small() {}
+// @mixin card-switcher-large() {}
 
 .c-card--switcher {
-    @include placeholder_landscape();
-
-    @include card-portrait-to-landscape-size() {
-        @include placeholder_portrait();
-
-        .c-card__obj__header,
-        .c-card__obj__body {
-            display: block;
-            padding-left: 0;
-            padding-right: 0;
-            width: 100%;
-        }
+    @include card-switcher();
+    @include card-landscape();
+    @include card-landscape-small();
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include card-portrait();
+        @include card-portrait-large();
     }
+}
+
+.c-card--switcher--small {
+    @include card-landscape-small();
+}
+
+.c-card--switcher--large {
+    @include card-portrait-large();
 }

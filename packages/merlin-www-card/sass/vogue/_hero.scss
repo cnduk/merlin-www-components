@@ -1,19 +1,33 @@
-@import '@cnbritain/merlin-www-common:vogue';
+// -------------------- //
+// Hero
+// -------------------- //
+@mixin card-hero() {}
+// @mixin card-hero-small() {}
+// @mixin card-hero-large() {}
 
 .c-card--hero {
+    @include card-hero();
+    // @include card-hero-small();
+    // @include min-screen(700px) {
+        @include card-portrait();
+        @include card-portrait-large();
+        // @include card-hero-large();
+    // }
 
-    .c-card__image {
-        padding-top: 66.67%;
-    }
-
-    .c-card__title {
-        @include c-card-hero-title;
-    }
-
-    @include card-portrait-to-landscape-size() {
-        .c-card__image {
-            padding-top: 100%;
+    @include max-screen($CARD_SWITCHER_WIDTH) {
+        .c-card__images {
+            .c-card__image {
+                padding-top: 66.66666%;
+            }
         }
     }
-
 }
+
+// .c-card--hero--small {
+//     @include card-portrait-large();
+
+// }
+
+// .c-card--hero--large {
+//     @include card-portrait-large();
+// }
