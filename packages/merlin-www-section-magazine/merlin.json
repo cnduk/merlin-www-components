@@ -14,7 +14,8 @@
         "glamour": "sass/glamour/glamour.scss",
         "wired": "sass/wired/wired.scss",
         "vogue": "sass/vogue/vogue.scss",
-        "missvogue": "sass/missvogue/missvogue.scss"
+        "missvogue": "sass/missvogue/missvogue.scss",
+        "gq": "sass/gq/gq.scss"
     },
     "partials": {
         "section": "templates/section.html"
@@ -23,6 +24,7 @@
         "@cnbritain/merlin-www-common",
         "@cnbritain/merlin-www-buttons",
         "@cnbritain/merlin-www-image",
+        "@cnbritain/merlin-www-card",
         "@cnbritain/merlin-www-card-list"
     ]
 }
