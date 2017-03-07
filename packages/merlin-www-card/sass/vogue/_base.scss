@@ -12,7 +12,6 @@
 
 .c-card__image {
     background: $COLOUR_BG_ACCENT1;
-    margin-bottom: $MARGIN_SMALL;
     @include card-image-links-normal();
     @include transition(all 0.3s ease);
 }
