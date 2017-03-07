@@ -51,7 +51,16 @@
 }
 
 .c-card-list--g-recommended {}
-.c-card-list--c-magazine-articles {}
+.c-card-list--c-magazine-articles {
+	.c-card-list__item + .c-card-list__item {
+	    margin-top: 20px;
+
+	    .c-card {
+	        border-top: 1px solid $bon-jour;
+	        padding-top: 20px;
+	    }
+	}
+}
 .c-card-list--mag-magazines {}
 .c-card-list--sh-shows {}
 .c-card-list--tg-articles {}
