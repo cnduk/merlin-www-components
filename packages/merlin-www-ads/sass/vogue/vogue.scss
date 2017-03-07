@@ -3,11 +3,12 @@
 @import '../wireframe/wireframe';
 @import '../wireframe/_debug';
 
-.ad__block__title {
+.ad__title {
     color: $COLOR_MAIN_INACTIVE;
     @include font('NOBEL', 10px);
     margin: 0 0 5px 0;
     text-align: left;
+    text-transform: uppercase;
 }
 
 .ad--article {
@@ -18,7 +19,7 @@
         padding: 20px 0;
     }
 
-    .ad__block__title {
+    .ad__title {
         color: $COLOR_MAIN_INACTIVE;
         @include font('NOBEL', 10px);
         margin: 0 0 5px 0;
@@ -28,7 +29,7 @@
     }
 
     @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ){
-        .ad__block__title {
+        .ad__title {
             padding-left: $TABLET_SIDE_GUTTER;
             padding-right: $TABLET_SIDE_GUTTER;
         }
@@ -39,7 +40,7 @@
             background: transparent;
             padding: 0;
         }
-        .ad__block__title {
+        .ad__title {
             display: none;
         }
     }
@@ -96,7 +97,7 @@
         margin-left: 0;
         margin-right: 0;
 
-        .ad__block__title {
+        .ad__title {
             display: block;
             padding-left: 0;
         }
@@ -146,7 +147,7 @@
         }
     }
 
-    .ad__block__title {
+    .ad__title {
         color: $COLOR_MAIN_INACTIVE;
         @include font('NOBEL', 10px);
         margin: 0 0 5px 0;
@@ -156,15 +157,36 @@
     }
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        .ad__block__title {
+        .ad__title {
             padding-left: $TABLET_SIDE_GUTTER;
             padding-right: $TABLET_SIDE_GUTTER;
         }
     }
 }
 
+.ad--tag-inline {
+    margin-bottom: 40px;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    margin-top: 40px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$DESKTOP_SIDE_GUTTER;
+        margin-right: -$DESKTOP_SIDE_GUTTER;
+    }
+    @include min-screen(940px) {
+        margin-right: -(340px + $DESKTOP_SIDE_GUTTER);
+    }
+}
+
 .ad--tag-rail {
     margin-bottom: 60px;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
     margin-top: 60px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
@@ -175,7 +197,12 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         clear: right;
         float: right;
-        margin: 0 0 0 40px;
+        margin: 0 -340px 0 40px;
+
+        &.stick-wrapper--fixed {
+            margin-right: -40px;
+        }
+
     }
 
     @include min-screen(940px) {
@@ -183,7 +210,7 @@
             background: transparent;
             padding: 0;
         }
-        .ad__block__title {
+        .ad__title {
             display: none;
         }
     }
@@ -213,7 +240,7 @@
         }
     }
 
-    .ad__block__title {
+    .ad__title {
         color: $COLOR_MAIN_INACTIVE;
         @include font('NOBEL', 10px);
         margin: 0 0 5px 0;
@@ -223,7 +250,7 @@
     }
 
     @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ){
-        .ad__block__title {
+        .ad__title {
             padding-left: $TABLET_SIDE_GUTTER;
             padding-right: $TABLET_SIDE_GUTTER;
         }
@@ -234,7 +261,7 @@
             background: transparent;
             padding: 0;
         }
-        .ad__block__title {
+        .ad__title {
             display: none;
         }
     }
@@ -285,7 +312,7 @@
             background: $COLOUR_BG_ADVERT;
             padding: 20px 0;
         }
-        .ad__block__title {
+        .ad__title {
             display: block;
         }
     }
@@ -301,7 +328,7 @@
             background: transparent;
             padding: 0;
         }
-        .ad__block__title {
+        .ad__title {
             display: none;
         }
     }
@@ -323,7 +350,7 @@
         padding: 20px 0;
     }
 
-    .ad__block__title {
+    .ad__title {
         margin: 0 0 5px 0;
         padding-left: $MOBILE_SIDE_GUTTER;
         padding-right: $MOBILE_SIDE_GUTTER;
@@ -331,7 +358,7 @@
     }
 
     @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ){
-        .ad__block__title {
+        .ad__title {
             padding-left: $TABLET_SIDE_GUTTER;
             padding-right: $TABLET_SIDE_GUTTER;
         }
