@@ -71,4 +71,10 @@
     }
 }
 .c-magazine__content__subtitle {}
+.c-magazine__btn-wrapper {
+    text-align: center;
+    @include tablet-size {
+        text-align: left;
+    }
+}
 .c-magazine__btn {}
