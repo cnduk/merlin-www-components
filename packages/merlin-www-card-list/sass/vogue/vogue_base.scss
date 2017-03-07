@@ -154,48 +154,8 @@
 }
 
 .c-card-list--c-magazine-articles {
-    @include tablet-size {
-        .c-card-list__item {
-            .c-card {
-                .c-card__obj {
-                    table-layout: fixed;
-                }
-
-                .c-card__obj__header {
-                    width: 70px;
-                }
-            }
-
-            .c-card__title {
-                // @include font-size(17px);
-            }
-        }
-    }
-
     .c-card-list__item + .c-card-list__item {
         margin-top: 20px;
-
-        // .c-card {
-        //     border-top: 1px solid $COLOUR_BORDER_SOLID;
-        //     padding-top: 15px;
-
-        //     &.c-card--dark {
-        //         border-top: 1px solid #333;
-        //     }
-        // }
-
-        // @include tablet-size {
-        //     margin-top: 20px;
-
-        //     .c-card {
-        //         border-top: none;
-        //         padding-top: 0;
-
-        //         &.c-card--dark {
-        //             border-top: none;
-        //         }
-        //     }
-        // }
     }
 }
 
