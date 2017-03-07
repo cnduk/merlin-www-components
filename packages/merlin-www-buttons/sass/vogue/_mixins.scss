@@ -1,6 +1,17 @@
 @import '@cnbritain/merlin-www-common:vogue';
 
+@mixin button-reset() {
+    border-bottom: none;
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover {
+        border-bottom: none;
+    }
+}
+
 @mixin button-single(){
+    @include button-reset();
     @include font('NOBEL', 12px);
     letter-spacing: 1px;
     padding: $PADDING_X_SMALL;
@@ -19,7 +30,6 @@
     text-decoration: none;
 }
 
-
 @mixin button-single-dark() {
     border: $_VOGUE_BORDER_WIDTH solid $COLOR_BUTTON_CTA_DARK;
     color: $COLOR_BUTTON_CTA_DARK;
@@ -32,6 +42,7 @@
 }
 
 @mixin button-single-two(){
+    @include button-reset();
     @include font('NOBEL', 12px);
     letter-spacing: 1px;
     padding: $PADDING_X_SMALL;
@@ -61,6 +72,7 @@
 }
 
 @mixin button-group(){
+    @include button-reset();
     @include font('NOBEL', 10px);
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         @include font-size(11px);
