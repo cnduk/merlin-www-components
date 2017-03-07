@@ -1,0 +1,19 @@
+@import '@cnbritain/merlin-www-common:wired';
+@import '@cnbritain/merlin-www-buttons:wired';
+
+@import '../wireframe/wireframe';
+
+.c-pagination {}
+.c-pagination__item {}
+.c-pagination__item--active {}
+.c-pagination__btn {
+    @include button-single();
+    @include button-single-light();
+
+    &:hover, &:focus {
+        @include button-single-light-hover();
+    }
+}
+.c-pagination__btn--active {
+    @include button-single-light-hover();
+}

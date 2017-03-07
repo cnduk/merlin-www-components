@@ -1,0 +1,7 @@
+<ul class="global__list-reset c-pagination">
+    {{# data.pagination_list.data.items }}
+        <li class="c-pagination__item {{ style.cls }}">
+            <a href="{{ data.item.data.url }}" title="{{ data.item.data.title }}" class="{{ data.item.style.cls }}">{{ data.item.data.title }}</a>
+        </li>
+    {{/ data.pagination_list.data.items }}
+</ul>

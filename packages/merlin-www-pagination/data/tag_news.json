@@ -1,0 +1,108 @@
+{
+    "type": "Pagination",
+    "state": {},
+    "data": {
+        "pagination_list": {
+            "type": "List",
+            "state": {},
+            "data": {
+                "items": [{
+                    "type": "ListItem",
+                    "state": {
+                        "is_first": true,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "type": "Link",
+                            "state": {},
+                            "data": {
+                                "url": "/topic/news/?page=1",
+                                "title": 1
+                            },
+                            "style": {
+                                "cls": "c-pagination__btn c-pagination__btn--active"
+                            }
+                        }
+                    },
+                    "style": {
+                        "cls": "c-pagination__item c-pagination__item--active"
+                    }
+                }, {
+                    "type": "ListItem",
+                    "state": {
+                        "is_first": false,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "type": "Link",
+                            "state": {},
+                            "data": {
+                                "url": "/topic/news/?page=2",
+                                "title": 2
+                            },
+                            "style": {
+                                "cls": "c-pagination__btn"
+                            }
+                        }
+                    },
+                    "style": {
+                        "cls": "c-pagination__item"
+                    }
+                }, {
+                    "type": "ListItem",
+                    "state": {
+                        "is_first": false,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "type": "Link",
+                            "state": {},
+                            "data": {
+                                "url": "/topic/news/?page=3",
+                                "title": 3
+                            },
+                            "style": {
+                                "cls": "c-pagination__btn"
+                            }
+                        }
+                    },
+                    "style": {
+                        "cls": "c-pagination__item"
+                    }
+                }, {
+                    "type": "ListItem",
+                    "state": {
+                        "is_first": false,
+                        "is_last": true
+                    },
+                    "data": {
+                        "item": {
+                            "type": "Link",
+                            "state": {},
+                            "data": {
+                                "url": "/topic/news/?page=2",
+                                "title": "Next"
+                            },
+                            "style": {
+                                "cls": "c-pagination__btn"
+                            }
+                        }
+                    },
+                    "style": {
+                        "cls": "c-pagination__item"
+                    }
+                }],
+                "length": 4
+            },
+            "style": {
+                "cls": ""
+            }
+        }
+    },
+    "style": {
+        "cls": ""
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "name": "@cnbritain/merlin-www-pagination",
+    "description": "Pagination fallback for pages that have infinite scroll",
+    "main": "index",
+    "currentTheme": null,
+    "data": {
+        "tag_news": "data/tag_news.json"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "wired": "sass/wired/wired.scss",
+        "missvogue": "sass/missvogue/missvogue.scss"
+    },
+    "partials": {
+        "index": "partials/index.html"
+    },
+    "js": {},
+    "demo": {
+        "tag_news": {
+            "data": "tag_news",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "glamour",
+                "wired",
+                "missvogue"
+            ]
+        }
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-buttons"
+    ]
+}
