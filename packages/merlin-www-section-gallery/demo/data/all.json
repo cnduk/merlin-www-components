@@ -258,7 +258,28 @@
       "type": "Profile"
     }],
     "sponsor": null,
-    "primary_tag": null,
+    "primary_tag": {
+      "data": {
+        "event_information": null,
+        "link": {
+          "data": {
+            "title": "Daily Digest",
+            "url": "http://localhost:3000/topic/daily-digest/"
+          },
+          "state": {},
+          "style": {
+            "cls": ""
+          },
+          "type": "Link"
+        },
+        "title": "Daily Digest"
+      },
+      "state": {},
+      "style": {
+        "cls": ""
+      },
+      "type": "Tag"
+    },
     "teaser": "London Fashion Week February 2017 Daily Digest",
     "title": "LFW: Daily Digest"
   },

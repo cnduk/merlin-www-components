@@ -58,22 +58,16 @@
 
 .c-gallery__meta {
     display: inline-block;
-
-    @include min-screen($CARD_SWITCHER_WIDTH) {
-        border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-        padding-top: 8px;
-    }
-
     @include c-card-meta;
 
     .c-gallery__meta-item {
         &:not(:last-child) {
-            padding-right: $PADDING_XX_SMALL;
+            padding-right: 8px;
         }
 
         & + .c-gallery__meta-item {
             border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-            padding-left: $PADDING_XX_SMALL;
+            padding-left: 8px;
         }
     }
 }
@@ -117,6 +111,12 @@
             fill: $COLOR_BORDER_DOTTED;
         }
     }
+}
+
+.c-gallery__tag {
+    @include c-card-primary-tag;
+    margin-top: 0;
+    margin-bottom: 8px;
 }
 
 .c-gallery__title {
