@@ -126,9 +126,6 @@
 
 .c-card__meta {
     @include c-card-meta;
-    @include card-portrait-to-landscape-size() {
-        padding-top: 8px;
-    }
 }
 
 .c-card__meta-item--tag {
