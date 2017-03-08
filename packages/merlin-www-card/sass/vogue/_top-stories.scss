@@ -24,18 +24,20 @@
 	}
 
 	.c-card__obj__header {
-	    padding-right: 10px;
+
 	}
 	.c-card__images {
 	    .c-card__image {
 	        padding-top: 100%;
 	    }
 
-	    .c-card__image__icon {}
+	    .c-card__image__icon {
+	    	display: none;
+	    }
 	}
 
 	.c-card__obj__body {
-	    padding-left: 10px;
+	    padding-left: 20px;
 	}
 
 	.c-card__tag {
