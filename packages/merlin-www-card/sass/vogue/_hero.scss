@@ -24,6 +24,10 @@
         .c-card__tag {
             margin-bottom: 20px;
         }
+
+        .c-card__title {
+            @include c-card-title-medium();
+        }
     }
 }
 

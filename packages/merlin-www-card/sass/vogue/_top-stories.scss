@@ -16,7 +16,7 @@
 
 @mixin card-top-stories-small() {
 	.c-card__obj__header {
-		width: 66px;
+		width: 33.33333%;
 	}
 
 	.c-card__obj__body {
@@ -40,6 +40,11 @@
 
 	.c-card__tag {
 	    display: none;
+	}
+
+	.c-card__title {
+		@include font-size(15px);
+		@include line-height(18px);
 	}
 
 	.c-card__teaser {
