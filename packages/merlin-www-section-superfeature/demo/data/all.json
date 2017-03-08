@@ -110,7 +110,28 @@
        "type": "Profile"
      }],
      "sponsor": null,
-     "primary_tag": null,
+     "primary_tag": {
+       "data": {
+         "event_information": null,
+         "link": {
+           "data": {
+             "title": "Celebrity Beauty",
+             "url": "http://localhost:3000/topic/celebrity-beauty-topic/"
+           },
+           "state": {},
+           "style": {
+             "cls": ""
+           },
+           "type": "Link"
+         },
+         "title": "Celebrity Beauty"
+       },
+       "state": {},
+       "style": {
+         "cls": ""
+       },
+       "type": "Tag"
+     },
      "teaser": "See the best hair and make-up on the red carpet at the Oscars 2017, from Emma Stone's Hollywood waves to Viola Davis's striking new crop",
      "title": "Beauty At The Oscars 2017"
    },
