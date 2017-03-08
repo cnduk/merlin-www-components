@@ -35,7 +35,7 @@ $NAVIGATION_BTN_WIDTH: 60px;
 }
 
 .c-top-stories__title {
-	display: none;
+    display: none;
 }
 
 .c-top-stories__nav {
@@ -85,75 +85,6 @@ $NAVIGATION_BTN_WIDTH: 60px;
 
     .has-no-scroll & {
         overflow-x: hidden;
-    }
-
-}
-
-
-//TODO MOVE INTO CARD LIST
-.c-card-list--top-stories {
-
-    .c-card-list__item {
-        margin-right: $MARGIN_MEDIUM;
-        width: 280px;
-
-        &:last-child {
-            width: 280px;
-        }
-
-        &.is-hidden {
-            height: 0;
-            overflow: hidden;
-            visibility: hidden;
-            width: 0;
-        }
-    }
-
-    .c-card__obj__header {
-        padding-right: 0;
-
-        // Overwrite landscape card on mobile
-        width: 33.33%;
-    }
-
-    .c-card__obj__body {
-        padding-left: $PADDING_SMALL;
-
-        // Overwrite landscape card on mobile
-        width: auto;
-    }
-
-    .c-card__sponsor {
-        margin-bottom: 0;
-    }
-
-    .c-card__meta {
-        border-top: none;
-        // Defaults to inline-block
-        // .c-card__meta-item--tag
-        // Gains height even when set to display none
-        display: block;
-        padding-top: 0;
-    }
-
-    .c-card__meta-item + .c-card__meta-item {
-        border-left: none;
-        padding-left: 0;
-    }
-
-    .c-card__meta-item--tag {
-        display: none;
-    }
-
-    .c-card__title {
-        @include font-size(15px);
-        @include line-height(18px);
-        margin: 0 0 6px 0;
-    }
-
-    .c-card__rating {
-        margin-bottom: $MARGIN_XX_SMALL;
-        margin-top: 6px;
     }
 }
 

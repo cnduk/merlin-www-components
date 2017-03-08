@@ -35,23 +35,6 @@
     -webkit-overflow-scrolling: touch;
 }
 
-.c-card-list--top-stories {
-    white-space: nowrap;
-
-    .c-card-list__item {
-        display: inline-block;
-        margin-right: 20px;
-        white-space: normal;
-        width: 250px;
-
-        &:last-child {
-            margin-right: 0;
-            width: 230px;
-        }
-    }
-
-}
-
 .has-navigation {
     .c-top-stories__nav {
         display: block;
