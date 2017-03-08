@@ -43,7 +43,7 @@ li.c-topic-strip__item {
         margin-left: $MARGIN_XX_SMALL;
 
         @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-            margin-left: $MARGIN_X_SMALL;
+            margin-left: 10px;
         }
     }
 }
@@ -51,7 +51,7 @@ li.c-topic-strip__item {
 .c-topic-strip__title {
     color: $COLOR_MAIN_PRIMARY;
     @include font('NOBEL', 11px, 700, 11px);
-    padding-right: $PADDING_XXX_SMALL;
+    padding-right: 20px;
     text-transform: uppercase;
 }
 
