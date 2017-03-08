@@ -21,6 +21,14 @@
             }
         }
     }
+
+    .c-card__tag {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        @include min-screen($CARD_SWITCHER_WIDTH) {
+            margin-bottom: 8px;
+        }
+    }
 }
 
 // .c-card--hero--small {

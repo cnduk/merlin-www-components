@@ -50,6 +50,10 @@
 
 .c-card__tag {
     @include c-card-primary-tag;
+    @include card-portrait-to-landscape-size() {
+        margin-bottom: 8px;
+    }
+    margin: 0 0 4px 0;
 }
 
 .c-card__title {
@@ -104,10 +108,10 @@
 .c-card__byline,
 .c-card__sponsor {
     @include c-card-byline;
-    margin: 6px 0 8px 0;
+    margin: 4px 0 4px 0;
 
     @include card-portrait-to-landscape-size() {
-        margin: $MARGIN_XX_SMALL 0 $MARGIN_X_SMALL 0;
+        margin: 8px 0 8px 0;
     }
 }
 .c-card__byline-prefix,
@@ -134,12 +138,12 @@
 // Need to be specific to overwrite global__list-reset
 li.c-card__meta-item {
     &:not(:last-child) {
-        padding-right: $PADDING_XX_SMALL;
+        padding-right: 8px;
     }
 
     & + li.c-card__meta-item {
         border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-        padding-left: $PADDING_XX_SMALL;
+        padding-left: 8px;
     }
 }
 
