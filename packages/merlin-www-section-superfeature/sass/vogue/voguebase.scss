@@ -34,12 +34,11 @@
 
 .c-superfeature__byline {
     @include c-card-byline;
-    margin-bottom: 14px;
-    margin-top: $MARGIN_XX_SMALL;
-
+    margin-bottom: 2px;
+    margin-top: 12px;
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        margin-bottom: $MARGIN_SMALL;
-        margin-top: $MARGIN_X_SMALL;
+        margin-bottom: 2px;
+        margin-top: 15px;
     }
 
     @include transition(opacity 0.3s ease-in-out);
@@ -58,7 +57,7 @@
     background-color: $COLOUR_BG_PAGE;
     margin-left: $MOBILE_SIDE_GUTTER;
     margin-right: $MOBILE_SIDE_GUTTER;
-    padding: $PADDING_SMALL $PADDING_LARGE $PADDING_LARGE $PADDING_LARGE;
+    padding: 28px 40px 0 40px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         margin-left: $TABLET_SIDE_GUTTER;
@@ -80,7 +79,8 @@
 
     margin-top: -$MARGIN_LARGE;
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        margin-top: -72px;
+        margin-top: -95px;
+        padding: 40px 60px 0 60px;
     }
 }
 
