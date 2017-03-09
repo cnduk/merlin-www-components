@@ -162,7 +162,7 @@ var AD_ATTRIBUTE_MAP = {
     },
     'group': {
         'map': function toString(value){
-            if(value === null) return null;
+            if(value === null || value === 'null') return null;
             return value.toString();
         },
         'required': false
