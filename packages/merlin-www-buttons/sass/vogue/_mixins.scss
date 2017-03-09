@@ -182,6 +182,8 @@
 }
 
 @mixin button-related-hover(){
-    border-color: $COLOR_BORDER_DOTTED;
+    background-color: #fff;
+    border: $_VOGUE_BORDER_WIDTH solid $COLOR_BORDER_DOTTED;
+    color: $COLOR_MAIN_TERTIARY;
     text-decoration: none;
 }

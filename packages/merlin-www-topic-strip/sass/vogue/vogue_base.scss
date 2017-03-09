@@ -76,6 +76,14 @@ li.c-topic-strip__item {
             }
         }
     }
+
+    .c-topic-strip__btn {
+        @include button-related();
+
+        &:hover {
+            @include button-related-hover();
+        }
+    }
 }
 
 .c-topic-strip__btn {
