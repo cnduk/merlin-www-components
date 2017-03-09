@@ -164,7 +164,8 @@
     }
 }
 
-.ad--tag-inline {
+.ad--tag-inline,
+.ad--tag-infinite {
     margin-bottom: 40px;
     margin-left: -$MOBILE_SIDE_GUTTER;
     margin-right: -$MOBILE_SIDE_GUTTER;
@@ -178,6 +179,10 @@
         margin-left: -$DESKTOP_SIDE_GUTTER;
         margin-right: -$DESKTOP_SIDE_GUTTER;
     }
+
+}
+
+.ad--tag-inline {
     @include min-screen(940px) {
         margin-right: -(340px + $DESKTOP_SIDE_GUTTER);
     }
