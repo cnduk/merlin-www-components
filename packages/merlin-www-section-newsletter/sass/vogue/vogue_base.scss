@@ -76,10 +76,10 @@
         margin-left: $MARGIN_XX_SMALL;
     }
 
-    @include button-single();
-    @include button-single-light();
+    @include button-single-two();
+    @include button-single-two-light();
     &:hover {
-        @include button-single-light-hover();
+        @include button-single-two-light-hover();
     }
 }
 
