@@ -37,6 +37,7 @@
 
 @mixin button-single-dark-hover() {
     background-color: $COLOR_BUTTON_CTA_DARK;
+    border: $_VOGUE_BORDER_WIDTH solid transparent;
     color: $COLOR_TYPE_HEADING;
     text-decoration: none;
 }
