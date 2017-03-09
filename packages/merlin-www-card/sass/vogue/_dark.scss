@@ -12,8 +12,11 @@
     &.c-card--inline,
     &.c-card--thumbnail {
 
+        .c-card__tag {
+            color: $COLOR_MAIN_INACTIVE;
+        }
+
         .c-card__title,
-        .c-card__meta,
         .c-card__byline,
         .c-card__sponsor {
             color: $COLOR_MAIN_PAGE;
@@ -33,11 +36,11 @@
 
         .c-card__separator {}
 
-        .c-card__sponsor {
-            .c-card__sponsor-label {
+        .c-card__byline--sponsorship {
+            .c-card__byline-prefix {
                 color: #888;
             }
-            .c-card__sponsor-title {
+            .c-card__byline-name {
                 color: $COLOR_MAIN_INACTIVE;
             }
         }
