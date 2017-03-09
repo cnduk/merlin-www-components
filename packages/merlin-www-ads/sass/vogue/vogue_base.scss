@@ -1,0 +1,366 @@
+.ad__title {
+    color: $COLOR_MAIN_INACTIVE;
+    @include font('NOBEL', 10px);
+    margin: 0 0 5px 0;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.ad--article {
+    text-align: center;
+
+    .ad__container {
+        background: $COLOUR_BG_ADVERT;
+        padding: 20px 0;
+    }
+
+    .ad__title {
+        color: $COLOR_MAIN_INACTIVE;
+        @include font('NOBEL', 10px);
+        margin: 0 0 5px 0;
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
+        text-align: left;
+    }
+
+    @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ){
+        .ad__title {
+            padding-left: $TABLET_SIDE_GUTTER;
+            padding-right: $TABLET_SIDE_GUTTER;
+        }
+    }
+
+    @include min-screen( $DESKTOP_SIDE_GUTTER_BREAKPOINT ){
+        .ad__container {
+            background: transparent;
+            padding: 0;
+        }
+        .ad__title {
+            display: none;
+        }
+    }
+}
+
+.ad--article-header {
+    .ad__container {
+        background-color: $COLOUR_BG_ADVERT;
+        padding: 20px 0;
+    }
+}
+
+.ad--article-video {
+    .ad__container {
+        background-color: $COLOR_MAIN_SECONDARY;
+    }
+}
+
+.ad--article-rail {
+    margin-bottom: 60px;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    margin-top: 60px;
+
+    @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ){
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen( $DESKTOP_SIDE_GUTTER_BREAKPOINT ){
+        position: absolute;
+        right: 0;
+        margin: 0;
+        width: 300px;
+    }
+}
+
+.ad--article-rail-top {
+    @include min-screen( $DESKTOP_SIDE_GUTTER_BREAKPOINT ){
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+.ad--article-inline {
+    margin: 45px (-$MOBILE_SIDE_GUTTER);
+
+    @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ){
+        margin: 40px (-$TABLET_SIDE_GUTTER);
+    }
+
+    @include min-screen( $DESKTOP_SIDE_GUTTER_BREAKPOINT ){
+        margin-left: 0;
+        margin-right: 0;
+
+        .ad__title {
+            display: block;
+            padding-left: 0;
+        }
+    }
+}
+
+.ad--gallery {}
+
+.ad--gallery-inline {
+    cursor: pointer;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.ad--gallery-side {
+    display: none;
+    margin: 0 auto 60px auto;
+    width: 300px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: block;
+        margin-bottom: 0;
+        position: absolute;
+        right: 0;
+    }
+}
+
+.ad--gallery__interstitial-image,
+.ad--gallery__interstitial-video {
+    cursor: pointer;
+    max-width: 100%;
+}
+
+
+//Tag Page
+.ad--tag {
+    text-align: center;
+
+    .ad__container {
+        background: $COLOUR_BG_ADVERT;
+        padding: 20px 0;
+    }
+
+    .is-hidden {
+        .ad__container {
+            padding: 0;
+        }
+    }
+
+    .ad__title {
+        color: $COLOR_MAIN_INACTIVE;
+        @include font('NOBEL', 10px);
+        margin: 0 0 5px 0;
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
+        text-align: left;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        .ad__title {
+            padding-left: $TABLET_SIDE_GUTTER;
+            padding-right: $TABLET_SIDE_GUTTER;
+        }
+    }
+}
+
+.ad--tag-inline,
+.ad--tag-infinite {
+    margin-bottom: 40px;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    margin-top: 40px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$DESKTOP_SIDE_GUTTER;
+        margin-right: -$DESKTOP_SIDE_GUTTER;
+    }
+
+}
+
+.ad--tag-inline {
+    @include min-screen(940px) {
+        margin-right: -(340px + $DESKTOP_SIDE_GUTTER);
+    }
+}
+
+.ad--tag-rail {
+    margin-bottom: 60px;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    margin-top: 60px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$TABLET_SIDE_GUTTER + 20;
+        margin-right: -$TABLET_SIDE_GUTTER + 20;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        clear: right;
+        float: right;
+        margin: 0 -340px 0 40px;
+
+        &.stick-wrapper--fixed {
+            margin-right: -40px;
+        }
+
+    }
+
+    @include min-screen(940px) {
+        .ad__container {
+            background: transparent;
+            padding: 0;
+        }
+        .ad__title {
+            display: none;
+        }
+    }
+}
+
+.ad--tag-rail-top {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        left: 100%;
+        position: absolute;
+        top: 0;
+    }
+}
+
+
+
+.ad--show {
+    text-align: center;
+
+    .ad__container {
+        background: $COLOUR_BG_ADVERT;
+        padding: 20px 0;
+    }
+
+    .is-hidden {
+        .ad__container {
+            padding: 0;
+        }
+    }
+
+    .ad__title {
+        color: $COLOR_MAIN_INACTIVE;
+        @include font('NOBEL', 10px);
+        margin: 0 0 5px 0;
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
+        text-align: left;
+    }
+
+    @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ){
+        .ad__title {
+            padding-left: $TABLET_SIDE_GUTTER;
+            padding-right: $TABLET_SIDE_GUTTER;
+        }
+    }
+
+    @include min-screen( 940px ){
+        .ad__container {
+            background: transparent;
+            padding: 0;
+        }
+        .ad__title {
+            display: none;
+        }
+    }
+
+}
+
+.ad--show-rail {
+    margin-bottom: 60px;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    margin-top: 60px;
+
+    @include min-screen( 700px ){
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen( 940px ){
+        position: absolute;
+        right: 0;
+        margin: 0;
+        width: 300px;
+    }
+}
+
+.ad--show-rail-top {
+    @include min-screen( 940px ){
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+
+.ad--show-season {
+    margin-bottom: 60px;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    margin-top: 60px;
+
+    @include min-screen( 700px ){
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen( 940px ){
+        .ad__container {
+            background: $COLOUR_BG_ADVERT;
+            padding: 20px 0;
+        }
+        .ad__title {
+            display: block;
+        }
+    }
+
+    @include min-screen( $SHOWS_SEASON_HUB_LARGE_BREAKPOINT ){
+        position: absolute;
+        right: $DESKTOP_SIDE_GUTTER;
+        margin: 0;
+        top: 0;
+        width: 300px;
+
+        .ad__container {
+            background: transparent;
+            padding: 0;
+        }
+        .ad__title {
+            display: none;
+        }
+    }
+}
+
+
+.ad--show-top {
+    .ad__container {
+        background-color: $COLOR_MAIN_SECONDARY;
+        padding: 20px 0;
+    }
+}
+
+.ad--homepage {
+    text-align: center;
+
+    .ad__container {
+        background: $COLOUR_BG_ADVERT;
+        padding: 20px 0;
+    }
+
+    .ad__title {
+        margin: 0 0 5px 0;
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
+        text-align: left;
+    }
+
+    @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ){
+        .ad__title {
+            padding-left: $TABLET_SIDE_GUTTER;
+            padding-right: $TABLET_SIDE_GUTTER;
+        }
+    }
+}
