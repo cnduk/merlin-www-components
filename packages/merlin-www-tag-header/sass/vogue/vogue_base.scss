@@ -26,7 +26,8 @@
 
 .tg-header--miss-vogue  {
 
-    .tg-header__intro__image {
+    .tg-header__intro__image,
+    .tg-header__intro svg {
         margin-bottom: $MARGIN_MEDIUM;
         width: 213px;
 
@@ -85,7 +86,8 @@
     }
 }
 
-.tg-header__intro__image {
+.tg-header__intro__image,
+.tg-header__intro svg {
     display: block;
     margin: 0 auto $MARGIN_SMALL auto;
     width: 160px;
