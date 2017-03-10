@@ -134,12 +134,30 @@
 
 .c-card-section--a-recommended,
 .c-card-section--g-recommended {
+    background-color: $COLOUR_BG_ACCENT2;
+    padding-bottom: $PADDING_LARGE;
+    padding-top: $PADDING_LARGE;
+    margin-bottom: 0;
+    margin-top: 0;
+    max-width: none;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-bottom: $PADDING_X_LARGE;
+        padding-top: $PADDING_X_LARGE;
+    }
+
+    .c-card-section__constrain {
+        max-width: $ARTICLE_TOTAL;
+    }
+
     .c-card-section__title {
         @include font('NOBEL', 15px);
         margin-bottom: $MARGIN_MEDIUM;
+        margin-top: 0;
         padding-bottom: 10px;
         position: relative;
         text-align: left;
+        text-transform: uppercase;
 
         &:after {
             @include dotted-line($COLOR_BORDER_DOTTED, 1px, 3px);
@@ -193,66 +211,6 @@
 //     }
 // }
 
-// %c-card-section--recirculation {
-//     background-color: $COLOUR_BG_ACCENT2;
-//     padding-bottom: $PADDING_LARGE;
-//     padding-top: $PADDING_LARGE;
-//     margin-bottom: 0;
-//     margin-top: 0;
-//     max-width: none;
-
-//     .c-card-section__constrain {
-//         max-width: $ARTICLE_TOTAL;
-//     }
-
-//     .c-card-section__title {
-//         @include font('NOBEL', 15px);
-//         margin-bottom: $MARGIN_SMALL;
-//         padding-bottom: 10px;
-//         position: relative;
-//         text-align: left;
-
-//         &:after {
-//             @include dotted-line($COLOR_BORDER_DOTTED, 1px, 3px);
-//             content: '';
-//             height: 1px;
-//             left: 0;
-//             position: absolute;
-//             right: 0;
-//             top: 100%;
-//         }
-//     }
-
-//     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-//         padding-bottom: $PADDING_X_LARGE;
-//         padding-top: $PADDING_X_LARGE;
-
-//         .c-card-section__title {
-//             margin-bottom: $MARGIN_MEDIUM;
-//         }
-//     }
-
-//     .c-card__meta {
-//         border-top-color: $COLOR_BORDER_SOLID_ACCENT1;
-//     }
-
-//     .c-card__image__icon {
-//         background-color: $COLOUR_BG_ACCENT2;
-//     }
-
-//     li.c-card__meta-item + li.c-card__meta-item {
-//         border-left-color: $COLOR_BORDER_SOLID_ACCENT1;
-//     }
-
-//     // This bitch needs to be simplified
-//     .c-card-list__item + .c-card-list__item .c-card:not(.c-card--magazine) {
-//         border-top-color: $COLOR_BORDER_SOLID_ACCENT1;
-//     }
-
-//     & + .c-card-section--recirculation {
-//         padding-top: 0;
-//     }
-// }
 
 // %c-card-section--magazine {
 //     .c-card-section__constrain {

@@ -55,7 +55,22 @@
     }
 }
 
+.c-card-list--a-recommended,
+.c-card-list--g-recommended {
+    @include one-column-size(){
+        .c-card-list__item + .c-card-list__item {
+            margin-top: 20px;
 
+            .c-card {
+                border-color: $COLOR_BORDER_SOLID_ACCENT1;
+            }
+        }
+    }
+
+    li.c-card__meta-item + li.c-card__meta-item {
+        border-left-color: $COLOR_BORDER_SOLID_ACCENT1;
+    }
+}
 
 // Common tag
 // Contains 5 cards
