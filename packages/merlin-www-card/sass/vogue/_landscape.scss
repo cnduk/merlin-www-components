@@ -63,7 +63,46 @@
 }
 
 @mixin card-landscape-large() {
+    .c-card__obj__header {
+        padding-right: 10px;
+        width: 33.33%;
+    }
+    .c-card__obj__body {
+        width: auto;
+    }
 
+    .c-card__images {
+        .c-card__image {
+            padding-top: 100%;
+        }
+
+        .c-card__image__icon {
+            bottom: 0;
+            height: 40px;
+            left: 0;
+            width: 40px;
+
+            svg {
+                display: block;
+                height: 100%;
+                margin: 0 auto;
+                vertical-align: middle;
+                width: 16px;
+            }
+        }
+    }
+
+    .c-card__teaser {
+        display: none;
+    }
+
+    .c-card__separator {
+        display: none;
+    }
+
+    .c-card__title {
+        margin-bottom: 12px;
+    }
 }
 
 .c-card--landscape {
@@ -78,6 +117,6 @@
     @include card-landscape-small();
 }
 
-// .c-card--landscape--large {
-//     @include card-landscape-large();
-// }
+.c-card--landscape--large {
+    @include card-landscape-large();
+}
