@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-tag-header",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": null,
   "main": "js/index.js",
   "scripts": {
@@ -9,11 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-www-card-list": "^1.0.27",
+    "@cnbritain/merlin-www-card-list": "1.0.28",
     "@cnbritain/merlin-www-common": "^0.1.6",
-    "@cnbritain/merlin-www-gallery-strip": "^1.0.1",
-    "@cnbritain/merlin-www-image": "^1.0.9",
-    "@cnbritain/merlin-www-show-card-carousel": "^1.1.11",
+    "@cnbritain/merlin-www-gallery-strip": "1.0.2",
+    "@cnbritain/merlin-www-image": "1.0.10",
+    "@cnbritain/merlin-www-show-card-carousel": "1.1.12",
     "@cnbritain/merlin-www-topic-strip": "^1.1.7"
   },
   "devDependencies": {

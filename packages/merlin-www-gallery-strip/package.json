@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-gallery-strip",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "js/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-www-image": "^1.0.9",
+    "@cnbritain/merlin-www-image": "1.0.10",
     "@cnbritain/merlin-www-common": "^0.1.6"
   },
   "devDependencies": {

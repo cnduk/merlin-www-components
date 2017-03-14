@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-international-redirect",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "js/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@cnbritain/merlin-www-common": "^0.1.6",
-    "@cnbritain/merlin-www-image": "^1.0.9",
+    "@cnbritain/merlin-www-image": "1.0.10",
     "@cnbritain/merlin-www-js-utils": "^1.0.1"
   },
   "devDependencies": {
