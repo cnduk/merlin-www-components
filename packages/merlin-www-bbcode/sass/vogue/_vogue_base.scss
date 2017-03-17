@@ -1,0 +1,416 @@
+.bb-embed {
+    margin: $MARGIN_LARGE 0;
+}
+
+
+.bb-figure {
+    box-sizing: border-box;
+    margin: $MARGIN_LARGE 0;
+}
+
+.bb-figure__caption,
+.bb-figure__credit {
+    margin: $MARGIN_X_SMALL 0 0 0;
+}
+
+.bb-figure__caption {
+    color: $COLOR_MAIN_TERTIARY;
+    @include font('ADOBE CASLON', 13px, null, 18px);
+
+    & + .bb-figure__credit {
+        margin: 8px 0 0 0;
+    }
+}
+
+.bb-figure__credit {
+    color: $COLOR_MAIN_INACTIVE;
+    @include font('NOBEL', 9px);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    &:before {
+        content: 'credit: '
+    }
+}
+
+.bb-figure--portrait {
+    @include min-screen(600px){
+        margin: 45px auto;
+        max-width: 70%;
+    }
+}
+
+.bb-note {
+    border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+    color: $COLOR_TYPE_META;
+    @include font('ADOBE CASLON', 15px, 'NORMAL');
+    padding-top: $PADDING_X_SMALL;
+
+    a {
+        color: $COLOR_TYPE_META;
+        @include secondary-links(true);
+    }
+}
+
+.bb-dropcap {}
+.bb-dropcap--letter {
+    box-sizing: border-box;
+    color: $COLOR_TYPE_HEADING;
+    float: left;
+    @include font('ITC CASLON');
+    font-size: 3.2em;
+    line-height: 0.5em;
+    margin-right: 0.21em;
+    padding-top: 0.28em;
+    text-align: left;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        font-size: 5.45em;
+        margin-right: 0.14em;
+        padding-top: 0.25em;
+    }
+
+    // Fix dropcap position in IE
+    .gt-ie8 &,
+    .is-ie10 & {
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            margin-top: -0.05em;
+        }
+    }
+
+}
+
+
+.bb-interactive {
+    margin: $MARGIN_LARGE 0;
+}
+
+
+/**
+ * Gallery
+ */
+.bb-gallery {
+    margin: $MARGIN_LARGE 0;
+    @include opacity(1);
+    @include transition(opacity 0.3s ease-in-out);
+
+    &:hover {
+        @include card-image-links-hover();
+    }
+}
+.bb-gallery__title {
+    color: #000;
+    @include font('ADOBE CASLON', 20px, 'BOLD', 24px);
+    margin: 0 0 $MARGIN_XX_SMALL 0;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(24px);
+        @include line-height(30px);
+    }
+}
+.bb-gallery__title__icon {
+    padding-right: 5px;
+}
+.bb-gallery__title__icon--gallery {
+    svg {
+        display: inline-block;
+        fill: $COLOR_TYPE_META;
+        vertical-align: baseline;
+        width: 18px;
+    }
+}
+.bb-gallery__remaining {
+    background-color: rgba(0,0,0,0.3);
+}
+
+.bb-gallery__remaining-text {
+    @include font('NOBEL', 24px, 'NORMAL');
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(35px);
+    }
+}
+
+.bb-gallery--show-summary {
+    margin-top: 0;
+
+    .bb-gallery__col:first-child:before {
+        @include c-card-label($COLOR_TYPE_LINK, #fff, 'VIEW COLLECTION');
+        padding: 14px 10px 14px 12px;
+    }
+}
+
+
+/**
+ * Question & Answer
+ */
+.bb-question,
+.bb-answer {}
+.bb-question__question,
+.bb-answer__answer {
+    @include font('ADOBE CASLON', 18px, 'NORMAL');
+}
+
+.bb-question__question,
+.bb-question__question p {
+    font-weight: map-get($FONT_WEIGHTS, 'BOLD');
+}
+
+.bb-question__q,
+.bb-answer__a {
+    color: $COLOR_TYPE_BODY;
+    @include font('NOBEL', 18px, 'BOLD');
+}
+
+.bb-question__separator,
+.bb-answer__separator {
+    display: none;
+}
+
+.bb-question__author,
+.bb-answer__author {
+    @include font('NOBEL', 11px, null, 11px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.bb-question__by,
+.bb-answer__by {
+    color: $COLOR_MAIN_TERTIARY;
+    @include font('ADOBE CASLON', 12px);
+    font-family: Adobe Caslon, serif;
+    letter-spacing: normal;
+    font-style: italic;
+    text-transform: lowercase;
+}
+
+
+/**
+ * Pullquote
+ */
+.bb-pullquote {
+    margin: $MARGIN_LARGE 0;
+}
+.bb-pullquote__quote {
+    font-weight: 700;
+
+    &:before,
+    &:after {
+        content: '';
+    }
+}
+.bb-pullquote__separator {
+    display: none;
+}
+.bb-pullquote__credit {
+    color: $COLOR_TYPE_HEADING;
+    @include font('NOBEL', 12px, 'NORMAL');
+    letter-spacing: 1px;
+    margin-top: $MARGIN_SMALL;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/**
+ * Blockquote
+ */
+.bb-blockquote {
+    margin: $MARGIN_LARGE 0;
+}
+
+.bb-blockquote__quote {
+    color: $COLOR_TYPE_META;
+    @include font-size(18px);
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(20px);
+    }
+}
+
+.bb-blockquote__separator {
+    display: none;
+}
+
+.bb-blockquote__credit {
+    color: $COLOR_TYPE_META;
+    @include font('NOBEL', 12px, 'NORMAL');
+    font-style: normal;
+    letter-spacing: 1px;
+    margin-top: $MARGIN_SMALL;
+    text-transform: uppercase;
+}
+
+
+/**
+ * Infobox
+ */
+.bb-infobox {
+    background-color: $COLOR_MAIN_ACCENT2;
+    margin: $MARGIN_LARGE 0;
+    padding: $PADDING_MEDIUM $PADDING_SMALL;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: $PADDING_LARGE;
+    }
+
+}
+
+.bb-infobox__title {
+    @include font('NOBEL', 20px);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.bb-infobox__hr {
+    border: none;
+    border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT1;
+    margin: $MARGIN_SMALL 0;
+}
+
+.bb-infobox__item {
+    margin: $MARGIN_MEDIUM 0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.bb-infobox__item__key {
+    @include font('NOBEL', 15px, 'BOLD');
+    padding-bottom: $PADDING_X_SMALL;
+    text-transform: uppercase;
+}
+
+.bb-infobox__item__value {
+    @include font('ADOBE CASLON', 17px);
+    margin: 0;
+}
+
+
+/**
+ * Video
+ */
+.bb-video {
+    position: relative;
+    margin: 40px 0;
+
+    &:hover {
+        .bb-video__image {
+            @include card-image-links-hover();
+        }
+    }
+}
+
+.bb-video__title {
+    @include font('ADOBE CASLON', 20px, 700, 24px);
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(24px);
+        @include line-height(27px);
+    }
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.bb-video__title-icon {
+    display: inline-block;
+    height: 24px;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        height: 27px;
+        margin-right: 10px;
+        width: 14px;
+    }
+    margin-right: 5px;
+    width: 11px;
+
+    svg {
+        fill: $COLOR_MAIN_TERTIARY;
+        width: 100%;
+    }
+}
+
+.bb-video__wrapper {}
+.bb-video__image {}
+.bb-video__image-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include vendor-prefix(transform, translate(-50%, -50%));
+    width: 45px;
+    height: 45px;
+    background-color: $COLOR_BUTTON_CTA_LIGHT;
+
+    svg {
+        display: block;
+        fill: $COLOR_MAIN_PAGE;
+        width: 15px;
+        height: 100%;
+        margin: 0 auto;
+    }
+}
+
+.bb-video__link {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+}
+
+
+/**
+ * Show Gallery
+ */
+.bb-show-gallery {
+    .c-gallery-strip__detail {
+        margin: -37px $MARGIN_SMALL 0 $MARGIN_SMALL;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin: -40px $MARGIN_SMALL 0 $MARGIN_SMALL;
+        }
+    }
+
+    .c-gallery-strip__title {
+        @include font('ADOBE CASLON', 20px, 700, 24px);
+        margin: 0 0 $MARGIN_XX_SMALL 0;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            @include font-size(24px);
+            @include line-height(28px);
+        }
+    }
+
+    .c-gallery-strip__list__item {
+        &:nth-child(3) {
+            .c-gallery-strip__remaining {
+                display: block;
+            }
+        }
+
+        &:nth-child(4) {
+            display: none;
+        }
+
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            &:nth-child(3) {
+                .c-gallery-strip__remaining {
+                    display: none;
+                }
+            }
+
+            &:nth-child(4) {
+                display: inline-block;
+            }
+
+            width: 25%;
+        }
+    }
+}
+
+
+/**
+ * Button
+ */
+.bb-button {
+
+}

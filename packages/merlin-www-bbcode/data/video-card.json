@@ -1,0 +1,72 @@
+{
+    "type": "BBCodeVideo",
+    "state": {
+        "has_icon": true,
+        "is_video": true
+    },
+    "data": {
+        "image": {
+            "type": "Image",
+            "state": {
+                "is_static": false,
+                "is_image": true,
+                "is_picture": false,
+                "is_linked": false,
+                "is_svg": false
+            },
+            "data": {
+                "credit": null,
+                "image_url": "https://vg-images.condecdn.net/image/ejxpV2xkA0l/crop/405/landscape",
+                "description": "",
+                "lazyload": true,
+                "title": "",
+                "srcset": "https://vg-images.condecdn.net/image/ejxpV2xkA0l/crop/405/landscape 405w, https://vg-images.condecdn.net/image/ejxpV2xkA0l/crop/810/landscape 810w, https://vg-images.condecdn.net/image/ejxpV2xkA0l/crop/1020/landscape 1020w",
+                "look_number": null,
+                "width": null,
+                "alt_text": null,
+                "orientation": "landscape"
+            },
+            "style": {
+                "cls": "img-lazyload "
+            }
+        },
+        "title": "In the Bag of Sarah Harris",
+        "link": {
+            "type": "Link",
+            "state": {},
+            "data": {
+                "url": "/video/in-the-bag-of-sarah-harris/",
+                "title": "In the Bag of Sarah Harris"
+            },
+            "style": {
+                "cls": ""
+            }
+        },
+        "icon": {
+            "type": "SVG",
+            "state": {
+                "is_static": false,
+                "is_image": false,
+                "is_picture": false,
+                "is_linked": false,
+                "is_svg": true
+            },
+            "data": {
+                "credit": null,
+                "description": null,
+                "lazyload": true,
+                "title": null,
+                "svg_content": "<svg id=\"type-video\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 14.73 16\"><title>type-video</title><path d=\"M0,16V0L14.73,8ZM1,1.68V14.32L12.63,8Z\" transform=\"translate(0 0)\"/></svg>",
+                "look_number": null,
+                "width": null,
+                "alt_text": null
+            },
+            "style": {
+                "cls": "img-lazyload "
+            }
+        }
+    },
+    "style": {
+        "cls": ""
+    }
+}

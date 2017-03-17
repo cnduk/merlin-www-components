@@ -1,0 +1,13 @@
+<figure class="global__fake-clear bb-figure">
+    <div class="bb-figure__wrapper">
+        {{# data.image }}
+            {{> @cnbritain/merlin-www-image}}
+        {{/ data.image }}
+    </div>
+    {{# data.image.data.description }}
+        <figcaption class="bb-figure__caption">{{ &. }}</figcaption>
+    {{/ data.image.data.description }}
+    {{# data.image.data.credit }}
+        <div class="bb-figure__credit">{{ &. }}</div>
+    {{/ data.image.data.credit }}
+</figure>

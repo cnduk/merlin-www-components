@@ -1,0 +1,15 @@
+{{# state.is_list_unordered }}
+    <ul>
+{{/ state.is_list_unordered }}
+{{# state.is_list_ordered }}
+    <ol>
+{{/ state.is_list_ordered }}
+{{# data.items }}
+    <li>{{ &. }}</li>
+{{/ data.items }}
+{{# state.is_list_unordered }}
+    </ul>
+{{/ state.is_list_unordered }}
+{{# state.is_list_ordered }}
+    </ol>
+{{/ state.is_list_ordered }}

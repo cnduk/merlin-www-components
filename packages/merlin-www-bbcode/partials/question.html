@@ -1,0 +1,9 @@
+<div class='bb-question'>
+    <div class='bb-question__question'>
+        <p><span class='bb-question__q'>Q. </span>{{ &data.question_text }}</p>
+    </div>
+    {{# data.question_author }}
+        <hr class='bb-question__separator'>
+        <div class='bb-question__author'><span class='bb-question__by'>By </span>{{ &data.question_author }}</div>
+    {{/ data.question_author }}
+</div>

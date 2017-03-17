@@ -1,0 +1,17 @@
+<div class='global__fake-clear bb-infobox'>
+    {{# data.items }}
+        {{# is_title }}
+            <h3 class='bb-infobox__title'>{{ &value }}</h3>
+            <hr class='bb-infobox__hr' />
+        {{/ is_title }}
+        {{# is_body }}
+            <p class="bb-infobox__body">{{ &value }}</p>
+        {{/ is_body }}
+        {{# is_item }}
+            <dl class='bb-infobox__item'>
+                <dt class='bb-infobox__item__key'>{{ &key }}</dt>
+                <dd class='bb-infobox__item__value'>{{ &value }}</dd>
+            </dl>
+        {{/ is_item }}
+    {{/ data.items }}
+</div>

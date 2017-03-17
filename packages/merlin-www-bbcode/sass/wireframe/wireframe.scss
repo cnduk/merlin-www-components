@@ -1,0 +1,287 @@
+@import "@cnbritain/merlin-www-common:wireframe";
+
+/**
+ * Twitter, Instagram, Vine, Facebook, Vimeo, Youtube
+ */
+.bb-embed {}
+
+.bb-embed--centered {
+     iframe {
+        display: block;
+        margin-left: auto !important;
+        margin-right: auto !important;
+     }
+}
+
+.bb-embed--video {
+    padding-top: 56.25%;
+    position: relative;
+
+    iframe {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+
+}
+
+.bb-embed--vine {
+    text-align: center;
+
+    iframe {
+        display: inline-block;
+    }
+
+}
+
+
+/**
+ * Image
+ */
+.bb-figure {}
+
+.bb-figure__caption {}
+
+.bb-figure__credit {}
+
+.bb-figure__wrapper {
+    position: relative;
+}
+.bb-figure--landscape {}
+.bb-figure--portrait {}
+.bb-figure--square {}
+.bb-figure--unknown {}
+.bb-figure--landscape,
+.bb-figure--portrait,
+.bb-figure--square {
+    img {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+
+
+/**
+ * Note
+ */
+.bb-note {}
+
+
+/**
+ * Dropcap
+ */
+
+.bb-dropcap {}
+.bb-dropcap--letter {}
+.bb-dropcap--word {}
+
+
+
+/**
+ * Gallery
+ */
+.bb-gallery {
+
+}
+
+.bb-gallery__link {
+    background-color: #000;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+}
+
+.bb-gallery__title {}
+.bb-gallery__title__icon {
+    display: inline-block;
+}
+.bb-gallery__title__icon--gallery {}
+
+.bb-gallery__cols {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    .bb-gallery__col:last-child .bb-gallery__remaining {
+        display: block;
+    }
+}
+
+li.bb-gallery__col {
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.bb-gallery__cols--3 {
+    .bb-gallery__col:nth-child(1) {
+        width: 66.66%;
+    }
+    .bb-gallery__col:nth-child(2),
+    .bb-gallery__col:nth-child(3) {
+        width: 33.33%;
+    }
+}
+.bb-gallery__cols--4 {
+    .bb-gallery__col {
+        width: 50%;
+    }
+}
+.bb-gallery__cols--5 {
+    .bb-gallery__col:nth-child(1) {
+        width: 50%;
+    }
+    .bb-gallery__col:nth-child(2),
+    .bb-gallery__col:nth-child(3),
+    .bb-gallery__col:nth-child(4),
+    .bb-gallery__col:nth-child(5) {
+        width: 25%;
+    }
+}
+.bb-gallery__cols--6 {
+    .bb-gallery__col {
+        width: 33.33%;
+    }
+}
+
+.bb-gallery__image {
+    width: 100%;
+}
+
+.bb-gallery__remaining {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: none;
+}
+
+.bb-gallery__remaining-text {
+    @include vendor-prefix('transform', translate(-50%, -50%));
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.bb-gallery__remaining-text--prefix {}
+.bb-gallery__remaining-text--value {}
+
+
+
+/**
+ * Question
+ */
+.bb-question {}
+.bb-question__question {}
+.bb-question__q {}
+
+.bb-question__separator {}
+
+.bb-question__author {}
+.bb-question__by {}
+
+
+
+/**
+ * Answer
+ */
+.bb-answer {}
+.bb-answer__answer {}
+.bb-answer__a {}
+
+.bb-question__separator {}
+
+.bb-answer__author {}
+.bb-answer__by {}
+
+
+
+/**
+ * Pullquote
+ */
+.bb-pullquote {}
+.bb-pullquote__quote {}
+.bb-pullquote__separator {}
+.bb-pullquote__credit {}
+
+
+
+/**
+ * Blockquote
+ */
+.bb-blockquote {}
+.bb-blockquote__quote {}
+.bb-blockquote__separator {}
+.bb-blockquote__credit {}
+
+
+
+/**
+ * Infobox
+ */
+.bb-infobox {}
+.bb-infobox__title {}
+.bb-infobox__hr {}
+.bb-infobox__item {}
+.bb-infobox__item__key {}
+.bb-infobox__item__value {}
+
+
+/**
+ * Interactive
+ */
+.bb-interactive {
+    display: block;
+}
+
+
+/**
+ * Video
+ */
+.bb-video {}
+.bb-video__title {}
+.bb-video__title-icon {}
+.bb-video__wrapper {
+    position: relative;
+}
+.bb-video__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.bb-video__image-icon {}
+.bb-video__link {}
+
+
+/**
+ * Show Gallery
+ */
+.bb-show-gallery {}
+
+
+/**
+ * Button
+ */
+.bb-button {
+    display: inline-block;
+}

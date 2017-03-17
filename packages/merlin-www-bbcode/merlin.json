@@ -1,0 +1,234 @@
+{
+    "name": "@cnbritain/merlin-www-bbcode",
+    "description": "Templates for rendered bbcode partials",
+    "main": "index",
+    "currentTheme": null,
+    "data": {
+        "answer": "data/answer.json",
+        "article-card": "data/article-card.json",
+        "blockquote": "data/blockquote.json",
+        "brightcove": "data/brightcove.json",
+        "facebook": "data/facebook.json",
+        "gallery-card": "data/gallery-card.json",
+        "image": "data/image.json",
+        "infobox": "data/infobox.json",
+        "instagram": "data/instagram.json",
+        "list": "data/list.json",
+        "note": "data/note.json",
+        "pullquote": "data/pullquote.json",
+        "question": "data/question.json",
+        "show-gallery-card": "data/show-gallery-card.json",
+        "twitter": "data/twitter.json",
+        "video-card": "data/video-card.json",
+        "vimeo": "data/vimeo.json",
+        "vine": "data/vine.json",
+        "youtube": "data/youtube.json"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "missvogue": "sass/missvogue/missvogue.scss"
+    },
+    "partials": {
+        "index": "partials/index.html",
+        "answer": "partials/answer.html",
+        "article-card": "partials/article-card.html",
+        "blockquote": "partials/blockquote.html",
+        "brightcove": "partials/brightcove.html",
+        "facebook": "partials/facebook.html",
+        "gallery-card": "partials/gallery-card.html",
+        "image": "partials/image.html",
+        "imgur": "partials/imgur.html",
+        "infobox": "partials/infobox.html",
+        "instagram": "partials/instagram.html",
+        "interactive": "partials/interactive.html",
+        "list": "partials/list.html",
+        "note": "partials/note.html",
+        "pullquote": "partials/pullquote.html",
+        "question": "partials/question.html",
+        "show-gallery-card": "partials/show-gallery-card.html",
+        "twitter": "partials/twitter.html",
+        "video-card": "partials/video-card.html",
+        "vimeo": "partials/vimeo.html",
+        "vine": "partials/vine.html",
+        "youtube": "partials/youtube.html"
+    },
+    "js": {},
+    "demo": {
+        "answer": {
+            "data": "answer",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        },
+        "article-card": {
+            "data": "article-card",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        },
+        "blockquote": {
+            "data": "blockquote",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        },
+        "brightcove": {
+            "data": "brightcove",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        },
+        "facebook": {
+            "data": "facebook",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        },
+        "gallery-card": {
+            "data": "gallery-card",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        },
+        "image": {
+            "data": "image",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        },
+        "infobox": {
+            "data": "infobox",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        },
+        "instagram": {
+            "data": "instagram",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        },
+        "list": {
+            "data": "list",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        },
+        "note": {
+            "data": "note",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        },
+        "pullquote": {
+            "data": "pullquote",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        },
+        "question": {
+            "data": "question",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        },
+        "show-gallery-card": {
+            "data": "show-gallery-card",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        },
+        "twitter": {
+            "data": "twitter",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        },
+        "video-card": {
+            "data": "video-card",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        },
+        "vimeo": {
+            "data": "vimeo",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        },
+        "vine": {
+            "data": "vine",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        },
+        "youtube": {
+            "data": "youtube",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        }
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-image"
+    ]
+}

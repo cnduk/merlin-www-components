@@ -1,0 +1,12 @@
+{
+    "type": "BBCodeFacebook",
+    "state": {
+        "is_facebook": true
+    },
+    "data": {
+        "html": "<div id=\"fb-root\"></div>\n<script>(function(d, s, id) {\n  var js, fjs = d.getElementsByTagName(s)[0];\n  if (d.getElementById(id)) return;\n  js = d.createElement(s); js.id = id;\n  js.src = \"//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3\";\n  fjs.parentNode.insertBefore(js, fjs);\n}(document, 'script', 'facebook-jssdk'));</script><div class=\"fb-post\" data-href=\"https://www.facebook.com/BritishGQ/posts/10153773478716051\" data-width=\"552\"><blockquote cite=\"https://www.facebook.com/BritishGQ/posts/10153773478716051\" class=\"fb-xfbml-parse-ignore\"><p>Finish the list.</p>Posted by <a href=\"https://www.facebook.com/BritishGQ/\">British GQ</a> on&nbsp;<a href=\"https://www.facebook.com/BritishGQ/posts/10153773478716051\">Wednesday, May 11, 2016</a></blockquote></div>"
+    },
+    "style": {
+        "cls": ""
+    }
+}
