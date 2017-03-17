@@ -1,13 +1,13 @@
 {
   "name": "@cnbritain/merlin-www-footer",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "main": "index.js",
   "scripts": {
     "demo": "merlin-component-demo-server merlin.json"
   },
   "dependencies": {
-    "@cnbritain/merlin-www-image": "1.0.10",
+    "@cnbritain/merlin-www-image": "^1.0.11",
     "@cnbritain/merlin-www-common": "^0.1.6"
   },
   "devDependencies": {

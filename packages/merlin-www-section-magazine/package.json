@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-section-magazine",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,10 +12,10 @@
     "@cnbritain/merlin-component-demo-server": "^2.4.2"
   },
   "dependencies": {
-    "@cnbritain/merlin-www-card-list": "1.0.28",
-    "@cnbritain/merlin-www-card": "0.1.23",
+    "@cnbritain/merlin-www-card-list": "^1.0.29",
+    "@cnbritain/merlin-www-card": "^0.1.24",
     "@cnbritain/merlin-www-buttons": "^1.0.9",
     "@cnbritain/merlin-www-common": "^0.1.6",
-    "@cnbritain/merlin-www-image": "1.0.10"
+    "@cnbritain/merlin-www-image": "^1.0.11"
   }
 }
