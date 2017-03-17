@@ -1,4 +1,4 @@
-<a href="{{ &data.link.data.url }}" title="{{ &data.link.data.title }}" class="{{ data.link.style.cls }}">
+<a href="{{ &data.link.data.url }}" title="{{ &data.link.data.title }}" class="{{ data.link.style.cls }}" {{# data.link.state.is_blank }} target="_blank" {{/ data.link.state.is_blank }}>
     {{# data.image }}
         {{> @cnbritain/merlin-www-image/image-base }}
     {{/ data.image }}
