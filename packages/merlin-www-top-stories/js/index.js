@@ -228,7 +228,7 @@ function enableButton(el){
  * @return {Array.<HTMLElement>}
  */
 function getStoryElements(el){
-    return toArray(el.querySelectorAll('.c-card-list--top-stories li'));
+    return toArray(el.querySelectorAll('.js-c-card-list__item'));
 }
 
 /**
