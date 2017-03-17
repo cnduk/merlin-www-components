@@ -414,3 +414,123 @@
 .bb-button {
 
 }
+
+
+/**
+ * Card
+ */
+.bb-card {
+    background-color: #F9F9F9;
+    border: 1px solid #EAEAEA;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 40px 0;
+    padding: 15px;
+
+    &:hover,
+    &:focus {
+        .bb-card__title,
+        .bb-card__byline-name {
+            @include card-text-links-hover();
+        }
+
+        .bb-card__image {
+            @include card-image-links-hover();
+        }
+    }
+
+    .bb-card__obj {
+        display: table;
+        width: 100%;
+    }
+
+    .bb-card__obj__header,
+    .bb-card__obj__body {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .bb-card__obj__header {
+        padding-right: 10px;
+        width: 100px;
+    }
+
+    .bb-card__images {
+        .bb-card__image {
+            padding-top: 100%;
+        }
+    }
+
+    .bb-card__obj__body {
+        padding-left: 10px;
+    }
+
+    .bb-card__image {
+        background: $COLOUR_BG_ACCENT1;
+        @include card-image-links-normal();
+        @include transition(all 0.3s ease);
+    }
+
+    .bb-card__tag {
+        @include c-card-primary-tag-small;
+        // @include card-portrait-to-landscape-size() {
+        //     margin-bottom: 8px;
+        // }
+        margin: 0 0 4px 0;
+    }
+
+    .bb-card__title {
+        margin: 0 0 6px 0;
+        @include c-card-title-small;
+        @include transition(all 0.3s ease);
+
+        // @include card-portrait-to-landscape-size() {
+        //     margin: 0 0 $MARGIN_XX_SMALL 0;
+        // }
+    }
+
+    .bb-card__separator {
+        display: none;
+    }
+
+    .bb-card__byline,
+    .bb-card__sponsor {
+        @include c-card-byline-small;
+        margin: 4px 0 4px 0;
+
+        // @include card-portrait-to-landscape-size() {
+        //     margin: 8px 0 2px 0;
+        // }
+    }
+
+    .bb-card__byline-prefix,
+    .bb-card__sponsor-label {
+        @include c-card-byline-prefix;
+        margin-right: 2px;
+    }
+
+    .bb-card__byline-name,
+    .bb-card__sponsor-title {
+        @include c-card-byline-name-small;
+    }
+
+    .bb-card__meta {
+        @include c-card-meta-small;
+    }
+
+    .bb-card__meta-item--tag {
+        @include c-card-meta-tag;
+    }
+
+    // Need to be specific to overwrite global__list-reset
+    li.bb-card__meta-item {
+        &:not(:last-child) {
+            padding-right: 8px;
+        }
+
+        & + li.c-card__meta-item {
+            border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+            padding-left: 8px;
+        }
+    }
+}
