@@ -1,8 +1,10 @@
 'use strict';
 
 const chalk = require('chalk');
+const fs = require('fs');
 const webpack = require('webpack');
 
+const LOGGER = require('./logger');
 const { loadFile, promiseError } = require('./utils');
 
 function compileJs(key, file){
