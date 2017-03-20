@@ -623,9 +623,12 @@ a.n-menu__subscribe-btn {
  * =============================================================================
  */
 .n-menu__newsletter-btn {
-    display: inline-block;
+    @include button-single();
+    @include button-single-light();
     margin-bottom: $MARGIN_LARGE;
-    width: auto;
+    &:hover {
+        @include button-single-light-hover();
+    }
 }
 
 
