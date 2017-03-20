@@ -14,7 +14,7 @@
         // @include card-hero-large();
     // }
 
-    @include max-screen($CARD_SWITCHER_WIDTH) {
+    @include max-screen($CARD_SWITCHER_WIDTH - 1) {
         .c-card__images {
             .c-card__image {
                 padding-top: 66.66666%;
