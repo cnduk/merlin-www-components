@@ -26,6 +26,7 @@
 
 @mixin button-single-light-hover() {
     background-color: $COLOR_BUTTON_CTA_LIGHT;
+    border: $_VOGUE_BORDER_WIDTH solid transparent;
     color: #fff;
     text-decoration: none;
 }
@@ -92,6 +93,7 @@
 
 @mixin button-group-light-hover(){
     background-color: $COLOR_BUTTON_CTA_LIGHT;
+    border: $_VOGUE_BORDER_WIDTH solid transparent;
     color: #fff;
     text-decoration: none;
 }
