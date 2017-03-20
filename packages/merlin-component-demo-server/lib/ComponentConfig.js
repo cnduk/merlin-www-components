@@ -113,7 +113,7 @@ class ComponentConfig {
     }
 
     createDemos(){
-        const demos = [];
+        let demos = [];
 
         if(this._hasConfigDemos(this._config)){
             Object.keys(this._config.demo).forEach((demoKey) => {
