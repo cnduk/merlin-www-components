@@ -89,7 +89,7 @@
  * Gallery
  */
 .bb-gallery {
-
+    position: relative;
 }
 
 .bb-gallery__link {
@@ -100,6 +100,7 @@
     top: 0;
     opacity: 0;
     width: 100%;
+    z-index: 1;
 }
 
 .bb-gallery__title {}
