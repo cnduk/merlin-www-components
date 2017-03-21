@@ -1,0 +1,53 @@
+{
+    "type": "FigureImage",
+    "state": {},
+    "data": {
+        "toolbar_list": null,
+        "image": {
+            "type": "Image",
+            "state": {
+                "is_static": false,
+                "is_portrait": false,
+                "is_image": true,
+                "is_square": false,
+                "is_svg": false,
+                "is_figure": false,
+                "is_linked": false,
+                "is_picture": false,
+                "is_landscape": true
+            },
+            "data": {
+                "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus reprehenderit, velit vel consectetur vitae quo dolorum quod voluptates architecto corrupti id doloribus tempore unde eius possimus repudiandae impedit rem quisquam.",
+                "title": "Example title to sit here",
+                "orientation": "landscape",
+                "look_number": null,
+                "alt_text": null,
+                "credit": "Example credit",
+                "image_url": "https://vg-images.condecdn.net/image/vyvLjMzJ2Zl/crop/405/landscape",
+                "lazyload": true,
+                "srcset": "https://vg-images.condecdn.net/image/vyvLjMzJ2Zl/crop/405/landscape 405w, https://vg-images.condecdn.net/image/vyvLjMzJ2Zl/crop/810/landscape 810w",
+                "width": null,
+                "uid": "vyvLjMzJ2Zl"
+            },
+            "style": {
+                "cls": "img-lazyload "
+            }
+        },
+        "magnifier_config": {
+            "type": "ConfigData",
+            "state": {},
+            "json": "{\"url\": \"https://vg-images.condecdn.net/image/vyvLjMzJ2Zl/crop/1920\", \"width\": 1920, \"height\": 1280}",
+            "data": {
+                "url": "https://vg-images.condecdn.net/image/vyvLjMzJ2Zl/crop/1920",
+                "width": 1920,
+                "height": 1280
+            },
+            "style": {
+                "cls": ""
+            }
+        }
+    },
+    "style": {
+        "cls": ""
+    }
+}

@@ -1,0 +1,131 @@
+@import '@cnbritain/merlin-www-common:glamour';
+@import '../wireframe/wireframe';
+
+.c-figure__container {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.c-figure__wrapper {
+    background-color: $COLOUR_BG_AD;
+}
+
+.c-figure__toolbar {
+    border: 1px solid $COLOUR_BUTTON_GALLERY_NAV_BORDER;
+    bottom: 15px;
+    height: 45px;
+    right: 15px;
+
+    @include tablet-size {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+li.c-figure__toolbar-listitem {
+    background-color: $COLOUR_BUTTON_GALLERY_ASIDE_BG;
+    border-bottom: 0;
+    height: 45px;
+    transition: background .1s ease-in-out;
+    width: 45px;
+
+    svg {
+        fill: $COLOUR_BUTTON_GALLERY_ASIDE;
+        width: 37%;
+    }
+
+    &:hover {
+        background-color: $COLOUR_BUTTON_GALLERY_ASIDE_BG_HOVER;
+
+        svg {
+            fill: $COLOUR_BUTTON_GALLERY_ASIDE_HOVER;
+        }
+    }
+}
+
+@each $name, $colour in $COLOUR_SOCIAL {
+    li.c-figure__toolbar-listitem--#{$name} {
+        svg {
+            fill: $colour;
+        }
+
+        &:hover {
+            background-color: $colour;
+            svg {
+                fill: $COLOUR_SOCIAL_ICON;
+            }
+        }
+    }
+}
+
+li.c-figure__toolbar-listitem--zoom {
+    &:hover {
+        background-color: $COLOUR_BUTTON_GALLERY_ASIDE;
+
+        svg {
+            fill: $COLOUR_BUTTON_GALLERY_ASIDE_BG;
+        }
+    }
+}
+
+.c-figure__title,
+.c-figure__caption,
+.c-figure__credit {
+    width: 100%;
+
+    @include desktop-size {
+        max-width: 700px;
+    }
+}
+
+.c-figure__title {
+    @include title-image-credit;
+
+    margin-bottom: 0px;
+
+    span {
+        @include font-size(13px);
+
+        padding-right: 10px;
+    }
+}
+
+.c-figure__caption {
+    @include font('GRAPHIK', 15px, 'NORMAL', 19px);
+    margin-bottom: 10px;
+
+    p {
+        @include font('GRAPHIK', 15px, 'NORMAL', 19px);
+    }
+}
+
+.c-figure__title + .c-figure__caption {
+    margin-top: -5px;
+}
+
+.c-figure__credit {
+    @include font('GRAPHIK', 10px, 400, 13px);
+    color: #b2b2b2;
+    letter-spacing: 0.02em;
+
+    strong {
+        font-weight: 500;
+    }
+}
+
+.is-hover .c-figure__toolbar:hover,
+.is-hover .c-figure__toolbar:focus,
+.is-touch .c-figure__toolbar:focus {
+    .c-figure__toolbar-listitem + .c-figure__toolbar-listitem {
+        border-left: 1px solid $COLOUR_BUTTON_GALLERY_NAV_BORDER;
+    }
+}
+
+.c-figure__magnifier-button + .c-figure__magnifier-button {
+    border-top: 1px solid $COLOUR_BORDER_SOLID;
+}
+
+.c-figure__magnifier--full-screen {
+    background-color: $COLOUR_BG_SECONDARY;
+    z-index: 15;
+}

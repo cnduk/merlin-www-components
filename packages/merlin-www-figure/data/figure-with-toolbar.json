@@ -1,0 +1,531 @@
+{
+    "type": "FigureImage",
+    "state": {},
+    "data": {
+        "toolbar_list": {
+            "type": "List",
+            "state": {},
+            "data": {                "items": [{
+                    "type": "ListItem",
+                    "state": {
+                        "is_first": true,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "type": "LinkedImage",
+                            "state": {
+                                "is_static": false,
+                                "is_linked": true,
+                                "is_svg": false,
+                                "is_image": false,
+                                "is_picture": false,
+                                "is_figure": false
+                            },
+                            "data": {
+                                "image": {
+                                    "type": "SVG",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_portrait": false,
+                                        "is_image": false,
+                                        "is_square": false,
+                                        "is_svg": true,
+                                        "is_figure": false,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_landscape": false
+                                    },
+                                    "data": {
+                                        "credit": null,
+                                        "description": null,
+                                        "lazyload": true,
+                                        "title": null,
+                                        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M16 13.6H0V2.4h16v11.2zm-15-1h14V3.8L8 8.6 1 3.8v8.8zm1.1-9.2l5.9 4 5.9-4H2.1z\"/></svg>",
+                                        "look_number": null,
+                                        "width": null,
+                                        "alt_text": null
+                                    },
+                                    "style": {
+                                        "cls": "img-lazyload "
+                                    }
+                                },
+                                "link": {
+                                    "type": "Link",
+                                    "state": {
+                                        "is_blank": true
+                                    },
+                                    "data": {
+                                        "url": "mailto:?body=http://www.vogue.co.uk/gallery/best-leggings-spring-summer-fashion-trend%23vyvLjMzJ2Zl&subject=Example%20title%20to%20sit%20here",
+                                        "title": "Email"
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                }
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }
+                    },
+                    "style": {
+                        "cls": "c-figure__toolbar-listitem--share c-figure__toolbar-listitem--email"
+                    }
+                }, {
+                    "type": "ListItem",
+                    "state": {
+                        "is_first": false,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "type": "LinkedImage",
+                            "state": {
+                                "is_static": false,
+                                "is_linked": true,
+                                "is_svg": false,
+                                "is_image": false,
+                                "is_picture": false,
+                                "is_figure": false
+                            },
+                            "data": {
+                                "image": {
+                                    "type": "SVG",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_portrait": false,
+                                        "is_image": false,
+                                        "is_square": false,
+                                        "is_svg": true,
+                                        "is_figure": false,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_landscape": false
+                                    },
+                                    "data": {
+                                        "credit": null,
+                                        "description": null,
+                                        "lazyload": true,
+                                        "title": null,
+                                        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M14.4 4.7v.4c0 4.3-3.3 9.3-9.3 9.3-1.9 0-3.6-.5-5-1.5h.8c1.5 0 3-.5 4.1-1.4-1.4 0-2.6-1-3.1-2.3.2 0 .4.1.6.1.3 0 .6 0 .9-.1C1.8 9 .6 7.7.6 6.1c.4.2.9.4 1.5.4C1.2 5.9.7 4.9.7 3.7c0-.6.2-1.2.4-1.7 1.6 2 4 3.3 6.8 3.4-.1-.1-.1-.4-.1-.6 0-1.8 1.5-3.3 3.3-3.3.9 0 1.8.4 2.4 1 .7-.1 1.5-.4 2.1-.8-.2.8-.8 1.4-1.4 1.8.6 0 1.2-.2 1.8-.5-.4.7-1 1.3-1.6 1.7z\"/></svg>",
+                                        "look_number": null,
+                                        "width": null,
+                                        "alt_text": null
+                                    },
+                                    "style": {
+                                        "cls": "img-lazyload "
+                                    }
+                                },
+                                "link": {
+                                    "type": "Link",
+                                    "state": {
+                                        "is_blank": true
+                                    },
+                                    "data": {
+                                        "url": "https://twitter.com/intent/tweet?url=http://www.vogue.co.uk/gallery/best-leggings-spring-summer-fashion-trend%23vyvLjMzJ2Zl&text=Example%20title%20to%20sit%20here",
+                                        "title": "Twitter"
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                }
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }
+                    },
+                    "style": {
+                        "cls": "c-figure__toolbar-listitem--share c-figure__toolbar-listitem--twitter"
+                    }
+                }, {
+                    "type": "ListItem",
+                    "state": {
+                        "is_first": false,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "type": "LinkedImage",
+                            "state": {
+                                "is_static": false,
+                                "is_linked": true,
+                                "is_svg": false,
+                                "is_image": false,
+                                "is_picture": false,
+                                "is_figure": false
+                            },
+                            "data": {
+                                "image": {
+                                    "type": "SVG",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_portrait": false,
+                                        "is_image": false,
+                                        "is_square": false,
+                                        "is_svg": true,
+                                        "is_figure": false,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_landscape": false
+                                    },
+                                    "data": {
+                                        "credit": null,
+                                        "description": null,
+                                        "lazyload": true,
+                                        "title": null,
+                                        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M5.9 3.1v2.2H4.3V8h1.6v8h3.3V8h2.2s.2-1.3.3-2.7H9.2V3.4c0-.3.4-.6.7-.6h1.8V0H9.3C5.8 0 5.9 2.7 5.9 3.1zm0 0\"/></svg>",
+                                        "look_number": null,
+                                        "width": null,
+                                        "alt_text": null
+                                    },
+                                    "style": {
+                                        "cls": "img-lazyload "
+                                    }
+                                },
+                                "link": {
+                                    "type": "Link",
+                                    "state": {
+                                        "is_blank": true
+                                    },
+                                    "data": {
+                                        "url": "https://www.facebook.com/dialog/share?app_id=449870811704655&display=popup&href=http://www.vogue.co.uk/gallery/best-leggings-spring-summer-fashion-trend%23vyvLjMzJ2Zl&redirect_uri=http://www.vogue.co.uk/gallery/best-leggings-spring-summer-fashion-trend%23vyvLjMzJ2Zl&picture=https://vg-images.condecdn.net/image/vyvLjMzJ2Zl/crop/1620/landscape",
+                                        "title": "Facebook"
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                }
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }
+                    },
+                    "style": {
+                        "cls": "c-figure__toolbar-listitem--share c-figure__toolbar-listitem--facebook"
+                    }
+                }, {
+                    "type": "ListItem",
+                    "state": {
+                        "is_first": false,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "type": "LinkedImage",
+                            "state": {
+                                "is_static": false,
+                                "is_linked": true,
+                                "is_svg": false,
+                                "is_image": false,
+                                "is_picture": false,
+                                "is_figure": false
+                            },
+                            "data": {
+                                "image": {
+                                    "type": "SVG",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_portrait": false,
+                                        "is_image": false,
+                                        "is_square": false,
+                                        "is_svg": true,
+                                        "is_figure": false,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_landscape": false
+                                    },
+                                    "data": {
+                                        "credit": null,
+                                        "description": null,
+                                        "lazyload": true,
+                                        "title": null,
+                                        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M12.1 9.6c0-.1-.2-.1-.4-.2s-1.1-.6-1.3-.6c-.2-.1-.3-.1-.4.1-.1.1-.5.6-.6.7-.1.1-.2.1-.4 0s-.9-.3-1.6-.9c-.6-.5-1-1.1-1.1-1.3-.1-.2 0-.3.1-.4l.3-.3c.1-.1.1-.2.2-.3.1-.1 0-.2 0-.3 0-.1-.4-1-.6-1.4-.2-.5-.3-.5-.4-.5h-.4c-.1 0-.3 0-.5.2-.2.3-.7.7-.7 1.7 0 .9.7 1.8.8 1.9.1.1 1.3 2.1 3.3 2.9 2 .8 2 .5 2.3.5.4 0 1.1-.5 1.3-.9.2-.5.2-.8.1-.9m-4-8.4c-3.6 0-6.6 2.9-6.6 6.6 0 1.4.5 2.8 1.3 3.8L2 14.1l2.5-.8c1 .7 2.3 1.1 3.6 1.1 3.6 0 6.6-2.9 6.6-6.6 0-3.6-2.9-6.6-6.6-6.6M16 7.8c0 4.3-3.5 7.8-7.9 7.8-1.4 0-2.7-.4-3.8-1L0 16l1.4-4.2C.7 10.6.3 9.2.3 7.8.3 3.5 3.8 0 8.1 0 12.5 0 16 3.5 16 7.8\"/></svg>",
+                                        "look_number": null,
+                                        "width": null,
+                                        "alt_text": null
+                                    },
+                                    "style": {
+                                        "cls": "img-lazyload "
+                                    }
+                                },
+                                "link": {
+                                    "type": "Link",
+                                    "state": {
+                                        "is_blank": true
+                                    },
+                                    "data": {
+                                        "url": "whatsapp://send?text=http://www.vogue.co.uk/gallery/best-leggings-spring-summer-fashion-trend%23vyvLjMzJ2Zl",
+                                        "title": "Whatsapp"
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                }
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }
+                    },
+                    "style": {
+                        "cls": "c-figure__toolbar-listitem--share c-figure__toolbar-listitem--whatsapp"
+                    }
+                }, {
+                    "type": "ListItem",
+                    "state": {
+                        "is_first": false,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "type": "LinkedImage",
+                            "state": {
+                                "is_static": false,
+                                "is_linked": true,
+                                "is_svg": false,
+                                "is_image": false,
+                                "is_picture": false,
+                                "is_figure": false
+                            },
+                            "data": {
+                                "image": {
+                                    "type": "SVG",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_portrait": false,
+                                        "is_image": false,
+                                        "is_square": false,
+                                        "is_svg": true,
+                                        "is_figure": false,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_landscape": false
+                                    },
+                                    "data": {
+                                        "credit": null,
+                                        "description": null,
+                                        "lazyload": true,
+                                        "title": null,
+                                        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 0C3.6 0 0 3.6 0 8c0 3.3 2 6.1 4.8 7.3 0-.6 0-1.2.1-1.8.2-.6 1-4.4 1-4.4s-.2-.5-.2-1.2c0-1.2.7-2.1 1.5-2.1s1.1.5 1.1 1.2-.5 1.8-.7 2.8c-.2.8.4 1.5 1.3 1.5 1.5 0 2.5-1.9 2.5-4.3 0-1.8-1.2-3.1-3.3-3.1-2.4 0-3.9 1.8-3.9 3.8 0 .7.2 1.2.5 1.6.1.2.2.2.1.4 0 .1-.1.5-.2.6-.1.2-.2.3-.4.2-1.1-.5-1.6-1.7-1.6-3.1 0-2.3 1.9-5 5.7-5 3.1 0 5.1 2.2 5.1 4.6 0 3.1-1.7 5.5-4.3 5.5-.9 0-1.7-.5-2-1 0 0-.5 1.8-.6 2.2-.2.6-.5 1.2-.8 1.7.8.5 1.5.6 2.3.6 4.4 0 8-3.6 8-8s-3.6-8-8-8z\"/></svg>",
+                                        "look_number": null,
+                                        "width": null,
+                                        "alt_text": null
+                                    },
+                                    "style": {
+                                        "cls": "img-lazyload "
+                                    }
+                                },
+                                "link": {
+                                    "type": "Link",
+                                    "state": {
+                                        "is_blank": true
+                                    },
+                                    "data": {
+                                        "url": "http://www.pinterest.com/pin/create/button/?url=http://www.vogue.co.uk/gallery/best-leggings-spring-summer-fashion-trend%23vyvLjMzJ2Zl&description=Lorem%20ipsum%20dolor%20sit%20amet%2C%20consectetur%20adipisicing%20elit.%20Temporibus%20reprehenderit%2C%20velit%20vel%20consectetur%20vitae%20quo%20dolorum%20quod%20voluptates%20architecto%20corrupti%20id%20doloribus%20tempore%20unde%20eius%20possimus%20repudiandae%20impedit%20rem%20quisquam.&media=https://vg-images.condecdn.net/image/vyvLjMzJ2Zl/crop/1620/landscape",
+                                        "title": "Pinterest"
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                }
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }
+                    },
+                    "style": {
+                        "cls": "c-figure__toolbar-listitem--share c-figure__toolbar-listitem--pinterest"
+                    }
+                }, {
+                    "type": "ListItem",
+                    "state": {
+                        "is_first": false,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "type": "LinkedImage",
+                            "state": {
+                                "is_static": false,
+                                "is_linked": true,
+                                "is_svg": false,
+                                "is_image": false,
+                                "is_picture": false,
+                                "is_figure": false
+                            },
+                            "data": {
+                                "image": {
+                                    "type": "SVG",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_portrait": false,
+                                        "is_image": false,
+                                        "is_square": false,
+                                        "is_svg": true,
+                                        "is_figure": false,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_landscape": false
+                                    },
+                                    "data": {
+                                        "credit": null,
+                                        "description": null,
+                                        "lazyload": true,
+                                        "title": null,
+                                        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\"><path d=\"M19.3 20l-6.5-6.5c-1.4 1.2-3.1 1.9-5.1 1.9C3.5 15.4 0 12 0 7.7 0 3.5 3.5 0 7.7 0s7.7 3.5 7.7 7.7c0 1.9-.7 3.7-1.9 5.1l6.5 6.5-.7.7zM7.7 1a6.7 6.7 0 1 0 0 13.4A6.7 6.7 0 0 0 7.7 1zm.5 10.5h-1V8.2H4v-1h3.2V4h1v3.2h3.2v1H8.2v3.3z\"/></svg>",
+                                        "look_number": null,
+                                        "width": null,
+                                        "alt_text": null
+                                    },
+                                    "style": {
+                                        "cls": "img-lazyload "
+                                    }
+                                },
+                                "link": {
+                                    "type": "Link",
+                                    "state": {
+                                        "is_blank": false
+                                    },
+                                    "data": {
+                                        "url": "#",
+                                        "title": "Zoom"
+                                    },
+                                    "style": {
+                                        "cls": "js-c-figure-magnify-zoom"
+                                    }
+                                }
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }
+                    },
+                    "style": {
+                        "cls": "c-figure__toolbar-listitem--zoom"
+                    }
+                }, {
+                    "type": "ListItem",
+                    "state": {
+                        "is_first": false,
+                        "is_last": true
+                    },
+                    "data": {
+                        "item": {
+                            "type": "LinkedImage",
+                            "state": {
+                                "is_static": false,
+                                "is_linked": true,
+                                "is_svg": false,
+                                "is_image": false,
+                                "is_picture": false,
+                                "is_figure": false
+                            },
+                            "data": {
+                                "image": {
+                                    "type": "SVG",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_portrait": false,
+                                        "is_image": false,
+                                        "is_square": false,
+                                        "is_svg": true,
+                                        "is_figure": false,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_landscape": false
+                                    },
+                                    "data": {
+                                        "credit": null,
+                                        "description": null,
+                                        "lazyload": true,
+                                        "title": null,
+                                        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\"><path d=\"M5 10c0 1.4-1.1 2.5-2.5 2.5S0 11.4 0 10s1.1-2.5 2.5-2.5S5 8.6 5 10zm5-2.5c-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5 2.5-1.1 2.5-2.5-1.1-2.5-2.5-2.5zm7.5 0C16.1 7.5 15 8.6 15 10s1.1 2.5 2.5 2.5S20 11.4 20 10s-1.1-2.5-2.5-2.5z\"/></svg>",
+                                        "look_number": null,
+                                        "width": null,
+                                        "alt_text": null
+                                    },
+                                    "style": {
+                                        "cls": "img-lazyload "
+                                    }
+                                },
+                                "link": {
+                                    "type": "Link",
+                                    "state": {
+                                        "is_blank": false
+                                    },
+                                    "data": {
+                                        "url": "#",
+                                        "title": "More"
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                }
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }
+                    },
+                    "style": {
+                        "cls": "c-figure__toolbar-listitem--more"
+                    }
+                }],
+                "length": 7
+            },
+            "style": {
+                "cls": ""
+            }
+        },
+        "image": {
+            "type": "Image",
+            "state": {
+                "is_static": false,
+                "is_portrait": false,
+                "is_image": true,
+                "is_square": false,
+                "is_svg": false,
+                "is_figure": false,
+                "is_linked": false,
+                "is_picture": false,
+                "is_landscape": true
+            },
+            "data": {
+                "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus reprehenderit, velit vel consectetur vitae quo dolorum quod voluptates architecto corrupti id doloribus tempore unde eius possimus repudiandae impedit rem quisquam.",
+                "title": "Example title to sit here",
+                "orientation": "landscape",
+                "look_number": null,
+                "alt_text": null,
+                "credit": "Example credit",
+                "image_url": "https://vg-images.condecdn.net/image/vyvLjMzJ2Zl/crop/405/landscape",
+                "lazyload": true,
+                "srcset": "https://vg-images.condecdn.net/image/vyvLjMzJ2Zl/crop/405/landscape 405w, https://vg-images.condecdn.net/image/vyvLjMzJ2Zl/crop/810/landscape 810w",
+                "width": null,
+                "uid": "vyvLjMzJ2Zl"
+            },
+            "style": {
+                "cls": "img-lazyload "
+            }
+        },
+        "magnifier_config": {
+            "type": "ConfigData",
+            "state": {},
+            "json": "{\"url\": \"https://vg-images.condecdn.net/image/vyvLjMzJ2Zl/crop/1920\", \"width\": 1920, \"height\": 1280}",
+            "data": {
+                "url": "https://vg-images.condecdn.net/image/vyvLjMzJ2Zl/crop/1920",
+                "width": 1920,
+                "height": 1280
+            },
+            "style": {
+                "cls": ""
+            }
+        }
+    },
+    "style": {
+        "cls": ""
+    }
+}

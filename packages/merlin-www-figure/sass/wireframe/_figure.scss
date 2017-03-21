@@ -1,0 +1,88 @@
+.c-figure {
+    margin: 0;
+}
+.c-figure__container {
+    position: relative;
+}
+.c-figure__helper {
+    width: 100%;
+}
+
+.c-figure__helper--landscape,
+.c-figure__helper--square,  {
+    padding-top: 66.6666667%;
+}
+
+.c-figure__helper--portrait {
+    padding-top: 150%;
+
+    @include min-screen(900px) {
+        padding-top: 66.6666667%;
+    }
+}
+
+.c-figure__wrapper {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.c-figure img {
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.c-figure__toolbar {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 60px;
+}
+
+li.c-figure__toolbar-listitem {
+    float: left;
+    height: 60px;
+    padding-bottom: 0;
+    width: 60px;
+
+    svg {
+        display: block;
+        margin: 0 auto;
+        height: 100%;
+        fill: #fff;
+    }
+}
+.c-figure__toolbar-listitem--share {
+    display: none;
+}
+.c-figure__toolbar-listitem--zoom {
+    display: none;
+}
+.c-figure__toolbar-listitem--more {}
+
+.c-figure__title {}
+.c-figure__caption {}
+.c-figure__credit {}
+
+.is-hover .c-figure__toolbar:hover,
+.is-hover .c-figure__toolbar:focus,
+.is-touch .c-figure__toolbar:focus {
+    .c-figure__toolbar-listitem--share,
+    .c-figure__toolbar-listitem--zoom {
+        display: inline-block;
+    }
+    .c-figure__toolbar-listitem--more {
+        display: none;
+    }
+}

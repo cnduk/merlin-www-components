@@ -1,0 +1,38 @@
+<figure class="c-figure {{ style.cls }} is-hover" {{# data.image.data.uid }}id="{{ data.image.data.uid }}"{{/ data.image.data.uid }}>
+    <div class="c-figure__container">
+        <div class="c-figure__helper {{# data.image.state.is_landscape }}c-figure__helper--landscape{{/ data.image.state.is_landscape }}{{# data.image.state.is_portrait }}c-figure__helper--portrait{{/ data.image.state.is_portrait }}{{# data.image.state.is_square }}c-figure__helper--square{{/ data.image.state.is_square }}"></div>
+        <div class="c-figure__wrapper">
+            {{# data.image }}
+                {{> @cnbritain/merlin-www-image/image-base }}
+            {{/ data.image }}
+        </div>
+        {{# data.toolbar_list }}
+            <div class="c-figure__toolbar" tabindex="1">
+                <ul class="global__list-reset c-figure__toolbar-list {{ style.cls }}">
+                    {{# data.items }}
+                        <li class="c-figure__toolbar-listitem {{ style.cls }}">
+                            {{# data.item }}
+                                {{> @cnbritain/merlin-www-image/image-base }}
+                            {{/ data.item }}
+                        </li>
+                    {{/ data.items }}
+                </ul>
+            </div>
+        {{/ data.toolbar_list }}
+    </div>
+    {{# data.image.data.title }}
+        <div class='c-figure__title'>{{ . }}</div>
+    {{/ data.image.data.title }}
+    {{! Description can contain bbcode so we have escaped in model }}
+    {{# data.image.data.description }}
+        <figcaption class='c-figure__caption'>{{ &. }}</figcaption>
+    {{/ data.image.data.description }}
+    {{# data.image.data.credit }}
+        <footer class="c-figure__credit">{{ . }}</footer>
+    {{/ data.image.data.credit }}
+    {{# data.magnifier_config }}
+        <script type="application/json" class="js-c-figure-magnify-config">
+            {{ &json }}
+        </script>
+    {{/ data.magnifier_config }}
+</figure>

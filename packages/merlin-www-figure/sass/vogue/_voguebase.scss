@@ -1,0 +1,167 @@
+.c-figure__container {
+    margin-bottom: $MARGIN_SMALL;
+    position: relative;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: $MARGIN_MEDIUM;
+    }
+}
+.c-figure__wrapper {
+    background-color: $COLOUR_BG_ADVERT;
+}
+
+.c-figure__toolbar {
+    border: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+    bottom: 15px;
+    height: 45px;
+    right: 15px;
+}
+
+li.c-figure__toolbar-listitem {
+    background-color: #fff;
+    height: 45px;
+    width: 45px;
+    @include vendor-prefix(transition, background 0.1s ease-in-out);
+
+    svg {
+        fill: #000;
+        width: 16px;
+    }
+}
+
+
+li.c-figure__toolbar-listitem--more {
+    svg {
+        fill: $COLOR_TYPE_META;
+    }
+}
+
+li.c-figure__toolbar-listitem--facebook {
+    svg {
+        fill: map-get($COLOUR_SOCIAL, 'facebook');
+    }
+
+    &:hover {
+        background-color: map-get($COLOUR_SOCIAL, 'facebook');
+
+        svg {
+            fill: #fff;
+        }
+    }
+}
+li.c-figure__toolbar-listitem--twitter {
+    svg {
+        fill: map-get($COLOUR_SOCIAL, 'twitter');
+    }
+
+    &:hover {
+        background-color: map-get($COLOUR_SOCIAL, 'twitter');
+
+        svg {
+            fill: #fff;
+        }
+    }
+}
+li.c-figure__toolbar-listitem--pinterest {
+    svg {
+        fill: map-get($COLOUR_SOCIAL, 'pinterest');
+    }
+
+    &:hover {
+        background-color: map-get($COLOUR_SOCIAL, 'pinterest');
+
+        svg {
+            fill: #fff;
+        }
+    }
+}
+li.c-figure__toolbar-listitem--email {
+    svg {
+        fill: map-get($COLOUR_SOCIAL, 'email');
+    }
+
+    &:hover {
+        background-color: map-get($COLOUR_SOCIAL, 'email');
+
+        svg {
+            fill: #fff;
+        }
+    }
+}
+li.c-figure__toolbar-listitem--whatsapp {
+    svg {
+        fill: map-get($COLOUR_SOCIAL, 'whatsapp');
+    }
+
+    &:hover {
+        background-color: map-get($COLOUR_SOCIAL, 'whatsapp');
+
+        svg {
+            fill: #fff;
+        }
+    }
+}
+li.c-figure__toolbar-listitem--zoom {
+    &:hover {
+        background-color: $COLOR_MAIN_HIGHLIGHT;
+        svg {
+            fill: #fff;
+        }
+    }
+}
+
+.c-figure__title {
+    @include font('ADOBE CASLON', 24px, 'BOLD');
+    line-height: em(28px, 24px);
+    margin-bottom: $MARGIN_XX_SMALL;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        line-height: em(30px, 24px);
+        padding-right: 160px;
+    }
+}
+
+.c-figure__caption {
+    color: $COLOR_TYPE_BODY;
+    @include font('ADOBE CASLON', 16px);
+    margin: $MARGIN_XX_SMALL 0;
+
+    p {
+        @include font('ADOBE CASLON', 16px);
+    }
+
+    a {
+        @include body-links(true);
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-right: 160px;
+    }
+}
+
+.c-figure__title,
+.c-figure__caption {
+    max-width: 620px;
+}
+
+.c-figure__credit {
+    color: $COLOR_MAIN_INACTIVE;
+    @include font('NOBEL', 9px);
+    text-transform: uppercase;
+
+    strong {
+        font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-right: 160px;
+    }
+}
+
+.is-hover .c-figure__toolbar:hover,
+.is-hover .c-figure__toolbar:focus,
+.is-touch .c-figure__toolbar:focus {
+    .c-figure__toolbar-listitem + .c-figure__toolbar-listitem {
+        border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+    }
+}
