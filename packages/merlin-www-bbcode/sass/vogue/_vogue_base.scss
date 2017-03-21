@@ -98,6 +98,11 @@
         @include card-image-links-hover();
     }
 }
+.bb-gallery__col {
+    &:before {
+        display: none;
+    }
+}
 .bb-gallery__title {
     color: #000;
     @include font('ADOBE CASLON', 20px, 'BOLD', 24px);
