@@ -2,10 +2,14 @@
 
 const chalk = require('chalk');
 const fs = require('fs');
+const path = require('path');
 const webpack = require('webpack');
 
 const LOGGER = require('./logger');
 const { loadFile, promiseError } = require('./utils');
+
+const componentDir = fs.realpathSync(
+    path.resolve(__dirname, '../node_modules'));
 
 function compileJs(key, file){
     return new Promise((resolve, reject) => {
@@ -53,12 +57,23 @@ function getWebpackConfig(key, file){
         'entry': {
             [key]: file
         },
-        'module': {},
+        'module': {
+            'rules': [{
+                'test': /\.mustache$/,
+                'use': 'mustache-loader'
+            }]
+        },
         'plugins': [],
         'output': {
             'filename': '[name].build.js'
         },
-        "stats": "verbose"
+        "stats": "verbose",
+        "resolveLoader": {
+            "modules": [
+                componentDir,
+                "node_modules"
+            ]
+        }
     };
 }
 
