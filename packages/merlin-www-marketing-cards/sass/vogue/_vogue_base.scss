@@ -1,0 +1,98 @@
+.a-marketing-card {
+    background-color: $COLOUR_BG_ADVERT;
+    @include font('ADOBE CASLON');
+    margin: $MARGIN_SMALL 0;
+    padding: $PADDING_MEDIUM $PADDING_SMALL;
+
+    @include marketing-card-medium-size(){
+        padding: 0;
+    }
+}
+.a-marketing-card--brand {}
+.a-marketing-card--event {}
+.a-marketing-card--topic {}
+.a-marketing-card--magazine {
+    .a-marketing-card__col {
+        text-align: center;
+
+        @include marketing-card-medium-size(){
+            text-align: left;
+        }
+    }
+}
+
+.a-marketing-card__brand {
+    margin: 0 0 $MARGIN_SMALL 0;
+}
+.a-marketing-card__brand__img {}
+.a-marketing-card__brand__name {
+    @include font('NOBEL', 11px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.a-marketing-card__brand__prefix {
+    color: $COLOR_TYPE_META;
+    @include font('ADOBE CASLON', 12px);
+    text-transform: italic;
+
+    & + .a-marketing-card__brand__img {
+        margin-top: $MARGIN_XX_SMALL;
+    }
+}
+
+.a-marketing-card__col {
+    @include marketing-card-medium-size(){
+        padding: 40px;
+    }
+}
+
+
+.a-marketing-card--brand .a-marketing-card__col,
+.a-marketing-card--topic .a-marketing-card__col,
+.a-marketing-card--event .a-marketing-card__col {
+    @include marketing-card-medium-size(){
+        & + .a-marketing-card__col {
+            border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+        }
+    }
+}
+
+
+
+
+.a-marketing-card__desc {
+    color: $COLOR_TYPE_META;
+    @include font('ADOBE CASLON', 15px);
+    margin: 0 0 $MARGIN_SMALL 0;
+}
+
+.a-marketing-card__magazine {
+    margin: 0 auto $MARGIN_SMALL auto;
+
+    @include marketing-card-medium-size(){
+        margin-bottom: 0;
+    }
+}
+.a-marketing-card__magazine__cover {}
+.a-marketing-card__magazine__cover--desktop {}
+.a-marketing-card__magazine__cover--tablet {}
+.a-marketing-card__magazine__cover--mobile {}
+
+.a-marketing-card__link {
+    @include button-single();
+    @include button-single-light();
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
+
+.a-marketing-card__title {
+    color: $COLOR_TYPE_BODY;
+    @include font('ADOBE CASLON', 17px, 'SEMI BOLD', 25px);
+    margin: 0 0 $MARGIN_XX_SMALL 0;
+
+    @include marketing-card-medium-size(){
+        @include font-size(20px);
+    }
+}

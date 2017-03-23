@@ -1,0 +1,68 @@
+{
+    "name": "@cnbritain/merlin-www-marketing-cards",
+    "description": "Brand, event and magazine marketing cards for articles",
+    "main": "index",
+    "currentTheme": null,
+    "data": {
+        "brand-with-logo": "data/brand-with-logo.json",
+        "brand-without-logo": "data/brand-without-logo.json",
+        "magazine": "data/magazine.json"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "wired": "sass/wired/wired.scss"
+    },
+    "partials": {
+        "index": "partials/index.html",
+        "brand": "partials/brand-card.html",
+        "event": "partials/event-card.html",
+        "magazine": "partials/magazine-card.html",
+        "topic": "partials/topic-card.html"
+    },
+    "js": {
+        "demo": "demo/demo.js"
+    },
+    "demo": {
+        "brand-with-logo": {
+            "data": "brand-with-logo",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue",
+                "wired"
+            ]
+        },
+        "brand-with-logo": {
+            "data": "brand-with-logo",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue",
+                "wired"
+            ]
+        },
+        "magazine": {
+            "data": "magazine",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue",
+                "wired"
+            ]
+        }
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-buttons",
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-image"
+    ]
+}

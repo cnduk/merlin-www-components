@@ -1,0 +1,69 @@
+{
+    "type": "BrandMarketingCard",
+    "state": {
+        "has_button": true,
+        "is_topic": false,
+        "has_logo": false,
+        "is_magazine": false,
+        "is_brand": true,
+        "is_event": false
+    },
+    "data": {
+        "tag": {
+            "type": "Tag",
+            "state": {},
+            "data": {
+                "link": {
+                    "type": "Link",
+                    "state": {
+                        "is_blank": false
+                    },
+                    "data": {
+                        "url": "/brand/ford/",
+                        "title": "Ford"
+                    },
+                    "style": {
+                        "cls": ""
+                    }
+                },
+                "event_information": null,
+                "title": "Ford"
+            },
+            "style": {
+                "cls": ""
+            }
+        },
+        "link": {
+            "type": "Link",
+            "state": {
+                "is_blank": false
+            },
+            "data": {
+                "url": "/brand/ford/",
+                "title": "Ford"
+            },
+            "style": {
+                "cls": ""
+            }
+        },
+        "title": null,
+        "logo": null,
+        "button": {
+            "type": "Link",
+            "state": {
+                "is_blank": false
+            },
+            "data": {
+                "url": "/brand/ford/",
+                "title": "View Sponsor"
+            },
+            "style": {
+                "cls": ""
+            }
+        },
+        "desc": null
+    },
+    "style": {
+        "cls": "a-marketing-card--brand"
+    }
+}

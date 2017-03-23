@@ -1,0 +1,98 @@
+@import '@cnbritain/merlin-www-common:wireframe';
+
+@mixin marketing-card-medium-size() {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+        @content;
+    }
+}
+
+.a-marketing-card {
+    box-sizing: border-box;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.a-marketing-card--brand {}
+.a-marketing-card--event {}
+.a-marketing-card--topic {}
+.a-marketing-card--magazine {
+    .a-marketing-card__col {
+        @include marketing-card-medium-size(){
+            vertical-align: middle;
+            width: 50%;
+        }
+    }
+}
+
+.a-marketing-card__brand {}
+.a-marketing-card__brand__img {
+    display: block;
+    max-width: 120px;
+}
+.a-marketing-card__brand__name {}
+.a-marketing-card__brand__prefix {
+    display: block;
+}
+
+.a-marketing-card__col {
+    display: block;
+    vertical-align: top;
+    width: 100%;
+
+    @include marketing-card-medium-size(){
+        display: table-cell;
+    }
+}
+
+
+.a-marketing-card--brand .a-marketing-card__col,
+.a-marketing-card--event .a-marketing-card__col {
+    @include marketing-card-medium-size(){
+        width: 120px;
+
+        & + .a-marketing-card__col {
+            width: auto;
+        }
+    }
+}
+
+
+
+
+.a-marketing-card__desc {}
+
+.a-marketing-card__magazine {
+    position: relative;
+    width: 180px;
+}
+.a-marketing-card__magazine__cover {}
+.a-marketing-card__magazine__cover--print {
+    width: 100%;
+}
+.a-marketing-card__magazine__cover--desktop {}
+.a-marketing-card__magazine__cover--tablet {
+    background: url("/static/img/template_ipad.png") 0 0 no-repeat;
+    background-size: auto 160px;
+    border-radius: 5px;
+    bottom: 0;
+    padding: 15px 10px 15px 10px;
+    position: absolute;
+    right: 0;
+    width: 100px;
+}
+.a-marketing-card__magazine__cover--mobile {
+    background: url("/static/img/template_iphone.png") 0 0 no-repeat;
+    background-size: 55px auto;
+    bottom: 0;
+    left: 50%;
+    margin-left: -30px;
+    padding: 20px 5px 8px 5px;
+    position: absolute;
+    width: 45px;
+}
+
+.a-marketing-card__link {
+    display: inline-block;
+}
+
+.a-marketing-card__title {}

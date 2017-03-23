@@ -1,0 +1,157 @@
+@import '@cnbritain/merlin-www-common:wired';
+@import '@cnbritain/merlin-www-buttons:wired';
+@import '../wireframe/wireframe';
+
+.a-marketing-card {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.a-marketing-card__brand {
+    @include font('EXCHANGE WEB', 12px, 'NORMAL', 17px);
+    font-style: italic;
+    margin-bottom: 30px;
+    text-align: left;
+
+    a {
+        @include font-size(13px);
+        @include font-weight('SEMI BOLD');
+
+        color: #000;
+        letter-spacing: 0.02em;
+    }
+
+}
+.a-marketing-card__brand__img {
+    margin: 10px 0 30px 0;
+    max-width: 120px;
+}
+
+.a-marketing-card__magazine {
+    margin: 0 auto 30px auto;
+    text-align: center;
+    width: 150px;
+}
+.a-marketing-card__magazine__cover--print {
+    margin-left: -48px;
+    width: 70%;
+}
+.a-marketing-card__magazine__cover--tablet {
+    background: none;
+    background-color: #000;
+    padding: 11px 8px;
+    width: 72px;
+}
+.a-marketing-card__magazine__cover--mobile {
+    background: none;
+    background-color: #000;
+    border-radius: 4px;
+    margin-bottom: 0;
+    margin-left: -35px;
+    padding: 13px 4px;
+    width: 40px;
+}
+
+.a-marketing-card__title {
+    @include font('EXCHANGE WEB', 17px, 'SEMI BOLD', 22px);
+
+    margin: 20px 0;
+    text-align: left;
+}
+
+.a-marketing-card__desc {
+    @include font('BRUTAL', 16px, 'NORMAL', 21px);
+    margin: 20px 0;
+    text-align: left;
+
+    &:before {
+        background-color: #000;
+        content: '';
+        display: block;
+        height: 1px;
+        margin: 20px 0;
+        width: 20px;
+    }
+}
+
+a.a-marketing-card__link {
+    @include button-single();
+    @include button-single-light();
+    box-sizing: border-box;
+    @include font-size(12px);
+    height: 40px;
+    line-height: 40px;
+    padding-bottom: 0;
+    padding-top: 0;
+    text-align: center;
+    width: 100%;
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
+
+@include marketing-card-medium-size() {
+    .a-marketing-card {
+        padding: 40px 0;
+        text-align: left;
+    }
+    .a-marketing-card__brand {
+        margin-bottom: 0;
+        text-align: left;
+    }
+    .a-marketing-card__brand__img {
+        margin: 10px auto 0 auto;
+    }
+    .a-marketing-card__magazine {
+        margin: 0;
+        width: 210px;
+    }
+    .a-marketing-card__title {
+        @include font-size(19px);
+        @include line-height(27px);
+        margin-top: 0;
+    }
+    .a-marketing-card__desc {
+        @include font-size(17px);
+        @include line-height(23px);
+    }
+    a.a-marketing-card__link {
+        text-align: center;
+        width: auto;
+    }
+    .a-marketing-card__magazine__cover--print {
+        margin-left: 0;
+    }
+    .a-marketing-card__magazine__cover--tablet {
+        padding: 15px 10px;
+        width: 100px;
+    }
+    .a-marketing-card__magazine__cover--mobile {
+        margin-left: -37px;
+        padding: 17px 5px;
+        width: 46px;
+    }
+    .a-marketing-card--brand,
+    .a-marketing-card--topic,
+    .a-marketing-card--event {
+        .a-marketing-card__col {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        .a-marketing-card__col + .a-marketing-card__col {
+            border-left: 1px solid #eaeaea;
+        }
+    }
+    .a-marketing-card--magazine {
+        .a-marketing-card__col {
+            padding-left: 40px;
+            padding-right: 40px;
+            vertical-align: top;
+            width: 230px;
+        }
+        .a-marketing-card__col + .a-marketing-card__col {
+            width: auto;
+        }
+    }
+}
