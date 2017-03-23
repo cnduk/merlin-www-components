@@ -13,6 +13,16 @@
 							{{# data.item }}
 								{{> @cnbritain/merlin-www-image }}
 							{{/ data.item }}
+
+							{{# data.remaining_count }}
+								<div class="c-card__image__remaining">
+									<div class="c-card__image__remaining__text">
+										<div class="c-card__image__remaining__value">
+											{{ . }}
+										</div>
+									</div>
+								</div>
+							{{/ data.remaining_count }}
 						</div>
 					{{/ data.items }}
 				{{/ data.image_list }}
