@@ -1,0 +1,36 @@
+.a-podcast {
+    margin: $MARGIN_MEDIUM 0 $MARGIN_LARGE 0;
+}
+.a-podcast__wrapper {}
+.a-podcast-content {}
+.a-podcast-audio {}
+
+.a-podcast__player {
+    margin: 0 0 $MARGIN_MEDIUM 0;
+    width: 100%;
+}
+
+li.a-podcast__list-item {
+    margin: 0 0 $MARGIN_X_SMALL 0;
+
+    @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT) {
+        display: inline-block;
+    }
+}
+
+.a-podcast__btn {
+    @include button-single();
+    @include button-single-light();
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 100%;
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+
+    @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT) {
+        width: auto;
+    }
+}

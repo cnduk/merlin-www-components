@@ -1,0 +1,64 @@
+{
+    "type": "Podcast",
+    "state": {},
+    "data": {
+        "rss_url": "https://www.wired.co.uk/rss/podcast/",
+        "title": "Emma Watson, Robot ethics: Podcast 309",
+        "analytics_url": "http://www.podtrac.com/pts/redirect.mp3/video.condenast.co.uk.s3.amazonaws.com/17332/wired/podcast/wireduk309-160317.mp3",
+        "podcast_url": "http://video.condenast.co.uk.s3.amazonaws.com/17332/wired/podcast/wireduk309-160317.mp3",
+        "series_tag": {
+            "type": "Tag",
+            "state": {},
+            "data": {
+                "link": {
+                    "type": "Link",
+                    "state": {
+                        "is_blank": false
+                    },
+                    "data": {
+                        "url": "https://www.wired.co.uk/series/wired-podcast/",
+                        "title": "The WIRED Podcast"
+                    },
+                    "style": {
+                        "cls": ""
+                    }
+                },
+                "event_information": null,
+                "title": "The WIRED Podcast"
+            },
+            "style": {
+                "cls": ""
+            }
+        },
+        "duration": "00:41:27",
+        "topic_tag": {
+            "type": "Tag",
+            "state": {},
+            "data": {
+                "link": {
+                    "type": "Link",
+                    "state": {
+                        "is_blank": false
+                    },
+                    "data": {
+                        "url": "https://www.wired.co.uk/topic/podcast/",
+                        "title": "Podcast"
+                    },
+                    "style": {
+                        "cls": ""
+                    }
+                },
+                "event_information": null,
+                "title": "Podcast"
+            },
+            "style": {
+                "cls": ""
+            }
+        },
+        "itunes_url": "itpc://www.wired.co.uk/rss/podcast/",
+        "episode_number": null
+    },
+    "style": {
+        "cls": ""
+    }
+}

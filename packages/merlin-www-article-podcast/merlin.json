@@ -1,0 +1,37 @@
+{
+    "name": "@cnbritain/merlin-www-article-podcast",
+    "description": "Podcast section for articles",
+    "main": "index",
+    "currentTheme": null,
+    "data": {
+        "all": "data/all.json"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "wired": "sass/wired/wired.scss"
+    },
+    "partials": {
+        "index": "partials/index.html"
+    },
+    "js": {},
+    "demo": {
+        "all": {
+            "data": "all",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue",
+                "wired"
+            ]
+        }
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-buttons"
+    ]
+}

@@ -1,0 +1,54 @@
+@import "@cnbritain/merlin-www-common:wired";
+@import "@cnbritain/merlin-www-buttons:wired";
+
+@import "../wireframe/wireframe";
+
+.a-podcast {
+    margin: 40px 0;
+}
+.a-podcast__wrapper {}
+.a-podcast-content {}
+.a-podcast-audio {}
+
+.a-podcast__player {
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 797px;
+}
+
+.a-podcast__list {
+    @include font-size(13px);
+    overflow: hidden;
+}
+
+.a-podcast__list-item {
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT) {
+        float: left;
+
+        &:not(:last-child) {
+            margin-bottom: 0;
+            margin-right: 15px;
+        }
+    }
+}
+
+.a-podcast__btn {
+    @include button-single();
+    @include button-single-light();
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+
+    @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT) {
+        width: auto;
+    }
+}
