@@ -15,10 +15,12 @@
 
 .c-topic-strip__list {
     display: inline-block;
+    font-size: 0;
 }
 
 .c-topic-strip__item {
     display: inline-block;
+    font-size: initial;
 }
 
 .c-topic-strip__btn {
