@@ -174,6 +174,8 @@
 .c-card-section--c-magazine-articles {}
 .c-card-section--mag-magazines {}
 .c-card-section--sh-shows {}
+
+.c-card-section--v-articles,
 .c-card-section--tg-articles {
     .c-card-section__title {
         @include font('NOBEL', 15px);
@@ -196,61 +198,4 @@
     @include section-right-sidebar();
 }
 .c-card-section--sh-articles {}
-.c-card-section--v-articles {}
 .c-card-section--tg-header-articles {}
-
-
-// %c-card-section--right-sidebar {
-//     .c-card-list {
-//         text-align: left;
-
-//         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-//             margin-right: 340px;
-//             position: relative;
-//         }
-//     }
-// }
-
-
-// %c-card-section--magazine {
-//     .c-card-section__constrain {
-//         max-width: $MAXIMUM_PAGE_WIDTH;
-//     }
-
-//     @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-//         .c-card-list__item {
-//             width: 50%;
-//         }
-//     }
-// }
-
-// %c-card-section--show {
-//     .c-card-list__item {
-//         @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT - 1) {
-//             width: 50%;
-
-//             //Single column layout overwritten
-//             //Second to last card needs margin removed
-//             &:nth-last-child(2) {
-//                 margin-bottom: 0;
-//             }
-
-//             &:nth-child(odd) {
-//                 padding-right: 10px;
-//             }
-
-//             &:nth-child(even) {
-//                 padding-left: 10px;
-//             }
-//         }
-//     }
-
-//     & + .c-card-section--show {
-//         // Reduces distance between two show sections to 20px
-//         margin-top: -20px;
-
-//         @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-//             margin-top: -30px;
-//         }
-//     }
-// }
