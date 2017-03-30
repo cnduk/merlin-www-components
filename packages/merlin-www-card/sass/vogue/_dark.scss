@@ -37,13 +37,12 @@
 
         .c-card__separator {}
 
-        .c-card__byline--sponsorship {
-            .c-card__byline-prefix {
-                color: #888;
-            }
-            .c-card__byline-name {
-                color: #bdbdbd;
-            }
+        .c-card__byline-prefix {
+            color: #888;
+        }
+
+        .c-card__byline-name {
+            color: #bdbdbd;
         }
 
         // Need to be specific to overwrite global__list-reset
