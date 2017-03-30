@@ -365,3 +365,25 @@
         }
     }
 }
+
+.c-card-list--v-related-articles {
+    margin: 0 -20px;
+
+    .c-card-list__item {
+        padding: 0 20px;
+        width: 100%;
+    }
+
+    .c-card-list__item + .c-card-list__item {
+        margin-top: 20px;
+
+        .c-card {
+            border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+            padding-top: 20px;
+
+            &.c-card--dark {
+                border-top: 1px solid $COLOR_MAIN_SECONDARY;
+            }
+        }
+    }
+}

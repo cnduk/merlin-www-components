@@ -101,8 +101,8 @@
 }
 .c-card-section--mag-articles {}
 .c-card-section--s-results {}
-.c-card-section--v-genre-articles {}
 
+.c-card-section--v-related-articles,
 .c-card-section--video {
     background-color: $COLOUR_BG_DARK;
     max-width: none;
@@ -128,9 +128,41 @@
         }
     }
 
+    .c-card-section__title {
+        @include font('NOBEL', 15px);
+        color: #fff;
+        margin-bottom: $MARGIN_MEDIUM;
+        margin-top: 0;
+        padding-bottom: 10px;
+        position: relative;
+        text-align: left;
+        text-transform: uppercase;
+    }
 }
 
 .c-card-section--sh-latest-articles {}
+
+.c-card-section--v-genre-articles {
+    .c-card-section__title {
+        @include font('NOBEL', 15px);
+        margin-bottom: $MARGIN_MEDIUM;
+        margin-top: 0;
+        padding-bottom: 10px;
+        position: relative;
+        text-align: left;
+        text-transform: uppercase;
+
+        &:after {
+            @include dotted-line($COLOR_BORDER_DOTTED, 1px, 3px);
+            content: '';
+            height: 1px;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 100%;
+        }
+    }
+}
 
 .c-card-section--a-recommended,
 .c-card-section--g-recommended {
@@ -174,6 +206,7 @@
 .c-card-section--c-magazine-articles {}
 .c-card-section--mag-magazines {}
 .c-card-section--sh-shows {}
+
 
 .c-card-section--v-articles,
 .c-card-section--tg-articles {
