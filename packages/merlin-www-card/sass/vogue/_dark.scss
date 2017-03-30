@@ -10,7 +10,8 @@
     &.c-card--portrait,
     &.c-card--switcher,
     &.c-card--inline,
-    &.c-card--thumbnail {
+    &.c-card--thumbnail,
+    &.c-card--v-related {
 
         .c-card__tag {
             color: $COLOR_MAIN_INACTIVE;
