@@ -377,12 +377,20 @@
     .c-card-list__item + .c-card-list__item {
         margin-top: 20px;
 
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-top: 12px;
+        }
+
         .c-card {
-            border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+            border-top: 1px solid #444;
             padding-top: 20px;
 
+            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+                padding-top: 12px;
+            }
+
             &.c-card--dark {
-                border-top: 1px solid $COLOR_MAIN_SECONDARY;
+                border-top: 1px solid #444;
             }
         }
     }
