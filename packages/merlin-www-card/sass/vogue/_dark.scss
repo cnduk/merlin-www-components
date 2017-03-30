@@ -42,14 +42,14 @@
                 color: #888;
             }
             .c-card__byline-name {
-                color: $COLOR_MAIN_INACTIVE;
+                color: #bdbdbd;
             }
         }
 
         // Need to be specific to overwrite global__list-reset
         li.c-card__meta-item {
             & + li.c-card__meta-item {
-                border-left: 1px solid $COLOR_MAIN_SECONDARY;
+                border-left: 1px solid #444;
             }
 
             color: $COLOR_TYPE_META;

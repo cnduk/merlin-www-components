@@ -17,9 +17,10 @@
 @mixin card-v-related-small() {
     .c-card__obj__header {
         padding-right: 10px;
-        width: 33.33%;
+        width: 50%;
     }
     .c-card__obj__body {
+        padding-left: 10px;
         width: auto;
     }
 
@@ -29,18 +30,7 @@
         }
 
         .c-card__image__icon {
-            bottom: 0;
-            height: 40px;
-            left: 0;
-            width: 40px;
-
-            svg {
-                display: block;
-                height: 100%;
-                margin: 0 auto;
-                vertical-align: middle;
-                width: 16px;
-            }
+            display: none;
         }
     }
 
@@ -53,24 +43,65 @@
     }
 
     .c-card__title {
-        margin-bottom: 12px;
+        @include font("NOBEL", 14px, null, 18px, 25);
+        margin-bottom: 8px;
     }
 }
 
-// @mixin card-v-related-large() {}
+@mixin card-v-related-large($has_small:false) {
+    .c-card__obj__header {
+        padding-right: 12px;
+    }
+
+    .c-card__obj__body {
+        padding-left: 0px;
+    }
+
+    @if not $has_small {
+        .c-card__obj__header {
+            width: 50%;
+        }
+        .c-card__obj__body {
+            width: auto;
+        }
+
+        .c-card__images {
+            .c-card__image {
+                padding-top: 66.66666%;
+            }
+
+            .c-card__image__icon {
+                display: none;
+            }
+        }
+
+        .c-card__teaser {
+            display: none;
+        }
+
+        .c-card__separator {
+            display: none;
+        }
+
+        .c-card__title {
+            @include font("NOBEL", 14px, null, 18px, 25);
+            margin-bottom: 8px;
+        }
+    }
+}
 
 .c-card--v-related {
     @include card-v-related();
     @include card-v-related-small();
-    // @include min-screen(800px) {
-    //     @include card-v-related-large();
-    // }
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include card-v-related-large($has_small:true);
+    }
 }
 
 .c-card--v-related--small {
     @include card-v-related-small();
 }
 
-// .c-card--v-related--large {
-//     @include card-v-related-large();
-// }
+.c-card--v-related--large {
+    @include card-v-related-large();
+}
