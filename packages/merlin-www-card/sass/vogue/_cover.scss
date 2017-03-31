@@ -1,0 +1,58 @@
+// -------------------- //
+// Cover
+// -------------------- //
+@mixin card-cover() {}
+// @mixin card-cover-small() {}
+
+@mixin card-cover-large() {
+    .c-card__obj {}
+    .c-card__obj__header {
+        display: block;
+        padding: 0;
+        width: auto;
+    }
+    .c-card__images {
+        .c-card__image {
+            padding-top: 150%;
+        }
+    }
+
+    .c-card__obj__body {
+        display: block;
+        padding: 0;
+        padding-top: 20px;
+        width: 100%;
+    }
+
+    .c-card__teaser {
+        display: none;
+    }
+
+    .c-card__separator {
+        display: none;
+    }
+
+    .c-card__tag {
+        margin-bottom: 8px;
+    }
+
+    .c-card__title {
+        margin-bottom: 15px;
+    }
+}
+
+.c-card--cover {
+    @include card-cover();
+    // @include card-cover-small();
+    // @include min-screen(800px) {
+        @include card-cover-large();
+    // }
+}
+
+// .c-card--cover--small {
+//     @include card-cover-small();
+// }
+
+// .c-card--cover--large {
+//     @include card-cover-large();
+// }
