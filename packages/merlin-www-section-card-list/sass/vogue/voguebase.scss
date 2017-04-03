@@ -1,3 +1,4 @@
+    }
 @import "@cnbritain/merlin-www-topic-strip:vogue";
 @import "@cnbritain/merlin-www-buttons:vogue";
 @import "@cnbritain/merlin-www-card-list:vogue";
@@ -209,7 +210,10 @@
     padding-bottom: 0;
 
     & + .c-card-section--mag-magazines {
-        padding-top: 0;
+        padding-top: 20px;
+        @include two-column-size(){
+            padding-top: 30px;
+        }
     }
 
     &:last-of-type {
