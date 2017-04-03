@@ -1,4 +1,4 @@
-<figure class="global__fake-clear bb-figure">
+<figure class="global__fake-clear bb-figure {{# data.image.state.is_landscape }}bb-figure--landscape{{/ data.image.state.is_landscape }}{{# data.image.state.is_portrait }}bb-figure--portrait{{/ data.image.state.is_portrait }}{{# data.image.state.is_square }}bb-figure--square{{/ data.image.state.is_square }}">
     <div class="bb-figure__wrapper">
         {{# data.image }}
             {{> @cnbritain/merlin-www-image}}

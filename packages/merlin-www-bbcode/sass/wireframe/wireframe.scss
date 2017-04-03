@@ -51,9 +51,21 @@
 .bb-figure__wrapper {
     position: relative;
 }
-.bb-figure--landscape {}
-.bb-figure--portrait {}
-.bb-figure--square {}
+.bb-figure--landscape {
+    .bb-figure__wrapper {
+        padding-top: 66.66666666667%;
+    }
+}
+.bb-figure--portrait {
+    .bb-figure__wrapper {
+        padding-top: 150%;
+    }
+}
+.bb-figure--square {
+    .bb-figure__wrapper {
+        padding-top: 100%;
+    }
+}
 .bb-figure--unknown {}
 .bb-figure--landscape,
 .bb-figure--portrait,
