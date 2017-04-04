@@ -206,25 +206,6 @@
     }
 }
 
-.c-card-section--mag-magazines {
-    padding-bottom: 0;
-
-    & + .c-card-section--mag-magazines {
-        padding-top: 20px;
-        @include two-column-size(){
-            padding-top: 30px;
-        }
-    }
-
-    &:last-of-type {
-        padding-bottom: $PADDING_LARGE;
-
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-            padding-bottom: $PADDING_X_LARGE;
-        }
-    }
-}
-
 .c-card-section--c-magazine-articles {}
 .c-card-section--sh-shows {}
 
