@@ -1,5 +1,5 @@
-<figure class="global__fake-clear bb-figure {{# data.image.state.is_landscape }}bb-figure--landscape{{/ data.image.state.is_landscape }}{{# data.image.state.is_portrait }}bb-figure--portrait{{/ data.image.state.is_portrait }}{{# data.image.state.is_square }}bb-figure--square{{/ data.image.state.is_square }}">
-    <div class="bb-figure__wrapper">
+<figure class="global__fake-clear bb-figure {{# data.image.style.padding_top }}bb-figure--custom{{/ data.image.style.padding_top }}">
+    <div class="bb-figure__wrapper" {{# data.image.style.padding_top }}style="padding-top:{{ data.image.style.padding_top }}"{{/ data.image.style.padding_top }}>
         {{# data.image }}
             {{> @cnbritain/merlin-www-image}}
         {{/ data.image }}
