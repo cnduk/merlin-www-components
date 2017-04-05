@@ -8,6 +8,7 @@ const webpack = require('webpack');
 const LOGGER = require('./logger');
 const { loadFile, promiseError } = require('./utils');
 
+const DYNAMIC_CONFIG_URL = /\{\{ DYNAMIC_CONFIG_URL \}\}/;
 const componentDir = fs.realpathSync(
     path.resolve(__dirname, '../node_modules'));
 
@@ -63,7 +64,20 @@ function getWebpackConfig(key, file){
                 'use': 'mustache-loader'
             }]
         },
-        'plugins': [],
+        'plugins': [
+            new webpack.NormalModuleReplacementPlugin(
+                DYNAMIC_CONFIG_URL,
+                function(ctx){
+                    var configKey = 'default';
+                    try {
+                        configKey = packageJson.cnOptions.brandConfig;
+                    } catch(err){}
+                    // Check if the value is undefined
+                    configKey = configKey === undefined ? 'default' : configKey;
+                    ctx.request = `./${configKey}`;
+                }
+            )
+        ],
         'output': {
             'filename': '[name].build.js'
         },
