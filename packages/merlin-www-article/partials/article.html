@@ -1,0 +1,68 @@
+<article class="a-main{{# state.is_sponsored }} is-sponsored{{/ state.is_sponsored }}{{# state.is_gallery }}{{^ state.has_body }} a-main--gallery{{/ state.has_body }}{{/ state.is_gallery }}" data-article-url="{{ data.article.data.url }}" data-article-type="{{ data.article.data.type }}" data-article-uid="{{ data.article.data.uid }}">
+    {{# data.article }}
+        {{> @cnbritain/merlin-www-article/article-header }}
+
+        {{# state.has_body }}
+            <div class="a-body stick-group">
+                <div class="a-body__wrapper">
+                    <aside class="a-author">
+                        {{# data.profiles }}
+                            {{# data.image }}
+                                <div class="a-author__image">
+                                    {{> @cnbritain/merlin-www-image }}
+                                </div>
+                            {{/ data.image }}
+                        {{/ data.profiles }}
+
+                        {{# data.byline }}
+                            <p class="a-author__byline">
+                                <span class="a-author__byline-prefix">By</span>
+                                <span class="a-author__byline-name">{{ &data.byline }}</span>
+                            </p>
+                        {{/ data.byline }}
+
+                        {{# data.profiles }}
+                            {{# data.teaser }}
+                                <hr class="a-author__separator a-author__separator--bio" />
+                                <p class="a-author__bio">{{ . }}</p>
+                                {{/ data.teaser }}
+                        {{/ data.profiles }}
+
+                        {{# data.date }}
+                            <hr class="a-author__separator a-author__separator--date">
+                            <div class="a-author__article-date">{{ data.label }}</div>
+                        {{/ data.date }}
+                    </aside>
+
+                    {{# data.review_information }}
+                        {{> @cnbritain/merlin-www-article-review }}
+                    {{/ data.review_information }}
+
+                    {{# data.podcast }}
+                        {{> @cnbritain/merlin-www-article-podcast }}
+                    {{/ data.podcast }}
+
+                    <div class='a-body__content'>
+                        {{ &data.body }}
+                        <div class="a-body__clear"></div>
+                    </div>
+
+                    {{# data.marketing_card }}
+                        {{> @cnbritain/merlin-www-marketing-cards }}
+                    {{/ data.marketing_card }}
+
+                </div>
+            </div>
+        {{/ state.has_body }}
+
+        {{# data.gallery }}
+            {{> @cnbritain/merlin-www-article/article-gallery }}
+        {{/ data.gallery }}
+
+        {{> @cnbritain/merlin-www-article/article-footer }}
+    {{/ data.article }}
+</article>
+
+{{# data.recommended }}
+    {{> @cnbritain/merlin-www-section-card-list }}
+{{/ data.recommended }}

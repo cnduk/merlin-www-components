@@ -1,0 +1,86 @@
+.a-logo {}
+.a-logo--video {}
+
+.a-video {
+    overflow: hidden;
+    position: relative;
+
+
+    &.has-sidebar {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            .a-video__player {
+                margin-right: 350px;
+            }
+        }
+    }
+}
+
+.a-video__wrapper {
+    box-sizing: border-box;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.a-video__player {}
+
+.a-video__player__wrapper {
+    padding-top: 56.25%;
+    position: relative;
+
+    iframe {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.a-video__sidebar {
+    bottom: 0;
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    right: 60px;
+    top: 0;
+    width: 350px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: block;
+    }
+}
+
+.a-video__sidebar__wrapper {}
+
+.a-video__sidebar__title {}
+
+.a-video__sidebar__list {
+    bottom: 0;
+    overflow-y: scroll;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 55px;
+}
+
+.a-video__related {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: none;
+    }
+}

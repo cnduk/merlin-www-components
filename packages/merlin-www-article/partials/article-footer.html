@@ -1,0 +1,35 @@
+{{! Style.com }}
+{{# data.config_style }}
+    <script type="application/json" class="{{ style.cls }}">
+        {{ &json }}
+    </script>
+{{/ data.config_style }}
+
+<footer class="a-footer{{# state.is_gallery }} a-footer--gallery{{/ state.is_gallery}}">
+    <div class="a-footer__wrapper">
+        {{# data.tags }}
+            <div class="a-related-tags">
+                <div class="a-related-tags__wrapper">
+                    {{> @cnbritain/merlin-www-topic-strip }}
+                </div>
+            </div>
+        {{/ data.tags }}
+
+        <div class="a-share">
+            <div class="a-share__wrapper">
+                <h4 class="a-share__title">Share this article</h4>
+                {{# data.share_list }}
+                    <ul class='global__list-reset a-share__list'>
+                        {{# data.items }}
+                            <li class='a-share__list-item {{ style.cls }}'>
+                                {{# data.item }}
+                                    {{> @cnbritain/merlin-www-image }}
+                                {{/ data.item }}
+                            </li>
+                        {{/ data.items }}
+                    </ul>
+                {{/ data.share_list }}
+            </div>
+        </div>
+    </div>
+</footer>

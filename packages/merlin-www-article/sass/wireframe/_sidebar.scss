@@ -1,0 +1,13 @@
+.a-sidebar-content {
+    clear: both;
+    display: none;
+    float: left;
+    margin-left: -($ARTICLE_LEFT_COLUMN_WIDTH + $ARTICLE_LEFT_COLUMN_MARGIN);
+    width: $ARTICLE_LEFT_COLUMN_WIDTH;
+
+    @include min-screen($ARTICLE_TOTAL) {
+        display: block;
+    }
+}
+
+.a-sidebar-content__title {}

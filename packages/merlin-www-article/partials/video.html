@@ -1,0 +1,28 @@
+<article class="a-main{{# state.is_sponsored }} is-sponsored{{/ state.is_sponsored }}{{# state.is_video }} a-main--video{{/ state.is_video }}" data-url="">
+    {{# data.video }}
+        {{> @cnbritain/merlin-www-article/video-player }}
+    {{/ data.video }}
+
+    {{> @cnbritain/merlin-www-article/video-header }}
+
+    {{# state.has_body }}
+        <div class="a-body a-body--video stick-group">
+            <div class="a-body__wrapper">
+                <div class='a-body__content'>
+                    {{ &data.body }}
+                    <div class="a-body__clear"></div>
+                </div>
+            </div>
+        </div>
+    {{/ state.has_body }}
+
+    {{> @cnbritain/merlin-www-article/video-footer }}
+
+    {{# data.video }}
+        {{# data.play_list }}
+            <aside class="a-video__related">
+                {{> @cnbritain/merlin-www-section-card-list }}
+            </aside>
+        {{/ data.play_list}}
+    {{/ data.video }}
+</article>

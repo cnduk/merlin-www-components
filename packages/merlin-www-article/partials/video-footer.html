@@ -1,0 +1,18 @@
+{{! Style.com }}
+{{# data.config_style }}
+    <script type="application/json" class="{{ style.cls }}">
+        {{ &json }}
+    </script>
+{{/ data.config_style }}
+
+<footer class="a-footer a-footer--video">
+    <div class="a-footer__wrapper">
+        {{# data.tags }}
+            <div class="a-related-tags">
+                <div class="a-related-tags__wrapper">
+                    {{> @cnbritain/merlin-www-topic-strip }}
+                </div>
+            </div>
+        {{/ data.tags }}
+    </div>
+</footer>

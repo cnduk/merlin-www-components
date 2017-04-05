@@ -1,0 +1,65 @@
+<header class="a-header a-header--video">
+    <div class="a-header__wrapper">
+        <div class="a-header__content">
+            {{# data.title }}
+                <h1 class="a-header__title">{{ data.title }}</h1>
+            {{/ data.title }}
+
+            <div class="a-header__about">
+                {{# data.byline }}
+                    <p class="a-header__byline">
+                        <span class="a-header__byline-prefix">By</span>
+                        <span class="a-header__byline-name">{{ &data.byline }}</span>
+                    </p>
+                {{/ data.byline }}
+            </div>
+
+            {{# data.sponsor }}
+                {{# data.link }}
+                    <div class="a-header__sponsor">
+                        <span class='a-header__sponsor-prefix'>In partnership with</span>
+                        <a class='a-header__sponsor-name' href="{{ &data.url }}">{{ data.title }}</a>
+                    </div>
+                {{/ data.link }}
+            {{/ data.sponsor }}
+
+            {{# data.meta_list }}
+                <ul class="global__list-reset a-header__meta {{ style.cls }}">
+                    {{# data.items }}
+                        <li class="a-header__meta-item {{ style.cls }} a-header__meta-item--{{ data.item.data.meta_type  }}">
+                            {{# data.item }}
+                                {{# data.link }}
+                                    <a href=" {{ data.url }}" class="{{ style.cls }}">{{ data.title }}</a>
+                                {{/ data.link }}
+                                {{^ data.link }}
+                                    <span class="{{ style.cls }}">{{ data.title }}</span>
+                                {{/ data.link }}
+                            {{/ data.item }}
+                        </li>
+                    {{/ data.items }}
+                </ul>
+            {{/ data.meta_list }}
+
+            {{! Style.com }}
+            {{# data.config_style }}
+                <script type="application/json" class="{{ style.cls }}">
+                    {{ &json }}
+                </script>
+            {{/ data.config_style }}
+
+            <div class="a-share">
+                {{# data.share_list }}
+                    <ul class='global__list-reset a-share__list'>
+                        {{# data.items }}
+                            <li class='a-share__list-item {{ style.cls }}'>
+                                {{# data.item }}
+                                    {{> @cnbritain/merlin-www-image }}
+                                {{/ data.item }}
+                            </li>
+                        {{/ data.items }}
+                    </ul>
+                {{/ data.share_list }}
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,118 @@
+.a-main {
+    min-height: 600px; //600px as a double sky might be in the article
+    position: relative;
+}
+
+.a-main--gallery {}
+.a-main--video {}
+
+.a-body {
+    box-sizing: border-box;
+    margin-top: $MOBILE_SLICE_MARGIN - 10;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+    width: 100%;
+
+    @include common-medium-size() {
+        margin-top: $TABLET_SLICE_MARGIN - 20;
+        margin-bottom: $TABLET_SLICE_MARGIN;
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include common-large-size() {
+        margin-top: $DESKTOP_SLICE_MARGIN - 20;
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
+}
+.a-body--gallery {}
+.a-body--video {
+    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    margin: 0 auto;
+    padding: 0;
+
+    .a-body__wrapper {
+        max-width: none;
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
+
+        @include common-medium-size() {
+            padding-left: $TABLET_SIDE_GUTTER;
+            padding-right: $TABLET_SIDE_GUTTER;
+        }
+
+        @include common-large-size() {
+            padding-left: $DESKTOP_SIDE_GUTTER;
+            padding-right: $DESKTOP_SIDE_GUTTER;
+        }
+    }
+
+    .a-body__content {
+        margin: 0;
+        max-width: none;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            padding-right: 360px;
+        }
+
+        @include min-screen($ARTICLE_TOTAL) {
+            padding-left: 60px;
+        }
+    }
+}
+.a-body__clear {
+    clear: both;
+}
+
+.a-body__wrapper {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: $ARTICLE_TOTAL;
+    position: relative;
+    width: 100%;
+    word-wrap: break-word;
+
+    @include common-large-size(){
+        padding: 0 $ARTICLE_RIGHT_TOTAL 0 0;
+    }
+
+    @include article-large-size(){
+        padding: 0 $ARTICLE_RIGHT_TOTAL 0 $ARTICLE_LEFT_TOTAL;
+    }
+}
+
+.a-body__content {}
+
+.a-infinite {
+    &.is-closed {
+        /**
+         * This we want to hide:
+         *  - .g-gallery-menu
+         *  - everything but first 3 images in gallery
+         *  - share
+         *
+         * We force things to hide to avoid images from being loaded
+         */
+        .g-image-nav,
+        .a-gallery__view--list .a-gallery__image-listitem:nth-of-type( n + 4 ),
+        // .a-gallery__section .g-ad:nth-of-type( n + 1 ),
+        .a-footer,
+        .c-card-section--g-recommended {
+            display: none;
+        }
+
+        .a-infinite__message {
+            display: block;
+        }
+    }
+}
+
+.a-infinite__message {
+    display: none;
+    text-align: center;
+}
+
+.a-infinite__message-btn {}

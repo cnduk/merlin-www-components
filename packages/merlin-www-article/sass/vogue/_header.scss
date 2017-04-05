@@ -1,0 +1,255 @@
+.a-header {}
+.a-header--gallery {}
+
+.a-header--video {}
+
+.a-header__wrapper {}
+
+.a-header__content {}
+
+.a-header__title {
+    @include line-height(36px);
+    margin: $MARGIN_X_SMALL 0;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include line-height(54px)
+        margin: $MARGIN_SMALL 0;
+    }
+}
+
+.a-header__teaser {
+    @include font('ADOBE CASLON', 16px, 'NORMAL', 20px);
+    color: $COLOR_TYPE_META;
+    margin: $MARGIN_X_SMALL 0;
+    word-break: break-word;
+
+    a {
+        color: $COLOR_TYPE_META;
+        @include secondary-links(true);
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(18px);
+        @include line-height(25px);
+    }
+}
+
+.a-header__separator {
+    @include dotted-line($COLOR_BORDER_DOTTED, 1px, 3px);
+    border: none;
+    height: 1px;
+    margin: 25px 0 $MARGIN_SMALL 0;
+}
+
+.a-header__about {}
+
+.a-header__byline {
+    margin-bottom: $MARGIN_XXX_SMALL;
+    a {
+        color: inherit;
+    }
+}
+
+.a-header__byline-name {
+    @include font('NOBEL', 10px);
+    color: #111;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.a-header__byline-prefix,
+.a-header__byline-conjunction {
+    color: $COLOR_MAIN_TERTIARY;
+    @include font('ADOBE CASLON', 12px);
+    font-style: italic;
+    text-transform: lowercase;
+}
+
+.a-header__date {
+    @include font('NOBEL', 10px);
+    color: $COLOR_TYPE_META;
+    letter-spacing: 0.025em;
+}
+
+.a-header__image {
+    padding-top: $PADDING_LARGE;
+}
+.a-header__image-constrain {
+    margin-bottom: $MARGIN_X_SMALL;
+}
+.a-header__image-constrain--landscape,
+.a-header__image-constrain--portrait,
+.a-header__image-constrain--square {}
+.a-header__image-constrain--landscape {}
+.a-header__image-constrain--portrait {}
+.a-header__image-constrain--square {}
+
+.a-header__image-title,
+.a-header__image-caption,
+.a-header__image-credit {
+    margin: 0 0 8px 0;
+}
+
+.a-header__image-title {
+    color: $COLOR_MAIN_PRIMARY;
+    @include font('ADOBE CASLON', 15px, 700, 20px);
+}
+
+.a-header__image-caption {
+    color: $COLOR_MAIN_TERTIARY;
+    @include font('ADOBE CASLON', 13px, null, 18px);
+}
+
+.a-header__image-credit {
+    &:before {
+        content: 'Credit: ';
+    }
+
+    color: $COLOR_MAIN_INACTIVE;
+    @include font('NOBEL', 9px);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.a-header__separator--hero {
+    background: none;
+    border-bottom: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+    margin: $MARGIN_X_SMALL $MOBILE_SIDE_GUTTER 0 $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.a-header__meta {
+    color: $COLOR_TYPE_META;
+    @include font('NOBEL', 10px);
+}
+.a-header__meta--date {
+    letter-spacing: 0.025em;
+}
+.a-header__meta--tag {}
+.a-header__meta-item {}
+
+.a-header__tag {
+    @include font('NOBEL', 11px);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 0 $MARGIN_X_SMALL 0;
+    text-transform: uppercase;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(12px);
+    }
+
+    a {
+        padding-right: 10px;
+    }
+
+    a + a {
+        border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+        padding-left: 10px;
+    }
+}
+
+// Force primary tag to be certain colour
+// even on miss vogue sub brand page
+// cannot use variable for highlight as overwritten
+.a-header__tag__primary {
+    color: #C00000;
+}
+
+// Only sub brands have a secondary tag
+.a-header__tag__secondary {
+    color: #08AEE6;
+}
+
+.a-header__separator--sponsor {
+    @include dotted-line($COLOR_BORDER_SOLID_ACCENT2, 1px, 1px);
+    height: 1px;
+    margin: 0 0 8px 0;
+    width: 45px;
+}
+
+.a-main.is-sponsored {}
+
+.a-header__sponsor {
+    margin: $MARGIN_X_SMALL 0 0 0;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: $MARGIN_SMALL 0;
+    }
+
+    &::after {
+        content: '';
+        @include dotted-line($COLOR_BORDER_DOTTED, 1px, 3px);
+        border: none;
+        display: none;
+        height: 1px;
+        margin: $MARGIN_MEDIUM 0 $MARGIN_SMALL 0;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            display: block;
+        }
+    }
+}
+
+.a-header__sponsor-prefix {
+    @include font('ADOBE CASLON', 11px, null, 14px);
+    color: $COLOR_MAIN_TERTIARY;
+    font-style: italic;
+    text-transform: lowercase;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font('ADOBE CASLON', 12px, null, 15px);
+    }
+}
+
+.a-header__sponsor-name {
+    @include font('NOBEL', 10px, null, 14px);
+    color: $COLOR_MAIN_PRIMARY;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font('NOBEL', 11px, null, 15px);
+    }
+}
+
+.a-header__sponsor-image {
+    height: 50px;
+    margin-top: $MARGIN_XX_SMALL;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: $MARGIN_XXX_SMALL;
+        margin-top: 0;
+    }
+}
+
+.a-header__meta {
+    @include c-card-meta;
+}
+
+.a-header__meta-item {
+    &:not(:last-child) {
+        padding-right: 8px;
+    }
+
+    & + .a-header__meta-item {
+        border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+        padding-left: 8px;
+    }
+
+    &--tag {
+        @include c-card-meta-tag;
+    }
+}
+
+.a-header__event {}
+.a-header__event-title {}
+.a-header__event-location {}
+.a-header__event-date {}
+.a-header__event-btn {}

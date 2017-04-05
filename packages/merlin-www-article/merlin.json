@@ -1,0 +1,57 @@
+{
+    "name": "@cnbritain/merlin-www-article",
+    "description": "Article header, footer, share, content. Includes video too.",
+    "main": "article",
+    "currentTheme": null,
+    "data": {
+        "article-gallery": "data/article-gallery.json",
+        "article-article": "data/article-article.json"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "missvogue": "sass/missvogue/missvogue.scss"
+    },
+    "partials": {
+        "article": "partials/article.html",
+        "article-header": "partials/article-header.html",
+        "article-footer": "partials/article-footer.html",
+        "article-gallery": "partials/article-gallery.html",
+        "video": "partials/video.html",
+        "video-header": "partials/video-header.html",
+        "video-footer": "partials/video-footer.html",
+        "video-player": "partials/video-player.html"
+    },
+    "js": {
+        "demo": "demo/demo.js"
+    },
+    "demo": {
+        "article-gallery": {
+            "data": "article-gallery",
+            "main": "article",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        },
+        "article-article": {
+            "data": "article-article",
+            "main": "article",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        }
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-article-podcast",
+        "@cnbritain/merlin-www-article-review",
+        "@cnbritain/merlin-www-figure",
+        "@cnbritain/merlin-www-image",
+        "@cnbritain/merlin-www-marketing-cards",
+        "@cnbritain/merlin-www-section-card-list",
+        "@cnbritain/merlin-www-topic-strip"
+    ]
+}

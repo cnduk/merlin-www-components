@@ -1,0 +1,34 @@
+.a-author,
+.a-event-author {
+    display: none;
+    clear: left;
+    float: left;
+    margin-left: -($ARTICLE_LEFT_COLUMN_WIDTH+$ARTICLE_LEFT_COLUMN_MARGIN);
+    width: $ARTICLE_LEFT_COLUMN_WIDTH;
+
+    @include min-screen($ARTICLE_TOTAL){
+        display: block;
+    }
+}
+
+.a-author__article-date {}
+
+.a-author__bio {}
+
+.a-author__byline {}
+.a-author__byline--photographer {
+    .a-author__byline-prefix {
+        display: block;
+    }
+}
+.a-author__byline-name {}
+.a-author__byline-prefix,
+.a-author__byline-conjunction {}
+
+.a-author__image,
+.a-event-author__image {}
+
+.a-author__separator,
+.a-event-author__separator {}
+
+.a-author__separator--date {}

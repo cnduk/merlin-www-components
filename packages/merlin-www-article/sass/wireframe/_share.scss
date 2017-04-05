@@ -1,0 +1,14 @@
+.a-share {}
+.a-share__wrapper {}
+
+.a-share__title {}
+
+.a-share__list {}
+
+.a-share__list-item {}
+
+.a-share__list-item--mobile {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        display: none;
+    }
+}

@@ -1,0 +1,117 @@
+<header class="a-header{{# state.is_gallery }}{{^ state.has_body }} a-header--gallery{{/ state.has_body }}{{/ state.is_gallery }}">
+    <div class="a-header__wrapper">
+        <div class="a-header__content">
+            {{# data.primary_tag }}
+                <div class="a-header__tag">
+                    <a href="{{ &data.url }}" target="_blank" class="a-header__tag__primary">{{ data.title }}</a>
+                </div>
+            {{/ data.primary_tag }}
+
+            {{# data.title }}
+                <h1 class="a-header__title">{{ data.title }}</h1>
+            {{/ data.title }}
+
+            {{# data.teaser }}
+                <p class="a-header__teaser">{{ &data.teaser }}</p>
+            {{/ data.teaser }}
+
+            <hr class="a-header__separator" />
+
+            <div class="a-header__about">
+                {{# data.byline }}
+                    <p class="a-header__byline">
+                        <span class="a-header__byline-prefix">By</span>
+                        <span class="a-header__byline-name">{{ &data.byline }}</span>
+                    </p>
+                {{/ data.byline }}
+
+                {{# data.date }}
+                    <div class="a-header__date">{{ data.relative_time }}</div>
+                {{/ data.date }}
+            </div>
+
+            {{# data.sponsor }}
+                {{# data.link }}
+                    <div class="a-header__sponsor">
+                        <span class='a-header__sponsor-prefix'>In partnership with</span>
+                        <a class='a-header__sponsor-name' href="{{ &data.url }}">{{ data.title }}</a>
+                    </div>
+                {{/ data.link }}
+            {{/ data.sponsor }}
+
+            {{! Style.com }}
+            {{# data.config_style }}
+                <script type="application/json" class="{{ style.cls }}">
+                    {{ &json }}
+                </script>
+            {{/ data.config_style }}
+
+            <div class="a-share">
+                {{# data.share_list }}
+                    <ul class='global__list-reset a-share__list'>
+                        {{# data.items }}
+                            <li class='a-share__list-item {{ style.cls }}'>
+                                {{# data.item }}
+                                    {{> @cnbritain/merlin-www-image }}
+                                {{/ data.item }}
+                            </li>
+                        {{/ data.items }}
+                    </ul>
+                {{/ data.share_list }}
+            </div>
+
+            {{# data.event_information }}
+                <div class='a-header__event'>
+                    <hr class='a-header__separator'>
+                    {{# data.title }}
+                        <div class='a-header__event-title'>{{ . }}</div>
+                    {{/ data.title }}
+
+                    {{# data.location }}
+                        <div class='a-header__event-location'>{{ . }}</div>
+                    {{/ data.location }}
+
+                    {{# data.date_range_html }}
+                        <div class='a-header__event-date'>
+                            {{ &. }}
+                        </div>
+                    {{/ data.date_range_html }}
+
+                    {{# data.ticket_link }}
+                        <a href="{{ &data.url }}" class='a-header__event-btn {{ style.cls }}'>{{ data.title }}</a>
+                    {{/ data.ticket_link }}
+                </div>
+            {{/ data.event_information }}
+
+        </div>
+    </div>
+
+    {{# data.image_list }}
+        {{# data.items }}
+            <figure class="a-header__image">
+                <div class="a-header__image-constrain {{ style.cls }}">
+                    {{# data.item }}
+                        {{> @cnbritain/merlin-www-image }}
+                    {{/ data.item }}
+                </div>
+                {{# data.item }}
+                    {{# data.title }}
+                        <div class="a-header__image-title">{{ data.title }}</div>
+                    {{/ data.title }}
+
+                    {{# data.description }}
+                        <figcaption class="a-header__image-caption">
+                            {{ data.description }}
+                        </figcaption>
+                    {{/ data.description }}
+
+                    {{# data.credit }}
+                        <div class="a-header__image-credit">
+                            {{ data.credit }}
+                        </div>
+                    {{/ data.credit }}
+                {{/ data.item }}
+            </figure>
+        {{/ data.items }}
+    {{/ data.image_list }}
+</header>

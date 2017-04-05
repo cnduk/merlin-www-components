@@ -1,0 +1,177 @@
+.a-gallery {
+    box-sizing: border-box;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.a-gallery__wrapper {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    position: relative;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-right: $ARTICLE_RIGHT_TOTAL;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.a-gallery__thumbnail-list {
+    overflow: hidden;
+}
+
+li.a-gallery__thumbnail {
+    cursor: pointer;
+    float: left;
+    position: relative;
+    width: 33.3333333333%;
+}
+.a-gallery__thumbnail-image {
+    img {
+        overflow: hidden;
+        vertical-align: top;
+        width: 100%;
+    }
+}
+
+.a-gallery__thumbnail-hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    @include vendor-prefix('transition', opacity 200ms ease-in-out);
+    width: 100%;
+
+    svg {
+        display: block;
+        height: 100%;
+        margin: 0 auto;
+        width: 25%;
+
+        path {
+            fill: #fff;
+        }
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.a-gallery__view {
+    &.is-hidden {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+li.a-gallery__image-listitem {
+    position: relative;
+}
+
+.c-figure__container {
+    position: relative;
+
+    @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT - 1) {
+        margin-left: -$MOBILE_SIDE_GUTTER;
+        margin-right: -$MOBILE_SIDE_GUTTER;
+    }
+}
+
+
+
+
+
+
+
+
+
+.g-image-nav {
+    display: none;
+    position: absolute;
+    @include vendor-prefix('transform', translateX(-100%));
+    width: 30px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        display: block;
+    }
+
+    &.is-hidden {
+        display: none;
+    }
+
+}
+
+.g-image-nav__btns {}
+.g-image-nav__btn {
+    @include vendor-prefix('transition', all 100ms ease-in-out);
+
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    width: 30px;
+
+    svg {
+        display: block;
+        fill: #000;
+        height: 100%;
+        margin: 0 auto;
+        width: 20px;
+    }
+}
+.g-image-nav__btn--previous {}
+.g-image-nav__btn--next {}
+.g-image-nav__btn[disabled] {
+    cursor: default;
+}

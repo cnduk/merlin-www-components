@@ -1,0 +1,135 @@
+.a-gallery {
+    margin: 30px auto;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+}
+
+.a-gallery__wrapper {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.a-gallery__thumbnail-list {
+    margin-left: 0px;
+    margin-right: 0px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+}
+li.a-gallery__thumbnail {
+    box-sizing: border-box;
+    margin: 2px 0 0 0;
+    padding: 0 1px;
+
+    &:nth-child(-n+3){
+        margin-top: 0;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin: 20px 0 0 0;
+        padding: 0 10px;
+    }
+}
+.a-gallery__thumbnail-image {
+    background-color: $COLOUR_BG_ADVERT;
+}
+.a-gallery__thumbnail-hover {
+    background-color: rgba(0, 0, 0, 0.38);
+    left: 1px;
+    right: 1px;
+    width: auto;
+
+    svg {
+        fill: #fff;
+        width: 30px;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        left: 10px;
+        right: 10px;
+
+        svg {
+            width: 40px;
+        }
+    }
+}
+
+
+
+
+
+
+
+li.a-gallery__image-listitem {
+    margin-bottom: $MARGIN_LARGE;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+        margin-bottom: $MARGIN_X_LARGE;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.c-figure__container {
+    margin-bottom: $MARGIN_SMALL;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: $MARGIN_MEDIUM;
+    }
+}
+
+
+
+
+
+
+
+
+
+.g-image-nav {
+    padding: $PADDING_SMALL $PADDING_X_SMALL;
+}
+
+.g-image-nav__btns {}
+.g-image-nav__btn {
+    background-color: $COLOUR_BG_PAGE;
+}
+.g-image-nav__btn--previous {
+    padding-bottom: $PADDING_SMALL;
+}
+.g-image-nav__btn--next {
+    border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT1;
+    padding-top: $PADDING_SMALL;
+}
+.g-image-nav__btn[disabled] {
+    svg {
+        fill: $COLOR_BUTTON_ACTION_INACTIVE;
+    }
+}
