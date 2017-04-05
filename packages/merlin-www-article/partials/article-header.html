@@ -110,6 +110,18 @@
                             {{ data.credit }}
                         </div>
                     {{/ data.credit }}
+
+                    {{! Does this make me a bad person? }}
+                    {{# data.title }}
+                        <hr class="a-header__separator a-header__separator--hero" />
+                    {{/ data.title }}
+                    {{^ data.title }}{{# data.description }}
+                        <hr class="a-header__separator a-header__separator--hero" />
+                    {{/ data.description }}{{/ data.title }}
+                    {{^ data.title }}{{^ data.description }}{{# data.credit }}
+                        <hr class="a-header__separator a-header__separator--hero" />
+                    {{/ data.credit }}{{/ data.description }}{{/ data.title }}
+
                 {{/ data.item }}
             </figure>
         {{/ data.items }}
