@@ -7,4 +7,4 @@ img.init();
 export { default as ArticleManager } from './ArticleManager';
 export { default as Article } from './Article';
 export { default as Gallery } from './Gallery';
-export { default as GalleryimageNavigation } from './GalleryimageNavigation';
+export { default as GalleryImageNavigation } from './GalleryImageNavigation';
