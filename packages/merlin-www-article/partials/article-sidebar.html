@@ -1,0 +1,16 @@
+<aside class="a-sidebar-content">
+    {{# data.title }}
+        <h4 class="a-sidebar-content__title">{{ . }}</h4>
+    {{/ data.title }}
+    {{# data.card_list }}
+        <ul class="global__list-reset a-sidebar-content__list">
+            {{# data.items }}
+                <li class="a-sidebar-content__list-item">
+                    {{# data.item }}
+                        {{> @cnbritain/merlin-www-card }}
+                    {{/ data.item }}
+                </li>
+            {{/ data.items }}
+        </ul>
+    {{/ data.card_list }}
+</aside>

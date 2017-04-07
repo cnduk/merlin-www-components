@@ -20,7 +20,8 @@
         "video": "partials/video.html",
         "video-header": "partials/video-header.html",
         "video-footer": "partials/video-footer.html",
-        "video-player": "partials/video-player.html"
+        "video-player": "partials/video-player.html",
+        "article-sidebar": "partials/article-sidebar.html"
     },
     "js": {
         "demo": "demo/demo.js"
@@ -52,6 +53,7 @@
         "@cnbritain/merlin-www-image",
         "@cnbritain/merlin-www-marketing-cards",
         "@cnbritain/merlin-www-section-card-list",
-        "@cnbritain/merlin-www-topic-strip"
+        "@cnbritain/merlin-www-topic-strip",
+        "@cnbritain/merlin-www-card"
     ]
 }
