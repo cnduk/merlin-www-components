@@ -205,6 +205,12 @@
     }
 }
 
+.c-card-section--mag-magazines {
+    .c-card-section__constrain {
+        max-width: $MAXIMUM_PAGE_WIDTH;
+    }
+}
+
 .c-card-section--c-magazine-articles {}
 .c-card-section--sh-shows {}
 
