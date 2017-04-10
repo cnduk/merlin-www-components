@@ -68,7 +68,40 @@
 }
 .c-card-list--mag-magazines {}
 .c-card-list--sh-shows {}
-.c-card-list--tg-articles {}
+
+.c-card-list--tg-articles {
+	margin: 0 -10px;
+
+    .c-card-list__item {
+		display: inline-block;
+	    padding: 0 10px;
+	    width: 100%;
+        margin-top: 20px;
+
+        .c-card {
+            border-top: 1px solid $bon-jour;
+            padding-top: 20px;
+
+            &.c-card--dark {
+                border-top-color: $mineshaft;
+            }
+        }
+
+        @include first(1) {
+            margin-top: 0;
+
+            .c-card {
+                border-top: none;
+                padding-top: 0;
+
+                &.c-card--dark {
+                    border-top: none;
+                }
+            }
+        }
+    }
+}
+
 .c-card-list--sh-articles {}
 .c-card-list--v-articles {}
 .c-card-list--tg-header-articles {}
