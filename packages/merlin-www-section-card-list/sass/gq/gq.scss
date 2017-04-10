@@ -138,9 +138,11 @@
     	}
 	}
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-right: 340px;
-    }
+	.c-card-list {
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		    margin-right: 340px;
+		}
+	}
 }
 
 .c-card-section--sh-articles {}

@@ -9,22 +9,22 @@
 	background-color: $woodsmoke;
 	padding: 36px $MOBILE_SIDE_GUTTER 40px $MOBILE_SIDE_GUTTER;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-	    padding-left: $TABLET_SIDE_GUTTER;
-	    padding-right: $TABLET_SIDE_GUTTER;
-	}
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-	    padding-left: $DESKTOP_SIDE_GUTTER;
-	    padding-right: $DESKTOP_SIDE_GUTTER
-	}
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
 }
 
 .tg-header--video {}
 .tg-header--person {}
 
 .tg-header__wrapper {
-	max-width: $MAXIMUM_PAGE_WIDTH;
+	max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER*2;
 	margin: 0 auto;
 }
 
