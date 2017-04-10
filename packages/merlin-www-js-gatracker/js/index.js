@@ -64,6 +64,10 @@ function GATracker(id, _config){
         ga( this._name + ".linker:autoLink", _config.linker );
     }
 
+    if(_config && _config.optimizeId !== undefined){
+        ga(this._name + ".require", _config.optimizeId);
+    }
+
     /**
      * Add this tracker to the global tracking
      */
