@@ -22,7 +22,8 @@ function GATracker(id, _config){
      * a period at the end as we refer to it in all the GA events
      * @type {String}
      */
-    this._name = "TRACKER" + GATracker.TRACKERS.length;
+    this._name = (_config && _config.name !== undefined ?
+        _config.name : "TRACKER" + GATracker.TRACKERS.length);
 
     /**
      * The tracking id
