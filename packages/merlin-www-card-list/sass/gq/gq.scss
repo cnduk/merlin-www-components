@@ -26,6 +26,10 @@
 	        .c-card {
 	            border-top: 1px solid $bon-jour;
 	            padding-top: 20px;
+
+	            &.c-card--dark {
+	                border-top-color: $mineshaft;
+	            }
 	        }
 	    }
 	}
