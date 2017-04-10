@@ -21,13 +21,14 @@
 	}
 }
 
-.c-card-section--c-curated {}
 .c-card-section--a-recommended {}
 .c-card-section--mag-articles {}
 .c-card-section--s-results {}
 .c-card-section--v-genre-articles {}
 .c-card-section--c-video-articles {}
 .c-card-section--sh-latest-articles {}
+
+.c-card-section--c-curated,
 .c-card-section--c-tag {
 	.c-card-section__title {
 		@include font("GOTHAM", 14px, 700, 40px, 60)
