@@ -1,5 +1,14 @@
 @import "@cnbritain/merlin-www-common:gq";
-@import "@cnbritain/merlin-www-buttons:vogue";
+@import "@cnbritain/merlin-www-buttons:gq";
 // @import "@cnbritain/merlin-www-search-header:gq";
 
 @import "../wireframe/wireframe";
+
+.has-open-menu {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
