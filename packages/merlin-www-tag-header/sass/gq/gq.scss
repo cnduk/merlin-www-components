@@ -1,0 +1,75 @@
+@import "@cnbritain/merlin-www-common:gq";
+@import "@cnbritain/merlin-www-card-list:gq";
+@import "@cnbritain/merlin-www-image:gq";
+@import "@cnbritain/merlin-www-topic-strip:gq";
+
+@import "../wireframe/wireframe";
+
+.tg-header {
+	background-color: $woodsmoke;
+	padding: 36px $MOBILE_SIDE_GUTTER 40px $MOBILE_SIDE_GUTTER;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	    padding-left: $TABLET_SIDE_GUTTER;
+	    padding-right: $TABLET_SIDE_GUTTER;
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	    padding-left: $DESKTOP_SIDE_GUTTER;
+	    padding-right: $DESKTOP_SIDE_GUTTER
+	}
+}
+
+.tg-header--video {}
+.tg-header--person {}
+
+.tg-header__wrapper {
+	max-width: $MAXIMUM_PAGE_WIDTH;
+	margin: 0 auto;
+}
+
+.tg-header__intro {}
+.tg-header__intro__image {}
+
+.tg-header__intro__title {
+	@include font("GOTHAM", 24px, 700, 28px, 60);
+	color: $white;
+	margin: 0;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.tg-header__separator {
+	display: none;
+}
+
+.tg-header__intro__description {
+	@include font("GOTHAM", 14px, null, 20px, -40);
+	color: $oslo-gray;
+}
+
+.tg-header__topic-strip {
+	margin-top: 24px;
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		margin-top: 32px;
+	}
+
+	.c-topic-strip {
+		text-align: center;
+	}
+
+	.c-topic-strip__title {
+		color: $white;
+	}
+
+	.c-topic-strip__btn {
+	    @include button-group();
+	    @include button-group-dark();
+
+	    &:hover {
+	        @include button-group-dark-hover();
+	    }
+	}
+}
+
+.tg-header__cards {}
