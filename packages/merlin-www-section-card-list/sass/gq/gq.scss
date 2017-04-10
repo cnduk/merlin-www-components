@@ -45,6 +45,16 @@
     	margin: 0 auto 40px auto;
     	width: 190px;
 
+    	svg {
+    	    display: inline-block;
+    	    height: 100%;
+    	    width: 100%;
+
+    	    path {
+    	        fill: $white;
+    	    }
+    	}
+
     	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
     		height: 60px;
     		width: 228px;

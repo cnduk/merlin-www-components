@@ -1,0 +1,20 @@
+@import '@cnbritain/merlin-www-common:gq';
+
+.c-card--dark {
+    &.c-card--landscape,
+    &.c-card--portrait,
+    &.c-card--switcher {
+        .c-card__title,
+        .c-card__byline {
+            color: $white;
+        }
+
+        .c-card__image__icon {
+            background-color: $white;
+
+            path {
+                fill: $limed-oak;
+            }
+        }
+    }
+}
