@@ -18,11 +18,9 @@
 
     {{> @cnbritain/merlin-www-article/video-footer }}
 
-    {{# data.video }}
-        {{# data.play_list }}
-            <aside class="a-video__related">
-                {{> @cnbritain/merlin-www-section-card-list }}
-            </aside>
-        {{/ data.play_list}}
-    {{/ data.video }}
+    {{# data.video.data.play_list }}
+        <aside class="a-video__related">
+            {{> @cnbritain/merlin-www-section-card-list }}
+        </aside>
+    {{/ data.video.data.play_list }}
 </article>
