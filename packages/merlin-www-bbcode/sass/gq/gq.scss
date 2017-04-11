@@ -362,6 +362,8 @@
     color: #17191b;
     display: table-cell;
     padding-left: 16px;
+    padding-top: 12px;
+    padding-bottom: 8px;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(20px);
@@ -391,4 +393,66 @@
         @include font-size(24px);
         @include line-height(24px);
     }
+}
+
+// -------------------- //
+// Video
+// -------------------- //
+.bb-video {
+    position: relative;
+}
+
+.bb-video__icon {
+    border-right: 1px solid #deddde;
+    display: table-cell;
+    padding-right: 16px;
+    width: 16px;
+
+    svg {
+        fill: #96814b;
+    }
+}
+
+.bb-video__title {
+    @include font("GOTHAM", 16px, 700, 20px, -40);
+    color: #17191b;
+    display: table-cell;
+    padding-left: 16px;
+    padding-top: 12px;
+    padding-bottom: 8px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(20px);
+        @include line-height(24px);
+    }
+}
+
+.bb-video__wrapper {
+    margin-top: 20px;
+}
+
+.bb-video__image-icon {
+    @include vendor-prefix(transform, translate(-50%, -50%));
+    background-color: $mineshaft;
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 60px;
+    left: 50%;
+    padding: 22px;
+    position: absolute;
+    top: 50%;
+    width: 60px;
+
+    svg {
+        fill: #ffffff;
+    }
+}
+
+.bb-video__link {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0;
 }
