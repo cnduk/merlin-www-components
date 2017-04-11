@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-pagination",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Pagination fallback for pages that have infinite scroll",
   "main": "js/index.js",
   "scripts": {
@@ -9,8 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-www-buttons": "^1.0.14",
-    "@cnbritain/merlin-www-common": "^1.0.1"
+    "@cnbritain/merlin-www-buttons": "^1.0.15",
+    "@cnbritain/merlin-www-common": "^1.0.2"
   },
   "devDependencies": {
     "@cnbritain/merlin-component-demo-server": "^2.8.0"
