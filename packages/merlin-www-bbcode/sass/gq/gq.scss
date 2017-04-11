@@ -1,0 +1,172 @@
+@import "@cnbritain/merlin-www-common:gq";
+
+@import "../wireframe/wireframe";
+
+// -------------------- //
+// Dropcap
+// -------------------- //
+.bb-dropcap {}
+.bb-dropcap--letter {
+	@include font("ITC_FENICE", 40px, 700, 40px)
+	border: 1px solid $mineshaft;
+	color: $mineshaft;
+	float: left;
+	margin: 5px 20px 10px 0;
+	padding: 17px 20px 7px 20px;
+	text-transform: capitalize;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    	@include font-size(44px);
+    	@include line-height(44px);
+    	margin: 7px 20px 11px 0;
+    	padding: 19px 21px 4px 21px;
+    }
+}
+
+// -------------------- //
+// Blockquote
+// -------------------- //
+.bb-blockquote {
+	@include font("GOTHAM", 16px, 400, 22px)
+	border-left: 20px solid $woodsmoke;
+	color: $mineshaft;
+	padding-left: 24px;
+
+	@include min-screen($TYPE_LARGE_COPY_WIDTH) {
+	    @include font-size(17px);
+	    @include line-height(24px);
+	}
+}
+
+.bb-blockquote__quote {
+	@include font("GOTHAM", 16px, 400, 22px);
+	color: $mineshaft;
+
+	@include min-screen($TYPE_LARGE_COPY_WIDTH) {
+	    @include font-size(17px);
+	    @include line-height(24px);
+	}
+}
+
+.bb-blockquote__separator {
+	display: none;
+}
+
+.bb-blockquote__credit {
+	@include font("GOTHAM", 9px, 700, 12px, 60);
+	margin-top: 20px;
+}
+
+
+// -------------------- //
+// Pullquote
+// -------------------- //
+.bb-pullquote {
+	border-top: 20px solid $woodsmoke;
+	border-bottom: 20px solid $woodsmoke;
+	padding: 32px 0;
+
+	@include min-screen($TYPE_LARGE_COPY_WIDTH) {
+		padding: 40px 16px;
+	}
+}
+.bb-pullquote__quote {
+	@include font("ITC_FENICE", 32px, 400, 36px, -40);
+	color: $mineshaft;
+
+    &:before,
+    &:after {
+        content: '';
+    }
+}
+
+.bb-pullquote__separator {
+    display: none;
+}
+
+.bb-pullquote__credit {
+	@include font("GOTHAM", 9px, 700, 12px, 60)
+	color: $mineshaft;
+	margin-top: 20px;
+}
+
+// -------------------- //
+// Infobox
+// -------------------- //
+.bb-infobox {
+	border-top: 1px solid $bon-jour;
+	border-bottom: 1px solid $bon-jour;
+	border-left: 1px solid $bon-jour;
+	border-right: 1px solid $bon-jour;
+	padding: 32px 20px;
+
+	@include min-screen($TYPE_LARGE_COPY_WIDTH) {
+		padding: 40px;
+	}
+}
+
+.bb-infobox__title {
+	@include font("ITC_FENICE", 24px, 400, 30px);
+	color: $mineshaft;
+	text-transform: uppercase;
+}
+
+.bb-infobox__hr {
+
+}
+
+.bb-infobox__item {
+
+}
+
+.bb-infobox__item__key {
+	@include font("GOTHAM", 14px, 700, 20px, 60);
+	color: $dodger-blue;
+	text-transform: uppercase;
+}
+
+.bb-infobox__item__value {
+	@include font("GOTHAM", 14px, 700, 20px, 60);
+	color: $mineshaft;
+	margin: 0;
+}
+
+// -------------------- //
+// Question
+// -------------------- //
+.bb-question {}
+.bb-question__question {}
+.bb-question__q {}
+
+.bb-question__separator {
+	display: none;
+}
+
+.bb-question__author {
+	@include font("GOTHAM", 9px, 700, 12px, 60);
+	color: #303030;
+	margin-top: 20px;
+}
+.bb-question__by {
+	display: none;
+}
+
+// -------------------- //
+// Answer
+// -------------------- //
+.bb-answer {}
+.bb-answer__answer {}
+.bb-answer__a {}
+
+.bb-question__separator {
+	display: none;
+}
+
+.bb-answer__author {
+	@include font("GOTHAM", 9px, 700, 12px, 60);
+	color: #303030;
+	margin-top: 20px;
+}
+.bb-answer__by {
+	display: none;
+}

@@ -106,6 +106,9 @@ h6,
 }
 
 hr {
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
     border-top: 4px double $bon-jour;
     height: 0;
 }
@@ -115,40 +118,36 @@ input {
 }
 
 mark {
-
+    background-color: $zircon;
+    color: $mineshaft;
 }
 
 p {
-
-}
-
-pre {
-
-}
-
-blockquote {
-    @include font("GOTHAM", 16px, 400, 22px)
+    @include font("GOTHAM", 16px, 400, 26px, -20);
     color: $mineshaft;
-    font-style: italic;
-    border-left: 20px solid $woodsmoke;
-    padding-left: 24px;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(17px);
-        @include line-height(24px);
+        @include line-height(28px);
     }
 }
 
-q {
-    color: $mineshaft;
-    @include font("ITC_FENICE", 32px, 400, 36px, -40);
-    border-top: 20px solid $woodsmoke;
-    border-bottom: 20px solid $woodsmoke;
-    padding: 32px 0;
+pre {
+    @include font-size(14px);
+    @include line-height(21px);
+    border-radius: 4px;
+    border: 1px solid $bon-jour;
+    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    padding: 20px;
+    white-space: pre-wrap;
+}
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        padding: 40px 16px;
-    }
+blockquote {
+
+}
+
+q {
+
 }
 
 
@@ -163,17 +162,45 @@ strong {
 
 ul,
 ol {
+    @include font("GOTHAM", 16px, 400, 26px, -20);
+    color: $mineshaft;
+    list-style-type: none;
+    padding-left: 32px;
 
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(17px);
+        @include line-height(28px);
+    }
 }
 
 li {
-
+    position: relative;
 }
 
 ul {
-
+    li:before {
+        background-color: #1da8ff;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: 8px;
+        left: -28px;
+        position: absolute;
+        top: 8px;
+        width: 8px;
+    }
 }
 
 ol {
+    counter-reset: section;
 
+    li {
+        counter-increment: section;
+    }
+
+    li:before {
+        content: counter(section) '.';
+        position: absolute;
+        left: -28px;
+    }
 }
