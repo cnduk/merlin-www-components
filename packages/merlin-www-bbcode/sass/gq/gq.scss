@@ -456,3 +456,50 @@
     width: 100%;
     opacity: 0;
 }
+
+// -------------------- //
+// Show Gallery
+// -------------------- //
+.bb-show-gallery {
+    margin: 0;
+
+    .c-gallery-strip__detail {
+        &:after {
+            border-bottom-color: $white;
+        }
+    }
+
+    .c-gallery-strip__title {
+        @include font("GOTHAM", 20px, 700, 24px, -40);
+        color: #17191b;
+        @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            @include font-size(18px);
+        }
+    }
+
+    .c-gallery-strip__list__item {
+        &:nth-child(3) {
+            .c-gallery-strip__remaining {
+                display: block;
+            }
+        }
+
+        &:nth-child(4) {
+            display: none;
+        }
+
+        @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            &:nth-child(3) {
+                .c-gallery-strip__remaining {
+                    display: none;
+                }
+            }
+
+            &:nth-child(4) {
+                display: inline-block;
+            }
+
+            width: 25%;
+        }
+    }
+}
