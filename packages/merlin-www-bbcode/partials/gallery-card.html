@@ -5,7 +5,8 @@
     {{/ data.link }}
 
     {{# state.has_icon }}
-        <h4 class='bb-gallery__title'>{{# data.icon }}<div class='bb-gallery__title__icon bb-gallery__title__icon--gallery'>{{> @cnbritain/merlin-www-image }}</div>{{/ data.icon }}{{ data.title }}</h4>
+        {{# data.icon }}<div class='bb-gallery__icon bb-gallery__icon--gallery'>{{> @cnbritain/merlin-www-image }}</div>{{/ data.icon }}
+        <h4 class='bb-gallery__title'>{{ data.title }}</h4>
     {{/ state.has_icon }}
     {{^ state.has_icon }}
         <h4 class='bb-gallery__title'>{{ data.title }}</h4>
