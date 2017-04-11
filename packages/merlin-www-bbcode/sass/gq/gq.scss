@@ -144,7 +144,7 @@
 
 .bb-question__author {
     @include font("GOTHAM", 9px, 700, 12px, 60);
-    color: #303030;
+    color: $mineshaft;
     margin-top: 20px;
 }
 .bb-question__by {
@@ -164,7 +164,7 @@
 
 .bb-answer__author {
     @include font("GOTHAM", 9px, 700, 12px, 60);
-    color: #303030;
+    color: $mineshaft;
     margin-top: 20px;
 }
 .bb-answer__by {
@@ -185,12 +185,12 @@
 
 .bb-figure__caption {
     @include font("GOTHAM", 16px, 700, 22px, -40);
-    color: #17191b;
+    color: $woodsmoke;
 }
 
 .bb-figure__credit {
     @include font("GOTHAM", 9px, 400, 12px, 60);
-    color: #85878b;
+    color: $oslo-gray;
     text-transform: uppercase;
 
     &:before {
@@ -343,13 +343,13 @@
 }
 
 .bb-gallery__icon {
-    border-right: 1px solid #deddde;
+    border-right: 1px solid $bon-jour;
     display: table-cell;
     padding-right: 16px;
     width: 16px;
 
     svg {
-        fill: #96814b;
+        fill: $limed-oak;
     }
 }
 
@@ -359,7 +359,7 @@
 
 .bb-gallery__title {
     @include font("GOTHAM", 16px, 700, 20px, -40);
-    color: #17191b;
+    color: $woodsmoke;
     display: table-cell;
     padding-left: 16px;
     padding-top: 12px;
@@ -387,7 +387,7 @@
 
 .bb-gallery__remaining-text {
     @include font("GOTHAM", 20px, 700, 20px);
-    color: #fff;
+    color: $white;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(24px);
@@ -403,19 +403,19 @@
 }
 
 .bb-video__icon {
-    border-right: 1px solid #deddde;
+    border-right: 1px solid $bon-jour;
     display: table-cell;
     padding-right: 16px;
     width: 16px;
 
     svg {
-        fill: #96814b;
+        fill: $limed-oak;
     }
 }
 
 .bb-video__title {
     @include font("GOTHAM", 16px, 700, 20px, -40);
-    color: #17191b;
+    color: $woodsmoke;
     display: table-cell;
     padding-left: 16px;
     padding-top: 12px;
@@ -444,7 +444,7 @@
     width: 60px;
 
     svg {
-        fill: #ffffff;
+        fill: $white;
     }
 }
 
@@ -471,7 +471,7 @@
 
     .c-gallery-strip__title {
         @include font("GOTHAM", 20px, 700, 24px, -40);
-        color: #17191b;
+        color: $woodsmoke;
         @include min-screen($TYPE_LARGE_COPY_WIDTH) {
             @include font-size(18px);
         }
