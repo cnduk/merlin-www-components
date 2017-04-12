@@ -32,21 +32,21 @@
     padding: 20px;
     position: relative;
     &:after {
-        @include triangle(24px, 16px, 'up', $woodsmoke);
+        @include triangle(16px, 12px, 'up', $woodsmoke);
         @include vendor-prefix(transform, translateX(-50%));
         content: '';
         left: 50%;
         position: absolute;
-        top: -24px;
+        top: -16px;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         padding: 28px 20px;
 
         &:after {
-            @include triangle(32px, 22px, 'up', $woodsmoke);
+            @include triangle(18px, 14px, 'up', $woodsmoke);
             content: '';
-            top: -32px;
+            top: -18px;
         }
     }
 }
@@ -57,18 +57,24 @@
 }
 
 .c-gallery-strip__title {
-    @include font("GOTHAM", 16px, 700, 20px, -40);
+    @include font("GOTHAM", 20px, 700, 24px, -40);
     color: $white;
     margin: 0;
     text-align: center;
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(20px);
-        @include line-height(24px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(18px);
     }
 }
 
 .c-gallery-strip__subtitle {
-
+    @include font("GOTHAM", 10px, 500, 12px, -40)
+    color: $white;
+    margin-top: 12px;
+    text-align: center;
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(12px);
+        @include line-height(16px);
+    }
 }
 
 .c-gallery-strip--tag {

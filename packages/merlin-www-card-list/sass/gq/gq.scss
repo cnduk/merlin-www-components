@@ -2,6 +2,27 @@
 
 @import "../wireframe/wireframe";
 
+.c-card-list--top-stories {
+    white-space: nowrap;
+
+    .c-card-list__item {
+        display: inline-block;
+        width: 280px;
+        white-space: normal;
+
+        & + .c-card-list__item {
+	        margin-left: 20px;
+        }
+
+        &.is-hidden {
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+            width: 0;
+        }
+    }
+}
+
 .c-card-list--mag-articles {}
 .c-card-list--s-results {}
 .c-card-list--v-genre-articles {}
