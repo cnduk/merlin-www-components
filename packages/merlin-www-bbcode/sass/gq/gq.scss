@@ -30,6 +30,7 @@
     @include font("GOTHAM", 16px, 400, 22px)
     border-left: 20px solid $woodsmoke;
     color: $mineshaft;
+    margin: 28px 0;
     padding-left: 24px;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
@@ -64,6 +65,7 @@
 .bb-pullquote {
     border-top: 20px solid $woodsmoke;
     border-bottom: 20px solid $woodsmoke;
+    margin: 28px 0;
     padding: 32px 0;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
@@ -99,6 +101,7 @@
     border-bottom: 1px solid $bon-jour;
     border-left: 1px solid $bon-jour;
     border-right: 1px solid $bon-jour;
+    margin: 28px 0;
     padding: 32px 20px;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
@@ -193,7 +196,7 @@
 // Figure
 // -------------------- //
 .bb-figure {
-    margin: 0;
+    margin: 28px 0;
 }
 
 .bb-figure__caption,
@@ -202,13 +205,15 @@
 }
 
 .bb-figure__caption {
-    @include font("GOTHAM", 16px, 700, 22px, -40);
+    @include font("GOTHAM", 12px, 500, 16px, -20);
     color: $woodsmoke;
+    margin-top: 16px;
 }
 
 .bb-figure__credit {
     @include font("GOTHAM", 9px, 400, 12px, 60);
     color: $oslo-gray;
+    margin-top: 8px;
     text-transform: uppercase;
 
     &:before {
@@ -222,6 +227,7 @@
 .bb-card {
     border: 1px solid $bon-jour;
     box-sizing: border-box;
+    margin: 28px 0;
     padding: 16px;
 
     &:after {
@@ -357,7 +363,7 @@
 // Gallery
 // -------------------- //
 .bb-gallery {
-
+    margin: 28px 0;
 }
 
 .bb-gallery__icon {
@@ -417,6 +423,7 @@
 // Video
 // -------------------- //
 .bb-video {
+    margin: 28px 0;
     position: relative;
 }
 
@@ -483,7 +490,7 @@
 // Show Gallery
 // -------------------- //
 .bb-show-gallery {
-    margin: 0;
+    margin: 28px 0;
 
     .c-gallery-strip__detail {
         &:after {
