@@ -63,6 +63,7 @@
 .bb-blockquote__quote {
     @include font("GOTHAM", 16px, 400, 22px);
     color: $mineshaft;
+    font-style: italic;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(17px);
@@ -77,6 +78,7 @@
 .bb-blockquote__credit {
     @include font("GOTHAM", 9px, 700, 12px, 60);
     margin-top: 20px;
+    text-transform: uppercase;
 }
 
 
@@ -88,6 +90,7 @@
     border-bottom: 20px solid $woodsmoke;
     margin: 28px 0;
     padding: 32px 0;
+    text-align: center;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         padding: 40px 16px;
