@@ -21,7 +21,21 @@
 	}
 }
 
-.c-card-section--a-recommended {}
+.c-card-section--a-recommended {
+	.c-card-section__title {
+		@include font("GOTHAM", 12px, 700, 12px, 60);
+		color: $woodsmoke;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		margin-top: 0;
+
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			padding-bottom: 20px;
+			border-bottom: 1px solid $bon-jour;
+		}
+	}
+}
+
 .c-card-section--mag-articles {}
 .c-card-section--s-results {}
 .c-card-section--v-genre-articles {}
