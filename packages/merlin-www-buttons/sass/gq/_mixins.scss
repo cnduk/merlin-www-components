@@ -89,15 +89,28 @@
 }
 
 @mixin button-top-stories() {
+    background-color: $woodsmoke;
+    height: 50%;
+    width: 60px;
 
+    svg {
+        height: 100%;
+        width: 11px;
+    }
+
+    svg {
+        fill: $white;
+    }
 }
 
 @mixin button-top-stories-hover() {
-
+    background: $mineshaft;
 }
 
 @mixin button-top-stories-disabled() {
-
+    svg {
+        fill: $mineshaft;
+    }
 }
 
 @mixin button-share {
