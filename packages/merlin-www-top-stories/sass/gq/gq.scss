@@ -6,20 +6,88 @@
 
 .c-top-stories {
     background-color: $woodsmoke;
+    display: none;
     padding: 24px 0;
 
-    @include min-screen($TOP_STORIES_DESKTOP_BREAKPOINT) {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         display: block;
+    }
+
+    &.has-navigation {
+        .c-card-list__item:last-child {
+            margin-right: 60px + 20px;
+        }
     }
 }
 
 .c-top-stories__wrapper {
     box-sizing: border-box;
-    padding-left: 30px;
-    padding-right: 30px;
     position: relative;
+    padding-left: 30px;
+
+    @media (min-width: 1440px) and (max-width: 1500px) {
+        @for $i from 0 through 60 {
+            @media (min-width: 1440px + $i) {
+                padding-left: #{(30 - $i/2)}px;
+            }
+        }
+    }
+
+    @include min-screen(1500px) {
+        padding-left: 0;
+    }
+}
+
+.c-top-stories__nav {
+    border-left: 1px solid $mineshaft;
+    bottom: -24px;
+    position: absolute;
+    right: 0;
+    top: -24px;
+    width: 60px;
+    z-index: 2;
+
+    @include min-screen($MAXIMUM_PAGE_WIDTH + 1) {
+        border-right: 1px solid $mineshaft;
+    }
+}
+
+.c-top-stories__nav-btn {
+    position: absolute;
+}
+.c-top-stories__nav-btn--left {
+    border-top: 1px solid $mineshaft;
+    top: 50%;
+}
+
+.c-top-stories__nav-btn--right {
+    top: 0;
 }
 
 .c-top-stories__title {
     display: none;
+}
+
+.c-top-stories__overflow {
+    margin-left: -30px;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    padding-left: 30px;
+
+    @media (min-width: 1440px) and (max-width: 1500px) {
+        @for $i from 0 through 60 {
+            @media (min-width: 1440px + $i) {
+                padding-left: #{(30 - $i/2)}px;
+                margin-left: -#{(30 - $i/2)}px;
+            }
+        }
+    }
+
+    @include min-screen(1500px) {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .has-no-scroll & {
+        overflow-x: hidden;
+    }
 }
