@@ -1,0 +1,60 @@
+{
+    "name": "@cnbritain/merlin-www-show-finder",
+    "description": "Show finder and live shows",
+    "main": "index",
+    "currentTheme": null,
+    "data": {
+        "designer-and-seasons": "data/designer-and-seasons.json",
+        "designer": "data/designer.json",
+        "seasons": "data/seasons.json"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
+        "glamour": "sass/glamour/glamour.scss"
+    },
+    "partials": {
+        "index": "partials/index.html"
+    },
+    "js": {
+        "demo": "demo/demo.js"
+    },
+    "demo": {
+        "designers": {
+            "data": "designer",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue",
+                "glamour"
+            ]
+        },
+        "seasons": {
+            "data": "seasons",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue",
+                "glamour"
+            ]
+        },
+        "designers-and-seasons": {
+            "data": "designer-and-seasons",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue",
+                "glamour"
+            ]
+        }
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-js-combobox",
+        "@cnbritain/merlin-www-js-utils"
+    ]
+}

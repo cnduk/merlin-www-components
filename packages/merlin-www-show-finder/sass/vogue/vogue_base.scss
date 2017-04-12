@@ -1,0 +1,208 @@
+.sh-finder {
+    background: $COLOUR_BG_DARK;
+    box-sizing: border-box;
+    color: #fff;
+    padding: 0;
+    width: 100%;
+}
+
+.sh-finder__wrapper {
+    margin-right: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    width: 100%;
+}
+
+.sh-finder-selectors {
+    @include font('NOBEL', 15px);
+    margin: 0 auto;
+    max-width: 700px;
+    padding: $PADDING_MEDIUM $PADDING_SMALL;
+
+    @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ){
+        padding-left: $PADDING_LARGE;
+        padding-right: $PADDING_LARGE;
+    }
+
+    @include min-screen( $DESKTOP_SIDE_GUTTER_BREAKPOINT ){
+        padding-left: $PADDING_LARGE;
+        padding-right: $PADDING_LARGE;
+    }
+}
+
+.sh-finder__item--label {
+    display: none;
+    @include font-weight('BOLD');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-bottom: $MARGIN_SMALL;
+    padding: 0;
+    text-transform: uppercase;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+        display: inline-block;
+    }
+
+    @include min-screen( $DESKTOP_SIDE_GUTTER_BREAKPOINT ){
+        margin-bottom: 0;
+    }
+}
+
+.sh-finder__item--combo {
+    box-sizing: border-box;
+    display: inline-block;
+    padding-top: 0;
+    padding-right: 10px;
+    width: 50%;
+
+    & + & {
+        padding-left: 10px;
+        padding-right: 0;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+        padding-top: 10px;
+        width: 280px;
+    }
+
+    @include min-screen( $DESKTOP_SIDE_GUTTER_BREAKPOINT ){
+        padding-top: 0;
+    }
+
+}
+
+.sh-live-banner {
+    border-top: 1px solid $COLOR_BORDER_DOTTED;
+    padding: 5px 0;
+}
+
+.sh-live-banner__link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sh-live-banner__meta-item {
+    display: inline-block;
+    @include font('NOBEL', 11px);
+}
+
+li.sh-live-banner__meta-item--status {
+    border-right: 1px solid $COLOR_BORDER_DOTTED;
+    margin-right: 5px;
+    padding-right: 5px;
+    text-transform: uppercase;
+
+    span {
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+
+    svg {
+        height: 10px;
+        width: 10px;
+    }
+}
+
+
+.sh-finder {
+    .cbo {
+        position: relative;
+
+        &:before {
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid #666;
+            content: '';
+            display: none;
+            height: 0;
+            margin-top: -3px;
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            width: 0;
+        }
+
+        @include min-screen( $DESKTOP_SIDE_GUTTER_BREAKPOINT ){
+            &:before {
+                display: block;
+            }
+        }
+    }
+
+    .cbo__button,
+    .cbo__search {
+        display: none;
+    }
+
+    .cbo__input {
+        @include vendor-prefix('appearance', none);
+        background: #fff;
+        border: 1px solid #eaeaea;
+        color: #666;
+        border-radius: 0;
+        box-sizing: border-box;
+        cursor: pointer;
+        @include font('NOBEL', 14px);
+        letter-spacing: 0.025em;
+        padding: $PADDING_X_SMALL;
+        text-align: center;
+        -webkit-font-smoothing: antialiased;
+
+        &::-webkit-input-placeholder {
+           color: #666;
+        }
+
+        &:-moz-placeholder {
+           color: #666;
+        }
+
+        &::-moz-placeholder {
+           color: #666;
+        }
+
+        &:-ms-input-placeholder {
+           color: #666;
+        }
+
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+            text-align: left;
+        }
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            padding: $PADDING_X_SMALL $PADDING_SMALL;
+        }
+
+    }
+
+    .cbo__options {
+        border: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+        border-top: none;
+        box-shadow: 0px 2px 5px 0px rgba(102, 102, 102, 0.06);
+        max-height: 240px;
+    }
+
+    .cbo__option {
+        background-color: #fff;
+        color: $COLOR_TYPE_BODY;
+        @include font('NOBEL', 14px);
+        @include line-height(18px);
+        letter-spacing: 0.025em;
+        margin: 0;
+        padding: $PADDING_X_SMALL $PADDING_SMALL;
+        text-align: left;
+
+        &:hover {
+            background-color: $COLOUR_BG_ACCENT2;
+        }
+
+    }
+
+    .cbo__option--disabled {
+        background-color: $COLOUR_BG_PAGE;
+        color: $COLOR_TYPE_META;
+    }
+
+    .cbo__option--selected {
+        color: $COLOR_TYPE_LINK;
+    }
+}

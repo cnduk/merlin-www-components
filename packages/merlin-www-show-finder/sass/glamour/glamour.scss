@@ -1,0 +1,162 @@
+@import '@cnbritain/merlin-www-common:glamour';
+@import '../wireframe/wireframe';
+
+.sh-finder {
+    background: $COLOUR_SECTION_SHOW_FINDER;
+    box-sizing: border-box;
+    color: $COLOUR_MAIN;
+    color: $COLOUR_MAIN;
+    padding: 0;
+    width: 100%;
+}
+
+.sh-finder__wrapper {
+    margin-right: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    width: 100%;
+}
+
+.sh-finder-selectors {
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 40px $MOBILE_SIDE_GUTTER;
+
+    @include tablet-size {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include desktop-size {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.sh-finder__item--label {
+    @include font('GRAPHIK', 13px, 'SEMI BOLD');
+
+    text-transform: uppercase;
+
+    @include desktop-size {
+        @include font-size(14px);
+    }
+}
+
+.sh-finder__item--combo {
+    box-sizing: border-box;
+    display: inline-block;
+    padding-right: 10px;
+    width: 50%;
+
+    @include tablet-size {
+        width: 240px;
+    }
+
+    @include desktop-size {
+        padding-top: 0;
+    }
+
+    & + & {
+        padding-left: 10px;
+        padding-right: 0;
+    }
+}
+
+.sh-live-banner {
+    @include font('GRAPHIK', 13px, 'REGULAR');
+
+    margin-top: 30px;
+}
+
+.sh-live-banner__link {
+    color: $COLOUR_MAIN;
+    text-decoration: none;
+}
+
+.sh-live-banner__meta-item {
+    display: inline-block;
+}
+
+li {
+    &.sh-live-banner__meta-item--status {
+        border-right: 1px solid $COLOUR_SEPARATOR_LIVE_SHOW;
+        margin-right: 5px;
+        padding-right: 10px;
+
+        span {
+            margin-right: 5px;
+        }
+
+        svg {
+            fill: $COLOUR_MAIN_HIGHLIGHT;
+            height: 10px;
+            width: 10px;
+        }
+    }
+}
+
+.sh-finder {
+    .cbo__button,
+    .cbo__search {
+        display: none;
+    }
+
+    .cbo__button {
+        appearance: none;
+        background: transparent;
+        border: 0;
+        display: none;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        polygon {
+            fill: $COLOUR_MAIN_HIGHLIGHT;
+            stroke: none;
+        }
+
+        @include tablet-size {
+            display: block;
+        }
+    }
+
+    .cbo__input {
+        @include font('GRAPHIK', 15px, 'SEMI BOLD');
+
+        appearance: none;
+        border: 0;
+        box-sizing: border-box;
+        color: $COLOUR_MAIN;
+        padding: 15px 15px 12px;
+        text-align: center;
+
+        &::placeholder {
+            color: $COLOUR_MAIN;
+        }
+
+        @include tablet-size {
+            text-align: left;
+        }
+    }
+
+    .cbo__options {
+        background-color: $COLOUR_MAIN_HIGHLIGHT;
+        color: $COLOUR_MAIN_DARK;
+    }
+
+    .cbo__option {
+        @include font('GRAPHIK', 15px, 'NORMAL', 15px);
+
+        padding: 10px 15px;
+    }
+
+    .cbo__option--disabled {
+        @include font-weight('SEMI BOLD');
+    }
+
+    .cbo__option--selected {
+        background: $COLOUR_BG_MAIN;
+        color: $COLOUR_MAIN_HIGHLIGHT;
+    }
+}

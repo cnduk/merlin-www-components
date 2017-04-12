@@ -1,0 +1,76 @@
+@import "@cnbritain/merlin-www-common:wireframe";
+@import '@cnbritain/merlin-www-js-combobox:wireframe';
+
+.sh-finder {
+    padding: 40px 0 25px;
+    text-align: center;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 70px 40px 25px;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 70px 0 25px;
+    }
+}
+
+.sh-finder__item {
+    display: inline-block;
+    padding: 10px 0 0;
+    width: 100%;
+
+    //TODO: find out why 500px?
+    @include min-screen(500px) {
+        width: 50%;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        width: auto;
+    }
+}
+
+.sh-finder__item--combo {
+    box-sizing: border-box;
+
+    @include min-screen(500px) {
+        padding-right: 5px;
+
+        & + & {
+            padding-left: 5px;
+            padding-right: 0;
+        }
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: 20px;
+
+        & + & {
+            padding-left: 20px;
+        }
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        width: 260px;
+    }
+}
+
+.sh-finder__item--label {
+    display: block;
+    padding-bottom: 10px;
+    width: 100%;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: inline-block;
+        padding: 10px 15px 20px;
+        width: auto;
+    }
+}
+
+.sh-finder__wrapper {
+    padding-bottom: 40px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: inline-block;
+        margin-right: 50px;
+    }
+}

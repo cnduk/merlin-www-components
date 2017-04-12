@@ -1,0 +1,30 @@
+<section class="sh-finder">
+    <div class="sh-finder__wrapper">
+
+        <div class="sh-finder-selectors">
+               <div class="sh-finder__item sh-finder__item--label">Show finder</div>
+                {{# state.has_designers }}
+                    <div class="sh-finder__item sh-finder__item--combo">
+                       <select data-searchable="true" data-placeholder="Search designers">
+                           <option disabled selected>Search designers</option>
+                           {{# data.designers }}
+                                <option value="{{ &data.url }}">{{ data.title }}</option>
+                           {{/ data.designers }}
+                       </select>
+                    </div>
+                {{/ state.has_designers }}
+                {{# state.has_seasons }}
+                    <div class="sh-finder__item sh-finder__item--combo">
+                        <select>
+                            <option disabled selected>Search seasons</option>
+                            {{# data.seasons }}
+                                <option value="{{ &data.url }}">{{ data.title }}</option>
+                            {{/ data.seasons }}
+                        </select>
+                    </div>
+                {{/ state.has_seasons }}
+        </div>
+
+        {{! TODO: live show }}
+    </div>
+</section>
