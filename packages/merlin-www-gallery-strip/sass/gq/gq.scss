@@ -52,6 +52,7 @@
 }
 
 .c-gallery-strip__remaining {
+    background-color: rgba(0, 0, 0, 0.38);
     @include font("GOTHAM", 20px, 700, 24px);
     color: $white;
 }
