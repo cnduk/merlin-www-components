@@ -1,7 +1,7 @@
 'use strict';
 
 import EventEmitter from 'eventemitter2';
-import { isIOS } from '@cnbritain/merlin-frontend-utils-js/js/detect';
+import { isIOS } from '@cnbritain/merlin-www-js-utils/js/detect';
 import {
     addClass,
     addEvent,
@@ -12,7 +12,7 @@ import {
     isDefined,
     removeClass,
     removeEvent
-} from '@cnbritain/merlin-frontend-utils-js/js/functions';
+} from '@cnbritain/merlin-www-js-utils/js/functions';
 
 var KEYBOARD_CODES = {
     'ALT': 18,
