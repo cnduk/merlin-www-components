@@ -32,7 +32,7 @@ h4,
 h5,
 h6 {
     color: $woodsmoke;
-    margin-bottom: 28px;
+    margin: 28px 0;
 }
 
 @mixin heading-scale($default, $medium, $large) {
@@ -111,6 +111,7 @@ hr {
     border-right: 0;
     border-top: 4px double $bon-jour;
     height: 0;
+    margin: 28px 0;
 }
 
 input {
@@ -125,6 +126,7 @@ mark {
 p {
     @include font("GOTHAM", 16px, 400, 26px, -20);
     color: $mineshaft;
+    margin: 28px 0;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(17px);
@@ -135,9 +137,13 @@ p {
 pre {
     @include font-size(14px);
     @include line-height(21px);
+    background-color: $albaster;
     border-radius: 4px;
     border: 1px solid $bon-jour;
+    color: $shuttle-gray;
     font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    line-height: 20px;
+    margin: 28px 0;
     padding: 20px;
     white-space: pre-wrap;
 }
@@ -166,6 +172,7 @@ ol {
     color: $mineshaft;
     list-style-type: none;
     padding-left: 32px;
+    margin: 28px 0;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(17px);
