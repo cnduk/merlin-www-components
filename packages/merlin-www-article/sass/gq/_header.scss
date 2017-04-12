@@ -1,0 +1,165 @@
+.a-header {}
+.a-header--gallery {
+
+}
+
+.a-header--video {
+
+}
+
+.a-header__wrapper {
+
+}
+
+.a-header__content {
+
+}
+
+.a-header__title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.a-header__teaser {
+    @include font("GOTHAM", 14px, 400, 20px, -40);
+    color: $oslo-gray;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(17px);
+        @include line-height(24px);
+    }
+}
+
+.a-header__separator {
+
+}
+
+.a-header__about {
+
+}
+
+.a-header__byline {
+    @include font("GOTHAM", 9px, 700, 14px, 60);
+    color: $mineshaft;
+    margin-bottom: 4px;
+    margin-top: 20px;
+    text-transform: uppercase;
+
+    a {
+        color: $mineshaft;
+        border-bottom: none;
+    }
+}
+
+.a-header__byline-name {
+    @include font-weight(700);
+}
+.a-header__byline-prefix,
+.a-header__byline-conjunction {}
+
+.a-header__date {
+    @include font("GOTHAM", 9px, 400, 14px, 4);
+    margin-top: 4px;
+    margin-bottom: 24px;
+    color: $oslo-gray;
+}
+
+.a-header__image {
+
+}
+
+.a-header__image-constrain {
+
+}
+
+.a-header__image-constrain--landscape,
+.a-header__image-constrain--portrait,
+.a-header__image-constrain--square {
+
+}
+
+.a-header__image-constrain--landscape {
+
+}
+
+.a-header__image-constrain--portrait {
+
+}
+
+.a-header__image-constrain--square {
+
+}
+
+.a-header__image-title,
+.a-header__image-caption,
+.a-header__image-credit {
+
+}
+
+.a-header__image-title {}
+.a-header__image-caption {}
+.a-header__image-credit {}
+
+.a-header__separator--hero {
+
+}
+
+.a-header__meta {}
+.a-header__meta--date {}
+.a-header__meta--tag {}
+.a-header__meta-item {
+
+}
+
+.a-header__tag {
+    @include font("GOTHAM", 10px, 700, 10px, 0);
+    background-color: $limed_oak;
+    border-bottom: none;
+    color: $white;
+    display: inline-block;
+    // margin-bottom: 20px;
+    padding: 4px 16px 4px 5px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(12px);
+        @include line-height(12px);
+        padding: 6px 16px 6px 6px;
+    }
+}
+.a-header__tag__primary {
+    border-bottom: none;
+    color: $white;
+}
+.a-header__tag__secondary {}
+
+.a-header__separator--sponsor {
+
+}
+
+.a-main.is-sponsored {
+    .a-header__separator {
+
+    }
+}
+
+.a-header__sponsor {}
+
+.a-header__sponsor-prefix {}
+
+.a-header__sponsor-name {}
+
+.a-header__sponsor-image {
+
+}
+
+.a-header__meta {}
+
+.a-header__meta-item {}
+
+.a-header__event {}
+.a-header__event-title {}
+.a-header__event-location {}
+.a-header__event-date {}
+.a-header__event-btn {}
