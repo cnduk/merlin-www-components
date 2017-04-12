@@ -88,6 +88,7 @@
     @include font("GOTHAM", 9px, 700, 12px, 60)
     color: $mineshaft;
     margin-top: 20px;
+    text-transform: uppercase;
 }
 
 // -------------------- //
@@ -108,25 +109,33 @@
 .bb-infobox__title {
     @include font("ITC_FENICE", 24px, 400, 30px);
     color: $mineshaft;
+    margin-bottom: 12px;
+    margin-top: 0;
     text-transform: uppercase;
 }
 
 .bb-infobox__hr {
-
+    margin-bottom: 36px;
+    margin-top: 0;
 }
 
 .bb-infobox__item {
+    margin: 0;
 
+    & + .bb-infobox__item {
+        margin-top: 28px;
+    }
 }
 
 .bb-infobox__item__key {
     @include font("GOTHAM", 14px, 700, 20px, 60);
     color: $dodger-blue;
+    margin-bottom: 12px;
     text-transform: uppercase;
 }
 
 .bb-infobox__item__value {
-    @include font("GOTHAM", 14px, 700, 20px, 60);
+    @include font("GOTHAM", 14px, 400, 20px, -20);
     color: $mineshaft;
     margin: 0;
 }
@@ -135,8 +144,12 @@
 // Question
 // -------------------- //
 .bb-question {}
-.bb-question__question {}
-.bb-question__q {}
+.bb-question__question,
+.bb-question__question p {
+    @include font-weight(700);
+}
+.bb-question__q {
+}
 
 .bb-question__separator {
     display: none;
@@ -146,6 +159,7 @@
     @include font("GOTHAM", 9px, 700, 12px, 60);
     color: $mineshaft;
     margin-top: 20px;
+    text-transform: uppercase;
 }
 .bb-question__by {
     display: none;
@@ -156,7 +170,10 @@
 // -------------------- //
 .bb-answer {}
 .bb-answer__answer {}
-.bb-answer__a {}
+.bb-answer__a {
+    @include font-weight(700);
+    color: $oslo-gray;
+}
 
 .bb-question__separator {
     display: none;
@@ -166,6 +183,7 @@
     @include font("GOTHAM", 9px, 700, 12px, 60);
     color: $mineshaft;
     margin-top: 20px;
+    text-transform: uppercase;
 }
 .bb-answer__by {
     display: none;
@@ -429,6 +447,10 @@
 
 .bb-video__wrapper {
     margin-top: 20px;
+
+    img {
+        width: 100%;
+    }
 }
 
 .bb-video__image-icon {
