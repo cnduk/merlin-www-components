@@ -1,0 +1,25 @@
+@import "@cnbritain/merlin-www-common:gq";
+@import "@cnbritain/merlin-www-card-list:gq";
+@import "@cnbritain/merlin-www-card:gq";
+
+@import "../wireframe/wireframe";
+
+.c-top-stories {
+    background-color: $woodsmoke;
+    padding: 24px 0;
+
+    @include min-screen($TOP_STORIES_DESKTOP_BREAKPOINT) {
+        display: block;
+    }
+}
+
+.c-top-stories__wrapper {
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+}
+
+.c-top-stories__title {
+    display: none;
+}
