@@ -7,8 +7,7 @@
 .c-card-list--mag-articles,
 .c-card-list--s-results,
 .c-card-list--v-genre-articles,
-.c-card-list--c-video-articles,
-.c-card-list--sh-latest-articles {
+.c-card-list--c-video-articles {
     margin: 0 -20px;
 
     .c-card-list__item {
@@ -213,7 +212,7 @@
 // Contains one column
 // Goes one
 .c-card-list--tg-articles,
-.c-card-list--sh-articles {
+.c-card-list--sh-latest-articles {
 
     .c-card-list__item {
         margin-top: 20px;
@@ -241,9 +240,14 @@
         }
 
     }
+
+    .ad--show-inline + .c-card-list__item .c-card {
+        border-top: none;
+        &.c-card--dark {
+            border-top: none;
+        }
+    }
 }
-
-
 
 
 // Video articles
