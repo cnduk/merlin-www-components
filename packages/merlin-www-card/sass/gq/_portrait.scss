@@ -2,7 +2,94 @@
 // Portrait
 // -------------------- //
 @mixin card-portrait() {}
-// @mixin card-portrait-small() {}
+@mixin card-portrait-small() {
+    .c-card__obj {}
+    .c-card__obj__header {
+        display: block;
+        padding: 0;
+        width: auto;
+    }
+    .c-card__images {
+        .c-card__image {
+            padding-top: 66.66666%;
+        }
+
+        .c-card__image__icon {
+            display: none;
+        }
+    }
+
+    .c-card__obj__body {
+
+    }
+
+    .c-card__header {
+
+    }
+
+    .c-card__footer {
+
+    }
+
+    .c-card__tag {
+        @include font("GOTHAM", 11px, 700, 16px, 0);
+        color: $limed-oak;
+        margin-bottom: 4px;
+        margin-top: 12px;
+    }
+
+    .c-card__title {
+        @include font("GOTHAM", 14px, 700, 18px, -10);
+        color: $woodsmoke;
+        margin-bottom: 12px;
+        margin-top: 4px;
+    }
+
+    .c-card__teaser {
+        display: none;
+    }
+
+    .c-card__separator {
+        display: none;
+    }
+
+    .c-card__byline {
+        @include font("GOTHAM", 9px, null, 14px, 60);
+        margin-bottom: 0;
+        margin-top: 12px;
+
+        .c-card__byline-prefix {
+            @include font-weight(400);
+        }
+
+        .c-card__byline-name {
+            @include font-weight(700);
+        }
+    }
+
+    .c-card__meta {
+        @include font("GOTHAM", 9px, 500, 14px);
+        color: $oslo-gray;
+        margin-top: 6px;
+        padding-right: 0;
+
+        li.c-card__meta-item {
+            & + li.c-card__meta-item {
+                border-left: none;
+                padding-left: 0;
+                &:before {
+                    background-color: $oslo-gray;
+                    border-radius: 50%;
+                    content: "";
+                    display: inline-block;
+                    height: 3px;
+                    margin: 1px 8px;
+                    width: 3px;
+                }
+            }
+        }
+    }
+}
 
 @mixin card-portrait-large() {
     .c-card__obj {}
@@ -123,10 +210,10 @@
     // }
 }
 
-// .c-card--portrait--small {
-//     @include card-portrait-small();
-// }
+.c-card--portrait-small {
+    @include card-portrait-small();
+}
 
-// .c-card--portrait--large {
-//     @include card-portrait-large();
-// }
+.c-card--portrait-large {
+    @include card-portrait-large();
+}
