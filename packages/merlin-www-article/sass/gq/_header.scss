@@ -75,7 +75,11 @@
 }
 
 .a-header__image {
+    margin-top: 32px;
 
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 40px;
+    }
 }
 
 .a-header__image-constrain {
@@ -106,12 +110,29 @@
 
 }
 
-.a-header__image-title {}
-.a-header__image-caption {}
-.a-header__image-credit {}
+.a-header__image-title {
+    @include font("GOTHAM", 16px, 700, 22px, -4);
+    color: $woodsmoke;
+    margin-bottom: 8px;
+    margin-top: 16px;
+}
+
+.a-header__image-caption {
+    @include font("GOTHAM", 16px, 700, 22px, -4);
+    color: $woodsmoke;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+.a-header__image-credit {
+    @include font("GOTHAM", 9px, 400, 12px, 60);
+    color: $oslo-gray;
+    margin-top: 8px;
+    text-transform: uppercase;
+}
 
 .a-header__separator--hero {
-
+    display: none;
 }
 
 .a-header__meta {}
