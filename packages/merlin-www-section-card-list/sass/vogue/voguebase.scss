@@ -140,8 +140,6 @@
     }
 }
 
-.c-card-section--sh-latest-articles {}
-
 .c-card-section--mag-articles,
 .c-card-section--v-genre-articles {
     .c-card-section__title {
@@ -215,7 +213,8 @@
 .c-card-section--sh-shows {}
 
 .c-card-section--v-articles,
-.c-card-section--tg-articles {
+.c-card-section--tg-articles,
+.c-card-section--sh-latest-articles {
     .c-card-section__title {
         @include font('NOBEL', 15px);
         margin-bottom: $MARGIN_MEDIUM;
