@@ -216,10 +216,10 @@
     }
 }
 
-.c-card--tg-article--small {
+.c-card--tg-article-small {
     @include card-tg-article-small();
 }
 
-.c-card--tg-article--large {
+.c-card--tg-article-large {
     @include card-tg-article-large();
 }
