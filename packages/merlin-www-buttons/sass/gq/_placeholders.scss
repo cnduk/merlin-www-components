@@ -76,12 +76,11 @@
     @include button-share();
 }
 
-// TODO
-// @each $name, $color in $COLOUR_SOCIAL {
-//     %btn-share--#{$name}--hover {
-//         @include button-share-light-hover($name);
-//     }
-// }
+@each $name, $color in $COLOUR_SOCIAL {
+    %btn-share--#{$name}--hover {
+        @include button-share-light-hover($name);
+    }
+}
 
 %btn-related {
     @include button-related();

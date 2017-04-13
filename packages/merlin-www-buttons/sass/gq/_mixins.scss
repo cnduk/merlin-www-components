@@ -114,18 +114,35 @@
 }
 
 @mixin button-share {
+	border-radius: 50%;
+	border: 1px solid $bon-jour;
+	box-sizing: border-box;
+	height: 40px;
+	width: 40px;
+    text-align: center;
 
+	svg {
+	    height: 100%;
+	    width: 16px;
+	}
 }
 
-@mixin button-share-light($name){
-
+@mixin button-share-light($name) {
+	background-color: $white;
+   	path {
+        fill: map-get($COLOUR_SOCIAL, $name);
+    }
 }
 
 @mixin button-share-light-hover($name){
-
+	background-color: map-get($COLOUR_SOCIAL, $name);
+	border: 1px solid map-get($COLOUR_SOCIAL, $name);
+	path {
+	    fill: $white;
+	}
 }
 
-@mixin button-share-dark($name){
+@mixin button-share-dark($name) {
 
 }
 

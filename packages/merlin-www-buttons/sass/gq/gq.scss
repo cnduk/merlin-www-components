@@ -110,30 +110,30 @@ a.btn-share {
 .btn-share--monotone,
 a.btn-share--monotone {}
 
-// @each $name, $color in $COLOUR_SOCIAL {
-//     .btn-share--#{$name},
-//     a.btn-share--#{$name} {
-//         background-color: #{$color};
+@each $name, $color in $COLOUR_SOCIAL {
+    .btn-share--#{$name},
+    a.btn-share--#{$name} {
+        background-color: #{$color};
 
-//         &.btn-share--dark {
-//             @include button-share-dark($name);
-//         }
+        &.btn-share--dark {
+            @include button-share-dark($name);
+        }
 
-//         &:hover,
-//         &:hover.btn-share--dark {
-//             @include button-share-dark-hover($name);
-//         }
+        &:hover,
+        &:hover.btn-share--dark {
+            @include button-share-dark-hover($name);
+        }
 
-//         &.btn-share--light {
-//             @include button-share-light($name);
-//         }
+        &.btn-share--light {
+            @include button-share-light($name);
+        }
 
-//         &:hover,
-//         &:hover.btn-share--light {
-//             @include button-share-light-hover($name);
-//         }
-//     }
-// }
+        &:hover,
+        &:hover.btn-share--light {
+            @include button-share-light-hover($name);
+        }
+    }
+}
 
 .btn-related,
 a.btn-related {
