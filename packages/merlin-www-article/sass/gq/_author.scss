@@ -35,7 +35,9 @@
 }
 .a-author__byline-name {}
 .a-author__byline-prefix,
-.a-author__byline-conjunction {}
+.a-author__byline-conjunction {
+    color: $mineshaft;
+}
 
 .a-author__image,
 .a-event-author__image {

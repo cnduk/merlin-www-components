@@ -136,6 +136,7 @@
     }
 }
 .a-header__tag__primary {
+    @include font-weight(700);
     border-bottom: none;
     color: $white;
 }
