@@ -1,0 +1,53 @@
+.a-author,
+.a-event-author {
+
+}
+
+.a-author__article-date {
+    @include font("GOTHAM", 9px, 400, 14px, 4);
+    color: $oslo-gray;
+    margin-top: 16px;
+}
+
+.a-author__bio {
+    @include font("GOTHAM", 12px, 400, 16px);
+    color: $oslo-gray;
+    margin-bottom: 16px;
+    margin-top: 8px;
+}
+
+.a-author__byline {
+    @include font("GOTHAM", 12px, 500, 16px, -4);
+    color: $oslo-gray;
+    margin-bottom: 8px;
+    margin-top: 0;
+    text-transform: uppercase;
+
+    a {
+        border-bottom: none;
+        color: inherit;
+    }
+}
+.a-author__byline--photographer {
+    .a-author__byline-prefix {
+
+    }
+}
+.a-author__byline-name {}
+.a-author__byline-prefix,
+.a-author__byline-conjunction {}
+
+.a-author__image,
+.a-event-author__image {
+    border-radius: 50%;
+    height: 66px;
+    margin-bottom: 20px;
+    width: 66px;
+}
+
+.a-author__separator,
+.a-event-author__separator {
+    display: none;
+}
+
+.a-author__separator--date {}

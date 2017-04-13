@@ -1,4 +1,12 @@
-.a-header {}
+.a-header {
+    margin-bottom: 32px;
+    margin-top: 40px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 40px;
+        margin-top: 60px;
+    }
+}
 .a-header--gallery {
 
 }
@@ -119,7 +127,6 @@
     border-bottom: none;
     color: $white;
     display: inline-block;
-    // margin-bottom: 20px;
     padding: 4px 16px 4px 5px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
