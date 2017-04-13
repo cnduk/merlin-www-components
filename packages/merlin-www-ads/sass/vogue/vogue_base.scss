@@ -160,7 +160,8 @@
 }
 
 .ad--tag-inline,
-.ad--tag-infinite {
+.ad--tag-infinite,
+.ad--show-inline {
     margin-bottom: 40px;
     margin-left: -$MOBILE_SIDE_GUTTER;
     margin-right: -$MOBILE_SIDE_GUTTER;
@@ -177,9 +178,17 @@
 
 }
 
-.ad--tag-inline {
+.ad--tag-inline,
+.ad--show-inline {
     @include min-screen(940px) {
         margin-right: -(340px + $DESKTOP_SIDE_GUTTER);
+    }
+}
+
+.ad--show-inline {
+    .ad__container {
+        background: $COLOUR_BG_ADVERT;
+        padding: 20px 0;
     }
 }
 
