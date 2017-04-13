@@ -1,0 +1,147 @@
+@import "@cnbritain/merlin-www-common:glamour";
+@import "@cnbritain/merlin-www-image:glamour";
+@import "@cnbritain/merlin-www-card:glamour";
+
+@import '../wireframe/wireframe';
+
+.sh-season-hub {
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    width: auto;
+
+    @include tablet-size {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($SHOWS_SEASON_HUB_LARGE_BREAKPOINT) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.sh-season-hub-viewer--large {
+    .sh-season-hub-viewer__panel--highlights {
+        padding: 20px 0;
+    }
+}
+
+.sh-season-hub-viewer__featured {
+    background: $COLOUR_MAIN_HIGHLIGHT;
+    width: 425px;
+
+    &:hover,
+    &:focus {
+        .sh-season-hub-viewer__featured__image {
+            opacity: .9;
+        }
+    }
+}
+
+.sh-season-hub-viewer__featured__image {
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+
+    img {
+        max-width: 425px;
+    }
+
+    &.is-featured {
+        &::before {
+            @include show-card-label('FEATURED', $COLOUR_MAIN_DARK, $COLOUR_MAIN_HIGHLIGHT, 35px);
+        }
+    }
+}
+
+.sh-season-hub-viewer__panel {
+    background: $COLOUR_BG_SECONDARY;
+    color: $COLOUR_MAIN_DARK;
+    padding: 0;
+
+    a {
+        color: $COLOUR_MAIN;
+
+        &:hover,
+        &:focus {
+            color: $COLOUR_MAIN;
+        }
+    }
+}
+
+li.sh-season-hub-viewer__tabs__tab {
+    background: $COLOUR_BG_DARK;
+    border-right: 2px solid $COLOUR_BORDER_SOLID_DARK;
+    color: $COLOUR_MAIN_DARK;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: (100 / 3) * 1%;
+
+    label {
+        @include font('GRAPHIK', 12px, 'SEMI BOLD', 18px);
+
+        height: 100%;
+        padding: 13px 0;
+        width: 100%;
+
+        @include min-screen($SHOWS_SEASON_HUB_LARGE_BREAKPOINT) {
+            @include font-size(14px);
+        }
+    }
+}
+
+.sh-season-hub-viewer__checkbox--latest:checked ~ * .sh-season-hub-viewer__tabs__tab--latest,
+.sh-season-hub-viewer__checkbox--highlights:checked ~ * .sh-season-hub-viewer__tabs__tab--highlights,
+.sh-season-hub-viewer__checkbox--az:checked ~ * .sh-season-hub-viewer__tabs__tab--az {
+    background-color: $COLOUR_BG_SECONDARY;
+    color: $COLOUR_MAIN;
+}
+
+.sh-season-hub-viewer__list--inline {
+    padding: 45px 10px 10px;
+
+    .sh-season-hub-viewer__list__item {
+        margin-bottom: 0;
+        padding: 0 5px;
+    }
+
+    .sh-season-hub-viewer__list__item--group {
+        @include font('GRAPHIK', 12px, 'SEMI BOLD', 17px);
+
+        color: $COLOUR_MAIN;
+        margin-top: -30px;
+    }
+}
+
+.sh-season-hub-viewer__panel--highlights {
+    .sh-season-hub-viewer__list--inline {
+        padding-top: 15px;
+    }
+}
+
+.sh-season-hub-viewer__list--stacked {
+    .sh-season-hub-viewer__list__item {
+        @include font('GRAPHIK', 22px, 'REGULAR', 39px);
+
+        padding: 0;
+
+        a {
+            display: block;
+            padding: 2px 26px;
+
+            &:hover,
+            &:focus {
+                background: $COLOUR_BG_ACCENT;
+            }
+        }
+    }
+
+    .sh-season-hub-viewer__list__item--group {
+        @include dotted-line($COLOUR_BORDER_DOTTED, 1px, 3px, bottom);
+        @include font('GRAPHIK', 15px, 'SEMI BOLD', 17px);
+
+        color: $COLOUR_MAIN;
+        margin: 0 0 10px 26px;
+        padding: 42px 26px 15px 0;
+    }
+}

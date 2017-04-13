@@ -1,0 +1,178 @@
+.sh-season-hub {
+    margin-left: (-$MOBILE_SIDE_GUTTER);
+    margin-right: (-$MOBILE_SIDE_GUTTER);
+    width: auto;
+
+    @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ){
+        margin-left: (-$TABLET_SIDE_GUTTER);
+        margin-right: (-$TABLET_SIDE_GUTTER);
+    }
+
+    @include min-screen($SHOWS_SEASON_HUB_LARGE_BREAKPOINT){
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.sh-season-hub-viewer--large {
+    @include min-screen($SHOWS_SEASON_HUB_LARGE_BREAKPOINT) {
+        border: 1px solid $COLOR_BORDER_SOLID_ACCENT1;
+    }
+}
+
+.sh-season-hub-viewer__featured {
+    @include opacity(1);
+    @include transition(opacity 0.3s ease-in-out);
+
+    &:hover,
+    &:focus {
+        @include opacity(0.9);
+    }
+}
+
+.sh-season-hub-viewer__featured__label {
+    @include c-card-label($COLOR_TYPE_LINK, #fff);
+    padding: $PADDING_XX_SMALL;
+    text-transform: uppercase;
+}
+
+.sh-season-hub-viewer__content {
+    border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT1;
+}
+
+
+
+.sh-season-hub-viewer__panel {
+    padding: 30px 0px;
+
+    @include min-screen($SHOWS_SEASON_HUB_LARGE_BREAKPOINT) {
+        padding: 30px 20px;
+    }
+
+    a {
+        color: $COLOR_TYPE_HEADING;
+        &:hover,
+        &:focus {
+            color: $COLOR_TYPE_META;
+            text-decoration: none;
+        }
+    }
+}
+.sh-season-hub-viewer__panel--inline {
+    .c-card__title {
+        white-space: initial;
+    }
+}
+
+
+
+
+
+
+li.sh-season-hub-viewer__tabs__tab {
+    background-color: $COLOUR_BG_ADVERT;
+    color: $COLOR_TYPE_META;
+    @include font('NOBEL', 11px, 'BOLD');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    text-transform: uppercase;
+    width: 33.33%;
+
+    label {
+        box-sizing: border-box;
+        height: 40px;
+        padding: 14px 0;
+    }
+
+    border: 1px solid $COLOR_BORDER_SOLID_ACCENT1;
+
+    &:first-child {
+        border-left: none;
+    }
+    &:last-child {
+        border-right: none;
+    }
+
+    @include min-screen($SHOWS_SEASON_HUB_LARGE_BREAKPOINT) {
+        border-top: none;
+    }
+
+    @include min-screen($SHOWS_SEASON_HUB_LARGE_BREAKPOINT){
+        @include font-size(12px);
+    }
+}
+.sh-season-hub-viewer__tabs__tab--latest {
+    .sh-season-hub-viewer__checkbox--latest:checked ~ * & {
+        background-color: #fff;
+        border-bottom: none;
+        color: $COLOR_TYPE_HEADING;
+    }
+}
+.sh-season-hub-viewer__tabs__tab--highlights {
+    .sh-season-hub-viewer__checkbox--highlights:checked ~ * & {
+        background-color: #fff;
+        border-bottom: none;
+        color: $COLOR_TYPE_HEADING;
+    }
+}
+.sh-season-hub-viewer__tabs__tab--az {
+    .sh-season-hub-viewer__checkbox--az:checked ~ * & {
+        background-color: #fff;
+        border-bottom: none;
+        color: $COLOR_TYPE_HEADING;
+    }
+}
+
+
+
+
+
+
+.sh-season-hub-viewer__list--inline {
+    padding: 30px 20px;
+
+    .sh-season-hub-viewer__list__item {
+        margin-bottom: 0;
+        padding-right: 10px;
+
+        &:last-child {
+            margin-right: -10px;
+        }
+    }
+
+    .sh-season-hub-viewer__list__item--group {
+        margin-top: -30px;
+    }
+}
+
+.sh-season-hub-viewer__list--stacked {
+    .sh-season-hub-viewer__list__item {
+        margin-bottom: $MARGIN_SMALL;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .sh-season-hub-viewer__list__item--group {
+        margin-top: $MARGIN_LARGE;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+li.sh-season-hub-viewer__list__item {
+    @include font('ITC CASLON', 20px);
+}
+li.sh-season-hub-viewer__list__item--group {
+    color: $COLOR_TYPE_META;
+    @include font('NOBEL', 13px);
+}
+
+.sh-season-hub-viewer__panel--az {
+    .sh-season-hub-viewer__list__item--group {
+        text-transform: uppercase;
+    }
+}

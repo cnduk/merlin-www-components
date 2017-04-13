@@ -1,0 +1,17 @@
+<section class="sh-season-hub">
+
+    {{! Hidden radio buttons }}
+    {{# state.has_latest_shows }}
+        <input type="radio" name="rdo-hub-viewer--{{ data.id }}" class="sh-season-hub-viewer__checkbox sh-season-hub-viewer__checkbox--latest" {{# state.is_latest_shows_selected }}checked='checked'{{/ state.is_latest_shows_selected }} id="chkLatestShows-{{ data.id }}" />
+    {{/ state.has_latest_shows }}
+    {{# state.has_highlighted_shows }}
+        <input type="radio" name="rdo-hub-viewer--{{ data.id }}" class="sh-season-hub-viewer__checkbox sh-season-hub-viewer__checkbox--highlights" {{# state.is_highlighted_shows_selected }}checked='checked'{{/ state.is_highlighted_shows_selected }} id="chkHighlights-{{ data.id }}" />
+    {{/ state.has_highlighted_shows }}
+    {{# state.has_a_to_z_shows }}
+        <input type="radio" name="rdo-hub-viewer--{{ data.id }}" class="sh-season-hub-viewer__checkbox sh-season-hub-viewer__checkbox--az" {{# state.is_a_to_z_shows_selected }}checked='checked'{{/ state.is_a_to_z_shows_selected }} id="chkAZ-{{ data.id }}" />
+    {{/ state.has_a_to_z_shows }}
+
+    {{> @cnbritain/merlin-www-show-season-hub/small-viewer }}
+    {{> @cnbritain/merlin-www-show-season-hub/large-viewer }}
+
+</section>

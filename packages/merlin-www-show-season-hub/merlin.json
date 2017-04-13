@@ -1,0 +1,85 @@
+{
+    "name": "@cnbritain/merlin-www-show-season-hub",
+    "description": "Hub viewer that displays latest shows, highlights and a to z",
+    "main": "index",
+    "currentTheme": null,
+    "data": {
+        "all": "data/all.json",
+        "highlights": "data/highlights.json",
+        "latest": "data/latest.json",
+        "a-to-z": "data/a-to-z.json",
+        "no-feature-card": "data/no-feature-card.json"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
+        "glamour": "sass/glamour/glamour.scss"
+    },
+    "partials": {
+        "index": "partials/index.html",
+        "navigation": "partials/navigation.html",
+        "small-viewer": "partials/small-viewer.html",
+        "large-viewer": "partials/large-viewer.html"
+    },
+    "js": {
+        "demo": "demo/demo.js"
+    },
+    "demo": {
+        "all": {
+            "data": "all",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue",
+                "glamour"
+            ]
+        },
+        "latest": {
+            "data": "latest",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue",
+                "glamour"
+            ]
+        },
+        "highlights": {
+            "data": "highlights",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue",
+                "glamour"
+            ]
+        },
+        "a-to-z": {
+            "data": "a-to-z",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue",
+                "glamour"
+            ]
+        },
+        "no-feature-card": {
+            "data": "no-feature-card",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue",
+                "glamour"
+            ]
+        }
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-card",
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-image"
+    ]
+}

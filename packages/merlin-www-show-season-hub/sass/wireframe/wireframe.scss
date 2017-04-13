@@ -1,0 +1,139 @@
+@import "@cnbritain/merlin-www-common:wireframe";
+@import "@cnbritain/merlin-www-image:wireframe";
+@import "@cnbritain/merlin-www-card:wireframe";
+
+.sh-season-hub {}
+
+.sh-season-hub-viewer__checkbox {
+    left: -9999px;
+    position: absolute;
+    visibility: hidden;
+}
+
+
+
+.sh-season-hub-viewer {}
+.sh-season-hub-viewer--small {
+    @include min-screen($SHOWS_SEASON_HUB_LARGE_BREAKPOINT){
+        display: none;
+    }
+}
+.sh-season-hub-viewer--large {
+    display: none;
+    table-layout: fixed;
+    width: 100%;
+
+    @include min-screen($SHOWS_SEASON_HUB_LARGE_BREAKPOINT){
+        display: table;
+    }
+}
+
+
+
+.sh-season-hub-viewer__featured {
+    display: table-cell;
+    position: relative;
+    vertical-align: top;
+    width: 400px;
+}
+.sh-season-hub-viewer__featured__link {
+    background-color: rgba(255,255,255,0.01);
+    bottom: 0;
+    font-size: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+.sh-season-hub-viewer__featured__image {
+    position: relative;
+
+    img {
+        max-width: 400px;
+        width: 100%;
+    }
+}
+
+.sh-season-hub-viewer__content {
+    display: table-cell;
+    height: 600px;
+    position: relative;
+    vertical-align: top;
+}
+
+
+
+.sh-season-hub-viewer__panel {}
+.sh-season-hub-viewer__panel--inline {
+    display: none;
+}
+.sh-season-hub-viewer__panel--scroll {
+    box-sizing: border-box;
+    display: none;
+    height: 600px - $SEASON_HUB_TAB_HEIGHT;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    position: absolute;
+    top: $SEASON_HUB_TAB_HEIGHT;   // Height of the nav
+    width: 100%;
+}
+.sh-season-hub-viewer__panel--latest {
+    .sh-season-hub-viewer__checkbox--latest:checked ~ * & {
+        display: block;
+    }
+}
+.sh-season-hub-viewer__panel--highlights {
+    .sh-season-hub-viewer__checkbox--highlights:checked ~ * & {
+        display: block;
+    }
+}
+.sh-season-hub-viewer__panel--az {
+    .sh-season-hub-viewer__checkbox--az:checked ~ * & {
+        display: block;
+    }
+}
+
+
+
+
+.sh-season-hub-viewer__nav {
+}
+.sh-season-hub-viewer__tabs {
+    border-collapse: collapse;
+    display: table;
+    width: 100%;
+}
+li.sh-season-hub-viewer__tabs__tab {
+    box-sizing: border-box;
+    display: table-cell;
+    height: $SEASON_HUB_TAB_HEIGHT;
+
+    label {
+        cursor: pointer;
+        display: block;
+    }
+}
+
+
+.sh-season-hub-viewer__list {}
+
+.sh-season-hub-viewer__list--inline {
+    box-sizing: border-box;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    white-space: nowrap;
+    width: 100%;
+
+    .sh-season-hub-viewer__list__item {
+        box-sizing: border-box;
+        display: inline-block;
+        vertical-align: top;
+        width: 210px;
+    }
+    .sh-season-hub-viewer__list__item--group {
+        position: absolute;
+    }
+}

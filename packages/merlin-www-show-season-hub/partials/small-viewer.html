@@ -1,0 +1,48 @@
+<div class="sh-season-hub-viewer sh-season-hub-viewer--small">
+
+    {{> @cnbritain/merlin-www-show-season-hub/navigation }}
+
+    <div>
+        {{# state.has_latest_shows }}
+            <div class="sh-season-hub-viewer__panel sh-season-hub-viewer__panel--inline sh-season-hub-viewer__panel--latest">
+                <ul class="global__list-reset sh-season-hub-viewer__list sh-season-hub-viewer__list--inline">
+                    {{# data.latest_show_groups }}
+                        <li class="sh-season-hub-viewer__list__item sh-season-hub-viewer__list__item--group">{{ data.title.data.label }}</li>
+                        {{# data.items }}
+                            <li class="sh-season-hub-viewer__list__item">
+                                {{> @cnbritain/merlin-www-card }}
+                            </li>
+                        {{/ data.items }}
+                    {{/ data.latest_show_groups }}
+                </ul>
+            </div>
+        {{/ state.has_latest_shows }}
+
+        {{# state.has_highlighted_shows }}
+            <div class="sh-season-hub-viewer__panel sh-season-hub-viewer__panel--inline sh-season-hub-viewer__panel--highlights">
+                <ul class="global__list-reset sh-season-hub-viewer__list sh-season-hub-viewer__list--inline">
+                    {{# data.highlighted_list }}
+                        <li class="sh-season-hub-viewer__list__item">
+                            {{> @cnbritain/merlin-www-card }}
+                        </li>
+                    {{/ data.highlighted_list }}
+                </ul>
+            </div>
+        {{/ state.has_highlighted_shows }}
+
+        {{# state.has_a_to_z_shows }}
+            <div class="sh-season-hub-viewer__panel sh-season-hub-viewer__panel--inline sh-season-hub-viewer__panel--az">
+                <ul class="global__list-reset sh-season-hub-viewer__list sh-season-hub-viewer__list--inline">
+                    {{# data.a_to_z_show_groups }}
+                        <li class="sh-season-hub-viewer__list__item sh-season-hub-viewer__list__item--group">{{ data.title }}</li>
+                        {{# data.items }}
+                            <li class="sh-season-hub-viewer__list__item">
+                                {{> @cnbritain/merlin-www-card }}
+                            </li>
+                        {{/ data.items }}
+                    {{/ data.a_to_z_show_groups }}
+                </ul>
+            </div>
+        {{/ state.has_a_to_z_shows }}
+    </div>
+</div>
