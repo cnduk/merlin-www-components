@@ -1,16 +1,16 @@
 {
   "name": "@cnbritain/merlin-www-top-stories",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "",
   "main": "js/index.js",
   "scripts": {
     "demo": "merlin-component-demo-server merlin.json"
   },
   "dependencies": {
-    "@cnbritain/merlin-www-card": "^1.0.18",
-    "@cnbritain/merlin-www-card-list": "^1.0.52",
-    "@cnbritain/merlin-www-common": "^1.0.3",
-    "@cnbritain/merlin-www-image": "^1.1.2",
+    "@cnbritain/merlin-www-card": "^1.0.19",
+    "@cnbritain/merlin-www-card-list": "^1.0.53",
+    "@cnbritain/merlin-www-common": "^1.0.4",
+    "@cnbritain/merlin-www-image": "^1.1.3",
     "@cnbritain/merlin-www-js-elementscroll": "^1.0.1"
   },
   "devDependencies": {
