@@ -5,9 +5,6 @@
 @import "../wireframe/_defaults";
 
 a {
-    border-bottom: 1px solid $cornflower-blue;
-    color: $cornflower-blue;
-    @include font-weight(400);
     text-decoration: none;
 }
 
