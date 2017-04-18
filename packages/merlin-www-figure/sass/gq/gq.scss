@@ -1,0 +1,23 @@
+@import '@cnbritain/merlin-www-common:gq';
+
+@import '../wireframe/wireframe';
+
+.c-figure__wrapper {
+	background-color: $albaster;
+}
+
+.c-figure__title {
+	@include font("GOTHAM", 20px, 700, 24px, -4);
+	color: $woodsmoke;
+}
+
+.c-figure__caption {
+	@include font("GOTHAM", 17px, 400, 28px, -2);
+	color: $mineshaft;
+}
+
+.c-figure__credit {
+	@include font("GOTHAM", 9px, 400, 12px, 60);
+	color: $oslo-gray;
+	text-transform: uppercase;
+}

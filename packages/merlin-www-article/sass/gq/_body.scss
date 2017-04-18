@@ -1,0 +1,25 @@
+.a-main {}
+
+.a-main--gallery {}
+.a-main--video {}
+
+.a-body {}
+.a-body--gallery {}
+.a-body--video {}
+.a-body__clear {
+    clear: both;
+}
+
+.a-body__wrapper {}
+.a-body__content {}
+
+.a-infinite__message {}
+
+.a-infinite__message-btn {
+    @include button-single();
+    @include button-single-light();
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
