@@ -40,13 +40,11 @@ function ArticleManager(){
 
     this.articles = [];
     this.focusArticle = null;
-
-    this._init();
 }
 
 ArticleManager.prototype = inherit(EventEmitter.prototype, {
 
-    "_init": function _init(){
+    "init": function init(){
         // Infinite scroll
         this._infiniteScroll = new InfiniteScroll({
             "el": window,
