@@ -1,0 +1,39 @@
+.g-image-nav {
+	width: 24px;
+
+	@include tablet-size {
+		padding: 0 8px;
+	}
+
+	@include desktop-size {
+		padding: 0 13px;
+	}
+}
+
+.g-image-nav__btns {
+	width: 24px;
+}
+
+.g-image-nav__btn {
+	border-radius: 50%;
+	border: 1px solid $mineshaft;
+	width: 24px;
+	height: 24px;
+
+	svg {
+		width: 12px;
+		height: 12px;
+	}
+}
+
+.g-image-nav__btn--previous {
+
+}
+
+.g-image-nav__btn--next {
+    margin-top: 8px;
+}
+
+.g-image-nav__btn[disabled] {
+	border-color: $bon-jour;
+}

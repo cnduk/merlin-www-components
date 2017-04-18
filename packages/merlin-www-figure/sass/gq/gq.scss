@@ -2,18 +2,50 @@
 
 @import '../wireframe/wireframe';
 
+.c-figure {}
+
+.c-figure__container {
+    margin-bottom: 28px;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    	margin-bottom: 32px;
+    }
+}
+
 .c-figure__wrapper {
 	background-color: $albaster;
+}
+
+.c-figure__toolbar {
+	bottom: 16px;
+	position: absolute;
+	right: 16px;
+}
+
+li.c-figure__toolbar-listitem {
+    background-color: $woodsmoke;
+
+    svg {
+        fill: $white;
+        width: 16px;
+    }
 }
 
 .c-figure__title {
 	@include font("GOTHAM", 20px, 700, 24px, -4);
 	color: $woodsmoke;
+	margin-bottom: 12px;
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		margin-bottom: 16px;
+	}
 }
 
 .c-figure__caption {
 	@include font("GOTHAM", 17px, 400, 28px, -2);
 	color: $mineshaft;
+	margin-bottom: 12px;
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		margin-bottom: 16px;
+	}
 }
 
 .c-figure__credit {
