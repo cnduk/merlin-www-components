@@ -1,0 +1,75 @@
+@import "@cnbritain/merlin-www-common:gq";
+@import "@cnbritain/merlin-www-image:gq";
+
+@import "../wireframe/wireframe";
+
+.c-footer {
+	background-color: $black;
+	color: $white;
+    padding: 0 20px;
+	@include min-screen(1100px) {
+		padding: 0 30px;
+	}
+}
+
+.c-footer__wrapper {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.c-footer__list {
+	color: $white;
+}
+
+.c-footer__list--left {}
+.c-footer__list--right {}
+
+.c-footer__list-item--links {
+	.c-footer__list-item {
+    	@include max-screen(1099px) {
+			border-top: 1px solid $mineshaft;
+			box-sizing: border-box;
+
+			&:last-child {
+				border-bottom: 1px solid $mineshaft;
+			}
+		}
+
+    	@include min-screen(1100px) {
+    		margin-right: 32px;
+    	}
+	}
+}
+
+li.c-footer__list-item {
+    @include font('GOTHAM', 12px, null, 60px, 20);
+    height: 60px;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        border-bottom: none;
+
+        @include min-screen(1100px) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+li.c-footer__list-item--logo {
+    margin-top: -60px;
+
+    svg {
+    	opacity: 0.32;
+        height: 60px;
+        width: 30px;
+    }
+
+    @include min-screen(1100px) {
+        clear: right;
+        padding-left: 32px;
+        margin-top: 0;
+    }
+}
