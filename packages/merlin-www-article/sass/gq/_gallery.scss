@@ -1,3 +1,13 @@
+.a-gallery {
+	margin: 0 auto;
+
+	@include desktop-size {
+
+	}
+}
+
+.a-gallery__wrapper {}
+
 .g-image-nav {
 	width: 24px;
 
