@@ -1,0 +1,105 @@
+@import "@cnbritain/merlin-www-common:gq";
+@import "@cnbritain/merlin-www-buttons:gq";
+
+@import "../wireframe/wireframe";
+
+.c-newsletter {
+    background-color: $black;
+    padding: 60px 0;
+    text-align: center;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 80px 0;
+    }
+}
+
+.c-newsletter__wrapper {
+    margin: 0 auto;
+    max-width: 570px;
+    padding: 0 20px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+
+    }
+}
+
+.c-newsletter__logo {
+    display: none;
+}
+
+.c-newsletter__title {
+    @include font('GOTHAM', 24px, 700, 28px);
+    color: $white;
+    margin-bottom: 14px;
+    margin-top: 0;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(32px);
+        @include line-height(36px);
+        margin-bottom: 24px;
+    }
+}
+
+.c-newsletter__description {
+    color: $oslo-gray;
+    @include font('GOTHAM', 14px, null, 20px);
+    margin-bottom: 32px;
+    margin-top: 14px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(15px);
+        @include line-height(22px);
+    }
+}
+
+.c-newsletter__form {
+	@include font("GOTHAM", 12px, 700, 12px);
+	color: $bon-jour;
+    width: 100%;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        width: auto;
+    }
+}
+
+.c-newsletter__form__text {
+	color: $bon-jour;
+	padding: 16px;
+    height: 44px;
+    margin-bottom: 10px;
+
+    &::placeholder {
+    	color: $bon-jour;
+    }
+
+    &:focus {
+
+    }
+}
+
+.c-newsletter__form__btn {
+    height: 44px;
+    margin-bottom: 28px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: 10px;
+    }
+
+    @include button-single();
+    @include button-single-light();
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
+
+.c-newsletter__legal {
+    @include font('GOTHAM', 10px, null, 14px);
+    color: $oslo-gray;
+    letter-spacing: 0.025em;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.c-newsletter__privacy {
+    color: $oslo-gray;
+}
