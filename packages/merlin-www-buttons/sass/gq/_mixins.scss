@@ -12,8 +12,9 @@
 
 @mixin button-single() {
 	@include button-reset();
-	@include font("GOTHAM", 12px, 700, 12px, 0);
+	@include font("GOTHAM", 12px, 700, 12px, 60);
 	padding: 16px 16px;
+	text-transform: uppercase;
 }
 
 @mixin button-single-light() {
