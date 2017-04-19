@@ -114,6 +114,7 @@
 }
 
 @mixin button-share {
+	@include button-reset();
 	border-radius: 50%;
 	border: 1px solid $bon-jour;
 	box-sizing: border-box;
@@ -134,7 +135,7 @@
     }
 }
 
-@mixin button-share-light-hover($name){
+@mixin button-share-light-hover($name) {
 	background-color: map-get($COLOUR_SOCIAL, $name);
 	border: 1px solid map-get($COLOUR_SOCIAL, $name);
 	path {
@@ -143,11 +144,19 @@
 }
 
 @mixin button-share-dark($name) {
-
+	background-color: $black;
+	border: 1px solid $mineshaft;
+   	path {
+        fill: $white;
+    }
 }
 
-@mixin button-share-dark-hover($name){
-
+@mixin button-share-dark-hover($name) {
+	background-color: map-get($COLOUR_SOCIAL, $name);
+	border: 1px solid map-get($COLOUR_SOCIAL, $name);
+	path {
+	    fill: $white;
+	}
 }
 
 @mixin button-related() {
