@@ -6,10 +6,26 @@
 .c-newsletter {
     background-color: $black;
     padding: 60px 0;
+    position: relative;
     text-align: center;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding: 80px 0;
+    }
+
+    &:before {
+        @include vendor-prefix(transform, translateX(-50%));
+        background-image: url('../img/newsletter.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: '';
+        height: 100%;
+        left: 50%;
+        max-width: $MAXIMUM_PAGE_WIDTH;
+        position: absolute;
+        top: 0;
+        width: 100%;
     }
 }
 
@@ -17,6 +33,7 @@
     margin: 0 auto;
     max-width: 570px;
     padding: 0 20px;
+    position: relative;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
 
@@ -53,8 +70,8 @@
 }
 
 .c-newsletter__form {
-	@include font("GOTHAM", 12px, 700, 12px);
-	color: $bon-jour;
+    @include font("GOTHAM", 12px, 700, 12px);
+    color: $bon-jour;
     width: 100%;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
@@ -63,13 +80,13 @@
 }
 
 .c-newsletter__form__text {
-	color: $bon-jour;
-	padding: 16px;
+    color: $bon-jour;
+    padding: 16px;
     height: 44px;
     margin-bottom: 10px;
 
     &::placeholder {
-    	color: $bon-jour;
+        color: $bon-jour;
     }
 
     &:focus {
