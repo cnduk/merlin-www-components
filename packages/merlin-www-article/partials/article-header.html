@@ -3,7 +3,12 @@
         <div class="a-header__content">
             {{# data.primary_tag }}
                 <div class="a-header__tag">
-                    <a href="{{ &data.url }}" target="_blank" class="a-header__tag__primary">{{ data.title }}</a>
+                    {{# state.has_link }}
+                        <a href="{{ &data.link.data.url }}" {{# data.link.state.is_blank }}target="_blank"{{/ data.link.state.is_blank }} class="a-header__tag__primary">{{ data.title }}</a>
+                    {{/ state.has_link }}
+                    {{^ state.has_link }}
+                        <span class="a-header__tag__primary">{{ data.title }}</span>
+                    {{/ state.has_link }}
                 </div>
             {{/ data.primary_tag }}
 
