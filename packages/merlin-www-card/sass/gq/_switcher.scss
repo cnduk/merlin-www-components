@@ -9,7 +9,7 @@
     @include card-switcher();
     @include card-landscape();
     @include card-landscape-small();
-    @include min-screen(600px) {
+    @include min-screen($CARD_SWITCHER_WIDTH) {
         @include card-portrait();
         @include card-portrait-large();
     }

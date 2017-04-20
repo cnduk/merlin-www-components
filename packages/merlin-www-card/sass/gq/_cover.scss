@@ -1,0 +1,102 @@
+// -------------------- //
+// Cover
+// -------------------- //
+@mixin card-cover() {}
+@mixin card-cover-small() {
+    .c-card__obj {}
+    .c-card__obj__header {
+        display: block;
+        padding: 0;
+        width: auto;
+    }
+    .c-card__images {
+        .c-card__image {
+            padding-top: 150%;
+        }
+    }
+
+    .c-card__obj__body {
+        display: block;
+        padding: 0;
+        width: 100%;
+    }
+
+    .c-card__teaser {
+        display: none;
+    }
+
+    .c-card__separator {
+        display: none;
+    }
+
+    .c-card__tag {
+
+    }
+
+    .c-card__title {
+        @include font("GOTHAM", 14px, 700, 18px, -10);
+        margin: 20px 0;
+        text-align: center;
+    }
+}
+
+@mixin card-cover-large($has_small:false) {
+    @if not $has_small {
+        .c-card__obj {}
+        .c-card__obj__header {
+            display: block;
+            padding: 0;
+            width: auto;
+        }
+        .c-card__images {
+            .c-card__image {
+                padding-top: 150%;
+            }
+        }
+
+        .c-card__teaser {
+            display: none;
+        }
+
+        .c-card__separator {
+            display: none;
+        }
+
+        .c-card__tag {
+
+        }
+    }
+
+    .c-card__obj__body {
+        border-bottom: 1px solid $bon-jour;
+        border-left: 1px solid $bon-jour;
+        border-right: 1px solid $bon-jour;
+        box-sizing: border-box;
+        display: block;
+        padding: 0;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .c-card__title {
+        @include font("GOTHAM", 18px, 700, 22px, -10);
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.c-card--cover {
+    @include card-cover();
+    @include card-cover-small();
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include card-cover-large($has_small:true);
+    }
+}
+
+.c-card--cover-small {
+    @include card-cover-small();
+}
+
+.c-card--cover-large {
+    @include card-cover-large();
+}
