@@ -56,25 +56,27 @@
 	}
 
 	@include two-column-size() {
-		.c-card-list__item {
-			@include last(2) {
-				margin-bottom: 0;
-	        	margin-top: 20px;
+		.c-card-list__item + .c-card-list__item {
+			margin-top: 20px;
+			@include first(2) {
+				margin-top: 0;
 			}
+		}
+
+		.c-card-list__item {
 		    width: 50%;
 		}
 	}
 
 	@include four-column-size() {
 	    .c-card-list__item + .c-card-list__item {
-	    	margin-bottom: 20px;
+			margin-top: 20px;
+			@include first(4) {
+				margin-top: 0;
+			}
 	    }
 
 	    .c-card-list__item {
-	    	@include last(4) {
-	    		margin-bottom: 0;
-	        	margin-top: 0px;
-	    	}
 	        width: 25%;
 	    }
 	}
