@@ -1,0 +1,42 @@
+.n-menu__search {
+    border-bottom: 1px solid $mineshaft;
+    overflow: hidden;
+    position: relative;
+
+    svg {
+        fill: $white;
+        height: 100%;
+        width: 18px;
+    }
+}
+
+.n-menu__search-search {
+    float: right;
+}
+
+.n-menu__search-textbox {
+    display: inline-block;
+    left: 0;
+    height: 60px;
+    position: absolute;
+    right: 60px;
+    top: 0;
+
+    input {
+        background-color: $black;
+        border: none;
+        box-sizing: border-box;
+        color: $white;
+        @include font("GOTHAM", 14px, null, 14px);
+        height: 60px;
+        padding: 0 20px;
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            padding: 0 30px;
+        }
+        width: 100%;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

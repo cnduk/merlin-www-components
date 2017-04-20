@@ -1,0 +1,30 @@
+.n-main__header-logo {
+    height: 140px;
+    max-width: none;
+    position: relative;
+    text-align: center;
+
+    a {
+    	display: inline-block;
+    }
+
+    svg, img {
+        height: 88px;
+        padding: 26px 0;
+    }
+
+    &:after {
+    	@include vendor-prefix(transform, translateX(-50%));
+    	background-color: $mineshaft;
+    	bottom: 0;
+    	content: '';
+    	height: 1px;
+    	left: 50%;
+    	position: absolute;
+    	width: 100vw;
+    }
+}
+
+.n-main__header-logo--takeover {
+
+}

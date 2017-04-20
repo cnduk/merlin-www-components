@@ -1,0 +1,285 @@
+.has-open-menu {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.n-main {
+	background-color: $black;
+	z-index: 10;
+}
+
+.n-main__wrapper {
+
+}
+
+.n-main__header {
+
+}
+
+.n-main__nav {
+    height: 60px;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+}
+
+.n-main__nav-logo {
+    height: 60px;
+    padding-left: 20px;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    	padding-left: 30px;
+    }
+    overflow: hidden;
+    position: relative;
+    width: 83px;
+
+    a {
+        @include transition(bottom, 200ms, ease-in-out);
+        bottom: 0;
+        height: 60px;
+        line-height: 60px;
+        position: absolute;
+        vertical-align: middle;
+    }
+
+    svg, img {
+        fill: $white;
+        height: 60px;
+        width: 100%;
+    }
+
+    @include screen(1440px, 1500px) {
+        @for $i from 0 through 60 {
+            @media (min-width: 1440px + $i) {
+                padding-left: #{(30 - $i/2)}px;
+            }
+        }
+    }
+
+    @include min-screen(1500px) {
+        padding-left: 0;
+    }
+}
+
+.n-main__nav-logo--takeover {
+    svg, img {
+
+    }
+}
+
+.n-main__nav-logo--hidden {
+    a {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            bottom: -60px;
+        }
+    }
+}
+
+.n-main__list-item {
+    vertical-align: top;
+}
+
+.n-main__nav-link {
+    @include font("GOTHAM", 12px, 700, 12px, 60);
+    box-sizing: border-box;
+    color: $white;
+    display: inline-block;
+    height: 60px;
+    margin: 0 16px;
+    text-transform: uppercase;
+
+    span {
+        display: inline-block;
+        height: 60px;
+        line-height: 60px;
+    }
+
+    &:hover {
+    	border-bottom: 4px solid $limed-oak;
+    }
+}
+
+.n-main__sticker {
+    z-index: 3;
+}
+
+.n-main__sticker-child {
+    background-color: $black;
+
+    &:after {
+    	@include vendor-prefix(transform, translateX(-50%));
+    	background-color: $mineshaft;
+    	bottom: 0;
+    	content: '';
+    	height: 1px;
+    	left: 50%;
+    	position: absolute;
+    	width: 100vw;
+    }
+}
+
+.n-main__nav-hamburger {
+    border-left: 1px solid $mineshaft;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    width: 60px;
+
+    .n-main__nav-hamburger__icon {
+        cursor: pointer;
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        width: 60px;
+
+        svg {
+            display: inline-block;
+            fill: $white;
+            height: 32px;
+            line-height: 60px;
+            vertical-align: middle;
+        }
+    }
+
+    .n-main__nav-hamburger__close-icon {
+        cursor: pointer;
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        width: 60px;
+
+        svg {
+            display: inline-block;
+            fill: $white;
+            height: 18px;
+            line-height: 60px;
+            vertical-align: middle;
+        }
+    }
+}
+
+.n-main__nav-search {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        border-left: 1px solid $mineshaft;
+    }
+
+    @include min-screen($MAXIMUM_PAGE_WIDTH + 1) {
+        border-right: 1px solid $mineshaft;
+    }
+
+    display: inline-block;
+    float: right;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    width: 60px;
+
+    .n-main__nav-search__icon {
+        background-color: transparent;
+        cursor: pointer;
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        width: 60px;
+
+        svg {
+            display: inline-block;
+            fill: $white;
+            height: 20px;
+            line-height: 60px;
+            vertical-align: middle;
+        }
+
+        &:hover {
+        	svg {
+        		fill: $limed-oak;
+        	}
+        }
+    }
+
+    .n-main__nav-search__close-icon {
+
+    }
+}
+
+.n-menu {
+	background-color: $black;
+    -webkit-overflow-scrolling: touch;
+
+    &.is-visible {
+        bottom: 0;
+        overflow: auto;
+        position: fixed;
+        top: 60px;
+        width: 100%;
+        z-index: 2;
+    }
+}
+
+.n-menu__top-stories {
+    .c-top-stories {
+        display: block;
+    }
+
+    .c-top-stories__overflow {
+    	padding-left: 20px;
+	    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	    	padding-left: 30px;
+	    }
+    }
+}
+
+.n-menu__nav {
+	margin-bottom: 32px;
+
+    .n-menu__nav__wrapper {
+        overflow: hidden;
+    }
+
+    a {
+        .n-menu__nav-item {
+            border-bottom: 1px solid $mineshaft;
+            float: left;
+            height: 60px;
+            position: relative;
+            width: 100%;
+
+            .n-menu__nav-link {
+            	color: $white;
+            	padding: 0 20px;
+                @include font("GOTHAM", 16px, 700, 16px, 60);
+                @include vendor-prefix(transform, translateY(-50%));
+                position: absolute;
+                text-transform: uppercase;
+                top: 50%;
+                word-break: break-word;
+                @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+                	padding: 0 30px;
+                }
+            }
+
+            &--more {
+                border-bottom: none;
+                height: 40px;
+                width: 50%;
+
+                .n-menu__nav-link {
+                    @include font-size(12px);
+                    @include line-height(12px);
+                    @include vendor-prefix(transform, none);
+                    bottom: 0;
+                    letter-spacing: 0.06em;
+                    top: initial;
+                }
+            }
+
+            &:hover,
+            &:focus {
+
+            }
+        }
+    }
+}
