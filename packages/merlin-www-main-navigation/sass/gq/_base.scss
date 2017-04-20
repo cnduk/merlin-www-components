@@ -8,8 +8,8 @@
 }
 
 .n-main {
-	background-color: $black;
-	z-index: 10;
+    background-color: $black;
+    z-index: 10;
 }
 
 .n-main__wrapper {
@@ -30,7 +30,7 @@
     height: 60px;
     padding-left: 20px;
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-    	padding-left: 30px;
+        padding-left: 30px;
     }
     overflow: hidden;
     position: relative;
@@ -98,7 +98,7 @@
     }
 
     &:hover {
-    	border-bottom: 4px solid $limed-oak;
+        border-bottom: 4px solid $limed-oak;
     }
 }
 
@@ -110,14 +110,14 @@
     background-color: $black;
 
     &:after {
-    	@include vendor-prefix(transform, translateX(-50%));
-    	background-color: $mineshaft;
-    	bottom: 0;
-    	content: '';
-    	height: 1px;
-    	left: 50%;
-    	position: absolute;
-    	width: 100vw;
+        @include vendor-prefix(transform, translateX(-50%));
+        background-color: $mineshaft;
+        bottom: 0;
+        content: '';
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        width: 100vw;
     }
 }
 
@@ -194,19 +194,38 @@
         }
 
         &:hover {
-        	svg {
-        		fill: $limed-oak;
-        	}
+            svg {
+                fill: $limed-oak;
+            }
         }
     }
 
     .n-main__nav-search__close-icon {
+        background-color: transparent;
+        cursor: pointer;
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        width: 60px;
 
+        svg {
+            display: inline-block;
+            fill: $white;
+            height: 20px;
+            line-height: 60px;
+            vertical-align: middle;
+        }
+
+        &:hover {
+            svg {
+                fill: $limed-oak;
+            }
+        }
     }
 }
 
 .n-menu {
-	background-color: $black;
+    background-color: $black;
     -webkit-overflow-scrolling: touch;
 
     &.is-visible {
@@ -225,15 +244,15 @@
     }
 
     .c-top-stories__overflow {
-    	padding-left: 20px;
-	    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-	    	padding-left: 30px;
-	    }
+        padding-left: 20px;
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            padding-left: 30px;
+        }
     }
 }
 
 .n-menu__nav {
-	margin-bottom: 32px;
+    margin-bottom: 32px;
 
     .n-menu__nav__wrapper {
         overflow: hidden;
@@ -248,8 +267,8 @@
             width: 100%;
 
             .n-menu__nav-link {
-            	color: $white;
-            	padding: 0 20px;
+                color: $white;
+                padding: 0 20px;
                 @include font("GOTHAM", 16px, 700, 16px, 60);
                 @include vendor-prefix(transform, translateY(-50%));
                 position: absolute;
@@ -257,7 +276,7 @@
                 top: 50%;
                 word-break: break-word;
                 @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-                	padding: 0 30px;
+                    padding: 0 30px;
                 }
             }
 

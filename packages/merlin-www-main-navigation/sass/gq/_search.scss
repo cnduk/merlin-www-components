@@ -40,3 +40,23 @@
         }
     }
 }
+
+.n-search {
+    background-color: rgba(25, 25, 27, 0.9);
+
+    &.has-overlay {
+        left: 0;
+        padding-bottom: 100%;
+        position: absolute;
+        right: 0;
+        top: auto;
+        z-index: 3;
+
+        &.is-stuck {
+            bottom: 0;
+            padding-bottom: 0;
+            position: fixed;
+            top: 60px;
+        }
+    }
+}
