@@ -1,225 +1,24 @@
 // -------------------- //
-// Tag Article
+// Switcher-video
 // -------------------- //
-@mixin card-switcher-video() {
-    .c-card__obj {
-        display: table;
-        width: 100%;
-    }
-
-    .c-card__obj__header,
-    .c-card__obj__body {
-        display: table-cell;
-        vertical-align: top;
-    }
-}
-
-@mixin card-switcher-video-small() {
-    .c-card__obj {}
-    .c-card__obj__header,
-    .c-card__obj__body {
-        width: 50%;
-    }
-
-    .c-card__obj__header {
-        padding-right: 8px;
-    }
-    .c-card__images {
-        .c-card__image {
-            padding-top: 100%;
-        }
-
-        .c-card__image__icon {
-            bottom: 0;
-            background-color: $limed-oak;
-            height: 40px;
-            left: 0;
-            width: 40px;
-
-            svg {
-                display: block;
-                height: 100%;
-                margin: 0 auto;
-                vertical-align: middle;
-                width: 16px;
-                fill: $white;
-            }
-        }
-    }
-
-    .c-card__obj__body {
-        padding-left: 8px;
-    }
-
-    .c-card__tag {
-        @include font("GOTHAM", 11px, null, 14px, -40);
-        color: $limed-oak;
-        margin-bottom: 6px;
-        margin-top: 0;
-    }
-
-    .c-card__title {
-        @include font("GOTHAM", 17px, 700, 22px, -10);
-        color: $woodsmoke;
-        margin-bottom: 12px;
-        margin-top: 6px;
-    }
-
-    .c-card__teaser {
-        display: none;
-    }
-
-    .c-card__separator {
-        display: none;
-    }
-
-    .c-card__byline {
-        @include font("GOTHAM", 9px, null, 12px, 60);
-        margin-bottom: 6px;
-        margin-top: 12px;
-
-        .c-card__byline-prefix {
-            @include font-weight(400);
-        }
-
-        .c-card__byline-name {
-            @include font-weight(700);
-        }
-    }
-
-    .c-card__meta {
-        @include font("GOTHAM", 9px, 500, 14px);
-        color: $oslo-gray;
-        margin-top: 6px;
-        padding-right: 0;
-
-        li.c-card__meta-item {
-            & + li.c-card__meta-item {
-                border-left: none;
-                padding-left: 0;
-                &:before {
-                    background-color: $oslo-gray;
-                    border-radius: 50%;
-                    content: "";
-                    display: inline-block;
-                    height: 3px;
-                    margin: 1px 8px;
-                    width: 3px;
-                }
-            }
-        }
-    }
-}
-
-@mixin card-switcher-video-large($has_small:false) {
-    .c-card__obj__header {
-        padding-right: 20px;
-        width: 33.33333%;
-    }
-
-    .c-card__obj__body {
-        padding-left: 20px;
-        width: auto;
-    }
-
-    @if not $has_small {
-        .c-card__obj {}
-        .c-card__images {
-            .c-card__image {
-                padding-top: 100%;
-            }
-
-            .c-card__image__icon {
-                bottom: 0;
-                background-color: $limed-oak;
-                height: 40px;
-                left: 0;
-                width: 40px;
-
-                svg {
-                    display: block;
-                    height: 100%;
-                    margin: 0 auto;
-                    vertical-align: middle;
-                    width: 16px;
-                    fill: $white;
-                }
-            }
-        }
-
-        .c-card__tag {
-            @include font("GOTHAM", 11px, null, 14px, -40);
-            color: $limed-oak;
-            margin-bottom: 6px;
-            margin-top: 0;
-        }
-
-        .c-card__title {
-            @include font("GOTHAM", 17px, 700, 22px, -10);
-            color: $woodsmoke;
-            margin-bottom: 12px;
-            margin-top: 6px;
-        }
-
-        .c-card__teaser {
-            display: none;
-        }
-
-        .c-card__separator {
-            display: none;
-        }
-
-        .c-card__byline {
-            @include font("GOTHAM", 9px, null, 12px, 60);
-            margin-bottom: 6px;
-            margin-top: 12px;
-
-            .c-card__byline-prefix {
-                @include font-weight(400);
-            }
-
-            .c-card__byline-name {
-                @include font-weight(700);
-            }
-        }
-
-        .c-card__meta {
-            @include font("GOTHAM", 9px, 500, 14px);
-            color: $oslo-gray;
-            margin-top: 6px;
-            padding-right: 0;
-
-            li.c-card__meta-item {
-                & + li.c-card__meta-item {
-                    border-left: none;
-                    padding-left: 0;
-                    &:before {
-                        background-color: $oslo-gray;
-                        border-radius: 50%;
-                        content: "";
-                        display: inline-block;
-                        height: 3px;
-                        margin: 1px 8px;
-                        width: 3px;
-                    }
-                }
-            }
-        }
-    }
-}
+@mixin card-switcher-video() {}
+// @mixin card-switcher-video-small() {}
+// @mixin card-switcher-video-large() {}
 
 .c-card--switcher-video {
     @include card-switcher-video();
-    @include card-switcher-video-small();
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include card-switcher-video-large($has_small:true);
+    @include card-landscape();
+    @include card-landscape-small();
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include card-portrait();
+        @include card-portrait-large();
     }
 }
 
 .c-card--switcher-video-small {
-    @include card-switcher-video-small();
+    @include card-landscape-small();
 }
 
 .c-card--switcher-video-large {
-    @include card-switcher-video-large();
+    @include card-portrait-large();
 }

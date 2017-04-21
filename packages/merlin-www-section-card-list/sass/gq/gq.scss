@@ -24,7 +24,9 @@
 .c-card-section--a-recommended,
 .c-card-section--g-recommended,
 .c-card-section--mag-articles,
-.c-card-section--mag-magazines {
+.c-card-section--mag-magazines,
+.c-card-section--v-articles,
+.c-card-section--v-genre-articles {
 	.c-card-section__title {
 		@include font("GOTHAM", 12px, 700, 12px, 60);
 		color: $woodsmoke;
@@ -40,7 +42,6 @@
 }
 
 .c-card-section--s-results {}
-.c-card-section--v-genre-articles {}
 .c-card-section--sh-latest-articles {}
 
 .c-card-section--c-video-articles {
@@ -121,8 +122,7 @@
 .c-card-section--c-magazine-articles {}
 .c-card-section--sh-shows {}
 
-.c-card-section--tg-articles,
-.c-card-section--v-articles {
+.c-card-section--tg-articles {
 	.c-card-section__title {
 		@include font("GOTHAM", 14px, 700, 40px, 60)
 		color: $woodsmoke;
