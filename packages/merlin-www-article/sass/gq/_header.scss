@@ -135,11 +135,35 @@
     display: none;
 }
 
-.a-header__meta {}
+.a-header__meta {
+    margin-bottom: 24px;
+    margin-top: 10px;
+}
 .a-header__meta--date {}
 .a-header__meta--tag {}
 .a-header__meta-item {
+    @include font("GOTHAM", 11px, 400, 16px);
+    color: $oslo-gray;
 
+    & + .a-header__meta-item {
+        margin-left: 8px;
+        padding-left: 8px;
+
+        &:before {
+            background-color: $oslo-gray;
+            border-radius: 50%;
+            content: '';
+            height: 3px;
+            left: -1.5px;
+            position: absolute;
+            top: 6.5px;
+            width: 3px;
+        }
+    }
+
+    a {
+        color: inherit;
+    }
 }
 
 .a-header__tag {

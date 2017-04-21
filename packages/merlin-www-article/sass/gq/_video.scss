@@ -1,0 +1,54 @@
+.a-logo {}
+.a-logo--video {
+    background-color: $woodsmoke;
+    padding: 40px 0 28px 0;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 60px 0 40px 0;
+    }
+
+    .a-logo__wrapper {
+        margin: 0 auto;
+        width: 190px;
+        height: 50px;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            width: 228px;
+            height: 60px;
+        }
+    }
+
+    svg {
+        fill: $white;
+    }
+}
+
+.a-video {
+    background-color: $woodsmoke;
+}
+
+.a-video__wrapper {
+
+}
+
+.a-video__player {}
+
+.a-video__player__wrapper {
+
+}
+
+.a-video__sidebar {
+
+}
+
+.a-video__sidebar__wrapper {}
+
+.a-video__sidebar__title {}
+
+.a-video__sidebar__list {
+
+}
+
+.a-video__related {
+
+}
