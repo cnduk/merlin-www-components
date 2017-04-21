@@ -161,9 +161,14 @@
 }
 
 @mixin button-related() {
-
+	@include button-reset();
+	@include font("GOTHAM", 12px, 700, 12px, 0);
+	background: $zircon;
+	color: $cornflower-blue;
+	padding: 14px 8px;
 }
 
 @mixin button-related-hover(){
-
+	background: $cornflower-blue;
+	color: $white;
 }

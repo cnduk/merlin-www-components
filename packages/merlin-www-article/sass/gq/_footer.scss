@@ -6,7 +6,11 @@
 
 .a-footer--gallery {}
 
-.a-footer--video {}
+.a-footer--video {
+	.a-footer__wrapper {
+		padding-left: 0;
+	}
+}
 
 .a-footer__wrapper {}
 
