@@ -38,15 +38,24 @@
 }
 
 .a-video__sidebar {
-
+    background-color: $shark;
+    padding: 0 20px 20px 20px;
 }
 
 .a-video__sidebar__wrapper {}
 
-.a-video__sidebar__title {}
+.a-video__sidebar__title {
+    @include font("GOTHAM", 14px, null, 18px, -40);
+    color: $white;
+    margin: 0;
+    padding: 24px 0 8px 0;
+    text-transform: uppercase;
+}
 
 .a-video__sidebar__list {
-
+    left: 20px;
+    padding-bottom: 20px;
+    right: 20px;
 }
 
 .a-video__related {
