@@ -199,11 +199,37 @@
     }
 }
 
-.a-header__sponsor {}
+.a-header__sponsor {
+    @include font("GOTHAM", 9px, 400, 14px, 60);
+    color: $mineshaft;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-transform: uppercase;
+
+    a {
+        color: $mineshaft;
+        border-bottom: none;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        &:after {
+            content: '';
+            border-bottom: 0;
+            border-left: 0;
+            border-right: 0;
+            border-top: 4px double $bon-jour;
+            height: 0;
+            margin: 28px 0;
+            display: block;
+        }
+    }
+}
 
 .a-header__sponsor-prefix {}
 
-.a-header__sponsor-name {}
+.a-header__sponsor-name {
+    @include font-weight(700);
+}
 
 .a-header__sponsor-image {
 

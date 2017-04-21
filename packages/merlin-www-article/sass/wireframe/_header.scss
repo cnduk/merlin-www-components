@@ -198,9 +198,7 @@
 
 .a-main.is-sponsored {
     .a-header__separator {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            display: none;
-        }
+
     }
 }
 
