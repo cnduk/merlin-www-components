@@ -182,3 +182,24 @@
 
 .c-card-list--sh-articles {}
 .c-card-list--tg-header-articles {}
+
+.c-card-list--v-related-articles {
+	margin: 0 -10px;
+
+	.c-card-list__item {
+		display: inline-block;
+	    padding: 0 10px;
+	    width: 100%;
+	}
+
+
+    .c-card-list__item + .c-card-list__item {
+        margin-top: 20px;
+
+        .c-card {
+            border-top: 1px solid $mineshaft;
+            padding-top: 20px;
+        }
+    }
+
+}
