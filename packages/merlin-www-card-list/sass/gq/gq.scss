@@ -146,7 +146,8 @@
 }
 .c-card-list--sh-shows {}
 
-.c-card-list--tg-articles {
+.c-card-list--tg-articles,
+.c-card-list--v-articles {
 	margin: 0 -10px;
 
     .c-card-list__item {
@@ -180,5 +181,4 @@
 }
 
 .c-card-list--sh-articles {}
-.c-card-list--v-articles {}
 .c-card-list--tg-header-articles {}
