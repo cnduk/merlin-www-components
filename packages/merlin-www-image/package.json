@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-image",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "",
   "main": "js/index.js",
   "scripts": {
@@ -9,8 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lazysizes": "^1.4.0",
-    "@cnbritain/merlin-www-assets": "^1.0.6"
+    "@cnbritain/merlin-www-assets": "^1.1.0",
+    "lazysizes": "^1.4.0"
   },
   "devDependencies": {
     "@cnbritain/merlin-component-demo-server": "^2.8.0"
