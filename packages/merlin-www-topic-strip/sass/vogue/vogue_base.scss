@@ -55,11 +55,28 @@ li.c-topic-strip__item {
     text-transform: uppercase;
 }
 
+.c-topic-strip__btn {
+    @include button-group();
+    @include button-group-light();
+
+    &:hover {
+        @include button-group-light-hover();
+    }
+}
+
 .c-topic-strip--article-related {
     text-align: left;
 
     .c-topic-strip__item + .c-topic-strip__item {
         margin-left: $MARGIN_XX_SMALL;
+    }
+
+    .c-topic-strip__btn {
+        @include button-related();
+
+        &:hover {
+            @include button-related-hover();
+        }
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
@@ -70,27 +87,13 @@ li.c-topic-strip__item {
             margin-bottom: $MARGIN_XX_SMALL;
             margin-right: $MARGIN_XX_SMALL;
         }
+
         .c-topic-strip__item + .c-topic-strip__item {
             @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
                 margin-left: 0;
             }
         }
+
     }
 
-    .c-topic-strip__btn {
-        @include button-related();
-
-        &:hover {
-            @include button-related-hover();
-        }
-    }
-}
-
-.c-topic-strip__btn {
-    @include button-group();
-    @include button-group-light();
-
-    &:hover {
-        @include button-group-light-hover();
-    }
 }
