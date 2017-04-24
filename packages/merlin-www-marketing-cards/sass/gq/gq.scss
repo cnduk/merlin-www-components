@@ -1,0 +1,137 @@
+@import '@cnbritain/merlin-www-common:gq';
+@import '@cnbritain/merlin-www-buttons:gq';
+
+@import '../wireframe/wireframe';
+
+.a-marketing-card {
+    background-color: $white;
+    border: 1px solid $bon-jour;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.06);
+    margin: 28px 0;
+    padding: 40px 20px;
+
+    @include marketing-card-medium-size() {
+        padding: 0px;
+    }
+}
+
+.a-marketing-card--brand {}
+.a-marketing-card--event {}
+.a-marketing-card--topic {}
+.a-marketing-card--magazine {
+    .a-marketing-card__col {
+        @include marketing-card-medium-size() {
+            &:nth-child(1) {
+                padding-right: 20px;
+            }
+
+            &:nth-child(2) {
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
+.a-marketing-card__brand {
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    @include marketing-card-medium-size() {
+        margin-bottom: 0;
+    }
+}
+
+.a-marketing-card__brand__img {
+    margin: 0 auto;
+}
+
+.a-marketing-card__brand__name {
+    @include font("GOTHAM", 17px, 700, 20px, 60);
+    @include marketing-card-medium-size() {
+        @include font-size(20px);
+        @include line-height(24px);
+    }
+
+    a {
+        color: inherit;
+    }
+}
+
+.a-marketing-card__brand__prefix {
+    @include font("GOTHAM", 9px, 400, 16px, 60);
+    margin-bottom: 16px;
+    @include marketing-card-medium-size() {
+        margin-bottom: 20px;
+    }
+}
+
+.a-marketing-card__col {
+    text-align: center;
+
+    @include marketing-card-medium-size() {
+        padding: 40px;
+        text-align: left;
+    }
+}
+
+.a-marketing-card--brand .a-marketing-card__col,
+.a-marketing-card--topic .a-marketing-card__col,
+.a-marketing-card--event .a-marketing-card__col {
+    @include marketing-card-medium-size() {
+        width: 38%;
+
+        & + .a-marketing-card__col {
+            border-left: 1px solid $bon-jour;
+        }
+    }
+}
+
+.a-marketing-card__desc {
+    @include font("GOTHAM", 14px, 400, 20px, -10);
+    margin-bottom: 28px;
+}
+
+.a-marketing-card__magazine {
+    margin: 0 auto 24px auto;
+
+    @include marketing-card-medium-size() {
+        margin-bottom: 0;
+    }
+}
+.a-marketing-card__magazine__cover {}
+.a-marketing-card__magazine__cover--print {
+    width: 72%;
+}
+
+.a-marketing-card__magazine__cover--tablet {
+    background-color: $black;
+    border-radius: 4px;
+    bottom: 1px;
+    box-shadow: 0px 0px 0px 1px rgba(48, 48, 48, 1);
+    padding: 12px 4px;
+    position: absolute;
+    right: 0;
+    width: 44%;
+
+    @include marketing-card-medium-size() {
+        padding: 16px 5px;
+    }
+}
+
+.a-marketing-card__magazine__cover--mobile {
+    display: none;
+}
+
+.a-marketing-card__link {
+    @include button-single();
+    @include button-single-light();
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
+
+.a-marketing-card__title {
+    @include font("GOTHAM", 14px, 500, 20px, -4);
+    color: $woodsmoke;
+    margin: 0 0 24px 0;
+}
