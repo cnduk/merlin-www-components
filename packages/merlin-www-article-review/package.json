@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-article-review",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Review section for articles",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-www-common": "^1.0.6"
+    "@cnbritain/merlin-www-common": "^1.0.7"
   },
   "devDependencies": {
     "@cnbritain/merlin-component-demo-server": "^2.8.0"
