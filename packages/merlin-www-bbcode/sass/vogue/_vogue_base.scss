@@ -102,6 +102,10 @@
     &:before {
         display: none;
     }
+
+    img {
+        width: 100%;
+    }
 }
 .bb-gallery__title {
     color: #000;
@@ -141,6 +145,11 @@
     .bb-gallery__col:first-child:before {
         @include c-card-label($COLOR_TYPE_LINK, #fff, 'VIEW COLLECTION');
         padding: 14px 10px 14px 12px;
+        // NOTE: needed to reset before from li
+        border-radius: 0;
+        height: auto;
+        top: auto;
+        width: auto;
     }
 }
 
