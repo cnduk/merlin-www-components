@@ -194,6 +194,8 @@
 
 {{# state.has_search }}
     <div class="n-search">
-        {{> @cnbritain/merlin-www-search-header }}
+        {{# data.search_overlay }}
+            {{> @cnbritain/merlin-www-search-header }}
+        {{/ data.search_overlay }}
     </div>
 {{/ state.has_search }}
