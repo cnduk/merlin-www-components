@@ -1,0 +1,56 @@
+@import '@cnbritain/merlin-www-common:wired';
+
+@import '../wireframe/wireframe';
+
+.a-review {
+	border: 1px solid $bon-jour;
+	margin: 28px 0;
+	padding: 32px 20px;
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		padding: 40px;
+	}
+}
+
+.a-review__item {
+	& + .a-review__item {
+		margin-top: 28px;
+	}
+}
+.a-review__key {
+	@include font("GOTHAM", 14px, 700, 20px, 60);
+	color: $dodger-blue;
+	margin-bottom: 12px;
+	text-transform: uppercase;
+}
+
+.a-review__separator {
+	display: none;
+}
+
+.a-review__value {
+	@include font("GOTHAM", 14px, 400, 20px, -20);
+	color: $mineshaft;
+}
+
+.a-review__rating-list {
+	display: inline-block;
+}
+
+li.a-review__rating-list__item {
+	background: $bon-jour;
+	height: 8px;
+	margin-right: 4px;
+	width: 8px;
+}
+
+li.a-review__rating-list__item--active {
+	background: $dodger-blue;
+}
+
+.a-review__rating {
+	@include font("GOTHAM", 12px, 700, 12px);
+	color: $mineshaft;
+	display: inline-block;
+	margin-left: 4px;
+}
