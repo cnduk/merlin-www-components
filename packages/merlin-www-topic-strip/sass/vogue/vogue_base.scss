@@ -97,3 +97,49 @@ li.c-topic-strip__item {
     }
 
 }
+
+.c-topic-strip--show-trends {
+    font-size: 0;
+    margin: $MARGIN_MEDIUM 0;
+    text-align: left;
+
+    .c-topic-strip__title {
+        padding-right: 15px;
+    }
+
+    .c-topic-strip__btn {
+        @include button-related();
+
+        &:hover {
+            @include button-related-hover();
+        }
+    }
+
+    @include min-screen($ARTICLE_TOTAL){
+        white-space: normal;
+
+        .c-topic-strip__title {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .c-topic-strip__list {
+            display: block;
+        }
+
+        .c-topic-strip__item {
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+
+        .c-topic-strip__item + .c-topic-strip__item {
+            margin-left: 0;
+        }
+
+        .c-topic-strip__btn {
+            display: block;
+        }
+
+    }
+
+}
