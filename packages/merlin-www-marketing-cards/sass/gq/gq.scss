@@ -18,6 +18,7 @@
 .a-marketing-card--brand {}
 .a-marketing-card--event {}
 .a-marketing-card--topic {}
+
 .a-marketing-card--magazine {
     .a-marketing-card__col {
         @include marketing-card-medium-size() {
@@ -69,7 +70,10 @@
 
     @include marketing-card-medium-size() {
         padding: 40px;
-        text-align: left;
+
+        &:nth-child(2) {
+            text-align: left;
+        }
     }
 }
 
