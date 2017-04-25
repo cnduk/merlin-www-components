@@ -96,8 +96,7 @@
 .c-card-section--s-results {}
 
 .c-card-section--v-related-articles,
-.c-card-section--c-video-articles,
-.c-card-section--sh-summary-articles {
+.c-card-section--c-video-articles {
     background-color: $COLOUR_BG_DARK;
     max-width: none;
     padding: 40px $MOBILE_SIDE_GUTTER;
@@ -159,7 +158,9 @@
 
 .c-card-section--mag-magazines,
 .c-card-section--a-recommended,
-.c-card-section--g-recommended {
+.c-card-section--g-recommended,
+.c-card-section--sh-summary-articles,
+.c-card-section--sh-summary-shows {
     background-color: $COLOUR_BG_ACCENT2;
     padding-bottom: $PADDING_LARGE;
     padding-top: $PADDING_LARGE;
