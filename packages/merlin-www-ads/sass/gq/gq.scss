@@ -1,0 +1,70 @@
+.ad__main {
+
+	&.is-hidden {
+
+	}
+
+	&.stick-wrapper {
+
+	}
+
+	&.is-sticky-block {
+
+	}
+}
+
+.ad--homepage {
+	.ad__block {
+		background-color: $albaster;
+		padding: 20px 0;
+		text-align: center;
+	}
+}
+
+.ad--tag {
+	.ad__block {
+		background-color: $albaster;
+		padding: 20px 0;
+		text-align: center;
+	}
+}
+
+.ad--tag-header {
+	.ad__block {
+		background-color: $shark;
+		padding: 20px 0;
+		text-align: center;
+	}
+}
+
+.ad--tag-rail {
+	margin: 20px (-$MOBILE_SIDE_GUTTER + 10) 0 (-$MOBILE_SIDE_GUTTER + 10);
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+		margin-left: -$TABLET_SIDE_GUTTER + 10;
+		margin-right: -$TABLET_SIDE_GUTTER + 10;
+	}
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+
+	}
+}
+
+.ad__title {
+	@include font("GOTHAM", 9px, 400, 12px, 60);
+	color: $oslo-gray;
+	margin-bottom: 8px;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+
+.ad__block {
+
+	&.is-sticky-element {
+
+	}
+}
+
+.ad__container {
+
+}
