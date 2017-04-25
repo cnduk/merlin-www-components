@@ -9,18 +9,19 @@
 .a-gallery__wrapper {}
 
 .g-image-nav {
-	width: 24px;
+	width: $MOBILE_SIDE_GUTTER;
 
 	@include tablet-size {
-		padding: 0 8px;
+		width: $TABLET_SIDE_GUTTER;
 	}
 
 	@include desktop-size {
-		padding: 0 13px;
+		width: $DESKTOP_SIDE_GUTTER;
 	}
 }
 
 .g-image-nav__btns {
+	margin: 0 auto;
 	width: 24px;
 }
 
@@ -46,4 +47,24 @@
 
 .g-image-nav__btn[disabled] {
 	border-color: $bon-jour;
+}
+
+.a-gallery__view {
+
+	&--list {
+
+	}
+}
+
+ul.a-gallery__image-list {}
+li.a-gallery__image-listitem {
+	margin-bottom: 28px;
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		margin-bottom: 32px;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
