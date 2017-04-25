@@ -3,7 +3,8 @@
 .c-card--dark {
     &.c-card--landscape,
     &.c-card--portrait,
-    &.c-card--switcher {
+    &.c-card--switcher,
+    &.c-card--hero {
         .c-card__title,
         .c-card__byline {
             color: $white;
