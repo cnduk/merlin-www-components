@@ -42,42 +42,46 @@
 	}
 
 	@include one-column-size() {
-	    .c-card-list__item + .c-card-list__item {
-	        margin-top: 20px;
+	    .c-card-list__item {
+	    	& + .c-card-list__item {
+	    		margin-top: 20px;
 
-	        .c-card {
-	            border-top: 1px solid $bon-jour;
-	            padding-top: 20px;
+	    		.c-card {
+	    		    border-top: 1px solid $bon-jour;
+	    		    padding-top: 20px;
 
-	            &.c-card--dark {
-	                border-top-color: $mineshaft;
-	            }
-	        }
+	    		    &.c-card--dark {
+	    		        border-top-color: $mineshaft;
+	    		    }
+	    		}
+	    	}
 	    }
 	}
 
 	@include two-column-size() {
-		.c-card-list__item + .c-card-list__item {
-			margin-top: 20px;
-			@include first(2) {
-				margin-top: 0;
-			}
-		}
-
 		.c-card-list__item {
+			& + .c-card-list__item {
+				margin-top: 20px;
+			}
+
+		    @include first(2) {
+		    	margin-top: 0;
+		    }
+
 		    width: 50%;
 		}
 	}
 
 	@include four-column-size() {
-	    .c-card-list__item + .c-card-list__item {
-			margin-top: 20px;
-			@include first(4) {
-				margin-top: 0;
-			}
-	    }
-
 	    .c-card-list__item {
+	    	& + .c-card-list__item {
+	    		margin-top: 20px;
+	    	}
+
+	        @include first(4) {
+	        	margin-top: 0;
+	        }
+
 	        width: 25%;
 	    }
 	}
@@ -92,27 +96,31 @@
 	    width: 100%;
 	}
 
-	@include three-column-size(){
-		.c-card-list__item + .c-card-list__item {
-			margin-top: 20px;
-			@include first(3) {
-				margin-top: 0;
-			}
-		}
-
+	@include three-column-size() {
 		.c-card-list__item {
+			& + .c-card-list__item {
+				margin-top: 20px;
+			}
+
+		    @include first(3) {
+		    	margin-top: 0;
+		    }
+
 		    width: 33.33333%;
 		}
 	}
 }
-.c-card-list--c-magazine-articles {
-	.c-card-list__item + .c-card-list__item {
-	    margin-top: 20px;
 
-	    .c-card {
-	        border-top: 1px solid $bon-jour;
-	        padding-top: 20px;
-	    }
+.c-card-list--c-magazine-articles {
+	.c-card-list__item {
+		& + .c-card-list__item {
+		    margin-top: 20px;
+
+		    .c-card {
+		        border-top: 1px solid $bon-jour;
+		        padding-top: 20px;
+		    }
+		}
 	}
 }
 
@@ -120,31 +128,34 @@
 	margin: 0 -10px;
 
 	.c-card-list__item {
+	    & + .c-card-list__item {
+			margin-top: 20px;
+		}
+
 		display: inline-block;
 	    padding: 0 10px;
 	    width: 50%;
 
-	    & + .c-card-list__item {
-			margin-top: 20px;
-			@include first(2) {
-				margin-top: 0;
-			}
+		@include first(2) {
+			margin-top: 0;
 		}
 	}
 
 	@include four-column-size() {
-	    .c-card-list__item + .c-card-list__item {
-			margin-top: 20px;
-			@include first(4) {
-				margin-top: 0;
-			}
-	    }
-
 	    .c-card-list__item {
+	    	& + .c-card-list__item {
+	    		margin-top: 20px;
+	    	}
+
+	        @include first(4) {
+	        	margin-top: 0;
+	        }
+
 	        width: 25%;
 	    }
 	}
 }
+
 .c-card-list--sh-shows {}
 
 .c-card-list--tg-articles {
@@ -181,25 +192,76 @@
 }
 
 .c-card-list--sh-articles {}
-.c-card-list--tg-header-articles {}
+.c-card-list--tg-header-articles {
+	margin: 0 -10px;
+
+	.c-card-list__item {
+		display: inline-block;
+		padding: 0 10px;
+	    width: 100%;
+	}
+
+	@include one-column-size() {
+	    .c-card-list__item {
+	    	& + .c-card-list__item {
+	    		margin-top: 20px;
+
+	    		.c-card {
+	    		    border-top: 1px solid $bon-jour;
+	    		    padding-top: 20px;
+
+	    		    &.c-card--dark {
+	    		        border-top-color: $mineshaft;
+	    		    }
+	    		}
+	    	}
+	    }
+	}
+
+	@include two-column-size() {
+		.c-card-list__item {
+			& + .c-card-list__item {
+				margin-top: 20px;
+			}
+
+		    @include first(2) {
+		    	margin-top: 0;
+		    }
+
+		    width: 50%;
+		}
+	}
+
+	@include three-column-size() {
+	    .c-card-list__item {
+	    	& + .c-card-list__item {
+	    		margin-top: 20px;
+	    	}
+
+    		@include first(3) {
+    			margin-top: 0;
+    		}
+
+	        width: 33.33333%;
+	    }
+	}
+}
 
 .c-card-list--v-related-articles {
 	margin: 0 -10px;
 
 	.c-card-list__item {
+		& + .c-card-list__item {
+			margin-top: 20px;
+
+			.c-card {
+			    border-top: 1px solid $mineshaft;
+			    padding-top: 20px;
+			}
+		}
+
 		display: inline-block;
 	    padding: 0 10px;
 	    width: 100%;
 	}
-
-
-    .c-card-list__item + .c-card-list__item {
-        margin-top: 20px;
-
-        .c-card {
-            border-top: 1px solid $mineshaft;
-            padding-top: 20px;
-        }
-    }
-
 }
