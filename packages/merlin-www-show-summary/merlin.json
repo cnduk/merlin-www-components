@@ -1,0 +1,66 @@
+{
+    "name": "@cnbritain/merlin-www-show-summary",
+    "description": "Show summary article",
+    "main": "index",
+    "currentTheme": null,
+    "data": {
+        "article": "data/article.json",
+        "related-galleries": "data/related-galleries.json"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "vogue": "sass/vogue/vogue.scss"
+    },
+    "partials": {
+        "index": "partials/index.html",
+        "sidebar": "partials/sidebar.html",
+        "related-galleries": "partials/related-galleries.html",
+        "header": "partials/header.html"
+    },
+    "js": {
+        "demo": "demo/demo.js"
+    },
+    "demo": {
+        "header": {
+            "data": "article",
+            "main": "header",
+            "themes": [
+                "wireframe",
+                "vogue"
+            ]
+        },
+        "related-galleries": {
+            "data": "related-galleries",
+            "main": "related-galleries",
+            "themes": [
+                "wireframe",
+                "vogue"
+            ]
+        },
+        "sidebar": {
+            "data": "article",
+            "main": "sidebar",
+            "themes": [
+                "wireframe",
+                "vogue"
+            ]
+        },
+        "all": {
+            "data": "article",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue"
+            ]
+        }
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-ads",
+        "@cnbritain/merlin-www-bbcode",
+        "@cnbritain/merlin-www-buttons",
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-image",
+        "@cnbritain/merlin-www-show-card-carousel",
+        "@cnbritain/merlin-www-topic-strip"
+    ]
+}

@@ -1,0 +1,17 @@
+<section class="sh-article__galleries">
+    <ul class="global__list-reset sh-article__galleries-list">
+        {{# data.items }}
+            <li class="sh-article__galleries-item">
+                {{# data.item }}
+                    <a href="{{ &data.link.data.url }}" title="{{ data.link.data.title }}" class="sh-article__galleries-item__link {{ data.link.style.cls }}">{{ data.link.data.title }}</a>
+                    <h6 class="sh-article__galleries-item__title">{{ data.link.data.title }}</h6>
+                    <div class="sh-article__galleries-item__image">
+                        {{# data.image }}
+                            {{> @cnbritain/merlin-www-image }}
+                        {{/ data.image }}
+                    </div>
+                {{/ data.item }}
+            </li>
+        {{/ data.items }}
+    </ul>
+</section>

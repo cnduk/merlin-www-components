@@ -1,0 +1,68 @@
+<header class="sh-article-header">
+    <div class="sh-article-header__wrapper">
+        <div class='sh-article-header__content'>
+
+            {{# data.primary_tag }}
+                <div class="sh-article-header__tag">
+                    {{# state.has_link }}
+                        <a class="sh-article-header__tag-season" href="{{ &data.link.data.url }}">{{ data.title }}</a>
+                    {{/ state.has_link }}
+                    {{^ state.has_link }}
+                        <span class="sh-article-header__tag-season">{{ data.title }}</span>
+                    {{/ state.has_link }}
+                </div>
+            {{/ data.primary_tag }}
+
+            <h1 class="sh-article-header__title">{{ data.title }}</h1>
+
+            {{! NOTE: we do something a little different with the meta list }}
+            {{! TODO: profiles in meta }}
+            {{! TODO: tidy up these styles }}
+            {{# data.meta_list }}
+                <div class="sh-article-header__meta-summary">
+                    {{# data.items }}
+                        {{# data.item }}
+                            {{# state.is_location }}
+                                {{# state.has_icon }}
+                                    {{# data.icon }}{{> @cnbritain/merlin-www-image }}{{/ data.icon }}
+                                {{/ state.has_icon }}
+                                {{# state.has_link }}
+                                    <a href="{{ &data.link.data.url }}" title="{{ data.link.data.title }}" class="{{ data.link.style.cls }}"><span class="{{ style.cls }}">{{ data.title }}</span></a>,
+                                {{/ state.has_link }}
+                                {{^ state.has_link }}
+                                    <span class="{{ style.cls }}">{{ data.title }}</span>,
+                                {{/ state.has_link }}
+                            {{/ state.is_location }}
+                            {{# state.is_date }}
+                                <span class="{{ style.cls }}">{{ data.title }}</span>
+                            {{/ state.is_date }}
+                            {{# state.is_creative_director }}
+                                {{# state.has_link }}
+                                    &mdash; <span class="{{ style.cls }}"><a href="{{ &data.link.data.url }}" title="{{ data.title }}">{{ data.title }}</a>, Creative Director</span>
+                                {{/ state.has_link }}
+                                {{^ state.has_link }}
+                                    &mdash; <span class="{{ style.cls }}">{{ data.title }}, Creative Director</span>
+                                {{/ state.has_link }}
+                            {{/ state.is_creative_director }}
+                        {{/ data.item }}
+                    {{/ data.items }}
+                </div>
+            {{/ data.meta_list }}
+
+            {{# data.share_list }}
+                <div class="sh-article-header__share">
+                    <ul class="global__list-reset sh-article-header__share-list {{ style.cls }}">
+                        {{# data.items }}
+                            <li class="sh-article-header__share-item {{ style.cls }}">
+                                {{# data.item }}
+                                    {{> @cnbritain/merlin-www-image }}
+                                {{/ data.item }}
+                            </li>
+                        {{/ data.items }}
+                    </ul>
+                </div>
+            {{/ data.share_list }}
+
+        </div>
+    </div>
+</header>

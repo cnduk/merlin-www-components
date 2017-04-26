@@ -1,0 +1,66 @@
+.sh-article-header {}
+
+
+
+
+.sh-article-header__wrapper {
+    box-sizing: border-box;
+    width: 100%;
+}
+.sh-article-header__content {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: $ARTICLE_TOTAL;
+    width: 100%;
+}
+
+
+
+
+
+
+.sh-article-header__tag {
+    @include font-size(12px);
+}
+.sh-article-header__tag-season {}
+
+
+
+
+.sh-article-header__title {}
+
+
+
+
+
+.sh-article-header__meta {
+
+}
+.sh-article-header__meta-summary {
+    svg {
+        display: inline-block;
+        height: 100%;
+        vertical-align: bottom;
+        width: 8px;
+    }
+
+    @include min-screen($ARTICLE_TOTAL) {
+        display: none;
+    }
+}
+
+
+.sh-article-header__share {}
+.sh-article-header__share-list {
+    display: inline-block;
+    font-size: 0;
+}
+.sh-article-header__share-item {
+    display: inline-block;
+}
+
+.sh-article-header__share-item--mobile {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+        display: none;
+    }
+}

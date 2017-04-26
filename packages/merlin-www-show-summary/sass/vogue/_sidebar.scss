@@ -1,0 +1,24 @@
+.sh-article-sidebar {
+    a {
+        @include aside-links(true);
+    }
+}
+
+.sh-article-sidebar__item {
+    margin: 30px 0;
+}
+.sh-article-sidebar__item--meta {
+    border-bottom: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+    color: $COLOR_TYPE_META;
+    @include font('NOBEL', 10px);
+    line-height: em(16px, 10px);
+
+    svg {
+        fill: $COLOR_TYPE_META;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+        @include font-size(11px);
+        line-height: em(20px, 11px);
+    }
+}

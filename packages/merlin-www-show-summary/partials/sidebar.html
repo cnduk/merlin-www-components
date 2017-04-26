@@ -1,0 +1,31 @@
+<div class="sh-article-sidebar">
+
+    <div class="sh-article-sidebar__item sh-article-sidebar__item--meta">
+        {{# data.location }}
+            {{# state.has_link }}
+                <a class="{{ data.link.style.cls }}" href="{{ &data.link.data.url }}" title="{{ data.link.data.title }}"><span class="{{ style.cls }}">{{ data.title }}</span></a>,
+            {{/ state.has_link }}
+            {{^ state.has_link }}
+                <span class="{{ style.cls }}">{{ data.title }}</span>,
+            {{/ state.has_link }}
+        {{/ data.location }}
+        {{ data.date.data.label }}
+        {{# data.creative_director }}
+            &mdash; by
+            {{# state.has_link }}
+                <a class="{{ data.link.style.cls }}" href="{{ &data.link.data.url }}" title="{{ data.link.data.title }}"><span class="{{ style.cls }}">{{ data.title }}</span></a>,
+            {{/ state.has_link }}
+            {{^ state.has_link }}
+                <span class="{{ style.cls }}">{{ data.title }}</span>,
+            {{/ state.has_link }}
+             Creative Director
+        {{/ data.creative_director }}
+    </div>
+
+    {{# data.trend_topic_strip }}
+        <div class="sh-article-sidebar__item sh-article-sidebar__item--trends">
+            {{> @cnbritain/merlin-www-topic-strip }}
+        </div>
+    {{/ data.trend_topic_strip }}
+
+</div>

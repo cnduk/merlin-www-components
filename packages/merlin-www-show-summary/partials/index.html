@@ -1,0 +1,70 @@
+
+<article class="sh-article {{# state.is_sponsored }}is-sponsored{{/ state.is_sponsored }}" data-article-url="{{ data.url }}" data-article-type="{{ data.type }}" data-article-uid="{{ data.uid }}">
+
+    {{> @cnbritain/merlin-www-show-summary/header }}
+
+    <div class="global__group sh-article__body">
+        <div class="sh-article__body__wrapper">
+
+            {{> @cnbritain/merlin-www-show-summary/sidebar }}
+
+            {{# data.bbcode_gallery }}
+                {{> @cnbritain/merlin-www-bbcode }}
+            {{/ data.bbcode_gallery }}
+
+            {{# data.trend_topic_strip }}
+                <div class='sh-article__body-trends'>
+                    {{> @cnbritain/merlin-www-topic-strip }}
+                </div>
+            {{/ data.trend_topic_strip }}
+
+            {{# state.has_body }}
+                {{# state.is_long_body }}
+                    <input type="checkbox" id="chkShowSummaryBody" checked aria-hidden="true" hidden />
+                {{/ state.is_long_body }}
+                <div class="sh-article__body-content">
+
+                    {{ &data.body }}
+
+                    {{# data.byline }}
+                        <div class="sh-article__body-author">
+                            {{# data.profiles }}
+                                {{# state.has_image }}
+                                    {{# state.has_link }}
+                                        <a href="{{ &data.link.data.url }}" class='sh-article__body-author__image'>
+                                            {{# data.image }}{{> @cnbritain/merlin-www-image }}{{/ data.image }}
+                                        </a>
+                                    {{/ state.has_link }}
+                                    {{^ state.has_link }}
+                                        <span class='sh-article__body-author__image'>{{# data.image }}{{> @cnbritain/merlin-www-image }}{{/ data.image }}</span>
+                                    {{/ state.has_link }}
+                                {{/ state.has_image }}
+                            {{/ data.profiles }}
+                            <div class="sh-article__body-author__byline">
+                                <span class="sh-article__body-author__byline-prefix">By</span> <span class="sh-article__body-author__byline-name">{{ &data.byline }}</span>
+                            </div>
+                        </div>
+                    {{/ data.byline }}
+
+                    {{# state.is_long_body }}
+                        <label for="chkShowSummaryBody" class="global__button-reset sh-article__body-expander js-sh-btn-expand">Continue reading</label>
+                    {{/ state.is_long_body }}
+                </div>
+            {{/ state.has_body }}
+
+            {{# data.related_galleries }}
+                {{> @cnbritain/merlin-www-show-summary/related-galleries }}
+            {{/ data.related_galleries }}
+
+            {{# ad_slots.show_summary_rail_top }}
+                {{> @cnbritain/merlin-www-ads }}
+            {{/ ad_slots.show_summary_rail_top }}
+
+            {{# data.season_carousel }}
+                {{> @cnbritain/merlin-www-show-card-carousel }}
+            {{/ data.season_carousel }}
+
+        </div>
+    </div>
+
+</article>

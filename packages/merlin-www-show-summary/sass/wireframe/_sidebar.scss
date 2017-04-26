@@ -1,0 +1,41 @@
+.sh-article-sidebar {
+    display: none;
+    float: left;
+    margin-left: -220px;
+    width: 170px;
+
+    @include min-screen($ARTICLE_TOTAL){
+        display: block;
+    }
+}
+
+.sh-article-sidebar__item {
+    margin: 10px 0;
+}
+.sh-article-sidebar__item--meta {
+    margin-top: 0;
+    padding-bottom: 35px;
+
+    svg {
+        height: 100%;
+        margin-right: 10px;
+        width: 8px;
+    }
+
+}
+.sh-article-sidebar__item--trends {}
+
+.sh-article-sidebar__trend-list {}
+li.sh-article-sidebar__trend-list__item {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 10px;
+
+    a {
+        display: block;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
