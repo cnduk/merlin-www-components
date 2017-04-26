@@ -4,13 +4,15 @@
         <a class="bb-gallery__link" href="{{ &data.url }}" title="{{ data.title }}">{{ data.title }}</a>
     {{/ data.link }}
 
-    {{# state.has_icon }}
-        {{# data.icon }}<div class='bb-gallery__icon bb-gallery__icon--gallery'>{{> @cnbritain/merlin-www-image }}</div>{{/ data.icon }}
-        <h4 class='bb-gallery__title'>{{ data.title }}</h4>
-    {{/ state.has_icon }}
-    {{^ state.has_icon }}
-        <h4 class='bb-gallery__title'>{{ data.title }}</h4>
-    {{/ state.has_icon }}
+    {{# state.has_title }}
+        {{# state.has_icon }}
+            {{# data.icon }}<div class='bb-gallery__icon bb-gallery__icon--gallery'>{{> @cnbritain/merlin-www-image }}</div>{{/ data.icon }}
+            <h4 class='bb-gallery__title'>{{ data.title }}</h4>
+        {{/ state.has_icon }}
+        {{^ state.has_icon }}
+            <h4 class='bb-gallery__title'>{{ data.title }}</h4>
+        {{/ state.has_icon }}
+    {{/ state.has_title }}
 
     {{# state.is_layout_3 }}
         {{# data.image_list }}
