@@ -1,8 +1,8 @@
 {{# state.is_list_unordered }}
-    <ul>
+    <ul class="{{ style.cls }}">
 {{/ state.is_list_unordered }}
 {{# state.is_list_ordered }}
-    <ol>
+    <ol class="{{ style.cls }}">
 {{/ state.is_list_ordered }}
 {{# data.items }}
     <li>{{ &. }}</li>
