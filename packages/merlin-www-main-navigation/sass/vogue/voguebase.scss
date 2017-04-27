@@ -294,17 +294,6 @@ a.n-main__cover__btn {
         padding-bottom: $PADDING_MEDIUM;
     }
 
-    .btn-share {
-        position: relative;
-        width: 50px;
-        height: 50px;
-
-        svg {
-            display: block;
-            margin: 0 auto;
-        }
-    }
-
     a + a::before {
             background-color: $COLOR_BORDER_SOLID_ACCENT2;
             content: '';
@@ -317,6 +306,43 @@ a.n-main__cover__btn {
         }
 
 }
+.n-main__dropdown__btn-share {
+    @include button-share();
+    position: relative;
+    width: 50px;
+    height: 50px;
+
+    svg {
+        display: block;
+        margin: 0 auto;
+    }
+}
+@each $name, $color in $COLOUR_SOCIAL {
+
+    .n-main__dropdown__btn-share--#{$name} {
+        @include button-share-light($name);
+
+        &:hover {
+            @include button-share-light-hover($name);
+        }
+
+        &.btn-share--dark {
+            @include button-share-dark($name);
+            &:hover {
+                @include button-share-dark-hover($name);
+            }
+        }
+    }
+}
+
+.n-main__dropdown__btn--newsletter {
+    @include button-single();
+    @include button-single-light();
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
+
 .n-main__dropdown-list {
     background-color: $COLOR_MAIN_PAGE;
     border: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
