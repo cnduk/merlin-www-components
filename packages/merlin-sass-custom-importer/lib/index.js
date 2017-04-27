@@ -98,7 +98,6 @@ module.exports = function(merlinConfig={}, scopeName=null){
     const scope = scopeName ? `(${scopeName})` : '';
 
     function importer(url, previous, done){
-
         const realPrevious = fs.realpathSync(previous);
         let sassUrl = null;
 
@@ -119,13 +118,21 @@ module.exports = function(merlinConfig={}, scopeName=null){
         if(SESSION.has(sassUrl)){
             LOGGER.log('SKIP', `SASS${scope}::Skipping ${sassUrl}`);
             SESSION.SKIPPED_ITEMS++;
-            return done({ contents: '' });
+            if(done){
+                return done({ contents: '' });
+            } else {
+                return { contents: '' };
+            }
         }
 
         LOGGER.log('LOAD', `SASS${scope}::Loading ${sassUrl}`);
         SESSION.LOADED_ITEMS++;
         SESSION.add(sassUrl);
-        return done({ file: sassUrl });
+        if(done){
+            return done({ file: sassUrl });
+        } else {
+            return { file: sassUrl };
+        }
     }
 
     importer.SESSION = SESSION;
