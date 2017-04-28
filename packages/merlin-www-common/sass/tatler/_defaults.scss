@@ -1,1 +1,186 @@
 @import '../wireframe/_defaults';
+
+body {
+    margin: 0;
+    text-size-adjust: none;
+}
+
+a {
+    color: $COLOUR_TYPE_LINK;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+abbr {}
+
+blockquote {
+
+}
+.blockquote__separator {}
+.blockquote__credit {}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $COLOUR_TYPE_HEADING;
+    font-variant-ligatures: common-ligatures; // let's get ligatured
+    line-height: 1.2;
+    margin: $MARGIN_MEDIUM 0 $MARGIN_SMALL 0;
+}
+
+@each $level, $heading in $HEADINGS {
+    %h-#{$level} {
+        @include font-size(map-get($heading, small));
+        font-weight: map-get($heading, weight);
+
+        @media (min-width: 600px) {
+            @include font-size(map-get($heading, large));
+            letter-spacing: 1px;
+        }
+    }
+
+    #{map-get($heading, h)}, .h-#{$level} {
+        @extend %h-#{$level};
+    }
+}
+
+hr {
+    border-top: 1px solid $COLOR_BORDER_SOLID;
+    height: 0;
+    margin: 15px 0;
+}
+
+input {
+    // TODO:: Do the input...
+}
+
+mark {
+    background: $COLOUR_BG_HIGHLIGHT;
+}
+
+p {
+    @include font-size(18px);
+    @include line-height(25px);
+
+    color: $COLOUR_TYPE_BODY;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(18px);
+        @include line-height(28px);
+    }
+}
+
+q {
+    @include font-size(25px);
+    @include line-height(30px);
+
+    color: $COLOUR_MAIN_ACCENT;
+    display: block;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(30px);
+        @include line-height(38px);
+    }
+}
+
+.quote__separator {}
+.quote__credit {}
+
+small {}
+
+ul, ol {
+    @include font-size(15px);
+    @include line-height(22px);
+
+    color: $COLOUR_TYPE_BODY;
+    list-style-type: none;
+    margin: $MARGIN_SMALL 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(15px);
+        @include line-height(22px);
+    }
+
+    li {
+        position: relative;
+        margin: 0.4em 0;
+    }
+}
+
+ul {
+    li {
+        padding-left: 23px;
+
+        @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            padding-left: 28px;
+        }
+    }
+
+    li:before {
+        background: $COLOUR_MAIN_HIGHLIGHT;
+        border-radius: 50%;
+        content: '';
+        display: block;
+        height: 8px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 8px;
+    }
+}
+
+ol {
+    counter-reset: section;
+
+    li {
+        padding-left: 40px;
+
+        @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            padding-left: 45px;
+        }
+    }
+
+    li:before {
+        @include font-size(16px);
+
+        background: $COLOUR_BG;
+        color: $COLOUR_MAIN_HIGHLIGHT;
+        content: counters(section);
+        counter-increment: section;
+        display: block;
+        font-weight: bold;
+        height: 25px;
+        left: 0;
+        line-height: 25px;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: 25px;
+
+        @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            @include font-size(16px);
+
+            height: 30px;
+            line-height: 30px;
+            width: 30px;
+        }
+    }
+}
+
+pre {
+    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+}
+
+code {
+    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    display: inline;
+}
