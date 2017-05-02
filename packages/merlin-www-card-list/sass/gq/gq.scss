@@ -265,3 +265,49 @@
 	    width: 100%;
 	}
 }
+
+.c-card-list--c-contributors {
+	margin: 0 -10px;
+
+	.c-card-list__item {
+		display: inline-block;
+		padding: 0 10px;
+	    width: 100%;
+	}
+
+	@include one-column-size() {
+	    .c-card-list__item {
+	    	& + .c-card-list__item {
+	    		margin-top: 20px;
+
+	    		.c-card {
+	    		    border-top: 1px solid $bon-jour;
+	    		    padding-top: 20px;
+
+	    		    &.c-card--dark {
+	    		        border-top-color: $mineshaft;
+	    		    }
+	    		}
+	    	}
+	    }
+	}
+
+	@include two-column-size() {
+		text-align: center;
+
+	    .c-card-list__item {
+	    	padding: 20px;
+
+	    	& + .c-card-list__item {
+	    		margin-top: 20px;
+	    	}
+
+    		@include first(3) {
+    			margin-top: 0;
+    		}
+
+    		max-width: 275px;
+	        width: 33.33333%;
+	    }
+	}
+}
