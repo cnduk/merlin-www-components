@@ -28,6 +28,7 @@
 
 .c-gallery__image-remaining__text {
 	color: $white;
+    white-space: nowrap;
 	@include font("GOTHAM", 20px, 700, 20px);
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
     	@include font-size(24px);
