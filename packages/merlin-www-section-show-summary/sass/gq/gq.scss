@@ -23,6 +23,8 @@
 }
 
 .c-show-summary-section__wrapper {
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
     position: relative;
 }
 
