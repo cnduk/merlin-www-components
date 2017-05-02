@@ -5,7 +5,17 @@
 
 .a-header__wrapper {}
 
-.a-header__content {}
+.a-header__content {
+    padding: $PADDING_LARGE 0 0 0;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: $PADDING_X_LARGE $ARTICLE_RIGHT_TOTAL 0 0;
+    }
+
+    @include min-screen($ARTICLE_TOTAL) {
+        padding: $PADDING_X_LARGE $ARTICLE_RIGHT_TOTAL 0 $ARTICLE_LEFT_TOTAL;
+    }
+}
 
 .a-header__title {
     @include line-height(36px);
