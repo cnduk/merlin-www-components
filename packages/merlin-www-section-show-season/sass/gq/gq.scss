@@ -7,7 +7,7 @@
 
 .c-show-season-section {
 	background-color: $woodsmoke;
-    padding: $MOBILE_SLICE_MARGIN;
+    padding: 40px $MOBILE_SLICE_MARGIN;
     max-width: none;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
