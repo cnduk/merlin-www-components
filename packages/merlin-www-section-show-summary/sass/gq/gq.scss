@@ -5,9 +5,10 @@
 @import "../wireframe/wireframe";
 
 .c-show-summary-section {
-	background-color: $seashell;
+    background-color: $seashell;
     padding-bottom: $MOBILE_SLICE_MARGIN;
     padding-top: $MOBILE_SLICE_MARGIN;
+    position: relative;
     max-width: none;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
@@ -18,6 +19,27 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         padding-bottom: $DESKTOP_SLICE_MARGIN;
         padding-top: $DESKTOP_SLICE_MARGIN;
+    }
+}
+
+.c-show-summary-section__wrapper {
+    position: relative;
+}
+
+.c-show-summary-section__link {
+    bottom: 0;
+    font-size: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.c-show-summary-section__link:hover ~ .c-show-summary-section__content {
+    .c-show-summary-section__title {
+        text-decoration: underline;
     }
 }
 
@@ -41,20 +63,20 @@
     }
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-    	margin: 0 60px;
-    	padding: 56px 48px;
-	    &:after {
-	        @include triangle(28px, 18px, 'up', $white);
-	        top: -28px;
-	    }
+        margin: 0 60px;
+        padding: 56px 48px;
+        &:after {
+            @include triangle(28px, 18px, 'up', $white);
+            top: -28px;
+        }
     }
 }
 
 .c-show-summary-section__title {
-	color: $woodsmoke;
-	@include font("ITC_FENICE", 24px, 700, 28px, -40);
-	margin-bottom: 14px;
-	margin-top: 0px;
+    color: $woodsmoke;
+    @include font("ITC_FENICE", 24px, 700, 28px, -40);
+    margin-bottom: 14px;
+    margin-top: 0px;
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         @include font-size(32px);
         @include line-height(36px);
@@ -64,24 +86,24 @@
 }
 
 .c-show-summary-section__meta {
-	@include font("GOTHAM", 9px, null, 14px);
-	color: $oslo-gray;
-	margin-top: 6px;
+    @include font("GOTHAM", 9px, null, 14px);
+    color: $oslo-gray;
+    margin-top: 6px;
 }
 
 li.c-show-summary-section__meta-item {
-	padding-right: 0;
-	& + li.c-show-summary-section__meta-item {
-	    border-left: none;
-	    padding-left: 0;
-	    &:before {
-	    	background-color: $oslo-gray;
-	    	border-radius: 50%;
-	    	content: "";
-	    	display: inline-block;
-	    	height: 3px;
-	    	margin: 1px 8px;
-	    	width: 3px;
-	    }
-	}
+    padding-right: 0;
+    & + li.c-show-summary-section__meta-item {
+        border-left: none;
+        padding-left: 0;
+        &:before {
+            background-color: $oslo-gray;
+            border-radius: 50%;
+            content: "";
+            display: inline-block;
+            height: 3px;
+            margin: 1px 8px;
+            width: 3px;
+        }
+    }
 }
