@@ -1,0 +1,97 @@
+@import "@cnbritain/merlin-www-common:gq";
+@import "@cnbritain/merlin-www-image:gq";
+@import "@cnbritain/merlin-www-buttons:gq";
+@import "@cnbritain/merlin-www-card:gq";
+
+@import "../wireframe/wireframe";
+
+.c-show-season-section {
+	background-color: $woodsmoke;
+    padding: $MOBILE_SLICE_MARGIN;
+    max-width: none;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: $DESKTOP_SLICE_MARGIN;
+    }
+}
+
+.c-show-season-section__wrapper {
+	margin: 0 auto;
+	max-width: $MAXIMUM_PAGE_WIDTH;
+	position: relative;
+	width: 100%;
+}
+
+.c-show-season-section__title {
+	@include font("GOTHAM", 14px, 700, 40px, 60)
+	color: $white;
+	height: 40px;
+	margin-bottom: 32px;
+	margin-top: 0;
+	text-align: left;
+	text-transform: uppercase;
+
+	span {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&:before {
+		background-color: $oslo-gray;
+		content: '';
+		display: inline-block;
+		height: 40px;
+		margin-right: 12px;
+		width: 20px;
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		padding-bottom: 20px;
+		border-bottom: 1px solid $mineshaft;
+		margin-bottom: 20px;
+	}
+}
+
+.c-show-season-section__meta {
+	@include font("GOTHAM", 12px, 700, 16px, -4);
+	color: $oslo-gray;
+	margin: 32px 0 24px 0;
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		line-height: 40px;
+		margin: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+
+li.c-show-season-section__card-list-item {
+	margin-top: 20px;
+
+    @include first(2) {
+    	margin-top: 0;
+    }
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		margin: 0;
+	}
+}
+
+.c-show-season-section__btn {
+	@include button-single-two();
+	@include button-single-two-dark();
+	&:hover {
+		@include button-single-two-dark-hover();
+	}
+	margin-top: 40px;
+	&:after {
+		content: '\2192';
+		display: inline-block;
+		margin-left: 8px;
+	}
+}

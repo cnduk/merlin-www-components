@@ -1,0 +1,73 @@
+// -------------------- //
+// Show
+// -------------------- //
+@mixin card-show() {}
+@mixin card-show-small() {
+    .c-card__obj {}
+    .c-card__obj__header {
+        display: block;
+        padding: 0;
+        width: auto;
+    }
+
+    .c-card__obj__body {
+        padding: 20px 0 0 0;
+    }
+
+    .c-card__images {
+        .c-card__image {
+            padding-top: 150%;
+        }
+    }
+
+    .c-card__image-label {
+        display: none;
+    }
+
+    .c-card__title {
+        @include font("GOTHAM", 14px, 700, 18px, -10);
+        color: $white;
+        margin: 0;
+        text-align: center;
+    }
+
+    .c-card__separator {
+        display: none;
+    }
+}
+
+@mixin card-show-large($has_small:false) {
+    @if not $has_small {
+
+    }
+
+    .c-card__obj__body {
+        border-bottom: 1px solid $mineshaft;
+        border-left: 1px solid $mineshaft;
+        border-right: 1px solid $mineshaft;
+        padding: 20px;
+    }
+
+    .c-card__title {
+        @include font("GOTHAM", 17px, 700, 22px, -10);
+        color: $white;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.c-card--show {
+    @include card-show();
+    @include card-show-small();
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include card-show-large();
+    }
+}
+
+.c-card--show-small {
+    @include card-show-small();
+}
+
+.c-card--show-large {
+    @include card-show-large();
+}
