@@ -158,11 +158,11 @@ MainNavigation.prototype = {
         if(elGalleryToggle){
             addEvent(elGalleryToggle, 'click', function() {
                 //Emits event to tell counter to toggle
-                this._galleryArticle.toggleListView();
+                this._galleryArticle.gallery.toggleView();
 
                 //Recalculates gallery bounds
                 //Values used in uppdate to show/hide gallery navigation
-                this._galleryArticle.resize();
+                this._galleryArticle.gallery.resize();
             }.bind(this));
         }
 
@@ -271,7 +271,7 @@ MainNavigation.prototype = {
     'setGalleryArticle': function(galleryArticle){
         this._galleryArticle = galleryArticle;
         if(galleryArticle === null) return;
-        this.dom.galleryTotal.innerHTML = galleryArticle.images.length;
+        this.dom.galleryTotal.innerHTML = galleryArticle.gallery.images.length;
 
         if (!this._galleryArticle.listenerTree.showList) {
             this._galleryArticle.on('showList', function () {
@@ -445,11 +445,11 @@ MainNavigation.prototype = {
 
         // Check if gallery navigation needs to show or hide
         if(this._galleryArticle === null) return;
-        if(this._galleryArticle.galleryBounds.top > scrollY + windowHeightHalf){
+        if(this._galleryArticle.gallery.bounds.top > scrollY + windowHeightHalf){
             if(this.states.gallery) this.hideGalleryNavigation();
             return;
         }
-        if(this._galleryArticle.galleryBounds.bottom < scrollY + windowHeightHalf){
+        if(this._galleryArticle.gallery.bounds.bottom < scrollY + windowHeightHalf){
             if(this.states.gallery) this.hideGalleryNavigation();
             return;
         }
