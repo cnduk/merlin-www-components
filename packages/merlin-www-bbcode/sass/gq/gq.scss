@@ -13,7 +13,24 @@
 // Note
 // -------------------- //
 .bb-note {
-    margin: 28px 0;
+    border-top: 1px solid $bon-jour;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 40px 0;
+    padding-top: 12px;
+    position: relative;
+    text-indent: 20px;
+
+    &:before {
+        background-color: $dodger-blue;
+        border-radius: 50%;
+        content: '';
+        height: 8px;
+        left: 0;
+        position: absolute;
+        top: 15px;
+        width: 8px;
+    }
 }
 
 // -------------------- //
