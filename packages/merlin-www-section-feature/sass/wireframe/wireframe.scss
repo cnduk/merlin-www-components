@@ -66,6 +66,24 @@
         width: auto;
     }
 }
+
+.c-feature__image--custom {
+    position: relative;
+
+    img {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
+// Custom padding top applied to this class
+.c-feature__image__wrapper {}
+
 .c-feature__icon {
     bottom: 0;
     height: 40px;
