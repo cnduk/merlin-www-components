@@ -63,7 +63,7 @@
 
 @mixin button-group() {
 	@include button-reset();
-	@include font("GOTHAM", 12px, 700, 12px, 0);
+	@include font("GOTHAM", 11px, 700, 12px, -4);
 	padding: 14px 8px;
 }
 
