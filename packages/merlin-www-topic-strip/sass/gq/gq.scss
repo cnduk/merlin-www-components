@@ -70,4 +70,8 @@ li.c-topic-strip__item {
     &:hover {
         @include button-group-light-hover();
     }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(12px);
+    }
 }
