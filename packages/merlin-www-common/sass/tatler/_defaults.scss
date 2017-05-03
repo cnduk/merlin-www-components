@@ -28,6 +28,8 @@ h3,
 h4,
 h5,
 h6 {
+    @include font('STARLING');
+
     color: $COLOUR_TYPE_HEADING;
     font-variant-ligatures: common-ligatures; // let's get ligatured
     line-height: 1.2;
@@ -51,7 +53,7 @@ h6 {
 }
 
 hr {
-    border-top: 1px solid $COLOR_BORDER_SOLID;
+    border-top: 1px solid $COLOUR_BORDER_SOLID;
     height: 0;
     margin: 15px 0;
 }
@@ -65,6 +67,7 @@ mark {
 }
 
 p {
+    @include font('AGENDA');
     @include font-size(18px);
     @include line-height(25px);
 
@@ -77,6 +80,7 @@ p {
 }
 
 q {
+    @include font('STARLING');
     @include font-size(25px);
     @include line-height(30px);
 
@@ -98,6 +102,7 @@ q {
 small {}
 
 ul, ol {
+    @include font('AGENDA';)
     @include font-size(15px);
     @include line-height(22px);
 

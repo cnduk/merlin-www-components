@@ -1,0 +1,40 @@
+@import "../_fonts";
+
+$AGENDA_FONT_DIR: '/static/fonts/agenda/';
+
+// Agenda
+// Medium
+@font-face {
+  font-family: 'Agenda';
+  font-style: normal;
+  font-weight: map-get($FONT_WEIGHTS, 'MEDIUM');
+  src: url($AGENDA_FONT_DIR + 'Agenda-Medium.woff2') format('woff2'),
+       url($AGENDA_FONT_DIR + 'Agenda-Medium.woff') format('woff');
+}
+
+// Bold
+@font-face {
+  font-family: 'Agenda';
+  font-style: normal;
+  font-weight: map-get($FONT_WEIGHTS, 'BOLD');
+  src: url($AGENDA_FONT_DIR + 'Agenda-Bold.woff2') format('woff2'),
+       url($AGENDA_FONT_DIR + 'Agenda-Bold.woff') format('woff');
+}
+
+// Italic
+@font-face {
+  font-family: 'Agenda';
+  font-style: italic;
+  font-weight: map-get($FONT_WEIGHTS, 'MEDIUM');
+  src: url($AGENDA_FONT_DIR + 'Agenda-Medium-Italic.woff2') format('woff2'),
+       url($AGENDA_FONT_DIR + 'Agenda-Medium-Italic.woff') format('woff');
+}
+
+// Font configs
+$_FONT_FAMILY: Agenda, sans-serif;
+$_FONT_AGENDA: map-merge($FONT_GROUP_DEFAULT, (
+    'FAMILY': $_FONT_FAMILY,
+    'LETTER SPACING': 0.025em,
+    'LINE HEIGHT': 1em
+));
+$FONT_GROUPS: map-merge($FONT_GROUPS, ('AGENDA': $_FONT_AGENDA));

@@ -1,0 +1,40 @@
+@import "../_fonts";
+
+$STARLING_FONT_DIR: '/static/fonts/starling/';
+
+// Starling
+// Roman
+@font-face {
+  font-family: 'Starling';
+  font-style: normal;
+  font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
+  src: url($STARLING_FONT_DIR + 'Starling-Roman.woff2') format('woff2'),
+       url($STARLING_FONT_DIR + 'Starling-Roman.woff') format('woff');
+}
+
+// Bold
+@font-face {
+  font-family: 'Starling';
+  font-style: normal;
+  font-weight: map-get($FONT_WEIGHTS, 'BOLD');
+  src: url($STARLING_FONT_DIR + 'Starling-Bold.woff2') format('woff2'),
+       url($STARLING_FONT_DIR + 'Starling-Bold.woff') format('woff');
+}
+
+// Italic
+@font-face {
+  font-family: 'Starling';
+  font-style: italic;
+  font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
+  src: url($STARLING_FONT_DIR + 'Starling-Italic.woff2') format('woff2'),
+       url($STARLING_FONT_DIR + 'Starling-Italic.woff') format('woff');
+}
+
+// Font configs
+$_FONT_FAMILY: Starling, sans-serif;
+$_FONT_STARLING: map-merge($FONT_GROUP_DEFAULT, (
+    'FAMILY': $_FONT_FAMILY,
+    'LETTER SPACING': 0.025em,
+    'LINE HEIGHT': 1em
+));
+$FONT_GROUPS: map-merge($FONT_GROUPS, ('STARLING': $_FONT_STARLING));
