@@ -4,12 +4,13 @@
 @import "../wireframe/wireframe";
 
 .c-footer {
-	background-color: $black;
-	color: $white;
+    background-color: $black;
+    border-top: 1px solid $mineshaft;
+    color: $white;
     padding: 0 20px;
-	@include min-screen(1100px) {
-		padding: 0 30px;
-	}
+    @include min-screen(1100px) {
+        padding: 0 30px;
+    }
 }
 
 .c-footer__wrapper {
@@ -18,31 +19,31 @@
 }
 
 .c-footer__list {
-	color: $white;
+    color: $white;
 }
 
 .c-footer__list--left {}
 .c-footer__list--right {}
 
 .c-footer__list-item--links {
-	.c-footer__list-item {
-    	@include max-screen(1099px) {
-			border-top: 1px solid $mineshaft;
-			box-sizing: border-box;
+    .c-footer__list-item {
+        @include max-screen(1099px) {
+            border-top: 1px solid $mineshaft;
+            box-sizing: border-box;
 
-			&:last-child {
-				border-bottom: 1px solid $mineshaft;
-			}
-		}
+            &:last-child {
+                border-bottom: 1px solid $mineshaft;
+            }
+        }
 
-    	@include min-screen(1100px) {
-    		margin-right: 32px;
-    	}
-	}
+        @include min-screen(1100px) {
+            margin-right: 32px;
+        }
+    }
 }
 
 li.c-footer__list-item {
-    @include font('GOTHAM', 12px, null, 60px, 20);
+    @include font('GOTHAM', 12px, 500, 60px, 0);
     height: 60px;
 
     a {
@@ -62,9 +63,9 @@ li.c-footer__list-item--logo {
     margin-top: -60px;
 
     svg {
-    	opacity: 0.32;
+        opacity: 0.32;
         height: 60px;
-        width: 30px;
+        width: 42px;
     }
 
     @include min-screen(1100px) {
