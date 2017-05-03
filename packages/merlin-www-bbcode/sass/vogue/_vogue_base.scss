@@ -117,10 +117,10 @@
         @include line-height(30px);
     }
 }
-.bb-gallery__title__icon {
+.bb-gallery__icon {
     padding-right: 5px;
 }
-.bb-gallery__title__icon--gallery {
+.bb-gallery__icon--gallery {
     svg {
         display: inline-block;
         fill: $COLOR_TYPE_META;

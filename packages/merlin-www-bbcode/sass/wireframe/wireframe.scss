@@ -97,11 +97,13 @@
     z-index: 1;
 }
 
-.bb-gallery__title {}
-.bb-gallery__title__icon {
+.bb-gallery__title {
     display: inline-block;
 }
-.bb-gallery__title__icon--gallery {}
+.bb-gallery__icon {
+    display: inline-block;
+}
+.bb-gallery__icon--gallery {}
 
 .bb-gallery__cols {
     display: block;
