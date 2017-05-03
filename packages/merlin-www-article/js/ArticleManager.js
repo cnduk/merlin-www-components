@@ -227,10 +227,20 @@ function onInfiniteLoadComplete(e){
     // Add the article to the manager
     var articleEl = document.querySelectorAll('.a-main');
     articleEl = articleEl[articleEl.length - 1];
+
+    var configAnalytics = null;
+    if(responseJSON.config_analytics){
+        configAnalytics = responseJSON.config_analytics.data;
+    }
+    var configSimplereach = null;
+    if(responseJSON.config_simplereach){
+        configSimplereach = responseJSON.config_simplereach.data;
+    }
+
     var article = this.add(articleEl, {
-        'analytics': responseJSON.analytics_config,
+        'analytics': configAnalytics,
         'infinite': true,
-        'simplereach': responseJSON.simplereach_config
+        'simplereach': configSimplereach
     });
 
     // Update any local storage values
