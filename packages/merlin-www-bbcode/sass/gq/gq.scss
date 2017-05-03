@@ -345,17 +345,22 @@
 }
 
 .bb-card__tag {
-    @include font("GOTHAM", 11px, 700, 14px, -40);
+    @include font("GOTHAM", 11px, 700, 14px, -4);
     color: $limed-oak;
     margin-bottom: 6px;
     margin-top: 0;
 }
 
 .bb-card__title {
-    @include font("GOTHAM", 14px, 700, 18px, -10);
+    @include font("GOTHAM", 14px, 700, 18px, -4);
     color: $woodsmoke;
     margin-bottom: 12px;
     margin-top: 6px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(17px);
+        @include line-height(22px);
+    }
 }
 
 .bb-card__teaser {
@@ -395,9 +400,9 @@
                 border-radius: 50%;
                 content: "";
                 display: inline-block;
-                height: 3px;
-                margin: 1px 8px;
-                width: 3px;
+                height: 2px;
+                margin: 1px 4px;
+                width: 2px;
             }
         }
     }
@@ -426,7 +431,7 @@
 }
 
 .bb-gallery__title {
-    @include font("GOTHAM", 16px, 700, 20px, -40);
+    @include font("GOTHAM", 16px, 700, 20px, -4);
     color: $woodsmoke;
     display: table-cell;
     padding-left: 16px;
