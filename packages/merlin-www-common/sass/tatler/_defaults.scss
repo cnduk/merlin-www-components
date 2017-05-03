@@ -102,7 +102,7 @@ q {
 small {}
 
 ul, ol {
-    @include font('AGENDA';)
+    @include font('AGENDA');
     @include font-size(15px);
     @include line-height(22px);
 
