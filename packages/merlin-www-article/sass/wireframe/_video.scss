@@ -80,7 +80,21 @@
 }
 
 .a-video__related {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         display: none;
     }
 }
+.a-video__related__wrapper {}
+.a-video__related__title {}
+.a-video__related__list {}
