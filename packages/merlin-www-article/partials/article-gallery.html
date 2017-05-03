@@ -43,11 +43,20 @@
             {{# data.image_list }}
                 <ul class="global__list-reset a-gallery__image-list {{ style.cls }}">
                     {{# data.items }}
-                        <li class="a-gallery__image-listitem {{ style.cls }} js-g-image">
-                            {{# data.item }}
-                                {{> @cnbritain/merlin-www-figure }}
-                            {{/ data.item }}
-                        </li>
+                        {{# data.item.state.is_ad }}
+                            <li class="a-gallery__image-listitem a-gallery__image-listitem--ad {{ style.cls }}">
+                                {{# data.item }}
+                                    {{> @cnbritain/merlin-www-ads }}
+                                {{/ data.item }}
+                            </li>
+                        {{/ data.item.state.is_ad }}
+                        {{^ data.item.state.is_ad }}
+                            <li class="a-gallery__image-listitem a-gallery__image-listitem--image {{ style.cls }} js-g-image">
+                                {{# data.item }}
+                                    {{> @cnbritain/merlin-www-figure }}
+                                {{/ data.item }}
+                            </li>
+                        {{/ data.item.state.is_ad }}
                     {{/ data.items }}
                 </ul>
             {{/ data.image_list }}

@@ -116,7 +116,11 @@ li.a-gallery__thumbnail {
 
 
 
-li.a-gallery__image-listitem {
+li.a-gallery__image-listitem {}
+li.a-gallery__image-listitem--ad {
+    position: initial;
+}
+li.a-gallery__image-listitem--image {
     position: relative;
 }
 
