@@ -18,6 +18,10 @@ $white: #ffffff;
 $woodsmoke: #17191b;
 $zircon: #f1f6ff;
 
+// ----- Social Colours -----//
+$COLOUR_EMAIL: $oslo-gray;
+$COLOUR_SOCIAL: map-merge($COLOUR_SOCIAL, ("email": $COLOUR_EMAIL));
+
 // ----- Breakpoints ----- //
 $DESKTOP_SIDE_GUTTER: 60px;
 $TABLET_SIDE_GUTTER: 60px;
