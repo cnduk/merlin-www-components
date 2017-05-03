@@ -58,7 +58,7 @@
 }
 
 .c-gallery-strip__title {
-    @include font("GOTHAM", 20px, 700, 24px, -40);
+    @include font("GOTHAM", 20px, 700, 24px, -4);
     color: $white;
     margin: 0;
     text-align: center;
