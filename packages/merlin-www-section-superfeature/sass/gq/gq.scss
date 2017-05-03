@@ -45,9 +45,9 @@
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         @include vendor-prefix(transform, translateX(-50%));
         bottom: 20px;
+        box-sizing: border-box;
         left: 50%;
         margin: 0;
-        max-width: 570px;
         padding: 36px 24px;
         position: absolute;
         width: 570px;
