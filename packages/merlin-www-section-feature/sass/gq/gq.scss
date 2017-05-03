@@ -4,7 +4,7 @@
 @import '../wireframe/wireframe';
 
 .c-feature {
-	background-color: $seashell;
+    background-color: $seashell;
     padding-bottom: $MOBILE_SLICE_MARGIN;
     padding-top: $MOBILE_SLICE_MARGIN;
     max-width: none;
@@ -37,12 +37,6 @@
     }
 }
 
-.c-feature__link:hover ~ .c-feature__content {
-    .c-feature__title {
-        text-decoration: underline;
-    }
-}
-
 .c-feature__images,
 .c-feature__content {
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
@@ -62,29 +56,29 @@
     text-align: center;
 
     &:after {
-        @include triangle(24px, 16px, 'up', $white);
+        @include triangle(16px, 12px, 'up', $white);
         @include vendor-prefix(transform, translateX(-50%));
         content: '';
         height: 0;
         left: 50%;
         position: absolute;
-        top: -24px;
+        top: -16px;
         width: 0;
     }
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-    	padding: 0 48px;
-	    &:after {
-            @include triangle(32px, 22px, 'right', $white);
+        padding: 28px 48px;
+        &:after {
+            @include triangle(18px, 14px, 'right', $white);
             @include vendor-prefix(transform, translateX(0%) translateY(-50%));
             content: '';
             height: 0;
             left: initial;
             position: absolute;
-            right: -32px;
+            right: -18px;
             top: 50%;
             width: 0;
-	    }
+        }
     }
 }
 
@@ -109,14 +103,14 @@
             height: 100%;
             margin: 0 auto;
             vertical-align: middle;
-            width: 13px;
+            width: 16px;
             fill: $limed-oak;
         }
     }
 }
 
 .c-feature__tag {
-    @include font("GOTHAM", 11px, 700, 14px);
+    @include font("GOTHAM", 11px, 700, 14px, -4);
     color: $limed-oak;
     margin-bottom: 8px;
     margin-top: 0;
@@ -129,32 +123,38 @@
 }
 
 .c-feature__title {
-	color: $woodsmoke;
-	@include font("ITC_FENICE", 24px, 700, 28px, -40);
-	margin-bottom: 14px;
-	margin-top: 0px;
+    color: $woodsmoke;
+    @include font("ITC_FENICE", 24px, 700, 28px, -4);
+    margin-bottom: 14px;
+    margin-top: 0px;
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         @include font-size(32px);
         @include line-height(36px);
-        margin-bottom: 20px;
+        margin-bottom: 8px;
         margin-top: 0px;
     }
 }
 
 .c-feature__teaser {
-    @include font("GOTHAM", 12px, null, 16px);
+    @include font("GOTHAM", 12px, null, 16px, -4);
     color: $oslo-gray;
+    display: none;
+    margin-bottom: 14px;
+    margin-top: 14px;
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         @include font-size(15px);
         @include line-height(20px);
+        display: block;
+        margin-bottom: 20px;
+        margin-top: 8px;
     }
 }
 
 .c-feature__byline {
-	@include font("GOTHAM", 9px, null, 16px, 60);
-	margin-bottom: 6px;
-	margin-top: 14px;
-	text-transform: uppercase;
+    @include font("GOTHAM", 9px, null, 16px, 60);
+    margin-bottom: 6px;
+    margin-top: 14px;
+    text-transform: uppercase;
 }
 
 .c-feature__byline-prefix {
@@ -166,24 +166,24 @@
 }
 
 .c-feature__meta {
-	@include font("GOTHAM", 9px, null, 14px);
-	color: $oslo-gray;
-	margin-top: 6px;
+    @include font("GOTHAM", 9px, null, 14px);
+    color: $oslo-gray;
+    margin-top: 6px;
 }
 
 li.c-feature__meta-item {
-	padding-right: 0;
-	& + li.c-feature__meta-item {
-	    border-left: none;
-	    padding-left: 0;
-	    &:before {
-	    	background-color: $oslo-gray;
-	    	border-radius: 50%;
-	    	content: "";
-	    	display: inline-block;
-	    	height: 3px;
-	    	margin: 1px 8px;
-	    	width: 3px;
-	    }
-	}
+    padding-right: 0;
+    & + li.c-feature__meta-item {
+        border-left: none;
+        padding-left: 0;
+        &:before {
+            background-color: $oslo-gray;
+            border-radius: 50%;
+            content: "";
+            display: inline-block;
+            height: 2px;
+            margin: 1px 4px;
+            width: 2px;
+        }
+    }
 }
