@@ -26,6 +26,10 @@
 
         .c-card__title {
             height: auto;
+
+            &:after {
+                background: none;
+            }
         }
     }
 }
