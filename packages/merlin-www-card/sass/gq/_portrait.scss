@@ -127,7 +127,7 @@
         border-right: 1px solid $bon-jour;
         box-sizing: border-box;
         display: table;
-        height: 234px;
+        height: 212px;
         padding: 20px;
         width: 100%;
     }
@@ -141,19 +141,31 @@
     }
 
     .c-card__tag {
-        @include font("GOTHAM", 12px, null, 14px, -40);
+        @include font("GOTHAM", 12px, 700, 14px, -4);
         color: $limed-oak;
         margin-bottom: 6px;
         margin-top: 0;
     }
 
     .c-card__title {
-        @include font("GOTHAM", 17px, 700, 22px, -10);
+        @include font("GOTHAM", 17px, 700, 22px, -4);
         color: $woodsmoke;
         height: 88px;
         margin-bottom: 14px;
         margin-top: 6px;
         overflow: hidden;
+        position: relative;
+
+        &:after {
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 91%);
+            bottom: 0;
+            content: '';
+            display: block;
+            height: 22px;
+            position: absolute;
+            right: 0;
+            width: 50%;
+        }
     }
 
     .c-card__teaser {
@@ -193,9 +205,9 @@
                     border-radius: 50%;
                     content: "";
                     display: inline-block;
-                    height: 3px;
-                    margin: 1px 8px;
-                    width: 3px;
+                    height: 2px;
+                    margin: 1px 4px;
+                    width: 2px;
                 }
             }
         }

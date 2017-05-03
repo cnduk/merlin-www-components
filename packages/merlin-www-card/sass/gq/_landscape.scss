@@ -52,14 +52,14 @@
     }
 
     .c-card__tag {
-        @include font("GOTHAM", 11px, null, 14px, -40);
+        @include font("GOTHAM", 11px, 700, 14px, -4);
         color: $limed-oak;
         margin-bottom: 6px;
         margin-top: 0;
     }
 
     .c-card__title {
-        @include font("GOTHAM", 17px, 700, 22px, -10);
+        @include font("GOTHAM", 14px, 700, 18px, -4);
         color: $woodsmoke;
         margin-bottom: 12px;
         margin-top: 6px;
@@ -102,9 +102,9 @@
                     border-radius: 50%;
                     content: "";
                     display: inline-block;
-                    height: 3px;
-                    margin: 1px 8px;
-                    width: 3px;
+                    height: 2px;
+                    margin: 1px 4px;
+                    width: 2px;
                 }
             }
         }
