@@ -58,8 +58,8 @@
 }
 
 .c-newsletter__description {
+    @include font('GOTHAM', 14px, null, 20px, -4);
     color: $oslo-gray;
-    @include font('GOTHAM', 14px, null, 20px);
     margin-bottom: 32px;
     margin-top: 14px;
 
@@ -70,7 +70,7 @@
 }
 
 .c-newsletter__form {
-    @include font("GOTHAM", 12px, 700, 12px);
+    @include font("GOTHAM", 14px, normal, 14px);
     color: $bon-jour;
     width: 100%;
 
@@ -80,13 +80,15 @@
 }
 
 .c-newsletter__form__text {
-    color: $bon-jour;
+    @include font("GOTHAM", 14px, normal, 14px);
+    border-radius: 0;
+    color: $mineshaft;
     padding: 16px;
     height: 44px;
     margin-bottom: 10px;
 
     &::placeholder {
-        color: $bon-jour;
+        color: $mineshaft;
     }
 
     &:focus {
@@ -119,4 +121,5 @@
 
 .c-newsletter__privacy {
     color: $oslo-gray;
+    text-decoration: underline;
 }
