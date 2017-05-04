@@ -39,7 +39,7 @@
 }
 
 .a-header__teaser {
-    @include font("GOTHAM", 14px, 400, 20px, 0);
+    @include font("GOTHAM", 14px, 400, 20px, -2);
     color: $oslo-gray;
     margin-bottom: 20px;
     margin-top: 10px;
