@@ -34,7 +34,7 @@
 	}
 
 	.c-card__title {
-	    @include font("GOTHAM", 12px, 700, 16px, -40);
+	    @include font("GOTHAM", 12px, 700, 16px, -4);
 	    color: $woodsmoke;
 	    margin-bottom: 6px;
 	    margin-top: 0px;
@@ -129,7 +129,7 @@
 	}
 
 	.c-card__title {
-        @include font("GOTHAM", 17px, 700, 22px, -10);
+        @include font("GOTHAM", 17px, 700, 22px, -4);
         color: $woodsmoke;
         margin-bottom: 14px;
         margin-top: 6px;
