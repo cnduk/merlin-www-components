@@ -228,19 +228,20 @@ function onInfiniteLoadComplete(e){
     var articleEl = document.querySelectorAll('.a-main');
     articleEl = articleEl[articleEl.length - 1];
 
-    var configAnalytics = null;
-    if(responseJSON.config_analytics){
-        configAnalytics = responseJSON.config_analytics.data;
+    var analytics = null;
+    if(responseJSON.hasOwnProperty('config_analytics') && responseJSON.config_analytics !== null){
+        analytics = responseJSON.config_analytics.data;
     }
-    var configSimplereach = null;
-    if(responseJSON.config_simplereach){
-        configSimplereach = responseJSON.config_simplereach.data;
+
+    var simplereach = null;
+    if(responseJSON.hasOwnProperty('config_simplereach') && responseJSON.config_simplereach !== null){
+        simplereach = responseJSON.config_simplereach.data;
     }
 
     var article = this.add(articleEl, {
-        'analytics': configAnalytics,
+        'analytics': analytics,
         'infinite': true,
-        'simplereach': configSimplereach
+        'simplereach': simplereach
     });
 
     // Update any local storage values
