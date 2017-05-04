@@ -160,6 +160,10 @@
     color: $oslo-gray;
     margin-top: 8px;
     text-transform: uppercase;
+
+    &:before {
+        content: 'Credit: ';
+    }
 }
 
 .a-header__separator--hero {
