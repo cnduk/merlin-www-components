@@ -3,15 +3,20 @@
 
 .c-gallery {
     background-color: $seashell;
-    padding: $MOBILE_SLICE_MARGIN;
+    padding: $MOBILE_SIDE_GUTTER;
     max-width: none;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: $TABLET_SLICE_MARGIN;
+        padding: $TABLET_SIDE_GUTTER;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: $DESKTOP_SLICE_MARGIN;
+        padding: $DESKTOP_SIDE_GUTTER;
+    }
+
+    & + .c-gallery,
+    & + .c-feature {
+        padding-top: 0;
     }
 }
 

@@ -11,18 +11,18 @@
         padding-bottom: 0;
     }
 
-    margin-bottom: $MOBILE_SLICE_MARGIN;
-    margin-top: $MOBILE_SLICE_MARGIN;
+    // margin-bottom: $MOBILE_SLICE_MARGIN;
+    // margin-top: $MOBILE_SLICE_MARGIN;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: $TABLET_SLICE_MARGIN;
-        margin-top: $TABLET_SLICE_MARGIN;
-    }
+    // @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    //     margin-bottom: $TABLET_SLICE_MARGIN;
+    //     margin-top: $TABLET_SLICE_MARGIN;
+    // }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: $DESKTOP_SLICE_MARGIN;
-        margin-top: $DESKTOP_SLICE_MARGIN;
-    }
+    // @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    //     margin-bottom: $DESKTOP_SLICE_MARGIN;
+    //     margin-top: $DESKTOP_SLICE_MARGIN;
+    // }
 }
 
 .c-superfeature__content {

@@ -5,18 +5,23 @@
 
 .c-feature {
     background-color: $seashell;
-    padding-bottom: $MOBILE_SLICE_MARGIN;
-    padding-top: $MOBILE_SLICE_MARGIN;
+    padding-bottom: $MOBILE_SIDE_GUTTER;
+    padding-top: $MOBILE_SIDE_GUTTER;
     max-width: none;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding-bottom: $TABLET_SLICE_MARGIN;
-        padding-top: $TABLET_SLICE_MARGIN;
+        padding-bottom: $TABLET_SIDE_GUTTER;
+        padding-top: $TABLET_SIDE_GUTTER;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding-bottom: $DESKTOP_SLICE_MARGIN;
-        padding-top: $DESKTOP_SLICE_MARGIN;
+        padding-bottom: $DESKTOP_SIDE_GUTTER;
+        padding-top: $DESKTOP_SIDE_GUTTER;
+    }
+
+    & + .c-gallery,
+    & + .c-feature {
+        padding-top: 0;
     }
 }
 
