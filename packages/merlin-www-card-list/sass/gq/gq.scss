@@ -121,6 +121,17 @@
 		        padding-top: 20px;
 		    }
 		}
+
+		@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+			& + .c-card-list__item {
+			    margin-top: 24px;
+
+			    .c-card {
+			        border-top: none;
+			        padding-top: 0px;
+			    }
+			}
+		}
 	}
 }
 
