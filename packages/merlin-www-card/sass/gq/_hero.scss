@@ -14,7 +14,7 @@
         // @include card-hero-large();
     // }
 
-    @include max-screen(599px) {
+    @include max-screen($CARD_SWITCHER_WIDTH - 1) {
         .c-card__obj__body {
             border-bottom: 0;
             border-left: 0;
@@ -26,9 +26,14 @@
 
         .c-card__title {
             height: auto;
+            margin-bottom: 14px;
+        }
 
-            &:after {
-                background: none;
+        &.c-card--dark {
+            .c-card__title {
+                &:after {
+                    content: none;
+                }
             }
         }
     }
