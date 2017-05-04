@@ -2,12 +2,14 @@
 
 .a-main--gallery {}
 .a-main--video {
-	.a-body__content {
-	    padding-left: 0;
-	}
+    .a-body__content {
+        padding-left: 0;
+    }
 }
 
-.a-body {}
+.a-body {
+    margin-top: 40px;
+}
 .a-body--gallery {}
 .a-body--video {}
 .a-body__clear {
@@ -16,12 +18,12 @@
 
 .a-body__wrapper {}
 .a-body__content {
-	a {
-	    border-bottom: 1px solid $cornflower-blue;
-	    color: $cornflower-blue;
-	    @include font-weight(400);
-	    text-decoration: none;
-	}
+    a {
+        border-bottom: 1px solid $cornflower-blue;
+        color: $cornflower-blue;
+        @include font-weight(400);
+        text-decoration: none;
+    }
 }
 
 .a-infinite__message {
