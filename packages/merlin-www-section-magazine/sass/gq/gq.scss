@@ -43,6 +43,7 @@
 	img {
 		background-color: #19191b;
 		border-radius: 8px;
+		box-shadow: 2px 0 32px 0 rgba(0, 0, 0, 0.16);
 	    padding: 20px 8px;
 	    right: 20px;
 		@include desktop-size {
@@ -55,7 +56,7 @@
 }
 
 .c-magazine__content__date {
-	@include font("ITC_FENICE", 24px, 700, 28px);
+	@include font("ITC_FENICE", 24px, 700, 28px, -4);
 	margin: 28px 0;
 	text-align: center;
 	@include tablet-size {
@@ -67,7 +68,7 @@
 }
 
 .c-magazine__content__title {
-	@include font("GOTHAM", 12px, 700, 16px);
+	@include font("GOTHAM", 12px, 700, 16px, -4);
 	color: $limed-oak;
 	margin-bottom: 12px;
 	text-align: left;
