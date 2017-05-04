@@ -39,6 +39,12 @@
     }
 }
 
+.c-magazine__cover--print {
+    img {
+    	box-shadow: 2px 0 32px 0 rgba(0, 0, 0, 0.16);
+    }
+}
+
 .c-magazine__cover--tablet {
 	img {
 		background-color: #19191b;
