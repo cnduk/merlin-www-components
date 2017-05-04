@@ -7,18 +7,15 @@
 .c-show-summary-section {
     background-color: $seashell;
     padding-bottom: $MOBILE_SLICE_MARGIN;
-    padding-top: $MOBILE_SLICE_MARGIN;
     position: relative;
     max-width: none;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding-bottom: $TABLET_SLICE_MARGIN;
-        padding-top: $TABLET_SLICE_MARGIN;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         padding-bottom: $DESKTOP_SLICE_MARGIN;
-        padding-top: $DESKTOP_SLICE_MARGIN;
     }
 }
 
@@ -39,12 +36,6 @@
     z-index: 1;
 }
 
-.c-show-summary-section__link:hover ~ .c-show-summary-section__content {
-    .c-show-summary-section__title {
-        text-decoration: underline;
-    }
-}
-
 .c-show-summary-section__content {
     background: $white;
     border-bottom: 1px solid $bon-jour;
@@ -54,13 +45,13 @@
     text-align: center;
 
     &:after {
-        @include triangle(24px, 16px, 'up', $white);
+        @include triangle(16px, 12px, 'up', $white);
         @include vendor-prefix(transform, translateX(-50%));
         content: '';
         height: 0;
         left: 50%;
         position: absolute;
-        top: -24px;
+        top: -16px;
         width: 0;
     }
 
@@ -68,14 +59,14 @@
         margin: 0 60px;
         padding: 56px 48px;
         &:after {
-            @include triangle(28px, 18px, 'up', $white);
-            top: -28px;
+            @include triangle(18px, 14px, 'up', $white);
+            top: -18px;
         }
     }
 }
 
 .c-show-summary-section__tag {
-    @include font("GOTHAM", 11px, 700, 14px);
+    @include font("GOTHAM", 11px, 700, 14px, -4);
     color: $limed-oak;
     margin-bottom: 8px;
     margin-top: 0;
@@ -89,19 +80,19 @@
 
 .c-show-summary-section__title {
     color: $woodsmoke;
-    @include font("ITC_FENICE", 24px, 700, 28px, -40);
+    @include font("ITC_FENICE", 24px, 700, 28px, -4);
     margin-bottom: 14px;
     margin-top: 0px;
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         @include font-size(32px);
         @include line-height(36px);
-        margin-bottom: 20px;
+        margin-bottom: 8px;
         margin-top: 0px;
     }
 }
 
 .c-show-summary-section__meta {
-    @include font("GOTHAM", 9px, null, 14px);
+    @include font("GOTHAM", 9px, 500, 14px);
     color: $oslo-gray;
     margin-top: 6px;
 }
@@ -116,9 +107,9 @@ li.c-show-summary-section__meta-item {
             border-radius: 50%;
             content: "";
             display: inline-block;
-            height: 3px;
-            margin: 1px 8px;
-            width: 3px;
+            height: 2px;
+            margin: 1px 4px;
+            width: 2px;
         }
     }
 }
