@@ -22,16 +22,24 @@
 }
 
 .a-header__content {
-
+    @include min-screen($ARTICLE_TOTAL) {
+        padding-left: 0;
+    }
 }
 
 .a-header__title {
-    margin-top: 20px;
+    letter-spacing: 0;
+    margin-top: 16px;
     margin-bottom: 10px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 20px;
+        margin-bottom: 16px;
+    }
 }
 
 .a-header__teaser {
-    @include font("GOTHAM", 14px, 400, 20px, -40);
+    @include font("GOTHAM", 14px, 400, 20px, 0);
     color: $oslo-gray;
     margin-bottom: 20px;
     margin-top: 10px;
@@ -39,11 +47,22 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         @include font-size(17px);
         @include line-height(24px);
+        margin-bottom: 32px;
+        margin-top: 16px;
+    }
+
+    a {
+        border-bottom: 1px solid $cornflower-blue;
+        color: $cornflower-blue;
+        @include font-weight(400);
+        text-decoration: none;
     }
 }
 
 .a-header__separator {
-
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: none;
+    }
 }
 
 .a-header__about {
@@ -51,7 +70,7 @@
 }
 
 .a-header__byline {
-    @include font("GOTHAM", 9px, 700, 14px, 60);
+    @include font("GOTHAM", 9px, 400, 14px, 60);
     color: $mineshaft;
     margin-bottom: 4px;
     margin-top: 20px;
@@ -70,7 +89,7 @@
 .a-header__byline-conjunction {}
 
 .a-header__date {
-    @include font("GOTHAM", 9px, 400, 14px, 4);
+    @include font("GOTHAM", 9px, 500, 14px, 4);
     margin-top: 4px;
     margin-bottom: 24px;
     color: $oslo-gray;
@@ -78,6 +97,8 @@
 
 .a-header__image {
     margin-top: 32px;
+    padding: 0;
+    max-width: $MAXIMUM_PAGE_WIDTH;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin-top: 40px;
@@ -109,7 +130,15 @@
 .a-header__image-title,
 .a-header__image-caption,
 .a-header__image-credit {
+    box-sizing: border-box;
+    max-width: $ARTICLE_TOTAL + $DESKTOP_SIDE_GUTTER*2;
 
+    @include min-screen($ARTICLE_TOTAL) {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 220px + $DESKTOP_SIDE_GUTTER;
+        padding-right: 350px + $DESKTOP_SIDE_GUTTER;
+    }
 }
 
 .a-header__image-title {
@@ -169,17 +198,16 @@
 }
 
 .a-header__tag {
-    @include font("GOTHAM", 10px, 700, 10px, 0);
+    @include font("GOTHAM", 10px, 700, 10px, -4);
     background-color: $limed_oak;
     border-bottom: none;
     color: $white;
     display: inline-block;
-    padding: 4px 16px 4px 5px;
+    padding: 6px 16px 6px 6px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         @include font-size(12px);
         @include line-height(12px);
-        padding: 6px 16px 6px 6px;
     }
 }
 .a-header__tag__primary {
