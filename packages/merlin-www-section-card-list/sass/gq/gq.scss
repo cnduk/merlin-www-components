@@ -99,14 +99,14 @@
     }
 }
 
-.c-card-section--c-contributors ,
+.c-card-section--c-contributors,
 .c-card-section--c-curated,
 .c-card-section--c-tag {
 	.c-card-section__title {
 		@include font("GOTHAM", 14px, 700, 40px, 60)
 		color: $woodsmoke;
 		height: 40px;
-		margin-bottom: 32px;
+		margin-bottom: 24px;
 		margin-top: 0;
 		text-align: left;
 		text-transform: uppercase;
@@ -140,7 +140,7 @@
 		@include font("GOTHAM", 14px, 700, 40px, 60)
 		color: $woodsmoke;
 		height: 40px;
-		margin-bottom: 32px;
+		margin-bottom: 24px;
 		margin-top: 0;
 		text-align: left;
 		text-transform: uppercase;

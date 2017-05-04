@@ -23,6 +23,13 @@
     //     margin-bottom: $DESKTOP_SLICE_MARGIN;
     //     margin-top: $DESKTOP_SLICE_MARGIN;
     // }
+
+    @include max-screen($FEATURE_LARGE_BREAKPOINT - 1) {
+        & + .c-gallery,
+        & + .c-feature {
+            padding-top: 0;
+        }
+    }
 }
 
 .c-superfeature__content {
