@@ -4,9 +4,9 @@
 }
 
 .a-author__article-date {
-    @include font("GOTHAM", 9px, 400, 14px, 4);
+    @include font("GOTHAM", 9px, 500, 14px, 0);
     color: $oslo-gray;
-    margin-top: 16px;
+    margin-top: 8px;
 }
 
 .a-author__bio {
@@ -17,8 +17,8 @@
 }
 
 .a-author__byline {
-    @include font("GOTHAM", 12px, 500, 16px, -4);
-    color: $oslo-gray;
+    @include font("GOTHAM", 9px, 400, 16px, 60);
+    color: $mineshaft;
     margin-bottom: 8px;
     margin-top: 0;
     text-transform: uppercase;
@@ -33,7 +33,9 @@
 
     }
 }
-.a-author__byline-name {}
+.a-author__byline-name {
+    @include font-weight(700);
+}
 .a-author__byline-prefix,
 .a-author__byline-conjunction {
     color: $mineshaft;
