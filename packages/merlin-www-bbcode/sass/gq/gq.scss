@@ -6,7 +6,7 @@
 // Embed
 // -------------------- //
 .bb-embed {
-    margin: 28px 0;
+    margin: 40px 0;
 }
 
 // -------------------- //
@@ -37,7 +37,7 @@
 // Interactive
 // -------------------- //
 .bb-interactive {
-    margin: 28px 0;
+    margin: 40px 0;
 }
 
 // -------------------- //
@@ -68,7 +68,7 @@
     @include font("GOTHAM", 16px, 400, 22px)
     border-left: 20px solid $woodsmoke;
     color: $mineshaft;
-    margin: 28px 0;
+    margin: 40px 0;
     padding-left: 24px;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
@@ -105,7 +105,7 @@
 .bb-pullquote {
     border-top: 20px solid $woodsmoke;
     border-bottom: 20px solid $woodsmoke;
-    margin: 28px 0;
+    margin: 40px 0;
     padding: 32px 0;
     text-align: center;
 
@@ -114,7 +114,7 @@
     }
 }
 .bb-pullquote__quote {
-    @include font("ITC_FENICE", 32px, 400, 36px, -40);
+    @include font("ITC_FENICE", 32px, 400, 36px, -4);
     color: $mineshaft;
 
     &:before,
@@ -142,7 +142,7 @@
     border-bottom: 1px solid $bon-jour;
     border-left: 1px solid $bon-jour;
     border-right: 1px solid $bon-jour;
-    margin: 28px 0;
+    margin: 40px 0;
     padding: 32px 20px;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
@@ -237,7 +237,7 @@
 // Figure
 // -------------------- //
 .bb-figure {
-    margin: 28px 0;
+    margin: 40px 0;
 }
 
 .bb-figure__caption,
@@ -268,7 +268,7 @@
 .bb-card {
     border: 1px solid $bon-jour;
     box-sizing: border-box;
-    margin: 28px 0;
+    margin: 40px 0;
     padding: 16px;
 
     &:after {
@@ -412,7 +412,7 @@
 // Gallery
 // -------------------- //
 .bb-gallery {
-    margin: 28px 0;
+    margin: 40px 0;
 }
 
 .bb-gallery__icon {
@@ -472,7 +472,7 @@
 // Video
 // -------------------- //
 .bb-video {
-    margin: 28px 0;
+    margin: 40px 0;
     position: relative;
 }
 
@@ -539,7 +539,7 @@
 // Show Gallery
 // -------------------- //
 .bb-show-gallery {
-    margin: 28px 0;
+    margin: 40px 0;
 
     .c-gallery-strip__detail {
         border-color: $bon-jour;
