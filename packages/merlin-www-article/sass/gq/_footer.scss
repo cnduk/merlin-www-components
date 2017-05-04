@@ -16,5 +16,8 @@
 
 .a-related-tags {
     margin: 28px 0 40px 0;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    	margin: 40px 0;
+    }
 }
 .a-related-tags__wrapper {}
