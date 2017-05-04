@@ -48,7 +48,7 @@
 	background-color: $woodsmoke;
 	margin: 0;
     max-width: none;
-    padding: $MOBILE_SLICE_MARGIN;
+    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding: $TABLET_SLICE_MARGIN;
