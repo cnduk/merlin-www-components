@@ -7,7 +7,7 @@
 
 .c-show-season-section {
 	background-color: $woodsmoke;
-    padding: 40px $MOBILE_SLICE_MARGIN;
+    padding: $MOBILE_SLICE_MARGIN;
     max-width: none;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
@@ -88,7 +88,8 @@ li.c-show-season-section__card-list-item {
 	&:hover {
 		@include button-single-two-dark-hover();
 	}
-	margin-top: 40px;
+	margin-bottom: -16px;
+	margin-top: 24px;
 	&:after {
 		content: '\2192';
 		display: inline-block;

@@ -46,8 +46,9 @@
 
 .c-card-section--c-video-articles {
 	background-color: $woodsmoke;
-    padding: $MOBILE_SLICE_MARGIN;
+	margin: 0;
     max-width: none;
+    padding: $MOBILE_SLICE_MARGIN;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding: $TABLET_SLICE_MARGIN;
@@ -184,7 +185,8 @@
 	&:hover {
 		@include button-single-two-light-hover();
 	}
-	margin-top: 40px;
+	margin-bottom: -16px;
+	margin-top: 24px;
 	&:after {
 		background-image: url('data:image/svg+xml;utf8, <svg fill="#4681f5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8.48"><title>btn-arrownext</title><path d="M8,12.24l-0.53-.8,4.44-3H2v-1h9.93l-4.44-3L8,3.76,13.79,7.6a0.48,0.48,0,0,1,0,.8Z" transform="translate(-2 -3.76)"/></svg>');
 		background-position: bottom;
