@@ -1,14 +1,9 @@
 // -------------------- //
 // Show
 // -------------------- //
-@mixin card-show() {}
-@mixin card-show-small() {
+@mixin card-show() {
     .c-card__obj__body {
         padding-top: 20px;
-    }
-
-    .c-card__image {
-        padding-top: 150%;
     }
 
     .c-card__image-label {
@@ -20,16 +15,14 @@
         padding: 8px 6px 6px 8px;
         position: absolute;
         text-transform: uppercase;
-
-        &--latest {
-            background-color: $COLOUR_BG_ACCENT2;
+    }
+    .c-card__image-label--latest {
+        background-color: $COLOUR_BG_ACCENT2;
             color: $COLOR_TYPE_HEADING;
-        }
-
-        &--featured {
-            background-color: $COLOR_TYPE_LINK;
-            color: $COLOR_MAIN_PAGE;
-        }
+    }
+    .c-card__image-label--featured {
+        background-color: $COLOR_TYPE_LINK;
+        color: $COLOR_MAIN_PAGE;
     }
 
     .c-card__title {
@@ -37,23 +30,21 @@
         margin-bottom: 0;
     }
 }
-
-// @mixin card-show-large($has_small:false) {
-
-// }
+@mixin card-show-small() {}
+@mixin card-show-large() {}
 
 .c-card--show {
     @include card-show();
-    @include card-show-small();
-    // @include min-screen($CARD_SWITCHER_WIDTH) {
-    //     @include card-show-large($has_small:true);
-    // }
+    // @include card-show-small();
+    // @include card-show-large();
 }
 
 .c-card--show-small {
+    @include card-show();
     @include card-show-small();
 }
 
-// .c-card--show-large {
-//     @include card-show-large();
-// }
+.c-card--show-large {
+    @include card-show();
+    @include card-show-large();
+}

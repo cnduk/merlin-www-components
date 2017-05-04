@@ -1,41 +1,34 @@
 // -------------------- //
 // Portrait
 // -------------------- //
-@mixin card-portrait() {}
-// @mixin card-portrait-small() {}
-
-@mixin card-portrait-large() {
+@mixin card-portrait() {
     .c-card__obj {}
     .c-card__obj__header {
         display: block;
+        margin-bottom: $MARGIN_SMALL;
         padding: 0;
         width: auto;
     }
-    .c-card__images {
-        .c-card__image {
-            padding-top: 100%;
-        }
 
-        .c-card__image__icon {
-            bottom: 0;
-            height: 40px;
-            left: 0;
-            width: 40px;
+    .c-card__image__icon {
+        bottom: 0;
+        height: 40px;
+        left: 0;
+        width: 40px;
 
-            svg {
-                display: block;
-                height: 100%;
-                margin: 0 auto;
-                vertical-align: middle;
-                width: 16px;
-            }
+        svg {
+            display: block;
+            height: 100%;
+            margin: 0 auto;
+            vertical-align: middle;
+            width: 16px;
         }
     }
 
     .c-card__obj__body {
         display: block;
+        margin-top: $MARGIN_XX_SMALL;
         padding: 0;
-        padding-top: 20px;
         width: 100%;
     }
 
@@ -55,19 +48,22 @@
         margin-bottom: 15px;
     }
 }
+@mixin card-portrait-small() {}
+@mixin card-portrait-large() {}
 
 .c-card--portrait {
     @include card-portrait();
+    // NOTE: we dont have any changes
     // @include card-portrait-small();
-    // @include min-screen(800px) {
-        @include card-portrait-large();
-    // }
+    // @include card-portrait-large();
 }
 
-// .c-card--portrait-small {
-//     @include card-portrait-small();
-// }
+.c-card--portrait-small {
+    @include card-portrait();
+    @include card-portrait-small();
+}
 
-// .c-card--portrait-large {
-//     @include card-portrait-large();
-// }
+.c-card--portrait-large {
+    @include card-portrait();
+    @include card-portrait-large();
+}

@@ -1,9 +1,0 @@
-@import '@cnbritain/merlin-www-common:vogue';
-
-.c-card--show-summary {
-    .c-card__title {
-        @include font('NOBEL', 12px, 'BOLD');
-        margin: 0 0 $MARGIN_SMALL 0;
-        text-transform: uppercase;
-    }
-}

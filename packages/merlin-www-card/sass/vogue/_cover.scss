@@ -1,20 +1,16 @@
 // -------------------- //
 // Cover
 // -------------------- //
-@mixin card-cover() {}
-// @mixin card-cover-small() {}
-
-@mixin card-cover-large() {
+@mixin card-cover() {
     .c-card__obj {}
     .c-card__obj__header {
         display: block;
         padding: 0;
         width: auto;
     }
-    .c-card__images {
-        .c-card__image {
-            padding-top: 150%;
-        }
+
+    .c-card__image--custom {
+        padding-top: 131.730769231%;
     }
 
     .c-card__obj__body {
@@ -41,19 +37,21 @@
         text-align: center;
     }
 }
+@mixin card-cover-small() {}
+@mixin card-cover-large() {}
 
 .c-card--cover {
     @include card-cover();
     // @include card-cover-small();
-    // @include min-screen(800px) {
-        @include card-cover-large();
-    // }
+    // @include card-cover-large();
 }
 
-// .c-card--cover-small {
-//     @include card-cover-small();
-// }
+.c-card--cover-small {
+    @include card-cover();
+    @include card-cover-small();
+}
 
-// .c-card--cover-large {
-//     @include card-cover-large();
-// }
+.c-card--cover-large {
+    @include card-cover();
+    @include card-cover-large();
+}

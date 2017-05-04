@@ -1,37 +1,51 @@
 // -------------------- //
 // Hero
 // -------------------- //
-@mixin card-hero() {}
-// @mixin card-hero-small() {}
-// @mixin card-hero-large() {}
+// Note: we force a padding-top on the image here as the image goes from
+// landscape to square
+@mixin card-hero() {
+    @include card-portrait();
 
-.c-card--hero {
-    @include card-hero();
-    // @include card-hero-small();
-    // @include min-screen(700px) {
-        @include card-portrait();
-        @include card-portrait-large();
-        // @include card-hero-large();
-    // }
-
-    @include max-screen($CARD_SWITCHER_WIDTH - 1) {
-        .c-card__images {
-            .c-card__image {
-                padding-top: 66.66666%;
-            }
-        }
-
-        .c-card__title {
-            @include c-card-title-medium();
-        }
+    .c-card__image--picture img {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+@mixin card-hero-small() {
+    @include card-portrait-small();
+    .c-card__image--picture {
+        padding-top: 66.66666%;
+    }
+    .c-card__title {
+        @include c-card-title-medium();
+    }
+}
+@mixin card-hero-large() {
+    @include card-portrait-large();
+    .c-card__image--picture {
+        padding-top: 100%;
     }
 }
 
-// .c-card--hero-small {
-//     @include card-portrait-large();
+.c-card--hero {
+    @include card-hero();
+    @include card-hero-small();
+    @include min-screen($CARD_SWITCHER_WIDTH){
+        @include card-hero-large();
+    }
+}
 
-// }
+.c-card--hero-small {
+    @include card-hero();
+    @include card-hero-small();
+}
 
-// .c-card--hero-large {
-//     @include card-portrait-large();
-// }
+.c-card--hero-large {
+    @include card-hero();
+    @include card-hero-large();
+}

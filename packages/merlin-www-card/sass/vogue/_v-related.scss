@@ -99,9 +99,11 @@
 }
 
 .c-card--v-related-small {
+    @include card-v-related();
     @include card-v-related-small();
 }
 
 .c-card--v-related-large {
+    @include card-v-related();
     @include card-v-related-large();
 }
