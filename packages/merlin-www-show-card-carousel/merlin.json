@@ -10,7 +10,8 @@
         "wireframe": "sass/wireframe/wireframe.scss",
         "vogue": "sass/vogue/vogue.scss",
         "glamour": "sass/glamour/glamour.scss",
-        "missvogue": "themes/missvogue/missvogue.scss"
+        "missvogue": "themes/missvogue/missvogue.scss",
+        "tatler": "themes/tatler/tatler.scss",
     },
     "partials": {
         "index": "partials/index.html"
@@ -24,7 +25,8 @@
             "main": "index",
             "themes": [
                 "vogue",
-                "glamour"
+                "glamour",
+                "tatler"
             ]
         }
     },
