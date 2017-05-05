@@ -32,6 +32,24 @@
     }
 }
 
+.c-superfeature__image {
+    padding-top: 66.66666%;
+    position: relative;
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        padding-top: 56.25%;
+    }
+
+    img {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
 .c-superfeature__content {
     background: $white;
     border-bottom: 1px solid $bon-jour;
