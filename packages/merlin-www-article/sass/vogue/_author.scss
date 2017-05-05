@@ -15,10 +15,16 @@
 .a-author__bio {
     color: $COLOR_TYPE_META;
     @include font('ADOBE CASLON', 13px, null, 16px);
+    margin-bottom: $MARGIN_SMALL;
+    margin-top: -8px;
 }
 
 .a-author__byline {
-    margin: $MARGIN_X_SMALL 0;
+    margin: $MARGIN_XX_SMALL 0;
+}
+.a-author__byline--authors {
+    line-height: 1em;
+    margin-bottom: $MARGIN_SMALL;
 }
 
 .a-author__byline-name {
@@ -47,7 +53,7 @@
 .a-event-author__separator {
     border: none;
     border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-    margin: $MARGIN_X_SMALL 0;
+    margin: $MARGIN_XX_SMALL 0;
 }
 
 .a-author__separator--date {}
