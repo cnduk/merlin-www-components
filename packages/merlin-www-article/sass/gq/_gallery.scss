@@ -47,6 +47,10 @@
 
 .g-image-nav__btn[disabled] {
 	border-color: $bon-jour;
+
+	svg {
+		fill: $bon-jour;
+	}
 }
 
 .a-gallery__view {
