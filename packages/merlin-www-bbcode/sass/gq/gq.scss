@@ -246,7 +246,7 @@
 }
 
 .bb-figure__caption {
-    @include font("GOTHAM", 12px, 500, 16px, -20);
+    @include font("GOTHAM", 12px, 500, 16px, -2);
     color: $woodsmoke;
     margin-top: 16px;
 }
