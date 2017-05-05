@@ -54,10 +54,14 @@
 .a-header__about {}
 
 .a-header__byline {
-    margin-bottom: $MARGIN_XXX_SMALL;
+    margin-bottom: 8px;
+
     a {
         color: inherit;
     }
+}
+.a-header__byline-item {
+    margin-right: 8px;
 }
 
 .a-header__byline-name {
