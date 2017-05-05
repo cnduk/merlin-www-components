@@ -265,7 +265,7 @@ function renderVideoAd(ad, json, isLarge){
 
     // Play button
     var playButton = new Image();
-    playButton.src = 'http://cnda.condenast.co.uk/co/ads/adbuilder/playbutton.png';
+    playButton.src = 'https://cnda.condenast.co.uk/co/ads/adbuilder/playbutton.png';
     playButton.className = CLS_PLAYER_BTN;
     setStyle(playButton, {
         'left': '50%',
