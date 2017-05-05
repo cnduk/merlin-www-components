@@ -18,7 +18,8 @@
         "vogue": "sass/vogue/vogue.scss",
         "missvogue": "sass/missvogue/missvogue.scss",
         "glamour": "sass/glamour/glamour.scss",
-        "wired": "sass/wired/wired.scss"
+        "wired": "sass/wired/wired.scss",
+        "tatler": "sass/tatler/tatler.scss"
     },
     "partials": {
         "index": "partials/index.html",
@@ -36,7 +37,8 @@
                 "vogue",
                 "glamour",
                 "missvogue",
-                "wired"
+                "wired",
+                "tatler"
             ]
         },
         "card_list": {
@@ -47,7 +49,8 @@
                 "vogue",
                 "glamour",
                 "missvogue",
-                "wired"
+                "wired",
+                "tatler"
             ]
         },
         "event_information": {
@@ -58,7 +61,8 @@
                 "vogue",
                 "glamour",
                 "missvogue",
-                "wired"
+                "wired",
+                "tatler"
             ]
         },
         "hair_file": {
@@ -68,7 +72,8 @@
                 "wireframe",
                 "vogue",
                 "glamour",
-                "missvogue"
+                "missvogue",
+                "tatler"
             ]
         },
         "style_file": {
@@ -78,7 +83,8 @@
                 "wireframe",
                 "vogue",
                 "glamour",
-                "missvogue"
+                "missvogue",
+                "tatler"
             ]
         },
         "show_list": {
@@ -86,7 +92,8 @@
             "main": "index",
             "themes": [
                 "vogue",
-                "missvogue"
+                "missvogue",
+                "tatler"
             ]
         },
         "navigation_list": {
@@ -97,7 +104,8 @@
                 "vogue",
                 "glamour",
                 "missvogue",
-                "wired"
+                "wired",
+                "tatler"
             ]
         },
         "image": {
@@ -108,7 +116,8 @@
                 "vogue",
                 "glamour",
                 "missvogue",
-                "wired"
+                "wired",
+                "tatler"
             ]
         }
     },
