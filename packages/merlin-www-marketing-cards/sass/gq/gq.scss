@@ -60,9 +60,6 @@
 .a-marketing-card__brand__prefix {
     @include font("GOTHAM", 9px, 400, 16px, 60);
     margin-bottom: 16px;
-    @include marketing-card-medium-size() {
-        margin-bottom: 20px;
-    }
 }
 
 .a-marketing-card__col {
