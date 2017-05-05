@@ -15,18 +15,19 @@
                         {{/ data.profiles }}
 
                         {{# data.byline }}
-                            <p class="a-author__byline">
+                            <p class="a-author__byline a-author__byline--authors">
                                 <span class="a-author__byline-prefix">By</span>
                                 <span class="a-author__byline-name">{{ &data.byline }}</span>
                             </p>
                         {{/ data.byline }}
 
-                        {{# data.profiles }}
-                            {{# data.teaser }}
-                                <hr class="a-author__separator a-author__separator--bio" />
-                                <p class="a-author__bio">{{ . }}</p>
-                            {{/ data.teaser }}
-                        {{/ data.profiles }}
+                        {{^ state.has_multiple_profiles }}
+                            {{# data.profiles }}
+                                {{# data.teaser }}
+                                    <p class="a-author__bio">{{ &. }}</p>
+                                {{/ data.teaser }}
+                            {{/ data.profiles }}
+                        {{/ state.has_multiple_profiles }}
 
                         {{# data.photographer_profile }}
                             <hr class="a-author__separator a-author__separator--byline" />
