@@ -233,33 +233,24 @@
 
 .a-header__sponsor {
     @include font("GOTHAM", 9px, 400, 14px, 60);
+    border-bottom: 1px solid $bon-jour;
+    border-top: 1px solid $bon-jour;
     color: $mineshaft;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    padding: 12px 0;
     text-transform: uppercase;
 
     a {
         color: $mineshaft;
         border-bottom: none;
     }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        &:after {
-            content: '';
-            border-bottom: 0;
-            border-left: 0;
-            border-right: 0;
-            border-top: 4px double $bon-jour;
-            height: 0;
-            margin: 28px 0;
-            display: block;
-        }
-    }
 }
 
 .a-header__sponsor-prefix {}
 
 .a-header__sponsor-name {
+    @include font-size(12px);
     @include font-weight(700);
 }
 
