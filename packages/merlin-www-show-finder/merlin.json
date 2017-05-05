@@ -12,7 +12,8 @@
         "wireframe": "sass/wireframe/wireframe.scss",
         "vogue": "sass/vogue/vogue.scss",
         "missvogue": "sass/missvogue/missvogue.scss",
-        "glamour": "sass/glamour/glamour.scss"
+        "glamour": "sass/glamour/glamour.scss",
+        "tatler": "sass/tatler/tatler.scss"
     },
     "partials": {
         "index": "partials/index.html"
@@ -28,7 +29,8 @@
                 "wireframe",
                 "vogue",
                 "missvogue",
-                "glamour"
+                "glamour",
+                "tatler"
             ]
         },
         "seasons": {
@@ -38,7 +40,8 @@
                 "wireframe",
                 "vogue",
                 "missvogue",
-                "glamour"
+                "glamour",
+                "tatler"
             ]
         },
         "designers-and-seasons": {
@@ -48,7 +51,8 @@
                 "wireframe",
                 "vogue",
                 "missvogue",
-                "glamour"
+                "glamour",
+                "tatler"
             ]
         }
     },
