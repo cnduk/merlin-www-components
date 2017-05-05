@@ -42,6 +42,18 @@
                             </div>
                         {{/ data.photographer_profile }}
 
+                        {{# data.syndication_profile }}
+                            <hr class="a-author__separator a-author__separator--syndication" />
+                            <div class="a-author__byline a-author__byline--syndication">
+                                {{# state.has_link }}
+                                    <span class="a-author__byline-prefix">Originally published by</span> <span class="a-author__byline-name"><a class="{{ data.link.style.cls }}" title="{{ data.link.data.title }}" href="{{ &data.link.data.url }}">{{ data.name }}</a></span>
+                                {{/ state.has_link }}
+                                {{^ state.has_link }}
+                                    <span class="a-author__byline-prefix">Originally published by</span> <span class="a-author__byline-name">{{ data.name }}</span>
+                                {{/ state.has_link }}
+                            </div>
+                        {{/ data.syndication_profile }}
+
                         {{# data.date }}
                             <hr class="a-author__separator a-author__separator--date">
                             <div class="a-author__article-date">{{ data.label }}</div>
