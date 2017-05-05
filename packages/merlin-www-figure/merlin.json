@@ -15,7 +15,8 @@
                 "vogue",
                 "missvogue",
                 "glamour",
-                "wired"
+                "wired",
+                "tatler"
             ]
         },
         "figure-without-toolbar": {
@@ -26,7 +27,8 @@
                 "vogue",
                 "missvogue",
                 "glamour",
-                "wired"
+                "wired",
+                "tatler"
             ]
         }
     },
@@ -38,7 +40,8 @@
         "vogue": "sass/vogue/vogue.scss",
         "missvogue": "sass/missvogue/missvogue.scss",
         "glamour": "sass/glamour/glamour.scss",
-        "wired": "sass/wired/wired.scss"
+        "wired": "sass/wired/wired.scss",
+        "tatler": "sass/tatler/tatler.scss"
     },
     "partials": {
         "figure": "templates/figure.html"
