@@ -78,6 +78,21 @@
     }
 }
 
+.n-main__nav-title {
+    @include font("GOTHAM", 17px, 700, 60px, -4);
+    color: $white;
+    overflow: hidden;
+    padding-left: 145px;
+    padding-right: 195px;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-right: 238px;
+    }
+}
+
 .n-main__list-item {
     vertical-align: top;
 }

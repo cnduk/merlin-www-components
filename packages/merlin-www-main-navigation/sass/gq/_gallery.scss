@@ -1,0 +1,89 @@
+.n-gallery-nav {
+	@include opacity(0);
+	@include transition(opacity 0.2s ease-in-out, visibility 0.2s ease-in-out);
+    background-color: $black;
+	bottom: 0;
+	height: 60px;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	visibility: hidden;
+	width: 100%;
+
+	&.is-visible {
+	    @include opacity(1);
+	    visibility: visible;
+	}
+}
+
+.n-gallery-counter {
+    @include font("GOTHAM", 12px, 700, 20px);
+    color: $white;
+    line-height: 60px;
+    padding: 0 20px;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0 32px;
+    }
+}
+
+.n-gallery-counter__current {}
+.n-gallery-counter__slash {}
+
+.n-gallery-counter__total {
+    @include font("GOTHAM", 12px, 400, 20px);
+    color: $white;
+}
+
+
+.n-gallery-toggle,
+a.n-gallery-close {
+    display: inline-block;
+    font-size: 0;
+    height: 60px;
+    line-height: 60px;
+    width: 50px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        width: 60px;
+    }
+
+    &:hover {
+        svg {
+            fill: $limed-oak;
+        }
+    }
+
+    svg {
+        height: 100%;
+        fill: $white;
+        width: 18px;
+    }
+}
+.n-gallery-toggle--list,
+.n-gallery-toggle--grid {
+    border-left: 1px solid $mineshaft;
+    border-right: 1px solid $mineshaft;
+
+    display: inline-block;
+    font-size: 0;
+    height: 60px;
+    line-height: 60px;
+    width: 50px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        width: 60px;
+    }
+
+    &:hover {
+        svg {
+            fill: $limed-oak;
+        }
+    }
+
+    svg {
+        height: 100%;
+        fill: $white;
+        width: 18px;
+    }
+}
