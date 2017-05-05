@@ -53,7 +53,7 @@
 
     @include screen(1440px, 1500px) {
         @for $i from 0 through 60 {
-            @media (min-width: 1440px + $i) {
+            @media (min-width: 1440px + $i) and (max-width: 1440px + $i + 0.5) {
                 padding-left: #{(30 - $i/2)}px;
             }
         }
@@ -87,6 +87,18 @@
     text-overflow: ellipsis;
     vertical-align: middle;
     white-space: nowrap;
+
+    @include screen(1440px, 1500px) {
+        @for $i from 0 through 60 {
+            @media (min-width: 1440px + $i) and (max-width: 1440px + $i + 0.5) {
+                padding-left: #{(145 - $i/2)}px;
+            }
+        }
+    }
+
+    @include min-screen(1500px) {
+        padding-left: 115px;
+    }
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding-right: 238px;
