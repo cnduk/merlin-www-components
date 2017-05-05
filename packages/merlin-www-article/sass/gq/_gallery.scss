@@ -97,7 +97,9 @@ li.a-gallery__thumbnail {
         padding: 0 10px;
     }
 }
-.a-gallery__thumbnail-image {}
+.a-gallery__thumbnail-image {
+	background-color: $albaster;
+}
 .a-gallery__thumbnail-hover {
     left: 2px;
     right: 2px;
