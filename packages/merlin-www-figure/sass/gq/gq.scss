@@ -5,9 +5,9 @@
 .c-figure {}
 
 .c-figure__container {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    	margin-bottom: 32px;
+    	margin-bottom: 28px;
     }
 }
 
@@ -16,13 +16,17 @@
 }
 
 .c-figure__toolbar {
+	border: 1px solid $mineshaft;
 	bottom: 16px;
+	height: 44px;
 	position: absolute;
 	right: 16px;
 }
 
 li.c-figure__toolbar-listitem {
     background-color: $woodsmoke;
+    height: 44px;
+    width: 44px;
 
     svg {
         fill: $white;
@@ -40,11 +44,20 @@ li.c-figure__toolbar-listitem {
 }
 
 .c-figure__caption {
-	@include font("GOTHAM", 17px, 400, 28px, -2);
+	@include font("GOTHAM", 16px, 400, 26px, -2);
 	color: $mineshaft;
 	margin-bottom: 12px;
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 		margin-bottom: 16px;
+		@include font-size(17px);
+		@include line-height(28px);
+	}
+
+	a {
+		border-bottom: 1px solid $cornflower-blue;
+		color: $cornflower-blue;
+		@include font-weight(400);
+		text-decoration: none;
 	}
 }
 
@@ -52,4 +65,8 @@ li.c-figure__toolbar-listitem {
 	@include font("GOTHAM", 9px, 400, 12px, 60);
 	color: $oslo-gray;
 	text-transform: uppercase;
+
+    &:before {
+        content: 'Credit: ';
+    }
 }
