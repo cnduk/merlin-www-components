@@ -25,8 +25,21 @@
                             {{# data.teaser }}
                                 <hr class="a-author__separator a-author__separator--bio" />
                                 <p class="a-author__bio">{{ . }}</p>
-                                {{/ data.teaser }}
+                            {{/ data.teaser }}
                         {{/ data.profiles }}
+
+                        {{# data.photographer_profile }}
+                            <hr class="a-author__separator a-author__separator--byline" />
+                            <div class="a-author__byline a-author__byline--photographer">
+                                <span class="a-author__byline-prefix">Photography by</span>
+                                {{# state.has_link }}
+                                    <span class="a-author__byline-name"><a class="{{ data.link.style.cls }}" href="{{ &data.link.data.url }}" title="{{ data.link.data.title }}">{{ data.name }}</a></span>
+                                {{/ state.has_link }}
+                                {{^ state.has_link }}
+                                    <span class="a-author__byline-name">{{ data.name }}</span>
+                                {{/ state.has_link }}
+                            </div>
+                        {{/ data.photographer_profile }}
 
                         {{# data.date }}
                             <hr class="a-author__separator a-author__separator--date">
