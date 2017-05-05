@@ -181,18 +181,18 @@
     color: $oslo-gray;
 
     & + .a-header__meta-item {
-        margin-left: 8px;
-        padding-left: 8px;
+        margin-left: 2px;
+        padding-left: 6px;
 
         &:before {
             background-color: $oslo-gray;
             border-radius: 50%;
             content: '';
-            height: 3px;
-            left: -1.5px;
+            height: 2px;
+            left: -1px;
             position: absolute;
-            top: 6.5px;
-            width: 3px;
+            top: 7px;
+            width: 2px;
         }
     }
 
