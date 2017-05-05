@@ -34,80 +34,46 @@
 .c-card-list--s-results {
 	margin: 0 -10px;
 
-	.c-card-list__item {
+    .c-card-list__item {
 		display: inline-block;
 	    padding: 0 10px;
 	    width: 100%;
-	}
+        margin-top: 20px;
 
-	@include one-column-size() {
-	    .c-card-list__item {
-	    	& + .c-card-list__item {
-	    		margin-top: 20px;
-
-	    		.c-card {
-	    		    border-top: 1px solid $bon-jour;
-	    		    padding-top: 20px;
-
-	    		    &.c-card--dark {
-	    		        border-top-color: $mineshaft;
-	    		    }
-	    		}
-	    	}
-	    }
-	}
-
-	@include two-column-size() {
-		.c-card-list__item {
+		@include one-column-size() {
 			& + .c-card-list__item {
-				margin-top: 20px;
+				.c-card {
+				    border-top: 1px solid $bon-jour;
+				    padding-top: 20px;
+
+				    &.c-card--dark {
+				        border-top-color: $mineshaft;
+				    }
+				}
 			}
 
+	        @include first(1) {
+	            margin-top: 0;
+	        }
+    	}
+
+        @include two-column-size() {
 		    @include first(2) {
 		    	margin-top: 0;
+
 		    }
 
 		    width: 50%;
-		}
-	}
+        }
 
-	@include four-column-size() {
-	    .c-card-list__item {
-	    	& + .c-card-list__item {
-	    		margin-top: 20px;
-	    	}
-
-	        @include first(4) {
-	        	margin-top: 0;
-	        }
-
-	        width: 25%;
-	    }
-	}
-}
-
-.c-card-list--g-recommended {
-	margin: 0 -10px;
-
-	.c-card-list__item {
-		display: inline-block;
-	    padding: 0 10px;
-	    width: 100%;
-	}
-
-	@include three-column-size() {
-		.c-card-list__item {
-			& + .c-card-list__item {
-				margin-top: 20px;
-			}
-
-		    @include first(3) {
+        @include four-column-size() {
+		    @include first(4) {
 		    	margin-top: 0;
 		    }
 
-		    width: 33.33333%;
-		}
-	}
+		    width: 25%;
+        }
+    }
 }
 
 .c-card-list--c-magazine-articles {
@@ -359,7 +325,7 @@
 		    	margin-top: 0;
 		    }
 
-		    width: 33.33335%;
+		    width: 33.33333%;
         }
     }
 
