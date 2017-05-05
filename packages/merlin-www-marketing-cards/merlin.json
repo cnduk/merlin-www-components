@@ -14,7 +14,8 @@
         "missvogue": "sass/missvogue/missvogue.scss",
         "glamour": "sass/glamour/glamour.scss",
         "wired": "sass/wired/wired.scss",
-        "gq": "sass/gq/gq.scss"
+        "gq": "sass/gq/gq.scss",
+        "tatler": "sass/tatler/tatler.scss"
     },
     "partials": {
         "index": "partials/index.html",
@@ -36,7 +37,8 @@
                 "glamour",
                 "missvogue",
                 "wired",
-                "gq"
+                "gq",
+                "tatler"
             ]
         },
         "brand-with-logo": {
@@ -48,7 +50,8 @@
                 "glamour",
                 "missvogue",
                 "wired",
-                "gq"
+                "gq",
+                "tatler"
             ]
         },
         "magazine": {
@@ -60,7 +63,8 @@
                 "glamour",
                 "missvogue",
                 "wired",
-                "gq"
+                "gq",
+                "tatler"
             ]
         }
     },
