@@ -4,7 +4,8 @@
     "currentTheme": null,
     "data": {
         "vogue": "data/vogue.json",
-        "glamour": "data/glamour.json"
+        "glamour": "data/glamour.json",
+        "tatler": "data/vogue.json"
     },
     "demo": {
         "vogue": {
@@ -16,6 +17,11 @@
             "data": "glamour",
             "main": "international-redirect",
             "themes": ["glamour"]
+        },
+        "tatler": {
+            "data": "tatler",
+            "main": "international-redirect",
+            "themes": ["tatler"]
         }
     },
     "js": {
@@ -25,7 +31,8 @@
         "wireframe": "sass/wireframe/wireframe.scss",
         "vogue": "sass/vogue/vogue.scss",
         "missvogue": "sass/missvogue/missvogue.scss",
-        "glamour": "sass/glamour/glamour.scss"
+        "glamour": "sass/glamour/glamour.scss",
+        "tatler": "sass/tatler/tatler.scss"
     },
     "partials": {
         "international-redirect": "templates/international-redirect.html"
