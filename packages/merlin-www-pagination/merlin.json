@@ -11,7 +11,8 @@
         "vogue": "sass/vogue/vogue.scss",
         "glamour": "sass/glamour/glamour.scss",
         "wired": "sass/wired/wired.scss",
-        "missvogue": "sass/missvogue/missvogue.scss"
+        "missvogue": "sass/missvogue/missvogue.scss",
+        "tatler": "sass/tatler/tatler.scss"
     },
     "partials": {
         "index": "partials/index.html"
@@ -26,7 +27,8 @@
                 "vogue",
                 "glamour",
                 "wired",
-                "missvogue"
+                "missvogue",
+                "tatler"
             ]
         }
     },
