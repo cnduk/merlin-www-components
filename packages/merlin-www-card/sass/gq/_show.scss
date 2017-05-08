@@ -26,7 +26,7 @@
 
     .c-card__title {
         @include font("GOTHAM", 14px, 700, 18px, -4);
-        color: $white;
+        color: $woodsmoke;
         margin: 0;
         text-align: center;
     }
@@ -42,15 +42,15 @@
     }
 
     .c-card__obj__body {
-        border-bottom: 1px solid $mineshaft;
-        border-left: 1px solid $mineshaft;
-        border-right: 1px solid $mineshaft;
+        border-bottom: 1px solid $bon-jour;
+        border-left: 1px solid $bon-jour;
+        border-right: 1px solid $bon-jour;
         padding: 20px;
     }
 
     .c-card__title {
         @include font("GOTHAM", 17px, 700, 22px, -4);
-        color: $white;
+        color: $woodsmoke;
         margin: 0;
         text-align: center;
     }
