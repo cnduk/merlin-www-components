@@ -108,10 +108,10 @@
 .c-card__byline,
 .c-card__sponsor {
     @include c-card-byline;
-    margin: 4px 0 4px 0;
+    margin: 6px 0 8px 0;
 
     @include card-portrait-to-landscape-size() {
-        margin: 8px 0 2px 0;
+        margin: $MARGIN_XX_SMALL 0 $MARGIN_X_SMALL 0;
     }
 }
 .c-card__byline-prefix,
@@ -126,6 +126,10 @@
 
 .c-card__meta {
     @include c-card-meta;
+    display: inline-block;
+    @include card-portrait-to-landscape-size() {
+        padding-top: 8px;
+    }
 }
 
 .c-card__meta-item--tag {
