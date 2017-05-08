@@ -29,7 +29,8 @@
 .c-card-list--c-tag,
 .c-card-list--mag-articles,
 .c-card-list--v-genre-articles,
-.c-card-list--s-results {
+.c-card-list--s-results,
+.c-card-list--sh-summary-articles {
 	margin: 0 -10px;
 
     .c-card-list__item {
@@ -98,7 +99,8 @@
 	}
 }
 
-.c-card-list--mag-magazines {
+.c-card-list--mag-magazines,
+.c-card-list--sh-summary-shows {
 	margin: 0 -10px;
 
 	.c-card-list__item {
