@@ -34,11 +34,12 @@
 
 .c-superfeature__byline {
     @include c-card-byline;
-    margin-bottom: 2px;
-    margin-top: 12px;
+    margin-bottom: 14px;
+    margin-top: $MARGIN_XX_SMALL;
+
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        margin-bottom: 2px;
-        margin-top: 15px;
+        margin-bottom: $MARGIN_SMALL;
+        margin-top: $MARGIN_X_SMALL;
     }
 
     @include transition(opacity 0.3s ease-in-out);
@@ -57,7 +58,7 @@
     background-color: $COLOUR_BG_PAGE;
     margin-left: $MOBILE_SIDE_GUTTER;
     margin-right: $MOBILE_SIDE_GUTTER;
-    padding: 28px 40px 0 40px;
+    padding: $PADDING_SMALL $PADDING_LARGE $PADDING_LARGE $PADDING_LARGE;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         margin-left: $TABLET_SIDE_GUTTER;
@@ -79,8 +80,7 @@
 
     margin-top: -$MARGIN_LARGE;
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        margin-top: -95px;
-        padding: 40px 60px 0 60px;
+        margin-top: -72px;
     }
 }
 
@@ -98,16 +98,21 @@
 
 .c-superfeature__meta {
     display: inline-block;
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+        padding-top: 8px;
+    }
+
     @include c-card-meta;
 
     .c-superfeature__meta-item {
         &:not(:last-child) {
-            padding-right: 8px;
+            padding-right: $PADDING_XX_SMALL;
         }
 
         & + .c-superfeature__meta-item {
             border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-            padding-left: 8px;
+            padding-left: $PADDING_XX_SMALL;
         }
 
         &--tag {
