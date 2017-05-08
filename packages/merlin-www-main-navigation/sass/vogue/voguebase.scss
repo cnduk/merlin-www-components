@@ -296,15 +296,15 @@ a.n-main__cover__btn {
     }
 
     a + a::before {
-            background-color: $COLOR_BORDER_SOLID_ACCENT2;
-            content: '';
-            display: inline-block;
-            height: 20px;
-            left: -2px;
-            margin: $MARGIN_X_SMALL 0px;
-            position: absolute;
-            width: 1px;
-        }
+        background-color: $COLOR_BORDER_SOLID_ACCENT2;
+        content: '';
+        display: inline-block;
+        height: 20px;
+        left: -2px;
+        margin: $MARGIN_X_SMALL 0px;
+        position: absolute;
+        width: 1px;
+    }
 
 }
 .n-main__dropdown__btn-share {
