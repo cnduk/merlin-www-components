@@ -101,7 +101,7 @@
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 	    clear: right;
 	    float: right;
-	    margin: 0 0 0 40px;
+	    margin: 0 -340px 0 40px;
 
 	    &.stick-wrapper--fixed {
 	        margin-right: -40px;
