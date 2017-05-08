@@ -98,9 +98,23 @@
 		margin-right: -$TABLET_SIDE_GUTTER + 10;
 	}
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	    clear: right;
+	    float: right;
+	    margin: 0 0 0 40px;
 
+	    &.stick-wrapper--fixed {
+	        margin-right: -40px;
+	    }
 	}
+}
+
+.ad--tag-rail-top {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        left: 100%;
+        position: absolute;
+        top: 0;
+    }
 }
 
 .ad__title {
