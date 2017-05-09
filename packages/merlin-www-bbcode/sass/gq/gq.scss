@@ -1,4 +1,5 @@
 @import "@cnbritain/merlin-www-common:gq";
+@import "@cnbritain/merlin-www-buttons:gq";
 
 @import "../wireframe/wireframe";
 
@@ -422,6 +423,23 @@
     margin: 40px 0;
 }
 
+.bb-gallery--show-summary {
+    .bb-gallery__col {
+        &:first-child {
+            &:before {
+                @include button-single();
+                @include button-single-light();
+                @include vendor-prefix(transform, translateX(-50%));
+                bottom: 32px;
+                content: 'View Collection';
+                left: 50%;
+                position: absolute;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
 .bb-gallery__icon {
     border-right: 1px solid $bon-jour;
     display: table-cell;
@@ -452,6 +470,20 @@
 
     & + .bb-gallery__cols {
         margin-top: 20px;
+    }
+}
+
+.bb-gallery__link {
+    &:hover {
+        & + .bb-gallery__cols {
+            .bb-gallery__col {
+                &:first-child {
+                    &:before {
+                        @include button-single-light-hover();
+                    }
+                }
+            }
+        }
     }
 }
 
