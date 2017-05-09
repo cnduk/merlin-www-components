@@ -5,13 +5,15 @@
     "currentTheme": null,
     "data": {
         "article-gallery": "data/article-gallery.json",
-        "article-article": "data/article-article.json"
+        "article-article": "data/article-article.json",
+        "article-video": "data/article-video.json"
     },
     "themes": {
         "wireframe": "sass/wireframe/wireframe.scss",
         "vogue": "sass/vogue/vogue.scss",
         "missvogue": "sass/missvogue/missvogue.scss",
-        "tatler": "sass/tatler/tatler.scss"
+        "tatler": "sass/tatler/tatler.scss",
+        "gq": "sass/gq/gq.scss"
     },
     "partials": {
         "article": "partials/article.html",
@@ -35,7 +37,8 @@
                 "wireframe",
                 "vogue",
                 "missvogue",
-                "tatler"
+                "tatler",
+                "gq"
             ]
         },
         "article-article": {
@@ -45,7 +48,19 @@
                 "wireframe",
                 "vogue",
                 "missvogue",
-                "tatler"
+                "tatler",
+                "gq"
+            ]
+        },
+        "article-video": {
+            "data": "article-video",
+            "main": "video",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue",
+                "tatler",
+                "gq"
             ]
         }
     },
