@@ -11,8 +11,6 @@
 }
 
 .tg-header--video {
-    background-color: $COLOUR_BG_DARK;
-
     margin-bottom: 0;
 
     .tg-header__intro {
@@ -152,6 +150,18 @@
 
 .tg-header__cards {
     margin: $MARGIN_LARGE auto;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
 }
 
 .tg-header__shows,
