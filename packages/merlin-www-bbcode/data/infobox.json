@@ -8,9 +8,18 @@
             "is_title": true,
             "value": "Infobox"
         }, {
-            "value": "Value",
+            "is_body": true,
+            "value": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic laudantium, cumque optio ab at libero ipsam alias, commodi, dolorem delectus aut. Blanditiis eveniet cumque deserunt nisi aut explicabo, consequatur nesciunt?"
+        },
+        {
             "is_item": true,
-            "key": "Key"
+            "value": "Value 1",
+            "key": "Key 1"
+        },
+        {
+            "is_item": true,
+            "value": "Value 2",
+            "key": "Key 2"
         }]
     },
     "style": {
