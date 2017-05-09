@@ -449,10 +449,14 @@
         @include font-size(20px);
         @include line-height(24px);
     }
+
+    & + .bb-gallery__cols {
+        margin-top: 20px;
+    }
 }
 
 .bb-gallery__cols {
-    margin-top: 20px;
+
 }
 
 .bb-gallery__col {
