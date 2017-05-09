@@ -1,0 +1,53 @@
+.sh-article {}
+.sh-article__body {}
+.sh-article__body__wrapper {}
+
+.sh-article__body-content {
+	a {
+	    border-bottom: 1px solid $cornflower-blue;
+	    color: $cornflower-blue;
+	    @include font-weight(400);
+	    text-decoration: none;
+	}
+}
+
+.sh-article__body-author {}
+.sh-article__body-author__image {
+	height: 66px;
+	padding-right: 16px;
+	width: 66px;
+
+	img {
+		border-radius: 50%;
+		overflow: hidden;
+	}
+}
+
+.sh-article__body-author__byline {
+    @include font("GOTHAM", 9px, 400, 16px, 60);
+    color: $mineshaft;
+    margin-bottom: 8px;
+    margin-top: 0;
+    text-transform: uppercase;
+
+    a {
+        border-bottom: none;
+        color: inherit;
+    }
+}
+
+.sh-article__body-author__byline-name {
+    @include font-weight(700);
+}
+
+.sh-article__body-author__byline-prefix {
+	color: $mineshaft;
+}
+
+.sh-article__body-trends {}
+.sh-article__body-expander {
+	@include font("GOTHAM", 9px, 700, 16px, 240);
+	color: $cornflower-blue;
+	margin: 32px 0;
+	text-transform: uppercase;
+}

@@ -1,0 +1,101 @@
+.sh-article-header {
+    margin-bottom: 32px;
+    margin-top: 40px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 40px;
+        margin-top: 60px;
+    }
+}
+
+.sh-article-header__wrapper {
+    box-sizing: border-box;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+    width: 100%;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.sh-article-header__content {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0 $ARTICLE_RIGHT_TOTAL 0 0;
+    }
+
+    @include min-screen($ARTICLE_TOTAL) {
+        padding: 0 $ARTICLE_RIGHT_TOTAL 0 $ARTICLE_LEFT_TOTAL;
+    }
+}
+
+.sh-article-header__tag {
+    @include font("GOTHAM", 10px, 700, 10px, -4);
+    background-color: $limed_oak;
+    border-bottom: none;
+    color: $white;
+    display: inline-block;
+    padding: 6px 16px 6px 6px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(12px);
+        @include line-height(12px);
+    }
+}
+
+.sh-article-header__tag-season {
+    color: inherit;
+}
+
+.sh-article-header__title {
+    letter-spacing: 0;
+    margin-top: 16px;
+    margin-bottom: 10px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 20px;
+        margin-bottom: 16px;
+    }
+}
+
+.sh-article-header__meta-summary {
+    @include font("GOTHAM", 11px, 400, 16px);
+    color: $oslo-gray;
+    margin-bottom: 24px;
+    margin-top: 10px;
+
+    svg {
+
+    }
+
+    a {
+        color: inherit;
+    }
+}
+
+.sh-article-header__share {
+    height: 40px;
+}
+
+.sh-article-header__share-list {
+    height: 40px;
+}
+
+.sh-article-header__share-item {
+    height: 40px;
+
+    & + .sh-article-header__share-item {
+        margin-left: 8px;
+    }
+}
+.sh-article-header__share-item--mobile {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        display: none;
+    }
+}

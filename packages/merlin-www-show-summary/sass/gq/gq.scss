@@ -1,5 +1,4 @@
 @import '@cnbritain/merlin-www-common:gq';
-
 @import '@cnbritain/merlin-www-ads:gq';
 @import '@cnbritain/merlin-www-bbcode:gq';
 @import '@cnbritain/merlin-www-buttons:gq';
@@ -8,3 +7,8 @@
 @import '@cnbritain/merlin-www-topic-strip:gq';
 
 @import '../wireframe/wireframe';
+
+@import "./_header";
+@import "./_sidebar";
+@import "./_body";
+@import "./_related-galleries";
