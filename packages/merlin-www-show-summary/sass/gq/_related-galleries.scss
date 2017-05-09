@@ -1,3 +1,28 @@
-.sh-article__galleries {}
-.sh-article__galleries-list {}
-.sh-article__galleries-item__title {}
+.sh-article__galleries {
+	border-top: 4px double $bon-jour;
+	margin: 28px 0;
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		margin-bottom: 40px;
+		margin-top: 60px;
+	}
+}
+
+.sh-article__galleries-list {
+	margin: 0 -8px;
+	padding-top: 28px;
+}
+
+li.sh-article__galleries-item {
+	padding: 0 8px;
+
+	@include min-screen($CARD_LIST_2_COLUMN_BREAKPOINT) {
+	    margin-bottom: 28px;
+	}
+}
+
+.sh-article__galleries-item__title {
+	@include font("GOTHAM", 12px, 700, 12px, 60);
+	color: $woodsmoke;
+	text-transform: uppercase;
+}
