@@ -10,7 +10,9 @@
 	margin: 28px 0;
 }
 
-.sh-item-carousel__header {}
+.sh-item-carousel__header {
+	padding-right: 64px;
+}
 
 .sh-item-carousel__list {
 	font-size: 0;
@@ -68,7 +70,7 @@ li.sh-item-carousel__list__item {
 
 .sh-item-carousel__title {
 	font-size: 0;
-	height: 16px;
+	line-height: 1;
 	margin: 28px 0 20px 0;
 	text-transform: uppercase;
 }
