@@ -37,11 +37,9 @@
 
 .sh-article-header__tag {
     @include font("GOTHAM", 10px, 700, 10px, -4);
-    background-color: $limed_oak;
     border-bottom: none;
-    color: $white;
+    color: $limed_oak;
     display: inline-block;
-    padding: 6px 16px 6px 6px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         @include font-size(12px);
@@ -71,7 +69,11 @@
     margin-top: 10px;
 
     svg {
-
+        fill: $oslo-gray;
+        height: 12px;
+        margin-right: 8px;
+        width: 8px;
+        vertical-align: initial;
     }
 
     a {

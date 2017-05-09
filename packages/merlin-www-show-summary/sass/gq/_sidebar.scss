@@ -1,5 +1,22 @@
 .sh-article-sidebar {}
-.sh-article-sidebar__item {}
+.sh-article-sidebar__item {
+	@include font("GOTHAM", 11px, 400, 16px);
+	color: $oslo-gray;
+	margin-bottom: 24px;
+	margin-top: 0px;
+
+	svg {
+	    fill: $oslo-gray;
+	    height: 12px;
+	    margin-right: 8px;
+	    width: 8px;
+	    vertical-align: initial;
+	}
+
+	a {
+	    color: inherit;
+	}
+}
 .sh-article-sidebar__item--meta {}
 .sh-article-sidebar__item--trends {}
 
