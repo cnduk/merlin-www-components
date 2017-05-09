@@ -89,7 +89,10 @@
 }
 
 .tg-header__cards {
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: $MOBILE_SLICE_MARGIN;
+	max-width: $MAXIMUM_PAGE_WIDTH;
 
 	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
 	    margin-top: $TABLET_SLICE_MARGIN;
