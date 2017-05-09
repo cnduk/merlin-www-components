@@ -4,3 +4,99 @@
 @import '@cnbritain/merlin-www-card:gq';
 
 @import '../wireframe/wireframe';
+
+.sh-item-carousel {
+	border-top: 4px double $bon-jour;
+	margin: 28px 0;
+}
+
+.sh-item-carousel__header {}
+
+.sh-item-carousel__list {
+	font-size: 0;
+}
+
+li.sh-item-carousel__list__item {
+	width: 201px;
+
+	.c-card--show {
+		.c-card__obj__body {
+			border: none;
+			padding: 20px 0 0 0;
+		}
+
+		.c-card__title {
+			text-align: left;
+		}
+	}
+
+	& + li.sh-item-carousel__list__item {
+		margin-left: 8px;
+	}
+}
+
+.sh-item-carousel__nav {
+	font-size: 0;
+	top: 24px;
+}
+
+.sh-item-carousel__nav__btn {
+	border-radius: 50%;
+	border: 1px solid #303030;
+	width: 24px;
+	height: 24px;
+
+	svg {
+		display: block;
+		height: 12px;
+		width: 12px;
+	    fill: $black;
+	    margin: 0 auto;
+	}
+
+	& + .sh-item-carousel__nav__btn {
+		margin-left: 8px;
+	}
+}
+
+.sh-item-carousel__nav__btn[disabled] {
+	border-color: $bon-jour;
+	svg {
+		fill: $bon-jour;
+	}
+}
+
+.sh-item-carousel__title {
+	font-size: 0;
+	height: 16px;
+	margin: 28px 0 20px 0;
+	text-transform: uppercase;
+}
+.sh-item-carousel__title__item {
+	@include font("GOTHAM", 12px, 700, 16px, 60);
+	position: relative;
+
+	& + .sh-item-carousel__title__item {
+		padding-left: 12px;
+		margin-left: 12px;
+
+		&:before {
+			background-color: $oslo-gray;
+			border-radius: 50%;
+			content: '';
+			height: 4px;
+			left: -2px;
+			position: absolute;
+			top: 6px;
+			width: 4px;
+		}
+	}
+}
+
+.sh-item-carousel__title__item--title {
+	color: $woodsmoke;
+}
+
+.sh-item-carousel__title__item--brand {
+	color: $oslo-gray;
+}
