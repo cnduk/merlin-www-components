@@ -1,3 +1,152 @@
 @import '@cnbritain/merlin-www-common:gq';
 
 @import '../wireframe/wireframe';
+
+.sh-finder {
+	background-color: $woodsmoke;
+	padding: 28px $MOBILE_SIDE_GUTTER;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	    padding-left: $TABLET_SIDE_GUTTER;
+	    padding-right: $TABLET_SIDE_GUTTER;
+	}
+}
+
+.sh-finder__wrapper {
+	margin: 0;
+	padding: 0;
+}
+
+.sh-finder-selectors {
+	font-size: 0;
+}
+
+.sh-finder__item {
+	box-sizing: border-box;
+	font-size: initial;
+	padding: 0;
+	width: auto;
+
+	&--label {
+		@include font("GOTHAM", 12px, 700, 12px, 60);
+		color: $white;
+		display: none;
+		margin-right: 32px;
+		text-transform: uppercase;
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			display: inline-block;
+		}
+	}
+
+	&--combo {
+		@include font("GOTHAM", 12px, 500, 12px);
+		display: inline-block;
+		height: 44px;
+		width: 50%;
+
+		@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+			width: 240px;
+		}
+
+		& + .sh-finder__item--combo {
+			padding-left: 16px;
+		}
+	}
+}
+
+.sh-finder {
+    .cbo {
+        position: relative;
+
+        &:before {
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid $shuttle-gray;
+            content: '';
+            display: none;
+            height: 0;
+            margin-top: -3px;
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            width: 0;
+        }
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            &:before {
+                display: block;
+            }
+        }
+    }
+
+    .cbo__button,
+    .cbo__search {
+        display: none;
+    }
+
+    .cbo__input {
+		@include font("GOTHAM", 12px, 500, 12px);
+        @include vendor-prefix('appearance', none);
+        background: $woodsmoke;
+        border-radius: 0;
+        border: 1px solid $mineshaft;
+        box-sizing: border-box;
+        color: $white;
+        cursor: pointer;
+        height: 44px;
+        line-height: 44px;
+        padding: 0;
+        text-align: center;
+
+        &::-webkit-input-placeholder {
+           color: $white;
+        }
+
+        &:-moz-placeholder {
+           color: $white;
+        }
+
+        &::-moz-placeholder {
+           color: $white;
+        }
+
+        &:-ms-input-placeholder {
+           color: $white;
+        }
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        	padding: 12px 16px;
+            text-align: left;
+        }
+    }
+
+    .cbo__options {
+    	background-color: $woodsmoke;
+        border: 1px solid $mineshaft;
+        border-top: none;
+        box-sizing: border-box;
+        max-height: 280px;
+    }
+
+    .cbo__option {
+		@include font("GOTHAM", 12px, 500, 12px);
+        background-color: $woodsmoke;
+        color: $white;
+        margin: 0;
+        padding: 16px;
+        text-align: left;
+
+        &:hover {
+            background-color: $shark;
+        }
+
+    }
+
+    .cbo__option--disabled {
+
+    }
+
+    .cbo__option--selected {
+        color: $limed-oak;
+    }
+}
