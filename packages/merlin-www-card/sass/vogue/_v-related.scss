@@ -17,7 +17,8 @@
 @mixin card-v-related-small() {
     .c-card__obj__header {
         padding-right: 10px;
-        width: 50%;
+        width: 33.33%;
+        vertical-align: top;
     }
     .c-card__obj__body {
         padding-left: 10px;
@@ -45,6 +46,10 @@
     .c-card__title {
         @include font("NOBEL", 14px, null, 18px, 25);
         margin-bottom: 8px;
+    }
+
+    .c-card__meta {
+        padding-top: 0;
     }
 }
 
