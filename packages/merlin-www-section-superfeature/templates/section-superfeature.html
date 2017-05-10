@@ -1,26 +1,26 @@
 <section class="c-superfeature {{ style.cls }}">
-	{{# data.link }}
-		<a href="{{ &data.url }}" class="c-superfeature__link c-superfeature__link--article {{ style.cls }}">{{ data.title }}</a>
-	{{/ data.link }}
+    {{# data.link }}
+        <a href="{{ &data.url }}" class="c-superfeature__link c-superfeature__link--article {{ style.cls }}">{{ data.title }}</a>
+    {{/ data.link }}
 
-	{{# data.image }}
-		<div class="c-superfeature__image {{ style.cls }}">
-			{{> @cnbritain/merlin-www-image }}
-		</div>
-	{{/ data.image }}
+    {{# data.image }}
+        <div class="c-superfeature__image">
+            {{> @cnbritain/merlin-www-image }}
+        </div>
+    {{/ data.image }}
 
     <div class="c-superfeature__content">
         {{# data.primary_tag }}
             <p class="c-superfeature__tag">{{ data.title }}</p>
         {{/ data.primary_tag }}
 
-    	{{# data.title }}
+        {{# data.title }}
             <h3 class="c-superfeature__title"><span>{{ data.title }}</span></h3>
-    	{{/ data.title }}
+        {{/ data.title }}
 
-    	{{# data.teaser }}
+        {{# data.teaser }}
             <p class="c-superfeature__teaser"><span>{{ data.teaser }}</span></p>
-    	{{/ data.teaser }}
+        {{/ data.teaser }}
 
         {{# data.sponsor }}
             <p class="c-superfeature__byline c-superfeature__byline--sponsorship {{ style.cls }}">
