@@ -82,23 +82,28 @@
 .n-main__nav-title {
     @include font("GOTHAM", 17px, 700, 60px, -4);
     color: $white;
+    display: none;
     overflow: hidden;
-    padding-left: 145px;
+    padding-left: 138px;
     padding-right: 195px;
     text-overflow: ellipsis;
     vertical-align: middle;
     white-space: nowrap;
 
+    @include min-screen(600px) {
+        display: block;
+    }
+
     @include screen(1440px, 1500px) {
         @for $i from 0 through 60 {
             @media (min-width: 1440px + $i) and (max-width: 1440px + $i + 0.5) {
-                padding-left: #{(145 - $i/2)}px;
+                padding-left: #{(138 - $i/2)}px;
             }
         }
     }
 
     @include min-screen(1500px) {
-        padding-left: 115px;
+        padding-left: 108px;
     }
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
