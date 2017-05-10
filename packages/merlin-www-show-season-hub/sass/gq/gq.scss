@@ -8,7 +8,7 @@
 	background-color: $shark;
 	box-sizing: border-box;
 	margin: 0 auto;
-	max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+	max-width: $MAXIMUM_PAGE_WIDTH;
 	padding-bottom: 28px;
 	position: relative;
 	margin-left: $MOBILE_SIDE_GUTTER;
@@ -26,6 +26,11 @@
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 	    margin-left: $DESKTOP_SIDE_GUTTER;
 	    margin-right: $DESKTOP_SIDE_GUTTER;
+	}
+
+	@include min-screen($MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER*2) {
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	&:before {
