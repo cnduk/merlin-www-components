@@ -134,7 +134,13 @@ li.sh-season-hub-viewer__tabs__tab {
 
 .sh-season-hub-viewer__panel {
 	&--inline {
+		margin-left: -$MOBILE_SIDE_GUTTER;
+		margin-right: -$MOBILE_SIDE_GUTTER;
 
+		@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+			margin-left: -$TABLET_SIDE_GUTTER;
+			margin-right: -$TABLET_SIDE_GUTTER;
+		}
 	}
 
 	&--latest {
@@ -158,6 +164,14 @@ li.sh-season-hub-viewer__tabs__tab {
 	font-size: 0;
 
 	&--inline {
+		padding-left: $MOBILE_SIDE_GUTTER;
+		padding-right: $MOBILE_SIDE_GUTTER;
+
+		@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+			padding-left: $TABLET_SIDE_GUTTER;
+			padding-right: $TABLET_SIDE_GUTTER;
+		}
+
 		li.sh-season-hub-viewer__list__item {
 			margin-top: 60px;
 			width: 201px;
