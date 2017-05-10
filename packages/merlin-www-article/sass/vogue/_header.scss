@@ -142,16 +142,6 @@
     }
 }
 
-.a-header__meta {
-    color: $COLOR_TYPE_META;
-    @include font('NOBEL', 10px);
-}
-.a-header__meta--date {
-    letter-spacing: 0.025em;
-}
-.a-header__meta--tag {}
-.a-header__meta-item {}
-
 .a-header__tag {
     @include font('NOBEL', 11px);
     -webkit-font-smoothing: antialiased;
@@ -251,7 +241,16 @@
 }
 
 .a-header__meta {
-    @include c-card-meta;
+    @include c-card-meta-small;
+    color: $COLOR_TYPE_META;
+    @include font('NOBEL', 10px);
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include c-card-meta-medium;
+        border-top: none;
+    }
+
+
 }
 
 .a-header__meta-item {
@@ -263,11 +262,15 @@
         border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
         padding-left: 8px;
     }
-
-    &--tag {
-        @include c-card-meta-tag;
-    }
 }
+
+.a-header__meta--date {
+    letter-spacing: 0.025em;
+}
+.a-header__meta--tag {
+    @include c-card-meta-tag;
+}
+.a-header__meta-item {}
 
 .a-header__event {}
 .a-header__event-title {}
