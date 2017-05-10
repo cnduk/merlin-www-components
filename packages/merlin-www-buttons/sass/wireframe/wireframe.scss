@@ -13,5 +13,9 @@
 
 .btn-top-stories {}
 
-.btn-share {}
+.btn-share {
+    svg {
+        width: 50px;
+    }
+}
 .btn-share--monotone {}
