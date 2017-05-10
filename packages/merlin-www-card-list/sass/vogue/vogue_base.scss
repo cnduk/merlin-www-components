@@ -380,27 +380,23 @@
 
     .c-card-list__item {
         padding: 0 20px;
+        opacity: 1;
+        @include transition(opacity 0.3s ease-out)
         width: 100%;
+
+        &.is-active {
+            opacity: 0.3;
+        }
     }
 
     .c-card-list__item + .c-card-list__item {
+        border-top: 1px solid #444;
+        padding-top: 20px;
         margin-top: 20px;
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             margin-top: 12px;
-        }
-
-        .c-card {
-            border-top: 1px solid #444;
-            padding-top: 20px;
-
-            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-                padding-top: 12px;
-            }
-
-            &.c-card--dark {
-                border-top: 1px solid #444;
-            }
+            padding-top: 12px;
         }
     }
 }
