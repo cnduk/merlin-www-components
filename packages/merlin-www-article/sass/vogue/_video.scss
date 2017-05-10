@@ -101,3 +101,12 @@
         padding: 0 $PADDING_XX_SMALL;
     }
 }
+
+.a-video__ad {
+    margin-bottom: 40px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
+        margin-bottom: 0;
+        top: $PADDING_X_LARGE;
+    }
+}
