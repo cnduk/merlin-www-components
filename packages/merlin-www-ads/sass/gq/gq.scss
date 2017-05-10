@@ -26,7 +26,11 @@
 }
 
 .ad--article-header {
-
+	.ad__block {
+		background-color: $albaster;
+		padding: 20px 0;
+		text-align: center;
+	}
 }
 
 .ad--article-rail {
@@ -61,11 +65,31 @@
 }
 
 .ad--show {
-	text-align: center;
+
+}
+
+
+.ad--show-season {
+	.ad__block {
+		background-color: $shark;
+		padding-top: 20px;
+		text-align: center;
+
+		@include min-screen($SHOWS_SEASON_HUB_LARGE_BREAKPOINT) {
+			padding: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
 }
 
 .ad--show-top {
-
+	.ad__block {
+		background-color: $shark;
+		padding: 20px 0;
+		text-align: center;
+	}
 }
 
 .ad--show-rail {

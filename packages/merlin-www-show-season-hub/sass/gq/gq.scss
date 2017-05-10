@@ -3,3 +3,253 @@
 @import '@cnbritain/merlin-www-card:gq';
 
 @import '../wireframe/wireframe';
+
+.sh-main__hub {
+	background-color: $shark;
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+	padding-bottom: 28px;
+	position: relative;
+	margin-left: $MOBILE_SIDE_GUTTER;
+	margin-right: $MOBILE_SIDE_GUTTER;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	    margin-left: $TABLET_SIDE_GUTTER;
+	    margin-right: $TABLET_SIDE_GUTTER;
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	    padding-bottom: 60px;
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	    margin-left: $DESKTOP_SIDE_GUTTER;
+	    margin-right: $DESKTOP_SIDE_GUTTER;
+	}
+
+	&:before {
+		@include vendor-prefix(transform, translateX(-50%));
+		background-color: $shark;
+		content: '';
+		height: 100%;
+		left: 50%;
+		position: absolute;
+		top: 0;
+		width: 100vw;
+		z-index: -1;
+	}
+}
+
+.sh-season-hub {
+	@include min-screen($SHOWS_SEASON_HUB_LARGE_BREAKPOINT) {
+		margin-right: 360px;
+	}
+}
+
+.sh-season-hub-viewer__checkbox {
+	&--latest {
+		&:checked {
+			& ~ * [class$="--latest"] {
+				border-bottom: none;
+				color: $white;
+			}
+		}
+	}
+
+	&--highlights {
+		&:checked {
+			& ~ * [class$="--highlights"] {
+				border-bottom: none;
+				color: $white;
+			}
+		}
+	}
+
+	&--az {
+		&:checked {
+			& ~ * [class$="--az"] {
+				border-bottom: none;
+				color: $white;
+			}
+		}
+	}
+}
+
+.sh-season-hub-viewer {
+	&--small {
+
+	}
+
+	&--large {
+
+	}
+}
+
+.sh-season-hub-viewer__nav {
+	margin-left: -$MOBILE_SIDE_GUTTER;
+	margin-right: -$MOBILE_SIDE_GUTTER;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	    margin-left: -$TABLET_SIDE_GUTTER;
+	    margin-right: -$TABLET_SIDE_GUTTER;
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	    margin-left: -$DESKTOP_SIDE_GUTTER;
+	    margin-right: -$DESKTOP_SIDE_GUTTER;
+	}
+
+	@include min-screen($SHOWS_SEASON_HUB_LARGE_BREAKPOINT) {
+	    margin-left: 0;
+	    margin-right: 0;
+	}
+}
+
+.sh-season-hub-viewer__tabs {
+	box-sizing: border-box;
+}
+
+li.sh-season-hub-viewer__tabs__tab {
+	@include font("GOTHAM", 12px, 700, 44px, 60);
+	border: 1px solid $mineshaft;
+	color: $oslo-gray;
+	height: 44px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 50%;
+
+	&--latest {
+		border-left: none;
+	}
+
+	&--highlights {
+		display: none;
+	}
+
+	&--az {
+		border-right: none;
+	}
+}
+
+.sh-season-hub-viewer__panel {
+	&--inline {
+
+	}
+
+	&--latest {
+
+	}
+
+	&--highlights {
+		display: none;
+	}
+
+	&--az {
+
+	}
+
+	&--scroll {
+		padding: 28px 20px;
+	}
+}
+
+.sh-season-hub-viewer__list {
+	font-size: 0;
+
+	&--inline {
+		li.sh-season-hub-viewer__list__item {
+			margin-top: 60px;
+			width: 201px;
+
+			&--group {
+				padding-top: 28px;
+				padding-bottom: 16px;
+				margin-top: 0;
+			}
+
+			.c-card--show {
+				.c-card__obj__body {
+					border: none;
+					padding: 20px 0 0 0;
+				}
+
+				.c-card__title {
+					text-align: left;
+				}
+			}
+
+			& + li.sh-season-hub-viewer__list__item {
+				margin-left: 8px;
+
+				@include first(2) {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	&--stacked {
+		li.sh-season-hub-viewer__list__item {
+			margin-bottom: 24px;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			a {
+				@include font("GOTHAM", 18px, 700, 32px, -10);
+				color: $white;
+			}
+
+			&--group {
+				margin-top: 44px;
+			}
+		}
+	}
+}
+
+li.sh-season-hub-viewer__list__item {
+	font-size: initial;
+
+	&--group {
+		@include font("GOTHAM", 12px, 400, 16px);
+		color: $oslo-gray;
+	}
+}
+
+.sh-season-hub-viewer__featured {
+
+}
+
+.sh-season-hub-viewer__featured__image {
+
+}
+
+.sh-season-hub-viewer__featured__link {
+	&:hover ~ * {
+		.sh-season-hub-viewer__featured__label {
+			@include button-single-light-hover();
+		}
+	}
+}
+
+.sh-season-hub-viewer__featured__label {
+	@include button-single();
+	@include button-single-light();
+
+	@include vendor-prefix(transform, translateX(-50%));
+	bottom: 32px;
+	left: 50%;
+	position: absolute;
+}
+
+.sh-season-hub-viewer__content {
+	border-left: 1px solid $mineshaft;
+	border-right: 1px solid $mineshaft;
+	border-bottom: 1px solid $mineshaft;
+}
