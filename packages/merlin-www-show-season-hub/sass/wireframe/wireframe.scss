@@ -49,9 +49,15 @@
 }
 .sh-season-hub-viewer__featured__image {
     position: relative;
+    padding-top: 150%;
 
     img {
-        max-width: 400px;
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
         width: 100%;
     }
 }
