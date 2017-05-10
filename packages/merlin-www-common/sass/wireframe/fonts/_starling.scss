@@ -3,13 +3,24 @@
 $STARLING_FONT_DIR: '/static/fonts/starling/';
 
 // Starling
-// Roman
+// Normal
 @font-face {
   font-family: 'Starling';
   font-style: normal;
   font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
-  src: url($STARLING_FONT_DIR + 'Starling-Roman.woff2') format('woff2'),
-       url($STARLING_FONT_DIR + 'Starling-Roman.woff') format('woff');
+  src: url($STARLING_FONT_DIR + 'Starling-Regular.eot') format('eot'),
+       url($STARLING_FONT_DIR + 'Starling-Regular.woff2') format('woff2'),
+       url($STARLING_FONT_DIR + 'Starling-Regular.woff') format('woff');
+}
+
+// Roman Italic
+@font-face {
+  font-family: 'Starling';
+  font-style: italic;
+  font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
+  src: url($STARLING_FONT_DIR + 'Starling-Italic.eot') format('eot'),
+       url($STARLING_FONT_DIR + 'Starling-Italic.woff2') format('woff2'),
+       url($STARLING_FONT_DIR + 'Starling-Italic.woff') format('woff');
 }
 
 // Bold
@@ -17,24 +28,27 @@ $STARLING_FONT_DIR: '/static/fonts/starling/';
   font-family: 'Starling';
   font-style: normal;
   font-weight: map-get($FONT_WEIGHTS, 'BOLD');
-  src: url($STARLING_FONT_DIR + 'Starling-Bold.woff2') format('woff2'),
+  src: url($STARLING_FONT_DIR + 'Starling-Bold.eot') format('eot'),
+       url($STARLING_FONT_DIR + 'Starling-Bold.woff2') format('woff2'),
        url($STARLING_FONT_DIR + 'Starling-Bold.woff') format('woff');
 }
 
-// Italic
+// Bold Italic
 @font-face {
   font-family: 'Starling';
   font-style: italic;
-  font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
-  src: url($STARLING_FONT_DIR + 'Starling-Italic.woff2') format('woff2'),
-       url($STARLING_FONT_DIR + 'Starling-Italic.woff') format('woff');
+  font-weight: map-get($FONT_WEIGHTS, 'BOLD');
+  src: url($STARLING_FONT_DIR + 'Starling-Bold-Italic.eot') format('eot'),
+       url($STARLING_FONT_DIR + 'Starling-Bold-Italic.woff2') format('woff2'),
+       url($STARLING_FONT_DIR + 'Starling-Bold-Italic.woff') format('woff');
 }
+
 
 // Font configs
 $_FONT_FAMILY: Starling, sans-serif;
 $_FONT_STARLING: map-merge($FONT_GROUP_DEFAULT, (
     'FAMILY': $_FONT_FAMILY,
-    'LETTER SPACING': 0.025em,
+    'LETTER SPACING': normal,
     'LINE HEIGHT': 1em
 ));
 $FONT_GROUPS: map-merge($FONT_GROUPS, ('STARLING': $_FONT_STARLING));
