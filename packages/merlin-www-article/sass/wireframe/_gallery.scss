@@ -56,8 +56,16 @@ li.a-gallery__thumbnail {
     width: 33.3333333333%;
 }
 .a-gallery__thumbnail-image {
+    position: relative;
+    padding-top: 100%;
+
     img {
+        bottom: 0;
+        left: 0;
         overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
         vertical-align: top;
         width: 100%;
     }
