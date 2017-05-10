@@ -254,6 +254,8 @@
 }
 
 .a-header__meta-item {
+    text-transform: uppercase;
+
     &:not(:last-child) {
         padding-right: 8px;
     }
@@ -264,10 +266,11 @@
     }
 }
 
-.a-header__meta--date {
+.a-header__meta-item--date {
     letter-spacing: 0.025em;
+    text-transform: initial;
 }
-.a-header__meta--tag {
+.a-header__meta-item--tag {
     @include c-card-meta-tag;
 }
 .a-header__meta-item {}
