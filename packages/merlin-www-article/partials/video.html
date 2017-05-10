@@ -3,20 +3,28 @@
         {{> @cnbritain/merlin-www-article/video-player }}
     {{/ data.video }}
 
-    {{> @cnbritain/merlin-www-article/video-header }}
+    <div class="a-video__content-body">
+        {{> @cnbritain/merlin-www-article/video-header }}
 
-    {{# state.has_body }}
-        <div class="a-body a-body--video stick-group">
-            <div class="a-body__wrapper">
-                <div class='a-body__content'>
-                    {{ &data.body }}
-                    <div class="a-body__clear"></div>
+        {{# state.has_body }}
+            <div class="a-body a-body--video stick-group">
+                <div class="a-body__wrapper">
+                    <div class='a-body__content'>
+                        {{ &data.body }}
+                        <div class="a-body__clear"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    {{/ state.has_body }}
+        {{/ state.has_body }}
 
-    {{> @cnbritain/merlin-www-article/video-footer }}
+        {{> @cnbritain/merlin-www-article/video-footer }}
+
+        {{# ad_slots.video_content }}
+            <div class="a-video__ad">
+                {{> @cnbritain/merlin-www-ads }}
+            </div>
+        {{/ ad_slots.video_content }}
+    </div>
 
     {{# data.video.data.play_list }}
         <aside class="a-video__related">

@@ -98,3 +98,21 @@
 .a-video__related__wrapper {}
 .a-video__related__title {}
 .a-video__related__list {}
+
+
+
+.a-video__content-body {
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    min-height: 600px;
+    position: relative;
+}
+.a-video__ad {
+    margin: 0 auto;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
+        position: absolute;
+        right: $DESKTOP_SIDE_GUTTER;
+        top: 0;
+    }
+}
