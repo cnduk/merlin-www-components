@@ -1,0 +1,14 @@
+{{> @cnbritain/merlin-www-article/video-header }}
+
+{{# state.has_body }}
+    <div class="a-body a-body--video stick-group">
+        <div class="a-body__wrapper">
+            <div class='a-body__content'>
+                {{ &data.body }}
+                <div class="a-body__clear"></div>
+            </div>
+        </div>
+    </div>
+{{/ state.has_body }}
+
+{{> @cnbritain/merlin-www-article/video-footer }}
