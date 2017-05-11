@@ -252,6 +252,7 @@
 .a-header__sponsor-name {
     @include font-size(12px);
     @include font-weight(700);
+    margin-left: 2px;
 }
 
 .a-header__sponsor-image {

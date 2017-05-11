@@ -1,10 +1,10 @@
 .a-logo {}
 .a-logo--video {
     background-color: $woodsmoke;
-    padding: 40px 0 28px 0;
+    padding: 36px 0 28px 0;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: 60px 0 40px 0;
+        padding: 52px 0 40px 0;
     }
 
     .a-logo__wrapper {
@@ -47,7 +47,7 @@
 .a-video__sidebar__title {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    @include font("GOTHAM", 12px, null, 12px, -6);
+    @include font("GOTHAM", 12px, null, 12px, 60);
     color: $white;
     margin: 0;
     padding: 24px 0 8px 0;
@@ -85,7 +85,7 @@
 
         .c-card__image {
             &:after {
-                @include font("GOTHAM", 10px, 700, 16px, 60);
+                @include font("GOTHAM", 10px, 700, 16px, 0);
                 @include vendor-prefix(transition-duration, 300ms);
                 background-color: $cornflower-blue;
                 bottom: 0px;
@@ -93,7 +93,7 @@
                 content: 'Now Playing';
                 left: 0px;
                 opacity: 0;
-                padding: 6px;
+                padding: 4px;
                 position: absolute;
             }
         }

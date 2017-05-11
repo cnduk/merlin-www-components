@@ -47,10 +47,6 @@
 
 .a-marketing-card__brand__name {
     @include font("GOTHAM", 17px, 700, 20px, 60);
-    @include marketing-card-medium-size() {
-        @include font-size(20px);
-        @include line-height(24px);
-    }
 
     a {
         color: inherit;
