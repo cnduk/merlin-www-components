@@ -1,0 +1,76 @@
+@mixin card-magazine {
+    .c-card__obj {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@mixin card-magazine-small {
+    @include card-magazine;
+
+    .c-card__obj__header {
+        flex: 1 0;
+        padding-right: 10px;
+    }
+
+    .c-card__images {
+        .c-card__image {
+            padding-top: 100%;
+        }
+    }
+
+    .c-card__obj__body {
+        flex: 2 0;
+        padding-left: 10px;
+    }
+
+    .c-card__tag,
+    .c-card__teaser,
+    .c-card__separator,
+    .c-card__byline {
+        display: none;
+    }
+}
+
+@mixin card-magazine-large {
+    @include card-magazine;
+
+    .c-card__obj__header {
+        flex: 0 0 66px;
+        padding-right: 10px;
+    }
+
+    .c-card__images {
+        .c-card__image {
+            padding-top: 100%;
+        }
+    }
+
+    .c-card__obj__body {
+        flex: 1 0;
+        padding-left: 10px;
+    }
+
+    .c-card__tag,
+    .c-card__teaser,
+    .c-card__separator,
+    .c-card__byline {
+        display: none;
+    }
+}
+
+.c-card--magazine {
+    @include card-magazine-small;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include card-magazine-large;
+    }
+}
+
+.c-card--magazine-small {
+    @include card-magazine-small;
+}
+
+.c-card--magazine-large {
+    @include card-magazine-large;
+}

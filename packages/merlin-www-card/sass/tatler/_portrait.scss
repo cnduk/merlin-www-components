@@ -1,0 +1,33 @@
+@mixin card-portrait {
+    .c-card__obj {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .c-card__obj__header,
+    .c-card__obj__body {
+        flex: 1 0;
+    }
+
+    .c-card__teaser,
+    .c-card__separator {
+        display: none;
+    }
+
+    .c-card__tag {}
+
+    .c-card__title {}
+}
+
+
+.c-card--portrait {
+    @include card-portrait;
+}
+
+.c-card--portrait-small {
+    @include card-portrait;
+}
+
+.c-card--portrait-large {
+    @include card-portrait;
+}

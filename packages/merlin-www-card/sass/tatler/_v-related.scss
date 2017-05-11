@@ -1,0 +1,89 @@
+@mixin card-v-related() {
+    .c-card__obj {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@mixin card-v-related-small {
+    @include card-v-related;
+
+    .c-card__obj__header {
+        padding-right: 10px;
+        flex: 1 0;
+    }
+
+    .c-card__obj__body {
+        flex: 2 0;
+
+        padding-left: 10px;
+    }
+
+    .c-card__images {
+        .c-card__image {
+            padding-top: 66.66666%;
+        }
+
+        .c-card__image__icon {
+            display: none;
+        }
+    }
+
+    .c-card__teaser,
+    .c-card__separator {
+        display: none;
+    }
+
+    .c-card__title {}
+
+    .c-card__meta {}
+}
+
+@mixin card-v-related-large($has_small:false) {
+    @include card-v-related;
+
+    .c-card__obj__header {
+        flex: 1 0;
+        padding-right: 12px;
+    }
+
+    .c-card__obj__body {
+        flex: 1 0;
+        padding-left: 12px;
+    }
+
+    .c-card__images {
+        .c-card__image {
+            padding-top: 66.66666%;
+        }
+
+        .c-card__image__icon {
+            display: none;
+        }
+    }
+
+    .c-card__teaser,
+    .c-card__separator {
+        display: none;
+    }
+
+    .c-card__title {}
+
+    .c-card__meta {}
+}
+
+.c-card--v-related {
+    @include card-v-related-small;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include card-v-related-large;
+    }
+}
+
+.c-card--v-related-small {
+    @include card-v-related-small;
+}
+
+.c-card--v-related-large {
+    @include card-v-related-large;
+}

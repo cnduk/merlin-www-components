@@ -1,0 +1,62 @@
+@mixin card-landscape {
+    .c-card__obj {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@mixin card-landscape-small {
+    @include card-landscape;
+
+    .c-card__obj__header,
+    .c-card__obj__body {
+        flex: 1 0;
+    }
+
+    .c-card__obj__header {
+        padding-right: 10px;
+    }
+
+    .c-card__obj__body {
+        padding-left: 10px;
+    }
+
+    .c-card__teaser,
+    .c-card__separator {
+        display: none;
+    }
+
+    .c-card__title {}
+}
+
+@mixin card-landscape-large {
+    @include card-landscape;
+
+    .c-card__obj__header {
+        flex: 1 0;
+        padding-right: 10px;
+    }
+
+    .c-card__obj__body {
+        flex: 2 0;
+    }
+
+    .c-card__teaser,
+    .c-card__separator {
+        display: none;
+    }
+
+    .c-card__title {}
+}
+
+.c-card--landscape {
+    @include card-landscape-small;
+}
+
+.c-card--landscape-small {
+    @include card-landscape-small;
+}
+
+.c-card--landscape-large {
+    @include card-landscape-large;
+}

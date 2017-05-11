@@ -1,0 +1,135 @@
+.c-card {
+    position: relative;
+}
+
+.c-card__link--article {
+    background-color: rgba(255,255,255,0.01);
+    bottom: 0;
+    font-size: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.c-card__images {
+    position: relative;
+}
+
+.c-card__image {
+    display: block;
+    position: relative;
+    width: 100%;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.c-card__image--landscape,
+.c-card__image--portrait,
+.c-card__image--square,
+.c-card__image--custom,
+.c-card__image--picture {
+    img {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+.c-card__image--landscape {
+    padding-top: 66.66666667%;
+}
+
+.c-card__image--portrait {
+    padding-top: 150%;
+}
+
+.c-card__image--square {
+    padding-top: 100%;
+}
+
+.c-card__image__icon {
+    position: absolute;
+}
+
+// Need to be specific to overwrite global__list-reset
+li.c-card__meta-item {
+    display: inline-block;
+}
+
+
+
+
+.c-card {
+    &:hover,
+    &:focus {
+        .c-card__title,
+        .c-card__byline-name {}
+
+        .c-card__image {}
+    }
+}
+
+.c-card__image {}
+
+.c-card__image__icon {
+    svg {}
+    path {}
+}
+
+
+.c-card__tag {}
+
+.c-card__title {}
+
+.c-card__teaser {}
+
+.c-card__separator {}
+
+.c-card__rating {}
+
+.c-card__rating-mark {}
+
+.c-card__rating-mark--fill {}
+
+.c-card__byline,
+.c-card__sponsor {}
+
+.c-card__byline-prefix,
+.c-card__sponsor-label {}
+
+.c-card__byline-name,
+.c-card__sponsor-title {}
+
+.c-card__meta {}
+
+.c-card__meta-item--tag {}
+
+li.c-card__meta-item {
+    &:not(:last-child) {}
+
+    & + & {}
+}
+
+
+.c-card__meta-item--gallery {
+    svg {}
+    path {}
+}
+
+.c-card__meta-item--duration {
+    svg {}
+    path {}
+}
+
+.c-card__more {}
+
+.c-card__image__remaining {}

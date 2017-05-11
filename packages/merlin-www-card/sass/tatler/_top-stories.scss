@@ -1,0 +1,45 @@
+// -------------------- //
+// Top Stories
+// -------------------- //
+@mixin card-top-stories {
+    .c-card__obj {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .c-card__obj__header,
+    .c-card__obj__body {}
+
+    .c-card__obj__header {
+        flex: 1 0;
+    }
+
+    .c-card__image__icon {
+        display: none;
+    }
+
+    .c-card__obj__body {
+        flex: 2 0;
+    }
+
+    .c-card__title {}
+
+    .c-card__tag,
+    .c-card__teaser,
+    .c-card__separator,
+    .c-card__byline {
+        display: none;
+    }
+}
+
+.c-card--top-stories {
+    @include card-top-stories
+}
+
+.c-card--top-stories-small {
+    @include card-top-stories;
+}
+
+.c-card--top-stories-large {
+    @include card-top-stories;
+}

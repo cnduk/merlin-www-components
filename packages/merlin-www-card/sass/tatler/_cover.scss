@@ -1,0 +1,45 @@
+@mixin card-cover {
+    .c-card__obj {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .c-card__obj__header {
+        flex: 1 0;
+    }
+
+    .c-card__image--custom {
+        padding-top: 131.730769231%;
+    }
+
+    .c-card__obj__body {
+        flex: 1 0;
+        padding-top: 20px;
+    }
+
+    .c-card__teaser,
+    .c-card__separator {
+        display: none;
+    }
+
+    .c-card__tag {
+        margin-bottom: 8px;
+    }
+
+    .c-card__title {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+}
+
+.c-card--cover {
+    @include card-cover;
+}
+
+.c-card--cover-small {
+    @include card-cover;
+}
+
+.c-card--cover-large {
+    @include card-cover;
+}

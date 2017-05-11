@@ -1,0 +1,124 @@
+// -------------------- //
+// Tag Article
+// -------------------- //
+@mixin card-tg-article {
+    .c-card__obj {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@mixin card-tg-article-small {
+    @include card-tg-article;
+
+    .c-card__obj__header,
+    .c-card__obj__body {
+        flex: 1 0;
+    }
+
+    .c-card__obj__header {
+        padding-right: 8px;
+    }
+
+    .c-card__obj__body {
+        padding-left: 8px;
+    }
+
+    .c-card__images {
+        .c-card__image {
+            padding-top: 100%;
+        }
+
+        .c-card__image__icon {
+            bottom: 0;
+            height: 40px;
+            left: 0;
+            width: 40px;
+
+            svg {
+                display: block;
+                height: 100%;
+                margin: 0 auto;
+                vertical-align: middle;
+                width: 16px;
+            }
+        }
+    }
+
+    .c-card__tag {}
+
+    .c-card__title {}
+
+    .c-card__teaser,
+    .c-card__separator {
+        display: none;
+    }
+
+    .c-card__byline {}
+
+    .c-card__meta {}
+}
+
+@mixin card-tg-article-large {
+    @include card-tg-article;
+
+    .c-card__obj__header {
+        flex: 1 0;
+        padding-right: 10px;
+    }
+
+    .c-card__obj__body {
+        flex: 2 0;
+        padding-left: 10px;
+    }
+
+    .c-card__images {
+        .c-card__image {
+            padding-top: 100%;
+        }
+
+        .c-card__image__icon {
+            bottom: 0;
+            height: 40px;
+            left: 0;
+            width: 40px;
+
+            svg {
+                display: block;
+                height: 100%;
+                margin: 0 auto;
+                vertical-align: middle;
+                width: 16px;
+            }
+        }
+    }
+
+    .c-card__tag {}
+
+    .c-card__title {}
+
+    .c-card__teaser,
+    .c-card__separator {
+        display: none;
+    }
+
+    .c-card__byline {}
+
+    .c-card__meta {}
+}
+
+.c-card--tg-article {
+    @include card-tg-article-small;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include card-tg-article-large;
+    }
+}
+
+.c-card--tg-article-small {
+    @include card-tg-article-small;
+}
+
+.c-card--tg-article-large {
+    @include card-tg-article-large;
+}

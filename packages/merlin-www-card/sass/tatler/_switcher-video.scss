@@ -1,0 +1,23 @@
+@mixin card-switcher-video-small {
+    @include card-landscape-small;
+}
+
+@mixin card-switcher-video-large {
+    @include card-portrait;
+}
+
+.c-card--switcher-video {
+    @include card-switcher-video-small;
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include card-switcher-video-large;
+    }
+}
+
+.c-card--switcher-video-small {
+    @include card-switcher-video-small;
+}
+
+.c-card--switcher-video-large {
+    @include card-switcher-video-large;
+}
