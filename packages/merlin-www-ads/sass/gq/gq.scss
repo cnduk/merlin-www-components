@@ -89,6 +89,7 @@
 
 	.ad__block {
 		background-color: $shark;
+        padding-bottom: 0;
 
 		@include min-screen($SHOWS_SEASON_HUB_LARGE_BREAKPOINT) {
 			padding: 0;
