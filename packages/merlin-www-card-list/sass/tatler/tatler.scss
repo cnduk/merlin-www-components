@@ -3,6 +3,19 @@
 
 @import '../wireframe/wireframe';
 
+@import "@cnbritain/merlin-www-ads:wireframe";
+
+.c-card-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.c-card-list--cols {
+    .c-card-list__item {
+        display: flex;
+    }
+}
+
 // Common curated, article recommended, magazine articles, search results,
 // video genre articles, latest articles
 // Contains four cards
@@ -13,6 +26,7 @@
 .c-card-list--s-results,
 .c-card-list--v-genre-articles,
 .c-card-list--c-video-articles {
+    flex-direction: column;
     margin: 0 -20px;
 
     .c-card-list__item {
@@ -20,7 +34,7 @@
         width: 100%;
     }
 
-    @include one-column-size(){
+    @include one-column-size {
         .c-card-list__item + .c-card-list__item {
             margin-top: 20px;
 
@@ -36,9 +50,11 @@
     }
 
 
-    @include two-column-size(){
+    @include two-column-size {
+        flex-direction: row;
+
         .c-card-list__item {
-            display: inline-block;
+            display: flex;
             margin-bottom: 30px;
             width: 50%;
 
@@ -48,7 +64,7 @@
         }
     }
 
-    @include four-column-size(){
+    @include four-column-size {
         .c-card-list__item {
             width: 25%;
 
@@ -61,7 +77,9 @@
 
 .c-card-list--a-recommended,
 .c-card-list--g-recommended {
-    @include one-column-size(){
+    flex-direction: column;
+
+    @include one-column-size {
         .c-card-list__item + .c-card-list__item {
             margin-top: 20px;
 
@@ -80,6 +98,7 @@
 // Contains 5 cards
 // Goes one, two, three, five
 .c-card-list--c-tag {
+    flex-direction: column;
     margin: 0 -20px;
     text-align: center;
 
@@ -89,7 +108,7 @@
         width: 100%;
     }
 
-    @include one-column-size(){
+    @include one-column-size {
         .c-card-list__item + .c-card-list__item {
             margin-top: 20px;
 
@@ -104,10 +123,11 @@
         }
     }
 
+    @include two-column-size {
+        flex-direction: row;
 
-    @include two-column-size(){
         .c-card-list__item {
-            display: inline-block;
+            display: flex;
             margin-bottom: 30px;
             width: 50%;
 
@@ -117,7 +137,7 @@
         }
     }
 
-    @include three-column-size(){
+    @include three-column-size {
         .c-card-list__item {
             margin-bottom: 30px;
             width: 33.3%;
@@ -128,7 +148,7 @@
         }
     }
 
-    @include five-column-size(){
+    @include five-column-size {
         .c-card-list__item {
             margin-bottom: 0;
             width: 20%;
@@ -141,6 +161,7 @@
 // Contains 3 cards
 // Goes one, three
 .c-card-list--g-recommended {
+    flex-direction: column;
     margin: 0 -20px;
 
     .c-card-list__item {
@@ -149,9 +170,11 @@
         width: 100%;
     }
 
-    @include three-column-size(){
+    @include three-column-size {
+        flex-direction: row;
+
         .c-card-list__item {
-            display: inline-block;
+            display: flex;
             margin-top: 0;
             width: 33.3%;
         }
@@ -159,13 +182,16 @@
 }
 
 .c-card-list--c-contributors {
-    @include three-column-size(){
+    flex-direction: column;
+
+    @include three-column-size {
+        flex-direction: row;
         max-width: 600px;
         margin: 0 auto;
         text-align: center;
 
         .c-card-list__item {
-            display: inline-block;
+            display: flex;
             padding: 0 20px;
             width: 33.3%;
         }
@@ -184,10 +210,11 @@
 // Contains four columns
 // Goes two, four
 .c-card-list--mag-magazines {
+    flex-direction: column;
     margin: 0 -20px;
 
     .c-card-list__item {
-        display: inline-block;
+        display: flex;
         margin-bottom: 20px;
         @include last(2){
             margin-bottom: 0;
@@ -196,7 +223,9 @@
         width: 50%;
     }
 
-    @include four-column-size(){
+    @include four-column-size {
+        flex-direction: row;
+
         .c-card-list__item {
             margin-bottom: 30px;
             width: 25%;
@@ -216,6 +245,7 @@
 // Contains one column
 // Goes one
 .c-card-list--tg-articles {
+    flex-direction: column;
 
     .c-card-list__item {
         margin-top: 20px;
@@ -250,6 +280,7 @@
 // Contains three columns
 // Goes one, two, three
 .c-card-list--v-articles {
+    flex-direction: column;
     margin: 0 -20px;
 
     .c-card-list__item {
@@ -257,7 +288,7 @@
         width: 100%;
     }
 
-    @include one-column-size(){
+    @include one-column-size {
         .c-card-list__item + .c-card-list__item {
             margin-top: 20px;
 
@@ -273,9 +304,11 @@
     }
 
 
-    @include two-column-size(){
+    @include two-column-size {
+        flex-direction: row;
+
         .c-card-list__item {
-            display: inline-block;
+            display: flex;
             margin-bottom: 30px;
             width: 50%;
 
@@ -286,7 +319,7 @@
     }
 
     // This is suppose to be a 4 column trigger with 33.33%
-    @include four-column-size(){
+    @include four-column-size {
         .c-card-list__item {
             width: 33.33%;
 
@@ -302,6 +335,8 @@
 // Contains 3 cards
 // Goes one, two, three
 .c-card-list--tg-header-articles {
+    flex-direction: column;
+
     margin: 0 -20px;
     text-align: center;
 
@@ -311,7 +346,7 @@
         width: 100%;
     }
 
-    @include one-column-size(){
+    @include one-column-size {
         .c-card-list__item + .c-card-list__item {
             margin-top: 20px;
 
@@ -327,9 +362,11 @@
     }
 
 
-    @include two-column-size(){
+    @include two-column-size {
+        flex-direction: row;
+
         .c-card-list__item {
-            display: inline-block;
+            display: flex;
             margin-bottom: 30px;
             width: 50%;
 
@@ -339,7 +376,7 @@
         }
     }
 
-    @include three-column-size(){
+    @include three-column-size {
         .c-card-list__item {
             margin-bottom: 0;
             width: 33.33%;
@@ -348,10 +385,11 @@
 }
 
 .c-card-list--top-stories {
+    flex-direction: row;
     white-space: nowrap;
 
     .c-card-list__item {
-        display: inline-block;
+        display: flex;
         margin-right: $MARGIN_MEDIUM;
         width: 280px;
         white-space: normal;
@@ -370,6 +408,7 @@
 }
 
 .c-card-list--v-related-articles {
+    flex-direction: row;
     margin: 0 -20px;
 
     .c-card-list__item {
