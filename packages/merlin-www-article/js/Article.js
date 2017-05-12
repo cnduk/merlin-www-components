@@ -5,11 +5,17 @@ import {
     addEventOnce,
     getElementOffset,
     inherit,
-    removeClass
+    removeClass,
+    stopEvent
 } from '@cnbritain/merlin-www-js-utils/js/functions';
-import { CLS_INFINITE_BTN, CLS_ARTICLE_GALLERY } from './constants';
+import {
+    CLS_INFINITE_BTN,
+    CLS_ARTICLE_GALLERY,
+    CLS_ARTICLE_VIDEO_PLAYER
+} from './constants';
 import Gallery from './Gallery';
 import {
+    bubbleEvent,
     dispatchSimpleReach,
     dispatchSimpleReachStop,
     getArticleTitle,
@@ -24,19 +30,14 @@ function Article(el, _options){
 
     var options = _options || {};
 
-    this._analytics = options.analytics || null;
-    this._simplereach = options.simplereach || null;
-
+    this.analytics = options.analytics || null;
     this.bounds = null;
     this.el = el;
-    this.gallery = null;
+    this.gallery = options.gallery || null;
     this.manager = options.manager;
-    this.properties = {
-        "title": getArticleTitle(this.el),
-        "url": getArticleUrl(this.el)
-    };
+    this.properties = null;
+    this.simplereach = options.simplereach || null;
     this.type = getArticleType(this.el);
-
     this.isInfinite = options.infinite || false;
 
     this._init();
@@ -44,27 +45,49 @@ function Article(el, _options){
 
 Article.prototype = inherit(EventEmitter.prototype, {
 
-    "_init": function(){
+    "_bindBubblingEvents": function _bindBubblingEvents(){
+        // Gallery
+        if(this.gallery !== null){
+            bubbleEvent(this.gallery, this, 'viewchange');
+            bubbleEvent(this.gallery, this, 'imagefocus');
+            bubbleEvent(this.gallery, this, 'imageblur');
+        }
+    },
+
+    "_getArticleProperties": function _getArticleProperties(){
+        this.properties = {
+            "title": getArticleTitle(this.el),
+            "url": getArticleUrl(this.el)
+        };
+    },
+
+    "_init": function _init(){
 
         // If article has come from infinite scroll, trigger social embeds to
         // update as the article body might contain embeds.
         if(this.isInfinite) updateSocialEmbeds();
 
         // SimpleReach setup
-        if(this.isInfinite){
-            this.on('focus', this.emitSimpleReach.bind(this));
-        } else {
-            // SimpleReach is fired automatically in the page for the first
-            // article. So we listen to the first focus and then after that we
-            // have to trigger simplereach ourself.
-            this.once('focus', function(){
-                this.on('focus', this.emitSimpleReach.bind(this));
-            }.bind(this));
+        if(this.simplereach){
+            if(this.isInfinite){
+                this.on('focus', function(){
+                    emitSimpleReach(this.simplereach);
+                }.bind(this));
+            } else {
+                // SimpleReach is fired automatically in the page for the first
+                // article. So we listen to the first focus and then after that we
+                // have to trigger simplereach ourself.
+                this.once('focus', function(){
+                    this.on('focus', function(){
+                        emitSimpleReach(this.simplereach);
+                    }.bind(this));
+                }.bind(this));
+            }
         }
 
         // Check if the article contains a gallery
         var gallery = this.el.querySelector(CLS_ARTICLE_GALLERY);
-        if(gallery){
+        if(this.gallery === null && gallery){
             this.gallery = new Gallery(gallery);
             // Listen to when the article focuses or blurs so we can add and remove
             // the scroll listener as and when needed
@@ -94,16 +117,11 @@ Article.prototype = inherit(EventEmitter.prototype, {
             );
         }
 
+        this._bindBubblingEvents();
+        this._getArticleProperties();
     },
 
     "constructor": Article,
-
-    "emitSimpleReach": function emitSimpleReach(){
-        // Always fire a stop as at the moment we don't keep track if we're in
-        // a simplereach article
-        dispatchSimpleReachStop();
-        if(this._simplereach !== null) dispatchSimpleReach(this._simplereach);
-    },
 
     "expand": function(){
         removeClass(this.el.parentNode, 'is-closed');
@@ -117,5 +135,12 @@ Article.prototype = inherit(EventEmitter.prototype, {
     }
 
 });
+
+function emitSimpleReach(config){
+    // Always fire a stop as at the moment we don't keep track if we're in
+    // a simplereach article
+    dispatchSimpleReachStop();
+    if(this.simplereach !== null) dispatchSimpleReach(this.simplereach);
+}
 
 export default Article;

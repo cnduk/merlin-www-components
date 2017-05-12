@@ -55,10 +55,10 @@ function Gallery(el, options) {
 
     /**
      * Index of the current image that has focus
-     * @private
+     * @public
      * @type {Number}
      */
-    this._focusImageIndex = -1;
+    this.focusedImageIndex = -1;
 
     this._hooks = {
         "imageScroll": null,
@@ -109,7 +109,7 @@ function Gallery(el, options) {
      * @memberof! Gallery.prototype
      * @type {Array.HTMLElement}
      */
-    this.images = toArray(this.el.querySelectorAll(CLS_ARTICLE_GALLERY_IMAGE));
+    this.imageElements = toArray(this.el.querySelectorAll(CLS_ARTICLE_GALLERY_IMAGE));
 
     /**
      * The gallery navigation arrows
@@ -143,7 +143,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
     "_thumbnailClick": function(e){
         var dataIndex = parseInt(
             e.delegateTarget.getAttribute('data-thumbnail-index'), 10);
-        var elImage = this.images[dataIndex];
+        var elImage = this.imageElements[dataIndex];
 
         this.displayListView();
         window.scrollTo(0, getElementOffset(elImage).top - 60);
@@ -160,10 +160,10 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
             this.imageNavigation = new GalleryImageNavigation(
                 this.el.querySelector(CLS_IMAGE_NAVIGATION));
             this.imageNavigation.on('next', function(){
-                this.gotoImage(this._focusImageIndex + 1);
+                this.gotoImage(this.focusedImageIndex + 1);
             }.bind(this));
             this.imageNavigation.on('previous', function(){
-                this.gotoImage(this._focusImageIndex - 1);
+                this.gotoImage(this.focusedImageIndex - 1);
             }.bind(this));
         }
 
@@ -186,7 +186,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
      */
     'resize': function resize(){
         this.bounds = getElementOffset(this.el);
-        this._imagePositions = this.images.map(getElementOffset);
+        this._imagePositions = this.imageElements.map(getElementOffset);
         this._windowHeightHalf = window.innerHeight/2;
         if(this.imageNavigation !== null) this.imageNavigation.resize();
 
@@ -216,7 +216,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
         // NOTE: 60 is the navigation height
         var scrollY = getWindowScrollTop();
         var top = this.bounds.top - 60;
-        var bottom = this.bounds.bottom - 60 - this.imageNavigation.height;
+        var bottom = this.bounds.bottom - 60 - this.imageNavigation.bounds.height;
 
         // Check if at bottom, set absolute
         if(scrollY >= bottom){
@@ -224,7 +224,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
             this._imageNavigationState = 'absolute';
             setAbsolute(
                 this.imageNavigation.el,
-                (this.bounds.bottom - this.bounds.top - this.imageNavigation.height) + 'px'
+                (this.bounds.bottom - this.bounds.top - this.imageNavigation.bounds.height) + 'px'
             );
             return;
         }
@@ -249,11 +249,11 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
         var index = imageIndex;
         if(index < 0){
             index = 0;
-        } else if(index > this.images.length - 1){
-            index = this.images.length - 1;
+        } else if(index > this.imageElements.length - 1){
+            index = this.imageElements.length - 1;
         }
 
-        if(index === this._focusImageIndex) return;
+        if(index === this.focusedImageIndex) return;
 
         this._elementScroll.start({
             'x': 0,
@@ -269,15 +269,15 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
     },
 
     "bindImageScrollListener": function(){
-        if(this._hooks.imageScroll !== null) return;
-        this._hooks.imageScroll = throttle(this.updateImageScroll, 300, this);
-        addEvent(window, 'scroll', this._hooks.imageScroll);
+        if(this._hooks.imageElementscroll !== null) return;
+        this._hooks.imageElementscroll = throttle(this.updateImageScroll, 300, this);
+        addEvent(window, 'scroll', this._hooks.imageElementscroll);
     },
 
     "unbindImageScrollListener": function(){
         if(this._hooks.scroll === null) return;
-        removeEvent(window, 'scroll', this._hooks.imageScroll);
-        this._hooks.imageScroll = null;
+        removeEvent(window, 'scroll', this._hooks.imageElementscroll);
+        this._hooks.imageElementscroll = null;
     },
 
     "updateImageScroll": function(){
@@ -290,28 +290,28 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
         while(++i < length){
             tmpPosition = this._imagePositions[i];
 
-            if(this._focusImageIndex === i) continue;
+            if(this.focusedImageIndex === i) continue;
             if(tmpPosition.top > scrollTop) continue;
             if(tmpPosition.bottom < scrollTop) continue;
 
-            if(this._focusImageIndex !== -1){
+            if(this.focusedImageIndex !== -1){
                 this.emit(
                     'imageblur',
-                    events.imageblur(this, this._focusImageIndex)
+                    events.imageblur(this, this.focusedImageIndex)
                 );
             }
-            this._focusImageIndex = i;
+            this.focusedImageIndex = i;
             this.emit(
                 'imagefocus',
-                events.imagefocus(this, this._focusImageIndex)
+                events.imagefocus(this, this.focusedImageIndex)
             );
 
             // Update image navigation is set
             if(this.imageNavigation !== null){
-                if(this._focusImageIndex === 0){
+                if(this.focusedImageIndex === 0){
                     this.imageNavigation.enableNextButton();
                     this.imageNavigation.disablePreviousButton();
-                } else if(this._focusImageIndex === this.images.length - 1){
+                } else if(this.focusedImageIndex === this.imageElements.length - 1){
                     this.imageNavigation.enablePreviousButton();
                     this.imageNavigation.disableNextButton();
                 } else {

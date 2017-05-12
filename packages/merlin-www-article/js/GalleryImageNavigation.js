@@ -3,6 +3,7 @@
 import EventEmitter from 'eventemitter2';
 import {
     addEvent,
+    getElementOffset,
     inherit,
     removeClass,
     removeEvent
@@ -14,8 +15,8 @@ var CLS_PREVIOUS_BUTTON = '.g-image-nav__btn--previous';
 
 function GalleryImageNavigation(el){
     EventEmitter.call(this, {'wildcard': true});
+    this.bounds = null;
     this.el = el;
-    this.height = 0;
 
     this._init();
 }
@@ -65,7 +66,7 @@ GalleryImageNavigation.prototype = inherit(EventEmitter.prototype, {
     },
 
     "resize": function(){
-        this.height = this.el.offsetHeight;
+        this.bounds = getElementOffset(this.el);
     }
 
 });

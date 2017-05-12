@@ -9,6 +9,20 @@ import {
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import { ARTICLE_TYPES } from './constants';
 
+
+/**
+ * Bubbles an event from the src to the dest
+ * @param  {Object} src
+ * @param  {Object} dest
+ * @param  {String} type
+ */
+export function bubbleEvent(src, dest, type){
+    src.on(type, function bubbleEvent_inner(e){
+        if(!e.bubbles) return;
+        dest.emit(type, e);
+    });
+}
+
 /**
  * Checks if Simplereach is in the global namespace
  * @return {Boolean} [description]
@@ -168,3 +182,4 @@ export function setStorage(key, val){
     }
     return window[cnd].Store.set(storeKey, val);
 }
+
