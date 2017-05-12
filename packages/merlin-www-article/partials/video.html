@@ -1,8 +1,8 @@
-<article class="a-main{{# state.is_sponsored }} is-sponsored{{/ state.is_sponsored }}{{# state.is_video }} a-main--video{{/ state.is_video }}">
-    {{# data.video }}
-        {{> @cnbritain/merlin-www-article/video-player }}
-    {{/ data.video }}
+{{# data.video }}
+    {{> @cnbritain/merlin-www-article/video-player }}
+{{/ data.video }}
 
+<article class="a-main{{# state.is_sponsored }} is-sponsored{{/ state.is_sponsored }}{{# state.is_video }} a-main--video{{/ state.is_video }}" data-article-type="VIDEO" data-article-url="{{ data.url }}" data-article-uid="{{ data.uid }}">
     <div class="a-video__content-body">
         <div class="js-a-video-body">
             {{> @cnbritain/merlin-www-article/video-body }}
@@ -16,7 +16,7 @@
     </div>
 
     {{# data.video.data.play_list }}
-        <aside class="a-video__related">
+        <aside class="a-video__related js-v-section-playlist">
             <div class="a-video__related__wrapper">
                 {{# data.title }}
                     <h3 class="a-video__related__title">

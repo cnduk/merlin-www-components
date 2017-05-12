@@ -1,21 +1,13 @@
-<div class="a-video{{# data.play_list }} has-sidebar{{/ data.play_list }}">
+<div class="a-video{{# data.play_list }} has-sidebar{{/ data.play_list }} js-v-player">
     <div class="a-video__wrapper">
         <div class="a-video__player">
-            <div class="a-video__player__wrapper">
-                {{# state.is_brightcove }}
-                    <iframe src='https://players.brightcove.net/{{ data.brightcove_id }}/HyQn0tK_default/index.html?videoId={{ data.external_id }}' width="560" height="315" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
-                {{/ state.is_brightcove }}
-                {{# state.is_youtube }}
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ data.external_id }}?rel=0&amp;showinfo=0&amp;autoplay=1{{# data.external_playlist_id }}&amp;list={{ . }}{{/ data.external_playlist_id }}" frameborder="0" allowfullscreen></iframe>
-                {{/ state.is_youtube }}
-                {{# state.is_vimeo }}
-                    <iframe src="https://player.vimeo.com/video/{{ data.external_id }}?color=f5f7f7&title=0&byline=0&portrait=0&badge=0" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                {{/ state.is_vimeo }}
+            <div class="a-video__player__wrapper js-v-player-embed">
+                {{> @cnbritain/merlin-www-article/video-embed }}
             </div>
         </div>
 
         {{# data.play_list }}
-            <aside class="a-video__sidebar">
+            <aside class="a-video__sidebar js-v-player-playlist">
                 <div class="a-video__sidebar__wrapper">
                     {{# data.title }}
                         <h3 class="a-video__sidebar__title">
