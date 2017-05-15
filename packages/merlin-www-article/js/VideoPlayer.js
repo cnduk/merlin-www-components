@@ -4,8 +4,7 @@ import EventEmitter from 'eventemitter2';
 import { inherit } from '@cnbritain/merlin-www-js-utils/js/functions';
 import {
     CLS_ARTICLE_VIDEO_PLAYER,
-    CLS_ARTICLE_VIDEO_PLAYER_PLAYLIST,
-    CLS_ARTICLE_VIDEO_SECTION_PLAYLIST
+    CLS_ARTICLE_VIDEO_PLAYER_PLAYLIST
 } from './constants';
 import { bubbleEvent } from './utils';
 import Playlist from './Playlist';
@@ -32,15 +31,17 @@ VideoPlayer.prototype = inherit(EventEmitter.prototype, {
         var sidebarPlaylist = this.el.querySelector(
             CLS_ARTICLE_VIDEO_PLAYER_PLAYLIST);
         if(sidebarPlaylist){
-            var sectionPlaylist = this.el.parentNode.querySelector(
-                CLS_ARTICLE_VIDEO_SECTION_PLAYLIST);
-            this.playlist = new Playlist(sidebarPlaylist, sectionPlaylist);
+            this.playlist = new Playlist(sidebarPlaylist);
         }
 
         this._bubbleEvents();
     },
 
-    constructor: VideoPlayer
+    constructor: VideoPlayer,
+
+    resize: function resize(){
+        if(this.playlist !== null) this.playlist.resize();
+    }
 
 });
 
