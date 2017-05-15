@@ -1,0 +1,19 @@
+{
+    "name": "@cnbritain/merlin-www-section-splash",
+    "description": null,
+    "main": "section-splash",
+    "currentTheme": null,
+    "data": {
+        "gq": "data/gq.json"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "gq": "sass/gq/gq.scss"
+    },
+    "partials": {
+        "index": "partials/index.html"
+    },
+    "js": {},
+    "demo": null,
+    "dependencies": []
+}
