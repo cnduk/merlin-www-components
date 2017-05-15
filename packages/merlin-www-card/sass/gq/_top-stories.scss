@@ -104,6 +104,7 @@
 }
 
 .c-card--top-stories-small {
+	@include card-tg-article();
 	@include card-top-stories-small();
 }
 

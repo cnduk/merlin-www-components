@@ -160,9 +160,11 @@
 }
 
 .c-card--contributor-small {
+    @include card-contributor();
     @include card-contributor-small();
 }
 
 .c-card--contributor-large {
+    @include card-contributor();
     @include card-contributor-large();
 }

@@ -86,6 +86,10 @@
                     width: 2px;
                 }
             }
+
+            svg {
+                fill: $oslo-gray;
+            }
         }
     }
 
@@ -172,6 +176,10 @@
                         width: 2px;
                     }
                 }
+
+                svg {
+                    fill: $oslo-gray;
+                }
             }
         }
 
@@ -195,9 +203,11 @@
 }
 
 .c-card--v-related-small {
+    @include card-v-related();
     @include card-v-related-small();
 }
 
 .c-card--v-related-large {
+    @include card-v-related();
     @include card-v-related-large();
 }

@@ -16,9 +16,13 @@
 }
 
 .c-card--switcher-small {
+	@include card-switcher();
+	@include card-landscape();
     @include card-landscape-small();
 }
 
 .c-card--switcher-large {
+	@include card-switcher();
+	@include card-portrait();
     @include card-portrait-large();
 }

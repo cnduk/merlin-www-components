@@ -94,9 +94,11 @@
 }
 
 .c-card--cover-small {
+    @include card-cover();
     @include card-cover-small();
 }
 
 .c-card--cover-large {
+    @include card-cover();
     @include card-cover-large();
 }

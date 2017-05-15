@@ -99,6 +99,7 @@
 }
 
 .c-card--magazine-small {
+	@include card-magazine();
     @include card-magazine-small();
 }
 

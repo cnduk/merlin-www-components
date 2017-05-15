@@ -65,9 +65,11 @@
 }
 
 .c-card--show-small {
+    @include card-show();
     @include card-show-small();
 }
 
 .c-card--show-large {
+    @include card-show();
     @include card-show-large();
 }

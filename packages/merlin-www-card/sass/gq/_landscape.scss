@@ -124,6 +124,7 @@
 }
 
 .c-card--landscape-small {
+    @include card-landscape();
     @include card-landscape-small();
 }
 
