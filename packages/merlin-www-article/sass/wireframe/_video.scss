@@ -109,6 +109,7 @@
 }
 .a-video__ad {
     margin: 0 auto;
+    text-align: center;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
         position: absolute;
