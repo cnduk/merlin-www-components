@@ -100,6 +100,70 @@
     }
 }
 
+.c-card-section--v-related-articles {
+	background-color: $shark;
+	margin: 0;
+    max-width: none;
+    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: none;
+        padding: $DESKTOP_SLICE_MARGIN;
+    }
+
+    .c-card-section__logo {
+    	height: 50px;
+    	margin: 0 auto 40px auto;
+    	width: 190px;
+
+    	svg {
+    	    display: inline-block;
+    	    height: 100%;
+    	    width: 100%;
+
+    	    path {
+    	        fill: $white;
+    	    }
+    	}
+
+    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    		height: 60px;
+    		width: 228px;
+    	}
+    }
+
+    .c-card-section__title {
+    	@include font("GOTHAM", 12px, 700, 12px, 60);
+    	color: $white;
+    	text-transform: uppercase;
+    	margin-bottom: 20px;
+    	margin-top: 0;
+    }
+
+    .c-card-section__btn {
+		@include button-single-two();
+		@include button-single-two-dark();
+		&:hover {
+			@include button-single-two-dark-hover();
+		}
+
+		&:after {
+			background-image: url('data:image/svg+xml;utf8, <svg fill="#85878b" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8.48"><title>btn-arrownext</title><path d="M8,12.24l-0.53-.8,4.44-3H2v-1h9.93l-4.44-3L8,3.76,13.79,7.6a0.48,0.48,0,0,1,0,.8Z" transform="translate(-2 -3.76)"/></svg>');
+			background-position: bottom;
+			background-repeat: no-repeat;
+			content: '';
+			display: inline-block;
+			height: 10px;
+			margin-left: 8px;
+			width: 12px;
+		}
+    }
+}
+
 .c-card-section--c-contributors,
 .c-card-section--c-curated,
 .c-card-section--c-tag {

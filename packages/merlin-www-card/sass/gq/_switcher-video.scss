@@ -22,7 +22,7 @@
 }
 
 .c-card--switcher-video-large {
-	@include card-switcher-video() {}
-	@include card-portrait();
+    @include card-switcher-video();
+    @include card-portrait();
     @include card-portrait-large();
 }
