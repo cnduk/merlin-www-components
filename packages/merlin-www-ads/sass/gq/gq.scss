@@ -152,7 +152,7 @@
 }
 
 .ad--tag-rail {
-	margin: 20px (-$MOBILE_SIDE_GUTTER + 10) 0 (-$MOBILE_SIDE_GUTTER + 10);
+	margin: 0 (-$MOBILE_SIDE_GUTTER + 10) 20px (-$MOBILE_SIDE_GUTTER + 10);
 
 	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
 		margin-left: -$TABLET_SIDE_GUTTER + 10;

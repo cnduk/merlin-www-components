@@ -311,7 +311,7 @@
 		display: inline-block;
 	    padding: 0 10px;
 	    width: 100%;
-        margin-top: 20px;
+        margin-bottom: 20px;
 
 		@include one-column-size() {
 			& + .c-card-list__item {
@@ -325,14 +325,14 @@
 				}
 			}
 
-	        @include first(1) {
-	            margin-top: 0;
+	        @include last(1) {
+	            margin-bottom: 0;
 	        }
     	}
 
         @include two-column-size() {
-		    @include first(2) {
-		    	margin-top: 0;
+		    @include last(2) {
+		    	margin-bottom: 0;
 
 		    }
 
@@ -340,8 +340,8 @@
         }
 
         @include four-column-size() {
-		    @include first(3) {
-		    	margin-top: 0;
+		    @include last(3) {
+		    	margin-bottom: 0;
 		    }
 
 		    width: 33.33333%;
