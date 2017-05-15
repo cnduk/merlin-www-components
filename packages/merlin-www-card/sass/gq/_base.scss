@@ -50,5 +50,7 @@
 }
 
 li.c-card__meta-item {
-
+	&--gallery {
+		display: none;
+	}
 }

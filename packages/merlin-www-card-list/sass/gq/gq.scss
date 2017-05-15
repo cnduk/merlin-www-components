@@ -162,6 +162,24 @@
 
 	@include four-column-size() {
 		margin-right: 340px;
+
+	    .c-card-list__item {
+			.c-card {
+			    border-top: 1px solid $bon-jour;
+			    padding-top: 20px;
+
+			    &.c-card--dark {
+			        border-top-color: $mineshaft;
+			    }
+			}
+
+			@include first(1) {
+			    .c-card {
+			        border-top: none;
+			        padding-top: 0;
+			    }
+			}
+		}
 	}
 }
 
