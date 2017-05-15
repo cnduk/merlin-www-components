@@ -89,6 +89,10 @@
         }
     }
 
+    @include two-column-size {
+        flex-direction: row;
+    }
+
     li.c-card__meta-item + li.c-card__meta-item {
         border-left-color: $COLOUR_BORDER_SEPARATOR;
     }
@@ -386,6 +390,7 @@
 
 .c-card-list--top-stories {
     flex-direction: row;
+    flex-wrap: nowrap;
     white-space: nowrap;
 
     .c-card-list__item {
