@@ -95,7 +95,6 @@
 
 .c-card-section--s-results {}
 
-.c-card-section--v-related-articles,
 .c-card-section--c-video-articles {
     background-color: $COLOUR_BG_DARK;
     max-width: none;
@@ -131,6 +130,43 @@
         text-align: left;
         text-transform: uppercase;
     }
+}
+
+.c-card-section--v-related-articles {
+    background-color: $COLOUR_BG_DARK;
+    max-width: none;
+    padding: 0 $MOBILE_SIDE_GUTTER;
+
+    .c-card-section__btn {
+        width: auto;
+
+        @include button-single();
+        @include button-single-dark();
+
+        &:hover {
+            @include button-single-dark-hover();
+        }
+    }
+
+    .c-card-section__title {
+        color: $COLOR_MAIN_PAGE;
+        @include font("NOBEL", 15px, 700, 16px);
+        margin: 0;
+        padding: $PADDING_SMALL 0;
+        position: relative;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: none;
+    }
+
 }
 
 .c-card-section--mag-articles,
