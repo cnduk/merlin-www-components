@@ -150,11 +150,17 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
     "constructor": ArticleManager,
 
     "disableInfiniteScroll": function disableInfiniteScroll(){
+        if(this._infiniteScroll === null) return;
+
         this._infiniteScroll.disable();
         this._infiniteScroll.removeAllListeners();
+        this._infiniteScroll = null;
 
         removeEvent(window, 'resize', this._hooks.resize);
         this._hooks.resize = null;
+
+        removeEvent(window, 'scroll', this._hooks.scroll);
+        this._hooks.scroll = null;
     },
 
     "enableInfiniteScroll": function enableInfiniteScroll(){
