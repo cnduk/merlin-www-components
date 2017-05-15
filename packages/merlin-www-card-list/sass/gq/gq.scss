@@ -142,7 +142,7 @@
 		display: inline-block;
 	    padding: 0 10px;
 	    width: 100%;
-        margin-top: 20px;
+        margin-bottom: 20px;
 
 		& + .c-card-list__item {
 			.c-card {
@@ -155,8 +155,8 @@
 			}
 		}
 
-        @include first(1) {
-            margin-top: 0;
+        @include last(1) {
+            margin-bottom: 0;
         }
 	}
 
