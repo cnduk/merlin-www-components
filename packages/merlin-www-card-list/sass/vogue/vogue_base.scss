@@ -376,10 +376,8 @@
 }
 
 .c-card-list--v-related-articles {
-    margin: 0 -20px;
 
     .c-card-list__item {
-        padding: 0 20px;
         opacity: 1;
         @include transition(opacity 0.3s ease-out)
         width: 100%;
@@ -391,12 +389,7 @@
 
     .c-card-list__item + .c-card-list__item {
         border-top: 1px solid #444;
-        padding-top: 20px;
-        margin-top: 20px;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            margin-top: 12px;
-            padding-top: 12px;
-        }
+        margin-top: 12px;
+        padding-top: 12px;
     }
 }
