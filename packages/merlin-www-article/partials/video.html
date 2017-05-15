@@ -14,19 +14,4 @@
             </div>
         {{/ ad_slots.video_content }}
     </div>
-
-    {{# data.video.data.play_list }}
-        <aside class="a-video__related js-v-section-playlist">
-            <div class="a-video__related__wrapper">
-                {{# data.title }}
-                    <h3 class="a-video__related__title">
-                        {{ . }}
-                    </h3>
-                {{/ data.title }}
-                <div class="a-video__related__list">
-                    {{> @cnbritain/merlin-www-card-list }}
-                </div>
-            </div>
-        </aside>
-    {{/ data.video.data.play_list }}
 </article>
