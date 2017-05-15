@@ -1,7 +1,7 @@
 @import '@cnbritain/merlin-www-common:tatler';
 @import '@cnbritain/merlin-www-image:tatler';
 
-// NO wireframe include cos we're gonna flex it up instead...
+@import '../flexbox-wireframe/flexbox-wireframe';
 
 @import '_base';
 @import '_landscape';

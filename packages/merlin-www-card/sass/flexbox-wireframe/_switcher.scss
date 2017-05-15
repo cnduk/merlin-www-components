@@ -1,0 +1,35 @@
+.c-card--switcher {
+    .c-card__obj {
+        display: flex;
+    }
+
+    .c-card__obj__header,
+    .c-card__obj__body {
+        display: flex;
+    }
+
+    .c-card__obj__header {
+        > img {
+            display: block;
+            max-width: none;
+        }
+
+        width: 33.33%;
+    }
+
+    .c-card__obj__body {
+        display: flex;
+    }
+
+    @include min-screen( $CARD_SWITCHER_WIDTH ){
+        .c-card__obj__header,
+        .c-card__obj__body {
+            display: flex;
+            width: 100%;
+        }
+
+        .c-card__obj__body {
+            padding-left: 0;
+        }
+    }
+}

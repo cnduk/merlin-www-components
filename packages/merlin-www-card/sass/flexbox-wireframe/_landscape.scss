@@ -1,0 +1,22 @@
+.c-card--landscape {
+    .c-card__obj {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .c-card__obj__header,
+    .c-card__obj__body {
+        display: flex;
+    }
+
+    .c-card__obj__header {
+        > img {
+            display: block;
+            max-width: none;
+        }
+        width: 33.33%;
+    }
+    .c-card__obj__body {
+        display: flex;
+    }
+}

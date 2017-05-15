@@ -1,0 +1,13 @@
+// Flexbox Wireframe
+// =============================================================================
+// We're going MADLADZ and using flexbox to layout the cards for Tatler
+// but as quite a few components pull in the card wireframe which defines the
+// layout using the global__flag mixins we need to define a new layout wireframe
+// that we can pull in after the card wireframe include to override that layout.
+// It should be ok.
+@import "@cnbritain/merlin-www-common:wireframe";
+
+@import "_base";
+@import "_portrait";
+@import "_landscape";
+@import "_switcher";
