@@ -390,11 +390,13 @@ function setAbsolute(el, top){
 }
 
 function setDefault(el){
+    removeClass(el, 'is-fixed');
     el.style.position = '';
     el.style.top = '';
 }
 
 function setFixed(el, top){
+    addClass(el, 'is-fixed');
     el.style.position = 'fixed';
     el.style.top = top;
 }

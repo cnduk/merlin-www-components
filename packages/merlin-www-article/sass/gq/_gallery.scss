@@ -9,6 +9,7 @@
 .a-gallery__wrapper {}
 
 .g-image-nav {
+	@include vendor-prefix(transition-duration, 300ms);
 	width: $MOBILE_SIDE_GUTTER;
 
 	@include tablet-size {
@@ -17,6 +18,10 @@
 
 	@include desktop-size {
 		width: $DESKTOP_SIDE_GUTTER;
+	}
+
+	&.is-fixed {
+		@include vendor-prefix(transform, translateX(-100%) translateY(20px));
 	}
 }
 
