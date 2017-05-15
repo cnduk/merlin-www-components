@@ -80,12 +80,13 @@
 }
 
 .c-newsletter__form__text {
-    @include font("GOTHAM", 14px, normal, 14px);
+    @include font("GOTHAM", 14px, 500, 14px);
     border-radius: 0;
+    box-sizing: border-box;
     color: $mineshaft;
-    padding: 16px;
-    height: 44px;
+    height: 60px;
     margin-bottom: 10px;
+    padding: 16px;
 
     &::placeholder {
         color: $mineshaft;
@@ -97,7 +98,7 @@
 }
 
 .c-newsletter__form__btn {
-    height: 44px;
+    height: 60px;
     margin-bottom: 28px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
