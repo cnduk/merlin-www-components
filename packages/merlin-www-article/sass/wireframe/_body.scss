@@ -4,7 +4,9 @@
 }
 
 .a-main--gallery {}
-.a-main--video {}
+.a-main--video {
+    min-height: initial;
+}
 
 .a-body {
     box-sizing: border-box;

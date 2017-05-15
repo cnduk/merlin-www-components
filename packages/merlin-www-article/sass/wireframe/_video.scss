@@ -79,34 +79,12 @@
     top: 55px;
 }
 
-.a-video__related {
-    box-sizing: border-box;
-    margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
-    padding-left: $MOBILE_SIDE_GUTTER;
-    padding-right: $MOBILE_SIDE_GUTTER;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        display: none;
-    }
-}
-.a-video__related__wrapper {}
-.a-video__related__title {}
-.a-video__related__list {}
-
-
-
 .a-video__content-body {
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
-    min-height: 600px;
     position: relative;
 }
+
 .a-video__ad {
     margin: 0 auto;
     text-align: center;
