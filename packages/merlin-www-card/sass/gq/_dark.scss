@@ -14,13 +14,6 @@
         .c-card__title {
             &:after {
                 background: linear-gradient(to right, rgba(23, 25, 27, 0), rgba(23, 25, 27, 1) 91%);
-                bottom: 0;
-                content: '';
-                display: block;
-                height: 22px;
-                position: absolute;
-                right: 0;
-                width: 50%;
             }
         }
 
