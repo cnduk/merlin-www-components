@@ -11,7 +11,7 @@
     .c-card__obj__header,
     .c-card__obj__body {
         display: table-cell;
-        vertical-align: top;
+        vertical-align: middle;
     }
 
 	.c-card__obj__header {
@@ -33,11 +33,22 @@
 	    padding-left: 8px;
 	}
 
+    .c-card__tag {
+        @include font("GOTHAM", 11px, 700, 14px, -4);
+        color: $limed-oak;
+        margin-bottom: 6px;
+        margin-top: 0;
+    }
+
 	.c-card__title {
-	    @include font("GOTHAM", 12px, 700, 16px, -4);
+	    @include font("GOTHAM", 14px, 700, 18px, -4);
 	    color: $woodsmoke;
 	    margin-bottom: 6px;
 	    margin-top: 0px;
+	}
+
+	.c-card__teaser {
+		display: none;
 	}
 
 	.c-card__separator {
@@ -73,9 +84,9 @@
 	                border-radius: 50%;
 	                content: "";
 	                display: inline-block;
-	                height: 3px;
-	                margin: 1px 8px;
-	                width: 3px;
+	                height: 2px;
+	                margin: 1px 4px;
+	                width: 2px;
 	            }
 	        }
 	    }
@@ -103,9 +114,9 @@
     	                border-radius: 50%;
     	                content: "";
     	                display: inline-block;
-    	                height: 3px;
-    	                margin: 1px 8px;
-    	                width: 3px;
+    	                height: 2px;
+    	                margin: 1px 4px;
+    	                width: 2px;
     	            }
     	        }
     	    }
@@ -128,11 +139,22 @@
 		text-align: center;
 	}
 
+    .c-card__tag {
+        @include font("GOTHAM", 12px, 700, 14px, -4);
+        color: $limed-oak;
+        margin-bottom: 6px;
+        margin-top: 0;
+    }
+
 	.c-card__title {
         @include font("GOTHAM", 17px, 700, 22px, -4);
         color: $woodsmoke;
         margin-bottom: 14px;
         margin-top: 6px;
+	}
+
+	.c-card__teaser {
+		display: none;
 	}
 
 	.c-card__byline {
