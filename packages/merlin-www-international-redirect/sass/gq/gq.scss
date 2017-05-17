@@ -1,0 +1,74 @@
+@import '@cnbritain/merlin-www-common:gq';
+
+@import '../wireframe/wireframe';
+
+.c-int-redirect {
+	background-color: $woodsmoke;
+}
+
+.c-int-redirect__wrapper {
+	max-width: $MAXIMUM_PAGE_WIDTH;
+	margin: 0 auto;
+}
+
+.c-int-redirect__btn {
+	height: 100%;
+	position: absolute;
+	right: 0;
+	width: 60px;
+
+	svg {
+		@include vendor-prefix(transform, translate(-50%, -50%));
+		border-radius: 50%;
+		border: 1px solid $oslo-gray;
+		box-sizing: border-box;
+		fill: $white;
+		height: 24px;
+		left: 50%;
+		padding: 6px;
+		position: absolute;
+		top: 50%;
+		width: 24px;
+	}
+}
+
+.c-int-redirect__msg {
+	@include font("GOTHAM", 12px, 'BOOK', 18px, -4);
+	color: $oslo-gray;
+	padding: 32px 80px 32px 20px;
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
+
+	label {
+		border-bottom: 1px solid $white;
+		color: $white;
+	}
+}
+
+.c-int-redirect__list {
+	color: $oslo-gray;
+	font-size: 0;
+	padding: 32px 80px 32px 20px;
+	text-align: center;
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		padding-top: 24px;
+		padding-bottom: 4px;
+	}
+}
+
+li.c-int-redirect__list__item {
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		padding-bottom: 20px;
+	}
+
+	a {
+		@include font("GOTHAM", 12px, 'BOOK', 18px, -4);
+		color: inherit;
+		padding: 0 5px;
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			padding: 0 16px;
+		}
+	}
+}
