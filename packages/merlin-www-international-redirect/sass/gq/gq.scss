@@ -50,21 +50,21 @@
 .c-int-redirect__list {
 	color: $oslo-gray;
 	font-size: 0;
-	padding: 32px 80px 32px 20px;
+	padding: 24px 80px 24px 20px;
 	text-align: center;
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 		padding-top: 24px;
-		padding-bottom: 4px;
+		padding-bottom: 16px;
 	}
 }
 
 li.c-int-redirect__list__item {
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		padding-bottom: 20px;
+		padding-bottom: 8px;
 	}
 
 	a {
-		@include font("GOTHAM", 12px, 'BOOK', 18px, -4);
+		@include font("GOTHAM", 12px, 'BOOK', 24px, -4);
 		color: inherit;
 		padding: 0 5px;
 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
