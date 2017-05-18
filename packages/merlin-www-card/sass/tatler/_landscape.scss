@@ -26,7 +26,12 @@
         display: none;
     }
 
-    .c-card__title {}
+    .c-card__title {
+        // FONT: CARD_LANDSCAPE
+        @include font('STARLING', 18px, 'NORMAL', 22px);
+
+        color: $black-two;
+    }
 }
 
 @mixin card-landscape-large {
@@ -46,7 +51,12 @@
         display: none;
     }
 
-    .c-card__title {}
+    .c-card__title {
+        // FONT: CARD_LANDSCAPE
+        @include font('STARLING', 24px, 'NORMAL', 28px);
+
+        color: $black-two;
+    }
 }
 
 .c-card--landscape {

@@ -47,7 +47,12 @@
 
     .c-card__tag {}
 
-    .c-card__title {}
+    .c-card__title {
+        // FONT: CARD_TAG_ARTICLE
+        @include font('STARLING', 18px, 'NORMAL', 22px);
+
+        color: $black-two;
+    }
 
     .c-card__teaser,
     .c-card__separator {
@@ -95,7 +100,14 @@
 
     .c-card__tag {}
 
-    .c-card__title {}
+    .c-card__title {
+        .c-card__title {
+        // FONT: CARD_TAG_ARTICLE
+        @include font('STARLING', 27px, 'NORMAL', 32px);
+
+        color: $black-two;
+    }
+    }
 
     .c-card__teaser,
     .c-card__separator {

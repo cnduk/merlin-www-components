@@ -16,7 +16,12 @@
 
     .c-card__tag {}
 
-    .c-card__title {}
+    .c-card__title {
+        // FONT: CARD_PORTRAIT
+        @include font('STARLING', 24px, 'NORMAL', 28px);
+
+        color: $black-two;
+    }
 }
 
 

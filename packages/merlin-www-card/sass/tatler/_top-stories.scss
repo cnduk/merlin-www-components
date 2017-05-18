@@ -22,7 +22,12 @@
         flex: 2 0;
     }
 
-    .c-card__title {}
+    .c-card__title {
+        // FONT: CARD_TOP_STORIES
+        @include font('STARLING', 18px, 'NORMAL', 22px);
+
+        color: $black-two;
+    }
 
     .c-card__tag,
     .c-card__teaser,
