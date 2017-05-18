@@ -25,6 +25,12 @@
 
 }
 
+.ad--article-video {
+    .ad__block {
+        background-color: $shark;
+    }
+}
+
 .ad--article-rail {
     margin-bottom: 40px;
     margin-left: -$MOBILE_SIDE_GUTTER;
