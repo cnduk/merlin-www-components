@@ -7,7 +7,20 @@
     text-align: left;
 }
 
-.c-topic-strip--bleed {}
+.c-topic-strip--bleed {
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+}
+
 .c-topic-strip--c-card-section {
     margin-bottom: 24px;
     margin-top: 24px;
@@ -40,28 +53,32 @@ li.c-topic-strip__item {
     }
 }
 
-// .c-topic-strip--article-related {
-//     text-align: left;
+.c-topic-strip--article-related {
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
 
-//     .c-topic-strip__item + .c-topic-strip__item {
-//         margin-left: 10px;
-//     }
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: -8px;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        white-space: normal;
 
-//     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-//         white-space: normal;
-//         margin-bottom: -10px;
+        .c-topic-strip__item {
+            margin-bottom: 8px;
+            margin-right: 8px;
 
-//         .c-topic-strip__item {
-//             margin-bottom: 10px;
-//             margin-right: 10px;
-//         }
-//         .c-topic-strip__item + .c-topic-strip__item {
-//             @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-//                 margin-left: 0;
-//             }
-//         }
-//     }
-// }
+            & + .c-topic-strip__item {
+                @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
 
 .c-topic-strip__btn {
     @include button-group();
