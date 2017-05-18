@@ -28,14 +28,23 @@
         color: inherit;
     }
 }
+
+.a-author__byline--syndication {
+    .a-author__byline-prefix {
+
+    }
+}
+
 .a-author__byline--photographer {
     .a-author__byline-prefix {
 
     }
 }
+
 .a-author__byline-name {
     @include font-weight(700);
 }
+
 .a-author__byline-prefix,
 .a-author__byline-conjunction {
     color: $mineshaft;
