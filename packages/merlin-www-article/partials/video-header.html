@@ -8,11 +8,42 @@
             <hr class="a-header__separator" />
 
             <div class="a-header__about">
+
                 {{# data.byline }}
-                    <p class="a-header__byline">
+                    <div class="a-header__byline">
+                {{/ data.byline }}
+                {{^ data.byline }}
+                    {{# data.syndication_profile }}
+                        <div class="a-header__byline">
+                    {{/ data.syndication_profile }}
+                {{/ data.byline }}
+
+                {{# data.byline }}
+                    <span class="a-header__byline-item">
                         <span class="a-header__byline-prefix">By</span>
                         <span class="a-header__byline-name">{{ &data.byline }}</span>
-                    </p>
+                    </span>
+                {{/ data.byline }}
+
+                {{# data.syndication_profile }}
+                    <span class="a-header__byline-item a-header__byline-item--syndication">
+                        <span class="a-header__byline-prefix">Originally published by </span>
+                        {{# state.has_link }}
+                            <span class="a-header__byline-name"><a class="{{ data.link.style.cls }}" title="{{ data.link.data.title }}" href="{{ &data.link.data.url }}">{{ data.name }}</a></span>
+                        {{/ state.has_link }}
+                        {{^ state.has_link }}
+                            <span class="a-header__byline-name">{{ data.name }}</span>
+                        {{/ state.has_link }}
+                    </span>
+                {{/ data.syndication_profile }}
+
+                {{# data.byline }}
+                    </div>
+                {{/ data.byline }}
+                {{^ data.byline }}
+                    {{# data.syndication_profile }}
+                        </div>
+                    {{/ data.syndication_profile }}
                 {{/ data.byline }}
             </div>
 

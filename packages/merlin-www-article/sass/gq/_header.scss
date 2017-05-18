@@ -69,9 +69,14 @@
 
 }
 
+.a-header__byline {
+
+}
+
 .a-header__byline-item {
     @include font("GOTHAM", 9px, 400, 14px, 60);
     color: $mineshaft;
+    display: block;
     margin-bottom: 4px;
     margin-top: 20px;
     text-transform: uppercase;
