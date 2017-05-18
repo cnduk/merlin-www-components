@@ -6,6 +6,10 @@
     &.c-card--switcher,
     &.c-card--hero,
     &.c-card--dark {
+        .c-card__image {
+            background-color: $mineshaft;
+        }
+
         .c-card__title,
         .c-card__byline {
             color: $white;
