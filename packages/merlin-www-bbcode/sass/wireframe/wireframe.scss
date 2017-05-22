@@ -256,7 +256,20 @@ li.bb-gallery__col {
  */
 .bb-video {}
 .bb-video__title {}
-.bb-video__title-icon {}
+.bb-video__title-icon {
+    display: inline-block;
+    height: 24px;
+    width: 11px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        height: 27px;
+        width: 14px;
+    }
+
+    svg {
+        width: 100%;
+    }
+}
 .bb-video__wrapper {
     position: relative;
 }

@@ -326,19 +326,13 @@
 }
 
 .bb-video__title-icon {
-    display: inline-block;
-    height: 24px;
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        height: 27px;
-        margin-right: 10px;
-        width: 14px;
-    }
     margin-right: 5px;
-    width: 11px;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-right: 10px;
+    }
 
     svg {
         fill: $COLOR_MAIN_TERTIARY;
-        width: 100%;
     }
 }
 

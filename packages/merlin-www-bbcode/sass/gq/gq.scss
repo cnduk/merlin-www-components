@@ -531,9 +531,10 @@
     position: relative;
 }
 
-.bb-video__icon {
+.bb-video__title-icon {
     border-right: 1px solid $bon-jour;
-    display: table-cell;
+    display: inline-block;
+    margin-right: 16px;
     padding-right: 16px;
     width: 16px;
 
@@ -545,8 +546,6 @@
 .bb-video__title {
     @include font("GOTHAM", 16px, 700, 20px, -4);
     color: $woodsmoke;
-    display: table-cell;
-    padding-left: 16px;
     padding-top: 12px;
     padding-bottom: 8px;
 
