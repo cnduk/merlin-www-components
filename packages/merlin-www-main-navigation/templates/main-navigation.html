@@ -10,10 +10,12 @@
         {{/ state.has_masthead }}
 
         {{# data.masthead }}
-            <div class="n-main__header n-visibility--desktop">
-                <div class="n-main__header-logo">
-                    {{> @cnbritain/merlin-www-image }}
-                </div>
+            <div class="n-main__header n-visibility--desktop" {{# style.inline }}style="{{ . }}"{{/ style.inline }}>
+                {{# data.image }}
+                    <div class="n-main__header-logo">
+                        {{> @cnbritain/merlin-www-image }}
+                    </div>
+                {{/ data.image }}
             </div>
         {{/ data.masthead }}
 
