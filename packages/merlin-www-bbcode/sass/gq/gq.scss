@@ -115,8 +115,13 @@
     }
 }
 .bb-pullquote__quote {
-    @include font("ITC_FENICE", 32px, 400, 36px, -4);
+    @include font("ITC_FENICE", 26px, 400, 30px, 0);
     color: $mineshaft;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(32px);
+        @include line-height(36px);
+    }
 
     &:before,
     &:after {
@@ -267,6 +272,7 @@
 // Card
 // -------------------- //
 .bb-card {
+    border-radius: 4px;
     border: 1px solid $bon-jour;
     box-sizing: border-box;
     margin: 40px 0;
