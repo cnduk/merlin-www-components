@@ -54,7 +54,9 @@
 
 li.c-card__meta-item {
 	&--gallery {
-		display: none;
+		svg {
+			display: none;
+		}
 	}
 
 	&--duration {
