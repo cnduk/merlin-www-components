@@ -886,6 +886,7 @@ function getLogoOffsets( logoConfig, responsiveAd ){
     if( ( !hasOwnProperty( responsiveAd.get( "adConfig" ), "isMobile" ) ||
           !responsiveAd.get( "adConfig" ).isMobile ) &&
         hasOwnProperty( logoConfig, "mobileOverridePosition" ) &&
+        logoConfig.mobileOverridePosition !== null &&
         responsiveAd._windowWidth <= ResponsiveAd.MOBILE_MAX_WIDTH_INCL ){
 
         logoSizeConfig = logoConfig.mobileOverridePosition;
