@@ -25,6 +25,11 @@
 .n-main__header-logo {
     margin: 0 auto;
     max-width: 400px;
+
+    svg, img {
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 .n-main__nav {
