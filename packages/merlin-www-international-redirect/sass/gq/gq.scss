@@ -35,7 +35,7 @@
 .c-int-redirect__msg {
 	@include font("GOTHAM", 12px, 'BOOK', 18px, -4);
 	color: $oslo-gray;
-	padding: 32px 80px 32px 20px;
+	padding: 20px 60px 20px 20px;
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 		padding-top: 24px;
 		padding-bottom: 24px;
@@ -50,7 +50,7 @@
 .c-int-redirect__list {
 	color: $oslo-gray;
 	font-size: 0;
-	padding: 24px 80px 24px 20px;
+	padding: 20px 60px 20px 20px;
 	text-align: center;
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 		padding-top: 24px;
