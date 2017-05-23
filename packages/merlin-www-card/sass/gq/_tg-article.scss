@@ -112,23 +112,6 @@
 }
 
 @mixin card-tg-article-large($has_small:false) {
-    .c-card__obj__header {
-        padding-right: 10px;
-        width: 33.33333%;
-    }
-
-    .c-card__obj__body {
-        padding-left: 10px;
-        width: auto;
-    }
-
-    .c-card__title {
-        @include font("GOTHAM", 20px, 700, 24px, -4);
-        color: $woodsmoke;
-        margin-bottom: 20px;
-        margin-top: 10px;
-    }
-
     @if not $has_small {
         .c-card__obj {}
         .c-card__images {
@@ -213,12 +196,29 @@
             }
         }
     }
+
+    .c-card__obj__header {
+        padding-right: 10px;
+        width: 33.33333%;
+    }
+
+    .c-card__obj__body {
+        padding-left: 10px;
+        width: auto;
+    }
+
+    .c-card__title {
+        @include font("GOTHAM", 20px, 700, 24px, -4);
+        color: $woodsmoke;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
 }
 
 .c-card--tg-article {
     @include card-tg-article();
     @include card-tg-article-small();
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include min-screen($CARD_SWITCHER_WIDTH) {
         @include card-tg-article-large($has_small:true);
     }
 }
