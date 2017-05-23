@@ -157,11 +157,11 @@
     @include font("GOTHAM", 16px, 700, 22px, -4);
     color: $woodsmoke;
     margin-bottom: 8px;
-    margin-top: 16px;
+    margin-top: 8px;
 }
 
 .a-header__image-caption {
-    @include font("GOTHAM", 16px, 700, 22px, -4);
+    @include font("GOTHAM", 12px, 500, 16px, -2);
     color: $woodsmoke;
     margin-bottom: 8px;
     margin-top: 8px;
