@@ -275,7 +275,7 @@
 
 	    .c-card__image {
 	        &:after {
-	            @include font("GOTHAM", 10px, 700, 16px, 60);
+	            @include font("GOTHAM", 10px, 700, 16px, 0);
 	            @include vendor-prefix(transition-duration, 300ms);
 	            background-color: $cornflower-blue;
 	            bottom: 0px;
@@ -283,7 +283,7 @@
 	            content: 'Now Playing';
 	            left: 0px;
 	            opacity: 0;
-	            padding: 6px;
+	            padding: 4px;
 	            position: absolute;
 	        }
 	    }
