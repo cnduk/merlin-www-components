@@ -286,18 +286,8 @@
             content: '\2192';
             content: 'Continue Reading ';
             position: absolute;
-            right: 36px;
-            text-transform: uppercase;
-        }
-
-        &:after {
-            @include font("GOTHAM", 9px, 700, 16px, 60);
-            bottom: 16px;
-            content: url('data:image/svg+xml;utf8, <svg fill="#4681f5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8.48"><title>btn-arrownext</title><path d="M8,12.24l-0.53-.8,4.44-3H2v-1h9.93l-4.44-3L8,3.76,13.79,7.6a0.48,0.48,0,0,1,0,.8Z" transform="translate(-2 -3.76)"/></svg>');
-            height: 16px;
-            position: absolute;
             right: 16px;
-            width: 12px;
+            text-transform: uppercase;
         }
     }
 }
@@ -389,6 +379,7 @@
     @include font("GOTHAM", 9px, null, 12px, 60);
     margin-bottom: 6px;
     margin-top: 12px;
+    text-transform: uppercase;
 
     .bb-card__byline-prefix {
         @include font-weight(400);
