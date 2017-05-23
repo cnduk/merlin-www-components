@@ -9,13 +9,13 @@ import {
     getElementOffset,
     getWindowScrollTop,
     removeClass
-} from '@cnbritain/merlin-frontend-utils-js/js/functions';
+} from '@cnbritain/merlin-www-js-utils/js/functions';
 
 import {
     hasTouch,
     isAndroid,
     isIOS
-} from '@cnbritain/merlin-frontend-utils-js/js/detect';
+} from '@cnbritain/merlin-www-js-utils/js/detect';
 
 import VanishingNavigation from './vanishing-navigation';
 
