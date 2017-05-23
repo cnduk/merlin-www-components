@@ -7,7 +7,7 @@ import {
     removeClass,
     removeEvent,
     throttle
-} from '@cnbritain/merlin-frontend-utils-js/js/functions';
+} from '@cnbritain/merlin-www-js-utils/js/functions';
 
 var CLS_VANISH = 'n-vanishing-nav';
 var CLS_VANISH_HIDDEN = 'is-hidden';
