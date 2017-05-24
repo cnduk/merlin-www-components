@@ -104,26 +104,55 @@ li.c-card__meta-item {
 .c-card__sponsor {}
 
 .c-card__byline-prefix,
-.c-card__sponsor-label {}
+.c-card__sponsor-label {
+    @include font('AGENDA', 11px, 'MEDIUM', 13px);
+
+    color: $gray;
+    font-style: italic;
+    letter-spacing: 1px;
+}
 
 .c-card__byline-name,
-.c-card__sponsor-title {}
+.c-card__sponsor-title {
+    @include font('AGENDA', 11px, 'MEDIUM', 13px);
 
-.c-card__meta {}
+    color: $gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
 
-.c-card__meta-item--tag {}
+.c-card__meta {
+    @include font('AGENDA', 11px, 'MEDIUM', 13px);
+
+    color: $gray;
+}
 
 li.c-card__meta-item {
-    &:not(:last-child) {}
+    &:not(:last-child) {
+        &:after {
+            content: '';
+            height: 14px;
+            width: 1px;
+            background-color: $silver;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 5px;
+        }
+    }
 
     & + & {}
+
+    &.c-card__meta-item--tag {
+        display: none;
+    }
+
+    &.c-card__meta-item--gallery {
+        display: none;
+    }
 }
 
 
-.c-card__meta-item--gallery {
-    svg {}
-    path {}
-}
+
 
 .c-card__meta-item--duration {
     svg {}

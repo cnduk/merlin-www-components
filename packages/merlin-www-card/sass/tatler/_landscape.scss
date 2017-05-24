@@ -3,6 +3,43 @@
         display: flex;
         flex-direction: row;
     }
+
+    .c-card__obj__body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .c-card__title {
+        margin: 0;
+    }
+
+    .c-card__separator {
+        width: 20px;
+        border: 0;
+        border-top: 1px solid $COLOUR_MAIN_HIGHLIGHT;
+    }
+
+    .c-card__image__icon {
+        position: absolute;
+        display: block;
+        width: 35px;
+        height: 35px;
+        background: $white;
+        border-radius: 50%;
+        line-height: 35px;
+        text-align: center;
+        bottom: 10px;
+        left: 10px;
+
+        svg {
+            width: 20px;
+            height: auto;
+        }
+
+        path {
+            fill: $black;
+        }
+    }
 }
 
 @mixin card-landscape-small {
@@ -10,7 +47,8 @@
 
     .c-card__obj__header,
     .c-card__obj__body {
-        flex: 1 0;
+        flex: 0 0 50%;
+        flex-direction: column;
     }
 
     .c-card__obj__header {
@@ -21,8 +59,7 @@
         padding-left: 10px;
     }
 
-    .c-card__teaser,
-    .c-card__separator {
+    .c-card__teaser {
         display: none;
     }
 
@@ -43,11 +80,11 @@
     }
 
     .c-card__obj__body {
+        background: $white;
         flex: 2 0;
     }
 
-    .c-card__teaser,
-    .c-card__separator {
+    .c-card__teaser {
         display: none;
     }
 

@@ -4,14 +4,14 @@
 @mixin card-top-stories {
     .c-card__obj {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .c-card__obj__header,
     .c-card__obj__body {}
 
     .c-card__obj__header {
-        flex: 1 0;
+        flex: 0 0 33.333%;
     }
 
     .c-card__image__icon {
@@ -19,7 +19,8 @@
     }
 
     .c-card__obj__body {
-        flex: 2 0;
+        flex: 0 0 66.666%;
+        padding: 0 15px 0 13px;
     }
 
     .c-card__title {
@@ -27,18 +28,25 @@
         @include font('STARLING', 18px, 'NORMAL', 22px);
 
         color: $black-two;
+        margin: 5px 0 12px;
     }
 
     .c-card__tag,
     .c-card__teaser,
-    .c-card__separator,
     .c-card__byline {
         display: none;
+    }
+
+    .c-card__separator {
+        border: 1px solid $COLOUR_MAIN_HIGHLIGHT;
+        border-width: 1px 0 0 0;
+        display: block;
+        width: 20px;
     }
 }
 
 .c-card--top-stories {
-    @include card-top-stories
+    @include card-top-stories;
 }
 
 .c-card--top-stories-small {

@@ -6,11 +6,29 @@
 
     .c-card__obj__header,
     .c-card__obj__body {
+        display: flex;
         flex: 1 0;
     }
 
-    .c-card__teaser,
+    .c-card__obj__header,
+    .c-card__obj__footer {
+        display: flex;
+    }
+
+    .c-card__obj__body {
+       background: $white;
+       text-align: center;
+       padding: 28px 20px;
+    }
+
     .c-card__separator {
+        width: 20px;
+        border: 0;
+        border-top: 1px solid $COLOUR_MAIN_HIGHLIGHT;
+        margin: 15px auto;
+    }
+
+    .c-card__teaser {
         display: none;
     }
 
@@ -21,6 +39,29 @@
         @include font('STARLING', 24px, 'NORMAL', 28px);
 
         color: $black-two;
+        margin: 0;
+    }
+
+    .c-card__image__icon {
+        position: absolute;
+        display: block;
+        width: 35px;
+        height: 35px;
+        background: $white;
+        border-radius: 50%;
+        line-height: 35px;
+        text-align: center;
+        bottom: 10px;
+        right: 10px;
+
+        svg {
+            width: 20px;
+            height: auto;
+        }
+
+        path {
+            fill: $black;
+        }
     }
 }
 
