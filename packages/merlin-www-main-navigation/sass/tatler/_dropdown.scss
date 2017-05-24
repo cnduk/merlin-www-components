@@ -1,0 +1,101 @@
+.n-main__dropdown {}
+.n-main__dropdown--follow {
+    .n-main__dropdown-link {
+        letter-spacing: 0;
+        text-transform: none;
+    }
+}
+
+.n-main__dropdown--follow__group {
+    font-size: 0;
+    text-align: center;
+
+    & + .n-main__dropdown--follow__group {
+        margin-top: 16px;
+    }
+}
+
+.n-main__dropdown-list {
+    background-color: $white;
+    border: 1px solid $white-two;
+    border-top: none;
+}
+
+.n-main__dropdown-list--left {
+    padding: 15px 20px 5px;
+    width: 160px;
+    box-sizing: border-box;
+}
+
+.n-main__dropdown-list--follow {
+    padding: 20px 16px 32px 16px;
+    margin-right: -1px;
+    white-space: nowrap;
+}
+
+.n-main__dropdown-list-item {
+    .n-main__nav-link {
+        box-sizing: border-box;
+        color: $black;
+        display: inline-block;
+        height: 35px;
+        line-height: 35px;
+        white-space: nowrap;
+        margin: 0;
+
+        span {
+            display: inline-block;
+            height: 35px;
+            line-height: 1em;
+            vertical-align: top;
+        }
+
+        &:hover {
+            color: $COLOUR_MAIN_HIGHLIGHT;
+        }
+    }
+}
+
+.n-main__dropdown-link {
+    &:hover {
+        border-bottom: none;
+    }
+
+    &:after {
+        border-top-color: $COLOUR_MAIN_HIGHLIGHT;
+        border-width: 4px;
+        margin-left: 8px;
+        position: relative;
+        top: -2px;
+    }
+}
+
+a.n-main__dropdown__btn-share,
+.n-main__dropdown__btn-share {
+    @include button-share();
+    @include button-share-dark($name:none);
+
+    font-size: initial;
+
+    & + .n-main__dropdown__btn-share {
+        margin-left: 8px;
+    }
+}
+
+@each $name, $color in $COLOUR_SOCIAL {
+    .n-main__dropdown__btn-share--#{$name},
+    a.n-main__dropdown__btn-share--#{$name} {
+        &:hover {
+            @include button-share-dark-hover($name);
+        }
+    }
+}
+
+.n-main__dropdown__btn {
+    @include button-single();
+    @include button-single-light();
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+}

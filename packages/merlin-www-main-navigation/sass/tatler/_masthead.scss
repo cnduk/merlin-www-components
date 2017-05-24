@@ -1,0 +1,29 @@
+.n-main__header {
+    display: none;
+
+    @include min-screen( $MAIN_NAVIGATION_MOBILE_BREAKPOINT ){
+        display: flex;
+        align-items: center;
+        flex-wrap: none;
+        height: 140px;
+        justify-content: center;
+    }
+}
+
+.n-main__header-logo {
+    height: 80px;
+    max-width: none;
+    position: relative;
+
+    a {
+        display: inline-block;
+    }
+
+    svg, img {
+        height: 80px;
+        padding: 0;
+        fill: $black;
+    }
+}
+
+.n-main__header-logo--takeover {}

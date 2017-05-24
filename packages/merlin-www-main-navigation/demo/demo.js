@@ -1,3 +1,2 @@
-import img from '../js/index';
+import MAIN_NAVIGATION from '../js/main-navigation';
 
-img.init();

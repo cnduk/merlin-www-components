@@ -1,0 +1,129 @@
+.n-main__nav-search {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        border-left: 1px solid $white-two;
+    }
+
+    @include min-screen($MAXIMUM_PAGE_WIDTH + 1) {
+        border-right: 1px solid $white-two;
+    }
+
+    display: inline-block;
+    float: right;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    width: 60px;
+
+    .n-main__nav-search__icon {
+        background-color: transparent;
+        cursor: pointer;
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        width: 60px;
+
+        svg {
+            display: inline-block;
+            fill: $black-two;
+            height: 18px;
+            line-height: 60px;
+            vertical-align: middle;
+        }
+
+        &:hover {
+            svg {
+                fill: $limed-oak;
+            }
+        }
+    }
+
+    .n-main__nav-search__close-icon {
+        background-color: transparent;
+        cursor: pointer;
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        width: 60px;
+
+        svg {
+            display: inline-block;
+            fill: $black-two;
+            height: 18px;
+            line-height: 60px;
+            vertical-align: middle;
+        }
+
+        &:hover {
+            svg {
+                fill: $COLOUR_MAIN_HIGHLIGHT;
+            }
+        }
+    }
+}
+
+.n-menu__search {
+    border: 0;
+    background-color: $black-two;
+    overflow: hidden;
+    position: relative;
+
+    svg, path {
+        fill: $white;
+        height: 100%;
+        width: 18px;
+    }
+}
+
+.n-menu__search-search {
+    float: right;
+}
+
+.n-menu__search-textbox {
+    display: inline-block;
+    left: 0;
+    height: 60px;
+    position: absolute;
+    right: 60px;
+    top: 0;
+
+    input {
+        @include font('STARLING', 20px, 'NORMAL', 20px);
+
+        appearance: none;
+        background-color: $black-two;
+        border: none;
+        box-sizing: border-box;
+        color: $white;
+        height: 60px;
+        padding: 0 20px;
+        width: 100%;
+
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            padding: 0 30px;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.n-search {
+    background-color: rgba(25, 25, 27, 0.9);
+
+    &.has-overlay {
+        left: 0;
+        padding-bottom: 100%;
+        position: absolute;
+        right: 0;
+        top: auto;
+        z-index: 3;
+
+        &.is-stuck {
+            bottom: 0;
+            padding-bottom: 0;
+            position: fixed;
+            top: 60px;
+        }
+    }
+}

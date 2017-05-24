@@ -1,0 +1,121 @@
+.has-open-menu {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.n-main {
+    background-color: $white;
+    z-index: 10;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.n-main__wrapper {}
+
+.n-main__nav {
+    height: 60px;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+}
+
+.n-main__nav-logo {
+    height: 60px;
+    overflow: hidden;
+    padding-left: 20px;
+    position: relative;
+    width: 83px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: 30px;
+    }
+
+    a {
+        bottom: 0;
+        height: 60px;
+        line-height: 60px;
+        position: absolute;
+        transition: bottom 200ms ease-in-out;
+        vertical-align: middle;
+    }
+
+    svg, img {
+        fill: $black;
+        height: 60px;
+        width: 100%;
+    }
+
+    @include screen(1440px, 1500px) {
+        @for $i from 0 through 60 {
+            @media (min-width: 1440px + $i) and (max-width: 1440px + $i + 0.5) {
+                padding-left: #{(30 - $i/2)}px;
+            }
+        }
+    }
+
+    @include min-screen(1500px) {
+        padding-left: 0;
+    }
+}
+
+.n-main__nav-logo--takeover {
+    svg, img {}
+}
+
+.n-main__nav-logo--hidden {
+    a {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            bottom: -60px;
+        }
+    }
+}
+
+.n-main__list-item {
+    vertical-align: top;
+    position: relative;
+
+    & + &:before {
+        background-color: $white-three;
+        content: "";
+        display: block;
+        height: 20px;
+        margin-top: -10px;
+        position: absolute;
+        top: 50%;
+        width: 1px;
+    }
+}
+
+.n-main__nav-link {
+    @include font('STARLING', 15px, 'NORMAL', 15px);
+
+    box-sizing: border-box;
+    color: $black;
+    display: inline-block;
+    height: 60px;
+    margin: 0 20px;
+
+    span {
+        display: inline-block;
+        height: 60px;
+        line-height: 60px;
+    }
+
+    &:hover {
+        color: $COLOUR_MAIN_HIGHLIGHT;
+    }
+}
+
+.n-main__sticker {
+    z-index: 3;
+}
+
+.n-main__sticker-child {
+    background-color: $white;
+
+    &.is-stuck {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    }
+}
