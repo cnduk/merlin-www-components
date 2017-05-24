@@ -38,7 +38,7 @@
     width: 83px;
 
     a {
-        @include transition(bottom, 200ms, ease-in-out);
+        @include transition(bottom 200ms ease-in-out);
         bottom: 0;
         height: 60px;
         line-height: 60px;
@@ -63,19 +63,20 @@
     @include min-screen(1500px) {
         padding-left: 0;
     }
+
+    &.is-hidden {
+        a {
+            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+                bottom: -60px;
+            }
+        }
+    }
+
 }
 
 .n-main__nav-logo--takeover {
     svg, img {
 
-    }
-}
-
-.n-main__nav-logo--hidden {
-    a {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            bottom: -60px;
-        }
     }
 }
 

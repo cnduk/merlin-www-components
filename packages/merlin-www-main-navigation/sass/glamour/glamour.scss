@@ -104,14 +104,15 @@
         display: inline-block;
         vertical-align: middle;
     }
-}
 
-.n-main__nav-logo--hidden {
-    a {
-        @include min-screen($MAIN_NAVIGATION_MOBILE_BREAKPOINT) {
-            transform: translateY($MAIN_NAVIGATION_HEIGHT);
+    &.is-hidden {
+        a {
+            @include min-screen($MAIN_NAVIGATION_MOBILE_BREAKPOINT) {
+                transform: translateY($MAIN_NAVIGATION_HEIGHT);
+            }
         }
     }
+
 }
 
 .n-main__nav-hamburger {

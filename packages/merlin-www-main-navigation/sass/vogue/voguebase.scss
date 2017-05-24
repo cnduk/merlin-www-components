@@ -104,7 +104,7 @@ a.n-main__cover__btn {
         height: $MAIN_NAVIGATION_HEIGHT;
         line-height: $MAIN_NAVIGATION_HEIGHT;
         position: absolute;
-        @include transition(bottom, 200ms, ease-in-out);
+        @include transition(bottom 200ms ease-in-out);
         vertical-align: middle;
     }
 
@@ -124,17 +124,19 @@ a.n-main__cover__btn {
     @include min-screen(1480px) {
         padding-left: 0px;
     }
+
+    &.is-hidden {
+        a {
+            @include min-screen($MAIN_NAVIGATION_MOBILE_BREAKPOINT) {
+                bottom: -($MAIN_NAVIGATION_HEIGHT);
+            }
+        }
+    }
+
 }
 .n-main__nav-logo--takeover {
     svg, img {
         height: 60px;
-    }
-}
-.n-main__nav-logo--hidden {
-    a {
-        @include min-screen($MAIN_NAVIGATION_MOBILE_BREAKPOINT) {
-            bottom: -($MAIN_NAVIGATION_HEIGHT);
-        }
     }
 }
 
