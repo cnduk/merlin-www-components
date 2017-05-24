@@ -395,9 +395,10 @@
 
     .c-card-list__item {
         display: flex;
+        flex: none;
         margin-right: $MARGIN_MEDIUM;
-        width: 280px;
         white-space: normal;
+        width: 280px;
 
         &:last-child {
             width: 280px;
