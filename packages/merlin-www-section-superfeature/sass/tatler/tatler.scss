@@ -2,3 +2,92 @@
 @import '@cnbritain/merlin-www-image:tatler';
 
 @import '../wireframe/wireframe';
+
+.c-superfeature {
+    background: $wild-sand;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+    margin-top: $MOBILE_SLICE_MARGIN;
+    max-width: none;
+    padding: 30px 0;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $TABLET_SLICE_MARGIN;
+        margin-bottom: $TABLET_SLICE_MARGIN;
+        padding: 60px 0;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $DESKTOP_SLICE_MARGIN;
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+    }
+}
+
+.c-superfeature__link,
+.c-superfeature__image {
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    margin: 0 auto;
+}
+
+.c-superfeature__content {
+    background: $white;
+    margin: 0 20px;
+    max-width: $MAXIMUM_PAGE_WIDTH - 120px;
+    padding: 28px 20px;
+    text-align: center;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin: 0 60px;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 0 60px;
+        padding: 60px 170px;
+        border: 10px solid white;
+        border-width: 0 20px 20px 20px;
+        box-shadow: inset 0 0 0 1px #ccc;
+        position: relative;
+
+        &:after {
+            content: '';
+            display: block;
+            background: $white;
+            top: 0;
+            height: 1px;
+            position: absolute;
+            left: 1px;
+            right: 1px;
+        }
+    }
+
+    @include min-screen($MAXIMUM_PAGE_WIDTH) {
+        margin: 0 auto;
+    }
+}
+
+
+.c-superfeature__teaser {
+    display: none;
+}
+
+.c-superfeature__title {
+    margin: 0 0 15px;
+    position: relative;
+    padding: 0 0 15px;
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 1px;
+        background: $COLOUR_MAIN_HIGHLIGHT;
+        bottom: 0;
+        left: 50%;
+        margin-left: -10px;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 0 0 25px;
+        padding: 0 0 25px;
+    }
+}
