@@ -88,7 +88,9 @@ Article.prototype = inherit(EventEmitter.prototype, {
         // Check if the article contains a gallery
         var gallery = this.el.querySelector(CLS_ARTICLE_GALLERY);
         if(this.gallery === null && gallery){
-            this.gallery = new Gallery(gallery);
+            this.gallery = new Gallery(gallery, {
+                parentArticle: this
+            });
             // Listen to when the article focuses or blurs so we can add and remove
             // the scroll listener as and when needed
             this.on('focus', function(){
@@ -103,6 +105,10 @@ Article.prototype = inherit(EventEmitter.prototype, {
                 this.gallery.updateImageScroll();
                 this.gallery.updateNavScroll();
             }.bind(this));
+        } else {
+            if(this.gallery !== null){
+                this.gallery.parentArticle = this;
+            }
         }
 
         // If the gallery has come in from infinite scroll, it will be wrapped up

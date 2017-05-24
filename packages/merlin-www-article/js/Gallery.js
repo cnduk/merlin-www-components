@@ -52,6 +52,7 @@ var CLS_IS_HIDDEN = 'is-hidden';
  */
 function Gallery(el, options) {
     EventEmitter.call(this, {'wildcard': true});
+    var _options = options || {};
 
     /**
      * Index of the current image that has focus
@@ -61,10 +62,12 @@ function Gallery(el, options) {
     this.focusedImageIndex = -1;
 
     this._hooks = {
-        "imageScroll": null,
+        "imageElementscroll": null,
         "navScroll": null,
         "thumbnailClick": null
     };
+
+    this.parentArticle = _options.parentArticle || null
 
     /**
      * The bounds of the gallery container
@@ -120,15 +123,6 @@ function Gallery(el, options) {
      */
     this.imageNavigation = null;
     this._imageNavigationState = 'default';
-
-    /**
-     * The gallery section images
-     * @alias section
-     * @public
-     * @memberof! Gallery.prototype
-     * @type {HTMLElement}
-     */
-    this.section = this.el.querySelector('.a-gallery__section');
 
     this.layoutView = 'list';
 
