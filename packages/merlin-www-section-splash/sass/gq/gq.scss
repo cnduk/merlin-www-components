@@ -4,3 +4,270 @@
 @import "@cnbritain/merlin-www-card:gq";
 
 @import "../wireframe/wireframe";
+
+.c-splash-section {
+	margin-bottom: $MOBILE_SLICE_MARGIN;
+	margin-top: $MOBILE_SLICE_MARGIN;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	    margin-bottom: $TABLET_SLICE_MARGIN;
+	    margin-top: $TABLET_SLICE_MARGIN;
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	    margin-bottom: $DESKTOP_SLICE_MARGIN;
+	    margin-top: $DESKTOP_SLICE_MARGIN;
+	}
+}
+
+.c-splash-section__wrapper {
+	background-color: $seashell;
+	margin: 0 auto;
+	max-width: $MAXIMUM_PAGE_WIDTH;
+	position: relative;
+	width: 100%;
+}
+
+.c-splash-hero {
+	display: block;
+	position: relative;
+	width: 100%;
+    background-color: $seashell;
+
+	@include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+        background-color: $black;
+		width: 64%;
+	}
+}
+
+.c-splash-hero__byline {
+	@include font("GOTHAM", 9px, null, 16px, 60);
+	margin-bottom: 6px;
+	margin-top: 14px;
+	text-transform: uppercase;
+}
+
+.c-splash-hero__byline-prefix {
+	@include font-weight(400);
+}
+
+.c-splash-hero__byline-name {
+	@include font-weight(700);
+}
+
+.c-splash-hero__content {
+	background: $white;
+	border-bottom: 1px solid $bon-jour;
+	margin: -69px 20px 0 20px;
+	padding: 28px 20px;
+	position: relative;
+	text-align: center;
+
+	&:after {
+	    @include triangle(16px, 12px, 'up', $white);
+	    @include vendor-prefix(transform, translateX(-50%));
+	    content: '';
+	    left: 50%;
+	    position: absolute;
+	    top: -16px;
+	}
+
+	@include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+	    bottom: 60px;
+	    box-sizing: border-box;
+	    margin-left: 60px;
+	    margin-right: 60px;
+	    padding: 36px 24px;
+
+	    &:after {
+	        @include triangle(18px, 14px, 'up', $white);
+	        content: '';
+	        top: -18px;
+	    }
+	}
+}
+
+.c-splash-hero__image {
+	padding-top: 100%;
+
+	@include min-screen($CARD_SWITCHER_WIDTH) {
+	    padding-top: 56.25%;
+	}
+
+	img {
+	    bottom: 0;
+	    height: 100%;
+	    left: 0;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    width: 100%;
+	}
+}
+.c-splash-hero__link {}
+.c-splash-hero__link--article {}
+
+.c-splash-hero__meta {
+    @include font("GOTHAM", 9px, 500, 14px);
+    color: $oslo-gray;
+    margin-top: 6px;
+}
+
+li.c-splash-hero__meta-item {
+    padding-right: 0;
+    & + li.c-splash-hero__meta-item {
+        border-left: none;
+        padding-left: 0;
+        &:before {
+            background-color: $oslo-gray;
+            border-radius: 50%;
+            content: "";
+            display: inline-block;
+            height: 2px;
+            margin: 1px 4px;
+            width: 2px;
+        }
+    }
+}
+
+.c-splash-hero__meta-item--date {}
+.c-splash-hero__meta-item--tag {}
+
+.c-splash-hero__tag {
+	@include font("GOTHAM", 11px, 700, 14px, -4);
+	color: $limed-oak;
+	margin-bottom: 8px;
+	margin-top: 0;
+	text-transform: capitalize;
+	@include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+	    @include font-size(12px);
+	    @include line-height(16px);
+	    margin-bottom: 12px;
+	}
+}
+
+.c-splash-hero__title {
+	color: $woodsmoke;
+	@include font("ITC_FENICE", 24px, 700, 28px, -4);
+	margin-bottom: 14px;
+	margin-top: 0px;
+	@include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+	    @include font-size(32px);
+	    @include line-height(36px);
+	    margin-bottom: 8px;
+	    margin-top: 0px;
+	}
+}
+
+.c-splash-list {
+	box-sizing: border-box;
+	padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+
+	@include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+		height: 100%;
+		padding: 32px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 36%;
+	}
+
+	// TODO - Work out where to put these styles,
+	// maybe new component instead of card-list
+	.c-card-list {
+
+	}
+
+	.c-card-list__item {
+		display: inline-block;
+	    width: 100%;
+
+		@include one-column-size() {
+	        margin-top: 20px;
+
+			& + .c-card-list__item {
+				.c-card {
+				    border-top: 1px solid $bon-jour;
+				    padding-top: 20px;
+				}
+			}
+
+	        @include first(1) {
+	            margin-top: 0;
+	        }
+    	}
+
+    	@include screen($CARD_LIST_2_COLUMN_BREAKPOINT, $CARD_LIST_4_COLUMN_BREAKPOINT) {
+		    width: 50%;
+
+		    &:nth-child(odd) {
+		    	.c-card {
+			    	padding-right: 10px;
+		    	}
+		    }
+
+		    &:nth-child(even) {
+		    	.c-card {
+			    	padding-left: 10px;
+		    	}
+		    }
+
+		    &:nth-child(n+3) {
+        		margin-top: 20px;
+
+		    	.c-card {
+		    	    border-top: 1px solid $bon-jour;
+		    	    padding-top: 20px;
+		    	}
+		    }
+    	}
+
+    	@include four-column-size() {
+	        margin-top: 20px;
+
+			& + .c-card-list__item {
+				.c-card {
+				    border-top: 1px solid $bon-jour;
+				    padding-top: 20px;
+				}
+			}
+
+	        @include first(1) {
+	            margin-top: 0;
+	        }
+    	}
+	}
+
+
+	// TODO - Move to new card template
+	.c-card__obj__header {
+		width: 25%;
+		height: auto;
+		vertical-align: middle;
+	}
+
+	.c-card__image {
+		border-radius: 50%;
+	    padding-top: 100%;
+	    overflow: hidden;
+	}
+
+    .c-card__image__icon {
+    	display: none;
+    }
+
+	.c-card__obj__body {
+	    vertical-align: middle;
+		width: auto;
+	}
+
+	.c-card__byline {
+		display: none;
+	}
+
+	.c-card__meta {
+		display: none;
+	}
+}
+
+.c-splash-list__wrapper {}
