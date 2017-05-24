@@ -1,5 +1,13 @@
 @import '../wireframe/_defaults';
 
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
     margin: 0;
     text-size-adjust: none;
