@@ -270,7 +270,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
 
     "bindImageScrollListener": function(){
         if(this._hooks.imageElementscroll !== null) return;
-        this._hooks.imageElementscroll = throttle(this.updateImageScroll, 300, this);
+        this._hooks.imageElementscroll = throttle(this.updateImageScroll, 100, this);
         addEvent(window, 'scroll', this._hooks.imageElementscroll);
     },
 
