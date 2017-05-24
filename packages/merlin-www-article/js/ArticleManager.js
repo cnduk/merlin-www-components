@@ -126,6 +126,7 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         bubbleEvent(article, this, 'imagefocus');
         bubbleEvent(article, this, 'imageblur');
         bubbleEvent(article, this, 'viewchange');
+        bubbleEvent(article, this, 'expand');
     },
 
     "add": function add(el, _options){
