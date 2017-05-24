@@ -196,10 +196,10 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
     },
 
     "resize": function resize(_start, _length){
+        if(arguments.length === 0) return;
+
         this._pageHeight = document.body.scrollHeight - window.innerHeight;
         this._windowHeight = window.innerHeight/2;
-
-        if(arguments.length === 0) return;
 
         var start = _start < 0 ? 0 : parseInt(_start);
         var length = (
