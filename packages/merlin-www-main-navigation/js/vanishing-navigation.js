@@ -1,103 +1,109 @@
 'use strict';
 
+import EventEmitter from 'eventemitter2';
 import {
     addClass,
     addEvent,
     getWindowScrollTop,
+    inherit,
     removeClass,
     removeEvent,
     throttle
 } from '@cnbritain/merlin-www-js-utils/js/functions';
+
+import * as events from './events';
+
 
 var CLS_VANISH = 'n-vanishing-nav';
 var CLS_VANISH_HIDDEN = 'is-hidden';
 var MIN_HIDDEN_Y = 400;
 var THROTTLE_MS = 300;
 
-function VanishingNavigation(mainNavigation){
+function VanishingNavigation(el, settings){
+    EventEmitter.call(this, {'wildcard': true});
+
+    this._isEnabled = false;
+    this._isPaused = false;
+    this._isVisible = true;
+    this._hooks = {
+        "scroll": null
+    };
     this._lastScrollY = 0;
     this._offsetY = 0;
-    this._scrollHook = null;
-    this.navigation = mainNavigation;
-    this.states = {
-        'enabled': false,
-        'paused': false,
-        'visible': true
-    };
+
+    this.el = el;
 }
 
-VanishingNavigation.prototype = {
+VanishingNavigation.prototype = inherit(EventEmitter.prototype, {
 
     'constructor': VanishingNavigation,
 
-    'destroy': function(){
-        this.disable();
-        this.navigation = null;
-        this.states = null;
+    hide: function hide(){
+        if(!this._isVisible) return;
+        this._isVisible = false;
+        addClass(this.el, CLS_VANISH_HIDDEN);
+        this.emit('visibilitychange', events.visibilitychange(this, 'hidden'));
+    },
+    show: function show(){
+        if(this._isVisible) return;
+        this._isVisible = true;
+        removeClass(this.el, CLS_VANISH_HIDDEN);
+        this.emit('visibilitychange', events.visibilitychange(this, 'visible'));
     },
 
-    'disable': function(){
-        if(!this.states.enabled) return;
-        this.states.enabled = false;
+    enable: function enable(){
+        if(this.isEnabled) return;
+        this.isEnabled = true;
 
-        removeClass(this.navigation.el, CLS_VANISH);
-        removeEvent(window, 'scroll', this._scrollHook);
-        this._scrollHook = null;
+        addClass(this.el, CLS_VANISH);
+        this._hooks.scroll = throttle(this.update, THROTTLE_MS, this);
+        addEvent(window, 'scroll', this._hooks.scroll);
+        this.emit('enable', events.enable(this));
     },
+    disable: function disable(){
+        if(!this._isEnabled) return;
+        this._isEnabled = false;
 
-    'enable': function(){
-        if(this.states.enabled) return;
-        this.states.enabled = true;
-
-        addClass(this.navigation.el, CLS_VANISH);
-        this._scrollHook = throttle(this.update, THROTTLE_MS, this);
-        addEvent(window, 'scroll', this._scrollHook);
+        removeClass(this.el, CLS_VANISH);
+        removeEvent(window, 'scroll', this._hooks.scroll);
+        this._hooks.scroll = null;
+        this.emit('disable', events.disable(this));
     },
-
-    'hide': function(){
-        if(!this.states.visible) return;
-        this.states.visible = false;
-        addClass(this.navigation.el, CLS_VANISH_HIDDEN);
-    },
-
-    'pause': function(){
-        this.states.paused = true;
-    },
-
-    'show': function(){
-        if(this.states.visible) return;
-        this.states.visible = true;
-        removeClass(this.navigation.el, CLS_VANISH_HIDDEN);
-    },
-
-    'unpause': function(){
-        this.states.paused = false;
-    },
-
-    'update': function(){
-        if(this.states.paused) return;
+    update: function update(){
+        if(this._isPaused) return;
 
         var scrollY = getWindowScrollTop();
         var scrollVelocity = scrollY - this._lastScrollY;
         this._lastScrollY = scrollY;
 
+        this.emit('update', events.update(this, scrollY, scrollVelocity));
+
         // Check if we are in the min Y
-        if( scrollY - this._offsetY <= MIN_HIDDEN_Y ){
-            if( !this.states.visible ) this.show();
+        if(scrollY - this._offsetY <= MIN_HIDDEN_Y){
+            if(!this._isVisible) this.show();
             return;
         }
 
         // Check if we're scrolling up and visible
-        if( !this.states.visible && scrollVelocity < 0 ){
+        if(!this._isVisible && scrollVelocity < 0){
             return this.show();
         }
 
         // Check if we are greater than our min Y
-        if( this.states.visible && scrollVelocity > 0 ){
+        if(this._isVisible && scrollVelocity > 0){
             return this.hide();
         }
+    },
+
+    pause: function pause(){
+        this._isPaused = true;
+        this.emit('pause', events.pause(this));
+    },
+    unpause: function unpause(){
+        this._isPaused = false;
+        this.emit('unpause', events.unpause(this));
     }
 
-};
+});
 
 export default VanishingNavigation;

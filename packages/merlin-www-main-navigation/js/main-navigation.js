@@ -16,14 +16,34 @@ import {
     isAndroid,
     isIOS
 } from '@cnbritain/merlin-www-js-utils/js/detect';
-
-import VanishingNavigation from './vanishing-navigation';
-
 import img from '@cnbritain/merlin-www-image';
 
+import VanishingNavigation from './vanishing-navigation';
+import GalleryNavigation from './gallery-navigation';
+
+
 var RESIZE_DEBOUNCE_MS = 200;
+var CLS_GALLERY_NAV = '.n-gallery-nav';
+var CLS_HAMBURGER = '.n-main__nav-hamburger';
+var CLS_HAMBURGER_MENU = '.n-menu';
+var CLS_SEARCH = '.n-main__nav-search';
+var CLS_SEARCH_OVERLAY = '.n-search';
+var CLS_SIGNPOST = '.n-main__nav-signpost';
+var CLS_LOGO = '.n-main__nav-logo';
+var CLS_STICKER = '.n-main__sticker';
+var CLS_STICKER_CHILD = '.n-main__sticker-child';
+var CLS_HIDDEN = 'global__hidden';
+var CLS_STATE_OVERLAY = 'has-overlay';
+var CLS_STATE_VISIBLE = 'is-visible';
+var CLS_STATE_HIDDEN = 'is-hidden';
+var CLS_STATE_STUCK = 'is-stuck';
+var CLS_STATE_OPEN_MENU = 'has-open-menu';
+var ID_SEARCH_CHECKBOX = 'chkNavSearch';
+var ID_HAMBURGER_CHECKBOX = 'chkNavHamburger';
+
 var windowHeightHalf = window.innerHeight/2;
 var menuScrollTop = 0;
+
 
 /**
  * Creates the main navigation
@@ -31,13 +51,6 @@ var menuScrollTop = 0;
  * @param {HTMLElement} el The main navigation element
  */
 function MainNavigation(el){
-
-    /**
-     * The current gallery article that has focus
-     * @private
-     * @type {Gallery}
-     */
-    this._galleryArticle = null;
 
     /**
      * The navigation element
@@ -49,29 +62,6 @@ function MainNavigation(el){
     this.el = el;
 
     /**
-     * Cache of dom elements that are reused
-     * @alias dom
-     * @public
-     * @memberof! MainNavigation.prototype
-     * @type {Object}
-     */
-    this.dom = {
-        'galleryClose': getGalleryClose(el),
-        'galleryCounter': getGalleryCounter(el),
-        'galleryTotal': getGalleryTotal(el),
-        'hamburger': getHamburger(el),
-        'main': el,
-        'menu': getHamburgerMenu(el),
-        'search': getSearch(el),
-        // This is document as the searchbox is not within .n-main
-        'searchBox': getSearchBox(document),
-        'signpost': getSignpost(el),
-        'smallLogo': getSmallLogo(el),
-        'sticker': getSticker(el),
-        'stickerChild': getStickerChild(el)
-    };
-
-    /**
      * Do we have a BIIIIG header logo?
      * @public
      * @alias hasHeaderLogo
@@ -81,37 +71,39 @@ function MainNavigation(el){
     this.hasHeaderLogo = hasHeaderLogo(el);
 
     /**
-     * Cache of offsets for elements
-     * @public
-     * @alias offsets
-     * @memberof! MainNavigation.prototype
-     * @type {Object}
-     */
-    this.offsets = {
-        'sticker': getElementOffset(this.dom.sticker)
-    };
-
-    /**
-     * List of states about the navigation
-     * @public
-     * @alias states
-     * @memberof! MainNavigation.prototype
-     * @type {Object}
-     */
-    this.states = {
-        'gallery': false,
-        'menu': false,
-        'stuck': false
-    };
-
-    /**
      * Instance of the vanishing header bits
      * @public
-     * @alias vanish
+     * @alias vanishingNavigation
      * @memberof! MainNavigation.prototype
      * @type {VanishingNavigation}
      */
-    this.vanish = null;
+    this.vanishingNavigation = null;
+
+    this.galleryNavigation = null;
+
+    this._hamburger = this.el.querySelector(CLS_HAMBURGER);
+    this._hamburgerMenu = this.el.querySelector(CLS_HAMBURGER_MENU);
+    this._search = this.el.querySelector(CLS_SEARCH);
+    // This is document as the searchbox is not within .n-main
+    this._searchOverlay = document.querySelector(CLS_SEARCH_OVERLAY);
+    this._signpost = this.el.querySelector(CLS_SIGNPOST);
+    this._logo = this.el.querySelector(CLS_LOGO);
+    this._sticker = this.el.querySelector(CLS_STICKER);
+    this._stickerChild = this.el.querySelector(CLS_STICKER_CHILD);
+
+    /**
+     * Cache of offsets for elements
+     * @private
+     * @memberof! MainNavigation.prototype
+     * @type {Object}
+     */
+    this._offsets = {
+        'sticker': getElementOffset(this._sticker)
+    };
+
+    this._isStuck = false;
+    this._isGallery = false;
+    this._isMenuOpen = false;
 
     this._init();
 }
@@ -123,10 +115,13 @@ MainNavigation.prototype = {
      * @private
      */
     '_init': function(){
+
         // This listener is used to keep track of when the navigation is sticky
         addEvent(window, 'scroll', this.update.bind(this));
-        addEvent(document.getElementById('chkNavSearch'), 'change',
-            onSearchBoxChange.bind(this));
+        addEvent(
+            document.getElementById(ID_SEARCH_CHECKBOX), 'change',
+            this._onSearchBoxChange.bind(this));
+
         // Listener for resizing only when a logoheader is there as it hides
         // on mobile view
         if(this.hasHeaderLogo){
@@ -135,178 +130,49 @@ MainNavigation.prototype = {
                 this.update();
             }, RESIZE_DEBOUNCE_MS, this));
         }
+
         // Hamburger menu display
-        addEvent(document.getElementById('chkNavHamburger'), 'change',
-            onHamburgerChange.bind(this));
+        addEvent(document.getElementById(ID_HAMBURGER_CHECKBOX), 'change',
+            this._onHamburgerChange.bind(this));
+
         // Fix for touch devices
         // Touch devices wait for the label to focus before firing a click and
         // updating the checkbox. This way we skip the focus and click and
         // jump straight to the touch and fire our own change event
         if(hasTouch){
-            addEvent(this.dom.main.querySelector('.n-main__nav-hamburger'),
+            addEvent(this.el.querySelector(CLS_HAMBURGER),
                 'touchstart', function(e){
                 e.preventDefault();
                 e.stopPropagation();
-                var chk = document.getElementById('chkNavHamburger');
+                var chk = document.getElementById(ID_HAMBURGER_CHECKBOX);
                 chk.checked = !chk.checked;
                 fireEvent(chk, 'change', false, true);
             });
         }
 
-        // Check if we have rendered a gallery navigation
-        var elGalleryToggle = this.el.querySelector('.n-gallery-toggle');
-        if(elGalleryToggle){
-            addEvent(elGalleryToggle, 'click', function() {
-                //Emits event to tell counter to toggle
-                this._galleryArticle.gallery.toggleView();
-
-                //Recalculates gallery bounds
-                //Values used in uppdate to show/hide gallery navigation
-                this._galleryArticle.gallery.resize();
-            }.bind(this));
-        }
-
         // If the device is ios or android, make the nav have vanish abilities
         // Yes, we're sniffing useragent to make this judgement
         if(isAndroid || isIOS){
-            this.vanish = new VanishingNavigation(this);
-            this.vanish.enable();
+            this.vanishingNavigation = new VanishingNavigation(this.el);
+            this.vanishingNavigation.enable();
+        }
+
+        if(this.el.querySelector(CLS_GALLERY_NAV)){
+            this.galleryNavigation = new GalleryNavigation(
+                this.el.querySelector(CLS_GALLERY_NAV));
         }
 
         img.init();
+
     },
 
-    'constructor': MainNavigation,
 
-    /**
-     * Hides the gallery navigation
-     * @public
-     * @memberof! MainNavigation.prototype
-     */
-    'hideGalleryNavigation': function(){
-        if(!this.states.gallery) return;
-        this.states.gallery = false;
-        removeClass(this.el.querySelector('.n-gallery-nav'), 'is-visible');
-        unpauseVanishingHeader(this);
-    },
 
-    /**
-     * Hides the gallery navigation counter
-     * @public
-     * @memberof! MainNavigation.prototype
-     */
-    'hideGalleryNavigationCounter': function(){
-        addClass(this.el.querySelector('.n-gallery-counter'), 'global__hidden');
-    },
 
-    /**
-     * Hides the mobile menu
-     * @public
-     * @memberof! MainNavigation.prototype
-     */
-    'hideHamburgerMenu': function(){
-        if(!this.states.menu) return;
-        this.states.menu = false;
-        removeClass(this.dom.menu, 'is-visible');
-        removeClass(document.documentElement, 'has-open-menu');
-        removeClass(document.body, 'has-open-menu');
-        window.scrollTo(0, menuScrollTop);
 
-        removeClass(this.dom.hamburger.querySelector('.n-main__nav-hamburger__icon'), 'global__hidden');
-        addClass(this.dom.hamburger.querySelector('.n-main__nav-hamburger__close-icon'), 'global__hidden');
-    },
+    constructor: MainNavigation,
 
-    /**
-     * Hides the grid icon
-     * @public
-     * @memberof! MainNavigation.prototype
-     */
-    'hideGridIcon': function() {
-        addClass(this.el.querySelector('.n-gallery-toggle--grid'), 'global__hidden');
-    },
 
-    /**
-     * Hides the list icon
-     * @public
-     * @memberof! MainNavigation.prototype
-     */
-    'hideListIcon': function() {
-        addClass(this.el.querySelector('.n-gallery-toggle--list'), 'global__hidden');
-    },
-
-    /**
-     * Hides the search overlay
-     * @public
-     * @memberof! MainNavigation.prototype
-     */
-    'hideSearchBox': function(){
-        if( !hasClass( this.dom.searchBox, 'has-overlay') ) return;
-        removeClass(this.dom.searchBox, 'has-overlay');
-
-        removeClass(this.dom.search.querySelector('.n-main__nav-search__icon'), 'global__hidden');
-        addClass(this.dom.search.querySelector('.n-main__nav-search__close-icon'), 'global__hidden');
-    },
-
-    /**
-     * Hides the small brand logo
-     * @public
-     * @memberof! MainNavigation.prototype
-     */
-    'hideSmallLogo': function(){
-        if( hasClass( this.dom.smallLogo, 'n-main__nav-logo--hidden' ) ) return;
-        addClass(this.dom.smallLogo, 'n-main__nav-logo--hidden');
-    },
-
-    'resize': function(){
-        this.offsets.sticker = getElementOffset(this.dom.sticker);
-        windowHeightHalf = window.innerHeight/2;
-    },
-
-    /**
-     * Sets the current focused gallery article
-     * @param  {Gallery} galleryArticle
-     * @public
-     * @memberof! MainNavigation.prototype
-     */
-    'setGalleryArticle': function(galleryArticle){
-        this._galleryArticle = galleryArticle;
-        if(galleryArticle === null) return;
-        this.dom.galleryTotal.innerHTML = galleryArticle.gallery.images.length;
-
-        if (!this._galleryArticle.listenerTree.showList) {
-            this._galleryArticle.on('showList', function () {
-                this.showGalleryNavigationCounter();
-                this.hideListIcon();
-                this.showGridIcon();
-            }.bind(this));
-
-            this._galleryArticle.on('hideList', function () {
-                this.hideGalleryNavigationCounter();
-                this.showListIcon();
-                this.hideGridIcon();
-            }.bind(this));
-        }
-    },
-
-    /**
-     * Sets the url of the gallery close button. This defaults to
-     * history.back() when no url it set. It should redirect back to the
-     * previous article if coming from an article.
-     * @param  {String} url
-     */
-    'setGalleryClose': function(url){
-        this.dom.galleryClose.setAttribute('href', url);
-    },
-
-    /**
-     * Sets the gallery counter to the value
-     * @param  {Number} value
-     * @public
-     * @memberof! MainNavigation.prototype
-     */
-    'setGalleryCounter': function(value){
-        this.dom.galleryCounter.innerHTML = Number(value);
-    },
 
     /**
      * Sets the signpost to the tag
@@ -314,8 +180,28 @@ MainNavigation.prototype = {
      * @public
      * @memberof! MainNavigation.prototype
      */
-    'setSignpost': function(tag) {
-        this.dom.signpost.innerHTML = tag;
+    setSignpost: function setSignpost(tag) {
+        this._signpost.innerHTML = tag;
+    },
+
+    resize: function resize(){
+        this._offsets.sticker = getElementOffset(this._sticker);
+        windowHeightHalf = window.innerHeight/2;
+    },
+
+
+
+
+    /**
+     * Hides the gallery navigation
+     * @public
+     * @memberof! MainNavigation.prototype
+     */
+    hideGallery: function hideGallery(){
+        if(!this._isGallery) return;
+        this._isGallery = false;
+        removeClass(this.el.querySelector(CLS_GALLERY_NAV), CLS_STATE_VISIBLE);
+        this._unpauseVanishingHeader();
     },
 
     /**
@@ -323,105 +209,41 @@ MainNavigation.prototype = {
      * @public
      * @memberof! MainNavigation.prototype
      */
-    'showGalleryNavigation': function(){
-        if(this.states.gallery) return;
-        this.states.gallery = true;
-        var galleryNav = this.el.querySelector('.n-gallery-nav');
-        setGalleryNavigation(galleryNav, this._galleryArticle);
-        addClass(galleryNav, 'is-visible');
-        pauseVanishingHeader(this);
+    showGallery: function showGallery(){
+        if(this._isGallery) return;
+        this._isGallery = true;
+        var galleryNav = this.el.querySelector(CLS_GALLERY_NAV);
+        addClass(galleryNav, CLS_STATE_VISIBLE);
+        this._pauseVanishingHeader();
     },
 
-    /**
-     * Show the gallery navigation counter
-     * @public
-     * @memberof! MainNavigation.prototype
-     */
-    'showGalleryNavigationCounter': function(){
-        removeClass(this.el.querySelector('.n-gallery-counter'), 'global__hidden');
-    },
 
-    /**
-     * Shows the mobile menu
-     * @public
-     * @memberof! MainNavigation.prototype
-     */
-    'showHamburgerMenu': function(){
-        if(this.states.menu) return;
-        this.states.menu = true;
-        menuScrollTop = getWindowScrollTop();
-        addClass(this.dom.menu, 'is-visible');
-        addClass(document.documentElement, 'has-open-menu');
-        addClass(document.body, 'has-open-menu');
 
-        addClass(this.dom.hamburger.querySelector('.n-main__nav-hamburger__icon'), 'global__hidden');
-        removeClass(this.dom.hamburger.querySelector('.n-main__nav-hamburger__close-icon'), 'global__hidden');
-    },
 
-    /**
-     * Shows the grid icon
-     * @public
-     * @memberof! MainNavigation.prototype
-     */
-    'showGridIcon': function() {
-        removeClass(this.el.querySelector('.n-gallery-toggle--grid'), 'global__hidden');
-    },
 
-    /**
-     * Shows the list icon
-     * @public
-     * @memberof! MainNavigation.prototype
-     */
-    'showListIcon': function() {
-        removeClass(this.el.querySelector('.n-gallery-toggle--list'), 'global__hidden');
-    },
-
-    /**
-     * Shows the search overlay
-     * @param  {Boolean} focus Whether to focus the textbox
-     */
-    'showSearchBox': function(focus){
-        if( hasClass( this.dom.searchBox, 'has-overlay') ) return;
-        addClass(this.dom.searchBox, 'has-overlay');
-        if(focus){
-            this.dom.searchBox.getElementsByTagName('input')[0].focus();
-        }
-
-        addClass(this.dom.search.querySelector('.n-main__nav-search__icon'), 'global__hidden');
-        removeClass(this.dom.search.querySelector('.n-main__nav-search__close-icon'), 'global__hidden');
-    },
-
-    /**
-     * Shows the small brand logo
-     * @public
-     */
-    'showSmallLogo': function(){
-        if( !hasClass( this.dom.smallLogo, 'n-main__nav-logo--hidden' ) ) return;
-        removeClass(this.dom.smallLogo, 'n-main__nav-logo--hidden');
-    },
 
     /**
      * Sticks the navigation to the top of the window
      * @public
      */
-    'stick': function(){
-        if( this.states.stuck ) return;
-        this.states.stuck = true;
-        addClass(this.dom.stickerChild, 'is-stuck');
-        addClass(this.dom.searchBox, 'is-stuck');
-        this.dom.sticker.style.height = this.dom.stickerChild.offsetHeight + 'px';
+    stick: function stick(){
+        if(this._isStuck) return;
+        this._isStuck = true;
+        addClass(this._stickerChild, CLS_STATE_STUCK);
+        addClass(this._searchOverlay, CLS_STATE_STUCK);
+        this._sticker.style.height = this._stickerChild.offsetHeight + 'px';
     },
 
     /**
      * Unsticks the navigation from the top of the window
      * @public
      */
-    'unstick': function(){
-        if( !this.states.stuck ) return;
-        this.states.stuck = false;
-        removeClass(this.dom.stickerChild, 'is-stuck');
-        removeClass(this.dom.searchBox, 'is-stuck');
-        this.dom.sticker.style.height = '';
+    unstick: function unstick(){
+        if(!this._isStuck) return;
+        this._isStuck = false;
+        removeClass(this._stickerChild, CLS_STATE_STUCK);
+        removeClass(this._searchOverlay, CLS_STATE_STUCK);
+        this._sticker.style.height = '';
     },
 
     /**
@@ -429,134 +251,154 @@ MainNavigation.prototype = {
      * @public
      * @memberof! MainNavigation.prototype
      */
-    'update': function(){
+    update: function update(){
         var scrollY = getWindowScrollTop();
 
         // Stick and unstick the header
-        if( !this.states.stuck && scrollY > this.offsets.sticker.top ){
+        if(!this._isStuck && scrollY > this._offsets.sticker.top){
             this.stick();
-            if(this.hasHeaderLogo) this.showSmallLogo();
+            if(this.hasHeaderLogo) this._displayLogo();
 
-        } else if( this.states.stuck && scrollY < this.offsets.sticker.top ){
+        } else if(this._isStuck && scrollY < this._offsets.sticker.top){
             this.unstick();
-            if(this.hasHeaderLogo) this.hideSmallLogo();
+            if(this.hasHeaderLogo) this._hideLogo();
+        }
+    },
 
+
+
+
+
+
+
+    /**
+     * Shows the mobile menu
+     * @private
+     * @memberof! MainNavigation.prototype
+     */
+    _displayHamburgerMenu: function _displayHamburgerMenu(){
+        if(this._isMenuOpen) return;
+
+        this._isMenuOpen = true;
+
+        menuScrollTop = getWindowScrollTop();
+        addClass(this._hamburgerMenu, CLS_STATE_VISIBLE);
+        addClass(document.documentElement, CLS_STATE_OPEN_MENU);
+        addClass(document.body, CLS_STATE_OPEN_MENU);
+
+        addClass(this._hamburger.querySelector('.n-main__nav-hamburger__icon'), CLS_HIDDEN);
+        removeClass(this._hamburger.querySelector('.n-main__nav-hamburger__close-icon'), CLS_HIDDEN);
+    },
+
+    /**
+     * Hides the mobile menu
+     * @private
+     * @memberof! MainNavigation.prototype
+     */
+    _hideHamburgerMenu: function _hideHamburgerMenu(){
+        if(!this._isMenuOpen) return;
+
+        this._isMenuOpen = false;
+
+        removeClass(this._hamburgerMenu, CLS_STATE_VISIBLE);
+        removeClass(document.documentElement, CLS_STATE_OPEN_MENU);
+        removeClass(document.body, CLS_STATE_OPEN_MENU);
+        window.scrollTo(0, menuScrollTop);
+
+        removeClass(this._hamburger.querySelector('.n-main__nav-hamburger__icon'), CLS_HIDDEN);
+        addClass(this._hamburger.querySelector('.n-main__nav-hamburger__close-icon'), CLS_HIDDEN);
+    },
+
+
+
+
+
+    /**
+     * Hides the search overlay
+     * @public
+     * @memberof! MainNavigation.prototype
+     */
+    _hideSearchOverlay: function _hideSearchOverlay(){
+        if( !hasClass( this._searchOverlay, CLS_STATE_OVERLAY) ) return;
+        removeClass(this._searchOverlay, CLS_STATE_OVERLAY);
+
+        removeClass(this._search.querySelector('.n-main__nav-search__icon'), CLS_HIDDEN);
+        addClass(this._search.querySelector('.n-main__nav-search__close-icon'), CLS_HIDDEN);
+    },
+
+    /**
+     * Shows the search overlay
+     * @param  {Boolean} focus Whether to focus the textbox
+     */
+    _displaySearchOverlay: function _displaySearchOverlay(focus){
+        if( hasClass( this._searchOverlay, CLS_STATE_OVERLAY) ) return;
+        addClass(this._searchOverlay, CLS_STATE_OVERLAY);
+        if(focus){
+            this._searchOverlay.getElementsByTagName('input')[0].focus();
         }
 
-        // Check if gallery navigation needs to show or hide
-        if(this._galleryArticle === null) return;
-        if(this._galleryArticle.gallery.bounds.top > scrollY + windowHeightHalf){
-            if(this.states.gallery) this.hideGalleryNavigation();
-            return;
+        addClass(this._search.querySelector('.n-main__nav-search__icon'), CLS_HIDDEN);
+        removeClass(this._search.querySelector('.n-main__nav-search__close-icon'), CLS_HIDDEN);
+    },
+
+
+
+
+    /**
+     * Shows the small brand logo
+     * @public
+     */
+    _displayLogo: function _displayLogo(){
+        if(!hasClass(this._logo, CLS_STATE_HIDDEN)) return;
+        removeClass(this._logo, CLS_STATE_HIDDEN);
+    },
+
+    /**
+     * Hides the small brand logo
+     * @public
+     * @memberof! MainNavigation.prototype
+     */
+    _hideLogo: function _hideLogo(){
+        if(hasClass(this._logo, CLS_STATE_HIDDEN)) return;
+        addClass(this._logo, CLS_STATE_HIDDEN);
+    },
+
+
+
+
+    _onHamburgerChange: function _onHamburgerChange(e){
+        if(e.target.checked){
+            this._pauseVanishingHeader();
+            this._displayHamburgerMenu();
+        } else {
+            this._unpauseVanishingHeader();
+            this._hideHamburgerMenu();
         }
-        if(this._galleryArticle.gallery.bounds.bottom < scrollY + windowHeightHalf){
-            if(this.states.gallery) this.hideGalleryNavigation();
-            return;
+    },
+    _onSearchBoxChange: function _onSearchBoxChange(e){
+        if(e.target.checked){
+            this._pauseVanishingHeader();
+            this._displaySearchOverlay(true);
+        } else {
+            this._unpauseVanishingHeader();
+            this._hideSearchOverlay();
         }
-        if(!this.states.gallery) this.showGalleryNavigation();
+    },
+
+
+    _pauseVanishingHeader: function _pauseVanishingHeader(){
+        if(this.vanishingNavigation === null) return;
+        this.vanishingNavigation.pause();
+        this.vanishingNavigation.show();
+    },
+    _unpauseVanishingHeader: function _unpauseVanishingHeader(){
+        if(this.vanishingNavigation === null) return;
+        this.vanishingNavigation.unpause();
     }
+
 
 };
 
-/**
- * Gets the galler close button
- * @param  {HTMLElement} el
- * @return {HTMLElement}
- */
-function getGalleryClose(el){
-    return el.querySelector('.js-gallery-close');
-}
-
-/**
- * Gets the gallery counter display
- * @param  {HTMLElement} el
- * @return {HTMLElement}
- */
-function getGalleryCounter(el){
-    return el.querySelector('.n-gallery-counter__current');
-}
-
-/**
- * Gets the gallery total display
- * @param  {HTMLElement} el
- * @return {HTMLElement}
- */
-function getGalleryTotal(el){
-    return el.querySelector('.n-gallery-counter__total');
-}
-
-/**
- * Gets the hamburger
- * @param  {HTMLElement} el
- * @return {HTMLElement}
- */
-function getHamburger(el){
-    return el.querySelector('.n-main__nav-hamburger');
-}
-
-/**
- * Gets the hamburger menu element
- * @param  {HTMLElement} el
- * @return {HTMLElement}
- */
-function getHamburgerMenu(el){
-    return el.querySelector('.n-menu');
-}
-
-/**
- * Gets the search element
- * @param  {HTMLElement} el
- * @return {HTMLElement}
- */
-function getSearch(el){
-    return el.querySelector('.n-main__nav-search');
-}
-
-/**
- * Gets the searchbox element
- * @param  {HTMLElement} el
- * @return {HTMLElement}
- */
-function getSearchBox(el){
-    return el.querySelector('.n-search');
-}
-
-/**
- * Gets the signpost element
- * @param  {HTMLElement} el
- * @return {HTMLElement}
- */
-function getSignpost(el){
-    return el.querySelector('.n-main__nav-signpost');
-}
-
-/**
- * Gets the small logo in the navigation
- * @param  {HTMLElement} el
- * @return {HTMLElement}
- */
-function getSmallLogo(el){
-    return el.querySelector('.n-main__nav-logo');
-}
-
-/**
- * Gets the parent sticker element. This element is always relative in case
- * we need to recalculate position
- * @param  {HTMLElement} el
- * @return {HTMLElement}
- */
-function getSticker(el){
-    return el.querySelector('.n-main__sticker');
-}
-
-/**
- * Gets the element that will become fixed
- * @param  {HTMLElement} el
- * @return {HTMLElement}
- */
-function getStickerChild(el){
-    return el.querySelector('.n-main__sticker-child');
-}
 
 /**
  * Checks if there is a large header in the navigation
@@ -567,62 +409,6 @@ function hasHeaderLogo(el){
     return !!el.querySelector('.n-main__header');
 }
 
-/**
- * Callback for when the hamburger checkbox changes
- * @param  {Object} e Event data
- */
-function onHamburgerChange(e){
-    if(e.target.checked){
-        pauseVanishingHeader(this);
-        this.showHamburgerMenu();
-    } else {
-        unpauseVanishingHeader(this);
-        this.hideHamburgerMenu();
-    }
-}
-
-/**
- * Callback for when the search checkbox changes state
- * @param  {Object} e Event data
- */
-function onSearchBoxChange(e){
-    if(e.target.checked){
-        pauseVanishingHeader(this);
-        this.showSearchBox(true);
-    } else {
-        unpauseVanishingHeader(this);
-        this.hideSearchBox();
-    }
-}
-
-function pauseVanishingHeader(nav){
-    if(nav.vanish === null) return;
-    nav.vanish.pause();
-    nav.vanish.show();
-}
-
-function unpauseVanishingHeader(nav){
-    if(nav.vanish === null) return;
-    nav.vanish.unpause();
-}
-
-/**
- * Sets the html elements and attributes on the gallery nav
- * @param {HTMLElement} el             The main navigation
- * @param {Gallery} galleryArticle
- */
-function setGalleryNavigation(el, galleryArticle){
-    var tmpEl = null;
-    var tmpValue = null;
-    // Title
-    tmpEl = el.querySelector('.n-main__nav-title');
-    tmpValue = galleryArticle.el.querySelector('.a-header__title').innerHTML;
-    tmpEl.innerHTML = tmpValue;
-    tmpEl.setAttribute('title', tmpValue);
-    // Gallery count and total
-    tmpEl = el.querySelector('.n-gallery-counter__current');
-    tmpEl.innerHTML = '1';
-}
 
 var MAIN_NAVIGATION;
 
