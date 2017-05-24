@@ -3,7 +3,30 @@
 @import "@cnbritain/merlin-www-card-list:wireframe";
 @import "@cnbritain/merlin-www-card:wireframe";
 
-.c-splash-section {}
-.c-splash-section__wrapper {}
+.c-splash-section {
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+	padding-left: $MOBILE_SIDE_GUTTER;
+	padding-right: $MOBILE_SIDE_GUTTER;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	    padding-left: $TABLET_SIDE_GUTTER;
+	    padding-right: $TABLET_SIDE_GUTTER;
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	    padding-left: $DESKTOP_SIDE_GUTTER;
+	    padding-right: $DESKTOP_SIDE_GUTTER;
+	}
+}
+
+.c-splash-section__wrapper {
+	margin: 0 auto;
+	max-width: $MAXIMUM_PAGE_WIDTH;
+	position: relative; //Used by topics
+	width: 100%;
+}
+
 .c-splash-section__hero {}
 .c-splash-section__list {}
