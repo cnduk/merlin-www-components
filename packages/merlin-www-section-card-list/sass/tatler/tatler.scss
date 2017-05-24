@@ -6,3 +6,39 @@
 @import '@cnbritain/merlin-www-topic-strip:tatler';
 
 @import '../wireframe/wireframe';
+
+
+.c-card-section {
+    background-color: $wild-sand;
+    margin-top: $MOBILE_SLICE_MARGIN;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+    padding: 30px $MOBILE_SIDE_GUTTER;
+    max-width: none;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $TABLET_SLICE_MARGIN;
+        margin-bottom: $TABLET_SLICE_MARGIN;
+        padding: 20px $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $DESKTOP_SLICE_MARGIN;
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+        padding: 20px $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.c-card-section__title {
+    @include font('STARLING', 20px, 'BOLD', 20px);
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    margin: 40px 0 20px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font('STARLING', 27px, 'BOLD', 31px);
+
+        letter-spacing: 2px;
+    }
+}
