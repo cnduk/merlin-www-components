@@ -2,3 +2,13 @@
 @import '@cnbritain/merlin-www-image:tatler';
 
 @import '../wireframe/wireframe';
+
+.c-feature {
+    background-color: $wild-sand;
+    max-width: none;
+    padding: $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: $DESKTOP_SIDE_GUTTER;
+    }
+}
