@@ -167,4 +167,7 @@ li.c-splash-hero__meta-item {
 	}
 }
 
-.c-splash-list__wrapper {}
+.c-splash-list__wrapper {
+	height: 100%;
+	overflow: auto;
+}
