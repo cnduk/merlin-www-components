@@ -21,7 +21,7 @@
     }
 }
 
-@mixin card-hero-small() {
+@mixin card-hero-small {
     @include card-hero;
 
     .c-card__image--picture {

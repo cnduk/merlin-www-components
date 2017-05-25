@@ -2,7 +2,7 @@
     @include card-landscape-small;
 }
 
-@mixin card-switcher-large() {
+@mixin card-switcher-large {
     @include card-portrait;
 }
 
@@ -20,4 +20,17 @@
 
 .c-card--switcher-large {
     @include card-switcher-large;
+}
+
+
+// HEY WIREFRAME YUBLOCK
+// Needs .c-card for more specifity cos something is pulling in the wireframe
+.c-card--switcher {
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        .c-card__obj__header,
+        .c-card__obj__body {
+            display: flex;
+            width: 100%;
+        }
+    }
 }
