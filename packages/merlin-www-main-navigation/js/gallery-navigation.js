@@ -54,9 +54,6 @@ GalleryNavigation.prototype = inherit(EventEmitter.prototype, {
         el.innerHTML = title;
         el.setAttribute('title', title);
     },
-    setCloseUrl: function setCloseUrl(url){
-        this.el.querySelector(CLS_GALLERY_CLOSE).setAttribute('href', url);
-    },
 
     displayGridView: function displayGridView(){
         if(this._isGridView) return;
