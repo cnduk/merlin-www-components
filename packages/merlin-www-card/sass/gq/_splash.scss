@@ -1,0 +1,112 @@
+// -------------------- //
+// Splash
+// -------------------- //
+@mixin card-splash() {
+    .c-card__obj {
+        display: table;
+        width: 100%;
+    }
+
+    .c-card__obj__header,
+    .c-card__obj__body {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+@mixin card-splash-small() {
+    .c-card__obj {}
+    .c-card__obj__header {
+        padding-right: 8px;
+        width: 66px;
+    }
+
+    .c-card__images {
+        .c-card__image {
+            border-radius: 50%;
+            overflow: hidden;
+            padding-top: 100%;
+        }
+    }
+
+    .c-card__obj__body {
+        padding-left: 8px;
+        width: auto;
+    }
+
+    .c-card__tag {
+        @include font("GOTHAM", 11px, 700, 14px, -4);
+        color: $limed-oak;
+        margin-bottom: 6px;
+        margin-top: 0;
+    }
+
+    .c-card__title {
+        @include font("GOTHAM", 14px, 700, 18px, -4);
+        color: $woodsmoke;
+        margin-bottom: 12px;
+        margin-top: 6px;
+    }
+
+    .c-card__separator {
+        display: none;
+    }
+}
+
+@mixin card-splash-large($has_small:false) {
+    @if not $has_small {
+        .c-card__images {
+            .c-card__image {
+                border-radius: 50%;
+                overflow: hidden;
+                padding-top: 100%;
+            }
+        }
+
+        .c-card__obj__body {
+            padding-left: 8px;
+            width: auto;
+        }
+
+        .c-card__separator {
+            display: none;
+        }
+    }
+
+    .c-card__obj__header {
+        padding-right: 8px;
+        width: 25%;
+    }
+
+    .c-card__tag {
+        @include font("GOTHAM", 12px, 700, 16px, -4);
+        color: $limed-oak;
+        margin-bottom: 6px;
+        margin-top: 0;
+    }
+
+    .c-card__title {
+        @include font("GOTHAM", 17px, 700, 22px, -4);
+        color: $woodsmoke;
+        margin-bottom: 12px;
+        margin-top: 6px;
+    }
+}
+
+.c-card--splash {
+    @include card-splash();
+    @include card-splash-small();
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+        @include card-splash-large($has_small:true);
+    }
+}
+
+.c-card--splash-small {
+    @include card-splash();
+    @include card-splash-small();
+}
+
+.c-card--splash-large {
+    @include card-splash();
+    @include card-splash-large();
+}
