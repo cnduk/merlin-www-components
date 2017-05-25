@@ -16,6 +16,8 @@
     }
 }
 
+$C_CARD_GUTTER: 10px;
+
 // Common curated, article recommended, magazine articles, search results,
 // video genre articles, latest articles
 // Contains four cards
@@ -27,10 +29,10 @@
 .c-card-list--v-genre-articles,
 .c-card-list--c-video-articles {
     flex-direction: column;
-    margin: 0 -20px;
+    margin: 0 -$C_CARD_GUTTER;
 
     .c-card-list__item {
-        padding: 0 20px;
+        padding: 0 $C_CARD_GUTTER;
         width: 100%;
     }
 
@@ -48,7 +50,6 @@
             }
         }
     }
-
 
     @include two-column-size {
         flex-direction: row;
@@ -103,11 +104,11 @@
 // Goes one, two, three, five
 .c-card-list--c-tag {
     flex-direction: column;
-    margin: 0 -20px;
+    margin: 0 -$C_CARD_GUTTER;
     text-align: center;
 
     .c-card-list__item {
-        padding: 0 20px;
+        padding: 0 $C_CARD_GUTTER;
         text-align: left;
         width: 100%;
     }
@@ -152,10 +153,10 @@
         }
     }
 
-    @include five-column-size {
+    @include four-column-size {
         .c-card-list__item {
             margin-bottom: 0;
-            width: 20%;
+            width: 25%;
         }
     }
 }
@@ -166,11 +167,11 @@
 // Goes one, three
 .c-card-list--g-recommended {
     flex-direction: column;
-    margin: 0 -20px;
+    margin: 0 -$C_CARD_GUTTER;
 
     .c-card-list__item {
         margin-top: 20px;
-        padding: 0 20px;
+        padding: 0 $C_CARD_GUTTER;
         width: 100%;
     }
 
@@ -196,7 +197,7 @@
 
         .c-card-list__item {
             display: flex;
-            padding: 0 20px;
+            padding: 0 $C_CARD_GUTTER;
             width: 33.3%;
         }
     }
@@ -215,7 +216,7 @@
 // Goes two, four
 .c-card-list--mag-magazines {
     flex-direction: column;
-    margin: 0 -20px;
+    margin: 0 -$C_CARD_GUTTER;
 
     .c-card-list__item {
         display: flex;
@@ -223,7 +224,7 @@
         @include last(2){
             margin-bottom: 0;
         }
-        padding: 0 20px;
+        padding: 0 $C_CARD_GUTTER;
         width: 50%;
     }
 
@@ -285,10 +286,10 @@
 // Goes one, two, three
 .c-card-list--v-articles {
     flex-direction: column;
-    margin: 0 -20px;
+    margin: 0 -$C_CARD_GUTTER;
 
     .c-card-list__item {
-        padding: 0 20px;
+        padding: 0 $C_CARD_GUTTER;
         width: 100%;
     }
 
@@ -341,11 +342,11 @@
 .c-card-list--tg-header-articles {
     flex-direction: column;
 
-    margin: 0 -20px;
+    margin: 0 -$C_CARD_GUTTER;
     text-align: center;
 
     .c-card-list__item {
-        padding: 0 20px;
+        padding: 0 $C_CARD_GUTTER;
         text-align: left;
         width: 100%;
     }
@@ -415,11 +416,11 @@
 
 .c-card-list--v-related-articles {
     flex-direction: row;
-    margin: 0 -20px;
+    margin: 0 -$C_CARD_GUTTER;
 
     .c-card-list__item {
         opacity: 1;
-        padding: 0 20px;
+        padding: 0 $C_CARD_GUTTER;
         transition: opacity 0.3s ease-out;
         width: 100%;
 
