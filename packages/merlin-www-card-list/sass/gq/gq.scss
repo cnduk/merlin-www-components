@@ -22,7 +22,7 @@
 	        }
     	}
 
-    	@include screen($CARD_LIST_2_COLUMN_BREAKPOINT, $CARD_LIST_4_COLUMN_BREAKPOINT) {
+    	@include screen($CARD_LIST_2_COLUMN_BREAKPOINT, $CARD_LIST_4_COLUMN_BREAKPOINT - 1) {
 		    width: 50%;
 
 		    &:nth-child(odd) {
