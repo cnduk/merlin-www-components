@@ -45,6 +45,24 @@ var windowHeightHalf = window.innerHeight/2;
 var menuScrollTop = 0;
 
 
+
+function muteScroll(duration){
+    if(muteScroll._tmr !== null){
+        clearTimeout(muteScroll._tmr);
+    }
+    muteScroll.isMuted = true;
+    muteScroll._tmr = setTimeout(function muteScroll_tmr(){
+        muteScroll._tmr = null;
+        muteScroll.isMuted = false;
+    }, duration);
+}
+muteScroll._tmr = null;
+muteScroll.isMuted = false;
+
+
+
+
+
 /**
  * Creates the main navigation
  * @class
@@ -105,6 +123,9 @@ function MainNavigation(el){
     this._isGallery = false;
     this._isMenuOpen = false;
 
+    this._galleryScrollY = 0;
+    this._isGalleryHidden = false;
+
     this._init();
 }
 
@@ -160,10 +181,17 @@ MainNavigation.prototype = {
         if(this.el.querySelector(CLS_GALLERY_NAV)){
             this.galleryNavigation = new GalleryNavigation(
                 this.el.querySelector(CLS_GALLERY_NAV));
+            this.galleryNavigation.on(
+                'viewchange', this._viewchangeMuteScroll.bind(this));
         }
 
         img.init();
 
+    },
+
+    _viewchangeMuteScroll: function _viewchangeMuteScroll(){
+        muteScroll(500);
+        this._galleryScrollY = getWindowScrollTop();
     },
 
 
@@ -190,7 +218,33 @@ MainNavigation.prototype = {
     },
 
 
+    _galleryHide: function _galleryHide(){
+        this._isGalleryHidden = true;
+        removeClass(this.el.querySelector(CLS_GALLERY_NAV), CLS_STATE_VISIBLE);
+    },
 
+    _galleryShow: function _galleryShow(){
+        this._isGalleryHidden = false;
+        addClass(this.el.querySelector(CLS_GALLERY_NAV), CLS_STATE_VISIBLE);
+    },
+
+    _galleryScroll: function _galleryScroll(scrollY){
+        // Not in gallery mode so dont care
+        if(!this._isGallery) return;
+        if(muteScroll.isMuted) return;
+
+        var scrollVelocity = scrollY - this._galleryScrollY;
+        this._galleryScrollY = scrollY;
+
+        if(!this._isGalleryHidden && scrollVelocity < 0){
+            return this._galleryHide();
+        }
+
+        // Check if we are greater than our min Y
+        if(this._isGalleryHidden && scrollVelocity > 0){
+            return this._galleryShow();
+        }
+    },
 
     /**
      * Hides the gallery navigation
@@ -212,8 +266,7 @@ MainNavigation.prototype = {
     showGallery: function showGallery(){
         if(this._isGallery) return;
         this._isGallery = true;
-        var galleryNav = this.el.querySelector(CLS_GALLERY_NAV);
-        addClass(galleryNav, CLS_STATE_VISIBLE);
+        addClass(this.el.querySelector(CLS_GALLERY_NAV), CLS_STATE_VISIBLE);
         this._pauseVanishingHeader();
     },
 
@@ -263,6 +316,8 @@ MainNavigation.prototype = {
             this.unstick();
             if(this.hasHeaderLogo) this._hideLogo();
         }
+
+        this._galleryScroll(scrollY);
     },
 
 
@@ -398,7 +453,6 @@ MainNavigation.prototype = {
 
 
 };
-
 
 /**
  * Checks if there is a large header in the navigation
