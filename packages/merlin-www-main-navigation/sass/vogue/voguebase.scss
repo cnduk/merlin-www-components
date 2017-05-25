@@ -142,12 +142,15 @@ a.n-main__cover__btn {
 
 .n-main__nav-hamburger {
     border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+    box-sizing: border-box;
+    display: inline-block;
     height: $MAIN_NAVIGATION_HEIGHT;
     line-height: $MAIN_NAVIGATION_HEIGHT;
     text-align: center;
     width: $MAIN_NAVIGATION_HEIGHT;
 
     label {
+        background-color: transparent;
         cursor: pointer;
         display: block;
         height: $MAIN_NAVIGATION_HEIGHT;
@@ -162,9 +165,54 @@ a.n-main__cover__btn {
         vertical-align: middle;
     }
 
+    path {
+        fill: #000;
+    }
+
+    &:hover {
+        svg {
+            fill: $COLOR_MAIN_HIGHLIGHT;
+
+            path {
+                fill: $COLOR_MAIN_HIGHLIGHT;
+            }
+        }
+    }
+
+    @include min-screen($MAIN_NAVIGATION_MOBILE_BREAKPOINT) {
+        display: none;
+    }
 }
 
 .n-main__nav-search {
+    box-sizing: border-box;
+    display: inline-block;
+    float: right;
+    height: $MAIN_NAVIGATION_HEIGHT;
+    line-height: $MAIN_NAVIGATION_HEIGHT;
+    text-align: center;
+    width: $MAIN_NAVIGATION_HEIGHT;
+
+    label {
+        background-color: transparent;
+        cursor: pointer;
+        display: block;
+        height: $MAIN_NAVIGATION_HEIGHT;
+        line-height: $MAIN_NAVIGATION_HEIGHT;
+        width: $MAIN_NAVIGATION_HEIGHT;
+    }
+
+    svg {
+        display: inline-block;
+        height: 20px;
+        line-height: $MAIN_NAVIGATION_HEIGHT;
+        vertical-align: middle;
+    }
+
+    path {
+        fill: #000;
+    }
+
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
 
@@ -181,37 +229,6 @@ a.n-main__cover__btn {
 
     @include min-screen($MAXIMUM_PAGE_WIDTH + 1) {
         border-right: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-    }
-
-    display: inline-block;
-    float: right;
-    height: $MAIN_NAVIGATION_HEIGHT;
-    line-height: $MAIN_NAVIGATION_HEIGHT;
-    text-align: center;
-    width: $MAIN_NAVIGATION_HEIGHT;
-
-    label {
-        background-color: transparent;
-        cursor: pointer;
-        display: block;
-        height: $MAIN_NAVIGATION_HEIGHT;
-        line-height: $MAIN_NAVIGATION_HEIGHT;
-        width: $MAIN_NAVIGATION_HEIGHT;
-
-        path {
-            fill: #000;
-        }
-    }
-
-    svg {
-        display: inline-block;
-        height: 20px;
-        line-height: $MAIN_NAVIGATION_HEIGHT;
-        vertical-align: middle;
-    }
-
-    .n-main__nav-search__close-icon {
-
     }
 }
 
@@ -690,37 +707,61 @@ a.n-menu__subscribe-btn {
 .n-gallery-counter__total {}
 
 
-.n-gallery-toggle,
-a.n-gallery-close {
+.n-gallery-toggle {
+    border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+    box-sizing: border-box;
     display: inline-block;
     height: $MAIN_NAVIGATION_HEIGHT;
     line-height: $MAIN_NAVIGATION_HEIGHT;
-    width: $MAIN_NAVIGATION_HEIGHT - 20;
+    width: $MAIN_NAVIGATION_HEIGHT;
 
-    @include min-screen($GALLERY_NAV_ICONS_BREAKPOINT) {
+    label {
+        background-color: transparent;
+        cursor: pointer;
+        display: block;
+        height: $MAIN_NAVIGATION_HEIGHT;
+        line-height: $MAIN_NAVIGATION_HEIGHT;
         width: $MAIN_NAVIGATION_HEIGHT;
     }
 
     svg {
+        display: inline-block;
         height: 100%;
+        line-height: $MAIN_NAVIGATION_HEIGHT;
+        vertical-align: middle;
         width: 16px;
+    }
 
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    path {
+        fill: #000;
+    }
+
+    &:hover {
+        svg {
+            fill: $COLOR_MAIN_HIGHLIGHT;
+
+            path {
+                fill: $COLOR_MAIN_HIGHLIGHT;
+            }
+        }
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        svg {
             width: 18px;
         }
     }
+
+    @include min-screen($MAXIMUM_PAGE_WIDTH + 1) {
+        border-right: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+    }
 }
+
 .n-gallery-toggle--list,
 .n-gallery-toggle--grid {
-    border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-    border-right: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
     display: inline-block;
     height: $MAIN_NAVIGATION_HEIGHT;
-    width: $MAIN_NAVIGATION_HEIGHT - 20;
-
-    @include min-screen($GALLERY_NAV_ICONS_BREAKPOINT) {
-        width: $MAIN_NAVIGATION_HEIGHT;
-    }
+    width: $MAIN_NAVIGATION_HEIGHT;
 
     &:hover {
         svg {
@@ -741,6 +782,7 @@ a.n-gallery-close {
         }
     }
 }
+
 
 /**
  * Navigation - Gallery
