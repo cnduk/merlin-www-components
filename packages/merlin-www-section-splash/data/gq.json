@@ -1,965 +1,923 @@
 {
-  "data": {
-    "card_list": {
-      "data": {
-        "items": [{
-          "data": {
-            "item": {
-              "data": {
-                "byline": null,
-                "event_information": null,
-                "icon": null,
-                "image_list": {
-                  "data": {
-                    "items": [{
-                      "data": {
+    "data": {
+        "card_list": {
+            "data": {
+                "id": "05e4c1da-0a09-49d3-b584-18973aa4c91b",
+                "items": [{
+                    "data": {
+                        "id": "be7a1c7c-d9e8-425e-b84c-711e749b10a1",
+                        "index": 0,
                         "item": {
-                          "data": {
-                            "alt_text": null,
-                            "credit": "PA Photos",
-                            "description": "",
-                            "image_url": "https://vg-images.condecdn.net/image/w0RQoWB14Ol/crop/405/landscape",
-                            "lazyload": true,
-                            "look_number": null,
-                            "orientation": "landscape",
-                            "srcset": "https://vg-images.condecdn.net/image/w0RQoWB14Ol/crop/405/landscape 405w",
-                            "title": ""
-                          },
-                          "state": {
-                            "is_image": true,
-                            "is_linked": false,
-                            "is_picture": false,
-                            "is_static": false,
-                            "is_svg": false
-                          },
-                          "style": {
-                            "cls": "img-lazyload "
-                          },
-                          "type": "Image"
-                        }
-                      },
-                      "state": {
-                        "is_first": true,
-                        "is_last": false
-                      },
-                      "style": {
-                        "cls": "c-card__image--landscape"
-                      },
-                      "type": "ListItem"
-                    }],
-                    "length": 1
-                  },
-                  "state": {},
-                  "style": {
-                    "cls": ""
-                  },
-                  "type": "List"
-                },
-                "link": {
-                  "data": {
-                    "title": "How Adriana Is Protected By The Angels",
-                    "url": "/article/adriana-lima-interview-aliens-and-angels"
-                  },
-                  "state": {},
-                  "style": {
-                    "cls": ""
-                  },
-                  "type": "Link"
-                },
-                "meta_list": {
-                  "data": {
-                    "items": [{
-                      "data": {
-                        "item": {
-                          "data": {
-                            "icon": null,
-                            "link": {
-                              "data": {
-                                "title": "Adriana Lima",
-                                "url": "http://localhost:3000/person/adriana-lima/"
-                              },
-                              "state": {},
-                              "style": {
-                                "cls": ""
-                              },
-                              "type": "Link"
+                            "data": {
+                                "byline": "Paul Henderson",
+                                "event_information": null,
+                                "icon": null,
+                                "id": "e3fdba05-6449-48ed-8ade-93be4d8881f1",
+                                "image_list": {
+                                    "data": {
+                                        "id": "7814f379-c7bb-4515-9217-9f17d77def29",
+                                        "items": [{
+                                            "data": {
+                                                "id": "231519af-7f44-4032-803e-7e6713a1c7ea",
+                                                "index": 0,
+                                                "item": {
+                                                    "data": {
+                                                        "alt_text": null,
+                                                        "credit": null,
+                                                        "description": null,
+                                                        "id": "d290b449-9403-4fa4-a9be-8ef6bda9e39b",
+                                                        "image_url": "https://gq-staging-images.condecdn.net/image/0KgbvZokLbK/crop/405/landscape",
+                                                        "look_number": null,
+                                                        "orientation": "landscape",
+                                                        "srcset": "https://gq-staging-images.condecdn.net/image/0KgbvZokLbK/crop/405/landscape 405w",
+                                                        "title": "",
+                                                        "uid": "0KgbvZokLbK",
+                                                        "width": null
+                                                    },
+                                                    "state": {
+                                                        "is_image": true,
+                                                        "is_landscape": true,
+                                                        "is_lazyload": true,
+                                                        "is_linked": false,
+                                                        "is_picture": false,
+                                                        "is_portrait": false,
+                                                        "is_square": false,
+                                                        "is_static": false,
+                                                        "is_svg": false
+                                                    },
+                                                    "style": {
+                                                        "cls": "img-lazyload ",
+                                                        "inline": "",
+                                                        "padding_top": "66.666666667%"
+                                                    },
+                                                    "type": "Image"
+                                                }
+                                            },
+                                            "state": {
+                                                "is_first": true,
+                                                "is_last": false
+                                            },
+                                            "style": {
+                                                "cls": "c-card__image--landscape",
+                                                "inline": ""
+                                            },
+                                            "type": "ListItem"
+                                        }],
+                                        "length": 1
+                                    },
+                                    "state": {},
+                                    "style": {
+                                        "cls": "",
+                                        "inline": ""
+                                    },
+                                    "type": "List"
+                                },
+                                "link": {
+                                    "data": {
+                                        "id": "aad6cc26-3a7c-4d3d-88a9-1210465198cf",
+                                        "title": "Joshua vs Klitschko: \u2018This is a 50-50 fight,\u2019 says Eddie Hearn",
+                                        "url": "/article/joshua-vs-klitschko-i-see-this-as-a-50-50-fight-says-eddie-hearn"
+                                    },
+                                    "state": {
+                                        "is_blank": false
+                                    },
+                                    "style": {
+                                        "cls": "",
+                                        "inline": ""
+                                    },
+                                    "type": "Link"
+                                },
+                                "meta_list": {
+                                    "data": {
+                                        "id": "35676f1a-081b-4d0f-b0fc-793298899edd",
+                                        "items": [{
+                                            "data": {
+                                                "id": "4bce13c4-1e22-4b1c-b9fa-f12ba3b098f3",
+                                                "index": 0,
+                                                "item": {
+                                                    "data": {
+                                                        "icon": null,
+                                                        "id": "7672a155-f221-4b34-bad2-d9c026c1b5db",
+                                                        "link": null,
+                                                        "meta_type": "date",
+                                                        "title": "24 Apr 2017"
+                                                    },
+                                                    "state": {
+                                                        "has_icon": false,
+                                                        "has_link": false,
+                                                        "is_creative_director": false,
+                                                        "is_date": true,
+                                                        "is_duration": false,
+                                                        "is_episode_number": false,
+                                                        "is_event_date": false,
+                                                        "is_event_location": false,
+                                                        "is_gallery": false,
+                                                        "is_location": false,
+                                                        "is_profile": false,
+                                                        "is_tag": false,
+                                                        "is_video_topic": false
+                                                    },
+                                                    "style": {
+                                                        "cls": "",
+                                                        "inline": ""
+                                                    },
+                                                    "type": "Meta"
+                                                }
+                                            },
+                                            "state": {
+                                                "is_first": true,
+                                                "is_last": false
+                                            },
+                                            "style": {
+                                                "cls": "",
+                                                "inline": ""
+                                            },
+                                            "type": "ListItem"
+                                        }],
+                                        "length": 1
+                                    },
+                                    "state": {},
+                                    "style": {
+                                        "cls": "",
+                                        "inline": ""
+                                    },
+                                    "type": "MetaList"
+                                },
+                                "primary_tag": {
+                                    "data": {
+                                        "event_information": null,
+                                        "id": "83ec3341-f9b9-4492-ab08-00988267e0fe",
+                                        "link": {
+                                            "data": {
+                                                "id": "399d6e01-25fd-4f60-a8b8-5689381014cd",
+                                                "title": "Anthony Joshua",
+                                                "url": "http://localhost:3000/person/anthony-joshua"
+                                            },
+                                            "state": {
+                                                "is_blank": false
+                                            },
+                                            "style": {
+                                                "cls": "",
+                                                "inline": ""
+                                            },
+                                            "type": "Link"
+                                        },
+                                        "title": "Anthony Joshua"
+                                    },
+                                    "state": {
+                                        "has_link": true
+                                    },
+                                    "style": {
+                                        "cls": "",
+                                        "inline": ""
+                                    },
+                                    "type": "Tag"
+                                },
+                                "review_information": null,
+                                "sponsor": null,
+                                "teaser": "Ahead of Anthony Joshua's heavyweight fight with Wladimir Klitschko on Saturday, GQ spoke with promoter Eddie Hearn to talk tactics, breaking records and how he could make AJ a billionaire",
+                                "title": "Joshua vs Klitschko: \u2018This is a 50-50 fight,\u2019 says Eddie Hearn"
                             },
-                            "meta_type": "tag",
-                            "title": "Adriana Lima"
-                          },
-                          "state": {},
-                          "style": {
-                            "cls": ""
-                          },
-                          "type": "Meta"
+                            "state": {
+                                "is_contributor": false,
+                                "is_hero": false,
+                                "is_landscape": false,
+                                "is_magazine": false,
+                                "is_portrait": false,
+                                "is_show": false,
+                                "is_splash": false,
+                                "is_switcher": true,
+                                "is_thumbnail": false,
+                                "is_top_stories": false
+                            },
+                            "style": {
+                                "cls": "c-card--switcher",
+                                "inline": ""
+                            },
+                            "type": "SwitcherCard"
                         }
-                      },
-                      "state": {
-                        "is_first": true,
-                        "is_last": false
-                      },
-                      "style": {
-                        "cls": ""
-                      },
-                      "type": "ListItem"
-                    }],
-                    "length": 1
-                  },
-                  "state": {},
-                  "style": {
-                    "cls": ""
-                  },
-                  "type": "List"
-                },
-                "review_information": null,
-                "sponsor": null,
-                "primary_tag": {
-                  "data": {
-                    "event_information": null,
-                    "link": {
-                      "data": {
-                        "title": "Adriana Lima",
-                        "url": "http://localhost:3000/person/adriana-lima/"
-                      },
-                      "state": {},
-                      "style": {
-                        "cls": ""
-                      },
-                      "type": "Link"
                     },
-                    "title": "Adriana Lima"
-                  },
-                  "state": {},
-                  "style": {
-                    "cls": ""
-                  },
-                  "type": "Tag"
-                },
-                "teaser": "It seems the Victoria's Secret Angel's model friends aren't the only ones looking out for her",
-                "title": "How Adriana Is Protected By The Angels. How Adriana Is Protected By The Angels."
-              },
-              "state": {
-                "is_contributor": false,
-                "is_hero": false,
-                "is_landscape": false,
-                "is_portrait": false,
-                "is_show": false,
-                "is_switcher": true
-              },
-              "style": {
-                "cls": "c-card--hero"
-              },
-              "type": "HeroCard"
-            }
-          },
-          "state": {
-            "is_first": false,
-            "is_last": false
-          },
-          "style": {
-            "cls": ""
-          },
-          "type": "ListItem"
-        }, {
-          "data": {
-            "item": {
-              "data": {
-                "byline": "Scarlett Conlon",
-                "event_information": null,
-                "icon": {
-                  "data": {
-                    "alt_text": null,
-                    "credit": null,
-                    "description": null,
-                    "lazyload": true,
-                    "look_number": null,
-                    "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
-                    "title": null
-                  },
-                  "state": {
-                    "is_image": false,
-                    "is_linked": false,
-                    "is_picture": false,
-                    "is_static": false,
-                    "is_svg": true
-                  },
-                  "style": {
-                    "cls": "img-lazyload "
-                  },
-                  "type": "SVG"
-                },
-                "image_list": {
-                  "data": {
-                    "items": [{
-                      "data": {
-                        "item": {
-                          "data": {
-                            "alt_text": null,
-                            "credit": "Rex Features",
-                            "description": "",
-                            "image_url": "https://vg-images.condecdn.net/image/mK6RRnr09x7/crop/405",
-                            "lazyload": true,
-                            "look_number": null,
-                            "orientation": "landscape",
-                            "srcset": "https://vg-images.condecdn.net/image/mK6RRnr09x7/crop/405 405w",
-                            "title": ""
-                          },
-                          "state": {
-                            "is_image": true,
-                            "is_linked": false,
-                            "is_picture": false,
-                            "is_static": false,
-                            "is_svg": false
-                          },
-                          "style": {
-                            "cls": "img-lazyload "
-                          },
-                          "type": "Image"
-                        }
-                      },
-                      "state": {
+                    "state": {
                         "is_first": true,
                         "is_last": false
-                      },
-                      "style": {
-                        "cls": "c-card__image--landscape"
-                      },
-                      "type": "ListItem"
-                    }],
-                    "length": 1
-                  },
-                  "state": {},
-                  "style": {
-                    "cls": ""
-                  },
-                  "type": "List"
-                },
-                "link": {
-                  "data": {
-                    "title": "PFW: Daily Digest",
-                    "url": "/gallery/paris-fashion-week-march-2017-daily-digest-gallery"
-                  },
-                  "state": {},
-                  "style": {
-                    "cls": ""
-                  },
-                  "type": "Link"
-                },
-                "meta_list": {
-                  "data": {
-                    "items": [{
-                      "data": {
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "type": "ListItem"
+                }, {
+                    "data": {
+                        "id": "8c8b5c9c-4c69-4d3a-984f-0c509d9a3622",
+                        "index": 1,
                         "item": {
-                          "data": {
-                            "icon": null,
-                            "link": {
-                              "data": {
-                                "title": "Paris Fashion Week",
-                                "url": "http://localhost:3000/event/paris-fashion-week/"
-                              },
-                              "state": {},
-                              "style": {
-                                "cls": ""
-                              },
-                              "type": "Link"
+                            "data": {
+                                "byline": "GQ",
+                                "event_information": null,
+                                "icon": null,
+                                "id": "37625c84-c067-42c7-a8c7-56a180edce27",
+                                "image_list": {
+                                    "data": {
+                                        "id": "02a3a469-737a-458d-bebc-3a81be39ad3a",
+                                        "items": [{
+                                            "data": {
+                                                "id": "be7855c7-a2fa-46ed-bb89-36c4147b98e5",
+                                                "index": 0,
+                                                "item": {
+                                                    "data": {
+                                                        "alt_text": null,
+                                                        "credit": null,
+                                                        "description": null,
+                                                        "id": "88284dd1-0097-4507-901a-dd8170669f90",
+                                                        "image_url": "https://gq-staging-images.condecdn.net/image/88njYRl3PXA/crop/405/landscape",
+                                                        "look_number": null,
+                                                        "orientation": "landscape",
+                                                        "srcset": "https://gq-staging-images.condecdn.net/image/88njYRl3PXA/crop/405/landscape 405w",
+                                                        "title": "",
+                                                        "uid": "88njYRl3PXA",
+                                                        "width": null
+                                                    },
+                                                    "state": {
+                                                        "is_image": true,
+                                                        "is_landscape": true,
+                                                        "is_lazyload": true,
+                                                        "is_linked": false,
+                                                        "is_picture": false,
+                                                        "is_portrait": false,
+                                                        "is_square": false,
+                                                        "is_static": false,
+                                                        "is_svg": false
+                                                    },
+                                                    "style": {
+                                                        "cls": "img-lazyload ",
+                                                        "inline": "",
+                                                        "padding_top": "66.666666667%"
+                                                    },
+                                                    "type": "Image"
+                                                }
+                                            },
+                                            "state": {
+                                                "is_first": true,
+                                                "is_last": false
+                                            },
+                                            "style": {
+                                                "cls": "c-card__image--landscape",
+                                                "inline": ""
+                                            },
+                                            "type": "ListItem"
+                                        }],
+                                        "length": 1
+                                    },
+                                    "state": {},
+                                    "style": {
+                                        "cls": "",
+                                        "inline": ""
+                                    },
+                                    "type": "List"
+                                },
+                                "link": {
+                                    "data": {
+                                        "id": "b2302c6f-1a94-4f18-9a74-e4a6236a7b0f",
+                                        "title": "How GQ appeared in The Simpsons' takedown of Donald Trump",
+                                        "url": "/article/the-simpsons-donald-trump"
+                                    },
+                                    "state": {
+                                        "is_blank": false
+                                    },
+                                    "style": {
+                                        "cls": "",
+                                        "inline": ""
+                                    },
+                                    "type": "Link"
+                                },
+                                "meta_list": {
+                                    "data": {
+                                        "id": "26fd319a-4ea1-48b4-b6c0-bfcd970045c9",
+                                        "items": [{
+                                            "data": {
+                                                "id": "47370145-87f8-41da-8b4d-07bef81cb3ec",
+                                                "index": 0,
+                                                "item": {
+                                                    "data": {
+                                                        "icon": null,
+                                                        "id": "fb34c19d-70a4-4809-9f1a-1c2189a6318e",
+                                                        "link": null,
+                                                        "meta_type": "date",
+                                                        "title": "27 Apr 2017"
+                                                    },
+                                                    "state": {
+                                                        "has_icon": false,
+                                                        "has_link": false,
+                                                        "is_creative_director": false,
+                                                        "is_date": true,
+                                                        "is_duration": false,
+                                                        "is_episode_number": false,
+                                                        "is_event_date": false,
+                                                        "is_event_location": false,
+                                                        "is_gallery": false,
+                                                        "is_location": false,
+                                                        "is_profile": false,
+                                                        "is_tag": false,
+                                                        "is_video_topic": false
+                                                    },
+                                                    "style": {
+                                                        "cls": "",
+                                                        "inline": ""
+                                                    },
+                                                    "type": "Meta"
+                                                }
+                                            },
+                                            "state": {
+                                                "is_first": true,
+                                                "is_last": false
+                                            },
+                                            "style": {
+                                                "cls": "",
+                                                "inline": ""
+                                            },
+                                            "type": "ListItem"
+                                        }],
+                                        "length": 1
+                                    },
+                                    "state": {},
+                                    "style": {
+                                        "cls": "",
+                                        "inline": ""
+                                    },
+                                    "type": "MetaList"
+                                },
+                                "primary_tag": {
+                                    "data": {
+                                        "event_information": null,
+                                        "id": "8912fb58-ac29-4519-b5ab-34d4247b7827",
+                                        "link": {
+                                            "data": {
+                                                "id": "eb58421a-a822-4a82-83d8-20a0292f056d",
+                                                "title": "Donald Trump",
+                                                "url": "http://localhost:3000/topic/donald-trump-topic"
+                                            },
+                                            "state": {
+                                                "is_blank": false
+                                            },
+                                            "style": {
+                                                "cls": "",
+                                                "inline": ""
+                                            },
+                                            "type": "Link"
+                                        },
+                                        "title": "Donald Trump"
+                                    },
+                                    "state": {
+                                        "has_link": true
+                                    },
+                                    "style": {
+                                        "cls": "",
+                                        "inline": ""
+                                    },
+                                    "type": "Tag"
+                                },
+                                "review_information": null,
+                                "sponsor": null,
+                                "teaser": "Our most famous photoshoot of FLOTUS was immortalised during last night's short episode of The Simpsons",
+                                "title": "How GQ appeared in The Simpsons' takedown of Donald Trump"
                             },
-                            "meta_type": "tag",
-                            "title": "Paris Fashion Week"
-                          },
-                          "state": {},
-                          "style": {
-                            "cls": ""
-                          },
-                          "type": "Meta"
-                        }
-                      },
-                      "state": {
-                        "is_first": true,
-                        "is_last": false
-                      },
-                      "style": {
-                        "cls": ""
-                      },
-                      "type": "ListItem"
-                    }, {
-                      "data": {
-                        "item": {
-                          "data": {
-                            "icon": {
-                              "data": {
-                                "alt_text": null,
-                                "credit": null,
-                                "description": null,
-                                "lazyload": true,
-                                "look_number": null,
-                                "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
-                                "title": null
-                              },
-                              "state": {
-                                "is_image": false,
-                                "is_linked": false,
-                                "is_picture": false,
-                                "is_static": false,
-                                "is_svg": true
-                              },
-                              "style": {
-                                "cls": "img-lazyload "
-                              },
-                              "type": "SVG"
+                            "state": {
+                                "is_contributor": false,
+                                "is_hero": false,
+                                "is_landscape": false,
+                                "is_magazine": false,
+                                "is_portrait": false,
+                                "is_show": false,
+                                "is_splash": false,
+                                "is_switcher": true,
+                                "is_thumbnail": false,
+                                "is_top_stories": false
                             },
-                            "link": null,
-                            "meta_type": "gallery",
-                            "title": "43 items"
-                          },
-                          "state": {},
-                          "style": {
-                            "cls": ""
-                          },
-                          "type": "Meta"
+                            "style": {
+                                "cls": "c-card--switcher",
+                                "inline": ""
+                            },
+                            "type": "SwitcherCard"
                         }
-                      },
-                      "state": {
+                    },
+                    "state": {
                         "is_first": false,
                         "is_last": false
-                      },
-                      "style": {
-                        "cls": ""
-                      },
-                      "type": "ListItem"
-                    }, {
-                      "data": {
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "type": "ListItem"
+                }, {
+                    "data": {
+                        "id": "ce212798-0310-4adc-84e0-c618269f7312",
+                        "index": 2,
                         "item": {
-                          "data": {
-                            "icon": null,
-                            "link": null,
-                            "meta_type": "date",
-                            "title": "10:00 AM"
-                          },
-                          "state": {},
-                          "style": {
-                            "cls": ""
-                          },
-                          "type": "Meta"
+                            "data": {
+                                "byline": "Nick Carvell",
+                                "event_information": null,
+                                "icon": {
+                                    "data": {
+                                        "alt_text": null,
+                                        "credit": null,
+                                        "description": null,
+                                        "id": "9f2138a3-3576-42ef-b47f-d10ef5792564",
+                                        "look_number": null,
+                                        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><title>type-gallery</title><path d=\"M13 16H0V3h3V0h13v13h-3v3zM1 15h11v-2H3V4H1v11zm12-3h2V1H4v2h9v9zm-9 0h8V4H4v8z\"/></svg>",
+                                        "title": null,
+                                        "width": null
+                                    },
+                                    "state": {
+                                        "is_image": false,
+                                        "is_landscape": false,
+                                        "is_lazyload": false,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_portrait": false,
+                                        "is_square": false,
+                                        "is_static": false,
+                                        "is_svg": true
+                                    },
+                                    "style": {
+                                        "cls": "",
+                                        "inline": ""
+                                    },
+                                    "type": "SVG"
+                                },
+                                "id": "8052d569-0421-4ee1-9f4c-2dc646d89e71",
+                                "image_list": {
+                                    "data": {
+                                        "id": "b28b32cb-4092-413c-ae62-f02baaa25395",
+                                        "items": [{
+                                            "data": {
+                                                "id": "de7c2793-1b0b-4fca-9ed2-8f21cfc17a46",
+                                                "index": 0,
+                                                "item": {
+                                                    "data": {
+                                                        "alt_text": null,
+                                                        "credit": null,
+                                                        "description": null,
+                                                        "id": "8f08cbff-22a3-4d09-be08-53f77e717f55",
+                                                        "image_url": "https://gq-staging-images.condecdn.net/image/54zokYnJ683/crop/405/landscape",
+                                                        "look_number": null,
+                                                        "orientation": "landscape",
+                                                        "srcset": "https://gq-staging-images.condecdn.net/image/54zokYnJ683/crop/405/landscape 405w",
+                                                        "title": "",
+                                                        "uid": "54zokYnJ683",
+                                                        "width": null
+                                                    },
+                                                    "state": {
+                                                        "is_image": true,
+                                                        "is_landscape": true,
+                                                        "is_lazyload": true,
+                                                        "is_linked": false,
+                                                        "is_picture": false,
+                                                        "is_portrait": false,
+                                                        "is_square": false,
+                                                        "is_static": false,
+                                                        "is_svg": false
+                                                    },
+                                                    "style": {
+                                                        "cls": "img-lazyload ",
+                                                        "inline": "",
+                                                        "padding_top": "66.666666667%"
+                                                    },
+                                                    "type": "Image"
+                                                }
+                                            },
+                                            "state": {
+                                                "is_first": true,
+                                                "is_last": false
+                                            },
+                                            "style": {
+                                                "cls": "c-card__image--landscape",
+                                                "inline": ""
+                                            },
+                                            "type": "ListItem"
+                                        }],
+                                        "length": 1
+                                    },
+                                    "state": {},
+                                    "style": {
+                                        "cls": "",
+                                        "inline": ""
+                                    },
+                                    "type": "List"
+                                },
+                                "link": {
+                                    "data": {
+                                        "id": "2bb39f27-fedd-483d-928f-204dfe117c5b",
+                                        "title": "Paul & Shark has finally docked in London",
+                                        "url": "/gallery/paul-and-shark-regent-street-london"
+                                    },
+                                    "state": {
+                                        "is_blank": false
+                                    },
+                                    "style": {
+                                        "cls": "",
+                                        "inline": ""
+                                    },
+                                    "type": "Link"
+                                },
+                                "meta_list": {
+                                    "data": {
+                                        "id": "77513e51-c2b2-4617-a702-5d906685fa04",
+                                        "items": [{
+                                            "data": {
+                                                "id": "880a48c3-7aa4-443e-8daf-2c7c83386162",
+                                                "index": 0,
+                                                "item": {
+                                                    "data": {
+                                                        "icon": null,
+                                                        "id": "4109bacf-886b-4a65-8f45-40216e842bae",
+                                                        "link": null,
+                                                        "meta_type": "gallery",
+                                                        "title": "11 items"
+                                                    },
+                                                    "state": {
+                                                        "has_icon": false,
+                                                        "has_link": false,
+                                                        "is_creative_director": false,
+                                                        "is_date": false,
+                                                        "is_duration": false,
+                                                        "is_episode_number": false,
+                                                        "is_event_date": false,
+                                                        "is_event_location": false,
+                                                        "is_gallery": true,
+                                                        "is_location": false,
+                                                        "is_profile": false,
+                                                        "is_tag": false,
+                                                        "is_video_topic": false
+                                                    },
+                                                    "style": {
+                                                        "cls": "",
+                                                        "inline": ""
+                                                    },
+                                                    "type": "Meta"
+                                                }
+                                            },
+                                            "state": {
+                                                "is_first": true,
+                                                "is_last": false
+                                            },
+                                            "style": {
+                                                "cls": "",
+                                                "inline": ""
+                                            },
+                                            "type": "ListItem"
+                                        }, {
+                                            "data": {
+                                                "id": "dce0a539-8662-4fb2-9f44-efa9ccbce773",
+                                                "index": 1,
+                                                "item": {
+                                                    "data": {
+                                                        "icon": null,
+                                                        "id": "ef600c69-9d2d-4d62-b2ca-e0fae8719724",
+                                                        "link": null,
+                                                        "meta_type": "date",
+                                                        "title": "27 Apr 2017"
+                                                    },
+                                                    "state": {
+                                                        "has_icon": false,
+                                                        "has_link": false,
+                                                        "is_creative_director": false,
+                                                        "is_date": true,
+                                                        "is_duration": false,
+                                                        "is_episode_number": false,
+                                                        "is_event_date": false,
+                                                        "is_event_location": false,
+                                                        "is_gallery": false,
+                                                        "is_location": false,
+                                                        "is_profile": false,
+                                                        "is_tag": false,
+                                                        "is_video_topic": false
+                                                    },
+                                                    "style": {
+                                                        "cls": "",
+                                                        "inline": ""
+                                                    },
+                                                    "type": "Meta"
+                                                }
+                                            },
+                                            "state": {
+                                                "is_first": false,
+                                                "is_last": true
+                                            },
+                                            "style": {
+                                                "cls": "",
+                                                "inline": ""
+                                            },
+                                            "type": "ListItem"
+                                        }],
+                                        "length": 2
+                                    },
+                                    "state": {},
+                                    "style": {
+                                        "cls": "",
+                                        "inline": ""
+                                    },
+                                    "type": "MetaList"
+                                },
+                                "primary_tag": {
+                                    "data": {
+                                        "event_information": null,
+                                        "id": "f17d40ea-db5f-4b73-accd-9d30f2d1966d",
+                                        "link": {
+                                            "data": {
+                                                "id": "6a367180-20cd-4079-b83e-9fd2af1d6425",
+                                                "title": "Shopping",
+                                                "url": "http://localhost:3000/topic/shopping"
+                                            },
+                                            "state": {
+                                                "is_blank": false
+                                            },
+                                            "style": {
+                                                "cls": "",
+                                                "inline": ""
+                                            },
+                                            "type": "Link"
+                                        },
+                                        "title": "Shopping"
+                                    },
+                                    "state": {
+                                        "has_link": true
+                                    },
+                                    "style": {
+                                        "cls": "",
+                                        "inline": ""
+                                    },
+                                    "type": "Tag"
+                                },
+                                "review_information": null,
+                                "sponsor": null,
+                                "teaser": "The Italian sailing specialist has just dropped anchor on Regent Street in the capital - and we've got a first look inside",
+                                "title": "Paul & Shark has finally docked in London"
+                            },
+                            "state": {
+                                "is_contributor": false,
+                                "is_hero": false,
+                                "is_landscape": false,
+                                "is_magazine": false,
+                                "is_portrait": false,
+                                "is_show": false,
+                                "is_splash": false,
+                                "is_switcher": true,
+                                "is_thumbnail": false,
+                                "is_top_stories": false
+                            },
+                            "style": {
+                                "cls": "c-card--switcher",
+                                "inline": ""
+                            },
+                            "type": "SwitcherCard"
                         }
-                      },
-                      "state": {
+                    },
+                    "state": {
+                        "is_first": false,
+                        "is_last": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "type": "ListItem"
+                }, {
+                    "data": {
+                        "id": "45ac877a-8c03-40bf-9344-9c288756809f",
+                        "index": 3,
+                        "item": {
+                            "data": {
+                                "byline": "Charlie Burton",
+                                "event_information": null,
+                                "icon": null,
+                                "id": "14b6de8d-9cfd-48a6-a673-d973a988f561",
+                                "image_list": {
+                                    "data": {
+                                        "id": "cfb2f68d-0c6e-4d95-bf2c-28aac7ac1bd2",
+                                        "items": [{
+                                            "data": {
+                                                "id": "1e1f469f-6135-48ac-8c41-4a66b72347b8",
+                                                "index": 0,
+                                                "item": {
+                                                    "data": {
+                                                        "alt_text": null,
+                                                        "credit": null,
+                                                        "description": null,
+                                                        "id": "5e333fdb-0258-4474-bd64-1fe4e1537f53",
+                                                        "image_url": "https://gq-staging-images.condecdn.net/image/42JW278Wm2j/crop/405/landscape",
+                                                        "look_number": null,
+                                                        "orientation": "landscape",
+                                                        "srcset": "https://gq-staging-images.condecdn.net/image/42JW278Wm2j/crop/405/landscape 405w",
+                                                        "title": "",
+                                                        "uid": "42JW278Wm2j",
+                                                        "width": null
+                                                    },
+                                                    "state": {
+                                                        "is_image": true,
+                                                        "is_landscape": true,
+                                                        "is_lazyload": true,
+                                                        "is_linked": false,
+                                                        "is_picture": false,
+                                                        "is_portrait": false,
+                                                        "is_square": false,
+                                                        "is_static": false,
+                                                        "is_svg": false
+                                                    },
+                                                    "style": {
+                                                        "cls": "img-lazyload ",
+                                                        "inline": "",
+                                                        "padding_top": "66.666666667%"
+                                                    },
+                                                    "type": "Image"
+                                                }
+                                            },
+                                            "state": {
+                                                "is_first": true,
+                                                "is_last": false
+                                            },
+                                            "style": {
+                                                "cls": "c-card__image--landscape",
+                                                "inline": ""
+                                            },
+                                            "type": "ListItem"
+                                        }],
+                                        "length": 1
+                                    },
+                                    "state": {},
+                                    "style": {
+                                        "cls": "",
+                                        "inline": ""
+                                    },
+                                    "type": "List"
+                                },
+                                "link": {
+                                    "data": {
+                                        "id": "de14eafb-b977-4b2d-b56a-dfb887d30ac4",
+                                        "title": "Review: B&O Beoplay P2 portable Bluetooth speaker",
+                                        "url": "/article/beoplay-p2-review"
+                                    },
+                                    "state": {
+                                        "is_blank": false
+                                    },
+                                    "style": {
+                                        "cls": "",
+                                        "inline": ""
+                                    },
+                                    "type": "Link"
+                                },
+                                "meta_list": {
+                                    "data": {
+                                        "id": "fcd64a76-9d1c-4d30-937f-b0a030671807",
+                                        "items": [{
+                                            "data": {
+                                                "id": "8c5c702f-8e66-4e21-a17b-f807562a3caa",
+                                                "index": 0,
+                                                "item": {
+                                                    "data": {
+                                                        "icon": null,
+                                                        "id": "cbd8b16c-dcf4-49d4-8b00-791dba3cb719",
+                                                        "link": null,
+                                                        "meta_type": "date",
+                                                        "title": "27 Apr 2017"
+                                                    },
+                                                    "state": {
+                                                        "has_icon": false,
+                                                        "has_link": false,
+                                                        "is_creative_director": false,
+                                                        "is_date": true,
+                                                        "is_duration": false,
+                                                        "is_episode_number": false,
+                                                        "is_event_date": false,
+                                                        "is_event_location": false,
+                                                        "is_gallery": false,
+                                                        "is_location": false,
+                                                        "is_profile": false,
+                                                        "is_tag": false,
+                                                        "is_video_topic": false
+                                                    },
+                                                    "style": {
+                                                        "cls": "",
+                                                        "inline": ""
+                                                    },
+                                                    "type": "Meta"
+                                                }
+                                            },
+                                            "state": {
+                                                "is_first": true,
+                                                "is_last": false
+                                            },
+                                            "style": {
+                                                "cls": "",
+                                                "inline": ""
+                                            },
+                                            "type": "ListItem"
+                                        }],
+                                        "length": 1
+                                    },
+                                    "state": {},
+                                    "style": {
+                                        "cls": "",
+                                        "inline": ""
+                                    },
+                                    "type": "MetaList"
+                                },
+                                "primary_tag": {
+                                    "data": {
+                                        "event_information": null,
+                                        "id": "f04fb183-7b71-4eec-81e0-9a0fd7e809f6",
+                                        "link": {
+                                            "data": {
+                                                "id": "495e2b57-0866-4072-b711-c9f423a69c24",
+                                                "title": "Technology",
+                                                "url": "http://localhost:3000/topic/technology"
+                                            },
+                                            "state": {
+                                                "is_blank": false
+                                            },
+                                            "style": {
+                                                "cls": "",
+                                                "inline": ""
+                                            },
+                                            "type": "Link"
+                                        },
+                                        "title": "Technology"
+                                    },
+                                    "state": {
+                                        "has_link": true
+                                    },
+                                    "style": {
+                                        "cls": "",
+                                        "inline": ""
+                                    },
+                                    "type": "Tag"
+                                },
+                                "review_information": null,
+                                "sponsor": null,
+                                "teaser": "It's B&O's smallest yet \u2013 but is it any good?",
+                                "title": "Review: B&O Beoplay P2 portable Bluetooth speaker"
+                            },
+                            "state": {
+                                "is_contributor": false,
+                                "is_hero": false,
+                                "is_landscape": false,
+                                "is_magazine": false,
+                                "is_portrait": false,
+                                "is_show": false,
+                                "is_splash": false,
+                                "is_switcher": true,
+                                "is_thumbnail": false,
+                                "is_top_stories": false
+                            },
+                            "style": {
+                                "cls": "c-card--switcher",
+                                "inline": ""
+                            },
+                            "type": "SwitcherCard"
+                        }
+                    },
+                    "state": {
                         "is_first": false,
                         "is_last": true
-                      },
-                      "style": {
-                        "cls": ""
-                      },
-                      "type": "ListItem"
-                    }],
-                    "length": 3
-                  },
-                  "state": {},
-                  "style": {
-                    "cls": ""
-                  },
-                  "type": "List"
-                },
-                "review_information": null,
-                "sponsor": null,
-                "primary_tag": {
-                  "data": {
-                    "event_information": null,
-                    "link": {
-                      "data": {
-                        "title": "Paris Fashion Week",
-                        "url": "http://localhost:3000/event/paris-fashion-week/"
-                      },
-                      "state": {},
-                      "style": {
-                        "cls": ""
-                      },
-                      "type": "Link"
                     },
-                    "title": "Paris Fashion Week"
-                  },
-                  "state": {},
-                  "style": {
-                    "cls": ""
-                  },
-                  "type": "Tag"
-                },
-                "teaser": "Stay up to date with the latest from the City of Light as Fashion Week takes over",
-                "title": "PFW: Daily Digest"
-              },
-              "state": {
-                "is_contributor": false,
-                "is_hero": false,
-                "is_landscape": false,
-                "is_portrait": false,
-                "is_show": false,
-                "is_switcher": true
-              },
-              "style": {
-                "cls": "c-card--switcher"
-              },
-              "type": "SwitcherCard"
-            }
-          },
-          "state": {
-            "is_first": false,
-            "is_last": false
-          },
-          "style": {
-            "cls": ""
-          },
-          "type": "ListItem"
-        }, {
-          "data": {
-            "item": {
-              "data": {
-                "byline": "Naomi Pike",
-                "event_information": null,
-                "icon": {
-                  "data": {
-                    "alt_text": null,
-                    "credit": null,
-                    "description": null,
-                    "lazyload": true,
-                    "look_number": null,
-                    "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
-                    "title": null
-                  },
-                  "state": {
-                    "is_image": false,
-                    "is_linked": false,
-                    "is_picture": false,
-                    "is_static": false,
-                    "is_svg": true
-                  },
-                  "style": {
-                    "cls": "img-lazyload "
-                  },
-                  "type": "SVG"
-                },
-                "image_list": {
-                  "data": {
-                    "items": [{
-                      "data": {
-                        "item": {
-                          "data": {
-                            "alt_text": null,
-                            "credit": null,
-                            "description": "",
-                            "image_url": "https://vg-images.condecdn.net/image/L4LzzL0Wv4p/crop/405/landscape",
-                            "lazyload": true,
-                            "look_number": null,
-                            "orientation": "landscape",
-                            "srcset": "https://vg-images.condecdn.net/image/L4LzzL0Wv4p/crop/405/landscape 405w",
-                            "title": ""
-                          },
-                          "state": {
-                            "is_image": true,
-                            "is_linked": false,
-                            "is_picture": false,
-                            "is_static": false,
-                            "is_svg": false
-                          },
-                          "style": {
-                            "cls": "img-lazyload "
-                          },
-                          "type": "Image"
-                        }
-                      },
-                      "state": {
-                        "is_first": true,
-                        "is_last": false
-                      },
-                      "style": {
-                        "cls": "c-card__image--landscape"
-                      },
-                      "type": "ListItem"
-                    }],
-                    "length": 1
-                  },
-                  "state": {},
-                  "style": {
-                    "cls": ""
-                  },
-                  "type": "List"
-                },
-                "link": {
-                  "data": {
-                    "title": "This Week In Pictures - 27/02/2017",
-                    "url": "/gallery/this-week-in-pictures-28022017"
-                  },
-                  "state": {},
-                  "style": {
-                    "cls": ""
-                  },
-                  "type": "Link"
-                },
-                "meta_list": {
-                  "data": {
-                    "items": [{
-                      "data": {
-                        "item": {
-                          "data": {
-                            "icon": null,
-                            "link": {
-                              "data": {
-                                "title": "News",
-                                "url": "http://localhost:3000/topic/news/"
-                              },
-                              "state": {},
-                              "style": {
-                                "cls": ""
-                              },
-                              "type": "Link"
-                            },
-                            "meta_type": "tag",
-                            "title": "News"
-                          },
-                          "state": {},
-                          "style": {
-                            "cls": ""
-                          },
-                          "type": "Meta"
-                        }
-                      },
-                      "state": {
-                        "is_first": true,
-                        "is_last": false
-                      },
-                      "style": {
-                        "cls": ""
-                      },
-                      "type": "ListItem"
-                    }, {
-                      "data": {
-                        "item": {
-                          "data": {
-                            "icon": {
-                              "data": {
-                                "alt_text": null,
-                                "credit": null,
-                                "description": null,
-                                "lazyload": true,
-                                "look_number": null,
-                                "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
-                                "title": null
-                              },
-                              "state": {
-                                "is_image": false,
-                                "is_linked": false,
-                                "is_picture": false,
-                                "is_static": false,
-                                "is_svg": true
-                              },
-                              "style": {
-                                "cls": "img-lazyload "
-                              },
-                              "type": "SVG"
-                            },
-                            "link": null,
-                            "meta_type": "gallery",
-                            "title": "32 items"
-                          },
-                          "state": {},
-                          "style": {
-                            "cls": ""
-                          },
-                          "type": "Meta"
-                        }
-                      },
-                      "state": {
-                        "is_first": false,
-                        "is_last": false
-                      },
-                      "style": {
-                        "cls": ""
-                      },
-                      "type": "ListItem"
-                    }, {
-                      "data": {
-                        "item": {
-                          "data": {
-                            "icon": null,
-                            "link": null,
-                            "meta_type": "date",
-                            "title": "9:30 AM"
-                          },
-                          "state": {},
-                          "style": {
-                            "cls": ""
-                          },
-                          "type": "Meta"
-                        }
-                      },
-                      "state": {
-                        "is_first": false,
-                        "is_last": true
-                      },
-                      "style": {
-                        "cls": ""
-                      },
-                      "type": "ListItem"
-                    }],
-                    "length": 3
-                  },
-                  "state": {},
-                  "style": {
-                    "cls": ""
-                  },
-                  "type": "List"
-                },
-                "review_information": null,
-                "sponsor": null,
-                "primary_tag": {
-                  "data": {
-                    "event_information": null,
-                    "link": {
-                      "data": {
-                        "title": "News",
-                        "url": "http://localhost:3000/topic/news/"
-                      },
-                      "state": {},
-                      "style": {
-                        "cls": ""
-                      },
-                      "type": "Link"
+                    "style": {
+                        "cls": "",
+                        "inline": ""
                     },
-                    "title": "News"
-                  },
-                  "state": {},
-                  "style": {
-                    "cls": ""
-                  },
-                  "type": "Tag"
-                },
-                "teaser": "The news stories of the week presented in pictorial form",
-                "title": "This Week In Pictures - 27/02/2017"
-              },
-              "state": {
-                "is_contributor": false,
-                "is_hero": false,
-                "is_landscape": false,
-                "is_portrait": false,
-                "is_show": false,
-                "is_switcher": true
-              },
-              "style": {
-                "cls": "c-card--switcher"
-              },
-              "type": "SwitcherCard"
-            }
-          },
-          "state": {
-            "is_first": false,
-            "is_last": false
-          },
-          "style": {
-            "cls": ""
-          },
-          "type": "ListItem"
-        }, {
-          "data": {
-            "item": {
-              "data": {
-                "byline": "Lauren Milligan",
-                "event_information": null,
-                "icon": null,
-                "image_list": {
-                  "data": {
-                    "items": [{
-                      "data": {
-                        "item": {
-                          "data": {
-                            "alt_text": null,
-                            "credit": null,
-                            "description": "",
-                            "image_url": "https://vg-images.condecdn.net/image/7aPdBZrroL1/crop/405/landscape",
-                            "lazyload": true,
-                            "look_number": null,
-                            "orientation": "landscape",
-                            "srcset": "https://vg-images.condecdn.net/image/7aPdBZrroL1/crop/405/landscape 405w",
-                            "title": ""
-                          },
-                          "state": {
-                            "is_image": true,
-                            "is_linked": false,
-                            "is_picture": false,
-                            "is_static": false,
-                            "is_svg": false
-                          },
-                          "style": {
-                            "cls": "img-lazyload "
-                          },
-                          "type": "Image"
-                        }
-                      },
-                      "state": {
-                        "is_first": true,
-                        "is_last": false
-                      },
-                      "style": {
-                        "cls": "c-card__image--landscape"
-                      },
-                      "type": "ListItem"
-                    }],
-                    "length": 1
-                  },
-                  "state": {},
-                  "style": {
-                    "cls": ""
-                  },
-                  "type": "List"
-                },
-                "link": {
-                  "data": {
-                    "title": "Lingerie Label Agent Provocateur Bought",
-                    "url": "/article/agent-provocateur-bought-by-sports-direct"
-                  },
-                  "state": {},
-                  "style": {
-                    "cls": ""
-                  },
-                  "type": "Link"
-                },
-                "meta_list": {
-                  "data": {
-                    "items": [{
-                      "data": {
-                        "item": {
-                          "data": {
-                            "icon": null,
-                            "link": {
-                              "data": {
-                                "title": "Agent Provocateur",
-                                "url": "http://localhost:3000/brand/agent-provocateur/"
-                              },
-                              "state": {},
-                              "style": {
-                                "cls": ""
-                              },
-                              "type": "Link"
-                            },
-                            "meta_type": "tag",
-                            "title": "Agent Provocateur"
-                          },
-                          "state": {},
-                          "style": {
-                            "cls": ""
-                          },
-                          "type": "Meta"
-                        }
-                      },
-                      "state": {
-                        "is_first": true,
-                        "is_last": false
-                      },
-                      "style": {
-                        "cls": ""
-                      },
-                      "type": "ListItem"
-                    }],
-                    "length": 1
-                  },
-                  "state": {},
-                  "style": {
-                    "cls": ""
-                  },
-                  "type": "List"
-                },
-                "review_information": null,
-                "sponsor": null,
-                "primary_tag": {
-                  "data": {
-                    "event_information": null,
-                    "link": {
-                      "data": {
-                        "title": "Agent Provocateur",
-                        "url": "http://localhost:3000/brand/agent-provocateur/"
-                      },
-                      "state": {},
-                      "style": {
-                        "cls": ""
-                      },
-                      "type": "Link"
-                    },
-                    "title": "Agent Provocateur"
-                  },
-                  "state": {},
-                  "style": {
-                    "cls": ""
-                  },
-                  "type": "Tag"
-                },
-                "teaser": "The British lingerie label Agent Provocateur has been bought by Sports Direct owner Mike Ashley",
-                "title": "Lingerie Label Agent Provocateur Bought"
-              },
-              "state": {
-                "is_contributor": false,
-                "is_hero": false,
-                "is_landscape": false,
-                "is_portrait": false,
-                "is_show": false,
-                "is_switcher": true
-              },
-              "style": {
-                "cls": "c-card--switcher"
-              },
-              "type": "SwitcherCard"
-            }
-          },
-          "state": {
-            "is_first": false,
-            "is_last": true
-          },
-          "style": {
-            "cls": ""
-          },
-          "type": "ListItem"
-        }],
-        "length": 5
-      },
-      "state": {},
-      "style": {
-        "cls": "c-card-list--c-tag"
-      },
-      "type": "List"
+                    "type": "ListItem"
+                }],
+                "length": 4
+            },
+            "state": {},
+            "style": {
+                "cls": "c-card-list--c-curated",
+                "inline": ""
+            },
+            "type": "List"
+        },
+        "id": "64196b27-c25f-40dd-928e-e5bc0f15e1a8",
+        "link": null,
+        "logo": null,
+        "navigation_strip": null,
+        "title": "Top stories"
     },
-    "link": {
-      "data": {
-        "title": "View More",
-        "url": "/topic/news/"
-      },
-      "state": {},
-      "style": {
-        "cls": ""
-      },
-      "type": "Link"
+    "state": {
+        "is_cardlist": true,
+        "is_contributors": false,
+        "is_curated": true,
+        "is_feature": false,
+        "is_gallery": false,
+        "is_magazine": false,
+        "is_newsletter": false,
+        "is_show_season": false,
+        "is_show_summary": false,
+        "is_splash": false,
+        "is_superfeature": false,
+        "is_tag": false
     },
-    "logo": null,
-    "navigation_strip": {
-      "data": {
-        "title": "Topics",
-        "topic_list": {
-          "data": {
-            "items": [{
-              "data": {
-                "item": {
-                  "data": {
-                    "title": "Bafta Awards",
-                    "url": "/event/bafta-awards/"
-                  },
-                  "state": {},
-                  "style": {
-                    "cls": ""
-                  },
-                  "type": "Link"
-                }
-              },
-              "state": {
-                "is_first": true,
-                "is_last": false
-              },
-              "style": {
-                "cls": ""
-              },
-              "type": "ListItem"
-            }, {
-              "data": {
-                "item": {
-                  "data": {
-                    "title": "This Week In Pictures",
-                    "url": "/topic/this-week-in-pictures/"
-                  },
-                  "state": {},
-                  "style": {
-                    "cls": ""
-                  },
-                  "type": "Link"
-                }
-              },
-              "state": {
-                "is_first": false,
-                "is_last": false
-              },
-              "style": {
-                "cls": ""
-              },
-              "type": "ListItem"
-            }, {
-              "data": {
-                "item": {
-                  "data": {
-                    "title": "Gigi Hadid",
-                    "url": "/person/gigi-hadid/"
-                  },
-                  "state": {},
-                  "style": {
-                    "cls": ""
-                  },
-                  "type": "Link"
-                }
-              },
-              "state": {
-                "is_first": false,
-                "is_last": false
-              },
-              "style": {
-                "cls": ""
-              },
-              "type": "ListItem"
-            }, {
-              "data": {
-                "item": {
-                  "data": {
-                    "title": "New York Fashion Week",
-                    "url": "/event/new-york-fashion-week/"
-                  },
-                  "state": {},
-                  "style": {
-                    "cls": ""
-                  },
-                  "type": "Link"
-                }
-              },
-              "state": {
-                "is_first": false,
-                "is_last": true
-              },
-              "style": {
-                "cls": ""
-              },
-              "type": "ListItem"
-            }],
-            "length": 4
-          },
-          "state": {},
-          "style": {
-            "cls": ""
-          },
-          "type": "List"
-        }
-      },
-      "state": {},
-      "style": {
-        "cls": "c-topic-strip--bleed c-topic-strip--c-splash-section"
-      },
-      "type": "TopicStrip"
+    "style": {
+        "cls": "c-card-section--c-curated",
+        "inline": ""
     },
-    "title": "News"
-  },
-  "state": {
-    "is_cardlist": true,
-    "is_contributors": false,
-    "is_feature": false,
-    "is_gallery": false,
-    "is_magazine": false,
-    "is_newsletter": false,
-    "is_show_season": false,
-    "is_show_summary": false,
-    "is_superfeature": false,
-    "is_tag": true
-  },
-  "style": {
-    "cls": "c-splash-section--c-tag"
-  },
-  "type": "SectionSplash"
+    "type": "SectionCardlist"
 }
