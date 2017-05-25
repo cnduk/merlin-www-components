@@ -117,7 +117,7 @@
     display: none;
     margin-bottom: 14px;
     margin-top: 14px;
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
         @include font-size(15px);
         @include line-height(20px);
         display: block;
