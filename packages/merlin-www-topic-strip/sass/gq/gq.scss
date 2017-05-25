@@ -28,6 +28,7 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         display: inline-block;
         margin: 0;
+        padding: 0;
         position: absolute;
         right: 0;
         top: 0;
