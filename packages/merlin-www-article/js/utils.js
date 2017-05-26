@@ -183,3 +183,12 @@ export function setStorage(key, val){
     return window[cnd].Store.set(storeKey, val);
 }
 
+/**
+ * Checks if an article is of type gallery
+ * @param  {Article}  article
+ * @return {Boolean}
+ */
+export function isArticleGallery(article){
+    return article.type === ARTICLE_TYPES.GALLERY ||
+        article.type === ARTICLE_TYPES['SHOW-SUMMARY'];
+}

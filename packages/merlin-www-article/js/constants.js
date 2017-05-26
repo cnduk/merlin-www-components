@@ -9,7 +9,8 @@ export var ARTICLE_TYPES = {
     'UNKNOWN': -1,
     'ARTICLE': 0,
     'GALLERY': 1,
-    'VIDEO': 2
+    'VIDEO': 2,
+    'SHOW-SUMMARY': 3
 };
 
 export var CLS_INFINITE_BTN = '.js-a-infinite-btn';
