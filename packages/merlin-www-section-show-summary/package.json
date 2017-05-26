@@ -1,15 +1,15 @@
 {
   "name": "@cnbritain/merlin-www-section-show-summary",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "description": "",
   "main": "index.js",
   "scripts": {
     "demo": "merlin-component-demo-server merlin.json"
   },
   "dependencies": {
-    "@cnbritain/merlin-www-buttons": "^1.1.10",
-    "@cnbritain/merlin-www-common": "^1.2.10",
-    "@cnbritain/merlin-www-image": "^1.2.2"
+    "@cnbritain/merlin-www-buttons": "^1.1.11",
+    "@cnbritain/merlin-www-common": "^1.2.11",
+    "@cnbritain/merlin-www-image": "^1.2.3"
   },
   "devDependencies": {
     "@cnbritain/merlin-component-demo-server": "^2.8.2"
