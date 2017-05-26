@@ -44,7 +44,7 @@
 .c-splash-hero__content {
 	background: $white;
 	border-bottom: 1px solid $bon-jour;
-	margin: -64px 20px 0 20px;
+	margin: -69px 20px 0 20px;
 	padding: 28px 20px;
 	position: relative;
 	text-align: center;
@@ -61,12 +61,14 @@
 	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
 		margin-left: $TABLET_SIDE_GUTTER;
 		margin-right: $TABLET_SIDE_GUTTER;
+		margin-top: -80px;
 	}
 
 	@include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
 	    bottom: 60px;
 	    box-sizing: border-box;
 	    padding: 36px 24px;
+	    margin-top: -64px;
 
 	    &:after {
 	        @include triangle(18px, 14px, 'up', $white);
