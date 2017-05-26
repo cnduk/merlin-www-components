@@ -775,3 +775,28 @@ export function setAdStateToStopped(ad){
     ad.el.setAttribute('data-ad-stopped', true);
     return ad;
 }
+
+/**
+ * Creates a page impression element
+ * @param  {string} unit   ad unit
+ * @param  {string} zone   ad zone
+ * @param  {object} values key values
+ * @return {HTMLDivElement}
+ */
+export function createPageImpressionElement(unit, zone, values){
+    var attrs = {
+        unit: unit,
+        zone: zone,
+        sizes: "[[5, 5]]",
+        bidding: false,
+        sizemap: null,
+        values: JSON.stringify(values),
+        placement: "PAGE_IMPRESSION_TRACKER"
+    };
+    var div = document.createElement('div');
+    for(var key in attrs){
+        if(!attrs.hasOwnProperty(key)) continue;
+        div.setAttribute('data-ad-' + key, attrs[key]);
+    }
+    return div;
+}
