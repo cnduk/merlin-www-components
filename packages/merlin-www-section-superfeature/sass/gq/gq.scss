@@ -6,7 +6,7 @@
 .c-superfeature {
     background-color: $seashell;
     padding-bottom: 20px;
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
         background-color: initial;
         padding-bottom: 0;
     }
@@ -24,7 +24,7 @@
     //     margin-top: $DESKTOP_SLICE_MARGIN;
     // }
 
-    @include max-screen($FEATURE_LARGE_BREAKPOINT - 1) {
+    @include max-screen($SUPERFEATURE_LARGE_BREAKPOINT - 1) {
         & + .c-gallery,
         & + .c-feature {
             padding-top: 0;
@@ -35,7 +35,7 @@
 .c-superfeature__image {
     padding-top: 66.66666%;
     position: relative;
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
         padding-top: 56.25%;
     }
 
@@ -67,7 +67,7 @@
         top: -16px;
     }
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
         @include vendor-prefix(transform, translateX(-50%));
         bottom: 40px;
         box-sizing: border-box;
@@ -91,7 +91,7 @@
     margin-bottom: 8px;
     margin-top: 0;
     text-transform: capitalize;
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
         @include font-size(12px);
         @include line-height(16px);
         margin-bottom: 12px;
@@ -103,7 +103,7 @@
     @include font("ITC_FENICE", 24px, 700, 28px, -4);
     margin-bottom: 14px;
     margin-top: 0px;
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
         @include font-size(32px);
         @include line-height(36px);
         margin-bottom: 8px;
