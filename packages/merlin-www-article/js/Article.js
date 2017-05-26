@@ -30,6 +30,7 @@ function Article(el, _options){
 
     var options = _options || {};
 
+    this.ads = options.ads || null;
     this.analytics = options.analytics || null;
     this.bounds = null;
     this.el = el;

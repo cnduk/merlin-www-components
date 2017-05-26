@@ -131,6 +131,7 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
 
     "add": function add(el, _options){
         var config = assign({
+            'ads': null,
             'analytics': null,
             'infinite': false,
             'simplereach': null
@@ -312,6 +313,11 @@ function onInfiniteLoadComplete(e){
     var articleEl = document.querySelectorAll('.a-main');
     articleEl = articleEl[articleEl.length - 1];
 
+    var ads = null;
+    if(responseJSON.hasOwnProperty('config_ad') && responseJSON.config_ad !== null){
+        ads = responseJSON.config_ad.data;
+    }
+
     var analytics = null;
     if(responseJSON.hasOwnProperty('config_analytics') && responseJSON.config_analytics !== null){
         analytics = responseJSON.config_analytics.data;
@@ -323,6 +329,7 @@ function onInfiniteLoadComplete(e){
     }
 
     var article = this.add(articleEl, {
+        'ads': ads,
         'analytics': analytics,
         'infinite': true,
         'simplereach': simplereach
