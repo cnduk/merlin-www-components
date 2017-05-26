@@ -132,7 +132,7 @@
     @include font("ITC_FENICE", 24px, 700, 28px, -4);
     margin-bottom: 14px;
     margin-top: 0px;
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
         @include font-size(32px);
         @include line-height(36px);
         margin-bottom: 8px;
