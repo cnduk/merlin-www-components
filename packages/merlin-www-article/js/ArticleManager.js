@@ -110,6 +110,10 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         // Resize
         onPageLoad(this.resize.bind(this, 0));
 
+        // Scroll listener for focus and blur events
+        this._hooks.scroll = throttle(onWindowScroll, 33, this);
+        addEvent(window, 'scroll', this._hooks.scroll);
+
         // Video changes
         if(VideoPlayer !== null){
             bubbleEvent(VideoPlayer, this, 'videoselect');
@@ -160,17 +164,10 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
 
         removeEvent(window, 'resize', this._hooks.resize);
         this._hooks.resize = null;
-
-        removeEvent(window, 'scroll', this._hooks.scroll);
-        this._hooks.scroll = null;
     },
 
     "enableInfiniteScroll": function enableInfiniteScroll(){
         if(this._infiniteScroll !== null) return;
-
-        // Scroll listener for focus and blur events
-        this._hooks.scroll = throttle(onWindowScroll, 33, this);
-        addEvent(window, 'scroll', this._hooks.scroll);
 
         this._infiniteScroll = new InfiniteScroll({
             "el": window,
