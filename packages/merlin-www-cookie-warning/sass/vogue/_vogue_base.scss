@@ -1,0 +1,35 @@
+.c-cookie-warning {
+    background-color: #FFF;
+    border: 2px solid #EAEAEA;
+    border-radius: 3px 3px 0 0;
+    padding: 10px $MOBILE_SIDE_GUTTER;
+}
+.c-cookie-warning__table-cell--cta {
+    width: 30px;
+}
+.c-cookie-warning__message {
+    color: #acacac;
+    @include font('NOBEL', 14px, null, 18px);
+    margin-bottom: 0;
+    margin-top: 0;
+
+    a {
+        color: inherit;
+        text-decoration: underline;
+    }
+}
+.c-cookie-warning__button {
+    background-color: $COLOUR_BG_ACCENT2;
+    border: 1px solid $COLOR_BORDER_DOTTED;
+    border-radius: 50%;
+    height: 20px;
+    padding: 0;
+    width: 20px;
+
+    svg {
+        display: inline-block;
+        height: 10px;
+        margin: 0 auto;
+        width: 8px;
+    }
+}

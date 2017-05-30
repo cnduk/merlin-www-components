@@ -1,0 +1,35 @@
+{
+    "name": "@cnbritain/merlin-www-cookie-warning",
+    "description": "Dat bootiful 🍪 warnin",
+    "main": "index",
+    "currentTheme": null,
+    "data": {
+        "vogue": "data/vogue.json"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "missvogue": "sass/missvogue/missvogue.scss"
+    },
+    "partials": {
+        "index": "partials/index.html"
+    },
+    "js": {
+        "demo": "demo/demo.js"
+    },
+    "demo": {
+        "general": {
+            "data": "vogue",
+            "main": "index",
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue"
+            ]
+        }
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-js-utils",
+        "@cnbritain/merlin-www-image"
+    ]
+}
