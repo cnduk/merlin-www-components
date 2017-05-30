@@ -1,0 +1,59 @@
+@import '@cnbritain/merlin-www-common:gq';
+
+@import '../wireframe/wireframe';
+
+.c-cookie-warning {
+	background: rgba($seashell, 0.96);
+	border-left: 1px solid $bon-jour;
+	border-right: 1px solid $bon-jour;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-top: 1px solid $bon-jour;
+	padding: 16px;
+}
+
+.c-cookie-warning__table {
+
+}
+
+.c-cookie-warning__table-cell {
+
+}
+
+.c-cookie-warning__table-cell--message {
+	padding-right: 20px;
+}
+
+.c-cookie-warning__table-cell--cta {
+
+}
+
+.c-cookie-warning__message {
+	color: $shuttle-gray;
+	font-family: “Gotham”, sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 16px;
+	margin: 0;
+
+	a {
+		@include font-weight(400);
+		border-bottom: 1px solid $shuttle-gray;
+		color: $shuttle-gray;
+		text-decoration: none;
+	}
+}
+
+.c-cookie-warning__button {
+	border-radius: 50%;
+	border: 1px solid $shuttle-gray;
+	fill: $shuttle-gray;
+	height: 20px;
+	width: 20px;
+
+	svg {
+		height: 100%;
+		width: 6px;
+	}
+}
