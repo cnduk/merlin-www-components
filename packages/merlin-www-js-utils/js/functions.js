@@ -300,6 +300,14 @@ export function delegate( selector, fn, ctx ){
 }
 
 /**
+ * Deletes a cookie 🍪
+ * @param  {String} key cookie name
+ */
+export function deleteCookie(key){
+    setCookie(key, '', -1);
+}
+
+/**
  * Exits fullscreen mode for the element
  * @param  {HTMLNode} el
  */
@@ -364,6 +372,26 @@ export function getBoundingClientRect( el ){
         "top": 0,
         "width": width
     };
+}
+
+/**
+ * Get a cookie 🍪
+ * @param  {String} key cookie name
+ * @return {*}
+ */
+export function getCookie(key){
+    var cookieString = document.cookie.split(';');
+    var len = cookieString.length;
+    var cookie = null;
+    while(len--){
+        cookie = cookieString[len].trim();
+        if(cookie.indexOf(key) === 0){
+            // LOL IM A JOKER
+            var cooKey = key + '=';
+            return cookie.substring(cooKey.length, cookie.length);
+        }
+    }
+    return null;
 }
 
 /**
@@ -901,6 +929,22 @@ export function removeElement( el ){
 export function removeEvent( el, type, fn ){
     if( document.removeEventListener ) return el.removeEventListener( type, fn );
     return el.detachEvent( "on" + type, fn );
+}
+
+/**
+ * Set a cookie 🍪
+ * @param {String} key   cookie name
+ * @param {*} value cookie value
+ * @param {Number} days  amount of days the cookie should last
+ */
+export function setCookie(key, value, days){
+    var expires = "";
+    if(days){
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toGMTString();
+    }
+    document.cookie = key + '=' + value + expires + '; path=/';
 }
 
 /**
