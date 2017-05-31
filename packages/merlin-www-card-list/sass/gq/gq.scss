@@ -93,6 +93,10 @@
             visibility: hidden;
             width: 0;
         }
+
+        &:last-child {
+        	margin-right: 20px;
+        }
     }
 }
 
