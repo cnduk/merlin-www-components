@@ -47,7 +47,7 @@
 
 .c-magazine__cover--tablet {
 	img {
-		background-color: #19191b;
+		background-color: $woodsmoke;
 		border-radius: 8px;
 		box-shadow: 2px 0 32px 0 rgba(0, 0, 0, 0.16);
 	    padding: 20px 8px;
@@ -88,7 +88,7 @@
 	}
 	margin-top: 24px;
 	&:after {
-		background-image: url('data:image/svg+xml;utf8, <svg fill="#4681f5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8.48"><title>btn-arrownext</title><path d="M8,12.24l-0.53-.8,4.44-3H2v-1h9.93l-4.44-3L8,3.76,13.79,7.6a0.48,0.48,0,0,1,0,.8Z" transform="translate(-2 -3.76)"/></svg>');
+		background-image: url('data:image/svg+xml;utf8, <svg fill="%234681f5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8.48"><title>btn-arrownext</title><path d="M8,12.24l-0.53-.8,4.44-3H2v-1h9.93l-4.44-3L8,3.76,13.79,7.6a0.48,0.48,0,0,1,0,.8Z" transform="translate(-2 -3.76)"/></svg>');
 		background-position: bottom;
 		background-repeat: no-repeat;
 		content: '';
