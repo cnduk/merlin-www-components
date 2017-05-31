@@ -18,7 +18,8 @@
 .n-main__dropdown-list {
     background-color: $black;
     border: 1px solid $mineshaft;
-    border-top: none;
+    margin-top: -1px;
+    z-index: 1;
 }
 
 .n-main__dropdown-list--left {
