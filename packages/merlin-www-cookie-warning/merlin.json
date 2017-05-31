@@ -9,7 +9,8 @@
     "themes": {
         "wireframe": "sass/wireframe/wireframe.scss",
         "vogue": "sass/vogue/vogue.scss",
-        "missvogue": "sass/missvogue/missvogue.scss"
+        "missvogue": "sass/missvogue/missvogue.scss",
+        "gq": "sass/gq/gq.scss"
     },
     "partials": {
         "index": "partials/index.html"
@@ -24,7 +25,8 @@
             "themes": [
                 "wireframe",
                 "vogue",
-                "missvogue"
+                "missvogue",
+                "gq"
             ]
         }
     },
