@@ -3,8 +3,10 @@
 @import "../wireframe/wireframe";
 
 .c-card-list__item--ad {
-	&.is-hidden + .c-card-list__item {
-		margin-top: 0;
+	@include four-column-size() {
+		&.is-hidden + .c-card-list__item {
+			margin-top: 0;
+		}
 	}
 
 	.ad__block {
