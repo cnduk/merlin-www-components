@@ -2,6 +2,17 @@
 
 @import "../wireframe/wireframe";
 
+.c-card-list__item--ad {
+	&.is-hidden + .c-card-list__item {
+		margin-top: 0;
+	}
+
+	.ad__block {
+		background-color: transparent;
+		padding: 0;
+	}
+}
+
 .c-card-list--c-splash {
 	.c-card-list__item {
 		display: inline-block;
