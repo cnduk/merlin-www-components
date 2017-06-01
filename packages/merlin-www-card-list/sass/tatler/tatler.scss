@@ -17,25 +17,23 @@
 }
 
 $C_CARD_GUTTER: 10px;
+$C_CARD_BUM_MARGIN: 30px;
 
-// Common curated, article recommended, magazine articles, search results,
-// video genre articles, latest articles
-// Contains four cards
-// Goes one, two, four
-.c-card-list--c-curated,
-.c-card-list--a-recommended,
-.c-card-list--mag-articles,
-.c-card-list--s-results,
-.c-card-list--v-genre-articles,
-.c-card-list--c-video-articles {
+
+@mixin cl-base {
     flex-direction: column;
     margin: 0 -$C_CARD_GUTTER;
+    text-align: center;
 
     .c-card-list__item {
+        display: flex;
         padding: 0 $C_CARD_GUTTER;
+        text-align: left;
         width: 100%;
     }
+}
 
+@mixin cl-one {
     @include one-column-size {
         .c-card-list__item + .c-card-list__item {
             margin-top: 20px;
@@ -50,49 +48,112 @@ $C_CARD_GUTTER: 10px;
             }
         }
     }
+}
 
+@mixin cl-two {
     @include two-column-size {
         flex-direction: row;
+        justify-content: flex-start;
 
         .c-card-list__item {
-            display: flex;
-            margin-bottom: 30px;
+            margin-bottom: $C_CARD_BUM_MARGIN;
             width: 50%;
-
-            @include last(2){
-                margin-bottom: 0;
-            }
-        }
-    }
-
-    @include four-column-size {
-        .c-card-list__item {
-            width: 25%;
-
-            @include last(4) {
-                margin-bottom: 0;
-            }
         }
     }
 }
 
-.c-card-list--a-recommended,
-.c-card-list--g-recommended {
-    flex-direction: column;
+@mixin cl-three {
+    @include three-column-size {
+        flex-direction: row;
+        justify-content: center;
 
-    @include one-column-size {
-        .c-card-list__item + .c-card-list__item {
-            margin-top: 20px;
-
-            .c-card {
-                border-color: $COLOUR_BORDER_SEPARATOR;
-            }
+        .c-card-list__item {
+            margin-bottom: $C_CARD_BUM_MARGIN;
+            width: 33.33%;
         }
     }
+}
 
-    @include two-column-size {
+@mixin cl-four {
+    @include four-column-size {
         flex-direction: row;
+        justify-content: flex-start;
+
+        .c-card-list__item {
+            margin-bottom: $C_CARD_BUM_MARGIN;
+            width: 25%;
+        }
     }
+}
+
+@mixin cl-five {
+    @include five-column-size {
+        flex-direction: row;
+        justify-content: center;
+
+        .c-card-list__item {
+            margin-bottom: $C_CARD_BUM_MARGIN;
+            width: 20%;
+        }
+    }
+}
+
+@mixin cl-one-two {
+    @include cl-base;
+    @include cl-one;
+    @include cl-two;
+}
+
+@mixin cl-one-two-three {
+    @include cl-base;
+    @include cl-one;
+    @include cl-two;
+    @include cl-three;
+}
+
+@mixin cl-one-two-three-four {
+    @include cl-base;
+    @include cl-one;
+    @include cl-two;
+    @include cl-three;
+    @include cl-four;
+}
+
+@mixin cl-one-two-four {
+    @include cl-base;
+    @include cl-one;
+    @include cl-two;
+    @include cl-four;
+}
+
+@mixin cl-one-three {
+    @include cl-base;
+    @include cl-one;
+    @include cl-three;
+}
+
+@mixin cl-two-four {
+    @include cl-base;
+    @include cl-two;
+    @include cl-four;
+}
+
+// Common curated, article recommended, magazine articles, search results,
+// video genre articles, latest articles
+// Contains four cards
+// Goes one, two, four
+.c-card-list--c-curated,
+.c-card-list--a-recommended,
+.c-card-list--mag-articles,
+.c-card-list--s-results,
+.c-card-list--v-genre-articles,
+.c-card-list--c-video-articles {
+    @include cl-one-two-four;
+}
+
+.c-card-list--a-recommended,
+.c-card-list--g-recommended {
+    @include cl-one-two;
 
     li.c-card__meta-item + li.c-card__meta-item {
         border-left-color: $COLOUR_BORDER_SEPARATOR;
@@ -101,105 +162,25 @@ $C_CARD_GUTTER: 10px;
 
 // Common tag
 // Contains 5 cards
-// Goes one, two, three, five
+// Goes one, two, three, four
 .c-card-list--c-tag {
-    flex-direction: column;
-    margin: 0 -$C_CARD_GUTTER;
-    text-align: center;
-
-    .c-card-list__item {
-        padding: 0 $C_CARD_GUTTER;
-        text-align: left;
-        width: 100%;
-    }
-
-    @include one-column-size {
-        .c-card-list__item + .c-card-list__item {
-            margin-top: 20px;
-
-            .c-card {
-                border-top: 1px solid $COLOUR_BORDER_SEPARATOR;
-                padding-top: 20px;
-
-                &.c-card--dark {
-                    border-top: 1px solid $COLOUR_BORDER_SEPARATOR;
-                }
-            }
-        }
-    }
-
-    @include two-column-size {
-        flex-direction: row;
-
-        .c-card-list__item {
-            display: flex;
-            margin-bottom: 30px;
-            width: 50%;
-
-            @include last(1){
-                margin-bottom: 0;
-            }
-        }
-    }
-
-    @include three-column-size {
-        .c-card-list__item {
-            margin-bottom: 30px;
-            width: 33.3%;
-
-            @include last(2){
-                margin-bottom: 0;
-            }
-        }
-    }
-
-    @include four-column-size {
-        .c-card-list__item {
-            margin-bottom: 0;
-            width: 25%;
-        }
-    }
+    @include cl-one-two-three-four;
 }
 
 
 // Gallery recommended, common magazine articles
 // Contains 3 cards
 // Goes one, three
-.c-card-list--g-recommended {
-    flex-direction: column;
-    margin: 0 -$C_CARD_GUTTER;
-
-    .c-card-list__item {
-        margin-top: 20px;
-        padding: 0 $C_CARD_GUTTER;
-        width: 100%;
-    }
-
-    @include three-column-size {
-        flex-direction: row;
-
-        .c-card-list__item {
-            display: flex;
-            margin-top: 0;
-            width: 33.3%;
-        }
-    }
+.c-card-list--g-recommended,
+.c-card-list--c-contributors {
+    @include cl-one-three;
 }
 
 .c-card-list--c-contributors {
-    flex-direction: column;
-
     @include three-column-size {
-        flex-direction: row;
         max-width: 600px;
         margin: 0 auto;
         text-align: center;
-
-        .c-card-list__item {
-            display: flex;
-            padding: 0 $C_CARD_GUTTER;
-            width: 33.3%;
-        }
     }
 }
 
@@ -209,38 +190,11 @@ $C_CARD_GUTTER: 10px;
     }
 }
 
-
-
 // Magazine magazines
 // Contains four columns
 // Goes two, four
 .c-card-list--mag-magazines {
-    flex-direction: column;
-    margin: 0 -$C_CARD_GUTTER;
-
-    .c-card-list__item {
-        display: flex;
-        margin-bottom: 20px;
-        @include last(2){
-            margin-bottom: 0;
-        }
-        padding: 0 $C_CARD_GUTTER;
-        width: 50%;
-    }
-
-    @include four-column-size {
-        flex-direction: row;
-
-        .c-card-list__item {
-            margin-bottom: 30px;
-            width: 25%;
-
-            @include last(4){
-                margin-bottom: 0;
-            }
-        }
-    }
-
+    @include cl-two-four;
 }
 
 
@@ -253,7 +207,6 @@ $C_CARD_GUTTER: 10px;
     flex-direction: column;
 
     .c-card-list__item {
-        margin-top: 20px;
         width: 100%;
 
         .c-card {
@@ -265,8 +218,7 @@ $C_CARD_GUTTER: 10px;
             }
         }
 
-        @include first(1){
-            margin-top: 0;
+        @include first(1) {
             .c-card {
                 border-top: none;
                 padding-top: 0;
@@ -276,119 +228,19 @@ $C_CARD_GUTTER: 10px;
                 }
             }
         }
-
     }
 }
 
 
-// Video articles
+// Video articles and tag header articles
 // Contains three columns
 // Goes one, two, three
-.c-card-list--v-articles {
-    flex-direction: column;
-    margin: 0 -$C_CARD_GUTTER;
-
-    .c-card-list__item {
-        padding: 0 $C_CARD_GUTTER;
-        width: 100%;
-    }
-
-    @include one-column-size {
-        .c-card-list__item + .c-card-list__item {
-            margin-top: 20px;
-
-            .c-card {
-                border-top: 1px solid $COLOUR_BORDER_SEPARATOR;
-                padding-top: 20px;
-
-                &.c-card--dark {
-                    border-top: 1px solid $COLOUR_BORDER_SEPARATOR_DARK;
-                }
-            }
-        }
-    }
-
-
-    @include two-column-size {
-        flex-direction: row;
-
-        .c-card-list__item {
-            display: flex;
-            margin-bottom: 30px;
-            width: 50%;
-
-            @include last(2){
-                margin-bottom: 0;
-            }
-        }
-    }
-
-    // This is suppose to be a 4 column trigger with 33.33%
-    @include four-column-size {
-        .c-card-list__item {
-            width: 33.33%;
-
-            @include last(3){
-                margin-bottom: 0;
-            }
-        }
-    }
-}
-
-
-// Tag header articles
-// Contains 3 cards
-// Goes one, two, three
+.c-card-list--v-articles,
 .c-card-list--tg-header-articles {
-    flex-direction: column;
-
-    margin: 0 -$C_CARD_GUTTER;
-    text-align: center;
-
-    .c-card-list__item {
-        padding: 0 $C_CARD_GUTTER;
-        text-align: left;
-        width: 100%;
-    }
-
-    @include one-column-size {
-        .c-card-list__item + .c-card-list__item {
-            margin-top: 20px;
-
-            .c-card {
-                border-top: 1px solid $COLOUR_BORDER_SEPARATOR;
-                padding-top: 20px;
-
-                &.c-card--dark {
-                    border-top: 1px solid $COLOUR_BORDER_SEPARATOR_DARK;
-                }
-            }
-        }
-    }
-
-
-    @include two-column-size {
-        flex-direction: row;
-
-        .c-card-list__item {
-            display: flex;
-            margin-bottom: 30px;
-            width: 50%;
-
-            @include last(1){
-                margin-bottom: 0;
-            }
-        }
-    }
-
-    @include three-column-size {
-        .c-card-list__item {
-            margin-bottom: 0;
-            width: 33.33%;
-        }
-    }
+    @include cl-one-two-three;
 }
 
+// TOP STORIES AH HA
 .c-card-list--top-stories {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -414,6 +266,8 @@ $C_CARD_GUTTER: 10px;
     }
 }
 
+
+// RELATED ARTICLES
 .c-card-list--v-related-articles {
     flex-direction: row;
     margin: 0 -$C_CARD_GUTTER;
