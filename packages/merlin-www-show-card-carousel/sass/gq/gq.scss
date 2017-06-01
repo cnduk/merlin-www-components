@@ -8,6 +8,30 @@
 .sh-item-carousel {
 	border-top: 4px double $bon-jour;
 	margin: 28px 0;
+
+	&--dark {
+		border-color: $mineshaft;
+
+		.sh-item-carousel__title__item {
+			color: $white;
+		}
+
+		.sh-item-carousel__nav__btn {
+			border-color: $white;
+		}
+
+		.sh-item-carousel__nav__btn svg {
+			fill: $white;
+		}
+
+		.sh-item-carousel__nav__btn[disabled] {
+			border-color: $mineshaft;
+		}
+
+		.sh-item-carousel__nav__btn[disabled] svg {
+			fill: $mineshaft;
+		}
+	}
 }
 
 .sh-item-carousel__header {
@@ -74,6 +98,7 @@ li.sh-item-carousel__list__item {
 	margin: 28px 0 20px 0;
 	text-transform: uppercase;
 }
+
 .sh-item-carousel__title__item {
 	@include font("GOTHAM", 12px, 700, 16px, 60);
 	position: relative;

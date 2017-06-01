@@ -10,8 +10,9 @@
 .sh-item-carousel__header {}
 
 .sh-item-carousel__list {
-    overflow: auto;
     -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    overflow-y: hidden;
     white-space: nowrap;
 
     &.has-no-scroll {

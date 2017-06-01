@@ -102,3 +102,22 @@
 	    margin-top: $DESKTOP_SLICE_MARGIN;
 	}
 }
+
+.tg-header__shows {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: $MOBILE_SLICE_MARGIN;
+	max-width: $MAXIMUM_PAGE_WIDTH;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	    margin-top: $TABLET_SLICE_MARGIN;
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	    margin-top: $DESKTOP_SLICE_MARGIN;
+	}
+
+	.sh-item-carousel {
+		margin: 0;
+	}
+}
