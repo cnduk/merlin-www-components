@@ -628,12 +628,15 @@ li.n-menu__social-item {
     width: 50%;
 }
 .n-menu__subscribe-covers {
+    float: right;
+    margin-right: 40px;
     position: relative;
 
     //Removes extra padding from img parent
     font-size: 0;
 }
 .n-menu__subscribe-cover {
+
     &:nth-child(1) {
         width: 85px;
     }
