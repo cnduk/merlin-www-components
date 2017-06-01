@@ -88,6 +88,58 @@ window.GptAdSlots = {
   * Responsive ads
   * ===========================================================================
   */
+
+  function secureUrl(url){
+    url = url.replace(
+        /^http:\/\/digital-assets\.condenast\.co\.uk\/co\/ads\/adbuilder/,
+        "https://cnda.condenast.co.uk/co/ads/adbuilder"
+    );
+    // For http://cnda.condenast.co.uk/co/ads/adbuilder/pausebutton.png
+    url = url.replace(/^http:\/\//, "https://");
+    return url;
+  }
+
+  function isSet(obj, key){
+    if(!obj.hasOwnProperty(key)) return false;
+    return obj[key] !== "" && obj[key] !== null && obj[key] !== undefined;
+  }
+
+  function secureAdSources(config){
+
+    // Background image
+    if(isSet(config, 'backgroundImageSrc')){
+        config.backgroundImageSrc = secureUrl(
+            config.backgroundImageSrc);
+    }
+
+    // Video
+    if(isSet(config, 'videoSrcMp4')){
+        config.videoSrcMp4 = secureUrl(config.videoSrcMp4);
+    }
+    if(isSet(config, 'videoSrcMp4Below720')){
+        config.videoSrcMp4Below720 = secureUrl(
+            config.videoSrcMp4Below720);
+    }
+    if(isSet(config, 'videoSrcMp4Below640')){
+        config.videoSrcMp4Below640 = secureUrl(
+            config.videoSrcMp4Below640);
+    }
+    if(isSet(config, 'videoSrcWebM')){
+        config.videoSrcWebM = secureUrl(config.videoSrcWebM);
+    }
+
+    // Logos
+    if(isSet(config, 'logos')){
+        config.logos.forEach(function eachLogo(logoConfig, index){
+            if(isSet(logoConfig.normal, 'src')){
+                logoConfig.normal.src = secureUrl(logoConfig.normal.src);
+            }
+        });
+    }
+
+    return config;
+  }
+
  window.RESPONSIVEADS = {
 
       /**
@@ -110,6 +162,10 @@ window.GptAdSlots = {
        * @param  {HTMLElement} el
        */
       'renderIframeIntoElement': function(adConfig, el) {
+
+         // Update ad config to use secure urls
+         adConfig = secureAdSources(adConfig);
+
          // Find the responsive ad
          var elementDoc = el.ownerDocument;
          var elementWindow = elementDoc.defaultView || elementDoc.parentWindow;
