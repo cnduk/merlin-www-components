@@ -1,11 +1,11 @@
 {
- "name": "Vogue",
- "short_name": "Vogue",
- "background_color": "#ffffff",
- "theme_color": "#ffffff",
- "display": "browser",
- "orientation": "any",
- "start_url": "/?utm_source=homescreen&utm_medium=webapp",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "any",
+  "name": "Vogue",
+  "short_name": "Vogue",
+  "start_url": "/?utm_source=homescreen&utm_medium=webapp",
+  "theme_color": "#ffffff",
  "icons": [
   {
    "src": "\/static\/icons\/android-icon-36x36.png",
