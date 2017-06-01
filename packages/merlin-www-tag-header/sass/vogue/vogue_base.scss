@@ -149,7 +149,7 @@
 }
 
 .tg-header__cards {
-    margin: $MARGIN_LARGE auto;
+    margin: 0 auto $MARGIN_LARGE auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
