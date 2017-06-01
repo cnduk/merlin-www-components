@@ -1,7 +1,4 @@
 .a-header {}
-.a-header--gallery {}
-
-.a-header--video {}
 
 .a-header__wrapper {}
 
@@ -280,3 +277,17 @@
 .a-header__event-location {}
 .a-header__event-date {}
 .a-header__event-btn {}
+
+.a-header--gallery {}
+
+.a-header--video {
+    .a-header__separator {
+        display: none;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        .a-header__meta-item {
+            @include font-size(12px);
+        }
+    }
+}
