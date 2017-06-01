@@ -10,12 +10,6 @@
 	border-top-right-radius: 4px;
 	border-top: 1px solid $bon-jour;
 	padding: 16px;
-
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		left: $DESKTOP_SIDE_GUTTER;
-		margin-left: 0;
-		width: 360px;
-	}
 }
 
 .c-cookie-warning__table {
