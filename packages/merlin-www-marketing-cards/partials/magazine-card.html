@@ -1,15 +1,15 @@
 <aside class="a-marketing-card a-marketing-card--magazine">
-    <div class="a-marketing-card__col">
-        <div class="a-marketing-card__magazine">
-            {{# data.image_list }}
+    {{# data.image_list }}
+        <div class="a-marketing-card__col">
+            <div class="a-marketing-card__magazine">
                 {{# data.items }}
                     {{# data.item }}
                         {{> @cnbritain/merlin-www-image }}
                     {{/ data.item }}
                 {{/ data.items }}
-            {{/ data.image_list }}
+            </div>
         </div>
-    </div>
+    {{/ data.image_list }}
     <div class="a-marketing-card__col">
         {{# data.title }}
             <h4 class="a-marketing-card__title">{{ . }}</h4>
