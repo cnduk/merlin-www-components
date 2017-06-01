@@ -92,6 +92,12 @@ Playlist.prototype = inherit(EventEmitter.prototype, {
         // Update any local storage values
         if(responseJSON.local_storage){
             responseJSON.local_storage.forEach(function(item){
+                if(/playlist_json$/.test(item.key)){
+                    this.videoConfigs = this.videoConfigs.concat(
+                        item.value);
+                } else {
+                    setStorage(item.key, item.value);
+                }
                 switch(item.key){
                     case 'cnd_vg_playlist_json':
                         this.videoConfigs = this.videoConfigs.concat(
@@ -194,7 +200,7 @@ function getElementIndex(el){
 }
 
 function getPlaylistJson(){
-    return getStorage('cnd_vg_playlist_json');
+    return getStorage('playlist_json');
 }
 
 function addChildrenToNode(node, children){
