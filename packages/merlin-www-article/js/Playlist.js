@@ -98,15 +98,6 @@ Playlist.prototype = inherit(EventEmitter.prototype, {
                 } else {
                     setStorage(item.key, item.value);
                 }
-                switch(item.key){
-                    case 'cnd_vg_playlist_json':
-                        this.videoConfigs = this.videoConfigs.concat(
-                            item.value);
-                        break;
-                    default:
-                        setStorage(item.key, item.value);
-                        break;
-                }
             }.bind(this));
         }
 
