@@ -1,6 +1,7 @@
 .c-card {
     display: flex;
     position: relative;
+    width: 100%;
 }
 
 .c-card__link--article {
@@ -102,7 +103,9 @@ li.c-card__meta-item {
 .c-card__rating-mark--fill {}
 
 .c-card__byline,
-.c-card__sponsor {}
+.c-card__sponsor {
+    margin: 0;
+}
 
 .c-card__byline-prefix,
 .c-card__sponsor-label {

@@ -30,13 +30,6 @@
        padding: 28px 20px;
     }
 
-    .c-card__separator {
-        width: 20px;
-        border: 0;
-        border-top: 1px solid $COLOUR_MAIN_HIGHLIGHT;
-        margin: 15px auto;
-    }
-
     .c-card__teaser {
         display: none;
     }
@@ -48,7 +41,26 @@
         @include font('STARLING', 24px, 'NORMAL', 28px);
 
         color: $black-two;
-        margin: 0;
+        margin: 0 0 15px;
+    }
+
+    .c-card__header {
+        flex: 1 0 auto;
+        position: relative;
+    }
+
+    .c-card__separator {
+        width: 20px;
+        border: 0;
+        border-top: 1px solid $COLOUR_MAIN_HIGHLIGHT;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin: 0 0 0 -10px;
+    }
+
+    .c-card__body {
+        flex: 0 1 auto;
     }
 
     .c-card__image__icon {
