@@ -26,7 +26,7 @@
     width: 100%;
     word-wrap: break-word;
 
-    @include min-screen(940px){
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
         padding: 0 $ARTICLE_RIGHT_TOTAL 0 0;
     }
 

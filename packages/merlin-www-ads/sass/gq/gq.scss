@@ -141,7 +141,7 @@
         background-color: $shark;
         padding-bottom: 0;
 
-        @include min-screen($SHOWS_SEASON_HUB_LARGE_BREAKPOINT) {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             padding: 0;
             position: absolute;
             right: 0;
