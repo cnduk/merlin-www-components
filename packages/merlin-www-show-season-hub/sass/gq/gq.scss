@@ -167,6 +167,8 @@ li.sh-season-hub-viewer__tabs__tab {
 
 .sh-season-hub-viewer__list {
 	font-size: 0;
+	overflow-x: auto;
+	overflow-y: hidden;
 
 	&--inline {
 		padding-left: $MOBILE_SIDE_GUTTER;
@@ -194,7 +196,9 @@ li.sh-season-hub-viewer__tabs__tab {
 				}
 
 				.c-card__title {
+					overflow: hidden;
 					text-align: left;
+					text-overflow: ellipsis;
 				}
 			}
 
