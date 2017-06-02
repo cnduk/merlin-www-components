@@ -246,6 +246,10 @@
     margin: 40px 0;
 }
 
+.bb-figure__wrapper {
+    background-color: $bon-jour;
+}
+
 .bb-figure__caption,
 .bb-figure__credit {
 
@@ -323,6 +327,7 @@
 }
 .bb-card__images {
     .bb-card__image {
+        background-color: $bon-jour;
         padding-top: 100%;
     }
 
@@ -490,14 +495,9 @@
     }
 }
 
-.bb-gallery__cols {
-
-}
-
+.bb-gallery__cols {}
 .bb-gallery__col {
-    img {
-        width: 100%;
-    }
+    background-color: $bon-jour;
 }
 
 .bb-gallery__remaining {
