@@ -383,7 +383,9 @@ function onArticleFocus(e){
     document.title = article.properties.title;
 
     if(article.simplereach){
-        emitSimpleReach(article.simplereach);
+        var simplereachConfig = cloneObjectDeep(article.simplereach);
+        simplereachConfig['ref_url'] = lastUrl
+        emitSimpleReach(simplereachConfig);
     }
 
 }
