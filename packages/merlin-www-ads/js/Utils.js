@@ -76,7 +76,7 @@ var KEY_TEST_AD_ZONE = 'ad_test_zone';
  * @readonly
  * @enum {Number}
  */
-var AD_SIZES = {
+export var AD_SIZES = {
     'UNKNOWN': -1,
     'NATIVE': 0,
     'MPU': 1,
@@ -90,7 +90,6 @@ var AD_SIZES = {
     'INREAD': 9,
     'TRACKING_PIXEL': 10
 };
-export var AD_SIZES;
 
 /**
  * Maps sizes to enums
@@ -116,7 +115,7 @@ var AD_SIZES_MAP = {
  * @readonly
  * @enum {Number}
  */
-var AD_STATES = {
+export var AD_STATES = {
     'UNINITIALISED': 0,
     'INITIALISED': 1,
     'REGISTERED': 2,
@@ -124,7 +123,6 @@ var AD_STATES = {
     'STOPPED': 4,
     'DESTROYED': 5
 };
-export var AD_STATES;
 
 /**
  * Default properties for the Ad element
