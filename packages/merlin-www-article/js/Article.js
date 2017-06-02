@@ -16,8 +16,6 @@ import {
 import Gallery from './Gallery';
 import {
     bubbleEvent,
-    dispatchSimpleReach,
-    dispatchSimpleReachStop,
     getArticleTitle,
     getArticleType,
     getArticleUrl,
@@ -67,24 +65,6 @@ Article.prototype = inherit(EventEmitter.prototype, {
         // If article has come from infinite scroll, trigger social embeds to
         // update as the article body might contain embeds.
         if(this.isInfinite) updateSocialEmbeds();
-
-        // SimpleReach setup
-        if(this.simplereach){
-            if(this.isInfinite){
-                this.on('focus', function(){
-                    emitSimpleReach(this.simplereach);
-                }.bind(this));
-            } else {
-                // SimpleReach is fired automatically in the page for the first
-                // article. So we listen to the first focus and then after that we
-                // have to trigger simplereach ourself.
-                this.once('focus', function(){
-                    this.on('focus', function(){
-                        emitSimpleReach(this.simplereach);
-                    }.bind(this));
-                }.bind(this));
-            }
-        }
 
         // Check if the article contains a gallery
         var gallery = this.el.querySelector(CLS_ARTICLE_GALLERY);
@@ -142,12 +122,5 @@ Article.prototype = inherit(EventEmitter.prototype, {
     }
 
 });
-
-function emitSimpleReach(config){
-    // Always fire a stop as at the moment we don't keep track if we're in
-    // a simplereach article
-    dispatchSimpleReachStop();
-    if(this.simplereach !== null) dispatchSimpleReach(this.simplereach);
-}
 
 export default Article;

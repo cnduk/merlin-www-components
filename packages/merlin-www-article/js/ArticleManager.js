@@ -23,6 +23,8 @@ import {
 } from './constants';
 import {
     bubbleEvent,
+    dispatchSimpleReach,
+    dispatchSimpleReachStop,
     getArticleType,
     getStorage,
     setStorage
@@ -350,9 +352,40 @@ function onInfiniteLoadComplete(e){
     addHtmlToFragment = null;
 }
 
+
+function emitSimpleReach(config){
+    // Always fire a stop as at the moment we don't keep track if we're in
+    // a simplereach article
+    dispatchSimpleReachStop();
+    if(config !== null) dispatchSimpleReach(config);
+}
+
+
+var isFirstArticle = true;
 function onArticleFocus(e){
+
     var article = e.target;
+
+    // At the moment, the first article triggers the pageview and simplereach
+    // using script tags in the page.
+    // TODO: move that stuff out of the page and use this for everything
+    if(article.isInfinite && isFirstArticle){
+        isFirstArticle = false;
+        return;
+
+    // Scrolled down quick and focused next article before hitting the first
+    } else if(isFirstArticle) {
+        isFirstArticle = false;
+    }
+
     var url = article.properties.url + location.search;
+    var lastUrl = window.location.href;
+
     if (hasHistory) history.replaceState({}, article.properties.title, url);
     document.title = article.properties.title;
+
+    if(article.simplereach){
+        emitSimpleReach(article.simplereach);
+    }
+
 }
