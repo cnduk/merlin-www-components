@@ -63,14 +63,12 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
             article = this.articles[this.focusedIndex];
             eve = events.blur(article);
             article.emit('blur', eve);
-            this.emit('blur', eve);
         }
 
         this.focusedIndex = index;
         article = this.articles[index];
         eve = events.focus(article);
         article.emit('focus', eve);
-        this.emit('focus', eve);
     },
 
     "_onVideoChange": function _onVideoChange(e){
