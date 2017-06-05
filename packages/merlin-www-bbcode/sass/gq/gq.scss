@@ -428,7 +428,7 @@
 .bb-gallery--show-summary {
     .bb-gallery__col {
         &:first-child {
-            &:before {
+            &:after {
                 @include button-single();
                 @include button-single-light();
                 @include vendor-prefix(transform, translateX(-50%));
@@ -486,7 +486,7 @@
         & + .bb-gallery__cols {
             .bb-gallery__col {
                 &:first-child {
-                    &:before {
+                    &:after {
                         @include button-single-light-hover();
                     }
                 }
