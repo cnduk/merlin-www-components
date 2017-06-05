@@ -29,12 +29,18 @@
 	.c-card__obj__header {
 	    padding-right: 8px;
 	}
+
 	.c-card__images {
-	    .c-card__image {
-	    	border-radius: 50%;
-	        padding-top: 100%;
-	        overflow: hidden;
-	    }
+		.c-card__image {
+			border-radius: 50%;
+		    padding-top: 100%;
+		    overflow: hidden;
+
+		    img {
+		    	border-radius: 50%;
+		    	overflow: hidden;
+		    }
+		}
 
 	    .c-card__image__icon {}
 	}

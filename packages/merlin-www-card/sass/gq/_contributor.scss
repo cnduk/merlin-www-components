@@ -24,6 +24,11 @@
 	    	border-radius: 50%;
 	        padding-top: 100%;
 	        overflow: hidden;
+
+	        img {
+	        	border-radius: 50%;
+	        	overflow: hidden;
+	        }
 	    }
 
 	    .c-card__image__icon {}
@@ -95,8 +100,27 @@
 
 @mixin card-contributor-large($has_small:false) {
     @if not $has_small {
+    	.c-card__images {
+    	    .c-card__image {
+    	    	border-radius: 50%;
+    	        padding-top: 100%;
+    	        overflow: hidden;
+
+    	        img {
+    	        	border-radius: 50%;
+    	        	overflow: hidden;
+    	        }
+    	    }
+
+    	    .c-card__image__icon {}
+    	}
+
     	.c-card__separator {
     	    display: none;
+    	}
+
+    	.c-card__teaser {
+    		display: none;
     	}
 
     	.c-card__meta {
@@ -151,10 +175,6 @@
         color: $woodsmoke;
         margin-bottom: 14px;
         margin-top: 6px;
-	}
-
-	.c-card__teaser {
-		display: none;
 	}
 
 	.c-card__byline {

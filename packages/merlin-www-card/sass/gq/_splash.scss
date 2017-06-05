@@ -24,8 +24,13 @@
     .c-card__images {
         .c-card__image {
             border-radius: 50%;
-            overflow: hidden;
             padding-top: 100%;
+            overflow: hidden;
+
+            img {
+                border-radius: 50%;
+                overflow: hidden;
+            }
         }
     }
 
@@ -58,8 +63,13 @@
         .c-card__images {
             .c-card__image {
                 border-radius: 50%;
-                overflow: hidden;
                 padding-top: 100%;
+                overflow: hidden;
+
+                img {
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
             }
         }
 
