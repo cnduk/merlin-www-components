@@ -85,9 +85,12 @@ li.c-show-season-section__card-list-item {
 .c-show-season-section__btn {
 	@include button-single-two();
 	@include button-single-two-dark();
+	@include vendor-prefix(transition-duration, 300ms);
 	&:hover {
 		@include button-single-two-dark-hover();
+		background: $shark;
 	}
+
 	margin-bottom: -16px;
 	margin-top: 24px;
 	&:after {

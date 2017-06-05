@@ -83,8 +83,10 @@
     .c-card-section__btn {
 		@include button-single-two();
 		@include button-single-two-dark();
+		@include vendor-prefix(transition-duration, 300ms);
 		&:hover {
 			@include button-single-two-dark-hover();
+			background: $shark;
 		}
 
 		&:after {
@@ -146,8 +148,10 @@
     .c-card-section__btn {
 		@include button-single-two();
 		@include button-single-two-dark();
+		@include vendor-prefix(transition-duration, 300ms);
 		&:hover {
 			@include button-single-two-dark-hover();
+			background: $shark;
 		}
 
 		&:after {
@@ -246,9 +250,12 @@
 .c-card-section__btn {
 	@include button-single-two();
 	@include button-single-two-light();
+	@include vendor-prefix(transition-duration, 300ms);
 	&:hover {
 		@include button-single-two-light-hover();
+		background-color: $zircon;
 	}
+
 	margin-bottom: -16px;
 	margin-top: 24px;
 	&:after {

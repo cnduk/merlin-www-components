@@ -83,9 +83,12 @@
 .c-magazine__btn {
 	@include button-single-two();
 	@include button-single-two-light();
+	@include vendor-prefix(transition-duration, 300ms);
 	&:hover {
 		@include button-single-two-light-hover();
+		background-color: $zircon;
 	}
+
 	margin-top: 24px;
 	&:after {
 		background-image: url("data:image/svg+xml,%3Csvg fill='%234681f5' width='12px' height='12px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8.48'%3E%3Ctitle%3Ebtn-arrownext%3C/title%3E%3Cpath d='M8,12.24l-0.53-.8,4.44-3H2v-1h9.93l-4.44-3L8,3.76,13.79,7.6a0.48,0.48,0,0,1,0,.8Z' transform='translate%28-2 -3.76%29'/%3E%3C/svg%3E");
