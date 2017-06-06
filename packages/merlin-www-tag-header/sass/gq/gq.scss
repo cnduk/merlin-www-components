@@ -79,12 +79,18 @@
 }
 
 .tg-header__intro__description {
-	@include font("GOTHAM", 14px, null, 20px, -40);
+	@include font("GOTHAM", 14px, null, 20px, -2);
 	color: $oslo-gray;
 	margin-top: 24px;
 	text-align: center;
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 		margin-top: 32px;
+	}
+
+	a {
+		border-bottom: 1px solid;
+		color: inherit;
+		text-decoration: none;
 	}
 }
 
