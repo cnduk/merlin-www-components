@@ -163,19 +163,7 @@
 .ad--tag-infinite,
 .ad--show-inline {
     margin-bottom: 40px;
-    margin-left: -$MOBILE_SIDE_GUTTER;
-    margin-right: -$MOBILE_SIDE_GUTTER;
     margin-top: 40px;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: -$TABLET_SIDE_GUTTER;
-        margin-right: -$TABLET_SIDE_GUTTER;
-    }
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: -$DESKTOP_SIDE_GUTTER;
-        margin-right: -$DESKTOP_SIDE_GUTTER;
-    }
-
 }
 
 .ad--tag-inline,
