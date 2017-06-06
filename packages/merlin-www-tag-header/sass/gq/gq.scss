@@ -35,7 +35,30 @@
 	}
 }
 
-.tg-header--person {}
+.tg-header--profile {
+	.tg-header__intro__image {
+		background-color: $bon-jour;
+		border-radius: 50%;
+		display: block;
+		height: 66px;
+		margin: 0 auto 20px auto;
+		overflow: hidden;
+		width: 66px;
+
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			height: 108px;
+			margin-bottom: 28px;
+			width: 108px;
+		}
+
+		img {
+			border-radius: 50%;
+			height: 100%;
+			overflow: hidden;
+			width: 100%;
+		}
+	}
+}
 
 .tg-header__wrapper {
 	max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER*2;
@@ -43,28 +66,7 @@
 }
 
 .tg-header__intro {}
-.tg-header__intro__image {
-	background-color: $bon-jour;
-	border-radius: 50%;
-	display: block;
-	height: 66px;
-	margin: 0 auto 20px auto;
-	overflow: hidden;
-	width: 66px;
-
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		height: 108px;
-		margin-bottom: 28px;
-		width: 108px;
-	}
-
-	img {
-		border-radius: 50%;
-		height: 100%;
-		overflow: hidden;
-		width: 100%;
-	}
-}
+.tg-header__intro__image {}
 
 .tg-header__intro__title {
 	@include font("GOTHAM", 24px, 700, 28px, 60);
