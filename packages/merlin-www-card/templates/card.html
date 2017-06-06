@@ -94,19 +94,19 @@
 				    {{/ data.byline }}
 				{{/ data.sponsor }}
 
-				{{# data.meta_list }}
-				    <ul class="global__list-reset c-card__meta {{ style.cls }}">
-				        {{# data.items }}
-				            <li class="c-card__meta-item {{ style.cls }} c-card__meta-item--{{ data.item.data.meta_type  }}">
-				                {{# data.item }}
-							{{# data.icon }}{{> @cnbritain/merlin-www-image }}{{/ data.icon }}
-				                    <span class="{{ style.cls }}">{{ data.title }}</span>
-				                {{/ data.item }}
-				            </li>
-				        {{/ data.items }}
-				    </ul>
-				{{/ data.meta_list }}
-			</div>
-		</div>
-	</div>
+                {{# data.meta_list }}
+                    {{# data.items }}
+                        <ul class="global__list-reset c-card__meta {{ style.cls }}">
+                            <li class="c-card__meta-item {{ style.cls }} c-card__meta-item--{{ data.item.data.meta_type  }}">
+                                {{# data.item }}
+                                    {{# data.icon }}{{> @cnbritain/merlin-www-image }}{{/ data.icon }}
+                                    <span class="{{ style.cls }}">{{ data.title }}</span>
+                                {{/ data.item }}
+                            </li>
+                        </ul>
+                    {{/ data.items }}
+                {{/ data.meta_list }}
+            </div>
+        </div>
+    </div>
 </article>
