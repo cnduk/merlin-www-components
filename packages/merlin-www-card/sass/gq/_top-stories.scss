@@ -74,6 +74,10 @@
 	.c-card__byline {
 		display: none;
 	}
+    .c-card__byline--sponsorship {
+        display: block;
+        margin-bottom: 0;
+    }
 
 	.c-card__meta {
 	    @include font("GOTHAM", 9px, 500, 14px);

@@ -37,6 +37,11 @@
         display: none;
     }
 
+    .c-card__byline--sponsorship {
+        display: block;
+        margin-bottom: 0;
+    }
+
     .c-card__separator {
         border: 1px solid $COLOUR_MAIN_HIGHLIGHT;
         border-width: 1px 0 0 0;
