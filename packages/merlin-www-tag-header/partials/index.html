@@ -3,7 +3,9 @@
         <div class="tg-header__intro">
 
             {{# data.image }}
-                {{> @cnbritain/merlin-www-image }}
+                <div class="tg-header__intro__image{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
+                    {{> @cnbritain/merlin-www-image }}
+                </div>
             {{/ data.image }}
 
             {{# data.title }}
