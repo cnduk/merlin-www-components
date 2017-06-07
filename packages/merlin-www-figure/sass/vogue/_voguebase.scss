@@ -112,6 +112,7 @@ li.c-figure__toolbar-listitem--zoom {
 
 .c-figure__title {
     @include font('ADOBE CASLON', 24px, 'BOLD');
+    color: #111;
     line-height: em(28px, 24px);
     margin-bottom: $MARGIN_XX_SMALL;
 
