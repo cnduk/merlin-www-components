@@ -22,7 +22,7 @@ $C_CARD_BUM_MARGIN: 30px;
 
 @mixin cl-base {
     flex-direction: column;
-    margin: 0 -$C_CARD_GUTTER;
+    margin: 0 #{-$C_CARD_GUTTER};
     text-align: center;
 
     .c-card-list__item {
