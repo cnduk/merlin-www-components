@@ -5,8 +5,7 @@
                 {{> @cnbritain/merlin-www-image }}
             </div>
         {{/ data.covers }}
-        <div class="n-main__cover__offer">{{# data.offer}}{{ &. }}
-            {{/ data.offer}}{{# data.link }}
+        <div class="n-main__cover__offer">{{# data.offer}}{{ &. }}{{/ data.offer}}{{# data.link }}
                 <a href="{{ &data.url }}" class="btn-single btn-single--light n-main__cover__btn">{{ data.title }}</a>
             {{/ data.link }}
         </div>
