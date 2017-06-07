@@ -22,6 +22,25 @@
     }
 }
 
+.c-superfeature {
+    .c-superfeature__image {
+        @include card-image-normal;
+    }
+
+    &:hover,
+    &:focus {
+        .c-superfeature__title {
+            @include card-title-hover;
+        }
+
+        .c-superfeature__image {
+            @include card-image-hover;
+        }
+    }
+}
+
+
+
 .c-superfeature__link,
 .c-superfeature__image {
     max-width: $MAXIMUM_PAGE_WIDTH;
@@ -40,23 +59,10 @@
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include border-line-box(top);
+
         margin: 0 60px;
         padding: 60px 170px;
-        border: 10px solid white;
-        border-width: 0 20px 20px 20px;
-        box-shadow: inset 0 0 0 1px #ccc;
-        position: relative;
-
-        &:after {
-            content: '';
-            display: block;
-            background: $white;
-            top: 0;
-            height: 1px;
-            position: absolute;
-            left: 1px;
-            right: 1px;
-        }
     }
 
     @include min-screen($MAXIMUM_PAGE_WIDTH) {
@@ -70,6 +76,8 @@
 }
 
 .c-superfeature__title {
+    @include t-super-feature-title-small;
+
     margin: 0 0 15px;
     position: relative;
     padding: 0 0 15px;
@@ -87,7 +95,42 @@
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include t-super-feature-title-large;
         margin: 0 0 25px;
         padding: 0 0 25px;
     }
+}
+
+
+.c-superfeature__tag {
+    @include t-super-feature-tag-small;
+
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.c-superfeature__byline {
+    margin-bottom: 14px;
+    margin-top: $MARGIN_XX_SMALL;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        margin-bottom: $MARGIN_SMALL;
+        margin-top: $MARGIN_X_SMALL;
+    }
+
+    @include transition(opacity 0.3s ease-in-out);
+}
+
+.c-superfeature__byline-prefix {
+    @include t-super-feature-byline-prefix-small;
+
+    margin-right: 2px;
+}
+
+.c-superfeature__byline-name {
+    @include t-super-feature-byline-author-small;
+}
+
+.c-superfeature__meta {
+    @include t-super-feature-meta-small;
 }
