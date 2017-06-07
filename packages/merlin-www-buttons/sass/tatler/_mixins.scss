@@ -68,10 +68,8 @@
 @mixin button-group {
     @include button-reset;
 
-    @include font('AGENDA');
-    @include font-size(15px);
+    @include font('AGENDA', 15px, 'MEDIUM', 15px);
 
-    line-height: 1;
     padding: 8px 10px;
     text-align: center;
 }
@@ -115,6 +113,7 @@
     height: $_btn_size;
     line-height: $_btn_size;
     padding: 0;
+    text-align: center;
     width: $_btn_size;
 
     svg {
@@ -125,22 +124,34 @@
 
 @mixin button-share-light($name) {
     background-color: $COLOUR_SOCIAL_ICON_BG;
-    fill: map-get($COLOUR_SOCIAL_LIGHT, $name);
+
+    svg, path {
+        fill: map-get($COLOUR_SOCIAL_LIGHT, $name);
+    }
 }
 
 @mixin button-share-light-hover($name) {
     background-color: map-get($COLOUR_SOCIAL_LIGHT, $name);
-    fill: $COLOUR_SOCIAL_ICON_BG;
+
+    svg, path {
+        fill: $COLOUR_SOCIAL_ICON_BG;
+    }
 }
 
 @mixin button-share-dark($name) {
     background-color: $COLOUR_SOCIAL_ICON_BG_DARK;
-    fill: map-get($COLOUR_SOCIAL_DARK, $name);
+
+    svg, path {
+        fill: map-get($COLOUR_SOCIAL_DARK, $name);
+    }
 }
 
 @mixin button-share-dark-hover($name) {
     background-color: map-get($COLOUR_SOCIAL_DARK, $name);
-    fill: $COLOUR_SOCIAL_ICON_BG_DARK;
+
+    svg, path {
+        fill: $COLOUR_SOCIAL_ICON_BG_DARK;
+    }
 }
 
 @mixin button-share-monotone {}
