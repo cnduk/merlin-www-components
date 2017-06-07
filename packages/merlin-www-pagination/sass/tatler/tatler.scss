@@ -2,3 +2,23 @@
 @import '@cnbritain/merlin-www-buttons:tatler';
 
 @import '../wireframe/wireframe';
+
+.c-pagination {
+    @include line-height(45px);
+}
+
+.c-pagination__item {}
+
+.c-pagination__item--active {}
+
+.c-pagination__btn {
+    @include button-single-light;
+
+    &:hover, &:focus {
+        @include button-single-light-hover;
+    }
+}
+
+.c-pagination__btn--active {
+    @include button-single-light-hover;
+}
