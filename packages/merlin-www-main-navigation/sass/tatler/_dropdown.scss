@@ -85,6 +85,8 @@ a.n-main__dropdown__btn-share,
 @each $name, $color in $COLOUR_SOCIAL {
     .n-main__dropdown__btn-share--#{$name},
     a.n-main__dropdown__btn-share--#{$name} {
+        @include button-share-dark($name);
+
         &:hover {
             @include button-share-dark-hover($name);
         }
