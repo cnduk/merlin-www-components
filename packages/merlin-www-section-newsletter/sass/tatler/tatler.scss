@@ -2,3 +2,107 @@
 @import '@cnbritain/merlin-www-buttons:tatler';
 
 @import '../wireframe/wireframe';
+
+
+.c-newsletter {
+    background: $wild-sand;
+    padding: 30px 0;
+    text-align: center;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: $PADDING_XX_LARGE 0 75px 0;
+    }
+}
+
+.c-newsletter__wrapper {
+    margin: 0 auto;
+    max-width: 670px;
+    padding: 0 $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0 $PADDING_LARGE;
+    }
+}
+
+.c-newsletter__logo {
+    display: none;
+}
+
+.c-newsletter__title {
+    @include font('STARLING', 20px, 'BOLD', 20px);
+
+    letter-spacing: 1px;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font('STARLING', 27px, 'BOLD', 32px);
+
+        letter-spacing: 2px;
+    }
+}
+
+.c-newsletter__description {
+    @include font('AGENDA', 16px, 'MEDIUM', 20px);
+
+    margin-bottom: 20px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font('AGENDA', 16px, 'MEDIUM', 24px);
+
+        margin-bottom: 30px;
+    }
+}
+
+.c-newsletter__form {
+    width: 100%;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        width: auto;
+    }
+}
+
+.c-newsletter__form__text {
+    background: $COLOUR_INPUT_BG;
+    border: 1px solid $COLOUR_INPUT_BORDER;
+    color: $COLOUR_INPUT_TEXT;
+    margin-bottom: $MARGIN_XX_SMALL;
+    padding: $PADDING_XX_SMALL $PADDING_X_SMALL;
+    text-align: center;
+
+    &:focus {
+        border: 1px solid $COLOUR_INPUT_BORDER_ACTIVE;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        text-align: left;
+    }
+}
+
+.c-newsletter__form__btn {
+    @include button-single;
+    @include button-single-light;
+
+    width: auto;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: 20px;
+    }
+
+    &:hover {
+        @include button-single-light-hover;
+    }
+}
+
+.c-newsletter__legal {
+    @include font('AGENDA', 10px, 'MEDIUM', 10px);
+    color: $boulder;
+
+    a {
+        color: $boulder;
+    }
+}
+
+.c-newsletter__privacy {
+    color: $boulder;
+}
