@@ -3,49 +3,50 @@
 
 @import "../wireframe/wireframe";
 
+// Title Small
+// margin: 0 10px 0 20ox;
+// Button Small
+// padding: 10px
+// margin: 0 5px
+//
+// Title Large
+// margin: 0 10px 0 20ox;
+// Button Large
+// margin: 0 10px
+
 .c-topic-strip {}
 
 .c-topic-strip--bleed {
     @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: -$MOBILE_SIDE_GUTTER;
-        margin-right: -$MOBILE_SIDE_GUTTER;
-        padding-left: $MOBILE_SIDE_GUTTER;
-        padding-right: $MOBILE_SIDE_GUTTER;
+        // margin-left: -$MOBILE_SIDE_GUTTER;
+        // margin-right: -$MOBILE_SIDE_GUTTER;
+        // padding-left: $MOBILE_SIDE_GUTTER;
+        // padding-right: $MOBILE_SIDE_GUTTER;
 
         .c-topic-strip__list {
             display: inline-block;
-            margin-left: -$MOBILE_SIDE_GUTTER;
-            margin-right: -$MOBILE_SIDE_GUTTER;
-            padding-left: $MOBILE_SIDE_GUTTER;
-            padding-right: $MOBILE_SIDE_GUTTER;
+            // margin-left: -$MOBILE_SIDE_GUTTER;
+            // margin-right: -$MOBILE_SIDE_GUTTER;
+            // padding-left: $MOBILE_SIDE_GUTTER;
+            // padding-right: $MOBILE_SIDE_GUTTER;
         }
     }
 }
 
 .c-topic-strip--c-card-section {
-    @include font-size(10px);
     padding-bottom: $PADDING_SMALL;
     text-align: left;
 
-    .c-topic-strip__item a {
-        @include font-size(10px);
-    }
-
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(11px);
         padding-bottom: $PADDING_MEDIUM;
-        text-align: center;
-
-        .c-topic-strip__item a {
-            @include font-size(11px);
-        }
+        text-align: right;
     }
 }
 
 //li added due to specificity of .global__list-reset li setting margin to 0
 li.c-topic-strip__item {
     & + & {
-        margin-left: $MARGIN_XX_SMALL;
+        margin-left: 5px;
 
         @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
             margin-left: 10px;
@@ -54,6 +55,12 @@ li.c-topic-strip__item {
 }
 
 .c-topic-strip__title {
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+
+    color: $gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-right: 10px;
 }
 
 .c-topic-strip__btn {
