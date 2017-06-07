@@ -140,25 +140,20 @@
 }
 
 .a-header__tag {
-    @include font('NOBEL', 11px);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 700;
     letter-spacing: 1px;
     margin: 0 0 $MARGIN_X_SMALL 0;
     text-transform: uppercase;
+}
+
+.a-header__tag__primary,
+.a-header__tag__secondary {
+    @include font('NOBEL', 11px);
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         @include font-size(12px);
-    }
-
-    a {
-        padding-right: 10px;
-    }
-
-    a + a {
-        border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-        padding-left: 10px;
     }
 }
 
@@ -172,6 +167,12 @@
 // Only sub brands have a secondary tag
 .a-header__tag__secondary {
     color: #08AEE6;
+}
+
+.a-header__tag__secondary + .a-header__tag__primary {
+    border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+    margin-left: 10px;
+    padding-left: 10px;
 }
 
 .a-header__separator--sponsor {

@@ -186,9 +186,14 @@
     display: inline-block;
 }
 
-.a-header__tag {}
-.a-header__tag__primary {}
-.a-header__tag__secondary {}
+.a-header__tag {
+    font-size: 0;
+}
+.a-header__tag__primary,
+.a-header__tag__secondary {
+    display: inline-block;
+    font-size: initial;
+}
 
 .a-header__separator--sponsor {
     display: block;
