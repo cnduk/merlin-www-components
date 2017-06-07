@@ -24,7 +24,7 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin-top: $DESKTOP_SLICE_MARGIN;
         margin-bottom: $DESKTOP_SLICE_MARGIN;
-        padding: 20px $DESKTOP_SIDE_GUTTER;
+        padding: 60px 60px;
     }
 }
 
@@ -57,6 +57,8 @@
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         @include t-topic-title-large;
+
+        margin: 0 0 20px;
     }
 }
 
