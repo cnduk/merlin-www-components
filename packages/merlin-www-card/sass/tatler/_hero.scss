@@ -14,10 +14,7 @@
     }
 
     .c-card__title {
-        // FONT: CARD_HERO
-        @include font('STARLING', 24px, 'NORMAL', 28px);
-
-        color: $black-two;
+        @include t-card-title;
     }
 }
 

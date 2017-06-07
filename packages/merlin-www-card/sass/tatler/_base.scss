@@ -71,12 +71,19 @@ li.c-card__meta-item {
 
 
 .c-card {
+    .c-card__image {
+        @include card-image-normal;
+    }
+
     &:hover,
     &:focus {
-        .c-card__title,
-        .c-card__byline-name {}
+        .c-card__title {
+            @include card-title-hover;
+        }
 
-        .c-card__image {}
+        .c-card__image {
+            @include card-image-hover;
+        }
     }
 }
 
@@ -109,26 +116,18 @@ li.c-card__meta-item {
 
 .c-card__byline-prefix,
 .c-card__sponsor-label {
-    @include font('AGENDA', 11px, 'MEDIUM', 13px);
-
-    color: $gray;
-    font-style: italic;
-    letter-spacing: 1px;
+    @include t-card-byline-prefix;
 }
 
 .c-card__byline-name,
 .c-card__sponsor-title {
-    @include font('AGENDA', 11px, 'MEDIUM', 13px);
-
-    color: $gray;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    @include t-card-byline-author;
 }
 
 .c-card__meta {
-    @include font('AGENDA', 11px, 'MEDIUM', 13px);
+    @include t-card-meta;
 
-    color: $gray;
+    display: inline-block;
 }
 
 li.c-card__meta-item {
@@ -144,7 +143,9 @@ li.c-card__meta-item {
         }
     }
 
-    & + & {}
+    & + & {
+        border-left: 1px solid $COLOUR_BORDER_SEPARATOR;
+    }
 
     &.c-card__meta-item--tag {
         display: none;
@@ -159,8 +160,15 @@ li.c-card__meta-item {
 
 
 .c-card__meta-item--duration {
-    svg {}
-    path {}
+     svg {
+        height: 9px;
+        margin-right: 3px;
+        width: 9px;
+    }
+
+    path {
+        fill: $COLOUR_TYPE_META;
+    }
 }
 
 .c-card__more {}

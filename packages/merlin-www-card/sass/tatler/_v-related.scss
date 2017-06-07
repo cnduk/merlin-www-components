@@ -5,10 +5,7 @@
     }
 
     .c-card__title {
-        // FONT: CARD_VIDEO_RELATED
-        @include font('STARLING', 18px, 'NORMAL', 22px);
-
-        color: $black-two;
+        @include t-card-landscape-title;
     }
 }
 

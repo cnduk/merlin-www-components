@@ -1,6 +1,35 @@
 .c-card--dark {
-    // ADD DARK STUFF HERE
-    .c-card__title {
-        color: $white;
+    &.c-card--landscape,
+    &.c-card--portrait,
+    &.c-card--switcher,
+    &.c-card--hero,
+    &.c-card--dark {
+        .c-card__image {
+            background-color: $cod-gray;
+        }
+
+        .c-card__title,
+        .c-card__byline {
+            color: $white;
+        }
+
+        &:hover,
+        &:focus {
+            .c-card__title {
+                @include card-title-hover;
+            }
+        }
+
+        .c-card__image__icon {
+            background-color: $cod-gray;
+
+            path {
+                fill: $white;
+            }
+        }
+
+        .c-card__obj__body {
+            background: $cod-gray;
+        }
     }
 }

@@ -30,6 +30,7 @@
         text-align: center;
         bottom: 10px;
         left: 10px;
+        z-index: 1;
 
         svg {
             width: 20px;
@@ -64,10 +65,7 @@
     }
 
     .c-card__title {
-        // FONT: CARD_LANDSCAPE
-        @include font('STARLING', 18px, 'NORMAL', 22px);
-
-        color: $black-two;
+        @include t-card-landscape-title;
     }
 }
 
@@ -89,10 +87,7 @@
     }
 
     .c-card__title {
-        // FONT: CARD_LANDSCAPE
-        @include font('STARLING', 24px, 'NORMAL', 28px);
-
-        color: $black-two;
+        @include t-card-title;
     }
 }
 
