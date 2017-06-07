@@ -26,7 +26,16 @@
     overflow: hidden;
     padding-left: 20px;
     position: relative;
-    width: 83px;
+    width: 130px;
+    bottom: 0;
+
+    &.is-hidden {
+        a {
+            @include min-screen($MAIN_NAVIGATION_MOBILE_BREAKPOINT) {
+                bottom: -60px;
+            }
+        }
+    }
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding-left: 30px;
@@ -89,7 +98,7 @@
 }
 
 .n-main__nav-link {
-    @include font('STARLING', 15px, 'NORMAL', 15px);
+    @include font('STARLING', 18px, 'NORMAL', 18px);
 
     box-sizing: border-box;
     color: $black;
@@ -113,6 +122,7 @@
 }
 
 .n-main__sticker-child {
+    border-top: 1px solid $white-two;
     background-color: $white;
 
     &.is-stuck {

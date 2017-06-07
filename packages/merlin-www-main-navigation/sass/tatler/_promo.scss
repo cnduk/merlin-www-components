@@ -59,8 +59,8 @@ a.n-main__cover__btn {
 .n-menu__subscribe {
     background-color: $wild-sand;
     border: 0;
-    margin: 32px 0;
-    padding: 32px 20px;
+    margin: 20px 0;
+    padding: 30px 20px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding: 32px 30px;
