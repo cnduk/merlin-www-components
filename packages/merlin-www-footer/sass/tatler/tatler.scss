@@ -84,10 +84,13 @@ li.c-footer__list-item {
 li.c-footer__list-item--logo {
     margin-top: -60px;
     margin-right: $MARGIN_SMALL;
+    line-height: 60px;
 
     svg {
-        height: 60px;
+        display: inline-block;
+        height: 40px;
         width: 30px;
+        vertical-align: middle;
     }
 
     @include min-screen( 1100px ) {
