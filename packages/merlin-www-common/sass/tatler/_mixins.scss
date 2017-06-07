@@ -25,7 +25,7 @@
 }
 
 @mixin t-topic-title-large {
-    @include font('STARLING', 27px, 'BOLD', 31px);
+    @include font('STARLING', 20px, 'BOLD', 20px);
 
     color: $COLOUR_MAIN_PRIMARY;
     letter-spacing: 2px;
