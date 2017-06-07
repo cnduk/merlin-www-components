@@ -1,0 +1,220 @@
+.a-header {}
+
+.a-header__wrapper {}
+
+.a-header__content {
+    padding: 20px 0 30px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 60px 0;
+    }
+
+    @include min-screen($ARTICLE_TOTAL) {
+        padding: 60px 0;
+    }
+}
+
+.a-header__title {
+    @include font('STARLING', 34px, 'NORMAL', 38px);
+
+    margin: 9px 0 10px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font('STARLING', 62px, 'NORMAL', 67px);
+
+        letter-spacing: 1px;
+        margin: 12px 0 25px;
+    }
+}
+
+.a-header__teaser {
+    @include font('STARLING', 20px, 'NORMAL', 25px);
+
+    font-style: italic;
+    margin: 10px 0 20px;
+    word-break: break-word;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(23px);
+        @include line-height(28px);
+
+        margin: 25px 0 30px;
+    }
+}
+
+.a-header__separator {
+    display: none;
+}
+
+.a-header__about {}
+
+.a-header__byline {
+    @include font('AGENDA', 11px, 'MEDIUM', 13px);
+
+    color: $gray;
+    letter-spacing: 1px;
+    margin: 20px 0 5px;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
+
+.a-header__byline-prefix {
+    font-style: italic;
+}
+
+.a-header__byline-item {}
+
+.a-header__byline-name {}
+.a-header__byline-prefix,
+.a-header__byline-conjunction {}
+
+.a-header__date {
+    @include font('AGENDA', 11px, 'MEDIUM', 13px);
+
+    color: $gray;
+}
+
+.a-header__image {
+    padding-top: $PADDING_LARGE;
+}
+
+.a-header__image-constrain {
+    margin-bottom: $MARGIN_X_SMALL;
+    padding-top: 66.666666666667%;
+
+    img {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    @include min-screen(800px){
+        padding-top: 56.25%;
+    }
+}
+
+.a-header__image-title,
+.a-header__image-caption,
+.a-header__image-credit {}
+
+.a-header__image-title {}
+
+.a-header__image-caption {}
+
+.a-header__image-credit {
+    &:before {
+        content: 'Credit: ';
+    }
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.a-header__separator--hero {
+    display: none;
+}
+
+.a-header__tag {
+    @include font('AGENDA', 11px, 'MEDIUM', 12px);
+
+    color: $gray;
+    letter-spacing: 1px;
+    margin: 20px 0 9px;
+    text-transform: uppercase;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font('AGENDA', 16px, 'MEDIUM', 17px);
+
+        letter-spacing: 1px;
+        margin: 60px 0 12px;
+    }
+
+    a {
+        color: $gray;
+        text-decoration: none;
+        padding-right: 10px;
+    }
+
+    a + a {
+        border-left: 1px solid $COLOUR_BORDER_SEPARATOR;
+        padding-left: 10px;
+    }
+}
+
+.a-header__tag__primary {}
+
+.a-header__tag__secondary {}
+
+.a-header__separator--sponsor {
+    display: none;
+}
+
+.a-main.is-sponsored {}
+
+.a-header__sponsor {
+    margin: $MARGIN_X_SMALL 0 0 0;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: $MARGIN_SMALL 0;
+    }
+}
+
+.a-header__sponsor-prefix {
+    font-style: italic;
+    text-transform: lowercase;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {}
+}
+
+.a-header__sponsor-name {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {}
+}
+
+.a-header__sponsor-image {
+    height: 50px;
+    margin-top: $MARGIN_XX_SMALL;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: $MARGIN_XXX_SMALL;
+        margin-top: 0;
+    }
+}
+
+.a-header__meta {
+    @include min-screen($CARD_SWITCHER_WIDTH) {}
+}
+
+.a-header__meta-item {
+    &:not(:last-child) {}
+
+    & + .a-header__meta-item {}
+}
+
+.a-header__meta-item--date {}
+.a-header__meta-item--tag {}
+.a-header__meta-item {}
+
+.a-header__event {}
+.a-header__event-title {}
+.a-header__event-location {}
+.a-header__event-date {}
+.a-header__event-btn {}
+
+.a-header--gallery {}
+
+.a-header--video {
+    .a-header__separator {
+        display: none;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        .a-header__meta-item {
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.a-sidebar-content {
+    padding-top: 5px;
+
+    .c-card-list__item {
+        margin: 15px 0 30px 0;
+    }
+
+    .c-card__image {
+        margin: 15px 0 10px 0;
+    }
+
+    .c-card__title {
+        margin-bottom: 5px;
+        margin-top: 15px;
+    }
+
+    .c-card__byline,
+    .c-card__sponsor {
+        margin: 5px 0 15px 0;
+    }
+}
+
+.a-sidebar-content__title {
+    margin: 0;
+    text-transform: uppercase;
+
+    &::after {
+        content: '';
+        display: block;
+        height: 1px;
+        margin-top: 5px;
+    }
+}

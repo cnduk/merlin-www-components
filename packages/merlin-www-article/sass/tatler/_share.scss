@@ -1,0 +1,27 @@
+.a-share {
+    margin: 30px 0 10px;
+}
+.a-share__wrapper {}
+
+.a-share__title {
+    margin: 0 0 $MARGIN_SMALL 0;
+    text-transform: uppercase;
+}
+
+.a-share__list {
+    font-size: 0;
+    height: 45px;
+    margin: $MARGIN_SMALL 0 0 0;
+}
+
+li.a-share__list-item {
+    font-size: initial;
+    height: 45px;
+    margin-right: 10px;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.a-share__list-item--mobile {}
