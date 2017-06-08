@@ -4,7 +4,7 @@
         display: block;
     }
     position: absolute;
-    top: 48px;
+    top: 36px;
 }
 
 .n-main__covers__wrapper {
@@ -52,7 +52,7 @@ a.n-main__cover__btn {
     display: inline-block;
     @include font('GOTHAM', 9px, 700, 12px, 60);
     padding: 4px;
-    margin-top: 10px;
+    margin-top: 12px;
     text-transform: uppercase;
 }
 
