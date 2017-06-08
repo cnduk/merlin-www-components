@@ -1,0 +1,47 @@
+// -------------------- //
+// Contributor
+// -------------------- //
+@mixin card-contributor() {
+    @include card-landscape();
+
+    .c-card__image {
+        border-radius: 50%;
+        overflow: hidden;
+        padding-top: 100%;
+    }
+    .c-card__image img {
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+}
+@mixin card-contributor-small() {
+    @include card-landscape-small();
+    .c-card__images {
+        margin: 0 auto;
+        width: 80%;
+    }
+}
+@mixin card-contributor-large() {
+    @include card-portrait();
+    @include card-portrait-small();
+}
+
+.c-card--contributor {
+    @include card-contributor();
+    @include card-contributor-small()
+
+    @include two-column-size {
+        @include card-contributor-large();
+    }
+}
+
+.c-card--contributor-small {
+    @include card-contributor();
+    @include card-contributor-small()
+}
+
+.c-card--contributor-large {
+    @include card-contributor();
+    @include card-contributor-large();
+}
