@@ -18,7 +18,7 @@
 
 .a-body__wrapper {}
 .a-body__content {
-    a {
+    a:not([class]) {
         border-bottom: 1px solid $cornflower-blue;
         color: $cornflower-blue;
         text-decoration: none;
