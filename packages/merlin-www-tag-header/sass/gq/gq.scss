@@ -62,6 +62,24 @@
 	}
 }
 
+.tg-header--topic {
+	.tg-header__intro__image {
+		margin-bottom: 24px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 240px;
+
+		img {
+			width: 100%;
+		}
+
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			margin-bottom: 32px;
+			width: 320px;
+		}
+	}
+}
+
 .tg-header__wrapper {
 	max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER*2;
 	margin: 0 auto;
