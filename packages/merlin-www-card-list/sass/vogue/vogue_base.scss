@@ -156,7 +156,7 @@
 }
 
 .c-card-list--c-contributors {
-    @include three-column-size(){
+    @include two-column-size(){
         max-width: 600px;
         margin: 0 auto;
         text-align: center;
