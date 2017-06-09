@@ -229,7 +229,11 @@
 
 .a-header__meta-item {}
 
-.a-header__event {}
+.a-header__event {
+    @include min-screen($ARTICLE_TOTAL) {
+        display: none;
+    }
+}
 .a-header__event-title {}
 .a-header__event-location {}
 .a-header__event-date {}

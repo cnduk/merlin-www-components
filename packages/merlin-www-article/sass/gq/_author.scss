@@ -57,6 +57,11 @@
     margin-bottom: 20px;
     overflow: hidden;
     width: 66px;
+
+    img {
+        border-radius: 50%;
+        overflow: hidden;
+    }
 }
 
 .a-author__separator,

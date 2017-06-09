@@ -62,6 +62,7 @@
 	}
 }
 
+.tg-header--event,
 .tg-header--topic {
 	.tg-header__intro__image {
 		margin-bottom: 24px;
@@ -109,6 +110,8 @@
 	max-width: 800px;
 	text-align: center;
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		@include font-size(15px);
+		@include line-height(24px);
 		margin-top: 32px;
 	}
 

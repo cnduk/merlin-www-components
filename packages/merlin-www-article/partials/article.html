@@ -5,6 +5,28 @@
         {{# state.has_body }}
             <div class="a-body stick-group">
                 <div class="a-body__wrapper">
+                    {{# data.event_information }}
+                        <aside class="a-event-author">
+                            {{# data.title }}
+                                <div class='a-event-author__title'>{{ . }}</div>
+                            {{/ data.title }}
+
+                            {{# data.location }}
+                                <div class='a-event-author__location'>{{ . }}</div>
+                            {{/ data.location }}
+
+                            {{# data.date_range_html }}
+                                <div class='a-event-author__date'>
+                                    {{ &. }}
+                                </div>
+                            {{/ data.date_range_html }}
+
+                            {{# data.ticket_link }}
+                                <a href="{{ &data.url }}" class='a-event-author__btn {{ style.cls }}'>{{ data.title }}</a>
+                            {{/ data.ticket_link }}
+                        </aside>
+                    {{/ data.event_information }}
+
                     <aside class="a-author">
                         {{# data.profiles }}
                             {{# data.image }}
