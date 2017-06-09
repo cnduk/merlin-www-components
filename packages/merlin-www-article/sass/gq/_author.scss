@@ -70,3 +70,33 @@
 }
 
 .a-author__separator--date {}
+
+.a-event-author__title {
+    @include font("GOTHAM", 12px, 700, 16px);
+    color: $woodsmoke;
+}
+
+.a-event-author__location {
+    @include font("GOTHAM", 12px, 400, 16px);
+    color: $shuttle-gray;
+}
+
+.a-event-author__date {
+    @include font("GOTHAM", 12px, 400, 16px);
+    color: $shuttle-gray;
+}
+
+.a-event-author__btn {
+    @include button-group();
+    border: 1px solid $cornflower-blue;
+    box-sizing: border-box;
+    color: $cornflower-blue;
+    margin-top: 20px;
+    text-align: center;
+
+    &:hover {
+        background-color: $cornflower-blue;
+        border: 1px solid $cornflower-blue;
+        color: $white;
+    }
+}
