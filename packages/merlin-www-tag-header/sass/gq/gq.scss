@@ -62,6 +62,7 @@
 	}
 }
 
+.tg-header--brand,
 .tg-header--event,
 .tg-header--topic {
 	.tg-header__intro__image {
@@ -69,6 +70,10 @@
 		margin-left: auto;
 		margin-right: auto;
 		width: 240px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
 
 		img {
 			width: 100%;
