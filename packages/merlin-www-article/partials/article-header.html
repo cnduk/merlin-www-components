@@ -77,7 +77,9 @@
                     {{/ data.image }}
 
                     {{^ data.image }}
-                        <a class='a-header__sponsor-name' href="{{ &data.url }}">{{ data.title }}</a>
+                        {{# data.link }}
+                            <a class='a-header__sponsor-name' href="{{ &data.url }}">{{ data.title }}</a>
+                        {{/ data.link }}
                     {{/ data.image }}
                 </div>
             {{/ data.sponsor }}
