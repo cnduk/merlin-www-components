@@ -1,42 +1,16 @@
 <header class="a-header{{# state.is_gallery }}{{^ state.has_body }} a-header--gallery{{/ state.has_body }}{{/ state.is_gallery }}">
     <div class="a-header__wrapper">
         <div class="a-header__content">
-
-            {{# state.has_primary_tag }}
-                <div class="a-header__tag">
-            {{/ state.has_primary_tag }}
-            {{^ state.has_primary_tag }}
-                {{# state.has_secondary_tag }}
-                    <div class="a-header__tag">
-                {{/ state.has_secondary_tag }}
-            {{/ state.has_primary_tag }}
-
-            {{# data.secondary_tag }}
-                {{# state.has_link }}
-                    <a href="{{ &data.link.data.url }}" {{# data.link.state.is_blank }}target="_blank"{{/ data.link.state.is_blank }} class="a-header__tag__secondary">{{ data.title }}</a>
-                {{/ state.has_link }}
-                {{^ state.has_link }}
-                    <span class="a-header__tag__secondary">{{ data.title }}</span>
-                {{/ state.has_link }}
-            {{/ data.secondary_tag }}
-
             {{# data.primary_tag }}
-                {{# state.has_link }}
-                    <a href="{{ &data.link.data.url }}" {{# data.link.state.is_blank }}target="_blank"{{/ data.link.state.is_blank }} class="a-header__tag__primary">{{ data.title }}</a>
-                {{/ state.has_link }}
-                {{^ state.has_link }}
-                    <span class="a-header__tag__primary">{{ data.title }}</span>
-                {{/ state.has_link }}
-            {{/ data.primary_tag }}
-
-            {{# state.has_primary_tag }}
+                <div class="a-header__tag">
+                    {{# state.has_link }}
+                        <a href="{{ &data.link.data.url }}" {{# data.link.state.is_blank }}target="_blank"{{/ data.link.state.is_blank }} class="a-header__tag__primary">{{ data.title }}</a>
+                    {{/ state.has_link }}
+                    {{^ state.has_link }}
+                        <span class="a-header__tag__primary">{{ data.title }}</span>
+                    {{/ state.has_link }}
                 </div>
-            {{/ state.has_primary_tag }}
-            {{^ state.has_primary_tag }}
-                {{# state.has_secondary_tag }}
-                    </div>
-                {{/ state.has_secondary_tag }}
-            {{/ state.has_primary_tag }}
+            {{/ data.primary_tag }}
 
             {{# data.title }}
                 <h1 class="a-header__title">{{ data.title }}</h1>
@@ -93,12 +67,19 @@
             </div>
 
             {{# data.sponsor }}
-                {{# data.link }}
-                    <div class="a-header__sponsor">
-                        <span class='a-header__sponsor-prefix'>In partnership with</span>
+                <div class="a-header__sponsor">
+                    <span class='a-header__sponsor-prefix'>In partnership with</span>
+
+                    {{# data.image }}
+                        <div class="a-header__sponsor-image">
+                            {{> @cnbritain/merlin-www-image }}
+                        </div>
+                    {{/ data.image }}
+
+                    {{^ data.image }}
                         <a class='a-header__sponsor-name' href="{{ &data.url }}">{{ data.title }}</a>
-                    </div>
-                {{/ data.link }}
+                    {{/ data.image }}
+                </div>
             {{/ data.sponsor }}
 
             {{! Style.com }}

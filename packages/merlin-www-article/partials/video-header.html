@@ -48,12 +48,19 @@
             </div>
 
             {{# data.sponsor }}
-                {{# data.link }}
-                    <div class="a-header__sponsor">
-                        <span class='a-header__sponsor-prefix'>In partnership with</span>
+                <div class="a-header__sponsor">
+                    <span class='a-header__sponsor-prefix'>In partnership with</span>
+
+                    {{# data.image }}
+                        <div class="a-header__sponsor-image">
+                            {{> @cnbritain/merlin-www-image }}
+                        </div>
+                    {{/ data.image }}
+
+                    {{^ data.image }}
                         <a class='a-header__sponsor-name' href="{{ &data.url }}">{{ data.title }}</a>
-                    </div>
-                {{/ data.link }}
+                    {{/ data.image }}
+                </div>
             {{/ data.sponsor }}
 
             {{# data.meta_list }}

@@ -258,16 +258,32 @@
     }
 }
 
-.a-header__sponsor-prefix {}
+.a-header__sponsor-prefix {
+    display: table-cell;
+    vertical-align: middle;
+    white-space: nowrap;
+}
 
 .a-header__sponsor-name {
     @include font-size(12px);
     @include font-weight(700);
-    margin-left: 2px;
+    display: table-cell;
+    padding-left: 6px;
+    vertical-align: middle;
 }
 
 .a-header__sponsor-image {
+    display: table-cell;
+    height: 40px;
+    max-height: 40px;
+    max-width: 140px;
+    padding-left: 12px;
+    vertical-align: middle;
 
+    img {
+        height: 40px;
+        max-height: 40px;
+    }
 }
 
 .a-header__meta {}
