@@ -7,6 +7,12 @@
                 <div class="a-body__wrapper">
                     {{# data.event_information }}
                         <aside class="a-event-author">
+                            {{# data.image }}
+                                <div class="a-event-author__image">
+                                    {{> @cnbritain/merlin-www-image }}
+                                </div>
+                            {{/ data.image }}
+
                             {{# data.title }}
                                 <div class='a-event-author__title'>{{ . }}</div>
                             {{/ data.title }}
