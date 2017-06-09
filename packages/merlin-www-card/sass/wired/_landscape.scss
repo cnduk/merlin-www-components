@@ -1,0 +1,69 @@
+// -------------------- //
+// Landscape
+// -------------------- //
+@mixin card-landscape() {}
+
+@mixin card-landscape-small() {
+    .c-card__obj {}
+
+    .c-card__obj__header {
+        max-width: 12px;
+        vertical-align: top;
+    }
+
+    .c-card__obj__body {
+        padding-left: 10px;
+        vertical-align: top;
+    }
+
+    .c-card__image {
+        margin-bottom: 0;
+        padding-top: 100%;
+    }
+
+    .c-card__title {
+        @include font-size(25px);
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+
+    .c-card__separator {
+        margin: 10px 0;
+        width: 15px;
+    }
+
+    .c-card__byline {
+        @include font-size(11px);
+        margin-bottom: 3px;
+    }
+
+    .c-card__meta {
+        margin-bottom: 3px;
+    }
+
+    // Need to be specific to overwrite global__list-reset
+    li.c-card__meta-item {
+        @include font-size(11px);
+        margin-bottom: 0;
+    }
+}
+
+@mixin card-landscape-large() {}
+
+.c-card--landscape {
+    @include card-landscape();
+    @include card-landscape-small();
+    // @include min-screen(800px) {
+    //     @include card-landscape-large();
+    // }
+}
+
+.c-card--landscape-small {
+    @include card-landscape();
+    @include card-landscape-small();
+}
+
+.c-card--landscape-large {
+    @include card-landscape();
+    @include card-landscape-large();
+}
