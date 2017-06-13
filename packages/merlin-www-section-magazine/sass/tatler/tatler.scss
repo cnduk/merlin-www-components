@@ -63,6 +63,7 @@
     letter-spacing: 1px;
     text-align: center;
     text-transform: uppercase;
+    margin-bottom: 30px;
 
     @include desktop-size {
         @include font('STARLING', 27px, 'BOLD', 31px);
@@ -73,14 +74,14 @@
 }
 
 .c-magazine__content__title {
-    @include font('AGENDA', 11px, 'MEDIUM', 13px);
+    @include font('AGENDA', 11px, 'MEDIUM', 12px);
 
-    color: $boulder;
+    color: $gray;
     display: block;
     letter-spacing: 1px;
     text-align: center;
     text-transform: uppercase;
-    margin: 20px 0 5px;
+    margin: 0 0 6px;
 
     @include desktop-size {
         @include font('AGENDA', 12px, 'MEDIUM', 13px);
