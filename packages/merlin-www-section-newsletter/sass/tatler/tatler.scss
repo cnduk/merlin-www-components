@@ -45,6 +45,7 @@
 .c-newsletter__description {
     @include font('AGENDA', 16px, 'MEDIUM', 20px);
 
+    letter-spacing: .5px;
     margin-bottom: 20px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
@@ -66,7 +67,7 @@
     background: $COLOUR_INPUT_BG;
     border: 1px solid $COLOUR_INPUT_BORDER;
     color: $COLOUR_INPUT_TEXT;
-    margin-bottom: $MARGIN_XX_SMALL;
+    margin-bottom: 30px;
     padding: $PADDING_XX_SMALL $PADDING_X_SMALL;
     text-align: center;
 
@@ -76,6 +77,7 @@
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         text-align: left;
+        margin-bottom: 20px;
     }
 }
 
@@ -84,6 +86,7 @@
     @include button-single-light;
 
     width: auto;
+    margin-bottom: 30px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         margin-left: 20px;
@@ -96,10 +99,16 @@
 
 .c-newsletter__legal {
     @include font('AGENDA', 10px, 'MEDIUM', 10px);
+
     color: $boulder;
+    margin: 0;
 
     a {
         color: $boulder;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font('AGENDA', 12px, 'MEDIUM', 12px);
     }
 }
 
