@@ -10,20 +10,15 @@
 
 .c-card-section {
     background-color: $wild-sand;
-    margin-top: $MOBILE_SLICE_MARGIN;
-    margin-bottom: $MOBILE_SLICE_MARGIN;
-    padding: 30px $MOBILE_SIDE_GUTTER;
+    margin: 0 auto;
     max-width: none;
+    padding: 30px $MOBILE_SIDE_GUTTER;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: $TABLET_SLICE_MARGIN;
-        margin-bottom: $TABLET_SLICE_MARGIN;
         padding: 20px $TABLET_SIDE_GUTTER;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: $DESKTOP_SLICE_MARGIN;
-        margin-bottom: $DESKTOP_SLICE_MARGIN;
         padding: 60px 60px;
     }
 }
@@ -53,12 +48,10 @@
 .c-card-section__title {
     @include t-topic-title-small;
 
-    margin: 40px 0 20px;
+    margin: 0 0 20px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         @include t-topic-title-large;
-
-        margin: 0 0 20px;
     }
 }
 
@@ -78,7 +71,7 @@
 .c-card-section--c-video-articles {
     background-color: $COLOUR_BG_DARK;
     max-width: none;
-    padding: 40px $MOBILE_SIDE_GUTTER;
+    padding: 30px 20px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding: 80px $TABLET_SIDE_GUTTER;
@@ -89,6 +82,7 @@
     }
 
     .c-card-section__btn {
+        margin-top: 30px;
         width: auto;
 
         @include button-single();
