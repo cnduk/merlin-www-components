@@ -2,33 +2,22 @@
 @import "@cnbritain/merlin-www-buttons:tatler";
 
 @import "../wireframe/wireframe";
-
-// Title Small
-// margin: 0 10px 0 20ox;
-// Button Small
-// padding: 10px
-// margin: 0 5px
-//
-// Title Large
-// margin: 0 10px 0 20ox;
-// Button Large
-// margin: 0 10px
-
 .c-topic-strip {}
 
 .c-topic-strip--bleed {
+    box-sizing: content-box;
+
     @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        // margin-left: -$MOBILE_SIDE_GUTTER;
-        // margin-right: -$MOBILE_SIDE_GUTTER;
-        // padding-left: $MOBILE_SIDE_GUTTER;
-        // padding-right: $MOBILE_SIDE_GUTTER;
+        margin-left: -$MOBILE_SIDE_GUTTER;
+        margin-right: -$MOBILE_SIDE_GUTTER;
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
 
         .c-topic-strip__list {
-            display: inline-block;
-            // margin-left: -$MOBILE_SIDE_GUTTER;
-            // margin-right: -$MOBILE_SIDE_GUTTER;
-            // padding-left: $MOBILE_SIDE_GUTTER;
-            // padding-right: $MOBILE_SIDE_GUTTER;
+            margin-left: -$MOBILE_SIDE_GUTTER;
+            margin-right: -$MOBILE_SIDE_GUTTER;
+            padding-left: $MOBILE_SIDE_GUTTER;
+            padding-right: $MOBILE_SIDE_GUTTER;
         }
     }
 }
@@ -39,8 +28,7 @@
     text-align: left;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding-bottom: $PADDING_MEDIUM;
-        text-align: right;
+
     }
 }
 
