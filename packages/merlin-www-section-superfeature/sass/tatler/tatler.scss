@@ -5,26 +5,23 @@
 
 .c-superfeature {
     background: $wild-sand;
-    margin-bottom: $MOBILE_SLICE_MARGIN;
-    margin-top: $MOBILE_SLICE_MARGIN;
     max-width: none;
+    margin: 0 auto;
     padding: 30px 0;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: $TABLET_SLICE_MARGIN;
-        margin-bottom: $TABLET_SLICE_MARGIN;
-        padding: 60px 0;
-    }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: $DESKTOP_SLICE_MARGIN;
-        margin-bottom: $DESKTOP_SLICE_MARGIN;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 60px 0;
     }
 }
 
 .c-superfeature {
     .c-superfeature__image {
-        @include card-image-normal;
+        overflow: hidden;
+
+        img {
+            @include card-image-normal;
+        }
     }
 
     &:hover,
@@ -34,12 +31,12 @@
         }
 
         .c-superfeature__image {
-            @include card-image-hover;
+            img {
+                @include card-image-hover;
+            }
         }
     }
 }
-
-
 
 .c-superfeature__link,
 .c-superfeature__image {
@@ -110,27 +107,17 @@
 }
 
 .c-superfeature__byline {
-    margin-bottom: 14px;
-    margin-top: $MARGIN_XX_SMALL;
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        margin-bottom: $MARGIN_SMALL;
-        margin-top: $MARGIN_X_SMALL;
-    }
-
-    @include transition(opacity 0.3s ease-in-out);
-}
-
-.c-superfeature__byline-prefix {
-    @include t-super-feature-byline-prefix-small;
-
-    margin-right: 2px;
+    @include feature-card-byline;
 }
 
 .c-superfeature__byline-name {
-    @include t-super-feature-byline-author-small;
+    @include card-byline-name;
+}
+
+.c-superfeature__byline-prefix {
+    @include card-byline-prefix;
 }
 
 .c-superfeature__meta {
-    @include t-super-feature-meta-small;
+    @include card-meta;
 }
