@@ -6,9 +6,8 @@
 .c-superfeature {
     background: $wild-sand;
     max-width: none;
-    margin: 0 auto;
-    padding: 30px 0;
-
+    margin: 30px auto;
+    padding: 0 $MOBILE_SIDE_GUTTER;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding: 60px 0;
@@ -18,22 +17,12 @@
 .c-superfeature {
     .c-superfeature__image {
         overflow: hidden;
-
-        img {
-            @include card-image-normal;
-        }
     }
 
     &:hover,
     &:focus {
         .c-superfeature__title {
             @include card-title-hover;
-        }
-
-        .c-superfeature__image {
-            img {
-                @include card-image-hover;
-            }
         }
     }
 }
@@ -120,4 +109,30 @@
 
 .c-superfeature__meta {
     @include card-meta;
+}
+
+li.c-superfeature__meta-item {
+    padding-right: 0;
+
+    &:not(:last-child) {
+        &:after {
+            content: '';
+            height: 11px;
+            width: 1px;
+            background-color: $silver;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 5px;
+
+            .c-card--dark & {
+                background-color: #333;
+                height: 11px;
+            }
+        }
+    }
+
+    & + & {
+        border: 0;
+        padding: 0;
+    }
 }
