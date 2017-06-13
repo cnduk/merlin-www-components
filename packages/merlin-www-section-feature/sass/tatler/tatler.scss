@@ -5,6 +5,7 @@
 
 .c-feature {
     background-color: $wild-sand;
+    margin: 0 auto;
     max-width: none;
     padding: $MOBILE_SIDE_GUTTER;
 
@@ -13,21 +14,27 @@
     }
 
     .c-feature__image {
-        @include card-image-normal;
+        overflow: hidden;
+
+        img {
+            @include card-image-normal;
+        }
     }
 
     &:focus,
     &:hover {
-        .c-feature__title,
-        .c-feature__byline-name {
+        .c-feature__title {
             @include card-title-hover;
         }
 
         .c-feature__image {
-            @include card-image-hover;
+            img {
+                @include card-image-hover;
+            }
         }
     }
 }
+
 
 .c-feature--gallery {
     background-color: $COLOUR_BG_GALLERY;
@@ -71,7 +78,7 @@
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: 60px 170px;
+        padding: 20px;
 
         .c-feature--left & {
             @include border-line-box(left);
@@ -101,8 +108,13 @@
 }
 
 .c-feature__content-center {
-    padding: $PADDING_LARGE $PADDING_MEDIUM;
+    padding: 28px 20px;
     text-align: center;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0;
+        max-width: 500px;
+    }
 }
 
 .c-feature__content-center__center {}
@@ -120,12 +132,27 @@
 .c-feature__title {
     @include t-feature-title-small;
 
-    margin-bottom: $MARGIN_XX_SMALL;
+    margin-bottom: 15px;
+    padding: 0 0 15px;
+    position: relative;
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 1px;
+        background: $COLOUR_MAIN_HIGHLIGHT;
+        bottom: 0;
+        left: 50%;
+        margin-left: -10px;
+    }
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         @include t-feature-title-large;
 
-        margin-bottom: $MARGIN_X_SMALL;
+        margin: 0 0 25px;
+        padding: 0 0 25px;
     }
 }
 .c-feature__teaser {
@@ -137,35 +164,21 @@
 }
 
 .c-feature__byline {
-    margin-bottom: 14px;
-    margin-top: $MARGIN_XX_SMALL;
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        margin-bottom: $MARGIN_SMALL;
-        margin-top: $MARGIN_X_SMALL;
-    }
+    @include feature-card-byline;
 }
 
 .c-feature__byline-prefix {
-    @include t-feature-byline-prefix-small;
+    @include card-byline-prefix;
 
     margin-right: 2px;
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        @include t-feature-byline-prefix-large;
-    }
 }
 
 .c-feature__byline-name {
-    @include t-feature-byline-author-small;
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        @include t-feature-byline-author-large;
-    }
+    @include card-byline-name;
 }
 
 .c-feature__meta {
-    @include t-feature-meta-small;
+    @include card-meta;
 
     display: inline-block;
 
@@ -183,8 +196,7 @@
             border-left: 1px solid $COLOUR_BORDER_SEPARATOR;
         }
 
-        &--tag {
-        }
+        &--tag {}
     }
 }
 
