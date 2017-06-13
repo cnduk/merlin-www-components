@@ -23,29 +23,16 @@
     text-transform: uppercase;
     text-align: center;
 
-    &:before,
     &:after {
         content: '';
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 15.1" fill="%23e03b2a"><path d="M20 7.5a1 1 0 0 0-.3-.7L13 .3a1 1 0 0 0-1.4 1.4l5 5H1a1 1 0 0 0 0 1.8h15.6l-5 5a1 1 0 0 0 1.4 1.3l6.7-6.5a1 1 0 0 0 .3-.8z"/></svg>') 50% 50% no-repeat;
         display: block;
-        border: 1px solid $cinnabar;
         position: absolute;
         right: 0;
         top: 50%;
-    }
-
-    &:after {
-        border-width: 1px 1px 0 0;
-        transform: rotate(45deg);
-        width: 6px;
-        height: 6px;
-        margin-top: -4px;
-    }
-
-    &:before {
-        border-width: 1px 0 0 0;
-        width: 10px;
-        height: 1px;
-        margin-top: -1px;
+        width: 12px;
+        height: 12px;
+        transform: translateY(-50%);
     }
 }
 
