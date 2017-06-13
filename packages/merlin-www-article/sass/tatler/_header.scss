@@ -77,6 +77,11 @@
 
 .a-header__image {
     padding: 0;
+    max-width: 100%;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0 60px;
+    }
 }
 
 .a-header__image-constrain {
@@ -98,19 +103,35 @@
 
 .a-header__image-title,
 .a-header__image-caption,
-.a-header__image-credit {}
+.a-header__image-credit {
+    padding-left: 0;
+}
 
-.a-header__image-title {}
+.a-header__image-title {
+    @include font('AGENDA', 13px, 'MEDIUM', 17px);
 
-.a-header__image-caption {}
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 15px 0 5px;
+}
+
+.a-header__image-caption {
+     @include font('AGENDA', 13px, 'MEDIUM', 17px);
+
+    letter-spacing: 1px;
+    margin: 5px 0 10px;
+}
 
 .a-header__image-credit {
+    @include font('AGENDA', 10px, 'MEDIUM', 10px);
+
+    color: $boulder;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
     &:before {
         content: 'Credit: ';
     }
-
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
 }
 
 .a-header__separator--hero {

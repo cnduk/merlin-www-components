@@ -76,10 +76,10 @@ li.a-gallery__image-listitem {
 }
 
 .c-figure__container {
-    margin-bottom: $MARGIN_SMALL;
+    // margin-bottom: $MARGIN_SMALL;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: $MARGIN_MEDIUM;
+        // margin-bottom: $MARGIN_MEDIUM;
     }
 }
 
