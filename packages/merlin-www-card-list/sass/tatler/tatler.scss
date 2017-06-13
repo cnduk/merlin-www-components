@@ -36,14 +36,14 @@ $C_CARD_BUM_MARGIN: 30px;
 @mixin cl-one {
     @include one-column-size {
         .c-card-list__item + .c-card-list__item {
-            margin-top: 20px;
+            margin-top: 0;
 
             .c-card {
                 border-top: 1px solid $COLOUR_BORDER_SEPARATOR;
                 padding-top: 20px;
 
                 &.c-card--dark {
-                    border-top: 1px solid $COLOUR_BORDER_SEPARATOR_DARK;
+                    border: 0
                 }
             }
         }
@@ -249,12 +249,12 @@ $C_CARD_BUM_MARGIN: 30px;
     .c-card-list__item {
         display: flex;
         flex: none;
-        margin-right: $MARGIN_MEDIUM;
+        margin-right: 20px;
         white-space: normal;
-        width: 280px;
+        width: 275px;
 
         &:last-child {
-            width: 280px;
+            width: 275px;
         }
 
         &.is-hidden {
