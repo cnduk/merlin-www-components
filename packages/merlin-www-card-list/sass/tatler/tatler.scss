@@ -39,7 +39,7 @@ $C_CARD_BUM_MARGIN: 30px;
             margin-top: 0;
 
             .c-card {
-                border-top: 1px solid $COLOUR_BORDER_SEPARATOR;
+                border: 0;
                 padding-top: 20px;
 
                 &.c-card--dark {
