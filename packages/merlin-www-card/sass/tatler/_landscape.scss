@@ -14,9 +14,7 @@
     }
 
     .c-card__separator {
-        width: 20px;
-        border: 0;
-        border-top: 1px solid $COLOUR_MAIN_HIGHLIGHT;
+        display: none;
     }
 
     .c-card__image__icon {
@@ -53,11 +51,11 @@
     }
 
     .c-card__obj__header {
-        padding-right: 10px;
+        padding-right: 13px;
     }
 
     .c-card__obj__body {
-        padding-left: 10px;
+        padding-left: 0;
     }
 
     .c-card__teaser {

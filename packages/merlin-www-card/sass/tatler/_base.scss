@@ -4,6 +4,10 @@
     width: 100%;
 }
 
+.c-card__footer {
+    font-size: 0;
+}
+
 .c-card__link--article {
     background-color: rgba(255,255,255,0.01);
     bottom: 0;
@@ -121,10 +125,10 @@ li.c-card__meta-item {
 .c-card__sponsor {
     @include card-byline;
 
-    margin: 18px 0 5px;
+    margin: 10px 0 0;
 
     @include min-screen($CARD_SWITCHER_WIDTH) {
-        margin: 0 0 5px;
+        margin: 0;
     }
 }
 
@@ -142,13 +146,14 @@ li.c-card__meta-item {
     @include card-meta;
 
     display: inline-block;
+    margin-top: 10px;
 }
 
 li.c-card__meta-item {
     &:not(:last-child) {
         &:after {
             content: '';
-            height: 14px;
+            height: 11px;
             width: 1px;
             background-color: $silver;
             display: inline-block;
@@ -157,20 +162,17 @@ li.c-card__meta-item {
 
             .c-card--dark & {
                 background-color: #333;
+                height: 11px;
             }
         }
     }
 
-    & + & {
-        // border-left: 1px solid $COLOUR_BORDER_SEPARATOR;
-    }
+    & + & {}
 
-    &.c-card__meta-item--tag {
-        display: none;
-    }
+    &.c-card__meta-item--tag {}
 
     &.c-card__meta-item--gallery {
-        display: none;
+        svg { display: none; }
     }
 }
 

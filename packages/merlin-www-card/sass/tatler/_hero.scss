@@ -28,6 +28,10 @@
     .c-card__footer {
         margin-top: 0;
     }
+
+    .c-card__byline {
+        margin: 10px 0 0;
+    }
 }
 
 @mixin card-hero-large {
@@ -38,7 +42,11 @@
     }
 
     .c-card__footer {
-        margin-top: 15;
+        margin-top: 18px;
+    }
+
+    .c-card__byline {
+        margin: 0;
     }
 }
 

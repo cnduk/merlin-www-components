@@ -11,7 +11,7 @@
     .c-card__obj__body {}
 
     .c-card__obj__header {
-        flex: 0 0 120px;
+        flex: 0 0 70px;
     }
 
     .c-card__image__icon {
@@ -26,7 +26,11 @@
     .c-card__title {
         @include font('STARLING', 16px, 'NORMAL', 19px);
 
-        margin: 0 0 8px;
+        margin: 0 0 12px;
+    }
+
+    .c-card__footer {
+        font-size: 0;
     }
 
     .c-card__tag,
@@ -41,15 +45,13 @@
     }
 
     .c-card__separator {
-        border: 1px solid $COLOUR_MAIN_HIGHLIGHT;
-        border-width: 1px 0 0 0;
-        display: block;
-        margin: 5px 0;
-        width: 10px;
+        display: none;
     }
 
     .c-card__meta {
         @include card-meta;
+
+        margin-top: 0;
     }
 }
 

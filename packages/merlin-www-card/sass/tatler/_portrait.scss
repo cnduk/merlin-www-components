@@ -52,6 +52,7 @@
     }
 
     .c-card__separator {
+        display: block;
         width: 20px;
         border: 0;
         border-top: 1px solid $COLOUR_MAIN_HIGHLIGHT;
