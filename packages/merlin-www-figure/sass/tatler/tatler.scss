@@ -1,3 +1,91 @@
 @import '@cnbritain/merlin-www-common:tatler';
 
 @import '../wireframe/wireframe';
+
+.c-figure__container {
+    margin: 0;
+    position: relative;
+}
+
+.c-figure__wrapper {
+    background: $wild-sand;
+}
+
+.c-figure__toolbar {
+    @include tablet-size {}
+}
+
+.c-figure__title,
+.c-figure__caption,
+.c-figure__credit {
+    width: 100%;
+
+    @include desktop-size {
+        max-width: 700px;
+    }
+}
+
+.c-figure__title {
+    @include font('AGENDA', 13px, 'MEDIUM', 17px);
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 15px 0 5px;
+
+    @include desktop-size {
+        @include font('AGENDA', 15px, 'MEDIUM', 20px);
+    }
+}
+
+.c-figure__caption {
+    @include font('AGENDA', 13px, 'MEDIUM', 17px);
+
+    letter-spacing: 1px;
+    margin: 5px 0 10px;
+
+    @include desktop-size {
+        @include font('AGENDA', 15px, 'MEDIUM', 20px);
+
+        margin: 5px 0 15px;
+    }
+}
+
+// .c-figure__title + .c-figure__caption {
+//     margin-top: -5px;
+// }
+
+.c-figure__credit {
+    @include font('AGENDA', 10px, 'MEDIUM', 10px);
+
+    color: $boulder;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    &:before {
+        content: 'Credit: ';
+    }
+
+    @include desktop-size {
+
+    }
+}
+
+
+.c-figure__toolbar {
+    border: 1px solid $silver;
+    bottom: 10px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+}
+
+li.c-figure__toolbar-listitem {
+    background-color: $white;
+    height: 38px;
+    width: 38px;
+
+    svg {
+        fill: $black-two;
+        width: 16px;
+    }
+}
