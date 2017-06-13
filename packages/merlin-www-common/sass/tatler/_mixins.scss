@@ -358,17 +358,56 @@
 //// CARD MIXINS
 @mixin card-title-hover {
     color: $COLOUR_MAIN_HIGHLIGHT;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 @mixin card-image-normal {
     transition: transform 0.1s ease-in-out;
-    position: relative;
-    z-index: 1
 }
 
 @mixin card-image-hover {
     transform: scale(1.005);
+}
+
+@mixin card-byline {
+    @include line-height(12px);
+
+    color: $gray;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@mixin feature-card-byline {
+    @include card-byline;
+
+    margin: 0 0 10px;
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        margin: 25px 0 10px;
+    }
+}
+
+@mixin card-byline-name {
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+@mixin card-byline-prefix {
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+
+    font-style: italic;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+}
+
+@mixin card-meta {
+    @include font('AGENDA', 10px, 'MEDIUM', 10px);
+
+    color: $gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 

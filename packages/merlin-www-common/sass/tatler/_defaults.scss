@@ -9,8 +9,10 @@ html {
 }
 
 body {
+    background: $COLOUR_BG;
     margin: 0;
     text-size-adjust: none;
+    -webkit-font-smoothing: antialiased; // ಠ_ಠ
 }
 
 a {
