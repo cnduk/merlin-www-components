@@ -5,9 +5,7 @@
 }
 
 .a-author__article-date {
-    @include font('AGENDA', 11px, 'MEDIUM');
-
-    color: $gray;
+    @include card-meta;
 }
 
 .a-author__bio {
@@ -18,9 +16,8 @@
 }
 
 .a-author__byline {
-    @include font('AGENDA', 12px, 'MEDIUM', 13px);
+    @include card-byline;
 
-    letter-spacing: 1px;
     margin-bottom: 10px;
 
     a {
@@ -29,28 +26,20 @@
     }
 }
 
-.a-author__byline--syndication {
-    .a-author__byline-prefix {}
-}
-
-.a-author__byline--photographer {
-    .a-author__byline-prefix {}
-}
-
 .a-author__byline-name {
-    @include font('AGENDA', 12px, 'MEDIUM', 13px);
-
-    color: $gray;
-    letter-spacing: 1px;
+    @include card-byline-name;
 }
 
 .a-author__byline-prefix,
 .a-author__byline-conjunction {
-    @include font('AGENDA', 12px, 'MEDIUM', 13px);
+    @include card-byline-prefix;
+}
 
-    color: $gray;
-    letter-spacing: 1px;
-    font-style: italic;
+.a-author__byline--syndication,
+.a-author__byline--photographer {
+    .a-author__byline-prefix {
+        @include card-byline-prefix;
+    }
 }
 
 .a-author__image,

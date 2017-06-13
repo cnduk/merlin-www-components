@@ -49,10 +49,8 @@
 .a-header__about {}
 
 .a-header__byline {
-    @include font('AGENDA', 11px, 'MEDIUM', 13px);
+    @include card-byline;
 
-    color: $gray;
-    letter-spacing: 1px;
     margin: 20px 0 5px;
 
     a {
@@ -62,24 +60,23 @@
     }
 }
 
-.a-header__byline-prefix {
-    font-style: italic;
-}
-
 .a-header__byline-item {}
 
-.a-header__byline-name {}
 .a-header__byline-prefix,
-.a-header__byline-conjunction {}
+.a-header__byline-conjunction {
+    @include card-byline-prefix;
+}
+
+.a-header__byline-name {
+    @include card-byline-name;
+}
 
 .a-header__date {
-    @include font('AGENDA', 11px, 'MEDIUM', 13px);
-
-    color: $gray;
+    @include card-meta;
 }
 
 .a-header__image {
-    padding-top: $PADDING_LARGE;
+    padding: 0;
 }
 
 .a-header__image-constrain {
@@ -120,13 +117,16 @@
     display: none;
 }
 
-.a-header__tag {
+.a-header__tag,
+.a-header__tag__primary,
+.a-header__tag__secondary {
     @include font('AGENDA', 11px, 'MEDIUM', 12px);
 
     color: $gray;
     letter-spacing: 1px;
     margin: 20px 0 9px;
     text-transform: uppercase;
+    text-decoration: none;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         @include font('AGENDA', 16px, 'MEDIUM', 17px);
@@ -135,10 +135,20 @@
         margin: 60px 0 12px;
     }
 
+    &:hover,
+    &:focus {
+        color: $COLOUR_MAIN_HIGHLIGHT;
+    }
+
     a {
         color: $gray;
         text-decoration: none;
         padding-right: 10px;
+
+        &:hover,
+        &:focus {
+            color: $COLOUR_MAIN_HIGHLIGHT;
+        }
     }
 
     a + a {
@@ -146,10 +156,6 @@
         padding-left: 10px;
     }
 }
-
-.a-header__tag__primary {}
-
-.a-header__tag__secondary {}
 
 .a-header__separator--sponsor {
     display: none;
