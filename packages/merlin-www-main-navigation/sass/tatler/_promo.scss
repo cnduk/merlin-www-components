@@ -2,7 +2,7 @@
     display: none;
     overflow: hidden;
     position: absolute;
-    top: 48px;
+    top: 32px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         display: block;
@@ -19,7 +19,7 @@
 .n-main__cover {
     display: inline-block;
     margin-right: 12px;
-    width: 80px;
+    width: 95px;
 
     img {
         width: 100%;
@@ -35,14 +35,6 @@
     display: inline-block;
     vertical-align: top;
     white-space: pre-line;
-}
-
-.n-main__cover__btn,
-a.n-main__cover__btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 4px;
-    text-transform: uppercase;
 }
 
 .n-menu__subscribe {
@@ -108,11 +100,29 @@ a.n-main__cover__btn {
     white-space: pre-line;
 }
 
+.n-main__cover__btn,
+a.n-main__cover__btn {
+    margin-top: 10px;
+    padding: 4px;
+}
+
+
+.n-main__cover__btn,
+a.n-main__cover__btn,
 a.n-menu__subscribe-btn {
-    @include button-single();
-    @include button-single-light();
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+
+    color: $cinnabar;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0;
+
+    &:after {
+        display: none;
+    }
 
     &:hover {
-        @include button-single-light-hover();
+        text-decoration: underline;
     }
 }
