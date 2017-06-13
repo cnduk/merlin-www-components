@@ -6,15 +6,17 @@
             </div>
         {{/ data.logo }}
 
-        {{# data.title }}
-            <h3 class="c-card-section__title">
-                <span>{{ data.title }}</span>
-            </h3>
-        {{/ data.title }}
+        <div class="c-card-section__title-wrapper">
+            {{# data.title }}
+                <h3 class="c-card-section__title">
+                    <span>{{ data.title }}</span>
+                </h3>
+            {{/ data.title }}
 
-        {{# data.navigation_strip }}
-            {{> @cnbritain/merlin-www-topic-strip }}
-        {{/ data.navigation_strip }}
+            {{# data.navigation_strip }}
+                {{> @cnbritain/merlin-www-topic-strip }}
+            {{/ data.navigation_strip }}
+        </div>
 
         {{# data.card_list }}
             {{> @cnbritain/merlin-www-card-list }}

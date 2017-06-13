@@ -10,9 +10,9 @@
 
 .c-card-section {
     background-color: $wild-sand;
-    margin: 0 auto;
+    margin: 30px auto;
     max-width: none;
-    padding: 30px $MOBILE_SIDE_GUTTER;
+    padding: 0 $MOBILE_SIDE_GUTTER;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding: 20px $TABLET_SIDE_GUTTER;
@@ -49,9 +49,12 @@
     @include t-topic-title-small;
 
     margin: 0 0 20px;
+    text-align: center;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         @include t-topic-title-large;
+
+        text-align: left;
     }
 }
 
@@ -59,6 +62,19 @@
     max-width: 1320px;
 }
 
+
+.c-card-section__title-wrapper {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.c-topic-strip--c-card-section {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        width: auto;
+    }
+}
 
 .c-card-section--c-curated,
 .c-card-section--c-contributors,
@@ -82,11 +98,11 @@
     }
 
     .c-card-section__btn {
-        margin-top: 30px;
-        width: auto;
-
         @include button-single();
         @include button-single-dark();
+
+        margin-top: 30px;
+        width: auto;
 
         &:hover {
             @include button-single-dark-hover();
@@ -95,6 +111,17 @@
 
     .c-card-section__title {
         color: #fff;
+    }
+}
+
+.c-card-section__btn {
+    @include button-single();
+    @include button-single-light();
+
+    margin-top: 30px;
+
+    &:hover {
+        @include button-single-light-hover();
     }
 }
 
