@@ -5,9 +5,9 @@
 
 .c-feature {
     background-color: $wild-sand;
-    margin: 0 auto;
+    margin: 30px auto;
     max-width: none;
-    padding: $MOBILE_SIDE_GUTTER;
+    padding: 0 $MOBILE_SIDE_GUTTER;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding: $DESKTOP_SIDE_GUTTER;
@@ -117,7 +117,9 @@
     }
 }
 
-.c-feature__content-center__center {}
+.c-feature__content-center__center {
+    font-size: 0;
+}
 
 .c-feature__icon {
     background-color: $COLOUR_MAIN_PAGE;
@@ -185,18 +187,35 @@
     @include min-screen($CARD_SWITCHER_WIDTH) {
         padding-top: 8px;
     }
+}
 
-    .c-feature__meta-item {
-        &:not(:last-child) {
-            padding-right: $PADDING_XX_SMALL;
+li.c-feature__meta-item {
+    padding-right: 0;
+
+    &:not(:last-child) {
+        &:after {
+            content: '';
+            height: 11px;
+            width: 1px;
+            background-color: $silver;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 5px;
+
+            .c-card--dark & {
+                background-color: #333;
+                height: 11px;
+            }
         }
+    }
 
-        & + .c-feature__meta-item {
-            padding-left: $PADDING_XX_SMALL;
-            border-left: 1px solid $COLOUR_BORDER_SEPARATOR;
-        }
-
-        &--tag {}
+    & + & {
+        border: 0;
+        padding: 0;
     }
 }
+
+
+
+
 
