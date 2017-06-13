@@ -62,6 +62,10 @@ h6 {
     }
 }
 
+figure {
+    margin: 0;
+}
+
 hr {
     border-top: 1px solid $COLOUR_BORDER_SOLID;
     height: 0;
@@ -77,28 +81,22 @@ mark {
 }
 
 p {
-    @include font('AGENDA');
-    @include font-size(18px);
-    @include line-height(25px);
+    @include font('STARLING', 18px, 'NORMAL', 25px);
 
     color: $COLOUR_TYPE_BODY;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(18px);
-        @include line-height(28px);
+        @include font('STARLING', 18px, 'NORMAL', 28px);
     }
 }
 
 q {
-    @include font('STARLING');
-    @include font-size(25px);
-    @include line-height(30px);
+    @include font('STARLING', 25px, 'BOLD', 30px);
 
     color: $COLOUR_MAIN_ACCENT;
     display: block;
     text-align: center;
     font-style: italic;
-    font-weight: bold;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(30px);

@@ -370,7 +370,7 @@
 }
 
 @mixin card-byline {
-    @include line-height(12px);
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
 
     color: $gray;
     text-transform: uppercase;
