@@ -1,5 +1,5 @@
 .n-menu__social {
-    margin: 30px 20px 16px 20px;
+    margin: 30px 20px;
     text-align: center;
 
     ul {
@@ -8,12 +8,12 @@
 }
 
 .n-menu__social-title {
-    @include font('AGENDA', 11px, 'MEDIUM', 13px);
+    @include font('AGENDA', 12px, 'MEDIUM', 13px);
 
-    color: $boulder;
-    letter-spacing: 0.9px;
+    color: $gray;
     margin: 0 0 16px 0;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .n-menu__social-brand {}
@@ -23,7 +23,7 @@
     display: inline-block;
 
     & + & {
-        margin-left: 8px;
+        margin-left: 10px;
     }
 }
 
@@ -31,7 +31,7 @@
     @include button-single();
     @include button-single-light();
 
-    margin-bottom: 32px;
+    margin-bottom: 40px;
 
     &:hover {
         @include button-single-light-hover();

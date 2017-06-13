@@ -1,5 +1,6 @@
 .n-main__covers {
     display: none;
+    overflow: hidden;
     position: absolute;
     top: 48px;
 
@@ -10,21 +11,9 @@
 
 .n-main__covers__wrapper {
     max-width: $MAXIMUM_PAGE_WIDTH;
-    padding-left: 30px;
-    padding-right: 30px;
     margin: 0 auto;
-
-    @include screen(1440px, 1500px) {
-        @for $i from 0 through 60 {
-            @media (min-width: 1440px + $i) {
-                padding-left: #{(30 - $i/2)}px;
-            }
-        }
-    }
-
-    @include min-screen(1500px) {
-        padding-left: 0;
-    }
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .n-main__cover {
