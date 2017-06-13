@@ -11,7 +11,7 @@
     .c-card__obj__body {}
 
     .c-card__obj__header {
-        flex: 0 0 33.333%;
+        flex: 0 0 120px;
     }
 
     .c-card__image__icon {
@@ -19,14 +19,14 @@
     }
 
     .c-card__obj__body {
-        flex: 0 0 66.666%;
-        padding: 0 15px 0 13px;
+        flex: 1 1 auto;
+        padding: 0 0 0 13px;
     }
 
     .c-card__title {
-        @include t-card-landscape-title;
+        @include font('STARLING', 16px, 'NORMAL', 19px);
 
-        margin: 5px 0 12px;
+        margin: 0 0 8px;
     }
 
     .c-card__tag,
@@ -44,7 +44,12 @@
         border: 1px solid $COLOUR_MAIN_HIGHLIGHT;
         border-width: 1px 0 0 0;
         display: block;
-        width: 20px;
+        margin: 5px 0;
+        width: 10px;
+    }
+
+    .c-card__meta {
+        @include card-meta;
     }
 }
 

@@ -13,7 +13,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 1;
+    z-index: 5;
 }
 
 .c-card__images {
@@ -72,7 +72,11 @@ li.c-card__meta-item {
 
 .c-card {
     .c-card__image {
-        @include card-image-normal;
+        overflow: hidden;
+
+        img {
+            @include card-image-normal;
+        }
     }
 
     &:hover,
@@ -82,7 +86,9 @@ li.c-card__meta-item {
         }
 
         .c-card__image {
-            @include card-image-hover;
+            img {
+                @include card-image-hover;
+            }
         }
     }
 }
@@ -90,7 +96,9 @@ li.c-card__meta-item {
 .c-card__image {}
 
 .c-card__image__icon {
-    svg {}
+    svg {
+        height: 100%;
+    }
     path {}
 }
 
@@ -111,21 +119,27 @@ li.c-card__meta-item {
 
 .c-card__byline,
 .c-card__sponsor {
-    margin: 0;
+    @include card-byline;
+
+    margin: 18px 0 5px;
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        margin: 0 0 5px;
+    }
 }
 
 .c-card__byline-prefix,
 .c-card__sponsor-label {
-    @include t-card-byline-prefix;
+    @include card-byline-prefix;
 }
 
 .c-card__byline-name,
 .c-card__sponsor-title {
-    @include t-card-byline-author;
+    @include card-byline-name;
 }
 
 .c-card__meta {
-    @include t-card-meta;
+    @include card-meta;
 
     display: inline-block;
 }
@@ -140,6 +154,10 @@ li.c-card__meta-item {
             display: inline-block;
             vertical-align: middle;
             margin: 0 5px;
+
+            .c-card--dark & {
+                background-color: #333;
+            }
         }
     }
 
