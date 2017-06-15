@@ -110,6 +110,10 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         // Resize
         onPageLoad(this.resize.bind(this, 0));
 
+        // Scroll listener for focus and blur events
+        this._hooks.scroll = throttle(onWindowScroll, 33, this);
+        addEvent(window, 'scroll', this._hooks.scroll);
+
         // Video changes
         if(VideoPlayer !== null){
             bubbleEvent(VideoPlayer, this, 'videoselect');
@@ -182,10 +186,6 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         this._hooks.resize = debounce(
             this.resize, INFINITE_RESIZE_DEBOUNCE, this);
         addEvent(window, 'resize', this._hooks.resize);
-
-        // Scroll listener for focus and blur events
-        this._hooks.scroll = throttle(onWindowScroll, 33, this);
-        addEvent(window, 'scroll', this._hooks.scroll);
     },
 
     "getArticleByUid": function getArticleByUid(uid){
@@ -367,7 +367,7 @@ function onArticleFocus(e){
     // At the moment, the first article triggers the pageview and simplereach
     // using script tags in the page.
     // TODO: move that stuff out of the page and use this for everything
-    if(article.isInfinite && isFirstArticle){
+    if(!article.isInfinite && isFirstArticle){
         isFirstArticle = false;
         return;
 
