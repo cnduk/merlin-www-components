@@ -215,13 +215,13 @@
 .a-header__tag {
     background-color: $limed_oak;
     display: inline-block;
-    padding: 6px 16px 6px 6px;
 }
 
 .a-header__tag__primary {
     @include font("GOTHAM", 10px, 700, 10px, -4);
     border-bottom: none;
     color: $white;
+    padding: 6px 16px 6px 6px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         @include font-size(12px);
