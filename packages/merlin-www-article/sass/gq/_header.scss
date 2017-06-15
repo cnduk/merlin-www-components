@@ -213,23 +213,22 @@
 }
 
 .a-header__tag {
-    @include font("GOTHAM", 10px, 700, 10px, -4);
     background-color: $limed_oak;
-    border-bottom: none;
-    color: $white;
     display: inline-block;
     padding: 6px 16px 6px 6px;
+}
+
+.a-header__tag__primary {
+    @include font("GOTHAM", 10px, 700, 10px, -4);
+    border-bottom: none;
+    color: $white;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         @include font-size(12px);
         @include line-height(12px);
     }
 }
-.a-header__tag__primary {
-    @include font-weight(700);
-    border-bottom: none;
-    color: $white;
-}
+
 .a-header__tag__secondary {}
 
 .a-header__separator--sponsor {
