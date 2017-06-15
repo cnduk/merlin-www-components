@@ -39,14 +39,10 @@
 }
 
 .a-header__teaser {
-    @include font("GOTHAM", 14px, 400, 20px, -2);
-    color: $oslo-gray;
     margin-bottom: 20px;
     margin-top: 10px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(17px);
-        @include line-height(24px);
         margin-bottom: 32px;
         margin-top: 16px;
     }
@@ -55,6 +51,24 @@
         border-bottom: 1px solid $cornflower-blue;
         color: $cornflower-blue;
         text-decoration: none;
+    }
+
+    p {
+        @include font("GOTHAM", 14px, 400, 20px, -2);
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            @include font-size(17px);
+            @include line-height(24px);
+        }
+
+        color: $oslo-gray;
+    }
+
+    > *:first-child {
+        margin-top: 0;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
     }
 }
 
