@@ -101,6 +101,7 @@
 
 .a-marketing-card__magazine__cover--tablet {
     background-color: $black;
+    background-image: none;
     border-radius: 4px;
     bottom: 1px;
     box-shadow: 0px 0px 0px 1px rgba(48, 48, 48, 1);
@@ -115,6 +116,7 @@
 }
 
 .a-marketing-card__magazine__cover--mobile {
+    background-image: none;
     display: none;
 }
 
