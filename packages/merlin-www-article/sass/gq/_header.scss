@@ -174,10 +174,12 @@
 }
 
 .a-header__image-caption {
-    @include font("GOTHAM", 12px, 500, 16px, -2);
-    color: $woodsmoke;
-    margin-bottom: 8px;
-    margin-top: 8px;
+    p {
+        @include font("GOTHAM", 12px, 500, 16px, -2);
+        color: $woodsmoke;
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
 }
 
 .a-header__image-credit {
