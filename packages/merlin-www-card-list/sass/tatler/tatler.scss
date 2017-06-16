@@ -22,7 +22,7 @@ $C_CARD_BUM_MARGIN: 30px;
 
 @mixin cl-base {
     flex-direction: column;
-    margin: 0 #{-$C_CARD_GUTTER};
+    margin: 0 (-$C_CARD_GUTTER);
     text-align: center;
 
     .c-card-list__item {
@@ -139,7 +139,7 @@ $C_CARD_BUM_MARGIN: 30px;
 }
 
 // Common curated, article recommended, magazine articles, search results,
-// video genre articles, latest articles
+// video genre articles, latest articles, videos too
 // Contains four cards
 // Goes one, two, four
 .c-card-list--c-curated,
@@ -147,7 +147,8 @@ $C_CARD_BUM_MARGIN: 30px;
 .c-card-list--mag-articles,
 .c-card-list--s-results,
 .c-card-list--v-genre-articles,
-.c-card-list--c-video-articles {
+.c-card-list--c-video-articles,
+.c-card-list--v-articles {
     @include cl-one-two-four;
 }
 
@@ -232,10 +233,9 @@ $C_CARD_BUM_MARGIN: 30px;
 }
 
 
-// Video articles and tag header articles
+// Ttag header articles
 // Contains three columns
 // Goes one, two, three
-.c-card-list--v-articles,
 .c-card-list--tg-header-articles {
     @include cl-one-two-three;
 }
@@ -270,7 +270,7 @@ $C_CARD_BUM_MARGIN: 30px;
 // RELATED ARTICLES
 .c-card-list--v-related-articles {
     flex-direction: row;
-    margin: 0 -$C_CARD_GUTTER;
+    margin: 0 (-$C_CARD_GUTTER);
 
     .c-card-list__item {
         opacity: 1;
