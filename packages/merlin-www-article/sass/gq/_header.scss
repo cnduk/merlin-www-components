@@ -227,12 +227,13 @@
 }
 
 .a-header__tag {
-    background-color: $limed_oak;
     display: inline-block;
 }
 
+.a-header__tag__secondary,
 .a-header__tag__primary {
     @include font("GOTHAM", 10px, 700, 10px, -4);
+    background-color: $limed_oak;
     border-bottom: none;
     color: $white;
     padding: 6px 16px 6px 6px;
@@ -243,7 +244,9 @@
     }
 }
 
-.a-header__tag__secondary {}
+.a-header__tag__secondary {
+    margin-right: 8px;
+}
 
 .a-header__separator--sponsor {
 
