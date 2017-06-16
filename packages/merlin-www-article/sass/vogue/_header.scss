@@ -232,6 +232,11 @@
     height: 50px;
     margin-top: $MARGIN_XX_SMALL;
 
+    img {
+        height: 50px;
+        max-height: 50px;
+    }
+
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin-left: $MARGIN_XXX_SMALL;
         margin-top: 0;
