@@ -256,9 +256,12 @@
 }
 
 .bb-figure__caption {
-    @include font("GOTHAM", 12px, 500, 16px, -2);
-    color: $woodsmoke;
-    margin-top: 16px;
+    p {
+        @include font("GOTHAM", 12px, 500, 16px, -2);
+        color: $woodsmoke;
+        margin-top: 16px;
+        margin-bottom: 0;
+    }
 }
 
 .bb-figure__credit {
