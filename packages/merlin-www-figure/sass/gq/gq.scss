@@ -44,13 +44,15 @@ li.c-figure__toolbar-listitem {
 }
 
 .c-figure__caption {
-	@include font("GOTHAM", 16px, 400, 26px, -2);
-	color: $mineshaft;
-	margin-bottom: 12px;
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		margin-bottom: 16px;
-		@include font-size(17px);
-		@include line-height(28px);
+	p {
+		@include font("GOTHAM", 16px, 400, 26px, -2);
+		color: $mineshaft;
+		margin-bottom: 12px;
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			margin-bottom: 16px;
+			@include font-size(17px);
+			@include line-height(28px);
+		}
 	}
 
 	a {
