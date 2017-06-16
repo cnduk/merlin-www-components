@@ -8,14 +8,14 @@
     box-sizing: content-box;
 
     @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: -$MOBILE_SIDE_GUTTER;
-        margin-right: -$MOBILE_SIDE_GUTTER;
+        margin-left: (-$MOBILE_SIDE_GUTTER);
+        margin-right: (-$MOBILE_SIDE_GUTTER);
         padding-left: $MOBILE_SIDE_GUTTER;
         padding-right: $MOBILE_SIDE_GUTTER;
 
         .c-topic-strip__list {
-            margin-left: -$MOBILE_SIDE_GUTTER;
-            margin-right: -$MOBILE_SIDE_GUTTER;
+            margin-left: (-$MOBILE_SIDE_GUTTER);
+            margin-right: (-$MOBILE_SIDE_GUTTER);
             padding-left: $MOBILE_SIDE_GUTTER;
             padding-right: $MOBILE_SIDE_GUTTER;
         }
@@ -80,7 +80,7 @@ li.c-topic-strip__item {
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         white-space: normal;
-        margin-bottom: -$MARGIN_XX_SMALL;
+        margin-bottom: (-$MARGIN_XX_SMALL);
 
         .c-topic-strip__item {
             margin-bottom: $MARGIN_XX_SMALL;
