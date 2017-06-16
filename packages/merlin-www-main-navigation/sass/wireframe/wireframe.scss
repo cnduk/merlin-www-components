@@ -139,6 +139,10 @@
     }
 }
 
+.n-menu__search-textbox input {
+    @include vendor-prefix(appearance, none);
+}
+
 .n-search {
     background-color: rgba(0,0,0,0.85);
     display: none;
