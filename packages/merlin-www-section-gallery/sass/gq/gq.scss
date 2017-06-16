@@ -25,6 +25,10 @@
     max-width: $MAXIMUM_PAGE_WIDTH;
 }
 
+.c-gallery__image {
+    background-color: $bon-jour;
+}
+
 .c-gallery__image-remaining {
     background-color: rgba(0,0,0,0.38);
 }

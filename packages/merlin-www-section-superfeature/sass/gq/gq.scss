@@ -33,6 +33,7 @@
 }
 
 .c-superfeature__image {
+    background-color: $bon-jour;
     padding-top: 66.66666%;
     position: relative;
     @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
