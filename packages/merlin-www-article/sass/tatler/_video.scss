@@ -1,6 +1,6 @@
 .a-logo {}
 .a-logo--video {
-    background-color: #222;
+    background-color: $black-two;
     padding: 60px 0 40px 0;
 
     .a-logo__wrapper {
@@ -19,14 +19,22 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        top: -$MOBILE_SIDE_GUTTER;
+        top: (-$MOBILE_SIDE_GUTTER);
 
         @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-            top: -$TABLET_SIDE_GUTTER;
+            top: (-$TABLET_SIDE_GUTTER);
         }
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            top: -$DESKTOP_SIDE_GUTTER;
+            top: (-$DESKTOP_SIDE_GUTTER);
+        }
+    }
+
+     &.has-sidebar {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            .a-video__player {
+                margin-right: 470px;
+            }
         }
     }
 }
@@ -34,21 +42,25 @@
 .a-video__wrapper {}
 
 .a-video__player {
-    background-color: #222;
+    background-color: $black-two;
 }
 
 .a-video__player__wrapper {}
 
 .a-video__sidebar {
-    background-color: #333;
+    background-color: $cod-gray;
     padding: 0 20px 20px 20px;
+    width: 470px;
 }
 
 .a-video__sidebar__wrapper {}
 
 .a-video__sidebar__title {
+    @include font('STARLING', 16px, 'BOLD', 20px);
+
     color: #fff;
     margin: 0;
+    letter-spacing: 1px;
     padding: 20px 0;
     position: relative;
     text-align: left;
