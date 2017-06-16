@@ -32,7 +32,15 @@
 
 .bb-figure__caption {}
 
-.bb-figure__credit {}
+.bb-figure__credit {
+    @include font('AGENDA', 13px, 'MEDIUM', 17px);
+
+    color: $boulder;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font('AGENDA', 15px, 'MEDIUM', 22px);
+    }
+}
 
 .bb-figure__wrapper {}
 
@@ -53,8 +61,22 @@
  */
 
 .bb-dropcap {}
-.bb-dropcap--letter {}
-.bb-dropcap--word {}
+.bb-dropcap--letter {
+    @include font("STARLING", 89px, 'NORMAL', 65px);
+
+    float: left;
+    margin: 10px 10px 0 0;
+    padding: 0;
+    text-transform: capitalize;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(144px);
+        @include line-height(105px);
+
+        margin: 15px 15px 0 0;
+        padding: 0;
+    }
+}
 
 
 
@@ -108,18 +130,21 @@
 
 .bb-question__q,
 .bb-answer__a {
-    @include font('STARLING', 17px, 'BOLD');
+    @include font('STARLING', 17px, 'BOLD', 30px);
 
     border-radius: 50%;
     color: $COLOUR_MAIN_DARK;
     display: inline-block;
     height: 30px;
-    line-height: 30px;
-    margin: 0 20px 0 0;
+    margin: -5px 10px 0 0;
     text-align: center;
     text-transform: uppercase;
     vertical-align: middle;
     width: 30px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 0 10px 0 0;
+    }
 }
 
 .bb-question__q { background: $COLOUR_BG_DARK; }
@@ -157,34 +182,75 @@
  */
 .bb-pullquote {}
 .bb-pullquote__quote {
-    @include font('STARLING');
-    @include font-size(25px);
-    @include line-height(30px);
+    @include font('STARLING', 25px, 'NORMAL', 30px);
 
     color: $COLOUR_MAIN_ACCENT;
     display: block;
     text-align: center;
     font-style: italic;
-    font-weight: bold;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(30px);
         @include line-height(38px);
     }
+
+    &:before,
+    &:after {
+        content: '';
+    }
 }
 
-.bb-pullquote__separator {}
-.bb-pullquote__credit {}
+.bb-pullquote__separator {
+    border: 1px solid #ccc;
+    border-width: 1px 0 0 0;
+}
+
+.bb-pullquote__credit {
+    @include font('AGENDA', 13px, 'MEDIUM', 17px);
+
+    color: $boulder;
+    text-align: center;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font('AGENDA', 15px, 'MEDIUM', 22px);
+    }
+}
 
 
 
 /**
  * Blockquote
  */
-.bb-blockquote {}
-.bb-blockquote__quote {}
-.bb-blockquote__separator {}
-.bb-blockquote__credit {}
+.bb-blockquote {
+    border-left: 1px solid $COLOUR_MAIN_HIGHLIGHT;
+    padding: 0 0 0 10px;
+
+    &:before {
+        content: '';
+        display: block;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14.12" fill="#e03b2a"><path d="M0 8.06c0-4.44 4-7 6.9-8l.32.75c-2.35 1.18-5 2.67-5 5.51 0 .48.21 1.23.8 1.23s1.2-.49 1.74-.49a3.23 3.23 0 0 1 3.37 3.37 3.91 3.91 0 0 1-3.58 3.69C2 14.12 0 11.93 0 8.06zm11.87 0c0-4.44 4-7 6.9-8l.32.75c-2.35 1.18-5 2.67-5 5.51 0 .48.21 1.23.8 1.23s1.21-.49 1.74-.49A3.23 3.23 0 0 1 20 10.43a3.91 3.91 0 0 1-3.58 3.69c-2.57 0-4.55-2.19-4.55-6.06z"/></svg>') 50% 50% no-repeat;
+        height: 27px;
+        width: 38px;
+    }
+}
+
+.bb-blockquote__quote {
+    @include font('AGENDA', 17px, 'MEDIUM', 24px);
+}
+
+.bb-blockquote__separator {
+    display: none;
+}
+
+.bb-blockquote__credit {
+    @include font('AGENDA', 13px, 'MEDIUM', 17px);
+
+    color: $boulder;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font('AGENDA', 15px, 'MEDIUM', 22px);
+    }
+}
 
 
 
@@ -206,7 +272,6 @@
         position: absolute;
         right: 10px;
         top: 10px;
-        z-index: -1;
     }
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
