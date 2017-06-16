@@ -90,6 +90,24 @@ p {
     }
 }
 
+pre {
+    @include font-size(17px);
+    @include line-height(20px);
+
+    border: 1px solid #979797;
+    color: $boulder;
+    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    letter-spacing: 1px;
+    margin: 30px 0;
+    padding: 20px;
+    white-space: pre-wrap;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        padding: 40px;
+    }
+
+}
+
 q {
     @include font('STARLING', 25px, 'BOLD', 30px);
 
@@ -119,13 +137,13 @@ ul, ol {
     margin: $MARGIN_SMALL 0;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(15px);
+        @include font-size(17px);
         @include line-height(22px);
     }
 
     li {
         position: relative;
-        margin: 0.4em 0;
+        margin: 1em 0;
     }
 }
 
@@ -136,18 +154,18 @@ ul {
         @include min-screen($TYPE_LARGE_COPY_WIDTH) {
             padding-left: 28px;
         }
-    }
 
-    li:before {
-        background: $COLOUR_MAIN_HIGHLIGHT;
-        border-radius: 50%;
-        content: '';
-        display: block;
-        height: 8px;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 8px;
+        &:before {
+            background: $COLOUR_MAIN_HIGHLIGHT;
+            border-radius: 50%;
+            content: '';
+            display: block;
+            height: 8px;
+            left: 0;
+            position: absolute;
+            top: 7px;
+            width: 8px;
+        }
     }
 }
 
@@ -156,35 +174,37 @@ ol {
 
     li {
         padding-left: 40px;
+        margin: 1em 0;
 
         @include min-screen($TYPE_LARGE_COPY_WIDTH) {
             padding-left: 45px;
         }
-    }
 
-    li:before {
-        @include font-size(16px);
+        &:before {
+            @include font('AGENDA', 16px, 'BOLD', 23px);
 
-        background: $COLOUR_BG;
-        color: $COLOUR_MAIN_HIGHLIGHT;
-        content: counters(section);
-        counter-increment: section;
-        display: block;
-        font-weight: bold;
-        height: 25px;
-        left: 0;
-        line-height: 25px;
-        position: absolute;
-        text-align: center;
-        top: 0;
-        width: 25px;
+            border-radius: 50%;
+            border: 1px solid $COLOUR_MAIN_HIGHLIGHT;
+            color: $COLOUR_MAIN_HIGHLIGHT;
+            content: counter(section);
+            counter-increment: section;
+            display: block;
+            height: 25px;
+            left: 0;
+            padding: 0;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            width: 25px;
+            vertical-align: middle;
 
-        @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-            @include font-size(16px);
+            @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+                @include font-size(16px);
 
-            height: 30px;
-            line-height: 30px;
-            width: 30px;
+                height: 30px;
+                line-height: 30px;
+                width: 30px;
+            }
         }
     }
 }
