@@ -79,11 +79,7 @@
 }
 
 .c-splash-hero__image {
-	padding-top: 100%;
-
-	@include min-screen($CARD_SWITCHER_WIDTH) {
-	    padding-top: 56.25%;
-	}
+	padding-top: 66.66666%;
 
 	img {
 	    bottom: 0;
