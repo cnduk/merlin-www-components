@@ -1,9 +1,15 @@
 @import '@cnbritain/merlin-www-common:tatler';
+@import "@cnbritain/merlin-www-common:wireframe";
 
 @import '../wireframe/wireframe';
 
+@mixin bb-credit($font-size) {
+    @include font('AGENDA', $font-size, 'MEDIUM', $font-size);
 
-@import "@cnbritain/merlin-www-common:wireframe";
+    color: $boulder;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
 /**
  * Twitter, Instagram, Vine, Facebook, Vimeo, Youtube
@@ -33,13 +39,9 @@
 .bb-figure__caption {}
 
 .bb-figure__credit {
-    @include font('AGENDA', 13px, 'MEDIUM', 17px);
+    @include bb-credit(10px);
 
-    color: $boulder;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font('AGENDA', 15px, 'MEDIUM', 22px);
-    }
+    padding-top: 10px;
 }
 
 .bb-figure__wrapper {}
@@ -53,7 +55,35 @@
 /**
  * Note
  */
-.bb-note {}
+.bb-note {
+    @include font('AGENDA', 14px, 'MEDIUM', 18px);
+
+    border-top: 1px solid #ccc;
+    color: #000;
+    letter-spacing: 0.5px;
+    margin: 20px 0 40px;
+    padding-top: 12px;
+    padding-left: 23px;
+    position: relative;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font('AGENDA', 14px, 'MEDIUM', 22px);
+
+        padding-left: 28px;
+    }
+
+    &:before {
+        background: $COLOUR_MAIN_HIGHLIGHT;
+        border-radius: 50%;
+        content: '';
+        display: block;
+        height: 8px;
+        left: 0;
+        position: absolute;
+        top: 17px;
+        width: 8px;
+    }
+}
 
 
 /**
@@ -62,7 +92,7 @@
 
 .bb-dropcap {}
 .bb-dropcap--letter {
-    @include font("STARLING", 89px, 'NORMAL', 65px);
+    @include font("STARLING", 89px, 'NORMAL', 64px);
 
     float: left;
     margin: 10px 10px 0 0;
@@ -70,10 +100,10 @@
     text-transform: capitalize;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(144px);
-        @include line-height(105px);
+        @include font-size(140px);
+        @include line-height(98px);
 
-        margin: 15px 15px 0 0;
+        margin: 15px 15px -1px 0;
         padding: 0;
     }
 }
@@ -87,8 +117,36 @@
 
 .bb-gallery__link {}
 
-.bb-gallery__title {}
-.bb-gallery__icon {}
+.bb-gallery__title {
+    @include font-size(16px);
+    @include line-height(19px);
+
+    letter-spacing: 0;
+    margin: 30px 0 10px;
+    padding-left: 28px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(20px);
+        @include line-height(23px);
+
+        margin: 30px 0 15px;
+
+        padding-left: 26px;
+    }
+}
+
+.bb-gallery__icon {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 32px;
+    left: 0;
+
+    svg {
+        fill: $black;
+    }
+
+}
 .bb-gallery__icon--gallery {}
 
 .bb-gallery__cols {
@@ -99,9 +157,24 @@
 
 .bb-gallery__remaining {}
 
-.bb-gallery__remaining-text {}
+.bb-gallery__remaining-text {
+    @include font("STARLING", 27px, "NORMAL", 27px);
 
-.bb-gallery__remaining-text--prefix {}
+    letter-spacing: normal;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font("STARLING", 40px, "NORMAL", 40px);
+    }
+}
+
+.bb-gallery__remaining-text--prefix {
+    margin-right: -3px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin-right: -5px;
+    }
+}
+
 .bb-gallery__remaining-text--value {}
 
 
@@ -109,6 +182,12 @@
 /**
  * Question & Answer
  */
+.bb-question__question,
+.bb-answer__answer {
+    position: relative;
+    padding-left: 40px;
+}
+
 .bb-question__question,
 .bb-question__question p,
 .bb-answer__answer,
@@ -126,7 +205,14 @@
 }
 
 .bb-answer__answer,
-.bb-answer__answer p { color: $COLOUR_MAIN_ACCENT; }
+.bb-answer__answer p {
+    color: $COLOUR_MAIN_ACCENT;
+    margin-bottom: 15px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 20px;
+    }
+}
 
 .bb-question__q,
 .bb-answer__a {
@@ -136,14 +222,17 @@
     color: $COLOUR_MAIN_DARK;
     display: inline-block;
     height: 30px;
-    margin: -5px 10px 0 0;
+    left: 0;
+    position: absolute;
     text-align: center;
     text-transform: uppercase;
     vertical-align: middle;
     width: 30px;
+    top: -2px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin: 0 10px 0 0;
+        top: 0;
     }
 }
 
@@ -155,24 +244,24 @@
     display: none;
 }
 
-.bb-question__author,
-.bb-answer__author {
-    @include font('AGENDA', 15px, 'MEDIUM', 22px);
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font('AGENDA', 17px, 'MEDIUM', 22px);
-    }
-}
-
 .bb-question__by,
 .bb-answer__by {
-    @include font('AGENDA', 15px, 'MEDIUM', 22px);
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font('AGENDA', 17px, 'MEDIUM', 22px);
-    }
-
+    color: #8a8a8a;
     font-style: italic;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+}
+
+.bb-question__author,
+.bb-answer__author {
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+
+    color: #8a8a8a;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 
@@ -180,7 +269,14 @@
 /**
  * Pullquote
  */
-.bb-pullquote {}
+.bb-pullquote {
+    margin: 40px 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin: 60px 30px;
+    }
+}
+
 .bb-pullquote__quote {
     @include font('STARLING', 25px, 'NORMAL', 30px);
 
@@ -201,19 +297,17 @@
 }
 
 .bb-pullquote__separator {
-    border: 1px solid #ccc;
-    border-width: 1px 0 0 0;
+    display: none;
 }
 
 .bb-pullquote__credit {
-    @include font('AGENDA', 13px, 'MEDIUM', 17px);
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
 
-    color: $boulder;
+    color: #8a8a8a;
     text-align: center;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font('AGENDA', 15px, 'MEDIUM', 22px);
-    }
+    padding-top: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 
@@ -223,19 +317,32 @@
  */
 .bb-blockquote {
     border-left: 1px solid $COLOUR_MAIN_HIGHLIGHT;
-    padding: 0 0 0 10px;
+    margin: 40px 30px;
+    padding: 0 0 0 20px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin: 60px 30px;
+    }
 
     &:before {
         content: '';
         display: block;
         background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14.12" fill="#e03b2a"><path d="M0 8.06c0-4.44 4-7 6.9-8l.32.75c-2.35 1.18-5 2.67-5 5.51 0 .48.21 1.23.8 1.23s1.2-.49 1.74-.49a3.23 3.23 0 0 1 3.37 3.37 3.91 3.91 0 0 1-3.58 3.69C2 14.12 0 11.93 0 8.06zm11.87 0c0-4.44 4-7 6.9-8l.32.75c-2.35 1.18-5 2.67-5 5.51 0 .48.21 1.23.8 1.23s1.21-.49 1.74-.49A3.23 3.23 0 0 1 20 10.43a3.91 3.91 0 0 1-3.58 3.69c-2.57 0-4.55-2.19-4.55-6.06z"/></svg>') 50% 50% no-repeat;
-        height: 27px;
-        width: 38px;
+        height: 25px;
+        width: 34px;
+
+        @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            height: 26px;
+            width: 37px;
+        }
     }
 }
 
 .bb-blockquote__quote {
-    @include font('AGENDA', 17px, 'MEDIUM', 24px);
+    @include font('AGENDA', 17px, 'MEDIUM', 22px);
+
+    margin-top: 15px;
+    letter-spacing: .3px;
 }
 
 .bb-blockquote__separator {
@@ -243,13 +350,11 @@
 }
 
 .bb-blockquote__credit {
-    @include font('AGENDA', 13px, 'MEDIUM', 17px);
+    @include font('AGENDA', 10px, 'MEDIUM', 10px);
 
     color: $boulder;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font('AGENDA', 15px, 'MEDIUM', 22px);
-    }
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 
@@ -347,18 +452,38 @@
  * Video
  */
 .bb-video {}
-.bb-video__title {}
-.bb-video__title-icon {}
+.bb-video__title {
+    margin-right: 3px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin-right: 10px;
+    }
+}
+
+.bb-video__title-icon {
+    display: inline-block;
+    margin-right: 16px;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+
+    svg {
+        display: block;
+        height: 100%;
+        margin: 0 auto;
+        vertical-align: middle;
+        width: auto;
+    }
+
+    svg, path {
+        fill: $black;
+    }
+}
+
 .bb-video__wrapper {}
 .bb-video__image {}
 .bb-video__image-icon {}
 .bb-video__link {}
-
-
-/**
- * Show Gallery
- */
-.bb-show-gallery {}
 
 
 /**
@@ -370,15 +495,99 @@
 /**
  * Card
  */
-.bb-card {}
+.bb-card {
+    border: 1px solid $white-two;
+    margin: 30px 0;
+    padding: 15px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        padding: 20px;
+
+        &:before {
+            @include font('AGENDA', 12px, 'MEDIUM', 12px);
+
+            color: $black-two;
+            bottom: 16px;
+            content: 'Continue Reading ';
+            position: absolute;
+            letter-spacing: 1px;
+            right: 16px;
+            text-transform: uppercase;
+        }
+    }
+}
 
 .bb-card__link {}
-.bb-card__link--article {}
 
-.bb-card__images {}
+.bb-card__obj {
+    display: flex;
+}
 
-.bb-card__image {}
+.bb-card__obj__header {
+    flex: 0 0 112px;
+    padding-right: 13px;
 
-.bb-card__title {}
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        flex: 0 0 185px;
+        padding-right: 20px;
+    }
+}
 
-.bb-card__meta-item {}
+.bb-card__obj__body {
+    flex: 1 1 auto;
+    padding-left: 0;
+}
+
+
+.bb-card__images {
+    .bb-card__image {
+        padding-top: 100%;
+    }
+
+    .bb-card__image__icon {
+        display: none;
+
+        bottom: 0;
+        background-color: $black;
+        height: 40px;
+        left: 0;
+        width: 40px;
+
+        svg {
+            display: block;
+            height: 100%;
+            margin: 0 auto;
+            vertical-align: middle;
+            width: 16px;
+            fill: $white;
+        }
+    }
+}
+
+.bb-card__tag {
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+
+    color: $boulder;
+    letter-spacing: 1px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.bb-card__title {
+    @include font('STARLING', 18px, 'NORMAL', 22px);
+
+    margin-top: 3px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font('STARLING', 23px, 'BOLD', 28px);
+
+        margin-top: 10px;
+    }
+}
+
+.bb-card__teaser,
+.bb-card__separator,
+.bb-card__byline,
+.bb-card__meta {
+    display: none;
+}
