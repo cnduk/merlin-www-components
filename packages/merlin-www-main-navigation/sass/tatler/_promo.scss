@@ -41,7 +41,7 @@
     background-color: $wild-sand;
     border: 0;
     margin: 20px 0;
-    padding: 30px 20px;
+    padding: 20px 50px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding: 32px 30px;
@@ -49,9 +49,10 @@
 }
 
 .n-menu__subscribe__wrapper {}
+
 .n-menu__subscribe-cols {
     display: flex;
-    width: 100%;
+    width: 85%;
 }
 
 .n-menu__subscribe-col {
@@ -112,17 +113,22 @@ a.n-main__cover__btn,
 a.n-menu__subscribe-btn {
     @include font('AGENDA', 12px, 'MEDIUM', 12px);
 
+    border: 1px solid $cinnabar;
     color: $cinnabar;
     letter-spacing: 1px;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 0;
+    padding: 8px;
 
     &:after {
         display: none;
     }
 
-    &:hover {
-        text-decoration: underline;
+    &:hover,
+    &:focus {
+        background: $cinnabar;
+        border: 1px solid $cinnabar;
+        color: $white;
+        text-decoration: none;
     }
 }

@@ -88,7 +88,7 @@
     position: relative;
 
     & + &:before {
-        background-color: $white-three;
+        background: none;
         content: "";
         display: block;
         height: 20px;

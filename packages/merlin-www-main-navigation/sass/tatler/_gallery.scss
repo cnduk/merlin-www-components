@@ -1,8 +1,10 @@
 .n-main__nav-title {
-    color: $white;
+    @include font('STARLING', 17px, 'NORMAL', 60px);
+
+    color: $black;
     display: none;
     overflow: hidden;
-    padding-left: 138px;
+    padding-left: 160px;
     padding-right: 195px;
     text-overflow: ellipsis;
     vertical-align: middle;
@@ -21,7 +23,7 @@
     }
 
     @include min-screen(1500px) {
-        padding-left: 108px;
+        padding-left: 160px;
     }
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
@@ -30,7 +32,7 @@
 }
 
 .n-gallery-nav {
-    background-color: $black;
+    background-color: $white;
     bottom: 0;
     height: 60px;
     left: 0;
@@ -49,7 +51,7 @@
 }
 
 .n-gallery-counter {
-    color: $white;
+    color: $black;
     line-height: 60px;
     padding: 0 20px;
 
@@ -66,13 +68,13 @@
     @include font-size(12px);
     @include font-weight(400);
 
-    color: $oslo-gray;
+    color: $black;
     margin-left: 4px;
     margin-right: 4px;
 }
 
 .n-gallery-counter__total {
-    color: $white;
+    color: $black;
 }
 
 
@@ -96,14 +98,14 @@ a.n-gallery-close {
 
     svg {
         height: 100%;
-        fill: $white;
+        fill: $black;
         width: 18px;
     }
 }
 .n-gallery-toggle--list,
 .n-gallery-toggle--grid {
-    border-left: 1px solid $mineshaft;
-    border-right: 1px solid $mineshaft;
+    border-left: 1px solid $wild-sand;
+    border-right: 1px solid $wild-sand;
     display: inline-block;
     font-size: 0;
     height: 60px;
@@ -116,13 +118,13 @@ a.n-gallery-close {
 
     &:hover {
         svg {
-            fill: $limed-oak;
+            fill: $black;
         }
     }
 
     svg {
         height: 100%;
-        fill: $white;
+        fill: $black;
         width: 18px;
     }
 }
