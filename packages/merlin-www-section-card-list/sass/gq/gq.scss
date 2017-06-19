@@ -170,25 +170,27 @@
 .c-card-section--c-curated,
 .c-card-section--c-tag {
 	.c-card-section__title {
-		@include font("GOTHAM", 14px, 700, 40px, 60)
+		@include font("GOTHAM", 14px, 700, 16px, 60)
 		color: $woodsmoke;
+		display: table;
 		height: 40px;
 		margin-bottom: 24px;
 		margin-top: 0;
 		text-align: left;
 		text-transform: uppercase;
+		width: 100%;
 
 		span {
-			display: inline-block;
-			vertical-align: top;
+			display: table-cell;
+			padding-left: 12px;
+			vertical-align: middle;
 		}
 
 		&:before {
 			background-color: $limed-oak;
 			content: '';
-			display: inline-block;
+			display: table-cell;
 			height: 40px;
-			margin-right: 12px;
 			width: 20px;
 		}
 
@@ -205,25 +207,27 @@
 .c-card-section--sh-latest-articles,
 .c-card-section--tg-articles {
 	.c-card-section__title {
-		@include font("GOTHAM", 14px, 700, 40px, 60)
+		@include font("GOTHAM", 14px, 700, 16px, 60)
 		color: $woodsmoke;
+		display: table;
 		height: 40px;
 		margin-bottom: 24px;
 		margin-top: 0;
 		text-align: left;
 		text-transform: uppercase;
+		width: 100%;
 
 		span {
-			display: inline-block;
-			vertical-align: top;
+			display: table-cell;
+			padding-left: 12px;
+			vertical-align: middle;
 		}
 
 		&:before {
 			background-color: $mineshaft;
 			content: '';
-			display: inline-block;
+			display: table-cell;
 			height: 40px;
-			margin-right: 12px;
 			width: 20px;
 		}
 
