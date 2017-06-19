@@ -23,7 +23,7 @@
         @include font('STARLING', 62px, 'NORMAL', 67px);
 
         letter-spacing: 1px;
-        margin: 12px 0 25px;
+        margin: 25px 0;
     }
 }
 
@@ -31,7 +31,7 @@
     @include font('STARLING', 20px, 'NORMAL', 25px);
 
     font-style: italic;
-    margin: 10px 0 20px;
+    margin: 10px 0 15px;
     word-break: break-word;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
@@ -51,7 +51,7 @@
 .a-header__byline {
     @include card-byline;
 
-    margin: 20px 0 5px;
+    margin: 15px 0 10px;
 
     a {
         color: inherit;
@@ -141,19 +141,19 @@
 .a-header__tag,
 .a-header__tag__primary,
 .a-header__tag__secondary {
-    @include font('AGENDA', 11px, 'MEDIUM', 12px);
+    @include font('AGENDA', 11px, 'MEDIUM', 11px);
 
     color: $gray;
     letter-spacing: 1px;
-    margin: 20px 0 9px;
+    margin: 0 0 12px;
     text-transform: uppercase;
     text-decoration: none;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font('AGENDA', 16px, 'MEDIUM', 17px);
+        @include font('AGENDA', 16px, 'MEDIUM', 16px);
 
         letter-spacing: 1px;
-        margin: 60px 0 12px;
+        margin: 0 0 12px;
     }
 
     &:hover,
@@ -163,8 +163,9 @@
 
     a {
         color: $gray;
-        text-decoration: none;
+        margin-bottom: 0;
         padding-right: 10px;
+        text-decoration: none;
 
         &:hover,
         &:focus {

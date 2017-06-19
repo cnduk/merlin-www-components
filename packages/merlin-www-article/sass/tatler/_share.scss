@@ -1,9 +1,16 @@
 .a-share {
-    margin: 30px 0 10px;
+    margin: 25px 0 0;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin: 30px 0 0;
+    }
 }
 .a-share__wrapper {}
 
 .a-share__title {
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+
+    letter-spacing: 1px;
     margin: 0 0 $MARGIN_SMALL 0;
     text-transform: uppercase;
 }

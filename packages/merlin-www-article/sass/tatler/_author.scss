@@ -1,7 +1,7 @@
 .a-author,
 .a-event-author {
     color: $gray;
-    padding-right: 35px;
+    padding-right: 0;
 }
 
 .a-author__article-date {
@@ -9,16 +9,18 @@
 }
 
 .a-author__bio {
-    @include font('AGENDA', 12px, 'MEDIUM', 17px);
+    @include font('AGENDA', 14px, 'MEDIUM', 18px);
 
+    letter-spacing: 0.5px;
     color: $gray;
+    margin-top: 0;
     margin-bottom: 12px;
 }
 
 .a-author__byline {
     @include card-byline;
 
-    margin-bottom: 10px;
+    margin: 12px 0 15px;
 
     a {
         color: $gray;
@@ -44,13 +46,14 @@
 
 .a-author__image,
 .a-event-author__image {
-    border: 1px solid $silver;
-    padding: 10px;
+    border: 1px solid $black;
+    padding: 5px;
+    width: 100px;
 }
 
 .a-author__separator,
 .a-event-author__separator {
-    width: 20px;
+    width: 10px;
     border-color: $COLOUR_MAIN_HIGHLIGHT;
     border-width: 1px 0 0 0;
     margin: 12px 0;

@@ -1,13 +1,14 @@
 .a-gallery {
-    margin: 30px auto;
+    margin: 0 auto;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: 40px;
-        margin-bottom: 60px;
+        padding-left: 70px;
     }
 }
 
-.a-gallery__wrapper {}
+.a-gallery__wrapper {
+
+}
 
 .a-gallery__thumbnail-list {
     margin-left: 0px;
@@ -83,26 +84,66 @@ li.a-gallery__image-listitem {
     }
 }
 
+
 .g-image-nav {
-    padding: $PADDING_SMALL $PADDING_X_SMALL;
+    transition-duration: 300ms;
+    width: $MOBILE_SIDE_GUTTER;
+
+    @include tablet-size {
+        width: 70px;
+    }
+
+    @include desktop-size {
+        width: 70px;
+    }
+
+    &.is-fixed {
+        transform: translateX(-100%) translateY(20px);
+    }
 }
 
-.g-image-nav__btns {}
+.g-image-nav__btns {
+    margin: 0 auto;
+    width: 60px;
+}
+
 .g-image-nav__btn {
-    background-color: $COLOUR_BG_PAGE;
+    background: #f9f9f9;
+    border-radius: 50%;
+    border: 0;
+    width: 60px;
+    height: 60px;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    svg, path {
+        fill: $cinnabar;
+    }
+
+    &:hover,
+    &:focus {
+        background: $cinnabar;
+
+        svg, path {
+            fill: $white;
+        }
+    }
 }
 
-.g-image-nav__btn--previous {
-    padding-bottom: $PADDING_SMALL;
-}
+.g-image-nav__btn--previous {}
 
 .g-image-nav__btn--next {
-    border-top: 1px solid $COLOUR_BORDER_SOLID;
-    padding-top: $PADDING_SMALL;
+    margin-top: 10px;
 }
 
 .g-image-nav__btn[disabled] {
-    svg {
-        fill: $COLOUR_BUTTON_NAV_DARK_TEXT_DISABLED;
+    background: #f9f9f9;
+    pointer: normal;
+
+    svg, path {
+        fill: $silver;
     }
 }
