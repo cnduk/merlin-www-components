@@ -10,7 +10,8 @@
     padding: 0 $MOBILE_SIDE_GUTTER;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: 60px 0;
+        padding: 0 $TABLET_SIDE_GUTTER;
+        margin: 90px auto;
     }
 }
 
