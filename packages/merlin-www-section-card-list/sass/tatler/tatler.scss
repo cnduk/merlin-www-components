@@ -48,7 +48,7 @@
 .c-card-section__title {
     @include t-topic-title-small;
 
-    margin: 0 0 20px;
+    margin: 0;
     text-align: center;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
@@ -67,6 +67,8 @@
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 20px;
     }
 }
 
@@ -120,6 +122,11 @@
 
     margin-top: 30px;
 
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 40px;
+    }
+
     &:hover {
         @include button-single-light-hover();
     }
@@ -165,8 +172,7 @@
 .c-card-section--mag-articles,
 .c-card-section--v-genre-articles {
     .c-card-section__title {
-        margin-bottom: $MARGIN_MEDIUM;
-        margin-top: 0;
+        margin: 0;
         padding-bottom: 10px;
         position: relative;
         text-align: left;
@@ -204,8 +210,7 @@
     }
 
     .c-card-section__title {
-        margin-bottom: $MARGIN_MEDIUM;
-        margin-top: 0;
+        margin: 0;
         padding-bottom: 10px;
         position: relative;
         text-align: left;
@@ -235,7 +240,7 @@
 .c-card-section--tg-articles,
 .c-card-section--sh-latest-articles {
     .c-card-section__title {
-        margin-bottom: $MARGIN_MEDIUM;
+        margin: 0;
         padding-bottom: 10px;
         position: relative;
         text-align: left;
