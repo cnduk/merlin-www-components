@@ -26,27 +26,27 @@
 }
 
 .c-figure__title {
-    @include font('AGENDA', 13px, 'MEDIUM', 17px);
+    @include font('AGENDA', 16px, 'MEDIUM', 16px);
 
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin: 15px 0 5px;
+    margin: 20px 0 0;
 
     @include desktop-size {
-        @include font('AGENDA', 15px, 'MEDIUM', 20px);
+        @include font('AGENDA', 16px, 'MEDIUM', 16px);
     }
 }
 
 .c-figure__caption {
-    @include font('AGENDA', 13px, 'MEDIUM', 17px);
+    @include font('AGENDA', 16px, 'MEDIUM', 21px);
 
-    letter-spacing: 1px;
-    margin: 5px 0 10px;
+    letter-spacing: 0.5px;
+    margin: 10px 0 15px;
 
     @include desktop-size {
-        @include font('AGENDA', 15px, 'MEDIUM', 20px);
+        @include font('AGENDA', 16px, 'MEDIUM', 21px);
 
-        margin: 5px 0 15px;
+        margin: 10px 0 15px;
     }
 }
 
@@ -60,13 +60,14 @@
     color: $boulder;
     letter-spacing: 1px;
     text-transform: uppercase;
+    margin: 15px 0 0;
 
     &:before {
         content: 'Credit: ';
     }
 
     @include desktop-size {
-
+        margin: 15px 0 0;
     }
 }
 
