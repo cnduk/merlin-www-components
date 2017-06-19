@@ -50,11 +50,17 @@
 }
 
 .c-magazine__cover--print {
-    img {}
+    img {
+        width: 50%;
+        margin-left: 40px;
+    }
 }
 
 .c-magazine__cover--tablet {
-    img {}
+    img {
+        width: 40%;
+        margin-left: 40px;
+    }
 }
 
 .c-magazine__content__date {
