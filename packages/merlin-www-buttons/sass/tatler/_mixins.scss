@@ -14,8 +14,7 @@
 @mixin button-single {
     @include button-reset;
 
-    @include font('AGENDA');
-    @include font-size(15px);
+    @include font('AGENDA', 15px, 'MEDIUM', 16px)
 
     letter-spacing: 2px;
     padding-right: 20px;
@@ -30,8 +29,8 @@
         position: absolute;
         right: 0;
         top: 50%;
-        width: 12px;
-        height: 12px;
+        width: 15px;
+        height: 15px;
         transform: translateY(-50%);
     }
 }
@@ -152,45 +151,64 @@
     height: $_btn_size;
     line-height: $_btn_size;
     width: $_btn_size;
+    vertical-align: middle;
 
     svg {
-        height: 100%;
-        width: 50%;
+        height: 25%;
+        width: 25%;
     }
 }
 
 @mixin button-nav-light {
     background: $COLOUR_BUTTON_NAV_BG;
     border: 1px solid $COLOUR_BUTTON_NAV_BORDER;
-    fill: $COLOUR_BUTTON_NAV_TEXT;
+
+    svg, path {
+        fill: $COLOUR_BUTTON_NAV_TEXT;
+    }
 }
 
 @mixin button-nav-light-hover {
     background: $COLOUR_BUTTON_NAV_BG_HOVER;
     border: 1px solid $COLOUR_BUTTON_NAV_BORDER_HOVER;
-    fill: $COLOUR_BUTTON_NAV_TEXT_HOVER;
+
+    svg, path {
+        fill: $COLOUR_BUTTON_NAV_TEXT_HOVER;
+    }
 }
 
 @mixin button-nav-light-disabled {
     background: $COLOUR_BUTTON_NAV_BG_DISABLED;
     border: 1px solid $COLOUR_BUTTON_NAV_BORDER_DISABLED;
-    fill: $COLOUR_BUTTON_NAV_TEXT_DISABLED;
+
+    svg, path {
+        fill: $COLOUR_BUTTON_NAV_TEXT_DISABLED;
+    }
 }
 
 @mixin button-nav-dark {
     background: $COLOUR_BUTTON_NAV_DARK_BG;
     border: 1px solid $COLOUR_BUTTON_NAV_DARK_BORDER;
-    fill: $COLOUR_BUTTON_NAV_DARK_TEXT;
+
+    svg, path {
+        fill: $COLOUR_BUTTON_NAV_DARK_TEXT;
+    }
 }
 
 @mixin button-nav-dark-hover {
     background: $COLOUR_BUTTON_NAV_DARK_BG_HOVER;
     border: 1px solid $COLOUR_BUTTON_NAV_DARK_BORDER_HOVER;
-    fill: $COLOUR_BUTTON_NAV_DARK_TEXT_HOVER;
+
+    svg, path {
+        fill: $COLOUR_BUTTON_NAV_DARK_TEXT_HOVER;
+    }
 }
 
 @mixin button-nav-dark-disabled {
     background: $COLOUR_BUTTON_NAV_DARK_BG_DISABLED;
     border: 1px solid $COLOUR_BUTTON_NAV_DARK_BORDER_DISABLED;
-    fill: $COLOUR_BUTTON_NAV_DARK_TEXT_DISABLED;
+
+    svg, path {
+        fill: $COLOUR_BUTTON_NAV_DARK_TEXT_DISABLED;
+    }
 }

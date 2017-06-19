@@ -69,6 +69,7 @@ a.btn-related {
 
 .btn-top-stories,
 a.btn-top-stories {
+    @include button-nav;
     @include button-nav-light;
 
     &:hover:not(.btn-disabled):not([disabled]),
