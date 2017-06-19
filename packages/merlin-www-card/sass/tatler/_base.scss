@@ -68,7 +68,7 @@
 
 // Need to be specific to overwrite global__list-reset
 li.c-card__meta-item {
-    display: inline-block;
+    display: inline;
 }
 
 
@@ -128,7 +128,7 @@ li.c-card__meta-item {
     margin: 10px 0 0;
 
     @include min-screen($CARD_SWITCHER_WIDTH) {
-        margin: 0;
+        margin: 18px 0 0;
     }
 }
 
@@ -144,9 +144,15 @@ li.c-card__meta-item {
 
 .c-card__meta {
     @include card-meta;
+    @include line-height(15px);
 
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 7px;
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        margin-top: 15px;
+    }
+
 }
 
 li.c-card__meta-item {
@@ -181,9 +187,9 @@ li.c-card__meta-item {
 
 .c-card__meta-item--duration {
      svg {
-        height: 9px;
+        height: 7px;
         margin-right: 3px;
-        width: 9px;
+        width: 7px;
     }
 
     path {

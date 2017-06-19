@@ -29,7 +29,11 @@
         }
 
         .c-card__obj__body {
-            background: $cod-gray;
+            background: none;
+
+            @include min-screen($CARD_SWITCHER_WIDTH) {
+                background: $cod-gray;
+            }
         }
     }
 }

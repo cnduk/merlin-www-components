@@ -81,8 +81,12 @@
         left: 50%;
 
         svg {
-            width: 20px;
+            width: 15px;
             height: 100%;
+
+            .c-card-list--c-video-articles & {
+                margin-left: 3px;
+            }
         }
 
         path {
