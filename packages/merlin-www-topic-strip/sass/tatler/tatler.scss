@@ -28,7 +28,8 @@
     text-align: left;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-
+        padding-bottom: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -56,7 +57,7 @@ li.c-topic-strip__item {
     @include button-group();
     @include button-group-light();
 
-    background: $wild-sand;
+    background: none;
 
     &:hover {
         @include button-group-light-hover();
