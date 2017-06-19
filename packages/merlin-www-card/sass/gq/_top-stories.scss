@@ -75,8 +75,19 @@
 		display: none;
 	}
     .c-card__byline--sponsorship {
+        color: $oslo-gray;
         display: block;
+        @include font("GOTHAM", 9px, null, 14px, 60);
         margin-bottom: 0;
+        margin-top: 8px;
+
+        .c-card__byline-prefix {
+            @include font-weight(400);
+        }
+
+        .c-card__byline-name {
+            @include font-weight(700);
+        }
     }
 
 	.c-card__meta {
