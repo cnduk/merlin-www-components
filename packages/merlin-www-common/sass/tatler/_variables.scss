@@ -328,37 +328,49 @@ $HEADINGS: (
     alpha: (
         h: h1,
         small: 34px,
+        small-line-height: 39px,
         large: 62px,
+        large-line-height: 67px,
         weight: normal
     ),
     beta: (
         h: h2,
         small: 30px,
+        small-line-height: 35px,
         large: 40px,
+        large-line-height: 45px,
         weight: normal
     ),
     gamma: (
         h: h3,
         small: 23px,
+        small-line-height: 28px,
         large: 27px,
+        large-line-height: 32px,
         weight: bold
     ),
     delta: (
         h: h4,
         small: 16px,
+        small-line-height: 21px,
         large: 20px,
+        large-line-height: 25px,
         weight: bold
     ),
     epsilon: (
         h: h5,
         small: 16px,
+        small-line-height: 21px,
         large: 18px,
+        large-line-height: 23px,
         weight: bold
     ),
     zeta: (
         h: h6,
         small: 15px,
+        small-line-height: 20px,
         large: 15px,
+        large-line-height: 20px,
         weight: bold
     )
 );

@@ -24,6 +24,21 @@ a {
     }
 }
 
+// a {
+//     color: $COLOUR_TYPE_LINK;
+//     text-decoration: none;
+//     border-bottom: 1px solid rgba(224, 59, 42, 0.8);
+
+//     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+//         border-bottom: 1px solid $black;
+//         transition: border .16s ease;
+
+//         &:hover {
+//             border-bottom: 1px solid rgba(224, 59, 42, 0.8);
+//         }
+//     }
+// }
+
 abbr {}
 
 blockquote {
@@ -48,11 +63,22 @@ h6 {
 
 @each $level, $heading in $HEADINGS {
     %h-#{$level} {
-        @include font-size(map-get($heading, small));
-        font-weight: map-get($heading, weight);
+        @include font(
+            'STARLING',
+            map-get($heading, small),
+            map-get($heading, weight),
+            map-get($heading, small-line-height)
+        );
+
 
         @media (min-width: 600px) {
-            @include font-size(map-get($heading, large));
+            @include font(
+            'STARLING',
+            map-get($heading, large),
+            map-get($heading, weight),
+            map-get($heading, large-line-height)
+        );
+
             letter-spacing: 1px;
         }
     }
@@ -134,11 +160,15 @@ ul, ol {
 
     color: $COLOUR_TYPE_BODY;
     list-style-type: none;
-    margin: $MARGIN_SMALL 0;
+    margin: 30px 0;
+    padding: 0;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(17px);
         @include line-height(22px);
+
+        margin: 60px 0;
+        padding: 0 20px;
     }
 
     li {
@@ -149,10 +179,11 @@ ul, ol {
 
 ul {
     li {
-        padding-left: 23px;
+        padding-left: 20px;
+        letter-spacing: .3px;
 
         @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-            padding-left: 28px;
+            padding-left: 20px;
         }
 
         &:before {
@@ -175,6 +206,7 @@ ol {
     li {
         padding-left: 40px;
         margin: 1em 0;
+        letter-spacing: .3px;
 
         @include min-screen($TYPE_LARGE_COPY_WIDTH) {
             padding-left: 45px;
