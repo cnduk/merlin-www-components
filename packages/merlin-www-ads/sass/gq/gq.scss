@@ -14,7 +14,11 @@
 }
 
 .ad--homepage {
-
+    &.ad--native-large {
+        .ad__block {
+            padding: 0;
+        }
+    }
 }
 
 .ad--article {
