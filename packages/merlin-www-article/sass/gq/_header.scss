@@ -292,15 +292,14 @@
 
 .a-header__sponsor-image {
     display: table-cell;
-    height: 40px;
-    max-height: 40px;
-    max-width: 140px;
     padding-left: 12px;
     vertical-align: middle;
 
     img {
-        height: 40px;
-        max-height: 40px;
+        max-height: 50px;
+        // max-width: 140px;
+        height: auto;
+        width: auto;
     }
 }
 
