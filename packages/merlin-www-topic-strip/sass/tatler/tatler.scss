@@ -23,8 +23,8 @@
 }
 
 .c-topic-strip--c-card-section {
-    padding-bottom: 25px;
-    margin-bottom: 10px;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
     text-align: left;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
@@ -58,6 +58,7 @@ li.c-topic-strip__item {
     @include button-group-light();
 
     background: none;
+    padding: 8px;
 
     &:hover {
         @include button-group-light-hover();
