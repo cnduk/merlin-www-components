@@ -48,8 +48,10 @@ li.c-figure__toolbar-listitem {
 		@include font("GOTHAM", 16px, 400, 26px, -2);
 		color: $mineshaft;
 		margin-bottom: 12px;
+		margin-top: 12px;
 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 			margin-bottom: 16px;
+			margin-top: 16px;
 			@include font-size(17px);
 			@include line-height(28px);
 		}
