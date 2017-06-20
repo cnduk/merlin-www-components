@@ -12,10 +12,6 @@
         top: 0;
         width: 100%;
     }
-
-    .c-card__title {
-        @include t-card-title;
-    }
 }
 
 @mixin card-hero-small {
@@ -24,14 +20,6 @@
     .c-card__image--picture {
         padding-top: 66.66666%;
     }
-
-    .c-card__footer {
-        margin-top: 0;
-    }
-
-    .c-card__byline {
-        margin: 18px 0 0;
-    }
 }
 
 @mixin card-hero-large {
@@ -39,14 +27,6 @@
 
     .c-card__image--picture {
         padding-top: 100%;
-    }
-
-    .c-card__footer {
-        margin-top: 18px;
-    }
-
-    .c-card__byline {
-        margin: 0;
     }
 }
 

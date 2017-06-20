@@ -46,7 +46,6 @@
             top: 2.375rem;
             right: 0;
         }
-
     }
 
     .c-card__footer {
@@ -72,6 +71,19 @@
         @include card-meta;
 
         margin-top: 0;
+    }
+
+    &:hover,
+    &:focus {
+        .c-card__title {
+            color: $black;
+        }
+
+        .c-card__image {
+            img {
+                transform: none;
+            }
+        }
     }
 }
 
