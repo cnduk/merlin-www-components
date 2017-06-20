@@ -1,7 +1,7 @@
 .n-main__nav-title {
     @include font('STARLING', 17px, 'NORMAL', 60px);
 
-    color: $black;
+    color: $white;
     display: none;
     overflow: hidden;
     padding-left: 160px;
@@ -32,7 +32,7 @@
 }
 
 .n-gallery-nav {
-    background-color: $white;
+    background-color: $black;
     bottom: 0;
     height: 60px;
     left: 0;
@@ -48,10 +48,16 @@
         opacity: 1;
         visibility: visible;
     }
+
+    .n-main__nav-logo {
+        svg, path {
+            fill: $white;
+        }
+    }
 }
 
 .n-gallery-counter {
-    color: $black;
+    color: $white;
     line-height: 60px;
     padding: 0 20px;
 
@@ -61,20 +67,22 @@
 }
 
 .n-gallery-counter__current {
-    @include font-size(17px);
+    @include font-size(25px);
 }
 
 .n-gallery-counter__slash {
-    @include font-size(12px);
+    @include font-size(15px);
     @include font-weight(400);
 
-    color: $black;
+    color: $white;
     margin-left: 4px;
     margin-right: 4px;
 }
 
 .n-gallery-counter__total {
-    color: $black;
+    @include font-size(15px);
+
+    color: $white;
 }
 
 
@@ -92,20 +100,20 @@ a.n-gallery-close {
 
     &:hover {
         svg {
-            fill: $limed-oak;
+            fill: #8a8a8a;
         }
     }
 
     svg {
         height: 100%;
-        fill: $black;
+        fill: $white;
         width: 18px;
     }
 }
 .n-gallery-toggle--list,
 .n-gallery-toggle--grid {
-    border-left: 1px solid $wild-sand;
-    border-right: 1px solid $wild-sand;
+    border-left: 1px solid #666;
+    border-right: 1px solid #666;
     display: inline-block;
     font-size: 0;
     height: 60px;
@@ -118,13 +126,13 @@ a.n-gallery-close {
 
     &:hover {
         svg {
-            fill: $black;
+            fill: $white;
         }
     }
 
     svg {
         height: 100%;
-        fill: $black;
+        fill: $white;
         width: 18px;
     }
 }

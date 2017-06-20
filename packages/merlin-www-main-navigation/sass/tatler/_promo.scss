@@ -131,4 +131,8 @@ a.n-menu__subscribe-btn {
         color: $white;
         text-decoration: none;
     }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 5px;
+    }
 }
