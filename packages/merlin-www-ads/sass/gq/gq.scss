@@ -18,6 +18,19 @@
         .ad__block {
             padding: 0;
         }
+
+        & + .c-gallery,
+        & + .c-feature {
+            margin-top: -$MOBILE_SLICE_MARGIN;
+
+            @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+                margin-top: -$TABLET_SLICE_MARGIN;
+            }
+
+            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+                margin-top: -$DESKTOP_SLICE_MARGIN;
+            }
+        }
     }
 }
 
