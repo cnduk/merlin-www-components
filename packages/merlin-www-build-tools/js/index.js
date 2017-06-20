@@ -23,5 +23,8 @@ module.exports = function(config={}){
     gulp.task('js', js(taskConfig, browserSync));
     gulp.task('serve', serve(taskConfig, browserSync));
 
-}
+    gulp.task('dev', ['copy', 'sass', 'jshint', 'js', 'serve'])
+    gulp.task('staging', ['copy', 'sass', 'jshint', 'js'])
+    gulp.task('production', ['copy', 'sass', 'jshint', 'js'])
 
+}
