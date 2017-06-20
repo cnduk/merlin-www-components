@@ -51,15 +51,23 @@
 
 .c-magazine__cover--print {
     img {
-        width: 50%;
+        width: 100%;
         margin-left: 40px;
+
+        @include tablet-size {
+            width: 50%;
+        }
     }
 }
 
 .c-magazine__cover--tablet {
     img {
-        width: 40%;
+        width: 100%;
         margin-left: 40px;
+
+        @include tablet-size {
+            width: 40%;
+        }
     }
 }
 
