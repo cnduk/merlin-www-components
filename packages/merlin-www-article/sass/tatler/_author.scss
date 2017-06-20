@@ -9,7 +9,7 @@
 }
 
 .a-author__bio {
-    @include font('AGENDA', 14px, 'MEDIUM', 18px);
+    @include font('AGENDA', 13px, 'MEDIUM', 18px);
 
     letter-spacing: 0.5px;
     color: $gray;
@@ -20,7 +20,7 @@
 .a-author__byline {
     @include card-byline;
 
-    margin: 12px 0 15px;
+    margin: 15px 0 10px;
 
     a {
         color: $gray;
@@ -47,7 +47,7 @@
 .a-author__image,
 .a-event-author__image {
     border: 1px solid $black;
-    padding: 5px;
+    padding: 7px;
     width: 100px;
 }
 
