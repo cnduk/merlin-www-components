@@ -11,10 +11,6 @@
     background: $wild-sand;
 }
 
-.c-figure__toolbar {
-    @include tablet-size {}
-}
-
 .c-figure__title,
 .c-figure__caption,
 .c-figure__credit {
@@ -28,7 +24,7 @@
 .c-figure__title {
     @include font('AGENDA', 16px, 'MEDIUM', 16px);
 
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     text-transform: uppercase;
     margin: 20px 0 0;
 
@@ -41,12 +37,12 @@
     @include font('AGENDA', 16px, 'MEDIUM', 21px);
 
     letter-spacing: 0.5px;
-    margin: 10px 0 15px;
+    margin: 0 0 15px;
 
     @include desktop-size {
         @include font('AGENDA', 16px, 'MEDIUM', 21px);
 
-        margin: 10px 0 15px;
+        margin: 0 0 15px;
     }
 }
 
@@ -75,18 +71,18 @@
 .c-figure__toolbar {
     border: 1px solid $silver;
     bottom: 10px;
-    height: 40px;
+    height: 47px;
     position: absolute;
     right: 10px;
 }
 
 li.c-figure__toolbar-listitem {
     background-color: $white;
-    height: 38px;
-    width: 38px;
+    height: 45px;
+    width: 45px;
 
     svg {
-        fill: $black-two;
-        width: 16px;
+        fill: $black;
+        width: 17px;
     }
 }
