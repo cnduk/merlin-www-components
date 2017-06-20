@@ -1,7 +1,7 @@
 'use strict';
 
 const path = require('path');
-const getArgs = require('get-args');
+const minimist = require('minimist');
 
 function getAbsDir(filename, absRoot=process.cwd()){
     return path.join(absRoot, filename);
@@ -11,17 +11,22 @@ let ENV = null;
 function getEnvironment(){
     if(ENV !== null) return ENV;
 
-    const args = getArgs();
+    const args = minimist(process.argv.slice(2));
     let label = null;
-    if(args.options.dev){
-        label = 'DEV';
-    } else if(args.options.staging){
-        label = 'STAGING';
-    } else if(args.options.production){
-        label = 'PROD';
-    } else {
-        console.warn('No environment sent. Defaulting to production.');
-        label = 'PROD';
+    switch((args.env || '').toUpperCase()){
+        case 'DEV':
+            label = 'DEV';
+            break;
+        case 'STAGING':
+            label = 'STAGING';
+            break;
+        case 'PRODUCTION':
+            label = 'PRODUCTION';
+            break;
+        default:
+            console.warn('No environment sent. Defaulting to production.');
+            label = 'PROD';
+            break;
     }
     ENV = {
         name: label,
