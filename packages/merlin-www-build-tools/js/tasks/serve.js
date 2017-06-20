@@ -12,8 +12,8 @@ module.exports = function taskServeExport(taskConfig, browserSync){
         // Sass
         gulp.watch(taskConfig.watch.sass, ['sass']);
         // JS
-        gulp.watch(
-            taskConfig.watch.js, ['webpack']).on('change', browserSync.reload);
+        gulp.watch(taskConfig.watch.js, ['jshint', 'js'])
+            .on('change', browserSync.reload);
         // HTML and mustache
         gulp.watch(taskConfig.watch.html).on('change', browserSync.reload);
     };
