@@ -1,5 +1,6 @@
 'use strict';
 
+const fs = require('fs');
 const path = require('path');
 const minimist = require('minimist');
 
@@ -65,6 +66,10 @@ function getDefaultConfig(pkgJson, merlinJson){
                 getAbsDir('frontend/js/**/*.js')
             ]
         },
+        release: {
+            changelog: getAbsDir('./CHANGELOG.md'),
+            package: getAbsDir('./package.json')
+        },
         sass: {
             src: [
                 getAbsDir('frontend/sass/page.scss')
@@ -89,8 +94,13 @@ function getDefaultConfig(pkgJson, merlinJson){
     };
 }
 
+function getPackageJsonVersion(packageLocation) {
+    return JSON.parse(fs.readFileSync(packageLocation, 'utf8')).version;
+}
+
 module.exports = {
     getAbsDir,
     getDefaultConfig,
-    getEnvironment
+    getEnvironment,
+    getPackageJsonVersion
 };

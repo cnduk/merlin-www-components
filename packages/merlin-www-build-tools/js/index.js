@@ -10,6 +10,7 @@ const jshint = require('./tasks/jshint');
 const sass = require('./tasks/sass');
 const js = require('./tasks/js');
 const serve = require('./tasks/serve');
+const release = require('./tasks/release');
 
 module.exports = function(config={}){
 
@@ -22,6 +23,7 @@ module.exports = function(config={}){
     gulp.task('sass', sass(taskConfig, browserSync));
     gulp.task('js', js(taskConfig, browserSync));
     gulp.task('serve', serve(taskConfig, browserSync));
+    gulp.task('release', release(taskConfig, browserSync));
 
     gulp.task('dev', ['copy', 'sass', 'jshint', 'js', 'serve'])
     gulp.task('staging', ['copy', 'sass', 'jshint', 'js'])
