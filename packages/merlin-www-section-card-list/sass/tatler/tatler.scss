@@ -50,11 +50,14 @@
 
     margin: 0;
     text-align: center;
+    padding-bottom: 20px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         @include t-topic-title-large;
 
         text-align: left;
+
+        padding-bottom: 0;
     }
 }
 
