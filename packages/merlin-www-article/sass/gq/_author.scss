@@ -10,10 +10,23 @@
 }
 
 .a-author__bio {
-    @include font("GOTHAM", 12px, 400, 16px);
-    color: $oslo-gray;
     margin-bottom: 16px;
     margin-top: 8px;
+
+    p {
+        @include font("GOTHAM", 12px, 400, 16px);
+        color: $oslo-gray;
+        margin: 0 0 16px 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    a {
+        border-bottom: 1px solid;
+        color: inherit;
+    }
 }
 
 .a-author__byline {
