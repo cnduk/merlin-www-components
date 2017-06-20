@@ -71,7 +71,7 @@
     color: #8a8a8a;
     height: 45px;
     letter-spacing: 0.3px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: $PADDING_XX_SMALL $PADDING_X_SMALL;
     text-align: center;
 
@@ -88,6 +88,8 @@
 .c-newsletter__form__btn {
     @include button-single;
     @include button-single-light;
+
+    @include font-size(14px);
 
     width: auto;
     height:auto;
