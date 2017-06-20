@@ -7,7 +7,7 @@
     background: $wild-sand;
     max-width: none;
     margin: 30px auto;
-    padding: 0 $MOBILE_SIDE_GUTTER;
+    padding: 0;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding: 0 $TABLET_SIDE_GUTTER;
