@@ -3,8 +3,8 @@
 const path = require('path');
 const getArgs = require('get-args');
 
-function getAbsDir(filename){
-    return path.join(__dirname, filename);
+function getAbsDir(filename, absRoot=process.cwd()){
+    return path.join(absRoot, filename);
 }
 
 let ENV = null;
