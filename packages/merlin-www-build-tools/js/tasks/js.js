@@ -11,29 +11,50 @@ const ENV = utils.getEnvironment();
 
 module.exports = function taskJsExport(taskConfig, browserSync){
     return function taskJs(){
-        let plugins = [
-            new webpack.NormalModuleReplacementPlugin(
-                DYNAMIC_CONFIG_URL, function(ctx){
-                    var configKey = 'default';
-                    try {
-                        configKey = taskConfig.package.cnOptions.brandConfig;
-                    } catch(err){}
-                    // Check if the value is undefined
-                    configKey = configKey === undefined ? 'default' : configKey;
-                    ctx.request = `./${configKey}`;
+
+        let plugins = null;
+        let outputFile = null;
+
+        if(ENV.isDev){
+            outputFile = '[name].js';
+            plugins = [
+                new webpack.NormalModuleReplacementPlugin(
+                    DYNAMIC_CONFIG_URL, function(ctx){
+                        var configKey = 'default';
+                        try {
+                            configKey = taskConfig.package.cnOptions.brandConfig;
+                        } catch(err){}
+                        // Check if the value is undefined
+                        configKey = configKey === undefined ? 'default' : configKey;
+                        ctx.request = `./${configKey}`;
+                    }),
+                new webpack.optimize.CommonsChunkPlugin({
+                    name: 'core',
+                    filename: 'core.js'
+                })
+            ]
+        } else {
+            outputFile = '[name].min.js';
+            plugins = [
+                new webpack.NormalModuleReplacementPlugin(
+                    DYNAMIC_CONFIG_URL, function(ctx){
+                        var configKey = 'default';
+                        try {
+                            configKey = taskConfig.package.cnOptions.brandConfig;
+                        } catch(err){}
+                        // Check if the value is undefined
+                        configKey = configKey === undefined ? 'default' : configKey;
+                        ctx.request = `./${configKey}`;
+                    }),
+                new webpack.optimize.CommonsChunkPlugin({
+                    name: 'core',
+                    filename: 'core.min.js'
                 }),
-            new webpack.optimize.CommonsChunkPlugin({
-                name: 'core',
-                filename: 'core.js'
-            })
-        ];
-        if(ENV.isProd){
-            plugins = plugins.concat([
                 new webpack.optimize.ModuleConcatenationPlugin(),
                 new webpack.optimize.UglifyJsPlugin({
                     sourceMap: true
                 })
-            ]);
+            ]
         }
 
         const webpackConfig = {
@@ -46,7 +67,7 @@ module.exports = function taskJsExport(taskConfig, browserSync){
             },
             plugins: plugins,
             output: {
-                'filename': '[name].js',
+                'filename': outputFile,
                 'path': taskConfig.js.dest
             },
             devtool: "source-map"
