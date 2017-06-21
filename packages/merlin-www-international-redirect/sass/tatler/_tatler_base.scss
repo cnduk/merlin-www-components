@@ -1,0 +1,55 @@
+$_BUTTON_SIZE: 20px;
+
+.c-int-redirect {
+    background-color: $black;
+
+    a {
+        color: $white;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        background-color: rgba(0, 0, 0, .9);
+    }
+}
+
+.c-int-redirect__wrapper {
+    max-width: 1360px;
+    padding: 20px 60px 20px $MOBILE_SIDE_GUTTER;
+}
+
+.c-int-redirect__btn {
+    background-color: transparent;
+    border: 1px solid $white;
+    border-radius: 50%;
+    line-height: 16px;
+    height: $_BUTTON_SIZE;
+    padding: 0;
+    position: absolute;
+    margin-top: -($_BUTTON_SIZE/2);
+    right: (60px - $_BUTTON_SIZE)/2;
+    text-align: center;
+    top: 50%;
+    width: $_BUTTON_SIZE;
+
+    svg, path {
+        fill: $white;
+    }
+}
+
+li.c-int-redirect__list__item {
+    margin: 0 3px;
+}
+
+.c-int-redirect__msg {
+    @include font('AGENDA', 13px, 'MEDIUM', 16px);
+    color: $white;
+
+    label {
+        text-decoration: underline;
+        white-space: nowrap;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font('AGENDA', 15px, 'MEDIUM', 18px);
+    }
+}
