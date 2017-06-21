@@ -1,28 +1,53 @@
 // -------------------- //
 // Landscape
 // -------------------- //
-@mixin card-landscape() {}
+@mixin card-landscape() {
+    .c-card__obj {
+        display: table;
+        width: 100%;
+    }
+
+    .c-card__obj__header,
+    .c-card__obj__body {
+        display: table-cell;
+        vertical-align: top;
+    }
+}
 
 @mixin card-landscape-small() {
     .c-card__obj {}
+    .c-card__obj__header,
+    .c-card__obj__body {
+
+    }
 
     .c-card__obj__header {
-        max-width: 12px;
-        vertical-align: top;
+        max-width: 120px;
+        width: 33%;
+        padding-right: 10px;
+    }
+
+    .c-card__images {
+        .c-card__image {
+            padding-top: 100%;
+        }
+
+        .c-card__image__icon {
+
+        }
     }
 
     .c-card__obj__body {
         padding-left: 10px;
-        vertical-align: top;
+        width: 100%;
     }
 
-    .c-card__image {
-        margin-bottom: 0;
-        padding-top: 100%;
+    .c-card__tag {
+        display: none;
     }
 
     .c-card__title {
-        @include font-size(25px);
+        @include font("NEW GROTESK SQUARE", 25px, 300, 25px);
         margin-bottom: 10px;
         margin-top: 0;
     }
@@ -34,17 +59,36 @@
 
     .c-card__byline {
         @include font-size(11px);
+        @include line-height(11px);
         margin-bottom: 3px;
+    }
+
+    .c-card__byline-prefix {
+        @include font("EXCHANGE WEB");
+        font-style: italic;
+    }
+
+    .c-card__byline-name {
+        @include font("BRUTAL");
     }
 
     .c-card__meta {
-        margin-bottom: 3px;
-    }
+        font-size: 0;
+        margin-top: 3px;
 
-    // Need to be specific to overwrite global__list-reset
-    li.c-card__meta-item {
-        @include font-size(11px);
-        margin-bottom: 0;
+        li.c-card__meta-item {
+            @include font("EXCHANGE WEB", 11px, 400, 12px);
+            padding-right: 10px;
+
+            & + li.c-card__meta-item {
+                border-left: 1px solid black;
+                padding-left: 10px;
+
+                &:before {
+
+                }
+            }
+        }
     }
 }
 

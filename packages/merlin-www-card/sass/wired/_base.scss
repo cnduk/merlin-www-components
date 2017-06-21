@@ -1,161 +1,69 @@
 .c-card {
-    &:hover,
-    &:focus {
-        .c-card__title span {
-            @include fancy-underlines(#fff, #000, #000, transparent);
-        }
-    }
+    // NOTE: this is here due to ads centering their text
+    text-align: left;
+}
+
+.c-card__link {}
+.c-card__link--article {
+
+}
+
+.c-card__images {
+
 }
 
 .c-card__image {
-    background: #f5f5f5;
-    margin-bottom: 15px;
+    background-color: black;
+
+    img {
+
+    }
 }
+.c-card__image--landscape {
+
+}
+.c-card__image--portrait {
+
+}
+.c-card__image--square {
+
+}
+
 
 .c-card__image__icon {
-    background-color: #000;
-    bottom: 0;
-    height: 40px;
-    left: 50%;
-    line-height: 40px;
-    margin: -20px 0 0 -20px;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    width: 40px;
-
-    svg {
-        display: block;
-        height: 100%;
-        margin: 0 auto;
-        vertical-align: middle;
-        width: 20px;
-    }
-
-    path {
-        fill: #fff;
-    }
 
 }
 
-.c-card__image__remaining__value {
-    @include font('BRUTAL', 17px, 'BOLD', 23px);
-}
+.c-card__tag {}
 
-.c-card__title {
-    @include font('GROTESK', null, 'LIGHT');
-}
+.c-card__title {}
 
-.c-card__teaser {
-    @include font('BRUTAL', 15px, 'LIGHT');
-    margin: 0 0 15px 0;
-}
+.c-card__teaser {}
 
-.c-card__separator {
-    border: none;
-    border-bottom: 1px solid #000;
-    text-align: left;
-    width: 20px;
-}
+.c-card__rating {}
+.c-card__rating-label {}
+.c-card__rating-mark {}
+.c-card__rating-mark--fill {}
 
-.c-card__sponsor {
-    @include font-size(12px);
-    margin: 15px 0 3px 0;
-}
-.c-card__sponsor-label {
-    @include font('EXCHANGE');
-    font-style: italic;
-}
-.c-card__sponsor-title {
-    @include font('BRUTAL', null, 'BOLD');
-    text-transform: uppercase;
-}
+.c-card__byline {
 
-.c-card__rating {
-    @include font('BRUTAL', 12px, 'LIGHT');
-    margin-bottom: 8px;
-    margin-top: 8px;
-}
-.c-card__rating-mark {
-    background-color: #BFBFBF;
-    display: inline-block;
-    margin-right: 3px;
-    vertical-align: middle;
-    height: 10px;
-    width: 10px;
-}
-.c-card__rating-mark--fill {
-    background-color: #333;
-}
-.c-card__rating-label {
-    @include font('BRUTAL', 12px, 'NORMAL', 10px);
-    margin-left: 7px;
-}
-
-.c-card__byline-prefix {
-    @include font-family('EXCHANGE');
-    @include font-line-height('EXCHANGE');
-    font-style: italic;
-}
-.c-card__byline-name {
-    @include font-family('BRUTAL');
-    @include font-line-height('BRUTAL');
-    text-transform: uppercase;
 }
 
 .c-card__meta {
-    @include font-family('EXCHANGE');
-    @include font-line-height('EXCHANGE');
+
 }
 
-// Need to be specific to overwrite global__list-reset
 li.c-card__meta-item {
-    &:not(:last-child) {
-        padding-right: 10px;
+    &--gallery {
+        svg {
+            display: none;
+        }
     }
 
-    & + li.c-card__meta-item {
-        border-left: 1px solid rgba(0,0,0,0.2);
-        padding-left: 10px;
-    }
-}
-
-.c-card__meta-item--date {}
-
-.c-card__meta-item--gallery {
-    svg {
-        height: 10px;
-        margin-right: 3px;
-        vertical-align: middle;
-        width: 10px;
-    }
-    path {
-        fill: #000;
-    }
-}
-
-.c-card__meta-item--video {
-    svg {
-        height: 9px;
-        margin-right: 3px;
-        width: 9px;
-    }
-    path {
-        fill: #000;
-    }
-}
-
-.c-card__meta-item--live {
-    span {
-        @include font-size(12px);
-        padding-right: 2px;
-        vertical-align: middle;
-    }
-}
-
-@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    .c-card__image__remaining__value {
-        @include font-size(21px);
-        @include line-height(28px);
+    &--duration {
+        svg {
+            height: 8px;
+            width: 8px;
+        }
     }
 }
