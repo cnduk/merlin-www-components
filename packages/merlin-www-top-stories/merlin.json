@@ -1,27 +1,28 @@
 {
-    "name": "@cnbritain/merlin-www-top-stories",
-    "main": "top-stories",
-    "currentTheme": null,
-    "data": {
-        "without-nav": "data/without-nav.json"
-    },
+    "name": "@cnbritain/merlin-www-top-stories", 
     "js": {
         "demo": "demo/demo.js"
-    },
+    }, 
     "themes": {
-        "wireframe": "sass/wireframe/wireframe.scss",
-        "vogue": "sass/vogue/vogue.scss",
-        "missvogue": "sass/missvogue/missvogue.scss",
-        "tatler": "sass/tatler/tatler.scss"
-    },
+        "bystander": "sass/bystander/bystander.scss", 
+        "tatler": "sass/tatler/tatler.scss", 
+        "wireframe": "sass/wireframe/wireframe.scss", 
+        "missvogue": "sass/missvogue/missvogue.scss", 
+        "vogue": "sass/vogue/vogue.scss"
+    }, 
     "partials": {
         "top-stories": "templates/top-stories.html"
-    },
+    }, 
     "dependencies": [
-        "@cnbritain/merlin-www-common",
-        "@cnbritain/merlin-www-image",
-        "@cnbritain/merlin-www-card-list",
-        "@cnbritain/merlin-www-card",
+        "@cnbritain/merlin-www-common", 
+        "@cnbritain/merlin-www-image", 
+        "@cnbritain/merlin-www-card-list", 
+        "@cnbritain/merlin-www-card", 
         "@cnbritain/merlin-www-js-elementscroll"
-    ]
+    ], 
+    "currentTheme": null, 
+    "main": "top-stories", 
+    "data": {
+        "without-nav": "data/without-nav.json"
+    }
 }

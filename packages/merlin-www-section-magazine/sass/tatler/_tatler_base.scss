@@ -1,0 +1,105 @@
+.c-magazine {
+    background-color: $white;
+}
+
+.c-magazine__wrapper {
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    padding: 30px 20px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet-size {
+        padding: 60px 60px;
+        flex-direction: row;
+    }
+
+    @include desktop-size {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.c-magazine__covers,
+.c-magazine__content {
+}
+
+.c-magazine__covers {
+    @include desktop-size {
+        padding-right: 100px;
+    }
+}
+
+.c-magazine__title {
+    display: none;
+}
+
+.c-magazine__covers__wrapper {
+    @include tablet-size {
+        padding-right: 20px;
+    }
+}
+
+.c-magazine__cover--print {
+    img {
+        width: 100%;
+        margin-left: 40px;
+
+        @include tablet-size {
+            width: 50%;
+        }
+    }
+}
+
+.c-magazine__cover--tablet {
+    img {
+        width: 100%;
+        margin-left: 40px;
+
+        @include tablet-size {
+            width: 40%;
+        }
+    }
+}
+
+.c-magazine__content__date {
+    @include font('STARLING', 20px, 'BOLD', 20px);
+
+    color: $black-two;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+    @include desktop-size {
+        @include font('STARLING', 27px, 'BOLD', 31px);
+
+        letter-spacing: 2px;
+        text-align: left;
+    }
+}
+
+.c-magazine__content__title {
+    @include font('AGENDA', 11px, 'MEDIUM', 12px);
+
+    color: $gray;
+    display: block;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 0 6px;
+
+    @include desktop-size {
+        @include font('AGENDA', 12px, 'MEDIUM', 13px);
+
+        text-align: left;
+        margin: 0 0 6px;
+    }
+}
+
+.c-magazine__btn {
+    display: none;
+}

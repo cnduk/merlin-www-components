@@ -1,54 +1,57 @@
 {
-    "name": "@cnbritain/merlin-www-figure",
-    "main": "figure",
-    "currentTheme": null,
-    "data": {
-        "figure-with-toolbar": "data/figure-with-toolbar.json",
-        "figure-without-toolbar": "data/figure-without-toolbar.json"
-    },
+    "name": "@cnbritain/merlin-www-figure", 
     "demo": {
-        "figure-with-toolbar": {
-            "data": "figure-with-toolbar",
-            "main": "figure",
-            "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "glamour",
-                "wired",
-                "tatler"
-            ]
-        },
         "figure-without-toolbar": {
-            "data": "figure-without-toolbar",
-            "main": "figure",
             "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "glamour",
-                "wired",
-                "tatler"
-            ]
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "glamour", 
+                "wired", 
+                "tatler", 
+                "bystander"
+            ], 
+            "main": "figure", 
+            "data": "figure-without-toolbar"
+        }, 
+        "figure-with-toolbar": {
+            "themes": [
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "glamour", 
+                "wired", 
+                "tatler", 
+                "bystander"
+            ], 
+            "main": "figure", 
+            "data": "figure-with-toolbar"
         }
-    },
+    }, 
     "js": {
         "demo": "demo/demo.js"
-    },
+    }, 
     "themes": {
-        "wireframe": "sass/wireframe/wireframe.scss",
-        "vogue": "sass/vogue/vogue.scss",
-        "missvogue": "sass/missvogue/missvogue.scss",
-        "glamour": "sass/glamour/glamour.scss",
-        "wired": "sass/wired/wired.scss",
-        "tatler": "sass/tatler/tatler.scss"
-    },
+        "tatler": "sass/tatler/tatler.scss", 
+        "wireframe": "sass/wireframe/wireframe.scss", 
+        "glamour": "sass/glamour/glamour.scss", 
+        "bystander": "sass/bystander/bystander.scss", 
+        "wired": "sass/wired/wired.scss", 
+        "missvogue": "sass/missvogue/missvogue.scss", 
+        "vogue": "sass/vogue/vogue.scss"
+    }, 
     "partials": {
         "figure": "templates/figure.html"
-    },
+    }, 
     "dependencies": [
-        "@cnbritain/merlin-www-common",
-        "@cnbritain/merlin-www-image",
+        "@cnbritain/merlin-www-common", 
+        "@cnbritain/merlin-www-image", 
         "@cnbritain/merlin-www-js-utils"
-    ]
+    ], 
+    "currentTheme": null, 
+    "main": "figure", 
+    "data": {
+        "figure-without-toolbar": "data/figure-without-toolbar.json", 
+        "figure-with-toolbar": "data/figure-with-toolbar.json"
+    }
 }

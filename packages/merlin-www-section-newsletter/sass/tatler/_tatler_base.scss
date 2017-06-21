@@ -1,0 +1,129 @@
+.c-newsletter {
+    background: $wild-sand;
+    padding: 30px 0;
+    text-align: center;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: $PADDING_XX_LARGE 0 75px 0;
+    }
+}
+
+.c-newsletter__wrapper {
+    margin: 0 auto;
+    max-width: 670px;
+    padding: 0 $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0 $PADDING_LARGE;
+    }
+}
+
+.c-newsletter__logo {
+    display: none;
+}
+
+.c-newsletter__title {
+    @include font('STARLING', 20px, 'BOLD', 20px);
+
+    letter-spacing: 1px;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font('STARLING', 27px, 'BOLD', 32px);
+
+        letter-spacing: 2px;
+    }
+}
+
+.c-newsletter__description {
+    @include font('AGENDA', 16px, 'MEDIUM', 20px);
+
+    letter-spacing: .3px;
+    margin-bottom: 20px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font('AGENDA', 16px, 'MEDIUM', 24px);
+
+        margin-bottom: 30px;
+    }
+}
+
+.c-newsletter__form {
+    width: 100%;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        width: auto;
+    }
+}
+
+.c-newsletter__form__text {
+    @include font-size(14px);
+
+    background: $COLOUR_INPUT_BG;
+    border: 1px solid $COLOUR_INPUT_BORDER;
+    color: #8a8a8a;
+    height: 45px;
+    letter-spacing: 0.3px;
+    margin-bottom: 10px;
+    padding: $PADDING_XX_SMALL $PADDING_X_SMALL;
+    text-align: center;
+
+    &:focus {
+        border: 1px solid $COLOUR_INPUT_BORDER_ACTIVE;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+}
+
+.c-newsletter__form__btn {
+    @include button-single;
+    @include button-single-light;
+
+    @include font-size(14px);
+
+    width: auto;
+    height:auto;
+    margin-bottom: 30px;
+    padding: 10px;
+    color: $cinnabar;
+    border: 1px solid $cinnabar;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: 20px;
+        height: 45px;
+        padding: 10px 15px;
+        margin: 0 0 0 15px;
+    }
+
+    &:hover,
+    &:focus {
+        @include button-single-light-hover;
+
+        background: $cinnabar;
+        border: 1px solid $cinnabar;
+        color: $white;
+    }
+}
+
+.c-newsletter__legal {
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+
+    color: $boulder;
+    margin: 0;
+
+    a {
+        color: $boulder;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font('AGENDA', 14px, 'MEDIUM', 14px);
+    }
+}
+
+.c-newsletter__privacy {
+    color: $boulder;
+}

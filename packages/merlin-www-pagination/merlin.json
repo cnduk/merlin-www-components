@@ -1,39 +1,41 @@
 {
-    "name": "@cnbritain/merlin-www-pagination",
-    "description": "Pagination fallback for pages that have infinite scroll",
-    "main": "index",
-    "currentTheme": null,
-    "data": {
-        "tag_news": "data/tag_news.json"
-    },
-    "themes": {
-        "wireframe": "sass/wireframe/wireframe.scss",
-        "vogue": "sass/vogue/vogue.scss",
-        "glamour": "sass/glamour/glamour.scss",
-        "wired": "sass/wired/wired.scss",
-        "missvogue": "sass/missvogue/missvogue.scss",
-        "tatler": "sass/tatler/tatler.scss"
-    },
-    "partials": {
-        "index": "partials/index.html"
-    },
-    "js": {},
+    "name": "@cnbritain/merlin-www-pagination", 
     "demo": {
         "tag_news": {
-            "data": "tag_news",
-            "main": "index",
             "themes": [
-                "wireframe",
-                "vogue",
-                "glamour",
-                "wired",
-                "missvogue",
-                "tatler"
-            ]
+                "wireframe", 
+                "vogue", 
+                "glamour", 
+                "wired", 
+                "missvogue", 
+                "tatler", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "tag_news"
         }
-    },
+    }, 
+    "js": {}, 
+    "themes": {
+        "tatler": "sass/tatler/tatler.scss", 
+        "wireframe": "sass/wireframe/wireframe.scss", 
+        "glamour": "sass/glamour/glamour.scss", 
+        "bystander": "sass/bystander/bystander.scss", 
+        "wired": "sass/wired/wired.scss", 
+        "missvogue": "sass/missvogue/missvogue.scss", 
+        "vogue": "sass/vogue/vogue.scss"
+    }, 
+    "partials": {
+        "index": "partials/index.html"
+    }, 
     "dependencies": [
-        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-common", 
         "@cnbritain/merlin-www-buttons"
-    ]
+    ], 
+    "currentTheme": null, 
+    "main": "index", 
+    "data": {
+        "tag_news": "data/tag_news.json"
+    }, 
+    "description": "Pagination fallback for pages that have infinite scroll"
 }

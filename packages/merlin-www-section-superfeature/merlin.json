@@ -1,49 +1,52 @@
 {
-    "name": "@cnbritain/merlin-www-section-superfeature",
-    "main": "superfeature",
-    "currentTheme": null,
-    "data": {
-        "all": "demo/data/all.json",
-        "gq": "demo/data/gq.json"
-    },
+    "name": "@cnbritain/merlin-www-section-superfeature", 
     "demo": {
         "all": {
-            "data": "all",
-            "main": "superfeature",
             "themes": [
-                "wireframe",
-                "vogue",
-                "glamour",
-                "missvogue",
-                "wired",
-                "tatler"
-            ]
-        },
+                "wireframe", 
+                "vogue", 
+                "glamour", 
+                "missvogue", 
+                "wired", 
+                "tatler", 
+                "bystander"
+            ], 
+            "main": "superfeature", 
+            "data": "all"
+        }, 
         "gq": {
-            "data": "gq",
-            "main": "superfeature",
             "themes": [
-                "gq"
-            ]
+                "gq", 
+                "bystander"
+            ], 
+            "main": "superfeature", 
+            "data": "gq"
         }
-    },
+    }, 
     "js": {
         "demo": "demo/demo.js"
-    },
+    }, 
     "themes": {
-        "wireframe": "sass/wireframe/wireframe.scss",
-        "vogue": "sass/vogue/vogue.scss",
-        "missvogue": "sass/missvogue/missvogue.scss",
-        "wired": "sass/wired/wired.scss",
-        "glamour": "sass/glamour/glamour.scss",
-        "gq": "sass/gq/gq.scss",
-        "tatler": "sass/tatler/tatler.scss"
-    },
+        "gq": "sass/gq/gq.scss", 
+        "tatler": "sass/tatler/tatler.scss", 
+        "wireframe": "sass/wireframe/wireframe.scss", 
+        "glamour": "sass/glamour/glamour.scss", 
+        "bystander": "sass/bystander/bystander.scss", 
+        "wired": "sass/wired/wired.scss", 
+        "missvogue": "sass/missvogue/missvogue.scss", 
+        "vogue": "sass/vogue/vogue.scss"
+    }, 
     "partials": {
         "superfeature": "templates/section-superfeature.html"
-    },
+    }, 
     "dependencies": [
-        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-common", 
         "@cnbritain/merlin-www-image"
-    ]
+    ], 
+    "currentTheme": null, 
+    "main": "superfeature", 
+    "data": {
+        "all": "demo/data/all.json", 
+        "gq": "demo/data/gq.json"
+    }
 }

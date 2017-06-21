@@ -1,51 +1,54 @@
 {
-    "name": "@cnbritain/merlin-www-search-header",
-    "description": null,
-    "main": "index",
-    "currentTheme": null,
-    "data": {
-        "no-results-label": "data/no-results-label.json",
-        "results-label": "data/results-label.json"
-    },
-    "themes": {
-        "wireframe": "sass/wireframe/wireframe.scss",
-        "vogue": "sass/vogue/vogue.scss",
-        "missvogue": "sass/missvogue/missvogue.scss",
-        "glamour": "sass/glamour/glamour.scss",
-        "wired": "sass/wired/wired.scss",
-        "tatler": "sass/tatler/tatler.scss"
-    },
-    "partials": {
-        "index": "partials/index.html"
-    },
-    "js": {},
+    "name": "@cnbritain/merlin-www-search-header", 
     "demo": {
         "no-results-label": {
-            "data": "no-results-label",
-            "main": "index",
             "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "glamour",
-                "wired",
-                "tatler"
-            ]
-        },
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "glamour", 
+                "wired", 
+                "tatler", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "no-results-label"
+        }, 
         "results-label": {
-            "data": "results-label",
-            "main": "index",
             "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "glamour",
-                "wired",
-                "tatler"
-            ]
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "glamour", 
+                "wired", 
+                "tatler", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "results-label"
         }
-    },
+    }, 
+    "js": {}, 
+    "themes": {
+        "tatler": "sass/tatler/tatler.scss", 
+        "wireframe": "sass/wireframe/wireframe.scss", 
+        "glamour": "sass/glamour/glamour.scss", 
+        "bystander": "sass/bystander/bystander.scss", 
+        "wired": "sass/wired/wired.scss", 
+        "missvogue": "sass/missvogue/missvogue.scss", 
+        "vogue": "sass/vogue/vogue.scss"
+    }, 
+    "partials": {
+        "index": "partials/index.html"
+    }, 
     "dependencies": [
         "@cnbritain/merlin-www-common"
-    ]
+    ], 
+    "currentTheme": null, 
+    "main": "index", 
+    "data": {
+        "no-results-label": "data/no-results-label.json", 
+        "results-label": "data/results-label.json"
+    }, 
+    "description": null
 }

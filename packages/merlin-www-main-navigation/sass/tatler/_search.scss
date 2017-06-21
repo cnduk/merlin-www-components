@@ -31,8 +31,8 @@
         }
 
         &:hover {
-            svg {
-                fill: $limed-oak;
+            svg, path {
+                fill: $cinnabar;
             }
         }
     }

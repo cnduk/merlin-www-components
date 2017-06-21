@@ -1,276 +1,296 @@
 {
-    "name": "@cnbritain/merlin-www-bbcode",
-    "description": "Templates for rendered bbcode partials",
-    "main": "index",
-    "currentTheme": null,
-    "data": {
-        "answer": "data/answer.json",
-        "article-card": "data/article-card.json",
-        "blockquote": "data/blockquote.json",
-        "brightcove": "data/brightcove.json",
-        "facebook": "data/facebook.json",
-        "gallery-card": "data/gallery-card.json",
-        "image": "data/image.json",
-        "infobox": "data/infobox.json",
-        "instagram": "data/instagram.json",
-        "list": "data/list.json",
-        "note": "data/note.json",
-        "pullquote": "data/pullquote.json",
-        "question": "data/question.json",
-        "show-gallery-card": "data/show-gallery-card.json",
-        "twitter": "data/twitter.json",
-        "video-card": "data/video-card.json",
-        "vimeo": "data/vimeo.json",
-        "vine": "data/vine.json",
-        "youtube": "data/youtube.json"
-    },
-    "themes": {
-        "wireframe": "sass/wireframe/wireframe.scss",
-        "vogue": "sass/vogue/vogue.scss",
-        "missvogue": "sass/missvogue/missvogue.scss",
-        "tatler": "sass/tatler/tatler.scss",
-        "gq": "sass/gq/gq.scss"
-    },
-    "partials": {
-        "index": "partials/index.html",
-        "answer": "partials/answer.html",
-        "article-card": "partials/article-card.html",
-        "blockquote": "partials/blockquote.html",
-        "brightcove": "partials/brightcove.html",
-        "facebook": "partials/facebook.html",
-        "gallery-card": "partials/gallery-card.html",
-        "image": "partials/image.html",
-        "imgur": "partials/imgur.html",
-        "infobox": "partials/infobox.html",
-        "instagram": "partials/instagram.html",
-        "interactive": "partials/interactive.html",
-        "list": "partials/list.html",
-        "note": "partials/note.html",
-        "pullquote": "partials/pullquote.html",
-        "question": "partials/question.html",
-        "show-gallery-card": "partials/show-gallery-card.html",
-        "spotify": "partials/spotify.html",
-        "twitter": "partials/twitter.html",
-        "video-card": "partials/video-card.html",
-        "vimeo": "partials/vimeo.html",
-        "vine": "partials/vine.html",
-        "youtube": "partials/youtube.html"
-    },
-    "js": {},
+    "name": "@cnbritain/merlin-www-bbcode", 
     "demo": {
-        "answer": {
-            "data": "answer",
-            "main": "index",
-            "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq"
-            ]
-        },
-        "article-card": {
-            "data": "article-card",
-            "main": "index",
-            "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq"
-            ]
-        },
-        "blockquote": {
-            "data": "blockquote",
-            "main": "index",
-            "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq"
-            ]
-        },
-        "brightcove": {
-            "data": "brightcove",
-            "main": "index",
-            "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq"
-            ]
-        },
-        "facebook": {
-            "data": "facebook",
-            "main": "index",
-            "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq"
-            ]
-        },
-        "gallery-card": {
-            "data": "gallery-card",
-            "main": "index",
-            "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq"
-            ]
-        },
-        "image": {
-            "data": "image",
-            "main": "index",
-            "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq"
-            ]
-        },
-        "infobox": {
-            "data": "infobox",
-            "main": "index",
-            "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq"
-            ]
-        },
-        "instagram": {
-            "data": "instagram",
-            "main": "index",
-            "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq"
-            ]
-        },
-        "list": {
-            "data": "list",
-            "main": "index",
-            "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq"
-            ]
-        },
-        "note": {
-            "data": "note",
-            "main": "index",
-            "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq"
-            ]
-        },
-        "pullquote": {
-            "data": "pullquote",
-            "main": "index",
-            "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq"
-            ]
-        },
-        "question": {
-            "data": "question",
-            "main": "index",
-            "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq"
-            ]
-        },
         "show-gallery-card": {
-            "data": "show-gallery-card",
-            "main": "index",
             "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq"
-            ]
-        },
-        "twitter": {
-            "data": "twitter",
-            "main": "index",
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "tatler", 
+                "gq", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "show-gallery-card"
+        }, 
+        "note": {
             "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq"
-            ]
-        },
-        "video-card": {
-            "data": "video-card",
-            "main": "index",
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "tatler", 
+                "gq", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "note"
+        }, 
+        "blockquote": {
             "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq"
-            ]
-        },
-        "vimeo": {
-            "data": "vimeo",
-            "main": "index",
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "tatler", 
+                "gq", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "blockquote"
+        }, 
+        "gallery-card": {
             "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq"
-            ]
-        },
-        "vine": {
-            "data": "vine",
-            "main": "index",
-            "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq"
-            ]
-        },
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "tatler", 
+                "gq", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "gallery-card"
+        }, 
         "youtube": {
-            "data": "youtube",
-            "main": "index",
             "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq"
-            ]
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "tatler", 
+                "gq", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "youtube"
+        }, 
+        "question": {
+            "themes": [
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "tatler", 
+                "gq", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "question"
+        }, 
+        "article-card": {
+            "themes": [
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "tatler", 
+                "gq", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "article-card"
+        }, 
+        "image": {
+            "themes": [
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "tatler", 
+                "gq", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "image"
+        }, 
+        "list": {
+            "themes": [
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "tatler", 
+                "gq", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "list"
+        }, 
+        "video-card": {
+            "themes": [
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "tatler", 
+                "gq", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "video-card"
+        }, 
+        "brightcove": {
+            "themes": [
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "tatler", 
+                "gq", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "brightcove"
+        }, 
+        "infobox": {
+            "themes": [
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "tatler", 
+                "gq", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "infobox"
+        }, 
+        "vine": {
+            "themes": [
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "tatler", 
+                "gq", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "vine"
+        }, 
+        "facebook": {
+            "themes": [
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "tatler", 
+                "gq", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "facebook"
+        }, 
+        "vimeo": {
+            "themes": [
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "tatler", 
+                "gq", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "vimeo"
+        }, 
+        "answer": {
+            "themes": [
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "tatler", 
+                "gq", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "answer"
+        }, 
+        "pullquote": {
+            "themes": [
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "tatler", 
+                "gq", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "pullquote"
+        }, 
+        "twitter": {
+            "themes": [
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "tatler", 
+                "gq", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "twitter"
+        }, 
+        "instagram": {
+            "themes": [
+                "wireframe", 
+                "vogue", 
+                "missvogue", 
+                "tatler", 
+                "gq", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "instagram"
         }
-    },
+    }, 
+    "js": {}, 
+    "themes": {
+        "gq": "sass/gq/gq.scss", 
+        "tatler": "sass/tatler/tatler.scss", 
+        "wireframe": "sass/wireframe/wireframe.scss", 
+        "bystander": "sass/bystander/bystander.scss", 
+        "missvogue": "sass/missvogue/missvogue.scss", 
+        "vogue": "sass/vogue/vogue.scss"
+    }, 
+    "partials": {
+        "note": "partials/note.html", 
+        "gallery-card": "partials/gallery-card.html", 
+        "list": "partials/list.html", 
+        "image": "partials/image.html", 
+        "vine": "partials/vine.html", 
+        "instagram": "partials/instagram.html", 
+        "index": "partials/index.html", 
+        "question": "partials/question.html", 
+        "infobox": "partials/infobox.html", 
+        "answer": "partials/answer.html", 
+        "twitter": "partials/twitter.html", 
+        "blockquote": "partials/blockquote.html", 
+        "spotify": "partials/spotify.html", 
+        "brightcove": "partials/brightcove.html", 
+        "facebook": "partials/facebook.html", 
+        "pullquote": "partials/pullquote.html", 
+        "article-card": "partials/article-card.html", 
+        "video-card": "partials/video-card.html", 
+        "show-gallery-card": "partials/show-gallery-card.html", 
+        "youtube": "partials/youtube.html", 
+        "vimeo": "partials/vimeo.html", 
+        "imgur": "partials/imgur.html", 
+        "interactive": "partials/interactive.html"
+    }, 
     "dependencies": [
-        "@cnbritain/merlin-www-buttons",
-        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-buttons", 
+        "@cnbritain/merlin-www-common", 
         "@cnbritain/merlin-www-image"
-    ]
+    ], 
+    "currentTheme": null, 
+    "main": "index", 
+    "data": {
+        "show-gallery-card": "data/show-gallery-card.json", 
+        "note": "data/note.json", 
+        "blockquote": "data/blockquote.json", 
+        "gallery-card": "data/gallery-card.json", 
+        "youtube": "data/youtube.json", 
+        "question": "data/question.json", 
+        "article-card": "data/article-card.json", 
+        "image": "data/image.json", 
+        "list": "data/list.json", 
+        "video-card": "data/video-card.json", 
+        "brightcove": "data/brightcove.json", 
+        "infobox": "data/infobox.json", 
+        "vine": "data/vine.json", 
+        "facebook": "data/facebook.json", 
+        "vimeo": "data/vimeo.json", 
+        "answer": "data/answer.json", 
+        "pullquote": "data/pullquote.json", 
+        "twitter": "data/twitter.json", 
+        "instagram": "data/instagram.json"
+    }, 
+    "description": "Templates for rendered bbcode partials"
 }

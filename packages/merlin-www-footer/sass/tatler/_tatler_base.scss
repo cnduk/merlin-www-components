@@ -1,0 +1,97 @@
+.c-footer {
+    background-color: $COLOUR_BG_DARK;
+    color: $COLOUR_MAIN_DARK;
+}
+
+.c-footer__wrapper {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.c-footer__list {
+    color: $COLOUR_MAIN_DARK;
+}
+
+.c-footer__list--left {
+    @include min-screen(1100px) {
+        & .c-footer__list-item:first-child {
+            padding-left: $PADDING_LARGE;
+        }
+    }
+}
+.c-footer__list--right {
+    @include min-screen(1100px) {
+        & > .c-footer__list-item:last-child {
+            padding-right: $PADDING_LARGE;
+        }
+    }
+}
+
+.c-footer__list-item--links {
+    @include max-screen(1099px) {
+        background-color: $COLOUR_BG_DARK;
+    }
+
+    .c-footer__list-item {
+        @include max-screen(1099px) {
+            &:last-child:after {
+                content: none;
+            }
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: calc(100% - #{$MARGIN_SMALL});
+            background-color: $COLOUR_BORDER_SEPARATOR_DARK;
+
+            @include min-screen(1100px) {
+                display: none;
+            }
+        }
+    }
+}
+
+li.c-footer__list-item {
+    @include font('AGENDA', 12px, 'MEDIUM', 60px);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    height: 60px;
+    letter-spacing: 1px;
+    padding-left: $PADDING_SMALL;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        border-bottom: none;
+        text-transform: uppercase;
+
+        @include min-screen(1100px) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+li.c-footer__list-item--logo {
+    margin-top: -60px;
+    margin-right: $MARGIN_SMALL;
+    line-height: 60px;
+
+    svg {
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        vertical-align: middle;
+    }
+
+    @include min-screen( 1100px ) {
+        clear: right;
+        padding-left: 45px;
+        margin-right: 0;
+        margin-top: 0;
+    }
+}

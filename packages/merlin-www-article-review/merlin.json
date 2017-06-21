@@ -1,38 +1,40 @@
 {
-    "name": "@cnbritain/merlin-www-article-review",
-    "description": "Review section for articles",
-    "main": "index",
-    "currentTheme": null,
-    "data": {
-        "all": "data/all.json"
-    },
-    "themes": {
-        "wireframe": "sass/wireframe/wireframe.scss",
-        "vogue": "sass/vogue/vogue.scss",
-        "missvogue": "sass/missvogue/missvogue.scss",
-        "glamour": "sass/glamour/glamour.scss",
-        "wired": "sass/wired/wired.scss",
-        "tatler": "sass/tatler/tatler.scss"
-    },
-    "partials": {
-        "index": "partials/index.html"
-    },
-    "js": {},
+    "name": "@cnbritain/merlin-www-article-review", 
     "demo": {
         "all": {
-            "data": "all",
-            "main": "index",
             "themes": [
-                "wireframe",
-                "vogue",
-                "glamour",
-                "missvogue",
-                "wired",
-                "tatler"
-            ]
+                "wireframe", 
+                "vogue", 
+                "glamour", 
+                "missvogue", 
+                "wired", 
+                "tatler", 
+                "bystander"
+            ], 
+            "main": "index", 
+            "data": "all"
         }
-    },
+    }, 
+    "js": {}, 
+    "themes": {
+        "tatler": "sass/tatler/tatler.scss", 
+        "wireframe": "sass/wireframe/wireframe.scss", 
+        "glamour": "sass/glamour/glamour.scss", 
+        "bystander": "sass/bystander/bystander.scss", 
+        "wired": "sass/wired/wired.scss", 
+        "missvogue": "sass/missvogue/missvogue.scss", 
+        "vogue": "sass/vogue/vogue.scss"
+    }, 
+    "partials": {
+        "index": "partials/index.html"
+    }, 
     "dependencies": [
         "@cnbritain/merlin-www-common"
-    ]
+    ], 
+    "currentTheme": null, 
+    "main": "index", 
+    "data": {
+        "all": "data/all.json"
+    }, 
+    "description": "Review section for articles"
 }

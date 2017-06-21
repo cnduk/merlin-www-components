@@ -1,0 +1,61 @@
+.srch-main {
+    background: $black-two;
+    color: $white;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 45px $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 45px $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 45px $DESKTOP_SIDE_GUTTER;
+    }
+
+    form {
+        border-bottom: 1px solid $COLOUR_BORDER_SEPARATOR_DARK;
+    }
+}
+
+.srch-textbox {
+    @include font('STARLING', 35px, 'NORMAL', 38px);
+
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: $COLOUR_MAIN_DARK;
+    display: block;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    padding: 10px 20px;
+    width: 100%;
+
+    &::placeholder {
+        color: $COLOUR_MAIN_TERTIARY;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(65px);
+        @include line-height(48px);
+    }
+}
+
+.srch-results {
+    @include font('AGENDA', 12px, 'MEDIUM', 20px);
+
+    color: $COLOUR_MAIN_TERTIARY;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 23px 0 0;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font('AGENDA', 14px, 'MEDIUM', 20px);
+
+        margin: 12px 0 0;
+    }
+}

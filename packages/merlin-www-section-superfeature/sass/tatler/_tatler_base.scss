@@ -1,0 +1,134 @@
+.c-superfeature {
+    background: $wild-sand;
+    max-width: none;
+    margin: 30px auto;
+    padding: 0;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0 $TABLET_SIDE_GUTTER;
+        margin: 90px auto;
+    }
+}
+
+.c-superfeature {
+    .c-superfeature__image {
+        overflow: hidden;
+    }
+
+    &:hover,
+    &:focus {
+        .c-superfeature__title {
+            @include card-title-hover;
+        }
+    }
+}
+
+.c-superfeature__link,
+.c-superfeature__image {
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    margin: 0 auto;
+}
+
+.c-superfeature__content {
+    background: $white;
+    margin: 0 20px;
+    max-width: $MAXIMUM_PAGE_WIDTH - 120px;
+    padding: 28px 20px;
+    text-align: center;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin: 0 60px;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include border-line-box(top);
+
+        margin: 0 60px;
+        padding: 60px 170px;
+    }
+
+    @include min-screen($MAXIMUM_PAGE_WIDTH) {
+        margin: 0 auto;
+    }
+}
+
+
+.c-superfeature__teaser {
+    display: none;
+}
+
+.c-superfeature__title {
+    @include t-super-feature-title-small;
+
+    margin: 0 0 15px;
+    position: relative;
+    padding: 0 0 15px;
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 1px;
+        background: $COLOUR_MAIN_HIGHLIGHT;
+        bottom: 0;
+        left: 50%;
+        margin-left: -10px;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include t-super-feature-title-large;
+        margin: 0 0 25px;
+        padding: 0 0 25px;
+    }
+}
+
+
+.c-superfeature__tag {
+    @include t-super-feature-tag-small;
+
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.c-superfeature__byline {
+    @include feature-card-byline;
+}
+
+.c-superfeature__byline-name {
+    @include card-byline-name;
+}
+
+.c-superfeature__byline-prefix {
+    @include card-byline-prefix;
+}
+
+.c-superfeature__meta {
+    @include card-meta;
+}
+
+li.c-superfeature__meta-item {
+    padding-right: 0;
+
+    &:not(:last-child) {
+        &:after {
+            content: '';
+            height: 11px;
+            width: 1px;
+            background-color: $silver;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 5px;
+
+            .c-card--dark & {
+                background-color: #333;
+                height: 11px;
+            }
+        }
+    }
+
+    & + & {
+        border: 0;
+        padding: 0;
+    }
+}

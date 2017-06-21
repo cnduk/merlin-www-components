@@ -1,34 +1,35 @@
 {
-    "name": "@cnbritain/merlin-www-main-navigation",
-    "main": "main-navigation",
-    "currentTheme": null,
-    "data": {
-        "main-navigation": "demo/data/main-navigation.json",
-        "main-navigation-masthead": "demo/data/main-navigation-masthead.json",
-        "main-navigation-promotion-mobile": "demo/data/main-navigation-promotion-mobile.json",
-        "main-navigation-promotion-desktop": "demo/data/main-navigation-promotion-desktop.json",
-        "main-navigation-gallery": "demo/data/main-navigation-gallery.json"
-    },
+    "name": "@cnbritain/merlin-www-main-navigation", 
     "js": {
         "demo": "demo/demo.js"
-    },
+    }, 
     "themes": {
-        "wireframe": "sass/wireframe/wireframe.scss",
-        "vogue": "sass/vogue/vogue.scss",
-        "missvogue": "sass/missvogue/missvogue.scss",
-        "tatler": "sass/tatler/tatler.scss",
-        "gq": "sass/gq/gq.scss"
-    },
+        "gq": "sass/gq/gq.scss", 
+        "tatler": "sass/tatler/tatler.scss", 
+        "wireframe": "sass/wireframe/wireframe.scss", 
+        "bystander": "sass/bystander/bystander.scss", 
+        "missvogue": "sass/missvogue/missvogue.scss", 
+        "vogue": "sass/vogue/vogue.scss"
+    }, 
     "partials": {
-        "main-navigation": "templates/main-navigation.html",
-        "main-navigation-promotion-mobile": "templates/main-navigation-promotion-mobile.html",
-        "main-navigation-promotion-desktop": "templates/main-navigation-promotion-desktop.html",
+        "main-navigation-promotion-desktop": "templates/main-navigation-promotion-desktop.html", 
+        "main-navigation": "templates/main-navigation.html", 
+        "main-navigation-promotion-mobile": "templates/main-navigation-promotion-mobile.html", 
         "gallery-navigation": "templates/gallery-navigation.html"
-    },
+    }, 
     "dependencies": [
-        "@cnbritain/merlin-www-common",
-        "@cnbritain/merlin-www-buttons",
-        "@cnbritain/merlin-www-image",
+        "@cnbritain/merlin-www-common", 
+        "@cnbritain/merlin-www-buttons", 
+        "@cnbritain/merlin-www-image", 
         "@cnbritain/merlin-www-search-header"
-    ]
+    ], 
+    "currentTheme": null, 
+    "main": "main-navigation", 
+    "data": {
+        "main-navigation-promotion-desktop": "demo/data/main-navigation-promotion-desktop.json", 
+        "main-navigation": "demo/data/main-navigation.json", 
+        "main-navigation-masthead": "demo/data/main-navigation-masthead.json", 
+        "main-navigation-promotion-mobile": "demo/data/main-navigation-promotion-mobile.json", 
+        "main-navigation-gallery": "demo/data/main-navigation-gallery.json"
+    }
 }

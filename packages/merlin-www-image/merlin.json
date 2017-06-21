@@ -1,38 +1,39 @@
 {
-    "name": "@cnbritain/merlin-www-image",
-    "main": "image",
-    "currentTheme": null,
-    "data": {
-        "image": "demo/data/image.json",
-        "image-lazyload": "demo/data/image-lazyload.json",
-        "picture": "demo/data/picture.json",
-        "picture-lazyload": "demo/data/picture-lazyload.json",
-        "linked-image": "demo/data/linked-image.json",
-        "linked-image-lazyload": "demo/data/linked-image-lazyload.json",
-        "static-image": "demo/data/image-static.json",
-        "static-image-lazyload": "demo/data/image-static-lazyload.json",
-        "svg": "demo/data/svg.json"
-    },
+    "name": "@cnbritain/merlin-www-image", 
     "js": {
         "demo": "demo/demo.js"
-    },
+    }, 
     "themes": {
-        "wireframe": "sass/wireframe/wireframe.scss",
-        "vogue": "sass/vogue/vogue.scss",
-        "wired": "sass/wired/wired.scss",
-        "glamour": "sass/glamour/glamour.scss",
-        "tatler": "sass/tatler/tatler.scss"
-    },
+        "tatler": "sass/tatler/tatler.scss", 
+        "wireframe": "sass/wireframe/wireframe.scss", 
+        "glamour": "sass/glamour/glamour.scss", 
+        "bystander": "sass/bystander/bystander.scss", 
+        "wired": "sass/wired/wired.scss", 
+        "vogue": "sass/vogue/vogue.scss"
+    }, 
     "partials": {
-        "image": "templates/image.html",
-        "image-base": "templates/partials/image-base.html",
-        "image-image": "templates/partials/image-image.html",
-        "image-linked": "templates/partials/image-linked.html",
-        "image-picture": "templates/partials/image-picture.html",
-        "image-static": "templates/partials/image-static.html",
-        "image-svg": "templates/partials/image-svg.html"
-    },
+        "image-svg": "templates/partials/image-svg.html", 
+        "image-image": "templates/partials/image-image.html", 
+        "image": "templates/image.html", 
+        "image-picture": "templates/partials/image-picture.html", 
+        "image-linked": "templates/partials/image-linked.html", 
+        "image-base": "templates/partials/image-base.html", 
+        "image-static": "templates/partials/image-static.html"
+    }, 
     "dependencies": [
         "@cnbritain/merlin-www-assets"
-    ]
+    ], 
+    "currentTheme": null, 
+    "main": "image", 
+    "data": {
+        "picture": "demo/data/picture.json", 
+        "static-image-lazyload": "demo/data/image-static-lazyload.json", 
+        "picture-lazyload": "demo/data/picture-lazyload.json", 
+        "svg": "demo/data/svg.json", 
+        "image": "demo/data/image.json", 
+        "static-image": "demo/data/image-static.json", 
+        "image-lazyload": "demo/data/image-lazyload.json", 
+        "linked-image": "demo/data/linked-image.json", 
+        "linked-image-lazyload": "demo/data/linked-image-lazyload.json"
+    }
 }

@@ -1,38 +1,42 @@
 {
     "name": "@cnbritain/merlin-www-cookie-warning",
-    "description": "Dat bootiful 🍪 warnin",
-    "main": "index",
-    "currentTheme": null,
-    "data": {
-        "vogue": "data/vogue.json"
-    },
-    "themes": {
-        "wireframe": "sass/wireframe/wireframe.scss",
-        "vogue": "sass/vogue/vogue.scss",
-        "missvogue": "sass/missvogue/missvogue.scss",
-        "gq": "sass/gq/gq.scss"
-    },
-    "partials": {
-        "index": "partials/index.html"
-    },
-    "js": {
-        "demo": "demo/demo.js"
-    },
     "demo": {
         "general": {
-            "data": "vogue",
-            "main": "index",
             "themes": [
                 "wireframe",
                 "vogue",
                 "missvogue",
-                "gq"
-            ]
+                "gq",
+                "tatler",
+                "bystander"
+            ],
+            "main": "index",
+            "data": "vogue"
         }
+    },
+    "js": {
+        "demo": "demo/demo.js"
+    },
+    "themes": {
+        "bystander": "sass/bystander/bystander.scss",
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "gq": "sass/gq/gq.scss",
+        "tatler": "sass/tatler/tatler.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
+        "vogue": "sass/vogue/vogue.scss"
+    },
+    "partials": {
+        "index": "partials/index.html"
     },
     "dependencies": [
         "@cnbritain/merlin-www-common",
         "@cnbritain/merlin-www-js-utils",
         "@cnbritain/merlin-www-image"
-    ]
+    ],
+    "currentTheme": null,
+    "main": "index",
+    "data": {
+        "vogue": "data/vogue.json"
+    },
+    "description": "Dat bootiful \ud83c\udf6a warnin"
 }

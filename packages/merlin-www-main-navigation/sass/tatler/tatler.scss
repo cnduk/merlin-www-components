@@ -4,30 +4,4 @@
 
 @import '../wireframe/wireframe';
 
-$limed-oak: hotpink;
-$mineshaft: hotpink;
-$woodsmoke: hotpink;
-$shuttle-gray: hotpink;
-$oslo-gray: hotpink;
-
-@import '_base';
-@import '_dropdown';
-@import '_gallery';
-@import '_masthead';
-@import '_menu';
-@import '_promo';
-@import '_search';
-@import '_social';
-
-.n-vanishing-nav {
-    .n-main__sticker-child {
-        transform: translate(0);
-        transition: transform 0.2s ease-in-out;
-    }
-
-    &.is-hidden {
-        .n-main__sticker-child {
-            transform: translate(0, -100%);
-        }
-    }
-}
+@import './_tatler_base';

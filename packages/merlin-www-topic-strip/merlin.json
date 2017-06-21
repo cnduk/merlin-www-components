@@ -1,26 +1,27 @@
 {
-    "name": "@cnbritain/merlin-www-topic-strip",
-    "main": "topic",
-    "currentTheme": null,
-    "data": {
-        "topic": "demo/data/topic.json",
-        "topic-with-title": "demo/data/topic-with-title.json"
-    },
-    "js": {},
+    "name": "@cnbritain/merlin-www-topic-strip", 
+    "js": {}, 
     "themes": {
-        "wireframe": "sass/wireframe/wireframe.scss",
-        "vogue": "sass/vogue/vogue.scss",
-        "missvogue": "sass/missvogue/missvogue.scss",
-        "wired": "sass/wired/wired.scss",
-        "glamour": "sass/glamour/glamour.scss",
-        "gq": "sass/gq/gq.scss",
-        "tatler": "sass/tatler/tatler.scss"
-    },
+        "gq": "sass/gq/gq.scss", 
+        "tatler": "sass/tatler/tatler.scss", 
+        "wireframe": "sass/wireframe/wireframe.scss", 
+        "glamour": "sass/glamour/glamour.scss", 
+        "bystander": "sass/bystander/bystander.scss", 
+        "wired": "sass/wired/wired.scss", 
+        "missvogue": "sass/missvogue/missvogue.scss", 
+        "vogue": "sass/vogue/vogue.scss"
+    }, 
     "partials": {
         "topic": "templates/topic-strip.html"
-    },
+    }, 
     "dependencies": [
-        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-common", 
         "@cnbritain/merlin-www-buttons"
-    ]
+    ], 
+    "currentTheme": null, 
+    "main": "topic", 
+    "data": {
+        "topic": "demo/data/topic.json", 
+        "topic-with-title": "demo/data/topic-with-title.json"
+    }
 }
