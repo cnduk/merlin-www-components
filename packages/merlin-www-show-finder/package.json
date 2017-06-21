@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-show-finder",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Show finder and live shows",
   "main": "js/index.js",
   "scripts": {
@@ -14,6 +14,6 @@
     "@cnbritain/merlin-www-js-utils": "^1.1.0"
   },
   "devDependencies": {
-    "@cnbritain/merlin-component-demo-server": "^2.8.2"
+    "@cnbritain/merlin-component-demo-server": "^2.8.3"
   }
 }

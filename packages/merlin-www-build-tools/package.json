@@ -1,13 +1,13 @@
 {
   "name": "@cnbritain/merlin-www-build-tools",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Build tools for the www app",
   "main": "js/index.js",
   "scripts": {},
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-sass-custom-importer": "^1.1.7",
+    "@cnbritain/merlin-sass-custom-importer": "^1.1.8",
     "browser-sync": "^2.18.12",
     "gulp": "^3.9.1",
     "gulp-bump": "^2.7.0",
