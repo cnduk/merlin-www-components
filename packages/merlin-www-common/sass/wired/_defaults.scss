@@ -160,6 +160,10 @@ small {
     @include font("BRUTAL", 12px, 300, 12px);
 }
 
+strong {
+    @include font-weight(700);
+}
+
 ul,
 ol {
     @include font("BRUTAL", 17px, 300, 23px);
