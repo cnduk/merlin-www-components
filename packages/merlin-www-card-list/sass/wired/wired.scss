@@ -2,43 +2,43 @@
 
 @import "../wireframe/wireframe";
 
-.c-card-list__item--ad {
-    @include four-column-size() {
-        &.is-hidden + .c-card-list__item {
-            margin-top: 0;
-        }
-    }
+// .c-card-list__item--ad {
+//     @include four-column-size() {
+//         &.is-hidden + .c-card-list__item {
+//             margin-top: 0;
+//         }
+//     }
 
-    .ad__block {
-        background-color: transparent;
-        padding: 0;
-    }
-}
+//     .ad__block {
+//         background-color: transparent;
+//         padding: 0;
+//     }
+// }
 
-.c-card-list--top-stories {
-    white-space: nowrap;
+// .c-card-list--top-stories {
+//     white-space: nowrap;
 
-    .c-card-list__item {
-        display: inline-block;
-        width: 280px;
-        white-space: normal;
+//     .c-card-list__item {
+//         display: inline-block;
+//         width: 280px;
+//         white-space: normal;
 
-        & + .c-card-list__item {
-            margin-left: 30px;
-        }
+//         & + .c-card-list__item {
+//             margin-left: 30px;
+//         }
 
-        &.is-hidden {
-            height: 0;
-            overflow: hidden;
-            visibility: hidden;
-            width: 0;
-        }
+//         &.is-hidden {
+//             height: 0;
+//             overflow: hidden;
+//             visibility: hidden;
+//             width: 0;
+//         }
 
-        &:last-child {
-            margin-right: 30px;
-        }
-    }
-}
+//         &:last-child {
+//             margin-right: 30px;
+//         }
+//     }
+// }
 
 .c-card-list--a-recommended,
 .c-card-list--c-video-articles,
@@ -53,20 +53,18 @@
         display: inline-block;
         padding: 0 10px;
         width: 100%;
-        margin-top: 30px;
+        margin-top: 20px;
+
+        .c-card {
+            border-top: 1px solid black;
+            padding-top: 20px;
+
+            &.c-card--dark {
+                border-top-color: white;
+            }
+        }
 
         @include one-column-size() {
-            & + .c-card-list__item {
-                .c-card {
-                    border-top: 1px solid black;
-                    padding-top: 30px;
-
-                    &.c-card--dark {
-                        border-top-color: white;
-                    }
-                }
-            }
-
             @include first(1) {
                 margin-top: 0;
             }
@@ -75,7 +73,6 @@
         @include two-column-size() {
             @include first(2) {
                 margin-top: 0;
-
             }
 
             width: 50%;
