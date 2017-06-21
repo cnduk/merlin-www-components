@@ -16,7 +16,7 @@ module.exports = function taskJsExport(taskConfig, browserSync){
                 DYNAMIC_CONFIG_URL, function(ctx){
                     var configKey = 'default';
                     try {
-                        configKey = config.package.cnOptions.brandConfig;
+                        configKey = taskConfig.package.cnOptions.brandConfig;
                     } catch(err){}
                     // Check if the value is undefined
                     configKey = configKey === undefined ? 'default' : configKey;
