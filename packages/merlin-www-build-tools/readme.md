@@ -138,16 +138,20 @@ Runs `copy`, `sass`, `jshint` and `js`.
         watch: {
             proxy: 'localhost:9001',
             html: [
-                getAbsDir('**/*.html'),
-                getAbsDir('**/*.mustache')
+                getAbsDir(`${abbr}_backend/templates/**/*.html`),
+                getAbsDir(`${abbr}_backend/templates/**/*.mustache`),
+                getAbsDir('node_modules/@cnbritain/**/templates/**/*.html'),
+                getAbsDir('node_modules/@cnbritain/**/templates/**/*.mustache'),
+                getAbsDir('node_modules/@cnbritain/**/partials/**/*.html'),
+                getAbsDir('node_modules/@cnbritain/**/partials/**/*.mustache')
             ],
             js: [
                 getAbsDir('frontend/js/*.js'),
-                getAbsDir('node_modules/@cnbritain/**/*.js')
+                getAbsDir('node_modules/@cnbritain/**/js/*.js')
             ],
             sass: [
-                getAbsDir('frontend/sass/*.scss'),
-                getAbsDir('node_modules/@cnbritain/**/*.scss')
+                getAbsDir('frontend/sass/**/*.scss'),
+                getAbsDir('node_modules/@cnbritain/**/sass/**/*.scss')
             ]
         }
     }
