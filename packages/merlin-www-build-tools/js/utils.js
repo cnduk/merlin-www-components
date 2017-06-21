@@ -81,18 +81,18 @@ function getDefaultConfig(pkgJson, merlinJson){
             html: [
                 getAbsDir(`${abbr}_backend/templates/**/*.html`),
                 getAbsDir(`${abbr}_backend/templates/**/*.mustache`),
-                getAbsDir('node_modules/@cnbritain/**/templates/**/*.html'),
-                getAbsDir('node_modules/@cnbritain/**/templates/**/*.mustache'),
-                getAbsDir('node_modules/@cnbritain/**/partials/**/*.html'),
-                getAbsDir('node_modules/@cnbritain/**/partials/**/*.mustache')
+                getAbsDir('node_modules/@cnbritain/*/templates/**/*.html'),
+                getAbsDir('node_modules/@cnbritain/*/templates/**/*.mustache'),
+                getAbsDir('node_modules/@cnbritain/*/partials/**/*.html'),
+                getAbsDir('node_modules/@cnbritain/*/partials/**/*.mustache')
             ],
             js: [
-                getAbsDir('frontend/js/*.js'),
-                getAbsDir('node_modules/@cnbritain/**/js/*.js')
+                getAbsDir('frontend/js/**/*.js'),
+                getAbsDir('node_modules/@cnbritain/*/js/*.js')
             ],
             sass: [
                 getAbsDir('frontend/sass/**/*.scss'),
-                getAbsDir('node_modules/@cnbritain/**/sass/**/*.scss')
+                getAbsDir('node_modules/@cnbritain/*/sass/**/*.scss')
             ]
         }
     };
