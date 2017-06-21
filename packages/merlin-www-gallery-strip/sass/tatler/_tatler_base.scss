@@ -1,0 +1,117 @@
+.c-gallery-strip {
+    margin-bottom: $MARGIN_LARGE;
+    margin-top: $MARGIN_LARGE;
+}
+
+.c-gallery-strip__wrapper {}
+
+.c-gallery-strip__link {}
+
+.c-gallery-strip__list {
+    background-color: $white;
+    display: flex;
+    flex-direction: row;
+}
+
+li.c-gallery-strip__list__item {
+    margin: 0 1px 0 0;
+
+    &:last-child {
+        margin: 0;
+    }
+
+    &:nth-child(n+4) {
+        display: none;
+    }
+
+    &:nth-child(3) {
+        .c-gallery-strip__remaining {
+            display: block;
+        }
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        &:nth-child(n+4):nth-child(-n+6){
+            display: block;
+        }
+
+        &:nth-child(3){
+            .c-gallery-strip__remaining {
+                display: none;
+            }
+        }
+
+        &:nth-child(6){
+            .c-gallery-strip__remaining {
+                display: block;
+            }
+        }
+
+        & {
+            display: block;
+            width: 16.66%;
+        }
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        &:nth-child(n+4):nth-child(-n+8){
+            display: block;
+        }
+
+        &:nth-child(6){
+            .c-gallery-strip__remaining {
+                display: none;
+            }
+        }
+
+        &:nth-child(8){
+            .c-gallery-strip__remaining {
+                display: block;
+            }
+        }
+
+        & {
+            width: 12.5%;
+        }
+    }
+}
+
+.c-gallery-strip__images__image {}
+
+.c-gallery-strip__detail {
+    text-align: center;
+}
+
+.c-gallery-strip__remaining {
+    background-color: rgba(0,0,0,0.3);
+}
+
+.c-gallery-strip__remaining__label {
+    @include font('STARLING', 27px, 'BOLD', 27px);
+
+    color: #fff;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font('STARLING', 40px, 'BOLD', 40px);
+    }
+}
+
+.c-gallery-strip__remaining__prefix {}
+
+.c-gallery-strip__remaining__value {}
+
+.c-gallery-strip__title {
+    @include font('STARLING', 24px, 'BOLD', 28px);
+
+    margin: 15px 0 0;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin: 20px 0 0;
+    }
+}
+
+.c-gallery-strip__subtitle {}
+
+.c-gallery-strip--tag {}
+
+.c-gallery-strip--gutters {}
