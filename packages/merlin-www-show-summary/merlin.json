@@ -9,8 +9,7 @@
     },
     "themes": {
         "wireframe": "sass/wireframe/wireframe.scss",
-        "vogue": "sass/vogue/vogue.scss",
-        "tatler": "sass/tatler/tatler.scss"
+        "vogue": "sass/vogue/vogue.scss"
     },
     "partials": {
         "index": "partials/index.html",
@@ -27,8 +26,7 @@
             "main": "header",
             "themes": [
                 "wireframe",
-                "vogue",
-                "tatler"
+                "vogue"
             ]
         },
         "related-galleries": {
@@ -36,8 +34,7 @@
             "main": "related-galleries",
             "themes": [
                 "wireframe",
-                "vogue",
-                "tatler"
+                "vogue"
             ]
         },
         "sidebar": {
@@ -45,8 +42,7 @@
             "main": "sidebar",
             "themes": [
                 "wireframe",
-                "vogue",
-                "tatler"
+                "vogue"
             ]
         },
         "all": {
@@ -54,8 +50,7 @@
             "main": "index",
             "themes": [
                 "wireframe",
-                "vogue",
-                "tatler"
+                "vogue"
             ]
         }
     },
