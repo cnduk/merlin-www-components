@@ -39,7 +39,7 @@
 }
 
 .c-card__image__remaining__value {
-    @include font-size('BRUTAL', 17px, 'BOLD', 23px);
+    @include font('BRUTAL', 17px, 'BOLD', 23px);
 }
 
 .c-card__title {
