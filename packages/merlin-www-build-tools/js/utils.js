@@ -98,7 +98,21 @@ function getPackageJsonVersion(packageLocation) {
     return JSON.parse(fs.readFileSync(packageLocation, 'utf8')).version;
 }
 
+function createFileNotExist(filename, done){
+    fs.stat(filename, (err, stats) => {
+        if(err){
+            if(err.code !== "ENOENT"){
+                console.error(err);
+                return done(err);
+            }
+        }
+        if(stats && stats.isFile()) return done();
+        fs.writeFile(filename, '', done);
+    });
+}
+
 module.exports = {
+    createFileNotExist,
     getAbsDir,
     getDefaultConfig,
     getEnvironment,

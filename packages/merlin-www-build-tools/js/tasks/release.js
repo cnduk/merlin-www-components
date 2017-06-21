@@ -17,6 +17,10 @@ module.exports = function taskReleaseExports(taskConfig, browserSync) {
 
     const args = minimist(process.argv.slice(2));
 
+    gulp.task('create-changelog', function(done){
+        utils.createFileNotExist(taskConfig.release.changelog, done);
+    });
+
     gulp.task('changelog', function() {
         return gulp.src(taskConfig.release.changelog, {
             buffer: false
@@ -81,6 +85,7 @@ module.exports = function taskReleaseExports(taskConfig, browserSync) {
         }
 
         runSequence(
+            'create-changelog',
             'bump-version',
             'changelog',
             'commit-changes',
