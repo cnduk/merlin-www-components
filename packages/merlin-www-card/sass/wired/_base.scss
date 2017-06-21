@@ -1,6 +1,11 @@
 .c-card {
-    // NOTE: this is here due to ads centering their text
     text-align: left;
+    &:hover,
+    &:focus {
+        .c-card__title span {
+            text-decoration: underline;
+        }
+    }
 }
 
 .c-card__link {}
