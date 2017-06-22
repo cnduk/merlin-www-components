@@ -1,6 +1,51 @@
-@import '@cnbritain/merlin-www-common:tatler';
-@import '@cnbritain/merlin-www-buttons:tatler';
+.a-podcast {
+	margin: 30px 0;
+}
 
-@import '../wireframe/wireframe';
+.a-podcast__wrapper {}
+.a-podcast__content {}
+.a-podcast__audio {}
 
-@import './_tatler_base';
+.a-podcast__player {
+	margin-bottom: 30px;
+	width: 100%;
+}
+
+.a-podcast__list {
+	font-size: 0;
+	margin-top: -10px;
+}
+
+li.a-podcast__list-item {
+	display: inline-block;
+	font-size: initial;
+
+	margin-right: 10px;
+	margin-top: 10px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	@include min-screen($TYPE_LARGE_COPY_WIDTH) {
+		margin-right: 20px;
+	}
+}
+
+.a-podcast__btn {
+	@include button-group();
+	@include button-group-light();
+
+	&:hover {
+		@include button-group-light-hover();
+	}
+}
+
+.a-podcast__btn--itunes {}
+.a-podcast__btn--rss {}
+.a-podcast__btn--download {
+
+	&:hover {
+
+	}
+}
