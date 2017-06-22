@@ -25,14 +25,14 @@
     }
 
     & + .ad--native-large {
-        margin-top: -$MOBILE_SLICE_MARGIN;
+        margin-top: -$MOBILE_SIDE_GUTTER;
 
         @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-            margin-top: -$TABLET_SLICE_MARGIN;
+            margin-top: -$TABLET_SIDE_GUTTER;
         }
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            margin-top: -$DESKTOP_SLICE_MARGIN;
+            margin-top: -$DESKTOP_SIDE_GUTTER;
         }
     }
 }
