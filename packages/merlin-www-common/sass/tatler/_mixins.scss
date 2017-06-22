@@ -403,7 +403,7 @@
 
     margin: 0 0 10px;
 
-    @include min-screen($CARD_SWITCHER_WIDTH) {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         margin: 25px 0 10px;
     }
 }
