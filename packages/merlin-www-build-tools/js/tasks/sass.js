@@ -7,6 +7,7 @@ const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const rename = require('gulp-rename');
 const merge = require('merge-stream');
+const autoprefixer = require('gulp-autoprefixer');
 const SASS_IMPORTER = require('@cnbritain/merlin-sass-custom-importer');
 
 const utils = require('../utils');
@@ -34,6 +35,12 @@ module.exports = function taskSassExport(taskConfig, browserSync){
 
             return gulp.src(file)
                 .pipe(sourcemaps.init())
+                .pipe(autoprefixer({
+                    browsers: [
+                        "last 2 versions",
+                        "ie >= 10"
+                    ]
+                }))
                 .pipe(sass(sassConfig).on('error', sass.logError))
                 .pipe(rename(renameConfig))
                 // I have a feeling I'm going to need to check this
