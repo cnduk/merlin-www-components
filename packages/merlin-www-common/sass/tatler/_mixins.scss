@@ -311,6 +311,7 @@
 
 @mixin t-gallery-byline-author-large {
     @include t-feature-byline-author-large;
+    @include font-size(12px);
 }
 
 @mixin t-gallery-meta-small {
