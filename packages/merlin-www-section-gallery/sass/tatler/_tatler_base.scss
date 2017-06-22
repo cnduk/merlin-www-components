@@ -12,31 +12,32 @@ $section_gallery_icon_size: 40px;
         .c-gallery__title {
             @include card-title-hover;
         }
-
-        .c-gallery__image {
-            img {
-                @include card-image-hover;
-            }
-        }
     }
 
 }
 
 .c-gallery__wrapper {
-    background-color: $white;
+
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
     width: 100%;
 }
 
-.c-gallery__image {
-    overflow: hidden;
-    img {
-        @include card-image-normal;
-    }
+.c-gallery__images {}
+.c-gallery__image-remaining {
+    background-color: rgba(17, 17, 17, 0.6);
 }
-
+.c-gallery__image-remaining__text {
+    color: $white;
+}
+.c-gallery__image-remaining__text-prefix {
+    @include font('STARLING', 30px, 'BOLD', 30px);
+}
+.c-gallery__image-remaining__text-value {
+    @include font('STARLING', 27px, 'BOLD', 27px);
+}
 .c-gallery__text {
+    background-color: $white;
     padding: $section_gallery_text_padding;
     text-align: center;
 }
@@ -100,10 +101,10 @@ li.c-gallery__meta-item {
     @include t-gallery-meta-small;
 
     border-right: 1px solid $silver;
-    padding-right: 5px;
+    padding-right: 8px;
 
     & + & {
-        padding-left: 5px;
+        padding-left: 8px;
     }
 
     &:last-child {
