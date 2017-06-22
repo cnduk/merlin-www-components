@@ -4,3 +4,38 @@
 @import '../wireframe/wireframe';
 
 @import '../tatler/_tatler_base';
+
+.c-gallery__wrapper {
+    background-color: $COLOUR_BG;
+}
+.c-gallery__images {
+    background-color: $COLOUR_BG;
+}
+.c-gallery__text {
+    background-color: $black;
+}
+.c-gallery__icon {
+    background-color: $black;
+    svg {
+        fill: $white;
+    }
+}
+.c-gallery__title,
+.c-gallery__teaser {
+    color: $white;
+}
+
+li.c-gallery__meta-item {
+    border-right-color: $mine-shaft;
+}
+
+@include min-screen($FEATURE_LARGE_BREAKPOINT){
+    .c-gallery__text {
+        @include border-line-box(left, $bg: $black, $border: $brownish-grey);
+    }
+
+    .c-gallery__icon {
+        background-color: $cod-gray;
+        margin: 0 auto 30px auto;
+    }
+}
