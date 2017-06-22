@@ -29,7 +29,8 @@
     }
 }
 
-.c-figure__caption {
+.c-figure__caption,
+.c-figure__caption p {
     @include font('AGENDA', 16px, 'MEDIUM', 21px);
 
     letter-spacing: 0.5px;
