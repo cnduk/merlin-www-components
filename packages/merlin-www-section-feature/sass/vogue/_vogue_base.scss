@@ -16,28 +16,26 @@
         }
     }
 }
+
 .c-feature--gallery {
     background-color: $COLOUR_BG_GALLERY;
 }
+
 .c-feature__constrain {
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
 }
-.c-feature__wrapper {
-    // Display inline block reset
-    font-size: 0;
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        display: table;
-        padding-top: 0;
-        width: 100%;
-        .c-feature--right & {
-            direction: rtl;
-        }
-    }
-}
-.c-feature__images {
-}
+
+.c-feature__wrapper {}
+.c-feature__images {}
 .c-feature__content {
+    background: #fff;
+    padding: $PADDING_LARGE $PADDING_MEDIUM;
+    text-align: center;
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        padding: $PADDING_X_LARGE;
+    }
+
     .c-feature__icon {
         border: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
         margin: 0 auto $MARGIN_MEDIUM auto;
@@ -46,45 +44,17 @@
         height: 15px;
     }
 }
-.c-feature__images,
-.c-feature__content {
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        background: none;
-        direction: ltr;
-        display: table-cell;
-        position: static;
-        vertical-align: middle;
-        width: 50%;
-    }
-}
+
 .c-feature__image {
     @include card-image-links-normal();
     @include transition(all 0.3s ease-in-out);
 }
+
 .c-feature__image--portrait {
     display: inline-block;
     width: 50%;
 }
-.c-feature__content-center {
-    padding: $PADDING_LARGE $PADDING_MEDIUM;
-    text-align: center;
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        background: #fff;
-        box-sizing: border-box;
-        display: table;
-        min-height: 300px;
-        padding: $PADDING_X_LARGE;
-        position: relative;
-        vertical-align: middle;
-        width: 100%;
-    }
-}
-.c-feature__content-center__center {
-    @include min-screen( $FEATURE_LARGE_BREAKPOINT ){
-        display: table-cell;
-        vertical-align: middle;
-    }
-}
+
 .c-feature__icon {
     background-color: $COLOR_MAIN_PAGE;
     fill: $COLOR_MAIN_TERTIARY;

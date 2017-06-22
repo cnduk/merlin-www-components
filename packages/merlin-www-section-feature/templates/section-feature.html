@@ -20,54 +20,50 @@
             {{/ data.image_list }}
 
             <div class="c-feature__content">
-                <div class="c-feature__content-center">
-                    <div class="c-feature__content-center__center">
-                        {{# data.icon }}
-                            <div class="c-feature__icon">
-                                {{> @cnbritain/merlin-www-image }}
-                            </div>
-                        {{/ data.icon }}
-
-                        {{# data.primary_tag }}
-                            <p class="c-feature__tag">{{ data.title }}</p>
-                        {{/ data.primary_tag }}
-
-                        {{# data.title }}
-                            <h3 class="c-feature__title"><span>{{ data.title }}</span></h3>
-                        {{/ data.title }}
-
-                        {{# data.teaser }}
-                            <p class="c-feature__teaser">{{ &data.teaser }}</p>
-                        {{/ data.teaser }}
-
-                        {{# data.sponsor }}
-                            <p class="c-feature__byline c-feature__byline--sponsorship {{ style.cls }}">
-                                <span class="c-feature__byline-prefix">In partnership with </span>
-                                <span class="c-feature__byline-name">{{ data.title }}</span>
-                            </p>
-                        {{/ data.sponsor }}
-                        {{^ data.sponsor }}
-                            {{# data.byline }}
-                                <p class="c-feature__byline">
-                                    <span class="c-feature__byline-prefix">By</span>
-                                    <span class="c-feature__byline-name">{{ data.byline }}</span>
-                                </p>
-                            {{/ data.byline }}
-                        {{/ data.sponsor }}
-
-                        {{# data.meta_list }}
-                            <ul class="global__list-reset c-feature__meta {{ style.cls }}">
-                                {{# data.items }}
-                                    <li class="c-feature__meta-item {{ style.cls }} c-feature__meta-item--{{ data.item.data.meta_type  }}">
-                                        {{# data.item }}
-                                            <span class="{{ style.cls }}">{{ data.title }}</span>
-                                        {{/ data.item }}
-                                    </li>
-                                {{/ data.items }}
-                            </ul>
-                        {{/ data.meta_list }}
+                {{# data.icon }}
+                    <div class="c-feature__icon">
+                        {{> @cnbritain/merlin-www-image }}
                     </div>
-                </div>
+                {{/ data.icon }}
+
+                {{# data.primary_tag }}
+                    <p class="c-feature__tag">{{ data.title }}</p>
+                {{/ data.primary_tag }}
+
+                {{# data.title }}
+                    <h3 class="c-feature__title"><span>{{ data.title }}</span></h3>
+                {{/ data.title }}
+
+                {{# data.teaser }}
+                    <p class="c-feature__teaser">{{ &data.teaser }}</p>
+                {{/ data.teaser }}
+
+                {{# data.sponsor }}
+                    <p class="c-feature__byline c-feature__byline--sponsorship {{ style.cls }}">
+                        <span class="c-feature__byline-prefix">In partnership with </span>
+                        <span class="c-feature__byline-name">{{ data.title }}</span>
+                    </p>
+                {{/ data.sponsor }}
+                {{^ data.sponsor }}
+                    {{# data.byline }}
+                        <p class="c-feature__byline">
+                            <span class="c-feature__byline-prefix">By</span>
+                            <span class="c-feature__byline-name">{{ data.byline }}</span>
+                        </p>
+                    {{/ data.byline }}
+                {{/ data.sponsor }}
+
+                {{# data.meta_list }}
+                    <ul class="global__list-reset c-feature__meta {{ style.cls }}">
+                        {{# data.items }}
+                            <li class="c-feature__meta-item {{ style.cls }} c-feature__meta-item--{{ data.item.data.meta_type  }}">
+                                {{# data.item }}
+                                    <span class="{{ style.cls }}">{{ data.title }}</span>
+                                {{/ data.item }}
+                            </li>
+                        {{/ data.items }}
+                    </ul>
+                {{/ data.meta_list }}
             </div>
         </div>
     </div>

@@ -7,7 +7,6 @@
     background-color: $seashell;
     padding-bottom: $MOBILE_SIDE_GUTTER;
     padding-top: $MOBILE_SIDE_GUTTER;
-    max-width: none;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding-bottom: $TABLET_SIDE_GUTTER;
@@ -41,29 +40,11 @@
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
 }
-.c-feature__wrapper {
-    font-size: 0;
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        display: table;
-        direction: rtl;
-        padding-top: 0;
-        width: 100%;
-        .c-feature--right & {
-            direction: ltr;
-        }
-    }
-}
+
+.c-feature__wrapper {}
 
 .c-feature__images,
-.c-feature__content {
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        direction: ltr;
-        display: table-cell;
-        position: static;
-        vertical-align: middle;
-        width: 50%;
-    }
-}
+.c-feature__content {}
 
 .c-feature__content {
     background: $white;
