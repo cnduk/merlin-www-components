@@ -107,7 +107,19 @@ li.c-card__meta-item {
 }
 
 
-.c-card__tag {}
+.c-card__tag {
+    @include font('AGENDA', 11px, 'MEDIUM', 11px);
+
+    color: $gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include font('AGENDA', 16px, 'MEDIUM', 16px);
+
+        letter-spacing: 1px;
+    }
+}
 
 .c-card__title {}
 

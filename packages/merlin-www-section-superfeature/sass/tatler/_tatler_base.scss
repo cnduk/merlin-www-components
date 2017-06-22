@@ -85,10 +85,17 @@
 
 
 .c-superfeature__tag {
-    @include t-super-feature-tag-small;
+    @include font('AGENDA', 11px, 'MEDIUM', 11px);
 
-    margin-top: 0;
-    margin-bottom: 8px;
+    color: $gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include font('AGENDA', 16px, 'MEDIUM', 16px);
+
+        letter-spacing: 1px;
+    }
 }
 
 .c-superfeature__byline {

@@ -122,8 +122,17 @@
 }
 
 .c-feature__tag {
-    margin-top: 0;
-    margin-bottom: 8px;
+    @include font('AGENDA', 11px, 'MEDIUM', 11px);
+
+    color: $gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include font('AGENDA', 16px, 'MEDIUM', 16px);
+
+        letter-spacing: 1px;
+    }
 }
 
 .c-feature__title {
