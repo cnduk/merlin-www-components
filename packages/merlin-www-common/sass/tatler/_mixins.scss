@@ -69,6 +69,7 @@
     color: $COLOUR_MAIN_TERTIARY;
     font-style: italic;
     letter-spacing: 1px;
+    text-transform: lowercase;
 }
 
 @mixin t-card-byline-author {
