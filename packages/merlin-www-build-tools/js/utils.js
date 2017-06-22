@@ -21,8 +21,8 @@ function getEnvironment(){
         case 'STAGING':
             label = 'STAGING';
             break;
-        case 'PRODUCTION':
-            label = 'PRODUCTION';
+        case 'PROD':
+            label = 'PROD';
             break;
         default:
             console.warn('No environment sent. Defaulting to production.');
