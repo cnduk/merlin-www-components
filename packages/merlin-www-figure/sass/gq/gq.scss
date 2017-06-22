@@ -44,7 +44,7 @@ li.c-figure__toolbar-listitem {
 }
 
 .c-figure__caption {
-	p {
+	p:not([class]) {
 		@include font("GOTHAM", 16px, 400, 26px, -2);
 		color: $mineshaft;
 		margin-bottom: 12px;

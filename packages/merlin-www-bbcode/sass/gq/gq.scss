@@ -14,9 +14,9 @@
 // Note
 // -------------------- //
 .bb-note {
+    @include font-size(12px);
+    @include line-height(16px);
     border-top: 1px solid $bon-jour;
-    font-size: 12px;
-    line-height: 16px;
     margin: 28px 0 40px 0;
     padding-top: 12px;
     position: relative;
