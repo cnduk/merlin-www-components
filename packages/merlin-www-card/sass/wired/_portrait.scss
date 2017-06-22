@@ -54,12 +54,12 @@
     }
 
     .c-card__byline-prefix {
-        @include font("EXCHANGE WEB");
+        @include font("EXCHANGE WEB", 11px, null, 11px);
         font-style: italic;
     }
 
     .c-card__byline-name {
-        @include font("BRUTAL");
+        @include font("BRUTAL", 11px, 700, 11px);
     }
 
     .c-card__meta {
