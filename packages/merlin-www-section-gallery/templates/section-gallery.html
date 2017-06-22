@@ -45,7 +45,10 @@
 	            <hr class="c-gallery__separator" />
 
 	            {{# data.sponsor }}
-
+                    <p class="c-gallery__byline c-gallery__byline--sponsorship {{ style.cls }}">
+                        <span class="c-gallery__byline-prefix">In partnership with </span>
+                        <span class="c-gallery__byline-name">{{ data.title }}</span>
+                    </p>
 	            {{/ data.sponsor }}
 	            {{^ data.sponsor }}
 	                {{# data.byline }}
