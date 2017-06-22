@@ -434,6 +434,7 @@
 
 /// FANCY BORDER LINE BOX
 @mixin border-line-box($direction: top, $width: 20px, $bg: $white, $border: #ccc) {
+    background: $bg;
     border: $width solid $bg;
     border-top-width: if($direction == top, 0, $width);
     border-right-width: if($direction == right, 0, $width);

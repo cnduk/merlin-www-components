@@ -42,12 +42,15 @@
 
 .c-feature__wrapper {
     display: flex;
+    direction: ltr;
     flex-direction: column;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        direction: ltr;
         flex-direction: row;
 
         .c-feature--right & {
+            direction: ltr;
             flex-direction: row-reverse;
         }
     }
@@ -57,13 +60,29 @@
     }
 }
 
+.c-feature__images,
+.c-feature__content {
+    position: relative;
+    display: flex;
+    width: 100%;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        width: 50%;
+    }
+}
+
 .c-feature__images {
     flex-direction: row;
 }
 
 .c-feature__content {
     align-items: center;
+    display: flex;
+    direction: ltr;
+    flex-direction: column;
     justify-content: center;
+    padding: 28px 20px;
+    text-align: center;
 
     .c-feature__icon {
         margin: 0 auto $MARGIN_MEDIUM auto;
@@ -85,35 +104,9 @@
     }
 }
 
-
-.c-feature__images,
-.c-feature__content {
-    position: relative;
-    display: flex;
-    width: 100%;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        width: 50%;
-    }
-}
-
 .c-feature__image--portrait {
     display: inline-block;
     width: 50%;
-}
-
-.c-feature__content-center {
-    padding: 28px 20px;
-    text-align: center;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: 0;
-        max-width: 500px;
-    }
-}
-
-.c-feature__content-center__center {
-    font-size: 0;
 }
 
 .c-feature__icon {
@@ -159,6 +152,7 @@
 
         margin: 0 0 25px;
         padding: 0 0 25px;
+        max-width: 500px;
     }
 }
 .c-feature__teaser {
