@@ -2,3 +2,336 @@
 @import "@cnbritain/merlin-www-buttons:wired";
 
 @import "../wireframe/wireframe";
+
+// -------------------- //
+// Embed
+// -------------------- //
+.bb-embed {
+    margin: 40px 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    	margin: 60px 0;
+    }
+}
+
+// -------------------- //
+// Note
+// -------------------- //
+.bb-note {
+	@include font("BRUTAL", 13px, 400);
+    border-top: 1px solid #000;
+    margin: 40px 0;
+    padding-top: 20px;
+}
+
+// -------------------- //
+// Interactive
+// -------------------- //
+.bb-interactive {
+    margin: 40px 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    	margin: 60px 0;
+    }
+}
+
+// -------------------- //
+// Dropcap
+// -------------------- //
+.bb-dropcap {}
+.bb-dropcap--letter {
+
+}
+
+// -------------------- //
+// Blockquote
+// -------------------- //
+.bb-blockquote {
+	border-left-color: #7e7e7f;
+	margin: 40px 0;
+
+	@include min-screen($TYPE_LARGE_COPY_WIDTH) {
+	    margin: 60px 0;
+	}
+}
+
+.bb-blockquote__quote {
+    @include font-size(16px);
+    @include line-height(21px);
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(17px);
+        @include line-height(22px);
+    }
+}
+
+.bb-blockquote__separator {
+    border: none;
+    border-bottom: 1px solid #7e7e7f;
+    margin: 15px 0;
+    width: 15px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        width: 10px;
+    }
+}
+
+.bb-blockquote__credit {
+    @include font-size(14px);
+    @include line-height(22px);
+}
+
+// -------------------- //
+// Pullquote
+// -------------------- //
+.bb-pullquote {
+    margin: 30px 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin: 60px 0;
+    }
+}
+
+.bb-pullquote__quote {
+    &:before,
+    &:after {
+        content: '';
+    }
+}
+
+.bb-pullquote__separator {
+    border: none;
+    border-top: 1px solid #000;
+    margin: 12px auto;
+    width: 40px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin: 20px auto;
+        width: 50px;
+    }
+}
+
+.bb-pullquote__credit {
+	@include font("BRUTAL", 13px, 400, 13px);
+    text-align: center;
+}
+
+// -------------------- //
+// Infobox
+// -------------------- //
+.bb-infobox {
+    border: 5px solid #000;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.bb-infobox__title {
+	@include font("BRUTAL", 15px, 700, 23px);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.bb-infobox__hr {
+    border: none;
+    border-top: 1px solid #000;
+    margin: 15px 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin: 16px 0 20px 0;
+    }
+}
+
+.bb-infobox__item {
+    margin: 0;
+
+    &:last-child {
+        .bb-infobox__item__value {
+            margin: 0;
+        }
+    }
+}
+
+.bb-infobox__item__key {
+	@include font("BRUTAL", 15px, 700, 23px);
+    margin: 0;
+}
+
+.bb-infobox__item__value {
+	@include font("BRUTAL", 15px, 300, 23px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(17px);
+        @include line-height(22px);
+    }
+    margin: 0 0 20px 0;
+}
+
+// -------------------- //
+// Question / Answer
+// -------------------- //
+.bb-question,
+.bb-answer {}
+.bb-question__question,
+.bb-answer__answer {
+	@include font("EXCHANGE WEB", 17px, null, 22px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(19px);
+        @include line-height(27px);
+    }
+}
+
+.bb-question__question {
+	@include font-weight(600);
+}
+
+.bb-answer__answer {
+	@include font-weight(400);
+}
+
+.bb-question__q,
+.bb-answer__a {
+	@include font("BRUTAL");
+	@include font-weight(700);
+    padding-right: 5px;
+}
+
+.bb-question__separator,
+.bb-answer__separator {
+    border: none;
+    border-bottom: 1px solid #7e7e7f;
+    margin: 15px 0;
+    width: 15px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        width: 10px;
+    }
+}
+
+.bb-question__author,
+.bb-answer__author {
+	@include font("BRUTAL", 13px, 400, 27px);
+}
+
+.bb-question__by,
+.bb-answer__by {
+	@include font("EXCHANGE WEB");
+	@include font-weight(400);
+    font-style: italic;
+}
+
+.bb-question__separator {
+    margin: 0 0 5px 0;
+    width: 15px;
+}
+
+// -------------------- //
+// Figure
+// -------------------- //
+.bb-figure {
+    box-sizing: border-box;
+    margin: 45px 0;
+}
+
+.bb-figure__caption {
+    @include font-size(16px);
+    @include line-height(24px);
+    margin: 15px 0 0 0;
+}
+
+.bb-figure__credit {
+    @include font-size(12px);
+    margin: 12px 0 0 0;
+
+    &:before {
+        content: 'Credit ';
+        @include font-weight(300);
+    }
+}
+
+// -------------------- //
+// Card
+// -------------------- //
+// TODO
+
+// -------------------- //
+// Gallery
+// -------------------- //
+.bb-gallery {
+    margin: 30px 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin: 60px 0;
+    }
+
+    &:hover {
+        .bb-gallery__title span+span {
+            text-decoration: underline;
+        }
+    }
+
+}
+
+.bb-gallery__title {
+	@include font("BRUTAL", 17px, 700, 23px);
+    color: #000;
+    margin: 0 0 15px 0;
+}
+
+.bb-gallery__title__icon {
+    padding-right: 3px;
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        padding-right: 5px;
+    }
+}
+
+.bb-gallery__title__icon--gallery {
+    svg {
+        display: inline-block;
+        vertical-align: sub;
+        width: 20px;
+    }
+}
+
+.bb-gallery__cols {}
+.bb-gallery__col {}
+.bb-gallery__col--2-2 {}
+.bb-gallery__col--1-1 {}
+.bb-gallery__image {}
+.bb-gallery__remaining {}
+
+.bb-gallery__remaining-text {
+	@include font("BRUTAL");
+	@include font-weight(700);
+}
+
+.bb-gallery__remaining-text--prefix {
+    @include font-size(20px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(27px);
+        position: relative;
+        top: -4px;
+    }
+}
+
+.bb-gallery__remaining-text--value {
+    @include font-size(25px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(37px);
+    }
+}
+
+// -------------------- //
+// Video
+// -------------------- //
+// TODO
+
+// -------------------- //
+// Button
+// -------------------- //
+.bb-button {
+    @include button-single();
+    @include button-single-light();
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
