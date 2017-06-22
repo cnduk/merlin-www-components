@@ -1,0 +1,41 @@
+// -------------------- //
+// Contributor
+// -------------------- //
+@mixin card-contributor {
+    @include card-landscape;
+
+    .c-card__image {
+        border: 1px solid $silver;
+        padding: 120px;
+        width: 100px;
+    }
+}
+@mixin card-contributor-small {
+    @include card-contributor;
+    @include card-landscape-small;
+}
+
+@mixin card-contributor-large {
+    @include card-contributor;
+    @include card-portrait;
+
+    .c-card__obj__body {
+        background: transparent;
+    }
+}
+
+.c-card--contributor {
+    @include card-contributor-small;
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include card-contributor-large;
+    }
+}
+
+.c-card--contributor-small {
+    @include card-contributor-small;
+}
+
+.c-card--contributor-large {
+    @include card-contributor-small;
+}
