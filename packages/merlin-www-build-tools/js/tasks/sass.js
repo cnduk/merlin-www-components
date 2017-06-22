@@ -35,13 +35,13 @@ module.exports = function taskSassExport(taskConfig, browserSync){
 
             return gulp.src(file)
                 .pipe(sourcemaps.init())
+                .pipe(sass(sassConfig).on('error', sass.logError))
                 .pipe(autoprefixer({
                     browsers: [
                         "last 2 versions",
                         "ie >= 10"
                     ]
                 }))
-                .pipe(sass(sassConfig).on('error', sass.logError))
                 .pipe(rename(renameConfig))
                 // I have a feeling I'm going to need to check this
                 .pipe(sourcemaps.write('./'))
