@@ -171,6 +171,20 @@
     color: $COLOUR_MAIN_PRIMARY;
 }
 
+@mixin t-feature-teaser-small {
+    @include font('STARLING', 15px, 'NORMAL', 20px);
+
+    color: $COLOUR_TYPE_BODY;
+    font-style: italic;
+}
+
+@mixin t-feature-teaser-large {
+    color: $COLOUR_TYPE_BODY;
+    @include font('STARLING', 18px, 'NORMAL', 23px);
+
+    font-style: italic;
+}
+
 @mixin t-feature-byline-prefix-small {
     @include t-card-byline-prefix;
 }
@@ -269,12 +283,18 @@
 
 @mixin t-gallery-title-small {
     @include t-feature-title-small;
-
-    color: $COLOUR_MAIN_DARK;
 }
 
 @mixin t-gallery-title-large {
     @include t-feature-title-large;
+}
+
+@mixin t-gallery-teaser-small {
+    @include t-feature-teaser-small;
+}
+
+@mixin t-gallery-teaser-large {
+    @include t-feature-teaser-large;
 }
 
 @mixin t-gallery-byline-prefix-small {
