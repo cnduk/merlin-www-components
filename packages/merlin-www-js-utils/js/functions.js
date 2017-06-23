@@ -1009,3 +1009,93 @@ export function unescapeJinjaValue(value){
     tmp = null;
     return unescaped;
 }
+
+/**
+ * Get the host name from a url string
+ * @param  {String} url a url
+ * @return {String}     the host name
+ */
+export function getUrlHost(url){
+    var charPosition = url.indexOf('?');
+    if(charPosition === -1) return url;
+    return url.substring(0, charPosition);
+}
+
+/**
+ * Get query string arguments from a url
+ * @param  {String} url a url
+ * @return {Object}
+ */
+export function getQueryArgs(url){
+    var charPosition = url.indexOf('?');
+    var args = {};
+
+    if(charPosition === -1) return args;
+
+    var argString = url.substr(charPosition + 1);
+    var argPieces = argString.split('&');
+    var argPiecesLen = argPieces.length;
+
+    var splitArg = null;
+    var key = null;
+
+    // Andy was not happy about my while loop :(
+    for(var i = 0; i < argPiecesLen; i++){
+        splitArg = argPieces[i].split('=');
+        key = decodeURIComponent(splitArg[0]);
+
+        if(!args.hasOwnProperty(key)){
+            args[key] = [];
+        }
+
+        if(splitArg.length > 1){
+            args[key].push(decodeURIComponent(splitArg[1]));
+        }
+    }
+
+    return args;
+}
+
+/**
+ * Get a query string from an object
+ * @param  {Object} args
+ * @return {String}
+ */
+function getQueryString(args){
+    var qs = '';
+    for(var key in args){
+        if(!args.hasOwnProperty(key)) continue;
+        args[key].forEach(function(value){
+            qs += '&' + encodeURIComponent(key) + '=' +
+                encodeURIComponent(value);
+        });
+    }
+    // Chop off first &
+    return qs.substr(1);
+}
+
+/**
+ * Update query string values in  aurl
+ * @param  {String} url
+ * @param  {Object} args new query string values
+ * @return {String}
+ */
+function updateQueryString(url, args){
+    // Get the existing args from url if any
+    var currentArgs = getQueryArgs(url);
+
+    // Update args with our args
+    for(var key in args){
+        if(!args.hasOwnProperty(key)) continue;
+        if(Array.isArray(args[key])){
+            currentArgs[key] = args[key];
+        } else {
+            currentArgs[key] = [args[key]];
+        }
+    }
+
+    // Build query string
+    var hostUrl = getUrlHost(url);
+    var querystring = getQueryString(currentArgs);
+    return hostUrl + '?' + querystring;
+}
