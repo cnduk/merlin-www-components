@@ -1,13 +1,13 @@
 {
   "name": "@cnbritain/merlin-www-js-infinitescroll",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Infinite scroll library",
   "main": "js/index.js",
   "scripts": {},
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-www-js-utils": "^1.2.0",
+    "@cnbritain/merlin-www-js-utils": "^1.2.1",
     "eventemitter2": "^4.1.0"
   }
 }
