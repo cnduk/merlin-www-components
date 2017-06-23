@@ -10,6 +10,8 @@
 
     .c-feature__image {
         overflow: hidden;
+        display: flex;
+        flex: 1 0 auto;
 
         img {
             @include card-image-normal;
@@ -71,8 +73,9 @@
 
 .c-feature__content {
     align-items: center;
-    display: flex;
+    background: $white;
     direction: ltr;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 28px 20px;
@@ -81,8 +84,12 @@
     .c-feature__icon {
         margin: 0 auto $MARGIN_MEDIUM auto;
         padding: $PADDING_XX_SMALL;
-        width: 15px;
-        height: 15px;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        background: $white;
+        top: -20px;
+        border-radius: 50%;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
@@ -95,6 +102,12 @@
         .c-feature--right & {
             @include border-line-box(right);
         }
+
+        .c-feature__icon {
+            position: static;
+
+            background: $wild-sand;
+        }
     }
 }
 
@@ -105,7 +118,10 @@
 
 .c-feature__icon {
     background-color: $COLOUR_MAIN_PAGE;
-    fill: $COLOUR_MAIN_TERTIARY;
+
+    svg, path {
+        fill: $black;
+    }
 }
 
 .c-feature__tag {
@@ -161,6 +177,8 @@
 
 .c-feature__byline {
     @include feature-card-byline;
+
+    margin: 0 0 10px
 }
 
 .c-feature__byline-prefix {

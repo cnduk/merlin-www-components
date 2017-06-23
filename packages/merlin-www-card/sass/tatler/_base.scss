@@ -112,9 +112,8 @@ li.c-card__meta-item {
 
     color: $gray;
     letter-spacing: 1px;
+    margin: 0 0 5px;
     text-transform: uppercase;
-
-    margin: 0 0 10px;
 
     @include min-screen($CARD_SWITCHER_WIDTH) {
         @include font('AGENDA', 12px, 'MEDIUM', 12px);
@@ -141,10 +140,10 @@ li.c-card__meta-item {
 .c-card__sponsor {
     @include card-byline;
 
-    margin: 10px 0 0;
+    margin: 5px 0 0;
 
     @include min-screen($CARD_SWITCHER_WIDTH) {
-        margin: 18px 0 0;
+        margin: 10px 0 0;
     }
 }
 
@@ -163,10 +162,10 @@ li.c-card__meta-item {
     @include line-height(15px);
 
     display: inline-block;
-    margin-top: 7px;
+    margin-top: 5px;
 
     @include min-screen($CARD_SWITCHER_WIDTH) {
-        margin-top: 15px;
+        margin-top: 5px;
     }
 
 }
