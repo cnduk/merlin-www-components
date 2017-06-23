@@ -1,14 +1,14 @@
 .a-share {
-    margin: 25px 0 0;
+    padding: 0 0 30px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin: 30px 0 0;
+        padding: 0 0 60px;
     }
 }
 .a-share__wrapper {}
 
 .a-share__title {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    @include font('AGENDA', 15px, 'MEDIUM', 15px);
 
     letter-spacing: 1px;
     margin: 0 0 $MARGIN_SMALL 0;

@@ -5,7 +5,7 @@
 
     @include min-screen($TOP_STORIES_DESKTOP_BREAKPOINT){
         display: block;
-        padding: 20px 0 0;
+        padding: 20px 0 21px;
     }
 
 }
@@ -51,10 +51,12 @@
     margin-left: -20px;
     max-width: $MAXIMUM_PAGE_WIDTH;
     padding-left: 20px;
+    padding-bottom: 10px;
 
     @include min-screen($MAXIMUM_PAGE_WIDTH) {
         padding-left: 0;
         margin-left: 0;
+        padding-bottom: 0;
     }
 
     .has-no-scroll & {

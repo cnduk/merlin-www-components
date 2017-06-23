@@ -22,12 +22,8 @@
         }
     }
 
-    @include min-screen(1500px) {
-        padding-left: 160px;
-    }
-
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding-right: 238px;
+        padding-right: 160px;
     }
 }
 
@@ -100,7 +96,7 @@ a.n-gallery-close {
 
     &:hover {
         svg {
-            fill: #8a8a8a;
+            fill: $gray;
         }
     }
 
@@ -125,12 +121,12 @@ a.n-gallery-close {
     }
 
     &:hover {
-        svg {
-            fill: $white;
+        svg, path, circle {
+            fill: $gray;
         }
     }
 
-    svg {
+    svg, path, circle {
         height: 100%;
         fill: $white;
         width: 18px;

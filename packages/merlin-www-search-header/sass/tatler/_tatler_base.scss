@@ -6,11 +6,11 @@
     padding: 45px $MOBILE_SIDE_GUTTER;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: 45px $TABLET_SIDE_GUTTER;
+        padding: 30px $TABLET_SIDE_GUTTER;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: 45px $DESKTOP_SIDE_GUTTER;
+        padding: 30px $DESKTOP_SIDE_GUTTER;
     }
 
     form {
@@ -19,7 +19,7 @@
 }
 
 .srch-textbox {
-    @include font('STARLING', 35px, 'NORMAL', 38px);
+    @include font('STARLING',35px, 'NORMAL', 38px);
 
     appearance: none;
     background: transparent;
@@ -42,6 +42,9 @@
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         @include font-size(65px);
         @include line-height(48px);
+
+        text-align: left;
+        padding-left: 0;
     }
 }
 
@@ -57,5 +60,7 @@
         @include font('AGENDA', 14px, 'MEDIUM', 20px);
 
         margin: 12px 0 0;
+        text-align: left;
+        padding-left: 0;
     }
 }

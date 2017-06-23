@@ -58,13 +58,13 @@
     letter-spacing: 0.5px;
     margin: 20px 0 40px;
     padding-top: 12px;
-    padding-left: 23px;
+    padding-left: 20px;
     position: relative;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font('AGENDA', 14px, 'MEDIUM', 22px);
 
-        padding-left: 28px;
+        padding-left: 20px;
     }
 
     &:before {
@@ -77,6 +77,10 @@
         position: absolute;
         top: 17px;
         width: 8px;
+
+        @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            top: 19px;
+        }
     }
 }
 
@@ -113,8 +117,8 @@
 .bb-gallery__link {}
 
 .bb-gallery__title {
-    @include font-size(16px);
-    @include line-height(19px);
+    @include font-size(18px);
+    @include line-height(20px);
 
     letter-spacing: 0;
     margin: 30px 0 10px;
@@ -254,7 +258,6 @@
     @include font('AGENDA', 12px, 'MEDIUM', 12px);
 
     color: #8a8a8a;
-    font-style: italic;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -312,7 +315,7 @@
  */
 .bb-blockquote {
     border-left: 1px solid $COLOUR_MAIN_HIGHLIGHT;
-    margin: 40px 30px;
+    margin: 40px 0;
     padding: 0 0 0 20px;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
@@ -491,7 +494,8 @@
  * Card
  */
 .bb-card {
-    border: 1px solid $white-two;
+    background: $wild-sand;
+    border: 0;
     margin: 30px 0;
     padding: 15px;
 
@@ -501,12 +505,12 @@
         &:before {
             @include font('AGENDA', 12px, 'MEDIUM', 12px);
 
-            color: $black-two;
-            bottom: 16px;
-            content: 'Continue Reading ';
+            color: $cinnabar;
+            bottom: 20px;
+            content: 'Continue Reading';
             position: absolute;
             letter-spacing: 1px;
-            right: 16px;
+            right: 20px;
             text-transform: uppercase;
         }
     }
@@ -562,21 +566,25 @@
 .bb-card__tag {
     @include font('AGENDA', 12px, 'MEDIUM', 12px);
 
-    color: $boulder;
+    color: $gray;
     letter-spacing: 1px;
-    margin: 0;
+    margin: 0 0 7px;
     text-transform: uppercase;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin: 0 0 10px;
+    }
 }
 
 .bb-card__title {
     @include font('STARLING', 18px, 'NORMAL', 22px);
 
-    margin-top: 3px;
+    margin: 0;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font('STARLING', 23px, 'BOLD', 28px);
 
-        margin-top: 10px;
+        margin: 10px 0 0;
     }
 }
 

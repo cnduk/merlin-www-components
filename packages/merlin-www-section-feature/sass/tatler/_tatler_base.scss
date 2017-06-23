@@ -21,12 +21,6 @@
         .c-feature__title {
             @include card-title-hover;
         }
-
-        .c-feature__image {
-            img {
-                @include card-image-hover;
-            }
-        }
     }
 }
 
@@ -115,23 +109,25 @@
 }
 
 .c-feature__tag {
-    @include font('AGENDA', 11px, 'MEDIUM', 11px);
+   @include font('AGENDA', 12px, 'MEDIUM', 12px);
 
     color: $gray;
     letter-spacing: 1px;
     text-transform: uppercase;
+    margin: 0 0 10px;
 
     @include min-screen($CARD_SWITCHER_WIDTH) {
-        @include font('AGENDA', 16px, 'MEDIUM', 16px);
+        @include font('AGENDA', 12px, 'MEDIUM', 12px);
 
         letter-spacing: 1px;
+        margin: 0 0 15px;
     }
 }
 
 .c-feature__title {
     @include t-feature-title-small;
 
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     padding: 0 0 15px;
     position: relative;
 
@@ -181,9 +177,12 @@
     @include card-meta;
 
     display: inline-block;
+    margin-top: 0;
+    padding-top: 0;
 
     @include min-screen($CARD_SWITCHER_WIDTH) {
-        padding-top: 8px;
+        margin-top: 0;
+        padding-top: 0;
     }
 }
 

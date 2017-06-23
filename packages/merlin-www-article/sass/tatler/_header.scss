@@ -23,12 +23,12 @@
     padding: 20px 0 30px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: 60px 0;
+        padding: 60px 360px 40px 0;
     }
 
-    @include min-screen($ARTICLE_TOTAL) {
-        padding: 60px 0;
-    }
+    // @include min-screen($ARTICLE_TOTAL) {
+    //     padding: 60px 0;
+    // }
 }
 
 .a-header__title {
@@ -61,6 +61,10 @@
     p {
         @include font-size(23px);
         @include line-height(28px);
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin: 25px 0 30px;
+        }
     }
 }
 
@@ -163,7 +167,7 @@
 .a-header__tag,
 .a-header__tag__primary,
 .a-header__tag__secondary {
-    @include font('AGENDA', 11px, 'MEDIUM', 11px);
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
 
     color: $gray;
     letter-spacing: 1px;
@@ -250,11 +254,81 @@
 .a-header__meta-item--tag {}
 .a-header__meta-item {}
 
-.a-header__event {}
-.a-header__event-title {}
-.a-header__event-location {}
-.a-header__event-date {}
-.a-header__event-btn {}
+.a-header__event {
+    margin-top: 25px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 0;
+    }
+}
+
+.a-header__event-title {
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+
+    color: $cinnabar;
+    letter-spacing: 1px;
+    margin: 15px 0 5px;
+    text-transform: uppercase;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font('AGENDA', 13px, 'MEDIUM', 13px);
+
+        margin: 15px 0 4px;
+    }
+}
+
+.a-header__event-location {
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+
+    text-transform: none;
+    letter-spacing: .5px;
+    color: #8a8a8a;
+    margin: 0 0 5px;
+
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font('AGENDA', 13px, 'MEDIUM', 13px);
+
+        margin: 0 0 2px;
+    }
+}
+
+.a-header__event-date {
+    @include font('AGENDA', 10px, 'MEDIUM', 18px);
+
+    color: #8a8a8a;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 0 0 8px;
+    }
+}
+
+.a-header__event-btn {
+    @include font('AGENDA', 10px, 'MEDIUM', 10px);
+
+    background: transparent;
+    border: 1px solid $cinnabar;
+    color: $cinnabar;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 5px;
+    }
+
+    &:focus,
+    &:hover {
+        background: $cinnabar;
+        color: $white;
+    }
+}
 
 .a-header--gallery {}
 

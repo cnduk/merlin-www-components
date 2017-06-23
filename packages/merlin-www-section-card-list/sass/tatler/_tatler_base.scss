@@ -220,6 +220,25 @@
     }
 }
 
+.c-card-section--a-recommended {
+    padding-top: 30px;
+
+    .c-card-section__title {
+        @include font-size(18px);
+        @include line-height(18px);
+
+        padding-bottom: 20px;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-top: 60px;
+
+        .c-card-section__title {
+            padding-bottom: 0;
+        }
+    }
+}
+
 .c-card-section--mag-magazines {
     .c-card-section__constrain {
         max-width: $MAXIMUM_PAGE_WIDTH;

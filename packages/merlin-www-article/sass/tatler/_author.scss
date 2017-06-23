@@ -8,7 +8,8 @@
     @include card-meta;
 }
 
-.a-author__bio {
+.a-author__bio,
+.a-author__bio p {
     @include font('AGENDA', 13px, 'MEDIUM', 18px);
 
     letter-spacing: 0.5px;

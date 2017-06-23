@@ -108,16 +108,20 @@ li.c-card__meta-item {
 
 
 .c-card__tag {
-    @include font('AGENDA', 11px, 'MEDIUM', 11px);
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
 
     color: $gray;
     letter-spacing: 1px;
     text-transform: uppercase;
 
+    margin: 0 0 10px;
+
     @include min-screen($CARD_SWITCHER_WIDTH) {
-        @include font('AGENDA', 16px, 'MEDIUM', 16px);
+        @include font('AGENDA', 12px, 'MEDIUM', 12px);
 
         letter-spacing: 1px;
+
+        margin: 0 0 15px;
     }
 }
 

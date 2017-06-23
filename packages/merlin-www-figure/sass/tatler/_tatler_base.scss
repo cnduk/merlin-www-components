@@ -4,7 +4,7 @@
 }
 
 .c-figure__wrapper {
-    background: $wild-sand;
+    background: $cod-gray;
 }
 
 .c-figure__title,
@@ -26,6 +26,8 @@
 
     @include desktop-size {
         @include font('AGENDA', 16px, 'MEDIUM', 16px);
+
+        letter-spacing: 1px;
     }
 }
 
@@ -81,5 +83,33 @@ li.c-figure__toolbar-listitem {
     svg {
         fill: $black;
         width: 17px;
+    }
+}
+
+
+@each $name, $color in $COLOUR_SOCIAL {
+    li.c-figure__toolbar-listitem--#{$name} {
+        svg, path {
+            fill: map-get($COLOUR_SOCIAL, $name);
+        }
+
+        &:hover {
+            background-color: map-get($COLOUR_SOCIAL, $name);
+
+            svg, path {
+                fill: #fff;
+            }
+        }
+    }
+}
+
+li.c-figure__toolbar-listitem--zoom {
+
+    &:hover {
+        background-color: $black;
+
+        svg, path {
+            fill: #fff;
+        }
     }
 }

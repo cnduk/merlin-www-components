@@ -11,6 +11,10 @@
 
 .a-body {
     margin-top: 40px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 0;
+    }
 }
 
 .a-body--gallery {}
@@ -22,9 +26,15 @@
 .a-body__wrapper {}
 .a-body__content {}
 
+
+.a-infinite {
+    background: $white;
+}
+
 .a-infinite__message {
     box-sizing: border-box;
-    margin: 0 auto 40px auto;
+    margin: 0 auto;
+    padding-bottom: 40px;
     max-width: $MAXIMUM_PAGE_WIDTH - $DESKTOP_SIDE_GUTTER * 2;
     position: relative;
 
@@ -33,7 +43,7 @@
     }
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: 60px;
+        padding-bottom: 60px;
     }
 }
 
