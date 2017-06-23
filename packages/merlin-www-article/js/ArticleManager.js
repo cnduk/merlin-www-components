@@ -12,7 +12,8 @@ import {
     insertBefore,
     onPageLoad,
     removeEvent,
-    throttle
+    throttle,
+    updateQueryString
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import { hasHistory } from '@cnbritain/merlin-www-js-utils/js/detect';
 import InfiniteScroll from '@cnbritain/merlin-www-js-infinitescroll';
@@ -229,9 +230,11 @@ function infiniteScrollUrl(){
         getStorage('article_referral_uid'));
     var excludeUid = validateArticleUid(
         getStorage('article_exclude_uid'));
-    return (
-        location.origin + '/xhr/article/next?referral_uid=' +
-        referralUid + '&exclude_uid=' + excludeUid);
+    var url = updateQueryString(getStorage('infinite_url'), {
+        referral_uid: referralUid,
+        exclude_uid: excludeUid
+    });
+    return location.origin + url;
 }
 
 
