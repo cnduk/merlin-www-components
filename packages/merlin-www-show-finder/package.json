@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-show-finder",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "Show finder and live shows",
   "main": "js/index.js",
   "scripts": {
@@ -10,8 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "@cnbritain/merlin-www-common": "^1.5.2",
-    "@cnbritain/merlin-www-js-combobox": "^1.0.4",
-    "@cnbritain/merlin-www-js-utils": "^1.1.0"
+    "@cnbritain/merlin-www-js-combobox": "^1.0.5",
+    "@cnbritain/merlin-www-js-utils": "^1.2.0"
   },
   "devDependencies": {
     "@cnbritain/merlin-component-demo-server": "^2.8.3"

@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-ads",
-  "version": "1.6.6",
+  "version": "1.6.7",
   "description": "",
   "main": "js/index.js",
   "scripts": {
@@ -10,8 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "@cnbritain/merlin-www-common": "^1.5.2",
-    "@cnbritain/merlin-www-js-gatracker": "^1.2.1",
-    "@cnbritain/merlin-www-js-utils": "^1.1.0",
+    "@cnbritain/merlin-www-js-gatracker": "^1.2.2",
+    "@cnbritain/merlin-www-js-utils": "^1.2.0",
     "eventemitter2": "^4.1.0"
   }
 }
