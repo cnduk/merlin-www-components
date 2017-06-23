@@ -1061,7 +1061,7 @@ export function getQueryArgs(url){
  * @param  {Object} args
  * @return {String}
  */
-function getQueryString(args){
+export function getQueryString(args){
     var qs = '';
     for(var key in args){
         if(!args.hasOwnProperty(key)) continue;
@@ -1080,7 +1080,7 @@ function getQueryString(args){
  * @param  {Object} args new query string values
  * @return {String}
  */
-function updateQueryString(url, args){
+export function updateQueryString(url, args){
     // Get the existing args from url if any
     var currentArgs = getQueryArgs(url);
 
