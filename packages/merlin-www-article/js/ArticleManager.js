@@ -353,15 +353,6 @@ function onInfiniteLoadComplete(e){
     addHtmlToFragment = null;
 }
 
-
-function emitSimpleReach(config){
-    // Always fire a stop as at the moment we don't keep track if we're in
-    // a simplereach article
-    dispatchSimpleReachStop();
-    if(config !== null) dispatchSimpleReach(config);
-}
-
-
 var isFirstArticle = true;
 function onArticleFocus(e){
 
@@ -385,10 +376,14 @@ function onArticleFocus(e){
     if (hasHistory) history.replaceState({}, article.properties.title, url);
     document.title = article.properties.title;
 
+    // We always want to stop if we focus into a new article. If the article
+    // with focus has a simplereach config, it will then trigger a new
+    // simplereach session.
+    dispatchSimpleReachStop();
     if(article.simplereach){
         var simplereachConfig = cloneObjectDeep(article.simplereach);
         simplereachConfig['ref_url'] = lastUrl
-        emitSimpleReach(simplereachConfig);
+        dispatchSimpleReach(simplereachConfig);
     }
 
 }
