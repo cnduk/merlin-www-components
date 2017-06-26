@@ -1,5 +1,10 @@
-.c-card-section--contributors {
-    .c-card__separator {}
-    .c-card__byline {}
-    .c-card__byline-prefix {}
+.c-card-section--c-contributors {
+    .c-card-section__title {
+        text-align: center;
+        margin: 0 0 30px;
+    }
+
+    .c-card-list__item {
+        padding: 0 15px;
+    }
 }

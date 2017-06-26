@@ -2,17 +2,58 @@
 // Contributor
 // -------------------- //
 @mixin card-contributor {
-    @include card-landscape;
+    .c-card__obj {
+        @include global__flag('c-card__obj');
+    }
 
-    .c-card__image {
+    .c-card__images {
         border: 1px solid $silver;
-        padding: 120px;
-        width: 100px;
+        padding: 10px;
+    }
+
+    .c-card__obj__header,
+    .c-card__obj__body {
+        @include global__flag__content('c-card__obj');
+    }
+
+    .c-card__obj__header {
+        @include global__flag__image('c-card__obj');
+    }
+
+    .c-card__obj__body {
+        @include global__flag__body('c-card__obj');
+
+        background: transparent;
+    }
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        .c-card__obj__header,
+        .c-card__obj__body {
+            display: flex;
+            width: 100%;
+        }
+
+        .c-card__obj__body {
+            padding-left: 0;
+        }
     }
 }
+
 @mixin card-contributor-small {
     @include card-contributor;
     @include card-landscape-small;
+
+    .c-card__obj__body {
+        background: transparent;
+        padding-top: 11px;
+    }
+
+    .c-card__separator {
+        display: block;
+        width: 20px;
+        border: 0;
+        border-top: 1px solid $COLOUR_MAIN_HIGHLIGHT;
+    }
 }
 
 @mixin card-contributor-large {
@@ -21,6 +62,7 @@
 
     .c-card__obj__body {
         background: transparent;
+        padding: 15px 0 0;
     }
 }
 
@@ -37,5 +79,5 @@
 }
 
 .c-card--contributor-large {
-    @include card-contributor-small;
+    @include card-contributor-large;
 }

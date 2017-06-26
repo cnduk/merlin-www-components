@@ -164,14 +164,26 @@ $C_CARD_BUM_MARGIN: 0;
 // Gallery recommended, common magazine articles
 // Contains 3 cards
 // Goes one, three
-.c-card-list--g-recommended,
-.c-card-list--c-contributors {
+.c-card-list--g-recommended {
     @include cl-one-three;
 }
 
 .c-card-list--c-contributors {
+    @include cl-base;
+    @include cl-one;
+
+    @include two-column-size {
+        flex-direction: row;
+        justify-content: center;
+
+        .c-card-list__item {
+            margin-bottom: $C_CARD_BUM_MARGIN;
+            width: 33.33%;
+        }
+    }
+
     @include three-column-size {
-        max-width: 600px;
+        max-width: 660px;
         margin: 0 auto;
         text-align: center;
     }
