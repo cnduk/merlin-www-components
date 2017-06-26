@@ -1,0 +1,85 @@
+.a-marketing-card {
+    background: $wild-sand;
+    margin: $MARGIN_SMALL 0;
+    padding: $PADDING_MEDIUM $PADDING_SMALL;
+
+    @include marketing-card-medium-size(){
+        padding: 0;
+    }
+}
+.a-marketing-card--brand {}
+.a-marketing-card--event {}
+.a-marketing-card--topic {}
+.a-marketing-card--magazine {
+    .a-marketing-card__col {
+        text-align: center;
+
+        @include marketing-card-medium-size {
+            text-align: left;
+        }
+    }
+}
+
+.a-marketing-card__brand {}
+.a-marketing-card__brand__img {}
+.a-marketing-card__brand__name {}
+.a-marketing-card__brand__prefix {}
+
+.a-marketing-card__col {
+    text-align: center;
+}
+
+.a-marketing-card--brand .a-marketing-card__col,
+.a-marketing-card--event .a-marketing-card__col {}
+
+.a-marketing-card__desc {}
+
+.a-marketing-card__magazine {
+    margin: 0 auto $MARGIN_SMALL auto;
+
+    @include marketing-card-medium-size(){
+        margin-bottom: 0;
+    }
+}
+
+.a-marketing-card__magazine__cover {
+    display: inline-block;
+}
+.a-marketing-card__magazine__cover--print {
+    width: 95px;
+}
+.a-marketing-card__magazine__cover--desktop {}
+.a-marketing-card__magazine__cover--tablet {
+    background-color: $black;
+    background-image: none;
+    border-radius: 4px;
+    box-shadow: 0px 0px 0px 1px rgba(48, 48, 48, 1);
+    padding: 8px 4px;
+    width: 55px;
+    position: static;
+    margin-left: -20px;
+}
+.a-marketing-card__magazine__cover--mobile {
+    display: none;
+}
+
+.a-marketing-card__link {
+    @include button-single;
+    @include button-single-light;
+
+    &:hover,
+    &:focus {
+        @include button-single-light-hover;
+    }
+
+}
+
+.a-marketing-card__title {
+    @include font('STARLING', 16px, 'NORMAL', 22px);
+
+    color: $black-two;
+
+    @include marketing-card-medium-size() {
+        @include font('STARLING', 21px, 'NORMAL', 26px);
+    }
+}
