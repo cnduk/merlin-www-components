@@ -1,33 +1,42 @@
 .a-sidebar-content {
-    padding-top: 5px;
-
     .c-card-list__item {
         margin: 15px 0 30px 0;
     }
 
     .c-card__image {
-        margin: 15px 0 10px 0;
+        margin: 0;
+    }
+
+    .c-card__obj__body {
+        padding: 15px 0 0;
     }
 
     .c-card__title {
-        margin-bottom: 5px;
-        margin-top: 15px;
+        @include font('STARLING', 18px, 'NORMAL', 22px);
+
+        margin: 0 0 15px;
+        text-align: left;
+    }
+
+    .c-card__separator {
+        left: 0;
+        margin: 0;
     }
 
     .c-card__byline,
     .c-card__sponsor {
-        margin: 5px 0 15px 0;
+        text-align: left;
     }
 }
 
 .a-sidebar-content__title {
+    @include t-topic-title-small;
+
     margin: 0;
+    padding-bottom: 20px;
     text-transform: uppercase;
 
-    &::after {
-        content: '';
-        display: block;
-        height: 1px;
-        margin-top: 5px;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include t-topic-title-large;
     }
 }
