@@ -4,3 +4,17 @@
 @import '../wireframe/wireframe';
 
 @import '../tatler/_tatler_base';
+
+.c-superfeature__content {
+    background-color: $black;
+}
+
+.c-superfeature__title {
+    color: $white;
+}
+
+@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    .c-superfeature__content {
+        @include border-line-box(top, $bg:$black, $border:$brownish-grey);
+    }
+}
