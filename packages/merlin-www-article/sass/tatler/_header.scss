@@ -23,7 +23,7 @@
     padding: 20px 0 30px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: 60px 360px 40px 0;
+        padding: 60px 360px 60px 0;
     }
 
     // @include min-screen($ARTICLE_TOTAL) {

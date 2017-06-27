@@ -10,7 +10,7 @@
 }
 
 .a-body {
-    margin-top: 40px;
+    margin-top: 0;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         margin-top: 0;
@@ -24,7 +24,17 @@
 }
 
 .a-body__wrapper {}
-.a-body__content {}
+.a-body__content {
+    p {
+        margin-top: 0;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        p {
+           margin-top: 0;
+        }
+    }
+}
 
 
 .a-infinite {

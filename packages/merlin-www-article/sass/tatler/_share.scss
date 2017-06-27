@@ -1,8 +1,8 @@
 .a-share {
-    padding: 0 0 30px;
+    padding: 0;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: 0 0 60px;
+        padding: 0;
     }
 }
 .a-share__wrapper {}
