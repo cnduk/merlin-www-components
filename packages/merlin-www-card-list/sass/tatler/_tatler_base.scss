@@ -215,7 +215,7 @@ $C_CARD_BUM_MARGIN: 0;
         width: 100%;
 
         .c-card {
-            border-top: 1px solid $COLOUR_BORDER_SEPARATOR;
+            border: 0;
             padding-top: 20px;
 
             &.c-card--dark {

@@ -40,6 +40,43 @@
     }
 }
 
+.tg-header--profile {
+    .tg-header__intro {
+        text-align: center;
+    }
+
+    .tg-header__intro__image {
+        border: 1px solid $silver;
+        display: inline-block;
+        height: 76px;
+        margin: 0 0 30px;
+        overflow: hidden;
+        padding: 5px;
+        width: 76px;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            display: inline-block;
+            padding: 10px;
+            height: 110px;
+            width: 110px;
+            margin: 0 20px -30px 0;
+        }
+
+        img {
+            height: 100%;
+            overflow: hidden;
+            width: 100%;
+        }
+    }
+
+    .tg-header__intro__title {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            display: inline-block;
+            margin: 0 0 30px 0;
+        }
+    }
+}
+
 .tg-header--person {
     .c-gallery-strip__wrapper {
         box-sizing: border-box;
@@ -125,6 +162,7 @@
     margin: $MARGIN_X_SMALL auto 22px auto;
     max-width: 680px;
     text-align: center;
+    font-style: italic;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         @include font-size(20px);
