@@ -8,9 +8,14 @@
     }
 }
 
-.a-footer--gallery {}
-.a-footer--video {}
-.a-footer__wrapper {}
+.a-footer--gallery {
+    .a-footer__wrapper {
+        @include common-large-size() {
+            padding-left: 60px;
+        }
+    }
+}
+
 
 .a-related-tags {
     border: 0;

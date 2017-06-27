@@ -33,8 +33,13 @@ $section_gallery_icon_size: 40px;
 .c-gallery__image-remaining__text-prefix {
     @include font('STARLING', 30px, 'BOLD', 30px);
 }
+
 .c-gallery__image-remaining__text-value {
-    @include font('STARLING', 27px, 'BOLD', 27px);
+    @include font('STARLING', 25px, 'BOLD', 25px);
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include font('STARLING', 30px, 'BOLD', 30px);
+    }
 }
 .c-gallery__text {
     background-color: $white;

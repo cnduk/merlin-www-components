@@ -9,7 +9,8 @@
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: 60px 60px;
+        margin: 60px auto;
+        padding: 0 60px;
     }
 }
 
@@ -82,14 +83,10 @@
 .c-card-section--c-video-articles {
     background-color: $COLOUR_BG_DARK;
     max-width: none;
-    padding: 30px 20px;
+    padding: 60px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: 80px $TABLET_SIDE_GUTTER;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: 80px $DESKTOP_SIDE_GUTTER;
+    .c-card-section__title-wrapper {
+        display: none;
     }
 
     .c-card-section__btn {
@@ -102,6 +99,11 @@
         &:hover {
             @include button-single-dark-hover();
         }
+    }
+
+    .c-card__image__icon svg {
+        height: 100%;
+        width: 15px;
     }
 
     .c-card-section__title {

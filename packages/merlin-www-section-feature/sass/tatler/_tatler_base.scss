@@ -5,7 +5,8 @@
     padding: 0 $MOBILE_SIDE_GUTTER;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: $DESKTOP_SIDE_GUTTER;
+        margin: 60px auto;
+        padding: 0 60px;
     }
 
     .c-feature__image {
@@ -93,7 +94,7 @@
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: 20px;
+        padding: 20px 60px;
 
         .c-feature--left & {
             @include border-line-box(left);
@@ -143,7 +144,7 @@
 .c-feature__title {
     @include t-feature-title-small;
 
-    margin-bottom: 18px;
+    margin: 0 0 18px;
     padding: 0 0 15px;
     position: relative;
 
@@ -178,7 +179,7 @@
 .c-feature__byline {
     @include feature-card-byline;
 
-    margin: 0 0 10px
+    margin: 0 0 10px;
 }
 
 .c-feature__byline-prefix {

@@ -8,9 +8,12 @@
             background-color: $cod-gray;
         }
 
-        .c-card__title,
-        .c-card__byline {
+        .c-card__title {
             color: $white;
+        }
+
+        .c-card__byline {
+            color: $gray;
         }
 
         &:hover,

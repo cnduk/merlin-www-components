@@ -1,5 +1,5 @@
 .c-footer {
-    background-color: $COLOUR_BG_DARK;
+    background-color: $black;
     color: $COLOUR_MAIN_DARK;
 }
 
@@ -29,7 +29,7 @@
 
 .c-footer__list-item--links {
     @include max-screen(1099px) {
-        background-color: $COLOUR_BG_DARK;
+        background-color: $black;
     }
 
     .c-footer__list-item {
