@@ -20,7 +20,9 @@
 }
 
 .c-newsletter__logo {
-    display: none;
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 405px;
 }
 
 .c-newsletter__title {
