@@ -2,11 +2,8 @@
     background: $wild-sand;
     margin: $MARGIN_SMALL 0;
     padding: $PADDING_MEDIUM $PADDING_SMALL;
-
-    @include marketing-card-medium-size(){
-        padding: 0;
-    }
 }
+
 .a-marketing-card--brand {}
 .a-marketing-card--event {}
 .a-marketing-card--topic {}

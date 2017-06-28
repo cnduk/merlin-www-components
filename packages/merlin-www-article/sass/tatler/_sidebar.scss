@@ -7,8 +7,25 @@
         margin: 0;
     }
 
+
+    .c-card {
+        &:hover,
+        &:focus {
+            .c-card__image {
+                img {
+                    transform: none;
+                }
+            }
+        }
+    }
+
     .c-card__obj__body {
         padding: 15px 0 0;
+        text-align: left;
+    }
+
+    p.c-card__tag {
+        margin: 0 0 5px;
     }
 
     .c-card__title {
@@ -21,19 +38,24 @@
     .c-card__separator {
         left: 0;
         margin: 0;
+        width: 10px;
     }
 
-    .c-card__byline,
-    .c-card__sponsor {
-        text-align: left;
+    p.c-card__byline {
+        margin: 0;
+    }
+
+    .c-card__meta {
+        display: block;
+        text-align: right;
     }
 }
 
 .a-sidebar-content__title {
-    @include t-topic-title-small;
+    @include font('STARLING', 18px, 'NORMAL', 18px);
 
     margin: 0;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     text-transform: uppercase;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {

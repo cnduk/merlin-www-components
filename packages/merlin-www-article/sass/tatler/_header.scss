@@ -59,11 +59,16 @@
     }
 
     p {
-        @include font-size(23px);
-        @include line-height(28px);
+        @include font-size(20px);
+        @include line-height(25px);
+
+        margin: 0;
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            margin: 25px 0 30px;
+            @include font-size(23px);
+            @include line-height(28px);
+
+            margin: 0;
         }
     }
 }

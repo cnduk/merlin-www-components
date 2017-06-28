@@ -30,7 +30,6 @@
 @mixin card-tg-article-large {
     .c-card__obj {
         background: $white;
-        box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.03);
     }
 
     .c-card__obj__header {
@@ -54,12 +53,15 @@
 
     .c-card__separator {
         display: block;
-        width: 20px;
+        width: 10px;
         border: 0;
         border-top: 1px solid $COLOUR_MAIN_HIGHLIGHT;
     }
 
-    .c-card__byline {}
+    .c-card__byline,
+    .c-card__sponsor  {
+        margin: 0;
+    }
 
     .c-card__meta {}
 }

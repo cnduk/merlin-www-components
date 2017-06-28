@@ -83,7 +83,11 @@
 .c-card-section--c-video-articles {
     background-color: $COLOUR_BG_DARK;
     max-width: none;
-    padding: 60px;
+    padding: 30px 20px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 60px;
+    }
 
     .c-card-section__title-wrapper {
         display: none;

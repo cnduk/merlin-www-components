@@ -16,16 +16,22 @@
     .c-card__obj__body {
         @include global__flag__body('c-card__obj');
     }
+
+    &:hover,
+    &:focus {
+        .c-card__image {
+            img {
+                transform: none;
+            }
+        }
+    }
 }
 
 @mixin card-magazine-small {
     @include card-landscape-small;
 
-    .c-card__separator {
-        display: block;
-        width: 20px;
-        border: 0;
-        border-top: 1px solid $COLOUR_MAIN_HIGHLIGHT;
+    .c-card__title {
+        @include font('STARLING', 16px, 'NORMAL', 19px);
     }
 }
 
@@ -44,11 +50,8 @@
         width: 65px;
     }
 
-    .c-card__separator {
-        display: block;
-        width: 20px;
-        border: 0;
-        border-top: 1px solid $COLOUR_MAIN_HIGHLIGHT;
+    .c-card__title {
+        @include font('STARLING', 16px, 'NORMAL', 19px);
     }
 }
 

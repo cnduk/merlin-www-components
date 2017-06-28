@@ -72,15 +72,6 @@ li.a-gallery__image-listitem {
     }
 }
 
-.c-figure__container {
-    // margin-bottom: $MARGIN_SMALL;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        // margin-bottom: $MARGIN_MEDIUM;
-    }
-}
-
-
 .g-image-nav {
     transition-duration: 300ms;
     width: $MOBILE_SIDE_GUTTER;
@@ -99,24 +90,24 @@ li.a-gallery__image-listitem {
 }
 
 .g-image-nav__btns {
-    margin: 0 auto 0 15px;
+    margin: 0 auto 0 20px;
     width: 60px;
 }
 
 .g-image-nav__btn {
-    background: #f9f9f9;
+    background: $black;
     border-radius: 50%;
     border: 0;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
 
     svg {
-        width: 18px;
-        height: 18px;
+        width: 15px;
+        height: 15px;
     }
 
     svg, path {
-        fill: $cinnabar;
+        fill: $white;
     }
 
     &:hover,
@@ -136,7 +127,7 @@ li.a-gallery__image-listitem {
 }
 
 .g-image-nav__btn[disabled] {
-    background: #f9f9f9;
+    background: $wild-sand;
     pointer: normal;
 
     svg, path {

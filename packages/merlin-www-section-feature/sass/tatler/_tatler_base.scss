@@ -180,6 +180,10 @@
     @include feature-card-byline;
 
     margin: 0 0 10px;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        margin: 0 0 10px;
+    }
 }
 
 .c-feature__byline-prefix {

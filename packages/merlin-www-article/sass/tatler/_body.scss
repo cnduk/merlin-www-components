@@ -25,13 +25,37 @@
 
 .a-body__wrapper {}
 .a-body__content {
+    a {
+        color: $cinnabar;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(224, 59, 42, 0.8);
+        transition: border .16s ease;
+
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            border-bottom: 1px solid rgba(0,0,0,0);
+
+            &:focus,
+            &:hover {
+                border-bottom: 1px solid rgba(224, 59, 42, 0.8);
+            }
+        }
+    }
+
     p {
-        margin-top: 0;
+        margin: 30px 0;
+    }
+
+    p:first-of-type {
+        margin: 0 0 30px;
     }
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         p {
-           margin-top: 0;
+           margin: 30px 0;
+        }
+
+        p:first-of-type {
+            margin: 0 0 30px;
         }
     }
 }
