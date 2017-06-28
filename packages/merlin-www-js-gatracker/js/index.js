@@ -85,6 +85,17 @@ GATracker.TRACKERS = [];
 
 
 /**
+ * Reset all custom dimensions on all the trackers
+ * @static
+ */
+GATracker.ResetCustomDimensions = function ResetCustomDimensions(){
+    GATracker.TRACKERS.forEach(function ResetAll_inner( tracker ){
+        tracker.resetCustomDimensions();
+    });
+};
+
+
+/**
  * Calls send on all the trackers
  * @static
  * @param {String} hitType
@@ -121,6 +132,18 @@ GATracker.SetAll = function SetAll( fieldName, value ){
 GATracker.prototype = {
 
     "constructor": GATracker,
+
+    /**
+     * Reset all the custom dimensions on the tracker
+     */
+    "resetCustomDimensions": function(){
+        var resetValues = {};
+        for(var key in GATracker.DIMENSION_BY_INDEX){
+            if(!GATracker.DIMENSION_BY_INDEX.hasOwnProperty(key)) continue;
+            resetValues[key] = null;
+        }
+        this.set(resetValues);
+    },
 
     /**
      * Fires a ga send call
