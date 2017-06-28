@@ -13,10 +13,14 @@
 }
 
 .a-author__bio {
-    color: $COLOR_TYPE_META;
-    @include font('ADOBE CASLON', 13px, null, 16px);
     margin-bottom: $MARGIN_SMALL;
     margin-top: -8px;
+
+    p {
+        color: $COLOR_TYPE_META;
+        @include font('ADOBE CASLON', 13px, null, 16px);
+        margin-top: 0;
+    }
 }
 
 .a-author__byline {
