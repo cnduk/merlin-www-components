@@ -3,6 +3,7 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const merge = require('lodash.merge');
+const runSequence = require('run-sequence');
 
 const utils = require('./utils');
 const copy = require('./tasks/copy');
@@ -25,7 +26,13 @@ module.exports = function(config={}){
     gulp.task('serve', serve(taskConfig, browserSync));
     gulp.task('release', release(taskConfig, browserSync));
 
-    gulp.task('dev', ['copy', 'sass', 'jshint', 'js', 'serve'])
+    gulp.task('dev', function(cb){
+        runSequence(
+            ['copy', 'sass', 'jshint', 'js'],
+            'serve',
+            cb
+        );
+    });
     gulp.task('staging', ['copy', 'sass', 'jshint', 'js'])
     gulp.task('production', ['copy', 'sass', 'jshint', 'js'])
 
