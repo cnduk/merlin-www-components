@@ -498,7 +498,7 @@
 
     .bb-card__title {
         margin: 0 0 6px 0;
-        @include c-card-title-small;
+        @include c-card-inline-title-medium;
         @include transition(all 0.3s ease);
 
         // @include card-portrait-to-landscape-size() {
@@ -545,7 +545,7 @@
             padding-right: 8px;
         }
 
-        & + li.c-card__meta-item {
+        & + li.bb-card__meta-item {
             border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
             padding-left: 8px;
         }
