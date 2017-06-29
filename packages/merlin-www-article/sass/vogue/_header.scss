@@ -24,7 +24,7 @@
     }
 }
 
-.a-header__teaser {
+.a-header__teaser p {
     @include font('ADOBE CASLON', 16px, 'NORMAL', 20px);
     color: $COLOR_TYPE_META;
     margin: $MARGIN_X_SMALL 0;
