@@ -21,7 +21,7 @@ li.a-gallery__thumbnail {
     margin: 2px 0 0 0;
     padding: 0 1px;
 
-    &:nth-child(-n+3){
+    &:nth-child(-n+3) {
         margin-top: 0;
     }
 
@@ -63,7 +63,7 @@ li.a-gallery__image-listitem {
         margin-bottom: 0;
     }
 
-    @include tablet-size{
+    @include tablet-size {
         margin-bottom: $MARGIN_X_LARGE;
 
         &:last-child {

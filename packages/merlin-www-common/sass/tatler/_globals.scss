@@ -1,16 +1,16 @@
 @import '../wireframe/_globals';
 
-@mixin global__flag($base-cls: 'global__flag'){
+@mixin global__flag($base-cls: 'global__flag') {
     display: flex;
     width: 100%;
 }
 
-@mixin global__flag__body($base-cls: 'global__flag'){
+@mixin global__flag__body($base-cls: 'global__flag') {
     display: flex;
     width: 100%;
 }
 
-@mixin global__flag__content($base-cls: 'global__flag'){
+@mixin global__flag__content($base-cls: 'global__flag') {
     display: flex;
     vertical-align: middle;
 
@@ -23,7 +23,7 @@
     }
 }
 
-@mixin global__flag__image($base-cls: 'global__flag'){
+@mixin global__flag__image($base-cls: 'global__flag') {
     padding-right: 10px;
 
     > img {

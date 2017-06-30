@@ -139,8 +139,7 @@ li.c-gallery__meta-item {
 
 }
 
-@include desktop-size{
-
+@include desktop-size {
     .c-gallery {
         margin: 60px 0;
         padding: 0 $DESKTOP_SIDE_GUTTER;

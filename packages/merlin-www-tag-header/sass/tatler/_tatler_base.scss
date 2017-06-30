@@ -143,7 +143,7 @@
     margin: 0 0 $MARGIN_X_SMALL 0;
     text-align: center;
 
-    @include desktop-size{
+    @include desktop-size {
         @include line-height(50px);
 
         margin-bottom: $MARGIN_SMALL;

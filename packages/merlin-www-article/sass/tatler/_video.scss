@@ -115,7 +115,7 @@
 .a-video__ad {
     margin-bottom: 40px;
 
-    @include desktop-size{
+    @include desktop-size {
         margin-bottom: 0;
         top: $PADDING_X_LARGE;
     }

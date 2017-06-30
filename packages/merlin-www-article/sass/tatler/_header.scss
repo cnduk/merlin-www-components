@@ -127,7 +127,7 @@
         top: 0;
     }
 
-    @include min-screen(800px){
+    @include min-screen(800px) {
         padding-top: 56.25%;
     }
 }

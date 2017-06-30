@@ -33,7 +33,7 @@
 .c-card--hero {
     @include card-hero-small;
 
-    @include card-switcher-size{
+    @include card-switcher-size {
         @include card-hero-large;
     }
 }
