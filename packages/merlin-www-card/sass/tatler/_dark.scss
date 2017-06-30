@@ -34,7 +34,7 @@
         .c-card__obj__body {
             background: none;
 
-            @include min-screen($CARD_SWITCHER_WIDTH) {
+            @include card-switcher-size {
                 background: $cod-gray;
             }
         }

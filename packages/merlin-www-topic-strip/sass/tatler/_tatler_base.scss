@@ -23,7 +23,7 @@
     margin-bottom: 5px;
     text-align: left;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         padding-bottom: 0;
         margin-bottom: 0;
     }
@@ -34,7 +34,7 @@ li.c-topic-strip__item {
     & + & {
         margin-left: 5px;
 
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include tablet-size {
             margin-left: 10px;
         }
     }
@@ -76,7 +76,7 @@ li.c-topic-strip__item {
         }
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         white-space: normal;
         margin-bottom: 0;
 
@@ -86,7 +86,7 @@ li.c-topic-strip__item {
         }
 
         .c-topic-strip__item + .c-topic-strip__item {
-            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            @include desktop-size {
                 margin-left: 0;
             }
         }

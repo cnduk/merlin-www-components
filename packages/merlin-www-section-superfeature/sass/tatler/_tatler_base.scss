@@ -4,7 +4,7 @@
     margin: 30px auto;
     padding: 0;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         padding: 0;
         margin: 60px auto;
     }
@@ -36,18 +36,18 @@
     padding: 28px 20px;
     text-align: center;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         margin: 0 60px;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         @include border-line-box(top);
 
         margin: 0 60px;
         padding: 60px 170px;
     }
 
-    @include min-screen($MAXIMUM_PAGE_WIDTH) {
+    @include maximum-size {
         margin: 0 auto;
     }
 }
@@ -76,7 +76,7 @@
         margin-left: -10px;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         @include t-super-feature-title-large;
         margin: 0 0 25px;
         padding: 0 0 25px;
@@ -92,7 +92,7 @@
     margin: 0 0 10px;
     text-transform: uppercase;
 
-    @include min-screen($CARD_SWITCHER_WIDTH) {
+    @include card-switcher-size {
         @include font('AGENDA', 12px, 'MEDIUM', 12px);
 
         letter-spacing: 1px;

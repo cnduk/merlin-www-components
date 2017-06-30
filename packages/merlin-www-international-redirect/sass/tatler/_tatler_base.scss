@@ -7,7 +7,7 @@ $_BUTTON_SIZE: 20px;
         color: $white;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         background-color: rgba(0, 0, 0, .9);
     }
 }
@@ -49,7 +49,7 @@ li.c-int-redirect__list__item {
         white-space: nowrap;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         @include font('AGENDA', 15px, 'MEDIUM', 18px);
     }
 }

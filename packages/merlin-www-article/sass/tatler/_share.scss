@@ -1,7 +1,7 @@
 .a-share {
     padding: 0;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         padding: 0;
     }
 }

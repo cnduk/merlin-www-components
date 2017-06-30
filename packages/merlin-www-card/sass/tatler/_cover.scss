@@ -46,7 +46,7 @@
 .c-card--cover {
     @include card-cover;
 
-    @include min-screen($CARD_SWITCHER_WIDTH) {
+    @include card-switcher-size {
         .c-card__obj__body {
             padding-top: 20px;
         }

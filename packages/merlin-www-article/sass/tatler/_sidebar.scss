@@ -58,7 +58,7 @@
     padding-bottom: 15px;
     text-transform: uppercase;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         @include t-topic-title-large;
     }
 }

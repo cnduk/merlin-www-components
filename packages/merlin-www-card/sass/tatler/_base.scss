@@ -115,7 +115,7 @@ li.c-card__meta-item {
     margin: 0 0 5px;
     text-transform: uppercase;
 
-    @include min-screen($CARD_SWITCHER_WIDTH) {
+    @include card-switcher-size {
         @include font('AGENDA', 12px, 'MEDIUM', 12px);
 
         letter-spacing: 1px;
@@ -142,7 +142,7 @@ li.c-card__meta-item {
 
     margin: 5px 0 0;
 
-    @include min-screen($CARD_SWITCHER_WIDTH) {
+    @include card-switcher-size {
         margin: 10px 0 0;
     }
 }
@@ -164,7 +164,7 @@ li.c-card__meta-item {
     display: inline-block;
     margin-top: 5px;
 
-    @include min-screen($CARD_SWITCHER_WIDTH) {
+    @include card-switcher-size {
         margin-top: 5px;
     }
 

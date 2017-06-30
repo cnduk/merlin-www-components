@@ -69,7 +69,7 @@
 .c-card--tg-article {
     @include card-tg-article-small;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         @include card-tg-article-large;
     }
 }

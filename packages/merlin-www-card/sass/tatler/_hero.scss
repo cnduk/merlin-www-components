@@ -33,7 +33,7 @@
 .c-card--hero {
     @include card-hero-small;
 
-    @include min-screen($CARD_SWITCHER_WIDTH){
+    @include card-switcher-size{
         @include card-hero-large;
     }
 }

@@ -4,7 +4,7 @@
     position: absolute;
     top: 32px;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         display: block;
     }
 }
@@ -43,7 +43,7 @@
     margin: 20px 0;
     padding: 20px 40px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         padding: 32px 30px;
     }
 }
@@ -62,7 +62,7 @@
     &:nth-child(2) {
         padding-left: 30px;
 
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include tablet-size {
             padding-left: 30px;
         }
     }
@@ -132,7 +132,7 @@ a.n-menu__subscribe-btn {
         text-decoration: none;
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         padding: 5px;
     }
 }

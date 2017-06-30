@@ -87,7 +87,7 @@
 .c-card--v-related {
     @include card-v-related-small;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         @include card-v-related-large;
     }
 }

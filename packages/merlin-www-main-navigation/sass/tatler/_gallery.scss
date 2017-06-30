@@ -22,7 +22,7 @@
         }
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         padding-right: 160px;
     }
 }
@@ -57,7 +57,7 @@
     line-height: 60px;
     padding: 0 20px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         padding: 0 32px;
     }
 }
@@ -90,7 +90,7 @@ a.n-gallery-close {
     line-height: 60px;
     width: 50px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         width: 60px;
     }
 
@@ -116,7 +116,7 @@ a.n-gallery-close {
     line-height: 60px;
     width: 50px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         width: 60px;
     }
 

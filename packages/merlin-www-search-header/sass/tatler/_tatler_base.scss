@@ -5,11 +5,11 @@
     overflow: hidden;
     padding: 45px $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         padding: 30px $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         padding: 30px $DESKTOP_SIDE_GUTTER;
     }
 
@@ -39,7 +39,7 @@
         outline: none;
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         @include font-size(65px);
         @include line-height(48px);
 
@@ -56,7 +56,7 @@
     letter-spacing: 1px;
     margin: 23px 0 0;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         @include font('AGENDA', 14px, 'MEDIUM', 20px);
 
         margin: 12px 0 0;

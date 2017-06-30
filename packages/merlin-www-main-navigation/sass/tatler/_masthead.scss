@@ -1,7 +1,7 @@
 .n-main__header {
     display: none;
 
-    @include min-screen( $MAIN_NAVIGATION_MOBILE_BREAKPOINT ){
+    @include desktop-size {
         display: flex;
         align-items: center;
         flex-wrap: none;

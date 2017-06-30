@@ -1,11 +1,11 @@
 .tg-header {
     margin-bottom: $MOBILE_SLICE_MARGIN;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         margin-bottom: $TABLET_SLICE_MARGIN;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         margin-bottom: $DESKTOP_SLICE_MARGIN;
     }
 }
@@ -17,7 +17,7 @@
     .tg-header__intro {
         padding: $PADDING_LARGE 0 $PADDING_MEDIUM 0;
 
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include tablet-size {
             padding: $PADDING_X_LARGE 0 $PADDING_LARGE 0;
         }
     }
@@ -33,7 +33,7 @@
             width: 100%;
         }
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include desktop-size {
             width: 250px;
             height: 60px;
         }
@@ -54,7 +54,7 @@
         padding: 5px;
         width: 76px;
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include desktop-size {
             display: inline-block;
             padding: 10px;
             height: 110px;
@@ -70,7 +70,7 @@
     }
 
     .tg-header__intro__title {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include desktop-size {
             display: inline-block;
             margin: 0 0 30px 0;
         }
@@ -85,12 +85,12 @@
         padding-left: $MOBILE_SIDE_GUTTER;
         padding-right: $MOBILE_SIDE_GUTTER;
 
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include tablet-size {
             padding-left: $TABLET_SIDE_GUTTER;
             padding-right: $TABLET_SIDE_GUTTER;
         }
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include desktop-size {
             padding-left: $DESKTOP_SIDE_GUTTER;
             padding-right: $DESKTOP_SIDE_GUTTER;
         }
@@ -100,11 +100,11 @@
 .tg-header__wrapper {
     padding: 0 $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         padding: 0 $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         padding: 0 $DESKTOP_SIDE_GUTTER;
     }
 }
@@ -112,7 +112,7 @@
 .tg-header__intro {
     padding: $PADDING_LARGE 0 0 0;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         padding: $PADDING_X_LARGE 0 0 0;
     }
 }
@@ -123,12 +123,12 @@
     margin: 0 auto $MARGIN_SMALL auto;
     width: 160px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         margin-bottom: $MARGIN_MEDIUM;
         width: 250px;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         width: 250px;
     }
 
@@ -143,7 +143,7 @@
     margin: 0 0 $MARGIN_X_SMALL 0;
     text-align: center;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
+    @include desktop-size{
         @include line-height(50px);
 
         margin-bottom: $MARGIN_SMALL;
@@ -164,7 +164,7 @@
     text-align: center;
     font-style: italic;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         @include font-size(20px);
         @include line-height(25px);
 
@@ -175,7 +175,7 @@
 .tg-header__topic-strip {
     margin: 25px 0 $MARGIN_LARGE 0;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         margin: $MARGIN_MEDIUM 0 $MARGIN_X_LARGE 0;
     }
 }
@@ -189,12 +189,12 @@
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
@@ -204,11 +204,11 @@
 .tg-header__style-file {
     padding: 40px $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         padding: 40px $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         padding: 40px $DESKTOP_SIDE_GUTTER;
     }
 

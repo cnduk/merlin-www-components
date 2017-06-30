@@ -32,7 +32,7 @@
     margin-right: -1px;
     white-space: nowrap;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         padding: 10px 20px 30px 20px;
     }
 }

@@ -60,7 +60,7 @@
     .c-top-stories__overflow {
         padding-left: 20px;
 
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include tablet-size {
             padding-left: 30px;
         }
     }
@@ -90,7 +90,7 @@
                 transform: translateY(-50%);
                 word-break: break-word;
 
-                @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+                @include tablet-size {
                     padding: 0 30px;
                 }
             }

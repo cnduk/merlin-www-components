@@ -1,0 +1,23 @@
+@mixin article-total-size {
+    @include min-screen($ARTICLE_TOTAL) {
+        @content;
+    }
+}
+
+@mixin card-switcher-size {
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @content;
+    }
+}
+
+@mixin feature-large-size {
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @content;
+    }
+}
+
+@mixin maximum-size {
+    @include min-screen($MAXIMUM_PAGE_WIDTH) {
+        @content;
+    }
+}

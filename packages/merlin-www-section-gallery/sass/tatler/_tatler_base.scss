@@ -37,7 +37,7 @@ $section_gallery_icon_size: 40px;
 .c-gallery__image-remaining__text-value {
     @include font('STARLING', 25px, 'BOLD', 25px);
 
-    @include min-screen($CARD_SWITCHER_WIDTH) {
+    @include card-switcher-size {
         @include font('STARLING', 30px, 'BOLD', 30px);
     }
 }
@@ -118,7 +118,7 @@ li.c-gallery__meta-item {
     }
 }
 
-@include min-screen($FEATURE_LARGE_BREAKPOINT){
+@include feature-large-size {
     .c-gallery {
         padding: 0 $TABLET_SIDE_GUTTER;
     }
@@ -139,7 +139,7 @@ li.c-gallery__meta-item {
 
 }
 
-@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
+@include desktop-size{
 
     .c-gallery {
         margin: 60px 0;

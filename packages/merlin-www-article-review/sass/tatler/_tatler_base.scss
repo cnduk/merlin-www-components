@@ -15,7 +15,7 @@
         top: 10px;
     }
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    @include desktop-size {
         padding: 40px;
     }
 }
@@ -23,7 +23,7 @@
 .a-review__item {
     @include font('AGENDA', 14px, 'MEDIUM', 17px);
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    @include desktop-size {
         @include font('AGENDA', 16px, 'MEDIUM', 20px);
     }
 
@@ -44,7 +44,7 @@
     border-width: 1px 0 0 0;
     margin: 10px 0;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    @include desktop-size {
         margin: 15px 0;
     }
 }
@@ -55,7 +55,7 @@
 
     margin: 0;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    @include desktop-size {
         @include font('AGENDA', 16px, 'MEDIUM', 20px);
     }
 }

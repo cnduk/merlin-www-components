@@ -4,7 +4,7 @@
     max-width: none;
     padding: 0 $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         margin: 60px auto;
         padding: 0 60px;
     }
@@ -42,7 +42,7 @@
     direction: ltr;
     flex-direction: column;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         direction: ltr;
         flex-direction: row;
 
@@ -52,7 +52,7 @@
         }
     }
 
-    @include min-screen( $FEATURE_LARGE_BREAKPOINT ){
+    @include feature-large-size {
         padding: 0;
     }
 }
@@ -63,7 +63,7 @@
     display: flex;
     width: 100%;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         width: 50%;
     }
 }
@@ -93,7 +93,7 @@
         border-radius: 50%;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         padding: 20px 60px;
 
         .c-feature--left & {
@@ -133,7 +133,7 @@
     text-transform: uppercase;
     margin: 0 0 10px;
 
-    @include min-screen($CARD_SWITCHER_WIDTH) {
+    @include card-switcher-size {
         @include font('AGENDA', 12px, 'MEDIUM', 12px);
 
         letter-spacing: 1px;
@@ -160,7 +160,7 @@
         margin-left: -10px;
     }
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include feature-large-size {
         @include t-feature-title-large;
 
         margin: 0 0 20px;
@@ -182,7 +182,7 @@
 
     margin: 0 0 10px;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include feature-large-size {
         margin: 0 0 10px;
     }
 }
@@ -204,7 +204,7 @@
     margin-top: 0;
     padding-top: 0;
 
-    @include min-screen($CARD_SWITCHER_WIDTH) {
+    @include card-switcher-size {
         margin-top: 0;
         padding-top: 0;
     }

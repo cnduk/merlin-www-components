@@ -30,7 +30,7 @@ li.c-gallery-strip__list__item {
         }
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         &:nth-child(n+4):nth-child(-n+6){
             display: block;
         }
@@ -53,7 +53,7 @@ li.c-gallery-strip__list__item {
         }
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         &:nth-child(n+4):nth-child(-n+8){
             display: block;
         }
@@ -91,7 +91,7 @@ li.c-gallery-strip__list__item {
 
     color: #fff;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         @include font('STARLING', 40px, 'BOLD', 40px);
     }
 }
@@ -105,7 +105,7 @@ li.c-gallery-strip__list__item {
 
     margin: 15px 0 0;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         margin: 20px 0 0;
     }
 }

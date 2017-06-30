@@ -10,7 +10,7 @@
     margin-left: 0px;
     margin-right: 0px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         margin-left: -10px;
         margin-right: -10px;
     }
@@ -25,7 +25,7 @@ li.a-gallery__thumbnail {
         margin-top: 0;
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         margin: 20px 0 0 0;
         padding: 0 10px;
     }
@@ -46,7 +46,7 @@ li.a-gallery__thumbnail {
         width: 30px;
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         left: 10px;
         right: 10px;
 
@@ -63,7 +63,7 @@ li.a-gallery__image-listitem {
         margin-bottom: 0;
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+    @include tablet-size{
         margin-bottom: $MARGIN_X_LARGE;
 
         &:last-child {

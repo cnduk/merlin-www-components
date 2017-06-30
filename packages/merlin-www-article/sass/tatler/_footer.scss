@@ -5,7 +5,7 @@
         margin: 30px 0 0;
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         padding-bottom: 60px;
 
         .a-share {
@@ -17,12 +17,12 @@
 .a-footer--gallery {
     padding-bottom: 30px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         padding-bottom: 80px;
     }
 
     .a-footer__wrapper {
-        @include common-large-size() {
+        @include desktop-size {
             padding-left: 60px;
         }
     }
@@ -34,7 +34,7 @@
     margin: 30px 0;
     padding: 0;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         margin: 60px 0;
     }
 }

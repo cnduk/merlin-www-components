@@ -9,7 +9,7 @@
 .c-card--switcher-video {
     @include card-switcher-video-small;
 
-    @include min-screen($CARD_SWITCHER_WIDTH) {
+    @include card-switcher-size {
         @include card-switcher-video-large;
     }
 }

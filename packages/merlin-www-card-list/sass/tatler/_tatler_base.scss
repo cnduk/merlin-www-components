@@ -303,7 +303,7 @@ $C_CARD_BUM_MARGIN: 0;
         padding-top: 20px;
         margin-top: 20px;
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include desktop-size {
             margin-top: 12px;
             padding-top: 12px;
         }

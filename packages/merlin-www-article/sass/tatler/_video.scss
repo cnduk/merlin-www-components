@@ -21,17 +21,17 @@
         height: 100%;
         top: (-$MOBILE_SIDE_GUTTER);
 
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include tablet-size {
             top: (-$TABLET_SIDE_GUTTER);
         }
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include desktop-size {
             top: (-$DESKTOP_SIDE_GUTTER);
         }
     }
 
      &.has-sidebar {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include desktop-size {
             .a-video__player {
                 margin-right: 470px;
             }
@@ -79,12 +79,12 @@
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         display: none;
     }
 
@@ -115,7 +115,7 @@
 .a-video__ad {
     margin-bottom: 40px;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
+    @include desktop-size{
         margin-bottom: 0;
         top: $PADDING_X_LARGE;
     }
