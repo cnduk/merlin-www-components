@@ -76,7 +76,7 @@
 
 a.n-main__dropdown__btn-share,
 .n-main__dropdown__btn-share {
-    @include button-share();
+    @include button-share;
     @include button-share-dark($name:none);
 
     font-size: initial;
@@ -98,10 +98,10 @@ a.n-main__dropdown__btn-share,
 }
 
 .n-main__dropdown__btn {
-    @include button-single();
-    @include button-single-light();
+    @include button-single;
+    @include button-single-light;
 
     &:hover {
-        @include button-single-light-hover();
+        @include button-single-light-hover;
     }
 }

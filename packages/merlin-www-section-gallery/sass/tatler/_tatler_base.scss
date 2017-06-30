@@ -161,7 +161,7 @@ li.c-gallery__meta-item {
     }
 
     .c-gallery__tag {
-        @include t-gallery-tag-large();
+        @include t-gallery-tag-large;
         margin: 15px 0;
     }
 

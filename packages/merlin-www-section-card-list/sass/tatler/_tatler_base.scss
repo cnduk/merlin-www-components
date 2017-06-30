@@ -99,14 +99,14 @@
     }
 
     .c-card-section__btn {
-        @include button-single();
-        @include button-single-dark();
+        @include button-single;
+        @include button-single-dark;
 
         margin-top: 30px;
         width: auto;
 
         &:hover {
-            @include button-single-dark-hover();
+            @include button-single-dark-hover;
         }
     }
 
@@ -121,8 +121,8 @@
 }
 
 .c-card-section__btn {
-    @include button-single();
-    @include button-single-light();
+    @include button-single;
+    @include button-single-light;
 
     margin-top: 30px;
 
@@ -132,7 +132,7 @@
     }
 
     &:hover {
-        @include button-single-light-hover();
+        @include button-single-light-hover;
     }
 }
 

@@ -33,11 +33,11 @@ li.a-podcast__list-item {
 }
 
 .a-podcast__btn {
-	@include button-group();
-	@include button-group-light();
+	@include button-group;
+	@include button-group-light;
 
 	&:hover {
-		@include button-group-light-hover();
+		@include button-group-light-hover;
 	}
 }
 

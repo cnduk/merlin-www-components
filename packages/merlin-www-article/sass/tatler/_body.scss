@@ -82,10 +82,10 @@
 }
 
 .a-infinite__message-btn {
-    @include button-single();
-    @include button-single-light();
+    @include button-single;
+    @include button-single-light;
 
     &:hover {
-        @include button-single-light-hover();
+        @include button-single-light-hover;
     }
 }
