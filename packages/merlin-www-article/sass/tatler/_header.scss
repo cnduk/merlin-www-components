@@ -287,7 +287,7 @@
 
     text-transform: none;
     letter-spacing: .5px;
-    color: #8a8a8a;
+    color: $gray;
     margin: 0 0 5px;
 
 
@@ -301,7 +301,7 @@
 .a-header__event-date {
     @include font('AGENDA', 10px, 'MEDIUM', 18px);
 
-    color: #8a8a8a;
+    color: $gray;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin: 0 0 10px;

@@ -116,7 +116,7 @@
     }
 
     .c-card-section__title {
-        color: #fff;
+        color: $white;
     }
 }
 
@@ -145,11 +145,11 @@
         margin-bottom: $PADDING_SMALL;
         width: auto;
 
-        @include button-single();
-        @include button-single-dark();
+        @include button-single;
+        @include button-single-dark;
 
         &:hover {
-            @include button-single-dark-hover();
+            @include button-single-dark-hover;
         }
     }
 

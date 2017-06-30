@@ -58,7 +58,7 @@
 .a-video__sidebar__title {
     @include font('STARLING', 16px, 'BOLD', 20px);
 
-    color: #fff;
+    color: $white;
     margin: 0;
     letter-spacing: 1px;
     padding: 20px 0;

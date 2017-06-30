@@ -59,8 +59,8 @@
 .bb-note {
     @include font('AGENDA', 14px, 'MEDIUM', 18px);
 
-    border-top: 1px solid #ccc;
-    color: #000;
+    border-top: 1px solid $silver;
+    color: $black;
     letter-spacing: .3px;
     margin: 20px 0 40px;
     padding-top: 12px;
@@ -254,7 +254,7 @@
 .bb-answer__by {
     @include font('AGENDA', 12px, 'MEDIUM', 12px);
 
-    color: #8a8a8a;
+    color: $gray;
     font-style: italic;
     letter-spacing: 1px;
     text-transform: lowercase;
@@ -264,7 +264,7 @@
 .bb-answer__author {
     @include font('AGENDA', 12px, 'MEDIUM', 12px);
 
-    color: #8a8a8a;
+    color: $gray;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -308,7 +308,7 @@
 .bb-pullquote__credit {
     @include font('AGENDA', 12px, 'MEDIUM', 12px);
 
-    color: #8a8a8a;
+    color: $gray;
     text-align: center;
     padding-top: 10px;
     letter-spacing: 1px;

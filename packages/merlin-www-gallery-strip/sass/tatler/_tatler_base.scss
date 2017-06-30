@@ -89,7 +89,7 @@ li.c-gallery-strip__list__item {
 .c-gallery-strip__remaining__label {
     @include font('STARLING', 27px, 'BOLD', 27px);
 
-    color: #fff;
+    color: $white;
 
     @include tablet-size {
         @include font('STARLING', 40px, 'BOLD', 40px);

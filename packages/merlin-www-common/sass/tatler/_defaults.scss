@@ -119,7 +119,7 @@ pre {
     @include font-size(17px);
     @include line-height(20px);
 
-    border: 1px solid #979797;
+    border: 1px solid $gray;
     color: $boulder;
     font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
     letter-spacing: 1px;
