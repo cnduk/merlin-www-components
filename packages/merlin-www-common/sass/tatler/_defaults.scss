@@ -24,21 +24,6 @@ a {
     }
 }
 
-// a {
-//     color: $COLOUR_TYPE_LINK;
-//     text-decoration: none;
-//     border-bottom: 1px solid rgba(224, 59, 42, 0.8);
-
-//     @include desktop-size {
-//         border-bottom: 1px solid $black;
-//         transition: border .16s ease;
-
-//         &:hover {
-//             border-bottom: 1px solid rgba(224, 59, 42, 0.8);
-//         }
-//     }
-// }
-
 abbr {}
 
 blockquote {
@@ -120,7 +105,7 @@ pre {
     @include line-height(20px);
 
     border: 1px solid $gray;
-    color: $boulder;
+    color: $COLOUR_PRE_TEXT;
     font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
     letter-spacing: 1px;
     margin: 30px 0;

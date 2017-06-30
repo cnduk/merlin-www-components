@@ -156,7 +156,7 @@
 .a-header__image-credit {
     @include font('AGENDA', 10px, 'MEDIUM', 10px);
 
-    color: $boulder;
+    color: $COLOUR_CREDIT_TEXT;
     letter-spacing: 1px;
     text-transform: uppercase;
 

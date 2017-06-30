@@ -28,7 +28,7 @@
         margin: 0 auto;
 
         svg {
-            fill: $white;
+            fill: $COLOUR_ICON_FILL;
             height: 100%;
             width: 100%;
         }
@@ -46,7 +46,7 @@
     }
 
     .tg-header__intro__image {
-        border: 1px solid $silver;
+        border: 1px solid $COLOUR_BORDER_SOLID;
         display: inline-block;
         height: 76px;
         margin: 0 0 30px;

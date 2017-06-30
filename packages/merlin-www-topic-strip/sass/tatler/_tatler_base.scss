@@ -43,7 +43,7 @@ li.c-topic-strip__item {
 .c-topic-strip__title {
     @include font('AGENDA', 12px, 'MEDIUM', 12px);
 
-    color: $black;
+    color: $COLOUR_TITLE_TEXT;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-right: 10px;

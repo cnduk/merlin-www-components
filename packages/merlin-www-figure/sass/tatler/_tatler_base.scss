@@ -50,14 +50,10 @@
     }
 }
 
-// .c-figure__title + .c-figure__caption {
-//     margin-top: -5px;
-// }
-
 .c-figure__credit {
     @include font('AGENDA', 10px, 'MEDIUM', 10px);
 
-    color: $boulder;
+    color: $COLOUR_CREDIT_TEXT;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin: 0;
@@ -73,7 +69,7 @@
 
 
 .c-figure__toolbar {
-    border: 1px solid $silver;
+    border: 1px solid $COLOUR_BORDER_SOLID;
     bottom: 10px;
     height: 47px;
     position: absolute;

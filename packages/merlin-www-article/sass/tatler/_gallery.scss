@@ -42,7 +42,7 @@ li.a-gallery__thumbnail {
     width: auto;
 
     svg {
-        fill: $white;
+        fill: $COLOUR_ICON_FILL;
         width: 30px;
     }
 
@@ -107,7 +107,7 @@ li.a-gallery__image-listitem {
     }
 
     svg, path {
-        fill: $white;
+        fill: $COLOUR_ICON_FILL;
     }
 
     &:hover,
@@ -115,7 +115,7 @@ li.a-gallery__image-listitem {
         background: $cinnabar;
 
         svg, path {
-            fill: $white;
+            fill: $COLOUR_ICON_FILL;
         }
     }
 }

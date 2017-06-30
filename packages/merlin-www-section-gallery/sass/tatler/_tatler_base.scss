@@ -105,7 +105,7 @@ $section_gallery_icon_size: 40px;
 li.c-gallery__meta-item {
     @include t-gallery-meta-small;
 
-    border-right: 1px solid $silver;
+    border-right: 1px solid $COLOUR_BORDER_SOLID;
     padding-right: 8px;
 
     & + & {

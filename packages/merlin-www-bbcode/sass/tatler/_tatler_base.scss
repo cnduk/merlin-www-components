@@ -1,7 +1,7 @@
 @mixin bb-credit($font-size) {
     @include font('AGENDA', $font-size, 'MEDIUM', $font-size);
 
-    color: $boulder;
+    color: $COLOUR_CREDIT_TEXT;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -59,7 +59,7 @@
 .bb-note {
     @include font('AGENDA', 14px, 'MEDIUM', 18px);
 
-    border-top: 1px solid $silver;
+    border-top: 1px solid $COLOUR_BORDER_SOLID;
     color: $black;
     letter-spacing: .3px;
     margin: 20px 0 40px;
@@ -363,7 +363,7 @@
 .bb-blockquote__credit {
     @include font('AGENDA', 10px, 'MEDIUM', 10px);
 
-    color: $boulder;
+    color: $COLOUR_CREDIT_TEXT;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -577,7 +577,6 @@
 
     .bb-card__image__icon {
         display: none;
-
         bottom: 0;
         background-color: $black;
         height: 40px;
@@ -590,7 +589,7 @@
             margin: 0 auto;
             vertical-align: middle;
             width: 16px;
-            fill: $white;
+            fill: $COLOUR_ICON_FILL;
         }
     }
 }

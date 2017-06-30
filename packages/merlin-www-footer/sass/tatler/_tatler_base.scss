@@ -88,7 +88,7 @@ li.c-footer__list-item--logo {
         vertical-align: middle;
     }
 
-    @include min-screen( 1100px ) {
+    @include min-screen(1100px) {
         clear: right;
         padding-left: 45px;
         margin-right: 0;
