@@ -70,16 +70,15 @@ h6 {
             map-get($heading, small-line-height)
         );
 
-
         @media (min-width: 600px) {
             @include font(
-            'STARLING',
-            map-get($heading, large),
-            map-get($heading, weight),
-            map-get($heading, large-line-height)
-        );
+                'STARLING',
+                map-get($heading, large),
+                map-get($heading, weight),
+                map-get($heading, large-line-height)
+            );
 
-            letter-spacing: 1px;
+            letter-spacing: map-get($heading, letter-spacing);
         }
     }
 

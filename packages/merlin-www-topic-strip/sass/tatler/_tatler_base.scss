@@ -78,7 +78,7 @@ li.c-topic-strip__item {
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         white-space: normal;
-        margin-bottom: (-$MARGIN_XX_SMALL);
+        margin-bottom: 0;
 
         .c-topic-strip__item {
             margin-bottom: $MARGIN_XX_SMALL;

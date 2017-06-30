@@ -134,7 +134,7 @@ li.c-gallery__meta-item {
 
     .c-gallery__icon {
         background-color: $silver;
-        margin: 0 auto 30px auto;
+        margin: 0 auto 20px auto;
     }
 
 }
@@ -157,7 +157,7 @@ li.c-gallery__meta-item {
 
     .c-gallery__icon {
         background-color: $wild-sand;
-        margin: 0 auto 30px auto;
+        margin: 0 auto 20px auto;
     }
 
     .c-gallery__tag {
@@ -174,7 +174,11 @@ li.c-gallery__meta-item {
     }
 
     .c-gallery__separator {
-        margin: 25px auto;
+        margin: 15px auto 20px;
+    }
+
+    .c-gallery__byline-prefix {
+        margin: 15px 0 10px;
     }
 
     .c-gallery__byline-prefix {

@@ -19,6 +19,7 @@
         @include font('AGENDA', 10px, 'MEDIUM');
 
         color: $COLOUR_MAIN_INACTIVE;
+        letter-spacing: 1px;
         margin: 0 0 5px;
         padding-left: $MOBILE_SIDE_GUTTER;
         padding-right: $MOBILE_SIDE_GUTTER;
@@ -57,7 +58,7 @@
 }
 
 .ad--article-rail {
-    margin: 60px (-$MOBILE_SIDE_GUTTER);
+    margin: 30px (-$MOBILE_SIDE_GUTTER);
 
     @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ){
         margin-left: (-$TABLET_SIDE_GUTTER);

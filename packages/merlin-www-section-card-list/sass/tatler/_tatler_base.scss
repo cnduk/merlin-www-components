@@ -41,13 +41,12 @@
 
     margin: 0;
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         @include t-topic-title-large;
 
         text-align: left;
-
         padding-bottom: 0;
     }
 }
@@ -75,7 +74,13 @@
 .c-card-section--c-curated,
 .c-card-section--c-contributors,
 .c-card-section--c-tag {
-    .c-card-section__title {}
+    .c-card-section__title {
+        padding: 0 0 15px;
+
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            padding-bottom: 0;
+        }
+    }
 }
 
 .c-card-section--s-results {}
@@ -271,6 +276,10 @@
             position: absolute;
             right: 0;
             top: 100%;
+        }
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            padding-bottom: 0;
         }
     }
 
