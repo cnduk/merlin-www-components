@@ -199,7 +199,18 @@ $C_CARD_BUM_MARGIN: 0;
 // Contains four columns
 // Goes two, four
 .c-card-list--mag-magazines {
-    @include cl-two-four;
+    @include cl-base;
+
+    flex-direction: row;
+    justify-content: flex-start;
+
+    .c-card-list__item {
+        margin-bottom: $C_CARD_BUM_MARGIN;
+        width: 50%;
+    }
+
+    @include cl-three;
+    @include cl-four;
 }
 
 

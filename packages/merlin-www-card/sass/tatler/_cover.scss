@@ -2,10 +2,17 @@
     .c-card__obj {
         display: flex;
         flex-direction: column;
+        margin-bottom: 30px;
+        width: 100%;
     }
 
-    .c-card__obj__header {
-        flex: 1 0;
+
+    .c-card__obj__header,
+    .c-card__obj__body {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        flex: 1 0 auto;
     }
 
     .c-card__image--custom {
@@ -13,8 +20,7 @@
     }
 
     .c-card__obj__body {
-        flex: 1 0;
-        padding-top: 20px;
+        padding-top: 10px;
     }
 
     .c-card__teaser,
@@ -27,13 +33,30 @@
     }
 
     .c-card__title {
-        margin-bottom: 15px;
+        @include font('AGENDA', 11px, 'MEDIUM', 13px);
+
+        color: $gray;
+        letter-spacing: .5px;
+        margin: 0;
         text-align: center;
+        text-transform: uppercase;
     }
 }
 
 .c-card--cover {
     @include card-cover;
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        .c-card__obj__body {
+            padding-top: 20px;
+        }
+
+        .c-card__title {
+            @include font('AGENDA', 17px, 'MEDIUM', 17px);
+
+            letter-spacing: 1px;
+        }
+    }
 }
 
 .c-card--cover-small {
@@ -42,4 +65,14 @@
 
 .c-card--cover-large {
     @include card-cover;
+
+    .c-card__obj__body {
+        padding-top: 20px;
+    }
+
+    .c-card__title {
+        @include font('AGENDA', 17px, 'MEDIUM', 17px);
+
+        letter-spacing: 1px;
+    }
 }
