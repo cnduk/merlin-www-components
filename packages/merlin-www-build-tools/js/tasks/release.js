@@ -71,7 +71,7 @@ module.exports = function taskReleaseExports(taskConfig, browserSync) {
             if (error) {
                 return cb(error);
             }
-            git.push('origin', 'master', {args: '--tags'}, cb);
+            git.push('origin', `v${version}`, cb);
         });
     });
 
