@@ -14,8 +14,11 @@
 }
 
 .bb-figure__caption {
-    color: $COLOR_MAIN_TERTIARY;
-    @include font('ADOBE CASLON', 13px, null, 18px);
+
+    p {
+        color: $COLOR_MAIN_TERTIARY;
+        @include font('ADOBE CASLON', 13px, null, 18px);
+    }
 
     & + .bb-figure__credit {
         margin: 8px 0 0 0;
