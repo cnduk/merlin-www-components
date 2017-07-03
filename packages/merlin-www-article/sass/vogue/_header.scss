@@ -112,7 +112,7 @@
     @include font('ADOBE CASLON', 15px, 700, 20px);
 }
 
-.a-header__image-caption {
+.a-header__image-caption p {
     color: $COLOR_MAIN_TERTIARY;
     @include font('ADOBE CASLON', 13px, null, 18px);
 }
