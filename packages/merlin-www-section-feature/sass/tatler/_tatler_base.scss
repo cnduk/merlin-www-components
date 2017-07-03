@@ -235,3 +235,31 @@ li.c-feature__meta-item {
         padding: 0;
     }
 }
+
+.c-feature--dark {
+    .c-feature__content {
+        background: $black;
+
+        .c-feature__icon {
+            background: $white;
+        }
+    }
+
+    .c-feature__title {
+        color: $white;
+    }
+}
+
+@include desktop-size {
+    .c-feature--dark.c-feature--left {
+        .c-feature__content {
+            @include border-line-box(left, $bg: $black, $border: $brownish-grey);
+        }
+    }
+
+    .c-feature--dark.c-feature--right {
+        .c-feature__content {
+            @include border-line-box(right, $bg: $black, $border: $brownish-grey);
+        }
+    }
+}

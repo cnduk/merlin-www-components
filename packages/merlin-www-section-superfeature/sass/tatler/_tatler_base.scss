@@ -141,3 +141,24 @@ li.c-superfeature__meta-item {
         padding: 0;
     }
 }
+
+
+.c-superfeature--dark {
+    .c-superfeature__content {
+        background: $black;
+
+        .c-superfeature__icon {
+            background: $white;
+        }
+
+        @include desktop-size {
+            @include border-line-box(top, $bg: $black, $border: $brownish-grey);
+        }
+    }
+
+    .c-superfeature__title,
+    .c-superfeature__teaser {
+        color: $white;
+    }
+}
+
