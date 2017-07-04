@@ -41,7 +41,7 @@
     background-color: $wild-sand;
     border: 0;
     margin: 20px 0;
-    padding: 20px 40px;
+    padding: 20px 20px;
 
     @include tablet-size {
         padding: 32px 30px;
@@ -52,7 +52,7 @@
 
 .n-menu__subscribe-cols {
     display: flex;
-    width: 85%;
+    width: 100%;
 }
 
 .n-menu__subscribe-col {
@@ -60,8 +60,6 @@
     width: 50%;
 
     &:nth-child(2) {
-        padding-left: 30px;
-
         @include tablet-size {
             padding-left: 30px;
         }
@@ -75,7 +73,7 @@
 
 .n-menu__subscribe-cover {
     &:nth-child(1) {
-        width: 85px;
+        width: 100px;
     }
 
     &:nth-child(2) {
@@ -86,9 +84,9 @@
         border-top: 8px solid $black;
         box-shadow: 0px 0px 0px 1px rgba(48,48,48,1);
         bottom: 0;
-        left: 60px;
+        left: 70px;
         position: absolute;
-        width: 52px;
+        width: 50px;
     }
 }
 
