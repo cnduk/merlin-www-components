@@ -198,7 +198,7 @@
 .bb-question__question p,
 .bb-answer__answer,
 .bb-answer__answer p {
-    @include font('STARLING', 18px, 'BOLD', 22px);
+    @include font('STARLING', 18px, 'BOLD', 24px);
 
     @include desktop-size {
         @include font('STARLING', 20px, 'BOLD', 32px);
