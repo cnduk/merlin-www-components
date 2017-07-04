@@ -107,11 +107,12 @@
 }
 
 .a-header__image {
-    padding: 0;
+    margin-bottom: 30px;
     max-width: 100%;
 
     @include desktop-size {
         padding: 0 60px;
+        margin-bottom: 60px;
     }
 }
 
@@ -155,9 +156,10 @@
 
 .a-header__image-credit {
     @include font('AGENDA', 10px, 'MEDIUM', 10px);
-
-    color: $COLOUR_CREDIT_TEXT;
+    color: $gray;
     letter-spacing: 1px;
+    margin-bottom: 30px;
+    padding-left: 20px;
     text-transform: uppercase;
 
     &:before {
