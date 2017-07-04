@@ -22,18 +22,10 @@
 }
 
 .c-figure__title {
-    @include font('AGENDA', 16px, 'MEDIUM', 16px);
+    @include font('AGENDA', 16px, 'MEDIUM', 18px);
 
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    letter-spacing: 0.5px;
     margin: 0 0 5px;
-
-    @include desktop-size {
-        @include font('AGENDA', 16px, 'MEDIUM', 16px);
-
-        letter-spacing: 1px;
-        margin: 0 0 5px;
-    }
 }
 
 .c-figure__caption,
@@ -56,46 +48,47 @@
     color: $COLOUR_CREDIT_TEXT;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin: 0;
+    margin: 15px 0 0 0;
 
     &:before {
         content: 'Credit: ';
-    }
-
-    @include desktop-size {
-        margin: 0;
     }
 }
 
 
 .c-figure__toolbar {
-    border: 1px solid $COLOUR_BORDER_SOLID;
+    border: 1px solid $brownish-grey;
     bottom: 10px;
     height: 47px;
     position: absolute;
     right: 10px;
+
+    @include desktop-size {
+        bottom: 15px;
+        right: 15px;
+    }
 }
 
 li.c-figure__toolbar-listitem {
-    background-color: $white;
+    background-color: $black;
     height: 45px;
     width: 45px;
 
-    svg {
-        fill: $black;
+    svg, path {
+        fill: $white;
         width: 17px;
     }
 }
 
 
-@each $name, $color in $COLOUR_SOCIAL {
+@each $name, $color in $COLOUR_SOCIAL_DARK {
     li.c-figure__toolbar-listitem--#{$name} {
         svg, path {
-            fill: map-get($COLOUR_SOCIAL, $name);
+            fill: $white;
         }
 
         &:hover {
-            background-color: map-get($COLOUR_SOCIAL, $name);
+            background-color: map-get($COLOUR_SOCIAL_DARK, $name);
 
             svg, path {
                 fill: $white;
@@ -105,9 +98,12 @@ li.c-figure__toolbar-listitem {
 }
 
 li.c-figure__toolbar-listitem--zoom {
+    svg, path {
+        fill: $white;
+    }
 
     &:hover {
-        background-color: $black;
+        background-color: $brownish-grey;
 
         svg, path {
             fill: $white;
