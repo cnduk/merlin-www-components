@@ -55,10 +55,6 @@
     @include font('STARLING', 18px, 'NORMAL', 18px);
 
     margin: 0;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     text-transform: uppercase;
-
-    @include tablet-size {
-        @include t-topic-title-large;
-    }
 }
