@@ -17,9 +17,10 @@
     //Allows for margin collapse
     display: inline;
     height: 0;
-    padding: 0;
     margin: 0;
     overflow: hidden;
+    padding: 0;
+    position: absolute;
     visibility: hidden;
 
     .ad__block {
