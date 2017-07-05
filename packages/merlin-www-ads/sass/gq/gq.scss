@@ -255,7 +255,32 @@
 
 .ad--tag-inline {
     padding: 0 10px;
-    margin: 10px 0;
+    position: relative;
+    margin: 10px (-$MOBILE_SIDE_GUTTER + -10px);
+
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$DESKTOP_SIDE_GUTTER;
+        margin-right: (-$DESKTOP_SIDE_GUTTER + -340px + -10px);
+
+        &:before {
+            background: $albaster;
+            content: "";
+            height: 100%;
+            width: 100vw;
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
+    }
+
 }
 
 .ad__title {
