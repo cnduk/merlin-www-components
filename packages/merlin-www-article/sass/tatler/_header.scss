@@ -108,10 +108,10 @@
 
 .a-header__image {
     margin-bottom: 30px;
-    max-width: 100%;
+    padding: 0;
+    max-width: $MAXIMUM_PAGE_WIDTH;
 
     @include desktop-size {
-        padding: 0 60px;
         margin-bottom: 60px;
     }
 }
