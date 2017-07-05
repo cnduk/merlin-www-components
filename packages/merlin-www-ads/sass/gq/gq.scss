@@ -219,7 +219,7 @@
 }
 
 .ad--tag-rail {
-    margin: 0 (-$MOBILE_SIDE_GUTTER + 10) 20px (-$MOBILE_SIDE_GUTTER + 10);
+    margin: 10px (-$MOBILE_SIDE_GUTTER + 10) 10px (-$MOBILE_SIDE_GUTTER + 10);
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         margin-left: -$TABLET_SIDE_GUTTER + 10;
@@ -239,7 +239,7 @@
     .ad__block {
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             background-color: transparent;
-            margin: -20px 0;
+            margin: -10px 0;
             padding: 20px 0;
         }
     }
@@ -251,6 +251,11 @@
         position: absolute;
         top: 0;
     }
+}
+
+.ad--tag-inline {
+    padding: 0 10px;
+    margin: 10px 0;
 }
 
 .ad__title {
