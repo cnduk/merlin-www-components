@@ -144,7 +144,7 @@
 .c-feature__title {
     @include t-feature-title-small;
 
-    margin: 0 0 18px;
+    margin: 0 0 20px;
     padding: 0 0 15px;
     position: relative;
 
@@ -233,33 +233,5 @@ li.c-feature__meta-item {
     & + & {
         border: 0;
         padding: 0;
-    }
-}
-
-.c-feature--dark {
-    .c-feature__content {
-        background: $black;
-
-        .c-feature__icon {
-            background: $white;
-        }
-    }
-
-    .c-feature__title {
-        color: $white;
-    }
-}
-
-@include desktop-size {
-    .c-feature--dark.c-feature--left {
-        .c-feature__content {
-            @include border-line-box(left, $bg: $black, $border: $brownish-grey);
-        }
-    }
-
-    .c-feature--dark.c-feature--right {
-        .c-feature__content {
-            @include border-line-box(right, $bg: $black, $border: $brownish-grey);
-        }
     }
 }
