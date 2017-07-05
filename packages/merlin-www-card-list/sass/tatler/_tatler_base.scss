@@ -28,17 +28,12 @@ $C_CARD_BUM_MARGIN: 0;
 
 @mixin cl-one {
     @include one-column-size {
-        .c-card-list__item + .c-card-list__item {
-            margin-top: 0;
+        margin-bottom: -$C_CARD_GUTTER;
+        margin-top: -$C_CARD_GUTTER;
 
-            .c-card {
-                border: 0;
-                padding-top: 20px;
-
-                &.c-card--dark {
-                    border: 0
-                }
-            }
+        .c-card-list__item {
+            margin-bottom: $C_CARD_GUTTER;
+            margin-top: $C_CARD_GUTTER;
         }
     }
 }
@@ -47,9 +42,12 @@ $C_CARD_BUM_MARGIN: 0;
     @include two-column-size {
         flex-direction: row;
         justify-content: flex-start;
+        margin-bottom: -$C_CARD_GUTTER;
+        margin-top: -$C_CARD_GUTTER;
 
         .c-card-list__item {
-            margin-bottom: $C_CARD_BUM_MARGIN;
+            margin-bottom: $C_CARD_GUTTER;
+            margin-top: $C_CARD_GUTTER;
             width: 50%;
         }
     }
@@ -59,9 +57,12 @@ $C_CARD_BUM_MARGIN: 0;
     @include three-column-size {
         flex-direction: row;
         justify-content: center;
+        margin-bottom: -$C_CARD_GUTTER;
+        margin-top: -$C_CARD_GUTTER;
 
         .c-card-list__item {
-            margin-bottom: $C_CARD_BUM_MARGIN;
+            margin-bottom: $C_CARD_GUTTER;
+            margin-top: $C_CARD_GUTTER;
             width: 33.33%;
         }
     }
@@ -71,9 +72,12 @@ $C_CARD_BUM_MARGIN: 0;
     @include four-column-size {
         flex-direction: row;
         justify-content: flex-start;
+        margin-bottom: -$C_CARD_GUTTER;
+        margin-top: -$C_CARD_GUTTER;
 
         .c-card-list__item {
-            margin-bottom: $C_CARD_BUM_MARGIN;
+            margin-bottom: $C_CARD_GUTTER;
+            margin-top: $C_CARD_GUTTER;
             width: 25%;
         }
     }
@@ -83,9 +87,12 @@ $C_CARD_BUM_MARGIN: 0;
     @include five-column-size {
         flex-direction: row;
         justify-content: center;
+        margin-bottom: -$C_CARD_GUTTER;
+        margin-top: -$C_CARD_GUTTER;
 
         .c-card-list__item {
-            margin-bottom: $C_CARD_BUM_MARGIN;
+            margin-bottom: $C_CARD_GUTTER;
+            margin-top: $C_CARD_GUTTER;
             width: 20%;
         }
     }
