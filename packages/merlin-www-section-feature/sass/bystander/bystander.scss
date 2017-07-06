@@ -10,13 +10,16 @@
 }
 .c-feature__icon {
     background: $black;
+    path {
+        fill: $white;
+    }
 }
 
 .c-feature__title {
     color: $white;
 }
 
-@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+@include desktop-size {
     .c-feature--left .c-feature__content {
         @include border-line-box(left, $bg: $black, $border: $brownish-grey);
     }
