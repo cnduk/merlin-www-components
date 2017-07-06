@@ -194,5 +194,30 @@ li.c-gallery__meta-item {
     li.c-gallery__meta-item {
         @include t-gallery-meta-large;
     }
+}
+
+
+.c-gallery--dark {
+
+    .c-gallery__text {
+        background: $black;
+
+        @include desktop-size {
+            @include border-line-box(left, $bg: $black, $border: $brownish-grey);
+        }
+    }
+
+    .c-gallery__icon {
+        background: $cod-gray;
+
+        path {
+            fill: $white;
+        }
+    }
+
+    .c-gallery__title,
+    .c-gallery__teaser {
+        color: $white;
+    }
 
 }
