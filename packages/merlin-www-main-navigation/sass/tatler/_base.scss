@@ -55,7 +55,7 @@
     svg, img {
         fill: $black;
         height: 60px;
-        width: 100%;
+        width: 100px;
     }
 
     @include screen(1440px, 1500px) {
