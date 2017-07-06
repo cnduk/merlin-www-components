@@ -1,7 +1,10 @@
 .a-marketing-card {
     background: $wild-sand;
     margin: $MARGIN_SMALL 0;
-    padding: $PADDING_MEDIUM $PADDING_SMALL;
+    padding: 30px 20px;
+    @include tablet-size {
+        padding: 30px 40px;
+    }
 }
 
 .a-marketing-card--brand {}
@@ -33,6 +36,7 @@
 
 .a-marketing-card__magazine {
     margin: 0 auto $MARGIN_SMALL auto;
+    width: 230px;
 
     @include tablet-size {
         margin-bottom: 0;
@@ -43,7 +47,10 @@
     display: inline-block;
 }
 .a-marketing-card__magazine__cover--print {
-    width: 95px;
+    width: 110px;
+    @include tablet-size {
+        width: 140px;
+    }
 }
 .a-marketing-card__magazine__cover--desktop {}
 .a-marketing-card__magazine__cover--tablet {
@@ -51,11 +58,18 @@
     background-image: none;
     border-radius: 4px;
     box-shadow: 0px 0px 0px 1px rgba(48, 48, 48, 1);
-    padding: 8px 4px;
-    width: 55px;
+    margin-left: -50px;
+    padding: 12px 6px;
     position: static;
-    margin-left: -20px;
+    width: 85px;
+
+    @include tablet-size {
+        margin-left: -50px;
+        padding: 12px 6px;
+        width: 107px;
+    }
 }
+
 .a-marketing-card__magazine__cover--mobile {
     display: none;
 }
@@ -75,8 +89,10 @@
     @include font('STARLING', 16px, 'NORMAL', 22px);
 
     color: $black-two;
+    margin-top: 20px;
 
     @include tablet-size {
         @include font('STARLING', 21px, 'NORMAL', 26px);
+        margin-top: 0;
     }
 }
