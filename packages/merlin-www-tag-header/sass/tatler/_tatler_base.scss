@@ -129,15 +129,11 @@
 .tg-header__intro svg {
     display: block;
     margin: 0 auto $MARGIN_SMALL auto;
-    width: 160px;
+    width: 230px;
 
     @include tablet-size {
         margin-bottom: $MARGIN_MEDIUM;
-        width: 250px;
-    }
-
-    @include desktop-size {
-        width: 250px;
+        width: 350px;
     }
 
     // &:last-child {
