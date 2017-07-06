@@ -190,6 +190,12 @@
             top: 100%;
         }
     }
+
+    @include desktop-size {
+        .c-card-section__title {
+            padding-bottom: 0;
+        }
+    }
 }
 
 .c-card-section--mag-magazines,
@@ -226,6 +232,12 @@
             position: absolute;
             right: 0;
             top: 100%;
+        }
+    }
+
+    @include desktop-size {
+        .c-card-section__title {
+            padding-bottom: 0;
         }
     }
 }
@@ -276,16 +288,17 @@
             right: 0;
             top: 100%;
         }
-
-        @include desktop-size {
-            padding-bottom: 0;
-        }
     }
 
     .c-card-list {
         text-align: left;
+    }
 
-        @include desktop-size {
+    @include desktop-size {
+        .c-card-section__title {
+            padding-bottom: 0;
+        }
+        .c-card-list {
             margin-right: 340px;
             position: relative;
         }
