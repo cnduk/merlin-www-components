@@ -13,6 +13,10 @@
 .c-superfeature {
     .c-superfeature__image {
         overflow: hidden;
+
+        img {
+            width: 100%;
+        }
     }
 
     &:hover,
