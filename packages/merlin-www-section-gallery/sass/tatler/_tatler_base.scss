@@ -63,6 +63,10 @@ $section_gallery_icon_size: 40px;
         width: $section_gallery_icon_size/2;
     }
 }
+.c-gallery__icon--video {
+    height: 100%;
+    width: 15px;
+}
 
 .c-gallery__tag {
     @include t-gallery-tag-small;
