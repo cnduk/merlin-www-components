@@ -43,7 +43,7 @@ $section_gallery_icon_size: 40px;
 }
 .c-gallery__text {
     background-color: $white;
-    padding: $section_gallery_text_padding;
+    padding: $section_gallery_text_padding 20px;
     text-align: center;
 }
 
@@ -151,6 +151,7 @@ li.c-gallery__meta-item {
 
     .c-gallery__text {
         @include border-line-box(left);
+        padding: $section_gallery_text_padding;
     }
 
     .c-gallery__text__wrapper {
