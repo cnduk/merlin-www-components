@@ -4,11 +4,6 @@
     max-width: none;
     padding: 0 $MOBILE_SIDE_GUTTER;
 
-    @include tablet-size {
-        margin: 60px auto;
-        padding: 0 60px;
-    }
-
     .c-feature__image {
         overflow: hidden;
         display: flex;
@@ -41,20 +36,6 @@
     display: flex;
     direction: ltr;
     flex-direction: column;
-
-    @include desktop-size {
-        direction: ltr;
-        flex-direction: row;
-
-        .c-feature--right & {
-            direction: ltr;
-            flex-direction: row-reverse;
-        }
-    }
-
-    @include feature-large-size {
-        padding: 0;
-    }
 }
 
 .c-feature__images,
@@ -62,10 +43,6 @@
     position: relative;
     display: flex;
     width: 100%;
-
-    @include desktop-size {
-        width: 50%;
-    }
 }
 
 .c-feature__images {
@@ -81,35 +58,17 @@
     justify-content: center;
     padding: 28px 20px;
     text-align: center;
+}
 
-    .c-feature__icon {
-        margin: 0 auto $MARGIN_MEDIUM auto;
-        padding: $PADDING_XX_SMALL;
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        background: $white;
-        top: -20px;
-        border-radius: 50%;
-    }
-
-    @include desktop-size {
-        padding: 20px 60px;
-
-        .c-feature--left & {
-            @include border-line-box(left);
-        }
-
-        .c-feature--right & {
-            @include border-line-box(right);
-        }
-
-        .c-feature__icon {
-            position: static;
-
-            background: $wild-sand;
-        }
-    }
+.c-feature__icon {
+    margin: 0 auto $MARGIN_MEDIUM auto;
+    padding: $PADDING_XX_SMALL;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background: $white;
+    top: -20px;
+    border-radius: 50%;
 }
 
 .c-feature__image--portrait {
@@ -136,13 +95,6 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     margin: 0 0 10px;
-
-    @include card-switcher-size {
-        @include font('AGENDA', 12px, 'MEDIUM', 12px);
-
-        letter-spacing: 1px;
-        margin: 0 0 15px;
-    }
 }
 
 .c-feature__title {
@@ -163,14 +115,6 @@
         left: 50%;
         margin-left: -10px;
     }
-
-    @include feature-large-size {
-        @include t-feature-title-large;
-
-        margin: 0 0 20px;
-        padding: 0 0 15px;
-        max-width: 500px;
-    }
 }
 
 .c-feature__teaser {
@@ -185,10 +129,6 @@
     @include feature-card-byline;
 
     margin: 0 0 10px;
-
-    @include feature-large-size {
-        margin: 0 0 10px;
-    }
 }
 
 .c-feature__byline-prefix {
@@ -207,11 +147,6 @@
     display: inline-block;
     margin-top: 0;
     padding-top: 0;
-
-    @include card-switcher-size {
-        margin-top: 0;
-        padding-top: 0;
-    }
 }
 
 li.c-feature__meta-item {
@@ -238,4 +173,83 @@ li.c-feature__meta-item {
         border: 0;
         padding: 0;
     }
+}
+
+
+@include feature-large-size {
+    .c-feature__wrapper {
+        padding: 0;
+    }
+    .c-feature__title {
+        @include t-feature-title-large;
+
+        margin: 0 0 20px;
+        padding: 0 0 15px;
+        max-width: 500px;
+    }
+    .c-feature__byline {
+        margin: 0 0 10px;
+    }
+}
+
+
+@include card-switcher-size {
+    .c-feature__tag {
+        @include font('AGENDA', 12px, 'MEDIUM', 12px);
+
+        letter-spacing: 1px;
+        margin: 0 0 15px;
+    }
+    .c-feature__meta {
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
+
+@include tablet-size {
+
+    .c-feature {
+        margin: 60px auto;
+        padding: 0 60px;
+    }
+
+}
+
+
+@include desktop-size {
+
+    .c-feature__wrapper {
+        direction: ltr;
+        flex-direction: row;
+
+        .c-feature--right & {
+            direction: ltr;
+            flex-direction: row-reverse;
+        }
+    }
+
+    .c-feature__images,
+    .c-feature__content {
+        width: 50%;
+    }
+
+    .c-feature__content {
+        padding: 20px 60px;
+
+        .c-feature--left & {
+            @include border-line-box(left);
+        }
+
+        .c-feature--right & {
+            @include border-line-box(right);
+        }
+    }
+
+    .c-feature__icon {
+        position: static;
+
+        background: $wild-sand;
+    }
+
 }
