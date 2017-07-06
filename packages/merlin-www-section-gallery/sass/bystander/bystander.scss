@@ -27,6 +27,7 @@
 
 li.c-gallery__meta-item {
     border-right-color: $mine-shaft;
+    border-right-width: 2px;
 }
 
 @include min-screen($FEATURE_LARGE_BREAKPOINT){

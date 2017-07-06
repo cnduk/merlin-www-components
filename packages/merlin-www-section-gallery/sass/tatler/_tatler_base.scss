@@ -220,4 +220,9 @@ li.c-gallery__meta-item {
         color: $white;
     }
 
+    li.c-gallery__meta-item {
+        border-right-color: $mine-shaft;
+        border-right-width: 2px;
+    }
+
 }
