@@ -124,6 +124,10 @@
         fill: $black;
     }
 }
+.c-feature__icon--video {
+    height: 100%;
+    width: 15px;
+}
 
 .c-feature__tag {
    @include font('AGENDA', 12px, 'MEDIUM', 12px);
