@@ -22,12 +22,9 @@
     }
 
     .a-footer__wrapper {
-        @include desktop-size {
-            padding-left: 60px;
-        }
+        max-width: $ARTICLE_TOTAL;
     }
 }
-
 
 .a-related-tags {
     border: 0;
