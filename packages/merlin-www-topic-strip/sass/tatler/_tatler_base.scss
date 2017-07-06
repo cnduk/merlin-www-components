@@ -79,9 +79,10 @@ li.c-topic-strip__item {
     @include desktop-size {
         white-space: normal;
         margin-bottom: 0;
+        margin-top: -$MARGIN_XX_SMALL;
 
         .c-topic-strip__item {
-            margin-bottom: $MARGIN_XX_SMALL;
+            margin-top: $MARGIN_XX_SMALL;
             margin-right: $MARGIN_XX_SMALL;
         }
 
