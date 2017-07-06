@@ -33,7 +33,7 @@
     }
 
     .c-card__title {
-        @include font('AGENDA', 11px, 'MEDIUM', 13px);
+        @include font('AGENDA', 13px, 'MEDIUM', 13px);
 
         color: $gray;
         letter-spacing: .5px;
