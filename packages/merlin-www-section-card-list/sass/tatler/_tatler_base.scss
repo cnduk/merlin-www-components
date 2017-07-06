@@ -262,8 +262,16 @@
 }
 
 .c-card-section--mag-magazines {
+    margin-bottom: 30px;
+    margin-top: 30px;
+
     .c-card-section__constrain {
         max-width: $MAXIMUM_PAGE_WIDTH;
+    }
+
+    @include desktop-size {
+        margin-bottom: 60px;
+        margin-top: 60px;
     }
 }
 
