@@ -102,7 +102,6 @@
 .n-main__cover__btn,
 a.n-main__cover__btn {
     margin-top: 10px;
-    padding: 4px;
 }
 
 
@@ -116,7 +115,7 @@ a.n-menu__subscribe-btn {
     letter-spacing: 1px;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 8px;
+    padding: 4px;
 
     &:after {
         display: none;
@@ -128,9 +127,5 @@ a.n-menu__subscribe-btn {
         border: 1px solid $cinnabar;
         color: $white;
         text-decoration: none;
-    }
-
-    @include tablet-size {
-        padding: 5px;
     }
 }
