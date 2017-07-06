@@ -1,5 +1,5 @@
 .a-footer {
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 
     .a-share {
         margin: 30px 0 0;
@@ -26,6 +26,19 @@
     }
 }
 
+.a-footer--video {
+    padding-bottom: 40px;
+
+    .a-related-tags {
+        margin: 0;
+        padding: 0;
+    }
+
+    @include desktop-size {
+        padding-bottom: 60px;
+    }
+}
+
 .a-related-tags {
     border: 0;
     margin: 30px 0;
@@ -35,5 +48,6 @@
         margin: 60px 0;
     }
 }
+
 
 .a-related-tags__wrapper {}

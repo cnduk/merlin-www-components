@@ -256,18 +256,39 @@
 }
 
 .a-header__meta {
-    @include card-switcher-size {}
+    @include card-switcher-size;
+    font-size: 0;
+
+    @include desktop-size {
+        margin-bottom: 30px;
+    }
 }
 
-.a-header__meta-item {
-    &:not(:last-child) {}
+li.a-header__meta-item {
+    color: $gray;
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    letter-spacing: 0.3px;
 
-    & + .a-header__meta-item {}
+    a {
+        color: inherit;
+        letter-spacing: 1px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    & + & {
+        border-left: 1px solid #ccc;
+        margin-left: 10px;
+        padding-left: 10px;
+    }
 }
 
-.a-header__meta-item--date {}
-.a-header__meta-item--tag {}
-.a-header__meta-item {}
+@include desktop-size {
+    li.a-header__meta-item {
+        @include font-size(16px);
+        @include line-height(16px);
+    }
+}
 
 .a-header__event {
     margin-top: 25px;
@@ -353,7 +374,9 @@
     }
 
     @include desktop-size {
-        .a-header__meta-item {
+        .a-header__content {
+            padding: 60px 360px 30px 0;
         }
     }
+
 }
