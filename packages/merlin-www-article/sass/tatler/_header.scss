@@ -274,7 +274,13 @@ li.a-header__meta-item {
         letter-spacing: 1px;
         text-decoration: none;
         text-transform: uppercase;
+
+        &:hover,
+        &:focus {
+            color: $COLOUR_MAIN_HIGHLIGHT;
+        }
     }
+
 
     & + & {
         border-left: 1px solid #ccc;
