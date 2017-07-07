@@ -1,16 +1,53 @@
-.c-cookie-warning {}
+.c-cookie-warning {
+    background-color: $white;
+    border: 1px solid $black;
+    padding: 20px;
 
-.c-cookie-warning__table-cell--cta {}
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
+        padding: 30px;
+    }
+}
+
+.c-cookie-warning__table-cell--cta {
+    vertical-align: top;
+    width: 50px;
+}
 
 .c-cookie-warning__message {
-    a {}
+    @include font('AGENDA', 14px, 'MEDIUM', 17px);
+    margin: 0;
+
+    a {
+        border-bottom: 2px solid $black;
+        color: inherit;
+        text-decoration: none;
+    }
 }
 
 .c-cookie-warning__button {
+    border: 1px solid $black;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+
     svg {
-        display: inline-block;
-        height: 10px;
+        display: block;
+        height: 8px;
         margin: 0 auto;
         width: 8px;
+    }
+}
+
+@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
+    .c-cookie-warning {
+        max-width: 630px;
+        padding: 30px;
+        width: 40%;
+    }
+    .c-cookie-warning__table-cell--cta {
+        width: 60px;
+    }
+    .c-cookie-warning__message {
+        @include line-height(20px);
     }
 }
