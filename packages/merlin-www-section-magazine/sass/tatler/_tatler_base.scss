@@ -29,9 +29,11 @@
 
 .c-magazine__covers {
     padding-right: 0;
+    width: 220px;
 
     @include desktop-size {
         padding-right: 50px;
+        width: auto;
     }
 }
 
@@ -67,7 +69,7 @@
 
 .c-magazine__cover--tablet {
     img {
-        width: 50%;
+        width: 47%;
         margin-left: 40px;
         right: 0;
 
