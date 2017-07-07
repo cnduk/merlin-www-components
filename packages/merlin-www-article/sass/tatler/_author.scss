@@ -20,8 +20,7 @@
 
 .a-author__byline {
     @include card-byline;
-
-    margin: 15px 0 10px;
+    margin: 12px 0 5px;
 
     a {
         color: $gray;
