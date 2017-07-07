@@ -307,9 +307,9 @@ li.a-header__meta-item {
 .a-header__event-title {
     @include font('AGENDA', 12px, 'MEDIUM', 12px);
 
-    color: $cinnabar;
+    color: $gray;
     letter-spacing: 1px;
-    margin: 15px 0 5px;
+    margin: 15px 0 10px;
     text-transform: uppercase;
 
     @include desktop-size {
@@ -325,7 +325,7 @@ li.a-header__meta-item {
     text-transform: none;
     letter-spacing: .5px;
     color: $gray;
-    margin: 0 0 5px;
+    margin: 0 0 10px;
 
 
     @include desktop-size {
