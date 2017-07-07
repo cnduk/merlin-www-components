@@ -27,7 +27,7 @@
     .c-card__title {
         @include font('STARLING', 16px, 'NORMAL', 19px);
 
-        margin: 0 0 10px;
+        margin: 0 0 5px;
         max-height: 57px;
         max-height: 3.5625rem;
         overflow: hidden;
@@ -60,7 +60,8 @@
 
     .c-card__byline--sponsorship {
         display: block;
-        margin-bottom: 0;
+        margin-bottom: 8px;
+        margin-top: 5px;
     }
 
     .c-card__separator {
