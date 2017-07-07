@@ -4,6 +4,10 @@
     padding-right: 0;
 }
 
+.a-event-author {
+    margin-bottom: 40px;
+}
+
 .a-author__article-date {
     @include card-meta;
 }
@@ -60,3 +64,27 @@
 }
 
 .a-author__separator--date {}
+
+.a-event-author__title {
+    @include font("AGENDA", 12px, 500, 18px)
+    color: $gray;
+    letter-spacing: 1px;
+    margin: 15px 0 5px;
+    text-transform: uppercase;
+}
+
+.a-event-author__location {
+    @include font("AGENDA", 13px, 500, 18px);
+    color: #8a8a8a;
+    color: $gray;
+    letter-spacing: 0.5px;
+}
+
+.a-event-author__date {
+    @include font("AGENDA", 10px, 500, 10px);
+    color: $gray;
+    font-family: Agenda,sans-serif;
+    letter-spacing: 1px;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
