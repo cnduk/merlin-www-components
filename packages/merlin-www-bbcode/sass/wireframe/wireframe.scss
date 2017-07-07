@@ -299,7 +299,9 @@ li.bb-gallery__col {
 /**
  * Video
  */
-.bb-video {}
+.bb-video {
+    position: relative;
+}
 .bb-video__title {}
 .bb-video__title-icon {
     display: inline-block;
@@ -316,16 +318,31 @@ li.bb-gallery__col {
     }
 }
 .bb-video__wrapper {
+    padding-top: 66.66666%;
     position: relative;
+
+    img {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
 }
-.bb-video__image {
+
+.bb-video__image-icon {
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
 }
-.bb-video__image-icon {}
-.bb-video__link {}
+.bb-video__link {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: 1;
+}
 
 
 /**

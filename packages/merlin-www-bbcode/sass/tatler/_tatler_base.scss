@@ -158,7 +158,11 @@
 .bb-gallery__cols {
     .bb-gallery__col:last-child .bb-gallery__remaining {}
 }
-.bb-gallery__col {}
+.bb-gallery__col {
+    &:before {
+        content: none;
+    }
+}
 .bb-gallery__image {}
 
 .bb-gallery__remaining {}
@@ -512,7 +516,31 @@
 
 .bb-video__wrapper {}
 .bb-video__image {}
-.bb-video__image-icon {}
+.bb-video__image-icon {
+    @include vendor-prefix(transform, translate(-50%, -50%));
+    background-color: rgba(17, 17, 17, 0.6);
+    border-radius: 50%;
+    height: 60px;
+    left: 50%;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    width: 60px;
+
+    @include desktop-size {
+
+    }
+
+    svg, path {
+        fill: $white;
+        height: 20px;
+        width: 20px;
+
+        @include desktop-size {
+
+        }
+    }
+}
 .bb-video__link {}
 
 
