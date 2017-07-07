@@ -48,11 +48,11 @@ $section_gallery_icon_size: 40px;
 }
 
 .c-gallery__icon {
-    background-color: $white;
+    background-color: $wild-sand;
     border-radius: 50%;
     display: block;
     height: $section_gallery_icon_size;
-    margin: 0 auto ($section_gallery_icon_size/2) auto;
+    margin: 0 auto 15px auto;
     position: relative;
     width: $section_gallery_icon_size;
 
@@ -87,7 +87,7 @@ $section_gallery_icon_size: 40px;
     border: none;
     display: block;
     height: 1px;
-    margin: 15px auto 20px auto;
+    margin: 20px auto;
     width: 20px;
 }
 
