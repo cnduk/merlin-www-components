@@ -134,3 +134,33 @@ li.a-gallery__image-listitem {
         fill: $silver;
     }
 }
+
+.g-image-nav--dark {
+
+    .g-image-nav__btn {
+        background-color: $white;
+
+        svg, path {
+            fill: $black;
+        }
+
+        &:hover,
+        &:focus {
+            background: $cinnabar;
+
+            svg, path {
+                fill: $black;
+            }
+        }
+
+    }
+
+    .g-image-nav__btn[disabled] {
+        background-color: $black;
+
+        svg, path {
+            fill: $cod-gray;
+        }
+    }
+
+}
