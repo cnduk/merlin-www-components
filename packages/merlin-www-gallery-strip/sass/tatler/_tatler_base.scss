@@ -101,12 +101,14 @@ li.c-gallery-strip__list__item {
 .c-gallery-strip__remaining__value {}
 
 .c-gallery-strip__title {
-    @include font('STARLING', 24px, 'BOLD', 28px);
+    @include font('STARLING', 16px, 'BOLD', 19px);
 
-    margin: 15px 0 0;
+    margin: 10px 0 0 0;
 
     @include tablet-size {
-        margin: 20px 0 0;
+        @include font-size(20px);
+        @include line-height(24px);
+        margin: 15px 0 0 0;
     }
 }
 
