@@ -76,10 +76,7 @@
         border-radius: 50%;
         line-height: 40px;
         text-align: center;
-        transform: translateX(-50%);
         z-index: 1;
-        bottom: -20px;
-        left: 50%;
 
         svg {
             width: 20px;
@@ -100,15 +97,36 @@
     }
 }
 
+@mixin card-portrait-small {
+    .c-card__image__icon {
+        bottom: 10px;
+        left: 10px;
+    }
+}
+
+@mixin card-portrait-large {
+    .c-card__image__icon {
+        transform: translateX(-50%);
+        bottom: -20px;
+        left: 50%;
+    }
+}
+
 
 .c-card--portrait {
     @include card-portrait;
+    @include card-portrait-small;
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include card-portrait-large;
+    }
 }
 
 .c-card--portrait-small {
     @include card-portrait;
+    @include card-portrait-small;
 }
 
 .c-card--portrait-large {
     @include card-portrait;
+    @include card-portrait-large;
 }

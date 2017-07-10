@@ -4,6 +4,7 @@
 
 @mixin card-switcher-large {
     @include card-portrait;
+    @include card-portrait-large;
 }
 
 .c-card--switcher {
