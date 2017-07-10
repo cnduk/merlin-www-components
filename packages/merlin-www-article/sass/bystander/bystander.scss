@@ -13,3 +13,34 @@
 @import '../wireframe/wireframe';
 
 @import '../tatler/_tatler_base';
+
+
+.ad--article-gallery,
+.ad--article-gallery .ad__container {
+    background-color: $cod-gray;
+}
+
+.a-main--gallery {
+    background-color: $cod-gray;
+    color: $white;
+
+    // Header
+    .a-header__title,
+    .a-header__teaser,
+    .a-header__image-title,
+    .a-header__image-caption {
+        color: $white;
+    }
+    // Body
+    .a-body__content p {
+        color: $white;
+    }
+    // Gallery
+    .c-figure__title {
+        color: $white;
+    }
+    // Share
+    .a-share__title {
+        color: $white;
+    }
+}
