@@ -1,4 +1,4 @@
-<article class="a-main{{# state.is_sponsored }} is-sponsored{{/ state.is_sponsored }}{{# state.is_gallery }}{{^ state.has_body }} a-main--gallery{{/ state.has_body }}{{/ state.is_gallery }}" data-article-url="{{ data.article.data.url }}" data-article-type="{{ data.article.data.type }}" data-article-uid="{{ data.article.data.uid }}">
+<article class="a-main{{# state.is_sponsored }} is-sponsored{{/ state.is_sponsored }}{{# state.is_gallery }} a-main--gallery{{/ state.is_gallery }} {{^ state.has_body }} has-body{{/ state.has_body }}" data-article-url="{{ data.article.data.url }}" data-article-type="{{ data.article.data.type }}" data-article-uid="{{ data.article.data.uid }}">
     {{# data.article }}
         {{> @cnbritain/merlin-www-article/article-header }}
 
