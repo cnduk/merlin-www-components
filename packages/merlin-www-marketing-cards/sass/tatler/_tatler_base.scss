@@ -1,79 +1,40 @@
+
 .a-marketing-card {
     background: $wild-sand;
     margin: $MARGIN_SMALL 0;
     padding: 30px 20px;
-    @include tablet-size {
-        padding: 30px 40px;
-    }
-}
-
-.a-marketing-card--brand {}
-.a-marketing-card--event {}
-.a-marketing-card--topic {}
-.a-marketing-card--magazine {
-    .a-marketing-card__col {
-        text-align: center;
-
-        @include tablet-size {
-            text-align: left;
-        }
-    }
 }
 
 .a-marketing-card__brand {}
-.a-marketing-card__brand__img {}
+.a-marketing-card__brand__img {
+    margin: 0 auto 30px auto;
+}
 .a-marketing-card__brand__name {}
-.a-marketing-card__brand__prefix {}
+.a-marketing-card__brand__prefix {
+    @include font('AGENDA', 12px, 'MEDIUM', 16px);
+    font-style: italic;
+    letter-spacing: 1.2px;
+    margin-bottom: 20px;
+}
 
 .a-marketing-card__col {
     text-align: center;
 }
+.a-marketing-card__title {
+    @include font('STARLING', 16px, 'NORMAL', 22px);
 
-.a-marketing-card--brand .a-marketing-card__col,
-.a-marketing-card--event .a-marketing-card__col {}
+    color: $black-two;
+    margin: 0 auto 30px auto;
+}
+.a-marketing-card__desc {
+    @include font('AGENDA', 14px, 'MEDIUM', 20px);
+    letter-spacing: 0.8px;
+    margin: 15px auto 30px auto;
 
-.a-marketing-card__desc {}
-
-.a-marketing-card__magazine {
-    margin: 0 auto $MARGIN_SMALL auto;
-    width: 230px;
-
-    @include tablet-size {
-        margin-bottom: 0;
+    .a-marketing-card__title + & {
+        margin-top: -15px;
     }
 }
-
-.a-marketing-card__magazine__cover {
-    display: inline-block;
-}
-.a-marketing-card__magazine__cover--print {
-    width: 110px;
-    @include tablet-size {
-        width: 140px;
-    }
-}
-.a-marketing-card__magazine__cover--desktop {}
-.a-marketing-card__magazine__cover--tablet {
-    background-color: $black;
-    background-image: none;
-    border-radius: 4px;
-    box-shadow: 0px 0px 0px 1px rgba(48, 48, 48, 1);
-    margin-left: -50px;
-    padding: 12px 6px;
-    position: static;
-    width: 85px;
-
-    @include tablet-size {
-        margin-left: -50px;
-        padding: 12px 6px;
-        width: 107px;
-    }
-}
-
-.a-marketing-card__magazine__cover--mobile {
-    display: none;
-}
-
 .a-marketing-card__link {
     @include button-single;
     @include button-single-light;
@@ -85,14 +46,102 @@
 
 }
 
-.a-marketing-card__title {
-    @include font('STARLING', 16px, 'NORMAL', 22px);
+.a-marketing-card__magazine {
+    margin: 0 auto $MARGIN_SMALL auto;
+    width: 230px;
+}
+.a-marketing-card__magazine__cover {
+    display: inline-block;
+}
+.a-marketing-card__magazine__cover--print {
+    width: 110px;
+}
+.a-marketing-card__magazine__cover--desktop {}
+.a-marketing-card__magazine__cover--tablet {
+    background-color: $black;
+    background-image: none;
+    border-radius: 4px;
+    box-shadow: 0px 0px 0px 1px rgba(48, 48, 48, 1);
+    margin-left: -50px;
+    padding: 12px 6px;
+    position: static;
+    width: 85px;
+}
+.a-marketing-card__magazine__cover--mobile {
+    display: none;
+}
 
-    color: $black-two;
-    margin-top: 20px;
-
-    @include tablet-size {
-        @include font('STARLING', 21px, 'NORMAL', 26px);
-        margin-top: 0;
+.a-marketing-card--brand {}
+.a-marketing-card--event {}
+.a-marketing-card--topic {}
+.a-marketing-card--magazine {
+    .a-marketing-card__col {
+        text-align: center;
     }
+}
+
+
+@include tablet-size {
+    .a-marketing-card {
+        padding: 30px 40px;
+    }
+    .a-marketing-card__brand__img {
+        margin-bottom: 0;
+        max-width: auto;
+        width: 100%;
+    }
+    .a-marketing-card__title {
+        @include font('STARLING', 21px, 'NORMAL', 26px);
+        margin: 0 auto 40px auto;
+    }
+    .a-marketing-card__desc {
+        margin-bottom: 40px;
+
+        .a-marketing-card__title + & {
+            margin-top: -30px;
+        }
+    }
+
+    .a-marketing-card__magazine {
+        margin-left: 0;
+        margin-bottom: 0;
+        width: auto;
+    }
+    .a-marketing-card__magazine__cover--print {
+        width: 160px;
+    }
+    .a-marketing-card__magazine__cover--tablet {
+        margin-left: -50px;
+        padding: 12px 6px;
+        width: 110px;
+    }
+
+    .a-marketing-card--topic,
+    .a-marketing-card--brand,
+    .a-marketing-card--event {
+        .a-marketing-card__col {
+            padding-left: 0;
+            padding-right: 40px;
+            text-align: center;
+            width: 140px + 40px;
+        }
+        .a-marketing-card__col + .a-marketing-card__col {
+            border-left: 2px solid $black;
+            padding-left: 40px;
+            text-align: left;
+            width: auto;
+        }
+    }
+
+    .a-marketing-card--magazine {
+        .a-marketing-card__col {
+            text-align: left;
+            width: 230px;
+        }
+        .a-marketing-card__col + .a-marketing-card__col {
+            padding-left: 40px;
+            width: auto;
+        }
+    }
+
 }
