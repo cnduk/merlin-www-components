@@ -22,12 +22,14 @@
                             {{/ data.location }}
 
                             {{# data.date_range_html }}
+                                <hr class="a-event-author__separator a-event-author__separator--date" />
                                 <div class='a-event-author__date'>
                                     {{ &. }}
                                 </div>
                             {{/ data.date_range_html }}
 
                             {{# data.ticket_link }}
+                                <hr class="a-event-author__separator a-event-author__separator--ticket" />
                                 <a href="{{ &data.url }}" class='a-event-author__btn {{ style.cls }}'>{{ data.title }}</a>
                             {{/ data.ticket_link }}
                         </aside>
