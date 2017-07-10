@@ -24,6 +24,10 @@
     background-color: $cod-gray;
     color: $white;
 
+    .a-header__tag a + a {
+        border-left-color: $mine-shaft;
+    }
+
     // Header
     .a-header__title,
     .a-header__teaser,
