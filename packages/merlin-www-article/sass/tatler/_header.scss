@@ -349,26 +349,15 @@ li.a-header__meta-item {
 }
 
 .a-header__event-btn {
-    @include font('AGENDA', 10px, 'MEDIUM', 10px);
-
-    background: transparent;
-    border: 1px solid $cinnabar;
+    @include font("AGENDA", 10px, 500, 10px);
     color: $cinnabar;
-    display: inline-block;
-    letter-spacing: 1px;
-    margin: 0;
-    padding: 8px;
+    letter-spacing: 0.5px;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: none;
+    transition: border .16s ease;
 
-    @include desktop-size {
-        padding: 5px;
-    }
-
-    &:focus,
     &:hover {
-        background: $cinnabar;
-        color: $white;
+        border-bottom: 1px solid $cinnabar;
     }
 }
 

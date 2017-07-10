@@ -88,3 +88,16 @@
     margin: 10px 0;
     text-transform: uppercase;
 }
+
+.a-event-author__btn {
+    @include font("AGENDA", 10px, 500, 10px);
+    color: $cinnabar;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    text-transform: none;
+    transition: border .16s ease;
+
+    &:hover {
+        border-bottom: 1px solid $cinnabar;
+    }
+}
