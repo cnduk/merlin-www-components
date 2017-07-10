@@ -227,22 +227,38 @@
 .a-main.is-sponsored {}
 
 .a-header__sponsor {
+    color: $gray;
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    letter-spacing: 1px;
     margin: $MARGIN_X_SMALL 0 0 0;
 
     @include desktop-size {
-        margin: $MARGIN_SMALL 0;
+        margin: $MARGIN_MEDIUM 0 $MARGIN_LARGE 0;
     }
 }
 
 .a-header__sponsor-prefix {
     font-style: italic;
     text-transform: lowercase;
-
-    @include desktop-size {}
 }
 
 .a-header__sponsor-name {
-    @include desktop-size {}
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    margin-left: 1px;
+    padding-bottom: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: border .16s ease;
+
+    &:hover, &:focus {
+        border-bottom: 1px solid rgba($cinnabar, 0.8);
+    }
+
+    @include desktop-size {
+        @include font-size(16px);
+        @include line-height(16px);
+        margin-left: 3px;
+    }
 }
 
 .a-header__sponsor-image {
