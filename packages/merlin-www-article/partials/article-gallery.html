@@ -1,22 +1,22 @@
 <section class="a-gallery js-a-gallery">
     <div class="a-gallery__wrapper">
 
-        {{# state.has_navigation }}
-            <div class='g-image-nav is-hidden js-g-image-nav'>
+        {{# data.navigation }}
+            <div class='g-image-nav {{ style.cls }} is-hidden js-g-image-nav'>
                 <div class='g-image-nav__btns'>
-                    {{# data.icon_nav_previous }}
+                    {{# data.icon_previous }}
                         <button disabled class='global__button-reset g-image-nav__btn g-image-nav__btn--previous'>
                             {{> @cnbritain/merlin-www-image }}
                         </button>
-                    {{/ data.icon_nav_previous }}
-                    {{# data.icon_nav_next }}
+                    {{/ data.icon_previous }}
+                    {{# data.icon_next }}
                         <button disabled class='global__button-reset g-image-nav__btn g-image-nav__btn--next'>
                             {{> @cnbritain/merlin-www-image }}
                         </button>
-                    {{/ data.icon_nav_next }}
+                    {{/ data.icon_next }}
                 </div>
             </div>
-        {{/ state.has_navigation }}
+        {{/ data.navigation }}
 
         <div class='a-gallery__view a-gallery__view--thumbnails is-hidden js-g-view-thumbnails'>
             {{# data.thumbnail_list }}
