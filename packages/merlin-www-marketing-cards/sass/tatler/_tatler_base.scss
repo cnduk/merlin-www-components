@@ -14,7 +14,7 @@
     @include font('AGENDA', 12px, 'MEDIUM', 16px);
     font-style: italic;
     letter-spacing: 1.2px;
-    margin-bottom: 20px;
+    margin-bottom: 13px;
 }
 
 .a-marketing-card__col {
@@ -126,7 +126,7 @@
             width: 140px + 40px;
         }
         .a-marketing-card__col + .a-marketing-card__col {
-            border-left: 2px solid $black;
+            border-left: 1px solid $black;
             padding-left: 40px;
             text-align: left;
             width: auto;
