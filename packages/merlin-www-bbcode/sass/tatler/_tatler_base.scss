@@ -133,20 +133,24 @@
 
     @include desktop-size {
         @include font-size(20px);
-        @include line-height(23px);
+        @include line-height(25px);
 
         margin: 30px 0 15px;
 
-        padding-left: 26px;
+        padding-left: 30px;
     }
 }
 
 .bb-gallery__icon {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
+    top: 30px;
     position: absolute;
-    top: 32px;
     left: 0;
+
+    @include desktop-size {
+        top: 32px;
+    }
 
     svg {
         fill: $black;
@@ -487,19 +491,26 @@
  */
 .bb-video {}
 .bb-video__title {
+    @include font-size(18px);
+    @include line-height(20px);
+    margin-bottom: 10px;
+    margin-left: 28px;
     margin-right: 3px;
 
     @include desktop-size {
+        @include font-size(20px);
+        @include line-height(25px);
         margin-right: 10px;
     }
 }
 
 .bb-video__title-icon {
     display: inline-block;
-    margin-right: 16px;
-    padding: 0;
-    width: 16px;
     height: 16px;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    width: 16px;
 
     svg {
         display: block;
