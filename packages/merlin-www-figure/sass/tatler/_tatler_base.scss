@@ -1,45 +1,32 @@
 .c-figure__container {
     margin: 0 0 10px;
     position: relative;
-
-    @include desktop-size {
-        margin: 0 0 15px;
-    }
 }
 
 .c-figure__wrapper {
-    background: $cod-gray;
+    background: $wild-sand;
 }
 
 .c-figure__title,
 .c-figure__caption,
 .c-figure__credit {
     width: 100%;
+}
 
-    @include desktop-size {
-        max-width: 700px;
-    }
+.c-figure__title,
+.c-figure__caption,
+.c-figure__caption p {
+    @include font('AGENDA', 16px, 'MEDIUM', 18px);
+    letter-spacing: 0.5px;
 }
 
 .c-figure__title {
-    @include font('AGENDA', 16px, 'MEDIUM', 18px);
-
-    letter-spacing: 0.5px;
     margin: 0 0 5px;
 }
 
 .c-figure__caption,
 .c-figure__caption p {
-    @include font('AGENDA', 16px, 'MEDIUM', 18px);
-
-    letter-spacing: 0.5px;
     margin: 0 0 10px;
-
-    @include desktop-size {
-        @include font('AGENDA', 16px, 'MEDIUM', 18px);
-
-        margin: 0 0 14px;
-    }
 }
 
 .c-figure__credit {
@@ -57,38 +44,33 @@
 
 
 .c-figure__toolbar {
-    border: 1px solid $brownish-grey;
+    border: 1px solid $silver;
     bottom: 10px;
     height: 47px;
     position: absolute;
     right: 10px;
-
-    @include desktop-size {
-        bottom: 15px;
-        right: 15px;
-    }
 }
 
 li.c-figure__toolbar-listitem {
-    background-color: $black;
+    background-color: $wild-sand;
     height: 45px;
     width: 45px;
 
     svg, path {
-        fill: $white;
-        width: 17px;
+        width: 20px;
     }
 }
 
 
-@each $name, $color in $COLOUR_SOCIAL_DARK {
-    li.c-figure__toolbar-listitem--#{$name} {
+@each $name, $color in $COLOUR_SOCIAL_LIGHT {
+    .c-figure__toolbar-listitem--#{$name} {
+
         svg, path {
-            fill: $white;
+            fill: map-get($COLOUR_SOCIAL_LIGHT, $name);
         }
 
         &:hover {
-            background-color: map-get($COLOUR_SOCIAL_DARK, $name);
+            background-color: map-get($COLOUR_SOCIAL_LIGHT, $name);
 
             svg, path {
                 fill: $white;
@@ -97,9 +79,15 @@ li.c-figure__toolbar-listitem {
     }
 }
 
-li.c-figure__toolbar-listitem--zoom {
+.c-figure__toolbar-listitem--more {
     svg, path {
-        fill: $white;
+        fill: $brownish-grey;
+    }
+}
+
+.c-figure__toolbar-listitem--zoom {
+    svg, path {
+        fill: $brownish-grey;
     }
 
     &:hover {
@@ -109,4 +97,60 @@ li.c-figure__toolbar-listitem--zoom {
             fill: $white;
         }
     }
+}
+
+
+@include desktop-size {
+    .c-figure__container {
+        margin: 0 0 15px;
+    }
+
+    .c-figure__title,
+    .c-figure__caption,
+    .c-figure__credit {
+        max-width: 700px;
+    }
+
+    .c-figure__caption,
+    .c-figure__caption p {
+        margin: 0 0 14px;
+    }
+
+    .c-figure__toolbar {
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+.c-figure--dark {
+    .c-figure__wrapper {
+        background: $black;
+    }
+
+    .c-figure__toolbar {
+        border: 1px solid $cod-gray;
+    }
+
+    .c-figure__toolbar-listitem {
+        background-color: $cod-gray;
+
+        svg, path {
+            fill: $white;
+        }
+    }
+
+    @each $name, $color in $COLOUR_SOCIAL_DARK {
+        .c-figure__toolbar-listitem--#{$name} {
+            &:hover {
+                background-color: map-get($COLOUR_SOCIAL_DARK, $name);
+            }
+        }
+    }
+
+    .c-figure__toolbar-listitem--zoom {
+        &:hover {
+            background-color: $brownish-grey;
+        }
+    }
+
 }
