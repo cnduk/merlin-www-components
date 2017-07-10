@@ -90,14 +90,16 @@
 }
 
 .a-event-author__btn {
-    @include font("AGENDA", 10px, 500, 10px);
+    @include font("AGENDA", 12px, 500, 10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
     color: $cinnabar;
     letter-spacing: 0.5px;
+    padding-bottom: 3px;
     text-decoration: none;
     text-transform: none;
     transition: border .16s ease;
 
     &:hover {
-        border-bottom: 1px solid $cinnabar;
+        border-bottom: 1px solid rgba($cinnabar, 0.8);
     }
 }

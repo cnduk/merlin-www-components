@@ -28,7 +28,7 @@
     a {
         color: $cinnabar;
         text-decoration: none;
-        border-bottom: 1px solid rgba(224, 59, 42, 0.8);
+        border-bottom: 1px solid rgba($cinnabar, 0.8);
         transition: border .16s ease;
 
         @include tablet-size {
@@ -36,7 +36,7 @@
 
             &:focus,
             &:hover {
-                border-bottom: 1px solid rgba(224, 59, 42, 0.8);
+                border-bottom: 1px solid rgba($cinnabar, 0.8);
             }
         }
     }
