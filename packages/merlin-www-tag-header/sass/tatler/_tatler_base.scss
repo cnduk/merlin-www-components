@@ -245,3 +245,20 @@
         }
     }
 }
+
+
+.tg-header__event-meta {
+    color: $gray;
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.tg-header__event-meta__start-date {}
+.tg-header__event-meta__location {
+    .tg-header__event-meta__start-date + & {
+        border-left: 1px solid $silver;
+        margin-left: 8px;
+        padding-left: 9px;
+    }
+}
