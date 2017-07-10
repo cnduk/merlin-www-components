@@ -2,6 +2,7 @@
 // landscape to square
 @mixin card-hero {
     @include card-portrait;
+    @include card-portrait-large;
 
     .c-card__image--picture img {
         bottom: 0;
