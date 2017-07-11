@@ -227,7 +227,7 @@ $C_CARD_BUM_MARGIN: 0;
 // Contains one column
 // Goes one
 .c-card-list--tg-articles {
-    flex-direction: column;
+    display: block;
 
     .c-card-list__item {
         width: 100%;
