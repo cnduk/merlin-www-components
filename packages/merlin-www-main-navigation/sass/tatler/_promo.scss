@@ -31,7 +31,9 @@
 }
 
 .n-main__cover__offer {
-    color: $white;
+    @include font('STARLING', 14px, 'NORMAL', 19px);
+
+    color: $black;
     display: inline-block;
     vertical-align: top;
     white-space: pre-line;
