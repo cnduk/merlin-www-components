@@ -62,10 +62,17 @@ li.c-topic-strip__item {
 }
 
 .c-topic-strip--article-related {
+    overflow-x: visible;
     text-align: left;
+    white-space: normal;
 
-    .c-topic-strip__item + .c-topic-strip__item {
-        margin-left: $MARGIN_XX_SMALL;
+    .c-topic-strip__list {
+        margin-top: -$MARGIN_XX_SMALL;
+    }
+
+    li.c-topic-strip__item,
+    li.c-topic-strip__item + .c-topic-strip__item {
+        margin: $MARGIN_XX_SMALL $MARGIN_XX_SMALL 0 0;
     }
 
     .c-topic-strip__btn {
@@ -76,20 +83,4 @@ li.c-topic-strip__item {
         }
     }
 
-    @include desktop-size {
-        white-space: normal;
-        margin-bottom: 0;
-        margin-top: -$MARGIN_XX_SMALL;
-
-        .c-topic-strip__item {
-            margin-top: $MARGIN_XX_SMALL;
-            margin-right: $MARGIN_XX_SMALL;
-        }
-
-        .c-topic-strip__item + .c-topic-strip__item {
-            @include desktop-size {
-                margin-left: 0;
-            }
-        }
-    }
 }
