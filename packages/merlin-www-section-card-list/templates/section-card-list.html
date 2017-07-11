@@ -7,11 +7,23 @@
         {{/ data.logo }}
 
         <div class="c-card-section__title-wrapper">
-            {{# data.title }}
-                <h3 class="c-card-section__title">
-                    <span>{{ data.title }}</span>
-                </h3>
-            {{/ data.title }}
+            {{# state.is_linked_title }}
+                {{# data.title }}
+                    <h3 class="c-card-section__title">
+                        <span>
+                            <a href="{{ &data.url }}">{{ data.title }}</a>
+                        </span>
+                    </h3>
+                {{/ data.title }}
+            {{/ state.is_linked_title }}
+
+            {{^ state.is_linked_title }}
+                {{# data.title }}
+                    <h3 class="c-card-section__title">
+                        <span>{{ data.title }}</span>
+                    </h3>
+                {{/ data.title }}
+            {{/ state.is_linked_title }}
 
             {{# data.navigation_strip }}
                 {{> @cnbritain/merlin-www-topic-strip }}

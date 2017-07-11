@@ -184,6 +184,10 @@
 			display: table-cell;
 			padding-left: 12px;
 			vertical-align: middle;
+
+			a {
+				color: inherit;
+			}
 		}
 
 		&:before {
