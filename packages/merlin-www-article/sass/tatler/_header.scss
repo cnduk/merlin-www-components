@@ -118,19 +118,6 @@
 
 .a-header__image-constrain {
     margin-bottom: $MARGIN_X_SMALL;
-    padding-top: 66.666666666667%;
-
-    img {
-        bottom: 0;
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    @include min-screen(800px) {
-        padding-top: 56.25%;
-    }
 }
 
 .a-header__image-title,
