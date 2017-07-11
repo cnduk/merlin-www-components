@@ -49,7 +49,15 @@
         display: none;
     }
 
-    .c-card__meta {}
+    .c-card__meta {
+        li.c-card__meta-item {
+            &:not(:last-child) {
+                &:after {
+                    background-color: $mine-shaft;
+                }
+            }
+        }
+    }
 }
 
 @mixin card-v-related-large($has_small:false) {
