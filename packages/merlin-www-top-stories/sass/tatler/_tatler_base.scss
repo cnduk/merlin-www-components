@@ -1,23 +1,19 @@
 .c-top-stories {
     background: $COLOUR_BG_TOP_STORIES;
     display: none;
-    padding: 20px 0 0;
+    padding: 0;
 
     @include desktop-size {
         display: block;
-        padding: 20px 0 21px;
     }
 
 }
 
 .c-top-stories__wrapper {
     box-sizing: border-box;
+    min-height: 120px;
     position: relative;
-    padding: 0 0 10px 20px;
-
-    @include desktop-size {
-        padding: 0 0 0 20px;
-    }
+    padding: 20px 0 20px 20px;
 }
 
 .c-top-stories__title {
@@ -27,23 +23,26 @@
 .c-top-stories__nav {
     position: absolute;
     z-index: 6;
-    right: 0;
-    top: -20px;
-    width: 60px;
     bottom: 0;
+    right: 0;
+    top: 0;
+    width: 60px;
 }
 
 .c-top-stories__nav-btn {
-    height: 60px;
+    height: auto;
     position: absolute;
     width: 60px;
 }
 
 .c-top-stories__nav-btn--left {
-    top: 60%;
+    top: 50%;
+    bottom: 0;
 }
 
 .c-top-stories__nav-btn--right {
+    border-bottom: none;
+    bottom: 50%;
     top: 0;
 }
 
