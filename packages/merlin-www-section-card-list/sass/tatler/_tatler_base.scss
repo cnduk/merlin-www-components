@@ -48,6 +48,11 @@
         text-align: left;
         padding-bottom: 0;
     }
+
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
 }
 
 .c-card-section__constrain {
