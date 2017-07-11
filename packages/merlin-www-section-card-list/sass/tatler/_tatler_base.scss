@@ -146,7 +146,7 @@
     padding: 0 $MOBILE_SIDE_GUTTER;
 
     .c-card-section__btn {
-        margin-bottom: $PADDING_SMALL;
+        margin-bottom: 30px;
         width: auto;
 
         @include button-single;
@@ -158,11 +158,13 @@
     }
 
     .c-card-section__title {
+        @include font-size(18px);
+        @include line-height(18px);
         color: $COLOUR_MAIN_PAGE;
         margin: 0;
-        padding: $PADDING_SMALL 0;
+        padding: 30px 0;
         position: relative;
-        text-align: left;
+        text-align: center;
         text-transform: uppercase;
     }
 

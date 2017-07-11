@@ -35,7 +35,7 @@
      &.has-sidebar {
         @include desktop-size {
             .a-video__player {
-                margin-right: 470px;
+                margin-right: 350px;
             }
         }
     }
@@ -52,13 +52,13 @@
 .a-video__sidebar {
     background-color: $cod-gray;
     padding: 0 20px 20px 20px;
-    width: 470px;
+    width: 350px;
 }
 
 .a-video__sidebar__wrapper {}
 
 .a-video__sidebar__title {
-    @include font('STARLING', 16px, 'BOLD', 20px);
+    @include font('STARLING', 14px, 'BOLD', 14px);
 
     color: $white;
     margin: 0;
@@ -71,6 +71,7 @@
 
 .a-video__sidebar__list {
     left: 20px;
+    overflow-x: hidden;
     padding-bottom: 20px;
     right: 20px;
 }

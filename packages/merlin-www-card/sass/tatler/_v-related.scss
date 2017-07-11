@@ -12,6 +12,7 @@
     .c-card__title {
         @include t-card-landscape-title;
 
+        color: $white;
         margin: 0;
     }
 }
@@ -20,13 +21,12 @@
     @include card-v-related;
 
     .c-card__obj__header {
-        flex: 0 0 175px;
+        flex: 0 0 120px;
         padding: 0;
     }
 
     .c-card__obj__body {
         flex: 1 1 auto;
-        padding: 0 0 0 13px;
     }
 
     .c-card__obj__header {
@@ -55,7 +55,7 @@
     @include card-v-related;
 
     .c-card__obj__header {
-        flex: 1 0 50%;
+        flex: 0 0 130px;
 
         padding-right: 12px;
     }
