@@ -85,4 +85,9 @@ li.c-figure__toolbar-listitem {
     .c-figure__toolbar-listitem--more {
         display: none;
     }
+    .c-figure__toolbar-listitem--whatsapp {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            display: none;
+        }
+    }
 }
