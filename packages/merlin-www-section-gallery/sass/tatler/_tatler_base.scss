@@ -199,11 +199,9 @@ li.c-gallery__meta-item {
 .c-gallery--dark {
 
     .c-gallery__text {
-        background: $black;
+        @include border-line-box(left, $bg: $black, $border: $brownish-grey);
 
-        @include desktop-size {
-            @include border-line-box(left, $bg: $black, $border: $brownish-grey);
-        }
+        background: $black;
     }
 
     .c-gallery__icon {
