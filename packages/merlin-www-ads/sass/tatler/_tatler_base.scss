@@ -169,17 +169,24 @@
         margin-right: (-$TABLET_SIDE_GUTTER);
     }
 
-    @include desktop-size {
-        margin-left: (-$DESKTOP_SIDE_GUTTER);
-        margin-right: (-$DESKTOP_SIDE_GUTTER);
+     @include desktop-size {
+        margin-left: -$DESKTOP_SIDE_GUTTER;
+        margin-right: (-$DESKTOP_SIDE_GUTTER + -340px);
+        position: relative;
+
+        &:before {
+            background: $COLOUR_BG_ADVERT;
+            content: '';
+            height: 100%;
+            width: 100vw;
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
     }
 
-}
-
-.ad--tag-inline {
-    @include min-screen(940px) {
-        margin-right: (-340px + $DESKTOP_SIDE_GUTTER);
-    }
 }
 
 .ad--tag-rail {
