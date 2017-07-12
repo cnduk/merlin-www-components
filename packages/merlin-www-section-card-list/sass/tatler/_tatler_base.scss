@@ -182,10 +182,13 @@
 .c-card-section--mag-articles,
 .c-card-section--v-genre-articles {
     .c-card-section__title {
+        @include font-size(20px);
+        @include line-height(20px);
+
         margin: 0;
-        padding-bottom: 10px;
+        padding-bottom: 15px;
         position: relative;
-        text-align: left;
+        text-align: center;
         text-transform: uppercase;
 
         &:after {
@@ -200,7 +203,8 @@
 
     @include desktop-size {
         .c-card-section__title {
-            padding-bottom: 0;
+            padding-bottom: 0px;
+            text-align: left;
         }
     }
 }
@@ -289,10 +293,12 @@
 .c-card-section--tg-articles,
 .c-card-section--sh-latest-articles {
     .c-card-section__title {
+        @include font-size(20px);
+        @include line-height(20px);
         margin: 0;
-        padding-bottom: 10px;
+        padding-bottom: 15px;
         position: relative;
-        text-align: left;
+        text-align: center;
         text-transform: uppercase;
 
         &:after {
@@ -312,6 +318,7 @@
     @include desktop-size {
         .c-card-section__title {
             padding-bottom: 0;
+            text-align: center;
         }
         .c-card-list {
             margin-right: 340px;
