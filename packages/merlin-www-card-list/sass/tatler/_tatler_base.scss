@@ -350,13 +350,6 @@ $C_CARD_BUM_MARGIN: 0;
     }
 
     .c-card-list__item + .c-card-list__item {
-        border-top: 1px solid $mine-shaft;
         margin-top: 20px;
-        padding-top: 20px;
-
-        @include desktop-size {
-            margin-top: 20px;
-            padding-top: 20px;
-        }
     }
 }
