@@ -373,6 +373,10 @@ li.a-header__meta-item {
         display: none;
     }
 
+    .a-header__title {
+        max-width: 800px;
+    }
+
     @include desktop-size {
         .a-header__content {
             padding: 60px 360px 30px 0;
