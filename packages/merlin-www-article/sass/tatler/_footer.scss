@@ -29,6 +29,10 @@
 .a-footer--video {
     padding-bottom: 40px;
 
+    .a-footer__wrapper {
+        padding-left: 0;
+    }
+
     .a-related-tags {
         margin: 0;
         padding: 0;
