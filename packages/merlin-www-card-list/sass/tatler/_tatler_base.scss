@@ -321,9 +321,9 @@ $C_CARD_BUM_MARGIN: 0;
             &:after {
                 @include font("AGENDA", 12px, 500, 12px);
                 @include vendor-prefix(transition-duration, 300ms);
-                background-color: $white;
+                background-color: $cinnabar;
                 bottom: 0px;
-                color: $cinnabar;
+                color: $white;
                 content: 'Now Playing';
                 left: 0px;
                 letter-spacing: 0.2px;
