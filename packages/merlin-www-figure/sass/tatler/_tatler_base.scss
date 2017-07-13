@@ -29,18 +29,6 @@
     margin: 0 0 10px;
 }
 
-.c-figure__caption a {
-    border-bottom: 1px solid rgba(0,0,0,0);
-    color: $cinnabar;
-    text-decoration: none;
-    transition: border .16s ease;
-
-    &:focus,
-    &:hover {
-        border-bottom: 1px solid rgba($cinnabar, 0.8);
-    }
-}
-
 .c-figure__credit {
     @include font('AGENDA', 10px, 'MEDIUM', 10px);
 
@@ -93,17 +81,17 @@ li.c-figure__toolbar-listitem {
 
 .c-figure__toolbar-listitem--more {
     svg, path {
-        fill: $brownish-grey;
+        fill: $black;
     }
 }
 
 .c-figure__toolbar-listitem--zoom {
     svg, path {
-        fill: $brownish-grey;
+        fill: $black;
     }
 
     &:hover {
-        background-color: $brownish-grey;
+        background-color: $cod-grey;
 
         svg, path {
             fill: $white;
