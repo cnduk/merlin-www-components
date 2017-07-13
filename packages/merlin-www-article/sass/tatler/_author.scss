@@ -53,6 +53,11 @@
     border: 1px solid $COLOUR_BORDER_SOLID;
     padding: 7px;
     width: 100px;
+
+    + .a-author__image,
+    + .a-event-author__image {
+        margin-top: 12px;
+    }
 }
 
 .a-author__separator,
