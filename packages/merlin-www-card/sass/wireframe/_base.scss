@@ -62,7 +62,9 @@
     position: absolute;
 }
 
-.c-card__title {}
+.c-card__title {
+    word-wrap: break-word;
+}
 
 .c-card__teaser {}
 
