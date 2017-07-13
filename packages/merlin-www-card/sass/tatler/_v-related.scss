@@ -16,6 +16,14 @@
         color: $white;
         margin: 0;
     }
+
+    .c-card__tag {
+        margin: 0 0 5px 0;
+    }
+
+    .c-card__meta {
+        padding-right: 10px;
+    }
 }
 
 @mixin card-v-related-small {
