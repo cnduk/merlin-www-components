@@ -24,6 +24,9 @@ $section_gallery_icon_size: 40px;
 }
 
 .c-gallery__images {}
+.c-gallery__image {
+    background-color: $silver;
+}
 .c-gallery__image-remaining {
     background-color: rgba(17, 17, 17, 0.6);
 }
