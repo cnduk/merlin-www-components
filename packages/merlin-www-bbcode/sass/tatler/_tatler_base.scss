@@ -45,7 +45,9 @@
     padding-top: 10px;
 }
 
-.bb-figure__wrapper {}
+.bb-figure__wrapper {
+    background-color: $silver;
+}
 
 .bb-figure--custom {
     img {}
