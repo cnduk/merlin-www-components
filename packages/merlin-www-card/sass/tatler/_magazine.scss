@@ -1,4 +1,6 @@
 .c-card--magazine {
+    max-width: 500px;
+
     .c-card__obj {
         @include global__flag('c-card__obj');
     }
@@ -31,7 +33,7 @@
     @include card-landscape-small;
 
     .c-card__title {
-        @include font('STARLING', 16px, 'NORMAL', 19px);
+        @include font('STARLING', 18px, 'NORMAL', 22px);
     }
 }
 
@@ -51,7 +53,7 @@
     }
 
     .c-card__title {
-        @include font('STARLING', 16px, 'NORMAL', 19px);
+        @include font('STARLING', 18px, 'NORMAL', 22px);
     }
 }
 
