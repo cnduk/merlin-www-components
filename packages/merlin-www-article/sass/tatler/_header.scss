@@ -130,32 +130,42 @@
     @include font('AGENDA', 13px, 'MEDIUM', 17px);
 
     letter-spacing: 1px;
+    margin: 15px auto 5px auto;
+    max-width: $ARTICLE_TOTAL + $DESKTOP_SIDE_GUTTER*2;
+    padding-left: $MOBILE_SIDE_GUTTER;
     text-transform: uppercase;
-    margin: 15px 0 5px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+    }
 }
 
 .a-header__image-caption {
-     @include font('AGENDA', 13px, 'MEDIUM', 17px);
+    @include font('AGENDA', 13px, 'MEDIUM', 17px);
 
     letter-spacing: 1px;
-    margin: 5px 0 10px;
+    margin: 5px auto 10px auto;
+    max-width: $ARTICLE_TOTAL + $DESKTOP_SIDE_GUTTER*2;
+    padding-left: $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+    }
 }
 
 .a-header__image-credit {
     @include font('AGENDA', 10px, 'MEDIUM', 10px);
+
     color: $gray;
     letter-spacing: 1px;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 5px auto 30px auto;
     max-width: $ARTICLE_TOTAL + $DESKTOP_SIDE_GUTTER*2;
-    padding-left: 20px;
+    padding-left: $MOBILE_SIDE_GUTTER;
     text-transform: uppercase;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding-left: 60px;
+        padding-left: $DESKTOP_SIDE_GUTTER;
     }
-
 
     &:before {
         content: 'Credit: ';
