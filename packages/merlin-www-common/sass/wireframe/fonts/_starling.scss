@@ -45,7 +45,7 @@ $STARLING_FONT_DIR: '/static/fonts/starling/';
 
 
 // Font configs
-$_FONT_FAMILY: Starling, sans-serif;
+$_FONT_FAMILY: Starling, serif;
 $_FONT_STARLING: map-merge($FONT_GROUP_DEFAULT, (
     'FAMILY': $_FONT_FAMILY,
     'LETTER SPACING': normal,
