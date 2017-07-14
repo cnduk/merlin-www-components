@@ -165,6 +165,7 @@
     .bb-gallery__col:last-child .bb-gallery__remaining {}
 }
 .bb-gallery__col {
+    background-color: $silver;
     &:before {
         content: none;
     }
@@ -613,6 +614,7 @@
 
 .bb-card__images {
     .bb-card__image {
+        background-color: $silver;
         padding-top: 100%;
     }
 
