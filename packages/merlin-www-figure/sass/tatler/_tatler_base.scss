@@ -27,6 +27,22 @@
 .c-figure__caption,
 .c-figure__caption p {
     margin: 0 0 10px;
+
+    a {
+        color: $cinnabar;
+        text-decoration: none;
+        border-bottom: 1px solid rgba($cinnabar, 0.8);
+        transition: border .16s ease;
+
+        @include tablet-size {
+            border-bottom: 1px solid rgba(0,0,0,0);
+
+            &:focus,
+            &:hover {
+                border-bottom: 1px solid rgba($cinnabar, 0.8);
+            }
+        }
+    }
 }
 
 .c-figure__credit {
