@@ -51,7 +51,7 @@ $section_gallery_icon_size: 40px;
 }
 
 .c-gallery__icon {
-    background-color: $wild-sand;
+    background-color: $white;
     border-radius: 50%;
     display: block;
     height: $section_gallery_icon_size;
@@ -64,6 +64,10 @@ $section_gallery_icon_size: 40px;
         margin: 0 auto;
         height: $section_gallery_icon_size;
         width: $section_gallery_icon_size/2;
+    }
+
+    @include feature-large-size {
+        background-color: $wild-sand;
     }
 }
 .c-gallery__icon--video {
@@ -210,7 +214,11 @@ li.c-gallery__meta-item {
     }
 
     .c-gallery__icon {
-        background: $cod-gray;
+        background-color: $black;
+
+        @include feature-large-size {
+            background: $cod-gray;
+        }
 
         path {
             fill: $white;
