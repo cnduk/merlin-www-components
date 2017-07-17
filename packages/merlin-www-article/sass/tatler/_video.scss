@@ -1,7 +1,11 @@
 .a-logo {}
 .a-logo--video {
     background-color: $black-two;
-    padding: 60px 0 40px 0;
+    padding: 30px 0;
+
+    @include tablet-size {
+        padding: 60px 0 40px 0;
+    }
 
     .a-logo__wrapper {
         margin: 0 auto;
