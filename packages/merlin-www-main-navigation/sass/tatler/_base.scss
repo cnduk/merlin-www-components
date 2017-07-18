@@ -13,9 +13,6 @@
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
-.n-main__wrapper {
-    max-width: 100%;
-}
 
 .n-main__nav {
     height: 60px;
@@ -124,7 +121,7 @@
 }
 
 .n-main__sticker-child {
-    border-top: 1px solid $white-two;
+    border: 0;
     background-color: $white;
 
     &.is-stuck {

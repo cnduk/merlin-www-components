@@ -11,7 +11,7 @@
 }
 
 .n-main__header-logo {
-    height: 80px;
+    height: 140px;
     margin: 0;
     max-width: none;
     position: relative;
@@ -21,9 +21,20 @@
     }
 
     svg, img {
-        height: 80px;
-        padding: 0;
+        height: 140px;
+        padding: 20px 0;
         fill: $black;
+    }
+
+    &:after {
+        background-color: $white-two;
+        bottom: 0;
+        content: '';
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 100vw;
     }
 }
 

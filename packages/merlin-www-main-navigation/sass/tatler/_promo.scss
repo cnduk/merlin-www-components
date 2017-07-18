@@ -13,7 +13,20 @@
     max-width: $MAXIMUM_PAGE_WIDTH;
     margin: 0 auto;
     padding-left: 60px;
-    padding-right: 60px;
+
+    @include screen(1440px, 1560px) {
+        padding-left: 60px;
+    }
+
+    @include min-screen(1561px) {
+        padding-left: 0;
+    }
+}
+
+@include screen(1440px, 1560px) {
+    .n-main__wrapper {
+        max-width: 100%;
+    }
 }
 
 .n-main__cover {
