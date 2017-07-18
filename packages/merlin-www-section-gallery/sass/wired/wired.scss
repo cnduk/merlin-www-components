@@ -4,126 +4,118 @@
 @import "../wireframe/wireframe";
 
 .c-gallery {
-    margin-top: $MOBILE_SLICE_MARGIN;
     margin-bottom: $MOBILE_SLICE_MARGIN;
-    padding-left: 0;
-    padding-right: 0;
+    margin-top: $MOBILE_SLICE_MARGIN;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: $TABLET_SLICE_MARGIN;
         margin-bottom: $TABLET_SLICE_MARGIN;
+        margin-top: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+        margin-top: $DESKTOP_SLICE_MARGIN;
+    }
+
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: $DESKTOP_SLICE_MARGIN;
-        margin-bottom: $DESKTOP_SLICE_MARGIN;
-        padding-left: $DESKTOP_SIDE_GUTTER;
-        padding-right: $DESKTOP_SIDE_GUTTER;
-    }
-
-    &:hover {
-        .c-gallery__title span {
-            @include fancy-underlines(#000, #fff, #fff, transparent);
-        }
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
     }
 }
 
-.c-gallery__byline {
-    @include font-size(12px);
-    margin-bottom: 10px;
-    margin-top: 15px;
+.c-gallery__wrapper {
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
 }
 
-.c-gallery__byline-name {
-    @include font("BRUTAL");
-    text-transform: uppercase;
-}
-
-.c-gallery__byline-prefix {
-    @include font("EXCHANGE WEB");
-    font-style: italic;
-}
-
-.c-gallery__teaser {
-    display: none;
-}
-
-.c-gallery__image-remaining {
-    @include font("BRUTAL", 31px, 700);
-    background-color: rgba(0,0,0,0.5);
-    color: #fff;
-    white-space: nowrap;
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        @include font-size(35px);
-    }
-}
-
-.c-gallery__meta {
-    @include font("EXCHANGE WEB", 11px, null, null, 20);
-
-    .c-gallery__meta-item {
-        padding-right: 10px;
-
-        & + .c-gallery__meta-item{
-            border-left: 1px solid rgba(255, 255, 255, 0.4);
-            padding-left: 10px;
-        }
-
-        &:last-child {
-            padding-right: 0;
-        }
-    }
-}
-
-.c-gallery__separator {
-    border: none;
-    border-bottom: 1px solid #fff;
-    margin: 0 auto 10px auto;
-    width: 20px;
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        margin-bottom: 25px;
-        width: 50px;
-    }
-}
-
+.c-gallery__images {}
 .c-gallery__text {
-    background: #000;
-    color: #fff;
-    padding: 30px 30px;
+    background-color: #fff;
+    padding: 40px 20px;
+    position: relative;
     text-align: center;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        padding: 0 50px;
+        padding: 40px;
     }
 }
 
 .c-gallery__icon {
-    margin: 0 auto 20px auto;
-    height: 17px;
-    width: 17px;
-
-    svg {
-        display: block;
-        fill: #fff;
-    }
+    display: none;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        margin-bottom: 30px;
-        height: 20px;
-        width: 20px;
+        // TODO: Display icon at any point?
     }
 }
 
-.c-gallery__title {
-    @include font("NEW GROTESK SQUARE", 40px, "LIGHT", 40px, 20);
-    margin: 0 0 13px 0;
+.c-gallery__tag {
+    display: none;
+}
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+.c-gallery__title {
+    @include font("NEW GROTESK SQUARE", 40px, 300, 40px);
+    margin-bottom: 10px;
+    margin-top: 0px;
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
         @include font-size(45px);
-        margin: 0 0 20px 0;
+        @include line-height(45px);
+        margin-bottom: 20px;
+    }
+}
+
+.c-gallery__teaser {
+    display: none;
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+
+    }
+}
+
+.c-gallery__separator {
+    display: none;
+}
+
+.c-gallery__byline {
+    @include font-size(11px);
+    @include line-height(11px);
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.c-gallery__byline-prefix {
+    @include font("EXCHANGE WEB", 11px, null, 11px);
+    font-style: italic;
+}
+
+.c-gallery__byline-name {
+    @include font("BRUTAL", 11px, 700, 11px);
+    text-transform: uppercase;
+}
+
+.c-gallery__meta {
+    font-size: 0;
+    margin-top: 5px;
+
+    li.c-gallery__meta-item {
+        @include font("EXCHANGE WEB", 11px, 400, 12px);
+        padding-right: 10px;
+
+        & + li.c-gallery__meta-item {
+            border-left: 1px solid #000;
+            padding-left: 10px;
+
+            &:before {
+
+            }
+        }
     }
 }
