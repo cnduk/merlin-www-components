@@ -22,10 +22,11 @@
 }
 
 .c-card-section--c-curated,
-.c-card-section--c-tag {
+.c-card-section--c-tag,
+.c-card-section--tg-articles {
     .c-card-section__title {
         @include font("BRUTAL", 15px, 700, 15px);
-        color: #000;
+        color: black;
         margin-bottom: 20px;
         margin-top: 0;
         text-transform: uppercase;

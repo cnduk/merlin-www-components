@@ -1,0 +1,28 @@
+// -------------------- //
+// Tag Article
+// -------------------- //
+@mixin card-tg-article() {}
+// @mixin card-tg-article-small() {}
+// @mixin card-tg-article-large() {}
+
+.c-card--tg-article {
+    @include card-tg-article();
+    @include card-landscape();
+    @include card-landscape-small();
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include card-portrait();
+        @include card-portrait-large();
+    }
+}
+
+.c-card--tg-article-small {
+    @include card-tg-article();
+    @include card-landscape();
+    @include card-landscape-small();
+}
+
+.c-card--tg-article-large {
+    @include card-tg-article();
+    @include card-portrait();
+    @include card-portrait-large();
+}
