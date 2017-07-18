@@ -3,118 +3,101 @@
 
 @import '../wireframe/wireframe';
 
-$_FONT_GROTESK: map-get($FONT_GROUPS, 'NEW GROTESK SQUARE');
-$_FONT_EXCHANGE: map-get($FONT_GROUPS, 'EXCHANGE WEB');
-$_FONT_BRUTAL: map-get($FONT_GROUPS, 'BRUTAL');
-
 .c-superfeature {
-    margin-top: $MOBILE_SLICE_MARGIN;
     margin-bottom: $MOBILE_SLICE_MARGIN;
+    margin-top: $MOBILE_SLICE_MARGIN;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: $TABLET_SLICE_MARGIN;
         margin-bottom: $TABLET_SLICE_MARGIN;
+        margin-top: $TABLET_SLICE_MARGIN;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: $DESKTOP_SLICE_MARGIN;
         margin-bottom: $DESKTOP_SLICE_MARGIN;
+        margin-top: $DESKTOP_SLICE_MARGIN;
     }
-
-    text-align: center;
-
-    @include min-screen( $SUPERFEATURE_MEDIUM_BREAKPOINT ){
-        max-width: $MAXIMUM_PAGE_WIDTH * 0.8;
-        width: 80%;
-    }
-
-    &:hover {
-        .c-superfeature__title span {
-            @include fancy-underlines(#fff, #000, #000, transparent);
-        }
-    }
-
 }
-.c-superfeature__byline {
-    margin: 15px 0 5px 0;
-}
-.c-superfeature__byline-name {
-    font-family: map-get($_FONT_BRUTAL, 'FAMILY');
-    font-weight: map-get($FONT_WEIGHTS, 'BOLD');
-    text-transform: uppercase;
-}
-.c-superfeature__byline-prefix {
-    font-family: map-get($_FONT_EXCHANGE, 'FAMILY');
-    font-style: italic;
-}
-.c-superfeature__content {
-    background-color: #fff;
-    box-sizing: border-box;
-    padding: 40px $MOBILE_SIDE_GUTTER;
 
-    @include min-screen( $SUPERFEATURE_MEDIUM_BREAKPOINT ){
-        padding: 60px 100px;
-    }
-
-}
-.c-superfeature__teaser {
-    display: none;
-}
 .c-superfeature__image {
+    // TODO: Lazyload image colour
+    padding-top: 66.66666%;
+    position: relative;
+
     img {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
         width: 100%;
     }
 }
-.c-superfeature__meta {
-    font-family: map-get($_FONT_EXCHANGE, 'FAMILY');
-    @include font-size(11px);
-    line-height: map-get($_FONT_EXCHANGE, 'LINE HEIGHT');
-}
-.c-superfeature__meta-item {
 
-    & + .c-superfeature__meta-item {
-        border-left: 1px solid rgba(0, 0, 0, 0.2);
-        margin-left: 10px;
-        padding-left: 10px;
+.c-superfeature__content {
+    background-color: #fff;
+    padding: 40px 20px;
+    position: relative;
+    text-align: center;
+
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        padding: 60px 40px;
     }
-
 }
 
-.c-superfeature__meta-item--date {
+.c-superfeature__tag {
+    display: none;
+}
+
+.c-superfeature__title {
+    @include font("NEW GROTESK SQUARE", 40px, 300, 40px);
+    margin-bottom: 10px;
+    margin-top: 0px;
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        @include font-size(60px);
+        @include line-height(60px);
+        margin-bottom: 20px;
+    }
+}
+
+.c-superfeature__teaser {
+    display: none;
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+
+    }
+}
+
+.c-superfeature__byline {
+    @include font-size(11px);
+    @include line-height(11px);
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.c-superfeature__byline-prefix {
+    @include font("EXCHANGE WEB", 11px, null, 11px);
     font-style: italic;
 }
-.c-superfeature__meta-item--tag {}
-.c-superfeature__separator {
-    border: none;
-    border-top: 1px solid #000;
-    margin: 10px auto;
-    width: 20px;
 
-    @include min-screen( $SUPERFEATURE_MEDIUM_BREAKPOINT ){
-        margin-bottom: 20px;
-        margin-top: 20px;
-    }
-
-    @include min-screen( $SUPERFEATURE_LARGE_BREAKPOINT ){
-        margin-bottom: 31px;
-        margin-top: 20px;
-        width: 50px;
-    }
+.c-superfeature__byline-name {
+    @include font("BRUTAL", 11px, 700, 11px);
 }
-.c-superfeature__title {
-    font-family: map-get($_FONT_GROTESK, 'FAMILY');
-    @include font-size(40px);
-    font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
-    line-height: map-get($_FONT_GROTESK, 'LINE HEIGHT');
-    margin: 0 0 10px 0;
 
-    @include min-screen( $SUPERFEATURE_MEDIUM_BREAKPOINT ){
-        @include font-size(60px);
-        margin-bottom: 21px;
+.c-superfeature__meta {
+    font-size: 0;
+    margin-top: 5px;
+
+    li.c-superfeature__meta-item {
+        @include font("EXCHANGE WEB", 11px, 400, 12px);
+        padding-right: 10px;
+
+        & + li.c-superfeature__meta-item {
+            border-left: 1px solid #000;
+            padding-left: 10px;
+
+            &:before {
+
+            }
+        }
     }
-
-    @include min-screen( $SUPERFEATURE_LARGE_BREAKPOINT ){
-        @include font-size(80px);
-    }
-
 }
