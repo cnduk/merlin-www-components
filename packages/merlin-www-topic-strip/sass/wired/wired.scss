@@ -3,53 +3,48 @@
 
 @import "../wireframe/wireframe";
 
-.c-topic-strip {}
+.c-topic-strip {
+    text-align: left;
+}
 
 .c-topic-strip--bleed {
-    @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: -$MOBILE_SIDE_GUTTER;
-        margin-right: -$MOBILE_SIDE_GUTTER;
-        padding-left: $MOBILE_SIDE_GUTTER;
-        padding-right: $MOBILE_SIDE_GUTTER;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
 
-        .c-topic-strip__list {
-            display: inline-block;
-            margin-left: -$MOBILE_SIDE_GUTTER;
-            margin-right: -$MOBILE_SIDE_GUTTER;
-            padding-left: $MOBILE_SIDE_GUTTER;
-            padding-right: $MOBILE_SIDE_GUTTER;
-        }
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
     }
 }
 
 .c-topic-strip--c-card-section {
-    @include font-size(10px);
-    padding-bottom: 20px;
-    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 20px;
 
-    .c-topic-strip__item a {
-        @include font-size(10px);
-    }
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(11px);
-        padding-bottom: 30px;
-        text-align: center;
-
-        .c-topic-strip__item a {
-            @include font-size(11px);
-        }
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: auto;
     }
 }
 
-//li added due to specificity of .global__list-reset li setting margin to 0
+.c-topic-strip__list {
+    font-size: 0;
+}
+
 li.c-topic-strip__item {
+    font-size: initial;
+
     & + & {
         margin-left: 10px;
-
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-            margin-left: 15px;
-        }
     }
 }
 
@@ -60,23 +55,27 @@ li.c-topic-strip__item {
 }
 
 .c-topic-strip--article-related {
-    text-align: left;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
 
-    .c-topic-strip__item + .c-topic-strip__item {
-        margin-left: 10px;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        white-space: normal;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         margin-bottom: -10px;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        white-space: normal;
 
         .c-topic-strip__item {
             margin-bottom: 10px;
             margin-right: 10px;
-        }
-        .c-topic-strip__item + .c-topic-strip__item {
-            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-                margin-left: 0;
+
+            & + .c-topic-strip__item {
+                @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+                    margin-left: 0;
+                }
             }
         }
     }
