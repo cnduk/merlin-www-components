@@ -197,6 +197,10 @@ $C_CARD_BUM_MARGIN: 0;
 }
 
 .c-card-list--c-magazine-articles {
+    .c-card-list__item {
+        max-width: 450px;
+    }
+
     .c-card-list__item + .c-card-list__item {
         margin-top: 20px;
     }

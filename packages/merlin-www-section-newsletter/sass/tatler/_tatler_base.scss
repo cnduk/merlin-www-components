@@ -73,8 +73,10 @@
 .c-newsletter__form__text {
     @include font-size(14px);
 
+    -webkit-appearance: none;
     background: $COLOUR_INPUT_BG;
     border: 0;
+    border-radius: 0;
     color: $gray;
     height: 45px;
     letter-spacing: 0.3px;

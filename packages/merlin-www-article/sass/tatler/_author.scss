@@ -45,6 +45,8 @@
 .a-author__byline--photographer {
     .a-author__byline-prefix {
         @include card-byline-prefix;
+
+        @include line-height(16px);
     }
 }
 
