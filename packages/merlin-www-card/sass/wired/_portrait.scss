@@ -61,6 +61,7 @@
 
     .c-card__byline-name {
         @include font("BRUTAL", 11px, 700, 11px);
+        text-transform: uppercase;
     }
 
     .c-card__meta {

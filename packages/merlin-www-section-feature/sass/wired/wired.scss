@@ -110,6 +110,7 @@
 
 .c-feature__byline-name {
     @include font("BRUTAL", 11px, 700, 11px);
+    text-transform: uppercase;
 }
 
 .c-feature__meta {
