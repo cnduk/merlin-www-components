@@ -16,6 +16,13 @@
         margin-bottom: $DESKTOP_SLICE_MARGIN;
         margin-top: $DESKTOP_SLICE_MARGIN;
     }
+
+    &:hover,
+    &:focus {
+        .c-superfeature__title span {
+            text-decoration: underline;
+        }
+    }
 }
 
 .c-superfeature__image {

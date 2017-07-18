@@ -27,6 +27,13 @@
 .c-gallery__wrapper {
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
+
+    &:hover,
+    &:focus {
+        .c-gallery__title span {
+            text-decoration: underline;
+        }
+    }
 }
 
 .c-gallery__images {}

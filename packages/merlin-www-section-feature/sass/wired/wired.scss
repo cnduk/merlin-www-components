@@ -4,7 +4,6 @@
 @import '../wireframe/wireframe';
 
 .c-feature {
-    // background-color: $seashell;
     margin-bottom: $MOBILE_SLICE_MARGIN;
     margin-top: $MOBILE_SLICE_MARGIN;
 
@@ -17,23 +16,6 @@
         margin-bottom: $DESKTOP_SLICE_MARGIN;
         margin-top: $DESKTOP_SLICE_MARGIN;
     }
-
-    // & + .c-gallery,
-    // & + .c-feature {
-    //     padding-top: 0;
-    // }
-
-    // & + .ad--native-large {
-    //     margin-top: -$MOBILE_SIDE_GUTTER;
-
-    //     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-    //         margin-top: -$TABLET_SIDE_GUTTER;
-    //     }
-
-    //     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    //         margin-top: -$DESKTOP_SIDE_GUTTER;
-    //     }
-    // }
 }
 
 .c-feature__constrain {
@@ -41,7 +23,14 @@
     max-width: $MAXIMUM_PAGE_WIDTH;
 }
 
-.c-feature__wrapper {}
+.c-feature__wrapper {
+    &:hover,
+    &:focus {
+        .c-feature__title span {
+            text-decoration: underline;
+        }
+    }
+}
 
 .c-feature__images,
 .c-feature__content {}
