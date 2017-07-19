@@ -13,6 +13,21 @@
 .c-superfeature__content {}
 .c-superfeature__teaser {}
 .c-superfeature__image {}
+
+.c-superfeature__image--custom {
+    position: relative;
+
+    img {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
 .c-superfeature__link {}
 .c-superfeature__link--article {
     background-color: rgba(255,255,255,0.01);
