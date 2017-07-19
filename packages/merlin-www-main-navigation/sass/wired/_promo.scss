@@ -27,7 +27,7 @@
 
 .n-main__cover {
     display: inline-block;
-    margin-right: 12px;
+    margin-right: 10px;
     width: 80px;
 
     img {
@@ -40,26 +40,22 @@
 }
 
 .n-main__cover__offer {
+    @include font('BRUTAL', 13px, 'BOOK', 15px);
+    color: #000;
     display: inline-block;
     vertical-align: top;
-    // @include font('GOTHAM', 12px, null, 18px);
-    // color: $white;
     white-space: pre-line;
 }
 
 .n-main__cover__btn,
 a.n-main__cover__btn {
-    display: inline-block;
-    // @include font('GOTHAM', 9px, 700, 12px, 60);
-    padding: 4px;
-    margin-top: 12px;
-    text-transform: uppercase;
+    @include font-size(11px);
+    margin-top: 10px;
+    padding: 4px 7px;
 }
 
 .n-menu__subscribe {
-    // background-color: $woodsmoke;
-    // border-bottom: 1px solid $mineshaft;
-    // border-top: 1px solid $mineshaft;
+    // border-bottom: 1px solid #f5f5f5;
     margin: 32px 0;
     padding: 32px 20px;
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
@@ -85,7 +81,7 @@ a.n-main__cover__btn {
 }
 .n-menu__subscribe-covers {
     position: relative;
-    // font-size: 0;
+    font-size: 0;
 }
 .n-menu__subscribe-cover {
     &:nth-child(1) {
@@ -93,11 +89,11 @@ a.n-main__cover__btn {
     }
 
     &:nth-child(2) {
-        // border-bottom: 8px solid $black;
-        // border-left: 4px solid $black;
-        // border-radius: 3px;
-        // border-right: 4px solid $black;
-        // border-top: 8px solid $black;
+        border-bottom: 8px solid #000;
+        border-left: 4px solid #000;
+        border-radius: 3px;
+        border-right: 4px solid #000;
+        border-top: 8px solid #000;
         box-shadow: 0px 0px 0px 1px rgba(48,48,48,1);
         bottom: 0;
         left: 60px;
@@ -106,8 +102,7 @@ a.n-main__cover__btn {
     }
 }
 .n-menu__subscribe-message {
-    // @include font("GOTHAM", 12px, null, 18px);
-    // color: $white;
+    @include font('BRUTAL', 13px, 'BOOK', 15px);
     margin-bottom: 12px;
     max-width: 240px;
     white-space: pre-line;
