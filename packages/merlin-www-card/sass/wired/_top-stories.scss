@@ -1,0 +1,119 @@
+// -------------------- //
+// Top Stories
+// -------------------- //
+@mixin card-top-stories() {
+	.c-card__obj {
+		display: table;
+		width: 100%;
+	}
+
+	.c-card__obj__header,
+	.c-card__obj__body {
+		display: table-cell;
+		vertical-align: top;
+	}
+}
+
+@mixin card-top-stories-small() {
+	.c-card__obj {
+
+	}
+
+	.c-card__obj__header {
+		width: 33.33333%;
+	}
+
+	.c-card__obj__body {
+
+	}
+
+	.c-card__obj__header {
+	    padding-right: 10px;
+	}
+
+    .c-card__images {
+        .c-card__image {
+            padding-top: 100%;
+        }
+
+        .c-card__image__icon {
+
+        }
+    }
+
+	.c-card__obj__body {
+	    padding-left: 10px;
+	}
+
+	.c-card__tag {
+	    display: none;
+	}
+
+	.c-card__title {
+	    @include font("BRUTAL", 13px, 500, 17px);
+	    margin-bottom: 10px;
+	    margin-top: 0;
+	}
+
+	.c-card__separator {
+	    margin: 10px 0;
+	    width: 15px;
+	}
+
+	.c-card__byline {
+		display: none;
+	    @include font-size(11px);
+	    @include line-height(11px);
+	    margin-bottom: 5px;
+	    margin-top: 10px;
+	}
+
+	.c-card__byline-prefix {
+	    @include font("EXCHANGE WEB", 11px, null, 11px);
+	    font-style: italic;
+	}
+
+	.c-card__byline-name {
+	    @include font("BRUTAL", 11px, 700, 11px);
+	    text-transform: uppercase;
+	}
+
+	.c-card__meta {
+	    font-size: 0;
+	    margin-top: 5px;
+
+	    li.c-card__meta-item {
+	        @include font("EXCHANGE WEB", 11px, 400, 12px);
+	        padding-right: 10px;
+
+	        & + li.c-card__meta-item {
+	            border-left: 1px solid black;
+	            padding-left: 10px;
+
+	            &:before {
+
+	            }
+	        }
+	    }
+	}
+}
+
+// @mixin card-top-stories-large() {}
+
+.c-card--top-stories {
+	@include card-top-stories();
+	@include card-top-stories-small();
+	// @include min-screen($breakpoint) {
+	// 	@include card-top-stories-large();
+	// }
+}
+
+.c-card--top-stories-small {
+	@include card-top-stories();
+	@include card-top-stories-small();
+}
+
+// .c-card--top-stories-large {
+// 	@include card-top-stories-large();
+// }
+//
