@@ -1,0 +1,91 @@
+.n-main__dropdown {}
+.n-main__dropdown--follow {
+    .n-main__dropdown-link {
+        letter-spacing: 0;
+        text-transform: none;
+    }
+}
+
+.n-main__dropdown--follow__group {
+    font-size: 0;
+    text-align: center;
+
+    & + .n-main__dropdown--follow__group {
+        margin-top: 16px;
+    }
+}
+
+.n-main__dropdown-list {
+    background-color: #fff;
+    border: 1px solid #ececec;
+    margin-top: -1px;
+    z-index: 1;
+}
+
+.n-main__dropdown-list--left {
+    padding: 20px 0 16px 0;
+    // margin-left: -16px;
+}
+
+.n-main__dropdown-list--follow {
+    padding: 20px 16px;
+    margin-right: -1px;
+    white-space: nowrap;
+}
+
+.n-main__dropdown-list-item {
+    .n-main__nav-link {
+        @include line-height(40px);
+        box-sizing: border-box;
+        display: inline-block;
+        height: 40px;
+        white-space: nowrap;
+
+        span {
+            display: inline-block;
+            height: 40px;
+            line-height: 40px;
+        }
+    }
+}
+
+.n-main__dropdown-link {
+    &:hover {
+
+    }
+
+    &:after {
+        margin-left: 10px;
+        position: relative;
+        top: -2px;
+    }
+}
+
+a.n-main__dropdown__btn-share,
+.n-main__dropdown__btn-share {
+    @include button-share();
+    @include button-share-light($name:none);
+    font-size: initial;
+
+    & + .n-main__dropdown__btn-share {
+        margin-left: 10px;
+    }
+}
+
+@each $name, $color in $COLOUR_SOCIAL {
+    .n-main__dropdown__btn-share--#{$name},
+    a.n-main__dropdown__btn-share--#{$name} {
+        &:hover {
+            @include button-share-light-hover($name);
+        }
+    }
+}
+
+.n-main__dropdown__btn {
+    @include button-single();
+    @include button-single-light();
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+}

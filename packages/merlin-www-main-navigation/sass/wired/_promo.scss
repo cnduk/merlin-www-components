@@ -1,0 +1,122 @@
+.n-main__covers {
+    display: none;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: block;
+    }
+    position: absolute;
+    top: 36px;
+}
+
+.n-main__covers__wrapper {
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    padding-left: 30px;
+    @include screen(1440px, 1500px) {
+        @for $i from 0 through 60 {
+            @media (min-width: 1440px + $i) {
+                padding-left: #{(30 - $i/2)}px;
+            }
+        }
+    }
+
+    @include min-screen(1500px) {
+        padding-left: 0;
+    }
+    padding-right: 30px;
+    margin: 0 auto;
+}
+
+.n-main__cover {
+    display: inline-block;
+    margin-right: 12px;
+    width: 80px;
+
+    img {
+        width: 100%;
+    }
+
+    &:nth-child(2) {
+        display: none;
+    }
+}
+
+.n-main__cover__offer {
+    display: inline-block;
+    vertical-align: top;
+    // @include font('GOTHAM', 12px, null, 18px);
+    // color: $white;
+    white-space: pre-line;
+}
+
+.n-main__cover__btn,
+a.n-main__cover__btn {
+    display: inline-block;
+    // @include font('GOTHAM', 9px, 700, 12px, 60);
+    padding: 4px;
+    margin-top: 12px;
+    text-transform: uppercase;
+}
+
+.n-menu__subscribe {
+    // background-color: $woodsmoke;
+    // border-bottom: 1px solid $mineshaft;
+    // border-top: 1px solid $mineshaft;
+    margin: 32px 0;
+    padding: 32px 20px;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 32px 30px;
+    }
+}
+.n-menu__subscribe__wrapper {}
+.n-menu__subscribe-cols {
+    display: table;
+    width: 100%;
+}
+.n-menu__subscribe-col {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+
+    &:nth-child(2) {
+        padding-left: 20px;
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            padding-left: 30px;
+        }
+    }
+}
+.n-menu__subscribe-covers {
+    position: relative;
+    // font-size: 0;
+}
+.n-menu__subscribe-cover {
+    &:nth-child(1) {
+        width: 85px;
+    }
+
+    &:nth-child(2) {
+        // border-bottom: 8px solid $black;
+        // border-left: 4px solid $black;
+        // border-radius: 3px;
+        // border-right: 4px solid $black;
+        // border-top: 8px solid $black;
+        box-shadow: 0px 0px 0px 1px rgba(48,48,48,1);
+        bottom: 0;
+        left: 60px;
+        position: absolute;
+        width: 52px;
+    }
+}
+.n-menu__subscribe-message {
+    // @include font("GOTHAM", 12px, null, 18px);
+    // color: $white;
+    margin-bottom: 12px;
+    max-width: 240px;
+    white-space: pre-line;
+}
+a.n-menu__subscribe-btn {
+    @include button-single();
+    @include button-single-light();
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
