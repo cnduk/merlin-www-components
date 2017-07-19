@@ -39,7 +39,6 @@
     @include desktop-size {
         @include font('STARLING', 62px, 'NORMAL', 67px);
 
-        letter-spacing: 1px;
         margin: 25px 0;
     }
 }
