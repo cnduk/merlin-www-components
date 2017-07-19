@@ -89,3 +89,7 @@ li.c-topic-strip__item {
         @include button-group-dark-hover();
     }
 }
+
+.c-topic-strip__btn--related {
+    @include button-related();
+}
