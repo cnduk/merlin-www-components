@@ -128,7 +128,11 @@
     background-color: $COLOUR_SOCIAL_ICON_BG_DARK;
 
     svg, path {
-        fill: map-get($COLOUR_SOCIAL_DARK, $name);
+        @if $name == 'email' {
+            fill: $white;
+        } @else {
+            fill: map-get($COLOUR_SOCIAL_DARK, $name);
+        }
     }
 }
 
@@ -136,7 +140,11 @@
     background-color: map-get($COLOUR_SOCIAL_DARK, $name);
 
     svg, path {
-        fill: $COLOUR_SOCIAL_ICON_BG_DARK;
+        @if $name == 'email' {
+            fill: $white;
+        } @else {
+            fill: $COLOUR_SOCIAL_ICON_BG;
+        }
     }
 }
 
