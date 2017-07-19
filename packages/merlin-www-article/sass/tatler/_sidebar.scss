@@ -48,6 +48,11 @@
     .c-card__meta {
         display: block;
         text-align: left;
+        margin-top: 0;
+    }
+
+    .c-card__byline + .c-card__meta {
+        margin-top: 5px;
     }
 }
 

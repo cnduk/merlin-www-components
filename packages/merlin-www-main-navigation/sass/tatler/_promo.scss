@@ -23,7 +23,7 @@
     }
 }
 
-@include min-screen(1440px) {
+@include screen(1440px, 1560px) {
     .n-main__wrapper {
         max-width: 100%;
     }
