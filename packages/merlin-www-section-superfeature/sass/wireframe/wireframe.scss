@@ -12,6 +12,16 @@
 .c-superfeature__byline-prefix {}
 .c-superfeature__content {}
 .c-superfeature__teaser {}
+.c-superfeature__images {}
+.c-superfeature__images--multiple {
+    font-size: 0;
+
+    .c-superfeature__image {
+        display: inline-block;
+        width: 25%;
+    }
+
+}
 .c-superfeature__image {}
 
 .c-superfeature__image--custom {
