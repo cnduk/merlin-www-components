@@ -48,3 +48,16 @@
         color: $white;
     }
 }
+
+.a-infinite--gallery {
+    background: $cod-gray;
+}
+
+.a-infinite__message-btn {
+    @include button-single;
+    @include button-single-dark;
+
+    &:hover {
+        @include button-single-dark-hover;
+    }
+}
