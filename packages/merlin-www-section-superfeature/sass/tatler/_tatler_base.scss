@@ -28,10 +28,28 @@
     }
 }
 
-.c-superfeature__link,
-.c-superfeature__image {
-    max-width: $MAXIMUM_PAGE_WIDTH;
+.c-superfeature__images {
     margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+}
+.c-superfeature__images--multiple {
+
+    .c-superfeature__image {
+        width: 50%;
+    }
+    .c-superfeature__image:nth-child(n+3) {
+        display: none;
+    }
+
+    @include tablet-size {
+        .c-superfeature__image {
+            width: 25%;
+        }
+        .c-superfeature__image:nth-child(n+3) {
+            display: inline-block;
+        }
+    }
+
 }
 
 .c-superfeature__content {

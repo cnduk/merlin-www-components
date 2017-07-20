@@ -7,11 +7,19 @@
 	        	        <a href="{{ &data.url }}" class="c-splash-hero__link c-splash-hero__link--article {{ style.cls }}">{{ data.title }}</a>
 	        	    {{/ data.link }}
 
-	        	    {{# data.image }}
-	        	        <div class="c-splash-hero__image">
-	        	            {{> @cnbritain/merlin-www-image }}
-	        	        </div>
-	        	    {{/ data.image }}
+					{{# data.image_list }}
+			            <div class="c-splash-hero__images {{ style.cls }} ">
+			                {{# data.items }}
+			                    <div class="c-splash-hero__image {{ style.cls }}{{# data.item.style.padding_top }} c-splash-hero__image--custom{{/ data.item.style.padding_top }}">
+			                        {{# data.item }}
+			                            <div class="c-splash-hero__image__wrapper"{{# style.padding_top }} style="padding-top: {{ style.padding_top}}"{{/ style.padding_top }}>
+			                                {{> @cnbritain/merlin-www-image }}
+			                            </div>
+			                        {{/ data.item }}
+			                    </div>
+			                {{/ data.items }}
+			            </div>
+			        {{/ data.image_list }}
 
 	        	    <div class="c-splash-hero__content">
 	        	        {{# data.primary_tag }}
