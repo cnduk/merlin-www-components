@@ -46,11 +46,13 @@
 }
 
 .bb-figure__wrapper {
-    background-color: $silver;
+    background-color: $wild-sand;
 }
 
-.bb-figure--custom {
-    img {}
+.bb-figure--external {
+    img {
+        margin: 0 auto;
+    }
 }
 
 
