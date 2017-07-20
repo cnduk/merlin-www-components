@@ -25,9 +25,11 @@
     }
 }
 
+.c-superfeature__images {
+
+}
+
 .c-superfeature__image {
-    // TODO: Lazyload image colour
-    padding-top: 66.66666%;
     position: relative;
 
     img {
@@ -39,6 +41,11 @@
         top: 0;
         width: 100%;
     }
+}
+
+.c-superfeature__image__wrapper {
+    background-color: #000;
+    padding-top: 66.66666%;
 }
 
 .c-superfeature__content {
