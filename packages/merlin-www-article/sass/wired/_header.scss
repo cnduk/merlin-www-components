@@ -1,0 +1,294 @@
+.a-header {
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 60px;
+        margin-top: 60px;
+    }
+}
+
+.a-header--gallery {
+
+}
+
+.a-header--video {
+    .a-header__content {
+
+    }
+}
+
+.a-header__wrapper {
+
+}
+
+.a-header__content {
+    @include min-screen($ARTICLE_TOTAL) {
+        padding-left: 0;
+    }
+}
+
+.a-header__title {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+
+    }
+}
+
+.a-header__teaser {
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 25px;
+        margin-top: 25px;
+    }
+
+    a {
+
+    }
+
+    p {
+        @include font("BRUTAL", 20px, 300, 20px);
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+
+        }
+    }
+}
+
+.a-header__separator {
+    display: block;
+    margin: 15px 0;
+    width: 20px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 20px 0;
+        width: 40px;
+    }
+}
+
+.a-header__about {
+
+}
+
+.a-header__byline {
+    margin-bottom: 7px;
+    margin-top: 15px;
+}
+
+.a-header__byline-item {
+
+}
+
+.a-header__byline-item--syndication {
+
+}
+
+.a-header__byline-name {
+    @include font("EXCHANGE WEB", 14px, 400, 14px);
+
+    a {
+        @include font("BRUTAL", 14px, 700, 14px);
+        color: inherit;
+        text-transform: uppercase;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.a-header__byline-prefix,
+.a-header__byline-conjunction {
+    @include font("EXCHANGE WEB", 14px, 400, 14px);
+    font-style: italic;
+}
+
+.a-header__date {
+    @include font("EXCHANGE WEB", 11px, 400, 11px);
+    font-style: italic;
+    margin-bottom: 25px;
+    margin-top: 7px;
+}
+
+.a-header__image {
+    margin: 40px 0;
+    padding: 0;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 60px auto;
+        padding: 0 $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.a-header__image-constrain {
+    background-color: #000;
+}
+
+.a-header__image-constrain--landscape,
+.a-header__image-constrain--portrait,
+.a-header__image-constrain--square {
+
+}
+
+.a-header__image-constrain--landscape {
+
+}
+
+.a-header__image-constrain--portrait {
+
+}
+
+.a-header__image-constrain--square {
+
+}
+
+.a-header__image-title,
+.a-header__image-caption,
+.a-header__image-credit {
+    padding: 0 $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0 $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0;
+    }
+}
+
+.a-header__image-title {
+
+}
+
+.a-header__image-caption {
+    p {
+        @include font("BRUTAL", 16px, 300, 16px);
+        margin: 12px 0;
+    }
+}
+
+.a-header__image-credit {
+    @include font("BRUTAL", 12px, 700, 12px);
+    margin-top: 12px;
+
+    &:before {
+        @include font-weight(300);
+        content: 'Credit: ';
+    }
+}
+
+.a-header__separator--hero {
+    display: none;
+}
+
+.a-header__meta {
+
+}
+.a-header__meta--date {}
+.a-header__meta--tag {}
+.a-header__meta-item {
+
+    & + .a-header__meta-item {
+
+
+        &:before {
+
+        }
+    }
+
+    a {
+
+    }
+}
+
+.a-header__tag {
+    display: block;
+    margin-bottom: 15px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 22px;
+    }
+
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.a-header__tag__secondary,
+.a-header__tag__primary {
+    @include font("EXCHANGE WEB", 14px, null, 15px);
+    color: #000;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(16px);
+        @include line-height(16px);
+    }
+}
+
+.a-header__tag__secondary {
+
+}
+
+.a-header__separator--sponsor {
+
+}
+
+.a-main.is-sponsored {
+    .a-header__separator {
+
+    }
+}
+
+.a-header__sponsor {
+    a {
+
+    }
+}
+
+.a-header__sponsor-prefix {
+
+}
+
+.a-header__sponsor-name {
+
+}
+
+.a-header__sponsor-image {
+
+
+    img {
+
+    }
+}
+
+.a-header__meta {}
+
+.a-header__meta-item {}
+
+.a-header__event {
+
+}
+
+.a-header__event-title {
+
+}
+
+.a-header__event-location {
+
+}
+
+.a-header__event-date {
+
+}
+
+.a-header__event-btn {
+
+    &:hover {
+
+    }
+}
