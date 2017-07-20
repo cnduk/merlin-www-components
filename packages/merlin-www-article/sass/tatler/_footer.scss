@@ -20,10 +20,6 @@
     @include tablet-size {
         padding-bottom: 80px;
     }
-
-    .a-footer__wrapper {
-        max-width: $ARTICLE_TOTAL;
-    }
 }
 
 .a-footer--video {
