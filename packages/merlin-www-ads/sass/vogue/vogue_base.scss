@@ -168,9 +168,28 @@
 
 .ad--tag-inline,
 .ad--show-inline {
-    @include min-screen(940px) {
-        margin-right: -(340px + $DESKTOP_SIDE_GUTTER);
+
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
     }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
+        margin-left: 0;
+        margin-right: -340px;
+
+        .ad__block {
+            left: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            right: 50%;
+            width: 100vw;
+        }
+    }
+
 }
 
 .ad--show-inline {
