@@ -30,6 +30,13 @@
         margin-bottom: 20px;
         margin-top: 0;
         text-transform: uppercase;
+
+        a {
+            color: inherit;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
 

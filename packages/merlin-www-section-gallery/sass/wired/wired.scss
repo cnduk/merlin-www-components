@@ -37,6 +37,9 @@
 }
 
 .c-gallery__images {}
+.c-gallery__image {
+    background-color: #000;
+}
 .c-gallery__image-remaining {
     @include font("BRUTAL", 30px, 700, 30px);
     background-color: rgba(0,0,0,0.5);

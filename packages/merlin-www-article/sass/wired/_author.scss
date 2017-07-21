@@ -28,8 +28,9 @@
 }
 
 .a-author__byline {
+    @include font("EXCHANGE WEB", 14px, 400, 14px);
     margin-bottom: 7px;
-    margin-top: 15px;
+    margin-top: 0;
 }
 
 .a-author__byline--syndication {
@@ -45,8 +46,6 @@
 }
 
 .a-author__byline-name {
-    @include font("EXCHANGE WEB", 14px, 400, 14px);
-
     a {
         @include font("BRUTAL", 14px, 700, 14px);
         color: inherit;
