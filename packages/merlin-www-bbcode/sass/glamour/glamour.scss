@@ -1,0 +1,401 @@
+@import '@cnbritain/merlin-www-common:glamour';
+@import "@cnbritain/merlin-www-common:wireframe";
+
+@import '../wireframe/wireframe';
+
+
+.bb-embed {
+    @include section-margins;
+}
+
+
+.bb-figure {
+    @include font('GRAPHIK');
+    @include section-margins;
+
+    box-sizing: border-box;
+}
+
+.bb-figure__caption {
+    @include font-size(15px);
+    @include line-height(19px);
+
+    margin: 15px 0 0;
+}
+
+.bb-figure__credit {
+    @include font-size(9px);
+
+    border-bottom: 1px solid #000;
+    color: #b2b2b2;
+    margin: 12px 0 0;
+    padding: 0 0 10px 0;
+
+    strong {
+        @include font-weight('SEMI BOLD');
+    }
+
+    @include tablet-size {
+        @include font-size(10px);
+    }
+}
+
+.bb-figure--portrait {
+    @include min-screen(600px) {
+        max-width: 70%;
+    }
+}
+
+.bb-note {
+    @include font('GRAPHIK', 13px);
+
+    border-top: 1px solid $COLOUR_BORDER_SOLID;
+    margin: 40px 0;
+    padding: 15px 0 2px;
+
+    strong {
+        @include font-weight('SEMI BOLD');
+    }
+}
+
+.bb-dropcap--letter {
+    @include font('CENTURY_GOTHIC', 86px, 'BOLD');
+
+    box-sizing: border-box;
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding-top: 0;
+
+    @include tablet-size {
+        @include font-size(102px);
+
+        margin-bottom: -5px;
+        margin-right: 15px;
+        margin-top: -12px;
+        padding-top: 0;
+    }
+}
+
+
+
+////
+// Gallery
+////
+.bb-gallery {
+    @include section-margins;
+}
+
+.bb-gallery__title {
+    @include title-gallery-inline;
+    @include font-size(15px);
+
+    color: $COLOUR_MAIN;
+    margin: 0 0 10px;
+
+    @include tablet-size {
+        @include font-size(17px);
+        margin: 0 0 15px;
+    }
+}
+
+.bb-gallery__title__icon {
+    padding-right: 3px;
+
+    @include tablet-size {
+        padding-right: 5px;
+    }
+}
+
+.bb-gallery__title__icon--gallery {
+    svg {
+        display: inline-block;
+        padding-bottom: 4px;
+        vertical-align: sub;
+        width: 13px;
+
+        @include tablet-size {
+            width: 15px;
+        }
+    }
+}
+
+.bb-gallery__remaining {
+    background-color: $COLOUR_BG_GALLERY_REMAINING;
+    border-radius: 50%;
+    color: $COLOUR_MAIN;
+    height: 70%;
+    margin: 15%;
+    width: 70%;
+
+    @include tablet-size {
+        height: 50%;
+        margin: 25%;
+        width: 50%;
+    }
+}
+
+.bb-gallery__remaining-text {
+    @include font('GRAPHIK', $weight: 'SEMI BOLD');
+
+    white-space: nowrap;
+
+    @include tablet-size {
+        top: 52%;
+    }
+}
+
+.bb-gallery__remaining-text--prefix {
+    @include font-size(18px);
+
+    @include tablet-size {
+        @include font-size(27px);
+
+        position: relative;
+        top: -1px;
+    }
+}
+
+.bb-gallery__remaining-text--value {
+    @include font-size(22px);
+
+    @include tablet-size {
+        @include font-size(30px);
+    }
+}
+
+
+
+////
+// Question & Answer
+////
+.bb-question__question,
+.bb-answer__answer {
+    @include font('MILLER_DISPLAY', 18px, $line-height: 25px);
+
+    @include tablet-size {
+        @include font-size(21px);
+        @include line-height(30px);
+    }
+}
+
+.bb-question__question {
+    @include font-weight('SEMI BOLD');
+}
+
+.bb-answer__answer {
+    @include font-weight('NORMAL');
+}
+
+.bb-question__q,
+.bb-answer__a {
+    @include font('MILLER_DISPLAY', $weight: 'SEMI BOLD');
+
+    color: #57b1ff;
+    padding-right: 5px;
+}
+
+.bb-question__separator,
+.bb-answer__separator {
+    display: none;
+}
+
+.bb-question__author,
+.bb-answer__author {
+    @include font('GRAPHIK', 13px, 'SEMI BOLD');
+}
+
+.bb-question__by,
+.bb-answer__by {
+    @include font('GRAPHIK', 13px, 'NORMAL', 25px);
+}
+
+
+
+////
+// Pullquote
+////
+.bb-pullquote {
+    @include section-margins;
+
+    border-bottom: 3px solid #000;
+    border-top: 3px solid #000;
+    padding: 20px 0;
+
+    @include tablet-size {
+        padding: 30px 0;
+    }
+}
+
+.bb-pullquote__quote {
+    &::before,
+    &::after {
+        content: '';
+    }
+}
+
+.bb-pullquote__separator {
+    display: none;
+}
+
+.bb-pullquote__credit {
+    @include font('GRAPHIK', 13px);
+
+    margin-top: 17px;
+    text-align: center;
+}
+
+
+
+////
+// Blockquote
+////
+.bb-blockquote {
+    @include section-margins;
+}
+
+.bb-blockquote__quote {
+    @include font-size(18px);
+    margin: 25px 0 10px;
+
+    @include tablet-size {
+        @include font-size(20px);
+    }
+}
+
+.bb-blockquote__separator {
+    display: none;
+}
+
+.bb-blockquote__credit {
+    @include font('GRAPHIK', 13px, $line-height: 13px);
+    margin-bottom: 28px;
+}
+
+
+
+////
+// Infobox
+////
+.bb-infobox {
+    @include section-margins;
+
+    border: 2px solid $COLOUR_BORDER_SOLID;
+    padding: 20px;
+
+    @include tablet-size {
+        border: 7px solid $COLOUR_BORDER_SOLID;
+        padding: 20px 25px;
+    }
+
+    @include desktop-size {
+        border: 7px solid $COLOUR_BORDER_SOLID;
+        padding: 40px;
+    }
+
+}
+
+.bb-infobox__title {
+    @include font('GRAPHIK', 17px, 'SEMI BOLD', 23px);
+
+    margin: 0;
+}
+
+.bb-infobox__hr {
+    border: 0;
+    border-top: 1px solid $COLOUR_BORDER_SOLID;
+    margin: 10px 0 30px;
+}
+
+.bb-infobox__item {
+    margin: 0;
+
+    &:last-child {
+        .bb-infobox__item__value {
+            margin: 0;
+        }
+    }
+}
+
+.bb-infobox__item__key {
+    @include font('GRAPHIK', 15px, 'SEMI BOLD', 23px);
+
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+.bb-infobox__item__value {
+    @include font('GRAPHIK', 15px, 'NORMAL', 23px);
+
+    margin: 0 0 20px;
+
+    @include tablet-size {
+        @include font-size(17px);
+        @include line-height(22px);
+    }
+}
+
+
+/**
+ * Video
+ */
+.bb-video {
+    @include section-margins;
+
+    position: relative;
+}
+
+.bb-video__title {
+    @include title-gallery-inline;
+
+    margin: 0 0 10px 0;
+}
+
+.bb-video__title-icon {
+    display: inline-block;
+    padding-right: 5px;
+    vertical-align: middle;
+
+    svg {
+        height: 13px;
+        width: 13px;
+    }
+}
+
+.bb-video__image-icon {
+    background-color: $COLOUR_BG_DARK;
+    bottom: 0;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    width: 40px;
+
+    svg {
+        display: block;
+        fill: $COLOUR_BG_MAIN;
+        height: 100%;
+        margin: 0 auto;
+        width: 18px;
+    }
+}
+
+.bb-video__link {
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+@include tablet-size {
+    .bb-video__title {
+        @include font-size(19px);
+
+        margin-bottom: 15px;
+    }
+
+    .bb-video__title-icon {
+        vertical-align: top;
+    }
+}
