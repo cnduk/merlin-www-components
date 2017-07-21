@@ -4,16 +4,6 @@
     max-width: none;
     padding: 0 $MOBILE_SIDE_GUTTER;
 
-    .c-feature__image {
-        overflow: hidden;
-        display: flex;
-        flex: 1 0 auto;
-
-        img {
-            @include card-image-normal;
-        }
-    }
-
     &:focus,
     &:hover {
         .c-feature__title {
@@ -41,12 +31,15 @@
 .c-feature__images,
 .c-feature__content {
     position: relative;
-    display: flex;
     width: 100%;
 }
 
-.c-feature__images {
-    flex-direction: row;
+.c-feature__image {
+    overflow: hidden;
+
+    img {
+        @include card-image-normal;
+    }
 }
 
 .c-feature__content {
