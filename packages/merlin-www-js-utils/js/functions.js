@@ -382,13 +382,13 @@ export function getBoundingClientRect( el ){
 export function getCookie(key){
     var cookieString = document.cookie.split(';');
     var len = cookieString.length;
+    var cooKey = key + '=';
     var cookie = null;
     while(len--){
         cookie = cookieString[len].trim();
-        if(cookie.indexOf(key) === 0){
-            // LOL IM A JOKER
-            var cooKey = key + '=';
-            return cookie.substring(cooKey.length, cookie.length);
+        if(cookie.indexOf(cooKey) === 0){
+            return decodeURIComponent(
+                cookie.substring(cooKey.length, cookie.length));
         }
     }
     return null;
