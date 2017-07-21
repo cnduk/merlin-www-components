@@ -13,14 +13,14 @@
 }
 
 .c-footer__list--left {
-    @include min-screen(1100px) {
+    @include screen(1100px, $MAXIMUM_PAGE_WIDTH + $PADDING_LARGE) {
         & .c-footer__list-item:first-child {
             padding-left: $PADDING_LARGE;
         }
     }
 }
 .c-footer__list--right {
-    @include min-screen(1100px) {
+    @include screen(1100px, $MAXIMUM_PAGE_WIDTH + $PADDING_LARGE) {
         & > .c-footer__list-item:last-child {
             padding-right: $PADDING_LARGE;
         }
