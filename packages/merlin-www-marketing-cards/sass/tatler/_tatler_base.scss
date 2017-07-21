@@ -1,20 +1,45 @@
 
 .a-marketing-card {
     background: $wild-sand;
-    margin: $MARGIN_SMALL 0;
+    margin: 40px 0;
     padding: 30px 20px;
+
+    @include desktop-size {
+        margin: 60px 0;
+    }
 }
 
-.a-marketing-card__brand {}
+.a-marketing-card__brand {
+    margin-bottom: 20px;
+    @include desktop-size {
+        margin-bottom: 0;
+    }
+}
 .a-marketing-card__brand__img {
     margin: 0 auto 30px auto;
 }
-.a-marketing-card__brand__name {}
+.a-marketing-card__brand__name {
+    @include font("AGENDA", 16px, 500);
+    text-transform: uppercase;
+    text-decoration: none;
+
+    a {
+        text-decoration: none;
+        color: $gray;
+
+        &:hover {
+            color: $cinnabar;
+        }
+    }
+}
 .a-marketing-card__brand__prefix {
     @include font('AGENDA', 12px, 'MEDIUM', 16px);
     font-style: italic;
     letter-spacing: 1.2px;
-    margin-bottom: 13px;
+    margin-bottom: 10px;
+    @include desktop-size {
+        margin-bottom: 13px;
+    }
 }
 
 .a-marketing-card__col {
