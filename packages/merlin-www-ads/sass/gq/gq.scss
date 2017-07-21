@@ -19,16 +19,18 @@
             padding: 0;
         }
 
-        & + .c-gallery,
-        & + .c-feature {
-            margin-top: -$MOBILE_SIDE_GUTTER;
+        &:not(.is-hidden) {
+            & + .c-gallery,
+            & + .c-feature {
+                margin-top: -$MOBILE_SIDE_GUTTER;
 
-            @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-                margin-top: -$TABLET_SIDE_GUTTER;
-            }
+                @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+                    margin-top: -$TABLET_SIDE_GUTTER;
+                }
 
-            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-                margin-top: -$DESKTOP_SIDE_GUTTER;
+                @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+                    margin-top: -$DESKTOP_SIDE_GUTTER;
+                }
             }
         }
     }

@@ -43,9 +43,12 @@
     }
 }
 
+.c-superfeature__images {
+
+}
+
 .c-superfeature__image {
     background-color: $bon-jour;
-    padding-top: 66.66666%;
     position: relative;
 
     img {
@@ -57,6 +60,10 @@
         top: 0;
         width: 100%;
     }
+}
+
+.c-superfeature__image__wrapper {
+    padding-top: 66.66666%;
 }
 
 .c-superfeature__content {

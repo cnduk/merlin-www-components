@@ -78,9 +78,11 @@
 	}
 }
 
-.c-splash-hero__image {
-	padding-top: 66.66666%;
+.c-splash-hero__images {
 
+}
+
+.c-splash-hero__image {
 	img {
 	    bottom: 0;
 	    height: 100%;
@@ -91,6 +93,11 @@
 	    width: 100%;
 	}
 }
+
+.c-splash-hero__image__wrapper {
+	padding-top: 66.66666%;
+}
+
 .c-splash-hero__link {}
 .c-splash-hero__link--article {}
 
