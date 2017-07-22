@@ -28,6 +28,12 @@
     border-bottom: 2px solid $COLOUR_BORDER_SOLID;
 }
 
+.n-main__header-logo {
+    svg {
+        display: inline;
+    }
+}
+
 .n-main__nav {
     @include font('GRAPHIK', 17px, 'NORMAL', 15px, 20);
 
@@ -702,7 +708,7 @@ a.n-gallery-close {
 
 .n-main__cover {
     display: inline-block;
-    margin-right: 12px;
+    margin: 18px 12px 0 0;
     width: 80px;
 
     img {
