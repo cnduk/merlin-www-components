@@ -10,7 +10,7 @@
     margin: 40px 0;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-    	margin: 60px 0;
+        margin: 60px 0;
     }
 }
 
@@ -18,7 +18,7 @@
 // Note
 // -------------------- //
 .bb-note {
-	@include font("BRUTAL", 13px, 400);
+    @include font("BRUTAL", 13px, 400);
     border-top: 1px solid #000;
     margin: 40px 0;
     padding-top: 20px;
@@ -31,7 +31,7 @@
     margin: 40px 0;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-    	margin: 60px 0;
+        margin: 60px 0;
     }
 }
 
@@ -47,12 +47,12 @@
 // Blockquote
 // -------------------- //
 .bb-blockquote {
-	border-left-color: #7e7e7f;
-	margin: 40px 0;
+    border-left-color: #7e7e7f;
+    margin: 40px 0;
 
-	@include min-screen($TYPE_LARGE_COPY_WIDTH) {
-	    margin: 60px 0;
-	}
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin: 60px 0;
+    }
 }
 
 .bb-blockquote__quote {
@@ -112,7 +112,7 @@
 }
 
 .bb-pullquote__credit {
-	@include font("BRUTAL", 13px, 400, 13px);
+    @include font("BRUTAL", 13px, 400, 13px);
     text-align: center;
 }
 
@@ -127,7 +127,7 @@
 }
 
 .bb-infobox__title {
-	@include font("BRUTAL", 15px, 700, 23px);
+    @include font("BRUTAL", 15px, 700, 23px);
     margin: 0;
     text-transform: uppercase;
 }
@@ -153,12 +153,12 @@
 }
 
 .bb-infobox__item__key {
-	@include font("BRUTAL", 15px, 700, 23px);
+    @include font("BRUTAL", 15px, 700, 23px);
     margin: 0;
 }
 
 .bb-infobox__item__value {
-	@include font("BRUTAL", 15px, 300, 23px);
+    @include font("BRUTAL", 15px, 300, 23px);
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(17px);
         @include line-height(22px);
@@ -173,7 +173,7 @@
 .bb-answer {}
 .bb-question__question,
 .bb-answer__answer {
-	@include font("EXCHANGE WEB", 17px, null, 22px);
+    @include font("EXCHANGE WEB", 17px, null, 22px);
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(19px);
         @include line-height(27px);
@@ -181,17 +181,17 @@
 }
 
 .bb-question__question {
-	@include font-weight(600);
+    @include font-weight(600);
 }
 
 .bb-answer__answer {
-	@include font-weight(400);
+    @include font-weight(400);
 }
 
 .bb-question__q,
 .bb-answer__a {
-	@include font("BRUTAL");
-	@include font-weight(700);
+    @include font("BRUTAL");
+    @include font-weight(700);
     padding-right: 5px;
 }
 
@@ -209,13 +209,13 @@
 
 .bb-question__author,
 .bb-answer__author {
-	@include font("BRUTAL", 13px, 400, 27px);
+    @include font("BRUTAL", 13px, 400, 27px);
 }
 
 .bb-question__by,
 .bb-answer__by {
-	@include font("EXCHANGE WEB");
-	@include font-weight(400);
+    @include font("EXCHANGE WEB");
+    @include font-weight(400);
     font-style: italic;
 }
 
@@ -233,13 +233,14 @@
 }
 
 .bb-figure__caption {
-    @include font-size(16px);
-    @include line-height(24px);
-    margin: 15px 0 0 0;
+    p {
+        @include font("BRUTAL", 16px, 700, 24px);
+        margin: 15px 0 0 0;
+    }
 }
 
 .bb-figure__credit {
-    @include font-size(12px);
+    @include font("BRUTAL", 12px, 700, 12px);
     margin: 12px 0 0 0;
 
     &:before {
@@ -272,7 +273,7 @@
 }
 
 .bb-gallery__title {
-	@include font("BRUTAL", 17px, 700, 23px);
+    @include font("BRUTAL", 17px, 700, 23px);
     color: #000;
     margin: 0 0 15px 0;
 }
@@ -300,8 +301,8 @@
 .bb-gallery__remaining {}
 
 .bb-gallery__remaining-text {
-	@include font("BRUTAL");
-	@include font-weight(700);
+    @include font("BRUTAL");
+    @include font-weight(700);
 }
 
 .bb-gallery__remaining-text--prefix {
