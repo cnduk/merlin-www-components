@@ -9,6 +9,15 @@
     }
 }
 
+.c-card-list__item--ad {
+    .ad--native-medium,
+    .ad--native-medium .ad__block,
+    .ad--native-medium .ad__container {
+        display: flex;
+        width: 100%;
+    }
+}
+
 $C_CARD_GUTTER: 10px;
 $C_CARD_BUM_MARGIN: 0;
 
