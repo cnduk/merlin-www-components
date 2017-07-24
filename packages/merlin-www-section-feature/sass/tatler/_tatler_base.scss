@@ -76,6 +76,12 @@
     height: 100%;
     width: 15px;
 }
+.c-feature__icon--gallery {
+    height: 100%;
+    margin-left: -4px;
+    margin-top: -1px;
+    width: 20px;
+}
 
 .c-feature__tag {
    @include font('AGENDA', 12px, 'MEDIUM', 12px);
