@@ -22,11 +22,7 @@
     max-width: $MAXIMUM_PAGE_WIDTH;
 }
 
-.c-feature__wrapper {
-    display: flex;
-    direction: ltr;
-    flex-direction: column;
-}
+.c-feature__wrapper {}
 
 .c-feature__images,
 .c-feature__content {
@@ -43,12 +39,8 @@
 }
 
 .c-feature__content {
-    align-items: stretch;
     background: $white;
     direction: ltr;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding: 28px 20px;
     text-align: center;
 }
