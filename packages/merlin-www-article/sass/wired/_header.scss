@@ -9,7 +9,13 @@
 }
 
 .a-header--gallery {
+    margin-top: 0px;
+    padding-top: 40px;
 
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 0px;
+        padding-top: 60px;
+    }
 }
 
 .a-header--video {
