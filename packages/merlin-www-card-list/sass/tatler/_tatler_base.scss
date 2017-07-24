@@ -147,11 +147,12 @@ $C_CARD_BUM_MARGIN: 0;
     @include cl-four;
 }
 
-// Common curated, article recommended, magazine articles, search results,
-// video genre articles, latest articles, videos too
+// Common curated, common tag, article recommended, magazine articles,
+// search results, video genre articles, latest articles, videos too
 // Contains four cards
 // Goes one, two, four
 .c-card-list--c-curated,
+.c-card-list--c-tag,
 .c-card-list--a-recommended,
 .c-card-list--mag-articles,
 .c-card-list--s-results,
@@ -167,13 +168,6 @@ $C_CARD_BUM_MARGIN: 0;
     li.c-card__meta-item + li.c-card__meta-item {
         border-left-color: $COLOUR_BORDER_SEPARATOR;
     }
-}
-
-// Common tag
-// Contains 5 cards
-// Goes one, two, three, four
-.c-card-list--c-tag {
-    @include cl-one-two-three-four;
 }
 
 
