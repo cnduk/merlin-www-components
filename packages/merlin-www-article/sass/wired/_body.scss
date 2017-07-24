@@ -19,9 +19,15 @@
 .a-body__wrapper {}
 .a-body__content {
     a:not([class]) {
-        border-bottom: 1px solid $cornflower-blue;
-        color: $cornflower-blue;
-        text-decoration: none;
+        color: #167ac6;
+        text-decoration: underline;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
 
