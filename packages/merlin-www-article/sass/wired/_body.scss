@@ -2,6 +2,18 @@
 
 .a-main--gallery {
     background-color: #000;
+    .a-header {
+        @extend .a-header--gallery;
+    }
+
+    .a-author,
+    .a-author p {
+        color: #fff;
+    }
+
+    .a-body__content p {
+        color: #fff;
+    }
 }
 .a-main--video {
     .a-body__content {

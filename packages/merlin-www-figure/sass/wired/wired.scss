@@ -1,6 +1,15 @@
 @import '@cnbritain/merlin-www-common:wired';
 @import '../wireframe/wireframe';
 
+.c-figure {}
+.c-figure--dark {
+    .c-figure__title,
+    .c-figure__caption p,
+    .c-figure__credit {
+        color: #fff;
+    }
+}
+
 .c-figure__container {
     margin-bottom: 20px;
     position: relative;
@@ -65,11 +74,8 @@ li.c-figure__toolbar-listitem--zoom {
 }
 
 .c-figure__title {
-    font-family: map-get($_FONT_BRUTAL, 'FAMILY');
-    font-weight: map-get($FONT_WEIGHTS, 'BOLD');
+    @include font("BRUTAL", 16px, 700, 24px);
     text-transform: uppercase;
-    @include font-size(16px);
-    @include line-height(24px);
     margin-bottom: 10px;
 
     &:before {
@@ -85,33 +91,40 @@ li.c-figure__toolbar-listitem--zoom {
 }
 
 .c-figure__caption {
-    font-family: map-get($_FONT_BRUTAL, 'FAMILY');
-    font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
+    p:not([class]) {
+        @include font("BRUTAL", 16px, 300, 21px);
+        margin-bottom: 8px;
+        margin-top: 0;
 
-    @include font-size(16px);
-    @include line-height(21px);
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            max-width: 800px;
+            width: 80%;
+        }
+    }
 
-    margin-bottom: 8px;
+    a {
+        color: #167ac6;
+        text-decoration: underline;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        max-width: 800px;
-        width: 80%;
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
 
 .c-figure__credit {
-    font-family: map-get($_FONT_BRUTAL, 'FAMILY');
-    font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
-
-    @include font-size(11px);
-    @include line-height(13px);
-
-    strong {
-        font-weight: map-get($FONT_WEIGHTS, 'MEDIUM');
-    }
-
+    @include font("BRUTAL", 11px, 700, 13px);
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         max-width: 800px;
         width: 80%;
+    }
+
+
+    &:before {
+        @include font-weight(300);
+        content: 'Credit: ';
     }
 }

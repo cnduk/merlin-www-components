@@ -16,6 +16,16 @@
         margin-top: 0px;
         padding-top: 60px;
     }
+
+    .a-header__title,
+    .a-header__teaser p,
+    .a-header__about {
+        color: #fff;
+    }
+
+    .a-header__separator {
+        border-top-color: #fff;
+    }
 }
 
 .a-header--video {

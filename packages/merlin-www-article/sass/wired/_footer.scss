@@ -5,13 +5,17 @@
 }
 
 .a-footer--gallery {
-	background: #000;
-	margin-bottom: 0;
-	padding-bottom: 40px;
+	.a-share__title {
+		color: #fff;
+	}
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		margin-bottom: 0;
-		padding-bottom: 60px;
+	.a-share {
+	    margin: 60px 0 0 0;
+	    padding-bottom: 40px;
+
+	    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	        padding-bottom: 60px;
+	    }
 	}
 }
 
