@@ -30,7 +30,7 @@
 
 .a-header--video {
     .a-header__content {
-
+        padding-left: 0;
     }
 }
 
@@ -201,22 +201,33 @@
 }
 
 .a-header__meta {
-
+    font-size: 0;
+    margin-bottom: 25px;
+    margin-top: 7px;
 }
+
 .a-header__meta--date {}
 .a-header__meta--tag {}
-.a-header__meta-item {
+li.a-header__meta-item {
+    @include font("EXCHANGE WEB", 11px, 400, 11px);
+    font-style: italic;
+    padding-right: 10px;
 
     & + .a-header__meta-item {
-
-
-        &:before {
-
-        }
+        border-left: 1px solid #000;
+        padding-left: 10px;
     }
 
     a {
+        color: #000;
+        text-decoration: underline;
 
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
 
