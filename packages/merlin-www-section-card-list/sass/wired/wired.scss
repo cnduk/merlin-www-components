@@ -27,7 +27,7 @@
 .c-card-section--v-articles {
     .c-card-section__title {
         @include font("BRUTAL", 15px, 700, 15px);
-        color: black;
+        color: #000;
         margin-bottom: 20px;
         margin-top: 0;
         text-transform: uppercase;
@@ -39,23 +39,63 @@
             }
         }
     }
+
+    .c-card-section__btn {
+        @include button-single();
+        @include button-single-light();
+        &:hover {
+            @include button-single-light-hover();
+        }
+    }
+}
+
+.c-card-section--v-related-articles {
+    background-color: #000;
+    margin: 0;
+    max-width: none;
+    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: none;
+        padding: $DESKTOP_SLICE_MARGIN;
+    }
+
+    .c-card-section__title {
+        @include font("BRUTAL", 15px, 700, 15px);
+        color: #fff;
+        margin-bottom: 20px;
+        margin-top: 0;
+        text-transform: uppercase;
+
+        a {
+            color: inherit;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .c-card-section__btn {
+        @include button-single();
+        @include button-single-dark();
+        &:hover {
+            @include button-single-dark-hover();
+        }
+    }
 }
 
 .c-card-section__constrain {}
 .c-card-section__logo {}
 .c-card-section__title {}
 .c-card-section__btn {
-    @include button-single();
-    @include button-single-light();
     @include vendor-prefix(transition-duration, 100ms);
     box-sizing: border-box;
     margin-top: 30px;
     width: 100%;
-
-    &:hover {
-        @include button-single-light-hover();
-    }
-
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         width: auto;
     }
