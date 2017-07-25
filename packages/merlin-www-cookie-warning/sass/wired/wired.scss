@@ -1,0 +1,65 @@
+@import '@cnbritain/merlin-www-common:wired';
+
+@import '../wireframe/wireframe';
+
+.c-cookie-warning {
+    background-color: #000;
+    border: 2px solid #222;
+    border-radius: 4px 4px 0 0;
+    padding: 20px;
+}
+
+.c-cookie-warning__table-cell--cta {
+    vertical-align: top;
+    width: 30px;
+}
+
+.c-cookie-warning__message {
+    @include font('BRUTAL', 13px, 700, 15px);
+    color: #fff;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-right: 20px;
+
+    a {
+        border-bottom: none;
+        color: inherit;
+        text-decoration: underline;
+
+        &:hover {
+            border-bottom: none;
+        }
+    }
+}
+
+.c-cookie-warning__button {
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    height: 25px;
+    padding: 0;
+    width: 25px;
+
+    svg {
+        display: inline-block;
+        height: 10px;
+        margin: 0 auto;
+        width: 13px;
+    }
+
+    path {
+        stroke: #fff;
+        stroke-width: 2px;
+    }
+}
+
+@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    .c-cookie-warning {
+        max-width: 630px;
+        width: 40%;
+    }
+
+    .c-cookie-warning__message {
+        padding-right: 30px;
+    }
+}
