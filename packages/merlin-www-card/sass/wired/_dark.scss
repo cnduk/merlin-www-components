@@ -1,0 +1,20 @@
+.c-card--dark {
+    &.c-card--landscape,
+    &.c-card--portrait {
+        .c-card__image {
+            background-color: #fff;
+        }
+
+        .c-card__tag,
+        .c-card__title,
+        .c-card__teaser,
+        .c-card__byline,
+        .c-card__meta {
+            color: #fff;
+        }
+
+        .c-card__separator {
+            border-top-color: #fff;
+        }
+    }
+}
