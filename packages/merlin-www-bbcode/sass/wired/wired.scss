@@ -47,8 +47,10 @@
 // Blockquote
 // -------------------- //
 .bb-blockquote {
-    border-left-color: #7e7e7f;
+    border-left: 1px solid #7e7e7f;
+    color: #7e7e7f;
     margin: 40px 0;
+    padding: 0 0 0 20px;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         margin: 60px 0;
@@ -56,9 +58,8 @@
 }
 
 .bb-blockquote__quote {
-    @include font-size(16px);
-    @include line-height(21px);
-
+    @include font("BRUTAL", 16px, 700, 21px);
+    color: #7e7e7f;
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(17px);
         @include line-height(22px);
@@ -77,8 +78,7 @@
 }
 
 .bb-blockquote__credit {
-    @include font-size(14px);
-    @include line-height(22px);
+    @include font("BRUTAL", 14px, 300, 21px);
 }
 
 // -------------------- //
@@ -93,6 +93,15 @@
 }
 
 .bb-pullquote__quote {
+    @include font("NEW GROTESK SQUARE", 35px, 300, 35px);
+    display: block;
+    text-align: center;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH){
+        @include font-size(48px);
+        @include line-height(48px);
+    }
+
     &:before,
     &:after {
         content: '';

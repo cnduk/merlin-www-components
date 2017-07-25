@@ -33,7 +33,7 @@ h6 {
     -moz-osx-font-smoothing: auto;
     -webkit-font-smoothing: auto;
     font-variant-ligatures: common-ligatures;
-    color: black;
+    color: #000;
     margin: 40px 0 15px 0;
 }
 
@@ -123,7 +123,7 @@ h6, .h-zeta {
 
 hr {
     border: none;
-    border-top: 1px solid black;
+    border-top: 1px solid #000;
     height: 0;
     margin: 10px 0;
 }
@@ -139,7 +139,7 @@ mark {
 
 p {
     @include font("EXCHANGE WEB", 17px, 300, 23px);
-    color: black;
+    color: #000;
     margin: 10px 0;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
@@ -149,7 +149,8 @@ p {
 }
 
 pre {
-
+    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    white-space: pre-wrap;
 }
 
 q {
@@ -182,7 +183,7 @@ li {
 
 ul {
     li:not([class]):before {
-        background: black;
+        background: #000;
         border-radius: 50%;
         content: "";
         display: block;
