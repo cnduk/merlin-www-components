@@ -159,21 +159,19 @@
 .c-magazine__content__subtitle {}
 
 .c-magazine__btn {
-    @include font('BRUTAL', 12px, 600, 14px);
+    @include button-single();
+    @include button-single-light();
+    @include vendor-prefix(transition-duration, 100ms);
     box-sizing: border-box;
-    margin: 30px 0 0 0;
-    text-transform: uppercase;
-    text-align: center;
+    margin-top: 30px;
     width: 100%;
 
-    @include tablet-size {
-        padding: 10px;
-        margin-top: 40px;
-        width: 110px;
+    &:hover {
+        @include button-single-light-hover();
     }
 
-    a {
-        color: inherit;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        width: auto;
     }
 }
 

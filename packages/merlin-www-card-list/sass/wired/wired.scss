@@ -121,3 +121,19 @@
         }
     }
 }
+
+.c-card-list--c-magazine-articles {
+    margin: -10px;
+
+    .c-card-list__item {
+        display: inline-block;
+        padding: 0 10px;
+        margin: 10px 0;
+        width: 100%;
+
+        .c-card {
+            border-top: 1px solid #000;
+            padding-top: 20px;
+        }
+    }
+}
