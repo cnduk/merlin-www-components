@@ -61,6 +61,7 @@
     }
 }
 
+.c-card-list--v-articles,
 .c-card-list--tg-articles {
     margin: -10px;
 
@@ -90,5 +91,33 @@
 
     @include four-column-size() {
         margin-right: 340px;
+    }
+}
+
+.c-card-list--tg-header-articles {
+    margin: -10px;
+
+    .c-card-list__item {
+        display: inline-block;
+        padding: 0 10px;
+        margin: 10px 0;
+        width: 100%;
+
+        .c-card {
+            border-top: 1px solid #fff;
+            padding-top: 20px;
+        }
+
+        .c-card--dark {
+            border-top-color: #fff;
+        }
+
+        @include two-column-size() {
+            width: 50%;
+        }
+
+        @include four-column-size() {
+            width: 33.33333%;
+        }
     }
 }

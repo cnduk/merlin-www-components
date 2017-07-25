@@ -7,14 +7,14 @@
 
 .tg-header {
     background-color: #000;
-    padding: $MOBILE_SIDE_GUTTER 0;
+    padding: $MOBILE_SIDE_GUTTER;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: $TABLET_SIDE_GUTTER 0;
+        padding: $TABLET_SIDE_GUTTER;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: $DESKTOP_SIDE_GUTTER 0;
+        padding: $DESKTOP_SIDE_GUTTER;
     }
 }
 
