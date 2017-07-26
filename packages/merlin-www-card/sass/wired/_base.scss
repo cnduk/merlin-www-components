@@ -36,7 +36,22 @@
 
 
 .c-card__image__icon {
+    background-color: #000;
+    bottom: 0;
+    height: 40px;
+    left: 50%;
+    line-height: 40px;
+    margin: -20px 0 0 -20px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 40px;
 
+    svg {
+        fill: #fff;
+        width: 20px;
+        height: 100%;
+    }
 }
 
 .c-card__tag {}
@@ -45,10 +60,31 @@
 
 .c-card__teaser {}
 
-.c-card__rating {}
-.c-card__rating-label {}
-.c-card__rating-mark {}
-.c-card__rating-mark--fill {}
+.c-card__rating {
+    font-size: 0;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+li.c-card__rating-label {
+    @include font("BRUTAL", 12px, 400, 12px);
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+li.c-card__rating-mark {
+    background-color: #bfbfbf;
+    display: inline-block;
+    height: 10px;
+    margin-right: 3px;
+    vertical-align: middle;
+    width: 10px;
+}
+
+li.c-card__rating-mark--fill {
+    background-color: #333;
+}
 
 .c-card__byline {
 
