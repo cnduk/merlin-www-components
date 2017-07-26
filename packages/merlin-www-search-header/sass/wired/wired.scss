@@ -2,9 +2,6 @@
 
 @import '../wireframe/wireframe';
 
-$_FONT_EXCHANGE: map-get($FONT_GROUPS, 'EXCHANGE WEB');
-$_FONT_BRUTAL: map-get($FONT_GROUPS, 'BRUTAL');
-
 .srch-main {
     background-color: #000;
     box-sizing: border-box;
@@ -16,15 +13,14 @@ $_FONT_BRUTAL: map-get($FONT_GROUPS, 'BRUTAL');
         padding: 0 $TABLET_SIDE_GUTTER;
     }
 }
+
 .srch-textbox {
+    @include font("EXHCANGE WEB", 17px, 400, 17px);
     @include vendor-prefix(appearance, none);
     background-color: transparent;
     border: none;
     color: #fff;
     display: block;
-    font-family: map-get($_FONT_EXCHANGE, 'FAMILY');
-    @include font-size(17px);
-    line-height: map-get($_FONT_EXCHANGE, 'LINE HEIGHT');
     margin: 40px auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
     padding: 10px 20px;
@@ -55,14 +51,10 @@ $_FONT_BRUTAL: map-get($FONT_GROUPS, 'BRUTAL');
         outline: 1px solid;
         outline-color: #000;
     }
-
 }
+
 .srch-results {
+    @include font("BRUTAL", 12px, 300, 12px);
     display: block;
-    font-family: map-get($_FONT_BRUTAL, 'FAMILY');
-    font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
-    @include font-size(12px);
-    line-height: map-get($_FONT_BRUTAL, 'LINE HEIGHT');
     margin-bottom: 40px;
-    letter-spacing: 0.020em;
 }
