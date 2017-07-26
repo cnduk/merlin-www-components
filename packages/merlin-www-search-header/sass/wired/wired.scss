@@ -15,7 +15,7 @@
 }
 
 .srch-textbox {
-    @include font("EXHCANGE WEB", 17px, 400, 17px);
+    @include font("EXCHANGE WEB", 17px, 400, 17px);
     @include vendor-prefix(appearance, none);
     background-color: transparent;
     border: none;
