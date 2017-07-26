@@ -12,7 +12,6 @@
     }
 }
 
-
 .c-feature--gallery {
     background-color: $COLOUR_BG_GALLERY;
 }
@@ -46,16 +45,15 @@
 }
 
 .c-feature__icon {
-    background-color: $COLOUR_MAIN_PAGE;
-    margin: 0 0 20px -20px;
-    padding: $PADDING_XX_SMALL 14px;
-    width: 40px;
+    background: $white;
+    border-radius: 50%;
     height: 40px;
     left: 50%;
+    margin: 0 0 20px -20px;
+    padding: $PADDING_XX_SMALL 14px;
     position: absolute;
-    background: $white;
     top: -20px;
-    border-radius: 50%;
+    width: 40px;
 
     svg, path {
         fill: $black;
@@ -76,6 +74,7 @@
     height: 100%;
     width: 15px;
 }
+
 .c-feature__icon--gallery {
     height: 100%;
     margin-left: -4px;
@@ -88,8 +87,8 @@
 
     color: $gray;
     letter-spacing: 1px;
-    text-transform: uppercase;
     margin: 0 0 10px;
+    text-transform: uppercase;
 }
 
 .c-feature__title {
@@ -100,22 +99,19 @@
     position: relative;
 
     &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 20px;
-        height: 1px;
         background: $COLOUR_MAIN_HIGHLIGHT;
         bottom: 0;
+        content: '';
+        display: block;
+        height: 1px;
         left: 50%;
         margin-left: -10px;
+        position: absolute;
+        width: 20px;
     }
 }
 
-.c-feature__teaser {
-    display: none;
-}
-
+.c-feature__teaser,
 .c-feature__separator {
     display: none;
 }
@@ -149,16 +145,16 @@ li.c-feature__meta-item {
 
     &:not(:last-child) {
         &:after {
+            background: $silver;
             content: '';
-            height: 11px;
-            width: 1px;
-            background-color: $silver;
             display: inline-block;
-            vertical-align: middle;
+            height: 11px;
             margin: 0 5px;
+            vertical-align: middle;
+            width: 1px;
 
             .c-card--dark & {
-                background-color: $mine-shaft;
+                background: $mine-shaft;
                 height: 11px;
             }
         }
@@ -170,16 +166,27 @@ li.c-feature__meta-item {
     }
 }
 
-
 @include feature-large-size {
     .c-feature__wrapper {
         direction: ltr;
+        display: table;
         padding: 0;
+        width: 100%;
 
         .c-feature--right & {
-            direction: ltr;
+            direction: rtl;
         }
     }
+
+    .c-feature__images,
+    .c-feature__content {
+        direction: ltr;
+        display: table-cell;
+        position: static;
+        vertical-align: middle;
+        width: 50%;
+    }
+
     .c-feature__content {
         .c-feature--left & {
             @include border-line-box(left);
@@ -189,43 +196,16 @@ li.c-feature__meta-item {
             @include border-line-box(right);
         }
     }
-    .c-feature__images,
-    .c-feature__content {
-        width: 50%;
-    }
-    .c-feature__title {
-        @include t-feature-title-large;
-
-        margin: 0 0 20px;
-        padding: 0 0 15px;
-    }
-    .c-feature__byline {
-        margin: 0 0 10px;
-    }
 
     .c-feature__icon {
-        position: static;
-
         background: $wild-sand;
         left: auto;
         margin-left: auto;
         margin-right: auto;
+        position: static;
     }
 }
 
-
-@include card-switcher-size {
-    .c-feature__tag {
-        @include font('AGENDA', 12px, 'MEDIUM', 12px);
-
-        letter-spacing: 1px;
-        margin: 0 0 15px;
-    }
-    .c-feature__meta {
-        margin-top: 0;
-        padding-top: 0;
-    }
-}
 
 
 @include tablet-size {
@@ -239,5 +219,31 @@ li.c-feature__meta-item {
 @include desktop-size {
     .c-feature__content {
         padding: 20px 60px;
+    }
+
+    .c-feature__title {
+        @include t-feature-title-large;
+
+        margin: 0 0 20px;
+        padding: 0 0 15px;
+    }
+
+    .c-feature__byline {
+        margin: 0 0 10px;
+    }
+}
+
+
+@include card-switcher-size {
+    .c-feature__tag {
+        @include font('AGENDA', 12px, 'MEDIUM', 12px);
+
+        letter-spacing: 1px;
+        margin: 0 0 15px;
+    }
+
+    .c-feature__meta {
+        margin-top: 0;
+        padding-top: 0;
     }
 }
