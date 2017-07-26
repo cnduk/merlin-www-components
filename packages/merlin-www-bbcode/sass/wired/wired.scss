@@ -265,7 +265,15 @@
     padding: 10px;
     background-color: #f5f5f5;
     margin: 40px 0;
+
+    &:hover,
+    &:focus {
+        .bb-card__title span {
+            text-decoration: underline;
+        }
+    }
 }
+
 .bb-card__obj {
     display: table;
     width: 100%;
