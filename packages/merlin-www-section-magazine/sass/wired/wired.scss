@@ -164,6 +164,7 @@
     @include vendor-prefix(transition-duration, 100ms);
     box-sizing: border-box;
     margin-top: 30px;
+    text-align: center;
     width: 100%;
 
     &:hover {

@@ -4,27 +4,44 @@
 @import "../wireframe/wireframe";
 
 .c-newsletter {
-    background-color: #fff;
     box-sizing: border-box;
-    margin: $MOBILE_SLICE_MARGIN auto;
-    max-width: 1440px;
-    padding: 20px 20px 40px 20px;
+    margin: 0 auto;
+    margin-top: $MOBILE_SLICE_MARGIN;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+    max-width: $MAXIMUM_PAGE_WIDTH;
     text-align: center;
 
-    @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ){
-        margin-top: $MOBILE_SLICE_MARGIN;
-        margin-bottom: $MOBILE_SLICE_MARGIN;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $TABLET_SLICE_MARGIN;
+        margin-bottom: $TABLET_SLICE_MARGIN;
+        padding: 0 $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $DESKTOP_SLICE_MARGIN;
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+        padding: 0 $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.c-newsletter__wrapper {
+    background-color: #fff;
+    box-sizing: border-box;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    padding: $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen( $DESKTOP_SIDE_GUTTER_BREAKPOINT ){
-        margin-top: $DESKTOP_SLICE_MARGIN;
-        margin-bottom: $DESKTOP_SLICE_MARGIN;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         padding: $DESKTOP_SIDE_GUTTER;
     }
 }
-.c-newsletter__wrapper {
-}
+
 .c-newsletter__logo {
     margin-bottom: 20px;
 
@@ -42,6 +59,7 @@
         }
     }
 }
+
 .c-newsletter__title {
     @include font('NEW GROTESK SQUARE', 30px, 700, 30px);
 
@@ -55,6 +73,7 @@
 
     text-transform: uppercase;
 }
+
 .c-newsletter__description {
     @include font('EXCHANGE WEB', 17px, null, 23px);
 
@@ -67,11 +86,12 @@
 
     max-width: 760px;
 }
+
 .c-newsletter__form {
     margin: 0 auto;
     margin-bottom: 15px;
 
-    @include min-screen ( $TABLET_SIDE_GUTTER_BREAKPOINT ) {
+    @include min-screen ( $DESKTOP_SIDE_GUTTER_BREAKPOINT ) {
         display: inline-block;
 
         height: 40px;
@@ -82,6 +102,7 @@
 
     width: 100%;
 }
+
 .c-newsletter__form__text {
     background-color: #f5f5f5;
 
@@ -102,7 +123,7 @@
     padding: 10px;
     box-sizing: border-box;
 
-    @include min-screen ( $TABLET_SIDE_GUTTER_BREAKPOINT ) {
+    @include min-screen ( $DESKTOP_SIDE_GUTTER_BREAKPOINT ) {
         float: left;
         margin-bottom: 0;
         width: 420px;
@@ -123,7 +144,7 @@
     padding: 0;
     text-transform: uppercase;
 
-    @include min-screen ( $TABLET_SIDE_GUTTER_BREAKPOINT ) {
+    @include min-screen ( $DESKTOP_SIDE_GUTTER_BREAKPOINT ) {
         float: left;
         margin-left: 20px;
         width: 140px;
