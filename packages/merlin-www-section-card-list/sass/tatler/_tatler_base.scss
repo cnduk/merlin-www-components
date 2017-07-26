@@ -55,8 +55,18 @@
     }
 }
 
-.c-card-section__constrain {
+.c-card-section--dark {
+    background: $cod-gray;
 
+    .c-card-section__title {
+        color: $white;
+    }
+
+    .c-card-section__logo svg {
+        path, text {
+            fill: $white;
+        }
+    }
 }
 
 
