@@ -16,5 +16,11 @@
         .c-card__separator {
             border-top-color: #fff;
         }
+
+        li.c-card__meta-item {
+            svg {
+                fill: #fff;
+            }
+        }
     }
 }
