@@ -67,6 +67,7 @@
     text-align: center;
 
     p {
+        color: #fff;
         @include font("BRUTAL", 15px, 300, 17px);
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             @include font-size(17px);

@@ -272,24 +272,43 @@ li.a-header__meta-item {
 }
 
 .a-header__sponsor {
-    a {
+    display: table;
+    margin: 30px 0;
 
+    a {
+        color: #000;
     }
 }
 
 .a-header__sponsor-prefix {
-
+    @include font("EXCHANGE WEB", 16px, 300, 16px);
+    display: table-cell;
+    font-style: italic;
+    vertical-align: middle;
+    white-space: nowrap;
 }
 
 .a-header__sponsor-name {
+    @include font("BRUTAL", 16px, 700, 16px);
+    display: table-cell;
+    padding-left: 20px;
+    vertical-align: middle;
 
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .a-header__sponsor-image {
-
+    display: table-cell;
+    padding-left: 20px;
+    vertical-align: middle;
 
     img {
-
+        max-height: 72px;
+        // max-width: 140px;
+        height: auto;
+        width: auto;
     }
 }
 
@@ -302,20 +321,31 @@ li.a-header__meta-item {
 }
 
 .a-header__event-title {
-
+    @include font("BRUTAL", 12px, 700, 12px);
+    display: inline;
+    text-transform: capitalize;
 }
 
 .a-header__event-location {
+    @include font("BRUTAL", 12px, 300, 12px);
+    display: inline;
 
+    &:before {
+        content: '- '
+    }
 }
 
 .a-header__event-date {
-
+    @include font("EXCHANGE WEB", 11px, 300, 11px);
+    font-style: italic;
 }
 
 .a-header__event-btn {
+    @include button-single();
+    @include button-single-light();
+    margin-top: 15px;
 
     &:hover {
-
+        @include button-single-light-hover();
     }
 }

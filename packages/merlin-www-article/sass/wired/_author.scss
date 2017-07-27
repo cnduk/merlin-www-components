@@ -62,8 +62,7 @@
     font-style: italic;
 }
 
-.a-author__image,
-.a-event-author__image {
+.a-author__image {
     background-color: #000;
     margin-bottom: 15px;
     padding-top: 100%;
@@ -80,6 +79,14 @@
     }
 }
 
+.a-event-author__image {
+    margin-bottom: 15px;
+
+    img {
+        width: 100%;
+    }
+}
+
 .a-author__separator,
 .a-event-author__separator {
     display: block;
@@ -90,17 +97,32 @@
 .a-author__separator--date {}
 
 .a-event-author__title {
-
+    @include font("BRUTAL", 12px, 700, 12px);
+    display: inline;
+    text-transform: capitalize;
 }
 
 .a-event-author__location {
+    @include font("BRUTAL", 12px, 300, 12px);
+    display: inline;
 
+    &:before {
+        content: '- '
+    }
 }
 
 .a-event-author__date {
-
+    @include font("EXCHANGE WEB", 11px, 300, 11px);
+    font-style: italic;
 }
 
 .a-event-author__btn {
+    @include button-single();
+    @include button-single-light();
+    margin-top: 15px;
+    text-align: center;
 
+    &:hover {
+        @include button-single-light-hover();
+    }
 }
