@@ -1,0 +1,66 @@
+// -------------------- //
+// Contributor
+// -------------------- //
+@mixin card-contributor() {}
+// @mixin card-contributor-small() {}
+// @mixin card-contributor-large() {}
+
+.c-card--contributor {
+    @include card-contributor();
+    @include card-landscape();
+    @include card-landscape-small();
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include card-portrait();
+        @include card-portrait-large();
+
+        .c-card__images {
+            .c-card__image {
+                padding-top: 100%;
+            }
+
+            .c-card__image__icon {
+
+            }
+        }
+
+        .c-card__obj__body {
+            text-align: center;
+        }
+
+        .c-card__separator {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.c-card--contributor-small {
+    @include card-contributor();
+    @include card-landscape();
+    @include card-landscape-small();
+}
+
+.c-card--contributor-large {
+    @include card-contributor();
+    @include card-portrait();
+    @include card-portrait-large();
+
+    .c-card__images {
+        .c-card__image {
+            padding-top: 100%;
+        }
+
+        .c-card__image__icon {
+
+        }
+    }
+
+    .c-card__obj__body {
+        text-align: center;
+    }
+
+    .c-card__separator {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
