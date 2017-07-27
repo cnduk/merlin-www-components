@@ -63,7 +63,15 @@
     }
 
     a {
+        color: #167ac6;
+        text-decoration: underline;
 
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 
     p {
@@ -180,6 +188,18 @@
 }
 
 .a-header__image-caption {
+    a {
+        color: #167ac6;
+        text-decoration: underline;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
     p {
         @include font("BRUTAL", 16px, 300, 16px);
         margin: 12px 0;
