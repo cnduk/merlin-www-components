@@ -28,7 +28,8 @@
 .c-card-section--v-genre-articles,
 .c-card-section--a-recommended,
 .c-card-section--mag-articles,
-.c-card-section--mag-magazines {
+.c-card-section--mag-magazines,
+.c-card-section--c-contributors {
     .c-card-section__title {
         @include font("BRUTAL", 15px, 700, 15px);
         color: #000;
