@@ -241,6 +241,10 @@
     margin: 45px 0;
 }
 
+.bb-figure__wrapper {
+    background-color: #000;
+}
+
 .bb-figure__caption {
     p {
         @include font("BRUTAL", 16px, 700, 24px);
