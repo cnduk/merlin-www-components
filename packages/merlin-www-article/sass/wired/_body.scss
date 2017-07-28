@@ -11,6 +11,10 @@
         color: #fff;
     }
 
+    .a-body__wrapper {
+        max-width: $MAXIMUM_PAGE_WIDTH - $DESKTOP_SIDE_GUTTER*2;
+    }
+
     .a-body__content p {
         color: #fff;
     }
@@ -47,7 +51,8 @@
 
 .a-infinite__message {
     box-sizing: border-box;
-    margin: 0 auto 40px auto;
+    margin: 0 auto;
+    padding-bottom: 40px;
     max-width: $MAXIMUM_PAGE_WIDTH - $DESKTOP_SIDE_GUTTER*2;
     position: relative;
 
@@ -56,15 +61,37 @@
     }
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: 60px;
+        padding-bottom: 60px;
     }
 }
 
-.a-infinite__message-btn {
-    @include button-single();
-    @include button-single-light();
+.a-infinite__message-btn {}
+.a-infinite {
+    &.is-closed {
+        .c-card-section--g-recommended {
+            display: none;
+        }
+    }
 
-    &:hover {
-        @include button-single-light-hover();
+    .a-infinite__message-btn {
+        @include button-single();
+        @include button-single-light();
+
+        &:hover {
+            @include button-single-light-hover();
+        }
+    }
+}
+
+.a-infinite--gallery {
+    background-color: #000;
+
+    .a-infinite__message-btn {
+        @include button-single();
+        @include button-single-dark();
+
+        &:hover {
+            @include button-single-dark-hover();
+        }
     }
 }

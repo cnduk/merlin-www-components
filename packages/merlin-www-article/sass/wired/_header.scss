@@ -15,8 +15,13 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin-top: 0px;
         padding-top: 60px;
+
+        .a-header__about {
+            display: none;
+        }
     }
 
+    .a-header__tag a,
     .a-header__title,
     .a-header__teaser p,
     .a-header__about {

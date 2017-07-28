@@ -11,11 +11,6 @@
 
 	.a-share {
 	    margin: 60px 0 0 0;
-	    padding-bottom: 40px;
-
-	    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-	        padding-bottom: 60px;
-	    }
 	}
 }
 
