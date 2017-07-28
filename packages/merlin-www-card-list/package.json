@@ -1,13 +1,13 @@
 {
   "name": "@cnbritain/merlin-www-card-list",
-  "version": "1.7.63",
+  "version": "1.7.64",
   "description": "",
   "main": "js/index.js",
   "scripts": {
     "demo": "merlin-component-demo-server merlin.json"
   },
   "dependencies": {
-    "@cnbritain/merlin-www-ads": "^1.6.39",
+    "@cnbritain/merlin-www-ads": "^1.6.40",
     "@cnbritain/merlin-www-card": "^1.7.49",
     "@cnbritain/merlin-www-common": "^1.5.22"
   },
