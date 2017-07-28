@@ -1,6 +1,7 @@
 .c-card--dark {
     &.c-card--landscape,
-    &.c-card--portrait {
+    &.c-card--portrait,
+    &.c-card--switcher {
         .c-card__image {
             background-color: #fff;
         }
