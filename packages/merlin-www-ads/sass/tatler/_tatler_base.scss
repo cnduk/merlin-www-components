@@ -51,8 +51,7 @@
     }
 }
 
-.ad--article-video,
-.ad--dark {
+.ad--article-video {
     .ad__container {
         background: $cod-gray;
     }
@@ -249,5 +248,11 @@
             padding-left: $TABLET_SIDE_GUTTER;
             padding-right: $TABLET_SIDE_GUTTER;
         }
+    }
+}
+
+.ad--dark {
+    .ad__container {
+        background: $cod-gray;
     }
 }
