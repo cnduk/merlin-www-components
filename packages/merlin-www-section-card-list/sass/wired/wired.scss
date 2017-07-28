@@ -54,6 +54,43 @@
     }
 }
 
+.c-card-section--c-video-articles {
+    background-color: #000;
+    margin: 0;
+    max-width: none;
+    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: $DESKTOP_SLICE_MARGIN;
+    }
+
+    .c-card-section__logo {
+        margin: 0 auto 20px auto;
+        text-align: center;
+        width: 150px;
+
+        svg {
+            width: 100%;
+        }
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-bottom: 40px;
+        }
+    }
+
+    .c-card-section__btn {
+        @include button-single();
+        @include button-single-dark();
+        &:hover {
+            @include button-single-dark-hover();
+        }
+    }
+}
+
 .c-card-section--v-related-articles {
     background-color: #000;
     margin: 0;
