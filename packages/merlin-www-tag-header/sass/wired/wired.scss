@@ -20,6 +20,12 @@
 
 .tg-header--event {
     background-color: #f5f5f5;
+
+    .tg-header__intro__description {
+        p {
+            color: #000;
+        }
+    }
 }
 
 .tg-header__wrapper {
