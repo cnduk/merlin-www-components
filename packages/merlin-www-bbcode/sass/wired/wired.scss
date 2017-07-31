@@ -254,6 +254,12 @@
     margin: 45px 0;
 }
 
+.bb-figure--external {
+    .bb-figure__wrapper {
+        background-color: transparent;
+    }
+}
+
 .bb-figure__wrapper {
     background-color: #000;
 }
