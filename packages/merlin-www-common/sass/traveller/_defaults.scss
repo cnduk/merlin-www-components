@@ -1,0 +1,233 @@
+@import './_variables';
+@import './_mixins';
+@import './_fonts';
+
+@import "../wireframe/_defaults";
+
+a {
+    text-decoration: none;
+}
+
+abbr {
+    text-decoration: underline;
+}
+
+
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+em {
+    font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $MUSTASAARI;
+    margin: 0 0 8px 0;
+}
+
+@mixin heading-scale($default, $medium, $large) {
+    @include font-size($default);
+
+    @include min-screen($TYPE_MEDIUM_COPY_WIDTH) {
+        @include font-size($medium);
+    }
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size($large);
+    }
+}
+
+%h-alpha {
+    @include font("PROXIMA NOVA CONDENSED", 34px, 600, 40px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(46px);
+        @include line-height(54px);
+    }
+}
+
+%h-beta {
+    @include font("PROXIMA NOVA CONDENSED", 28px, 600, 32px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(34px);
+        @include line-height(40px);
+    }
+}
+
+%h-gamma {
+    @include font("PROXIMA NOVA CONDENSED", 24, 600, 28px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(28px);
+        @include line-height(32px);
+    }
+}
+
+%h-delta {
+    @include font("PROXIMA NOVA CONDENSED", 20px, 600, 24px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(24px);
+        @include line-height(28px);
+    }
+}
+
+%h-epsilon {
+    @include font("PROXIMA NOVA CONDENSED", 16px, 600, 20px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(20px);
+        @include line-height(24px);
+    }
+}
+
+%h-zeta {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 600, 16px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(16px);
+        @include line-height(20px);
+    }
+}
+
+h1,
+.h-alpha {
+    @extend %h-alpha;
+}
+
+h2,
+.h-beta {
+    @extend %h-beta;
+}
+
+h3,
+.h-gamma {
+    @extend %h-gamma;
+}
+
+h4,
+.h-delta {
+    @extend %h-delta;
+}
+
+h5,
+.h-epsilon {
+    @extend %h-epsilon;
+}
+
+h6,
+.h-zeta {
+    @extend %h-zeta;
+}
+
+hr {
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 1px double $PORCELAIN;
+    height: 0;
+    margin: 40px 0;
+}
+
+input {
+
+}
+
+mark {
+//     background-color: $solitude;
+//     color: $mineshaft;
+//     padding: 4px 0;
+// }
+
+p {
+    @include font("FREIGHT TEXT", 18px, null, 28px);
+    color: $MUSTASAARI;
+    margin: 0 0 28px 0;
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(20px);
+        @include line-height(32px);
+        margin: 0 0 32px 0;
+    }
+}
+
+pre {
+    // @include font-size(14px);
+    // @include line-height(21px);
+    // background-color: $albaster;
+    // border-radius: 4px;
+    // border: 1px solid $bon-jour;
+    // color: $shuttle-gray;
+    // font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    // line-height: 20px;
+    // margin: 28px 0;
+    // padding: 20px;
+    // white-space: pre-wrap;
+}
+
+blockquote {
+
+}
+
+q {
+
+}
+
+
+small {
+    // @include font("GOTHAM", 12px, 400, 20px);
+    // color: $oslo-gray;
+}
+
+strong {
+    @include font-weight(700);
+}
+
+ul,
+ol {
+    // @include font("GOTHAM", 16px, 400, 26px, -20);
+    // color: $mineshaft;
+    // list-style-type: none;
+    // padding-left: 32px;
+    // margin: 28px 0;
+
+    // @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    //     @include font-size(17px);
+    //     @include line-height(28px);
+    // }
+}
+
+li {
+    position: relative;
+}
+
+ul {
+    li:not([class]):before {
+        // background-color: #1da8ff;
+        // border-radius: 50%;
+        // content: "";
+        // display: block;
+        // height: 8px;
+        // left: -28px;
+        // position: absolute;
+        // top: 8px;
+        // width: 8px;
+    }
+}
+
+ol {
+    counter-reset: section;
+
+    li {
+        counter-increment: section;
+    }
+
+    li:not([class]):before {
+        // content: counter(section) '.';
+        // position: absolute;
+        // left: -28px;
+    }
+}
