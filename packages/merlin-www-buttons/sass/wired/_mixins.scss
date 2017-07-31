@@ -128,14 +128,28 @@
 }
 
 @mixin button-related() {
+    @include button-reset();
     @include font("BRUTAL", 12px, 400, 12px);
-    background-color: #f5f5f5;
-    color: #000;
     padding: 10px 15px;
     text-transform: uppercase;
+}
 
-    &:hover {
-        background-color: #000;
-        color: #fff;
-    }
+@mixin button-related-light() {
+    background-color: #f5f5f5;
+    color: #000;
+}
+
+@mixin button-related-light-hover() {
+    background-color: #000;
+    color: #fff;
+}
+
+@mixin button-related-dark() {
+    background-color: #3e3e3e;
+    color: #fff;
+}
+
+@mixin button-related-dark-hover() {
+    background-color: #fff;
+    color: #000;
 }

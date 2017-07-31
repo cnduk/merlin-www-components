@@ -92,4 +92,18 @@ li.c-topic-strip__item {
 
 .c-topic-strip__btn--related {
     @include button-related();
+    @include button-related-light();
+
+    &:hover {
+        @include button-related-light-hover();
+    }
+}
+
+.c-topic-strip__btn--related-dark {
+    @include button-related();
+    @include button-related-dark();
+
+    &:hover {
+        @include button-related-dark-hover();
+    }
 }

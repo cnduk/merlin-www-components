@@ -116,3 +116,21 @@ a.btn-share--monotone {}
 a.btn-related {
     @include button-related();
 }
+
+.btn-related--light,
+a.btn-related--light {
+    @include button-related-light;
+
+    &:hover {
+        @include button-related-light-hover;
+    }
+}
+
+.btn-related--dark,
+a.btn-related--dark {
+    @include button-related-dark;
+
+    &:hover {
+        @include button-related-dark-hover;
+    }
+}
