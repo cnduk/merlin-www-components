@@ -86,9 +86,11 @@
 }
 
 .c-feature__teaser {
+    @include font("BRUTAL", 15px, none, 15px);
     display: none;
+    margin: 10px auto;
     @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
-
+        display: block;
     }
 }
 
