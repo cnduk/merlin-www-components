@@ -46,7 +46,6 @@
     @include button-reset();
     @include font("EXCHANGE WEB", 12px, 400, 12px);
     @include transition(all 0.1s ease-in-out);
-    letter-spacing: 0.5px;
     padding: 10px 12px;
     text-align: center;
 }
