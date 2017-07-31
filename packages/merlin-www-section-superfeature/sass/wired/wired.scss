@@ -5,7 +5,10 @@
 
 .c-superfeature {
     margin-bottom: $MOBILE_SLICE_MARGIN;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: $MOBILE_SLICE_MARGIN;
+    max-width: $MAXIMUM_PAGE_WIDTH * 0.8;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         margin-bottom: $TABLET_SLICE_MARGIN;
@@ -16,6 +19,7 @@
         margin-bottom: $DESKTOP_SLICE_MARGIN;
         margin-top: $DESKTOP_SLICE_MARGIN;
     }
+
 
     &:hover,
     &:focus {

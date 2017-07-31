@@ -44,10 +44,10 @@
 
 @mixin button-group() {
     @include button-reset();
-    @include font("BRUTAL", 12px, 400, 12px);
+    @include font("EXCHANGE WEB", 12px, 400, 12px);
     @include transition(all 0.1s ease-in-out);
     letter-spacing: 0.5px;
-    padding: 10px 10px;
+    padding: 10px 12px;
     text-align: center;
 }
 
