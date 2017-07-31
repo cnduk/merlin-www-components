@@ -28,7 +28,7 @@ li.c-figure__toolbar-listitem {
 
     svg {
         fill: #fff;
-        width: 30px;
+        width: 18px;
     }
 
     &:hover {
@@ -62,9 +62,6 @@ li.c-figure__toolbar-listitem--whatsapp {
     }
 }
 li.c-figure__toolbar-listitem--zoom {
-    svg {
-        width: 20px;
-    }
     &:hover {
         background-color: #fff;
         svg {
