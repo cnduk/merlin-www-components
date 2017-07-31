@@ -57,9 +57,16 @@
 
 .c-feature__icon {
     display: none;
+    height: 20px;
+    margin: 0 auto 20px auto;
+    width: 20px;
+
+    svg {
+        fill: #000;
+    }
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        // TODO: Display icon at any point?
+        display: block;
     }
 }
 

@@ -48,7 +48,7 @@
 }
 
 .c-gallery__text {
-    background-color: #fff;
+    background-color: #000;
     padding: 40px 20px;
     position: relative;
     text-align: center;
@@ -60,9 +60,16 @@
 
 .c-gallery__icon {
     display: none;
+    height: 20px;
+    margin: 0 auto 20px auto;
+    width: 20px;
+
+    svg {
+        fill: #fff;
+    }
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        // TODO: Display icon at any point?
+        display: block;
     }
 }
 
@@ -72,6 +79,7 @@
 
 .c-gallery__title {
     @include font("NEW GROTESK SQUARE", 40px, 300, 40px);
+    color: #fff;
     margin-bottom: 10px;
     margin-top: 0px;
     @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
@@ -89,12 +97,19 @@
 }
 
 .c-gallery__separator {
-    display: none;
+    border-color: #fff;
+    margin: 20px auto;
+    width: 20px;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        width: 40px;
+    }
 }
 
 .c-gallery__byline {
     @include font-size(11px);
     @include line-height(11px);
+    color: #fff;
     margin-bottom: 5px;
     margin-top: 10px;
 }
@@ -110,6 +125,7 @@
 }
 
 .c-gallery__meta {
+    color: #fff;
     font-size: 0;
     margin-top: 5px;
 
@@ -118,7 +134,7 @@
         padding-right: 10px;
 
         & + li.c-gallery__meta-item {
-            border-left: 1px solid #000;
+            border-left: 1px solid #fff;
             padding-left: 10px;
 
             &:before {

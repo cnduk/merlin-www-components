@@ -83,10 +83,10 @@ li.c-topic-strip__item {
 
 .c-topic-strip__btn {
     @include button-group();
-    @include button-group-dark();
+    @include button-group-light();
 
     &:hover {
-        @include button-group-dark-hover();
+        @include button-group-light-hover();
     }
 }
 
