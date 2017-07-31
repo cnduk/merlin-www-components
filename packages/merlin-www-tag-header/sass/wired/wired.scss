@@ -28,6 +28,12 @@
     }
 }
 
+.tg-header--profile {
+    .tg-header__intro__image {
+        margin-bottom: 30px;
+    }
+}
+
 .tg-header__wrapper {
     max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER*2;
     margin: 0 auto;
