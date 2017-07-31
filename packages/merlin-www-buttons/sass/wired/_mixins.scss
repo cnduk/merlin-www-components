@@ -14,6 +14,7 @@
     @include button-reset();
     @include font("BRUTAL", 12px, 400, 12px);
     @include transition(all 0.1s ease-in-out);
+    letter-spacing: 0.5px;
     padding: 10px 15px;
     text-transform: uppercase;
 }
@@ -30,12 +31,14 @@
 }
 
 @mixin button-single-dark() {
-    background-color: #333;
+    background-color: #000;
+    border: 1px solid #fff;
     color: #fff;
 }
 
 @mixin button-single-dark-hover() {
     background-color: #fff;
+    border: 1px solid #fff;
     color: #000;
 }
 
@@ -43,6 +46,7 @@
     @include button-reset();
     @include font("BRUTAL", 12px, 400, 12px);
     @include transition(all 0.1s ease-in-out);
+    letter-spacing: 0.5px;
     padding: 10px 10px;
     text-align: center;
 }
