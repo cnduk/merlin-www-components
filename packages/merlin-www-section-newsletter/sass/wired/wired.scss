@@ -8,7 +8,7 @@
     margin: 0 auto;
     margin-top: $MOBILE_SLICE_MARGIN;
     margin-bottom: $MOBILE_SLICE_MARGIN;
-    max-width: $MAXIMUM_PAGE_WIDTH;
+    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER*2;
     text-align: center;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
