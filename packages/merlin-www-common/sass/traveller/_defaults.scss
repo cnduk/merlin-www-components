@@ -63,7 +63,7 @@ h6 {
 }
 
 %h-gamma {
-    @include font("PROXIMA NOVA CONDENSED", 24, 600, 28px);
+    @include font("PROXIMA NOVA CONDENSED", 24px, 600, 28px);
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(28px);
         @include line-height(32px);
@@ -128,7 +128,7 @@ hr {
     border-bottom: 0;
     border-left: 0;
     border-right: 0;
-    border-top: 1px double $PORCELAIN;
+    border-top: 1px solid $PORCELAIN;
     height: 0;
     margin: 40px 0;
 }
@@ -141,7 +141,7 @@ mark {
 //     background-color: $solitude;
 //     color: $mineshaft;
 //     padding: 4px 0;
-// }
+}
 
 p {
     @include font("FREIGHT TEXT", 18px, null, 28px);

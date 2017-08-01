@@ -26,4 +26,10 @@
 .c-card__byline-name {}
 
 .c-card__meta {}
-.c-card__meta-item {}
+li.c-card__meta-item {
+	&--gallery {
+		svg {
+			display: none;
+		}
+	}
+}

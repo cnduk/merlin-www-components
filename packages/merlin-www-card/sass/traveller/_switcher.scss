@@ -10,6 +10,13 @@
     @include card-landscape();
     @include card-landscape-small();
     @include min-screen($CARD_SWITCHER_WIDTH) {
+        .c-card__obj__header,
+        .c-card__obj__body {
+            display: block;
+            padding: 0;
+            width: auto;
+        }
+
         @include card-portrait();
         @include card-portrait-large();
     }
