@@ -1,0 +1,66 @@
+// -------------------- //
+// Splash
+// -------------------- //
+@mixin card-splash() {
+    .c-card__obj__header,
+    .c-card__obj__body {
+        vertical-align: middle;
+    }
+
+    .c-card__image {
+        border-radius: 50%;
+        padding-top: 100%;
+        overflow: hidden;
+
+        img {
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+}
+
+@mixin card-splash-small() {
+    .c-card__obj__header {
+        padding-right: 8px;
+        width: 72px;
+    }
+
+    .c-card__obj__body {
+        padding-left: 8px;
+        width: auto;
+    }
+}
+
+@mixin card-splash-large() {
+    .c-card__obj__header {
+        width: 30%;
+    }
+}
+
+.c-card--splash {
+    @include card-landscape();
+    @include card-landscape-small();
+
+    @include card-splash();
+    @include card-splash-small();
+
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+        @include card-splash-large();
+    }
+}
+
+.c-card--splash-small {
+    @include card-landscape();
+    @include card-landscape-small();
+
+    @include card-splash();
+    @include card-splash-small();
+}
+
+.c-card--splash-large {
+    @include card-landscape();
+    @include card-landscape-small();
+
+    @include card-splash();
+    @include card-splash-large();
+}
