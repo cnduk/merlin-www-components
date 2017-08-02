@@ -6,9 +6,17 @@
 @import "../wireframe/wireframe";
 
 .c-splash-section {}
-.c-splash-section__wrapper {}
+.c-splash-section__wrapper {
+	margin: 0 auto;
+	max-width: $MAXIMUM_PAGE_WIDTH;
+	position: relative;
+	width: 100%;
+}
 
 .c-splash-hero {}
+.c-splash-hero__wrapper {
+	position: relative;
+}
 
 .c-splash-hero__images {}
 .c-splash-hero__image {
@@ -139,5 +147,20 @@ li.c-splash-hero__meta-item {
     }
 }
 
-.c-splash__list {}
+.c-splash-list {
+	margin: 24px $MOBILE_SIDE_GUTTER $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+	padding-bottom: 32px;
+	border-bottom: 1px solid $ISABEL;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	    margin-left: $TABLET_SIDE_GUTTER;
+	    margin-right: $TABLET_SIDE_GUTTER;
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	    margin-left: $DESKTOP_SIDE_GUTTER;
+	    margin-right: $DESKTOP_SIDE_GUTTER;
+	}
+}
+
 .c-splash-list__wrapper {}
