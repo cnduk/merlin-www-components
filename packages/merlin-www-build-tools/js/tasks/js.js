@@ -3,6 +3,7 @@
 const gulp = require('gulp');
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
+const plumber = require('gulp-plumber');
 
 const utils = require('../utils');
 
@@ -73,6 +74,7 @@ module.exports = function taskJsExport(taskConfig, browserSync){
             devtool: "source-map"
         };
         return gulp.src(Object.values(taskConfig.js.src))
+            .pipe(plumber())
             .pipe(webpackStream(webpackConfig, webpack))
             .pipe(gulp.dest(taskConfig.js.dest));
     };
