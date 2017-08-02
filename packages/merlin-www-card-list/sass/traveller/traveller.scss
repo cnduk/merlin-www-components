@@ -65,3 +65,22 @@
         }
     }
 }
+
+.c-card-list--c-splash {
+    margin: -10px -12px;
+
+    .c-card-list__item {
+        display: inline-block;
+        padding: 0 12px;
+        margin: 10px 0;
+        width: 100%;
+
+        @include two-column-size() {
+            width: 50%;
+        }
+
+        @include four-column-size() {
+            width: 25%;
+        }
+    }
+}
