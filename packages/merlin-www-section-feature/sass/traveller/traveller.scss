@@ -16,16 +16,20 @@
 	    margin-bottom: $DESKTOP_SLICE_MARGIN;
 	    margin-top: $DESKTOP_SLICE_MARGIN;
 	}
+
+	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 .c-feature--right {
 	.c-feature__images--multiple {
 		@include min-screen($FEATURE_LARGE_BREAKPOINT) {
-			// width: calc(50% + 10px);
+			padding-right: 12px;
 
 			& + .c-feature__content {
 				padding-right: $TABLET_SIDE_GUTTER;
-				// width: calc(50% - 10px);
 			}
 		}
 	}
@@ -41,11 +45,10 @@
 .c-feature--left {
 	.c-feature__images--multiple {
 		@include min-screen($FEATURE_LARGE_BREAKPOINT) {
-			// width: calc(50% + 10px);
+			padding-left: 12px;
 
 			& + .c-feature__content {
 				padding-left: $TABLET_SIDE_GUTTER;
-				// width: calc(50% - 10px);
 			}
 		}
 	}
@@ -64,7 +67,7 @@
 }
 
 .c-feature__wrapper {
-	table-layout: fixed;
+
 }
 
 .c-feature__images {
