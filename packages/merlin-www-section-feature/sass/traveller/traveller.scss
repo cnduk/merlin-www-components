@@ -4,17 +4,17 @@
 @import '../wireframe/wireframe';
 
 .c-feature {
-	margin-bottom: $MOBILE_SIDE_GUTTER;
-	margin-top: $MOBILE_SIDE_GUTTER;
+	margin-bottom: $MOBILE_SLICE_MARGIN;
+	margin-top: $MOBILE_SLICE_MARGIN;
 
 	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-	    margin-bottom: $TABLET_SIDE_GUTTER;
-	    margin-top: $TABLET_SIDE_GUTTER;
+	    margin-bottom: $TABLET_SLICE_MARGIN;
+	    margin-top: $TABLET_SLICE_MARGIN;
 	}
 
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-	    margin-bottom: $DESKTOP_SIDE_GUTTER;
-	    margin-top: $DESKTOP_SIDE_GUTTER;
+	    margin-bottom: $DESKTOP_SLICE_MARGIN;
+	    margin-top: $DESKTOP_SLICE_MARGIN;
 	}
 }
 
@@ -116,6 +116,11 @@
 
 .c-feature__image__wrapper {
 	background-color: $CAPE-HAZE;
+	padding-top: 66.66666%;
+
+	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+		padding-top: 43.75%;
+	}
 }
 
 .c-feature__icon {
