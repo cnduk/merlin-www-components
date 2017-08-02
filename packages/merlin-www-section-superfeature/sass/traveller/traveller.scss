@@ -3,7 +3,20 @@
 
 @import "../wireframe/wireframe";
 
-.c-superfeature {}
+.c-superfeature {
+	margin-bottom: $MOBILE_SLICE_MARGIN;
+	margin-top: $MOBILE_SLICE_MARGIN;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	    margin-bottom: $TABLET_SLICE_MARGIN;
+	    margin-top: $TABLET_SLICE_MARGIN;
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	    margin-bottom: $DESKTOP_SLICE_MARGIN;
+	    margin-top: $DESKTOP_SLICE_MARGIN;
+	}
+}
 .c-superfeature__link {}
 
 .c-superfeature__images {}
@@ -35,6 +48,7 @@
 	padding-left: $MOBILE_SIDE_GUTTER;
 	padding-right: $MOBILE_SIDE_GUTTER;
 	position: absolute;
+	text-align: center;
 	top: 50%;
 	transform: translate(-50%, -50%);
 	width: 100%;
@@ -56,10 +70,12 @@
 
 .c-superfeature__tag {
 	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
+	border-bottom: 1px solid $WHITE;
 	color: $WHITE;
+	display: inline-block;
 	letter-spacing: 2px;
-	margin-bottom: 14px;
-	margin-top: 0;
+	margin: 0 auto 14px auto;
+	padding-bottom: 3px;
 	text-align: center;
 	text-transform: uppercase;
 
