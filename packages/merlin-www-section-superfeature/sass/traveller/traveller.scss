@@ -38,7 +38,7 @@
 	background-color: $CAPE-HAZE;
 	padding-top: 100%;
 
-	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+	@include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
 		padding-top: 52%;
 	}
 }
