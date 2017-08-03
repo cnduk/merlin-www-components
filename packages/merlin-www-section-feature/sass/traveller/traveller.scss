@@ -156,6 +156,7 @@
 	color: $SHERPA-BLUE;
 	letter-spacing: 2px;
 	margin-bottom: 6px;
+	margin-top: 20px;
 	text-align: center;
 	text-transform: uppercase;
 
@@ -163,6 +164,7 @@
     	@include font-size(14px);
     	@include line-height(16px);
     	margin-bottom: 16px;
+    	margin-top: 0;
     }
 }
 
