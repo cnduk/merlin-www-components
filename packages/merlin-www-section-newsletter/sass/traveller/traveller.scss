@@ -1,0 +1,118 @@
+@import "@cnbritain/merlin-www-common:traveller";
+@import "@cnbritain/merlin-www-buttons:traveller";
+
+@import "../wireframe/wireframe";
+
+.c-newsletter {
+    background-color: $CAPE-HAZE;
+    padding: 60px 0;
+    position: relative;
+    text-align: center;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 80px 0;
+    }
+
+    &:before {
+		transform: translateX(-50%);
+        background-image: url('../img/newsletter.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: '';
+        height: 100%;
+        left: 50%;
+        max-width: $MAXIMUM_PAGE_WIDTH;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.c-newsletter__wrapper {
+    margin: 0 auto;
+    max-width: 570px;
+    padding: 0 $MOBILE_SIDE_GUTTER;
+    position: relative;
+}
+
+.c-newsletter__logo {
+    display: none;
+}
+
+.c-newsletter__title {
+	@include font("LULO ONE", 24px, 700, 28px);
+	color: $WHITE;
+	margin-bottom: 16px;
+	margin-top: 0px;
+	text-align: center;
+	text-transform: uppercase;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+		margin-bottom: 24px;
+	}
+}
+
+.c-newsletter__description {
+	@include font("PROXIMA NOVA CONDENSED", 14px, 400, 20px);
+	color: $WHITE;
+	letter-spacing: 1px;
+	margin: 16px 0 24px 0;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+		margin: 24px 0 32px 0;
+	}
+}
+
+.c-newsletter__form {
+	@include font("PROXIMA NOVA CONDENSED", 14px, 400, 14px);
+	width: 100%;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	    width: auto;
+	}
+}
+
+.c-newsletter__form__text {
+    @include font("PROXIMA NOVA CONDENSED", 14px, 400, 14px);
+    background: $WHITE;
+    border-radius: 0;
+    border: 1px solid $PORCELAIN;
+    box-sizing: border-box;
+    color: $RAVEN;
+    height: 60px;
+    margin-bottom: 10px;
+
+    &:placeholder {
+    	color: $RAVEN;
+    }
+}
+
+.c-newsletter__form__btn {
+    height: 60px;
+    margin-bottom: 16px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: 10px;
+        margin-bottom: 24px;
+    }
+
+    @include button-single-two();
+    @include button-single-two-light();
+    &:hover {
+        @include button-single-two-light-hover();
+    }
+}
+
+.c-newsletter__legal {
+    @include font("PROXIMA NOVA CONDENSED", 12px, null, 14px);
+    color: $WHITE;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.c-newsletter__privacy {
+	color: $WHITE;
+	padding-bottom: 3px;
+    border-bottom: 1px solid $WHITE;
+}
