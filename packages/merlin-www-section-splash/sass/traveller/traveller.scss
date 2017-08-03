@@ -1,5 +1,5 @@
 @import "@cnbritain/merlin-www-common:traveller";
-// @import "@cnbritain/merlin-www-buttons:traveller";
+@import "@cnbritain/merlin-www-buttons:traveller";
 @import "@cnbritain/merlin-www-card-list:traveller";
 @import "@cnbritain/merlin-www-card:traveller";
 
@@ -74,14 +74,10 @@
 	color: $WHITE;
 	display: inline-block;
 	letter-spacing: 2px;
-	margin: 0 auto 14px auto;
+	margin: 0 auto;
 	padding-bottom: 3px;
 	text-align: center;
 	text-transform: uppercase;
-
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-    	margin-bottom: 24px;
-	}
 }
 
 .c-splash-hero__title {
