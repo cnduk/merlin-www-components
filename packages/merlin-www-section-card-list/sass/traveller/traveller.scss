@@ -1,5 +1,5 @@
 @import "@cnbritain/merlin-www-common:traveller";
-// @import "@cnbritain/merlin-www-topic-strip:traveller";
+@import "@cnbritain/merlin-www-topic-strip:traveller";
 @import "@cnbritain/merlin-www-buttons:traveller";
 @import "@cnbritain/merlin-www-card-list:traveller";
 @import "@cnbritain/merlin-www-card:traveller";
@@ -25,7 +25,7 @@
 	.c-card-section__title {
 		@include font("LULO ONE", 24px, 700, 28px);
 		color: $SHERPA-BLUE;
-		margin-bottom: 32px;
+		margin-bottom: 20px;
 		text-align: center;
 		text-transform: uppercase;
 
@@ -36,7 +36,7 @@
 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 			@include font-size(28px);
 			@include line-height(32px);
-			margin-bottom: 48px;
+			margin-bottom: 24px;
 		}
 	}
 
