@@ -56,8 +56,8 @@
     .c-card__title {
         @include font("PROXIMA NOVA CONDENSED", 20px, 600, 24px);
         color: $MUSTASAARI;
-        margin-bottom: 8px;
-        margin-top: 16px;
+        margin-bottom: 16px;
+        margin-top: 8px;
         text-align: center;
     }
 
