@@ -54,6 +54,55 @@
 	}
 }
 
+.c-card-section--c-video-articles {
+	background-color: $JUNGLE;
+	margin: 0;
+    max-width: none;
+    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: $DESKTOP_SLICE_MARGIN;
+    }
+
+    .c-card-section__logo {
+    	height: 50px;
+    	margin: 0 auto 40px auto;
+    	width: 190px;
+
+    	svg {
+    	    display: inline-block;
+    	    height: 100%;
+    	    width: 100%;
+
+    	    path {
+    	        fill: $WHITE;
+    	    }
+    	}
+
+    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    		height: 60px;
+    		width: 228px;
+    	}
+    }
+
+	.c-card-section__btn {
+		@include button-single();
+		@include button-single-dark();
+		&:hover {
+			@include button-single-dark-hover();
+		}
+
+		margin-top: 24px;
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			margin-top: 40px;
+		}
+	}
+}
+
 .c-card-section__constrain {}
 .c-card-section__logo {}
 .c-card-section__title {}
