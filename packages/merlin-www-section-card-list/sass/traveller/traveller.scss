@@ -1,6 +1,6 @@
 @import "@cnbritain/merlin-www-common:traveller";
 // @import "@cnbritain/merlin-www-topic-strip:traveller";
-// @import "@cnbritain/merlin-www-buttons:traveller";
+@import "@cnbritain/merlin-www-buttons:traveller";
 @import "@cnbritain/merlin-www-card-list:traveller";
 @import "@cnbritain/merlin-www-card:traveller";
 
@@ -41,6 +41,12 @@
 	}
 
 	.c-card-section__btn {
+		@include button-single();
+		@include button-single-light();
+		&:hover {
+			@include button-single-light-hover();
+		}
+
 		margin-top: 24px;
 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 			margin-top: 40px;
