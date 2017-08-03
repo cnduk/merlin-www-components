@@ -7,7 +7,7 @@ a.btn-single,
 a.btn-group,
 a.btn-share,
 a.btn-related {
-    @include btn-reset();
+    @include button-reset();
 }
 
 .btn-single,
@@ -24,14 +24,14 @@ a.btn-single--light {
     }
 }
 
-// .btn-single--dark,
-// a.btn-single--dark {
-//     @include button-single-dark;
+.btn-single--dark,
+a.btn-single--dark {
+    @include button-single-dark;
 
-//     &:hover {
-//         @include button-single-dark-hover;
-//     }
-// }
+    &:hover {
+        @include button-single-dark-hover;
+    }
+}
 
 .btn-single-two,
 a.btn-single-two {
@@ -47,14 +47,14 @@ a.btn-single-two--light {
     }
 }
 
-// .btn-single-two--dark,
-// a.btn-single-two--dark {
-//     @include button-single-two-dark;
+.btn-single-two--dark,
+a.btn-single-two--dark {
+    @include button-single-two-dark;
 
-//     &:hover {
-//         @include button-single-two-dark-hover;
-//     }
-// }
+    &:hover {
+        @include button-single-two-dark-hover;
+    }
+}
 
 .btn-group,
 a.btn-group {

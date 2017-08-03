@@ -31,6 +31,19 @@
 	color: $FAROE-GRAY;
 }
 
+@mixin button-single-dark() {
+	border: 1px solid rgba($PORCELAIN, 0.12);
+	color: $WHITE;
+}
+
+@mixin button-single-dark-hover() {
+	border: 1px solid rgba($PORCELAIN, 0.18);
+}
+
+@mixin button-single-dark-inactive() {
+
+}
+
 @mixin button-single-two() {
 	@include button-reset();
 	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 14px);
@@ -48,6 +61,19 @@
 }
 
 @mixin button-single-two-light-inactive() {
+	background-color: $PORCELAIN;
+}
+
+@mixin button-single-two-dark() {
+	background-color: $WHITE;
+	color: $MUSTASAARI;
+}
+
+@mixin button-single-two-dark-hover() {
+
+}
+
+@mixin button-single-two-dark-inactive() {
 	background-color: $PORCELAIN;
 }
 
