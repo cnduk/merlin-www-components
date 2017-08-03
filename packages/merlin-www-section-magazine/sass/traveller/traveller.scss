@@ -13,6 +13,7 @@
 	box-sizing: border-box;
 	margin: 0 auto;
 	max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+	overflow: hidden;
 	padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
 	position: relative;
 
