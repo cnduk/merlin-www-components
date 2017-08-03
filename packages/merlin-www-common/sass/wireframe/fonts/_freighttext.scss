@@ -1,0 +1,7 @@
+@import "../_fonts";
+
+$_FONT_FAMILY: Freight Text, serif;
+$_FONT_FREIGHT_TEXT: map-merge($FONT_GROUP_DEFAULT, (
+    'FAMILY': $_FONT_FAMILY
+));
+$FONT_GROUPS: map-merge($FONT_GROUPS, ('FREIGHT TEXT': $_FONT_FREIGHT_TEXT));

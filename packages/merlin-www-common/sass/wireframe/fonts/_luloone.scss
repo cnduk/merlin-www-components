@@ -1,0 +1,7 @@
+@import "../_fonts";
+
+$_FONT_FAMILY: Lulo One, sans-serif;
+$_FONT_LULO_ONE: map-merge($FONT_GROUP_DEFAULT, (
+    'FAMILY': $_FONT_FAMILY
+));
+$FONT_GROUPS: map-merge($FONT_GROUPS, ('LULO ONE': $_FONT_LULO_ONE));
