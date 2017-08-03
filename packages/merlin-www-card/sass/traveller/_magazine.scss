@@ -1,0 +1,60 @@
+// -------------------- //
+// Magazine
+// -------------------- //
+@mixin card-magazine() {
+    .c-card__obj__header,
+    .c-card__obj__body {
+        vertical-align: middle;
+    }
+
+    .c-card__image {
+        border-radius: 50%;
+        padding-top: 100%;
+        overflow: hidden;
+
+        img {
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+}
+
+@mixin card-magazine-small() {
+    .c-card__obj__header {
+        padding-right: 8px;
+        width: 72px;
+    }
+
+    .c-card__obj__body {
+        padding-left: 8px;
+        width: auto;
+    }
+}
+
+@mixin card-magazine-large() {
+
+}
+
+.c-card--magazine {
+    @include card-landscape();
+    @include card-landscape-small();
+
+    @include card-magazine();
+    @include card-magazine-small();
+}
+
+.c-card--magazine-small {
+    @include card-landscape();
+    @include card-landscape-small();
+
+    @include card-magazine();
+    @include card-magazine-small();
+}
+
+.c-card--magazine-large {
+    @include card-landscape();
+    @include card-landscape-small();
+
+    @include card-magazine();
+    @include card-magazine-large();
+}
