@@ -44,6 +44,10 @@
         width: 100%;
 
         @include one-column-size() {
+            &:first-child {
+                margin-bottom: 26px;
+            }
+
             & + .c-card-list__item {
                 .c-card {
                     border-top: 1px solid $ISABEL;
