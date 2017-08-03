@@ -4,3 +4,87 @@
 @import "@cnbritain/merlin-www-buttons:traveller";
 
 @import '../wireframe/wireframe';
+
+.c-magazine {
+	background-color: $CAPE-HAZE;
+}
+
+.c-magazine__wrapper {
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+	padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+	position: relative;
+
+	@include tablet-size {
+	    padding: $TABLET_SLICE_MARGIN $TABLET_SIDE_GUTTER;
+	}
+
+	@include desktop-size {
+	    padding-left: $DESKTOP_SIDE_GUTTER;
+	    padding-right: $DESKTOP_SIDE_GUTTER;
+	}
+}
+
+.c-magazine__covers__wrapper {}
+.c-magazine__cover--print {
+	img {
+		box-shadow: 2px 0 24px 0 rgba($MUSTASAARI, 0.08);
+	}
+}
+
+.c-magazine__cover--tablet {
+	img {
+		box-shadow: 2px 0 24px 0 rgba($MUSTASAARI, 0.08);
+	}
+}
+
+.c-magazine__title {
+	@include font("FREIGHT TEXT", 20px, 400, 20px);
+	color: $MUSTASAARI;
+	font-style: italic;
+	margin-bottom: 12px;
+	margin-top: 0;
+	text-align: center;
+}
+
+.c-magazine__content__title {
+	@include font("FREIGHT TEXT", 20px, null, 20px);
+	color: $MUSTASAARI;
+	font-style: italic;
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.c-magazine__content__date {
+	@include font("PROXIMA NOVA CONDENSED", 24px, 600, 28px);
+	color: $MUSTASAARI;
+	letter-spacing: 1px;
+	margin-bottom: 32px;
+	margin-top: 12px;
+	text-align: center;
+	text-transform: uppercase;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+		@include font-size(28px);
+		@include line-height(32px);
+		letter-spacing: 2px;
+		margin-bottom: 24px;
+		margin-top: 0;
+		text-align: left;
+	}
+}
+
+.c-magazine__btn {
+	@include button-single();
+	@include button-single-light();
+	margin-top: 24px;
+
+	&:hover {
+		@include button-single-light-hover();
+	}
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+		margin-top: 40px;
+	}
+}
