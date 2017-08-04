@@ -217,6 +217,6 @@
 
 @mixin button-top-stories-disabled() {
     svg {
-
+    	fill: rgba($MUSTASAARI, 0.12);
     }
 }
