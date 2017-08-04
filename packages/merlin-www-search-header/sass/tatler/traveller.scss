@@ -1,0 +1,54 @@
+@import '@cnbritain/merlin-www-common:traveller';
+
+@import '../wireframe/wireframe';
+
+.srch-main {
+	background-color: $WHITE;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin: $MOBILE_SLICE_MARGIN 0;
+	padding: 0 $MOBILE_SIDE_GUTTER;
+	width: 100%;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	    margin: $TABLET_SIDE_GUTTER 0;
+	    padding: 0 $TABLET_SIDE_GUTTER;
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	    margin: $DESKTOP_SIDE_GUTTER 0;
+	    padding: 0 $DESKTOP_SIDE_GUTTER;
+	}
+}
+
+.srch-textbox {
+	@include font("PROXIMA NOVA CONDENSED", 34px, 400, 36px);
+	@include vendor-prefix(appearance, none);
+	background-color: transparent;
+	border: none;
+	color: $MUSTASAARI;
+	display: block;
+	margin: 0 auto;
+	max-width: $MAXIMUM_PAGE_WIDTH;
+	width: 100%;
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		@include font-size(46px);
+		@include line-height(46px);
+	}
+
+	&::placeholder {
+	    color: $MUSTASAARI;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.srch-results {
+	@include font("PROXIMA NOVA CONDENSED", 14px, 400, 16px);
+	border-top: 1px solid $ISABEL;
+	color: $MANATEE;
+	margin-top: 12px;
+	padding-top: 8px;
+}
