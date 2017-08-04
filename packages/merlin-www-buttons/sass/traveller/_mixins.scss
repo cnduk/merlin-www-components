@@ -195,3 +195,28 @@
  		fill: map-get($COLOUR_SOCIAL, $name);
 	}
 }
+
+@mixin button-top-stories() {
+    background-color: $CAPE-HAZE;
+    height: 50%;
+    width: 60px;
+
+    svg {
+        height: 100%;
+        width: 18px;
+    }
+
+    svg {
+        fill: $MUSTASAARI;
+    }
+}
+
+@mixin button-top-stories-hover() {
+
+}
+
+@mixin button-top-stories-disabled() {
+    svg {
+
+    }
+}
