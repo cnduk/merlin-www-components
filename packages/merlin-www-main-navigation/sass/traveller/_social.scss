@@ -1,0 +1,36 @@
+.n-menu__social {
+    margin: 32px 20px 24px 20px;
+    text-align: center;
+
+    ul {
+        font-size: 0;
+    }
+}
+
+.n-menu__social-title {
+    @include font("FREIGHT TEXT", 14px, null, 14px);
+    color: $MUSTASAARI;
+    font-style: italic;
+    margin: 0 0 24px 0;
+}
+
+.n-menu__social-brand {}
+
+.n-menu__social-item {
+    position: relative;
+    display: inline-block;
+
+    & + .n-menu__social-item {
+        margin-left: 8px;
+    }
+}
+
+.n-menu__newsletter-btn {
+    @include button-single-two();
+    @include button-single-two-light();
+    margin-bottom: 40px;
+
+    &:hover {
+        @include button-single-two-light-hover();
+    }
+}

@@ -106,7 +106,7 @@ a.n-main__dropdown__btn-share,
 }
 
 .n-main__dropdown__btn {
-    @include button-single();
+    @include button-single-two();
     @include button-single-two-light();
 
     &:hover {

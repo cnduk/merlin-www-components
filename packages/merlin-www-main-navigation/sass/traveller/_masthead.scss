@@ -1,0 +1,21 @@
+.n-main__header-logo {
+    display: inline-block;
+    height: 140px;
+    max-width: none;
+    position: relative;
+    text-align: center;
+
+    a {
+        display: inline-block;
+    }
+
+    svg, img {
+        height: 92px;
+        padding: 24px 0;
+        fill: $SHERPA-BLUE;
+    }
+}
+
+.n-main__header-logo--takeover {
+
+}
