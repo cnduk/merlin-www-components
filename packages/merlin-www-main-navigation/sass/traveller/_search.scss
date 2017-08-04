@@ -4,6 +4,10 @@
     overflow: hidden;
     position: relative;
 
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin: 0 30px;
+    }
+
     svg {
         fill: $MUSTASAARI;
         height: 100%;
