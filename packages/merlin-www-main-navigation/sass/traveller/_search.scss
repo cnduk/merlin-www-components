@@ -32,6 +32,10 @@
         height: 60px;
         width: 100%;
 
+        &::placeholder {
+            color: $MUSTASAARI;
+        }
+
         &:focus {
             outline: none;
         }
