@@ -295,7 +295,7 @@
 
     .c-top-stories__overflow {
         padding-left: 20px;
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             padding-left: 30px;
         }
     }
