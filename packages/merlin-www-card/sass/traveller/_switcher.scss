@@ -13,15 +13,15 @@
     @include card-switcher-small();
 
     @include min-screen($CARD_SWITCHER_WIDTH) {
-        @include card-portrait();
-        @include card-portrait-large();
-
         .c-card__obj__header,
         .c-card__obj__body {
             display: block;
             padding: 0;
             width: auto;
         }
+
+        @include card-portrait();
+        @include card-portrait-large();
     }
 }
 
