@@ -156,3 +156,42 @@
 		background-color: $FAROE-GRAY;
 	}
 }
+
+@mixin button-share {
+	@include button-reset();
+	border-radius: 50%;
+	border: 1px solid $PORCELAIN;
+	box-sizing: border-box;
+	height: 40px;
+	width: 40px;
+    text-align: center;
+
+	svg {
+	    height: 100%;
+	    width: 16px;
+	}
+}
+
+@mixin button-share-light($name) {
+   	path {
+        fill: map-get($COLOUR_SOCIAL, $name);
+    }
+}
+
+@mixin button-share-light-hover($name) {
+	border: 1px solid $PORCELAIN;
+}
+
+@mixin button-share-dark($name) {
+ 	path {
+ 		fill: $RAVEN;
+ 	}
+}
+
+@mixin button-share-dark-hover($name) {
+	border: 1px solid $PORCELAIN;
+
+	path {
+ 		fill: map-get($COLOUR_SOCIAL, $name);
+	}
+}
