@@ -7,8 +7,9 @@
 
     .c-card-list__item {
         display: inline-block;
-        width: 280px;
+        vertical-align: middle;
         white-space: normal;
+        width: 280px;
 
         & + .c-card-list__item {
             margin-left: 24px;
