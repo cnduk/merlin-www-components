@@ -16,7 +16,7 @@
 	}
 
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		margin: $DESTKOP_SLICE_MARGIN 0;
+		margin: $DESKTOP_SLICE_MARGIN 0;
 	    padding: 0 $DESKTOP_SIDE_GUTTER;
 	}
 }
@@ -28,7 +28,6 @@
 	border: none;
 	color: $MUSTASAARI;
 	display: block;
-	font-family: Proxima Nova Condensed, sans-serif;
 	margin: 0 auto;
 	max-width: $MAXIMUM_PAGE_WIDTH;
 	width: 100%;
