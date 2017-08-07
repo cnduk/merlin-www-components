@@ -64,7 +64,8 @@
 
 .a-header__image-constrain--landscape,
 .a-header__image-constrain--portrait,
-.a-header__image-constrain--square {
+.a-header__image-constrain--square,
+.a-header__image-constrain--custom {
     img {
         bottom: 0;
         height: 100%;
@@ -86,6 +87,13 @@
 
 .a-header__image-constrain--square {
     padding-top: 100%;
+}
+
+.a-header__image-constrain--custom {
+	padding-top: 100%;
+	@include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+		padding-top: 52%;
+	}
 }
 
 .a-header__image-content {
