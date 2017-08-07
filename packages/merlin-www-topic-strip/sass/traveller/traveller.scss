@@ -51,32 +51,20 @@ li.c-topic-strip__item {
     }
 }
 
-// .c-topic-strip--article-related {
-//     margin-left: -$MOBILE_SIDE_GUTTER;
-//     margin-right: -$MOBILE_SIDE_GUTTER;
-//     padding-left: $MOBILE_SIDE_GUTTER;
-//     padding-right: $MOBILE_SIDE_GUTTER;
+.c-topic-strip--article-related {
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+    text-align: center;
 
-//     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-//         margin-bottom: -8px;
-//         margin-left: 0;
-//         margin-right: 0;
-//         padding-left: 0;
-//         padding-right: 0;
-//         white-space: normal;
-
-//         .c-topic-strip__item {
-//             margin-bottom: 8px;
-//             margin-right: 8px;
-
-//             & + .c-topic-strip__item {
-//                 @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-//                     margin-left: 0;
-//                 }
-//             }
-//         }
-//     }
-// }
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
 
 .c-topic-strip__btn {
     @include button-group();
