@@ -7,10 +7,7 @@
     }
 }
 
-.a-body {
-    // margin-top: 40px;
-}
-
+.a-body {}
 .a-body--gallery {}
 .a-body--video {}
 .a-body__clear {
@@ -19,11 +16,10 @@
 
 .a-body__wrapper {}
 .a-body__content {
-    // a:not([class]) {
-    //     border-bottom: 1px solid $cornflower-blue;
-    //     color: $cornflower-blue;
-    //     text-decoration: none;
-    // }
+    a:not([class]) {
+        border-bottom: 1px solid $SHERPA-BLUE;
+        color: $SHERPA-BLUE;
+    }
 }
 
 .a-infinite__message {
