@@ -22,6 +22,7 @@ module.exports = function taskSassExport(taskConfig, browserSync){
             outputStyle = 'compressed';
             renameConfig = { suffix: '.min' };
         }
+        SASS_IMPORTER.LOGGER.enabled = ENV.isDev;
 
         const streams = taskConfig.sass.src.map((file) => {
 
