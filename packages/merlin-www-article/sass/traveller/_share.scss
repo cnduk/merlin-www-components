@@ -1,0 +1,35 @@
+.a-share {}
+.a-share__wrapper {}
+
+.a-share__title {
+    margin-bottom: 16px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    @include font("PROXIMA NOVA CONDENSED", 14px, 400, 16px);
+    color: $MUSTASAARI;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.a-share__list {
+	font-size: 0;
+	height: 40px;
+    text-align: center;
+}
+
+.a-share__list-item {
+    display: inline-block;
+    font-size: initial;
+    height: 40px;
+
+    & + .a-share__list-item {
+    	margin-left: 12px;
+    }
+}
+
+.a-share__list-item--mobile {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        display: none;
+    }
+}

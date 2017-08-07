@@ -1,0 +1,87 @@
+.a-author {}
+
+.a-author__image {
+    border-radius: 50%;
+    border: 1px solid $CAPE-HAZE;
+    height: 60px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    padding: 8px;
+    position: relative;
+    width: 60px;
+
+    &:before {
+        background-color: $CAPE-HAZE;
+        border-radius: 50%;
+        bottom: 0;
+        content: '';
+        height: 60px;
+        left: 0;
+        margin: 8px;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 60px;
+        z-index: -1;
+    }
+
+    img {
+        border-radius: 50%;
+        height: 60px;
+        overflow: hidden;
+        width: 60px;
+    }
+}
+
+.a-author__byline {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    color: $MUSTASAARI;
+    margin-bottom: 4px;
+    margin-top: 0;
+
+    a {
+        color: $MUSTASAARI;
+    }
+}
+
+.a-author__byline-name {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.a-author__byline-prefix,
+.a-author__byline-conjunction {
+    font-style: italic;
+    text-transform: lowercase;
+}
+
+.a-author__bio {
+    margin-bottom: 8px;
+    margin-top: 8px;
+
+    p {
+        @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+        color: $RAVEN;
+        margin: 0 0 8px 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    a {
+        color: inherit;
+    }
+}
+
+.a-author__separator {
+    display: none;
+}
+
+.a-author__article-date {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    color: $MANATEE;
+    margin-bottom: 0;
+    margin-top: 4px;
+}
