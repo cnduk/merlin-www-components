@@ -26,17 +26,17 @@
     margin-top: 20px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    	margin-bottom: 24px;
-    	margin-top: 24px;
-    	text-align: center;
+        margin-bottom: 24px;
+        margin-top: 24px;
+        text-align: center;
     }
 }
 
 .c-topic-strip__title {
-	@include font("FREIGHT", 14px, 400, 16px);
-	color: $RAVEN;
-	font-style: italic;
-	margin-right: 24px;
+    @include font("FREIGHT TEXT", 14px, 400, 16px);
+    color: $RAVEN;
+    font-style: italic;
+    margin-right: 24px;
 }
 
 .c-topic-strip__list {
