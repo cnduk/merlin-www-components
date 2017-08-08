@@ -153,11 +153,13 @@ p {
 }
 
 pre {
-    @include font("Source Code Pro, Menlo, Consolas, Monaco, monospace", 14px, null, 20px);
+    @include font-size(14px);
+    @include line-height(20px);
     background-color: $ADVERT-LIGHT;
     border-radius: 4px;
     border: 1px solid $PORCELAIN;
     color: $RAVEN;
+    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
     margin: 28px 0;
     padding: 20px;
     white-space: pre-wrap;
