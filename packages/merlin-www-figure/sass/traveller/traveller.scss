@@ -40,10 +40,12 @@
 }
 
 .c-figure__caption {
+	margin-bottom: 8px;
+
 	p:not([class]) {
 		@include font("PROXIMA NOVA CONDENSED", 14px, 400, 20px);
 		color: $MUSTASAARI;
-		margin-bottom: 8px;
+		margin: 0;
 	}
 
 	a {
