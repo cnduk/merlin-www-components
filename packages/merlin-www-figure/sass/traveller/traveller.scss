@@ -1,0 +1,65 @@
+@import '@cnbritain/merlin-www-common:traveller';
+
+@import '../wireframe/wireframe';
+
+.c-figure {}
+
+.c-figure__container {
+	margin-bottom: 28px;
+}
+
+.c-figure__wrapper {
+	background-color: $CAPE-HAZE;
+}
+
+// .c-figure__toolbar {
+// 	border: 1px solid $mineshaft;
+// 	bottom: 16px;
+// 	height: 44px;
+// 	position: absolute;
+// 	right: 16px;
+// }
+
+// li.c-figure__toolbar-listitem {
+//     background-color: $woodsmoke;
+//     height: 44px;
+//     width: 44px;
+
+//     svg {
+//         fill: $white;
+//         width: 16px;
+//     }
+// }
+
+.c-figure__title {
+	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 20px);
+	color: $MUSTASAARI;
+	letter-spacing: 1px;
+	margin-bottom: 4px;
+	text-transform: uppercase;
+}
+
+.c-figure__caption {
+	p:not([class]) {
+		@include font("PROXIMA NOVA CONDENSED", 14px, 400, 20px);
+		color: $MUSTASAARI;
+		margin-bottom: 8px;
+	}
+
+	a {
+	    border-bottom: 1px solid $SHERPA-BLUE;
+	    color: $SHERPA-BLUE;
+		padding-bottom: 3px;
+	}
+}
+
+.c-figure__credit {
+	@include font("PROXIMA NOVA CONDENSED", 12px, 400, 12px);
+	color: $RAVEN;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+
+    &:before {
+        content: 'Credit: ';
+    }
+}
