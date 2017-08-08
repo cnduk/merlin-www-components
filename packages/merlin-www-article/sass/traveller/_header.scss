@@ -129,6 +129,12 @@
 		color: $WHITE;
 		margin: 0;
 	}
+
+	a {
+	    border-bottom: 1px solid $WHITE;
+	    color: $WHITE;
+		padding-bottom: 3px;
+	}
 }
 
 .a-header__image-credit {
@@ -198,6 +204,12 @@
 		@include font("PROXIMA NOVA CONDENSED", 16px, 400, 20px);
 		color: $RAVEN;
 		text-align: center;
+	}
+
+	a {
+	    color: inherit;
+		padding-bottom: 3px;
+	    border-bottom: 1px solid;
 	}
 
 	> *:first-child {

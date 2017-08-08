@@ -177,6 +177,9 @@
 
 .bb-figure__wrapper {
     background-color: $CAPE-HAZE;
+    &:not(:last-child) {
+        margin-bottom: 12px;
+    }
 }
 
 .bb-figure__caption {
