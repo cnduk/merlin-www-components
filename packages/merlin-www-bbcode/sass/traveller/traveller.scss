@@ -515,6 +515,7 @@
 
 .bb-card__images {}
 .bb-card__image {
+    background-color: $CAPE-HAZE;
     padding-top: 100%;
     @include min-screen($CARD_SWITCHER_WIDTH) {
         padding-top: 66.66666%;
