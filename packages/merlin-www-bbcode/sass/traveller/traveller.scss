@@ -213,6 +213,7 @@
 // -------------------- //
 .bb-question {
     margin: 40px 0;
+    position: relative;
 }
 
 .bb-question__question {
@@ -228,6 +229,11 @@
     left: 0;
     position: absolute;
     text-indent: 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(20px);
+        @include line-height(32px);
+    }
 }
 
 .bb-question__separator {
@@ -249,6 +255,7 @@
 // -------------------- //
 .bb-answer {
     margin: 40px 0;
+    position: relative;
 }
 
 .bb-answer__answer {
@@ -264,6 +271,11 @@
     left: 0;
     position: absolute;
     text-indent: 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(20px);
+        @include line-height(32px);
+    }
 }
 
 .bb-question__separator {
@@ -465,7 +477,7 @@
     margin: 40px 0;
     padding: 12px;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    @include min-screen($CARD_SWITCHER_WIDTH) {
         padding: 16px;
 
         &:before {
@@ -495,7 +507,7 @@
     vertical-align: top;
     width: 92px;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    @include min-screen($CARD_SWITCHER_WIDTH) {
         padding-right: 8px;
         width: 174px;
     }
@@ -504,7 +516,7 @@
 .bb-card__images {}
 .bb-card__image {
     padding-top: 100%;
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    @include min-screen($CARD_SWITCHER_WIDTH) {
         padding-top: 66.66666%;
     }
 }
@@ -534,7 +546,7 @@
     vertical-align: top;
     width: auto;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    @include min-screen($CARD_SWITCHER_WIDTH) {
         padding-left: 8px;
     }
 }
@@ -556,7 +568,7 @@
     margin-bottom: 8px;
     margin-top: 6px;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    @include min-screen($CARD_SWITCHER_WIDTH) {
         @include font-size(20px);
         @include line-height(24px);
         margin-bottom: 16px;
