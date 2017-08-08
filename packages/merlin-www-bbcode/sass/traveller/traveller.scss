@@ -246,3 +246,27 @@
 .bb-answer__by {
     display: none;
 }
+
+// -------------------- //
+// Gallery
+// -------------------- //
+.bb-gallery {
+    margin: 40px 0;
+}
+
+// -------------------- //
+// Button
+// -------------------- //
+.bb-button {
+    @include button-single-two();
+    @include button-single-two-light();
+    width: 100%;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        width: auto;
+    }
+
+    &:hover {
+        @include button-single-two-light-hover();
+    }
+}
