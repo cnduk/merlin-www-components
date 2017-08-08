@@ -218,6 +218,7 @@ ol {
     }
 
     li:not([class]):before {
+        @include font("PROXIMA NOVA CONDENSED", 18px, 600, 28px);
         content: counter(section) '.';
         position: absolute;
         left: -28px;
