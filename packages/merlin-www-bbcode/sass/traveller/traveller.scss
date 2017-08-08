@@ -1,0 +1,248 @@
+@import "@cnbritain/merlin-www-common:traveller";
+@import "@cnbritain/merlin-www-buttons:traveller";
+
+@import "../wireframe/wireframe";
+
+// -------------------- //
+// Note
+// -------------------- //
+.bb-note {
+    @include font("FREIGHT TEXT", 14px, null, 20px);
+    border-top: 1px solid $ISABEL;
+    color: $MUSTASAARI;
+    margin: 40px 0;
+    padding-top: 12px;
+    position: relative;
+
+    &:before {
+        color: $SHERPA-BLUE;
+        content: "\2605";
+    }
+}
+
+// -------------------- //
+// Dropcap
+// -------------------- //
+.bb-dropcap {}
+.bb-dropcap--letter {
+    @include font("LULO ONE", 87px, 700, 87px);
+    color: $SHERPA-BLUE;
+    float: left;
+    text-transform: capitalize;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(100px);
+        @include line-height(100px);
+    }
+}
+
+// -------------------- //
+// Embed
+// -------------------- //
+.bb-embed {
+    margin: 40px 0;
+}
+
+// -------------------- //
+// Interactive
+// -------------------- //
+.bb-interactive {
+    margin: 40px 0;
+}
+
+// -------------------- //
+// Blockquote
+// -------------------- //
+.bb-blockquote {
+    border-left: 2px solid $BALI-HAI;
+    margin: 40px 0;
+    padding-left: 30px;
+}
+
+.bb-blockquote__quote {
+    @include font("PROXIMA NOVA CONDENSED", 18px, 400, 24px);
+    color: $BALI-HAI;
+    font-style: italic;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(20px);
+        @include line-height(28px);
+    }
+}
+
+.bb-blockquote__separator {
+    display: none;
+}
+
+.bb-blockquote__credit {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    color: $BALI-HAI;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 16px;
+}
+
+// -------------------- //
+// Pullquote
+// -------------------- //
+.bb-pullquote {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.bb-pullquote__quote {
+    @include font("LULO ONE", 20px, 700, 24px);
+    color: $SHERPA-BLUE;
+    text-transform: uppercase;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(24px);
+        @include line-height(32px);
+    }
+}
+
+.bb-pullquote__separator {
+    display: none;
+}
+
+.bb-pullquote__credit {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    color: $BALI-HAI;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 16px;
+}
+
+// -------------------- //
+// Infobox
+// -------------------- //
+.bb-infobox {
+    border: 2px solid $SHERPA-BLUE;
+    margin: 40px 0;
+    padding: 32px 20px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        padding: 32px;
+    }
+}
+
+.bb-infobox__title {
+    @include font("PROXIMA NOVA CONDENSED", 20px, 600, 24px);
+    color: $SHERPA-BLUE;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    margin-top: 0;
+    text-transform: uppercase;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        letter-spacing: 2px;
+    }
+}
+
+.bb-infobox__hr {
+    border-color: $SHERPA-BLUE;
+    margin-bottom: 24px;
+    margin-top: 4px;
+}
+
+.bb-infobox__item {
+    margin: 0;
+
+    & + .bb-infobox__item {
+        margin-top: 24px;
+    }
+}
+
+.bb-infobox__item__key {
+    @include font("PROXIMA NOVA CONDENSED", 16px, 600, 20px);
+    color: $SHERPA-BLUE;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.bb-infobox__item__value {
+    @include font("PROXIMA NOVA CONDENSED", 16px, 400, 20px);
+    color: $MUSTASAARI;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+// -------------------- //
+// Figure
+// -------------------- //
+.bb-figure {
+    margin: 40px 0;
+}
+
+// -------------------- //
+// Question
+// -------------------- //
+.bb-question {
+    margin: 40px 0;
+}
+
+.bb-question__question {
+    p {
+        margin-bottom: 16px;
+        text-indent: 32px;
+    }
+}
+
+.bb-question__q {
+    @include font("PROXIMA NOVA CONDENSED", 18px, 600, 28px);
+    color: $MUSTASAARI;
+    left: 0;
+    position: absolute;
+    text-indent: 0;
+}
+
+.bb-question__separator {
+    display: none;
+}
+
+.bb-question__author {
+    @include font("PROXIMA NOVA CONDENSED", 12px, null, 16px);
+    color: $BALI-HAI;
+    letter-spacing: 1px;
+}
+
+.bb-question__by {
+    display: none;
+}
+
+// -------------------- //
+// Answer
+// -------------------- //
+.bb-answer {
+    margin: 40px 0;
+}
+
+.bb-answer__answer {
+    p {
+        margin-bottom: 16px;
+        text-indent: 32px;
+    }
+}
+
+.bb-answer__a {
+    @include font("PROXIMA NOVA CONDENSED", 18px, 600, 28px);
+    color: $BALI-HAI;
+    left: 0;
+    position: absolute;
+    text-indent: 0;
+}
+
+.bb-question__separator {
+    display: none;
+}
+
+.bb-answer__author {
+    @include font("PROXIMA NOVA CONDENSED", 12px, null, 16px);
+    color: $BALI-HAI;
+    letter-spacing: 1px;
+}
+
+.bb-answer__by {
+    display: none;
+}
