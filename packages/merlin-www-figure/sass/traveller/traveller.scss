@@ -63,6 +63,10 @@ li.c-figure__toolbar-listitem {
 	letter-spacing: 1px;
 	margin-bottom: 4px;
 	text-transform: uppercase;
+
+	@include min-screen($ARTICLE_TOTAL) {
+		padding-left: 220px;
+	}
 }
 
 .c-figure__caption {
@@ -79,6 +83,10 @@ li.c-figure__toolbar-listitem {
 	    color: $SHERPA-BLUE;
 		padding-bottom: 3px;
 	}
+
+	@include min-screen($ARTICLE_TOTAL) {
+		padding-left: 220px;
+	}
 }
 
 .c-figure__credit {
@@ -89,5 +97,9 @@ li.c-figure__toolbar-listitem {
 
     &:before {
         content: 'Credit: ';
+    }
+
+    @include min-screen($ARTICLE_TOTAL) {
+    	padding-left: 220px;
     }
 }
