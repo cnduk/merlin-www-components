@@ -1,4 +1,9 @@
-.a-share {}
+.a-share {
+    margin-top: 24px;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 32px;
+    }
+}
 .a-share__wrapper {}
 
 .a-share__title {
@@ -13,8 +18,8 @@
 }
 
 .a-share__list {
-	font-size: 0;
-	height: 40px;
+    font-size: 0;
+    height: 40px;
     text-align: center;
 }
 
@@ -24,7 +29,7 @@
     height: 40px;
 
     & + .a-share__list-item {
-    	margin-left: 12px;
+        margin-left: 12px;
     }
 }
 
