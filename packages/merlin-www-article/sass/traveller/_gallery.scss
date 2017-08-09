@@ -5,7 +5,7 @@
 .a-gallery__wrapper {
     max-width: $ARTICLE_TOTAL;
     @include min-screen($ARTICLE_TOTAL) {
-        padding-right: 350px;
+        padding-right: $ARTICLE_RIGHT_TOTAL;
     }
 }
 
