@@ -58,11 +58,16 @@ li.c-figure__toolbar-listitem {
 }
 
 .c-figure__title {
-	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 20px);
+	@include font("PROXIMA NOVA CONDENSED", 28px, 600, 32px);
 	color: $MUSTASAARI;
 	letter-spacing: 1px;
-	margin-bottom: 4px;
+	margin-bottom: 8px;
 	text-transform: uppercase;
+
+	@include min-screen($TYPE_LARGE_COPY_WIDTH) {
+		@include font-size(32px);
+		@include line-height(40px);
+	}
 
 	@include min-screen($ARTICLE_TOTAL) {
 		padding-left: 220px;
@@ -70,12 +75,17 @@ li.c-figure__toolbar-listitem {
 }
 
 .c-figure__caption {
-	margin-bottom: 8px;
+	margin-bottom: 24px;
 
 	p:not([class]) {
-		@include font("PROXIMA NOVA CONDENSED", 14px, 400, 20px);
+		@include font("PROXIMA NOVA CONDENSED", 18px, 400, 28px);
 		color: $MUSTASAARI;
 		margin: 0;
+
+		@include min-screen($TYPE_LARGE_COPY_WIDTH) {
+			@include font-size(20px);
+			@include line-height(32px);
+		}
 	}
 
 	a {
@@ -83,6 +93,7 @@ li.c-figure__toolbar-listitem {
 	    color: $SHERPA-BLUE;
 		padding-bottom: 3px;
 	}
+
 
 	@include min-screen($ARTICLE_TOTAL) {
 		padding-left: 220px;
@@ -98,6 +109,7 @@ li.c-figure__toolbar-listitem {
     &:before {
         content: 'Credit: ';
     }
+
 
     @include min-screen($ARTICLE_TOTAL) {
     	padding-left: 220px;
