@@ -25,6 +25,18 @@
 	.a-header__tag__secondary {
 		border-bottom: 1px solid $WHITE;
 	}
+
+	.a-header__title {
+		@include font("LULO ONE", 24px, 700, 32px);
+		letter-spacing: 0;
+		margin-bottom: 0;
+
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			@include font-size(40px);
+			@include line-height(48px);
+			margin-bottom: 0;
+		}
+	}
 }
 
 .a-header__image {
@@ -186,10 +198,19 @@
 }
 
 .a-header__title {
-	@include font("LULO ONE", 24px, 700, 32px);
+	@include font("LULO ONE", 28px, 600, 32px);
 	color: $MUSTASAARI;
-	margin: 0;
+	letter-spacing: 2px;
+	margin-bottom: 10px;
+	margin-top: 0;
 	text-align: center;
+	text-transform: uppercase;
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		@include font-size(46px);
+		@include line-height(54px);
+		margin-bottom: 16px;
+	}
 }
 
 .a-header__teaser {
