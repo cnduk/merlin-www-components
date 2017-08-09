@@ -1,0 +1,178 @@
+@import "@cnbritain/merlin-www-common:traveller";
+@import "@cnbritain/merlin-www-card-list:traveller";
+@import "@cnbritain/merlin-www-image:traveller";
+@import "@cnbritain/merlin-www-topic-strip:traveller";
+
+@import "../wireframe/wireframe";
+
+.tg-header {
+	margin: 32px 0;
+	padding: 0 $MOBILE_SIDE_GUTTER;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+		padding: 0 $TABLET_SIDE_GUTTER;
+	}
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 48px 0;
+        padding: 0 $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+// .tg-header--video {
+// 	.tg-header__intro__image {
+// 		width: 190px;
+// 		height: 50px;
+// 		margin: 0 auto;
+
+// 		svg {
+// 			fill: $white;
+// 			height: 100%;
+// 			width: 100%;
+// 		}
+
+// 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+// 			width: 228px;
+// 			height: 60px;
+// 		}
+// 	}
+// }
+
+// .tg-header--profile {
+// 	.tg-header__intro__image {
+// 		background-color: $bon-jour;
+// 		border-radius: 50%;
+// 		display: block;
+// 		height: 66px;
+// 		margin: 0 auto 20px auto;
+// 		overflow: hidden;
+// 		width: 66px;
+
+// 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+// 			height: 108px;
+// 			margin-bottom: 28px;
+// 			width: 108px;
+// 		}
+
+// 		img {
+// 			border-radius: 50%;
+// 			height: 100%;
+// 			overflow: hidden;
+// 			width: 100%;
+// 		}
+// 	}
+// }
+
+// .tg-header--brand,
+// .tg-header--event,
+// .tg-header--topic {
+// 	.tg-header__intro__image {
+// 		margin-bottom: 24px;
+// 		margin-left: auto;
+// 		margin-right: auto;
+// 		width: 240px;
+
+// 		&:last-child {
+// 			margin-bottom: 0;
+// 		}
+
+// 		img {
+// 			width: 100%;
+// 		}
+
+// 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+// 			margin-bottom: 32px;
+// 			width: 320px;
+// 		}
+// 	}
+// }
+
+.tg-header__wrapper {
+	max-width: $MAXIMUM_PAGE_WIDTH;
+	margin: 0 auto;
+}
+
+.tg-header__intro {}
+.tg-header__intro__image {}
+
+.tg-header__intro__title {
+	@include font("LULO ONE", 28px, 700, 32px);
+	color: $SHERPA-BLUE;
+	margin: 0 0 16px 0;
+	text-align: center;
+	text-transform: uppercase;
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		@include font-size(46px);
+		@include line-height(54px);
+		margin-bottom: 24px;
+	}
+}
+
+.tg-header__separator {
+	display: none;
+}
+
+.tg-header__intro__description {
+	color: $MUSTASAARI;
+	margin: 16px auto 24px auto;
+	max-width: 800px;
+	text-align: center;
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		margin-top: 24px;
+	}
+
+	a {
+	    border-bottom: 1px solid;
+	    color: inherit;
+		padding-bottom: 3px;
+	}
+
+	p {
+		@include font("PROXIMA NOVA CONDENSED", 18px, 400, 28px);
+		color: inherit;
+
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			@include font-size(20px);
+			@include line-height(32px);
+		}
+	}
+
+	> *:first-child {
+		margin-top: 0;
+	}
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.tg-header__topic-strip {
+	margin: 24px auto;
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		margin: 32px auto;
+	}
+
+	.c-topic-strip {
+		text-align: center;
+	}
+
+	.c-topic-strip__btn {
+	    @include button-group-two();
+	    @include button-group-two-light();
+
+	    &:hover {
+	        @include button-group-two-light-hover();
+	    }
+	}
+}
+
+.tg-header__cards {
+	margin: 24px auto;
+	max-width: $MAXIMUM_PAGE_WIDTH;
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	    margin: 32px auto;
+	}
+}
