@@ -1,0 +1,153 @@
+@import '@cnbritain/merlin-www-common:traveller';
+@import '@cnbritain/merlin-www-buttons:traveller';
+
+@import '../wireframe/wireframe';
+
+.a-marketing-card {
+    background-color: $WHITE;
+    border: 1px solid $PORCELAIN;
+    margin: 40px 0;
+    padding: 32px 20px;
+
+    @include marketing-card-medium-size() {
+        padding: 32px;
+    }
+}
+
+.a-marketing-card--brand {
+    .a-marketing-card__col {
+        @include marketing-card-medium-size() {
+            &:nth-child(1) {
+                padding-right: 32px;
+            }
+
+            &:nth-child(2) {
+                padding-left: 32px;
+            }
+        }
+    }
+}
+.a-marketing-card--event {}
+.a-marketing-card--topic {}
+
+.a-marketing-card--magazine {
+    .a-marketing-card__col {
+        @include marketing-card-medium-size() {
+            &:nth-child(1) {
+                padding-right: 16px;
+            }
+
+            &:nth-child(2) {
+                padding-left: 16px;
+            }
+        }
+    }
+}
+
+.a-marketing-card__brand {
+    margin-bottom: 24px;
+    @include marketing-card-medium-size() {
+        margin-bottom: 0;
+    }
+}
+
+.a-marketing-card__brand__img {
+    margin: 0 auto;
+    max-width: 222px;
+    width: 100%;
+    @include marketing-card-medium-size() {
+        max-width: none;
+    }
+}
+
+.a-marketing-card__brand__name {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    color: $MUSTASAARI;
+
+    a {
+        color: inherit;
+    }
+}
+
+.a-marketing-card__brand__prefix {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    margin-bottom: 12px;
+}
+
+.a-marketing-card__col {
+    text-align: center;
+
+    @include marketing-card-medium-size() {
+        &:nth-child(2) {
+            text-align: left;
+        }
+    }
+}
+
+.a-marketing-card--brand .a-marketing-card__col,
+.a-marketing-card--topic .a-marketing-card__col,
+.a-marketing-card--event .a-marketing-card__col {
+    @include marketing-card-medium-size() {
+        width: 38%;
+
+        & + .a-marketing-card__col {
+            border-left: 1px solid $PORCELAIN;
+        }
+    }
+}
+
+.a-marketing-card__desc {
+    @include font("PROXIMA NOVA CONDENSED", 14px, 400, 20px);
+    color: $MUSTASAARI;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+.a-marketing-card__magazine {
+    margin: 0 auto 20px auto;
+
+    @include marketing-card-medium-size() {
+        margin-bottom: 0;
+    }
+}
+.a-marketing-card__magazine__cover {}
+.a-marketing-card__magazine__cover--print {
+    width: 72%;
+}
+
+.a-marketing-card__magazine__cover--tablet {
+    background-color: $BLACK;
+    background-image: none;
+    border-radius: 4px;
+    bottom: 0px;
+    box-shadow: 2px 0 24px 0 rgba($MUSTASAARI, 0.08);
+    padding: 12px 4px;
+    position: absolute;
+    right: 0;
+    width: 44%;
+
+    @include marketing-card-medium-size() {
+        padding: 14px 5px;
+    }
+}
+
+.a-marketing-card__magazine__cover--mobile {
+    background-image: none;
+    display: none;
+}
+
+.a-marketing-card__link {
+    @include button-single-two();
+    @include button-single-two-light();
+
+    &:hover {
+        @include button-single-two-light-hover();
+    }
+}
+
+.a-marketing-card__title {
+    @include font("FREIGHT TEXT", 16px, 400, 24px);
+    color: $MUSTASAARI;
+    font-style: italic;
+    margin: 0 0 12px 0;
+}
