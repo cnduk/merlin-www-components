@@ -117,15 +117,13 @@ a.btn-share {
 @each $name, $color in $COLOUR_SOCIAL {
     .btn-share--#{$name},
     a.btn-share--#{$name} {
-        background-color: #{$color};
-
-        &.btn-share--dark {
-            @include button-share-dark($name);
+        &.btn-share--light-two {
+            @include button-share-light-two($name);
         }
 
         &:hover,
-        &:hover.btn-share--dark {
-            @include button-share-dark-hover($name);
+        &:hover.btn-share--light-two {
+            @include button-share-light-two-hover($name);
         }
 
         &.btn-share--light {

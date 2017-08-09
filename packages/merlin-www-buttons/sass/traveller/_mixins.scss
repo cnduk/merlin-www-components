@@ -182,13 +182,13 @@
 	border: 1px solid $PORCELAIN;
 }
 
-@mixin button-share-dark($name) {
+@mixin button-share-light-two($name) {
  	path {
  		fill: $RAVEN;
  	}
 }
 
-@mixin button-share-dark-hover($name) {
+@mixin button-share-light-two-hover($name) {
 	border: 1px solid $PORCELAIN;
 
 	path {
