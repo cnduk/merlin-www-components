@@ -9,27 +9,53 @@
 }
 
 .c-figure__wrapper {
-	background-color: $CAPE-HAZE;
+
 }
 
-// .c-figure__toolbar {
-// 	border: 1px solid $mineshaft;
-// 	bottom: 16px;
-// 	height: 44px;
-// 	position: absolute;
-// 	right: 16px;
-// }
+.c-figure__toolbar {
+	border: 1px solid $PORCELAIN;
+	bottom: 16px;
+	height: 40px;
+	position: absolute;
+	right: 16px;
+}
 
-// li.c-figure__toolbar-listitem {
-//     background-color: $woodsmoke;
-//     height: 44px;
-//     width: 44px;
+li.c-figure__toolbar-listitem {
+	background-color: $WHITE;
+    height: 40px;
+    width: 40px;
 
-//     svg {
-//         fill: $white;
-//         width: 16px;
-//     }
-// }
+    svg {
+        width: 16px;
+    }
+
+    & + li.c-figure__toolbar-listitem {
+    	&:not(:last-child) {
+    		border-left: 1px solid $PORCELAIN;
+    	}
+    }
+}
+
+@each $name, $color in $COLOUR_SOCIAL_LIGHT {
+    .c-figure__toolbar-listitem--#{$name} {
+
+        svg, path {
+            fill: map-get($COLOUR_SOCIAL_LIGHT, $name);
+        }
+    }
+}
+
+.c-figure__toolbar-listitem--more {
+    svg, path {
+        fill: $MUSTASAARI;
+    }
+}
+
+.c-figure__toolbar-listitem--zoom {
+    svg, path {
+        fill: $MUSTASAARI;
+    }
+}
 
 .c-figure__title {
 	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 20px);
