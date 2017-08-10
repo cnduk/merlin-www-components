@@ -83,7 +83,8 @@
     }
 }
 
-.c-card-section--c-video-articles {
+.c-card-section--c-video-articles,
+.c-card-section--v-related-articles {
 	background-color: $JUNGLE;
 	margin: 0;
     max-width: none;
@@ -95,6 +96,19 @@
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         padding: $DESKTOP_SLICE_MARGIN;
+    }
+
+    .c-card-section__title {
+    	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
+    	color: $WHITE;
+    	letter-spacing: 1px;
+    	margin-bottom: 16px;
+    	margin-top: 0;
+    	text-transform: uppercase;
+
+    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    		margin-bottom: 24px;
+    	}
     }
 
     .c-card-section__logo {
@@ -128,6 +142,20 @@
 		margin-top: 24px;
 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 			margin-top: 40px;
+		}
+	}
+}
+
+.c-card-section--tg-articles {
+	.c-card-section__title {
+		@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
+		letter-spacing: 1px;
+		margin-bottom: 16px;
+		margin-top: 0;
+		text-transform: uppercase;
+
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			margin-bottom: 24px;
 		}
 	}
 }

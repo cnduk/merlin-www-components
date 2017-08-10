@@ -45,17 +45,12 @@
 .a-video__sidebar__wrapper {}
 
 .a-video__sidebar__title {
-    @include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
+    @include font("PROXIMA NOVA CONDENSED", 12px, 600, 12px);
     color: $WHITE;
     letter-spacing: 1px;
     margin: 0;
     padding: 24px 0 8px 0;
     text-transform: uppercase;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(12px);
-        @include line-height(12px);
-    }
 }
 
 .a-video__sidebar__list {
