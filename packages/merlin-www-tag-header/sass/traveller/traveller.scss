@@ -19,73 +19,71 @@
     }
 }
 
-// .tg-header--video {
-// 	.tg-header__intro__image {
-// 		width: 190px;
-// 		height: 50px;
-// 		margin: 0 auto;
+.tg-header--video {
+	.tg-header__intro__image {
+		// TODO
+		display: none;
+	}
+}
 
-// 		svg {
-// 			fill: $white;
-// 			height: 100%;
-// 			width: 100%;
-// 		}
+.tg-header--profile {
+	.tg-header__intro__image {
+		box-sizing: border-box;
+		border-radius: 50%;
+		border: 1px solid $CAPE-HAZE;
+		height: 72px;
+		margin: 0 auto 12px auto;
+		overflow: hidden;
+		padding: 8px;
+		position: relative;
+		width: 72px;
 
-// 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-// 			width: 228px;
-// 			height: 60px;
-// 		}
-// 	}
-// }
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			margin-bottom: 24px;
+			padding: 10px;
+			width: 108px;
+			height: 108px;
+		}
 
-// .tg-header--profile {
-// 	.tg-header__intro__image {
-// 		background-color: $bon-jour;
-// 		border-radius: 50%;
-// 		display: block;
-// 		height: 66px;
-// 		margin: 0 auto 20px auto;
-// 		overflow: hidden;
-// 		width: 66px;
+		&:before {
+		    background-color: $CAPE-HAZE;
+		    border-radius: 50%;
+		    bottom: 0;
+		    content: '';
+		    height: 54px;
+		    left: 0;
+		    margin: 8px;
+		    overflow: hidden;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		    width: 54px;
+		    z-index: -1;
 
-// 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-// 			height: 108px;
-// 			margin-bottom: 28px;
-// 			width: 108px;
-// 		}
+		    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		    	margin: 10px;
+		    	width: 84px;
+		    	height: 84px;
+		    }
+		}
 
-// 		img {
-// 			border-radius: 50%;
-// 			height: 100%;
-// 			overflow: hidden;
-// 			width: 100%;
-// 		}
-// 	}
-// }
+		img {
+		    border-radius: 50%;
+		    height: 100%;
+		    overflow: hidden;
+		    width: 100%;
+		}
+	}
+}
 
-// .tg-header--brand,
-// .tg-header--event,
-// .tg-header--topic {
-// 	.tg-header__intro__image {
-// 		margin-bottom: 24px;
-// 		margin-left: auto;
-// 		margin-right: auto;
-// 		width: 240px;
-
-// 		&:last-child {
-// 			margin-bottom: 0;
-// 		}
-
-// 		img {
-// 			width: 100%;
-// 		}
-
-// 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-// 			margin-bottom: 32px;
-// 			width: 320px;
-// 		}
-// 	}
-// }
+.tg-header--brand,
+.tg-header--event,
+.tg-header--topic {
+	.tg-header__intro__image {
+		// TODO
+		display: none;
+	}
+}
 
 .tg-header__wrapper {
 	max-width: $MAXIMUM_PAGE_WIDTH;
