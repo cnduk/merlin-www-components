@@ -213,6 +213,10 @@
 	}
 }
 
+.a-header__separator {
+	display: none;
+}
+
 .a-header__teaser {
 	margin-top: 10px;
 	margin-bottom: 16px;
@@ -280,12 +284,35 @@
 	text-align: center;
 }
 
-.a-header__meta {}
+ul.a-header__meta {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    color: $MANATEE;
+    margin-top: 4px;
+    text-align: center;
+}
+
+li.a-header__meta-item {
+    display: inline-block;
+
+    & + li.a-header__meta-item {
+        &:before {
+            background-color: $MANATEE;
+            border-radius: 50%;
+            content: "";
+            display: inline-block;
+            height: 2px;
+            margin: 1px 4px;
+            width: 2px;
+        }
+    }
+
+    a {
+        color: inherit;
+    }
+}
+
 .a-header__meta--date {}
 .a-header__meta--tag {}
-.a-header__meta-item {
-    display: inline-block;
-}
 
 .a-header__tag {
     font-size: 0;
@@ -320,6 +347,3 @@
         vertical-align: middle;
     }
 }
-
-.a-header__meta {}
-.a-header__meta-item {}
