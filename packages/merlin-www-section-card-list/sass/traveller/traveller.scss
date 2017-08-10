@@ -153,7 +153,8 @@
 	}
 }
 
-.c-card-section--tg-articles {
+.c-card-section--tg-articles,
+.c-card-section--v-articles {
 	.c-card-section__title {
 		@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
 		letter-spacing: 1px;
@@ -163,6 +164,12 @@
 
 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 			margin-bottom: 24px;
+		}
+	}
+
+	.c-card-list {
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		    margin-right: 340px;
 		}
 	}
 }
