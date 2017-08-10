@@ -5,7 +5,24 @@
 	}
 }
 .a-header--gallery {}
-.a-header--video {}
+.a-header--video {
+	.a-header__content {
+		max-width: none;
+		padding-left: 0;
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			padding-right: 360px;
+		}
+	}
+
+	.a-header__title,
+	.a-header__about,
+	.a-header__meta,
+	.a-share__list {
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			text-align: left;
+		}
+	}
+}
 
 .a-header__hero {
 	margin-bottom: 24px;
