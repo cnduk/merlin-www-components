@@ -56,7 +56,8 @@
 	}
 }
 
-.c-card-section--a-recommended {
+.c-card-section--a-recommended,
+.c-card-section--v-genre-articles {
 	background-color: $CAPE-HAZE;
 	margin: 0;
     max-width: none;
@@ -143,6 +144,12 @@
 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 			margin-top: 40px;
 		}
+	}
+}
+
+.c-card-section--v-related-articles {
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		display: none;
 	}
 }
 
