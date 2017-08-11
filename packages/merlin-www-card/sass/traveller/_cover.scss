@@ -1,0 +1,35 @@
+// -------------------- //
+// Cover
+// -------------------- //
+@mixin card-cover() {
+    .c-card__image {
+        padding-top: 135.8064516%;
+    }
+}
+
+@mixin card-cover-small() {}
+@mixin card-cover-large() {}
+
+.c-card--cover {
+    @include card-portrait();
+    @include card-portrait-large();
+
+    @include card-cover();
+    @include card-cover-small();
+}
+
+.c-card--cover-small {
+    @include card-portrait();
+    @include card-portrait-large();
+
+    @include card-cover();
+    @include card-cover-small();
+}
+
+.c-card--cover-large {
+    @include card-portrait();
+    @include card-portrait-large();
+
+    @include card-cover();
+    @include card-cover-large();
+}

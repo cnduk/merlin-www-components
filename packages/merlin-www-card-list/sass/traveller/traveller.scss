@@ -368,3 +368,18 @@
         }
     }
 }
+
+.c-card-list--mag-magazines {
+    margin: -6px -12px;
+
+    .c-card-list__item {
+        display: inline-block;
+        padding: 0 12px;
+        margin: 6px 0;
+        width: 50%;
+
+        @include four-column-size() {
+            width: 25%;
+        }
+    }
+}
