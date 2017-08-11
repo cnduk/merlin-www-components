@@ -72,7 +72,8 @@
 }
 
 .c-card-list--a-recommended,
-.c-card-list--v-genre-articles {
+.c-card-list--v-genre-articles,
+.c-card-list--s-results {
     margin: -6px -12px;
 
     .c-card-list__item {
@@ -136,6 +137,7 @@
                 text-transform: uppercase;
                 top: 50%;
                 transform: translate(-50%, -50%);
+                transition-duration: 300ms;
                 white-space: nowrap;
             }
         }
@@ -151,6 +153,7 @@
                 position: absolute;
                 right: 0;
                 top: 0;
+                transition-duration: 300ms;
                 width: 100%;
             }
         }
