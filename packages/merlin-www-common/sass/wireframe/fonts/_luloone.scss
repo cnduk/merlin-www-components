@@ -1,5 +1,15 @@
 @import "../_fonts";
 
+@font-face {
+	font-family: 'Lulo One';
+	font-style: normal;
+	font-weight: 700;
+	src: url('/static/fonts/lulo-one/LuloOne-Bold.eot') format('embedded-opentype'),
+		 url('/static/fonts/lulo-one/LuloOne-Bold.ttf') format('truetype'),
+		 url('/static/fonts/lulo-one/LuloOne-Bold.woff') format('woff'),
+		 url('/static/fonts/lulo-one/LuloOne-Bold.woff2') format('woff2');
+}
+
 $_FONT_FAMILY: Lulo One, sans-serif;
 $_FONT_LULO_ONE: map-merge($FONT_GROUP_DEFAULT, (
     'FAMILY': $_FONT_FAMILY
