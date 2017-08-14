@@ -26,13 +26,17 @@
 .bb-dropcap {}
 .bb-dropcap--letter {
     @include font("LULO ONE", 87px, 700, 87px);
+    box-sizing: border-box;
     color: $SHERPA-BLUE;
     float: left;
+    height: 84px;
+    padding-top: 8px;
     text-transform: capitalize;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(100px);
         @include line-height(100px);
+        height: 93px;
     }
 }
 
