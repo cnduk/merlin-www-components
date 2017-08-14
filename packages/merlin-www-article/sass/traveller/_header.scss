@@ -339,7 +339,13 @@ li.a-header__meta-item {
 
 .a-header__tag {
     font-size: 0;
+    margin-bottom: 14px;
+    margin-top: 0;
     text-align: center;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    	margin-bottom: 24px;
+    }
 }
 
 .a-header__tag__primary,
@@ -350,12 +356,7 @@ li.a-header__meta-item {
 	display: inline-block;
 	padding-bottom: 3px;
     letter-spacing: 2px;
-    margin-bottom: 14px;
-    margin-top: 0;
     text-transform: uppercase;
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    	margin-bottom: 24px;
-    }
 }
 
 .a-header__sponsor {
