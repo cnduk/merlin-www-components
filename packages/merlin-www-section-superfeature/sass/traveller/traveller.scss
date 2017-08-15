@@ -88,6 +88,7 @@
 .c-superfeature__title {
 	@include font("LULO ONE", 24px, 700, 32px);
 	color: $WHITE;
+	margin-bottom: 16px;
 	text-align: center;
 
     @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
