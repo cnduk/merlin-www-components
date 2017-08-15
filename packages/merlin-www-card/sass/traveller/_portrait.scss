@@ -63,7 +63,11 @@
         display: none;
     }
 
-    .c-card__footer {}
+    .c-card__footer {
+        > :first-child {
+            margin-top: 8px;
+        }
+    }
 
     .c-card__byline {
         @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
@@ -165,7 +169,11 @@
         display: none;
     }
 
-    .c-card__footer {}
+    .c-card__footer {
+        > :first-child {
+            margin-top: 16px;
+        }
+    }
 
     .c-card__byline {
         @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
