@@ -1,0 +1,7 @@
+@import "../_fonts";
+
+$_FONT_FAMILY: proxima-nova, sans-serif;
+$_FONT_PROXIMA_NOVA: map-merge($FONT_GROUP_DEFAULT, (
+    'FAMILY': $_FONT_FAMILY
+));
+$FONT_GROUPS: map-merge($FONT_GROUPS, ('PROXIMA NOVA': $_FONT_PROXIMA_NOVA));
