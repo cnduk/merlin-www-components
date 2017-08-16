@@ -175,30 +175,28 @@
 }
 
 .ad--tag-inline {
-    // padding: 0 10px;
-    // position: relative;
-    // margin: 10px (-$MOBILE_SIDE_GUTTER + -10px);
+    padding: 0 12px;
+    position: relative;
+    margin: 6px (-$MOBILE_SIDE_GUTTER);
 
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
 
-    // @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-    //     margin-left: -$TABLET_SIDE_GUTTER;
-    //     margin-right: -$TABLET_SIDE_GUTTER;
-    // }
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 20px;
+        margin-left: -$DESKTOP_SIDE_GUTTER;
+        margin-right: (-$DESKTOP_SIDE_GUTTER + -340px + -12px);
+        margin-top: 20px;
 
-    // @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    //     margin-left: -$DESKTOP_SIDE_GUTTER;
-    //     margin-right: (-$DESKTOP_SIDE_GUTTER + -340px + -10px);
+        .ad__block {
+            left: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            right: 50%;
+            width: 100vw;
+        }
 
-    //     &:before {
-    //         // background: $albaster;
-    //         content: "";
-    //         height: 100%;
-    //         width: 100vw;
-    //         position: absolute;
-    //         left: 50%;
-    //         right: 50%;
-    //         margin-left: -50vw;
-    //         margin-right: -50vw;
-    //     }
-    // }
+    }
 }
