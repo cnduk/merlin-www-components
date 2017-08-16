@@ -1,20 +1,21 @@
 .a-logo {}
 .a-logo--video {
     background-color: $JUNGLE;
-    padding: 36px 0 28px 0;
+    padding: 32px 0 32px 0;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: 52px 0 40px 0;
+        padding: 48px 0 46px 0;
     }
 
     .a-logo__wrapper {
+        height: 42px;
         margin: 0 auto;
-        width: 190px;
-        height: 50px;
+        width: 268px;
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            width: 228px;
-            height: 60px;
+            height: 52px;
+            margin: 0 auto;
+            width: 331px;
         }
     }
 
