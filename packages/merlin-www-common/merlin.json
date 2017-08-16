@@ -1,21 +1,22 @@
 {
-    "name": "@cnbritain/merlin-www-common", 
-    "js": {}, 
+    "name": "@cnbritain/merlin-www-common",
+    "js": {},
     "themes": {
-        "gq": "sass/gq/gq.scss", 
-        "tatler": "sass/tatler/tatler.scss", 
-        "wireframe": "sass/wireframe/wireframe.scss", 
-        "glamour": "sass/glamour/glamour.scss", 
-        "bystander": "sass/bystander/bystander.scss", 
-        "wired": "sass/wired/wired.scss", 
-        "missvogue": "sass/missvogue/missvogue.scss", 
-        "vogue": "sass/vogue/vogue.scss"
-    }, 
-    "partials": {}, 
+        "gq": "sass/gq/gq.scss",
+        "tatler": "sass/tatler/tatler.scss",
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "bystander": "sass/bystander/bystander.scss",
+        "wired": "sass/wired/wired.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "traveller": "sass/traveller/traveller.scss"
+    },
+    "partials": {},
     "dependencies": [
         "@cnbritain/merlin-www-assets"
-    ], 
-    "currentTheme": null, 
-    "main": "", 
+    ],
+    "currentTheme": null,
+    "main": "",
     "data": {}
 }
