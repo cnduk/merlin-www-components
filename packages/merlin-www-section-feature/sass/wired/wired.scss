@@ -4,8 +4,7 @@
 @import '../wireframe/wireframe';
 
 .c-feature {
-    margin-bottom: $MOBILE_SLICE_MARGIN;
-    margin-top: $MOBILE_SLICE_MARGIN;
+    margin: $MOBILE_SLICE_MARGIN 0;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         margin-bottom: $TABLET_SLICE_MARGIN;
@@ -16,6 +15,7 @@
         margin-bottom: $DESKTOP_SLICE_MARGIN;
         margin-top: $DESKTOP_SLICE_MARGIN;
     }
+
 }
 
 .c-feature__constrain {
@@ -32,18 +32,8 @@
     }
 }
 
-.c-feature__images,
-.c-feature__content {}
-
-.c-feature__content {
-    background-color: #fff;
-    padding: 40px 20px;
-    position: relative;
-    text-align: center;
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        padding: 40px;
-    }
+.c-feature__image__wrapper {
+    background-color: $black;
 }
 
 .c-feature__image--portrait {
@@ -51,81 +41,100 @@
     width: 50%;
 }
 
-.c-feature__image__wrapper {
-    background-color: #000;
+.c-feature__content {
+    background-color: $white;
+    padding: 30px 20px;
+    position: relative;
+    text-align: center;
 }
 
 .c-feature__icon {
-    display: none;
+    display: block;
     height: 20px;
     margin: 0 auto 20px auto;
     width: 20px;
 
     svg {
-        fill: #000;
+        fill: $black;
     }
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        display: block;
-    }
-}
-
-.c-feature__tag {
-    display: none;
 }
 
 .c-feature__title {
     @include font("NEW GROTESK SQUARE", 40px, 300, 40px);
-    margin-bottom: 10px;
-    margin-top: 0px;
-    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
-        @include font-size(45px);
-        @include line-height(45px);
-        margin-bottom: 20px;
-    }
+    color: $black;
+    margin: 0 auto 10px auto;
 }
 
 .c-feature__teaser {
-    @include font("BRUTAL", 15px, none, 15px);
-    display: none;
+    @include font("BRUTAL", 15px, null, 17px);
+    color: $black;
     margin: 10px auto;
-    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+}
+
+.c-feature__title + *:not(.c-feature__teaser),
+.c-feature__teaser + * {
+    &:before {
+        background-color: $black;
+        content: '';
         display: block;
+        height: 1px;
+        margin: 10px auto;
+        width: 10px;
     }
 }
 
 .c-feature__byline {
-    @include font-size(11px);
-    @include line-height(11px);
+    color: $black;
+    line-height: 1em;
     margin-bottom: 5px;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 .c-feature__byline-prefix {
-    @include font("EXCHANGE WEB", 11px, null, 11px);
+    @include font("EXCHANGE WEB", 11px);
     font-style: italic;
 }
 
 .c-feature__byline-name {
-    @include font("BRUTAL", 11px, 700, 11px);
+    @include font("BRUTAL", 11px, 700);
     text-transform: uppercase;
 }
 
 .c-feature__meta {
+    color: $black;
     font-size: 0;
     margin-top: 5px;
 
-    li.c-feature__meta-item {
-        @include font("EXCHANGE WEB", 11px, 400, 12px);
+    .c-feature__meta-item {
+        @include font("EXCHANGE WEB", 11px, 400);
         padding-right: 10px;
 
-        & + li.c-feature__meta-item {
-            border-left: 1px solid #000;
+        & + .c-feature__meta-item {
+            border-left: 1px solid $isabelline;
             padding-left: 10px;
-
-            &:before {
-
-            }
         }
     }
 }
+
+
+
+@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    .c-feature__content {
+        padding: 40px;
+    }
+    .c-feature__icon {
+        margin-bottom: 30px;
+    }
+    .c-feature__title {
+        @include font-size(45px);
+        @include line-height(45px);
+    }
+    .c-feature__title + *:not(.c-feature__teaser),
+    .c-feature__teaser + * {
+        &:before {
+            margin: 20px auto;
+            width: 30px;
+        }
+    }
+}
+
