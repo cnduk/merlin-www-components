@@ -9,30 +9,17 @@
 }
 
 .c-card__link {}
-.c-card__link--article {
+.c-card__link--article {}
 
-}
-
-.c-card__images {
-
-}
+.c-card__images {}
 
 .c-card__image {
     background-color: #000;
-
-    img {
-
-    }
 }
-.c-card__image--landscape {
-
-}
-.c-card__image--portrait {
-
-}
-.c-card__image--square {
-
-}
+.c-card__image--landscape {}
+.c-card__image--portrait {}
+.c-card__image--square {}
+.c-card__image--custom {}
 
 
 .c-card__image__icon {
@@ -86,13 +73,9 @@ li.c-card__rating-mark--fill {
     background-color: #333;
 }
 
-.c-card__byline {
+.c-card__byline {}
 
-}
-
-.c-card__meta {
-
-}
+.c-card__meta {}
 
 li.c-card__meta-item {
     &--gallery {

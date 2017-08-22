@@ -2,10 +2,6 @@
 // Portrait
 // -------------------- //
 @mixin card-portrait() {
-
-}
-
-@mixin card-portrait-small() {
     .c-card__obj {}
     .c-card__obj__header,
     .c-card__obj__body {
@@ -17,158 +13,68 @@
     .c-card__obj__header {
         max-width: none;
     }
+}
 
+@mixin card-portrait-small() {
     .c-card__images {
-        .c-card__image {
-            padding-top: 100%;
-        }
-
-        .c-card__image__icon {
-
-        }
-    }
-
-    .c-card__tag {
-        display: none;
+        margin-bottom: 15px;
     }
 
     .c-card__title {
-        @include font("NEW GROTESK SQUARE", 25px, 300, 25px);
-        margin-bottom: 10px;
-        margin-top: 10px;
+        @include font("NEW GROTESK SQUARE", 30px, 300, 30px);
+        margin: 10px auto;
     }
 
     .c-card__separator {
         margin: 10px 0;
-        width: 15px;
+        width: 10px;
     }
 
     .c-card__byline {
-        @include font-size(11px);
-        @include line-height(11px);
-        margin-bottom: 5px;
-        margin-top: 10px;
+        line-height: 1em;
+        margin: 12px auto 5px auto;
     }
 
     .c-card__byline-prefix {
-        @include font("EXCHANGE WEB", 11px, null, 11px);
+        @include font("EXCHANGE WEB", 11px, null, null);
         font-style: italic;
     }
 
     .c-card__byline-name {
-        @include font("BRUTAL", 11px, 700, 11px);
+        @include font("BRUTAL", 11px, 700, null);
         text-transform: uppercase;
     }
 
     .c-card__meta {
         font-size: 0;
         margin-top: 5px;
+    }
+    .c-card__meta-item {
+        @include font("EXCHANGE WEB", 11px, 400, 11px);
+        padding-right: 10px;
 
-        li.c-card__meta-item {
-            @include font("EXCHANGE WEB", 11px, 400, 12px);
-            padding-right: 10px;
-
-            & + li.c-card__meta-item {
-                border-left: 1px solid black;
-                padding-left: 10px;
-
-                &:before {
-
-                }
-            }
+        & + .c-card__meta-item {
+            border-left: 1px solid $isabelline;
+            padding-left: 10px;
         }
     }
 }
 
 @mixin card-portrait-large() {
-    .c-card__obj {}
-    .c-card__obj__header,
-    .c-card__obj__body {
-        display: block;
-        padding: 0;
-        width: auto;
-    }
-
-    .c-card__obj__header {
-        max-width: none;
-    }
-
-    .c-card__images {
-        .c-card__image {
-            padding-top: 66.66666%;
-        }
-
-        .c-card__image__icon {
-
-        }
-    }
-
-    .c-card__tag {
-
-    }
-
-    .c-card__title {
-        @include font("NEW GROTESK SQUARE", 25px, 300, 25px);
-        margin-bottom: 10px;
-        margin-top: 10px;
-    }
-
-    .c-card__separator {
-        margin: 10px 0;
-        width: 15px;
-    }
-
-    .c-card__byline {
-        @include font-size(11px);
-        @include line-height(11px);
-        margin-bottom: 5px;
-        margin-top: 10px;
-    }
-
-    .c-card__byline-prefix {
-        @include font("EXCHANGE WEB", 11px, null, 11px);
-        font-style: italic;
-    }
-
-    .c-card__byline-name {
-        @include font("BRUTAL", 11px, 700, 11px);
-        text-transform: uppercase;
-    }
-
-    .c-card__meta {
-        font-size: 0;
-        margin-top: 5px;
-
-        li.c-card__meta-item {
-            @include font("EXCHANGE WEB", 11px, 400, 12px);
-            padding-right: 10px;
-
-            & + li.c-card__meta-item {
-                border-left: 1px solid black;
-                padding-left: 10px;
-
-                &:before {
-
-                }
-            }
-        }
-    }
+    @include card-portrait-small;
 }
 
 .c-card--portrait {
-    @include card-portrait();
-    // @include card-portrait-small();
-    // @include min-screen(800px) {
-        @include card-portrait-large();
-    // }
+    @include card-portrait;
+    @include card-portrait-large;
 }
 
 .c-card--portrait-small {
-    @include card-portrait();
-    @include card-portrait-small();
+    @include card-portrait;
+    @include card-portrait-small;
 }
 
 .c-card--portrait-large {
-    @include card-portrait();
-    @include card-portrait-large();
+    @include card-portrait;
+    @include card-portrait-large;
 }
