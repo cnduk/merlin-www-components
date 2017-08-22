@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-show-season-hub",
-  "version": "1.2.59",
+  "version": "1.2.60",
   "description": "Hub viewer that displays latest shows, highlights and a to z",
   "main": "js/index.js",
   "scripts": {
@@ -9,8 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-www-card": "^1.7.59",
-    "@cnbritain/merlin-www-common": "^1.5.31",
+    "@cnbritain/merlin-www-card": "^1.7.60",
+    "@cnbritain/merlin-www-common": "^1.5.32",
     "@cnbritain/merlin-www-image": "^1.3.17"
   },
   "devDependencies": {
