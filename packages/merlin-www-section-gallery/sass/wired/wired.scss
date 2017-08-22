@@ -4,8 +4,7 @@
 @import "../wireframe/wireframe";
 
 .c-gallery {
-    margin-bottom: $MOBILE_SLICE_MARGIN;
-    margin-top: $MOBILE_SLICE_MARGIN;
+    margin: $MOBILE_SLICE_MARGIN auto;
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
 
@@ -25,6 +24,7 @@
 }
 
 .c-gallery__wrapper {
+    display: table;
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
 
@@ -36,113 +36,148 @@
     }
 }
 
-.c-gallery__images {}
+.c-gallery__images {
+    display: table-footer-group;
+}
 .c-gallery__image {
     background-color: #000;
 }
 .c-gallery__image-remaining {
-    @include font("BRUTAL", 30px, 700, 30px);
     background-color: rgba(0,0,0,0.5);
-    color: #fff;
+    bottom: 0;
+    color: $white;
+    height: 100%;
+    top: 0;
     white-space: nowrap;
 }
 
-.c-gallery__text {
-    background-color: #000;
-    padding: 40px 20px;
+.c-gallery__image-remaining__text-prefix {
+    @include font("BRUTAL", 20px, 900);
+    line-height: 100%;
     position: relative;
-    text-align: center;
+    top: -3px;
+}
+.c-gallery__image-remaining__text-value {
+    @include font("BRUTAL", 30px, 900);
+    line-height: 100%;
+}
+
+li.c-gallery__image-item {
+    &:first-child {
+        width: 33.33333%;
+    }
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        padding: 40px;
+        &:first-child {
+            width: 75%;
+        }
     }
 }
 
+.c-gallery__text {
+    background-color: $black;
+    color: $white;
+    display: table-header-group;
+    text-align: center;
+}
+
+.c-gallery__text__wrapper {
+    padding: 30px 20px;
+}
+
 .c-gallery__icon {
-    display: none;
+    display: block;
     height: 20px;
     margin: 0 auto 20px auto;
     width: 20px;
 
     svg {
-        fill: #fff;
+        fill: $white;
     }
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        display: block;
-    }
-}
-
-.c-gallery__tag {
-    display: none;
 }
 
 .c-gallery__title {
     @include font("NEW GROTESK SQUARE", 40px, 300, 40px);
-    color: #fff;
-    margin-bottom: 10px;
-    margin-top: 0px;
-    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
-        @include font-size(45px);
-        @include line-height(45px);
-        margin-bottom: 20px;
-    }
+    color: $white;
+    margin: 0 auto 10px auto;
 }
 
 .c-gallery__teaser {
-    @include font("BRUTAL", 15px, none, 15px);
-    color: #fff;
-    display: none;
+    @include font("BRUTAL", 15px, null, 17px);
+    color: $white;
     margin: 10px auto;
-    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
-        display: block;
-    }
 }
 
 .c-gallery__separator {
-    border-color: #fff;
-    margin: 20px auto;
+    border-color: $white;
+    margin: 10px auto;
     width: 20px;
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        width: 40px;
-    }
 }
 
+
 .c-gallery__byline {
-    @include font-size(11px);
-    @include line-height(11px);
-    color: #fff;
+    color: $white;
+    line-height: 1em;
     margin-bottom: 5px;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 .c-gallery__byline-prefix {
-    @include font("EXCHANGE WEB", 11px, null, 11px);
+    @include font("EXCHANGE WEB", 11px);
     font-style: italic;
 }
 
 .c-gallery__byline-name {
-    @include font("BRUTAL", 11px, 700, 11px);
+    @include font("BRUTAL", 11px, 700);
     text-transform: uppercase;
 }
 
 .c-gallery__meta {
-    color: #fff;
+    color: $white;
     font-size: 0;
     margin-top: 5px;
+}
+li.c-gallery__meta-item {
+    @include font("EXCHANGE WEB", 11px, 400);
+    padding-right: 10px;
 
-    li.c-gallery__meta-item {
-        @include font("EXCHANGE WEB", 11px, 400, 12px);
-        padding-right: 10px;
-
-        & + li.c-gallery__meta-item {
-            border-left: 1px solid #fff;
-            padding-left: 10px;
-
-            &:before {
-
-            }
-        }
+    & + .c-gallery__meta-item {
+        border-left: 1px solid $black-olive;
+        padding-left: 10px;
     }
+}
+
+@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    .c-gallery__wrapper {
+        direction: rtl;
+    }
+    .c-gallery__images {
+        display: table-cell;
+        direction: ltr;
+    }
+    li.c-gallery__image-item:first-child {
+        width: 75%;
+    }
+    .c-gallery__image-remaining {
+        height: auto;
+        top: 66.66%;
+    }
+    .c-gallery__text {
+        display: table-cell;
+        direction: ltr;
+    }
+    .c-gallery__text__wrapper {
+        padding: 40px;
+    }
+    .c-gallery__icon {
+        margin-bottom: 30px;
+    }
+    .c-gallery__title {
+        @include font-size(45px);
+        @include line-height(45px);
+    }
+    .c-gallery__separator {
+        width: 30px;
+    }
+
 }
