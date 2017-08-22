@@ -1,8 +1,9 @@
 @import '@cnbritain/merlin-www-common:wired';
 
 @import './_mixins';
-@import './_placeholders';
 @import '../wireframe/wireframe';
+
+/* ===RESET=== */
 
 a.btn-single,
 a.btn-group,
@@ -12,11 +13,14 @@ a.btn-related {
     display: inline-block;
     text-decoration: none;
 
-    &:hover {
+    &:hover,
+    &:focus {
         border-bottom: none;
     }
 
 }
+
+/* ===SINGLE=== */
 
 .btn-single,
 a.btn-single {
@@ -27,8 +31,13 @@ a.btn-single {
 a.btn-single--light {
     @include button-single-light;
 
-    &:hover {
+    &:hover,
+    &:focus {
         @include button-single-light-hover;
+    }
+
+    @include disabled-selectors {
+        @include button-single-light-disabled;
     }
 }
 
@@ -36,10 +45,17 @@ a.btn-single--light {
 a.btn-single--dark {
     @include button-single-dark;
 
-    &:hover {
+    &:hover,
+    &:focus {
         @include button-single-dark-hover;
     }
+
+    @include disabled-selectors {
+        @include button-single-dark-disabled;
+    }
 }
+
+/* ===GROUP=== */
 
 .btn-group,
 a.btn-group {
@@ -50,7 +66,8 @@ a.btn-group {
 a.btn-group--light {
     @include button-group-light;
 
-    &:hover {
+    &:hover,
+    &:focus {
         @include button-group-light-hover;
     }
 }
@@ -59,26 +76,55 @@ a.btn-group--light {
 a.btn-group--dark {
     @include button-group-dark;
 
-    &:hover {
+    &:hover,
+    &:focus {
         @include button-group-dark-hover;
     }
 }
+
+.btn-group2,
+a.btn-group2 {
+    @include button-group2;
+}
+
+.btn-group2--light,
+a.btn-group2--light {
+    @include button-group2-light;
+
+    &:hover,
+    &:focus {
+        @include button-group2-light-hover;
+    }
+}
+
+.btn-group2--dark,
+a.btn-group2--dark {
+    @include button-group2-dark;
+
+    &:hover,
+    &:focus {
+        @include button-group2-dark-hover;
+    }
+}
+
+/* ===TOP STORIES=== */
 
 .btn-top-stories,
 a.btn-top-stories {
     @include button-top-stories();
 
-    &:hover:not(.btn-disabled):not([disabled]),
-    &:focus:not(.btn-disabled):not([disabled]) {
+    &:hover,
+    &:focus {
         @include button-top-stories-hover();
     }
 
-    &.btn-disabled,
-    &[disabled] {
+    @include disabled-selectors {
         @include button-top-stories-disabled();
     }
 
 }
+
+/* ===SHARE=== */
 
 .btn-share,
 a.btn-share {
@@ -96,8 +142,8 @@ a.btn-share--monotone {}
             @include button-share-dark($name);
         }
 
-        &:hover,
-        &:hover.btn-share--dark {
+        &:hover.btn-share--dark,
+        &:focus.btn-share--dark {
             @include button-share-dark-hover($name);
         }
 
@@ -105,12 +151,14 @@ a.btn-share--monotone {}
             @include button-share-light($name);
         }
 
-        &:hover,
-        &:hover.btn-share--light {
+        &:hover.btn-share--light,
+        &:focus.btn-share--light {
             @include button-share-light-hover($name);
         }
     }
 }
+
+/* ===RELATED=== */
 
 .btn-related,
 a.btn-related {
@@ -121,7 +169,8 @@ a.btn-related {
 a.btn-related--light {
     @include button-related-light;
 
-    &:hover {
+    &:hover,
+    &:focus {
         @include button-related-light-hover;
     }
 }
@@ -130,7 +179,25 @@ a.btn-related--light {
 a.btn-related--dark {
     @include button-related-dark;
 
-    &:hover {
+    &:hover,
+    &:focus {
         @include button-related-dark-hover;
     }
+}
+
+/* ===GALLERY NAVIGATION=== */
+
+.btn-gallery-navigation,
+a.btn-gallery-navigation {
+    @include button-gallery-navigation;
+
+    &:hover,
+    &:focus {
+        @include button-gallery-navigation-hover;
+    }
+
+    @include disabled-selectors {
+        @include button-gallery-navigation-disabled;
+    }
+
 }

@@ -1,5 +1,13 @@
 @import '@cnbritain/merlin-www-common:wired';
 
+@mixin disabled-selectors(){
+    &[disabled],
+    &.is-disabled,
+    &.btn-disabled {
+        @content;
+    }
+}
+
 @mixin button-reset() {
     border-bottom: none;
     display: inline-block;
@@ -10,68 +18,114 @@
     }
 }
 
+/* ===SINGLE=== */
+
 @mixin button-single() {
     @include button-reset();
     @include font("BRUTAL", 12px, 400, 12px);
     @include transition(all 0.1s ease-in-out);
     letter-spacing: 0.5px;
-    padding: 10px 15px;
+    padding: 10px;
     text-transform: uppercase;
 }
 
 @mixin button-single-light() {
-    border: 1px solid #000;
-    color: #000;
+    border: 1px solid $black;
+    color: $black;
 }
 
 @mixin button-single-light-hover() {
-    background-color: #000;
-    border: 1px solid #000;
-    color: #fff;
+    background-color: $black;
+    border: 1px solid $black;
+    color: $white;
+}
+
+@mixin button-single-light-disabled(){
+    background-color: none;
+    border: 1px solid $isabelline;
+    color: $isabelline;
 }
 
 @mixin button-single-dark() {
-    background-color: #000;
-    border: 1px solid #fff;
-    color: #fff;
+    background-color: $black-olive;
+    border: none;
+    color: $white;
 }
 
 @mixin button-single-dark-hover() {
-    background-color: #fff;
-    border: 1px solid #fff;
-    color: #000;
+    background-color: $white;
+    color: $black;
 }
+
+@mixin button-single-dark-disabled(){
+    background-color: $raisin-black;
+    color: $black;
+}
+
+/* ===GROUP=== */
 
 @mixin button-group() {
     @include button-reset();
-    @include font("EXCHANGE WEB", 12px, 400, 12px);
+    @include font("EXCHANGE WEB", 15px, 400, 15px);
     @include transition(all 0.1s ease-in-out);
-    padding: 10px 12px;
+    padding: 10px;
     text-align: center;
 }
 
 @mixin button-group-light() {
-    background-color: #fff;
-    color: #000;
+    background-color: $white;
+    color: $black;
 }
 
 @mixin button-group-light-hover() {
-    background-color: #000;
-    color: #fff;
+    background-color: $black;
+    color: $white;
 }
 
 @mixin button-group-dark() {
-    background-color: #333;
-    color: #fff;
+    background-color: $black-olive;
+    color: $white;
 }
 
 @mixin button-group-dark-hover() {
-    background-color: #fff;
-    color: #000;
+    background-color: $white;
+    color: $black;
 }
 
+@mixin button-group2() {
+    @include button-reset();
+    @include font("BRUTAL", 12px, 500, 12px);
+    @include transition(all 0.1s ease-in-out);
+    letter-spacing: 0.5px;
+    padding: 10px 12px;
+    text-align: center;
+}
+
+@mixin button-group2-light() {
+    background-color: $white;
+    color: $black;
+}
+
+@mixin button-group2-light-hover() {
+    background-color: $black;
+    color: $white;
+}
+
+@mixin button-group2-dark() {
+    background-color: $black-olive;
+    color: $white;
+}
+
+@mixin button-group2-dark-hover() {
+    background-color: $white;
+    color: $black;
+}
+
+/* ===TOP STORIES=== */
+
 @mixin button-top-stories() {
-    background: #f5f5f5;
+    @include button-reset();
+    background: $white-smoke;
     height: 50%;
     width: 60px;
 
@@ -81,22 +135,27 @@
     }
 
     path {
-        fill: #000;
+        fill: $black;
     }
 }
 
 @mixin button-top-stories-hover() {
-    background: #000;
+    background: $black;
+
     svg, path {
-        fill: #fff;
+        fill: $white;
     }
 }
 
 @mixin button-top-stories-disabled() {
+    background: $white-smoke;
+
     svg, path {
-        fill: #dfdfde;
+        fill: $isabelline;
     }
 }
+
+/* ===SHARE=== */
 
 @mixin button-share {
     @include button-reset();
@@ -108,14 +167,14 @@
     width: 40px;
 
     svg {
-        fill: #fff;
+        fill: $white;
         height: 100%;
         width: 50%;
     }
 }
 
 @mixin button-share-light($name) {
-    background-color: #ccc;
+    background-color: $isabelline;
 }
 
 @mixin button-share-light-hover($name) {
@@ -123,12 +182,14 @@
 }
 
 @mixin button-share-dark($name) {
-    background-color: #3e3e3e;
+    background-color: $black-olive;
 }
 
 @mixin button-share-dark-hover($name) {
     background-color: map-get($COLOUR_SOCIAL_DARK, $name);
 }
+
+/* ===RELATED=== */
 
 @mixin button-related() {
     @include button-reset();
@@ -138,21 +199,57 @@
 }
 
 @mixin button-related-light() {
-    background-color: #f5f5f5;
-    color: #000;
+    background-color: $white-smoke;
+    color: $black;
 }
 
 @mixin button-related-light-hover() {
-    background-color: #000;
-    color: #fff;
+    background-color: $black;
+    color: $white;
 }
 
 @mixin button-related-dark() {
-    background-color: #3e3e3e;
-    color: #fff;
+    background-color: $black-olive;
+    color: $white;
 }
 
 @mixin button-related-dark-hover() {
-    background-color: #fff;
-    color: #000;
+    background-color: $white;
+    color: $black;
+}
+
+/* ===GALLERY NAVIGATION=== */
+
+@mixin button-gallery-navigation(){
+    @include button-reset();
+    @include transition(all 0.1s ease-in-out);
+    background-color: $black;
+    border: 1px solid $raisin-black;
+    color: $black;
+    height: 35px;
+    width: 35px;
+
+    svg, path {
+        fill: $white;
+    }
+}
+
+@mixin button-gallery-navigation-hover(){
+    background-color: $white;
+    border: 1px solid $black;
+    color: $black;
+
+    svg, path {
+        fill: $black;
+    }
+}
+
+@mixin button-gallery-navigation-disabled(){
+    background-color: $raisin-black;
+    border: 1px solid $black;
+    color: $black;
+
+    svg, path {
+        fill: $black;
+    }
 }
