@@ -47,10 +47,12 @@
 
     .c-card__meta {
         font-size: 0;
-        margin-top: 5px;
+        margin-top: -5px;
     }
+
     .c-card__meta-item {
-        @include font("EXCHANGE WEB", 11px, 400, 11px);
+        @include font("EXCHANGE WEB", 11px, 400, 12px);
+        margin-top: 5px;
         padding-right: 10px;
 
         & + .c-card__meta-item {
