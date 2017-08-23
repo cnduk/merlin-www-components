@@ -30,13 +30,23 @@
 .c-magazine__covers__wrapper {}
 .c-magazine__cover--print {
 	img {
-		box-shadow: 2px 0 24px 0 rgba($MUSTASAARI, 0.08);
+		box-shadow: 0 0 32px 0 rgba($MUSTASAARI, 0.16);
 	}
 }
 
 .c-magazine__cover--tablet {
 	img {
-		box-shadow: 2px 0 24px 0 rgba($MUSTASAARI, 0.08);
+		background-color: $MUSTASAARI;
+		border-radius: 8px;
+		bottom: 1px;
+		box-shadow: 0px 0px 0px 1px $ABBEY;
+		padding: 16px 12px;
+
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			border-radius: 15px;
+			padding: 30px 20px;
+			width: 40%;
+		}
 	}
 }
 
@@ -44,9 +54,19 @@
 	@include font("FREIGHT TEXT", 20px, 400, 20px);
 	color: $MUSTASAARI;
 	font-style: italic;
-	margin-bottom: 12px;
+	margin-bottom: 20px;
 	margin-top: 0;
 	text-align: center;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+		margin-bottom: 12px;
+	}
+}
+
+.c-magazine__content {
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+		padding-left: 12px;
+	}
 }
 
 .c-magazine__content__title {
@@ -62,7 +82,7 @@
 	color: $MUSTASAARI;
 	letter-spacing: 1px;
 	margin-bottom: 32px;
-	margin-top: 12px;
+	margin-top: 24px;
 	text-align: center;
 	text-transform: uppercase;
 
@@ -71,7 +91,7 @@
 		@include line-height(32px);
 		letter-spacing: 2px;
 		margin-bottom: 24px;
-		margin-top: 0;
+		margin-top: 12px;
 		text-align: left;
 	}
 }
