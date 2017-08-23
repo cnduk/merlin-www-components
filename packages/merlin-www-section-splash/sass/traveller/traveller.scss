@@ -30,6 +30,10 @@
 		right: 0;
 		top: 0;
 		width: 100%;
+
+		@include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+			background-color: rgba($MUSTASAARI, 0.15);
+		}
 	}
 }
 
@@ -45,6 +49,7 @@
 .c-splash-hero__content {
 	box-sizing: border-box;
 	left: 50%;
+	max-width: 920px
 	padding-left: $MOBILE_SIDE_GUTTER;
 	padding-right: $MOBILE_SIDE_GUTTER;
 	position: absolute;
@@ -75,12 +80,12 @@
 	display: inline-block;
 	letter-spacing: 2px;
 	margin: 0 auto 14px auto;
-	padding-bottom: 3px;
+	padding-bottom: 4px;
 	text-align: center;
 	text-transform: uppercase;
 
 	@include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-		margin-bottom: 24px;
+		margin-bottom: 26px;
 	}
 }
 
@@ -118,10 +123,11 @@
 
 .c-splash-hero__byline-prefix {
     font-style: italic;
-
+    text-transform: lowercase;
 }
 
 .c-splash-hero__byline-name {
+	margin-left: 2px;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
