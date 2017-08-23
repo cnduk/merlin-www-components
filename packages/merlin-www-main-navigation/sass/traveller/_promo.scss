@@ -100,16 +100,17 @@ a.n-main__cover__btn {
     }
 
     &:nth-child(2) {
+        background-color: $MUSTASAARI;
         border-bottom: 8px solid $BLACK;
         border-left: 4px solid $BLACK;
         border-radius: 3px;
         border-right: 4px solid $BLACK;
         border-top: 8px solid $BLACK;
-        box-shadow: 0px 0px 0px 1px rgba(48,48,48,1);
         bottom: 0;
+        box-shadow: 0px 0px 0px 1px $ABBEY;
         left: 60px;
         position: absolute;
-        width: 52px;
+        width: 48px;
     }
 }
 
@@ -125,6 +126,12 @@ a.n-main__cover__btn {
 a.n-menu__subscribe-btn {
     @include button-single-two();
     @include button-single-two-light();
+
+    @include font-size(12px);
+    @include line-height(12px);
+    margin-top: 12px;
+    padding: 10px;
+    width: auto;
 
     &:hover {
         @include button-single-two-light-hover();

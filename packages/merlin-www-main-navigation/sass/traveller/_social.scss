@@ -8,7 +8,7 @@
 }
 
 .n-menu__social-title {
-    @include font("FREIGHT TEXT", 14px, null, 14px);
+    @include font("FREIGHT TEXT", 14px, 400, 14px);
     color: $MUSTASAARI;
     font-style: italic;
     margin: 0 0 24px 0;
