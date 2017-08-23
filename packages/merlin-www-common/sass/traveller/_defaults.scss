@@ -190,6 +190,11 @@ ol {
     list-style-type: none;
     margin: 40px 0;
     padding-left: 32px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(20px);
+        @include line-height(32px);
+    }
 }
 
 li {
@@ -205,8 +210,12 @@ ul {
         height: 8px;
         left: -28px;
         position: absolute;
-        top: 8px;
+        top: 10px;
         width: 8px;
+
+        @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            top: 12px;
+        }
     }
 }
 
@@ -218,9 +227,13 @@ ol {
     }
 
     li:not([class]):before {
-        @include font("PROXIMA NOVA CONDENSED", 18px, 600, 28px);
+        @include font("PROXIMA NOVA CONDENSED", 18px, 600, 32px);
         content: counter(section) '.';
         position: absolute;
         left: -28px;
+
+        @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            @include line-height(36px);
+        }
     }
 }
