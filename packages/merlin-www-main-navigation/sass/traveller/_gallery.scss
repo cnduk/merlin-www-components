@@ -37,17 +37,19 @@
 .n-gallery-counter__current {
     @include font("PROXIMA NOVA CONDENSED", 16px, 600, 16px);
     color: $SHERPA-BLUE;
+    letter-spacing: 1px;
 }
 
 .n-gallery-counter__slash {
     @include font("PROXIMA NOVA CONDENSED", 12px, 600, 16px);
     color: $MUSTASAARI;
-    margin: 0 4px;
+    margin: 0 6px;
 }
 
 .n-gallery-counter__total {
     @include font("PROXIMA NOVA CONDENSED", 12px, 600, 16px);
     color: $MUSTASAARI;
+    letter-spacing: 1px;
 }
 
 
