@@ -47,6 +47,7 @@
 
 .a-author__byline-name {
     letter-spacing: 1px;
+    margin-left: 2px;
     text-transform: uppercase;
 }
 
@@ -63,6 +64,7 @@
     p {
         @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
         color: $RAVEN;
+        letter-spacing: 0.5px;
         margin: 0 0 8px 0;
 
         &:last-child {
