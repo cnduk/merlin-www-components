@@ -13,6 +13,7 @@
 @mixin button-single() {
 	@include button-reset();
 	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 14px);
+	letter-spacing: 1px;
 	padding: 17px 16px;
 	text-transform: uppercase;
 }
@@ -47,6 +48,7 @@
 @mixin button-single-two() {
 	@include button-reset();
 	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 14px);
+	letter-spacing: 1px;
 	padding: 17px 16px;
 	text-transform: uppercase;
 }
