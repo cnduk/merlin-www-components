@@ -122,7 +122,7 @@
 	padding-top: 66.66666%;
 
 	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
-		padding-top: 43.75%;
+		padding-top: 40%;
 	}
 }
 
@@ -179,6 +179,7 @@
     @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
     	@include font-size(34px);
     	@include line-height(36px);
+    	letter-spacing: 2px;
     	margin-bottom: 16px;
     	margin-top: 0;
     }
@@ -207,11 +208,13 @@
 
 .c-feature__byline-prefix {
     font-style: italic;
+    text-transform: lowercase;
 
 }
 
 .c-feature__byline-name {
     letter-spacing: 1px;
+    margin-left: 2px;
     text-transform: uppercase;
 }
 
