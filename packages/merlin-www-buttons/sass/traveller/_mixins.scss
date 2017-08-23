@@ -181,7 +181,7 @@
 }
 
 @mixin button-share-light-hover($name) {
-	border: 1px solid $PORCELAIN;
+	border: 1px solid $FAROE-GRAY;
 }
 
 @mixin button-share-light-two($name) {
@@ -191,7 +191,7 @@
 }
 
 @mixin button-share-light-two-hover($name) {
-	border: 1px solid $PORCELAIN;
+	border: 1px solid $FAROE-GRAY;
 
 	path {
  		fill: map-get($COLOUR_SOCIAL, $name);
