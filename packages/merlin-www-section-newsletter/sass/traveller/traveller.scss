@@ -14,7 +14,6 @@
     }
 
     &:before {
-		transform: translateX(-50%);
         background-image: url('../img/newsletter.jpg');
         background-position: center center;
         background-repeat: no-repeat;
@@ -25,7 +24,26 @@
         max-width: $MAXIMUM_PAGE_WIDTH;
         position: absolute;
         top: 0;
+        transform: translateX(-50%);
         width: 100%;
+    }
+
+    &:after {
+        background-color: rgba($MUSTASAARI, 0.2);
+        bottom: 0;
+        content: '';
+        height: 100%;
+        left: 50%;
+        max-width: $MAXIMUM_PAGE_WIDTH;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateX(-50%);
+        width: 100%;
+
+        @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+            background-color: rgba($MUSTASAARI, 0.15);
+        }
     }
 }
 
@@ -34,6 +52,7 @@
     max-width: 570px;
     padding: 0 $MOBILE_SIDE_GUTTER;
     position: relative;
+    z-index: 1;
 }
 
 .c-newsletter__logo {
@@ -41,36 +60,40 @@
 }
 
 .c-newsletter__title {
-	@include font("LULO ONE", 24px, 700, 28px);
-	color: $WHITE;
-	margin-bottom: 16px;
-	margin-top: 0px;
-	text-align: center;
-	text-transform: uppercase;
+    @include font("LULO ONE", 24px, 700, 28px);
+    color: $WHITE;
+    margin-bottom: 16px;
+    margin-top: 0px;
+    text-align: center;
+    text-transform: uppercase;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-		margin-bottom: 24px;
-	}
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(28px);
+        @include line-height(32px);
+        margin-bottom: 20px;
+    }
 }
 
 .c-newsletter__description {
-	@include font("PROXIMA NOVA CONDENSED", 14px, 400, 20px);
-	color: $WHITE;
-	letter-spacing: 1px;
-	margin: 16px 0 24px 0;
+    @include font("PROXIMA NOVA CONDENSED", 14px, 400, 20px);
+    color: $WHITE;
+    letter-spacing: 1px;
+    margin: 16px 0 24px 0;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-		margin: 24px 0 32px 0;
-	}
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(16px);
+        @include line-height(20px);
+        margin: 20px 0 32px 0;
+    }
 }
 
 .c-newsletter__form {
-	@include font("PROXIMA NOVA CONDENSED", 14px, 400, 14px);
-	width: 100%;
+    @include font("PROXIMA NOVA CONDENSED", 14px, 400, 14px);
+    width: 100%;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-	    width: auto;
-	}
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        width: auto;
+    }
 }
 
 .c-newsletter__form__text {
@@ -79,12 +102,12 @@
     border-radius: 0;
     border: 1px solid $PORCELAIN;
     box-sizing: border-box;
-    color: $RAVEN;
+    color: $MUSTASAARI;
     height: 60px;
     margin-bottom: 10px;
 
-    &:placeholder {
-    	color: $RAVEN;
+    &::placeholder {
+        color: $RAVEN;
     }
 }
 
@@ -112,7 +135,6 @@
 }
 
 .c-newsletter__privacy {
-	color: $WHITE;
-	padding-bottom: 3px;
+    color: $WHITE;
     border-bottom: 1px solid $WHITE;
 }
