@@ -7,13 +7,13 @@
 .a-share__wrapper {}
 
 .a-share__title {
-    margin-bottom: 16px;
-    margin-top: 40px;
-    text-transform: uppercase;
-    @include font("PROXIMA NOVA CONDENSED", 14px, 400, 16px);
+    @include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
     color: $MUSTASAARI;
     letter-spacing: 1px;
+    margin-bottom: 16px;
+    margin-top: 40px;
     text-align: center;
+    text-transform: uppercase;
     text-transform: uppercase;
 }
 
