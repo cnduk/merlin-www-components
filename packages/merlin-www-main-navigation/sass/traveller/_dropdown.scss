@@ -1,6 +1,8 @@
 .n-main__dropdown {}
 .n-main__dropdown--follow {
     .n-main__dropdown-link {
+        @include font("FREIGHT TEXT", 14px, 400, 14px);
+        font-style: italic;
         letter-spacing: 0;
         text-transform: none;
     }
@@ -27,6 +29,7 @@
     box-shadow: 0px 2px 4px 0px rgba($BLACK, 0.04);
     padding: 12px 32px 20px 32px;
     margin-left: -16px;
+    min-width: 144px;
 }
 
 .n-main__dropdown-list--follow {

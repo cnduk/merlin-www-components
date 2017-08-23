@@ -1,7 +1,7 @@
 .n-main__covers {
     display: none;
     position: absolute;
-    top: 36px;
+    top: 39px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         display: block;
@@ -43,6 +43,7 @@
 
 .n-main__cover__offer {
     display: inline-block;
+    max-width: 144px;
     vertical-align: top;
     white-space: pre-line;
 }
@@ -51,7 +52,12 @@
 a.n-main__cover__btn {
     @include button-single-two();
     @include button-single-two-light();
+
+    @include font-size(12px);
+    @include line-height(12px);
     margin-top: 12px;
+    padding: 10px;
+    width: auto;
 
     &:hover {
         @include button-single-two-light-hover();
@@ -60,6 +66,8 @@ a.n-main__cover__btn {
 
 .n-menu__subscribe {
     background-color: $CAPE-HAZE;
+    border-bottom: 1px solid $ISABEL;
+    border-top: 1px solid $ISABEL;
     margin: 32px 0;
     padding: 20px;
 
@@ -106,7 +114,7 @@ a.n-main__cover__btn {
 }
 
 .n-menu__subscribe-message {
-    @include font("FREIGHT TEXT", 12px, null, 16px);
+    @include font("FREIGHT TEXT", 12px, 400, 16px);
     color: $MUSTASAARI;
     font-style: italic;
     margin-bottom: 12px;

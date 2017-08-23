@@ -82,7 +82,7 @@
 }
 
 .n-main__nav-title {
-    @include font("PROXIMA NOVA CONDENSED", 14px, 600, 60px);
+    @include font("PROXIMA NOVA CONDENSED", 16px, 600, 60px);
     color: $MUSTASAARI;
     display: none;
     overflow: hidden;
@@ -190,7 +190,7 @@
         svg {
             display: inline-block;
             fill: $MUSTASAARI;
-            height: 32px;
+            height: 24px;
             line-height: 60px;
             vertical-align: middle;
         }
@@ -206,7 +206,7 @@
         svg {
             display: inline-block;
             fill: $MUSTASAARI;
-            height: 18px;
+            height: 24px;
             line-height: 60px;
             vertical-align: middle;
         }
@@ -240,7 +240,7 @@
         svg {
             display: inline-block;
             fill: $MUSTASAARI;
-            height: 18px;
+            height: 20px;
             line-height: 60px;
             vertical-align: middle;
         }
@@ -263,7 +263,7 @@
         svg {
             display: inline-block;
             fill: $MUSTASAARI;
-            height: 18px;
+            height: 20px;
             line-height: 60px;
             vertical-align: middle;
         }
