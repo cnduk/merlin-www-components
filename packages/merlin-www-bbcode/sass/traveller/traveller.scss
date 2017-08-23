@@ -17,6 +17,7 @@
     &:before {
         color: $SHERPA-BLUE;
         content: "\2605";
+        margin-right: 4px;
     }
 }
 
@@ -59,7 +60,7 @@
 // -------------------- //
 .bb-blockquote {
     border-left: 2px solid $BALI-HAI;
-    margin: 40px 0;
+    margin: 0 0 16px 0;
     padding-left: 30px;
 }
 
@@ -131,7 +132,7 @@
 }
 
 .bb-infobox__title {
-    @include font("PROXIMA NOVA CONDENSED", 20px, 600, 24px);
+    @include font("PROXIMA NOVA", 20px, 600, 24px);
     color: $SHERPA-BLUE;
     letter-spacing: 1px;
     margin-bottom: 4px;
@@ -168,7 +169,6 @@
 .bb-infobox__item__value {
     @include font("PROXIMA NOVA CONDENSED", 16px, 400, 20px);
     color: $MUSTASAARI;
-    letter-spacing: 1px;
     margin: 0;
 }
 
@@ -231,7 +231,7 @@
 }
 
 .bb-question__q {
-    @include font("PROXIMA NOVA CONDENSED", 18px, 600, 28px);
+    @include font("PROXIMA NOVA CONDENSED", 18px, 600, 32px);
     color: $MUSTASAARI;
     left: 0;
     position: absolute;
@@ -239,7 +239,7 @@
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(20px);
-        @include line-height(32px);
+        @include line-height(36px);
     }
 }
 
@@ -248,9 +248,10 @@
 }
 
 .bb-question__author {
-    @include font("PROXIMA NOVA CONDENSED", 12px, null, 16px);
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
     color: $BALI-HAI;
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .bb-question__by {
@@ -273,7 +274,7 @@
 }
 
 .bb-answer__a {
-    @include font("PROXIMA NOVA CONDENSED", 18px, 600, 28px);
+    @include font("PROXIMA NOVA CONDENSED", 18px, 600, 32px);
     color: $BALI-HAI;
     left: 0;
     position: absolute;
@@ -281,7 +282,7 @@
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(20px);
-        @include line-height(32px);
+        @include line-height(36px);
     }
 }
 
@@ -290,9 +291,10 @@
 }
 
 .bb-answer__author {
-    @include font("PROXIMA NOVA CONDENSED", 12px, null, 16px);
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
     color: $BALI-HAI;
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .bb-answer__by {
@@ -310,6 +312,10 @@
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     margin: 40px 0;
+
+    &:hover {
+        border: 1px solid $FAROE-GRAY;
+    }
 }
 
 .bb-gallery__icon {
@@ -396,6 +402,10 @@
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     margin: 40px 0;
+
+    &:hover {
+        border: 1px solid $FAROE-GRAY;
+    }
 }
 
 .bb-video__title-icon {
@@ -498,6 +508,10 @@
             right: 16px;
             text-transform: uppercase;
         }
+    }
+
+    &:hover {
+        border: 1px solid $FAROE-GRAY;
     }
 }
 
