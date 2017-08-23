@@ -31,6 +31,10 @@
 		right: 0;
 		top: 0;
 		width: 100%;
+
+		@include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+			background-color: rgba($MUSTASAARI, 0.15);
+		}
 	}
 }
 
@@ -46,6 +50,7 @@
 .c-superfeature__content {
 	box-sizing: border-box;
 	left: 50%;
+	max-width: 920px;
 	padding-left: $MOBILE_SIDE_GUTTER;
 	padding-right: $MOBILE_SIDE_GUTTER;
 	position: absolute;
@@ -76,12 +81,12 @@
 	display: inline-block;
 	letter-spacing: 2px;
 	margin: 0 auto 14px auto;
-	padding-bottom: 3px;
+	padding-bottom: 4px;
 	text-align: center;
 	text-transform: uppercase;
 
 	@include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-		margin-bottom: 24px;
+		margin-bottom: 26px;
 	}
 }
 
@@ -120,11 +125,13 @@
 
 .c-superfeature__byline-prefix {
     font-style: italic;
+    text-transform: lowercase;
 
 }
 
 .c-superfeature__byline-name {
     letter-spacing: 1px;
+    margin-left: 2px;
     text-transform: uppercase;
 }
 
