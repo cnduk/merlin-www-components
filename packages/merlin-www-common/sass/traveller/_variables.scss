@@ -19,6 +19,10 @@ $RAVEN: #737E8B;
 $SHERPA-BLUE: #003D4C;
 $WHITE: #FFFFFF;
 
+// ----- Social Colours -----//
+$COLOUR_EMAIL: $SHERPA-BLUE;
+$COLOUR_SOCIAL: map-merge($COLOUR_SOCIAL, ("email": $COLOUR_EMAIL));
+
 // ----- Breakpoints ----- //
 $DESKTOP_SIDE_GUTTER: 60px;
 $TABLET_SIDE_GUTTER: 60px;
