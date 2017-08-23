@@ -32,9 +32,11 @@
 
 .a-header__hero {
 	margin-bottom: 24px;
+	margin-top: -32px;
 	position: relative;
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 		margin-bottom: 40px;
+		margin-top: -48px;
 	}
 
 	.a-header__tag,
@@ -83,6 +85,11 @@
     	right: 0;
     	top: 0;
     	width: 100%;
+
+    	// Matches hero crop breakpoint
+    	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    		background-color: rgba($MUSTASAARI, 0.15);
+    	}
     }
 
     img {
@@ -183,9 +190,11 @@
 
 .a-header__hero-content {
 	left: 50%;
+	max-width: 800px;
 	position: absolute;
 	top: 50%;
 	transform: translate(-50%, -50%);
+	width: 100%;
 }
 
 .a-header__wrapper {
@@ -208,7 +217,7 @@
 .a-header__content {
 	box-sizing: border-box;
 	margin: 0 auto;
-	max-width: $ARTICLE_TOTAL;
+	max-width: 800px;
 	width: 100%;
 
 	// @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
@@ -221,7 +230,7 @@
 }
 
 .a-header__title {
-	@include font("PROXIMA NOVA CONDENSED", 28px, 600, 32px);
+	@include font("PROXIMA NOVA", 28px, 600, 32px);
 	color: $MUSTASAARI;
 	letter-spacing: 2px;
 	margin-bottom: 10px;
@@ -232,7 +241,7 @@
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 		@include font-size(46px);
 		@include line-height(54px);
-		margin-bottom: 16px;
+		margin-bottom: 19px;
 	}
 }
 
@@ -244,19 +253,24 @@
 	margin-top: 10px;
 	margin-bottom: 16px;
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		margin-top: 16px;
+		margin-top: 19px;
 		margin-bottom: 24px;
 	}
 
 	p {
-		@include font("PROXIMA NOVA CONDENSED", 16px, 400, 20px);
+		@include font("PROXIMA NOVA CONDENSED", 16px, 400, 24px);
 		color: $RAVEN;
+		letter-spacing: 1px;
 		text-align: center;
+
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			@include font-size(20px);
+			@include line-height(28px);
+		}
 	}
 
 	a {
 	    color: inherit;
-		padding-bottom: 3px;
 	    border-bottom: 1px solid;
 	}
 
@@ -344,7 +358,7 @@ li.a-header__meta-item {
     text-align: center;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    	margin-bottom: 24px;
+    	margin-bottom: 26px;
     }
 }
 
@@ -354,7 +368,7 @@ li.a-header__meta-item {
     border-bottom: 1px solid $SHERPA-BLUE;
     color: $SHERPA-BLUE;
 	display: inline-block;
-	padding-bottom: 3px;
+	padding-bottom: 4px;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
