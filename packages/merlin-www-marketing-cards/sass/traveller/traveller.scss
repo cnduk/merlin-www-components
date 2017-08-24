@@ -116,19 +116,15 @@
 }
 
 .a-marketing-card__magazine__cover--tablet {
-    background-color: $BLACK;
+    background-color: $MUSTASAARI;
     background-image: none;
     border-radius: 4px;
-    bottom: 0px;
-    box-shadow: 2px 0 24px 0 rgba($MUSTASAARI, 0.08);
-    padding: 12px 4px;
+    bottom: 1px;
+    box-shadow: 0px 0px 0px 1px $ABBEY;
+    padding: 12px 6px;
     position: absolute;
     right: 0;
     width: 44%;
-
-    @include marketing-card-medium-size() {
-        padding: 14px 5px;
-    }
 }
 
 .a-marketing-card__magazine__cover--mobile {
