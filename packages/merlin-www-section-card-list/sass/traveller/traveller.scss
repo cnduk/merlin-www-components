@@ -57,7 +57,8 @@
 }
 
 .c-card-section--a-recommended,
-.c-card-section--v-genre-articles {
+.c-card-section--v-genre-articles,
+.c-card-section--mag-magazines {
 	background-color: $CAPE-HAZE;
 	margin: 0;
     max-width: none;
@@ -175,8 +176,7 @@
 	}
 }
 
-.c-card-section--mag-articles,
-.c-card-section--mag-magazines {
+.c-card-section--mag-articles {
 	.c-card-section__title {
 		@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
 		letter-spacing: 1px;
