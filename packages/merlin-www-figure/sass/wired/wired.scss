@@ -2,37 +2,30 @@
 @import '../wireframe/wireframe';
 
 .c-figure {}
-.c-figure--dark {
-    .c-figure__title,
-    .c-figure__caption p,
-    .c-figure__credit {
-        color: #fff;
-    }
-}
 
 .c-figure__container {
-    margin-bottom: 20px;
+    margin-bottom: 7px;
     position: relative;
 }
 .c-figure__wrapper {
-    background-color: #161616;
+    background-color: $raisin-black;
 }
 
 
 .c-figure__toolbar {}
 
 li.c-figure__toolbar-listitem {
-    background-color: #000;
+    background-color: $black;
     border-bottom: none;
     @include vendor-prefix(transition, background 0.1s ease-in-out);
 
     svg {
-        fill: #fff;
+        fill: $white;
         width: 18px;
     }
 
     &:hover {
-        background-color: #fff;
+        background-color: $white;
         border: none;
     }
 
@@ -63,65 +56,94 @@ li.c-figure__toolbar-listitem--whatsapp {
 }
 li.c-figure__toolbar-listitem--zoom {
     &:hover {
-        background-color: #fff;
+        background-color: $white;
         svg {
-            fill: #000;
+            fill: $black;
         }
     }
 }
 
 .c-figure__title {
-    @include font("BRUTAL", 16px, 700, 24px);
+    @include font('BRUTAL', 15px, 'BOLD', 18px);
+    color: $black;
+    margin-bottom: 5px;
     text-transform: uppercase;
-    margin-bottom: 10px;
 
     &:before {
-        content: "▲";
-        @include font-size(13px);
-        padding-right: 10px;
+        border-bottom: 12px solid $black;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        content: '';
+        display: inline-block;
+        height: 0;
+        margin-right: 7px;
+        width: 0;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         max-width: 800px;
         width: 80%;
     }
+
 }
 
 .c-figure__caption {
-    p:not([class]) {
-        @include font("BRUTAL", 16px, 300, 21px);
-        margin-bottom: 8px;
-        margin-top: 0;
+    margin: 5px auto 10px auto;
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            max-width: 800px;
-            width: 80%;
+    a {
+        color: $bright-navy-blue;
+        text-decoration: underline;
+    }
+
+    p {
+        @include font("BRUTAL", 15px, 500, 18px);
+        margin: 0;
+
+        & + p {
+            margin-top: 10px;
         }
     }
 
-    a {
-        color: #167ac6;
-        text-decoration: underline;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        p {
+            max-width: 800px;
+            width: 80%;
+        }
+        a {
             text-decoration: none;
             &:hover {
                 text-decoration: underline;
             }
         }
     }
+
 }
 
 .c-figure__credit {
-    @include font("BRUTAL", 11px, 700, 13px);
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        max-width: 800px;
-        width: 80%;
-    }
-
+    @include font("BRUTAL", 12px, 500, 12px);
+    margin-top: 10px;
 
     &:before {
         @include font-weight(300);
         content: 'Credit: ';
     }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        max-width: 800px;
+        width: 80%;
+    }
+
+}
+
+.c-figure--dark {
+    .c-figure__title,
+    .c-figure__caption p,
+    .c-figure__credit {
+        color: $white;
+    }
+
+    .c-figure__title:before {
+        border-bottom-color: $white;
+    }
+
 }
