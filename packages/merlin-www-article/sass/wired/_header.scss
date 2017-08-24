@@ -39,10 +39,6 @@
     }
 }
 
-.a-header__wrapper {
-
-}
-
 .a-header__content {
     @include min-screen($ARTICLE_TOTAL) {
         padding-left: 0;
@@ -98,21 +94,9 @@
     }
 }
 
-.a-header__about {
-
-}
-
 .a-header__byline {
     margin-bottom: 7px;
     margin-top: 15px;
-}
-
-.a-header__byline-item {
-
-}
-
-.a-header__byline-item--syndication {
-
 }
 
 .a-header__byline-name {
@@ -141,6 +125,9 @@
     margin-top: 7px;
 }
 
+
+
+
 .a-header__image {
     margin: 40px 0;
     padding: 0;
@@ -153,25 +140,11 @@
 }
 
 .a-header__image-constrain {
-    background-color: #000;
-}
+    background-color: $black;
 
-.a-header__image-constrain--landscape,
-.a-header__image-constrain--portrait,
-.a-header__image-constrain--square {
-
-}
-
-.a-header__image-constrain--landscape {
-
-}
-
-.a-header__image-constrain--portrait {
-
-}
-
-.a-header__image-constrain--square {
-
+    & + * {
+        margin-top: 10px;
+    }
 }
 
 .a-header__image-title,
@@ -187,14 +160,28 @@
         padding: 0;
     }
 }
-
 .a-header__image-title {
+    @include font('BRUTAL', 15px, 'BOLD', 18px);
+    color: $black;
+    margin-bottom: 5px;
+    text-transform: uppercase;
 
+    &:before {
+        border-bottom: 10px solid $black;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        content: '';
+        display: inline-block;
+        height: 0;
+        margin-right: 7px;
+        width: 0;
+    }
 }
-
 .a-header__image-caption {
+    margin: 5px auto 10px auto;
+
     a {
-        color: #167ac6;
+        color: $bright-navy-blue;
         text-decoration: underline;
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
@@ -206,20 +193,25 @@
     }
 
     p {
-        @include font("BRUTAL", 16px, 300, 16px);
-        margin: 12px 0;
+        @include font("BRUTAL", 15px, 500, 18px);
+        margin: 0;
+
+        & + p {
+            margin-top: 10px;
+        }
     }
 }
-
 .a-header__image-credit {
-    @include font("BRUTAL", 12px, 700, 12px);
-    margin-top: 12px;
+    @include font("BRUTAL", 12px, 500, 12px);
+    margin-top: 10px;
 
     &:before {
         @include font-weight(300);
         content: 'Credit: ';
     }
 }
+
+
 
 .a-header__separator--hero {
     display: none;
@@ -270,7 +262,6 @@ li.a-header__meta-item {
         }
     }
 }
-
 .a-header__tag__secondary,
 .a-header__tag__primary {
     @include font("EXCHANGE WEB", 14px, null, 15px);
@@ -282,20 +273,6 @@ li.a-header__meta-item {
     }
 }
 
-.a-header__tag__secondary {
-
-}
-
-.a-header__separator--sponsor {
-
-}
-
-.a-main.is-sponsored {
-    .a-header__separator {
-
-    }
-}
-
 .a-header__sponsor {
     display: table;
     margin: 30px 0;
@@ -304,7 +281,6 @@ li.a-header__meta-item {
         color: #000;
     }
 }
-
 .a-header__sponsor-prefix {
     @include font("EXCHANGE WEB", 16px, 300, 16px);
     display: table-cell;
@@ -312,7 +288,6 @@ li.a-header__meta-item {
     vertical-align: middle;
     white-space: nowrap;
 }
-
 .a-header__sponsor-name {
     @include font("BRUTAL", 16px, 700, 16px);
     display: table-cell;
@@ -323,7 +298,6 @@ li.a-header__meta-item {
         text-decoration: underline;
     }
 }
-
 .a-header__sponsor-image {
     display: table-cell;
     padding-left: 20px;
@@ -337,20 +311,11 @@ li.a-header__meta-item {
     }
 }
 
-.a-header__meta {}
-
-.a-header__meta-item {}
-
-.a-header__event {
-
-}
-
 .a-header__event-title {
     @include font("BRUTAL", 12px, 700, 12px);
     display: inline;
     text-transform: capitalize;
 }
-
 .a-header__event-location {
     @include font("BRUTAL", 12px, 300, 12px);
     display: inline;
@@ -359,12 +324,10 @@ li.a-header__meta-item {
         content: '- '
     }
 }
-
 .a-header__event-date {
     @include font("EXCHANGE WEB", 11px, 300, 11px);
     font-style: italic;
 }
-
 .a-header__event-btn {
     @include button-single();
     @include button-single-light();
