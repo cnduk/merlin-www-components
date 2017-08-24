@@ -96,6 +96,7 @@ li.a-gallery__thumbnail {
 
 }
 .a-gallery__thumbnail-hover {
+    background-color: rgba($BLACK, 0.2);
     left: 2px;
     right: 2px;
     width: auto;
