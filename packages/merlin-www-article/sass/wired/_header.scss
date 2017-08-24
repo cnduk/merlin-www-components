@@ -8,37 +8,6 @@
     }
 }
 
-.a-header--gallery {
-    margin-top: 0px;
-    padding-top: 40px;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: 0px;
-        padding-top: 60px;
-
-        .a-header__about {
-            display: none;
-        }
-    }
-
-    .a-header__tag a,
-    .a-header__title,
-    .a-header__teaser p,
-    .a-header__about {
-        color: #fff;
-    }
-
-    .a-header__separator {
-        border-top-color: #fff;
-    }
-}
-
-.a-header--video {
-    .a-header__content {
-        padding-left: 0;
-    }
-}
-
 .a-header__content {
     @include min-screen($ARTICLE_TOTAL) {
         padding-left: 0;
@@ -335,5 +304,77 @@ li.a-header__meta-item {
 
     &:hover {
         @include button-single-light-hover();
+    }
+}
+
+.a-header--gallery {
+    margin-top: 0px;
+    padding-top: 40px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 0px;
+        padding-top: 60px;
+
+        .a-header__about {
+            display: none;
+        }
+    }
+
+    .a-header__tag a,
+    .a-header__title,
+    .a-header__teaser p,
+    .a-header__about {
+        color: #fff;
+    }
+
+    .a-header__separator {
+        border-top-color: #fff;
+    }
+}
+
+.a-header--video {
+    margin-bottom: 30px;
+    margin-top: 30px;
+
+    .a-header__content {
+        padding-left: 0;
+    }
+
+    .a-header__separator {
+        margin: 10px 0;
+        width: 15px;
+    }
+
+    .a-header__meta {
+        margin: 15px 0
+    }
+
+    li.a-header__meta-item {
+        @include font("EXCHANGE WEB", 14px, 400);
+        font-style: normal;
+        padding-right: 8px;
+
+        & + .a-header__meta-item {
+            border-left: 1px solid $isabelline;
+            padding-left: 8px;
+        }
+    }
+
+    .a-share {
+        margin: 20px 0 30px 0;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        .a-header__separator {
+            margin: 15px 0 30px 0;
+            width: 40px;
+        }
+        li.a-header__meta-item {
+            padding-right: 10px;
+
+            & + .a-header__meta-item {
+                padding-left: 10px;
+            }
+        }
     }
 }
