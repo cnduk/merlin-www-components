@@ -195,10 +195,10 @@
 }
 
 .tg-header__cards {
-	margin: 24px auto;
+	margin: 32px auto;
 	max-width: $MAXIMUM_PAGE_WIDTH;
 
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-	    margin: 32px auto;
+	    margin: 48px auto;
 	}
 }
