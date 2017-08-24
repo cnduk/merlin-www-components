@@ -18,10 +18,10 @@
 // Note
 // -------------------- //
 .bb-note {
-    @include font("BRUTAL", 13px, 400);
-    border-top: 1px solid #000;
+    @include font("BRUTAL", 13px, 300);
+    border-top: 1px solid $black;
     margin: 40px 0;
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 // -------------------- //
@@ -40,19 +40,18 @@
 // -------------------- //
 .bb-dropcap {}
 .bb-dropcap--letter {
-    @include font("NEW GROTESK SQUARE", 88px, 700, 44px);
+    @include font("NEW GROTESK SQUARE", 88px, 700, 88px);
     box-sizing: border-box;
     float: left;
-    margin-bottom: 10px;
-    margin-right: 20px;
-    padding-top: 20px;
     text-align: left;
+    height: 0.78em;
+    margin-right: 0.3em;
+    margin-bottom: 0.20em;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(115px);
-        @include line-height(57px);
-        margin-right: 20px;
-        padding-top: 30px;
+        @include font-size(137px);
+        @include line-height(137px);
+        margin-right: 0.24em;
     }
 }
 
@@ -60,8 +59,8 @@
 // Blockquote
 // -------------------- //
 .bb-blockquote {
-    border-left: 1px solid #7e7e7f;
-    color: #7e7e7f;
+    border-left: 1px solid $trolley-grey;
+    color: $trolley-grey;
     margin: 40px 0;
     padding: 0 0 0 20px;
 
@@ -72,26 +71,22 @@
 
 .bb-blockquote__quote {
     @include font("BRUTAL", 16px, 700, 21px);
-    color: #7e7e7f;
+    color: $trolley-grey;
+
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(17px);
-        @include line-height(22px);
     }
 }
 
 .bb-blockquote__separator {
     border: none;
-    border-bottom: 1px solid #7e7e7f;
+    border-bottom: 1px solid $trolley-grey;
     margin: 15px 0;
-    width: 15px;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        width: 10px;
-    }
+    width: 10px;
 }
 
 .bb-blockquote__credit {
-    @include font("BRUTAL", 14px, 300, 21px);
+    @include font("BRUTAL", 14px, 300);
 }
 
 // -------------------- //
@@ -106,35 +101,34 @@
 }
 
 .bb-pullquote__quote {
-    @include font("NEW GROTESK SQUARE", 35px, 300, 35px);
+    @include font("NEW GROTESK SQUARE", 48px, 300, 48px);
     display: block;
     text-align: center;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH){
-        @include font-size(48px);
-        @include line-height(48px);
-    }
 
     &:before,
     &:after {
         content: '';
     }
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH){
+        @include font-size(48px);
+        @include line-height(48px);
+    }
 }
 
 .bb-pullquote__separator {
     border: none;
-    border-top: 1px solid #000;
-    margin: 12px auto;
+    border-top: 1px solid $black;
+    margin: 10px auto 15px auto;
     width: 40px;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        margin: 20px auto;
-        width: 50px;
+        margin: 15px auto 20px auto;
     }
 }
 
 .bb-pullquote__credit {
-    @include font("BRUTAL", 13px, 400, 13px);
+    @include font("BRUTAL", 13px, 300, 13px);
     text-align: center;
 }
 
@@ -142,32 +136,34 @@
 // Infobox
 // -------------------- //
 .bb-infobox {
-    border: 5px solid #000;
+    border: 7px solid $black;
     margin-top: 40px;
     margin-bottom: 40px;
     padding: 20px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        padding: 30px;
+    }
 }
 
 .bb-infobox__title {
-    @include font("BRUTAL", 15px, 700, 23px);
+    @include font("BRUTAL", 15px, 'BOLD');
+    border-bottom: 2px solid $black;
     margin: 0;
+    padding-bottom: 10px;
     text-transform: uppercase;
 }
 
 .bb-infobox__hr {
-    border: none;
-    border-top: 1px solid #000;
-    margin: 15px 0;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        margin: 16px 0 20px 0;
-    }
+    display: none;
 }
 
 .bb-infobox__item {
-    margin: 0;
+    margin: 20px auto;
 
     &:last-child {
+        margin-bottom: 0;
+
         .bb-infobox__item__value {
             margin: 0;
         }
@@ -175,17 +171,21 @@
 }
 
 .bb-infobox__item__key {
-    @include font("BRUTAL", 15px, 700, 23px);
-    margin: 0;
+    @include font("BRUTAL", 15px, 'BOLD');
+    border-bottom: 1px solid $black;
+    margin: 10px 0;
+    padding-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .bb-infobox__item__value {
-    @include font("BRUTAL", 15px, 300, 23px);
+    @include font("BRUTAL", 17px, 300, 23px);
+    margin: 10px 0;
+
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(17px);
         @include line-height(22px);
     }
-    margin: 0 0 20px 0;
 }
 
 // -------------------- //
@@ -193,40 +193,31 @@
 // -------------------- //
 .bb-question,
 .bb-answer {}
+
 .bb-question__question,
 .bb-answer__answer {
-    @include font("EXCHANGE WEB", 17px, null, 22px);
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(19px);
-        @include line-height(27px);
+    @include font("BRUTAL", 17px, null, 23px);
+    margin-left: 30px;
+
+    p {
+        @include font("BRUTAL", 17px, null, 23px);
     }
-}
-
-.bb-question__question {
-    @include font-weight(600);
-}
-
-.bb-answer__answer {
-    @include font-weight(400);
 }
 
 .bb-question__q,
 .bb-answer__a {
-    @include font("BRUTAL");
     @include font-weight(700);
-    padding-right: 5px;
+    display: inline-block;
+    margin-left: -30px;
+    width: 30px;
 }
 
 .bb-question__separator,
 .bb-answer__separator {
     border: none;
-    border-bottom: 1px solid #7e7e7f;
-    margin: 15px 0;
+    border-bottom: 1px solid $trolley-grey;
+    margin: 10px 0 10px 30px;
     width: 15px;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        width: 10px;
-    }
 }
 
 .bb-question__author,
@@ -239,11 +230,7 @@
     @include font("EXCHANGE WEB");
     @include font-weight(400);
     font-style: italic;
-}
-
-.bb-question__separator {
-    margin: 0 0 5px 0;
-    width: 15px;
+    margin-left: 30px;
 }
 
 // -------------------- //
@@ -261,19 +248,26 @@
 }
 
 .bb-figure__wrapper {
-    background-color: #000;
+    background-color: $white-smoke    ;
+
+    & + * {
+        margin-top: 10px;
+    }
 }
 
 .bb-figure__caption {
     p {
-        @include font("BRUTAL", 16px, 700, 24px);
-        margin: 15px 0 0 0;
+        @include font("BRUTAL", 16px, 500, 24px);
+
+        & + p {
+            margin-top: 10px;
+        }
     }
 }
 
 .bb-figure__credit {
     @include font("BRUTAL", 12px, 700, 12px);
-    margin: 12px 0 0 0;
+    margin: 10px 0 0 0;
 
     &:before {
         content: 'Credit ';
@@ -284,15 +278,31 @@
 // -------------------- //
 // Card
 // -------------------- //
+
 .bb-card {
-    padding: 10px;
-    background-color: #f5f5f5;
+    border: 1px solid $isabelline;
     margin: 40px 0;
+    padding: 15px;
 
     &:hover,
     &:focus {
         .bb-card__title span {
             text-decoration: underline;
+        }
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 20px;
+        position: relative;
+
+        &:before {
+            @include font('BRUTAL', 12px, 500);
+            bottom: 20px;
+            content: 'Continue reading';
+            position: absolute;
+            right: 20px;
+            text-transform: uppercase;
+            z-index: 1;
         }
     }
 }
@@ -309,46 +319,53 @@
 }
 
 .bb-card__obj__header {
-    max-width: 120px;
-    width: 33%;
-    padding-right: 10px;
+    width: 40%;
+    padding-right: 13px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-right: 20px;
+        width: 185px;
+    }
 }
 
-.bb-card__images {
-    .bb-card__image {
-        padding-top: 100%;
-    }
-
-    .bb-card__image__icon {
-
-    }
+.bb-card__image {
+    padding-top: 100%;
 }
 
 .bb-card__obj__body {
     padding-left: 10px;
-    width: 100%;
+    width: auto;
 }
 
 .bb-card__tag {
-    display: none;
+    @include font("EXCHANGE WEB", 11px, 500, 14px, -4);
+    color: $black;
+    margin: 0 0 10px 0;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(14px);
+        @include line-height(14px);
+        margin: 0 0 15px 0;
+    }
 }
 
 .bb-card__title {
-    @include font("NEW GROTESK SQUARE", 25px, 300, 25px);
-    margin-bottom: 10px;
-    margin-top: 0;
+    @include font("NEW GROTESK SQUARE", 25px, 300);
+    margin: 10px 0 0 0;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(40px);
+        margin: 15px 0 0 0;
+    }
 }
 
 .bb-card__separator {
-    margin: 10px 0;
-    width: 15px;
+    display: none;
 }
 
 .bb-card__byline {
-    @include font-size(11px);
-    @include line-height(11px);
-    margin-bottom: 5px;
-    margin-top: 10px;
+    line-height: 1em;
+    margin: 8px auto 5px auto;
 }
 
 .bb-card__byline-prefix {
@@ -363,22 +380,20 @@
 
 .bb-card__meta {
     font-size: 0;
-    margin-top: 5px;
+    margin-top: -5px;
 
     li.bb-card__meta-item {
         @include font("EXCHANGE WEB", 11px, 400, 12px);
+        margin-top: 5px;
         padding-right: 10px;
 
-        & + li.bb-card__meta-item {
-            border-left: 1px solid black;
+        & + .bb-card__meta-item {
+            border-left: 1px solid $isabelline;
             padding-left: 10px;
-
-            &:before {
-
-            }
         }
     }
 }
+
 
 // -------------------- //
 // Gallery
@@ -386,45 +401,59 @@
 .bb-gallery {
     margin: 30px 0;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        margin: 60px 0;
-    }
-
     &:hover {
-        .bb-gallery__title span+span {
+        .bb-gallery__title span + span {
             text-decoration: underline;
         }
     }
 
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin: 60px 0;
+    }
+
+}
+
+.bb-gallery__icon {
+    float: left;
+
+    svg {
+        width: 20px;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        svg {
+            width: 30px;
+        }
+    }
 }
 
 .bb-gallery__title {
-    @include font("BRUTAL", 17px, 700, 23px);
-    color: #000;
-    margin: 0 0 15px 0;
-}
+    @include font("BRUTAL", 17px, 700, 20px);
+    color: $black;
+    display: block;
+    margin: 0 0 10px 30px;
+    width: auto;
 
-.bb-gallery__title__icon {
-    padding-right: 3px;
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        padding-right: 5px;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin: 0 0 12px 40px;
     }
 }
 
-.bb-gallery__title__icon--gallery {
-    svg {
-        display: inline-block;
-        vertical-align: sub;
-        width: 20px;
-    }
+.bb-gallery__cols {
+    clear: both;
 }
-
-.bb-gallery__cols {}
 .bb-gallery__col {}
 .bb-gallery__col--2-2 {}
 .bb-gallery__col--1-1 {}
 .bb-gallery__image {}
-.bb-gallery__remaining {}
+.bb-gallery__remaining {
+    background-color: rgba(0,0,0,0.5);
+    bottom: 0;
+    color: $white;
+    height: 100%;
+    top: 0;
+    white-space: nowrap;
+}
 
 .bb-gallery__remaining-text {
     @include font("BRUTAL");
@@ -432,25 +461,118 @@
 }
 
 .bb-gallery__remaining-text--prefix {
-    @include font-size(20px);
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(27px);
-        position: relative;
+    @include font("BRUTAL", 20px, 900);
+    line-height: 100%;
+    position: relative;
+    top: -2px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(30px);
         top: -4px;
     }
 }
 
 .bb-gallery__remaining-text--value {
-    @include font-size(25px);
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(37px);
+    @include font("BRUTAL", 25px, 900);
+    line-height: 100%;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(40px);
     }
 }
 
 // -------------------- //
 // Video
 // -------------------- //
-// TODO
+
+.bb-video {
+    margin: 30px 0;
+
+    &:hover {
+        .bb-video__title span + span {
+            text-decoration: underline;
+        }
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin: 60px 0;
+    }
+
+}
+
+.bb-video__title {
+    @include font("BRUTAL", 17px, 700, 20px);
+    color: $black;
+    display: block;
+    margin: 0 0 10px 30px;
+    position: relative;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin: 0 0 12px 40px;
+    }
+}
+
+.bb-video__title-icon {
+    display: inline-block;
+    height: auto;
+    left: -30px;
+    position: absolute;
+    top: -2px;
+    width: 20px;
+
+    svg {
+        width: 20px;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        left: -40px;
+        top: -6px;
+        width: 30px;
+
+        svg {
+            width: 30px;
+        }
+    }
+}
+
+.bb-video__wrapper {
+    clear: both;
+}
+
+.bb-video__image-icon {
+    background-color: $black;
+    height: 50px;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 50px;
+
+    svg {
+        display: block;
+        height: 20px;
+        margin: 15px auto 0 auto;
+        width: 20px;
+    }
+
+    svg, path {
+        fill: $white;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        height: 70px;
+        margin: -35px 0 0 -35px;
+        width: 70px;
+
+        svg {
+            height: 30px;
+            margin-top: 20px;
+            width: 30px;
+        }
+    }
+}
+
 
 // -------------------- //
 // Button
