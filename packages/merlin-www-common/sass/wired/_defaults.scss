@@ -51,6 +51,8 @@ h6 {
 
 %h-alpha {
     @include font("NEW GROTESK SQUARE", 50px, 300, 50px);
+    letter-spacing: 0.3px;
+
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(100px);
         @include line-height(100px);
