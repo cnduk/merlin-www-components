@@ -4,8 +4,6 @@
 
 .c-cookie-warning {
     background-color: #000;
-    border: 2px solid #222;
-    border-radius: 4px 4px 0 0;
     padding: 20px;
 }
 
@@ -15,11 +13,11 @@
 }
 
 .c-cookie-warning__message {
-    @include font('BRUTAL', 13px, 700, 15px);
+    @include font('BRUTAL', 14px, 700, 18px);
     color: #fff;
     margin-bottom: 0;
     margin-top: 0;
-    padding-right: 20px;
+    padding-right: 30px;
 
     a {
         border-bottom: none;
@@ -36,15 +34,17 @@
     background-color: transparent;
     border-radius: 50%;
     border: 1px solid #fff;
-    height: 25px;
+    height: 20px;
     padding: 0;
-    width: 25px;
+    width: 20px;
 
     svg {
         display: inline-block;
-        height: 10px;
+        height: 8px;
         margin: 0 auto;
-        width: 13px;
+        position: relative;
+        top: -1px;
+        width: 8px;
     }
 
     path {
@@ -56,10 +56,11 @@
 @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
     .c-cookie-warning {
         max-width: 630px;
+        padding: 20px 30px;
         width: 40%;
     }
 
     .c-cookie-warning__message {
-        padding-right: 30px;
+        padding-right: 65px;
     }
 }
