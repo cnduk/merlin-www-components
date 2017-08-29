@@ -179,8 +179,9 @@
 .c-card-section__btn {
     @include vendor-prefix(transition-duration, 100ms);
     box-sizing: border-box;
-    margin-top: 30px;
+    margin-top: 40px;
     width: 100%;
+
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         width: 170px;
     }
