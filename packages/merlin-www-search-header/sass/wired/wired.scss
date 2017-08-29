@@ -42,14 +42,15 @@
        color: #444;
     }
 
-    @include min-screen( $DESKTOP_SIDE_GUTTER_BREAKPOINT ){
-        @include font-size(40px);
-        padding: 30px 20px;
-    }
-
     &:focus {
         outline: 1px solid;
         outline-color: #000;
+    }
+
+    @include min-screen( $DESKTOP_SIDE_GUTTER_BREAKPOINT ){
+        @include font-size(40px);
+        @include line-height(40px);
+        padding: 30px 20px;
     }
 }
 

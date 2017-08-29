@@ -35,9 +35,7 @@
     margin-right: 4px;
 }
 
-.n-gallery-counter__total {
-
-}
+.n-gallery-counter__total {}
 
 .n-gallery-toggle,
 a.n-gallery-close {
@@ -51,23 +49,13 @@ a.n-gallery-close {
         width: 60px;
     }
 
-    &:hover {
-        svg {
-            // fill: $limed-oak;
-        }
-    }
-
     svg {
         height: 100%;
-        // fill: $white;
         width: 18px;
     }
 }
 .n-gallery-toggle--list,
 .n-gallery-toggle--grid {
-    // border-left: 1px solid #ececec;
-    // border-right: 1px solid #ececec;
-
     display: inline-block;
     font-size: 0;
     height: 60px;
@@ -78,15 +66,8 @@ a.n-gallery-close {
         width: 60px;
     }
 
-    &:hover {
-        svg {
-            // fill: $limed-oak;
-        }
-    }
-
     svg {
         height: 100%;
-        // fill: $white;
         width: 18px;
     }
 }

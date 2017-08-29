@@ -1,10 +1,10 @@
 .n-menu__search {
-    background-color: #000;
+    background-color: $black;
     overflow: hidden;
     position: relative;
 
     svg {
-        fill: #fff;;
+        fill: $white;;
         height: 100%;
         width: 18px;
     }
@@ -23,16 +23,13 @@
     top: 0;
 
     input {
-        background-color: #000;
+        @include font("EXCHANGE WEB", 14px, null, 14px);
+        background-color: $black;
         border: none;
         box-sizing: border-box;
-        color: #fff;
-        @include font("EXCHANGE WEB", 14px, null, 14px);
+        color: $white;
         height: 60px;
         padding: 0 20px;
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-            padding: 0 30px;
-        }
         width: 100%;
 
         &:focus {
@@ -56,5 +53,11 @@
             position: fixed;
             top: 60px;
         }
+    }
+}
+
+@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    .n-menu__search-textbox input {
+        padding: 0 30px;
     }
 }

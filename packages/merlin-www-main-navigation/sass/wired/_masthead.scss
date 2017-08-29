@@ -1,31 +1,21 @@
+
 .n-main__header-logo {
-    display: inline-block;
-    height: 140px;
+    box-sizing: border-box;
+    display: block;
     max-width: none;
+    padding: 32px 0;
     position: relative;
     text-align: center;
 
     a {
-        display: inline-block;
+        display: block;
+        height: auto;
     }
 
     svg, img {
-        height: 88px;
-        padding: 26px 0;
+        height: 76px;
     }
 
-    &:after {
-        @include vendor-prefix(transform, translateX(-50%));
-        // background-color: $mineshaft;
-        bottom: 0;
-        content: '';
-        height: 1px;
-        left: 50%;
-        position: absolute;
-        width: 100vw;
-    }
 }
 
-.n-main__header-logo--takeover {
-
-}
+.n-main__header-logo--takeover {}
