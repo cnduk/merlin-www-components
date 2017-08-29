@@ -19,5 +19,10 @@
         svg {
             fill: $white;
         }
+
+        & + .c-card__meta-item {
+            border-left-color: $black-olive;
+        }
     }
+
 }
