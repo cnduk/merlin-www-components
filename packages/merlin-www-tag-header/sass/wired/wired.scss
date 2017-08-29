@@ -96,7 +96,8 @@
 }
 
 .tg-header__topic-strip {
-    margin: 30px auto 0 auto;
+    @include separator-line-small;
+    margin: 10px auto 0 auto;
 
     .c-topic-strip {
         text-align: center;
@@ -200,7 +201,9 @@
     }
 
     .tg-header__topic-strip {
-        margin-top: 40px;
+        @include separator-line-large;
+
+        margin-top: 10px;
     }
 
     .tg-header__cards {
