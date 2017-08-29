@@ -81,16 +81,78 @@
     }
 }
 
+
 .a-header__byline-prefix,
 .a-header__byline-conjunction {
     @include font("EXCHANGE WEB", 14px, 400, 14px);
     font-style: italic;
 }
 
+
+.a-header__sponsor {
+    margin: 15px 0 20px 0;
+
+    &:before {
+        background-color: $black;
+        content: '';
+        display: block;
+        height: 1px;
+        margin: 15px 0;
+        width: 15px;
+    }
+
+    a {
+        color: #000;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 30px 0;
+
+        &:before {
+            display: none;
+        }
+    }
+}
+.a-header__sponsor-prefix {
+    @include font("EXCHANGE WEB", 14px, 400, 14px);
+    font-style: italic;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(16px);
+        @include line-height(16px);
+    }
+}
+.a-header__sponsor-name {
+    @include font("BRUTAL", 14px, 700, 14px);
+    color: inherit;
+    text-transform: uppercase;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(16px);
+        @include line-height(16px);
+    }
+}
+.a-header__sponsor-image {
+    padding-left: 10px;
+    vertical-align: middle;
+
+    img {
+        max-height: 72px;
+        max-width: 135px;
+        height: auto;
+        width: auto;
+    }
+}
+
+
 .a-header__date {
     @include font("EXCHANGE WEB", 11px, 400, 11px);
     font-style: italic;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     margin-top: 7px;
 }
 
@@ -239,44 +301,6 @@ li.a-header__meta-item {
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         @include font-size(16px);
         @include line-height(16px);
-    }
-}
-
-.a-header__sponsor {
-    display: table;
-    margin: 30px 0;
-
-    a {
-        color: #000;
-    }
-}
-.a-header__sponsor-prefix {
-    @include font("EXCHANGE WEB", 16px, 300, 16px);
-    display: table-cell;
-    font-style: italic;
-    vertical-align: middle;
-    white-space: nowrap;
-}
-.a-header__sponsor-name {
-    @include font("BRUTAL", 16px, 700, 16px);
-    display: table-cell;
-    padding-left: 20px;
-    vertical-align: middle;
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-.a-header__sponsor-image {
-    display: table-cell;
-    padding-left: 20px;
-    vertical-align: middle;
-
-    img {
-        max-height: 72px;
-        // max-width: 140px;
-        height: auto;
-        width: auto;
     }
 }
 
