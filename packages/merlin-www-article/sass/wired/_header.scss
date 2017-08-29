@@ -17,37 +17,30 @@
 .a-header__title {
     margin-top: 15px;
     margin-bottom: 15px;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-
-    }
 }
 
 .a-header__teaser {
     margin-bottom: 10px;
     margin-top: 10px;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: 25px;
-        margin-top: 25px;
-    }
-
     a {
         color: #167ac6;
         text-decoration: underline;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            text-decoration: none;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
     }
 
     p {
         @include font("BRUTAL", 20px, 300, 20px);
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    }
 
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 15px;
+        margin-top: 25px;
+
+        a {
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -58,7 +51,7 @@
     width: 20px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin: 20px 0;
+        margin: 30px 0;
         width: 40px;
     }
 }

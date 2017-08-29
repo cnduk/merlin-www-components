@@ -1,7 +1,5 @@
 .a-author,
-.a-event-author {
-
-}
+.a-event-author {}
 
 .a-author__article-date {
     @include font("EXCHANGE WEB", 11px, 400, 11px);
@@ -31,18 +29,6 @@
     @include font("EXCHANGE WEB", 14px, 400, 14px);
     margin-bottom: 7px;
     margin-top: 0;
-}
-
-.a-author__byline--syndication {
-    .a-author__byline-prefix {
-
-    }
-}
-
-.a-author__byline--photographer {
-    .a-author__byline-prefix {
-
-    }
 }
 
 .a-author__byline-name {
@@ -90,8 +76,8 @@
 .a-author__separator,
 .a-event-author__separator {
     display: block;
-    margin: 15px 0;
-    width: 20px;
+    margin: 10px 0;
+    width: 15px;
 }
 
 .a-author__separator--date {}
