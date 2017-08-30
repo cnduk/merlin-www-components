@@ -15,13 +15,17 @@
 }
 
 .a-header__title {
+    margin-bottom: 5px;
     margin-top: 15px;
-    margin-bottom: 15px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 15px;
+    }
 }
 
 .a-header__teaser {
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 5px;
 
     a {
         color: #167ac6;
@@ -29,7 +33,8 @@
     }
 
     p {
-        @include font("BRUTAL", 20px, 300, 20px);
+        @include font("BRUTAL", 16px, 300, 19px);
+        margin-top: 5px;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
@@ -42,13 +47,18 @@
                 text-decoration: underline;
             }
         }
+
+        p {
+            @include font-size(20px);
+            @include line-height(20px);
+        }
     }
 }
 
 .a-header__separator {
     display: block;
-    margin: 15px 0;
-    width: 20px;
+    margin: 20px 0;
+    width: 15px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin: 30px 0;
@@ -57,8 +67,12 @@
 }
 
 .a-header__byline {
-    margin-bottom: 7px;
+    margin-bottom: 5px;
     margin-top: 15px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 7px;
+    }
 }
 
 .a-header__byline-name {
@@ -130,6 +144,7 @@
     }
 }
 .a-header__sponsor-image {
+    display: inline-block;
     padding-left: 10px;
     vertical-align: middle;
 
@@ -145,8 +160,11 @@
 .a-header__date {
     @include font("EXCHANGE WEB", 11px, 400, 11px);
     font-style: italic;
-    margin-bottom: 15px;
-    margin-top: 7px;
+    margin: 5px auto 25px auto;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 7px auto 15px auto;
+    }
 }
 
 
