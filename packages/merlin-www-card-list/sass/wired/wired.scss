@@ -144,8 +144,8 @@
 
     .c-card-list__item {
         display: inline-block;
-        padding: 0 10px;
-        margin: 10px 0 25px 0;
+        padding: 0 20px;
+        margin: 10px 0 15px 0;
         width: 100%;
     }
 
@@ -175,7 +175,7 @@
         position: relative;
 
         &:after {
-            @include font("BRUTAL", 11px, 500);
+            @include font("BRUTAL", 10px, 600);
             @include vendor-prefix(transition-duration, 300ms);
             background-color: $white;
             bottom: 0px;
