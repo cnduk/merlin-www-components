@@ -142,11 +142,15 @@
 }
 
 .c-newsletter__legal {
-    @include font('BRUTAL', 12px, 400, 15px);
+    @include font('BRUTAL', 10px, 400, 15px);
     margin: 0;
 
     a {
         border: none;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(12px);
     }
 }
 
