@@ -11,6 +11,16 @@
     .c-card__obj__header {
         width: 40%;
     }
+
+    .c-card__meta-item {
+        svg {
+            fill: $white;
+        }
+
+        & + .c-card__meta-item {
+            border-left-color: $black-olive;
+        }
+    }
 }
 
 @mixin card-v-related-large() {

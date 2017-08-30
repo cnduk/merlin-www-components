@@ -21,7 +21,8 @@
     }
 
     .c-card__title {
-        @include font("NEW GROTESK SQUARE", 30px, 300, 30px);
+        @include font("NEW GROTESK SQUARE", 30px, 300, 28px);
+        letter-spacing: 0.3px;
         margin: 10px auto;
     }
 

@@ -29,11 +29,11 @@
 
     .c-card__title {
         @include font("NEW GROTESK SQUARE", 25px, 300, 25px);
-        margin: 0 auto 10px auto;
+        margin: 0 auto 5px auto;
     }
 
     .c-card__separator {
-        margin: 10px 0;
+        margin: 5px 0;
         width: 10px;
     }
 
