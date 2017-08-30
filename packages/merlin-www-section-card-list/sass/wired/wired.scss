@@ -138,7 +138,7 @@
     background-color: #000;
     margin: 0;
     max-width: none;
-    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+    padding: 20px 20px 30px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding: $TABLET_SLICE_MARGIN;
