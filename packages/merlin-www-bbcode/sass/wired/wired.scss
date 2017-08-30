@@ -257,7 +257,7 @@
 
 .bb-figure__caption {
     p {
-        @include font("BRUTAL", 15px, 500, 18px);
+        @include font("BRUTAL", 15px, 500, 17px);
 
         & + p {
             margin-top: 10px;
