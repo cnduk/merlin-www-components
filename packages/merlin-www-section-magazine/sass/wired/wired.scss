@@ -30,7 +30,7 @@
     margin-left: auto;
     margin-right: auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
-    padding: $MOBILE_SIDE_GUTTER;
+    padding: 30px 20px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding: $TABLET_SIDE_GUTTER;
@@ -174,8 +174,4 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         width: auto;
     }
-}
-
-.c-magazine__btn__wrapper {
-
 }
