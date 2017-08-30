@@ -28,8 +28,9 @@
     margin-top: 5px;
 
     a {
-        color: #167ac6;
-        text-decoration: underline;
+        border-bottom: 1px solid $bright-navy-blue;
+        color: $bright-navy-blue;
+        text-decoration: none;
     }
 
     p {
@@ -42,15 +43,15 @@
         margin-top: 15px;
 
         a {
-            text-decoration: none;
+            border-bottom: none;
             &:hover {
-                text-decoration: underline;
+                border-bottom: 1px solid $bright-navy-blue;
             }
         }
 
         p {
             @include font-size(20px);
-            @include line-height(20px);
+            @include line-height(28px);
         }
     }
 }
