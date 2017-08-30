@@ -31,8 +31,11 @@
     color: $SHERPA-BLUE;
     float: left;
     height: 84px;
-    padding-top: 8px;
     text-transform: capitalize;
+
+    .is-macos & {
+        padding-top: 8px;
+    }
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(100px);
