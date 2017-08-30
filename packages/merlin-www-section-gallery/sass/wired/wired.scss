@@ -138,7 +138,7 @@ li.c-gallery__image-item {
     margin-top: 5px;
 }
 li.c-gallery__meta-item {
-    @include font("EXCHANGE WEB", 11px, 400);
+    @include font("EXCHANGE WEB", 11px, 400, 17px);
     padding-right: 10px;
 
     & + .c-gallery__meta-item {
