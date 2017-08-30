@@ -62,6 +62,7 @@
 .c-feature__title {
     @include font("NEW GROTESK SQUARE", 40px, 300, 40px);
     color: $black;
+    letter-spacing: 0.3px;
     margin: 0 auto 10px auto;
 }
 
@@ -87,7 +88,7 @@
     color: $black;
     line-height: 1em;
     margin-bottom: 5px;
-    margin-top: 12px;
+    margin-top: 10px;
 }
 
 .c-feature__byline-prefix {
@@ -104,15 +105,14 @@
     color: $black;
     font-size: 0;
     margin-top: 5px;
+}
+li.c-feature__meta-item {
+    @include font("EXCHANGE WEB", 11px, 400, 17px);
+    padding-right: 10px;
 
-    .c-feature__meta-item {
-        @include font("EXCHANGE WEB", 11px, 400);
-        padding-right: 10px;
-
-        & + .c-feature__meta-item {
-            border-left: 1px solid $isabelline;
-            padding-left: 10px;
-        }
+    & + .c-feature__meta-item {
+        border-left: 1px solid $isabelline;
+        padding-left: 10px;
     }
 }
 
