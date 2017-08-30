@@ -35,6 +35,11 @@
 .a-footer__wrapper {}
 
 .a-related-tags {
-    margin: 30px 0;
+    margin: 30px 0 20px 0;
+
+    // This is to help push the scroll bar down when it scrolls
+    .c-topic-strip--article-related {
+        padding-bottom: 10px;
+    }
 }
 .a-related-tags__wrapper {}
