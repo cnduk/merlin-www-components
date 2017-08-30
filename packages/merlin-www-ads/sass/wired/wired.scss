@@ -3,21 +3,6 @@
 @import '../wireframe/wireframe';
 @import '../wireframe/_debug';
 
-.ad__main {
-
-    &.is-hidden {
-
-    }
-
-    &.stick-wrapper {
-
-    }
-
-    &.is-sticky-block {
-
-    }
-}
-
 .ad--homepage {
     background-color: $snow;
     padding: 20px 0;
@@ -42,10 +27,15 @@
 }
 
 .ad--article-rail {
+    background-color: $raisin-black;
     margin-bottom: 40px;
     margin-left: -$MOBILE_SIDE_GUTTER;
     margin-right: -$MOBILE_SIDE_GUTTER;
     margin-top: 40px;
+
+    .ad__title {
+        color: $white;
+    }
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         margin-left: -$TABLET_SIDE_GUTTER;
@@ -53,6 +43,7 @@
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        background-color: transparent;
         position: absolute;
         margin: 0;
         right: 0;
