@@ -91,8 +91,9 @@ li.c-figure__toolbar-listitem--zoom {
     margin: 5px auto 10px auto;
 
     a {
+        border-bottom: 1px solid $bright-navy-blue;
         color: $bright-navy-blue;
-        text-decoration: underline;
+        text-decoration: none;
     }
 
     p {
@@ -110,9 +111,9 @@ li.c-figure__toolbar-listitem--zoom {
             width: 80%;
         }
         a {
-            text-decoration: none;
+            border-bottom: none;
             &:hover {
-                text-decoration: underline;
+                border-bottom: 1px solid $bright-navy-blue;
             }
         }
     }
