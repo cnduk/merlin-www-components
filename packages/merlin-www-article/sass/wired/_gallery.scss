@@ -1,15 +1,17 @@
 .a-gallery {
     margin: 0 auto;
-
-    @include desktop-size {
-
-    }
 }
 
 .a-gallery__wrapper {}
 
 .g-image-nav {
+    margin-top: 0;
+    transition: margin 0.1s ease-in-out;
     width: $MOBILE_SIDE_GUTTER;
+
+    &.is-fixed {
+        margin-top: 15px;
+    }
 
     @include tablet-size {
         width: $TABLET_SIDE_GUTTER;
@@ -17,10 +19,6 @@
 
     @include desktop-size {
         width: $DESKTOP_SIDE_GUTTER;
-    }
-
-    &.is-fixed {
-
     }
 }
 
@@ -75,24 +73,10 @@ li.a-gallery__image-listitem {
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin-bottom: 60px;
     }
-
-    &:last-child {
-
-    }
 }
 
-.a-gallery__thumbnail-list {
+.a-gallery__thumbnail-list {}
 
-}
-
-li.a-gallery__thumbnail {
-
-}
-
-.a-gallery__thumbnail-image {
-
-}
-
-.a-gallery__thumbnail-hover {
-
-}
+li.a-gallery__thumbnail {}
+.a-gallery__thumbnail-image {}
+.a-gallery__thumbnail-hover {}
