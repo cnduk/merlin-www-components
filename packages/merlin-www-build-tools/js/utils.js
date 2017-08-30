@@ -94,6 +94,17 @@ function getDefaultConfig(pkgJson, merlinJson){
                 getAbsDir('frontend/sass/**/*.scss'),
                 getAbsDir('node_modules/@cnbritain/*/sass/**/*.scss')
             ]
+        },
+        sw: {
+            globPatterns: [
+                'static/**\/*.{ttf,otf,woff,woff2,eot}',
+                'static/**\/*.css',
+                'static/**\/*.js',
+                'static/**\/*.{jpg,jpeg,png,gif}'
+            ],
+            modifyUrlPrefix: {
+                'static/': ''
+            }
         }
     };
 }
