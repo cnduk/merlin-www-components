@@ -1,28 +1,40 @@
 .a-footer {
     .a-share {
-        margin: 60px 0 40px 0;
+        margin: 40px 0;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
+        .a-share {
+            margin: 60px 0 40px 0;
+        }
     }
 }
 
 .a-footer--gallery {
-	.a-share__title {
-		color: #fff;
-	}
+    .a-share__title {
+        color: #fff;
+    }
 
-	.a-share {
-	    margin: 60px 0 0 0;
-	}
+    .a-share {
+        margin: 40px 0 0 0;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
+        .a-share {
+            margin-top: 60px;
+        }
+    }
 }
 
 .a-footer--video {
-	.a-footer__wrapper {
-		padding-left: 0;
-	}
+    .a-footer__wrapper {
+        padding-left: 0;
+    }
 }
 
 .a-footer__wrapper {}
 
 .a-related-tags {
-	margin: 40px 0;
+    margin: 30px 0;
 }
 .a-related-tags__wrapper {}

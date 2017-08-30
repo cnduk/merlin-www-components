@@ -39,7 +39,7 @@
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin-bottom: 15px;
-        margin-top: 25px;
+        margin-top: 15px;
 
         a {
             text-decoration: none;
@@ -278,13 +278,16 @@ li.a-header__meta-item {
     }
 
     a {
+        border-bottom: 1px solid $black;
         color: #000;
-        text-decoration: underline;
+        padding-bottom: 2px;
+        text-decoration: none;
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            border-bottom: 1px solid transparent;
             text-decoration: none;
             &:hover {
-                text-decoration: underline;
+                border-bottom: 1px solid $black;
             }
         }
     }
@@ -381,6 +384,7 @@ li.a-header__meta-item {
     }
 
     .a-header__meta {
+        line-height: 30px;
         margin: 15px 0
     }
 
@@ -400,6 +404,8 @@ li.a-header__meta-item {
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 60px;
+
         .a-header__separator {
             margin: 15px 0 30px 0;
             width: 40px;
@@ -410,6 +416,9 @@ li.a-header__meta-item {
             & + .a-header__meta-item {
                 padding-left: 10px;
             }
+        }
+        .a-share {
+            margin: 30px 0;
         }
     }
 }
