@@ -94,9 +94,9 @@ a.n-main__cover__btn {
 
 .n-main__nav-logo {
     height: $MAIN_NAVIGATION_HEIGHT;
+    left: $PADDING_SMALL;
     overflow: hidden;
-    padding-left: $PADDING_SMALL;
-    position: relative;
+    position: fixed;
     width: 118px;
 
     a {
@@ -113,24 +113,16 @@ a.n-main__cover__btn {
         width: 118px;
     }
 
-    @include screen(1440px, 1500px) {
-        @for $i from 0 through 40 {
-            @media (min-width: 1440px + $i) {
-                padding-left: #{(20 - $i/2)}px;
-            }
-        }
-    }
-
-    @include min-screen(1480px) {
-        padding-left: 0px;
-    }
-
     &.is-hidden {
         a {
             @include min-screen($MAIN_NAVIGATION_MOBILE_BREAKPOINT) {
                 bottom: -($MAIN_NAVIGATION_HEIGHT);
             }
         }
+    }
+
+    @include min-screen($MAXIMUM_PAGE_WIDTH + $PADDING_SMALL + $PADDING_SMALL){
+        left: auto;
     }
 
 }
@@ -487,39 +479,25 @@ li.n-main__dropdown-list-item {
 }
 
 .n-main__nav-title {
-    display: none;
-    @include min-screen(600px) {
-        display: block;
-    }
-
     @include font('ITC CASLON', 15px, null, $MAIN_NAVIGATION_HEIGHT + 4);
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(20px);
-    }
-    margin-left: 170px;
-    @media (min-width: 1440px) and (max-width: 1480px) {
-        @for $i from 0 through 40 {
-            @media (min-width: 1440px + $i) {
-                margin-left: #{(170 - $i/2)}px;
-            }
-        }
-    }
-
-    @include min-screen(1480px) {
-        margin-left: 150px;
-    }
-
-    margin-right: 155px;
-    @include min-screen($GALLERY_NAV_ICONS_BREAKPOINT) {
-        margin-right: 223px;
-    }
-
+    display: none;
+    padding-left: 170px;
+    padding-right: 155px;
     overflow: hidden;
     text-overflow: ellipsis;
     vertical-align: middle;
     white-space: nowrap;
-}
 
+
+    @include min-screen(600px) {
+        display: block;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(20px);
+    }
+
+}
 
 /**
  * Search specific bits
