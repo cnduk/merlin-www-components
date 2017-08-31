@@ -12,9 +12,7 @@
     z-index: 10;
 }
 
-.n-main__wrapper {
-
-}
+.n-main__wrapper {}
 
 .n-main__header {
     height: 140px;
@@ -29,12 +27,9 @@
 
 .n-main__nav-logo {
     height: 60px;
-    padding-left: 20px;
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding-left: 30px;
-    }
+    left: 20px;
     overflow: hidden;
-    position: relative;
+    position: fixed;
     width: 83px;
 
     a {
@@ -53,24 +48,16 @@
         width: 100%;
     }
 
-    @include screen(1440px, 1500px) {
-        @for $i from 0 through 60 {
-            @media (min-width: 1440px + $i) and (max-width: 1440px + $i + 0.5) {
-                padding-left: #{(30 - $i/2)}px;
-            }
-        }
-    }
-
-    @include min-screen(1500px) {
-        padding-left: 0;
-    }
-
     &.is-hidden {
         a {
             @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
                 bottom: -60px;
             }
         }
+    }
+
+    @include min-screen($MAXIMUM_PAGE_WIDTH + 20px + 20px) {
+        left: auto;
     }
 
 }
@@ -94,22 +81,6 @@
 
     @include min-screen(600px) {
         display: block;
-    }
-
-    @include screen(1440px, 1500px) {
-        @for $i from 0 through 60 {
-            @media (min-width: 1440px + $i) and (max-width: 1440px + $i + 0.5) {
-                padding-left: #{(138 - $i/2)}px;
-            }
-        }
-    }
-
-    @include min-screen(1500px) {
-        padding-left: 108px;
-    }
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding-right: 238px;
     }
 }
 
