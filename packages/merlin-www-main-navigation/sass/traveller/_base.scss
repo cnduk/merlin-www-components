@@ -29,20 +29,21 @@
 
 .n-main__nav-logo {
     height: 60px;
-    padding-left: 20px;
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding-left: 30px;
-    }
+    left: 20px;
     overflow: hidden;
-    position: relative;
+    position: fixed;
     width: 100px;
 
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        left: 30px;
+    }
+
     a {
-        @include transition(bottom 200ms ease-in-out);
         bottom: 0;
         height: 60px;
         line-height: 60px;
         position: absolute;
+        transition: bottom 0.2s ease-in-out;
         vertical-align: middle;
         width: 100px;
     }
@@ -53,18 +54,6 @@
         width: 100%;
     }
 
-    @include screen(1440px, 1500px) {
-        @for $i from 0 through 60 {
-            @media (min-width: 1440px + $i) and (max-width: 1440px + $i + 0.5) {
-                padding-left: #{(30 - $i/2)}px;
-            }
-        }
-    }
-
-    @include min-screen(1500px) {
-        padding-left: 0;
-    }
-
     &.is-hidden {
         a {
             @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
@@ -73,6 +62,9 @@
         }
     }
 
+    @include min-screen($MAXIMUM_PAGE_WIDTH + 60px) {
+        left: auto;
+    }
 }
 
 .n-main__nav-logo--takeover {
@@ -85,33 +77,27 @@
     @include font("PROXIMA NOVA CONDENSED", 16px, 600, 60px);
     color: $MUSTASAARI;
     display: none;
-    overflow: hidden;
-    padding-left: 152px;
+    left: 152px;
     letter-spacing: 2px;
-    padding-right: 172px;
+    overflow: hidden;
+    position: fixed;
+    right: 172px;
     text-overflow: ellipsis;
+    text-transform: uppercase;
     vertical-align: middle;
     white-space: nowrap;
-    text-transform: uppercase;
 
     @include min-screen(600px) {
         display: block;
     }
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding-left: 162px;
+        left: 162px;
     }
 
-    @include screen(1440px, 1500px) {
-        @for $i from 0 through 60 {
-            @media (min-width: 1440px + $i) and (max-width: 1440px + $i + 0.5) {
-                padding-left: #{(162 - $i/2)}px;
-            }
-        }
-    }
-
-    @include min-screen(1500px) {
-        padding-left: 132px;
+    @include min-screen($MAXIMUM_PAGE_WIDTH + 60px) {
+        position: absolute;
+        left: 132px;
     }
 }
 
