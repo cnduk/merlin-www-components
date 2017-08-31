@@ -406,3 +406,31 @@ li.bb-gallery__col {
 li.bb-card__meta-item {
     display: inline-block;
 }
+
+
+/**
+ * Timed Content
+ */
+.bb-timed-content {
+    &.bb-timed-content--pending,
+    &.bb-timed-content--expired {
+        display: none;
+    }
+
+    &.bb-timed-content--preview {
+        box-shadow: inset 0 0 0 1px #ff7f7f;
+        display: block;
+        position: relative;
+
+        &:before {
+            background: #ff7f7f;
+            bottom: 100%;
+            color: #fff;
+            content: '[timed-content from: 'attr(data-active-from) ' to: ' attr(data-active-to) ']';
+            font-family: monospace;
+            font-size: 11px;
+            left: -1px;
+            position: absolute;
+        }
+    }
+}
