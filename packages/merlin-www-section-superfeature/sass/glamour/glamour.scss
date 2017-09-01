@@ -126,3 +126,9 @@ li.c-superfeature__meta-item + li.c-superfeature__meta-item {
         margin-bottom: 8px;
     }
 }
+
+.c-superfeature__tag {
+    @include font('GRAPHIK', 13px, 'NORMAL', 18px, 20);
+    color: #fff;
+    margin: 0 0 10px 0;
+}
