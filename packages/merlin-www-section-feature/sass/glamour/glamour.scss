@@ -63,13 +63,19 @@
     width: 50%;
 }
 
+.c-feature__tag {
+    @include font('GRAPHIK', 13px, 'NORMAL', 18px, 20);
+    color: $COLOUR_MAIN_SECONDARY;
+    margin: 0 0 10px 0;
+}
+
 .c-feature__title {
     @include title-feature;
 
     margin: 0 0 10px;
 }
 
-.c-feature__desc {
+.c-feature__teaser {
     @include font('GRAPHIK', 15px, 'NORMAL', 20px);
     margin-bottom: 15px;
 }
@@ -176,7 +182,7 @@ li.c-feature__meta-item {
         margin-bottom: 8px;
         padding-top: 0;
     }
-    .c-feature__desc {
+    .c-feature__teaser {
         @include font('GRAPHIK', 17px, 'LIGHT', 23px);
         margin-top: 8px;
     }
