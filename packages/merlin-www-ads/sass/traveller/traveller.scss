@@ -75,6 +75,13 @@
         right: 0;
         width: 300px;
     }
+
+    .ad__block {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin: -20px 0;
+            padding: 20px 0;
+        }
+    }
 }
 
 .ad--article-rail-top {
