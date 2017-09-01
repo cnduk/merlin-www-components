@@ -1,0 +1,51 @@
+// -------------------- //
+// Portrait
+// -------------------- //
+@mixin card-portrait() {
+    .c-card__image {
+        margin-bottom: 15px;
+    }
+
+    .c-card__title {
+        @include title-card-portrait;
+
+        margin-bottom: 15px;
+        margin-top: 0;
+    }
+
+    .c-card__separator {
+        margin: 10px 0;
+    }
+
+    .c-card__separator--sponsor {
+        display: none;
+    }
+
+    .c-card__byline {
+        margin-bottom: 7px;
+    }
+}
+@mixin card-portrait-small() {}
+@mixin card-portrait-large() {
+    .c-card__byline {
+        margin-bottom: 5px;
+    }
+}
+
+.c-card--portrait {
+    @include card-portrait;
+    @include card-portrait-small;
+    @include desktop-size {
+        @include card-portrait-large;
+    }
+}
+
+.c-card--portrait-small {
+    @include card-portrait;
+    @include card-portrait-small;
+}
+
+.c-card--portrait-large {
+    @include card-portrait;
+    @include card-portrait-large;
+}

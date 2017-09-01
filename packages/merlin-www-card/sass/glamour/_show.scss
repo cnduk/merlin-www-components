@@ -1,0 +1,54 @@
+// -------------------- //
+// Show
+// -------------------- //
+@mixin card-show() {
+    &:hover,
+    &:focus {
+        .c-card__title {
+            border-bottom: 1px solid #000;
+            text-decoration: none;
+        }
+    }
+
+    .c-card__image {
+        margin-bottom: 10px;
+    }
+
+    .c-card__title {
+        border-bottom: 1px solid transparent;
+        @include font('GRAPHIK', 17px, 'NORMAL', 22px);
+        margin: 0;
+        text-align: center;
+    }
+}
+@mixin card-show-small() {
+    .c-card__title {
+        margin-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+@mixin card-show-large() {
+    .c-card__title {
+        @include font-size(20px);
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.c-card--show {
+    @include card-show();
+    @include card-show-small();
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include card-show-large();
+    }
+}
+
+.c-card--show-small {
+    @include card-show();
+    @include card-show-small();
+}
+
+.c-card--show-large {
+    @include card-show();
+    @include card-show-large();
+}
