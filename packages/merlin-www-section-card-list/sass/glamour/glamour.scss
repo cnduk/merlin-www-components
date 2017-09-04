@@ -87,8 +87,16 @@
         text-transform: uppercase;
         width: 100%;
 
+        a {
+            color: #000;
+        }
+
         .c-card-section--dark & {
             border-color: $COLOUR_BORDER_SOLID_DARK;
+
+            a {
+                color: #fff;
+            }
         }
 
     }
