@@ -207,11 +207,50 @@
     }
 }
 
-// .tg-header__event-meta {
-//     @include font('BRUTAL', 17px);
-//     margin: 40px 0;
-//     text-align: center;
-// }
-// .tg-header__event-meta__start-date {}
-// .tg-header__event-meta__separator {}
-// .tg-header__event-meta__location {}
+.tg-header__event-meta {
+    @include font('ADOBE CASLON', 0px, null, 20px);
+    color: $COLOR_TYPE_META;
+    margin: 40px 0;
+    max-width: 680px;
+    text-align: center;
+}
+.tg-header__event-meta__start-date {
+    @include font-size(16px);
+    display: block;
+}
+.tg-header__event-meta__separator {}
+.tg-header__event-meta__location {
+    @include font-size(16px);
+    display: block;
+}
+
+@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    .tg-header__event-meta {
+        margin: $MARGIN_X_SMALL auto $MARGIN_MEDIUM auto;
+    }
+    .tg-header__event-meta__start-date {
+        display: inline-block;
+
+
+        + .tg-header__event-meta__location {
+            margin-left: 8px;
+            padding-left: 8px;
+            position: relative;
+
+            &:before {
+                background: $COLOR_BORDER_SOLID_ACCENT2;
+                content: '';
+                display: block;
+                left: 0;
+                height: 20px;
+                position: absolute;
+                top: -2px;
+                width: 1px;
+            }
+        }
+    }
+    .tg-header__event-meta__separator {}
+    .tg-header__event-meta__location {
+        display: inline-block;
+    }
+}
