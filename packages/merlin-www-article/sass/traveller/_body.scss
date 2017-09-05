@@ -27,7 +27,7 @@
         color: $SHERPA-BLUE;
     }
 
-    h1 {
+    > h1 {
         @include font("PROXIMA NOVA");
         @include font-size(28px);
         @include line-height(32px);
@@ -40,7 +40,7 @@
         }
     }
 
-    h2 {
+    > h2 {
         @include line-height(28px);
         letter-spacing: 1px;
         text-transform: uppercase;
@@ -51,16 +51,16 @@
         }
     }
 
-    h3,
-    h4,
-    h5,
-    h5,
-    h6 {
+    > h3,
+    > h4,
+    > h5,
+    > h5,
+    > h6 {
         color: $MANATEE;
         letter-spacing: 1px;
     }
 
-    h2 + h3 {
+    > h2 + h3 {
         margin-top: -4px;
     }
 }
