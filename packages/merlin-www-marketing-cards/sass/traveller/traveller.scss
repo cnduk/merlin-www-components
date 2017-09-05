@@ -61,8 +61,10 @@
 }
 
 .a-marketing-card__brand__name {
-    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    @include font("PROXIMA NOVA", 24px, 600, 28px);
     color: $MUSTASAARI;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 
     a {
         color: inherit;
@@ -71,7 +73,9 @@
 
 .a-marketing-card__brand__prefix {
     @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    font-style: italic;
     margin-bottom: 12px;
+    text-transform: lowercase;
 }
 
 .a-marketing-card__col {
