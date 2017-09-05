@@ -33,7 +33,8 @@
     height: 84px;
     text-transform: capitalize;
 
-    .is-macos & {
+    .is-macos &,
+    .is-linux & {
         padding-top: 8px;
     }
 
