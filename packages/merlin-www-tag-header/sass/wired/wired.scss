@@ -129,6 +129,12 @@
 .tg-header--event {
     background-color: $white-smoke;
 
+    .tg-header__intro__image + .tg-header__intro__description:before,
+    .tg-header__intro__title + .tg-header__intro__description:before,
+    .tg-header__topic-strip:before {
+        background-color: $black;
+    }
+
     .tg-header__intro__image,
     .tg-header__intro__title {
         color: $black;
@@ -146,6 +152,11 @@
     .c-topic-strip__title,
     .tg-header__event-meta {
         color: $black;
+    }
+    .c-card-list__item {
+        .c-card {
+            border-top: 1px solid #000;
+        }
     }
 }
 
