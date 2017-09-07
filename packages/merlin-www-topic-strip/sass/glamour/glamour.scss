@@ -54,9 +54,8 @@ li.c-topic-strip__item {
 }
 
 .c-topic-strip__title {
-    // @include font('BRUTAL', 12px, 700, 12px);
+    @include font('GRAPHIK', 13px, 'SEMI BOLD', 16px);
     padding-right: 5px;
-    text-transform: uppercase;
 }
 
 .c-topic-strip--article-related {
