@@ -278,14 +278,14 @@
         padding: 0 12px;
         margin: 6px 0;
         width: 100%;
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
             margin: 20px 0;
         }
 
         .c-card {
             border-top: 1px solid $ISABEL;
             padding-top: 12px;
-            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
                 padding-top: 40px;
             }
 
