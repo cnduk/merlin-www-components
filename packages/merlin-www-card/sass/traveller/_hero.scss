@@ -4,13 +4,13 @@
 @mixin card-hero() {}
 
 @mixin card-hero-small() {
-    .c-card__image {
+    .c-card__image--custom {
         padding-top: 66.66666%;
     }
 }
 
 @mixin card-hero-large() {
-    .c-card__image {
+    .c-card__image--custom {
         padding-top: 100%;
     }
 }

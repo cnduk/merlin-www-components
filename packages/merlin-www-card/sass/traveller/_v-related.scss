@@ -2,10 +2,6 @@
 // Video Related
 // -------------------- //
 @mixin card-v-related() {
-    .c-card__image {
-        padding-top: 66.66666%;
-    }
-
     .c-card__tag {
         color: $CASPER;
     }
