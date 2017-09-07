@@ -1,15 +1,15 @@
 {
   "name": "@cnbritain/merlin-www-card-list",
-  "version": "1.7.91",
+  "version": "1.7.92",
   "description": "",
   "main": "js/index.js",
   "scripts": {
     "demo": "merlin-component-demo-server merlin.json"
   },
   "dependencies": {
-    "@cnbritain/merlin-www-ads": "^1.6.61",
-    "@cnbritain/merlin-www-card": "^1.7.71",
-    "@cnbritain/merlin-www-common": "^1.5.40"
+    "@cnbritain/merlin-www-ads": "^1.6.62",
+    "@cnbritain/merlin-www-card": "^1.7.72",
+    "@cnbritain/merlin-www-common": "^1.5.41"
   },
   "devDependencies": {
     "@cnbritain/merlin-component-demo-server": "^2.8.3"
