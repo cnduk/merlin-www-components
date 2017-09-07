@@ -18,27 +18,15 @@
     height: 60px;
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
+    position: relative;
 }
 
 .n-main__nav-logo {
     height: 60px;
+    left: 20px;
     overflow: hidden;
-    padding-left: 20px;
-    position: relative;
+    position: fixed;
     width: 130px;
-    bottom: 0;
-
-    &.is-hidden {
-        a {
-            @include desktop-size {
-                bottom: -60px;
-            }
-        }
-    }
-
-    @include tablet-size {
-        padding-left: 30px;
-    }
 
     a {
         bottom: 0;
@@ -55,17 +43,18 @@
         width: 100px;
     }
 
-    @include screen(1440px, 1500px) {
-        @for $i from 0 through 60 {
-            @media (min-width: 1440px + $i) and (max-width: 1440px + $i + 0.5) {
-                padding-left: #{(30 - $i/2)}px;
+    &.is-hidden {
+        a {
+            @include desktop-size {
+                bottom: -60px;
             }
         }
     }
 
-    @include min-screen(1500px) {
-        padding-left: 0;
+    @include min-screen($MAXIMUM_PAGE_WIDTH + 60px){
+        left: auto;
     }
+
 }
 
 .n-main__nav-logo--takeover {

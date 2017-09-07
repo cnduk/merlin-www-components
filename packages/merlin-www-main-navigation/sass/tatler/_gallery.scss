@@ -14,17 +14,6 @@
         display: block;
     }
 
-    @include screen(1440px, 1500px) {
-        @for $i from 0 through 60 {
-            @media (min-width: 1440px + $i) and (max-width: 1440px + $i + 0.5) {
-                padding-left: #{(138 - $i/2)}px;
-            }
-        }
-    }
-
-    @include tablet-size {
-        padding-right: 160px;
-    }
 }
 
 .n-gallery-nav {
