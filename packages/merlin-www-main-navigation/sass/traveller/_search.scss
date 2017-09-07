@@ -8,6 +8,10 @@
         margin: 0 30px;
     }
 
+    .n-main__nav-search {
+        width: 20px;
+    }
+
     svg {
         fill: $MUSTASAARI;
         height: 100%;
@@ -28,12 +32,13 @@
     top: 0;
 
     input {
-        @include font("PROXIMA NOVA CONDENSED", 16px, 400, 16px);
+        @include font("PROXIMA NOVA CONDENSED", 16px, 400, 60px);
         background-color: $WHITE;
         border: none;
         box-sizing: border-box;
         color: $MUSTASAARI;
         height: 60px;
+        padding: 0;
         width: 100%;
 
         &::placeholder {
