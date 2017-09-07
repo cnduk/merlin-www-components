@@ -19,6 +19,12 @@
             text-align: left;
         }
     }
+
+    .a-related-tags {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-top: 48px;
+        }
+    }
 }
 
 .a-footer__wrapper {}

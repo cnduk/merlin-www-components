@@ -15,7 +15,11 @@
 
 }
 .a-body--gallery {}
-.a-body--video {}
+.a-body--video {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 48px;
+    }
+}
 .a-body__clear {
     clear: both;
 }
