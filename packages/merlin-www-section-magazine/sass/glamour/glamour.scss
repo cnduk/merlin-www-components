@@ -148,21 +148,24 @@
 .c-magazine__content__subtitle {}
 
 .c-magazine__btn {
+    @include button-single;
+    @include button-single-light;
     @include font('GRAPHIK', 13px, 600, 13px, 20);
     box-sizing: border-box;
+    display: inline-block;
     margin: 30px 0 0 0;
     text-transform: capitalize;
     text-align: center;
     width: 100%;
 
+    &:hover {
+        @include button-single-light-hover;
+    }
+
     @include tablet-size {
         padding: 10px;
         margin-top: 40px;
         width: 110px;
-    }
-
-    a {
-        color: inherit;
     }
 }
 
