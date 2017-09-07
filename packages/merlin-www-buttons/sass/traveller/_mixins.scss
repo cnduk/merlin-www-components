@@ -107,7 +107,9 @@
 }
 
 @mixin button-group-light-hover() {
-
+	&:after {
+		transform: translateY(-2px);
+	}
 }
 
 @mixin button-group-light-disabled() {
@@ -147,7 +149,9 @@
 }
 
 @mixin button-group-two-light-hover() {
-
+	&:after {
+		transform: translateY(-2px);
+	}
 }
 
 @mixin button-group-two-light-disabled() {
