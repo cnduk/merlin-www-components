@@ -28,6 +28,17 @@
     }
 }
 
+.c-card-section__btn {
+    @include button-single;
+    @include button-single-light;
+    display: inline-block;
+    min-width: 150px;
+
+    &:hover {
+        @include button-single-light-hover;
+    }
+}
+
 .c-card-section--dark {
     color: $COLOUR_MAIN_DARK;
 }
@@ -50,6 +61,48 @@
 //         max-width: $MAXIMUM_PAGE_WIDTH;
 //     }
 // }
+
+.c-card-section--c-video-articles {
+    background: $COLOUR_SECTION_VIDEO;
+    padding-bottom: 40px;
+    padding-top: 30px;
+
+    .c-card-section__btn {
+        @include button-single-dark();
+        margin-top: 40px;
+
+        &:hover {
+            @include button-single-dark-hover();
+        }
+    }
+
+    .c-card-section__logo {
+        margin: 0 auto 30px;
+        text-align: center;
+        width: 215px;
+
+        svg {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    @include tablet-size {
+        .c-card-section__logo {
+            width: 200px;
+        }
+    }
+
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+        max-width: none;
+        padding: 80px 60px;
+
+        .c-card-section__logo {
+            margin-bottom: 40px;
+            width: 250px;
+        }
+    }
+}
 
 .c-card-section--a-recommended {
     .c-card-section__constrain {
@@ -179,69 +232,5 @@
                 padding-right: 30px;
             }
         }
-    }
-}
-
-// .c-card-section--recirculation {
-//     background-color: $COLOUR_BG_SECONDARY;
-//     margin: 0;
-//     padding: 40px $MOBILE_SIDE_GUTTER $MOBILE_SIDE_GUTTER $MOBILE_SIDE_GUTTER;
-
-//     @include tablet-size {
-//         padding: $TABLET_SIDE_GUTTER;
-//     }
-
-//     @include desktop-size {
-//         padding: $DESKTOP_SIDE_GUTTER;
-//     }
-
-//     .c-card-section__title,
-//     .c-card-section__title--list  {
-//         @include title-list;
-
-//         display: inline-block;
-//         margin-bottom: 20px;
-//         padding: 0;
-//         text-align: left;
-//         width: 100%;
-
-//         .c-card-section--dark & {
-//             border-color: $COLOUR_BORDER_SOLID_DARK;
-//         }
-
-//         @include desktop-size {
-//             margin-bottom: 25px;
-//             position: relative;
-//             text-align: left;
-//             width: 100%;
-
-//             &:before {
-//                 background-color: #000;
-//                 content: '';
-//                 height: 1px;
-//                 left: 0;
-//                 margin-top: -13px;
-//                 position: absolute;
-//                 right: 0;
-//                 top: 100%;
-//             }
-
-//             span {
-//                 background-color: $COLOUR_BG_SECONDARY;
-//                 padding-left: 0px;
-//                 padding-right: 15px;
-//                 position: relative;
-//                 z-index: 1;
-//             }
-//         }
-//     }
-// }
-
-.c-card-section__btn {
-    @include button-single;
-    @include button-single-light;
-
-    &:hover {
-        @include button-single-light-hover;
     }
 }
