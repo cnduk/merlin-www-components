@@ -22,12 +22,12 @@
 }
 
 .c-topic-strip--c-card-section {
-    margin-bottom: 16px;
-    margin-top: 16px;
+    margin-bottom: 12px;
+    margin-top: 12px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: 20px;
-        margin-top: 20px;
+        margin-bottom: 16px;
+        margin-top: 16px;
         text-align: center;
     }
 }

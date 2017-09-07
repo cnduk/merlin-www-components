@@ -33,16 +33,16 @@
 .c-card-list--c-tag {
     margin: -6px -12px;
     // 32px from top of card list minus the 6px that exists on the top card
-    margin-top: 32px - 6px;
+    margin-top: 28px - 6px;
 
     @include two-column-size() {
         margin: -16px -12px;
-        margin-top: 32px - 16px;
+        margin-top: 28px - 16px;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         // 48px from top of card list minus the 16px that exists on the top card
-        margin-top: 48px - 16px;
+        margin-top: 40px - 16px;
     }
 
     .c-card-list__item {

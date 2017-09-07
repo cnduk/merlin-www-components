@@ -26,7 +26,7 @@
 	.c-card-section__title {
 		@include font("LULO ONE", 24px, 700, 28px);
 		color: $SHERPA-BLUE;
-		margin-bottom: 16px;
+		margin-bottom: 12px;
 		margin-top: 0;
 		text-align: center;
 		text-transform: uppercase;
@@ -38,7 +38,7 @@
 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 			@include font-size(28px);
 			@include line-height(32px);
-			margin-bottom: 20px;
+			margin-bottom: 16px;
 		}
 	}
 
