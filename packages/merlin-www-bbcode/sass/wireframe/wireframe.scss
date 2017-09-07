@@ -422,7 +422,7 @@ li.bb-card__meta-item {
         display: block;
         position: relative;
 
-        &:before {
+        &:hover:before {
             background: #ff7f7f;
             bottom: 100%;
             color: #fff;
@@ -434,3 +434,4 @@ li.bb-card__meta-item {
         }
     }
 }
+
