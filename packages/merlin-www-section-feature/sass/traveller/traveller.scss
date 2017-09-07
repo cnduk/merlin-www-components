@@ -152,17 +152,15 @@
 }
 
 .c-feature__tag {
-	@include font("PROXIMA NOVA CONDENSED", 12px, 600, 12px);
+	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
 	color: $SHERPA-BLUE;
 	letter-spacing: 2px;
 	margin-bottom: 8px;
-	margin-top: 20px;
+	margin-top: 24px;
 	text-align: center;
 	text-transform: uppercase;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-    	@include font-size(14px);
-    	@include line-height(16px);
     	margin-bottom: 16px;
     	margin-top: 0;
     }
