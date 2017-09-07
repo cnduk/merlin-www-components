@@ -2,6 +2,13 @@
 // Portrait
 // -------------------- //
 @mixin card-portrait() {
+
+    .c-card__obj__header,
+    .c-card__obj__body {
+        display: block;
+        width: auto;
+    }
+
     .c-card__image {
         margin-bottom: 15px;
     }

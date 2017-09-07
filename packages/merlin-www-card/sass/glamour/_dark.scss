@@ -17,7 +17,8 @@
         .c-card__meta,
         .c-card__byline,
         .c-card__sponsor,
-        .c-card__meta-item--tag {
+        .c-card__meta-item--tag,
+        .c-card__tag {
             color: $COLOUR_META_DARK;
         }
 
@@ -41,7 +42,7 @@
         }
 
         .c-card__meta-item--gallery,
-        .c-card__meta-item--video {
+        .c-card__meta-item--duration {
             path {
                 fill: $COLOUR_META_DARK;
             }

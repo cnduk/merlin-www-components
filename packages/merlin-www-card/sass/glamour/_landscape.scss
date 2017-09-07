@@ -2,6 +2,14 @@
 // Landscape
 // -------------------- //
 @mixin card-landscape() {
+    box-sizing: border-box;
+    display: table;
+
+    .c-card__obj__header,
+    .c-card__obj__body {
+        display: table-cell;
+    }
+
     .c-card__obj__header {
         padding-right: 15px;
         vertical-align: top;
@@ -39,7 +47,11 @@
     }
 }
 
-@mixin card-landscape-small() {}
+@mixin card-landscape-small() {
+    .c-card__obj__header {
+        width: 45%;
+    }
+}
 
 @mixin card-landscape-large() {
     .c-card__obj__header {

@@ -48,7 +48,7 @@
     }
 }
 
-.c-card--magazine {
+.c-card--inline {
     @include card-inline;
     @include card-inline-small;
     @include min-screen($CARD_SWITCHER_WIDTH) {
@@ -56,12 +56,12 @@
     }
 }
 
-.c-card--magazine-small {
+.c-card--inline-small {
     @include card-inline;
     @include card-inline-small;
 }
 
-.c-card--magazine-large {
+.c-card--inline-large {
     @include card-inline;
     @include card-inline-large;
 }
