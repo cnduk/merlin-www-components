@@ -124,13 +124,13 @@
 .tg-header__intro__title {
 	@include font("LULO ONE", 28px, 700, 32px);
 	color: $SHERPA-BLUE;
-	margin: 0 0 16px 0;
+	margin: 0 0 12px 0;
 	text-align: center;
 	text-transform: uppercase;
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 		@include font-size(46px);
 		@include line-height(54px);
-		margin-bottom: 24px;
+		margin-bottom: 16px;
 	}
 }
 
@@ -140,12 +140,12 @@
 
 .tg-header__intro__description {
 	color: $MUSTASAARI;
-	margin: 16px auto 24px auto;
+	margin: 12px auto 24px auto;
 	max-width: 800px;
 	text-align: center;
 
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		margin-top: 24px;
+		margin-top: 16px;
 	}
 
 	a {
@@ -174,10 +174,10 @@
 }
 
 .tg-header__topic-strip {
-	margin: 24px auto;
+	margin: 12px auto;
 
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		margin: 32px auto;
+		margin: 24px auto;
 	}
 
 	.c-topic-strip {
