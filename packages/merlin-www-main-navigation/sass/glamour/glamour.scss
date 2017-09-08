@@ -284,10 +284,22 @@
         padding-bottom: 20px;
     }
 
-    .btn-share {
+    .n-main__dropdown__btn-share {
+        @include button-share;
+
         height: 35px;
         margin: 0 5px;
         width: 35px;
+    }
+
+    @each $name, $colour in $COLOUR_SOCIAL {
+        .n-main__dropdown__btn-share--#{$name} {
+            @include button-share-light($name);
+
+            &:hover {
+                @include button-share-light-hover($name);
+            }
+        }
     }
 }
 
@@ -360,7 +372,7 @@ li {
     &.n-main__dropdown-list-item--share {
         text-align: center;
 
-        .btn-share {
+        .n-main__dropdown__btn-share {
             margin: 0 10px;
         }
     }
@@ -369,7 +381,8 @@ li {
         display: inline-block;
         margin: 0 5px;
 
-        .btn-share {
+        .n-main__dropdown__btn-share {
+            @include button-share;
             height: 40px;
             line-height: 40px;
             width: 40px;
@@ -378,6 +391,28 @@ li {
                 width: 37%;
             }
         }
+        @each $name, $colour in $COLOUR_SOCIAL {
+            .n-main__dropdown__btn-share--#{$name} {
+                @include button-share-light($name);
+
+                &:hover {
+                    @include button-share-light-hover($name);
+                }
+            }
+        }
+    }
+
+}
+
+a.n-main__dropdown__btn--newsletter {
+    @include button-single;
+    @include button-single-light;
+    box-sizing: border-box;
+    width: 100%;
+
+    &:hover,
+    &:focus {
+        @include button-single-light-hover;
     }
 }
 
@@ -677,7 +712,14 @@ a.n-gallery-close {
 }
 
 .n-menu__newsletter-btn {
+    @include button-single;
+    @include button-single-light;
     margin-bottom: 30px;
+
+    &:hover,
+    &:focus {
+        @include button-single-light-hover;
+    }
 }
 
 
