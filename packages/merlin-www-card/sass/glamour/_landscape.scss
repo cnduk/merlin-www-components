@@ -2,8 +2,11 @@
 // Landscape
 // -------------------- //
 @mixin card-landscape() {
-    box-sizing: border-box;
-    display: table;
+    .c-card__obj {
+        box-sizing: border-box;
+        display: table;
+        width: 100%;
+    }
 
     .c-card__obj__header,
     .c-card__obj__body {
@@ -13,12 +16,12 @@
     .c-card__obj__header {
         padding-right: 15px;
         vertical-align: top;
-        width: 45%;
     }
 
     .c-card__obj__body {
         padding-left: 0;
         vertical-align: middle;
+        width: 55%;
     }
 
     .c-card__image {
@@ -51,11 +54,17 @@
     .c-card__obj__header {
         width: 45%;
     }
+    .c-card__obj__body {
+        width: 55%;
+    }
 }
 
 @mixin card-landscape-large() {
     .c-card__obj__header {
         width: 35%;
+    }
+    .c-card__obj__body {
+        width: 65%;
     }
 }
 
