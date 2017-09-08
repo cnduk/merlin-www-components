@@ -97,13 +97,13 @@ function getDefaultConfig(pkgJson, merlinJson){
         },
         sw: {
             globPatterns: [
-                'static/**\/*.{ttf,otf,woff,woff2,eot}',
-                'static/**\/*.css',
-                'static/**\/*.js',
-                'static/**\/*.{jpg,jpeg,png,gif}'
+                'static\/**\/*.{ttf,otf,woff,woff2,eot}',
+                'static\/**\/*.css',
+                'static\/**\/*.js',
+                'static\/**\/*.{jpg,jpeg,png,gif}'
             ],
             modifyUrlPrefix: {
-                'static/': ''
+                'static\/': ''
             }
         }
     };

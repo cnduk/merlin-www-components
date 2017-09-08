@@ -9,8 +9,8 @@ module.exports = function taskCopyExports(taskConfig, browserSync) {
 		return wbBuild.generateSW({
 	        globDirectory: `./${abbr}_backend/`,
 	        swDest: `./${abbr}_backend/static/sw.js`,
-	        globPatterns: taskConfig.globPatterns,
-	        modifyUrlPrefix: taskConfig.modifyUrlPrefix
+	        globPatterns: taskConfig.sw.globPatterns,
+	        modifyUrlPrefix: taskConfig.sw.modifyUrlPrefix,
 	    })
 	}
 }
