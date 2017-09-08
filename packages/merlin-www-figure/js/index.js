@@ -78,10 +78,8 @@ function initBackgroundBlur(){
     if(hasBackgroundBlur) return;
     hasBackgroundBlur = true;
     addEvent(document.body, 'touchend', function(e){
-        console.log(e.target, document.activeElement);
         if(hasClass(document.activeElement, CLS_FIGURE_TOOLBAR)){
             var parent = getParent(e.target, '.' + CLS_FIGURE_TOOLBAR);
-            console.log(parent);
             if(!parent || !hasClass(parent, CLS_FIGURE_TOOLBAR)){
                 document.activeElement.blur();
             }
