@@ -62,6 +62,54 @@
 //     }
 // }
 
+.c-card-section--tg-articles {
+    .c-card-section__title {
+        @include title-section;
+
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 0;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+
+        .c-card-section--dark & {
+            border-color: $COLOUR_BORDER_SOLID_DARK;
+        }
+    }
+
+    @include desktop-size {
+        .c-card-section__title {
+            margin-bottom: 25px;
+            position: relative;
+            text-align: left;
+            width: 100%;
+
+            &:before {
+                background-color: #000;
+                content: '';
+                height: 1px;
+                left: 0;
+                margin-top: -14px;
+                position: absolute;
+                right: 0;
+                top: 100%;
+                z-index: -1;
+            }
+
+            span {
+                background-color: $COLOUR_BG_MAIN;
+                padding-left: 0px;
+                padding-right: 30px;
+            }
+        }
+        .c-card-list {
+            margin-right: 360px;
+            position: relative;
+        }
+    }
+}
+
 .c-card-section--c-video-articles {
     background: $COLOUR_SECTION_VIDEO;
     padding-bottom: 40px;
