@@ -2,35 +2,13 @@
 // Magazine
 // -------------------- //
 @mixin card-magazine() {
-    @include card-portrait;
-    .c-card__image {
-        margin-bottom: 15px;
-    }
-
-    .c-card__title {
-        @include font('GRAPHIK', 15px, 400, null, 20);
-
-        margin: 15px 0 0;
-        padding-bottom: 0;
-    }
-
-    &:hover {
-        .c-card__title {
-            text-decoration: none;
-            border-bottom: 1px solid $COLOUR_BORDER_SOLID;
-            padding-bottom: 15px;
-        }
-    }
+    @include card-landscape;
 }
 @mixin card-magazine-small() {
-    @include card-portrait-small;
+    @include card-landscape-small;
 }
 @mixin card-magazine-large() {
-    @include card-portrait-large;
-    .c-card__title {
-        @include font-size(17px);
-        padding-bottom: 20px;
-    }
+    @include card-landscape-large;
 }
 
 .c-card--magazine {
