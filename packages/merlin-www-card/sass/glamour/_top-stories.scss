@@ -1,0 +1,42 @@
+// -------------------- //
+// Top Stories
+// -------------------- //
+@mixin card-top-stories() {
+    @include card-landscape;
+    .c-card__title {
+        @include font-size(15px);
+        @include line-height(18px);
+    }
+    .c-card__meta-item {
+        @include font-size(11px);
+        @include line-height(11px);
+        letter-spacing: tracking(30);
+
+        + li.c-card__meta-item {
+            @include line-height(11px);
+        }
+    }
+}
+
+@mixin card-top-stories-small() {
+    @include card-landscape-small;
+}
+
+@mixin card-top-stories-large() {
+    @include card-landscape-small;
+}
+
+.c-card--top-stories {
+    @include card-top-stories;
+    @include card-top-stories-small;
+}
+
+.c-card--top-stories-small {
+    @include card-top-stories;
+    @include card-top-stories-small;
+}
+
+.c-card--top-stories-large {
+    @include card-top-stories;
+    @include card-top-stories-large;
+}
