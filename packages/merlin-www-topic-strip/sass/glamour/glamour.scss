@@ -23,22 +23,12 @@
 }
 
 .c-topic-strip--c-card-section {
-    @include font-size(10px);
     padding-bottom: 20px;
     text-align: left;
 
-    .c-topic-strip__item a {
-        @include font-size(10px);
-    }
-
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(11px);
         padding-bottom: 30px;
         text-align: center;
-
-        .c-topic-strip__item a {
-            @include font-size(11px);
-        }
     }
 }
 
