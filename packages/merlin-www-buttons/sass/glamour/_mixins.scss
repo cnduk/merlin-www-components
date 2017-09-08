@@ -32,7 +32,7 @@
 }
 
 @mixin button-group(){
-    @include font('GRAPHIK', 13px, 'SEMI BOLD', 16px);
+    @include font('GRAPHIK', 13px, 'NORMAL', 16px);
 
     padding: 10px;
     text-align: center;
