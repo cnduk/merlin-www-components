@@ -111,9 +111,10 @@
     }
 }
 .bb-gallery__title {
-    color: #000;
     @include font('ADOBE CASLON', 20px, 'BOLD', 24px);
-    margin: 0 0 $MARGIN_XX_SMALL 0;
+    color: #000;
+    margin: 0 0 $MARGIN_XX_SMALL 5px;
+    width: calc(100% - 30px);
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         @include font-size(24px);
@@ -121,7 +122,7 @@
     }
 }
 .bb-gallery__icon {
-    padding-right: 5px;
+    vertical-align: top;
 }
 .bb-gallery__icon--gallery {
     svg {
