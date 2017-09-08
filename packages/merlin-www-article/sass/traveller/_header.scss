@@ -3,6 +3,10 @@
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 		margin: 48px 0;
 	}
+
+	&.has-hero {
+		margin-top: 0;
+	}
 }
 .a-header--gallery {}
 .a-header--video {
@@ -32,11 +36,10 @@
 
 .a-header__hero {
 	margin-bottom: 24px;
-	margin-top: -32px;
 	position: relative;
+
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 		margin-bottom: 40px;
-		margin-top: -48px;
 	}
 
 	.a-header__tag,

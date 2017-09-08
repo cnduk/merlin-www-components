@@ -1,4 +1,4 @@
-<header class="a-header{{# state.is_gallery }}{{^ state.has_body }} a-header--gallery{{/ state.has_body }}{{/ state.is_gallery }}">
+<header class="a-header{{# state.has_hero }} has-hero{{/ state.has_hero }}{{# state.is_gallery }}{{^ state.has_body }} a-header--gallery{{/ state.has_body }}{{/ state.is_gallery }}">
     <div class="a-header__wrapper">
         <div class="a-header__content">
             {{# state.has_primary_tag }}
