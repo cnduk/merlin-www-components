@@ -1,3 +1,4 @@
+}
 @import '@cnbritain/merlin-www-common:glamour';
 
 @mixin button-single(){
@@ -104,7 +105,9 @@
     width: 40px;
 
     svg {
+        display: block;
         height: 100%;
+        margin: 0 auto;
         width: 50%;
     }
 }
