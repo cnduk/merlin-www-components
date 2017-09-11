@@ -1,0 +1,30 @@
+.a-sidebar-content {
+    .c-card-list__item {
+        border-bottom: 1px solid #000;
+        margin: 0 0 20px;
+    }
+
+    .c-card__image {
+        margin-bottom: 10px;
+    }
+
+    .c-card__title {
+        @include title-related-content;
+        margin-bottom: 10px;
+    }
+
+    .c-card__byline {
+        margin-bottom: 5px;
+    }
+
+    .c-card__meta {
+        margin-bottom: 10px;
+    }
+}
+
+.a-sidebar-content__title {
+    @include font('GRAPHIK', 14px, 'SEMI BOLD', 20px, 20);
+
+    margin: 0 0 15px;
+    text-transform: uppercase;
+}

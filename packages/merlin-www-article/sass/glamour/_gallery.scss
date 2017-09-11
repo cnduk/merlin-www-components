@@ -1,0 +1,208 @@
+.a-gallery {
+    @include section-margins;
+
+    background-color: $COLOUR_BG_MAIN;
+    box-sizing: border-box;
+    color: $COLOUR_MAIN;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+
+    @include tablet-size {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include desktop-size {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.a-gallery__wrapper {
+    margin: 0 auto;
+    max-width: 1440px;
+
+    @include min-screen(940px) {
+        padding-right: 350px;
+    }
+}
+
+.a-gallery__nav__btns {
+    line-height: 0;
+    width: 50px;
+}
+
+.a-gallery__nav__btn {
+    background: $COLOUR_BUTTON_GALLERY_NAV_BG;
+    height: 50px;
+    opacity: .3;
+    transition: opacity .1s ease-in-out;
+    width: 50px;
+
+    svg {
+        fill: $COLOUR_BUTTON_GALLERY_NAV;
+        height: 100%;
+        transition: fill .1s ease-in-out;
+        width: 15px;
+    }
+}
+
+.a-gallery__nav__btn--next {
+    border-top: 1px solid $COLOUR_SEPARATOR_NAVIGATION;
+}
+
+.a-gallery__nav__btn--active {
+    fill: $COLOUR_BUTTON_GALLERY_NAV_HOVER;
+    opacity: 1;
+
+    &:hover {
+        background-color: $COLOUR_BUTTON_GALLERY_NAV_BG_HOVER;
+        opacity: 1;
+
+        svg {
+            fill: $COLOUR_BUTTON_GALLERY_NAV_HOVER;
+        }
+    }
+}
+
+.a-gallery__thumbnails {
+    @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$MOBILE_SIDE_GUTTER;
+        margin-right: -$MOBILE_SIDE_GUTTER;
+    }
+}
+
+.a-gallery__thumbnail__hover {
+    svg {
+        width: 15%;
+    }
+}
+
+.a-gallery__images {
+    padding-bottom: 40px;
+
+    &:last-child {
+        padding-bottom: 0;
+    }
+}
+
+.a-gallery__image {
+    margin-bottom: 15px;
+    position: relative;
+
+    @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$MOBILE_SIDE_GUTTER;
+        margin-right: -$MOBILE_SIDE_GUTTER;
+    }
+}
+
+.a-gallery__image__wrapper {
+    background-color: $COLOUR_BG_AD;
+}
+
+.a-gallery__aside {
+    border: 1px solid $COLOUR_BUTTON_GALLERY_NAV_BORDER;
+    bottom: 15px;
+    height: 45px;
+    right: 15px;
+
+    @include tablet-size {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+.a-gallery__aside__btn {
+    background-color: $COLOUR_BUTTON_GALLERY_ASIDE_BG;
+    border-bottom: 0;
+    height: 45px;
+    transition: background .1s ease-in-out;
+    width: 45px;
+
+    & + .a-gallery__aside__btn {
+        border-left: 1px solid $COLOUR_BUTTON_GALLERY_NAV_BORDER;
+    }
+
+    svg {
+        fill: $COLOUR_BUTTON_GALLERY_ASIDE;
+        width: 37%;
+    }
+
+    &:hover {
+        background-color: $COLOUR_BUTTON_GALLERY_ASIDE_BG_HOVER;
+
+        svg {
+            fill: $COLOUR_BUTTON_GALLERY_ASIDE_HOVER;
+        }
+    }
+}
+
+@each $name, $colour in $COLOUR_SOCIAL {
+    .a-gallery__aside__btn--#{$name} {
+        svg {
+            fill: $colour;
+        }
+
+        &:hover {
+            background-color: $colour;
+            svg {
+                fill: $COLOUR_SOCIAL_ICON;
+            }
+        }
+    }
+}
+
+.a-gallery__aside__btn--zoom {
+    &:hover {
+        background-color: $COLOUR_BUTTON_GALLERY_ASIDE;
+
+        svg {
+            fill: $COLOUR_BUTTON_GALLERY_ASIDE_BG;
+        }
+    }
+}
+
+.a-gallery__image__title,
+.a-gallery__image__caption,
+.a-gallery__image__credit {
+    width: 100%;
+
+    @include desktop-size {
+        max-width: 700px;
+    }
+}
+
+.a-gallery__image__title {
+    @include title-image-credit;
+
+    margin-bottom: 0px;
+
+    span {
+        @include font-size(13px);
+
+        padding-right: 10px;
+    }
+}
+
+.a-gallery__image__caption {
+    @include font('GRAPHIK', 15px, 'NORMAL', 19px);
+    margin-bottom: 10px;
+
+    p {
+        @include font('GRAPHIK', 15px, 'NORMAL', 19px);
+    }
+}
+
+.a-gallery__image__title + .a-gallery__image__caption {
+    margin-top: -5px;
+}
+
+.a-gallery__image__credit {
+    @include font('GRAPHIK', 10px, 400, 13px);
+    color: #b2b2b2;
+    letter-spacing: 0.02em;
+
+    strong {
+        font-weight: 500;
+    }
+}

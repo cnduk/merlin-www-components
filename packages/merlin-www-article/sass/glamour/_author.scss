@@ -1,0 +1,91 @@
+.a-author {
+    @include font('GRAPHIK', 11px, 'NORMAL', 12px, 20);
+
+    a {
+        color: $COLOUR_MAIN;
+    }
+}
+
+.a-author__article-date,
+.a-author__bio,
+.a-author__byline {
+    @include byline;
+
+    @include article-total-size {
+        @include byline-desktop;
+    }
+}
+
+.a-author__article-date {
+    @include font-size(11px);
+}
+
+.a-author__bio,
+.a-author__bio p {
+    @include font('GRAPHIK', 11px, 'NORMAL', 13px);
+}
+
+.a-author__article-date,
+.a-author__bio {
+    margin: 12px 0;
+}
+
+.a-author__byline {
+    margin: 10px 0;
+}
+
+.a-author__byline-name {
+    @include byline-name;
+}
+
+.a-author__byline-prefix {
+    @include byline-prefix;
+}
+
+.a-author__image {
+    border-radius: 51%;
+    margin-bottom: 15px;
+    width: 60%;
+}
+
+.a-author__separator,
+.a-event-author__separator {
+    display: none;
+
+    @include article-total-size {
+        background: #000;
+        border: 0;
+        display: block;
+        height: 1px;
+    }
+}
+
+.a-event-author {
+    background: $COLOUR_BG_SECONDARY;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.a-event-author__image {
+    margin-bottom: 12px;
+}
+
+.a-event-author__title {
+    @include font("GRAPHIK", 14px, 600, 18px);
+    letter-spacing: normal;
+    margin-bottom: 6px;
+}
+
+.a-event-author__location {
+    @include font("GRAPHIK", 14px, null, 18px);
+}
+
+.a-event-author__date {
+    @include font("GRAPHIK", 11px, null, 21px);
+}
+
+.a-event-author__btn {
+    @include font-size(11px);
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}

@@ -1,0 +1,193 @@
+.a-body {
+    box-sizing: border-box;
+    margin-top: $MOBILE_SLICE_MARGIN - 10;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+    width: 100%;
+
+    @include common-medium-size() {
+        margin-top: $TABLET_SLICE_MARGIN - 20;
+        margin-bottom: $TABLET_SLICE_MARGIN;
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include common-large-size() {
+        margin-top: $DESKTOP_SLICE_MARGIN - 20;
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
+}
+.a-body__clear {
+    clear: both;
+}
+
+.a-body__wrapper {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: $ARTICLE_TOTAL;
+    position: relative;
+    width: 100%;
+    word-wrap: break-word;
+
+    @include common-large-size(){
+        padding: 0 $ARTICLE_RIGHT_TOTAL 0 0;
+    }
+
+    @include article-large-size(){
+        padding: 0 $ARTICLE_RIGHT_TOTAL 0 $ARTICLE_LEFT_TOTAL;
+    }
+
+    > p:first-of-type::first-line {
+        @include font-weight('MEDIUM');
+    }
+}
+
+.a-body--gallery {
+    .a-body__wrapper {
+        max-width: $ARTICLE_TOTAL+110px;
+
+        @include common-large-size(){
+            padding-right: $ARTICLE_RIGHT_TOTAL+5px;
+        }
+
+        @include article-large-size(){
+            padding-right: $ARTICLE_RIGHT_TOTAL+5px;
+        }
+    }
+}
+
+// Im not sure about this
+.a-body__content {
+    a:not([class]) {
+        @include link-styles;
+    }
+}
+.a-gallery {
+    .a-gallery__image__caption a {
+        @include link-styles;
+    }
+}
+
+.a-related-tags {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    border-top: 1px solid rgba(0, 0, 0, 0.10);
+    margin: $MOBILE_SLICE_MARGIN (-$MOBILE_SIDE_GUTTER);
+    padding: 20px 0;
+
+    .c-topic-strip {
+        box-sizing: border-box;
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
+        text-align: left;
+    }
+
+    .c-topic-strip__item:first-child {
+        margin-left: 0;
+    }
+
+    @include tablet-size {
+        margin: $TABLET_SLICE_MARGIN 0;
+        padding: 15px 0;
+
+        .c-topic-strip {
+            padding-left: 0;
+            padding-right: 0;
+            white-space: normal;
+        }
+
+        .c-topic-strip__item {
+            margin: 5px 10px 5px 0;
+        }
+    }
+
+    @include desktop-size {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+        border-top: 1px solid rgba(0, 0, 0, 0.10);
+        margin: $DESKTOP_SLICE_MARGIN 0;
+        padding: 25px 0;
+    }
+}
+
+.a-footer--gallery {
+
+}
+
+.a-main {
+    margin: 0 auto;
+    margin-top: 30px;
+    @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT) {
+        margin-top: 60px;
+    }
+    // max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    min-height: 600px; //600px as a double sky might be in the article
+    position: relative;
+}
+
+.a-main--gallery {
+    max-width: initial;
+    overflow-y: hidden;
+
+    .a-gallery {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: $MAXIMUM_PAGE_WIDTH;
+        // max-width: $ARTICLE_TOTAL + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.a-infinite {
+    &.is-closed {
+        // This we want to hide:
+        //  - .g-gallery-menu
+        //  - everything but first 3 images in gallery
+        //  - share
+        //
+        // We force things to hide to avoid images from being loaded
+        .a-gallery__nav,
+        .a-gallery__section .a-gallery__images:nth-of-type( n + 6 ),
+        .a-gallery__section .ad--gallery:nth-of-type( n + 1 ),
+        .a-related-tags,
+        .a-footer-share,
+        .a-footer {
+            display: none;
+        }
+
+        .a-infinite__message {
+            display: block;
+        }
+    }
+}
+
+.a-infinite__message {
+    display: none;
+    margin: $MOBILE_SLICE_MARGIN 0;
+    text-align: center;
+
+    @include tablet-size {
+        margin: $TABLET_SLICE_MARGIN 0;
+    }
+
+    @include desktop-size {
+        margin: $DESKTOP_SLICE_MARGIN 0;
+    }
+}
+
+.a-infinite__message-btn {
+    @include font-size(12px);
+    @include line-height(12px);
+
+    box-sizing: border-box;
+    width: 100%;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        max-width: 170px;
+    }
+}
+
+
+.a-footer {
+
+}
