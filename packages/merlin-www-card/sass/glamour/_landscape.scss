@@ -61,10 +61,17 @@
 
 @mixin card-landscape-large() {
     .c-card__obj__header {
+        padding-right: 30px;
         width: 35%;
     }
     .c-card__obj__body {
+        padding-right: 100px;
         width: 65%;
+    }
+    .c-card__title {
+        @include font-size(30px);
+        @include line-height(33px);
+        margin-bottom: 20px;
     }
 }
 
