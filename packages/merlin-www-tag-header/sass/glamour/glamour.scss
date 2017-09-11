@@ -106,14 +106,22 @@
 
 .tg-header__cards {
     margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
 
     .c-card-list__item {
         padding-bottom: 40px;
+    }
 
-        @include tablet-size {
-            padding-bottom: 80px;
-        }
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
     }
 }
 
