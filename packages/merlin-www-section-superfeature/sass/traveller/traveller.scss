@@ -91,7 +91,7 @@
 }
 
 .c-superfeature__title {
-	@include font("LULO ONE", 24px, 700, 32px);
+	@include font("LULO ONE", 24px, 700, 32px, -35);
 	color: $WHITE;
 	margin-bottom: 16px;
 	text-align: center;

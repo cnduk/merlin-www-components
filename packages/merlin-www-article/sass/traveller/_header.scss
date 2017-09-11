@@ -55,8 +55,7 @@
 	}
 
 	.a-header__title {
-		@include font("LULO ONE", 24px, 700, 32px);
-		letter-spacing: 0;
+		@include font("LULO ONE", 24px, 700, 32px, -35);
 		margin-bottom: 0;
 
 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
@@ -244,6 +243,7 @@
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 		@include font-size(46px);
 		@include line-height(54px);
+		letter-spacing: 0.06em;
 		margin-bottom: 19px;
 	}
 }

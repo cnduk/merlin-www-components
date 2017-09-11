@@ -24,7 +24,7 @@
 .c-card-section--c-tag,
 .c-card-section--c-contributors {
 	.c-card-section__title {
-		@include font("LULO ONE", 24px, 700, 28px);
+		@include font("LULO ONE", 24px, 700, 28px, -35);
 		color: $SHERPA-BLUE;
 		margin-bottom: 12px;
 		margin-top: 0;

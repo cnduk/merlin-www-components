@@ -60,7 +60,7 @@
 }
 
 .c-newsletter__title {
-    @include font("LULO ONE", 24px, 700, 28px);
+    @include font("LULO ONE", 24px, 700, 28px, -35);
     color: $WHITE;
     margin-bottom: 16px;
     margin-top: 0px;

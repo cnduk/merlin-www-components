@@ -122,7 +122,7 @@
 .tg-header__intro__image {}
 
 .tg-header__intro__title {
-	@include font("LULO ONE", 28px, 700, 32px);
+	@include font("LULO ONE", 28px, 700, 32px, -35);
 	color: $SHERPA-BLUE;
 	margin: 0 0 12px 0;
 	text-align: center;

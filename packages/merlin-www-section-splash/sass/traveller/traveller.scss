@@ -90,7 +90,7 @@
 }
 
 .c-splash-hero__title {
-	@include font("LULO ONE", 24px, 700, 32px);
+	@include font("LULO ONE", 24px, 700, 32px, -35);
 	color: $WHITE;
 	text-align: center;
 
