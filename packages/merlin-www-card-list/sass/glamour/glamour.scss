@@ -377,50 +377,27 @@
 
     .c-card-list__item {
         margin-top: 15px;
-        @include desktop-size {
-            margin-top: 30px;
-        }
         width: 100%;
 
         .c-card {
             border-top: 1px solid $COLOUR_BORDER_SOLID;
             padding-top: 15px;
-            @include desktop-size {
+        }
+
+        @include desktop-size {
+            margin-top: 30px;
+
+            .c-card {
                 padding-top: 30px;
-            }
-
-            &.c-card--dark {
-                border-top: 1px solid #333;
-            }
-
-            &.c-card--landscape {
-                @include desktop-size {
-                    .c-card__obj__header {
-                        padding-right: 30px;
-                    }
-
-                    .c-card__obj__body {
-                        padding-right: 100px;
-
-                        .c-card__title {
-                            @include font-size(30px);
-                            @include line-height(33px);
-                            margin-bottom: 20px;
-                        }
-                    }
-                }
             }
         }
 
         @include first(1){
             margin-top: 0;
+
             .c-card {
                 border-top: none;
                 padding-top: 0;
-
-                &.c-card--dark {
-                    border-top: none;
-                }
             }
         }
 
