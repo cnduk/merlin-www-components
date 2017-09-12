@@ -42,7 +42,10 @@
 }
 
 .n-main__cover__offer {
+    @include font("FREIGHT TEXT", 12px, 400, 16px);
+    color: $MUSTASAARI;
     display: inline-block;
+    font-style: italic;
     max-width: 144px;
     vertical-align: top;
     white-space: pre-line;
@@ -55,6 +58,7 @@ a.n-main__cover__btn {
 
     @include font-size(12px);
     @include line-height(12px);
+    font-style: normal;
     margin-top: 12px;
     padding: 10px;
     width: auto;
@@ -118,8 +122,8 @@ a.n-main__cover__btn {
     @include font("FREIGHT TEXT", 12px, 400, 16px);
     color: $MUSTASAARI;
     font-style: italic;
-    margin-bottom: 12px;
     max-width: 240px;
+    vertical-align: top;
     white-space: pre-line;
 }
 
