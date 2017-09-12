@@ -9,11 +9,7 @@
 
 @import "../wireframe/wireframe";
 
-.tg-header--video {
-    background-color: $COLOUR_BG_DARK;
-    color: $COLOUR_MAIN_DARK;
-    overflow: hidden;
-}
+
 
 .tg-header__wrapper {
     padding: 0 $MOBILE_SIDE_GUTTER;
@@ -125,27 +121,6 @@
     }
 }
 
-.tg-header--person {
-    .c-gallery-strip__wrapper {
-        box-sizing: border-box;
-        margin: 0 auto;
-        max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
-        padding-left: 0;
-        padding-right: 0;
-
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-            padding-left: $TABLET_SIDE_GUTTER;
-            padding-right: $TABLET_SIDE_GUTTER;
-        }
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            padding-left: $DESKTOP_SIDE_GUTTER;
-            padding-right: $DESKTOP_SIDE_GUTTER;
-        }
-    }
-}
-
-
 .tg-header__event-meta {
     @include font('GRAPHIK', 12px, 'NORMAL', 17px, 20);
 
@@ -165,4 +140,24 @@
 
     border-left: 1px solid rgba(0,0,0, .3);
     padding-left: 7px;
+}
+
+.tg-header--person {
+    .c-gallery-strip__wrapper {
+        box-sizing: border-box;
+        margin: 0 auto;
+        max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+        padding-left: 0;
+        padding-right: 0;
+
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            padding-left: $TABLET_SIDE_GUTTER;
+            padding-right: $TABLET_SIDE_GUTTER;
+        }
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            padding-left: $DESKTOP_SIDE_GUTTER;
+            padding-right: $DESKTOP_SIDE_GUTTER;
+        }
+    }
 }
