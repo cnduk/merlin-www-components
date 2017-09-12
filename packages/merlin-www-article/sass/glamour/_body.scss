@@ -71,46 +71,6 @@
     }
 }
 
-.a-related-tags {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
-    border-top: 1px solid rgba(0, 0, 0, 0.10);
-    margin: $MOBILE_SLICE_MARGIN (-$MOBILE_SIDE_GUTTER);
-    padding: 20px 0;
-
-    .c-topic-strip {
-        box-sizing: border-box;
-        padding-left: $MOBILE_SIDE_GUTTER;
-        padding-right: $MOBILE_SIDE_GUTTER;
-        text-align: left;
-    }
-
-    .c-topic-strip__item:first-child {
-        margin-left: 0;
-    }
-
-    @include tablet-size {
-        margin: $TABLET_SLICE_MARGIN 0;
-        padding: 15px 0;
-
-        .c-topic-strip {
-            padding-left: 0;
-            padding-right: 0;
-            white-space: normal;
-        }
-
-        .c-topic-strip__item {
-            margin: 5px 10px 5px 0;
-        }
-    }
-
-    @include desktop-size {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.10);
-        border-top: 1px solid rgba(0, 0, 0, 0.10);
-        margin: $DESKTOP_SLICE_MARGIN 0;
-        padding: 25px 0;
-    }
-}
-
 .a-footer--gallery {
 
 }

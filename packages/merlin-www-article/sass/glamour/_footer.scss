@@ -1,39 +1,3 @@
-// Footer share
-.a-footer-share {
-    @include section-margins;
-}
-
-.a-footer-share__title {
-    @include title-share;
-
-    margin: 0 0 15px;
-    text-transform: uppercase;
-}
-
-.a-footer-share__list-item {
-    svg {
-        width: 40%;
-    }
-}
-
-li.a-footer-share__list-item {
-    margin: 0 2px 0 0;
-    text-align: center;
-}
-
-.a-footer-share--dark {
-    background-color: $COLOUR_BG_DARK;
-    color: $COLOUR_MAIN_DARK;
-
-    .a-footer-share__title {
-        color: $COLOUR_MAIN_DARK;
-    }
-
-    .a-footer-share__separator {
-        border-bottom-color: $COLOUR_SEPARATOR_DARK;
-    }
-}
-
 // Footer sponsor
 .a-footer-sponsor {
     @include font-size(12px);
@@ -106,4 +70,20 @@ li.a-footer-share__list-item {
     @include font('GRAPHIK', 17px, 'SEMI BOLD');
 
     margin: 30px 0;
+}
+
+.a-related-tags {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    border-top: 1px solid rgba(0, 0, 0, 0.10);
+    margin: $MOBILE_SLICE_MARGIN (-$MOBILE_SIDE_GUTTER);
+    padding: 20px 0;
+
+    @include tablet-size {
+        margin: $TABLET_SLICE_MARGIN 0;
+    }
+
+    @include desktop-size {
+        margin: $DESKTOP_SLICE_MARGIN 0;
+        padding: 25px 0;
+    }
 }

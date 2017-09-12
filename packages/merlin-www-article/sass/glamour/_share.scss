@@ -1,0 +1,35 @@
+// Footer share
+.a-share {
+    @include section-margins;
+}
+
+.a-share__title {
+    @include title-share;
+
+    margin: 0 0 15px;
+    text-transform: uppercase;
+}
+
+.a-share__list-item {
+    svg {
+        width: 40%;
+    }
+}
+
+li.a-share__list-item {
+    margin: 0 2px 0 0;
+    text-align: center;
+}
+
+.a-share--dark {
+    background-color: $COLOUR_BG_DARK;
+    color: $COLOUR_MAIN_DARK;
+
+    .a-share__title {
+        color: $COLOUR_MAIN_DARK;
+    }
+
+    .a-share__separator {
+        border-bottom-color: $COLOUR_SEPARATOR_DARK;
+    }
+}
