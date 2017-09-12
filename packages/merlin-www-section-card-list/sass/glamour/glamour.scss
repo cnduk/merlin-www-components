@@ -62,7 +62,8 @@
 //     }
 // }
 
-.c-card-section--tg-articles {
+.c-card-section--tg-articles,
+.c-card-section--v-articles {
     .c-card-section__title {
         @include title-section;
 
