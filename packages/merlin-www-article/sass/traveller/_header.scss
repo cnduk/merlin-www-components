@@ -411,7 +411,7 @@ li.a-header__meta-item {
 		transform: translateX(-50%);
 		width: 120px;
 
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		@include min-screen($ARTICLE_TOTAL) {
 			display: none;
 		}
 	}
@@ -428,7 +428,7 @@ li.a-header__meta-item {
 	text-transform: lowercase;
 	white-space: nowrap;
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	@include min-screen($ARTICLE_TOTAL) {
 		display: table-cell;
 		padding: 0;
 		vertical-align: middle;
@@ -451,7 +451,7 @@ li.a-header__meta-item {
 	    width: auto;
 	}
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	@include min-screen($ARTICLE_TOTAL) {
 		display: table-cell;
 		margin-top: 0;
 		padding-left: 16px;
