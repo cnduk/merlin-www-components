@@ -292,24 +292,38 @@
     }
 }
 
+
+
+
 .ad--tag-rail {
-    margin: 60px -5px;
+    margin-bottom: 60px;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    margin-top: 60px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: -$TABLET_SIDE_GUTTER;
-        margin-right: -$TABLET_SIDE_GUTTER;
+        margin-left: -$TABLET_SIDE_GUTTER + 20;
+        margin-right: -$TABLET_SIDE_GUTTER + 20;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         clear: right;
         float: right;
-        margin: 0 0 0 60px;
+        margin: 0 -340px 0 40px;
+
+        &.stick-wrapper--fixed {
+            margin-right: -40px;
+        }
+
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include min-screen(940px) {
         .ad__container {
-            background-color: none;
+            background: transparent;
             padding: 0;
+        }
+        .ad__title {
+            display: none;
         }
     }
 }
@@ -320,5 +334,37 @@
         position: absolute;
         top: 0;
     }
+}
+
+
+.ad--tag-inline,
+.ad--tag-infinite {
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+
+.ad--tag-inline {
+
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
+        margin-left: 0;
+        margin-right: -340px;
+
+        .ad__block {
+            left: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            right: 50%;
+            width: 100vw;
+        }
+    }
+
 }
 
