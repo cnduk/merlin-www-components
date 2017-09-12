@@ -146,6 +146,10 @@
 .bb-gallery--show-summary {
     margin-top: 0;
 
+    .bb-gallery__link {
+        z-index: 2;
+    }
+
     .bb-gallery__col:first-child:before {
         @include c-card-label($COLOR_TYPE_LINK, #fff, 'VIEW COLLECTION');
         padding: 14px 10px 14px 12px;
