@@ -129,7 +129,7 @@ Playlist.prototype = inherit(EventEmitter.prototype, {
             },
             "url": function infiniteScrollUrl(pageCounter){
                 var url = getStorage('playlist_infinite_url');
-                return location.origin + url + '?page=' + pageCounter;
+                return location.origin + url + '?page=' + (pageCounter + 1);
             }
         });
 
