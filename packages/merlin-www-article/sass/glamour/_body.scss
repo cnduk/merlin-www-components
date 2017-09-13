@@ -1,48 +1,6 @@
-.a-body {
-    box-sizing: border-box;
-    margin-top: $MOBILE_SLICE_MARGIN - 10;
-    margin-bottom: $MOBILE_SLICE_MARGIN;
-    padding-left: $MOBILE_SIDE_GUTTER;
-    padding-right: $MOBILE_SIDE_GUTTER;
-    width: 100%;
 
-    @include common-medium-size() {
-        margin-top: $TABLET_SLICE_MARGIN - 20;
-        margin-bottom: $TABLET_SLICE_MARGIN;
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
-    }
-
-    @include common-large-size() {
-        margin-top: $DESKTOP_SLICE_MARGIN - 20;
-        margin-bottom: $DESKTOP_SLICE_MARGIN;
-        padding-left: $DESKTOP_SIDE_GUTTER;
-        padding-right: $DESKTOP_SIDE_GUTTER;
-    }
-}
 .a-body__clear {
     clear: both;
-}
-
-.a-body__wrapper {
-    box-sizing: border-box;
-    margin: 0 auto;
-    max-width: $ARTICLE_TOTAL;
-    position: relative;
-    width: 100%;
-    word-wrap: break-word;
-
-    @include common-large-size(){
-        padding: 0 $ARTICLE_RIGHT_TOTAL 0 0;
-    }
-
-    @include article-large-size(){
-        padding: 0 $ARTICLE_RIGHT_TOTAL 0 $ARTICLE_LEFT_TOTAL;
-    }
-
-    > p:first-of-type::first-line {
-        @include font-weight('MEDIUM');
-    }
 }
 
 .a-body--gallery {
@@ -61,6 +19,9 @@
 
 // Im not sure about this
 .a-body__content {
+    > p:first-child {
+        margin-top: 0;
+    }
     a:not([class]) {
         @include link-styles;
     }

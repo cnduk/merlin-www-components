@@ -1,0 +1,88 @@
+.a-logo {}
+.a-logo--video {
+    background-color: $COLOUR_BG_DARK;
+    color: $COLOUR_MAIN_DARK;
+    overflow: hidden;
+    padding: 60px 0 40px 0;
+
+    .a-logo__wrapper {
+        margin: 0 auto;
+        width: 250px;
+    }
+
+    svg {
+        width: 100%;
+    }
+}
+
+
+
+
+.a-video {
+    &::before {
+        background-color: $COLOUR_BG_DARK;
+        content: '';
+        height: 100%;
+        position: absolute;
+        width: 100%;
+    }
+}
+.a-video__wrapper {}
+
+
+.a-video__player {}
+.a-video__player__wrapper {}
+
+
+
+
+
+
+
+
+
+.a-video__sidebar {
+    background-color: $COLOUR_BG_FOOTER;
+    box-sizing: border-box;
+    padding: 0 15px 15px;
+
+    &::before {
+        background: linear-gradient(to top, #000, transparent);
+        bottom: 0;
+        content: '';
+        height: 60px;
+        left: 0;
+        position: absolute;
+        top: auto;
+        width: 100%;
+        z-index: 1;
+    }
+}
+
+// .a-video__sidebar__wrapper {}
+
+.a-video__sidebar__title {
+    @include font('GRAPHIK', 15px, 500, 15px, 20);
+    color: $COLOUR_MAIN_DARK;
+    margin: 0;
+    padding: 20px 0;
+    position: relative;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.a-video__sidebar__list {
+    left: 15px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+    right: 0;
+}
+
+.a-video__ad {
+    margin-bottom: 40px;
+
+    @include desktop-size{
+        margin-bottom: 0;
+        top: $PADDING_X_LARGE;
+    }
+}

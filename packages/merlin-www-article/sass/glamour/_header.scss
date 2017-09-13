@@ -229,10 +229,13 @@
 .a-header__meta {
     @include meta-default;
 }
-.a-header__meta-item {
+li.a-header__meta-item {
     @include global-meta-item;
-
     display: inline-block;
+
+    &:last-child {
+        padding-right: 0;
+    }
 
     .a-header--dark & {
         @include meta-item-dark;
@@ -240,10 +243,6 @@
         & + .a-header__meta-item {
             @include meta-item-dark-sibling;
         }
-    }
-
-    &:last-child {
-        padding-right: 0;
     }
 }
 
@@ -355,4 +354,8 @@ li.a-header__share-item {
     @include tablet-size {
         display: inline-block;
     }
+}
+
+.a-header--video {
+    margin-bottom: 0;
 }
