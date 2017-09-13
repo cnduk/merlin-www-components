@@ -153,7 +153,8 @@
     }
 }
 
-.c-card-section--mag-articles {
+.c-card-section--mag-articles,
+.c-card-section--v-genre-articles {
     .c-card-section__title {
         @include title-section;
 
@@ -325,4 +326,32 @@
         }
     }
 
+}
+
+.c-card-section--v-related-articles {
+    background-color: $COLOUR_BG_DARK;
+    color: #fff;
+    max-width: none;
+    padding-bottom: $PADDING_SMALL;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+
+    .c-card-section__title {
+        @include font("GRAPHIK", 15px, 'MEDIUM', 16px);
+        color: #fff;
+        letter-spacing: 0.5px;
+        margin: 0;
+        padding: $PADDING_SMALL 0;
+        position: relative;
+        text-transform: uppercase;
+    }
+
+    @include tablet-size {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include desktop-size {
+        display: none;
+    }
 }
