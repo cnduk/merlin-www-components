@@ -532,3 +532,22 @@
         // }
     }
 }
+
+.c-card-list--v-related-articles {
+
+    .c-card-list__item {
+        @include transition(opacity 0.3s ease-out)
+        opacity: 1;
+        width: 100%;
+
+        &.is-active {
+            opacity: 0.5;
+        }
+    }
+
+    .c-card-list__item + .c-card-list__item {
+        border-top: 1px solid $COLOUR_SEPARATOR;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+}
