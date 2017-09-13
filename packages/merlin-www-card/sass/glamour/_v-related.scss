@@ -1,0 +1,38 @@
+// -------------------- //
+// v-related
+// -------------------- //
+@mixin card-v-related() {
+    @include card-landscape;
+
+    .c-card__title {
+        @include font-size(14px);
+        @include line-height(18px);
+        margin-bottom: 8px;
+    }
+}
+
+@mixin card-v-related-small() {
+    @include card-landscape-small;
+}
+
+@mixin card-v-related-large() {
+    @include card-landscape-large;
+}
+
+.c-card--v-related {
+    @include card-v-related();
+    @include card-v-related-small();
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include card-v-related-large();
+    }
+}
+
+.c-card--v-related-small {
+    @include card-v-related();
+    @include card-v-related-small();
+}
+
+.c-card--v-related-large {
+    @include card-v-related();
+    @include card-v-related-large();
+}
