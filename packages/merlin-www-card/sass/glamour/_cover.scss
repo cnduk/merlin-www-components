@@ -1,0 +1,45 @@
+// -------------------- //
+// Cover
+// -------------------- //
+@mixin card-cover() {
+    @include card-portrait;
+    .c-card__image--custom {
+        padding-top: 131.7307692%;
+    }
+    .c-card__title {
+        margin: 15px 0 0;
+        text-align: center;
+    }
+}
+@mixin card-cover-small() {
+    @include card-portrait-small;
+    .c-card__title {
+        @include font('GRAPHIK', 15px, 400, null, 20);
+        padding-bottom: 0;
+    }
+}
+@mixin card-cover-large() {
+    @include card-portrait-large;
+    .c-card__title {
+        @include font('GRAPHIK', 17px, 400, null, 20);
+        padding-bottom: 20px;
+    }
+}
+
+.c-card--cover {
+    @include card-cover;
+    @include card-cover-small;
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include card-cover-large;
+    }
+}
+
+.c-card--cover-small {
+    @include card-cover();
+    @include card-cover-small();
+}
+
+.c-card--cover-large {
+    @include card-cover();
+    @include card-cover-large();
+}
