@@ -1,53 +1,46 @@
 .c-card--dark {
 
-    &.c-card--inline {
-        background-color: transparent;
+    .c-card__title {
+        color: $COLOUR_MAIN_DARK;
     }
 
-    &.c-card--landscape,
-    &.c-card--portrait,
-    &.c-card--switcher,
-    &.c-card--inline,
-    &.c-card--thumbnail {
+    .c-card__teaser,
+    .c-card__meta,
+    .c-card__byline,
+    .c-card__sponsor,
+    .c-card__meta-item--tag,
+    .c-card__tag {
+        color: $COLOUR_META_DARK;
+    }
 
-        .c-card__title {
-            color: $COLOUR_MAIN_DARK;
-        }
+    .c-card__image__icon {
+        background: $COLOUR_BG_DARK;
+    }
 
-        .c-card__teaser,
-        .c-card__meta,
-        .c-card__byline,
-        .c-card__sponsor,
-        .c-card__meta-item--tag,
-        .c-card__tag {
-            color: $COLOUR_META_DARK;
+    .c-card__image__icon--video {
+        path {
+            fill: $COLOUR_MAIN_DARK;
         }
+    }
 
-        .c-card__image__icon {
-            background: $COLOUR_BG_DARK;
-        }
+    // Need to be specific to overwrite global__list-reset
+    li.c-card__meta-item {
+        @include meta-item-dark;
+    }
 
-        .c-card__image__icon--video {
-            path {
-                fill: $COLOUR_MAIN_DARK;
-            }
-        }
+    li.c-card__meta-item +  li.c-card__meta-item {
+        @include meta-item-dark-sibling;
+    }
 
-        // Need to be specific to overwrite global__list-reset
-        li.c-card__meta-item {
-            @include meta-item-dark;
+    .c-card__meta-item--gallery,
+    .c-card__meta-item--duration {
+        path {
+            fill: $COLOUR_META_DARK;
         }
+    }
 
-        li.c-card__meta-item +  li.c-card__meta-item {
-            @include meta-item-dark-sibling;
-        }
-
-        .c-card__meta-item--gallery,
-        .c-card__meta-item--duration {
-            path {
-                fill: $COLOUR_META_DARK;
-            }
-        }
+    &.c-card--inline {
+        background-color: transparent;
     }
 
 }
