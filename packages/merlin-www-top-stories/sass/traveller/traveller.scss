@@ -26,13 +26,10 @@
     box-sizing: border-box;
     position: relative;
     padding-left: 30px;
+    transform: translateZ(0);
 
     @media (min-width: 1440px) and (max-width: 1500px) {
-        @for $i from 0 through 60 {
-            @media (min-width: 1440px + $i) {
-                padding-left: #{(30 - $i/2)}px;
-            }
-        }
+        padding-left: calc(30px - (100vw - 1440px)/2 );
     }
 
     @include min-screen(1500px) {
@@ -75,14 +72,11 @@
     max-width: $MAXIMUM_PAGE_WIDTH;
     overflow-y: hidden;
     padding-left: 30px;
+    transform: translateZ(0);
 
     @media (min-width: 1440px) and (max-width: 1500px) {
-        @for $i from 0 through 60 {
-            @media (min-width: 1440px + $i) {
-                padding-left: #{(30 - $i/2)}px;
-                margin-left: -#{(30 - $i/2)}px;
-            }
-        }
+        padding-left: calc(30px - (100vw - 1440px)/2 );
+        margin-left: calc(-30px + (100vw - 1440px)/2 );
     }
 
     @include min-screen(1500px) {
