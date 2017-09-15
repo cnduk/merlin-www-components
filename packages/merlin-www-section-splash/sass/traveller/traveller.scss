@@ -82,6 +82,7 @@
 	margin: 0 auto 14px auto;
 	padding-bottom: 4px;
 	text-align: center;
+	text-shadow: 0 0 16px rgba($MUSTASAARI, 0.2);
 	text-transform: uppercase;
 
 	@include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
@@ -93,6 +94,7 @@
 	@include font("LULO ONE", 24px, 700, 32px, -35);
 	color: $WHITE;
 	text-align: center;
+	text-shadow: 0 0 16px rgba($MUSTASAARI, 0.2);
 
     @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
     	@include font-size(40px);

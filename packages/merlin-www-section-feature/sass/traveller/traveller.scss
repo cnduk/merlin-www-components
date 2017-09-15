@@ -99,7 +99,7 @@
     	background-color: $WHITE;
     	box-sizing: border-box;
     	margin: 0px;
-    	padding: 40px;
+    	padding: 36px;
     	position: absolute;
     	top: 50%;
     	transform: translateY(-50%);
@@ -175,10 +175,10 @@
 	text-transform: uppercase;
 
     @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
-    	@include font-size(34px);
-    	@include line-height(36px);
+    	@include font-size(28px);
+    	@include line-height(32px);
     	letter-spacing: 2px;
-    	margin-bottom: 16px;
+    	margin-bottom: 12px;
     	margin-top: 0;
     }
 }
@@ -190,7 +190,7 @@
     	@include font("PROXIMA NOVA CONDENSED", 16px, 400, 20px);
     	color: $RAVEN;
     	display: block;
-    	margin: 16px 0;
+    	margin: 12px 0 16px 0;
     	letter-spacing: 1px;
     	text-align: center;
     }
