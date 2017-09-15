@@ -142,6 +142,24 @@
     padding-left: 7px;
 }
 
+.tg-header--profile {
+    .tg-header__intro__image {
+        margin-bottom: 15px;
+        width: 120px;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    @include desktop-size {
+        .tg-header__intro__image {
+            margin-bottom: 20px;
+            width: 150px;
+        }
+    }
+}
+
 .tg-header--person {
     .c-gallery-strip__wrapper {
         box-sizing: border-box;
