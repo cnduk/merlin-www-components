@@ -43,9 +43,12 @@
 }
 
 .a-author__image {
-    border-radius: 51%;
     margin-bottom: 15px;
     width: 60%;
+
+    img {
+        border-radius: 50%;
+    }
 }
 
 .a-author__separator,
