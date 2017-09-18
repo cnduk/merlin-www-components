@@ -190,25 +190,26 @@
 }
 
 .ad--tag-rail {
+    display: block;
     margin: 60px (-$MOBILE_SIDE_GUTTER);
+    width: calc(100% + #{$MOBILE_SIDE_GUTTER*2});
 
     @include tablet-size {
-        margin-left: (-$TABLET_SIDE_GUTTER + 20);
-        margin-right: (-$TABLET_SIDE_GUTTER + 20);
+        margin-left: (-$TABLET_SIDE_GUTTER);
+        margin-right: (-$TABLET_SIDE_GUTTER);
+        width: calc(100% + #{$TABLET_SIDE_GUTTER*2});
     }
 
     @include desktop-size {
         clear: right;
         float: right;
         margin: 0 -340px 0 40px;
+        width: auto;
 
         &.stick-wrapper--fixed {
             margin-right: -40px;
         }
 
-    }
-
-    @include min-screen(940px) {
         .ad__container {
             background: transparent;
             padding: 0;
@@ -217,6 +218,7 @@
         .ad__title {
             display: none;
         }
+
     }
 }
 
