@@ -158,9 +158,27 @@ $C_CARD_BUM_MARGIN: 0;
 .c-card-list--s-results,
 .c-card-list--v-genre-articles,
 .c-card-list--c-video-articles,
-.c-card-list--v-articles,
 .c-card-list--g-recommended {
     @include cl-one-two-four;
+}
+
+.c-card-list--v-articles {
+    @include cl-base;
+    @include cl-one;
+    @include cl-two;
+
+    @include four-column-size {
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: -$C_CARD_GUTTER;
+        margin-top: -$C_CARD_GUTTER;
+
+        .c-card-list__item {
+            margin-bottom: $C_CARD_GUTTER;
+            margin-top: $C_CARD_GUTTER;
+            width: 33.33%;
+        }
+    }
 }
 
 .c-card-list--a-recommended,
