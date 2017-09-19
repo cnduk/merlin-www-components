@@ -1,0 +1,1420 @@
+{
+    "data": {
+        "recommended": {
+            "type": "SectionCardlist",
+            "state": {
+                "is_show_season": false,
+                "is_gallery": false,
+                "is_contributors": false,
+                "is_tag": false,
+                "is_superfeature": false,
+                "is_show_summary": false,
+                "is_newsletter": false,
+                "is_cardlist": true,
+                "is_magazine": false,
+                "is_feature": false
+            },
+            "data": {
+                "card_list": {
+                    "type": "List",
+                    "state": {},
+                    "data": {
+                        "items": [{
+                            "type": "ListItem",
+                            "state": {
+                                "is_first": true,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "SwitcherCard",
+                                    "state": {
+                                        "is_thumbnail": false,
+                                        "is_hero": false,
+                                        "is_switcher": true,
+                                        "is_contributor": false,
+                                        "is_show": false,
+                                        "is_magazine": false,
+                                        "is_top_stories": false,
+                                        "is_landscape": false,
+                                        "is_portrait": false
+                                    },
+                                    "data": {
+                                        "primary_tag": null,
+                                        "byline": "Kelly Gilbert",
+                                        "title": "What Supp? All You Need To Know About Supplements",
+                                        "review_information": null,
+                                        "meta_list": {
+                                            "type": "List",
+                                            "state": {},
+                                            "data": {
+                                                "items": [{
+                                                    "type": "ListItem",
+                                                    "state": {
+                                                        "is_first": true,
+                                                        "is_last": false
+                                                    },
+                                                    "data": {
+                                                        "item": {
+                                                            "type": "Meta",
+                                                            "state": {},
+                                                            "data": {
+                                                                "title": "Beauty",
+                                                                "meta_type": "tag",
+                                                                "link": {
+                                                                    "type": "Link",
+                                                                    "state": {
+                                                                        "is_blank": false
+                                                                    },
+                                                                    "data": {
+                                                                        "url": "http://butts/topic/beauty/",
+                                                                        "title": "Beauty"
+                                                                    },
+                                                                    "style": {
+                                                                        "cls": ""
+                                                                    }
+                                                                },
+                                                                "icon": null
+                                                            },
+                                                            "style": {
+                                                                "cls": ""
+                                                            }
+                                                        },
+                                                        "index": 0
+                                                    },
+                                                    "style": {
+                                                        "cls": ""
+                                                    }
+                                                }, {
+                                                    "type": "ListItem",
+                                                    "state": {
+                                                        "is_first": false,
+                                                        "is_last": true
+                                                    },
+                                                    "data": {
+                                                        "item": {
+                                                            "type": "Meta",
+                                                            "state": {},
+                                                            "data": {
+                                                                "title": "23 Sep 2016",
+                                                                "meta_type": "date",
+                                                                "link": null,
+                                                                "icon": null
+                                                            },
+                                                            "style": {
+                                                                "cls": ""
+                                                            }
+                                                        },
+                                                        "index": 1
+                                                    },
+                                                    "style": {
+                                                        "cls": ""
+                                                    }
+                                                }],
+                                                "length": 2
+                                            },
+                                            "style": {
+                                                "cls": ""
+                                            }
+                                        },
+                                        "image_list": {
+                                            "type": "List",
+                                            "state": {},
+                                            "data": {
+                                                "items": [{
+                                                    "type": "ListItem",
+                                                    "state": {
+                                                        "is_first": true,
+                                                        "is_last": false
+                                                    },
+                                                    "data": {
+                                                        "item": {
+                                                            "type": "Image",
+                                                            "state": {
+                                                                "is_static": false,
+                                                                "is_portrait": false,
+                                                                "is_image": true,
+                                                                "is_square": true,
+                                                                "is_svg": false,
+                                                                "is_lazyload": true,
+                                                                "is_linked": false,
+                                                                "is_picture": false,
+                                                                "is_landscape": false
+                                                            },
+                                                            "data": {
+                                                                "credit": null,
+                                                                "image_url": "https://vg-images.condecdn.net/image/Awo1pxR3WKX/crop/200/square",
+                                                                "description": null,
+                                                                "title": null,
+                                                                "orientation": "square",
+                                                                "srcset": "https://vg-images.condecdn.net/image/Awo1pxR3WKX/crop/200/square 200w, https://vg-images.condecdn.net/image/Awo1pxR3WKX/crop/300/square 300w, https://vg-images.condecdn.net/image/Awo1pxR3WKX/crop/400/square 400w, https://vg-images.condecdn.net/image/Awo1pxR3WKX/crop/600/square 600w, https://vg-images.condecdn.net/image/Awo1pxR3WKX/crop/900/square 900w",
+                                                                "look_number": null,
+                                                                "width": null,
+                                                                "alt_text": null,
+                                                                "uid": "Awo1pxR3WKX"
+                                                            },
+                                                            "style": {
+                                                                "padding_top": "100%",
+                                                                "cls": "img-lazyload "
+                                                            }
+                                                        },
+                                                        "index": 0
+                                                    },
+                                                    "style": {
+                                                        "cls": "c-card__image--square"
+                                                    }
+                                                }],
+                                                "length": 1
+                                            },
+                                            "style": {
+                                                "cls": ""
+                                            }
+                                        },
+                                        "teaser": null,
+                                        "link": {
+                                            "type": "Link",
+                                            "state": {
+                                                "is_blank": false
+                                            },
+                                            "data": {
+                                                "url": "/article/best-anti-ageing-supplements",
+                                                "title": "What Supp? All You Need To Know About Supplements"
+                                            },
+                                            "style": {
+                                                "cls": ""
+                                            }
+                                        },
+                                        "sponsor": null,
+                                        "event_information": null,
+                                        "icon": null
+                                    },
+                                    "style": {
+                                        "cls": "c-card--switcher"
+                                    }
+                                },
+                                "index": 0
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }, {
+                            "type": "ListItem",
+                            "state": {
+                                "is_first": false,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "SwitcherCard",
+                                    "state": {
+                                        "is_thumbnail": false,
+                                        "is_hero": false,
+                                        "is_switcher": true,
+                                        "is_contributor": false,
+                                        "is_show": false,
+                                        "is_magazine": false,
+                                        "is_top_stories": false,
+                                        "is_landscape": false,
+                                        "is_portrait": false
+                                    },
+                                    "data": {
+                                        "primary_tag": null,
+                                        "byline": "Lisa Niven",
+                                        "title": "What Is Athleisure Beauty, Anyway?",
+                                        "review_information": null,
+                                        "meta_list": {
+                                            "type": "List",
+                                            "state": {},
+                                            "data": {
+                                                "items": [{
+                                                    "type": "ListItem",
+                                                    "state": {
+                                                        "is_first": true,
+                                                        "is_last": false
+                                                    },
+                                                    "data": {
+                                                        "item": {
+                                                            "type": "Meta",
+                                                            "state": {},
+                                                            "data": {
+                                                                "title": "On Instagram",
+                                                                "meta_type": "tag",
+                                                                "link": {
+                                                                    "type": "Link",
+                                                                    "state": {
+                                                                        "is_blank": false
+                                                                    },
+                                                                    "data": {
+                                                                        "url": "http://butts/topic/on-instagram/",
+                                                                        "title": "On Instagram"
+                                                                    },
+                                                                    "style": {
+                                                                        "cls": ""
+                                                                    }
+                                                                },
+                                                                "icon": null
+                                                            },
+                                                            "style": {
+                                                                "cls": ""
+                                                            }
+                                                        },
+                                                        "index": 0
+                                                    },
+                                                    "style": {
+                                                        "cls": ""
+                                                    }
+                                                }, {
+                                                    "type": "ListItem",
+                                                    "state": {
+                                                        "is_first": false,
+                                                        "is_last": true
+                                                    },
+                                                    "data": {
+                                                        "item": {
+                                                            "type": "Meta",
+                                                            "state": {},
+                                                            "data": {
+                                                                "title": "05 Mar 2017",
+                                                                "meta_type": "date",
+                                                                "link": null,
+                                                                "icon": null
+                                                            },
+                                                            "style": {
+                                                                "cls": ""
+                                                            }
+                                                        },
+                                                        "index": 1
+                                                    },
+                                                    "style": {
+                                                        "cls": ""
+                                                    }
+                                                }],
+                                                "length": 2
+                                            },
+                                            "style": {
+                                                "cls": ""
+                                            }
+                                        },
+                                        "image_list": {
+                                            "type": "List",
+                                            "state": {},
+                                            "data": {
+                                                "items": [{
+                                                    "type": "ListItem",
+                                                    "state": {
+                                                        "is_first": true,
+                                                        "is_last": false
+                                                    },
+                                                    "data": {
+                                                        "item": {
+                                                            "type": "Image",
+                                                            "state": {
+                                                                "is_static": false,
+                                                                "is_portrait": false,
+                                                                "is_image": true,
+                                                                "is_square": true,
+                                                                "is_svg": false,
+                                                                "is_lazyload": true,
+                                                                "is_linked": false,
+                                                                "is_picture": false,
+                                                                "is_landscape": false
+                                                            },
+                                                            "data": {
+                                                                "credit": null,
+                                                                "image_url": "https://vg-images.condecdn.net/image/lK8545xoem5/crop/200/square",
+                                                                "description": null,
+                                                                "title": null,
+                                                                "orientation": "square",
+                                                                "srcset": "https://vg-images.condecdn.net/image/lK8545xoem5/crop/200/square 200w, https://vg-images.condecdn.net/image/lK8545xoem5/crop/300/square 300w, https://vg-images.condecdn.net/image/lK8545xoem5/crop/400/square 400w, https://vg-images.condecdn.net/image/lK8545xoem5/crop/600/square 600w, https://vg-images.condecdn.net/image/lK8545xoem5/crop/900/square 900w",
+                                                                "look_number": null,
+                                                                "width": null,
+                                                                "alt_text": null,
+                                                                "uid": "lK8545xoem5"
+                                                            },
+                                                            "style": {
+                                                                "padding_top": "100%",
+                                                                "cls": "img-lazyload "
+                                                            }
+                                                        },
+                                                        "index": 0
+                                                    },
+                                                    "style": {
+                                                        "cls": "c-card__image--square"
+                                                    }
+                                                }],
+                                                "length": 1
+                                            },
+                                            "style": {
+                                                "cls": ""
+                                            }
+                                        },
+                                        "teaser": null,
+                                        "link": {
+                                            "type": "Link",
+                                            "state": {
+                                                "is_blank": false
+                                            },
+                                            "data": {
+                                                "url": "/gallery/what-is-athleisure-beauty-anyway",
+                                                "title": "What Is Athleisure Beauty, Anyway?"
+                                            },
+                                            "style": {
+                                                "cls": ""
+                                            }
+                                        },
+                                        "sponsor": null,
+                                        "event_information": null,
+                                        "icon": {
+                                            "type": "SVG",
+                                            "state": {
+                                                "is_static": false,
+                                                "is_portrait": false,
+                                                "is_image": false,
+                                                "is_square": false,
+                                                "is_svg": true,
+                                                "is_lazyload": true,
+                                                "is_linked": false,
+                                                "is_picture": false,
+                                                "is_landscape": false
+                                            },
+                                            "data": {
+                                                "credit": null,
+                                                "description": null,
+                                                "title": null,
+                                                "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
+                                                "look_number": null,
+                                                "width": null,
+                                                "alt_text": null
+                                            },
+                                            "style": {
+                                                "cls": "img-lazyload "
+                                            }
+                                        }
+                                    },
+                                    "style": {
+                                        "cls": "c-card--switcher"
+                                    }
+                                },
+                                "index": 1
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }, {
+                            "type": "ListItem",
+                            "state": {
+                                "is_first": false,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "SwitcherCard",
+                                    "state": {
+                                        "is_thumbnail": false,
+                                        "is_hero": false,
+                                        "is_switcher": true,
+                                        "is_contributor": false,
+                                        "is_show": false,
+                                        "is_magazine": false,
+                                        "is_top_stories": false,
+                                        "is_landscape": false,
+                                        "is_portrait": false
+                                    },
+                                    "data": {
+                                        "primary_tag": null,
+                                        "byline": "Katie Berrington",
+                                        "title": "McQueen The Play: What We Know ",
+                                        "review_information": null,
+                                        "meta_list": {
+                                            "type": "List",
+                                            "state": {},
+                                            "data": {
+                                                "items": [{
+                                                    "type": "ListItem",
+                                                    "state": {
+                                                        "is_first": true,
+                                                        "is_last": false
+                                                    },
+                                                    "data": {
+                                                        "item": {
+                                                            "type": "Meta",
+                                                            "state": {},
+                                                            "data": {
+                                                                "title": "Arts",
+                                                                "meta_type": "tag",
+                                                                "link": {
+                                                                    "type": "Link",
+                                                                    "state": {
+                                                                        "is_blank": false
+                                                                    },
+                                                                    "data": {
+                                                                        "url": "http://butts/topic/arts/",
+                                                                        "title": "Arts"
+                                                                    },
+                                                                    "style": {
+                                                                        "cls": ""
+                                                                    }
+                                                                },
+                                                                "icon": null
+                                                            },
+                                                            "style": {
+                                                                "cls": ""
+                                                            }
+                                                        },
+                                                        "index": 0
+                                                    },
+                                                    "style": {
+                                                        "cls": ""
+                                                    }
+                                                }, {
+                                                    "type": "ListItem",
+                                                    "state": {
+                                                        "is_first": false,
+                                                        "is_last": true
+                                                    },
+                                                    "data": {
+                                                        "item": {
+                                                            "type": "Meta",
+                                                            "state": {},
+                                                            "data": {
+                                                                "title": "12 May 2015",
+                                                                "meta_type": "date",
+                                                                "link": null,
+                                                                "icon": null
+                                                            },
+                                                            "style": {
+                                                                "cls": ""
+                                                            }
+                                                        },
+                                                        "index": 1
+                                                    },
+                                                    "style": {
+                                                        "cls": ""
+                                                    }
+                                                }],
+                                                "length": 2
+                                            },
+                                            "style": {
+                                                "cls": ""
+                                            }
+                                        },
+                                        "image_list": {
+                                            "type": "List",
+                                            "state": {},
+                                            "data": {
+                                                "items": [{
+                                                    "type": "ListItem",
+                                                    "state": {
+                                                        "is_first": true,
+                                                        "is_last": false
+                                                    },
+                                                    "data": {
+                                                        "item": {
+                                                            "type": "Image",
+                                                            "state": {
+                                                                "is_static": false,
+                                                                "is_portrait": false,
+                                                                "is_image": true,
+                                                                "is_square": true,
+                                                                "is_svg": false,
+                                                                "is_lazyload": true,
+                                                                "is_linked": false,
+                                                                "is_picture": false,
+                                                                "is_landscape": false
+                                                            },
+                                                            "data": {
+                                                                "credit": null,
+                                                                "image_url": "https://vg-images.condecdn.net/image/8DMKpAA8AqW/crop/200/square",
+                                                                "description": null,
+                                                                "title": null,
+                                                                "orientation": "square",
+                                                                "srcset": "https://vg-images.condecdn.net/image/8DMKpAA8AqW/crop/200/square 200w, https://vg-images.condecdn.net/image/8DMKpAA8AqW/crop/300/square 300w, https://vg-images.condecdn.net/image/8DMKpAA8AqW/crop/400/square 400w, https://vg-images.condecdn.net/image/8DMKpAA8AqW/crop/600/square 600w, https://vg-images.condecdn.net/image/8DMKpAA8AqW/crop/900/square 900w",
+                                                                "look_number": null,
+                                                                "width": null,
+                                                                "alt_text": null,
+                                                                "uid": "8DMKpAA8AqW"
+                                                            },
+                                                            "style": {
+                                                                "padding_top": "100%",
+                                                                "cls": "img-lazyload "
+                                                            }
+                                                        },
+                                                        "index": 0
+                                                    },
+                                                    "style": {
+                                                        "cls": "c-card__image--square"
+                                                    }
+                                                }],
+                                                "length": 1
+                                            },
+                                            "style": {
+                                                "cls": ""
+                                            }
+                                        },
+                                        "teaser": null,
+                                        "link": {
+                                            "type": "Link",
+                                            "state": {
+                                                "is_blank": false
+                                            },
+                                            "data": {
+                                                "url": "/article/mcqueen-play-west-end-opening",
+                                                "title": "McQueen The Play: What We Know "
+                                            },
+                                            "style": {
+                                                "cls": ""
+                                            }
+                                        },
+                                        "sponsor": null,
+                                        "event_information": null,
+                                        "icon": null
+                                    },
+                                    "style": {
+                                        "cls": "c-card--switcher"
+                                    }
+                                },
+                                "index": 2
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }, {
+                            "type": "ListItem",
+                            "state": {
+                                "is_first": false,
+                                "is_last": true
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "SwitcherCard",
+                                    "state": {
+                                        "is_thumbnail": false,
+                                        "is_hero": false,
+                                        "is_switcher": true,
+                                        "is_contributor": false,
+                                        "is_show": false,
+                                        "is_magazine": false,
+                                        "is_top_stories": false,
+                                        "is_landscape": false,
+                                        "is_portrait": false
+                                    },
+                                    "data": {
+                                        "primary_tag": null,
+                                        "byline": "Vogue",
+                                        "title": "Marine Le Pen: What You Should Know",
+                                        "review_information": null,
+                                        "meta_list": {
+                                            "type": "List",
+                                            "state": {},
+                                            "data": {
+                                                "items": [{
+                                                    "type": "ListItem",
+                                                    "state": {
+                                                        "is_first": true,
+                                                        "is_last": false
+                                                    },
+                                                    "data": {
+                                                        "item": {
+                                                            "type": "Meta",
+                                                            "state": {},
+                                                            "data": {
+                                                                "title": "News",
+                                                                "meta_type": "tag",
+                                                                "link": {
+                                                                    "type": "Link",
+                                                                    "state": {
+                                                                        "is_blank": false
+                                                                    },
+                                                                    "data": {
+                                                                        "url": "http://butts/topic/news/",
+                                                                        "title": "News"
+                                                                    },
+                                                                    "style": {
+                                                                        "cls": ""
+                                                                    }
+                                                                },
+                                                                "icon": null
+                                                            },
+                                                            "style": {
+                                                                "cls": ""
+                                                            }
+                                                        },
+                                                        "index": 0
+                                                    },
+                                                    "style": {
+                                                        "cls": ""
+                                                    }
+                                                }, {
+                                                    "type": "ListItem",
+                                                    "state": {
+                                                        "is_first": false,
+                                                        "is_last": true
+                                                    },
+                                                    "data": {
+                                                        "item": {
+                                                            "type": "Meta",
+                                                            "state": {},
+                                                            "data": {
+                                                                "title": "17 Mar 2017",
+                                                                "meta_type": "date",
+                                                                "link": null,
+                                                                "icon": null
+                                                            },
+                                                            "style": {
+                                                                "cls": ""
+                                                            }
+                                                        },
+                                                        "index": 1
+                                                    },
+                                                    "style": {
+                                                        "cls": ""
+                                                    }
+                                                }],
+                                                "length": 2
+                                            },
+                                            "style": {
+                                                "cls": ""
+                                            }
+                                        },
+                                        "image_list": {
+                                            "type": "List",
+                                            "state": {},
+                                            "data": {
+                                                "items": [{
+                                                    "type": "ListItem",
+                                                    "state": {
+                                                        "is_first": true,
+                                                        "is_last": false
+                                                    },
+                                                    "data": {
+                                                        "item": {
+                                                            "type": "Image",
+                                                            "state": {
+                                                                "is_static": false,
+                                                                "is_portrait": false,
+                                                                "is_image": true,
+                                                                "is_square": true,
+                                                                "is_svg": false,
+                                                                "is_lazyload": true,
+                                                                "is_linked": false,
+                                                                "is_picture": false,
+                                                                "is_landscape": false
+                                                            },
+                                                            "data": {
+                                                                "credit": null,
+                                                                "image_url": "https://vg-images.condecdn.net/image/Xdz2Vmxme8b/crop/200/square",
+                                                                "description": null,
+                                                                "title": null,
+                                                                "orientation": "square",
+                                                                "srcset": "https://vg-images.condecdn.net/image/Xdz2Vmxme8b/crop/200/square 200w, https://vg-images.condecdn.net/image/Xdz2Vmxme8b/crop/300/square 300w, https://vg-images.condecdn.net/image/Xdz2Vmxme8b/crop/400/square 400w, https://vg-images.condecdn.net/image/Xdz2Vmxme8b/crop/600/square 600w, https://vg-images.condecdn.net/image/Xdz2Vmxme8b/crop/900/square 900w",
+                                                                "look_number": null,
+                                                                "width": null,
+                                                                "alt_text": null,
+                                                                "uid": "Xdz2Vmxme8b"
+                                                            },
+                                                            "style": {
+                                                                "padding_top": "100%",
+                                                                "cls": "img-lazyload "
+                                                            }
+                                                        },
+                                                        "index": 0
+                                                    },
+                                                    "style": {
+                                                        "cls": "c-card__image--square"
+                                                    }
+                                                }],
+                                                "length": 1
+                                            },
+                                            "style": {
+                                                "cls": ""
+                                            }
+                                        },
+                                        "teaser": null,
+                                        "link": {
+                                            "type": "Link",
+                                            "state": {
+                                                "is_blank": false
+                                            },
+                                            "data": {
+                                                "url": "/gallery/who-is-marine-le-pen-fact-file",
+                                                "title": "Marine Le Pen: What You Should Know"
+                                            },
+                                            "style": {
+                                                "cls": ""
+                                            }
+                                        },
+                                        "sponsor": null,
+                                        "event_information": null,
+                                        "icon": {
+                                            "type": "SVG",
+                                            "state": {
+                                                "is_static": false,
+                                                "is_portrait": false,
+                                                "is_image": false,
+                                                "is_square": false,
+                                                "is_svg": true,
+                                                "is_lazyload": true,
+                                                "is_linked": false,
+                                                "is_picture": false,
+                                                "is_landscape": false
+                                            },
+                                            "data": {
+                                                "credit": null,
+                                                "description": null,
+                                                "title": null,
+                                                "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
+                                                "look_number": null,
+                                                "width": null,
+                                                "alt_text": null
+                                            },
+                                            "style": {
+                                                "cls": "img-lazyload "
+                                            }
+                                        }
+                                    },
+                                    "style": {
+                                        "cls": "c-card--switcher"
+                                    }
+                                },
+                                "index": 3
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }],
+                        "length": 4
+                    },
+                    "style": {
+                        "cls": "c-card-list--a-recommended"
+                    }
+                },
+                "logo": null,
+                "link": null,
+                "navigation_strip": null,
+                "title": "Recommended"
+            },
+            "style": {
+                "cls": "c-card-section--a-recommended"
+            }
+        },
+        "article": {
+            "type": "Article",
+            "state": {
+                "is_gallery": false,
+                "is_article": false,
+                "is_podcast": false,
+                "is_sponsored": false,
+                "is_video": false,
+                "has_body": true
+            },
+            "data": {
+                "body": "<p>A DOCUMENTARY about the life of <a href=\"http://www.vogue.co.uk/person/heath-ledger/\">Heath Ledger</a> is set to be released later this month, featuring never-before-seen footage of the late actor and interviews with his family, friends and colleagues.</p>\n\n\n\n\n\n <figure class=\"global__fake-clear bb-figure bb-figure--custom\">\n <div class=\"bb-figure__wrapper\" style=\"padding-top:134.427083333%\">\n <img src=\"/static/img/tiny.gif\" data-src=\"https://vg-images.condecdn.net/image/8k7rn6xM9dE/crop/405\" data-srcset=\"https://vg-images.condecdn.net/image/8k7rn6xM9dE/crop/405 405w, https://vg-images.condecdn.net/image/8k7rn6xM9dE/crop/810 810w, https://vg-images.condecdn.net/image/8k7rn6xM9dE/crop/1020 1020w, https://vg-images.condecdn.net/image/8k7rn6xM9dE/crop/1440 1440w, https://vg-images.condecdn.net/image/8k7rn6xM9dE/crop/1620 1620w\" data-sizes=\"auto\" class=\"global__image img-lazyload \" />\n <noscript>\n <img src=\"https://vg-images.condecdn.net/image/8k7rn6xM9dE/crop/405\" class=\"img-lazyload \" />\n </noscript>\n </div>\n <div class=\"bb-figure__credit\">Credit Getty Images</div>\n </figure>\n\n\n\n\n\n\n<p>Titled <em>I Am Heath Ledger</em>, the film will debut at New York\"s Tribeca Film Festival on April 23. The first trailer was released yesterday - on what would have been the actor\"s 38th birthday - and shows his friend, musician Ben Harper describing Ledger as \"the most alive person\". The director Ang Lee - who worked with the actor on <em>Brokeback Mountain</em> - added \"Even as a supporting actor he will steal the whole show, that is the power of Heath Ledger.\"</p>\n\n\n\n\n\n\n\n\n\n\n\n\n <article class=\"bb-card \">\n \t\t<a href=\"/gallery/jake-gyllenhaal-on-heath-ledger-and-jennifer-aniston\" class=\"bb-card__link bb-card__link--article \">Jake On The Impact Of Losing Heath</a>\n\n \t<div class=\"bb-card__obj\">\n \t\t<div class=\"bb-card__obj__header\">\n \t\t\t<div class=\"bb-card__images\">\n \t\t\t\t\t\t<div class=\"bb-card__image \">\n \t\t\t\t\t\t\t\t <img src=\"/static/img/tiny.gif\" data-src=\"https://vg-images.condecdn.net/image/GMrWZWxrO85/crop/200/square\" data-srcset=\"https://vg-images.condecdn.net/image/GMrWZWxrO85/crop/200/square 200w, https://vg-images.condecdn.net/image/GMrWZWxrO85/crop/300/square 300w, https://vg-images.condecdn.net/image/GMrWZWxrO85/crop/400/square 400w, https://vg-images.condecdn.net/image/GMrWZWxrO85/crop/600/square 600w\" data-sizes=\"auto\" class=\"global__image img-lazyload \" />\n \t\t\t\t\t\t\t\t <noscript>\n \t\t\t\t\t\t\t\t <img src=\"https://vg-images.condecdn.net/image/GMrWZWxrO85/crop/200/square\" class=\"img-lazyload \" />\n \t\t\t\t\t\t\t\t </noscript>\n \t\t\t\t\t\t</div>\n \t\t\t</div>\n \t\t</div>\n\n \t\t<div class=\"bb-card__obj__body\">\n \t\t\t<div class=\"bb-card__header\">\n \t\t\t\t\t<p class=\"bb-card__tag\">Heath Ledger</p>\n\n \t\t\t\t\t<h3 class=\"bb-card__title\">\n \t\t\t\t\t <span>Jake On The Impact Of Losing Heath</span>\n \t\t\t\t\t</h3>\n\n \t\t\t\t<hr class=\"bb-card__separator\" />\n \t\t\t</div>\n\n \t\t\t<div class=\"bb-card__footer\">\n\n \t\t\t\t <ul class=\"global__list-reset bb-card__meta \">\n \t\t\t\t <li class=\"bb-card__meta-item bb-card__meta-item--tag\">\n \t\t\t\t <span class=\"\">Heath Ledger</span>\n \t\t\t\t </li>\n \t\t\t\t <li class=\"bb-card__meta-item bb-card__meta-item--date\">\n \t\t\t\t <span class=\"\">07 Apr 2016</span>\n \t\t\t\t </li>\n \t\t\t\t </ul>\n \t\t\t</div>\n \t\t</div>\n \t</div>\n </article>\n<p>The documentary comes ahead of an exhibition opening at the Western Australian Museum in his native Perth this October, which will detail the life of Ledger, who passed away following an accidental overdose in 2008.</p><p>Watch the trailer, below.</p>\n\n\n\n\n\n\n <div class=\"global__fake-clear bb-embed bb-embed--video\">\n <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/5PPTDsTnaPk\" frameborder=\"0\" allowfullscreen></iframe>\n </div>\n\n\n\n\n\n",
+                "config_style": {
+                    "type": "ConfigData",
+                    "state": {},
+                    "json": "{\"article_uid\": \"or0V8kJg75B\"}",
+                    "data": {
+                        "article_uid": "or0V8kJg75B"
+                    },
+                    "style": {
+                        "cls": "tsl-cta"
+                    }
+                },
+                "marketing_card": null,
+                "uid": "or0V8kJg75B",
+                "share_list": {
+                    "type": "List",
+                    "state": {},
+                    "data": {
+                        "items": [{
+                            "type": "ListItem",
+                            "state": {
+                                "is_first": true,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "LinkedImage",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_linked": true,
+                                        "is_svg": false,
+                                        "is_image": false,
+                                        "is_picture": false
+                                    },
+                                    "data": {
+                                        "image": {
+                                            "type": "SVG",
+                                            "state": {
+                                                "is_static": false,
+                                                "is_portrait": false,
+                                                "is_image": false,
+                                                "is_square": false,
+                                                "is_svg": true,
+                                                "is_lazyload": true,
+                                                "is_linked": false,
+                                                "is_picture": false,
+                                                "is_landscape": false
+                                            },
+                                            "data": {
+                                                "credit": null,
+                                                "description": null,
+                                                "title": null,
+                                                "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M16 13.6H0V2.4h16v11.2zm-15-1h14V3.8L8 8.6 1 3.8v8.8zm1.1-9.2l5.9 4 5.9-4H2.1z\"/></svg>",
+                                                "look_number": null,
+                                                "width": null,
+                                                "alt_text": null
+                                            },
+                                            "style": {
+                                                "cls": "img-lazyload "
+                                            }
+                                        },
+                                        "link": {
+                                            "type": "Link",
+                                            "state": {
+                                                "is_blank": true
+                                            },
+                                            "data": {
+                                                "url": "mailto:?body=http://butts/article/heath-ledger-documentary-trailer-and-what-we-know&subject=I%20Am%20Heath%20Ledger:%20What%20We%20Know",
+                                                "title": "email"
+                                            },
+                                            "style": {
+                                                "cls": "btn-share btn-share--light btn-share--email"
+                                            }
+                                        }
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                },
+                                "index": 0
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }, {
+                            "type": "ListItem",
+                            "state": {
+                                "is_first": false,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "LinkedImage",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_linked": true,
+                                        "is_svg": false,
+                                        "is_image": false,
+                                        "is_picture": false
+                                    },
+                                    "data": {
+                                        "image": {
+                                            "type": "SVG",
+                                            "state": {
+                                                "is_static": false,
+                                                "is_portrait": false,
+                                                "is_image": false,
+                                                "is_square": false,
+                                                "is_svg": true,
+                                                "is_lazyload": true,
+                                                "is_linked": false,
+                                                "is_picture": false,
+                                                "is_landscape": false
+                                            },
+                                            "data": {
+                                                "credit": null,
+                                                "description": null,
+                                                "title": null,
+                                                "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M14.4 4.7v.4c0 4.3-3.3 9.3-9.3 9.3-1.9 0-3.6-.5-5-1.5h.8c1.5 0 3-.5 4.1-1.4-1.4 0-2.6-1-3.1-2.3.2 0 .4.1.6.1.3 0 .6 0 .9-.1C1.8 9 .6 7.7.6 6.1c.4.2.9.4 1.5.4C1.2 5.9.7 4.9.7 3.7c0-.6.2-1.2.4-1.7 1.6 2 4 3.3 6.8 3.4-.1-.1-.1-.4-.1-.6 0-1.8 1.5-3.3 3.3-3.3.9 0 1.8.4 2.4 1 .7-.1 1.5-.4 2.1-.8-.2.8-.8 1.4-1.4 1.8.6 0 1.2-.2 1.8-.5-.4.7-1 1.3-1.6 1.7z\"/></svg>",
+                                                "look_number": null,
+                                                "width": null,
+                                                "alt_text": null
+                                            },
+                                            "style": {
+                                                "cls": "img-lazyload "
+                                            }
+                                        },
+                                        "link": {
+                                            "type": "Link",
+                                            "state": {
+                                                "is_blank": true
+                                            },
+                                            "data": {
+                                                "url": "https://twitter.com/intent/tweet?url=http://butts/article/heath-ledger-documentary-trailer-and-what-we-know&text=I%20Am%20Heath%20Ledger:%20What%20We%20Know",
+                                                "title": "twitter"
+                                            },
+                                            "style": {
+                                                "cls": "btn-share btn-share--light btn-share--twitter"
+                                            }
+                                        }
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                },
+                                "index": 1
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }, {
+                            "type": "ListItem",
+                            "state": {
+                                "is_first": false,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "LinkedImage",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_linked": true,
+                                        "is_svg": false,
+                                        "is_image": false,
+                                        "is_picture": false
+                                    },
+                                    "data": {
+                                        "image": {
+                                            "type": "SVG",
+                                            "state": {
+                                                "is_static": false,
+                                                "is_portrait": false,
+                                                "is_image": false,
+                                                "is_square": false,
+                                                "is_svg": true,
+                                                "is_lazyload": true,
+                                                "is_linked": false,
+                                                "is_picture": false,
+                                                "is_landscape": false
+                                            },
+                                            "data": {
+                                                "credit": null,
+                                                "description": null,
+                                                "title": null,
+                                                "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M5.9 3.1v2.2H4.3V8h1.6v8h3.3V8h2.2s.2-1.3.3-2.7H9.2V3.4c0-.3.4-.6.7-.6h1.8V0H9.3C5.8 0 5.9 2.7 5.9 3.1zm0 0\"/></svg>",
+                                                "look_number": null,
+                                                "width": null,
+                                                "alt_text": null
+                                            },
+                                            "style": {
+                                                "cls": "img-lazyload "
+                                            }
+                                        },
+                                        "link": {
+                                            "type": "Link",
+                                            "state": {
+                                                "is_blank": true
+                                            },
+                                            "data": {
+                                                "url": "https://www.facebook.com/dialog/share?app_id=449870811704655&display=popup&href=http://butts/article/heath-ledger-documentary-trailer-and-what-we-know&redirect_uri=http://butts/article/heath-ledger-documentary-trailer-and-what-we-know&picture=https://vg-images.condecdn.net/image/8k7rn6xM9dE/crop/1620/landscape",
+                                                "title": "facebook"
+                                            },
+                                            "style": {
+                                                "cls": "btn-share btn-share--light btn-share--facebook"
+                                            }
+                                        }
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                },
+                                "index": 2
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }, {
+                            "type": "ListItem",
+                            "state": {
+                                "is_first": false,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "LinkedImage",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_linked": true,
+                                        "is_svg": false,
+                                        "is_image": false,
+                                        "is_picture": false
+                                    },
+                                    "data": {
+                                        "image": {
+                                            "type": "SVG",
+                                            "state": {
+                                                "is_static": false,
+                                                "is_portrait": false,
+                                                "is_image": false,
+                                                "is_square": false,
+                                                "is_svg": true,
+                                                "is_lazyload": true,
+                                                "is_linked": false,
+                                                "is_picture": false,
+                                                "is_landscape": false
+                                            },
+                                            "data": {
+                                                "credit": null,
+                                                "description": null,
+                                                "title": null,
+                                                "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M12.1 9.6c0-.1-.2-.1-.4-.2s-1.1-.6-1.3-.6c-.2-.1-.3-.1-.4.1-.1.1-.5.6-.6.7-.1.1-.2.1-.4 0s-.9-.3-1.6-.9c-.6-.5-1-1.1-1.1-1.3-.1-.2 0-.3.1-.4l.3-.3c.1-.1.1-.2.2-.3.1-.1 0-.2 0-.3 0-.1-.4-1-.6-1.4-.2-.5-.3-.5-.4-.5h-.4c-.1 0-.3 0-.5.2-.2.3-.7.7-.7 1.7 0 .9.7 1.8.8 1.9.1.1 1.3 2.1 3.3 2.9 2 .8 2 .5 2.3.5.4 0 1.1-.5 1.3-.9.2-.5.2-.8.1-.9m-4-8.4c-3.6 0-6.6 2.9-6.6 6.6 0 1.4.5 2.8 1.3 3.8L2 14.1l2.5-.8c1 .7 2.3 1.1 3.6 1.1 3.6 0 6.6-2.9 6.6-6.6 0-3.6-2.9-6.6-6.6-6.6M16 7.8c0 4.3-3.5 7.8-7.9 7.8-1.4 0-2.7-.4-3.8-1L0 16l1.4-4.2C.7 10.6.3 9.2.3 7.8.3 3.5 3.8 0 8.1 0 12.5 0 16 3.5 16 7.8\"/></svg>",
+                                                "look_number": null,
+                                                "width": null,
+                                                "alt_text": null
+                                            },
+                                            "style": {
+                                                "cls": "img-lazyload "
+                                            }
+                                        },
+                                        "link": {
+                                            "type": "Link",
+                                            "state": {
+                                                "is_blank": true
+                                            },
+                                            "data": {
+                                                "url": "whatsapp://send?text=http://butts/article/heath-ledger-documentary-trailer-and-what-we-know",
+                                                "title": "whatsapp"
+                                            },
+                                            "style": {
+                                                "cls": "btn-share btn-share--light btn-share--whatsapp"
+                                            }
+                                        }
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                },
+                                "index": 3
+                            },
+                            "style": {
+                                "cls": "a-share__list-item--mobile"
+                            }
+                        }, {
+                            "type": "ListItem",
+                            "state": {
+                                "is_first": false,
+                                "is_last": true
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "LinkedImage",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_linked": true,
+                                        "is_svg": false,
+                                        "is_image": false,
+                                        "is_picture": false
+                                    },
+                                    "data": {
+                                        "image": {
+                                            "type": "SVG",
+                                            "state": {
+                                                "is_static": false,
+                                                "is_portrait": false,
+                                                "is_image": false,
+                                                "is_square": false,
+                                                "is_svg": true,
+                                                "is_lazyload": true,
+                                                "is_linked": false,
+                                                "is_picture": false,
+                                                "is_landscape": false
+                                            },
+                                            "data": {
+                                                "credit": null,
+                                                "description": null,
+                                                "title": null,
+                                                "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 0C3.6 0 0 3.6 0 8c0 3.3 2 6.1 4.8 7.3 0-.6 0-1.2.1-1.8.2-.6 1-4.4 1-4.4s-.2-.5-.2-1.2c0-1.2.7-2.1 1.5-2.1s1.1.5 1.1 1.2-.5 1.8-.7 2.8c-.2.8.4 1.5 1.3 1.5 1.5 0 2.5-1.9 2.5-4.3 0-1.8-1.2-3.1-3.3-3.1-2.4 0-3.9 1.8-3.9 3.8 0 .7.2 1.2.5 1.6.1.2.2.2.1.4 0 .1-.1.5-.2.6-.1.2-.2.3-.4.2-1.1-.5-1.6-1.7-1.6-3.1 0-2.3 1.9-5 5.7-5 3.1 0 5.1 2.2 5.1 4.6 0 3.1-1.7 5.5-4.3 5.5-.9 0-1.7-.5-2-1 0 0-.5 1.8-.6 2.2-.2.6-.5 1.2-.8 1.7.8.5 1.5.6 2.3.6 4.4 0 8-3.6 8-8s-3.6-8-8-8z\"/></svg>",
+                                                "look_number": null,
+                                                "width": null,
+                                                "alt_text": null
+                                            },
+                                            "style": {
+                                                "cls": "img-lazyload "
+                                            }
+                                        },
+                                        "link": {
+                                            "type": "Link",
+                                            "state": {
+                                                "is_blank": true
+                                            },
+                                            "data": {
+                                                "url": "http://www.pinterest.com/pin/create/button/?url=http://butts/article/heath-ledger-documentary-trailer-and-what-we-know&description=I%20Am%20Heath%20Ledger:%20What%20We%20Know&media=https://vg-images.condecdn.net/image/8k7rn6xM9dE/crop/1620/landscape",
+                                                "title": "pinterest"
+                                            },
+                                            "style": {
+                                                "cls": "btn-share btn-share--light btn-share--pinterest"
+                                            }
+                                        }
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                },
+                                "index": 4
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }],
+                        "length": 5
+                    },
+                    "style": {
+                        "cls": ""
+                    }
+                },
+                "tags": {
+                    "type": "TopicStrip",
+                    "state": {},
+                    "data": {
+                        "topic_list": {
+                            "type": "List",
+                            "state": {},
+                            "data": {
+                                "items": [{
+                                    "type": "ListItem",
+                                    "state": {
+                                        "is_first": true,
+                                        "is_last": false
+                                    },
+                                    "data": {
+                                        "item": {
+                                            "type": "Link",
+                                            "state": {
+                                                "is_blank": false
+                                            },
+                                            "data": {
+                                                "url": "/person/heath-ledger/",
+                                                "title": "Heath Ledger"
+                                            },
+                                            "style": {
+                                                "cls": "c-topic-strip__btn--related"
+                                            }
+                                        },
+                                        "index": 0
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                }, {
+                                    "type": "ListItem",
+                                    "state": {
+                                        "is_first": false,
+                                        "is_last": true
+                                    },
+                                    "data": {
+                                        "item": {
+                                            "type": "Link",
+                                            "state": {
+                                                "is_blank": false
+                                            },
+                                            "data": {
+                                                "url": "/topic/arts-and-lifestyle/",
+                                                "title": "Arts & Lifestyle"
+                                            },
+                                            "style": {
+                                                "cls": "c-topic-strip__btn--related"
+                                            }
+                                        },
+                                        "index": 1
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                }],
+                                "length": 2
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        },
+                        "title": null
+                    },
+                    "style": {
+                        "cls": "c-topic-strip--article-related"
+                    }
+                },
+                "image_list": null,
+                "teaser": null,
+                "video": null,
+                "sponsor": null,
+                "date": {
+                    "type": "Date",
+                    "state": {},
+                    "data": {
+                        "date": "2017-04-05 10:28:20+00:00",
+                        "relative_time": "4 hours ago",
+                        "label": "Wednesday 5 April 2017"
+                    },
+                    "style": {
+                        "cls": ""
+                    }
+                },
+                "podcast": null,
+                "gallery": null,
+                "primary_tag": {
+                    "type": "Tag",
+                    "state": {},
+                    "data": {
+                        "link": {
+                            "type": "Link",
+                            "state": {
+                                "is_blank": false
+                            },
+                            "data": {
+                                "url": "http://butts/person/heath-ledger/",
+                                "title": "Heath Ledger"
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        },
+                        "event_information": null,
+                        "title": "Heath Ledger"
+                    },
+                    "style": {
+                        "cls": ""
+                    }
+                },
+                "byline": "<a href=\"/profile/katie-berrington/\">Katie Berrington</a>",
+                "title": "I Am Heath Ledger: What We Know",
+                "url": "http://butts/article/heath-ledger-documentary-trailer-and-what-we-know",
+                "review_information": {
+                    "type": "ReviewInformation",
+                    "state": {},
+                    "data": {
+                        "score_negative_count": [7, 8, 9, 10],
+                        "thing_name": null,
+                        "price_text": "£39.99",
+                        "thing": "Product",
+                        "conclusion_positive": "Makes great use of the Switch's innovative hardware, great fun at a party",
+                        "score": 6,
+                        "conclusion_negative": "Only fun for a couple of hours, should've been bundled with the console",
+                        "score_positive_count": [1, 2, 3, 4, 5, 6],
+                        "max_score": 10
+                    },
+                    "style": {
+                        "cls": ""
+                    }
+                },
+                "meta_list": {
+                    "type": "List",
+                    "state": {},
+                    "data": {
+                        "items": [{
+                            "type": "ListItem",
+                            "state": {
+                                "is_first": true,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "Meta",
+                                    "state": {},
+                                    "data": {
+                                        "title": "Heath Ledger",
+                                        "meta_type": "tag",
+                                        "link": {
+                                            "type": "Link",
+                                            "state": {
+                                                "is_blank": false
+                                            },
+                                            "data": {
+                                                "url": "http://butts/person/heath-ledger/",
+                                                "title": "Heath Ledger"
+                                            },
+                                            "style": {
+                                                "cls": ""
+                                            }
+                                        },
+                                        "icon": null
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                },
+                                "index": 0
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }, {
+                            "type": "ListItem",
+                            "state": {
+                                "is_first": false,
+                                "is_last": true
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "Meta",
+                                    "state": {},
+                                    "data": {
+                                        "title": "4 hours ago",
+                                        "meta_type": "date",
+                                        "link": null,
+                                        "icon": null
+                                    },
+                                    "style": {
+                                        "cls": ""
+                                    }
+                                },
+                                "index": 1
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }],
+                        "length": 2
+                    },
+                    "style": {
+                        "cls": ""
+                    }
+                },
+                "profiles": [{
+                    "type": "Profile",
+                    "state": {},
+                    "data": {
+                        "bio": "Katie is the Arts & Lifestyle editor of Vogue.co.uk",
+                        "image": null,
+                        "link": {
+                            "type": "Link",
+                            "state": {
+                                "is_blank": false
+                            },
+                            "data": {
+                                "url": "http://butts/profile/katie-berrington/",
+                                "title": "Katie Berrington"
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        },
+                        "teaser": "Katie is the Arts & Lifestyle editor of Vogue.co.uk",
+                        "name": "Katie Berrington"
+                    },
+                    "style": {
+                        "cls": ""
+                    }
+                }],
+                "event_information": null,
+                "link": {
+                    "type": "Link",
+                    "state": {
+                        "is_blank": false
+                    },
+                    "data": {
+                        "url": "http://butts/article/heath-ledger-documentary-trailer-and-what-we-know",
+                        "title": "I Am Heath Ledger: What We Know"
+                    },
+                    "style": {
+                        "cls": ""
+                    }
+                },
+                "type": "article"
+            },
+            "style": {
+                "cls": ""
+            }
+        }
+    }
+}
