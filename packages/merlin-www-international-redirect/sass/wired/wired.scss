@@ -15,7 +15,7 @@
 	height: 100%;
 	position: absolute;
 	right: 0;
-	width: 60px;
+	width: 80px;
 
 	svg {
 		@include vendor-prefix(transform, translate(-50%, -50%));
@@ -25,6 +25,7 @@
 		fill: $white;
 		height: 24px;
 		left: 50%;
+		margin-left: 10px;
 		padding: 6px;
 		position: absolute;
 		top: 50%;
@@ -35,12 +36,12 @@
 .c-int-redirect__msg {
 	@include font("BRUTAL", 14px, 500, 18px);
 	color: $white;
-	padding: 20px 60px 20px 20px;
+	padding: 20px 80px 20px 20px;
 	text-align: left;
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 		padding-top: 24px;
 		padding-bottom: 24px;
-		padding-left: 60px;
+		padding-left: 80px;
 		text-align: center;
 	}
 
@@ -53,27 +54,20 @@
 .c-int-redirect__list {
 	color: $white;
 	font-size: 0;
-	padding: 20px 60px 20px 20px;
+	padding: 20px 80px 12px 20px;
 	text-align: left;
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		padding-top: 24px;
-		padding-bottom: 16px;
-		padding-left: 60px;
+		padding-left: 80px;
 		text-align: center;
 	}
 }
 
 li.c-int-redirect__list__item {
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		padding-bottom: 8px;
-	}
+	padding-bottom: 8px;
 
 	a {
 		@include font("BRUTAL", 14px, 500, 18px);
 		color: inherit;
-		padding: 0 5px;
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-			padding: 0 16px;
-		}
+		padding: 0 7.5px;
 	}
 }
