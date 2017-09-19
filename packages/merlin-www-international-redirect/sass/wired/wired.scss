@@ -1,0 +1,78 @@
+@import '@cnbritain/merlin-www-common:wired';
+
+@import '../wireframe/wireframe';
+
+.c-int-redirect {
+	background-color: $black;
+}
+
+.c-int-redirect__wrapper {
+	max-width: $MAXIMUM_PAGE_WIDTH;
+	margin: 0 auto;
+}
+
+.c-int-redirect__btn {
+	height: 100%;
+	position: absolute;
+	right: 0;
+	width: 60px;
+
+	svg {
+		@include vendor-prefix(transform, translate(-50%, -50%));
+		border-radius: 50%;
+		border: 1px solid $white;
+		box-sizing: border-box;
+		fill: $white;
+		height: 24px;
+		left: 50%;
+		padding: 6px;
+		position: absolute;
+		top: 50%;
+		width: 24px;
+	}
+}
+
+.c-int-redirect__msg {
+	@include font("BRUTAL", 14px, 500, 18px);
+	color: $white;
+	padding: 20px 60px 20px 20px;
+	text-align: left;
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		padding-top: 24px;
+		padding-bottom: 24px;
+		padding-left: 60px;
+		text-align: center;
+	}
+
+	label {
+		border-bottom: 1px solid $white;
+		color: $white;
+	}
+}
+
+.c-int-redirect__list {
+	color: $white;
+	font-size: 0;
+	padding: 20px 60px 20px 20px;
+	text-align: left;
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		padding-top: 24px;
+		padding-bottom: 16px;
+		text-align: center;
+	}
+}
+
+li.c-int-redirect__list__item {
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		padding-bottom: 8px;
+	}
+
+	a {
+		@include font("BRUTAL", 14px, 500, 18px);
+		color: inherit;
+		padding: 0 5px;
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			padding: 0 16px;
+		}
+	}
+}
