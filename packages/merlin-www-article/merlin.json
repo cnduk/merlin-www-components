@@ -36,6 +36,18 @@
             ],
             "main": "article",
             "data": "article-article"
+        },
+        "article-review": {
+            "themes": [
+                "wireframe",
+                "vogue",
+                "missvogue",
+                "tatler",
+                "gq",
+                "bystander"
+            ],
+            "main": "article",
+            "data": "article-review"
         }
     },
     "js": {
@@ -61,24 +73,31 @@
         "article-footer": "partials/article-footer.html",
         "article": "partials/article.html",
         "video-header": "partials/video-header.html",
-        "article-header": "partials/article-header.html"
+        "article-header": "partials/article-header.html",
+        "article-review": "partials/article-review.html"
     },
     "dependencies": [
         "@cnbritain/merlin-www-article-podcast",
-        "@cnbritain/merlin-www-article-review",
         "@cnbritain/merlin-www-figure",
         "@cnbritain/merlin-www-image",
         "@cnbritain/merlin-www-marketing-cards",
         "@cnbritain/merlin-www-section-card-list",
         "@cnbritain/merlin-www-topic-strip",
-        "@cnbritain/merlin-www-card"
+        "@cnbritain/merlin-www-card",
+        "@cnbritain/merlin-www-bbcode",
+        "@cnbritain/merlin-www-buttons",
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-js-elementscroll",
+        "@cnbritain/merlin-www-js-infinitescroll",
+        "@cnbritain/merlin-www-js-utils"
     ],
     "currentTheme": null,
     "main": "article",
     "data": {
         "article-gallery": "data/article-gallery.json",
         "article-video": "data/article-video.json",
-        "article-article": "data/article-article.json"
+        "article-article": "data/article-article.json",
+        "article-review": "data/article-review.json"
     },
-    "description": "Article header, footer, share, content. Includes video too."
+    "description": "Article header, footer, share, content, review. Includes video too."
 }
