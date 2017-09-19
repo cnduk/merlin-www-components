@@ -58,6 +58,7 @@
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 		padding-top: 24px;
 		padding-bottom: 16px;
+		padding-left: 60px;
 		text-align: center;
 	}
 }
