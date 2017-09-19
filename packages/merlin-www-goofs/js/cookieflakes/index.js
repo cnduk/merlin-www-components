@@ -28,7 +28,7 @@ function createStyles(){
   return style;
 }
 
-export default function cookieflakes(){
+export default function cookieflakes(char){
     document.head.appendChild(createStyles());
-    document.body.appendChild(createDom('🍪'));
+    document.body.appendChild(createDom(char || '🍪'));
 }
