@@ -160,8 +160,7 @@
     }
 }
 
-.ad--tag-inline,
-.ad--tag-infinite {
+.ad--tag-inline {
     margin: 40px (-$MOBILE_SIDE_GUTTER);
 
     @include tablet-size {
@@ -188,6 +187,8 @@
     }
 
 }
+
+.ad--tag-infinite {}
 
 .ad--tag-rail {
     display: block;
