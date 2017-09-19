@@ -8,7 +8,8 @@
                 "missvogue",
                 "gq",
                 "tatler",
-                "bystander"
+                "bystander",
+                "wired"
             ],
             "main": "index",
             "data": "vogue"
@@ -23,7 +24,8 @@
         "gq": "sass/gq/gq.scss",
         "tatler": "sass/tatler/tatler.scss",
         "missvogue": "sass/missvogue/missvogue.scss",
-        "vogue": "sass/vogue/vogue.scss"
+        "vogue": "sass/vogue/vogue.scss",
+        "wired": "sass/wired/wired.scss"
     },
     "partials": {
         "index": "partials/index.html"
