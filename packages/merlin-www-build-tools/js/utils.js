@@ -101,10 +101,7 @@ function getDefaultConfig(pkgJson, merlinJson){
                 'static\/**\/*.css',
                 'static\/**\/*.js',
                 'static\/**\/*.{jpg,jpeg,png,gif}'
-            ],
-            modifyUrlPrefix: {
-                'static\/': ''
-            }
+            ]
         }
     };
 }
