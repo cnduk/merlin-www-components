@@ -17,7 +17,7 @@
         @include font-weight-fix();
     }
 
-    a {
+    a:not([class]) {
         @include body-links(true);
     }
 }
