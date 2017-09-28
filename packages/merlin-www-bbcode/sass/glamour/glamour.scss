@@ -1,5 +1,5 @@
 @import '@cnbritain/merlin-www-common:glamour';
-@import "@cnbritain/merlin-www-common:wireframe";
+@import '@cnbritain/merlin-www-card:glamour';
 
 @import '../wireframe/wireframe';
 
@@ -109,7 +109,7 @@
 
 .bb-gallery__title__icon--gallery {
     svg {
-        display: inline-block;
+        display:block;
         padding-bottom: 4px;
         vertical-align: sub;
         width: 13px;
@@ -358,7 +358,7 @@
 }
 
 .bb-video__title-icon {
-    display: inline-block;
+    display:block;
     padding-right: 5px;
     vertical-align: middle;
 
@@ -404,4 +404,154 @@
     .bb-video__title-icon {
         vertical-align: top;
     }
+}
+
+////
+// Card
+////
+@mixin card-bb() {
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 60px 0;
+    float: none;
+    width: 100%;
+
+    .bb-card__obj {
+        box-sizing: border-box;
+        display: table;
+        width: 100%;
+    }
+
+    .bb-card__obj__header,
+    .bb-card__obj__body {
+        display: table-cell;
+    }
+
+    .bb-card__obj__header {
+        padding-right: 15px;
+        vertical-align: top;
+        width: 30%;
+    }
+
+    .bb-card__obj__body {
+        padding-left: 0;
+        vertical-align: middle;
+        width: 70%;
+    }
+
+    .bb-card__image {
+        margin-bottom: 0;
+    }
+
+    .bb-card__title {
+        @include title-card-landscape;
+
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+
+    .bb-card__separator {
+        display: none;
+    }
+
+    .bb-card__separator {
+        margin: 10px 0;
+        width: 15px;
+    }
+
+    .bb-card__byline {
+        margin-bottom: 3px;
+    }
+
+    // Need to be specific to overwrite global__list-reset
+    li.bb-card__meta-item {
+        @include global-meta-item;
+        margin-bottom: 0;
+
+        & + li.bb-card__meta-item {
+            border-left: 1px solid rgba(0,0,0,.3);
+            padding-left: 7px;
+        }
+    }
+
+    .bb-card__meta {
+        @include meta-default;
+        line-height: 17px;
+    }
+
+}
+@mixin card-bb-small() {
+    .bb-card__title {
+        @include font-size(15px);
+        margin-bottom: 10px;
+    }
+}
+@mixin card-bb-large() {
+    .bb-card__obj__header,
+    .bb-card__obj__body {
+        display: block;
+        width: auto;
+    }
+
+    .bb-card__image {
+        margin-bottom: 15px;
+    }
+
+    .bb-card__title {
+        @include title-card-portrait;
+
+        margin-bottom: 15px;
+        margin-top: 0;
+    }
+
+    .bb-card__separator {
+        margin: 10px 0;
+    }
+
+    .bb-card__separator--sponsor {
+        display: none;
+    }
+
+    .bb-card__byline {
+        margin-bottom: 5px;
+    }
+
+    .bb-card__obj__header {
+        display: table-cell;
+        padding-right: 20px;
+        width: 30%;
+    }
+
+    .bb-card__obj__body {
+        display: table-cell;
+        width: auto;
+    }
+
+    .bb-card__image {
+        margin-bottom: 0;
+    }
+
+    .bb-card__title {
+        @include title-card-portrait;
+        margin-bottom: 10px;
+    }
+}
+
+.bb-card{
+    @include card-bb;
+    @include card-bb-small;
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include card-bb-large;
+    }
+}
+
+.bb-card-small {
+    @include card-bb;
+    @include card-bb-small;
+}
+
+.bb-card-large {
+    @include card-bb;
+    @include card-bb-large;
 }
