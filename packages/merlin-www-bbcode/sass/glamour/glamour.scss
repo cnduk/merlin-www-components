@@ -120,6 +120,12 @@
     }
 }
 
+.bb-gallery__col {
+    &:before {
+        content: none;
+    }
+}
+
 .bb-gallery__remaining {
     background-color: $COLOUR_BG_GALLERY_REMAINING;
     border-radius: 50%;
