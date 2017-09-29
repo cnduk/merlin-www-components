@@ -10,6 +10,7 @@ import {
     getWindowScrollTop,
     inherit,
     insertBefore,
+    loadScript,
     onPageLoad,
     removeEvent,
     throttle,
@@ -28,6 +29,7 @@ import {
     dispatchSimpleReachStop,
     getArticleType,
     getStorage,
+    loadYoutubeSubscribe,
     setStorage
 } from './utils';
 import * as events from './events';
@@ -100,6 +102,8 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         } else {
             index = this.articles.indexOf(article);
         }
+
+        loadYoutubeSubscribe();
 
         // Focus and blur events
         this._triggerFocusBlur(index);

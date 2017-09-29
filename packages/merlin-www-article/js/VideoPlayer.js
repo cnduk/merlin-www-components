@@ -6,7 +6,7 @@ import {
     CLS_ARTICLE_VIDEO_PLAYER,
     CLS_ARTICLE_VIDEO_PLAYER_PLAYLIST
 } from './constants';
-import { bubbleEvent } from './utils';
+import { bubbleEvent, loadYoutubeSubscribe } from './utils';
 import Playlist from './Playlist';
 
 function VideoPlayer(el, options){
@@ -35,6 +35,7 @@ VideoPlayer.prototype = inherit(EventEmitter.prototype, {
         }
 
         this._bubbleEvents();
+        loadYoutubeSubscribe();
     },
 
     constructor: VideoPlayer,

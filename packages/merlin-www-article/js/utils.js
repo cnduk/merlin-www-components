@@ -192,3 +192,19 @@ export function isArticleGallery(article){
     return article.type === ARTICLE_TYPES.GALLERY ||
         article.type === ARTICLE_TYPES['SHOW-SUMMARY'];
 }
+
+/**
+ * Loads youtube platform library and triggers a render on all subscribe
+ * buttons
+ */
+export function loadYoutubeSubscribe(){
+    var promise = null;
+    if(!('gapi' in window)){
+        promise = loadScript('https://apis.google.com/js/platform.js');
+    } else {
+        promise = Promise.resolve();
+    }
+    promise.then(function(){
+        gapi.ytsubscribe.go();
+    });
+}
