@@ -36,6 +36,22 @@
     .a-header__title {
         margin-top: 0;
     }
+
+    .a-share,
+    .a-share__list {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .a-share__list {
+        margin-bottom: 10px;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        .a-share__list {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .a-header__wrapper {

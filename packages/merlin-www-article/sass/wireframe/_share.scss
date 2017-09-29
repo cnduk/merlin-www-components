@@ -14,3 +14,23 @@
         display: none;
     }
 }
+
+
+// Used on video header
+// We have to make some of this stuff important to overwrite youtubes styles
+.a-share__youtube {
+    > div {
+        display: inline-block !important;
+        vertical-align: middle !important;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        display: inline-block;
+        vertical-align: middle;
+
+        > div {
+            margin-top: -5px !important;
+        }
+    }
+}
+.a-share__youtube__title {}
