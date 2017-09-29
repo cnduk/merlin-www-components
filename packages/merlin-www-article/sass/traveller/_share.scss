@@ -21,6 +21,11 @@
     font-size: 0;
     height: 40px;
     text-align: center;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
+        display: inline-block;
+        vertical-align: middle;
+    }
 }
 
 .a-share__list-item {
@@ -37,4 +42,25 @@
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         display: none;
     }
+}
+
+.a-share__youtube {
+    display: block;
+    margin: 12px auto 0 auto;
+    text-align: center;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+        display: block;
+        margin: 16px auto 0 auto;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
+        display: inline-block;
+        margin: 4px 0 0 12px;
+        vertical-align: middle;
+    }
+}
+.a-share__youtube__title {
+    @include font('PROXIMA NOVA CONDENSED', 9px, 'NORMAL', 11px);
+    text-transform: uppercase;
 }
