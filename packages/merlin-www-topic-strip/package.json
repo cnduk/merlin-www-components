@@ -1,14 +1,14 @@
 {
   "name": "@cnbritain/merlin-www-topic-strip",
-  "version": "1.5.59",
+  "version": "1.5.60",
   "description": "",
   "main": "index.js",
   "scripts": {
     "demo": "merlin-component-demo-server merlin.json"
   },
   "dependencies": {
-    "@cnbritain/merlin-www-buttons": "^1.2.54",
-    "@cnbritain/merlin-www-common": "^1.5.43"
+    "@cnbritain/merlin-www-buttons": "^1.2.55",
+    "@cnbritain/merlin-www-common": "^1.5.44"
   },
   "devDependencies": {
     "@cnbritain/merlin-component-demo-server": "^2.8.3"
