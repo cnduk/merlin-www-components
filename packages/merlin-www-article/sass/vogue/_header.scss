@@ -284,6 +284,17 @@
 .a-header__event-date {}
 .a-header__event-btn {}
 
+.a-share__youtube {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+        margin-left: 10px;
+        margin-top: 23px;
+    }
+}
+.a-share__youtube__title {
+    @include font('NOBEL', 9px, 'NORMAL', 11px);
+    text-transform: uppercase;
+}
+
 .a-header--gallery {}
 
 .a-header--video {
@@ -297,3 +308,4 @@
         }
     }
 }
+
