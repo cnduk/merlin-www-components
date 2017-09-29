@@ -379,6 +379,17 @@ li.a-header__meta-item {
     }
 }
 
+.a-share__youtube {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+        margin-left: 10px;
+        margin-top: 22px;
+    }
+}
+.a-share__youtube__title {
+    @include font('AGENDA', 9px, 'NORMAL', 11px);
+    text-transform: uppercase;
+}
+
 .a-header--gallery {}
 
 .a-header--video {

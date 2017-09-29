@@ -284,6 +284,13 @@ li.a-header__share-item {
     }
 }
 
+// Used on video header
+.a-share__youtube {}
+.a-share__youtube__title {
+    @include font('GRAPHIK', 9px, 'SEMI BOLD', 11px);
+    text-transform: uppercase;
+}
+
 .a-header__sponsor {
     @include font('GRAPHIK', 12px, $tracking: 20);
 

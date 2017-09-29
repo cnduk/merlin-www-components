@@ -340,3 +340,15 @@
         color: $white;
     }
 }
+
+
+.a-share__youtube {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+}
+.a-share__youtube__title {
+    @include font('GOTHAM', 9px, 'NORMAL', 11px);
+    text-transform: uppercase;
+}
