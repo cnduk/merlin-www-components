@@ -43,6 +43,7 @@ function getDefaultConfig(pkgJson, merlinJson){
     return {
         copy: {
             src: [
+                getAbsDir(`node_modules/@cnbritain/merlin-www-assets/static/wireframe/**/*`),
                 getAbsDir(`node_modules/@cnbritain/merlin-www-assets/static/${abbr}/**/*`)
             ],
             dest: getAbsDir(`${abbr}_backend/static/`)
