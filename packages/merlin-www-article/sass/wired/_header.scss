@@ -346,6 +346,19 @@ li.a-header__meta-item {
     }
 }
 
+.a-share__youtube {
+    margin-top: 10px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+}
+.a-share__youtube__title {
+    @include font('BRUTAL', 9px, 'NORMAL', 11px);
+    text-transform: uppercase;
+}
+
 .a-header--gallery {
     margin-top: 0px;
     padding-top: 40px;
