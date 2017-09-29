@@ -94,6 +94,14 @@
                         {{/ data.items }}
                     </ul>
                 {{/ data.share_list }}
+
+                {{# data.video.data.youtube_link }}
+                    <div class="a-share__youtube">
+                        <div class="g-ytsubscribe" data-channel="{{ data.url }}" data-layout="default" data-theme="dark" data-count="default"></div>
+                        <div class="a-share__youtube__title">{{ data.title }}</div>
+                    </div>
+                {{/ data.video.data.youtube_link }}
+
             </div>
         </div>
     </div>
