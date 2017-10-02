@@ -1,5 +1,8 @@
 'use strict';
 
+const fs = require('fs');
+const path = require('path');
+
 const gulp = require('gulp');
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
@@ -11,6 +14,14 @@ const DYNAMIC_CONFIG_URL = /\{\{ DYNAMIC_CONFIG_URL \}\}/;
 const ENV = utils.getEnvironment();
 
 module.exports = function taskJsExport(taskConfig, browserSync){
+
+    const pluginDir = fs.realpathSync(path.resolve(
+        __dirname,
+        '..',
+        '..',
+        'node_modules'
+    ))
+
     return function taskJs(){
 
         let plugins = null;
@@ -71,7 +82,12 @@ module.exports = function taskJsExport(taskConfig, browserSync){
                 'filename': outputFile,
                 'path': taskConfig.js.dest
             },
-            devtool: "source-map"
+            devtool: "source-map",
+            "resolveLoader": {
+                "modules": [
+                    pluginDir
+                ]
+            }
         };
         return gulp.src(Object.values(taskConfig.js.src))
             .pipe(plumber())
