@@ -8,3 +8,4 @@ export { default as initSearch } from './search';
 export { default as initTag } from './tagpage';
 export { default as initVideo } from './video';
 export { default as initSubscribe } from './subscribe';
+export { default as initShow } from './show';
