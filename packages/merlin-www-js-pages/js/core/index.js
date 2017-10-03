@@ -66,10 +66,8 @@ export default function init(config){
     if (navigator.appVersion.indexOf("X11") !== -1) os = "unix";
     if (navigator.appVersion.indexOf("Linux") !== -1) os = "linux";
 
-    addClass(
-        document.getElementsByTagName('html')[0],
-        'is-' + os + ' is-' + browser
-    );
+    addClass(document.getElementsByTagName('html')[0], 'is-' + os);
+    addClass(document.getElementsByTagName('html')[0], 'is-' + browser);
 
     // Removes :focus outline
     if (hasTouch) {
