@@ -23,8 +23,13 @@ import { supportBoxModel } from "./detect";
  * @param {String} cls
  */
 export function addClass( el, cls ){
-    if( el.classList ) return el.classList.add( cls );
-    el.className += " " + cls;
+    var _cls = cls;
+    if(_cls[0] === '.'){
+        _cls = cls.substr(1);
+    }
+
+    if( el.classList ) return el.classList.add( _cls );
+    el.className += " " + _cls;
 }
 
 /**
@@ -910,9 +915,14 @@ export function randomUUID(){
  * @param  {String} cls
  */
 export function removeClass( el, cls ){
-    if( el.classList ) return el.classList.remove( cls );
-    if( !hasClass( el, cls ) ) return;
-    var reg = new RegExp("(\\s|^)" + cls + "(\\s|$)");
+    var _cls = cls;
+    if(_cls[0] === '.'){
+        _cls = cls.substr(1);
+    }
+
+    if( el.classList ) return el.classList.remove( _cls );
+    if( !hasClass( el, _cls ) ) return;
+    var reg = new RegExp("(\\s|^)" + _cls + "(\\s|$)");
     el.className = el.className.replace( reg, " " );
 }
 
