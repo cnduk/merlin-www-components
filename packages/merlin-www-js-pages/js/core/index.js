@@ -28,7 +28,11 @@ import { fartscroll, raptor } from '@cnbritain/merlin-www-goofs';
 import InternationalRedirect from '@cnbritain/merlin-www-international-redirect';
 
 import { CLS_STATE_IS_HIDDEN } from '../constants';
-import { displayHiringMessage, isAdNative } from '../utils';
+import {
+    displayHiringMessage,
+    isAdNative,
+    setGlobalNamespace
+} from '../utils';
 
 var DEFAULT_INIT_CONFIG = {
     'OPEN_X_URL': null,
@@ -68,12 +72,12 @@ export default function init(config){
     // Global namespace stuffs
     // Don't just use the abbreviation in case something else in the page
     // overwrites it
-    window[getNamespaceKey(CONFIG_BRAND.abbr)] = {
+    setGlobalNamespace({
         'AdDebugger': AdDebugger,
         'AdManager': AdManager,
         'GATracker': GATracker,
         'Store': store
-    };
+    });
 
     // Goofs
     setupFartscroll();
