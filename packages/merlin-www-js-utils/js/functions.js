@@ -587,8 +587,13 @@ export function getWindowScrollTop(){
  * @return {Boolean}
  */
 export function hasClass( el, cls ) {
-    if( el.classList ) return el.classList.contains( cls );
-    return !!el.className.match( new RegExp( "(\\s|^)" + cls + "(\\s|$)" ) );
+    var _cls = cls;
+    if(_cls[0] === '.'){
+        _cls = _cls.substr(1);
+    }
+
+    if( el.classList ) return el.classList.contains( _cls );
+    return !!el.className.match( new RegExp( "(\\s|^)" + _cls + "(\\s|$)" ) );
 }
 
 /**
