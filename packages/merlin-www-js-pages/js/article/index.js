@@ -5,11 +5,11 @@ import { getNamespaceKey } from '@cnbritain/merlin-www-js-utils/js/functions';
 import figure from '@cnbritain/merlin-www-figure';
 import { ArticleManager } from '@cnbritain/merlin-www-article';
 
-import init as initStickyItems from './sticky';
-import init as initArticle from './article';
-import init as initAnalytics from './analytics';
-import init as initAds from './ads';
-import init as initCookieWarning from './cookie-warning';
+import { default as initStickyItems} from './sticky';
+import { default as initArticle} from './article';
+import { default as initAnalytics} from './analytics';
+import { default as initAds} from './ads';
+import { default as initCookieWarning} from './cookie-warning';
 
 export function init(){
     figure.init();
