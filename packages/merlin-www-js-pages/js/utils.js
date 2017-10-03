@@ -1,11 +1,10 @@
 'use strict';
 
 import CONFIG_BRAND from '@cnbritain/merlin-www-common';
-import GATracker from '@cnbritain/merlin-www-js-gatracker';
 import {
     getNamespaceKey
 } from '@cnbritain/merlin-www-js-utils/js/functions';
-import InternationalRedirect from '@cnbritain/merlin-www-international-redirect';
+import { AdUtils } from '@cnbritain/merlin-www-ads';
 
 export function displayHiringMessage(){
     var hiring = [
@@ -49,30 +48,6 @@ export function getStorage(key){
     return window[cnd].Store.get(storeKey);
 }
 
-export function initInternationalRedirect(){
-    if(InternationalRedirect.el !== null){
-        sendInternationRedirectEvent('Shown', null);
-        InternationalRedirect.on('visibilityChange', function(e){
-            sendInternationRedirectEvent('Closed', null);
-        });
-        InternationalRedirect.on('linkClick', function(e){
-            sendInternationRedirectEvent('Link Click', e.country);
-        });
-        InternationalRedirect.on('linkHover', function(e){
-            sendInternationRedirectEvent('Link Hover', e.country);
-        });
-    }
-}
-
-export function sendInternationRedirectEvent(action, label){
-    GATracker.SendAll(GATracker.SEND_HITTYPES.EVENT, {
-        'eventAction': action,
-        'eventCategory': 'CountryBanner',
-        'eventLabel': label,
-        'transport': 'beacon'
-    });
-}
-
 /**
  * Sets the value into local storage
  * @param {String} key
@@ -98,4 +73,26 @@ export function toArray(collection){
     var arr = new Array(len);
     while(len--) arr[len] = collection[len];
     return arr;
+}
+
+/**
+ * Check an ad to see if it is a native.
+ * @param  {Ad}  adModel
+ * @return {Boolean}
+ */
+export function isAdNative(adModel){
+    var adSizes = adModel.get('sizes');
+    var len = adSizes.length;
+
+    var adType = null;
+    while(len--){
+        adType = AdUtils.getAdTypeBySize(adSizes[len][0], adSizes[len][1]);
+
+        if(adType !== AdUtils.AD_SIZES.NATIVE) continue;
+        if(adModel.get('position') !== 'promotion-small') continue;
+
+        return true;
+    }
+
+    return false;
 }
