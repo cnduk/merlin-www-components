@@ -11,7 +11,7 @@ import { default as initAnalytics} from './analytics';
 import { default as initAds} from './ads';
 import { default as initCookieWarning} from './cookie-warning';
 
-export function init(){
+export default function init(){
     figure.init();
     initStickyItems();
     initAnalytics();
