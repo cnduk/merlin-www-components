@@ -10,6 +10,7 @@ import { default as initArticle} from './article';
 import { default as initAnalytics} from './analytics';
 import { default as initAds} from './ads';
 import { default as initCookieWarning} from './cookie-warning';
+import { getGlobalNamespace } from '../utils';
 
 export default function init(){
     figure.init();
@@ -22,5 +23,5 @@ export default function init(){
     // Global namespace stuffs
     // Don't just use the abbreviation in case something else in the page
     // overwrites it
-    window[getNamespaceKey(CONFIG_BRAND.abbr)].ArticleManager = ArticleManager;
+    getGlobalNamespace().ArticleManager = ArticleManager;
 }

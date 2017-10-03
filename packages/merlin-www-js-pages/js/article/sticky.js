@@ -19,11 +19,13 @@ import {
     Scroll,
     Stick
 } from '@cnbritain/merlin-www-js-sticky';
-import { toArray } from '../utils';
 
-var CLS_STICK_GROUP = '.stick-group';
-var CLS_STICK_WRAPPER = '.stick-wrapper';
-var CLS_STICK_OBSTACLE = '.stick-block';
+import {
+    CLS_STICK_GROUP,
+    CLS_STICK_WRAPPER,
+    CLS_STICK_OBSTACLE
+} from '../constants';
+import { toArray } from '../utils';
 
 var articleScroller = null;
 var debouncedUpdateAll = debounce(updateAll, 200);
