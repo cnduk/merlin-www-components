@@ -96,3 +96,19 @@ export function isAdNative(adModel){
 
     return false;
 }
+
+/**
+ * Return the global namespace for the brand
+ * @return {object}
+ */
+export function getGlobalNamespace(){
+    return window[getNamespaceKey(CONFIG_BRAND.abbr)];
+}
+
+/**
+ * Set the value in the global namespace for the brand
+ * @param {object} obj
+ */
+export function setGlobalNamespace(obj){
+    window[getNamespaceKey(CONFIG_BRAND.abbr)] = obj;
+}
