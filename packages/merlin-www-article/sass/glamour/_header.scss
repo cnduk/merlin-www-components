@@ -6,31 +6,6 @@
     }
 }
 
-.a-header--dark {
-    background-color: $COLOUR_BG_DARK;
-    color: $COLOUR_MAIN_DARK;
-
-    a {
-        color: $COLOUR_MAIN_HIGHLIGHT;
-    }
-}
-
-.a-header--gallery {
-    .a-header__content {
-        @include min-screen($ARTICLE_TOTAL) {
-            max-width: 1320px;
-            padding-left: 0;
-            padding-right: $ARTICLE_RIGHT_TOTAL;
-        }
-
-        @include min-screen($ARTICLE_TOTAL) {
-            .a-header__about {
-                display: block;
-            }
-        }
-    }
-}
-
 .a-header__intro {
     @include font('GRAPHIK', 19px, 'NORMAL', 22px);
 
@@ -61,7 +36,7 @@
 
     margin: 0 0 15px;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    @include desktop-size {
         @include title-article-desktop;
     }
 }
@@ -365,4 +340,34 @@ li.a-header__share-item {
 
 .a-header--video {
     margin-bottom: 0;
+
+    .a-header__content {
+        max-width: 840px + 360px;
+        padding-left: 0;
+    }
+}
+
+.a-header--dark {
+    background-color: $COLOUR_BG_DARK;
+    color: $COLOUR_MAIN_DARK;
+
+    a {
+        color: $COLOUR_MAIN_HIGHLIGHT;
+    }
+}
+
+.a-header--gallery {
+    .a-header__content {
+        @include min-screen($ARTICLE_TOTAL) {
+            max-width: 1320px;
+            padding-left: 0;
+            padding-right: $ARTICLE_RIGHT_TOTAL;
+        }
+
+        @include min-screen($ARTICLE_TOTAL) {
+            .a-header__about {
+                display: block;
+            }
+        }
+    }
 }

@@ -87,3 +87,11 @@
         padding: 25px 0;
     }
 }
+
+.a-footer--video {
+    .a-footer__wrapper {
+        margin-left: 0;
+        max-width: 840px + 360px;
+        padding-left: 0;
+    }
+}

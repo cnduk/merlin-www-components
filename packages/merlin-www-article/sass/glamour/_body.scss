@@ -3,20 +3,6 @@
     clear: both;
 }
 
-.a-body--gallery {
-    .a-body__wrapper {
-        max-width: $ARTICLE_TOTAL+110px;
-
-        @include common-large-size(){
-            padding-right: $ARTICLE_RIGHT_TOTAL+5px;
-        }
-
-        @include article-large-size(){
-            padding-right: $ARTICLE_RIGHT_TOTAL+5px;
-        }
-    }
-}
-
 // Im not sure about this
 .a-body__content {
     > p:first-child {
@@ -108,7 +94,26 @@
     }
 }
 
+.a-footer {}
 
-.a-footer {
+.a-body--gallery {
+    .a-body__wrapper {
+        max-width: $ARTICLE_TOTAL+110px;
 
+        @include common-large-size(){
+            padding-right: $ARTICLE_RIGHT_TOTAL+5px;
+        }
+
+        @include article-large-size(){
+            padding-right: $ARTICLE_RIGHT_TOTAL+5px;
+        }
+    }
+}
+
+.a-body--video {
+    .a-body__content {
+        box-sizing: border-box;
+        max-width: 840px + 360px;
+        padding-left: 0;
+    }
 }
