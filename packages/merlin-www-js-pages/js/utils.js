@@ -80,16 +80,26 @@ export function toArray(collection){
  * @param  {Ad}  adModel
  * @return {Boolean}
  */
-export function isAdNative(adModel){
+var _NATIVE_SIZES = ['promotion-small', 'promotion-medium', 'promotion-large'];
+export function isAdNative(adModel, nativeSize){
     var adSizes = adModel.get('sizes');
     var len = adSizes.length;
+
+    if(nativeSize !== undefined && _NATIVE_SIZES.indexOf(nativeSize) === -1){
+        throw new Error('Unknown native ad size: ' + nativeSize);
+    }
+    if(nativeSize !== undefined){
+        var positionRe = new RegExp('^' + nativeSize, 'i');
+    } else {
+        var positionRe = new RegExp('^promotion-', 'i');
+    }
 
     var adType = null;
     while(len--){
         adType = AdUtils.getAdTypeBySize(adSizes[len][0], adSizes[len][1]);
 
         if(adType !== AdUtils.AD_SIZES.NATIVE) continue;
-        if(adModel.get('position') !== 'promotion-small') continue;
+        if(!positionRe.test(adModel.get('position'))) continue;
 
         return true;
     }

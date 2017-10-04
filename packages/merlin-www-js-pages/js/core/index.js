@@ -85,7 +85,7 @@ export default function init(config){
 }
 
 export function onAdRegister(e){
-    if(isAdNative(e.ad)){
+    if(isAdNative(e.ad, 'promotion-small')){
         e.ad.once('render', onNativeAdRender);
         e.ad.once('stop', onNativeAdStop);
     }
