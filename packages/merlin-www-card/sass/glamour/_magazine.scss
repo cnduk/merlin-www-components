@@ -9,6 +9,16 @@
 }
 @mixin card-magazine-large() {
     @include card-landscape-large;
+
+    .c-card__obj__body {
+        padding-right: 0;
+    }
+
+    .c-card__title {
+        @include line-height(21px);
+        margin-bottom: 10px;
+    }
+
 }
 
 .c-card--magazine {
