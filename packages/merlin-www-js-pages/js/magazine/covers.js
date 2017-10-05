@@ -9,45 +9,40 @@ import {
     updateQueryString
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import InfiniteScroll from '@cnbritain/merlin-www-js-infinitescroll';
+import { ID_MAGAZINE_COVERS_HOOK } from '../constants';
+import { appendChildren } from '../utils';
 
-var ID_HOOK_COVERS = 'infiniteScrollHook';
+
 var INFINITE_BOTTOM_THRESHOLD = 1000;
 var INFINITE_SCROLL_THROTTLE = 300;
 var INFINITE_RESIZE_THROTTLE = 300;
+
 var infiniteScroller = null;
 var infiniteBodyScrollHeight = 0;
 var hookInfiniteResize = null;
 
 
-export function getMagazineCovers(page) {
-    var url = updateQueryString('/xhr/magazine', {
-        page: page
-    });
-    return url;
+export function resizeWindow() {
+    infiniteBodyScrollHeight = document.body.scrollHeight - window.innerHeight;
 }
 
-export default function initInfiniteScroll() {
-    infiniteScroller = new InfiniteScroll({
-        'el': window,
-        'throttle': INFINITE_SCROLL_THROTTLE,
-        'trigger': function(scrollY) {
-            return scrollY >= (
-                infiniteBodyScrollHeight - INFINITE_BOTTOM_THRESHOLD);
-        },
-        'url': function(pageCounter) {
-            return location.origin + getMagazineCovers(pageCounter+1);
-        }
+export function getUrl(page) {
+    return location.origin + updateQueryString('/xhr/magazine', {
+        page: page + 1
     });
-    infiniteScroller.on('loadError', onInfiniteLoadError);
-    infiniteScroller.on('loadComplete', onInfiniteLoadComplete);
+}
 
-    onInfiniteWindowResize();
-    onPageLoad(onInfiniteWindowResize);
-    hookInfiniteResize = throttle(
-        onInfiniteWindowResize, INFINITE_RESIZE_THROTTLE);
-    addEvent(window, 'resize', hookInfiniteResize);
+export function getTrigger(scrollY){
+    return scrollY >= (infiniteBodyScrollHeight - INFINITE_BOTTOM_THRESHOLD);
+}
 
-    infiniteScroller.enable();
+export function throwInfiniteError(message, e) {
+    destroyInfiniteScroller();
+    throw new Error(message, e);
+}
+
+export function onInfiniteError(e) {
+    throwInfiniteError('Error trying to load url in infinite scroll', e);
 }
 
 export function destroyInfiniteScroller() {
@@ -58,38 +53,18 @@ export function destroyInfiniteScroller() {
     hookInfiniteResize = null;
 }
 
-export function appendChildren(el, children){
-    var i = -1;
-    var len = children.length;
-    while(++i < len) el.appendChild(children[i]);
-}
-
 export function insertMagazines(section) {
     var docFragment = document.createDocumentFragment();
     var addToFragment = addHtml(docFragment);
 
-    var hook = document.getElementById(ID_HOOK_COVERS);
+    var hook = document.getElementById(ID_MAGAZINE_COVERS_HOOK);
     hook = hook.previousElementSibling.querySelector('.c-card-section ul');
 
     addToFragment(section);
     appendChildren(hook, docFragment.querySelectorAll('.c-card-list__item'));
 }
 
-export function onInfiniteLoadError(e) {
-    throwInfiniteError('Error trying to load url in infinite scroll', e);
-}
-
-export function onInfiniteWindowResize() {
-    infiniteBodyScrollHeight = (
-        document.body.scrollHeight - window.innerHeight);
-}
-
-export function throwInfiniteError(message, e) {
-    destroyInfiniteScroller();
-    throw new Error(message, e);
-}
-
-export function onInfiniteLoadComplete(e) {
+export function onInfiniteSuccess(e) {
     var responseText = e.originalRequest.responseText;
     var responseJSON = null;
 
@@ -106,5 +81,23 @@ export function onInfiniteLoadComplete(e) {
     if(responseJSON.stop) destroyInfiniteScroller();
 
     // TODO: Page impression tracker
-    onInfiniteWindowResize();
+    resizeWindow();
+}
+
+export default function init() {
+    infiniteScroller = new InfiniteScroll({
+        'el': window,
+        'throttle': INFINITE_SCROLL_THROTTLE,
+        'trigger': getTrigger,
+        'url': getUrl
+    });
+    infiniteScroller.on('loadError', onInfiniteError);
+    infiniteScroller.on('loadComplete', onInfiniteSuccess);
+
+    onPageLoad(resizeWindow);
+    resizeWindow();
+    hookInfiniteResize = throttle(resizeWindow, INFINITE_RESIZE_THROTTLE);
+    addEvent(window, 'resize', hookInfiniteResize);
+
+    infiniteScroller.enable();
 }

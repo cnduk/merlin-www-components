@@ -122,3 +122,14 @@ export function getGlobalNamespace(){
 export function setGlobalNamespace(obj){
     window[getNamespaceKey(CONFIG_BRAND.abbr)] = obj;
 }
+
+/**
+ * Append a list of child elements to another element
+ * @param  {HTMLElement} el
+ * @param  {Array.<HTMLElement>} children
+ */
+export function appendChildren(el, children){
+    while(children.length){
+        el.appendChild(children[0]);
+    }
+}

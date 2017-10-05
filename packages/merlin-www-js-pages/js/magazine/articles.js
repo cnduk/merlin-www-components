@@ -5,42 +5,48 @@ import {
     addEvent,
     addHtml,
     ajax,
-    getNamespaceKey,
     removeClass,
-    removeEvent
+    removeEvent,
+    updateQueryString
 } from '@cnbritain/merlin-www-js-utils/js/functions';
-import { getStorage } from '../utils';
-
+import {
+    ID_MAGAZINE_ARTICLES_BUTTON,
+    ID_MAGAZINE_ARTICLES_HOOK
+} from '../constants';
+import { getStorage, appendChildren } from '../utils';
 
 var CLS_HIDDEN = 'global__hidden';
-var ID_BUTTON_ARTICLES = 'btnMagazineMoreArticles';
-var ID_HOOK_ARTICLES = 'moreArticlesHook';
 
-var moreArticlesPage = 1;
+var nextArticlePage = 1;
 var isLoadingArticles = false;
 
 
 export default function init() {
-    var btn = document.getElementById(ID_BUTTON_ARTICLES);
+    var btn = document.getElementById(ID_MAGAZINE_ARTICLES_BUTTON);
     if (!btn) return;
 
     addEvent(btn, 'click', getMoreArticles);
     removeClass(btn.parentNode, CLS_HIDDEN);
 }
 
-export function appendChildren(el, children){
-    var i = -1;
-    var len = children.length;
-    while(++i < len) el.appendChild(children[i]);
+export function getUrl(month, year, page) {
+    return updateQueryString('/xhr/magazine/articles', {
+        year: Number(year),
+        month: Number(month),
+        page: Number(page)
+    });
 }
 
-export function disableMoreArticles() {
+export function disableAjax() {
     removeEvent(
-        document.getElementById(ID_BUTTON_ARTICLES), 'click', getMoreArticles);
+        document.getElementById(ID_MAGAZINE_ARTICLES_BUTTON),
+        'click',
+        getMoreArticles
+    );
 }
 
-export function onMoreArticleError() {
-    disableMoreArticles();
+export function onAjaxError() {
+    disableAjax();
     throw new Error('Error trying to load more articles');
 }
 
@@ -48,20 +54,20 @@ export function insertArticles(section){
     var docFragment = document.createDocumentFragment();
     var addToFragment = addHtml(docFragment);
 
-    var hook = document.getElementById(ID_HOOK_ARTICLES);
+    var hook = document.getElementById(ID_MAGAZINE_ARTICLES_HOOK);
     hook = hook.previousElementSibling.querySelector('.c-card-section ul');
 
     addToFragment(section);
     appendChildren(hook, docFragment.querySelectorAll('.c-card-list__item'));
 }
 
-export function onMoreArticleSuccess(e) {
+export function onAjaxSuccess(e) {
     var responseText = e.request.responseText;
     var responseJSON = null;
     try {
         responseJSON = JSON.parse(responseText);
     } catch (err) {
-        console.error('Error trying to parse response JSON');
+        console.error('Error trying to parse response ajax response');
         throw err;
     }
 
@@ -70,17 +76,14 @@ export function onMoreArticleSuccess(e) {
 
     // Check if we need to stop
     if (responseJSON.data.stop) {
-        disableMoreArticles();
+        disableAjax();
     } else {
-        removeClass(document.getElementById(ID_BUTTON_ARTICLES).parentNode,
-            CLS_HIDDEN);
+        removeClass(
+            document.getElementById(ID_MAGAZINE_ARTICLES_BUTTON).parentNode,
+            CLS_HIDDEN
+        );
     }
     isLoadingArticles = false;
-}
-
-export function getMoreArticlesUrl(month, year, page) {
-    return ('/xhr/magazine/articles?year=' + Number(year) + '&month=' +
-        Number(month) + '&page=' + Number(page));
 }
 
 export function getMoreArticles() {
@@ -88,12 +91,12 @@ export function getMoreArticles() {
     isLoadingArticles = true;
 
     // Hide the button
-    addClass(document.getElementById(ID_BUTTON_ARTICLES), CLS_HIDDEN);
+    addClass(document.getElementById(ID_MAGAZINE_ARTICLES_BUTTON), CLS_HIDDEN);
 
     // Load the content
     var issueMonth = getStorage('magazine_month');
     var issueYear = getStorage('magazine_year');
     ajax({
-        url: getMoreArticlesUrl(issueMonth, issueYear, ++moreArticlesPage)
-    }).then(onMoreArticleSuccess, onMoreArticleError);
+        url: getUrl(issueMonth, issueYear, ++nextArticlePage)
+    }).then(onAjaxSuccess, onAjaxError);
 }
