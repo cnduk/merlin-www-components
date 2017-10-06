@@ -94,6 +94,7 @@
 		left: 0;
 		position: absolute;
 		right: 2px;
+		transition: transform 100ms ease-in-out;
 		z-index: -1;
 	}
 }
@@ -136,6 +137,7 @@
 		left: 0;
 		position: absolute;
 		right: 2px;
+		transition: transform 100ms ease-in-out;
 		z-index: -1;
 	}
 }
