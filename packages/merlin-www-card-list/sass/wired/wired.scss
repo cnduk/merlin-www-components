@@ -90,6 +90,14 @@
         }
     }
 
+    @include two-column-size() {
+        margin: -15px -10px;
+
+        .c-card-list__item {
+            margin: 15px 0;
+        }
+    }
+
     @include four-column-size() {
         margin-right: 340px;
     }
@@ -248,11 +256,5 @@
         @include two-column-size() {
             width: 33.33333%;
         }
-    }
-}
-
-.c-card-list__item--ad {
-    .ad__block {
-        padding: 0;
     }
 }
