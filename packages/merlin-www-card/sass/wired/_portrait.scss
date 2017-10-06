@@ -21,6 +21,54 @@
     }
 
     .c-card__title {
+        @include font("NEW GROTESK SQUARE", 23px, 300, 23px);
+        letter-spacing: 0.3px;
+        margin: 10px auto;
+    }
+
+    .c-card__separator {
+        margin: 10px 0;
+        width: 10px;
+    }
+
+    .c-card__byline {
+        line-height: 1em;
+        margin: 12px auto 5px auto;
+    }
+
+    .c-card__byline-prefix {
+        @include font("EXCHANGE WEB", 12px, null, 17px);
+        font-style: italic;
+    }
+
+    .c-card__byline-name {
+        @include font("BRUTAL", 12px, 700, 15px);
+        text-transform: uppercase;
+    }
+
+    .c-card__meta {
+        font-size: 0;
+        margin-top: -5px;
+    }
+
+    .c-card__meta-item {
+        @include font("EXCHANGE WEB", 11px, 400, 12px);
+        margin-top: 5px;
+        padding-right: 10px;
+
+        & + .c-card__meta-item {
+            border-left: 1px solid $isabelline;
+            padding-left: 10px;
+        }
+    }
+}
+
+@mixin card-portrait-large() {
+    .c-card__images {
+        margin-bottom: 15px;
+    }
+
+    .c-card__title {
         @include font("NEW GROTESK SQUARE", 30px, 300, 28px);
         letter-spacing: 0.3px;
         margin: 10px auto;
@@ -61,10 +109,6 @@
             padding-left: 10px;
         }
     }
-}
-
-@mixin card-portrait-large() {
-    @include card-portrait-small;
 }
 
 .c-card--portrait {
