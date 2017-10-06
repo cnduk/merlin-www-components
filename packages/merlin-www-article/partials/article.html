@@ -83,10 +83,12 @@
                             </div>
                         {{/ data.syndication_profile }}
 
-                        {{# data.date }}
-                            <hr class="a-author__separator a-author__separator--date">
-                            <div class="a-author__article-date">{{ data.label }}</div>
-                        {{/ data.date }}
+                        {{^ state.has_event_information }}
+                            {{# data.date }}
+                                <hr class="a-author__separator a-author__separator--date">
+                                <div class="a-author__article-date">{{ data.label }}</div>
+                            {{/ data.date }}
+                        {{/ state.has_event_information }}
                     </aside>
 
                     {{# data.review_information }}
