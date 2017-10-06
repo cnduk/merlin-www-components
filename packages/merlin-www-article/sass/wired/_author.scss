@@ -89,12 +89,7 @@
 }
 
 .a-event-author__location {
-    @include font("BRUTAL", 12px, 300, 12px);
-    display: inline;
-
-    &:before {
-        content: '- '
-    }
+    @include font("BRUTAL", 12px, 700, 12px);
 }
 
 .a-event-author__date {
