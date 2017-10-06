@@ -27,6 +27,13 @@
 		}
 	}
 
+	.a-share__list {
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
 	.a-header__sponsor {
 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 			margin-left: 0;

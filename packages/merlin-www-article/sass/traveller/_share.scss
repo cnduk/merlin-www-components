@@ -1,5 +1,6 @@
 .a-share {
     margin-top: 24px;
+    position: relative;
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin-top: 32px;
     }
@@ -14,18 +15,12 @@
     margin-top: 40px;
     text-align: center;
     text-transform: uppercase;
-    text-transform: uppercase;
 }
 
 .a-share__list {
     font-size: 0;
     height: 40px;
     text-align: center;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
-        display: inline-block;
-        vertical-align: middle;
-    }
 }
 
 .a-share__list-item {
@@ -46,21 +41,18 @@
 
 .a-share__youtube {
     display: block;
-    margin: 12px auto 0 auto;
-    text-align: center;
+    margin: 20px auto 0 auto;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
-        display: block;
-        margin: 16px auto 0 auto;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         display: inline-block;
-        margin: 4px 0 0 12px;
-        vertical-align: middle;
+        margin-left: 8px;
+        margin-top: 4px;
+    }
+
+    //Overwrite default specificity
+    .a-share__youtube__title {
+        display: none !important;
     }
 }
-.a-share__youtube__title {
-    @include font('PROXIMA NOVA CONDENSED', 9px, 'NORMAL', 11px);
-    text-transform: uppercase;
-}
+
+.a-share__youtube__title {}
