@@ -1,3 +1,9 @@
+.a-footer {
+    .a-share {
+        margin: 50px 0;
+    }
+}
+
 // Footer sponsor
 .a-footer-sponsor {
     @include font-size(12px);
@@ -85,13 +91,5 @@
     @include desktop-size {
         margin: $DESKTOP_SLICE_MARGIN 0;
         padding: 25px 0;
-    }
-}
-
-.a-footer--video {
-    .a-footer__wrapper {
-        margin-left: 0;
-        max-width: 840px + 360px;
-        padding-left: 0;
     }
 }
