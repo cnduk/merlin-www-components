@@ -350,11 +350,12 @@
 }
 
 .bb-card__title {
-    @include font("NEW GROTESK SQUARE", 25px, 300);
+    @include font("NEW GROTESK SQUARE", 25px, 300, 25px);
     margin: 10px 0 0 0;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(40px);
+        @include font-size(30px);
+        @include line-height(28px);
         margin: 15px 0 0 0;
     }
 }
