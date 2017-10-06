@@ -48,6 +48,10 @@
             }
         }
     }
+
+    > p:first-of-type:first-line {
+        @include font-weight(700);
+    }
 }
 
 .a-infinite__message {
