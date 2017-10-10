@@ -79,7 +79,7 @@
     padding: 0;
 
     // This is to fix if we apply a :before to any li elements
-    li:before {
+    > li:before {
         background: none;
         border-radius: 0;
         content: none;
@@ -90,7 +90,7 @@
         width: auto;
     }
 
-    li {
+    > li {
         margin: 0;
         padding: 0;
     }
