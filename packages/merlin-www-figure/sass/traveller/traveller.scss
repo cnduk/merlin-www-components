@@ -5,7 +5,7 @@
 .c-figure {}
 
 .c-figure__container {
-	margin-bottom: 28px;
+	margin-bottom: 20px;
 }
 
 .c-figure__wrapper {
@@ -14,10 +14,10 @@
 
 .c-figure__toolbar {
 	border: 1px solid $PORCELAIN;
-	bottom: 16px;
+	bottom: 18px;
 	height: 40px;
 	position: absolute;
-	right: 16px;
+	right: 18px;
 }
 
 li.c-figure__toolbar-listitem {
@@ -67,7 +67,6 @@ li.c-figure__toolbar-listitem {
 	@include min-screen($TYPE_LARGE_COPY_WIDTH) {
 		@include font-size(32px);
 		@include line-height(36px);
-		letter-spacing: 2px;
 	}
 
 	@include min-screen($ARTICLE_TOTAL) {
