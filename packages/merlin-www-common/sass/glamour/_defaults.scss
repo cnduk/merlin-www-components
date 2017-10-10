@@ -213,7 +213,7 @@ ul {
     list-style-type: none;
     padding-left: 30px;
 
-    li::before {
+    > li::before {
         background: $COLOUR_BG_DARK;
         border-radius: 50%;
         content: '';
@@ -240,7 +240,7 @@ ol {
     }
     padding: 0;
 
-    li {
+    > li {
         list-style: none;
         margin: 55px 0 0 0;
         @include min-screen($TYPE_LARGE_COPY_WIDTH) {
