@@ -51,7 +51,6 @@
 
         @include min-screen($TYPE_LARGE_COPY_WIDTH) {
             @include line-height(36px);
-            letter-spacing: 2px;
         }
     }
 
@@ -60,6 +59,7 @@
     > h5,
     > h5,
     > h6 {
+        @include font-weight(400);
         color: $MANATEE;
         letter-spacing: 1px;
     }
