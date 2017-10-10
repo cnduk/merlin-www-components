@@ -50,9 +50,6 @@
 		}
 
 		margin-top: 24px;
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-			margin-top: 40px;
-		}
 	}
 }
 
@@ -156,9 +153,6 @@
 		}
 
 		margin-top: 24px;
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-			margin-top: 40px;
-		}
 	}
 }
 
