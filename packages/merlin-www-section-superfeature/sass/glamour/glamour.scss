@@ -65,7 +65,7 @@ $SUPERFEATURE_LARGE_VIEW: 1024px;
         box-sizing: border-box;
         color: $COLOUR_MAIN_DARK;
         bottom: 0px;
-        padding: 60px;
+        padding: 40px;
         position: absolute;
         right: 0px;
         text-align: left;
@@ -79,7 +79,7 @@ $SUPERFEATURE_LARGE_VIEW: 1024px;
     margin-bottom: 15px;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        @include font('GRAPHIK', 17px, 'LIGHT', 32px);
+        @include font('GRAPHIK', 17px, 'LIGHT', 22px);
         margin-bottom: 15px;
         margin-top: 8px;
     }
