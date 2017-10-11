@@ -83,14 +83,12 @@
 }
 
 .a-infinite__message-btn {
-    @include font-size(12px);
-    @include line-height(12px);
+    @include button-single;
+    @include button-single-light;
+    min-width: 150px;
 
-    box-sizing: border-box;
-    width: 100%;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        max-width: 170px;
+    &:hover {
+        @include button-single-light-hover;
     }
 }
 
