@@ -6,19 +6,23 @@
     }
 }
 
-.a-header__intro {
-    @include font('GRAPHIK', 19px, 'NORMAL', 22px);
+.a-header__teaser {
+    p {
+        @include font('GRAPHIK', 19px, 'NORMAL', 22px);
 
-    margin: 0 0 15px;
+        @include large-article-size {
+            @include font-size(22px);
+            @include line-height(27px);
+        }
+    }
 
     a {
         @include link-styles;
     }
 
-    @include large-article-size {
-        @include font-size(22px);
-        @include line-height(27px);
+    margin: 0 0 15px;
 
+    @include large-article-size {
         margin: 0 0 20px;
     }
 }
