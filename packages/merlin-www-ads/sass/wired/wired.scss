@@ -3,7 +3,9 @@
 @import '../wireframe/wireframe';
 @import '../wireframe/_debug';
 
-.ad--native-small {
+.ad--native-small,
+.ad--native-medium,
+.ad--native-large, {
     .ad__block {
         padding: 0;
     }
