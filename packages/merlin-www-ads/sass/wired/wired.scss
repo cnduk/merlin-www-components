@@ -3,6 +3,12 @@
 @import '../wireframe/wireframe';
 @import '../wireframe/_debug';
 
+.ad--native-small {
+    .ad__block {
+        padding: 0;
+    }
+}
+
 .ad--homepage {
     background-color: $snow;
     padding: 20px 0;
