@@ -34,7 +34,7 @@
 
 .c-footer__list-item--links {
     @include max-screen(1099px) {
-        background-color: $COLOUR_BG_DARK;
+        background-color: #131313;
     }
 
     .c-footer__list-item {
@@ -45,17 +45,20 @@
         }
 
         &:after {
+            background-color: $COLOUR_MAIN_SECONDARY;
             content: '';
             display: block;
             height: 1px;
-            width: calc(100% - #{20px});
-            background-color: $COLOUR_MAIN_SECONDARY;
+            margin-left: -20px;
+            padding-right: 20px;
+            width: 100%;
 
             @include min-screen(1100px) {
                 display: inline-block;
                 height: 12px;
                 width: 1px;
                 margin: 0 0 0 20px;
+                padding: 0;
                 background-color: rgba(255, 255, 255, 0.4);
             }
         }
@@ -64,12 +67,11 @@
 
 li.c-footer__list-item {
     @include font('GRAPHIK', 13px, 300, 60px, 20);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 
     height: 60px;
     letter-spacing: 0.025em;
     padding-left: 20px;
+    margin: 0;
 
     a {
         text-decoration: none;
