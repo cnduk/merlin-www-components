@@ -187,7 +187,7 @@ li {
 }
 
 ul {
-    li:not([class]):before {
+    > li:not([class]):before {
         background-color: #1da8ff;
         border-radius: 50%;
         content: "";
@@ -203,11 +203,11 @@ ul {
 ol {
     counter-reset: section;
 
-    li {
+    > li {
         counter-increment: section;
     }
 
-    li:not([class]):before {
+    > li:not([class]):before {
         content: counter(section) '.';
         position: absolute;
         left: -28px;
