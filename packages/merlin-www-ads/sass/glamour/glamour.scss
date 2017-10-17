@@ -369,3 +369,9 @@
 
 }
 
+.ad--native-large {
+    &:not(.is-hidden) .ad__block {
+        background-color: transparent;
+        padding: 0;
+    }
+}
