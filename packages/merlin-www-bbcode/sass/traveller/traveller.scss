@@ -180,7 +180,7 @@
 // Figure
 // -------------------- //
 .bb-figure {
-    margin: 40px 0;
+    margin: 28px 0;
 }
 
 .bb-figure__wrapper {
@@ -478,6 +478,7 @@
 .bb-button {
     @include button-single-two();
     @include button-single-two-light();
+    margin: 28px 0;
     width: 100%;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
