@@ -67,10 +67,15 @@
 		margin-bottom: 0;
 	    text-shadow: 0 0 16px rgba($MUSTASAARI, 0.2);
 
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
 			@include font-size(40px);
 			@include line-height(48px);
 			margin-bottom: 0;
+		}
+
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	    	@include font-size(46px);
+	    	@include line-height(54px);
 		}
 	}
 }
@@ -206,7 +211,7 @@
 .a-header__hero-content {
 	box-sizing: border-box;
 	left: 50%;
-	max-width: 920px;
+	max-width: 1024px + $DESKTOP_SIDE_GUTTER*2;
 	padding-left: $MOBILE_SIDE_GUTTER;
 	padding-right: $MOBILE_SIDE_GUTTER;
 	position: absolute;
@@ -288,7 +293,7 @@
 	}
 
 	p {
-		@include font("PROXIMA NOVA CONDENSED", 16px, 400, 24px);
+		@include font("PROXIMA NOVA CONDENSED", 16px, 400, 20px);
 		color: $RAVEN;
 		letter-spacing: 1px;
 		text-align: center;
