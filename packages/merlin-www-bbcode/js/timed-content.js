@@ -17,7 +17,7 @@ var CLS_TIMED_CONTENT_PREVIEW = 'bb-timed-content--preview';
 var MAX_TIMEOUT = 86400 * 5;
 
 function log(){
-    var DEBUG = true;
+    var DEBUG = false;
 
     if (DEBUG) {
         console.log.apply(console, arguments);
