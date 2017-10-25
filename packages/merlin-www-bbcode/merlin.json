@@ -286,6 +286,7 @@
         "timed-content": "partials/timed-content.html"
     },
     "dependencies": [
+        "@cnbritain/merlin-www-js-utils",
         "@cnbritain/merlin-www-buttons",
         "@cnbritain/merlin-www-common",
         "@cnbritain/merlin-www-image"
