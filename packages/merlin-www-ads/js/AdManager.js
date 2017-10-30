@@ -34,6 +34,7 @@ import {
     refreshRubicon,
     registerGPT,
     registerRubicon,
+    registerPrebid,
     renderGPT,
     setAdStateToRendered,
     setAdStateToStopped
@@ -147,6 +148,7 @@ AdManager.prototype = inherit(EventEmitter.prototype, {
             return Promise.all(ad.map(this.register));
         }
         return registerRubicon(ad)
+            .then(function(){ return registerPrebid(ad); })
             .then(function(){ return registerGPT(ad); })
             .catch(function(err){
                 console.error('There was an error registering the ads');

@@ -45,6 +45,84 @@ var TEAD_URL = null;
 export var TEAD_URL;
 
 /**
+ * Setting object for prebid.js. Contains adapter settings like Rubicon.
+ * @type {Object}
+ */
+var PREBID_SETTINGS = {};
+
+/**
+ * The url that should be used to load prebid
+ * @type {String}
+ */
+var PREBID_URL = null;
+// var PREBID_URL = '/static/js/prebid.js';
+export var PREBID_URL;
+
+/**
+ * Prebid timeout in milliseconds
+ * @type {Number}
+ */
+var PREBID_TIMEOUT = 1000;
+
+/**
+ * Prebid state for whether it has loaded
+ * @type {Boolean}
+ */
+var PREBID_LOADED = false;
+
+/**
+ * Ad sizes the Rubicon allows
+ * @type {Object}
+ */
+var RUBICON_ALLOWED_SIZES = {
+  '468x60': true,
+  '728x90': true,
+  '120x600': true,
+  '160x600': true,
+  '300x600': true,
+  '200x200': true,
+  '250x250': true,
+  '300x250': true,
+  '336x280': true,
+  '300x100': true,
+  '980x120': true,
+  '250x360': true,
+  '180x500': true,
+  '980x150': true,
+  '468x400': true,
+  '930x180': true,
+  '320x50': true,
+  '300x50': true,
+  '300x300': true,
+  '300x1050': true,
+  '970x90': true,
+  '970x250': true,
+  '1000x90': true,
+  '320x80': true,
+  '320x150': true,
+  '1000x1000': true,
+  '640x480': true,
+  '320x480': true,
+  '1800x1000': true,
+  '320x320': true,
+  '320x160': true,
+  '980x240': true,
+  '980x300': true,
+  '980x400': true,
+  '480x300': true,
+  '970x310': true,
+  '970x210': true,
+  '480x320': true,
+  '768x1024': true,
+  '480x280': true,
+  '1000x300': true,
+  '320x100': true,
+  '800x250': true,
+  '200x600': true,
+  '600x300': true
+};
+
+/**
  * The test ad config set by the page
  * @type {Object}
  */
@@ -318,6 +396,20 @@ export function getSlot(ad){
 }
 
 /**
+ * Get all the targeting on a current ad slot
+ * @param  {googletag.Slot} slot
+ * @return {Object}
+ */
+export function getSlotTargeting(slot){
+    var targeting = {};
+    var keys = slot.getTargetingKeys();
+    keys.forEach(function(key){
+        targeting[key] = slot.getTargeting(key);
+    });
+    return targeting;
+}
+
+/**
  * Checks if the ad allows header bidding
  * @param  {Ad}  ad
  * @return {Boolean}
@@ -389,6 +481,7 @@ export function loadAdLibraries(){
     window.googletag.cmd = window.googletag.cmd || [];
 
     return Promise.all([
+        loadPrebidLibrary(),
         loadRubiconLibrary()
     ]).then(function(){
         return loadGPTLibrary();
@@ -430,6 +523,39 @@ export function loadRubiconLibrary(){
 export function loadTeadLibrary(){
     window._ttf = window._ttf || [];
     return loadScript(TEAD_URL);
+}
+
+/**
+ * Loads the specified prebid url. A timeout is set to ensure we don't wait
+ * too long.
+ * @return {Promise}
+ */
+export function loadPrebidLibrary(){
+    if(PREBID_URL === null){
+        console.warn('Prebid library has no url specified to load. Ads will continue without Prebid');
+        return Promise.resolve();
+    }
+
+    window.pbjs = window.pbjs || {};
+    window.pbjs.que = window.pbjs.que || [];
+
+    var prebidPromise = loadScript(PREBID_URL)
+        .then(function(){
+            PREBID_LOADED = true;
+            return Promise.resolve();
+        }, function(){
+            console.warn('Error loading prebid library');
+            PREBID_LOADED = false;
+            return Promise.resolve();
+        }).catch(function(){
+            console.warn('Error loading prebid library');
+            PREBID_LOADED = false;
+            return Promise.resolve();
+        });
+
+    var timeoutPromise = promisifyTimeout(PREBID_TIMEOUT);
+
+    return Promise.race([prebidPromise, timeoutPromise]);
 }
 
 /**
@@ -480,6 +606,17 @@ export function mapAdElementAttributes(attribs){
 }
 
 /**
+ * Creates a timeout wrapped in a promise
+ * @param  {Number} ms amount of milliseconds
+ * @return {Promise}
+ */
+export function promisifyTimeout(ms){
+    return new Promise(function(resolve){
+        setTimeout(resolve, ms);
+    });
+}
+
+/**
  * Adds a callback to GPT's cmd queue
  * @param  {Function} callback
  * @return {Promise}
@@ -505,18 +642,40 @@ export function pushToGoogleTag(callback){
 
 export function refreshGPT(ads, changeCorrelator){
     return pushToGoogleTag(function(res){
+
         var slots = null;
+        var slotIds = null;
         if(Array.isArray(ads)){
             slots = ads.map(getSlot);
+            slotIds = ads.map(function(ad){ return ad.id; });
         } else {
             slots = [getSlot(ads)];
+            slotIds = [ads.id];
         }
 
         if(RUBICON_LOADED) slots.forEach(setRubiconTargeting);
-        googletag.pubads().refresh(slots, {
-            'changeCorrelator': !!changeCorrelator
-        });
-        res();
+
+        if(PREBID_LOADED){
+            pbjs.que.push(function() {
+                pbjs.requestBids({
+                    timeout: PREBID_TIMEOUT,
+                    adUnitCodes: slotIds,
+                    bidsBackHandler: function() {
+                        pbjs.setTargetingForGPTAsync(slotIds);
+                        googletag.pubads().refresh(slots,{
+                            'changeCorrelator': !!changeCorrelator
+                        });
+                        res();
+                    }
+                });
+            });
+        } else {
+            googletag.pubads().refresh(slots, {
+                'changeCorrelator': !!changeCorrelator
+            });
+            res();
+        }
+
     });
 
     function setRubiconTargeting(slot){
@@ -595,6 +754,12 @@ export function registerGPT(ad){
             slot.defineSizeMapping(
                 createSizeMap(ad.get('sizemap')).build());
         }
+        // Prebid bits
+        if(PREBID_LOADED){
+            pbjs.que.push(function() {
+                pbjs.setTargetingForGPTAsync();
+            });
+        }
         // Update slot information
         ad.slot = slot;
         ad.state = AD_STATES.REGISTERED;
@@ -607,6 +772,92 @@ export function registerGPT(ad){
             'slot': slot
         }));
         return ad;
+    });
+}
+
+/**
+ * Create the prebid config for the specified ads
+ * @param  {Array.<Ad>} ads
+ * @return {Array}
+ */
+function getPrebidAdUnits(ads){
+    var adUnits = [];
+
+    ads.forEach(function(ad){
+        if(!hasHeaderBidding(ad)){
+            return;
+        }
+
+        var bids = [];
+
+        // Rubicon
+        if(PREBID_SETTINGS.hasOwnProperty('RUBICON')){
+            PREBID_SETTINGS.RUBICON.zoneId.forEach(function(zoneId){
+                bids.push({
+                    bidder: 'rubicon',
+                    params: {
+                        accountId: PREBID_SETTINGS.RUBICON.accountId,
+                        siteId: PREBID_SETTINGS.RUBICON.siteId,
+                        zoneId: zoneId
+                    }
+                });
+            });
+        }
+
+        // No bids to be setup, dont do anything
+        if(bids.length === 0) return;
+
+        var adUnit = {
+           code: ad.id,
+           sizes: ad.get('sizes').filter(function(dims){
+            return RUBICON_ALLOWED_SIZES.hasOwnProperty(dims.join('x'));
+           }),
+           bids: bids
+        };
+
+        if(ad.get('sizemap')){
+            var sizemap = ad.get('sizemap').map(function(group){
+                return {
+                    minWidth: group[0][0],
+                    sizes: group[1].filter(function(dims){
+                        return RUBICON_ALLOWED_SIZES.hasOwnProperty(
+                            dims.join('x'));
+                    }).map(function(dims){
+                        return dims[0];
+                    })
+                };
+            });
+            if(sizemap.length > 0){
+                adUnit['sizeMapping'] = sizemap;
+            }
+        }
+        adUnits.push(adUnit);
+    });
+
+    return adUnits;
+}
+
+/**
+ * Registers prebid if loaded
+ * @param  {Ad} ad
+ * @return {Promise}
+ */
+export function registerPrebid(ad){
+    return pushToGoogleTag(function(res){
+        if(PREBID_LOADED && hasHeaderBidding(ad)){
+            pbjs.que.push(function() {
+                var adUnits = getPrebidAdUnits([ad]);
+                pbjs.addAdUnits(adUnits);
+
+                pbjs.requestBids({
+                    bidsBackHandler: function(bidResponses){
+                        res();
+                    }
+                });
+            });
+        } else {
+            res();
+        }
     });
 }
 
@@ -642,6 +893,12 @@ export function setAdUrls(config){
                 break;
             case 'TEAD_URL':
                 TEAD_URL = config[key];
+                break;
+            case 'PREBID_URL':
+                PREBID_URL = config[key];
+                break;
+            case 'PREBID_SETTINGS':
+                PREBID_SETTINGS = config[key]
                 break;
         }
     }
