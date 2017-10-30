@@ -5,7 +5,6 @@
  * @module Utils
  */
 
-import AutoQueue from './AutoQueue';
 import BRAND_CONFIG from '@cnbritain/merlin-www-common';
 
 import {
@@ -26,14 +25,6 @@ import {
 var GPT_URL = '//www.googletagservices.com/tag/js/gpt.js';
 export var GPT_URL;
 
-/**
- * The open x script url. This needs to be set in order for it to work.
- * @type {String}
- */
-var OPEN_X_URL = null;
-export var OPEN_X_URL;
-
-var OPEN_X_LOADED = false;
 
 /**
  * The rubicon script url. This needs to be set in order for it to work.
@@ -215,14 +206,6 @@ var AD_ATTRIBUTE_MAP = {
 };
 
 /**
- * Ok so OpenX register and refresh can only go one at a time. Literally. So
- * we have to queue up functions and get them to fire off callbacks when theyre
- * finished.
- */
-var OPEN_X_REGISTER = new AutoQueue(500);
-var OPEN_X_REFRESH = new AutoQueue(500);
-
-/**
  * Creates the DFP url
  * @param  {Object} attribs
  * @return {String}
@@ -265,16 +248,6 @@ export function checkTestAdConfig(refresh){
     }
 
     return TEST_AD_CONFIG;
-}
-
-export function createOpenXConfig(ad){
-    return [
-        ad.get('dfp'),
-        ad.get('sizes').map(function(size){
-            return size.join('x');
-        }),
-        ad.id
-    ];
 }
 
 function createSizeMap(sizemapAttrib){
@@ -416,7 +389,6 @@ export function loadAdLibraries(){
     window.googletag.cmd = window.googletag.cmd || [];
 
     return Promise.all([
-        loadOpenXLibrary(),
         loadRubiconLibrary()
     ]).then(function(){
         return loadGPTLibrary();
@@ -431,27 +403,6 @@ export function loadGPTLibrary(){
     window.googletag = window.googletag || {};
     window.googletag.cmd = window.googletag.cmd || [];
     return loadScript(GPT_URL);
-}
-
-export function loadOpenXLibrary(){
-    window.OX_dfp_ads = window.OX_dfp_ads || [];
-    if(OPEN_X_URL === null){
-        console.warn('OpenX library has no url specified to load. Ads will continue without OpenX');
-        return Promise.resolve();
-    }
-    return loadScript(OPEN_X_URL)
-        .then(function(){
-            OPEN_X_LOADED = true;
-            return Promise.resolve();
-        }, function(){
-            console.warn('OpenX library failed to load. Ads will continue without OpenX');
-            OPEN_X_LOADED = false;
-            return Promise.resolve();
-        }).catch(function(){
-            console.warn('OpenX library failed to load. Ads will continue without OpenX');
-            OPEN_X_LOADED = false;
-            return Promise.resolve();
-        });
 }
 
 export function loadRubiconLibrary(){
@@ -561,7 +512,6 @@ export function refreshGPT(ads, changeCorrelator){
             slots = [getSlot(ads)];
         }
 
-        if(OPEN_X_LOADED) OX.dfp_bidder.setOxTargeting(slots);
         if(RUBICON_LOADED) slots.forEach(setRubiconTargeting);
         googletag.pubads().refresh(slots, {
             'changeCorrelator': !!changeCorrelator
@@ -572,35 +522,6 @@ export function refreshGPT(ads, changeCorrelator){
     function setRubiconTargeting(slot){
         rubicontag.setTargetingForGPTSlot(slot);
     }
-}
-
-export function refreshOpenX(ads){
-    return pushToGoogleTag(function(res){
-        OPEN_X_REFRESH.chain(function(resolve){
-            // If ads is a value, we want to refresh the slots we've been
-            // given otherwise we want to refresh all.
-            if(isDefined(ads)){
-                var slots = null;
-
-                // Get the slots of the ads
-                if(Array.isArray(ads)){
-                    slots = ads.map(getSlot).filter(isDefined);
-                } else {
-                    slots = [getSlot(ads)].filter(isDefined);
-                }
-
-                // Check that we have slots. If so, refresh them.
-                if(slots.length > 0){
-                    OX.dfp_bidder.refresh(resolve, slots);
-                } else {
-                    resolve();
-                }
-            } else {
-                // Refresh allthethings
-                OX.dfp_bidder.refresh(resolve);
-            }
-        }, res);
-    });
 }
 
 export function refreshRubicon(ads){
@@ -689,18 +610,6 @@ export function registerGPT(ad){
     });
 }
 
-export function registerOpenX(ad){
-    return pushToGoogleTag(function(res){
-        OPEN_X_REGISTER.chain(function(resolve, reject){
-            if(hasHeaderBidding(ad)){
-                OX.dfp_bidder.addSlots([createOpenXConfig(ad)], resolve);
-            } else {
-                resolve();
-            }
-        }, res);
-    });
-}
-
 export function registerRubicon(ad){
     return pushToGoogleTag(function(res){
         if(RUBICON_LOADED && hasHeaderBidding(ad)){
@@ -727,9 +636,6 @@ export function setAdUrls(config){
         switch(key){
             case 'GPT_URL':
                 GPT_URL = config[key];
-                break;
-            case 'OPEN_X_URL':
-                OPEN_X_URL = config[key];
                 break;
             case 'RUBICON_URL':
                 RUBICON_URL = config[key];

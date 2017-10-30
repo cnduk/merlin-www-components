@@ -31,10 +31,8 @@ import {
     parseAdAttributes,
     pushToGoogleTag,
     refreshGPT,
-    refreshOpenX,
     refreshRubicon,
     registerGPT,
-    registerOpenX,
     registerRubicon,
     renderGPT,
     setAdStateToRendered,
@@ -134,10 +132,7 @@ AdManager.prototype = inherit(EventEmitter.prototype, {
     },
 
     'refresh': function(ads, changeCorrelator){
-        return refreshOpenX(ads)
-            .then(function(){
-                return refreshRubicon(ads);
-            })
+        return refreshRubicon(ads)
             .then(function(){
                 return refreshGPT(ads, changeCorrelator);
             })
@@ -151,8 +146,7 @@ AdManager.prototype = inherit(EventEmitter.prototype, {
         if(Array.isArray(ad)){
             return Promise.all(ad.map(this.register));
         }
-        return registerOpenX(ad)
-            .then(function(){ return registerRubicon(ad); })
+        return registerRubicon(ad)
             .then(function(){ return registerGPT(ad); })
             .catch(function(err){
                 console.error('There was an error registering the ads');
