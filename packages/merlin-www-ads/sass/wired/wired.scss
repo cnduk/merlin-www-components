@@ -152,7 +152,7 @@
         margin-right: -$TABLET_SIDE_GUTTER + 10;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
         clear: right;
         float: right;
         margin: 10px -340px 0 40px;
@@ -163,7 +163,7 @@
     }
 
     .ad__block {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
             background-color: transparent;
             padding: 0;
         }
@@ -171,7 +171,7 @@
 }
 
 .ad--tag-rail-top {
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
         left: 100%;
         position: absolute;
         top: 0;
