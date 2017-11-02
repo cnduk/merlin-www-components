@@ -33,17 +33,38 @@
     }
 
     .c-card__title {
+        @include font("ITC CASLON");
+        @include font-weight(400);
+        color: #111111;
         margin-bottom: 15px;
         text-align: center;
+        text-align: center;
+        text-transform: uppercase;
     }
 }
-@mixin card-cover-small() {}
-@mixin card-cover-large() {}
+
+@mixin card-cover-small() {
+    .c-card__title {
+        @include font-size(17px);
+        @include line-height(20px);
+
+    }
+}
+
+@mixin card-cover-large() {
+    .c-card__title {
+        @include font-size(20px);
+        @include line-height(25px);
+    }
+}
 
 .c-card--cover {
     @include card-cover();
-    // @include card-cover-small();
-    // @include card-cover-large();
+    @include card-cover-small();
+
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+        @include card-cover-large();
+    }
 }
 
 .c-card--cover-small {
