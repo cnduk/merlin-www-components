@@ -36,8 +36,8 @@
         @include font("ITC CASLON");
         @include font-weight(400);
         color: #111111;
+        letter-spacing: 0.025em;
         margin-bottom: 15px;
-        text-align: center;
         text-align: center;
         text-transform: uppercase;
     }
