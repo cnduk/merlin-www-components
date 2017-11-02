@@ -220,7 +220,7 @@
 
     @include four-column-size(){
         .c-card-list__item {
-            margin-bottom: 30px;
+            margin-bottom: 45px;
             width: 25%;
 
             @include last(4){
