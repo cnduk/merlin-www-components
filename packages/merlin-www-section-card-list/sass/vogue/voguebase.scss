@@ -176,7 +176,17 @@
 
 }
 
-.c-card-section--mag-articles,
+.c-card-section--mag-magazines,
+.c-card-section--mag-articles {
+    .c-card-section__title {
+        @include font("NOBEL", 14px, 700, 16px, 25);
+        color: #111111;
+        margin-bottom: 20px;
+        margin-top: 0;
+        text-transform: uppercase;
+    }
+}
+
 .c-card-section--v-genre-articles {
     .c-card-section__title {
         @include font('NOBEL', 15px);
@@ -199,7 +209,6 @@
     }
 }
 
-.c-card-section--mag-magazines,
 .c-card-section--a-recommended,
 .c-card-section--g-recommended,
 .c-card-section--sh-summary-articles,
