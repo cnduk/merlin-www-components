@@ -201,11 +201,11 @@ ul {
         @include line-height(30px);
     }
 
-    li {
+    > li {
         position: relative;
     }
 
-    li:before {
+    > li:before {
         background: $COLOUR_BG_DARK;
         border-radius: 50%;
         content: "";
@@ -234,11 +234,11 @@ ol {
         @include line-height(30px);
     }
 
-    li {
+    > li {
         position: relative;
     }
 
-    li:before {
+    > li:before {
         background: $COLOUR_BG_DARK;
         color: #fff;
         counter-increment: section;
