@@ -26,11 +26,13 @@
 
                     <aside class="a-author">
                         {{^ state.has_multiple_profiles }}
-                            {{# data.image }}
-                                <div class="a-author__image">
-                                    {{> @cnbritain/merlin-www-image }}
-                                </div>
-                            {{/ data.image }}
+                            {{# data.profiles }}
+                                {{# data.image }}
+                                    <div class="a-author__image">
+                                        {{> @cnbritain/merlin-www-image }}
+                                    </div>
+                                {{/ data.image }}
+                            {{/ data.profiles }}
                         {{/ state.has_multiple_profiles }}
 
                         {{# data.byline }}
