@@ -100,7 +100,7 @@
 .a-event-author__btn {
     @include button-single();
     @include button-single-light();
-    margin-top: 15px;
+    margin: 15px 0;
     text-align: center;
 
     &:hover {
