@@ -3,25 +3,42 @@
 import { addEvent } from '@cnbritain/merlin-www-js-utils/js/functions';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
 
-export default function init(){
-    var trackedLinks = document.querySelectorAll('.js-gatracked-link');
-    if(trackedLinks.length < 1) return;
-    var len = trackedLinks.length;
-    while(len--){
-        addEvent(trackedLinks[len], 'click', sendEvent);
-    }
+var JS_GATRACKED_LINK = '.js-gatracked-link';
+
+var analyticsEventKeys = {
+    // attribute key: value key
+    'data-analytics-event-action': 'action',
+    'data-analytics-event-category': 'category',
+    'data-analytics-event-label': 'label'
+};
+
+export function getAnalyticEventAttributes(el){
+    var attrs = {};
+    Object.keys(analyticsEventKeys).forEach(function(attrKey){
+        if(el.hasAttribute(attrKey)){
+            attr[analyticsEventKeys[attrKey]] = el.getAttribute(attrKey);
+        } else {
+            attr[analyticsEventKeys[attrKey]] = null;
+        }
+    });
+    return attrs;
 }
 
 export function sendEvent(e){
-    var target = this;
-    var analyticsAction = target.getAttribute('data-analytics-event-action');
-    var analyticsCategory = target.getAttribute(
-        'data-analytics-event-category');
-    var analyticsLabel = target.getAttribute('data-analytics-event-label');
+    var attrs = getAnalyticEventAttributes(this);
+
     GATracker.SendAll(GATracker.SEND_HITTYPES.EVENT, {
-        'eventAction': analyticsAction,
-        'eventCategory': analyticsCategory,
-        'eventLabel': analyticsLabel,
+        'eventAction': attrs.action,
+        'eventCategory': attrs.category,
+        'eventLabel': attrs.label,
         'transport': 'beacon'
     });
+}
+
+export default function init(){
+    var trackedLinks = document.querySelectorAll(JS_GATRACKED_LINK);
+    if(trackedLinks.length === 0) return;
+
+    var len = trackedLinks.length;
+    while(len--) addEvent(trackedLinks[len], 'click', sendEvent);
 }
