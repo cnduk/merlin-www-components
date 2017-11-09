@@ -75,14 +75,15 @@ const BRAND_KEY = {
 };
 
 const BRAND_THEMES = [
-    "vogue",
-    "wired",
+    "bystander",
     "glamour",
     "gq",
+    "missvogue",
     "tatler",
     "traveller",
-    "missvogue",
-    "bystander"
+    "vogue",
+    "wired",
+    "houseandgarden"
 ];
 
 module.exports = function(merlinConfig={}, scopeName=null){

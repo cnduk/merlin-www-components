@@ -1,0 +1,17 @@
+@import '@cnbritain/merlin-www-common:houseandgarden';
+
+.c-card--dark {
+    &.c-card--landscape,
+    &.c-card--portrait,
+    &.c-card--switcher,
+    &.c-card--hero {
+        .c-card__tag {
+            color: $CASPER;
+        }
+
+        .c-card__title,
+        .c-card__byline {
+            color: $WHITE;
+        }
+    }
+}

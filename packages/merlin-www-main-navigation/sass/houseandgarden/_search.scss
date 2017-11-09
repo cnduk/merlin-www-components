@@ -1,0 +1,72 @@
+.n-menu__search {
+    margin: 0 20px;
+    border-bottom: 1px solid $ISABEL;
+    overflow: hidden;
+    position: relative;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin: 0 30px;
+    }
+
+    .n-main__nav-search {
+        width: 20px;
+    }
+
+    svg {
+        fill: $MUSTASAARI;
+        height: 100%;
+        width: 20px;
+    }
+}
+
+.n-menu__search-search {
+    float: right;
+}
+
+.n-menu__search-textbox {
+    display: inline-block;
+    left: 0;
+    height: 60px;
+    position: absolute;
+    right: 60px;
+    top: 0;
+
+    input {
+        @include font("PROXIMA NOVA CONDENSED", 16px, 400, 60px);
+        background-color: $WHITE;
+        border: none;
+        box-sizing: border-box;
+        color: $MUSTASAARI;
+        height: 60px;
+        padding: 0;
+        width: 100%;
+
+        &::placeholder {
+            color: $MANATEE;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.n-search {
+    background-color: rgba($WHITE, 0.9);
+
+    &.has-overlay {
+        left: 0;
+        padding-bottom: 100%;
+        position: absolute;
+        right: 0;
+        top: auto;
+        z-index: 3;
+
+        &.is-stuck {
+            bottom: 0;
+            padding-bottom: 0;
+            position: fixed;
+            top: 60px;
+        }
+    }
+}

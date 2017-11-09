@@ -1,0 +1,205 @@
+@import "@cnbritain/merlin-www-common:houseandgarden";
+@import "@cnbritain/merlin-www-topic-strip:houseandgarden";
+@import "@cnbritain/merlin-www-buttons:houseandgarden";
+@import "@cnbritain/merlin-www-card-list:houseandgarden";
+@import "@cnbritain/merlin-www-card:houseandgarden";
+
+@import "../wireframe/wireframe";
+
+.c-card-section {
+	margin-top: $MOBILE_SLICE_MARGIN;
+	margin-bottom: $MOBILE_SLICE_MARGIN;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	    margin-top: $TABLET_SLICE_MARGIN;
+	    margin-bottom: $TABLET_SLICE_MARGIN;
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	    margin-top: $DESKTOP_SLICE_MARGIN;
+	    margin-bottom: $DESKTOP_SLICE_MARGIN;
+	}
+}
+
+.c-card-section--c-tag,
+.c-card-section--c-contributors {
+	.c-card-section__title {
+		@include font("LULO ONE", 24px, 700, 28px, -35);
+		color: $SHERPA-BLUE;
+		margin-bottom: 12px;
+		margin-top: 0;
+		text-align: center;
+		text-transform: uppercase;
+
+		a {
+			color: inherit;
+		}
+
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			@include font-size(28px);
+			@include line-height(32px);
+			margin-bottom: 16px;
+		}
+	}
+
+	.c-card-section__btn {
+		@include button-single();
+		@include button-single-light();
+		&:hover {
+			@include button-single-light-hover();
+		}
+
+		margin-top: 24px;
+	}
+}
+
+.c-card-section--mag-magazines {
+	background-color: $CAPE-HAZE;
+	margin: 0;
+    max-width: none;
+    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: $DESKTOP_SLICE_MARGIN;
+    }
+
+    .c-card-section__title {
+    	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
+    	letter-spacing: 1px;
+    	margin-bottom: 16px;
+    	margin-top: 0;
+    	text-transform: uppercase;
+
+    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    		margin-bottom: 24px;
+    	}
+    }
+}
+
+.c-card-section--a-recommended,
+.c-card-section--v-genre-articles {
+    .c-card-section__title {
+    	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
+    	letter-spacing: 1px;
+    	margin-bottom: 16px;
+    	margin-top: 0;
+    	text-transform: uppercase;
+
+    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    		margin-bottom: 24px;
+    	}
+    }
+}
+
+.c-card-section--c-video-articles,
+.c-card-section--v-related-articles {
+	background-color: $JUNGLE;
+	margin: 0;
+    max-width: none;
+    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: $DESKTOP_SLICE_MARGIN;
+    }
+
+    .c-card-section__title {
+    	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
+    	color: $WHITE;
+    	letter-spacing: 1px;
+    	margin-bottom: 16px;
+    	margin-top: 0;
+    	text-transform: uppercase;
+
+    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    		margin-bottom: 24px;
+    	}
+    }
+
+    .c-card-section__logo {
+    	height: 42px;
+		margin: 0 auto 26px auto;
+		width: 268px;
+
+    	svg {
+    	    display: inline-block;
+    	    height: 100%;
+    	    width: 100%;
+
+    	    path {
+    	        fill: $WHITE;
+    	    }
+    	}
+
+    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    		height: 52px;
+			margin: 0 auto 32px auto;
+    		width: 331px;
+    	}
+    }
+
+	.c-card-section__btn {
+		@include button-single();
+		@include button-single-dark();
+		&:hover {
+			@include button-single-dark-hover();
+		}
+
+		margin-top: 24px;
+	}
+}
+
+.c-card-section--v-related-articles {
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		display: none;
+	}
+}
+
+.c-card-section--tg-articles,
+.c-card-section--v-articles {
+	.c-card-section__title {
+		@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
+		letter-spacing: 1px;
+		margin-bottom: 16px;
+		margin-top: 0;
+		text-transform: uppercase;
+
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			margin-bottom: 24px;
+		}
+	}
+
+	.c-card-list {
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		    margin-right: 340px;
+		}
+	}
+}
+
+.c-card-section--mag-articles {
+	.c-card-section__title {
+		@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
+		letter-spacing: 1px;
+		margin-bottom: 16px;
+		margin-top: 0;
+		text-transform: uppercase;
+
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			margin-bottom: 24px;
+		}
+	}
+}
+
+.c-card-section__constrain {}
+.c-card-section__logo {}
+.c-card-section__title {}
+.c-card-section__btn {
+
+}

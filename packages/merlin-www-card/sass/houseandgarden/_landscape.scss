@@ -1,0 +1,250 @@
+// -------------------- //
+// Landscape
+// -------------------- //
+@mixin card-landscape() {
+    .c-card__obj {
+        display: table;
+        width: 100%;
+    }
+
+    .c-card__obj__header,
+    .c-card__obj__body {
+        display: table-cell;
+        vertical-align: top;
+    }
+}
+
+@mixin card-landscape-small() {
+    .c-card {}
+    .c-card__link {}
+
+    .c-card__obj {}
+    .c-card__obj__header {
+        padding-right: 8px;
+        width: 50%;
+    }
+
+    .c-card__images {}
+    .c-card__image {}
+
+    .c-card__image__icon {
+        @include vendor-prefix(transform, translate(-50%, -50%));
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        height: 48px;
+        left: 50%;
+        top: 50%;
+        width: 48px;
+
+        svg {
+            display: block;
+            height: 100%;
+            margin: 0 auto;
+            vertical-align: middle;
+            width: 20px;
+            fill: $WHITE;
+        }
+    }
+
+    .c-card__obj__body {
+        padding-left: 8px;
+        width: 50%;
+    }
+
+    .c-card__header {}
+
+    .c-card__tag {
+        @include font("PROXIMA NOVA CONDENSED", 12px, 600, 12px);
+        color: $SHERPA-BLUE;
+        letter-spacing: 2px;
+        margin-bottom: 6px;
+        margin-top: 0;
+        text-transform: uppercase;
+    }
+
+    .c-card__title {
+        @include font("PROXIMA NOVA CONDENSED", 16px, 600, 20px);
+        color: $MUSTASAARI;
+        margin-bottom: 8px;
+        margin-top: 6px;
+    }
+
+    .c-card__teaser {
+        display: none;
+    }
+
+    .c-card__separator {
+        display: none;
+    }
+
+    .c-card__footer {
+        > :first-child {
+            margin-top: 8px;
+        }
+    }
+
+    .c-card__byline {
+        @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+        color: $MUSTASAARI;
+        margin-bottom: 4px;
+        margin-top: 8px;
+    }
+
+    .c-card__byline--sponsorship {}
+
+    .c-card__byline-prefix {
+        font-style: italic;
+        text-transform: lowercase;
+    }
+
+    .c-card__byline-name {
+        letter-spacing: 1px;
+        margin-left: 2px;
+        text-transform: uppercase;
+    }
+
+    ul.c-card__meta {
+        @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+        color: $MANATEE;
+        margin-top: 4px;
+    }
+
+    li.c-card__meta-item {
+        & + li.c-card__meta-item {
+            &:before {
+                background-color: $MANATEE;
+                border-radius: 50%;
+                content: "";
+                display: inline-block;
+                height: 2px;
+                margin: 1px 4px;
+                width: 2px;
+            }
+        }
+    }
+}
+
+@mixin card-landscape-large() {
+    .c-card {}
+    .c-card__link {}
+
+    .c-card__obj {}
+    .c-card__obj__header {
+        padding-right: 20px;
+        width: 37.5%;
+    }
+
+    .c-card__images {}
+    .c-card__image {}
+
+    .c-card__image__icon {
+        @include vendor-prefix(transform, translate(-50%, -50%));
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        height: 48px;
+        left: 50%;
+        top: 50%;
+        width: 48px;
+
+        svg {
+            display: block;
+            height: 100%;
+            margin: 0 auto;
+            vertical-align: middle;
+            width: 20px;
+            fill: $WHITE;
+        }
+    }
+
+    .c-card__obj__body {
+        padding-left: 20px;
+        width: 50%;
+    }
+
+    .c-card__header {}
+
+    .c-card__tag {
+        @include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
+        color: $SHERPA-BLUE;
+        letter-spacing: 2px;
+        margin-bottom: 16px;
+        margin-top: 0;
+        text-transform: uppercase;
+    }
+
+    .c-card__title {
+        @include font("PROXIMA NOVA CONDENSED", 28px, 600, 36px);
+        color: $MUSTASAARI;
+        margin-bottom: 24px;
+        margin-top: 16px;
+    }
+
+    .c-card__teaser {
+        display: none;
+    }
+
+    .c-card__separator {
+        display: none;
+    }
+
+    .c-card__footer {
+        > :first-child {
+            margin-top: 16px;
+        }
+    }
+
+    .c-card__byline {
+        @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+        color: $MUSTASAARI;
+        margin-bottom: 4px;
+        margin-top: 8px;
+    }
+
+    .c-card__byline--sponsorship {}
+
+    .c-card__byline-prefix {
+        font-style: italic;
+        text-transform: lowercase;
+    }
+
+    .c-card__byline-name {
+        letter-spacing: 1px;
+        margin-left: 2px;
+        text-transform: uppercase;
+    }
+
+    ul.c-card__meta {
+        @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+        color: $MANATEE;
+        margin-top: 4px;
+    }
+
+    li.c-card__meta-item {
+        & + li.c-card__meta-item {
+            &:before {
+                background-color: $MANATEE;
+                border-radius: 50%;
+                content: "";
+                display: inline-block;
+                height: 2px;
+                margin: 1px 4px;
+                width: 2px;
+            }
+        }
+    }
+}
+
+.c-card--landscape {
+    @include card-landscape();
+    @include card-landscape-small();
+}
+
+.c-card--landscape-small {
+    @include card-landscape();
+    @include card-landscape-small();
+}
+
+.c-card--landscape-large {
+    @include card-landscape();
+    @include card-landscape-large();
+}

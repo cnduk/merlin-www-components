@@ -1,0 +1,164 @@
+@import "@cnbritain/merlin-www-common:houseandgarden";
+@import "@cnbritain/merlin-www-image:houseandgarden";
+
+@import "../wireframe/wireframe";
+
+.c-superfeature {
+	margin-bottom: $MOBILE_SLICE_MARGIN;
+	margin-top: $MOBILE_SLICE_MARGIN;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	    margin-bottom: $TABLET_SLICE_MARGIN;
+	    margin-top: $TABLET_SLICE_MARGIN;
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	    margin-bottom: $DESKTOP_SLICE_MARGIN;
+	    margin-top: $DESKTOP_SLICE_MARGIN;
+	}
+}
+.c-superfeature__link {}
+
+.c-superfeature__images {}
+.c-superfeature__image {
+	&:after {
+		background-color: rgba($MUSTASAARI, 0.2);
+		bottom: 0;
+		content: '';
+		height: 100%;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 100%;
+
+		@include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+			background-color: rgba($MUSTASAARI, 0.15);
+		}
+	}
+}
+
+.c-superfeature__image__wrapper {
+	background-color: $CAPE-HAZE;
+	padding-top: 100%;
+
+	@include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+		padding-top: 52%;
+	}
+}
+
+.c-superfeature__content {
+	box-sizing: border-box;
+	left: 50%;
+	max-width: 1024px + $DESKTOP_SIDE_GUTTER*2;
+	padding-left: $MOBILE_SIDE_GUTTER;
+	padding-right: $MOBILE_SIDE_GUTTER;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	    padding-left: $TABLET_SIDE_GUTTER;
+	    padding-right: $TABLET_SIDE_GUTTER;
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	    padding-left: $DESKTOP_SIDE_GUTTER;
+	    padding-right: $DESKTOP_SIDE_GUTTER;
+	}
+
+	:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.c-superfeature__tag {
+	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
+	border-bottom: 1px solid $WHITE;
+	color: $WHITE;
+	display: inline-block;
+	letter-spacing: 2px;
+	margin: 0 auto 14px auto;
+	padding-bottom: 4px;
+	text-align: center;
+	text-shadow: 0 0 16px rgba($MUSTASAARI, 0.2);
+	text-transform: uppercase;
+
+	@include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+		margin-bottom: 26px;
+	}
+}
+
+.c-superfeature__title {
+	@include font("LULO ONE", 24px, 700, 32px, -35);
+	color: $WHITE;
+	margin-bottom: 16px;
+	text-align: center;
+	text-shadow: 0 0 16px rgba($MUSTASAARI, 0.2);
+
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+    	@include font-size(40px);
+    	@include line-height(48px);
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    	@include font-size(46px);
+    	@include line-height(54px);
+	}
+}
+
+.c-superfeature__teaser {
+	display: none;
+
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+    	@include font("PROXIMA NOVA CONDENSED", 16px, 400, 20px);
+    	color: $WHITE;
+    	display: block;
+    	letter-spacing: 1px;
+    	margin: 16px 0;
+    	text-align: center;
+    }
+}
+
+.c-superfeature__byline {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    color: $WHITE;
+    margin-bottom: 4px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.c-superfeature__byline-prefix {
+    font-style: italic;
+    text-transform: lowercase;
+
+}
+
+.c-superfeature__byline-name {
+    letter-spacing: 1px;
+    margin-left: 2px;
+    text-transform: uppercase;
+}
+
+ul.c-superfeature__meta {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    color: $WHITE;
+    margin-top: 4px;
+    text-align: center;
+}
+
+li.c-superfeature__meta-item {
+    & + li.c-superfeature__meta-item {
+        &:before {
+            background-color: $WHITE;
+            border-radius: 50%;
+            content: "";
+            display: inline-block;
+            height: 2px;
+            margin: 1px 4px;
+            width: 2px;
+        }
+    }
+}

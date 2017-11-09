@@ -1,0 +1,164 @@
+@import '@cnbritain/merlin-www-common:houseandgarden';
+
+@import '../wireframe/wireframe';
+
+.c-gallery-strip {
+    margin: 40px 0;
+}
+
+.c-gallery-strip__wrapper {
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    position: relative;
+}
+
+.c-gallery-strip__link {}
+.c-gallery-strip__list {}
+li.c-gallery-strip__list__item {
+    background-color: $CAPE-HAZE;
+
+    &:before {
+        display: block;
+        content: "";
+        padding-top: 150%;
+        position: relative;
+    }
+
+    img {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.c-gallery-strip__detail {
+    position: relative;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+
+    }
+}
+
+.c-gallery-strip__remaining {
+    @include font("PROXIMA NOVA CONDENSED", 24px, 600, 24px);
+    background-color: rgba($BLACK, 0.33);
+    color: $WHITE;
+    z-index: 1;
+}
+
+.c-gallery-strip__title {
+    @include font("PROXIMA NOVA CONDENSED", 24px, 600, 28px);
+    color: $MUSTASAARI;
+    letter-spacing: 1px;
+    margin: 20px 0 0 0;
+    text-align: center;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(34px);
+        @include line-height(36px);
+        letter-spacing: 2px;
+        margin: 32px 0 0 0;
+    }
+}
+
+.c-gallery-strip__subtitle {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    color: $MANATEE;
+    margin: 4px 0 0 0;
+    text-align: center;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+
+    }
+}
+
+.c-gallery-strip--tag {
+    margin: 24px auto;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 32px auto;
+    }
+
+    .c-gallery-strip__list {
+        text-align: center;
+    }
+
+    .c-gallery-strip__list__item:nth-child(n+4) {
+        display: none;
+    }
+
+    .c-gallery-strip__list__item:nth-child(3) {
+        .c-gallery-strip__remaining {
+            display: block;
+        }
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+6) {
+            display: inline-block;
+        }
+
+        .c-gallery-strip__list__item:nth-child(3) {
+            .c-gallery-strip__remaining {
+                display: none;
+            }
+        }
+
+        .c-gallery-strip__list__item:nth-child(6) {
+            .c-gallery-strip__remaining {
+                display: block;
+            }
+        }
+
+        .c-gallery-strip__list__item {
+            display: inline-block;
+            width: 16.66%;
+        }
+
+        .c-gallery-strip__detail {
+
+        }
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+8) {
+            display: inline-block;
+        }
+
+        .c-gallery-strip__list__item:nth-child(6) {
+            .c-gallery-strip__remaining {
+                display: none;
+            }
+        }
+        .c-gallery-strip__list__item:nth-child(8) {
+
+            .c-gallery-strip__remaining {
+                display: block;
+            }
+        }
+
+        .c-gallery-strip__list__item {
+            width: 12.5%;
+        }
+    }
+}
+
+.c-gallery-strip--gutters {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        .c-gallery-strip__list {
+
+        }
+
+        .c-gallery-strip__list__item {
+
+        }
+
+        .c-gallery-strip__remaining {
+
+        }
+    }
+}

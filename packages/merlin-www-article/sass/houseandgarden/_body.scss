@@ -1,0 +1,94 @@
+.a-main {}
+
+.a-main--gallery {}
+.a-main--video {
+    .a-body__content {
+        padding-left: 0;
+    }
+}
+
+.a-body {
+    margin: 32px 0 40px 0;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 48px 0 60px 0;
+    }
+
+}
+.a-body--gallery {}
+.a-body--video {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 48px;
+    }
+}
+.a-body__clear {
+    clear: both;
+}
+
+.a-body__wrapper {}
+.a-body__content {
+    a:not([class]) {
+        border-bottom: 1px solid $SHERPA-BLUE;
+        color: $SHERPA-BLUE;
+    }
+
+    > h1 {
+        @include font("PROXIMA NOVA");
+        @include font-size(28px);
+        @include line-height(32px);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            @include font-size(46px);
+            @include line-height(54px);
+        }
+    }
+
+    > h2 {
+        @include line-height(28px);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            @include line-height(36px);
+        }
+    }
+
+    > h3,
+    > h4,
+    > h5,
+    > h5,
+    > h6 {
+        @include font-weight(400);
+        color: $MANATEE;
+        letter-spacing: 1px;
+    }
+
+    > h2 + h3 {
+        margin-top: -4px;
+    }
+}
+
+.a-infinite__message {
+    box-sizing: border-box;
+    margin: 0 auto 40px auto;
+    max-width: $MAXIMUM_PAGE_WIDTH - $DESKTOP_SIDE_GUTTER*2;
+    position: relative;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-right: $ARTICLE_RIGHT_TOTAL;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 60px;
+    }
+}
+
+.a-infinite__message-btn {
+    @include button-single();
+    @include button-single-light();
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+}

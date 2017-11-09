@@ -1,0 +1,69 @@
+@import '@cnbritain/merlin-www-common:houseandgarden';
+
+@import '../wireframe/wireframe';
+
+.srch-main {
+	background-color: $WHITE;
+	box-sizing: border-box;
+	margin-bottom: $MOBILE_SLICE_MARGIN;
+	overflow: hidden;
+	padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER 0 $MOBILE_SIDE_GUTTER;
+	width: 100%;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	    margin-bottom: $TABLET_SLICE_MARGIN;
+	    padding: $TABLET_SLICE_MARGIN $TABLET_SIDE_GUTTER 0 $TABLET_SIDE_GUTTER;
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	    margin-bottom: $DESKTOP_SLICE_MARGIN;
+	    padding: $TABLET_SLICE_MARGIN $TABLET_SIDE_GUTTER 0 $DESKTOP_SIDE_GUTTER;
+	}
+
+	.has-overlay & {
+		padding-bottom: $MOBILE_SLICE_MARGIN;
+
+		@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+		    padding-bottom: $TABLET_SLICE_MARGIN;
+		}
+
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		    padding-bottom: $DESKTOP_SLICE_MARGIN;
+		}
+	}
+}
+
+.srch-textbox {
+	@include font("PROXIMA NOVA CONDENSED", 34px, 400, 36px);
+	appearance: none;
+	background-color: transparent;
+	border-bottom: 1px solid $ISABEL;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	color: $MUSTASAARI;
+	display: block;
+	margin: 0 auto;
+	max-width: $MAXIMUM_PAGE_WIDTH;
+	padding: 0 0 8px 0;
+	width: 100%;
+
+	&::placeholder {
+		color: $MANATEE;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		@include font-size(46px);
+		@include line-height(46px);
+	}
+}
+
+.srch-results {
+	@include font("PROXIMA NOVA CONDENSED", 14px, 400, 16px);
+	color: $MANATEE;
+	margin-top: 12px;
+}

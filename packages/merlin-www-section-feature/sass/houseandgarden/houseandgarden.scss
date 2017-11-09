@@ -1,0 +1,238 @@
+@import '@cnbritain/merlin-www-common:houseandgarden';
+@import '@cnbritain/merlin-www-image:houseandgarden';
+
+@import '../wireframe/wireframe';
+
+.c-feature {
+	margin-bottom: $MOBILE_SLICE_MARGIN;
+	margin-top: $MOBILE_SLICE_MARGIN;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	    margin-bottom: $TABLET_SLICE_MARGIN;
+	    margin-top: $TABLET_SLICE_MARGIN;
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	    margin-bottom: $DESKTOP_SLICE_MARGIN;
+	    margin-top: $DESKTOP_SLICE_MARGIN;
+	}
+
+	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.c-feature--right {
+	.c-feature__images--multiple {
+		@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+			padding-right: 12px;
+
+			& + .c-feature__content {
+				padding-right: $TABLET_SIDE_GUTTER;
+			}
+		}
+	}
+
+	.c-feature__content {
+		@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+			right: 0;
+			margin-right: $TABLET_SIDE_GUTTER;
+		}
+	}
+}
+
+.c-feature--left {
+	.c-feature__images--multiple {
+		@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+			padding-left: 12px;
+
+			& + .c-feature__content {
+				padding-left: $TABLET_SIDE_GUTTER;
+			}
+		}
+	}
+
+	.c-feature__content {
+		@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+			left: 0;
+			margin-left: $TABLET_SIDE_GUTTER;
+		}
+	}
+}
+
+.c-feature__constrain {
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+}
+
+.c-feature__wrapper {
+
+}
+
+.c-feature__images {
+	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+		display: block;
+		width: 100%;
+	}
+}
+
+.c-feature__images--multiple {
+	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+		display: table-cell;
+		width: 50%;
+
+		& + .c-feature__content {
+			position: static;
+			width: 50%;
+			transform: none;
+			right: inherit;
+			top: inherit;
+		}
+	}
+}
+
+.c-feature__content {
+	margin: 20px;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    	background-color: $WHITE;
+    	box-sizing: border-box;
+    	margin: 0px;
+    	padding: 32px;
+    	position: absolute;
+    	top: 50%;
+    	transform: translateY(-50%);
+    	// 12px spacing between card elements
+    	width: calc(50% - (#{$TABLET_SIDE_GUTTER} + 12px));
+    }
+
+    :last-child {
+    	margin-bottom: 0;
+    }
+}
+
+.c-feature__image--portrait {
+	display: inline-block;
+	width: 50%;
+}
+
+.c-feature__image__wrapper {
+	background-color: $CAPE-HAZE;
+	padding-top: 66.66666%;
+
+	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+		padding-top: 40%;
+	}
+}
+
+.c-feature__icon {
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	display: block;
+	height: 48px;
+	left: 50%;
+	position: absolute;
+	top: calc(50% - 48px);
+	transform: translate(-50%, -50%);
+	width: 48px;
+
+	svg {
+	    display: block;
+	    fill: $WHITE;
+	    height: 100%;
+	    margin: 0 auto;
+	    vertical-align: middle;
+	    width: 20px;
+	}
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    	display: none;
+    }
+}
+
+.c-feature__tag {
+	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
+	color: $SHERPA-BLUE;
+	letter-spacing: 2px;
+	margin-bottom: 8px;
+	margin-top: 24px;
+	text-align: center;
+	text-transform: uppercase;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    	margin-bottom: 16px;
+    	margin-top: 0;
+    }
+}
+
+.c-feature__title {
+	@include font("PROXIMA NOVA CONDENSED", 24px, 600, 28px);
+	color: $MUSTASAARI;
+	letter-spacing: 1px;
+	margin: 6px 0;
+	text-align: center;
+	text-transform: uppercase;
+
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+    	@include font-size(28px);
+    	@include line-height(32px);
+    	letter-spacing: 2px;
+    	margin-bottom: 12px;
+    	margin-top: 0;
+    }
+}
+
+.c-feature__teaser {
+	display: none;
+
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+    	@include font("PROXIMA NOVA CONDENSED", 16px, 400, 20px);
+    	color: $RAVEN;
+    	display: block;
+    	margin: 12px 0 16px 0;
+    	letter-spacing: 1px;
+    	text-align: center;
+    }
+}
+
+.c-feature__byline {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    color: $MUSTASAARI;
+    margin-bottom: 4px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.c-feature__byline-prefix {
+    font-style: italic;
+    text-transform: lowercase;
+
+}
+
+.c-feature__byline-name {
+    letter-spacing: 1px;
+    margin-left: 2px;
+    text-transform: uppercase;
+}
+
+ul.c-feature__meta {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    color: $MANATEE;
+    margin-top: 4px;
+    text-align: center;
+}
+
+li.c-feature__meta-item {
+    & + li.c-feature__meta-item {
+        &:before {
+            background-color: $MANATEE;
+            border-radius: 50%;
+            content: "";
+            display: inline-block;
+            height: 2px;
+            margin: 1px 4px;
+            width: 2px;
+        }
+    }
+}

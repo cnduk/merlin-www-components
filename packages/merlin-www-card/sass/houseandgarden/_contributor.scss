@@ -1,0 +1,83 @@
+// -------------------- //
+// /Contributor
+// -------------------- //
+@mixin card-contributor() {}
+
+@mixin card-contributor-small() {
+    .c-card__obj__header,
+    .c-card__obj__body {
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    .c-card__images {
+        border-radius: 50%;
+        padding: 8px;
+        border: 1px solid $ISABEL;
+    }
+
+    .c-card__image {
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+
+    .c-card__obj__header {
+        padding-right: 8px;
+        width: 72px;
+    }
+
+    .c-card__obj__body {
+        padding-left: 8px;
+        width: auto;
+    }
+}
+
+@mixin card-contributor-large() {
+    .c-card__obj__header {
+        margin: 0 auto;
+        width: 108px;
+    }
+}
+
+.c-card--contributor {
+    @include card-landscape();
+    @include card-landscape-small();
+
+    @include card-contributor();
+    @include card-contributor-small();
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        .c-card__obj__header,
+        .c-card__obj__body {
+            display: block;
+            padding: 0;
+            width: auto;
+        }
+
+        @include card-portrait();
+        @include card-portrait-large();
+
+        @include card-contributor-large();
+    }
+}
+
+.c-card--contributor-small {
+    @include card-landscape();
+    @include card-landscape-small();
+
+    @include card-contributor();
+    @include card-contributor-small();
+}
+
+.c-card--contributor-large {
+    @include card-portrait();
+    @include card-portrait-large();
+
+    @include card-contributor();
+    @include card-contributor-large();
+}

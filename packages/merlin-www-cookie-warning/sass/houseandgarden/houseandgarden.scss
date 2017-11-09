@@ -1,0 +1,54 @@
+@import '@cnbritain/merlin-www-common:houseandgarden';
+
+@import '../wireframe/wireframe';
+
+.c-cookie-warning {
+	background-color: $CAPE-HAZE;
+	border-left: 1px solid $ISABEL;
+	border-right: 1px solid $ISABEL;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-top: 1px solid $ISABEL;
+	padding: 16px;
+	z-index: 10;
+}
+
+.c-cookie-warning__table {
+
+}
+
+.c-cookie-warning__table-cell {
+
+}
+
+.c-cookie-warning__table-cell--message {
+	padding-right: 16px;
+}
+
+.c-cookie-warning__table-cell--cta {
+
+}
+
+.c-cookie-warning__message {
+	@include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+	color: $MUSTASAARI;
+	margin: 0;
+
+	a {
+		border-bottom: 1px solid $MUSTASAARI;
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
+.c-cookie-warning__button {
+	border-radius: 50%;
+	border: 1px solid $MUSTASAARI;
+	height: 20px;
+	width: 20px;
+
+	svg {
+		height: 100%;
+		width: 8px;
+	}
+}

@@ -1,0 +1,118 @@
+.n-main__dropdown {}
+.n-main__dropdown--follow {
+    .n-main__dropdown-link {
+        @include font("FREIGHT TEXT", 14px, 400, 14px);
+        font-style: italic;
+        letter-spacing: 0;
+        text-transform: none;
+    }
+}
+
+.n-main__dropdown--follow__group {
+    font-size: 0;
+    text-align: center;
+
+    & + .n-main__dropdown--follow__group {
+        margin-top: 24px;
+    }
+}
+
+.n-main__dropdown-list {
+    background-color: $WHITE;
+    border: 1px solid $ISABEL;
+    margin-top: -1px;
+    z-index: 1;
+}
+
+.n-main__dropdown-list--left {
+    border-top: none;
+    box-shadow: 0px 2px 4px 0px rgba($BLACK, 0.04);
+    padding: 12px 32px 20px 32px;
+    margin-left: -16px;
+    min-width: 144px;
+}
+
+.n-main__dropdown-list--follow {
+    border-top: none;
+    box-shadow: 0px 2px 4px 0px rgba($BLACK, 0.04);
+    margin-right: -1px;
+    padding: 24px 32px 32px 32px;
+    white-space: nowrap;
+}
+
+.n-main__dropdown-list-item {
+    .n-main__nav-link {
+        @include line-height(38px);
+        box-sizing: border-box;
+        color: $MUSTASAARI;
+        display: inline-block;
+        margin: 0;
+        height: 38px;
+        white-space: nowrap;
+
+        span {
+            display: inline-block;
+            height: 38px;
+            line-height: 38px;
+        }
+
+        &:hover {
+            border-bottom: none;
+            color: $SHERPA-BLUE;
+
+            &:before {
+                background-color: $SHERPA-BLUE;
+                content: '';
+                height: 100%;
+                left: -33px;
+                position: absolute;
+                top: 0;
+                width: 1px;
+            }
+        }
+    }
+}
+
+.n-main__dropdown-link {
+    &:hover {
+        color: $MUSTASAARI;
+    }
+
+    &:after {
+        border-top-color: rgba($RAVEN, 0.4);
+        border-width: 4px;
+        margin-left: 8px;
+        position: relative;
+        top: -2px;
+    }
+}
+
+a.n-main__dropdown__btn-share,
+.n-main__dropdown__btn-share {
+    font-size: initial;
+
+    & + .n-main__dropdown__btn-share {
+        margin-left: 12px;
+    }
+}
+
+@each $name, $color in $COLOUR_SOCIAL {
+    .n-main__dropdown__btn-share--#{$name},
+    a.n-main__dropdown__btn-share--#{$name} {
+        @include button-share();
+        @include button-share-light($name);
+
+        &:hover {
+            @include button-share-light-hover($name);
+        }
+    }
+}
+
+.n-main__dropdown__btn {
+    @include button-single-two();
+    @include button-single-two-light();
+
+    &:hover {
+        @include button-single-two-light-hover();
+    }
+}

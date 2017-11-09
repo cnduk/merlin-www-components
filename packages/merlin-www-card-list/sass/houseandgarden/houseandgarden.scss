@@ -1,0 +1,431 @@
+@import "@cnbritain/merlin-www-common:houseandgarden";
+
+@import "../wireframe/wireframe";
+
+.c-card-list--top-stories {
+    white-space: nowrap;
+
+    .c-card-list__item {
+        display: inline-block;
+        vertical-align: middle;
+        white-space: normal;
+        width: 280px;
+
+        & + .c-card-list__item {
+            margin-left: 24px;
+        }
+
+        &.is-hidden {
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+            width: 0;
+        }
+
+        &:last-child {
+            margin-right: 24px;
+        }
+    }
+}
+
+.c-card-list--c-video-articles,
+.c-card-list--c-curated,
+.c-card-list--c-tag {
+    margin: -6px -12px;
+    // 32px from top of card list minus the 6px that exists on the top card
+    margin-top: 28px - 6px;
+
+    @include two-column-size() {
+        margin: -16px -12px;
+        margin-top: 28px - 16px;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        // 48px from top of card list minus the 16px that exists on the top card
+        margin-top: 40px - 16px;
+    }
+
+    .c-card-list__item {
+        display: inline-block;
+        padding: 0 12px;
+        margin: 6px 0;
+        width: 100%;
+
+        @include one-column-size() {
+            &:first-child {
+                margin-bottom: 26px;
+            }
+
+            & + .c-card-list__item {
+                .c-card {
+                    border-top: 1px solid $ISABEL;
+                    padding-top: 12px;
+
+                    &.c-card--dark {
+                        border-top: 1px solid rgba($PORCELAIN, 0.12);
+                    }
+                }
+            }
+        }
+
+        @include two-column-size() {
+            margin: 16px 0;
+            width: 50%;
+        }
+
+        @include four-column-size() {
+            width: 25%;
+        }
+    }
+}
+
+.c-card-list--a-recommended,
+.c-card-list--v-genre-articles,
+.c-card-list--mag-articles {
+    margin: -6px -12px;
+
+    @include two-column-size() {
+        margin: -16px -12px;
+    }
+
+    .c-card-list__item {
+        display: inline-block;
+        padding: 0 12px;
+        margin: 6px 0;
+        width: 100%;
+
+        @include one-column-size() {
+            & + .c-card-list__item {
+                .c-card {
+                    border-top: 1px solid $ISABEL;
+                    padding-top: 12px;
+
+                    &.c-card--dark {
+
+                    }
+                }
+            }
+        }
+
+        @include two-column-size() {
+            margin: 16px 0;
+            width: 50%;
+        }
+
+        @include four-column-size() {
+            width: 25%;
+        }
+    }
+}
+
+.c-card-list--v-related-articles {
+    margin: -6px -12px;
+
+    .c-card-list__item {
+        display: inline-block;
+        padding: 0 12px;
+        margin: 6px 0;
+        width: 100%;
+
+        & + .c-card-list__item {
+            .c-card {
+                border-top: 1px solid rgba($PORCELAIN, 0.12);
+                padding-top: 12px;
+
+                &.c-card--dark {
+
+                }
+            }
+        }
+
+        .c-card__images {
+            &:after {
+                @include font("PROXIMA NOVA CONDENSED", 10px, 600, 10px);
+                color: $WHITE;
+                content: "Now Playing";
+                left: 50%;
+                letter-spacing: 1px;
+                opacity: 0;
+                position: absolute;
+                text-transform: uppercase;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                transition-duration: 300ms;
+                white-space: nowrap;
+            }
+        }
+
+        .c-card__image {
+            &:after {
+                background-color: rgba($BLACK, 0.5);
+                bottom: 0;
+                content: "";
+                height: 100%;
+                left: 0;
+                opacity: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                transition-duration: 300ms;
+                width: 100%;
+            }
+        }
+
+        &.is-active {
+            .c-card__images {
+                &:after {
+                    opacity: 1;
+                }
+            }
+
+            .c-card__image {
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.c-card-list--c-splash {
+    margin: -12px -12px;
+
+    .c-card-list__item {
+        display: inline-block;
+        padding: 0 12px;
+        margin: 12px 0;
+        vertical-align: middle;
+        width: 100%;
+
+        @include two-column-size() {
+            width: 50%;
+        }
+
+        @include four-column-size() {
+            width: 25%;
+        }
+    }
+}
+
+.c-card-list--c-magazine-articles {
+    margin: -10px -12px;
+
+    .c-card-list__item {
+        display: inline-block;
+        padding: 0 12px;
+        margin: 10px 0;
+        width: 100%;
+    }
+}
+
+.c-card-list--c-contributors {
+    margin: -10px -12px;
+    text-align: center;
+
+    .c-card-list__item {
+        display: inline-block;
+        padding: 0 12px;
+        margin: 10px 0;
+        width: 100%;
+
+        @include one-column-size() {
+            & + .c-card-list__item {
+                .c-card {
+                    border-top: 1px solid $ISABEL;
+                    padding-top: 12px;
+
+                    &.c-card--dark {
+
+                    }
+                }
+            }
+        }
+
+        @include two-column-size() {
+            max-width: 275px;
+            width: 33.33333%;
+        }
+    }
+}
+
+.c-card-list--tg-header-articles {
+    margin: -16px -12px;
+
+    .c-card-list__item {
+        display: inline-block;
+        padding: 0 12px;
+        margin: 16px 0;
+        width: 100%;
+
+        @include two-column-size() {
+            width: 50%;
+        }
+
+        @include four-column-size() {
+            width: 33.33333%;
+        }
+    }
+}
+
+.c-card-list--tg-articles {
+    margin: -6px -12px;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: -20px -12px;
+    }
+
+    .c-card-list__item {
+        display: inline-block;
+        padding: 0 12px;
+        margin: 6px 0;
+        width: 100%;
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            margin: 20px 0;
+        }
+
+        .c-card {
+            border-top: 1px solid $ISABEL;
+            padding-top: 12px;
+            @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+                padding-top: 40px;
+            }
+
+            &.c-card--dark {
+
+            }
+        }
+
+        &:first-child {
+            .c-card {
+                border-top: none;
+                padding-top: 0;
+
+                &.c-card--dark {
+
+                }
+            }
+        }
+    }
+}
+
+.c-card-list--s-results {
+    margin: -6px -12px;
+
+    @include two-column-size() {
+        margin: -16px -12px;
+    }
+
+    @include four-column-size() {
+        margin: -24px -12px;
+    }
+
+    .c-card-list__item {
+        display: inline-block;
+        padding: 0 12px;
+        margin: 6px 0;
+        width: 100%;
+
+        @include one-column-size() {
+            .c-card {
+                border-top: 1px solid $ISABEL;
+                padding-top: 12px;
+
+                &.c-card--dark {
+
+                }
+            }
+
+            &:first-child {
+                .c-card {
+                    border-top: none;
+                    padding-top: 0;
+
+                    &.c-card--dark {
+
+                    }
+                }
+            }
+        }
+
+        @include two-column-size() {
+            margin: 16px 0;
+            width: 50%;
+        }
+
+        @include four-column-size() {
+            margin: 24px 0;
+            width: 25%;
+        }
+    }
+}
+
+.c-card-list--tg-articles-grid,
+.c-card-list--v-articles {
+    margin: -6px -12px;
+
+    @include two-column-size() {
+        margin: -16px -12px;
+    }
+
+    @include four-column-size() {
+        margin: -24px -12px;
+    }
+
+    .c-card-list__item {
+        display: inline-block;
+        padding: 0 12px;
+        margin: 6px 0;
+        width: 100%;
+
+        @include one-column-size() {
+            .c-card {
+                border-top: 1px solid $ISABEL;
+                padding-top: 12px;
+
+                &.c-card--dark {
+
+                }
+            }
+
+            &:first-child {
+                .c-card {
+                    border-top: none;
+                    padding-top: 0;
+
+                    &.c-card--dark {
+
+                    }
+                }
+            }
+        }
+
+        @include two-column-size() {
+            margin: 16px 0;
+            width: 50%;
+        }
+
+        @include four-column-size() {
+            margin: 24px 0;
+            width: 33.33333%;
+        }
+    }
+}
+
+.c-card-list--mag-magazines {
+    margin: -12px -12px;
+
+    @include four-column-size() {
+        margin: -24px -12px;
+    }
+
+    .c-card-list__item {
+        display: inline-block;
+        padding: 0 12px;
+        margin: 12px 0;
+        width: 50%;
+
+        @include four-column-size() {
+            margin: 24px 0;
+            width: 25%;
+        }
+    }
+}

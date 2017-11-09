@@ -1,0 +1,76 @@
+@import "@cnbritain/merlin-www-common:houseandgarden";
+@import "@cnbritain/merlin-www-buttons:houseandgarden";
+
+@import "../wireframe/wireframe";
+
+.c-topic-strip {
+    text-align: left;
+}
+
+.c-topic-strip--bleed {
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+}
+
+.c-topic-strip--c-card-section {
+    margin-bottom: 12px;
+    margin-top: 12px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 16px;
+        margin-top: 16px;
+        text-align: center;
+    }
+}
+
+.c-topic-strip__title {
+    @include font("FREIGHT TEXT", 14px, 400, 16px);
+    color: $RAVEN;
+    font-style: italic;
+    margin-right: 24px;
+}
+
+.c-topic-strip__list {
+    font-size: 0;
+}
+
+li.c-topic-strip__item {
+    font-size: initial;
+
+    & + & {
+        margin-left: 24px;
+    }
+}
+
+.c-topic-strip--article-related {
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+    text-align: center;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.c-topic-strip__btn {
+    @include button-group();
+    @include button-group-light();
+
+    &:hover {
+        @include button-group-light-hover();
+    }
+}

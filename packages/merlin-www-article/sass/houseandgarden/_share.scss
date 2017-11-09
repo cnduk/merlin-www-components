@@ -1,0 +1,61 @@
+.a-share {
+    margin-top: 24px;
+    position: relative;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 32px;
+    }
+}
+.a-share__wrapper {}
+
+.a-share__title {
+    @include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
+    color: $MUSTASAARI;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    margin-top: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.a-share__list {
+    font-size: 0;
+    height: 40px;
+    text-align: center;
+}
+
+.a-share__list-item {
+    display: inline-block;
+    font-size: initial;
+    height: 40px;
+
+    & + .a-share__list-item {
+        margin-left: 12px;
+    }
+}
+
+.a-share__list-item--mobile {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        display: none;
+    }
+}
+
+.a-share__youtube {
+    display: block;
+    margin: 20px auto 0 auto;
+    text-align: center;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: inline-block;
+        margin-left: 8px;
+        margin-top: 4px;
+    }
+
+    //Overwrite default specificity
+    .a-share__youtube__title {
+        display: none !important;
+    }
+}
+
+.a-share__youtube__title {}
+
+

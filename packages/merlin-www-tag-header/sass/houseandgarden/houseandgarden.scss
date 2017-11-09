@@ -1,0 +1,202 @@
+@import "@cnbritain/merlin-www-common:houseandgarden";
+@import "@cnbritain/merlin-www-card-list:houseandgarden";
+@import "@cnbritain/merlin-www-image:houseandgarden";
+@import "@cnbritain/merlin-www-topic-strip:houseandgarden";
+
+@import "../wireframe/wireframe";
+
+.tg-header {
+	margin: 32px 0;
+	padding: 0 $MOBILE_SIDE_GUTTER;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+		padding: 0 $TABLET_SIDE_GUTTER;
+	}
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 48px 0;
+        padding: 0 $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.tg-header--video {
+	.tg-header__intro__image {
+    	height: 42px;
+		margin: 0 auto;
+		width: 268px;
+
+    	svg {
+    	    display: inline-block;
+    	    height: 100%;
+    	    width: 100%;
+
+    	    path {
+    	        fill: $SHERPA-BLUE;
+    	    }
+    	}
+
+    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    		height: 52px;
+			margin: 0 auto;
+    		width: 331px;
+    	}
+	}
+}
+
+.tg-header--profile {
+	.tg-header__intro__image {
+		box-sizing: border-box;
+		border-radius: 50%;
+		border: 1px solid $PORCELAIN;
+		height: 72px;
+		margin: 0 auto 12px auto;
+		overflow: hidden;
+		padding: 6px;
+		position: relative;
+		width: 72px;
+
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			margin-bottom: 24px;
+			width: 108px;
+			height: 108px;
+		}
+
+		&:before {
+		    background-color: $CAPE-HAZE;
+		    border-radius: 50%;
+		    bottom: 0;
+		    content: '';
+		    height: 58px;
+		    left: 0;
+		    margin: 6px;
+		    overflow: hidden;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		    width: 58px;
+		    z-index: -1;
+
+		    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		    	width: 94px;
+		    	height: 94px;
+		    }
+		}
+
+		img {
+		    border-radius: 50%;
+		    height: 100%;
+		    overflow: hidden;
+		    width: 100%;
+		}
+	}
+}
+
+.tg-header--brand,
+.tg-header--event,
+.tg-header--topic {
+	.tg-header__intro__image {
+		margin-bottom: 24px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 240px;
+
+		img {
+			width: 100%;
+		}
+
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			margin-bottom: 32px;
+			width: 320px;
+		}
+	}
+}
+
+.tg-header__wrapper {
+	max-width: $MAXIMUM_PAGE_WIDTH;
+	margin: 0 auto;
+}
+
+.tg-header__intro {}
+.tg-header__intro__image {}
+
+.tg-header__intro__title {
+	@include font("LULO ONE", 28px, 700, 32px, -35);
+	color: $SHERPA-BLUE;
+	margin: 0 0 12px 0;
+	text-align: center;
+	text-transform: uppercase;
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		@include font-size(46px);
+		@include line-height(54px);
+		margin-bottom: 16px;
+	}
+}
+
+.tg-header__separator {
+	display: none;
+}
+
+.tg-header__intro__description {
+	color: $MUSTASAARI;
+	margin: 12px auto 24px auto;
+	max-width: 800px;
+	text-align: center;
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		margin-top: 16px;
+	}
+
+	a {
+	    border-bottom: 1px solid;
+	    color: inherit;
+		padding-bottom: 3px;
+	}
+
+	p {
+		@include font("FREIGHT TEXT", 18px, 400, 28px);
+		color: inherit;
+
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			@include font-size(20px);
+			@include line-height(32px);
+		}
+	}
+
+	> *:first-child {
+		margin-top: 0;
+	}
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.tg-header__topic-strip {
+	margin: 12px auto;
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		margin: 24px auto;
+	}
+
+	.c-topic-strip {
+		text-align: center;
+	}
+
+	.c-topic-strip__btn {
+	    @include button-group-two();
+	    @include button-group-two-light();
+
+	    &:hover {
+	        @include button-group-two-light-hover();
+	    }
+	}
+}
+
+.tg-header__cards {
+	margin: 32px auto;
+	max-width: $MAXIMUM_PAGE_WIDTH;
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	    margin: 48px auto;
+	}
+}
