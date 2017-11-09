@@ -21,7 +21,11 @@ var infiniteBodyScrollHeight = 0;
 var hookInfiniteResize = null;
 
 
-export function destroyInfiniteScroller(){
+export function onResize(){
+    infiniteBodyScrollHeight = document.body.scrollHeight - window.innerHeight;
+}
+
+export function disableInfiniteScroll(){
     infiniteScroller.destroy();
     removeEvent(window, 'resize', hookInfiniteResize);
 
@@ -29,35 +33,25 @@ export function destroyInfiniteScroller(){
     hookInfiniteResize = null;
 }
 
-export function getNextPageUrl(pageNumber){
-    var url = updateQueryString('/xhr' + getStorage('infinite_url'), {
-        page: pageNumber
-    });
-    return url;
+export function throwError(message, e){
+    disableInfiniteScroll();
+    throw new Error(message, e);
 }
 
-export default function init(){
-    infiniteScroller = new InfiniteScroll({
-        'el': window,
-        'throttle': INFINITE_SCROLL_THROTTLE,
-        'trigger': function(scrollY){
-            return scrollY >= (
-                infiniteBodyScrollHeight - INFINITE_BOTTOM_THRESHOLD);
-        },
-        'url': function(pageCounter){
-            return location.origin + getNextPageUrl(pageCounter+1);
-        }
-    });
-    infiniteScroller.on('loadError', onInfiniteLoadError);
-    infiniteScroller.on('loadComplete', onInfiniteLoadComplete);
+export function getTrigger(scrollY){
+    return scrollY >= (infiniteBodyScrollHeight - INFINITE_BOTTOM_THRESHOLD);
+}
 
-    onInfiniteWindowResize();
-    onPageLoad(onInfiniteWindowResize);
-    hookInfiniteResize = throttle(
-        onInfiniteWindowResize, INFINITE_RESIZE_THROTTLE);
-    addEvent(window, 'resize', hookInfiniteResize);
+export function getUrl(pageNumber){
+    var url = location.origin + '/xhr' + getStorage('infinite_url');
+    var queryValues = {
+        page: pageNumber + 1
+    };
+    return updateQueryString(url, queryValues);
+}
 
-    infiniteScroller.enable();
+export function onInfiniteError( e ){
+    throwError('Error trying to load url in infinite scroll', e);
 }
 
 export function insertSection(section){
@@ -66,44 +60,55 @@ export function insertSection(section){
 
     addToFragment(section);
 
-    var hook = document.getElementById('infiniteScrollHook');
-    hook.parentNode.insertBefore(docFragment, hook);
+    hook.parentNode.insertBefore(
+        docFragment, document.getElementById('infiniteScrollHook'));
 
     addToFragment = null;
-    hook = null;
     docFragment = null;
 }
 
-export function onInfiniteLoadError( e ){
-    throwInfiniteError('Error trying to load url in infinite scroll', e);
-}
-
-export function onInfiniteLoadComplete( e ){
+export function onInfiniteLoad( e ){
 
     var responseText = e.originalRequest.responseText;
     var responseJSON = null;
     try {
         responseJSON = JSON.parse(responseText);
     } catch(err){
-        throwInfiniteError('Error trying to parse response JSON', err);
+        throwError('Error trying to parse response JSON', err);
     }
 
     // Add items to page
     if(responseJSON.data.template) insertSection(responseJSON.data.template);
 
+    // Update any local storage values
+    if(responseJSON.data.local_storage){
+        responseJSON.data.local_storage.forEach(function(item){
+            setStorage(item.key, item.value);
+        });
+    }
+
     // Check if we need to stop
-    if(responseJSON.data.stop) destroyInfiniteScroller();
+    if(responseJSON.data.stop) disableInfiniteScroll();
 
     // TODO: Page impression tracker
-    onInfiniteWindowResize();
+    onResize();
 
 }
 
-export function onInfiniteWindowResize(){
-    infiniteBodyScrollHeight = document.body.scrollHeight - window.innerHeight;
-}
+export default function init(){
+    infiniteScroller = new InfiniteScroll({
+        'el': window,
+        'throttle': INFINITE_SCROLL_THROTTLE,
+        'trigger': getTrigger,
+        'url': getUrl
+    });
+    infiniteScroller.on('loadError', onInfiniteError);
+    infiniteScroller.on('loadComplete', onInfiniteLoad);
 
-export function throwInfiniteError(message, e){
-    destroyInfiniteScroller();
-    throw new Error(message, e);
+    onResize();
+    onPageLoad(onResize);
+    hookInfiniteResize = throttle(onResize, INFINITE_RESIZE_THROTTLE);
+    addEvent(window, 'resize', hookInfiniteResize);
+
+    infiniteScroller.enable();
 }
