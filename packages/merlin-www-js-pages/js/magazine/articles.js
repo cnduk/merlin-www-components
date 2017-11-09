@@ -19,6 +19,7 @@ var CLS_HIDDEN = 'global__hidden';
 
 var nextArticlePage = 1;
 var isLoadingArticles = false;
+var hasCoverStory = false;
 
 
 export default function init() {
@@ -27,14 +28,25 @@ export default function init() {
 
     addEvent(btn, 'click', getMoreArticles);
     removeClass(btn.parentNode, CLS_HIDDEN);
+
+    hasCoverStory = (getStorage('magazine_cover_story_uid') !== null);
 }
 
 export function getUrl(month, year, page) {
-    return updateQueryString('/xhr/magazine/articles', {
+
+    var queryValues = {
         year: Number(year),
         month: Number(month),
         page: Number(page)
-    });
+    };
+
+    if(coverStoryUid !== null && coverStoryUid !== false){
+        queryValues['exclude_uid'] = coverStoryUid;
+    } else if(hasCoverStory){
+        queryValues['shift'] = -1;
+    }
+
+    return updateQueryString('/xhr/magazine/articles', queryValues);
 }
 
 export function disableAjax() {
@@ -74,6 +86,13 @@ export function onAjaxSuccess(e) {
     // Add items to page
     if (responseJSON.data.template) insertArticles(responseJSON.data.template);
 
+    // Update any local storage values
+    if(responseJSON.data.local_storage){
+        responseJSON.data.local_storage.forEach(function(item){
+            setStorage(item.key, item.value);
+        });
+    }
+
     // Check if we need to stop
     if (responseJSON.data.stop) {
         disableAjax();
@@ -96,7 +115,13 @@ export function getMoreArticles() {
     // Load the content
     var issueMonth = getStorage('magazine_month');
     var issueYear = getStorage('magazine_year');
+    var coverStoryUid = getStorage('magazine_cover_story_uid');
     ajax({
-        url: getUrl(issueMonth, issueYear, ++nextArticlePage)
-    }).then(onAjaxSuccess, onAjaxError);
+        url: getMoreArticlesUrl(
+            issueMonth,
+            issueYear,
+            ++moreArticlesPage,
+            coverStoryUid
+        )
+    }).then(onMoreArticleSuccess, onMoreArticleError);
 }
