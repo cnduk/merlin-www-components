@@ -71,6 +71,7 @@ export function insertArticles(section){
 
     addToFragment(section);
     appendChildren(hook, docFragment.querySelectorAll('.c-card-list__item'));
+    docFragment = addToFragment = hook = null;
 }
 
 export function onAjaxSuccess(e) {
