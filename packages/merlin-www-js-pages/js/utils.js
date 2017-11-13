@@ -129,7 +129,7 @@ export function setGlobalNamespace(obj){
  * @param  {Array.<HTMLElement>} children
  */
 export function appendChildren(el, children){
-    while(children.length){
-        el.appendChild(children[0]);
+    for(var i=0, len=children.length; i<len; i++){
+        el.appendChild(children[i]);
     }
 }
