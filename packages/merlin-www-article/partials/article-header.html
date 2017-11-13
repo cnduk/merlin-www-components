@@ -103,7 +103,7 @@
 
                     {{^ data.image }}
                         {{# data.link }}
-                            <a class='a-header__sponsor-name' href="{{ &data.url }}">{{ data.title }}</a>
+                            <a class='a-header__sponsor-name' href="{{ &data.url }}" {{# state.is_nofollow }} rel="nofollow" {{/ state.is_nofollow }}>{{ data.title }}</a>
                         {{/ data.link }}
                     {{/ data.image }}
                 </div>
