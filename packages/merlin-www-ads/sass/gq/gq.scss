@@ -100,7 +100,14 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin-left: 0;
         margin-right: 0;
+
+        .ad__title {
+            display: block;
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
+
 }
 
 .ad--gallery {}
