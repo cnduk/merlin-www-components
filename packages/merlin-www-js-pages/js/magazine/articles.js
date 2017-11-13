@@ -116,12 +116,8 @@ export function getMoreArticles() {
     var issueMonth = getStorage('magazine_month');
     var issueYear = getStorage('magazine_year');
     var coverStoryUid = getStorage('magazine_cover_story_uid');
+    var url = getUrl(issueMonth, issueYear, ++nextArticlePage, coverStoryUid);
     ajax({
-        url: getUrl(
-            issueMonth,
-            issueYear,
-            ++moreArticlesPage,
-            coverStoryUid
-        )
-    }).then(onMoreArticleSuccess, onMoreArticleError);
+        url: url
+    }).then(onAjaxSuccess, onAjaxError);
 }
