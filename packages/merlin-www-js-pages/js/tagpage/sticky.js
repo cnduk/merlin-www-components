@@ -15,6 +15,7 @@ import {
     Stick
 } from '@cnbritain/merlin-www-js-sticky';
 import MainNavigation from '@cnbritain/merlin-www-main-navigation/js/main-navigation';
+import { toArray } from '../utils';
 
 var stickyScroller = null;
 
@@ -129,11 +130,4 @@ export function stickyResize(){
 
     stickyScroller.recalculate(true);
     stickyScroller.update();
-}
-
-export function toArray(collection){
-    var len = collection.length;
-    var arr = new Array(len);
-    while(len--) arr[len] = collection[len];
-    return arr;
 }

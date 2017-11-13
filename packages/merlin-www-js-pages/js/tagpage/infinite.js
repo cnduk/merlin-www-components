@@ -30,30 +30,6 @@ var infiniteBodyScrollHeight = 0;
 var hookInfiniteResize = null;
 
 
-export default function init(){
-
-    // Check if tag_infinite_scroll is set to true
-    if(getStorage('tag_infinite_scroll')) return;
-
-    infiniteScroller = new InfiniteScroll({
-        'el': window,
-        'throttle': INFINITE_SCROLL_THROTTLE,
-        'trigger': onInfiniteScrollTrigger,
-        'url': onInfiniteScrollUrl
-    });
-    infiniteScroller.on('loadError', onInfiniteLoadError);
-    infiniteScroller.on('loadComplete', onInfiniteLoadComplete);
-
-    resize();
-    onPageLoad(resize);
-    hookInfiniteResize = throttle(resize, INFINITE_RESIZE_THROTTLE);
-    addEvent(window, 'resize', hookInfiniteResize);
-
-    infiniteScroller.enable();
-}
-
-
-
 export function resize(){
     infiniteBodyScrollHeight = document.body.scrollHeight - window.innerHeight;
 }
@@ -151,4 +127,26 @@ export function onInfiniteLoadComplete( e ){
 
     // Trigger some more lazy ads
     AdManager.lazy();
+}
+
+export default function init(){
+
+    // Check if tag_infinite_scroll is set to true
+    if(getStorage('tag_infinite_scroll')) return;
+
+    infiniteScroller = new InfiniteScroll({
+        'el': window,
+        'throttle': INFINITE_SCROLL_THROTTLE,
+        'trigger': onInfiniteScrollTrigger,
+        'url': onInfiniteScrollUrl
+    });
+    infiniteScroller.on('loadError', onInfiniteLoadError);
+    infiniteScroller.on('loadComplete', onInfiniteLoadComplete);
+
+    resize();
+    onPageLoad(resize);
+    hookInfiniteResize = throttle(resize, INFINITE_RESIZE_THROTTLE);
+    addEvent(window, 'resize', hookInfiniteResize);
+
+    infiniteScroller.enable();
 }
