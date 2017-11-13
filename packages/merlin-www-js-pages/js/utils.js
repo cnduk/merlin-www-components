@@ -124,12 +124,19 @@ export function setGlobalNamespace(obj){
 }
 
 /**
- * Append a list of child elements to another element
+ * Append a list of child elements to another element.
+ *
+ * Ok, so huddle around boys and girls. The reason we are not iterating
+ * through the loop and just appending the children is because NodeList works
+ * differently if its parent is a DocumentFragment. Instead of the usual,
+ * remove from parent when you append, the node is still kept in the
+ * DocumentFragment so the length never changes.
+ *
  * @param  {HTMLElement} el
  * @param  {Array.<HTMLElement>} children
  */
 export function appendChildren(el, children){
-    for(var i=0, len=children.length; i<len; i++){
-        el.appendChild(children[i]);
-    }
+  Array.prototype.forEach.call(children, function(child){
+      el.appendChild(child);
+  });
 }
