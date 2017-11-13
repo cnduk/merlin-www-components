@@ -32,7 +32,7 @@ export default function init() {
     hasCoverStory = (getStorage('magazine_cover_story_uid') !== null);
 }
 
-export function getUrl(month, year, page) {
+export function getUrl(month, year, page, coverStoryUid) {
 
     var queryValues = {
         year: Number(year),
@@ -117,7 +117,7 @@ export function getMoreArticles() {
     var issueYear = getStorage('magazine_year');
     var coverStoryUid = getStorage('magazine_cover_story_uid');
     ajax({
-        url: getMoreArticlesUrl(
+        url: getUrl(
             issueMonth,
             issueYear,
             ++moreArticlesPage,
