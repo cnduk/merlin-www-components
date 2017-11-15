@@ -24,9 +24,10 @@
 .c-card-section--c-tag,
 .c-card-section--c-contributors {
 	.c-card-section__title {
-		@include font("LULO ONE", 24px, 700, 28px, -35);
-		color: $SHERPA-BLUE;
-		margin-bottom: 12px;
+		@include font("MILLER_DISPLAY", 20px, 400, 20px);
+		color: $mine-shaft;
+		letter-spacing: 4px;
+		margin-bottom: 20px;
 		margin-top: 0;
 		text-align: center;
 		text-transform: uppercase;
@@ -36,9 +37,11 @@
 		}
 
 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-			@include font-size(28px);
-			@include line-height(32px);
-			margin-bottom: 16px;
+			@include font-size(30px);
+			@include line-height(30px);
+			border-bottom: 1px solid $mine-shaft;
+			letter-spacing: 6px;
+			padding-bottom: 15px;
 		}
 	}
 
@@ -49,55 +52,55 @@
 			@include button-single-light-hover();
 		}
 
-		margin-top: 24px;
+		margin-top: 30px;
 	}
 }
 
-.c-card-section--mag-magazines {
-	background-color: $CAPE-HAZE;
-	margin: 0;
-    max-width: none;
-    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+// .c-card-section--mag-magazines {
+// 	background-color: $CAPE-HAZE;
+// 	margin: 0;
+//     max-width: none;
+//     padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: $TABLET_SLICE_MARGIN;
-    }
+//     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+//         padding: $TABLET_SLICE_MARGIN;
+//     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: $DESKTOP_SLICE_MARGIN;
-    }
+//     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+//         padding: $DESKTOP_SLICE_MARGIN;
+//     }
 
-    .c-card-section__title {
-    	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
-    	letter-spacing: 1px;
-    	margin-bottom: 16px;
-    	margin-top: 0;
-    	text-transform: uppercase;
+//     .c-card-section__title {
+//     	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
+//     	letter-spacing: 1px;
+//     	margin-bottom: 16px;
+//     	margin-top: 0;
+//     	text-transform: uppercase;
 
-    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    		margin-bottom: 24px;
-    	}
-    }
-}
+//     	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+//     		margin-bottom: 24px;
+//     	}
+//     }
+// }
 
-.c-card-section--a-recommended,
-.c-card-section--v-genre-articles {
-    .c-card-section__title {
-    	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
-    	letter-spacing: 1px;
-    	margin-bottom: 16px;
-    	margin-top: 0;
-    	text-transform: uppercase;
+// .c-card-section--a-recommended,
+// .c-card-section--v-genre-articles {
+//     .c-card-section__title {
+//     	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
+//     	letter-spacing: 1px;
+//     	margin-bottom: 16px;
+//     	margin-top: 0;
+//     	text-transform: uppercase;
 
-    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    		margin-bottom: 24px;
-    	}
-    }
-}
+//     	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+//     		margin-bottom: 24px;
+//     	}
+//     }
+// }
 
 .c-card-section--c-video-articles,
 .c-card-section--v-related-articles {
-	background-color: $JUNGLE;
+	background-color: $ebony-clay;
 	margin: 0;
     max-width: none;
     padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
@@ -110,22 +113,23 @@
         padding: $DESKTOP_SLICE_MARGIN;
     }
 
+    // TODO
     .c-card-section__title {
-    	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
-    	color: $WHITE;
-    	letter-spacing: 1px;
-    	margin-bottom: 16px;
-    	margin-top: 0;
-    	text-transform: uppercase;
+    	// @include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
+    	// color: $WHITE;
+    	// letter-spacing: 1px;
+    	// margin-bottom: 16px;
+    	// margin-top: 0;
+    	// text-transform: uppercase;
 
-    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    		margin-bottom: 24px;
-    	}
+    	// @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    	// 	margin-bottom: 24px;
+    	// }
     }
 
     .c-card-section__logo {
     	height: 42px;
-		margin: 0 auto 26px auto;
+		margin: 0 auto 30px auto;
 		width: 268px;
 
     	svg {
@@ -140,7 +144,6 @@
 
     	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
     		height: 52px;
-			margin: 0 auto 32px auto;
     		width: 331px;
     	}
     }
@@ -152,7 +155,7 @@
 			@include button-single-dark-hover();
 		}
 
-		margin-top: 24px;
+		margin-top: 30px;
 	}
 }
 
@@ -162,40 +165,40 @@
 	}
 }
 
-.c-card-section--tg-articles,
-.c-card-section--v-articles {
-	.c-card-section__title {
-		@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
-		letter-spacing: 1px;
-		margin-bottom: 16px;
-		margin-top: 0;
-		text-transform: uppercase;
+// .c-card-section--tg-articles,
+// .c-card-section--v-articles {
+// 	.c-card-section__title {
+// 		@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
+// 		letter-spacing: 1px;
+// 		margin-bottom: 16px;
+// 		margin-top: 0;
+// 		text-transform: uppercase;
 
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-			margin-bottom: 24px;
-		}
-	}
+// 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+// 			margin-bottom: 24px;
+// 		}
+// 	}
 
-	.c-card-list {
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		    margin-right: 340px;
-		}
-	}
-}
+// 	.c-card-list {
+// 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+// 		    margin-right: 340px;
+// 		}
+// 	}
+// }
 
-.c-card-section--mag-articles {
-	.c-card-section__title {
-		@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
-		letter-spacing: 1px;
-		margin-bottom: 16px;
-		margin-top: 0;
-		text-transform: uppercase;
+// .c-card-section--mag-articles {
+// 	.c-card-section__title {
+// 		@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
+// 		letter-spacing: 1px;
+// 		margin-bottom: 16px;
+// 		margin-top: 0;
+// 		text-transform: uppercase;
 
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-			margin-bottom: 24px;
-		}
-	}
-}
+// 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+// 			margin-bottom: 24px;
+// 		}
+// 	}
+// }
 
 .c-card-section__constrain {}
 .c-card-section__logo {}
