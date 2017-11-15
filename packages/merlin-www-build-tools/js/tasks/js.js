@@ -85,7 +85,8 @@ module.exports = function taskJsExport(taskConfig, browserSync){
             devtool: "source-map",
             "resolveLoader": {
                 "modules": [
-                    pluginDir
+                    pluginDir,
+                    "node_modules"
                 ]
             }
         };
