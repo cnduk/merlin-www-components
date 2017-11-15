@@ -12,166 +12,122 @@
 
 @mixin button-single() {
 	@include button-reset();
-	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 14px);
+	@include font("BRANDON GROTESQUE", 11px, 700, 11px);
 	letter-spacing: 1px;
 	padding: 17px 16px;
 	text-transform: uppercase;
 }
 
 @mixin button-single-light() {
-	border: 1px solid $PORCELAIN;
-	color: $MUSTASAARI;
+	background-color: transparent;
+	border: 1px solid $mine-shaft;
 }
 
 @mixin button-single-light-hover() {
-	border: 1px solid $FAROE-GRAY;
+	background-color: $mine-shaft;
+	border: 1px solid $mine-shaft;
 }
 
 @mixin button-single-light-inactive() {
-	border: 1px solid $CAPE-HAZE;
-	color: $FAROE-GRAY;
+	background-color: $mercury;
+	border: 1px solid $mercury;
+	color: $white;
 }
 
 @mixin button-single-dark() {
-	border: 1px solid rgba($PORCELAIN, 0.12);
-	color: $WHITE;
+	background-color: transparent;
+	border: 1px solid $dove-gray;
+	color: $white;
 }
 
 @mixin button-single-dark-hover() {
-	border: 1px solid rgba($PORCELAIN, 0.18);
+	background: $dove-gray;
+	border: 1px solid $dove-gray;
 }
 
 @mixin button-single-dark-inactive() {
-
-}
-
-@mixin button-single-two() {
-	@include button-reset();
-	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 14px);
-	letter-spacing: 1px;
-	padding: 17px 16px;
-	text-transform: uppercase;
-}
-
-@mixin button-single-two-light() {
-	background-color: $MUSTASAARI;
-	color: $WHITE;
-}
-
-@mixin button-single-two-light-hover() {
-
-}
-
-@mixin button-single-two-light-inactive() {
-	background-color: $PORCELAIN;
-}
-
-@mixin button-single-two-dark() {
-	background-color: $WHITE;
-	color: $MUSTASAARI;
-}
-
-@mixin button-single-two-dark-hover() {
-
-}
-
-@mixin button-single-two-dark-inactive() {
-	background-color: $PORCELAIN;
+	background-color: $steel-gray;
+	border: 1px solid $ebony-clay;
+	color: rgba($white, 0.2);
 }
 
 @mixin button-group() {
 	@include button-reset();
-	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
-	letter-spacing: 2px;
-	padding-bottom: 4px;
-	position: relative;
+	@include font("BRANDON GROTESQUE", 11px, 700, 11px);
+	letter-spacing: 1px;
 	text-transform: uppercase;
-
-	&:after {
-		bottom: 0;
-		content: "";
-		height: 1px;
-		left: 0;
-		position: absolute;
-		right: 2px;
-		transition: transform 100ms ease-in-out;
-		z-index: -1;
-	}
 }
 
 @mixin button-group-light() {
-	color: $RAVEN;
-
-	&:after {
-		background-color: $RAVEN;
-	}
+	color: $mine-shaft;
 }
 
 @mixin button-group-light-hover() {
-	&:after {
-		transform: translateY(-2px);
-	}
+	color: $careys-pink;
 }
 
 @mixin button-group-light-disabled() {
-	color: $FAROE-GRAY;
-	background-color: $FAROE-GRAY;
 
-	&:after {
-		background-color: $FAROE-GRAY;
-	}
+}
+
+@mixin button-group-dark() {
+	color: $white;
+}
+
+@mixin button-group-dark-hover() {
+	color: $careys-pink;
+}
+
+@mixin button-group-dark-disabled() {
+
 }
 
 @mixin button-group-two() {
 	@include button-reset();
-	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
-	letter-spacing: 2px;
-	padding-bottom: 4px;
-	position: relative;
+	@include font("BRANDON GROTESQUE", 11px, 700, 11px);
+	letter-spacing: 1px;
+	padding: 10px;
 	text-transform: uppercase;
-
-	&:after {
-		bottom: 0;
-		content: "";
-		height: 1px;
-		left: 0;
-		position: absolute;
-		right: 2px;
-		transition: transform 100ms ease-in-out;
-		z-index: -1;
-	}
 }
 
 @mixin button-group-two-light() {
-	color: $SHERPA-BLUE;
-
-	&:after {
-		background-color: $SHERPA-BLUE;
-	}
+	background-color: transparent;
+	border: 1px solid $silver-chalice;
+	color: $silver-chalice;
 }
 
 @mixin button-group-two-light-hover() {
-	&:after {
-		transform: translateY(-2px);
-	}
+	background-color: $silver-chalice;
+	border: 1px solid $silver-chalice;
+	color: $white;
 }
 
 @mixin button-group-two-light-disabled() {
-	color: $FAROE-GRAY;
-	background-color: $FAROE-GRAY;
 
-	&:after {
-		background-color: $FAROE-GRAY;
-	}
+}
+
+@mixin button-group-two-dark() {
+	background: transparent;
+	border: 1px solid $silver-chalice;
+	color: $silver-chalice;
+}
+
+@mixin button-group-two-dark-hover() {
+	background-color: $silver-chalice;
+	border: 1px solid $silver-chalice;
+	color: $white;
+}
+
+@mixin button-group-two-dark-disabled() {
+
 }
 
 @mixin button-share {
 	@include button-reset();
 	border-radius: 50%;
-	border: 1px solid $PORCELAIN;
 	box-sizing: border-box;
-	height: 40px;
-	width: 40px;
+	height: 50px;
+	width: 50px;
     text-align: center;
 
 	svg {
@@ -181,50 +137,47 @@
 }
 
 @mixin button-share-light($name) {
+	background-color: transparent;
+	border: 1px solid map-get($COLOUR_SOCIAL, $name);
+
    	path {
-        fill: map-get($COLOUR_SOCIAL, $name);
+   		fill: map-get($COLOUR_SOCIAL, $name);
     }
 }
 
 @mixin button-share-light-hover($name) {
-	border: 1px solid $FAROE-GRAY;
-}
+	background-color: map-get($COLOUR_SOCIAL, $name);
+	border: 1px solid map-get($COLOUR_SOCIAL, $name);
 
-@mixin button-share-light-two($name) {
- 	path {
- 		fill: $RAVEN;
- 	}
-}
-
-@mixin button-share-light-two-hover($name) {
-	border: 1px solid $FAROE-GRAY;
-
-	path {
- 		fill: map-get($COLOUR_SOCIAL, $name);
-	}
+   	path {
+   		fill: $white;
+    }
 }
 
 @mixin button-top-stories() {
-    background-color: $CAPE-HAZE;
+	background-color: $white;
     height: 50%;
     width: 60px;
 
     svg {
+        fill: $mine-shaft;
         height: 100%;
         width: 18px;
-    }
-
-    svg {
-        fill: $MUSTASAARI;
     }
 }
 
 @mixin button-top-stories-hover() {
-	background-color: $ISABEL;
+	background: $mine-shaft;
+
+	svg {
+	    fill: $white;
+	}
 }
 
 @mixin button-top-stories-disabled() {
-    svg {
-    	fill: rgba($MUSTASAARI, 0.12);
-    }
+	background: $white;
+
+	svg {
+	    fill: $mercury;
+	}
 }

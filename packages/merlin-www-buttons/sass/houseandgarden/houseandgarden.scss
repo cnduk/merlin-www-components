@@ -33,29 +33,6 @@ a.btn-single--dark {
     }
 }
 
-.btn-single-two,
-a.btn-single-two {
-    @include button-single-two;
-}
-
-.btn-single-two--light,
-a.btn-single-two--light {
-    @include button-single-two-light;
-
-    &:hover {
-        @include button-single-two-light-hover;
-    }
-}
-
-.btn-single-two--dark,
-a.btn-single-two--dark {
-    @include button-single-two-dark;
-
-    &:hover {
-        @include button-single-two-dark-hover;
-    }
-}
-
 .btn-group,
 a.btn-group {
     @include button-group;
@@ -70,15 +47,14 @@ a.btn-group--light {
     }
 }
 
-// .btn-group--dark,
-// a.btn-group--dark {
-//     @include button-group-dark;
+.btn-group--dark,
+a.btn-group--dark {
+    @include button-group-dark;
 
-//     &:hover {
-//         @include button-group-dark-hover;
-//     }
-// }
-
+    &:hover {
+        @include button-group-dark-hover;
+    }
+}
 
 .btn-group-two,
 a.btn-group-two {
@@ -91,6 +67,15 @@ a.btn-group-two--light {
 
     &:hover {
         @include button-group-two-light-hover;
+    }
+}
+
+.btn-group-two--dark,
+a.btn-group-two--dark {
+    @include button-group-two-dark;
+
+    &:hover {
+        @include button-group-two-dark-hover;
     }
 }
 
@@ -117,15 +102,6 @@ a.btn-share {
 @each $name, $color in $COLOUR_SOCIAL {
     .btn-share--#{$name},
     a.btn-share--#{$name} {
-        &.btn-share--light-two {
-            @include button-share-light-two($name);
-        }
-
-        &:hover,
-        &:hover.btn-share--light-two {
-            @include button-share-light-two-hover($name);
-        }
-
         &.btn-share--light {
             @include button-share-light($name);
         }
@@ -136,8 +112,3 @@ a.btn-share {
         }
     }
 }
-
-// .btn-related,
-// a.btn-related {
-//     @include button-related();
-// }
