@@ -21,11 +21,13 @@
 @mixin button-single-light() {
 	background-color: transparent;
 	border: 1px solid $mine-shaft;
+	color: $mine-shaft;
 }
 
 @mixin button-single-light-hover() {
 	background-color: $mine-shaft;
 	border: 1px solid $mine-shaft;
+	color: $white;
 }
 
 @mixin button-single-light-inactive() {
@@ -43,6 +45,7 @@
 @mixin button-single-dark-hover() {
 	background: $dove-gray;
 	border: 1px solid $dove-gray;
+	color: $white;
 }
 
 @mixin button-single-dark-inactive() {
