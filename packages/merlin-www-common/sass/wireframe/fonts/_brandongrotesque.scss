@@ -1,0 +1,7 @@
+@import "../_fonts";
+
+$_FONT_FAMILY: brandon-grotesque, sans-serif;
+$_BRANDON_GROTESQUE: map-merge($FONT_GROUP_DEFAULT, (
+    'FAMILY': $_FONT_FAMILY
+));
+$FONT_GROUPS: map-merge($FONT_GROUPS, ('BRANDON GROTESQUE': $_BRANDON_GROTESQUE));
