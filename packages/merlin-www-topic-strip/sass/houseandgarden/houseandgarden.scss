@@ -22,21 +22,21 @@
 }
 
 .c-topic-strip--c-card-section {
-    margin-bottom: 12px;
-    margin-top: 12px;
+    margin-bottom: 25px;
+    margin-top: 20px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: 16px;
-        margin-top: 16px;
+        margin-top: 25px;
         text-align: center;
     }
 }
 
 .c-topic-strip__title {
-    @include font("FREIGHT TEXT", 14px, 400, 16px);
-    color: $RAVEN;
+    @include font("MILLER_DISPLAY", 12px, 400, 12px);
+    color: $mine-shaft;
     font-style: italic;
-    margin-right: 24px;
+    letter-spacing: 0;
+    margin-right: 10px;
 }
 
 .c-topic-strip__list {
@@ -45,9 +45,14 @@
 
 li.c-topic-strip__item {
     font-size: initial;
+    border-right: 1px solid $silver;
+    margin-right: 10px;
+    padding-right: 10px;
 
-    & + & {
-        margin-left: 24px;
+    &:last-child {
+        border-right: none;
+        margin-right: 0;
+        padding-right: 0;
     }
 }
 
