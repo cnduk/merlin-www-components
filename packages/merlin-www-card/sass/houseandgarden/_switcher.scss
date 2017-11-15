@@ -20,6 +20,10 @@
             width: auto;
         }
 
+        .c-card__teaser {
+            display: block;
+        }
+
         @include card-portrait();
         @include card-portrait-large();
     }

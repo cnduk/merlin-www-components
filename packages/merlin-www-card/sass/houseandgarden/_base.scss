@@ -6,21 +6,22 @@
 
 .c-card__images {}
 .c-card__image {
-	background-color: $CAPE-HAZE;
+	// TODO
+	background-color: transparent;
 }
 .c-card__image__icon {}
 
 .c-card__obj__body {
 	.c-card__header {
-		> :last-child {
-			margin-bottom: 0;
-		}
+		// > :last-child {
+		// 	margin-bottom: 0;
+		// }
 	}
 
 	.c-card__footer {
-		> :last-child {
-			margin-bottom: 0;
-		}
+		// > :last-child {
+		// 	margin-bottom: 0;
+		// }
 	}
 }
 
