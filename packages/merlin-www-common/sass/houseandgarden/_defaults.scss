@@ -32,6 +32,7 @@ h5,
 h6 {
     color: $mine-shaft;
     letter-spacing: 0px;
+    margin: 0 0 10px 0;
 }
 
 @mixin heading-scale($default, $medium, $large) {
@@ -144,9 +145,11 @@ mark {
 p {
     @include font("MILLER_DISPLAY", 17px, 400, 23px);
     color: $mine-shaft;
+    margin: 0 0 30px 0;
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(19px);
         @include line-height(25px);
+        margin-bottom: 40px;
     }
 }
 
