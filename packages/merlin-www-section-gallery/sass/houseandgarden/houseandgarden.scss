@@ -6,7 +6,7 @@
 	box-sizing: border-box;
 	margin-bottom: $MOBILE_SLICE_MARGIN;
 	margin-top: $MOBILE_SLICE_MARGIN;
-	margin: 0 auto;
+	max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
 	padding-left: $MOBILE_SIDE_GUTTER;
 	padding-right: $MOBILE_SIDE_GUTTER;
 
@@ -26,8 +26,7 @@
 }
 
 .c-gallery__wrapper {
-    margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
+
 }
 
 .c-gallery__image {

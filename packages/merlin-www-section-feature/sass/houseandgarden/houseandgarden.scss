@@ -6,6 +6,7 @@
 .c-feature {
 	margin-bottom: $MOBILE_SLICE_MARGIN;
 	margin-top: $MOBILE_SLICE_MARGIN;
+	max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
 
 	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
 	    margin-bottom: $TABLET_SLICE_MARGIN;
