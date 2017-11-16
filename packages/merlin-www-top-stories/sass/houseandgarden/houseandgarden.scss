@@ -5,14 +5,13 @@
 @import "../wireframe/wireframe";
 
 .c-top-stories {
-    background-color: $CAPE-HAZE;
-    border-bottom: 1px solid $ISABEL;
+    background-color: $white;
+    border-bottom: 1px solid $mercury;
     display: none;
     padding: 20px 0;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         display: block;
-        padding: 24px 0;
     }
 
     &.has-navigation {
@@ -39,23 +38,24 @@
 
 .c-top-stories__nav {
     border-left: 1px solid $ISABEL;
-    bottom: -24px;
+    bottom: -20px;
     position: absolute;
     right: 0;
-    top: -24px;
+    top: -20px;
     width: 60px;
     z-index: 2;
 
     @include min-screen($MAXIMUM_PAGE_WIDTH + 1) {
-        border-right: 1px solid $ISABEL;
+        border-right: 1px solid $mercury;
     }
 }
 
 .c-top-stories__nav-btn {
     position: absolute;
 }
+
 .c-top-stories__nav-btn--left {
-    border-top: 1px solid $ISABEL;
+    border-top: 1px solid $mercury;
     top: 50%;
 }
 
