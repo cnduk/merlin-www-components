@@ -4,12 +4,20 @@
 @mixin card-hero() {}
 
 @mixin card-hero-small() {
+    .c-card__obj__body {
+        text-align: center;
+    }
+
     .c-card__image--custom {
         padding-top: 66.66666%;
     }
 }
 
 @mixin card-hero-large() {
+    .c-card__obj__body {
+        text-align: left;
+    }
+
     .c-card__image--custom {
         padding-top: 100%;
     }
