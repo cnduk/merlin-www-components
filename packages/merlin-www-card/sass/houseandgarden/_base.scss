@@ -1,4 +1,12 @@
-.c-card {}
+.c-card {
+	&:hover {
+		.c-card__title {
+			span {
+				box-shadow: 0 -0.5em 0 0 rgba($careys-pink, 0.5);
+			}
+		}
+	}
+}
 .c-card__link {}
 
 .c-card__obj {}
@@ -11,17 +19,8 @@
 .c-card__image__icon {}
 
 .c-card__obj__body {
-	.c-card__header {
-		// > :last-child {
-		// 	margin-bottom: 0;
-		// }
-	}
-
-	.c-card__footer {
-		// > :last-child {
-		// 	margin-bottom: 0;
-		// }
-	}
+	.c-card__header {}
+	.c-card__footer {}
 }
 
 .c-card__header {}

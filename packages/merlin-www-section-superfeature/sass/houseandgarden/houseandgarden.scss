@@ -16,7 +16,16 @@
 	    margin-bottom: $DESKTOP_SLICE_MARGIN;
 	    margin-top: $DESKTOP_SLICE_MARGIN;
 	}
+
+	&:hover {
+		.c-superfeature__title {
+  			span {
+  				box-shadow: inset 0 -0.5em 0 0 rgba($careys-pink, 0.5);
+  			}
+		}
+	}
 }
+
 .c-superfeature__link {}
 
 .c-superfeature__images {}

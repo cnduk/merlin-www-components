@@ -26,7 +26,13 @@
 }
 
 .c-gallery__wrapper {
-
+	&:hover {
+		.c-gallery__title {
+  			span {
+  				box-shadow: inset 0 -0.5em 0 0 rgba($careys-pink, 0.5);
+  			}
+		}
+	}
 }
 
 .c-gallery__image {
