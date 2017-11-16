@@ -22,6 +22,7 @@
 }
 
 .c-card-section--c-tag,
+.c-card-section--c-curated,
 .c-card-section--c-contributors {
 	.c-card-section__title {
 		@include font("MILLER_DISPLAY", 20px, 400, 20px);
