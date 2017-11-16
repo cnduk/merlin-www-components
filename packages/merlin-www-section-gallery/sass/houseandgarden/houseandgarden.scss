@@ -1,0 +1,166 @@
+@import '@cnbritain/merlin-www-common:houseandgarden';
+
+@import '../wireframe/wireframe';
+
+.c-gallery {
+	box-sizing: border-box;
+	margin-bottom: $MOBILE_SLICE_MARGIN;
+	margin-top: $MOBILE_SLICE_MARGIN;
+	margin: 0 auto;
+	padding-left: $MOBILE_SIDE_GUTTER;
+	padding-right: $MOBILE_SIDE_GUTTER;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	    margin-bottom: $TABLET_SLICE_MARGIN;
+	    margin-top: $TABLET_SLICE_MARGIN;
+	    padding-left: $TABLET_SIDE_GUTTER;
+	    padding-right: $TABLET_SIDE_GUTTER;
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	    margin-bottom: $DESKTOP_SLICE_MARGIN;
+	    margin-top: $DESKTOP_SLICE_MARGIN;
+	    padding-left: $DESKTOP_SIDE_GUTTER;
+	    padding-right: $DESKTOP_SIDE_GUTTER;
+	}
+}
+
+.c-gallery__wrapper {
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+}
+
+.c-gallery__image {
+    background-color: $wild-sand;
+}
+
+.c-gallery__image-remaining {
+	background-color: rgba($black, 0.7)
+}
+
+.c-gallery__image-remaining__text {
+    white-space: nowrap;
+}
+
+.c-gallery__image-remaining__text-prefix {
+	@include font("BRANDON GROTESQUE", 25px, 700, 25px);
+	color: $white;
+	letter-spacing: 0px;
+	vertical-align: middle;
+}
+
+.c-gallery__image-remaining__text-value {
+	@include font("BRANDON GROTESQUE", 35px, 700, 35px);
+	color: $white;
+	letter-spacing: 0px;
+	vertical-align: middle;
+}
+
+.c-gallery__text {
+	padding: 15px 20px 30px 20px;
+	text-align: center;
+
+	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+		border-top: 1px solid $mine-shaft;
+		border-right: 1px solid $mine-shaft;
+		border-bottom: 1px solid $mine-shaft;
+		padding: 40px;
+	}
+}
+
+.c-gallery__icon {
+	display: none;
+}
+
+.c-gallery__tag {
+	@include font("BRANDON GROTESQUE", 10px, 700, 10px);
+	color: $mine-shaft;
+	letter-spacing: 1px;
+	margin-bottom: 5px;
+	margin-top: 0;
+	text-transform: uppercase;
+
+	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+		margin-bottom: 10px;
+	}
+}
+
+.c-gallery__title {
+	@include font("MILLER_DISPLAY", 25px, 700, 27px);
+	color: $mine-shaft;
+	letter-spacing: 0.5px;
+	margin: 5px 0 15px 0;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    	@include font-size(40px);
+    	@include line-height(43px);
+    	letter-spacing: 0px;
+    	margin: 10px 0 25px 0;
+	}
+}
+
+.c-gallery__teaser {
+	display: none;
+
+	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+		@include font("MILLER_DISPLAY", 16px, 400, 21px);
+		color: $mine-shaft;
+		display: block;
+		font-style: italic;
+		letter-spacing: 0px;
+		margin: 10px 0 15px 0;
+	}
+}
+
+.c-gallery__separator {
+	display: none;
+}
+
+.c-gallery__byline {
+    @include font("BRANDON GROTESQUE", 10px, null, 10px);
+    color: $mine-shaft;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+    margin-top: 10px;
+    text-transform: uppercase;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    	margin-bottom: 10px;
+    	margin-top: 25px;
+    }
+}
+
+.c-gallery__byline--sponsorship {}
+.c-gallery__byline-prefix {}
+.c-gallery__byline-name {
+    @include font-weight(700);
+}
+
+ul.c-gallery__meta {
+    @include font("BRANDON GROTESQUE", 0px, 400, 10px);
+    color: $dove-gray;
+    letter-spacing: 1px;
+    margin-top: 7px;
+    text-transform: uppercase;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    	margin-top: 10px;
+    }
+}
+
+li.c-gallery__meta-item {
+    @include font("BRANDON GROTESQUE", 10px, 400, 10px);
+    color: $dove-gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    border-right: 1px solid $silver;
+    margin-right: 7px;
+    padding-right: 7px;
+
+    &:last-child {
+        border-right: none;
+        margin-right: 0;
+        padding-right: 0;
+    }
+}
