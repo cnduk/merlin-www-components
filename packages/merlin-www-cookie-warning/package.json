@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-cookie-warning",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "Dat bootiful 🍪 warnin",
   "main": "js/index.js",
   "scripts": {
@@ -9,8 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-www-common": "^1.7.0",
-    "@cnbritain/merlin-www-image": "^1.5.0",
+    "@cnbritain/merlin-www-common": "^1.7.1",
+    "@cnbritain/merlin-www-image": "^1.5.1",
     "@cnbritain/merlin-www-js-utils": "^1.3.1",
     "eventemitter2": "^4.1.0"
   },
