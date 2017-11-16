@@ -6,6 +6,7 @@ import CONFIG_BRAND from '@cnbritain/merlin-www-common';
 import {
     addClass,
     addEvent,
+    assign,
     getParent,
     getNamespaceKey,
     removeClass,
@@ -42,11 +43,9 @@ var DEFAULT_INIT_CONFIG = {
 
 export default function init(config){
 
-    var _config = null;
-    if(config === undefined){
-        _config = DEFAULT_INIT_CONFIG;
-    } else {
-        _config = config;
+    var _config = DEFAULT_INIT_CONFIG;
+    if(config !== undefined){
+        _config = assign({}, DEFAULT_INIT_CONFIG, config);
     }
 
     setupHtmlClasses();
