@@ -21,17 +21,14 @@ $NAVIGATION_BTN_WIDTH: 60px;
     padding-bottom: $PADDING_SMALL;
     padding-left: $PADDING_SMALL;
 
-    @media (min-width: 1440px) and (max-width: 1480px) {
-        @for $i from 0 through 40 {
-            @media (min-width: 1440px + $i) {
-                padding-left: #{(20 - $i/2)}px;
-            }
-        }
+    @media (min-width: 1440px) and (max-width: 1500px) {
+        padding-left: calc(30px - (100vw - 1440px)/2 );
     }
 
-    @include min-screen(1480px) {
+    @include min-screen(1500px) {
         padding-left: 0;
     }
+
 }
 
 .c-top-stories__title {
