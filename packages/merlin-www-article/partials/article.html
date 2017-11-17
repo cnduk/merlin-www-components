@@ -45,7 +45,7 @@
                         {{^ state.has_multiple_profiles }}
                             {{# data.profiles }}
                                 {{# data.teaser }}
-                                    <div class="a-author__bio">{{ &. }}</div>
+                                    <div class="a-author__bio has-bbcode">{{ &. }}</div>
                                 {{/ data.teaser }}
                             {{/ data.profiles }}
                         {{/ state.has_multiple_profiles }}
@@ -91,7 +91,7 @@
                         {{> @cnbritain/merlin-www-article/article-podcast }}
                     {{/ data.podcast }}
 
-                    <div class='a-body__content'>
+                    <div class='a-body__content has-bbcode'>
                         {{ &data.body }}
                         <div class="a-body__clear"></div>
                     </div>
