@@ -1,7 +1,8 @@
+// TODO
 .n-gallery-nav {
     @include opacity(0);
     @include transition(opacity 0.2s ease-in-out, visibility 0.2s ease-in-out);
-    background-color: $WHITE;
+    background-color: $white;
     bottom: 0;
     height: 60px;
     left: 0;
@@ -18,8 +19,7 @@
 
     &:before {
         @include vendor-prefix(transform, translateX(-50%));
-        background-color: $ISABEL;
-        box-shadow: 0px 2px 4px 0px rgba($BLACK, 0.04);
+        background-color: $mercury;
         bottom: 0;
         content: '';
         height: 1px;
@@ -29,28 +29,28 @@
     }
 }
 
-.n-gallery-counter {
-    @include line-height(60px);
-    padding: 0 24px;
-}
+// .n-gallery-counter {
+//     @include line-height(60px);
+//     padding: 0 24px;
+// }
 
-.n-gallery-counter__current {
-    @include font("PROXIMA NOVA CONDENSED", 20px, 600, 20px);
-    color: $SHERPA-BLUE;
-    letter-spacing: 1px;
-}
+// .n-gallery-counter__current {
+//     @include font("PROXIMA NOVA CONDENSED", 20px, 600, 20px);
+//     color: $SHERPA-BLUE;
+//     letter-spacing: 1px;
+// }
 
-.n-gallery-counter__slash {
-    @include font("PROXIMA NOVA CONDENSED", 14px, 600, 20px);
-    color: $MUSTASAARI;
-    margin: 0 6px;
-}
+// .n-gallery-counter__slash {
+//     @include font("PROXIMA NOVA CONDENSED", 14px, 600, 20px);
+//     color: $MUSTASAARI;
+//     margin: 0 6px;
+// }
 
-.n-gallery-counter__total {
-    @include font("PROXIMA NOVA CONDENSED", 14px, 600, 20px);
-    color: $MUSTASAARI;
-    letter-spacing: 1px;
-}
+// .n-gallery-counter__total {
+//     @include font("PROXIMA NOVA CONDENSED", 14px, 600, 20px);
+//     color: $MUSTASAARI;
+//     letter-spacing: 1px;
+// }
 
 
 .n-gallery-toggle,
@@ -61,37 +61,37 @@ a.n-gallery-close {
     line-height: 60px;
     width: 60px;
 
-    &:hover {
-        svg {
-            fill: $SHERPA-BLUE;
-        }
-    }
+    // &:hover {
+    //     svg {
+    //         fill: $SHERPA-BLUE;
+    //     }
+    // }
 
     svg {
         height: 100%;
-        fill: $MUSTASAARI;
+        fill: $mine-shaft;;
         width: 20px;
     }
 }
 .n-gallery-toggle--list,
 .n-gallery-toggle--grid {
-    border-left: 1px solid $ISABEL;
-    border-right: 1px solid $ISABEL;
+    border-left: 1px solid $mercury;
+    border-right: 1px solid $mercury;
     display: inline-block;
     font-size: 0;
     height: 60px;
     line-height: 60px;
     width: 60px;
 
-    &:hover {
-        svg {
-            fill: $SHERPA-BLUE;
-        }
-    }
+    // &:hover {
+    //     svg {
+    //         fill: $SHERPA-BLUE;
+    //     }
+    // }
 
     svg {
         height: 100%;
-        fill: $MUSTASAARI;
+        fill: $mine-shaft;
         width: 20px;
     }
 }

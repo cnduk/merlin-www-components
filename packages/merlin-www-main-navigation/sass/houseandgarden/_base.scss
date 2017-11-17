@@ -8,7 +8,7 @@
 }
 
 .n-main {
-    background-color: $WHITE;
+    background-color: $white;
     z-index: 10;
 }
 
@@ -49,7 +49,7 @@
     }
 
     svg, img {
-        fill: $SHERPA-BLUE;
+        fill: $mine-shaft;
         height: 60px;
         width: 100%;
     }
@@ -74,8 +74,8 @@
 }
 
 .n-main__nav-title {
-    @include font("PROXIMA NOVA CONDENSED", 20px, 600, 60px);
-    color: $MUSTASAARI;
+    @include font("MILLER_DISPLAY", 18px, 600, 18px);
+    color: $mine-shaft;
     display: none;
     left: 152px;
     letter-spacing: 2px;
@@ -103,27 +103,33 @@
 
 .n-main__list-item {
     vertical-align: top;
+
+    & + .n-main__list-item {
+        &:before {
+            background-color: $mercury;
+            content: '';
+            height: 20px;
+            margin: 20px 0;
+            position: absolute;
+            width: 1px;
+        }
+    }
 }
 
 .n-main__nav-link {
-    @include font("PROXIMA NOVA CONDENSED", 14px, 600, 14px);
+    @include font("MILLER_DISPLAY", 15px, 400, 15px);
     box-sizing: border-box;
-    color: $MUSTASAARI;
+    color: $mine-shaft;
     display: inline-block;
     height: 60px;
-    letter-spacing: 1px;
-    margin: 0 16px;
+    letter-spacing: 2px;
+    margin: 0 19px;
     text-transform: uppercase;
 
     span {
         display: inline-block;
         height: 60px;
         line-height: 60px;
-    }
-
-    &:hover {
-        border-bottom: 1px solid $SHERPA-BLUE;
-        color: $SHERPA-BLUE;
     }
 }
 
@@ -132,8 +138,7 @@
 
     &:before {
         @include vendor-prefix(transform, translateX(-50%));
-        background-color: $ISABEL;
-        box-shadow: 0px 2px 4px 0px rgba($BLACK, 0.04);
+        background-color: $mercury;
         top: 0;
         content: '';
         height: 1px;
@@ -144,12 +149,11 @@
 }
 
 .n-main__sticker-child {
-    background-color: $WHITE;
+    background-color: $white;
 
     &:before {
         @include vendor-prefix(transform, translateX(-50%));
-        background-color: $ISABEL;
-        box-shadow: 0px 2px 4px 0px rgba($BLACK, 0.06);
+        background-color: $mercury;
         bottom: 0;
         content: '';
         height: 1px;
@@ -160,7 +164,7 @@
 }
 
 .n-main__nav-hamburger {
-    border-left: 1px solid $ISABEL;
+    border-left: 1px solid $mercury;
     height: 60px;
     line-height: 60px;
     text-align: center;
@@ -175,7 +179,7 @@
 
         svg {
             display: inline-block;
-            fill: $MUSTASAARI;
+            fill: $mine-shaft;
             height: 24px;
             line-height: 60px;
             vertical-align: middle;
@@ -191,7 +195,7 @@
 
         svg {
             display: inline-block;
-            fill: $MUSTASAARI;
+            fill: $mine-shaft;
             height: 20px;
             line-height: 60px;
             vertical-align: middle;
@@ -201,11 +205,11 @@
 
 .n-main__nav-search {
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        border-left: 1px solid $ISABEL;
+        border-left: 1px solid $mercury;
     }
 
     @include min-screen($MAXIMUM_PAGE_WIDTH + 1) {
-        border-right: 1px solid $ISABEL;
+        border-right: 1px solid $mercury;
     }
 
     display: inline-block;
@@ -225,16 +229,10 @@
 
         svg {
             display: inline-block;
-            fill: $MUSTASAARI;
+            fill: $mine-shaft;
             height: 20px;
             line-height: 60px;
             vertical-align: middle;
-        }
-
-        &:hover {
-            svg {
-                fill: $SHERPA-BLUE;
-            }
         }
     }
 
@@ -248,22 +246,16 @@
 
         svg {
             display: inline-block;
-            fill: $MUSTASAARI;
+            fill: $mine-shaft;
             height: 20px;
             line-height: 60px;
             vertical-align: middle;
-        }
-
-        &:hover {
-            svg {
-                fill: $SHERPA-BLUE;
-            }
         }
     }
 }
 
 .n-menu {
-    background-color: $WHITE;
+    background-color: $white;
     -webkit-overflow-scrolling: touch;
 
     &.is-visible {
@@ -290,7 +282,7 @@
 }
 
 .n-menu__nav {
-    margin-bottom: 32px;
+    margin-bottom: 20px;
 
     .n-menu__nav__wrapper {
         margin: 0 20px;
@@ -303,17 +295,17 @@
 
     a {
         .n-menu__nav-item {
-            border-bottom: 1px solid $ISABEL;
+            border-bottom: 1px solid $mercury;
             float: left;
             height: 60px;
             position: relative;
             width: 100%;
 
             .n-menu__nav-link {
-                @include font("PROXIMA NOVA CONDENSED", 16px, 700, 16px);
+                @include font("MILLER_DISPLAY", 18px, 400, 18px);
                 @include vendor-prefix(transform, translateY(-50%));
-                color: $MUSTASAARI;
-                letter-spacing: 1px;
+                color: $mine-shaft;
+                letter-spacing: 2px;
                 position: absolute;
                 text-transform: uppercase;
                 top: 50%;
@@ -322,22 +314,16 @@
 
             &--more {
                 border-bottom: none;
-                height: 40px;
+                height: 45px;
                 width: 50%;
 
                 .n-menu__nav-link {
-                    @include font-size(12px);
-                    @include line-height(12px);
+                    @include font-size(15px);
+                    @include line-height(15px);
                     @include vendor-prefix(transform, none);
                     bottom: 0;
-                    letter-spacing: 0.06em;
                     top: initial;
                 }
-            }
-
-            &:hover,
-            &:focus {
-
             }
         }
     }

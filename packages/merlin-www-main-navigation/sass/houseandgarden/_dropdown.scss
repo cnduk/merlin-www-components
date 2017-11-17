@@ -1,9 +1,9 @@
 .n-main__dropdown {}
 .n-main__dropdown--follow {
     .n-main__dropdown-link {
-        @include font("FREIGHT TEXT", 14px, 400, 14px);
+        @include font("MILLER_DISPLAY", 15px, 400, 15px);
+        color: $mine-shaft;
         font-style: italic;
-        letter-spacing: 0;
         text-transform: none;
     }
 }
@@ -13,30 +13,26 @@
     text-align: center;
 
     & + .n-main__dropdown--follow__group {
-        margin-top: 24px;
+        margin-top: 20px;
     }
 }
 
 .n-main__dropdown-list {
-    background-color: $WHITE;
-    border: 1px solid $ISABEL;
+    background-color: $white;
+    border: 1px solid $mercury;
     margin-top: -1px;
     z-index: 1;
 }
 
 .n-main__dropdown-list--left {
     border-top: none;
-    box-shadow: 0px 2px 4px 0px rgba($BLACK, 0.04);
-    padding: 12px 32px 20px 32px;
-    margin-left: -16px;
-    min-width: 144px;
+    padding: 0 19px;
 }
 
 .n-main__dropdown-list--follow {
     border-top: none;
-    box-shadow: 0px 2px 4px 0px rgba($BLACK, 0.04);
     margin-right: -1px;
-    padding: 24px 32px 32px 32px;
+    padding: 19px;
     white-space: nowrap;
 }
 
@@ -44,7 +40,6 @@
     .n-main__nav-link {
         @include line-height(38px);
         box-sizing: border-box;
-        color: $MUSTASAARI;
         display: inline-block;
         margin: 0;
         height: 38px;
@@ -55,31 +50,12 @@
             height: 38px;
             line-height: 38px;
         }
-
-        &:hover {
-            border-bottom: none;
-            color: $SHERPA-BLUE;
-
-            &:before {
-                background-color: $SHERPA-BLUE;
-                content: '';
-                height: 100%;
-                left: -33px;
-                position: absolute;
-                top: 0;
-                width: 1px;
-            }
-        }
     }
 }
 
 .n-main__dropdown-link {
-    &:hover {
-        color: $MUSTASAARI;
-    }
-
     &:after {
-        border-top-color: rgba($RAVEN, 0.4);
+        border-top-color: $mine-shaft;
         border-width: 4px;
         margin-left: 8px;
         position: relative;
@@ -92,7 +68,7 @@ a.n-main__dropdown__btn-share,
     font-size: initial;
 
     & + .n-main__dropdown__btn-share {
-        margin-left: 12px;
+        margin-left: 14px;
     }
 }
 
@@ -109,10 +85,10 @@ a.n-main__dropdown__btn-share,
 }
 
 .n-main__dropdown__btn {
-    @include button-single-two();
-    @include button-single-two-light();
+    @include button-single();
+    @include button-single-light();
 
     &:hover {
-        @include button-single-two-light-hover();
+        @include button-single-light-hover();
     }
 }

@@ -1,6 +1,6 @@
 .n-main__header-logo {
     display: inline-block;
-    height: 140px;
+    height: 100px;
     max-width: none;
     position: relative;
     text-align: center;
@@ -10,9 +10,9 @@
     }
 
     svg, img {
-        height: 92px;
-        padding: 24px 0;
-        fill: $SHERPA-BLUE;
+        height: 100px;
+        padding: 20px 0;
+        fill: $black;
     }
 }
 

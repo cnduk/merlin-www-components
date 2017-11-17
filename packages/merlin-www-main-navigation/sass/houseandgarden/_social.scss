@@ -1,5 +1,5 @@
 .n-menu__social {
-    margin: 32px 20px 24px 20px;
+    margin: 50px 20px 20px 20px;
     text-align: center;
 
     ul {
@@ -8,10 +8,10 @@
 }
 
 .n-menu__social-title {
-    @include font("FREIGHT TEXT", 14px, 400, 14px);
-    color: $MUSTASAARI;
+    @include font("MILLER_DISPLAY", 15px, 400, 15px);
+    color: $mine-shaft;
     font-style: italic;
-    margin: 0 0 24px 0;
+    margin: 0 0 10px 0;
 }
 
 .n-menu__social-brand {}
@@ -26,11 +26,11 @@
 }
 
 .n-menu__newsletter-btn {
-    @include button-single-two();
-    @include button-single-two-light();
-    margin-bottom: 40px;
+    @include button-single();
+    @include button-single-light();
+    margin-bottom: 50px;
 
     &:hover {
-        @include button-single-two-light-hover();
+        @include button-single-light-hover();
     }
 }
