@@ -134,25 +134,25 @@
 //     }
 // }
 
-// .c-card-list--c-splash {
-//     margin: -12px -12px;
+.c-card-list--c-splash {
+    margin: -10px -10px;
 
-//     .c-card-list__item {
-//         display: inline-block;
-//         padding: 0 12px;
-//         margin: 12px 0;
-//         vertical-align: middle;
-//         width: 100%;
+    .c-card-list__item {
+        display: inline-block;
+        padding: 0 10px;
+        margin: 10px 0;
+        vertical-align: middle;
+        width: 100%;
 
-//         @include two-column-size() {
-//             width: 50%;
-//         }
+        @include two-column-size() {
+            width: 50%;
+        }
 
-//         @include four-column-size() {
-//             width: 25%;
-//         }
-//     }
-// }
+        @include four-column-size() {
+            width: 25%;
+        }
+    }
+}
 
 .c-card-list--c-magazine-articles {
     margin: -10px -10px;
