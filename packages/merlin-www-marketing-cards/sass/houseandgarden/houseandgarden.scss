@@ -137,12 +137,7 @@
 }
 
 .a-marketing-card__link {
-    @include button-single-two();
-    @include button-single-two-light();
 
-    &:hover {
-        @include button-single-two-light-hover();
-    }
 }
 
 .a-marketing-card__title {
