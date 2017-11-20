@@ -225,45 +225,41 @@
 //     }
 // }
 
-// .c-card-list--tg-articles {
-//     margin: -6px -12px;
-//     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-//         margin: -20px -12px;
-//     }
+.c-card-list--tg-articles {
+   margin: -10px -10px;
 
-//     .c-card-list__item {
-//         display: inline-block;
-//         padding: 0 12px;
-//         margin: 6px 0;
-//         width: 100%;
-//         @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-//             margin: 20px 0;
-//         }
+   .c-card-list__item {
+       display: inline-block;
+       padding: 0 10px;
+       margin: 10px 0;
+       width: 100%;
+       @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {}
 
-//         .c-card {
-//             border-top: 1px solid $ISABEL;
-//             padding-top: 12px;
-//             @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-//                 padding-top: 40px;
-//             }
+       .c-card {
+           border-top: 1px solid $silver;
+           padding-top: 10px;
 
-//             &.c-card--dark {
+           @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+               padding-top: 20px;
+           }
 
-//             }
-//         }
+           &.c-card--dark {
 
-//         &:first-child {
-//             .c-card {
-//                 border-top: none;
-//                 padding-top: 0;
+           }
+       }
 
-//                 &.c-card--dark {
+       &:first-child {
+           .c-card {
+               border-top: none;
+               padding-top: 0;
 
-//                 }
-//             }
-//         }
-//     }
-// }
+               &.c-card--dark {
+
+               }
+           }
+       }
+   }
+}
 
 // .c-card-list--s-results {
 //     margin: -6px -12px;
