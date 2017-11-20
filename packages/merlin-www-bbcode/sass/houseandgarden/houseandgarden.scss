@@ -476,18 +476,7 @@
 // Button
 // -------------------- //
 .bb-button {
-    @include button-single-two();
-    @include button-single-two-light();
-    margin: 28px 0;
-    width: 100%;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        width: auto;
-    }
-
-    &:hover {
-        @include button-single-two-light-hover();
-    }
 }
 
 // -------------------- //
