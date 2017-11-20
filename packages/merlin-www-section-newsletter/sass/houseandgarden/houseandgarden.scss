@@ -115,19 +115,7 @@
 }
 
 .c-newsletter__form__btn {
-    height: 60px;
-    margin-bottom: 16px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: 10px;
-        margin-bottom: 24px;
-    }
-
-    @include button-single-two();
-    @include button-single-two-light();
-    &:hover {
-        @include button-single-two-light-hover();
-    }
 }
 
 .c-newsletter__legal {
