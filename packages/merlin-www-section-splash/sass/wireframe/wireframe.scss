@@ -4,7 +4,7 @@
 @import "@cnbritain/merlin-www-card:wireframe";
 
 .c-splash-section {
-	position: relative;
+    position: relative;
 }
 
 .c-splash-section__wrapper {
@@ -21,7 +21,17 @@
 .c-splash-hero__content {}
 .c-splash-hero__teaser {}
 .c-splash-hero__image {
-	position: relative;
+    position: relative;
+
+    img {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
 }
 
 .c-splash-hero__link {}
