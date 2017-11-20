@@ -6,7 +6,7 @@
 @import '../wireframe/wireframe';
 
 .c-magazine {
-	background-color: $CAPE-HAZE;
+	background-color: $vanilla-ice;
 }
 
 .c-magazine__wrapper {
@@ -28,18 +28,11 @@
 }
 
 .c-magazine__covers__wrapper {}
-.c-magazine__cover--print {
-	img {
-		box-shadow: 0 0 32px 0 rgba($MUSTASAARI, 0.16);
-	}
-}
-
+.c-magazine__cover--print {}
 .c-magazine__cover--tablet {
 	img {
-		background-color: $MUSTASAARI;
 		border-radius: 8px;
 		bottom: 1px;
-		box-shadow: 0px 0px 0px 1px $ABBEY;
 		padding: 16px 12px;
 
 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
@@ -50,16 +43,22 @@
 	}
 }
 
+.c-magazine__cover__image {
+	img {
+		background-color: $black;
+	}
+}
+
 .c-magazine__title {
-	@include font("FREIGHT TEXT", 20px, 400, 20px);
-	color: $MUSTASAARI;
-	font-style: italic;
+	@include font("BRANDON GROTESQUE", 10px, 700, 10px);
+	color: $mine-shaft;
 	margin-bottom: 20px;
 	margin-top: 0;
 	text-align: center;
+	text-transform: uppercase;
 
 	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-		margin-bottom: 12px;
+		margin-bottom: 5px;
 	}
 }
 
@@ -70,28 +69,30 @@
 }
 
 .c-magazine__content__title {
-	@include font("FREIGHT TEXT", 20px, null, 20px);
-	color: $MUSTASAARI;
-	font-style: italic;
+	@include font("BRANDON GROTESQUE", 10px, 700, 10px);
+	color: $mine-shaft;
+	margin-bottom: 5px;
 	margin-top: 0;
-	margin-bottom: 16px;
+	text-align: left;
+	text-transform: uppercase;
 }
 
 .c-magazine__content__date {
-	@include font("PROXIMA NOVA CONDENSED", 24px, 600, 28px);
-	color: $MUSTASAARI;
-	letter-spacing: 1px;
-	margin-bottom: 32px;
-	margin-top: 24px;
+	@include font("MILLER DISPLAY", 25px, 700, 27px);
+	color: $mine-shaft;
+	color: $mine-shaft;
+	letter-spacing: 0px;
+	margin-bottom: 20px;
+	margin-top: 20px;
 	text-align: center;
 	text-transform: uppercase;
 
 	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-		@include font-size(28px);
-		@include line-height(32px);
-		letter-spacing: 2px;
-		margin-bottom: 24px;
-		margin-top: 12px;
+		@include font-size(40px);
+		@include line-height(43px);
+		letter-spacing: 0px;
+		margin-bottom: 30px;
+		margin-top: 5px;
 		text-align: left;
 	}
 }
@@ -99,13 +100,9 @@
 .c-magazine__btn {
 	@include button-single();
 	@include button-single-light();
-	margin-top: 24px;
+	margin-top: 30px;
 
 	&:hover {
 		@include button-single-light-hover();
-	}
-
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-		margin-top: 40px;
 	}
 }
