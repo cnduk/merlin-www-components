@@ -20,19 +20,21 @@
 
 @mixin card-splash-small() {
     .c-card__obj__header {
-        padding-right: 8px;
-        width: 72px;
+        width: 60px;
     }
 
     .c-card__obj__body {
-        padding-left: 8px;
         width: auto;
     }
 }
 
 @mixin card-splash-large() {
     .c-card__obj__header {
-        width: 30%;
+        width: 100px;
+    }
+
+    .c-card__obj__body {
+        width: auto;
     }
 }
 

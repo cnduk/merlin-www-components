@@ -4,6 +4,11 @@
 @mixin card-magazine() {}
 @mixin card-magazine-small() {}
 @mixin card-magazine-large() {
+    .c-card__obj__header,
+    .c-card__obj__body {
+        vertical-align: middle;
+    }
+
     .c-card__obj__header {
         width: 70px;
     }
