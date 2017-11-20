@@ -28,9 +28,12 @@
     }
 }
 
+.c-card-list--a-recommended,
 .c-card-list--c-video-articles,
 .c-card-list--c-curated,
-.c-card-list--c-tag {
+.c-card-list--c-tag,
+.c-card-list--mag-articles,
+.c-card-list--v-genre-articles {
     margin: -10px -10px;
 
     .c-card-list__item {
@@ -61,45 +64,6 @@
         }
     }
 }
-
-// .c-card-list--a-recommended,
-// .c-card-list--v-genre-articles,
-// .c-card-list--mag-articles {
-//     margin: -6px -12px;
-
-//     @include two-column-size() {
-//         margin: -16px -12px;
-//     }
-
-//     .c-card-list__item {
-//         display: inline-block;
-//         padding: 0 12px;
-//         margin: 6px 0;
-//         width: 100%;
-
-//         @include one-column-size() {
-//             & + .c-card-list__item {
-//                 .c-card {
-//                     border-top: 1px solid $ISABEL;
-//                     padding-top: 12px;
-
-//                     &.c-card--dark {
-
-//                     }
-//                 }
-//             }
-//         }
-
-//         @include two-column-size() {
-//             margin: 16px 0;
-//             width: 50%;
-//         }
-
-//         @include four-column-size() {
-//             width: 25%;
-//         }
-//     }
-// }
 
 // .c-card-list--v-related-articles {
 //     margin: -6px -12px;
@@ -404,22 +368,22 @@
 //     }
 // }
 
-// .c-card-list--mag-magazines {
-//     margin: -12px -12px;
+.c-card-list--mag-magazines {
+    margin: -10px -10px;
 
-//     @include four-column-size() {
-//         margin: -24px -12px;
-//     }
+    @include four-column-size() {
+        margin: -10px -10px;
+    }
 
-//     .c-card-list__item {
-//         display: inline-block;
-//         padding: 0 12px;
-//         margin: 12px 0;
-//         width: 50%;
+    .c-card-list__item {
+        display: inline-block;
+        padding: 0 10px;
+        margin: 10px 0;
+        width: 50%;
 
-//         @include four-column-size() {
-//             margin: 24px 0;
-//             width: 25%;
-//         }
-//     }
-// }
+        @include four-column-size() {
+            margin: 10px 0;
+            width: 25%;
+        }
+    }
+}
