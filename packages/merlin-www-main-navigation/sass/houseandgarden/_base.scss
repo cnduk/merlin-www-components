@@ -32,7 +32,7 @@
     left: 20px;
     overflow: hidden;
     position: fixed;
-    width: 100px;
+    width: 110px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         left: 30px;
@@ -45,7 +45,7 @@
         position: absolute;
         transition: bottom 0.2s ease-in-out;
         vertical-align: middle;
-        width: 100px;
+        width: 110px;
     }
 
     svg, img {
@@ -74,16 +74,15 @@
 }
 
 .n-main__nav-title {
-    @include font("MILLER_DISPLAY", 18px, 600, 18px);
+    @include font("MILLER_DISPLAY", 18px, 600, 60px);
     color: $mine-shaft;
     display: none;
-    left: 152px;
-    letter-spacing: 2px;
+    left: 180px;
+    letter-spacing: 0px;
     overflow: hidden;
     position: fixed;
-    right: 172px;
+    right: 90px;
     text-overflow: ellipsis;
-    text-transform: uppercase;
     vertical-align: middle;
     white-space: nowrap;
 
@@ -92,12 +91,12 @@
     }
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        left: 162px;
+        // left: 162px;
     }
 
     @include min-screen($MAXIMUM_PAGE_WIDTH + 60px) {
         position: absolute;
-        left: 132px;
+        left: 150px;
     }
 }
 
