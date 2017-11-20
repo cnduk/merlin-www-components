@@ -1,7 +1,7 @@
 .n-main__covers {
     display: none;
     position: absolute;
-    top: 37px;
+    top: 27px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         display: block;
@@ -9,6 +9,7 @@
 }
 
 .n-main__covers__wrapper {
+    font-size: 0;
     max-width: $MAXIMUM_PAGE_WIDTH;
     padding-left: 30px;
     @include screen(1440px, 1500px) {
@@ -30,7 +31,8 @@
 .n-main__cover {
     display: inline-block;
     margin-right: 12px;
-    width: 80px;
+    vertical-align: middle;
+    width: 90px;
 
     img {
         width: 100%;
@@ -42,14 +44,30 @@
 }
 
 .n-main__cover__offer {
+    // padding: 20px 20px 20px 0;
     @include font("MILLER_DISPLAY", 13px, 700, 15px);
     color: $black;
     display: inline-block;
     font-style: italic;
-    // max-width: 144px;
+    max-width: 130px;
     text-transform: uppercase;
-    vertical-align: top;
+    vertical-align: middle;
+    vertical-align: middle;
     white-space: pre-line;
+    position: relative;
+
+    &:before {
+        border: 1px solid $black;
+        bottom: 0;
+        content: '';
+        height: calc(100% + 20px);
+        left: -13px;
+        position: absolute;
+        right: 0;
+        top: -10px;
+        width: calc(100% + 20px);
+        z-index: -1;
+    }
 }
 
 .n-main__cover__btn,
