@@ -4,49 +4,24 @@
 @import "../wireframe/wireframe";
 
 .c-newsletter {
-    background-color: $CAPE-HAZE;
-    background-image: url('../img/newsletter.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 1440px auto;
-    margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
-    padding: 60px 0;
-    position: relative;
-    text-align: center;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $MOBILE_SLICE_MARGIN;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: 80px 0;
+        margin-top: $TABLET_SLICE_MARGIN;
+        margin-bottom: $TABLET_SLICE_MARGIN;
     }
 
-    &:before {
-        background-color: rgba($MUSTASAARI, 0.2);
-        bottom: 0;
-        content: '';
-        height: 100%;
-        left: 50%;
-        max-width: $MAXIMUM_PAGE_WIDTH;
-        position: absolute;
-        right: 0;
-        top: 0;
-        transform: translateX(-50%);
-        width: 100%;
-
-        @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-            background-color: rgba($MUSTASAARI, 0.15);
-        }
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $DESKTOP_SLICE_MARGIN;
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
     }
 
-    &:after {
-        @include font("PROXIMA NOVA CONDENSED", 10px, 400, 12px);
-        bottom: 4px;
-        color: $WHITE;
-        content: "Mirjam Bleeker";
-        letter-spacing: 1px;
-        position: absolute;
-        right: 4px;
-        text-transform: uppercase;
-    }
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    position: relative;
+    text-align: center;
 }
 
 .c-newsletter__wrapper {
@@ -61,37 +36,33 @@
 }
 
 .c-newsletter__title {
-    @include font("LULO ONE", 24px, 700, 28px, -35);
-    color: $WHITE;
-    margin-bottom: 16px;
+    @include font("MILLER_DISPLAY", 25px, 700, 27px);
+    color: $mine-shaft;
+    margin-bottom: 10px;
     margin-top: 0px;
     text-align: center;
-    text-shadow: 0 0 16px rgba($MUSTASAARI, 0.1);
     text-transform: uppercase;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(28px);
-        @include line-height(32px);
-        margin-bottom: 20px;
+        @include font-size(30px);
+        @include line-height(30px);
     }
 }
 
 .c-newsletter__description {
-    @include font("PROXIMA NOVA CONDENSED", 14px, 400, 20px);
-    color: $WHITE;
-    letter-spacing: 1px;
-    margin: 16px 0 24px 0;
-    text-shadow: 0 0 16px rgba($MUSTASAARI, 0.2);
+    @include font("MILLER DISPLAY", 14px, 400, 19px);
+    color: $mine-shaft;
+    font-style: italic;
+    letter-spacing: 0px;
+    margin: 10px 0 20px 0;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         @include font-size(16px);
         @include line-height(20px);
-        margin: 20px 0 32px 0;
     }
 }
 
 .c-newsletter__form {
-    @include font("PROXIMA NOVA CONDENSED", 14px, 400, 14px);
     width: 100%;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
@@ -100,32 +71,51 @@
 }
 
 .c-newsletter__form__text {
-    @include font("PROXIMA NOVA CONDENSED", 14px, 400, 14px);
-    background: $WHITE;
+    @include font("BRANDON GROTESQUE", 11px, 700, 11px);
     border-radius: 0;
-    border: 1px solid $PORCELAIN;
+    border: 1px solid $mine-shaft;
     box-sizing: border-box;
-    color: $MUSTASAARI;
-    height: 60px;
+    color: $silver-chalice;
+    height: 47px;
+    letter-spacing: 1px;
     margin-bottom: 10px;
+    padding: 17px 16px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        text-align: left;
+    }
 
     &::placeholder {
-        color: $RAVEN;
+        color: $silver-chalice;
     }
 }
 
 .c-newsletter__form__btn {
+    @include button-single();
+    @include button-single-light();
 
+    height: auto;
+    margin-bottom: 20px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: 10px;
+    }
+
+    &:hover {
+        @include button-single-light-hover();
+    }
 }
 
 .c-newsletter__legal {
-    @include font("PROXIMA NOVA CONDENSED", 12px, null, 14px);
-    color: $WHITE;
-    margin-bottom: 0;
-    margin-top: 0;
+    @include font("BRANDON GROTESQUE", 8px, 700, 10px);
+    color: $silver-chalice;
+    letter-spacing: 0px;
+    text-transform: uppercase;
 }
 
 .c-newsletter__privacy {
-    color: $WHITE;
-    border-bottom: 1px solid $WHITE;
+    border-bottom: 1px solid $silver-chalice;
+    color: $silver-chalice;
 }
