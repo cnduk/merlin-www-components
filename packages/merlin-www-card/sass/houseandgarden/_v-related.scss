@@ -2,13 +2,15 @@
 // Video Related
 // -------------------- //
 @mixin card-v-related() {
-    .c-card__tag {
-        color: $CASPER;
-    }
-
+    .c-card__tag,
     .c-card__title,
-    .c-card__byline {
-        color: $WHITE;
+    .c-card__byline,
+    .c-card__teaser {
+        color: $white;
+    }
+    ul.c-card__meta,
+    li.c-card__meta-item {
+        color: $silver-chalice;
     }
 }
 
