@@ -99,6 +99,35 @@
 //     }
 // }
 
+.c-card-section--a-recommended {
+	background-color: $vanilla-ice;
+	margin: 0;
+    max-width: none;
+    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: $DESKTOP_SLICE_MARGIN;
+    }
+
+    .c-card-section__title {
+    	@include font("MILLER_DISPLAY", 16px, 400, 16px);
+    	color: $mine-shaft;
+    	letter-spacing: 2px;
+    	margin-bottom: 15px;
+    	margin-top: 0;
+    	text-transform: uppercase;
+
+    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    		@include font-size(20px);
+    		@include line-height(20px);
+    	}
+    }
+}
+
 .c-card-section--c-video-articles,
 .c-card-section--v-related-articles {
 	background-color: $ebony-clay;
