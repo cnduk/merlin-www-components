@@ -122,7 +122,7 @@ li.c-splash-hero__meta-item {
 }
 
 .c-splash-list {
-	margin: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+	margin: 0 $MOBILE_SIDE_GUTTER $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
 	padding-bottom: 30px;
 	border-bottom: 1px solid $silver;
 
