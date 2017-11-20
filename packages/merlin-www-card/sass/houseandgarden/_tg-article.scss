@@ -3,15 +3,7 @@
 // -------------------- //
 @mixin card-tg-article() {}
 @mixin card-tg-article-small() {}
-@mixin card-tg-article-large() {
-    .c-card__teaser {
-        @include font("PROXIMA NOVA CONDENSED", 16px, 400, 20px);
-        color: $RAVEN;
-        display: block;
-        letter-spacing: 1px;
-        margin-top: 24px;
-    }
-}
+@mixin card-tg-article-large() {}
 
 .c-card--tg-article {
     @include card-landscape();
