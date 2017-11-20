@@ -33,7 +33,8 @@
 .c-card-list--c-curated,
 .c-card-list--c-tag,
 .c-card-list--mag-articles,
-.c-card-list--v-genre-articles {
+.c-card-list--v-genre-articles,
+.c-card-list--s-results {
     margin: -10px -10px;
 
     .c-card-list__item {
@@ -260,57 +261,6 @@
        }
    }
 }
-
-// .c-card-list--s-results {
-//     margin: -6px -12px;
-
-//     @include two-column-size() {
-//         margin: -16px -12px;
-//     }
-
-//     @include four-column-size() {
-//         margin: -24px -12px;
-//     }
-
-//     .c-card-list__item {
-//         display: inline-block;
-//         padding: 0 12px;
-//         margin: 6px 0;
-//         width: 100%;
-
-//         @include one-column-size() {
-//             .c-card {
-//                 border-top: 1px solid $ISABEL;
-//                 padding-top: 12px;
-
-//                 &.c-card--dark {
-
-//                 }
-//             }
-
-//             &:first-child {
-//                 .c-card {
-//                     border-top: none;
-//                     padding-top: 0;
-
-//                     &.c-card--dark {
-
-//                     }
-//                 }
-//             }
-//         }
-
-//         @include two-column-size() {
-//             margin: 16px 0;
-//             width: 50%;
-//         }
-
-//         @include four-column-size() {
-//             margin: 24px 0;
-//             width: 25%;
-//         }
-//     }
-// }
 
 // .c-card-list--tg-articles-grid,
 // .c-card-list--v-articles {
