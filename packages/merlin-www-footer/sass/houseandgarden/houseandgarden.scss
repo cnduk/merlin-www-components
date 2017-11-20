@@ -4,14 +4,8 @@
 @import "../wireframe/wireframe";
 
 .c-footer {
-    background-color: $MUSTASAARI;
-    border-top: 1px solid rgba($WHITE, 0.1);
-    color: $WHITE;
+    background-color: $mine-shaft;
     padding: 0 20px;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: 0 30px;
-    }
 }
 
 .c-footer__wrapper {
@@ -19,60 +13,90 @@
     max-width: 1440px;
 }
 
-.c-footer__list {
-    color: $WHITE;
+.c-footer__list {}
+
+.c-footer__list-item {
+    @include font("BRANDON GROTESQUE", 14px, 'BOLD', 14px);
+
+    color: $white;
+
+    a {
+        color: inherit;
+        border-bottom: none;
+        display: block;
+        text-decoration: none;
+    }
+}
+.c-footer__list-item--logo {
+    bottom: -10px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    width: 80px;
+
+    svg {
+        fill: $white;
+    }
 }
 
 .c-footer__list--left {}
-.c-footer__list--right {}
+.c-footer__list--right {
+    position: relative;
 
-.c-footer__list-item--links {
     .c-footer__list-item {
-        @include max-screen(1099px) {
-            border-top: 1px solid rgba($WHITE, 0.1);
-            box-sizing: border-box;
+        padding: 20px 0;
+    }
+}
+.c-footer__list-item--links {
+    border-bottom: 1px solid $tundora;
 
-            &:last-child {
-                border-bottom: 1px solid rgba($WHITE, 0.1);
-            }
-        }
-
-        @include min-screen(1100px) {
-            margin-right: 32px;
-        }
+    .c-footer__list-item {
+        border-top: 1px solid $tundora;
     }
 }
 
-li.c-footer__list-item {
-    @include font("PROXIMA NOVA CONDENSED", 14px, 600, 60px, 0);
-    color: $WHITE;
-    height: 60px;
 
-    a {
-        text-decoration: none;
-        color: inherit;
+@include min-screen(1100px) {
+    .c-footer__list-item a:hover {
+        text-decoration: underline;
+    }
+
+    li.c-footer__list-item {
+        border-top: none;
+        position: relative;
+
+        &:before {
+            background-color: $tundora;
+            content: '';
+            display: block;
+            height: 20px;
+            left: 0;
+            position: absolute;
+            top: 17px;
+            width: 1px;
+        }
+
+        &:first-child:before {
+            display: none;
+        }
+    }
+
+    li.c-footer__list-item--logo {
+        position: relative;
+        top: -5px;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    .c-footer__list--right {
+        .c-footer__list-item {
+            padding: 20px;
+        }
+    }
+
+    .c-footer__list-item--links {
         border-bottom: none;
-
-        @include min-screen(1100px) {
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-}
-
-li.c-footer__list-item--logo {
-    margin-top: -60px;
-
-    svg {
-        fill: $WHITE;
-        height: 60px;
-        width: 80px;
-    }
-
-    @include min-screen(1100px) {
-        clear: right;
-        padding-left: 32px;
-        margin-top: 0;
     }
 }
