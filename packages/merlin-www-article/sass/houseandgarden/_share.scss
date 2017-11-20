@@ -1,26 +1,23 @@
 .a-share {
-    margin-top: 24px;
+    margin-top: 30px;
     position: relative;
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: 32px;
-    }
 }
 .a-share__wrapper {}
 
 .a-share__title {
-    @include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
-    color: $MUSTASAARI;
+    @include font("BRANDON GROTESQUE", 11px, 700, 11px);
+    color: $black;
     letter-spacing: 1px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     margin-top: 40px;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
 }
 
 .a-share__list {
     font-size: 0;
     height: 40px;
-    text-align: center;
+    text-align: left;
 }
 
 .a-share__list-item {
@@ -29,7 +26,7 @@
     height: 40px;
 
     & + .a-share__list-item {
-        margin-left: 12px;
+        margin-left: 8px;
     }
 }
 
