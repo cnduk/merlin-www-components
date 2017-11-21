@@ -263,6 +263,16 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         max-width: 1190px;
     }
+
+     .a-share {
+        .a-share__list {
+            text-align: center;
+
+             @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+                 text-align: left;
+             }
+        }
+    }
 }
 
 .a-header__title {
