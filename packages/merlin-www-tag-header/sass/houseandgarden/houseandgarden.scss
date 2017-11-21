@@ -6,80 +6,56 @@
 @import "../wireframe/wireframe";
 
 .tg-header {
-	margin: 32px 0;
+	margin: $MOBILE_SLICE_MARGIN 0;
 	padding: 0 $MOBILE_SIDE_GUTTER;
 
 	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+		margin: $TABLET_SLICE_MARGIN 0;
 		padding: 0 $TABLET_SIDE_GUTTER;
 	}
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin: 48px 0;
+        margin: $DESKTOP_SLICE_MARGIN 0;
         padding: 0 $DESKTOP_SIDE_GUTTER;
     }
 }
 
+// TODO
 .tg-header--video {
 	.tg-header__intro__image {
-    	height: 42px;
-		margin: 0 auto;
-		width: 268px;
+  //   	height: 42px;
+		// margin: 0 auto;
+		// width: 268px;
 
-    	svg {
-    	    display: inline-block;
-    	    height: 100%;
-    	    width: 100%;
+  //   	svg {
+  //   	    display: inline-block;
+  //   	    height: 100%;
+  //   	    width: 100%;
 
-    	    path {
-    	        fill: $SHERPA-BLUE;
-    	    }
-    	}
+  //   	    path {
+  //   	        fill: $SHERPA-BLUE;
+  //   	    }
+  //   	}
 
-    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    		height: 52px;
-			margin: 0 auto;
-    		width: 331px;
-    	}
+  //   	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+  //   		height: 52px;
+		// 	margin: 0 auto;
+  //   		width: 331px;
+  //   	}
 	}
 }
 
 .tg-header--profile {
 	.tg-header__intro__image {
-		box-sizing: border-box;
 		border-radius: 50%;
-		border: 1px solid $PORCELAIN;
-		height: 72px;
-		margin: 0 auto 12px auto;
+		height: 85px;
+		margin: 0 auto 20px auto;
 		overflow: hidden;
-		padding: 6px;
-		position: relative;
-		width: 72px;
+		width: 85px;
 
 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-			margin-bottom: 24px;
-			width: 108px;
-			height: 108px;
-		}
-
-		&:before {
-		    background-color: $CAPE-HAZE;
-		    border-radius: 50%;
-		    bottom: 0;
-		    content: '';
-		    height: 58px;
-		    left: 0;
-		    margin: 6px;
-		    overflow: hidden;
-		    position: absolute;
-		    right: 0;
-		    top: 0;
-		    width: 58px;
-		    z-index: -1;
-
-		    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		    	width: 94px;
-		    	height: 94px;
-		    }
+			width: 130px;
+			height: 130px;
 		}
 
 		img {
@@ -95,18 +71,18 @@
 .tg-header--event,
 .tg-header--topic {
 	.tg-header__intro__image {
-		margin-bottom: 24px;
+		margin-bottom: 20px;
 		margin-left: auto;
 		margin-right: auto;
-		width: 240px;
+		width: 200px;
 
 		img {
 			width: 100%;
 		}
 
 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-			margin-bottom: 32px;
-			width: 320px;
+			margin-bottom: 30px;
+			width: 250px;
 		}
 	}
 }
@@ -120,15 +96,16 @@
 .tg-header__intro__image {}
 
 .tg-header__intro__title {
-	@include font("LULO ONE", 28px, 700, 32px, -35);
-	color: $SHERPA-BLUE;
-	margin: 0 0 12px 0;
+	@include font("MILLER DISPLAY", 40px, 700, 41px);
+	color: $mine-shaft;
+	letter-spacing: 0;
+	margin: 0 0 10px 0;
 	text-align: center;
 	text-transform: uppercase;
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		@include font-size(46px);
-		@include line-height(54px);
-		margin-bottom: 16px;
+		@include font-size(65px);
+		@include line-height(68px);
+		margin-bottom: 20px;
 	}
 }
 
@@ -137,28 +114,29 @@
 }
 
 .tg-header__intro__description {
-	color: $MUSTASAARI;
-	margin: 12px auto 24px auto;
-	max-width: 800px;
+	color: $mine-shaft;
+	margin: 10px auto 30px auto;
 	text-align: center;
 
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		margin-top: 16px;
+		margin: 20px auto 40px auto;
 	}
 
 	a {
-	    border-bottom: 1px solid;
-	    color: inherit;
-		padding-bottom: 3px;
+		border-bottom: 2px solid $careys-pink;
+		color: $mine-shaft;
+		padding-bottom: 2px;
 	}
 
 	p {
-		@include font("FREIGHT TEXT", 18px, 400, 28px);
-		color: inherit;
+		@include font("MILLER DISPLAY", 18px, 400, 22px);
+		color: $mine-shaft;
+		font-style: italic;
+		letter-spacing: 0;
 
 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-			@include font-size(20px);
-			@include line-height(32px);
+			@include font-size(23px);
+			@include line-height(28px);
 		}
 	}
 
@@ -172,10 +150,10 @@
 }
 
 .tg-header__topic-strip {
-	margin: 12px auto;
+	margin: 20px auto;
 
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		margin: 24px auto;
+		margin: 30px auto;
 	}
 
 	.c-topic-strip {
@@ -183,20 +161,20 @@
 	}
 
 	.c-topic-strip__btn {
-	    @include button-group-two();
-	    @include button-group-two-light();
+	    @include button-group();
+	    @include button-group-light();
 
 	    &:hover {
-	        @include button-group-two-light-hover();
+	        @include button-group-light-hover();
 	    }
 	}
 }
 
 .tg-header__cards {
-	margin: 32px auto;
+	margin: 25px auto;
 	max-width: $MAXIMUM_PAGE_WIDTH;
 
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-	    margin: 48px auto;
+	    margin: 60px auto;
 	}
 }
