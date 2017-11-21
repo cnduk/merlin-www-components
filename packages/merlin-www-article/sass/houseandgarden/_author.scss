@@ -2,88 +2,87 @@
 
 .a-author__image {
     border-radius: 50%;
-    border: 1px solid $PORCELAIN;
-    height: 60px;
-    margin-bottom: 16px;
+    height: 80px;
+    margin-bottom: 20px;
     overflow: hidden;
-    padding: 4px;
     position: relative;
-    width: 60px;
+    width: 80px;
 
     &:before {
-        background-color: $CAPE-HAZE;
+        background-color: $silver;
         border-radius: 50%;
         bottom: 0;
         content: '';
-        height: 60px;
+        height: 80px;
         left: 0;
-        margin: 4px;
         overflow: hidden;
         position: absolute;
         right: 0;
         top: 0;
-        width: 60px;
+        width: 80px;
         z-index: -1;
     }
 
     img {
         border-radius: 50%;
-        height: 60px;
+        height: 80px;
         overflow: hidden;
-        width: 60px;
+        width: 80px;
     }
 }
 
 .a-author__byline {
-    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
-    color: $MUSTASAARI;
+    @include font("BRANDON GROTESQUE", 10px, 400, 10px);
+    color: $mine-shaft;
+    letter-spacing: 1px;
     margin-bottom: 4px;
     margin-top: 0;
+    text-transform: uppercase;
 
     a {
-        color: $MUSTASAARI;
+        color: $mine-shaft;
     }
-}
 
-.a-author__byline-name {
-    letter-spacing: 1px;
-    margin-left: 2px;
-    text-transform: uppercase;
-}
+    .a-author__byline-name {
+        @include font("BRANDON GROTESQUE", 10px, 700, 10px);
+        letter-spacing: 0px;
+    }
 
-.a-author__byline-prefix,
-.a-author__byline-conjunction {
-    font-style: italic;
-    text-transform: lowercase;
-}
+    .a-author__byline-prefix,
+    .a-author__byline-conjunction {
+        color: $dove-gray;
+    }
 
-.a-author__bio {
-    margin-bottom: 8px;
-    margin-top: 8px;
+    .a-author__bio {
+        margin-bottom: 8px;
+        margin-top: 8px;
 
-    p {
-        @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
-        color: $RAVEN;
-        letter-spacing: 0.5px;
-        margin: 0 0 8px 0;
+        p {
+            @include font("MILLER_DISPLAY", 14px, 700, 19px);
+            color: $mine-shaft;
+            letter-spacing: 0px;
+            margin: 0 0 8px 0;
+            text-transform: uppercase;
 
-        &:last-child {
-            margin-bottom: 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        a {
+            color: inherit;
         }
     }
+}
 
-    a {
-        color: inherit;
+    .a-author__separator {
+        display: none;
     }
-}
 
-.a-author__separator {
-    display: none;
-}
-
-.a-author__article-date {
-    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
-    color: $MANATEE;
-    margin-bottom: 0;
-    margin-top: 4px;
-}
+    .a-author__article-date {
+        @include font("BRANDON GROTESQUE", 10px, 400, 10px);
+        color: $dove-gray;
+        letter-spacing: 1px;
+        margin-bottom: 0;
+        margin-top: 4px;
+    }
