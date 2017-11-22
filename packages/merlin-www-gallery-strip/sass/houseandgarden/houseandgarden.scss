@@ -3,9 +3,12 @@
 @import '../wireframe/wireframe';
 
 .c-gallery-strip {
-    margin: 40px 0;
-}
+    margin: 30px 0;
 
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 40px 0;
+    }
+}
 .c-gallery-strip__wrapper {
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
@@ -15,7 +18,7 @@
 .c-gallery-strip__link {}
 .c-gallery-strip__list {}
 li.c-gallery-strip__list__item {
-    background-color: $CAPE-HAZE;
+    background-color: $wild-sand;
 
     &:before {
         display: block;
@@ -44,43 +47,63 @@ li.c-gallery-strip__list__item {
 }
 
 .c-gallery-strip__remaining {
-    @include font("PROXIMA NOVA CONDENSED", 24px, 600, 24px);
-    background-color: rgba($BLACK, 0.33);
-    color: $WHITE;
+    background-color: rgba($mine-shaft, 0.7);
+    color: $white;
     z-index: 1;
 }
 
+.c-gallery-strip__remaining__prefix {
+    @include font("BRANDON GROTESQUE", 20px, 700, 25px);
+    vertical-align: middle;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(25px);
+        @include line-height(30px);
+    }
+}
+
+.c-gallery-strip__remaining__value {
+    @include font("BRANDON GROTESQUE", 25px, 700, 25px);
+    vertical-align: middle;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(30px);
+        @include line-height(30px);
+    }
+}
+
 .c-gallery-strip__title {
-    @include font("PROXIMA NOVA CONDENSED", 24px, 600, 28px);
-    color: $MUSTASAARI;
-    letter-spacing: 1px;
-    margin: 20px 0 0 0;
+    @include font("MILLER DISPLAY", 25px, 700, 27px);
+    color: $mine-shaft;
+    letter-spacing: 0px;
+    margin: 15px 0 0 0;
     text-align: center;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(34px);
-        @include line-height(36px);
-        letter-spacing: 2px;
-        margin: 32px 0 0 0;
+        @include font-size(27px);
+        @include line-height(29px);
+        margin: 20px 0 0 0;
     }
 }
 
 .c-gallery-strip__subtitle {
-    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
-    color: $MANATEE;
-    margin: 4px 0 0 0;
+    @include font("MILLER DISPLAY", 18px, 400, 22px);
+    color: $mine-shaft;
+    font-style: italic;
+    letter-spacing: 0px;
+    margin: 10px 0 0 0;
     text-align: center;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-
+        margin-top: 15px;
     }
 }
 
 .c-gallery-strip--tag {
-    margin: 24px auto;
+    margin: 25px 0;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin: 32px auto;
+        margin: 60px 0;
     }
 
     .c-gallery-strip__list {

@@ -66,74 +66,54 @@
     }
 }
 
-// .c-card-list--v-related-articles {
-//     margin: -6px -12px;
+.c-card-list--v-related-articles {
+    margin: -10px -10px;
 
-//     .c-card-list__item {
-//         display: inline-block;
-//         padding: 0 12px;
-//         margin: 6px 0;
-//         width: 100%;
+    .c-card-list__item {
+        display: inline-block;
+        padding: 0 10px;
+        margin: 10px 0;
+        width: 100%;
 
-//         & + .c-card-list__item {
-//             .c-card {
-//                 border-top: 1px solid rgba($PORCELAIN, 0.12);
-//                 padding-top: 12px;
+        & + .c-card-list__item {
+            .c-card {
+                border-top: 1px solid $tundora;
+                padding-top: 10px;
+            }
+        }
 
-//                 &.c-card--dark {
+        .c-card__images {
+            &:after {
+                @include font("BRANDON GROTESQUE", 10px, 700, 10px);
+                background-color: $ebony-clay;
+                bottom: 0;
+                color: $white;
+                content: "Now Playing";
+                left: 0;
+                letter-spacing: 1px;
+                opacity: 0;
+                padding: 5px;
+                position: absolute;
+                text-transform: uppercase;
+                white-space: nowrap;
+            }
+        }
 
-//                 }
-//             }
-//         }
+        &.is-active {
+            .c-card__images {
+                &:after {
+                    opacity: 1;
+                }
+            }
 
-//         .c-card__images {
-//             &:after {
-//                 @include font("PROXIMA NOVA CONDENSED", 10px, 600, 10px);
-//                 color: $WHITE;
-//                 content: "Now Playing";
-//                 left: 50%;
-//                 letter-spacing: 1px;
-//                 opacity: 0;
-//                 position: absolute;
-//                 text-transform: uppercase;
-//                 top: 50%;
-//                 transform: translate(-50%, -50%);
-//                 transition-duration: 300ms;
-//                 white-space: nowrap;
-//             }
-//         }
-
-//         .c-card__image {
-//             &:after {
-//                 background-color: rgba($BLACK, 0.5);
-//                 bottom: 0;
-//                 content: "";
-//                 height: 100%;
-//                 left: 0;
-//                 opacity: 0;
-//                 position: absolute;
-//                 right: 0;
-//                 top: 0;
-//                 transition-duration: 300ms;
-//                 width: 100%;
-//             }
-//         }
-
-//         &.is-active {
-//             .c-card__images {
-//                 &:after {
-//                     opacity: 1;
-//                 }
-//             }
-
-//             .c-card__image {
-//                 &:after {
-//                     opacity: 1;
-//                 }
-//             }
-//         }
-//     }
-// }
+            .c-card__image {
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
 
 .c-card-list--c-splash {
     margin: -10px -10px;
@@ -207,24 +187,24 @@
 //     }
 // }
 
-// .c-card-list--tg-header-articles {
-//     margin: -16px -12px;
+.c-card-list--tg-header-articles {
+    margin: -10px -10px;
 
-//     .c-card-list__item {
-//         display: inline-block;
-//         padding: 0 12px;
-//         margin: 16px 0;
-//         width: 100%;
+    .c-card-list__item {
+        display: inline-block;
+        padding: 0 10px;
+        margin: 10px 0;
+        width: 100%;
 
-//         @include two-column-size() {
-//             width: 50%;
-//         }
+        @include two-column-size() {
+            width: 50%;
+        }
 
-//         @include four-column-size() {
-//             width: 33.33333%;
-//         }
-//     }
-// }
+        @include four-column-size() {
+            width: 33.33333%;
+        }
+    }
+}
 
 .c-card-list--tg-articles {
    margin: -10px -10px;
@@ -262,57 +242,47 @@
    }
 }
 
-// .c-card-list--tg-articles-grid,
-// .c-card-list--v-articles {
-//     margin: -6px -12px;
+.c-card-list--tg-articles-grid,
+.c-card-list--v-articles {
+    margin: -10px -10px;
 
-//     @include two-column-size() {
-//         margin: -16px -12px;
-//     }
+    .c-card-list__item {
+        display: inline-block;
+        padding: 0 10px;
+        margin: 10px 0;
+        width: 100%;
 
-//     @include four-column-size() {
-//         margin: -24px -12px;
-//     }
+        @include one-column-size() {
+            .c-card {
+                border-top: 1px solid $silver;
+                padding-top: 10px;
 
-//     .c-card-list__item {
-//         display: inline-block;
-//         padding: 0 12px;
-//         margin: 6px 0;
-//         width: 100%;
+                &.c-card--dark {
 
-//         @include one-column-size() {
-//             .c-card {
-//                 border-top: 1px solid $ISABEL;
-//                 padding-top: 12px;
+                }
+            }
 
-//                 &.c-card--dark {
+            &:first-child {
+                .c-card {
+                    border-top: none;
+                    padding-top: 0;
 
-//                 }
-//             }
+                    &.c-card--dark {
 
-//             &:first-child {
-//                 .c-card {
-//                     border-top: none;
-//                     padding-top: 0;
+                    }
+                }
+            }
+        }
 
-//                     &.c-card--dark {
+        @include two-column-size() {
+            width: 50%;
+        }
 
-//                     }
-//                 }
-//             }
-//         }
-
-//         @include two-column-size() {
-//             margin: 16px 0;
-//             width: 50%;
-//         }
-
-//         @include four-column-size() {
-//             margin: 24px 0;
-//             width: 33.33333%;
-//         }
-//     }
-// }
+        @include four-column-size() {
+            width: 33.33333%;
+        }
+    }
+}
 
 .c-card-list--mag-magazines {
     margin: -10px -10px;
