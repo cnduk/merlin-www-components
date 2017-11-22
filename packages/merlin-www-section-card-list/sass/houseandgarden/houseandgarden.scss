@@ -1,4 +1,4 @@
-@import "@cnbritain/merlin-www-common:houseandgarden";
+vimport "@cnbritain/merlin-www-common:houseandgarden";
 @import "@cnbritain/merlin-www-topic-strip:houseandgarden";
 @import "@cnbritain/merlin-www-buttons:houseandgarden";
 @import "@cnbritain/merlin-www-card-list:houseandgarden";
@@ -57,20 +57,6 @@
         margin-top: 30px;
     }
 }
-
-// .c-card-section--v-genre-articles {
-//     .c-card-section__title {
-//      @include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
-//      letter-spacing: 1px;
-//      margin-bottom: 16px;
-//      margin-top: 0;
-//      text-transform: uppercase;
-
-//      @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-//          margin-bottom: 24px;
-//      }
-//     }
-// }
 
 .c-card-section--a-recommended,
 .c-card-section--mag-magazines,
