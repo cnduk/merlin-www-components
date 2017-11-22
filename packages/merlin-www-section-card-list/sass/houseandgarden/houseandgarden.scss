@@ -73,7 +73,8 @@
 // }
 
 .c-card-section--a-recommended,
-.c-card-section--mag-magazines {
+.c-card-section--mag-magazines,
+.c-card-section--v-genre-articles {
     background-color: $vanilla-ice;
     margin: 0;
     max-width: none;
@@ -102,6 +103,10 @@
     }
 }
 
+.c-card-section--v-genre-articles + .c-card-section--v-articles {
+    padding-top: 0;
+}
+
 .c-card-section--c-video-articles,
 .c-card-section--v-related-articles {
     background-color: $ebony-clay;
@@ -117,18 +122,13 @@
         padding: $DESKTOP_SLICE_MARGIN;
     }
 
-    // TODO
     .c-card-section__title {
-        // @include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
-        // color: $WHITE;
-        // letter-spacing: 1px;
-        // margin-bottom: 16px;
-        // margin-top: 0;
-        // text-transform: uppercase;
-
-        // @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        //  margin-bottom: 24px;
-        // }
+        @include font("BRANDON GROTESQUE", 13px, 700, 13px);
+        color: $white;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        margin-top: 0;
+        text-transform: uppercase;
     }
 
     .c-card-section__logo {
