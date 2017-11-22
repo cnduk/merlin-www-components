@@ -3,21 +3,197 @@
 
 @import "../wireframe/wireframe";
 
+.has-bbcode {
+
+    p {
+        @include font("MILLER_DISPLAY", 17px, 400, 23px);
+        color: $mine-shaft;
+        letter-spacing: 0;
+
+          @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            @include font-size(19px);
+              @include line-height(25px);
+          }
+
+        strong {
+            font-weight: bold;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        u {
+            text-decoration: underline;
+        }
+
+        mark {
+            background-color:$vanilla-ice;
+        }
+    }
+
+    a {
+        color: $mine-shaft;
+        border-bottom: 2px solid $careys-pink;
+        padding-bottom: 2px;
+    }
+
+    h1 {
+        @include font("MILLER_DISPLAY", 35px, 700, 38px);
+        color: $mine-shaft;
+        letter-spacing: 0;
+
+          @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            @include font-size(80px);
+              @include line-height(83px);
+          }
+    }
+
+    h2 {
+        @include font("MILLER_DISPLAY", 28px, 700, 31px);
+        color: $mine-shaft;
+        letter-spacing: 0;
+
+          @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            @include font-size(30px);
+              @include line-height(33px);
+          }
+    }
+
+    h3 {
+        @include font("MILLER_DISPLAY", 24px, 700, 27px);
+        color: $mine-shaft;
+        letter-spacing: 0;
+
+          @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            @include font-size(28px);
+              @include line-height(31px);
+          }
+    }
+
+    h4 {
+        @include font("MILLER_DISPLAY", 20px, 700, 23px);
+        color: $mine-shaft;
+        letter-spacing: 0;
+
+          @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            @include font-size(24px);
+              @include line-height(27px);
+          }
+    }
+
+    h5 {
+        @include font("MILLER_DISPLAY", 16px, 700, 19px);
+        color: $mine-shaft;
+        letter-spacing: 0;
+
+          @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            @include font-size(20px);
+              @include line-height(23px);
+          }
+    }
+
+    h6 {
+        @include font("MILLER_DISPLAY", 12px, 700, 15px);
+        color: $mine-shaft;
+        letter-spacing: 0;
+
+          @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            @include font-size(16px);
+              @include line-height(19px);
+          }
+    }
+
+    ul {
+        @include font("MILLER_DISPLAY", 17px, 400, 23px);
+        color: $mine-shaft;
+        letter-spacing: 0;
+        list-style: none;
+        padding: 0;
+    }
+
+    ul li {
+            margin:  0;
+            margin-bottom: 5px;
+            padding-left: 26px;
+            position: relative;
+
+            @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+               margin-bottom: 8px;
+            }
+
+            &:after {
+                background: $black;
+                content: "";
+                display: block;
+                height: 6.4px;
+                left: 0;
+                position: absolute;
+                top: 8px;
+                transform: rotate(45deg);
+                width: 6.4px;
+            }
+        }
+
+    ol {
+        @include font("MILLER_DISPLAY", 17px, 400, 23px);
+        color: $mine-shaft;
+        counter-reset: li;
+        letter-spacing: 0;
+        list-style-type: none;
+        padding-left: 0px;
+
+        @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            @include font("MILLER_DISPLAY", 19px, 400, 23px);
+        }
+    }
+
+    ol li {
+            padding-bottom: 15px;
+            padding-left: 40px;
+            position: relative;
+
+            @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+                padding-left: 43px;
+            }
+
+            &:before {
+                color: $white;
+                content: counter(li);
+                counter-increment: li;
+                background: $black;
+                border: 1px solid $black;
+                border-radius: 50%;
+                height: 23px;
+                left: 0;
+                position: absolute;
+                text-align: center;
+                width: 23px;
+
+                @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+                    height: 28px;
+                    width: 28px;
+                }
+            }
+        }
+}
+
 // -------------------- //
 // Note
 // -------------------- //
 .bb-note {
-    @include font("FREIGHT TEXT", 14px, null, 20px);
-    border-top: 1px solid $ISABEL;
-    color: $MUSTASAARI;
-    margin: 28px 0 40px 0;
-    padding-top: 12px;
-    position: relative;
+    @include font("MILLER_DISPLAY", 16px, 400, 21px);
+    color: $mine-shaft;
+    letter-spacing: 0;
+    font-style: italic;
 
     &:before {
-        color: $SHERPA-BLUE;
-        content: "\2605";
-        margin-right: 4px;
+        background: $mine-shaft;
+        content:"";
+        display: block;
+        height: 7px;
+        margin-bottom: 12px;
+        width: 30px;
     }
 }
 
@@ -26,22 +202,25 @@
 // -------------------- //
 .bb-dropcap {}
 .bb-dropcap--letter {
-    @include font("LULO ONE", 87px, 700, 87px);
+    @include font("MILLER_DISPLAY", 87px, 300, 87px);
     box-sizing: border-box;
-    color: $SHERPA-BLUE;
+    color: $mine-shaft;
     float: left;
-    height: 84px;
+    height: 90px;
+    letter-spacing: 0;
     text-transform: capitalize;
+    width: 100px;
 
     .is-macos &,
     .is-linux & {
-        padding-top: 8px;
+        //padding-top: 8px;
     }
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(100px);
-        @include line-height(100px);
-        height: 96px;
+        @include font-size(119px);
+        @include line-height(119px);
+        height: 124px;
+        width: 136px;
     }
 }
 
@@ -49,33 +228,33 @@
 // Embed
 // -------------------- //
 .bb-embed {
-    margin: 40px 0;
+    //margin: 40px 0;
 }
 
 // -------------------- //
 // Interactive
 // -------------------- //
 .bb-interactive {
-    margin: 40px 0;
+    //margin: 40px 0;
 }
 
 // -------------------- //
 // Blockquote
 // -------------------- //
 .bb-blockquote {
-    border-left: 2px solid $BALI-HAI;
+    border-left: 1px solid $silver-chalice;
     margin: 0 0 16px 0;
-    padding-left: 30px;
+    padding-left: 20px;
 }
 
 .bb-blockquote__quote {
-    @include font("PROXIMA NOVA CONDENSED", 18px, 400, 24px);
-    color: $BALI-HAI;
-    font-style: italic;
+    @include font("BRANDON GROTESQUE", 18px, 400, 27px);
+    color: $silver-chalice;
+    margin: 0;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(20px);
-        @include line-height(28px);
+        @include font-size(21px);
+        @include line-height(30px);
     }
 }
 
@@ -84,11 +263,10 @@
 }
 
 .bb-blockquote__credit {
-    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
-    color: $BALI-HAI;
-    letter-spacing: 1px;
+    @include font("BRANDON GROTESQUE", 10px, 400, 10px);
+    color: $silver-chalice;
     text-transform: uppercase;
-    margin-top: 16px;
+    margin-top: 15px;
 }
 
 // -------------------- //
@@ -100,13 +278,14 @@
 }
 
 .bb-pullquote__quote {
-    @include font("LULO ONE", 20px, 700, 24px);
-    color: $SHERPA-BLUE;
+    @include font("MILLER_DISPLAY", 20px, 400, 30px);
+    color: $mine-shaft;
+    letter-spacing: 4px;
     text-transform: uppercase;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(24px);
-        @include line-height(32px);
+        @include font-size(25px);
+        @include line-height(35px);
     }
 }
 
@@ -115,64 +294,87 @@
 }
 
 .bb-pullquote__credit {
-    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
-    color: $BALI-HAI;
+    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
+    color: $mine-shaft;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-top: 16px;
+    margin-top: 10px;
 }
 
 // -------------------- //
 // Infobox
 // -------------------- //
 .bb-infobox {
-    border: 2px solid $SHERPA-BLUE;
+    border: 1px solid $mine-shaft;
     margin: 40px 0;
-    padding: 32px 20px;
+    padding: 20px 20px 30px;
+    text-align: center;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        padding: 32px;
+        padding: 30px 30px 40px;
     }
 }
 
 .bb-infobox__title {
-    @include font("PROXIMA NOVA", 20px, 600, 24px);
-    color: $SHERPA-BLUE;
+    @include font("MILLER_DISPLAY", 21px, 700, 22px);
+    background: $white;
+    color: $mine-shaft;
     letter-spacing: 1px;
-    margin-bottom: 4px;
+    margin-bottom: 20px;
     margin-top: 0;
+    text-align: center;
     text-transform: uppercase;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        letter-spacing: 2px;
+        margin-bottom: 30px;
     }
+
+    &:before {
+        right: 0.5em;
+        margin-left: -50%;
+    }
+
+    &:after {
+        left: 0.5em;
+        margin-right: -50%;
+    }
+
+   &:before,
+   &:after {
+       background-color: #000;
+       content: "";
+       display: inline-block;
+       height: 1px;
+       position: relative;
+       vertical-align: middle;
+       width: 50%;
+   }
 }
 
 .bb-infobox__hr {
-    border-color: $SHERPA-BLUE;
-    margin-bottom: 24px;
-    margin-top: 4px;
+    display: none;
 }
 
+.bb-infobox__body{}
 .bb-infobox__item {
     margin: 0;
 
     & + .bb-infobox__item {
-        margin-top: 24px;
+        margin-top: 10px;
     }
 }
 
 .bb-infobox__item__key {
-    @include font("PROXIMA NOVA CONDENSED", 16px, 600, 20px);
-    color: $SHERPA-BLUE;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-    text-transform: uppercase;
+    @include font("MILLER_DISPLAY", 16px, 700, 20px);
+    color: $mine-shaft;
+    display: inline;
+    margin: 0;
 }
 
 .bb-infobox__item__value {
-    @include font("PROXIMA NOVA CONDENSED", 16px, 400, 20px);
-    color: $MUSTASAARI;
+    @include font("MILLER_DISPLAY", 16px, 400, 20px);
+    color: $mine-shaft;
+    display: inline;
     margin: 0;
 }
 
@@ -180,42 +382,35 @@
 // Figure
 // -------------------- //
 .bb-figure {
-    margin: 28px 0;
+    margin: 30px 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin: 40px 0;
+    }
 }
 
 .bb-figure__wrapper {
-    background-color: $CAPE-HAZE;
+    background-color: $dove-gray;
     &:not(:last-child) {
-        margin-bottom: 12px;
+        margin-bottom: 10px;
     }
 }
 
 .bb-figure__caption {
-    margin-bottom: 8px;
-    margin-top: 4px;
 
     p:not([class]) {
-        @include font("PROXIMA NOVA CONDENSED", 14px, 400, 20px);
-        color: $MUSTASAARI;
+        @include font("MILLER_DISPLAY", 14px, 400, 17px);
+        color: $mine-shaft;
+        letter-spacing: 0px;
         margin: 0;
-    }
-
-    a {
-        border-bottom: 1px solid $SHERPA-BLUE;
-        color: $SHERPA-BLUE;
-        padding-bottom: 3px;
     }
 }
 
 .bb-figure__credit {
-    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 12px);
-    color: $RAVEN;
+    @include font("BRANDON GROTESQUE", 10px, 400, 10px);
+    color: $dove-gray;
     letter-spacing: 1px;
-    text-transform: uppercase;
-
-    &:before {
-        content: 'Credit: ';
-    }
+    margin-top: 10px;
 }
 
 
@@ -223,28 +418,27 @@
 // Question
 // -------------------- //
 .bb-question {
-    margin: 40px 0;
+    margin: 40px 0 20px;
     position: relative;
 }
 
 .bb-question__question {
     p {
-        margin-bottom: 16px;
-        text-indent: 32px;
+        @include font("MILLER_DISPLAY", 19px, 800, 19px);
+        color: $mine-shaft;
+        letter-spacing: 0;
+        margin-bottom: 10px;
+        text-indent: 40px;
     }
 }
 
 .bb-question__q {
-    @include font("PROXIMA NOVA CONDENSED", 18px, 600, 32px);
-    color: $MUSTASAARI;
+    @include font("BRANDON GROTESQUE", 19px, 700, 19px);
+    color: $careys-pink;
+    letter-spacing: 0;
     left: 0;
     position: absolute;
     text-indent: 0;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(20px);
-        @include line-height(36px);
-    }
 }
 
 .bb-question__separator {
@@ -252,9 +446,10 @@
 }
 
 .bb-question__author {
-    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
-    color: $BALI-HAI;
-    letter-spacing: 1px;
+    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
+    color: $mine-shaft;
+    letter-spacing: 0;
+    text-indent: 40px;
     text-transform: uppercase;
 }
 
@@ -266,28 +461,24 @@
 // Answer
 // -------------------- //
 .bb-answer {
-    margin: 40px 0;
+    margin: 20px 0 20px;
     position: relative;
 }
 
 .bb-answer__answer {
     p {
-        margin-bottom: 16px;
-        text-indent: 32px;
+        margin-bottom: 10px;
+        text-indent: 40px;
     }
 }
 
 .bb-answer__a {
-    @include font("PROXIMA NOVA CONDENSED", 18px, 600, 32px);
-    color: $BALI-HAI;
+    @include font("BRANDON GROTESQUE", 19px, 700, 19px);
+    color: $careys-pink;
     left: 0;
+    letter-spacing: 0;
     position: absolute;
     text-indent: 0;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(20px);
-        @include line-height(36px);
-    }
 }
 
 .bb-question__separator {
@@ -295,9 +486,10 @@
 }
 
 .bb-answer__author {
-    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
-    color: $BALI-HAI;
-    letter-spacing: 1px;
+    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
+    color: $mine-shaft;
+    letter-spacing: 0;
+    text-indent: 40px;
     text-transform: uppercase;
 }
 
@@ -309,65 +501,59 @@
 // Gallery
 // -------------------- //
 .bb-gallery {
-    border-bottom: 1px solid $PORCELAIN;
-    border-left: 1px solid $PORCELAIN;
-    border-right: 1px solid $PORCELAIN;
-    border-top: 1px solid $PORCELAIN;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-bottom: 1px solid $silver;
+    border-left: 1px solid $silver;
+    border-right: 1px solid $silver;
+    border-top: 1px solid $silver;
     margin: 40px 0;
-
-    &:hover {
-        border: 1px solid $FAROE-GRAY;
-    }
 }
 
 .bb-gallery__icon {
     display: table-cell;
-    height: 48px;
-    padding: 12px;
+    height: 40px;
+    padding: 10px;
     position: relative;
     vertical-align: middle;
-    width: 48px;
+    width: 40px;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         padding: 16px;
     }
 
     &:before {
-        border-radius: 50%;
-        border: 1px solid $SHERPA-BLUE;
+        border: 1px solid $silver;
         box-sizing: border-box;
         content: "";
-        height: 48px;
+        height: 40px;
         left: 50%;
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 48px;
+        width: 40px;
     }
 
     svg {
         display: block;
-        fill: $SHERPA-BLUE;
+        fill: $mine-shaft;
         height: 100%;
         margin: 0 auto;
         width: 20px;
     }
 }
 
-.bb-gallery__title {
-    @include font("PROXIMA NOVA CONDENSED", 16px, 600, 20px);
-    color: $MUSTASAARI;
+h4.bb-gallery__title {
+    @include font("MILLER_DISPLAY", 15px, 600, 15px);
+    color: $mine-shaft;
     display: table-cell;
+    letter-spacing: 0.5px;
     padding-bottom: 12px;
     padding-right: 12px;
     padding-top: 12px;
     vertical-align: middle;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(20px);
-        @include line-height(24px);
+        @include font-size(18px);
+        @include line-height(18px);
         padding-bottom: 16px;
         padding-right: 16px;
         padding-top: 16px;
@@ -376,22 +562,42 @@
 
 .bb-gallery__link {}
 .bb-gallery__cols {}
-.bb-gallery__col {
-    background-color: $CAPE-HAZE;
+ul li.bb-gallery__col {
+    background-color: $dove-gray;
+    margin: 0;
+    padding: 0;
+
+    &:after{
+        display: none;
+    }
 }
 
 .bb-gallery__remaining {
-    background-color: rgba($BLACK, 0.4);
+    background-color: rgba($black, 0.7);
     white-space: nowrap;
 }
 
-.bb-gallery__remaining-text {
-    @include font("PROXIMA NOVA CONDENSED", 24px, 600, 24px);
-    color: $WHITE;
+
+.bb-gallery__remaining-text--prefix {
+    @include font("BRANDON GROTESQUE", 20px, 700, 20px);
+    bottom: 3px;
+    color: $white;
+    position: relative;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(28px);
-        @include line-height(28px);
+        @include font-size(25px);
+        @include line-height(25px);
+    }
+
+}
+
+.bb-gallery__remaining-text--value{
+    @include font("BRANDON GROTESQUE", 25px, 700, 25px);
+    color: $white;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(30px);
+        @include line-height(30px);
     }
 }
 
@@ -399,68 +605,55 @@
 // Video
 // -------------------- //
 .bb-video {
-    border-bottom: 1px solid $PORCELAIN;
-    border-left: 1px solid $PORCELAIN;
-    border-right: 1px solid $PORCELAIN;
-    border-top: 1px solid $PORCELAIN;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-bottom: 1px solid $silver;
+    border-left: 1px solid $silver;
+    border-right: 1px solid $silver;
+    border-top: 1px solid $silver;
     margin: 40px 0;
-
-    &:hover {
-        border: 1px solid $FAROE-GRAY;
-    }
 }
 
 .bb-video__title-icon {
-    display: table-cell;
-    height: 48px;
-    padding: 12px;
+    height: 40px;
+    padding: 10px;
     position: relative;
     vertical-align: middle;
-    width: 48px;
+    width: 40px;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         padding: 16px;
     }
 
     &:before {
-        border-radius: 50%;
-        border: 1px solid $SHERPA-BLUE;
+        border: 1px solid $silver;
         box-sizing: border-box;
         content: "";
-        height: 48px;
+        height: 40px;
         left: 50%;
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 48px;
+        width: 40px;
     }
 
     svg {
         display: block;
-        fill: $SHERPA-BLUE;
+        fill: $mine-shaft;
         height: 100%;
         margin: 0 auto;
         width: 20px;
     }
 }
 
-.bb-video__title {
-    @include font("PROXIMA NOVA CONDENSED", 16px, 600, 20px);
-    color: $MUSTASAARI;
-    display: table-cell;
-    padding-bottom: 12px;
-    padding-right: 12px;
-    padding-top: 12px;
+h4.bb-video__title {
+    @include font("MILLER_DISPLAY", 15px, 600, 15px);
+    color: $mine-shaft;
+    letter-spacing: 0.5px;
+    margin: 0;
     vertical-align: middle;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(20px);
-        @include line-height(24px);
-        padding-bottom: 16px;
-        padding-right: 16px;
-        padding-top: 16px;
+        @include font-size(18px);
+        @include line-height(18px);
     }
 }
 
@@ -475,37 +668,38 @@
 // -------------------- //
 // Button
 // -------------------- //
-.bb-button {
-
-}
+.bb-button {}
 
 // -------------------- //
 // Card
 // -------------------- //
 .bb-card {
-    border-radius: 4px;
-    border: 1px solid $PORCELAIN;
+    border: 1px solid $silver;
     margin: 40px 0;
-    padding: 12px;
+    padding: 15px;
 
     @include min-screen($CARD_SWITCHER_WIDTH) {
-        padding: 16px;
+        padding: 20px;
 
         &:before {
-            @include font("PROXIMA NOVA CONDENSED", 12px, 600, 16px);
-            color: $MANATEE;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            bottom: 16px;
+            @include font("BRANDON GROTESQUE", 11px, 700, 11px);
+            border-left: 1px solid $silver;
+            border-top: 1px solid $silver;
+            bottom: 0;
+            color: $mine-shaft;
             content: "Continue Reading";
+            letter-spacing: 1px;
+            padding: 15px;
             position: absolute;
-            right: 16px;
+            right: 0;
             text-transform: uppercase;
         }
-    }
 
-    &:hover {
-        border: 1px solid $FAROE-GRAY;
+        &:hover{
+            &:before {
+                @include button-single-light-hover();
+            }
+        }
     }
 }
 
@@ -518,19 +712,19 @@
 
 .bb-card__obj__header {
     display: table-cell;
-    padding-right: 6px;
+    padding-right: 13px;
     vertical-align: top;
     width: 92px;
 
     @include min-screen($CARD_SWITCHER_WIDTH) {
-        padding-right: 8px;
-        width: 174px;
+        padding-right: 20px;
+        width: 182px;
     }
 }
 
 .bb-card__images {}
 .bb-card__image {
-    background-color: $CAPE-HAZE;
+    background-color: $dove-gray;
     padding-top: 100%;
     @include min-screen($CARD_SWITCHER_WIDTH) {
         padding-top: 66.66666%;
@@ -552,43 +746,39 @@
         margin: 0 auto;
         vertical-align: middle;
         width: 20px;
-        fill: $WHITE;
+        fill: $white;
     }
 }
 
 .bb-card__obj__body {
     display: table-cell;
-    padding-left: 6px;
     vertical-align: top;
     width: auto;
-
-    @include min-screen($CARD_SWITCHER_WIDTH) {
-        padding-left: 8px;
-    }
 }
 
 .bb-card__header {}
 
-.bb-card__tag {
-    @include font("PROXIMA NOVA CONDENSED", 12px, 600, 12px);
-    color: $SHERPA-BLUE;
-    letter-spacing: 2px;
-    margin-bottom: 6px;
+p.bb-card__tag {
+    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
+    color: $mine-shaft;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
     margin-top: 0;
     text-transform: uppercase;
-}
-
-.bb-card__title {
-    @include font("PROXIMA NOVA CONDENSED", 16px, 600, 20px);
-    color: $MUSTASAARI;
-    margin-bottom: 8px;
-    margin-top: 6px;
 
     @include min-screen($CARD_SWITCHER_WIDTH) {
-        @include font-size(20px);
-        @include line-height(24px);
-        margin-bottom: 16px;
-        margin-top: 8px;
+        margin-bottom: 10px;
+    }
+}
+
+h3.bb-card__title {
+    @include font("MILLER_DISPLAY", 16px, 700, 17px);
+    color: $mine-shaft;
+    letter-spacing: 0.5px;
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include font-size(27px);
+        @include line-height(29px);
     }
 }
 
@@ -603,39 +793,17 @@
 .bb-card__footer {}
 
 .bb-card__byline {
-    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
-    color: $MUSTASAARI;
-    margin-bottom: 4px;
-    margin-top: 8px;
+    display: none;
 }
 
 .bb-card__byline--sponsorship {}
 
-.bb-card__byline-prefix {
-    font-style: italic;
-}
+.bb-card__byline-prefix {}
 
 .bb-card__byline-name {
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    display:none;
 }
 
 ul.bb-card__meta {
-    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
-    color: $MANATEE;
-    margin-top: 4px;
-}
-
-li.bb-card__meta-item {
-    & + li.bb-card__meta-item {
-        &:before {
-            background-color: $MANATEE;
-            border-radius: 50%;
-            content: "";
-            display: inline-block;
-            height: 2px;
-            margin: 1px 4px;
-            width: 2px;
-        }
-    }
+    display: none;
 }
