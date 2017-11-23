@@ -44,8 +44,8 @@
         letter-spacing: 0;
 
           @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-            @include font-size(80px);
-              @include line-height(83px);
+            @include font-size(65px);
+              @include line-height(68px);
           }
     }
 
