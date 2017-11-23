@@ -20,28 +20,20 @@
     }
 }
 
-// TODO
 .tg-header--video {
 	.tg-header__intro__image {
-  //   	height: 42px;
-		// margin: 0 auto;
-		// width: 268px;
+    	height: 38px;
+		margin: 0 auto;
+		width: 230px;
 
-  //   	svg {
-  //   	    display: inline-block;
-  //   	    height: 100%;
-  //   	    width: 100%;
+    	svg {
+	        fill: $mine-shaft;
+    	}
 
-  //   	    path {
-  //   	        fill: $SHERPA-BLUE;
-  //   	    }
-  //   	}
-
-  //   	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-  //   		height: 52px;
-		// 	margin: 0 auto;
-  //   		width: 331px;
-  //   	}
+    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    		height: 45px;
+    		width: 315px;
+    	}
 	}
 }
 

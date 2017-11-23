@@ -1,28 +1,26 @@
 .a-logo {}
-// TODO
 .a-logo--video {
     background-color: $ebony-clay;
-    // padding: 32px 0 32px 0;
+    padding: 40px 0;
 
-    // @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    //     padding: 48px 0 46px 0;
-    // }
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 60px 0;
+    }
 
-    // .a-logo__wrapper {
-    //     height: 42px;
-    //     margin: 0 auto;
-    //     width: 268px;
+    .a-logo__wrapper {
+        height: 38px;
+        margin: 0 auto;
+        width: 230px;
 
-    //     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    //         height: 52px;
-    //         margin: 0 auto;
-    //         width: 331px;
-    //     }
-    // }
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            height: 45px;
+            width: 315px;
+        }
+    }
 
-    // svg {
-    //     fill: $WHITE;
-    // }
+    svg {
+        fill: $white;
+    }
 }
 
 .a-video {
