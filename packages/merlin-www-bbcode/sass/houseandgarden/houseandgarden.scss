@@ -32,13 +32,13 @@
         }
     }
 
-    a {
+    p > a {
         color: $mine-shaft;
         border-bottom: 2px solid $careys-pink;
         padding-bottom: 2px;
     }
 
-    h1 {
+    P > h1 {
         @include font("MILLER_DISPLAY", 35px, 700, 38px);
         color: $mine-shaft;
         letter-spacing: 0;
@@ -49,7 +49,7 @@
           }
     }
 
-    h2 {
+    P > h2 {
         @include font("MILLER_DISPLAY", 28px, 700, 31px);
         color: $mine-shaft;
         letter-spacing: 0;
@@ -60,7 +60,7 @@
           }
     }
 
-    h3 {
+    p > h3 {
         @include font("MILLER_DISPLAY", 24px, 700, 27px);
         color: $mine-shaft;
         letter-spacing: 0;
@@ -71,7 +71,7 @@
           }
     }
 
-    h4 {
+    p > h4 {
         @include font("MILLER_DISPLAY", 20px, 700, 23px);
         color: $mine-shaft;
         letter-spacing: 0;
@@ -82,7 +82,7 @@
           }
     }
 
-    h5 {
+    p > h5 {
         @include font("MILLER_DISPLAY", 16px, 700, 19px);
         color: $mine-shaft;
         letter-spacing: 0;
@@ -93,7 +93,7 @@
           }
     }
 
-    h6 {
+    p > h6 {
         @include font("MILLER_DISPLAY", 12px, 700, 15px);
         color: $mine-shaft;
         letter-spacing: 0;
@@ -104,7 +104,7 @@
           }
     }
 
-    ul {
+    p > ul {
         @include font("MILLER_DISPLAY", 17px, 400, 23px);
         color: $mine-shaft;
         letter-spacing: 0;
@@ -112,7 +112,7 @@
         padding: 0;
     }
 
-    ul li {
+    p > ul li {
             margin:  0;
             margin-bottom: 5px;
             padding-left: 26px;
@@ -135,7 +135,7 @@
             }
         }
 
-    ol {
+    p > ol {
         @include font("MILLER_DISPLAY", 17px, 400, 23px);
         color: $mine-shaft;
         counter-reset: li;
@@ -148,7 +148,7 @@
         }
     }
 
-    ol li {
+     p > ol li {
             padding-bottom: 15px;
             padding-left: 40px;
             position: relative;
@@ -680,7 +680,6 @@ h4.bb-video__title {
 
     @include min-screen($CARD_SWITCHER_WIDTH) {
         padding: 20px;
-
         &:before {
             @include font("BRANDON GROTESQUE", 11px, 700, 11px);
             border-left: 1px solid $silver;
