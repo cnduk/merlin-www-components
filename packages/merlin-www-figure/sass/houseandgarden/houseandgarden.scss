@@ -5,34 +5,24 @@
 .c-figure {}
 
 .c-figure__container {
-	margin-bottom: 20px;
+    background-color: $advert-light;
+    margin-bottom: 10px;
 }
-
-.c-figure__wrapper {
-
-}
+.c-figure__wrapper {}
 
 .c-figure__toolbar {
-	border: 1px solid $PORCELAIN;
-	bottom: 18px;
-	height: 40px;
-	position: absolute;
-	right: 18px;
+    bottom: 0;
+    height: 60px;
+    position: absolute;
+    right: 0;
 }
-
-li.c-figure__toolbar-listitem {
-	background-color: $WHITE;
-    height: 40px;
-    width: 40px;
+.c-figure__toolbar-listitem {
+    background-color: $white;
+    height: 60px;
+    width: 60px;
 
     svg {
-        width: 16px;
-    }
-
-    & + li.c-figure__toolbar-listitem {
-    	&:not(:last-child) {
-    		border-left: 1px solid $PORCELAIN;
-    	}
+        width: 20px;
     }
 }
 
@@ -42,103 +32,84 @@ li.c-figure__toolbar-listitem {
         svg, path {
             fill: map-get($COLOUR_SOCIAL_LIGHT, $name);
         }
+
+        &:hover,
+        &:focus {
+            background-color: map-get($COLOUR_SOCIAL_LIGHT, $name);
+
+            svg, path {
+                fill: $white;
+            }
+        }
     }
 }
 
-.c-figure__toolbar-listitem--more {
+li .c-figure__toolbar-listitem--more {
     svg, path {
-        fill: $MUSTASAARI;
+        fill: $mine-shaft;
     }
 }
 
 .c-figure__toolbar-listitem--zoom {
     svg, path {
-        fill: $MUSTASAARI;
+        fill: $mine-shaft;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $mine-shaft;
+
+        svg, path {
+            fill: $white;
+        }
     }
 }
 
 .c-figure__title {
-	@include font("PROXIMA NOVA CONDENSED", 28px, 600, 32px);
-	color: $MUSTASAARI;
-	letter-spacing: 1px;
-	margin-bottom: 8px;
-	text-transform: uppercase;
+    @include font('MILLER_DISPLAY', 14px, null, 17px);
 
-	@include min-screen($TYPE_LARGE_COPY_WIDTH) {
-		@include font-size(32px);
-		@include line-height(36px);
-	}
-
-	@include min-screen($ARTICLE_TOTAL) {
-		padding-left: 220px;
-	}
+    color: $mine-shaft;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
 }
-
 .c-figure__caption {
-	margin-bottom: 16px;
+    @include font('MILLER_DISPLAY', 14px, null, 17px);
 
-	p:not([class]) {
-		@include font("FREIGHT TEXT", 18px, 400, 28px);
-		color: $MUSTASAARI;
-		margin: 0 0 16px 0;
+    color: $mine-shaft;
+    margin-bottom: 10px;
 
-		@include min-screen($TYPE_LARGE_COPY_WIDTH) {
-			@include font-size(20px);
-			@include line-height(32px);
-		}
-	}
-
-	a {
-	    border-bottom: 1px solid $SHERPA-BLUE;
-	    color: $SHERPA-BLUE;
-		padding-bottom: 3px;
-	}
-
-
-	@include min-screen($ARTICLE_TOTAL) {
-		padding-left: 220px;
-	}
+    &.has-bbcode {
+        > p {
+            @include font-size(14px);
+            @include line-height(17px);
+        }
+    }
 }
-
 .c-figure__credit {
-	@include font("PROXIMA NOVA CONDENSED", 12px, 400, 12px);
-	color: $RAVEN;
-	letter-spacing: 1px;
-	text-transform: uppercase;
+    @include font('BRANDON GROTESQUE', 10px, 'BOLD', 10px);
 
-    &:before {
-        content: 'Credit: ';
-    }
-
-
-    @include min-screen($ARTICLE_TOTAL) {
-    	padding-left: 220px;
-    }
+    color: $dove-gray;
+    letter-spacing: 1px;
+    margin-top: 10px;
 }
 
 .c-figure__magnifier {}
-.c-figure__toolbar {}
-
 .c-figure__magnifier--full-screen {
-    background-color: $MUSTASAARI;
+    background-color: $advert-light;
 }
 
 .c-figure__magnifier-button {
-	padding: 0;
-	width: 44px;
-	height: 44px;
+    padding: 0;
+    width: 60px;
+    height: 60px;
 
-	svg {
-		box-sizing: border-box;
-		padding: 3px;
-		border-radius: 50%;
-		height: 16px;
-	    width: 16px;
-	}
+    svg {
+        width: 20px;
+    }
 }
 .c-figure__magnifier-button--close {
     svg {
-    	border: 1px solid #fff;
+        border: 1px solid #fff;
         fill: #fff;
         stroke: #fff;
     }
@@ -147,20 +118,12 @@ li.c-figure__toolbar-listitem {
 .c-figure__magnifier-button--zoom-in,
 .c-figure__magnifier-button--zoom-out {
     svg {
-    	border: 1px solid #000;
         fill: #000;
         stroke: #000;
     }
 }
 
-.c-figure__magnifier-toolbar {
-	:not(:first-child) {
-		.c-figure__magnifier-button {
-			border-top: 1px solid $PORCELAIN;
-		}
-	}
-}
-
+.c-figure__magnifier-toolbar {}
 .c-figure__magnifier-toolbar-item {}
 .c-figure__magnifier-image {}
 .c-figure__magnifier-image-center {}
