@@ -189,6 +189,28 @@
 }
 
 // -------------------- //
+// Callout
+// -------------------- //
+.bb-callout {
+    border: 7px solid $black;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+
+    *:first-child {
+        margin-top: 0;
+    }
+
+    *:last-child {
+        margin-bottom: 0;
+    }
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        padding: 30px;
+    }
+}
+
+// -------------------- //
 // Question / Answer
 // -------------------- //
 .bb-question,

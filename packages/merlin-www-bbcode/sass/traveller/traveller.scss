@@ -177,6 +177,27 @@
 }
 
 // -------------------- //
+// Callout
+// -------------------- //
+.bb-callout {
+    border: 2px solid $SHERPA-BLUE;
+    margin: 40px 0;
+    padding: 32px 20px;
+
+    *:first-child {
+        margin-top: 0;
+    }
+
+    *:last-child {
+        margin-bottom: 0;
+    }
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        padding: 32px;
+    }
+}
+
+// -------------------- //
 // Figure
 // -------------------- //
 .bb-figure {

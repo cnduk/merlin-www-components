@@ -310,6 +310,27 @@
 
 
 /**
+ * Callout
+ */
+.bb-callout {
+    background-color: $COLOR_MAIN_ACCENT2;
+    margin: $MARGIN_LARGE 0;
+    padding: $PADDING_MEDIUM $PADDING_SMALL;
+
+    *:first-child {
+        margin-top: 0;
+    }
+    *:last-child {
+        margin-bottom: 0;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: $PADDING_LARGE;
+    }
+}
+
+
+/**
  * Video
  */
 .bb-video {
