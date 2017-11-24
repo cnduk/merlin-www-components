@@ -1,9 +1,9 @@
 .ad__title {
-    @include font("PROXIMA NOVA CONDENSED", 10px, 400, 10px);
-    color: $MANATEE;
+    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
+    color: $silver;
     display: block;
     letter-spacing: 1px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     margin-top: 0;
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
@@ -20,16 +20,14 @@
     }
 }
 
-.ad__block {
-
-}
+.ad__block {}
 
 .ad--homepage {
     text-align: center;
 
     .ad__block {
-        background-color: $ADVERT-LIGHT;
-        padding: 16px 0;
+        background-color: $wild-sand;
+        padding: 20px 0;
     }
 
     &.ad--native-large {
@@ -46,15 +44,15 @@
 
 .ad--article-header {
     .ad__block {
-        background-color: $ADVERT-LIGHT;
-        padding: 16px 0;
+        background-color: $wild-sand;
+        padding: 20px 0;
     }
 }
 
 .ad--article-video {
     .ad__block {
-        background-color: $ADVERT-DARK;
-        padding: 16px 0;
+        background-color: $advert-dark;
+        padding: 20px 0;
     }
 }
 
@@ -156,17 +154,16 @@
 
 .ad--tag-header {
     .ad__block {
-        background-color: $ADVERT-LIGHT;
-        padding: 16px 0;
+        background-color: $wild-sand;
+        padding: 20px 0;
     }
 }
 
 .ad--tag-rail {
-    // 12px - width of card list side padding
-    margin: 6px (-$MOBILE_SIDE_GUTTER + 12) 6px (-$MOBILE_SIDE_GUTTER + 12);
+    margin: 10px (-$MOBILE_SIDE_GUTTER + 20) 10px (-$MOBILE_SIDE_GUTTER + 20);
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin: 6px (-$TABLET_SIDE_GUTTER + 12) 6px (-$TABLET_SIDE_GUTTER + 12);
+        margin: 10px (-$TABLET_SIDE_GUTTER + 20) 10px (-$TABLET_SIDE_GUTTER + 20);
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
@@ -196,9 +193,9 @@
 }
 
 .ad--tag-inline {
-    padding: 0 12px;
+    padding: 0 10px;
     position: relative;
-    margin: 6px (-$MOBILE_SIDE_GUTTER);
+    margin: 10px (-$MOBILE_SIDE_GUTTER);
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         margin-left: -$TABLET_SIDE_GUTTER;
@@ -208,7 +205,7 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin-bottom: 20px;
         margin-left: -$DESKTOP_SIDE_GUTTER;
-        margin-right: (-$DESKTOP_SIDE_GUTTER + -340px + -12px);
+        margin-right: (-$DESKTOP_SIDE_GUTTER + -340px + -20px);
         margin-top: 20px;
 
         .ad__block {
