@@ -386,11 +386,11 @@
     margin: 40px 0;
     padding: 20px 20px 30px;
 
-    *:first-child {
+    > *:first-child {
         margin-top: 0;
     }
 
-    *:last-child {
+    > *:last-child {
         margin-bottom: 0;
     }
 

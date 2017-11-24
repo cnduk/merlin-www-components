@@ -317,10 +317,10 @@
     margin: $MARGIN_LARGE 0;
     padding: $PADDING_MEDIUM $PADDING_SMALL;
 
-    *:first-child {
+    > *:first-child {
         margin-top: 0;
     }
-    *:last-child {
+    > *:last-child {
         margin-bottom: 0;
     }
 
