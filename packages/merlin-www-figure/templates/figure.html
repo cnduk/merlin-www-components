@@ -25,7 +25,7 @@
     {{/ data.image.data.title }}
     {{! Description can contain bbcode so we have escaped in model }}
     {{# data.image.data.description }}
-        <figcaption class='c-figure__caption'>{{ &. }}</figcaption>
+        <figcaption class='c-figure__caption has-bbcode'>{{ &. }}</figcaption>
     {{/ data.image.data.description }}
     {{# data.image.data.credit }}
         <footer class="c-figure__credit">{{ . }}</footer>

@@ -63,7 +63,7 @@ export function getNextPageUrl(pageUrl, pageNumber, itemShift){
 
 export function onInfiniteUrl(pageCounter){
     return location.origin + getNextPageUrl(
-        getStorage('infinite_url'), pageCounter + 1, -nativeAdShift);
+        getStorage('infinite_url'), pageCounter + 1, nativeAdShift);
 }
 
 export function destroyInfiniteScroller(){

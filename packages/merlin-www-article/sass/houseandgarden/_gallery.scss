@@ -51,19 +51,14 @@
     }
 }
 
-.a-gallery__view {
-
-    &--list {
-
-    }
-}
+.a-gallery__view {}
 
 ul.a-gallery__image-list {}
 li.a-gallery__image-listitem {
-    margin-bottom: 48px;
+    margin-bottom: 30px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     }
 }
 
@@ -92,9 +87,7 @@ li.a-gallery__thumbnail {
     }
 }
 
-.a-gallery__thumbnail-image {
-
-}
+.a-gallery__thumbnail-image {}
 .a-gallery__thumbnail-hover {
     background-color: rgba($BLACK, 0.2);
     left: 2px;
