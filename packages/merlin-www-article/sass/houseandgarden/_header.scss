@@ -1,8 +1,10 @@
 .a-header {
     margin: 32px 0;
+
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin: 48px 0;
     }
+
     &.has-hero {
         margin-top: 0;
     }
@@ -287,12 +289,16 @@
         @include font-size(80px);
         @include line-height(83px);
         margin-bottom: 25px;
-      text-align: left;
+        text-align: left;
     }
 }
 
 .a-header__separator {
     display: none;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: none;
+    }
 }
 
 .a-header__teaser {
@@ -367,9 +373,13 @@
     @include font("BRANDON GROTESQUE", 10px, 400, 10px);
     color: $dove-gray;
     letter-spacing: 1px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     margin-top: 7px;
     text-align: center;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        text-align: left;
+    }
 }
 
 ul.a-header__meta {
@@ -444,7 +454,7 @@ li.a-header__meta-item {
     }
 
     &:before {
-        background-color: $dove-gray;
+        background-color: $silver;
         content: "";
         height: 1px;
         left: 50%;
@@ -453,24 +463,27 @@ li.a-header__meta-item {
         transform: translateX(-50%);
         width: 100%;
 
-        @include min-screen($ARTICLE_TOTAL) {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             display: none;
         }
     }
 }
 
 .a-header__sponsor-prefix {
+    @include font("BRANDON GROTESQUE", 10px, 400, 10px);
+    color: $mine-shaft;
+    letter-spacing: 1px;
     display: inline-block;
     padding: 10px 0 0 0;
     white-space: nowrap;
     text-transform: uppercase;
 
-    @include min-screen($ARTICLE_TOTAL) {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         display: table-cell;
         padding: 0;
         vertical-align: middle;
     }
-  @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
     @include font-size(13px);
     @include line-height(13px);
   }
@@ -482,29 +495,34 @@ li.a-header__meta-item {
     padding-left: 6px;
     text-transform: uppercase;
 
-  @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
     @include font-size(17px);
     @include line-height(17px);
   }
 }
 
 .a-header__sponsor-image {
+
+    @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT){
+        display: block;
+    }
+
     img {
         height: auto;
-        margin: 4px auto 0 auto;
-        max-height: 40px;
+        margin: 15px auto 0px auto;
+        max-height: 50px;
         max-width: 140px;
         width: auto;
     }
 
-    @include min-screen($ARTICLE_TOTAL) {
-        display: table-cell;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT)  {
+        display: block;
         margin-top: 0;
-        padding-left: 16px;
+        padding-left: 10px;
         vertical-align: middle;
 
         img {
-            max-height: 48px;
+            max-height: 50px;
             margin-top: 0;
         }
     }
