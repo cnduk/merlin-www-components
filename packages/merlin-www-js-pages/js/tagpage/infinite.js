@@ -55,7 +55,7 @@ export function getNextPageUrl(tagUrl, pageNumber, itemShift){
 
 export function onInfiniteScrollUrl(pageCounter){
     return location.origin + getNextPageUrl(
-        getStorage('infinite_url'), pageCounter + 1, -nativeAdsShift);
+        getStorage('infinite_url'), pageCounter + 1, nativeAdsShift);
 }
 
 
