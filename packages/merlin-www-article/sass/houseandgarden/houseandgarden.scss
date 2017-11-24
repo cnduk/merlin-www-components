@@ -22,6 +22,7 @@
 @import "../wireframe/_gallery";
 @import "./_gallery";
 
+@import "../wireframe/_header";
 @import "./_header";
 
 @import "../wireframe/_share";
@@ -33,5 +34,8 @@
 @import "../wireframe/_video";
 @import "./_video";
 
-@import '../wireframe/wireframe';
+@import "../wireframe/_podcast";
 @import "./_podcast";
+
+@import "../wireframe/_review";
+@import "./_review";
