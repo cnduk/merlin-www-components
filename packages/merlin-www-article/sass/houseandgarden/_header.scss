@@ -383,30 +383,31 @@
 }
 
 ul.a-header__meta {
-    //@include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
-    //color: $MANATEE;
-    //margin-top: 4px;
-    //text-align: center;
+    @include font("BRANDON GROTESQUE", 15px, 700, 15px);
+    color: $silver-chalice;
+    font-size: 0;
+    letter-spacing: 1px;
+    margin: 20px 0 30px 0;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 li.a-header__meta-item {
-    //display: inline-block;
-    //
-    //& + li.a-header__meta-item {
-    //    &:before {
-    //        background-color: $MANATEE;
-    //        border-radius: 50%;
-    //        content: "";
-    //        display: inline-block;
-    //        height: 2px;
-    //        margin: 1px 4px;
-    //        width: 2px;
-    //    }
-    //}
-    //
-    //a {
-    //    color: inherit;
-    //}
+    display: inline-block;
+    font-size: initial;
+    border-right: 1px solid $silver;
+    margin-right: 10px;
+    padding-right: 10px;
+
+    &:last-child {
+        border-right: none;
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    a {
+       color: inherit;
+    }
 }
 
 .a-header__meta--date {}
