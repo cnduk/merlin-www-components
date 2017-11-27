@@ -11,7 +11,7 @@ import {
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import InfiniteScroll from '@cnbritain/merlin-www-js-infinitescroll';
 
-import { getStorage } from '../utils';
+import { getStorage, setStorage } from '../utils';
 
 var INFINITE_BOTTOM_THRESHOLD = 1000;
 var INFINITE_SCROLL_THROTTLE = 300;
