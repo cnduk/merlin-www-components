@@ -12,11 +12,12 @@
 .a-header--gallery {}
 .a-header--video {
     .a-header__content {
-		//max-width: none;
-		//padding-left: 0;
-		//@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		//	padding-right: 360px;
-		//}
+        max-width: none;
+        padding-left: 0;
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            padding-left: $DESKTOP_SIDE_GUTTER;
+            padding-right: 360px;
+        }
     }
 
     .a-header__title,
