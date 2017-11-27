@@ -1,7 +1,11 @@
 .a-main {}
 
 .a-main--gallery {}
-.a-main--video {}
+.a-main--video {
+    .a-body__content {
+        padding-left: 0;
+    }
+}
 
 .a-body {
     margin: 32px 0 40px 0;

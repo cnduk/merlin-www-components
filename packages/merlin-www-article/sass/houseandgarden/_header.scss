@@ -15,7 +15,6 @@
         max-width: none;
         padding-left: 0;
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            padding-left: $DESKTOP_SIDE_GUTTER;
             padding-right: 360px;
         }
     }
