@@ -60,8 +60,8 @@ export function insertSection(section){
 
     addToFragment(section);
 
-    hook.parentNode.insertBefore(
-        docFragment, document.getElementById('infiniteScrollHook'));
+    var hook = document.getElementById('infiniteScrollHook');
+    hook.parentNode.insertBefore(docFragment, hook);
 
     addToFragment = null;
     docFragment = null;
