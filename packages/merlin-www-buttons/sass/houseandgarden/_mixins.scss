@@ -140,11 +140,11 @@
 }
 
 @mixin button-share-light($name) {
-	background-color: transparent;
-	border: 1px solid map-get($COLOUR_SOCIAL, $name);
+	background-color: $silver;
+	border: 1px solid $silver;
 
    	path {
-   		fill: map-get($COLOUR_SOCIAL, $name);
+   		fill: $white;
     }
 }
 
