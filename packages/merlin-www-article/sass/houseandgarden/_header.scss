@@ -383,7 +383,6 @@
 }
 
 ul.a-header__meta {
-    @include font("BRANDON GROTESQUE", 15px, 700, 15px);
     color: $silver-chalice;
     font-size: 0;
     letter-spacing: 1px;
@@ -393,8 +392,8 @@ ul.a-header__meta {
 }
 
 li.a-header__meta-item {
+    @include font("BRANDON GROTESQUE", 10px, 400, 10px);
     display: inline-block;
-    font-size: initial;
     border-right: 1px solid $silver;
     margin-right: 10px;
     padding-right: 10px;
