@@ -79,3 +79,12 @@ li.c-topic-strip__item {
         @include button-group-light-hover();
     }
 }
+
+.c-topic-strip__btn--related {
+    @include button-group-two();
+    @include button-group-two-light();
+
+    &:hover {
+        @include button-group-two-light-hover();
+    }
+}
