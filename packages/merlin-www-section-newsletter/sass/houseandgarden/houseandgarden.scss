@@ -50,7 +50,7 @@
 }
 
 .c-newsletter__description {
-    @include font("MILLER DISPLAY", 14px, 400, 19px);
+    @include font("MILLER_DISPLAY", 14px, 400, 19px);
     color: $mine-shaft;
     font-style: italic;
     letter-spacing: 0px;

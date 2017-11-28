@@ -34,19 +34,19 @@
 }
 
 .n-gallery-counter__current {
-    @include font("BRANDON_GROTESQUE", 15px, 700, 20px);
+    @include font("BRANDON GROTESQUE", 15px, 700, 20px);
     color: $mine-shaft;
     letter-spacing: 0px;
 }
 
 .n-gallery-counter__slash {
-    @include font("BRANDON_GROTESQUE", 15px, 400, 20px);
+    @include font("BRANDON GROTESQUE", 15px, 400, 20px);
     color: $mine-shaft;
     letter-spacing: 0px;
 }
 
 .n-gallery-counter__total {
-    @include font("BRANDON_GROTESQUE", 15px, 400, 20px);
+    @include font("BRANDON GROTESQUE", 15px, 400, 20px);
     color: $mine-shaft;
     letter-spacing: 0px;
 }
