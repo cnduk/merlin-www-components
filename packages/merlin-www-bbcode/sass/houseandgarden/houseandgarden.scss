@@ -38,7 +38,7 @@
         padding-bottom: 2px;
     }
 
-    P > h1 {
+    > h1 {
         @include font("MILLER_DISPLAY", 35px, 700, 38px);
         color: $mine-shaft;
         letter-spacing: 0;
@@ -49,7 +49,7 @@
           }
     }
 
-    P > h2 {
+    > h2 {
         @include font("MILLER_DISPLAY", 28px, 700, 31px);
         color: $mine-shaft;
         letter-spacing: 0;
@@ -60,7 +60,7 @@
           }
     }
 
-    p > h3 {
+    > h3 {
         @include font("MILLER_DISPLAY", 24px, 700, 27px);
         color: $mine-shaft;
         letter-spacing: 0;
@@ -71,7 +71,7 @@
           }
     }
 
-    p > h4 {
+    > h4 {
         @include font("MILLER_DISPLAY", 20px, 700, 23px);
         color: $mine-shaft;
         letter-spacing: 0;
@@ -82,7 +82,7 @@
           }
     }
 
-    p > h5 {
+    > h5 {
         @include font("MILLER_DISPLAY", 16px, 700, 19px);
         color: $mine-shaft;
         letter-spacing: 0;
@@ -93,7 +93,7 @@
           }
     }
 
-    p > h6 {
+    > h6 {
         @include font("MILLER_DISPLAY", 12px, 700, 15px);
         color: $mine-shaft;
         letter-spacing: 0;
@@ -104,7 +104,7 @@
           }
     }
 
-    p > ul {
+    > ul {
         @include font("MILLER_DISPLAY", 17px, 400, 23px);
         color: $mine-shaft;
         letter-spacing: 0;
@@ -112,7 +112,7 @@
         padding: 0;
     }
 
-    p > ul li {
+    > ul li {
             margin:  0;
             margin-bottom: 5px;
             padding-left: 26px;
@@ -135,7 +135,7 @@
             }
         }
 
-    p > ol {
+    > ol {
         @include font("MILLER_DISPLAY", 17px, 400, 23px);
         color: $mine-shaft;
         counter-reset: li;
@@ -148,7 +148,7 @@
         }
     }
 
-     p > ol li {
+    > ol li {
             padding-bottom: 15px;
             padding-left: 40px;
             position: relative;
