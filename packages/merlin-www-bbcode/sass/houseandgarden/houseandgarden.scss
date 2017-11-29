@@ -308,11 +308,13 @@
     border: 1px solid $mine-shaft;
     margin: 40px 0;
     overflow: visible;
-    padding: 0 20px 30px 20px;
+    // 11px is the negative top on the title
+    padding: (20px + 11px) 20px 30px 20px;
+    position: relative;
     text-align: center;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        padding: 0 30px 40px 30px;
+        padding: (30px + 11px) 30px 40px 30px;
     }
 }
 
@@ -320,15 +322,17 @@
     @include font("MILLER_DISPLAY", 21px, 700, 23px);
 
     background: $white;
+    box-sizing: border-box;
     color: $mine-shaft;
     display: inline-block;
     letter-spacing: 1px;
+    left: 50%;
     margin-bottom: 20px;
     padding: 0 20px;
-    position: relative;
+    position: absolute;
     top: -11px;
-    text-align: center;
     text-transform: uppercase;
+    transform: translateX(-50%);
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         margin-bottom: 30px;
