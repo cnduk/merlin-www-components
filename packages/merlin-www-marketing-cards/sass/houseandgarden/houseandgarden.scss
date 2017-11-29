@@ -1,809 +1,164 @@
-@import "@cnbritain/merlin-www-common:houseandgarden";
-@import "@cnbritain/merlin-www-buttons:houseandgarden";
+// @include marketing-card-medium-size(){
 
-@import "../wireframe/wireframe";
+@import '@cnbritain/merlin-www-common:houseandgarden';
+@import '@cnbritain/merlin-www-buttons:houseandgarden';
 
-.has-bbcode {
+@import '../wireframe/wireframe';
 
-    p {
-        @include font("MILLER_DISPLAY", 17px, 400, 23px);
-        color: $mine-shaft;
-        letter-spacing: 0;
+.a-marketing-card {
+    background-color: $vanilla-ice;
+    padding: 40px 0;
+}
 
-          @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-            @include font-size(19px);
-              @include line-height(25px);
-          }
+.a-marketing-card__col {
+    text-align: center;
+}
+.a-marketing-card__col + .a-marketing-card__col {}
 
-        strong {
-            font-weight: bold;
-        }
+.a-marketing-card__title {
+    @include font('MILLER_DISPLAY', 18px, 'BOLD', 22px);
 
-        em {
-            font-style: italic;
-        }
+    color: $mine-shaft;
+    margin: 0 0 10px 0;
+}
+.a-marketing-card__desc {
+    @include font('MILLER_DISPLAY', 14px, 'NORMAL', 19px);
 
-        u {
-            text-decoration: underline;
-        }
+    color: $mine-shaft;
+    font-style: italic;
+    margin: 0;
+}
+.a-marketing-card__link {
+    @include button-single;
+    @include button-single-light;
+    margin: 20px 0 0 0;
 
-        mark {
-            background-color:$vanilla-ice;
-        }
+    &:hover,
+    &:focus {
+        @include button-single-light-hover;
     }
+}
+
+.a-marketing-card__brand {}
+.a-marketing-card__brand__img {
+    margin: 0 auto 20px auto;
+    max-width: 140px;
+}
+.a-marketing-card__brand__prefix {
+    @include font('BRANDON GROTESQUE', 10px, 'NORMAL', 10px);
+
+    color: $mine-shaft;
+    display: block;
+    letter-spacing: 1px;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+}
+.a-marketing-card__brand__name {
+    @include font('BRANDON GROTESQUE', 20px, 'BOLD', 20px);
+
+    color: $mine-shaft;
+    display: block;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
 
     a {
-        color: $mine-shaft;
-        border-bottom: 2px solid $careys-pink;
-        padding-bottom: 2px;
-    }
-
-    h1 {
-        @include font("MILLER_DISPLAY", 35px, 700, 38px);
-        color: $mine-shaft;
-        letter-spacing: 0;
-
-          @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-            @include font-size(65px);
-              @include line-height(68px);
-          }
-    }
-
-    h2 {
-        @include font("MILLER_DISPLAY", 28px, 700, 31px);
-        color: $mine-shaft;
-        letter-spacing: 0;
-
-          @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-            @include font-size(30px);
-              @include line-height(33px);
-          }
-    }
-
-    h3 {
-        @include font("MILLER_DISPLAY", 24px, 700, 27px);
-        color: $mine-shaft;
-        letter-spacing: 0;
-
-          @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-            @include font-size(28px);
-              @include line-height(31px);
-          }
-    }
-
-    h4 {
-        @include font("MILLER_DISPLAY", 20px, 700, 23px);
-        color: $mine-shaft;
-        letter-spacing: 0;
-
-          @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-            @include font-size(24px);
-              @include line-height(27px);
-          }
-    }
-
-    h5 {
-        @include font("MILLER_DISPLAY", 16px, 700, 19px);
-        color: $mine-shaft;
-        letter-spacing: 0;
-
-          @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-            @include font-size(20px);
-              @include line-height(23px);
-          }
-    }
-
-    h6 {
-        @include font("MILLER_DISPLAY", 12px, 700, 15px);
-        color: $mine-shaft;
-        letter-spacing: 0;
-
-          @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-            @include font-size(16px);
-              @include line-height(19px);
-          }
-    }
-
-    ul {
-        @include font("MILLER_DISPLAY", 17px, 400, 23px);
-        color: $mine-shaft;
-        letter-spacing: 0;
-        list-style: none;
-        padding: 0;
-    }
-
-    ul li {
-            margin:  0;
-            margin-bottom: 5px;
-            padding-left: 26px;
-            position: relative;
-
-            @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-               margin-bottom: 8px;
-            }
-
-            &:after {
-                background: $black;
-                content: "";
-                display: block;
-                height: 6.4px;
-                left: 0;
-                position: absolute;
-                top: 8px;
-                transform: rotate(45deg);
-                width: 6.4px;
-            }
-        }
-
-    ol {
-        @include font("MILLER_DISPLAY", 17px, 400, 23px);
-        color: $mine-shaft;
-        counter-reset: li;
-        letter-spacing: 0;
-        list-style-type: none;
-        padding-left: 0px;
-
-        @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-            @include font("MILLER_DISPLAY", 19px, 400, 23px);
-        }
-    }
-
-    ol li {
-            padding-bottom: 15px;
-            padding-left: 40px;
-            position: relative;
-
-            @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-                padding-left: 43px;
-            }
-
-            &:before {
-                color: $white;
-                content: counter(li);
-                counter-increment: li;
-                background: $black;
-                border: 1px solid $black;
-                border-radius: 50%;
-                height: 23px;
-                left: 0;
-                position: absolute;
-                text-align: center;
-                width: 23px;
-
-                @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-                    height: 28px;
-                    width: 28px;
-                }
-            }
-        }
-}
-
-// -------------------- //
-// Note
-// -------------------- //
-.bb-note {
-    @include font("MILLER_DISPLAY", 16px, 400, 21px);
-    color: $mine-shaft;
-    letter-spacing: 0;
-    font-style: italic;
-
-    &:before {
-        background: $mine-shaft;
-        content:"";
-        display: block;
-        height: 7px;
-        margin-bottom: 12px;
-        width: 30px;
+        color: inherit;
     }
 }
 
-// -------------------- //
-// Dropcap
-// -------------------- //
-.bb-dropcap {}
-.bb-dropcap--letter {
-    @include font("MILLER_DISPLAY", 87px, 300, 87px);
-    box-sizing: border-box;
-    color: $mine-shaft;
-    float: left;
-    height: 90px;
-    letter-spacing: 0;
-    text-transform: capitalize;
-    width: 100px;
+.a-marketing-card__magazine {
+    margin: 0 auto 20px auto;
+    width: 150px;
+}
+.a-marketing-card__magazine__cover {}
+.a-marketing-card__magazine__cover--print {
+    width: 95px;
+}
+.a-marketing-card__magazine__cover--tablet {
+    width: 58px;
+}
+.a-marketing-card__magazine__cover--mobile {
+    display: none;
+}
 
-    .is-macos &,
-    .is-linux & {
-        //padding-top: 8px;
+.a-marketing-card--brand {}
+.a-marketing-card--event {}
+.a-marketing-card--topic {}
+.a-marketing-card--magazine {}
+
+.a-marketing-card--brand .a-marketing-card__col,
+.a-marketing-card--topic .a-marketing-card__col,
+.a-marketing-card--event .a-marketing-card__col {}
+
+
+
+
+@include marketing-card-medium-size(){
+
+    .a-marketing-card {
+        padding: 40px;
     }
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(119px);
-        @include line-height(119px);
-        height: 124px;
-        width: 136px;
+    .a-marketing-card__col {
+        text-align: left;
     }
-}
 
-// -------------------- //
-// Embed
-// -------------------- //
-.bb-embed {
-    //margin: 40px 0;
-}
-
-// -------------------- //
-// Interactive
-// -------------------- //
-.bb-interactive {
-    //margin: 40px 0;
-}
-
-// -------------------- //
-// Blockquote
-// -------------------- //
-.bb-blockquote {
-    border-left: 1px solid $silver-chalice;
-    margin: 0 0 16px 0;
-    padding-left: 20px;
-}
-
-.bb-blockquote__quote {
-    @include font("BRANDON GROTESQUE", 18px, 400, 27px);
-    color: $silver-chalice;
-    margin: 0;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    .a-marketing-card__title {
         @include font-size(21px);
-        @include line-height(30px);
+        @include line-height(26px);
     }
-}
-
-.bb-blockquote__separator {
-    display: none;
-}
-
-.bb-blockquote__credit {
-    @include font("BRANDON GROTESQUE", 10px, 400, 10px);
-    color: $silver-chalice;
-    text-transform: uppercase;
-    margin-top: 15px;
-}
-
-// -------------------- //
-// Pullquote
-// -------------------- //
-.bb-pullquote {
-    margin: 40px 0;
-    text-align: center;
-}
-
-.bb-pullquote__quote {
-    @include font("MILLER_DISPLAY", 20px, 400, 30px);
-    color: $mine-shaft;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(25px);
-        @include line-height(35px);
-    }
-}
-
-.bb-pullquote__separator {
-    display: none;
-}
-
-.bb-pullquote__credit {
-    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
-    color: $mine-shaft;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-top: 10px;
-}
-
-// -------------------- //
-// Infobox
-// -------------------- //
-.bb-infobox {
-    border: 1px solid $mine-shaft;
-    margin: 40px 0;
-    padding: 20px 20px 30px;
-    text-align: center;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        padding: 30px 30px 40px;
-    }
-}
-
-.bb-infobox__title {
-    @include font("MILLER_DISPLAY", 21px, 700, 22px);
-    background: $white;
-    color: $mine-shaft;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    margin-top: 0;
-    text-align: center;
-    text-transform: uppercase;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        margin-bottom: 30px;
-    }
-
-    &:before {
-        right: 0.5em;
-        margin-left: -50%;
-    }
-
-    &:after {
-        left: 0.5em;
-        margin-right: -50%;
-    }
-
-   &:before,
-   &:after {
-       background-color: #000;
-       content: "";
-       display: inline-block;
-       height: 1px;
-       position: relative;
-       vertical-align: middle;
-       width: 50%;
-   }
-}
-
-.bb-infobox__hr {
-    display: none;
-}
-
-.bb-infobox__body{}
-.bb-infobox__item {
-    margin: 0;
-
-    & + .bb-infobox__item {
-        margin-top: 10px;
-    }
-}
-
-.bb-infobox__item__key {
-    @include font("MILLER_DISPLAY", 16px, 700, 20px);
-    color: $mine-shaft;
-    display: inline;
-    margin: 0;
-}
-
-.bb-infobox__item__value {
-    @include font("MILLER_DISPLAY", 16px, 400, 20px);
-    color: $mine-shaft;
-    display: inline;
-    margin: 0;
-}
-
-// -------------------- //
-// Figure
-// -------------------- //
-.bb-figure {
-    margin: 30px 0;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        margin: 40px 0;
-    }
-}
-
-.bb-figure__wrapper {
-    background-color: $dove-gray;
-    &:not(:last-child) {
-        margin-bottom: 10px;
-    }
-}
-
-.bb-figure__caption {
-
-    p:not([class]) {
-        @include font("MILLER_DISPLAY", 14px, 400, 17px);
-        color: $mine-shaft;
-        letter-spacing: 0px;
-        margin: 0;
-    }
-}
-
-.bb-figure__credit {
-    @include font("BRANDON GROTESQUE", 10px, 400, 10px);
-    color: $dove-gray;
-    letter-spacing: 1px;
-    margin-top: 10px;
-}
-
-
-// -------------------- //
-// Question
-// -------------------- //
-.bb-question {
-    margin: 40px 0 20px;
-    position: relative;
-}
-
-.bb-question__question {
-    p {
-        @include font("MILLER_DISPLAY", 19px, 800, 19px);
-        color: $mine-shaft;
-        letter-spacing: 0;
-        margin-bottom: 10px;
-        text-indent: 40px;
-    }
-}
-
-.bb-question__q {
-    @include font("BRANDON GROTESQUE", 19px, 700, 19px);
-    color: $careys-pink;
-    letter-spacing: 0;
-    left: 0;
-    position: absolute;
-    text-indent: 0;
-}
-
-.bb-question__separator {
-    display: none;
-}
-
-.bb-question__author {
-    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
-    color: $mine-shaft;
-    letter-spacing: 0;
-    text-indent: 40px;
-    text-transform: uppercase;
-}
-
-.bb-question__by {
-    display: none;
-}
-
-// -------------------- //
-// Answer
-// -------------------- //
-.bb-answer {
-    margin: 20px 0 20px;
-    position: relative;
-}
-
-.bb-answer__answer {
-    p {
-        margin-bottom: 10px;
-        text-indent: 40px;
-    }
-}
-
-.bb-answer__a {
-    @include font("BRANDON GROTESQUE", 19px, 700, 19px);
-    color: $careys-pink;
-    left: 0;
-    letter-spacing: 0;
-    position: absolute;
-    text-indent: 0;
-}
-
-.bb-question__separator {
-    display: none;
-}
-
-.bb-answer__author {
-    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
-    color: $mine-shaft;
-    letter-spacing: 0;
-    text-indent: 40px;
-    text-transform: uppercase;
-}
-
-.bb-answer__by {
-    display: none;
-}
-
-// -------------------- //
-// Gallery
-// -------------------- //
-.bb-gallery {
-    border-bottom: 1px solid $silver;
-    border-left: 1px solid $silver;
-    border-right: 1px solid $silver;
-    border-top: 1px solid $silver;
-    margin: 40px 0;
-}
-
-.bb-gallery__icon {
-    display: table-cell;
-    height: 40px;
-    padding: 10px;
-    position: relative;
-    vertical-align: middle;
-    width: 40px;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        padding: 16px;
-    }
-
-    &:before {
-        border: 1px solid $silver;
-        box-sizing: border-box;
-        content: "";
-        height: 40px;
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 40px;
-    }
-
-    svg {
-        display: block;
-        fill: $mine-shaft;
-        height: 100%;
-        margin: 0 auto;
-        width: 20px;
-    }
-}
-
-h4.bb-gallery__title {
-    @include font("MILLER_DISPLAY", 15px, 600, 15px);
-    color: $mine-shaft;
-    display: table-cell;
-    letter-spacing: 0.5px;
-    padding-bottom: 12px;
-    padding-right: 12px;
-    padding-top: 12px;
-    vertical-align: middle;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    .a-marketing-card__desc {
         @include font-size(18px);
-        @include line-height(18px);
-        padding-bottom: 16px;
-        padding-right: 16px;
-        padding-top: 16px;
-    }
-}
-
-.bb-gallery__link {}
-.bb-gallery__cols {}
-ul li.bb-gallery__col {
-    background-color: $dove-gray;
-    margin: 0;
-    padding: 0;
-
-    &:after{
-        display: none;
-    }
-}
-
-.bb-gallery__remaining {
-    background-color: rgba($black, 0.7);
-    white-space: nowrap;
-}
-
-
-.bb-gallery__remaining-text--prefix {
-    @include font("BRANDON GROTESQUE", 20px, 700, 20px);
-    bottom: 3px;
-    color: $white;
-    position: relative;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(25px);
-        @include line-height(25px);
+        @include line-height(22px);
     }
 
-}
-
-.bb-gallery__remaining-text--value{
-    @include font("BRANDON GROTESQUE", 25px, 700, 25px);
-    color: $white;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(30px);
-        @include line-height(30px);
+    .a-marketing-card__magazine {
+        margin-bottom: 0;
+        width: 250px;
     }
-}
-
-// -------------------- //
-// Video
-// -------------------- //
-.bb-video {
-    border-bottom: 1px solid $silver;
-    border-left: 1px solid $silver;
-    border-right: 1px solid $silver;
-    border-top: 1px solid $silver;
-    margin: 40px 0;
-}
-
-.bb-video__title-icon {
-    height: 40px;
-    padding: 10px;
-    position: relative;
-    vertical-align: middle;
-    width: 40px;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        padding: 16px;
+    .a-marketing-card__magazine__cover--print {
+        width: 160px;
+    }
+    .a-marketing-card__magazine__cover--tablet {
+        width: 100px;
     }
 
-    &:before {
-        border: 1px solid $silver;
-        box-sizing: border-box;
-        content: "";
-        height: 40px;
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 40px;
-    }
+    .a-marketing-card--event .a-marketing-card__col {
+        padding-right: 40px;
+        width: 140px;
 
-    svg {
-        display: block;
-        fill: $mine-shaft;
-        height: 100%;
-        margin: 0 auto;
-        width: 20px;
-    }
-}
-
-h4.bb-video__title {
-    @include font("MILLER_DISPLAY", 15px, 600, 15px);
-    color: $mine-shaft;
-    letter-spacing: 0.5px;
-    margin: 0;
-    vertical-align: middle;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(18px);
-        @include line-height(18px);
-    }
-}
-
-.bb-video__wrapper {}
-.bb-video__image-icon {
-    display: none;
-}
-
-.bb-video__link {}
-
-
-// -------------------- //
-// Button
-// -------------------- //
-.bb-button {}
-
-// -------------------- //
-// Card
-// -------------------- //
-.bb-card {
-    border: 1px solid $silver;
-    margin: 40px 0;
-    padding: 15px;
-
-    @include min-screen($CARD_SWITCHER_WIDTH) {
-        padding: 20px;
-
-        &:before {
-            @include font("BRANDON GROTESQUE", 11px, 700, 11px);
-            border-left: 1px solid $silver;
-            border-top: 1px solid $silver;
-            bottom: 0;
-            color: $mine-shaft;
-            content: "Continue Reading";
-            letter-spacing: 1px;
-            padding: 15px;
-            position: absolute;
-            right: 0;
-            text-transform: uppercase;
-        }
-
-        &:hover{
-            &:before {
-                @include button-single-light-hover();
-            }
+        + .a-marketing-card__col {
+            border-left: 1px solid $black;
+            padding-left: 40px;
+            padding-right: 0;
+            width: auto;
         }
     }
-}
 
-.bb-card__link {}
+    .a-marketing-card--topic .a-marketing-card__col,
+    .a-marketing-card--brand .a-marketing-card__col {
+        padding-right: 40px;
+        text-align: center;
+        width: 180px;
 
-.bb-card__obj {
-    display: table;
-    width: 100%;
-}
-
-.bb-card__obj__header {
-    display: table-cell;
-    padding-right: 13px;
-    vertical-align: top;
-    width: 92px;
-
-    @include min-screen($CARD_SWITCHER_WIDTH) {
-        padding-right: 20px;
-        width: 182px;
+        + .a-marketing-card__col {
+            border-left: 1px solid $black;
+            padding-left: 40px;
+            padding-right: 0;
+            text-align: left;
+            width: auto;
+        }
     }
-}
 
-.bb-card__images {}
-.bb-card__image {
-    background-color: $dove-gray;
-    padding-top: 100%;
-    @include min-screen($CARD_SWITCHER_WIDTH) {
-        padding-top: 66.66666%;
+    .a-marketing-card--magazine .a-marketing-card__col {
+        padding-right: 40px;
+        width: 250px;
+
+        + .a-marketing-card__col {
+            width: auto;
+        }
     }
+
 }
 
-.bb-card__image__icon {
-    @include vendor-prefix(transform, translate(-50%, -50%));
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    height: 48px;
-    left: 50%;
-    top: 50%;
-    width: 48px;
 
-    svg {
-        display: block;
-        height: 100%;
-        margin: 0 auto;
-        vertical-align: middle;
-        width: 20px;
-        fill: $white;
-    }
-}
-
-.bb-card__obj__body {
-    display: table-cell;
-    vertical-align: top;
-    width: auto;
-}
-
-.bb-card__header {}
-
-p.bb-card__tag {
-    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
-    color: $mine-shaft;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-    margin-top: 0;
-    text-transform: uppercase;
-
-    @include min-screen($CARD_SWITCHER_WIDTH) {
-        margin-bottom: 10px;
-    }
-}
-
-h3.bb-card__title {
-    @include font("MILLER_DISPLAY", 16px, 700, 17px);
-    color: $mine-shaft;
-    letter-spacing: 0.5px;
-
-    @include min-screen($CARD_SWITCHER_WIDTH) {
-        @include font-size(27px);
-        @include line-height(29px);
-    }
-}
-
-.bb-card__teaser {
-    display: none;
-}
-
-.bb-card__separator {
-    display: none;
-}
-
-.bb-card__footer {}
-
-.bb-card__byline {
-    display: none;
-}
-
-.bb-card__byline--sponsorship {}
-
-.bb-card__byline-prefix {}
-
-.bb-card__byline-name {
-    display:none;
-}
-
-ul.bb-card__meta {
-    display: none;
-}
