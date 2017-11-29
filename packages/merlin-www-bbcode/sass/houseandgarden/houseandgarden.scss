@@ -307,21 +307,26 @@
 .bb-infobox {
     border: 1px solid $mine-shaft;
     margin: 40px 0;
-    padding: 20px 20px 30px;
+    overflow: visible;
+    padding: 0 20px 30px 20px;
     text-align: center;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        padding: 30px 30px 40px;
+        padding: 0 30px 40px 30px;
     }
 }
 
 .bb-infobox__title {
-    @include font("MILLER_DISPLAY", 21px, 700, 22px);
+    @include font("MILLER_DISPLAY", 21px, 700, 23px);
+
     background: $white;
     color: $mine-shaft;
+    display: inline-block;
     letter-spacing: 1px;
     margin-bottom: 20px;
-    margin-top: 0;
+    padding: 0 20px;
+    position: relative;
+    top: -11px;
     text-align: center;
     text-transform: uppercase;
 
@@ -329,26 +334,24 @@
         margin-bottom: 30px;
     }
 
-    &:before {
-        right: 0.5em;
-        margin-left: -50%;
-    }
-
+    &:before,
     &:after {
-        left: 0.5em;
-        margin-right: -50%;
+        background-color: $black;
+        bottom: 0;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 1px;
     }
 
-   &:before,
-   &:after {
-       background-color: #000;
-       content: "";
-       display: inline-block;
-       height: 1px;
-       position: relative;
-       vertical-align: middle;
-       width: 50%;
-   }
+    &:before {
+        left: 0;
+    }
+    &:after {
+        right: 0;
+    }
+
 }
 
 .bb-infobox__hr {
@@ -365,17 +368,20 @@
 }
 
 .bb-infobox__item__key {
-    @include font("MILLER_DISPLAY", 16px, 700, 20px);
+    @include font("BRANDON GROTESQUE", 15px, 800, 15px);
+
     color: $mine-shaft;
-    display: inline;
-    margin: 0;
+    letter-spacing: 1px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    text-decoration: underline;
 }
 
 .bb-infobox__item__value {
     @include font("MILLER_DISPLAY", 16px, 400, 20px);
+
     color: $mine-shaft;
-    display: inline;
-    margin: 0;
+    margin: 10px 0;
 }
 
 // -------------------- //
