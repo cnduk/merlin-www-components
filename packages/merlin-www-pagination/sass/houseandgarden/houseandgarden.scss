@@ -4,31 +4,31 @@
 @import '../wireframe/wireframe';
 
 .c-pagination {
-	font-size: 0;
-	margin: $MOBILE_SLICE_MARGIN 0;
+    font-size: 0;
+    margin: $MOBILE_SLICE_MARGIN 0;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-		margin: $TABLET_SLICE_MARGIN 0;
-	}
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin: $TABLET_SLICE_MARGIN 0;
+    }
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		margin: $DESKTOP_SLICE_MARGIN 0;
-	}
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: $DESKTOP_SLICE_MARGIN 0;
+    }
 }
-.c-pagination__item {
-	& + .c-pagination__item {
-		margin-left: 12px;
-	}
+.c-pagination__item + .c-pagination__item {
+    margin-left: 10px;
 }
 .c-pagination__item--active {}
 .c-pagination__btn {
     @include button-single();
     @include button-single-light();
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         @include button-single-light-hover();
     }
 }
 .c-pagination__btn--active {
-
+    @include button-single-light-hover();
 }
+
