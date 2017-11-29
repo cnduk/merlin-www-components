@@ -456,10 +456,7 @@
 
 .bb-figure__caption {
 
-    p:not([class]) {
-        @include font("MILLER_DISPLAY", 14px, 400, 17px);
-        color: $mine-shaft;
-        letter-spacing: 0px;
+    .bb-p {
         margin: 0;
     }
 }
