@@ -57,7 +57,7 @@ li.c-figure__toolbar-listitem {
 		}
 	}
 
-	a {
+	a:not([class]) {
 		border-bottom: 1px solid $cornflower-blue;
 		color: $cornflower-blue;
 		@include font-weight(400);
