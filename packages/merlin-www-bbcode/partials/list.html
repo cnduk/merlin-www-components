@@ -1,11 +1,11 @@
 {{# state.is_list_unordered }}
-    <ul class="{{ style.cls }}">
+    <ul class="bb-ul{{# style.cls }} {{ . }}{{/ style.cls }}">
 {{/ state.is_list_unordered }}
 {{# state.is_list_ordered }}
-    <ol class="{{ style.cls }}">
+    <ol class="bb-ol{{# style.cls }} {{ . }}{{/ style.cls }}">
 {{/ state.is_list_ordered }}
 {{# data.items }}
-    <li>{{ &. }}</li>
+    <li class="bb-li">{{ &. }}</li>
 {{/ data.items }}
 {{# state.is_list_unordered }}
     </ul>
