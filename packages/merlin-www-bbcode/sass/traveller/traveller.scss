@@ -371,17 +371,9 @@
     margin-bottom: 8px;
     margin-top: 4px;
 
-    // p:not([class]) {
-    //     @include font("PROXIMA NOVA CONDENSED", 14px, 400, 20px);
-    //     color: $MUSTASAARI;
-    //     margin: 0;
-    // }
-
-    // a {
-    //     border-bottom: 1px solid $SHERPA-BLUE;
-    //     color: $SHERPA-BLUE;
-    //     padding-bottom: 3px;
-    // }
+    .bb-p {
+        margin: 0;
+    }
 }
 
 .bb-figure__credit {
