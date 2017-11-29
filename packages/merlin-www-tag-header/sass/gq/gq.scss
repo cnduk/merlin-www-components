@@ -117,13 +117,13 @@
 		margin-top: 32px;
 	}
 
-	a {
+	a:not([class]) {
 		border-bottom: 1px solid;
 		color: inherit;
 		text-decoration: none;
 	}
 
-	p {
+	p:not([class]) {
 		@include font("GOTHAM", 14px, null, 20px, -2);
 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 			@include font-size(15px);
