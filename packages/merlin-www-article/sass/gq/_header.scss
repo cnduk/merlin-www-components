@@ -47,13 +47,7 @@
         margin-top: 16px;
     }
 
-    a {
-        border-bottom: 1px solid $cornflower-blue;
-        color: $cornflower-blue;
-        text-decoration: none;
-    }
-
-    p {
+    .bb-p {
         @include font("GOTHAM", 14px, 400, 20px, -2);
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             @include font-size(17px);
@@ -174,7 +168,7 @@
 }
 
 .a-header__image-caption {
-    p {
+    .bb-p {
         @include font("GOTHAM", 12px, 500, 16px, -2);
         color: $woodsmoke;
         margin-bottom: 8px;

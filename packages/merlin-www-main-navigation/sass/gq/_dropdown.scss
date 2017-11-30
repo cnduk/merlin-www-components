@@ -34,6 +34,8 @@
 }
 
 .n-main__dropdown-list-item {
+    position: relative;
+
     .n-main__nav-link {
         @include line-height(40px);
         box-sizing: border-box;

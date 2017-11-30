@@ -4,6 +4,157 @@
 @import "../wireframe/wireframe";
 
 // -------------------- //
+// Default
+// -------------------- //
+.bb-a {
+    border-bottom: 1px solid $cornflower-blue;
+    color: $cornflower-blue;
+}
+
+.bb-abbr {
+    text-decoration: underline;
+}
+
+.bb-em {
+    font-style: italic;
+}
+
+.bb-h1,
+.bb-h2,
+.bb-h3,
+.bb-h4,
+.bb-h5,
+.bb-h6 {
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: auto;
+    color: $woodsmoke;
+    margin: 28px 0;
+}
+
+.bb-h1 {
+    @include font("ITC_FENICE", 30px, 700, 32px, -4);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(50px);
+        @include line-height(54px);
+    }
+}
+
+.bb-h2 {
+    @include font("GOTHAM", 24px, 700, 28px, -4);
+}
+
+.bb-h3 {
+    @include font("GOTHAM", 20px, 700, 24px, -4);
+}
+
+.bb-h4 {
+    @include font("GOTHAM", 17px, 700, 22px, -4);
+}
+
+.bb-h5 {
+    @include font("GOTHAM", 14px, 700, 20px, -4);
+}
+
+.bb-h6 {
+    @include font("GOTHAM", 12px, 700, 16px, -4);
+}
+
+.bb-hr {
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 4px double $bon-jour;
+    height: 0;
+    margin: 40px 0;
+}
+
+.bb-mark {
+    background-color: $solitude;
+    color: $mineshaft;
+    padding: 4px 0;
+}
+
+.bb-p {
+    @include font("GOTHAM", 16px, 400, 26px, -2);
+    color: $mineshaft;
+    margin: 28px 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(17px);
+        @include line-height(28px);
+    }
+}
+
+.bb-pre {
+    @include font-size(14px);
+    @include line-height(21px);
+    background-color: $albaster;
+    border-radius: 4px;
+    border: 1px solid $bon-jour;
+    color: $shuttle-gray;
+    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    line-height: 20px;
+    margin: 28px 0;
+    padding: 20px;
+    white-space: pre-wrap;
+}
+
+.bb-small {
+    @include font("GOTHAM", 12px, 400, 20px);
+    color: $oslo-gray;
+}
+
+.bb-strong {
+    @include font-weight(700);
+}
+
+.bb-ul,
+.bb-ol {
+    @include font("GOTHAM", 16px, 400, 26px, -20);
+    color: $mineshaft;
+    list-style-type: none;
+    padding-left: 32px;
+    margin: 28px 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(17px);
+        @include line-height(28px);
+    }
+}
+
+.bb-li {
+    position: relative;
+}
+
+.bb-ul {
+    .bb-li:before {
+        background-color: #1da8ff;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: 8px;
+        left: -28px;
+        position: absolute;
+        top: 8px;
+        width: 8px;
+    }
+}
+
+.bb-ol {
+    counter-reset: section;
+
+    .bb-li {
+        counter-increment: section;
+    }
+
+    .bb-li:before {
+        content: counter(section) '.';
+        position: absolute;
+        left: -28px;
+    }
+}
+
+// -------------------- //
 // Embed
 // -------------------- //
 .bb-embed {
@@ -14,8 +165,7 @@
 // Note
 // -------------------- //
 .bb-note {
-    @include font-size(12px);
-    @include line-height(16px);
+    @include font("GOTHAM", 12px, 400, 16px);
     border-top: 1px solid $bon-jour;
     margin: 28px 0 40px 0;
     padding-top: 12px;
@@ -290,7 +440,7 @@
 }
 
 .bb-figure__caption {
-    p {
+    .bb-p {
         @include font("GOTHAM", 12px, 500, 16px, -2);
         color: $woodsmoke;
         margin-top: 16px;

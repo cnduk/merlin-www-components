@@ -17,13 +17,7 @@
 }
 
 .a-body__wrapper {}
-.a-body__content {
-    a:not([class]) {
-        border-bottom: 1px solid $cornflower-blue;
-        color: $cornflower-blue;
-        text-decoration: none;
-    }
-}
+.a-body__content {}
 
 .a-infinite__message {
     box-sizing: border-box;

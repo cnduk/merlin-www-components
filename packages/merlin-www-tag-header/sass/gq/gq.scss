@@ -117,19 +117,18 @@
 		margin-top: 32px;
 	}
 
-	a:not([class]) {
+	.bb-a {
 		border-bottom: 1px solid;
 		color: inherit;
-		text-decoration: none;
 	}
 
-	p:not([class]) {
+	.bb-p {
 		@include font("GOTHAM", 14px, null, 20px, -2);
+		color: inherit;
 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 			@include font-size(15px);
 			@include line-height(24px);
 		}
-		color: inherit;
 	}
 
 	> *:first-child {
