@@ -62,11 +62,13 @@ li.c-figure__toolbar-listitem {
 	color: $MUSTASAARI;
 	letter-spacing: 1px;
 	margin-bottom: 8px;
+	margin-top: 20px;
 	text-transform: uppercase;
 
 	@include min-screen($TYPE_LARGE_COPY_WIDTH) {
 		@include font-size(32px);
 		@include line-height(36px);
+		margin-top: 28px;
 	}
 
 	@include min-screen($ARTICLE_TOTAL) {
