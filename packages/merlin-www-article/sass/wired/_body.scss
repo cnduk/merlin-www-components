@@ -38,7 +38,7 @@
 
 .a-body__wrapper {}
 .a-body__content {
-    > p:first-of-type:first-line {
+    > .bb-p:first-of-type:first-line {
         @include font-weight(700);
     }
 }
