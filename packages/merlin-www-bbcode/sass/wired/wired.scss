@@ -4,6 +4,175 @@
 @import "../wireframe/wireframe";
 
 // -------------------- //
+// Default
+// -------------------- //
+.bb-a {
+    border-bottom: 1px solid $bright-navy-blue;
+    color: $bright-navy-blue;
+    text-decoration: none;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        border-bottom: none;
+
+        &:hover {
+            border-bottom: 1px solid $bright-navy-blue;
+        }
+    }
+}
+
+.bb-abbr {
+    text-decoration: underline;
+}
+
+.bb-em {
+    font-style: italic;
+}
+
+.bb-h1,
+.bb-h2,
+.bb-h3,
+.bb-h4,
+.bb-h5,
+.bb-h6 {
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: auto;
+    font-variant-ligatures: common-ligatures;
+    color: #000;
+    margin: 40px 0 15px 0;
+}
+
+.bb-h1 {
+    @include font("NEW GROTESK SQUARE", 50px, 300, 50px);
+    letter-spacing: 0.3px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(100px);
+        @include line-height(100px);
+    }
+}
+
+.bb-h2 {
+    @include font("NEW GROTESK SQUARE", 45px, 300, 45px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(65px);
+        @include line-height(65px);
+    }
+}
+
+.bb-h3 {
+    @include font("NEW GROTESK SQUARE", 40px, 300, 40px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(45px);
+        @include line-height(45px);
+    }
+}
+
+.bb-h4 {
+    @include font("NEW GROTESK SQUARE", 35px, 300, 35px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(40px);
+        @include line-height(40px);
+    }
+}
+
+.bb-h5 {
+    @include font("NEW GROTESK SQUARE", 30px, 300, 30px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(35px);
+        @include line-height(35px);
+    }
+}
+
+.bb-h6 {
+    @include font("NEW GROTESK SQUARE", 25px, 300, 25px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(30px);
+        @include line-height(30px);
+    }
+}
+
+.bb-hr {
+    border: none;
+    border-top: 1px solid #000;
+    height: 0;
+    margin: 10px 0;
+}
+
+.bb-mark {
+    background-color: #e6e7e8;
+    padding: 4px 0;
+}
+
+.bb-p {
+    @include font("EXCHANGE WEB", 17px, 300, 23px);
+    color: #000;
+    margin: 10px 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(19px);
+        @include line-height(27px);
+    }
+}
+
+.bb-pre {
+    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    white-space: pre-wrap;
+}
+
+.bb-small {
+    @include font("BRUTAL", 12px, 300, 12px);
+}
+
+.bb-strong {
+    @include font-weight(700);
+}
+
+.bb-ul,
+.bb-ol {
+    @include font("BRUTAL", 17px, 300, 23px);
+    list-style-type: none;
+    margin: 30px 0;
+    padding-left: 30px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin: 40px 0;
+    }
+}
+
+.bb-li {
+    position: relative;
+}
+
+.bb-ul {
+    .bb-li:before {
+        background: #000;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: 10px;
+        left: -30px;
+        position: absolute;
+        top: 7px;
+        width: 10px;
+    }
+}
+
+.bb-ol {
+    counter-reset: section;
+
+    .bb-li {
+        counter-increment: section;
+    }
+
+    .bb-li:before {
+        content: counters(section,".")".";
+        font-weight: bold;
+        left: -30px;
+        position: absolute;
+    }
+}
+
+// -------------------- //
 // Embed
 // -------------------- //
 .bb-embed {

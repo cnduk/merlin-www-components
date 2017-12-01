@@ -84,15 +84,9 @@
     max-width: 700px;
     text-align: center;
 
-    p {
+    .bb-p {
         @include font('BRUTAL', 15px, null, 17px);
         color: $white;
-    }
-
-    a {
-        border-bottom: 1px solid $bright-navy-blue;
-        color: $bright-navy-blue;
-        text-decoration: none;
     }
 }
 
@@ -199,16 +193,9 @@
     .tg-header__intro__description {
         margin-top: 40px;
 
-        p {
+        .bb-p {
             @include font-size(20px);
             @include line-height(23px);
-        }
-
-        a {
-            border-bottom: none;
-            &:hover {
-                border-bottom: 1px solid $bright-navy-blue;
-            }
         }
     }
 
@@ -235,5 +222,3 @@
     }
 
 }
-
-

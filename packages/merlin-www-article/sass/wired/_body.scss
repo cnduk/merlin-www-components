@@ -15,8 +15,10 @@
         max-width: $MAXIMUM_PAGE_WIDTH - $DESKTOP_SIDE_GUTTER*2;
     }
 
-    .a-body__content p {
-        color: #fff;
+    .a-body__content {
+        .bb-p {
+            color: #fff;
+        }
     }
 }
 .a-main--video {
@@ -36,19 +38,6 @@
 
 .a-body__wrapper {}
 .a-body__content {
-    a:not([class]) {
-        border-bottom: 1px solid $bright-navy-blue;
-        color: $bright-navy-blue;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            border-bottom: none;
-
-            &:hover {
-                border-bottom: 1px solid $bright-navy-blue;
-            }
-        }
-    }
-
     > p:first-of-type:first-line {
         @include font-weight(700);
     }

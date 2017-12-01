@@ -90,13 +90,7 @@ li.c-figure__toolbar-listitem--zoom {
 .c-figure__caption {
     margin: 5px auto 10px auto;
 
-    a {
-        border-bottom: 1px solid $bright-navy-blue;
-        color: $bright-navy-blue;
-        text-decoration: none;
-    }
-
-    p {
+    .bb-p {
         @include font("BRUTAL", 15px, 500, 18px);
         margin: 0;
 
@@ -106,18 +100,11 @@ li.c-figure__toolbar-listitem--zoom {
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        p {
+        .bb-p {
             max-width: 800px;
             width: 80%;
         }
-        a {
-            border-bottom: none;
-            &:hover {
-                border-bottom: 1px solid $bright-navy-blue;
-            }
-        }
     }
-
 }
 
 .c-figure__credit {
