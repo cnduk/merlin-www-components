@@ -8,14 +8,10 @@
     > p:first-child {
         margin-top: 0;
     }
-    a:not([class]) {
-        @include link-styles;
-    }
 }
+
 .a-gallery {
-    .a-gallery__image__caption a {
-        @include link-styles;
-    }
+
 }
 
 .a-footer--gallery {

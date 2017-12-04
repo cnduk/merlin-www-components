@@ -7,17 +7,13 @@
 }
 
 .a-header__teaser {
-    p {
+    .bb-p {
         @include font('GRAPHIK', 19px, 'NORMAL', 22px);
 
         @include large-article-size {
             @include font-size(22px);
             @include line-height(27px);
         }
-    }
-
-    a {
-        @include link-styles;
     }
 
     margin: 0 0 15px;
