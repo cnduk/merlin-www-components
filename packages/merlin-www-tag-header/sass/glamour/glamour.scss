@@ -70,7 +70,7 @@
 }
 
 .tg-header__intro__description,
-.tg-header__intro__description p {
+.tg-header__intro__description .bb-p {
     @include font('GRAPHIK', 15px);
     @include line-height(18px);
 
