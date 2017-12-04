@@ -94,7 +94,7 @@ li.c-figure__toolbar-listitem--zoom {
     @include font('GRAPHIK', 15px, 'NORMAL', 19px);
     margin-bottom: 10px;
 
-    p {
+    .bb-p {
         @include font('GRAPHIK', 15px, 'NORMAL', 19px);
     }
 }
