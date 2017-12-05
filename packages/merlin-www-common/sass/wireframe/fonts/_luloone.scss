@@ -1,7 +1,9 @@
+@import url("//hello.myfonts.net/count/354c77");
+
 @import "../_fonts";
 
 @font-face {
-	font-family: 'Lulo One';
+	font-family: 'LuloOne-Bold';
 	font-display: swap;
 	font-style: normal;
 	font-weight: 700;
@@ -11,7 +13,7 @@
 		 url('/static/fonts/lulo-one/LuloOne-Bold.woff2') format('woff2');
 }
 
-$_FONT_FAMILY: Lulo One, sans-serif;
+$_FONT_FAMILY: LuloOne-Bold, sans-serif;
 $_FONT_LULO_ONE: map-merge($FONT_GROUP_DEFAULT, (
     'FAMILY': $_FONT_FAMILY
 ));
