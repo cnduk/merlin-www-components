@@ -797,12 +797,20 @@ export function loadSocialScripts(){
         imgurPromise = Promise.resolve();
     }
 
+    // Skyscanner
+    if( !("skyscanner" in window) ){
+        skyscannerPromise = loadScript("https://widgets.skyscanner.net/widget-server/js/loader.js");
+    } else {
+        skyscannerPromise = Promise.resolve();
+    }
+
     return Promise.all([
         twitterPromise,
         vinePromise,
         facebookPromise,
         instagramPromise,
-        imgurPromise
+        imgurPromise,
+        skyscannerPromise
     ]);
 }
 
