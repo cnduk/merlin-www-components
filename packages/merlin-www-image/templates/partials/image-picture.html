@@ -6,10 +6,18 @@
             {{/ data.sources }}
         <!--[if IE 9]></video><![endif]-->
 
-        <img src="/static/img/tiny.gif" data-src="{{ &data.image_url }}" class="global__image {{ style.cls }}" {{# data.alt_text }} alt="{{ &data.alt_text }}" {{/ data.alt_text }} />
+        <img src="/static/img/tiny.gif" data-src="{{ &data.image_url }}" class="global__image img-lazyload {{ style.cls }}" {{# data.alt_text }} alt="{{ &data.alt_text }}" {{/ data.alt_text }} />
     </picture>
     <noscript>
-        <img src="{{ &data.image_url }}" class="global__image {{ style.cls }}" {{# data.alt_text }} alt="{{ &data.alt_text }}" {{/ data.alt_text }} />
+        <picture>
+            <!--[if IE 9]><video style="display: none"><![endif]-->
+                {{# data.sources }}
+                    <source media="{{ &media }}" srcset="{{ &srcset }}" />
+                {{/ data.sources }}
+            <!--[if IE 9]></video><![endif]-->
+
+            <img src="{{ &data.image_url }}" class="global__image {{ style.cls }}" {{# data.alt_text }} alt="{{ &data.alt_text }}" {{/ data.alt_text }} />
+        </picture>
     </noscript>
 {{/ state.is_lazyload }}
 {{^ state.is_lazyload }}
