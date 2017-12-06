@@ -90,6 +90,7 @@
 }
 
 .n-main__list-item {
+    position: relative;
     vertical-align: top;
 
     & + .n-main__list-item {
