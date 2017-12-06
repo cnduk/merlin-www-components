@@ -761,6 +761,7 @@ export function loadSocialScripts(){
     var facebookPromise = null;
     var instagramPromise = null;
     var imgurPromise = null;
+    var skyscannerPromise = null;
 
     // Twitter
     if( !("twttr" in window) ){

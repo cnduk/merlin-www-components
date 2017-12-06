@@ -112,6 +112,9 @@ export function updateSocialEmbeds(){
                 window.imgurEmbed.tasks++;
             }
 
+            // Skyscanner
+            window.skyscanner.widgets.load();
+
             return Promise.resolve();
         }, function updateSocialEmbeds_error(){
             console.error('Error', arguments);
