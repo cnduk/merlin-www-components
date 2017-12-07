@@ -37,7 +37,6 @@
 .bb-a {
     color: $mine-shaft;
     border-bottom: 2px solid $careys-pink;
-    padding-bottom: 2px;
 }
 
 .bb-h1,
@@ -52,14 +51,6 @@
 }
 
 .bb-h1 {
-    @include font("MILLER_DISPLAY", 40px, 700, 43px);
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(80px);
-        @include line-height(83px);
-    }
-}
-
-.bb-h2 {
     @include font("MILLER_DISPLAY", 35px, 700, 38px);
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(65px);
@@ -67,35 +58,43 @@
     }
 }
 
-.bb-h3 {
-    @include font("MILLER_DISPLAY", 24px, 700, 27px);
+.bb-h2 {
+    @include font("MILLER_DISPLAY", 28px, 700, 31px);
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(30px);
         @include line-height(33px);
     }
 }
 
-.bb-h4 {
-    @include font("MILLER_DISPLAY", 23px, 700, 26px);
+.bb-h3 {
+    @include font("MILLER_DISPLAY", 24px, 700, 27px);
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(27px);
+        @include font-size(28px);
         @include line-height(31px);
     }
 }
 
-.bb-h5 {
+.bb-h4 {
     @include font("MILLER_DISPLAY", 20px, 700, 23px);
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(25px);
-        @include line-height(28px);
+        @include font-size(24px);
+        @include line-height(27px);
+    }
+}
+
+.bb-h5 {
+    @include font("MILLER_DISPLAY", 16px, 700, 19px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(20px);
+        @include line-height(23px);
     }
 }
 
 .bb-h6 {
-    @include font("MILLER_DISPLAY", 19px, 700, 22px);
+    @include font("MILLER_DISPLAY", 12px, 700, 15px);
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(23px);
-        @include line-height(26px);
+        @include font-size(16px);
+        @include line-height(19px);
     }
 }
 
