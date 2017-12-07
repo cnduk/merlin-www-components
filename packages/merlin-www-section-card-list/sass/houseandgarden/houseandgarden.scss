@@ -39,11 +39,11 @@
         }
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            @include font-size(30px);
-            @include line-height(30px);
+            @include font-size(26px);
+            @include line-height(26px);
             border-bottom: 1px solid $mine-shaft;
             letter-spacing: 6px;
-            padding-bottom: 15px;
+            padding-bottom: 11px;
         }
     }
 
@@ -174,7 +174,7 @@
         @include font("MILLER_DISPLAY", 16px, 400, 16px);
         color: $mine-shaft;
         letter-spacing: 2px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         margin-top: 0;
         text-transform: uppercase;
 
