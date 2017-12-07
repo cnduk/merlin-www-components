@@ -52,7 +52,7 @@
     }
 }
 
-.tg-header__intro__title {
+.tg-header__title {
     @include title-article;
 
     margin: 0;
@@ -69,8 +69,8 @@
     display: none;
 }
 
-.tg-header__intro__description,
-.tg-header__intro__description .bb-p {
+.tg-header__description,
+.tg-header__description .bb-p {
     @include font('GRAPHIK', 15px);
     @include line-height(18px);
 

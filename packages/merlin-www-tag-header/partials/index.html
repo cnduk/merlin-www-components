@@ -9,20 +9,20 @@
             {{/ data.image }}
 
             {{# data.title }}
-                <h1 class="tg-header__intro__title"><span>{{ data.title }}</span></h1>
+                <h1 class="tg-header__title"><span>{{ data.title }}</span></h1>
             {{/ data.title }}
 
             {{# data.body }}
                 {{# state.is_body_expandable }}
-                    <div class="tg-header__intro__description is-closed">
+                    <div class="tg-header__description js-tg-header__description is-closed">
                         {{ &data.body }}
-                        <div class="tg-header__intro__description__expand">
-                            <button class="tg-header__intro__description__expand__btn global__button-reset btn-single btn-single--light js-tag-btn-expand">Continue reading</button>
+                        <div class="tg-header__description-expand">
+                            <button class="global__button-reset tg-header__expand-btn js-tg-header__expand-btn">Continue reading</button>
                         </div>
                     </div>
                 {{/ state.is_body_expandable }}
                 {{^ state.is_body_expandable }}
-                    <div class="tg-header__intro__description">{{ &data.body }}</div>
+                    <div class="tg-header__description js-tg-header__description">{{ &data.body }}</div>
                 {{/ state.is_body_expandable }}
             {{/ data.body }}
 

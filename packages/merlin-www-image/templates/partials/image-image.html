@@ -1,5 +1,5 @@
 {{# state.is_lazyload }}
-    <img src="/static/img/tiny.gif" data-src="{{ &data.image_url }}" data-srcset="{{ &data.srcset }}" data-sizes="auto" class="global__image {{ style.cls }}" {{# data.alt_text }} alt="{{ &data.alt_text }}" {{/ data.alt_text }} />
+    <img src="/static/img/tiny.gif" data-src="{{ &data.image_url }}" data-srcset="{{ &data.srcset }}" data-sizes="auto" class="global__image img-lazyload {{ style.cls }}" {{# data.alt_text }} alt="{{ &data.alt_text }}" {{/ data.alt_text }} />
     <noscript>
         <img src="{{ &data.image_url }}" class="{{ style.cls }}" {{# data.alt_text }} alt="{{ &data.alt_text }}" {{/ data.alt_text }} />
     </noscript>

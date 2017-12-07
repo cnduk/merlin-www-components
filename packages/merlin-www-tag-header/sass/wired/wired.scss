@@ -49,21 +49,21 @@
     margin: 0 auto 20px auto;
     width: 200px;
 
-    & + .tg-header__intro__description {
+    & + .tg-header__description {
         @include separator-line-small;
 
         margin-top: 0;
     }
 }
 
-.tg-header__intro__title {
+.tg-header__title {
     @include font("NEW GROTESK SQUARE", 45px, 300, 45px);
     color: $white;
     margin: 0 auto;
     max-width: 700px;
     text-align: center;
 
-    & + .tg-header__intro__description {
+    & + .tg-header__description {
         @include separator-line-small;
 
         margin-top: 0;
@@ -78,7 +78,7 @@
     display: none;
 }
 
-.tg-header__intro__description {
+.tg-header__description {
     color: $white;
     margin: 20px auto 0 auto;
     max-width: 700px;
@@ -123,22 +123,22 @@
 .tg-header--event {
     background-color: $white-smoke;
 
-    .tg-header__intro__image + .tg-header__intro__description:before,
-    .tg-header__intro__title + .tg-header__intro__description:before,
+    .tg-header__intro__image + .tg-header__description:before,
+    .tg-header__title + .tg-header__description:before,
     .tg-header__topic-strip:before {
         background-color: $black;
     }
 
     .tg-header__intro__image,
-    .tg-header__intro__title {
+    .tg-header__title {
         color: $black;
-        & + .tg-header__intro__description {
+        & + .tg-header__description {
             &:before {
                 background-color: $black;
             }
         }
     }
-    .tg-header__intro__description {
+    .tg-header__description {
         p {
             color: $black;
         }
@@ -172,16 +172,16 @@
         margin-bottom: 30px;
         width: 250px;
 
-        & + .tg-header__intro__description {
+        & + .tg-header__description {
             @include separator-line-large;
         }
     }
 
-    .tg-header__intro__title {
+    .tg-header__title {
         @include font-size(65px);
         @include line-height(65px);
 
-        & + .tg-header__intro__description {
+        & + .tg-header__description {
             @include separator-line-large;
         }
 
@@ -190,7 +190,7 @@
         }
     }
 
-    .tg-header__intro__description {
+    .tg-header__description {
         margin-top: 40px;
 
         .bb-p {

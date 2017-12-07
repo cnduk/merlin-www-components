@@ -104,7 +104,7 @@
     }
 }
 
-.tg-header__intro__title {
+.tg-header__title {
     @include line-height(36px);
     margin: 0 0 $MARGIN_X_SMALL 0;
     text-align: center;
@@ -123,7 +123,7 @@
     display: none;
 }
 
-.tg-header__intro__description {
+.tg-header__description {
     color: $COLOR_TYPE_META;
     @include font('ADOBE CASLON', 16px, null, 20px);
     margin: $MARGIN_X_SMALL auto 22px auto;
