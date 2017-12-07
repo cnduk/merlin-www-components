@@ -75,6 +75,9 @@ li.c-topic-strip__item {
     @include button-group();
     @include button-group-light();
 
+    @include font("BRANDON GROTESQUE", 12px, 700, 12px);
+    letter-spacing: 1px;
+
     &:hover {
         @include button-group-light-hover();
     }
