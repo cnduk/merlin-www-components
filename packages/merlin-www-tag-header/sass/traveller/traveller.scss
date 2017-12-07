@@ -1,3 +1,4 @@
+@import "@cnbritain/merlin-www-buttons:traveller";
 @import "@cnbritain/merlin-www-common:traveller";
 @import "@cnbritain/merlin-www-card-list:traveller";
 @import "@cnbritain/merlin-www-image:traveller";
@@ -119,7 +120,7 @@
 .tg-header__intro {}
 .tg-header__intro__image {}
 
-.tg-header__intro__title {
+.tg-header__title {
 	@include font("LULO ONE", 28px, 700, 32px, -35);
 	color: $SHERPA-BLUE;
 	margin: 0 0 12px 0;
@@ -136,7 +137,7 @@
 	display: none;
 }
 
-.tg-header__intro__description {
+.tg-header__description {
 	color: $MUSTASAARI;
 	margin: 12px auto 24px auto;
 	max-width: 800px;
@@ -161,6 +162,17 @@
 	> *:last-child {
 		margin-bottom: 0;
 	}
+}
+
+.tg-header__description-expand {}
+.tg-header__expand-btn {
+	@include button-single();
+	@include button-single-light();
+	&:hover {
+		@include button-single-light-hover();
+	}
+
+	margin-top: 24px;
 }
 
 .tg-header__topic-strip {

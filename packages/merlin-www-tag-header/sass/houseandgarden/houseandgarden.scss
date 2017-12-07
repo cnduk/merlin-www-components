@@ -87,7 +87,7 @@
 .tg-header__intro {}
 .tg-header__intro__image {}
 
-.tg-header__intro__title {
+.tg-header__title {
 	@include font("MILLER_DISPLAY", 40px, 700, 41px);
 	color: $mine-shaft;
 	letter-spacing: 0;
@@ -105,7 +105,7 @@
 	display: none;
 }
 
-.tg-header__intro__description {
+.tg-header__description {
 	color: $mine-shaft;
 	margin: 10px auto 30px auto;
 	text-align: center;

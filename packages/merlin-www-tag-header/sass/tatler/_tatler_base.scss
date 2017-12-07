@@ -70,14 +70,14 @@
         }
     }
 
-    .tg-header__intro__image + .tg-header__intro__title {
+    .tg-header__intro__image + .tg-header__title {
         @include desktop-size {
             margin-left: 20px;
             vertical-align: bottom;
         }
     }
 
-    .tg-header__intro__title {
+    .tg-header__title {
         @include desktop-size {
             display: inline-block;
             margin: 0 0 25px 0;
@@ -141,7 +141,7 @@
     // }
 }
 
-.tg-header__intro__title {
+.tg-header__title {
     @include line-height(36px);
 
     margin: 0 0 $MARGIN_X_SMALL 0;
@@ -162,7 +162,7 @@
     display: none;
 }
 
-.tg-header__intro__description {
+.tg-header__description {
     margin: $MARGIN_X_SMALL auto 22px auto;
     max-width: 680px;
     text-align: center;

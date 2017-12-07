@@ -94,7 +94,7 @@
 .tg-header__intro {}
 .tg-header__intro__image {}
 
-.tg-header__intro__title {
+.tg-header__title {
 	@include font("GOTHAM", 24px, 700, 28px, 60);
 	color: $white;
 	margin: 0;
@@ -106,7 +106,7 @@
 	display: none;
 }
 
-.tg-header__intro__description {
+.tg-header__description {
 	color: $oslo-gray;
 	margin-top: 24px;
 	margin-left: auto;

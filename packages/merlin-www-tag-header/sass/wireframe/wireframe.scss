@@ -6,11 +6,19 @@
 @import "@cnbritain/merlin-www-topic-strip:wireframe";
 
 .tg-header {}
-.tg-hedaer__wrapper {}
+.tg-header__wrapper {}
 .tg-header__intro {}
 .tg-header__intro__image {}
-.tg-header__intro__title {}
+.tg-header__title {}
 .tg-header__separator {}
-.tg-header__intro__description {}
+.tg-header__description {
+	&.is-closed {
+		:nth-child(n+4):nth-last-child(n+2) {
+			display: none;
+		}
+	}
+}
+.tg-header__description-expand {}
+.tg-header__expand-btn {}
 .tg-header__topic-strip {}
 .tg-header__cards {}
