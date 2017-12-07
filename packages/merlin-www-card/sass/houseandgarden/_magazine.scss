@@ -6,7 +6,7 @@
 @mixin card-magazine-large() {
     .c-card__obj__header,
     .c-card__obj__body {
-        vertical-align: middle;
+        vertical-align: top;
     }
 
     .c-card__obj__header {
@@ -18,11 +18,7 @@
     }
 
     .c-card__title {
-        @include font("MILLER_DISPLAY", 27px, 700, 29px);
-        color: $mine-shaft;
-        letter-spacing: 0px;
-        margin-bottom: 15px;
-        margin-top: 5px;
+        margin-top: 0;
     }
 }
 
