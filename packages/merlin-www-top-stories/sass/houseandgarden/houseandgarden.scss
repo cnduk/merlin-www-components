@@ -8,7 +8,7 @@
     background-color: $white;
     border-bottom: 1px solid $mercury;
     display: none;
-    padding: 20px 0;
+    padding: 10px 0;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         display: block;
@@ -38,10 +38,10 @@
 
 .c-top-stories__nav {
     border-left: 1px solid $ISABEL;
-    bottom: -20px;
+    bottom: -10px;
     position: absolute;
     right: 0;
-    top: -20px;
+    top: -10px;
     width: 60px;
     z-index: 2;
 
