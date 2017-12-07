@@ -164,15 +164,16 @@
 	}
 }
 
-.tg-header__description-expand {}
+.tg-header__description-expand {
+	margin-top: 24px;
+}
+
 .tg-header__expand-btn {
 	@include button-single();
 	@include button-single-light();
 	&:hover {
 		@include button-single-light-hover();
 	}
-
-	margin-top: 24px;
 }
 
 .tg-header__topic-strip {
