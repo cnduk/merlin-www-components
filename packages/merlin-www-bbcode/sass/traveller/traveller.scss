@@ -372,6 +372,7 @@
     margin-top: 4px;
 
     .bb-p {
+        @include font("PROXIMA NOVA CONDENSED", 14px, 400, 20px);
         margin: 0;
     }
 }
