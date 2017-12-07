@@ -14,7 +14,7 @@
 
             {{# data.body }}
                 {{# state.is_body_expandable }}
-                    <div class="tg-header__description is-closed">
+                    <div class="tg-header__description js-tg-header__description is-closed">
                         {{ &data.body }}
                         <div class="tg-header__description-expand">
                             <button class="global__button-reset tg-header__expand-btn js-tg-header__expand-btn">Continue reading</button>
@@ -22,7 +22,7 @@
                     </div>
                 {{/ state.is_body_expandable }}
                 {{^ state.is_body_expandable }}
-                    <div class="tg-header__description">{{ &data.body }}</div>
+                    <div class="tg-header__description js-tg-header__description">{{ &data.body }}</div>
                 {{/ state.is_body_expandable }}
             {{/ data.body }}
 
