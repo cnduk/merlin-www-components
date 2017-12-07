@@ -149,6 +149,11 @@
                 border-top: 1px solid $silver;
                 padding-top: 10px;
 
+                	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+                        border: none;
+                        padding-top: 0;
+                    }
+
                 &.c-card--dark {
                     border-top: 1px solid $tundora;
                 }
