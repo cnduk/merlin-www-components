@@ -38,6 +38,7 @@
 .c-newsletter__title {
     @include font("MILLER_DISPLAY", 25px, 700, 27px);
     color: $mine-shaft;
+    letter-spacing:0;
     margin-bottom: 10px;
     margin-top: 0px;
     text-align: center;
