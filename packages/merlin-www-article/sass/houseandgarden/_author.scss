@@ -35,7 +35,7 @@
     @include font("BRANDON GROTESQUE", 10px, 400, 10px);
     color: $mine-shaft;
     letter-spacing: 1px;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
     margin-top: 0;
     text-transform: uppercase;
 
@@ -45,7 +45,7 @@
 
     .a-author__byline-name {
         @include font("BRANDON GROTESQUE", 10px, 700, 10px);
-        letter-spacing: 0px;
+        letter-spacing: 1px;
     }
 
     .a-author__byline-prefix,
@@ -74,7 +74,6 @@
         }
     }
 }
-
     .a-author__separator {
         display: none;
     }
@@ -84,5 +83,6 @@
         color: $dove-gray;
         letter-spacing: 1px;
         margin-bottom: 0;
-        margin-top: 4px;
+        margin-top: 10px;
+        text-transform: uppercase;
     }

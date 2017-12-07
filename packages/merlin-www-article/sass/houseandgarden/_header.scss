@@ -1,5 +1,9 @@
 .a-header {
-    margin: 30px 0;
+    margin: 40px 0;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 60px 0;
+    }
 
     &.has-hero {
         margin-top: 0;
@@ -232,6 +236,7 @@
     width: 100%;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0 350px 0px 0;
         max-width: 1190px;
     }
 
@@ -255,8 +260,8 @@
     text-align: center;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(80px);
-        @include line-height(83px);
+        @include font-size(65px);
+        @include line-height(68px);
         margin-bottom: 25px;
         text-align: left;
     }
@@ -274,7 +279,7 @@
     margin-top: 10px;
     margin-bottom: 20px;
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: 25px;
+        margin-top: 10px;
         margin-bottom: 30px;
     }
 
@@ -285,16 +290,13 @@
         text-align: center;
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            @include font-size(23px);
+            @include font-size(21px);
             @include line-height(28px);
             text-align: left;
         }
     }
 
-    a {
-        color: inherit;
-        border-bottom: 1px solid;
-    }
+    a {}
 
     > *:first-child {
         margin-top: 0;
@@ -315,7 +317,7 @@
     @include font("BRANDON GROTESQUE", 10px, 400, 10px);
     color: $mine-shaft;
     letter-spacing: 1px;
-    margin-bottom: 4px;
+    margin-bottom: 7px;
     margin-top: 20px;
     text-align: center;
     text-transform: uppercase;
@@ -326,7 +328,7 @@
 }
 .a-header__byline-name {
     @include font("BRANDON GROTESQUE", 10px, 700, 10px);
-    letter-spacing: 0px;
+    letter-spacing: 1px;
 
     a {
         color: $mine-shaft;
@@ -345,6 +347,7 @@
     margin-bottom: 20px;
     margin-top: 7px;
     text-align: center;
+    text-transform: uppercase;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         text-align: left;
@@ -388,7 +391,7 @@ li.a-header__meta-item {
     text-align: center;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         text-align: left;
     }
 }
@@ -402,8 +405,8 @@ li.a-header__meta-item {
     text-transform: uppercase;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(15px);
-        @include line-height(15px);
+        @include font-size(13px);
+        @include line-height(13px);
     }
 }
 
