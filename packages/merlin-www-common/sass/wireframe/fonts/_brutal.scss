@@ -5,6 +5,7 @@ $BRUTAL_FONT_DIR: '/static/fonts/brutal-type/';
 // Brutal
 // Light
 @font-face {
+  font-display: swap;
   font-family: 'Brutal';
   font-style: normal;
   font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
@@ -14,6 +15,7 @@ $BRUTAL_FONT_DIR: '/static/fonts/brutal-type/';
 
 // Medium
 @font-face {
+  font-display: swap;
   font-family: 'Brutal';
   font-style: normal;
   font-weight: map-get($FONT_WEIGHTS, 'MEDIUM');
@@ -23,6 +25,7 @@ $BRUTAL_FONT_DIR: '/static/fonts/brutal-type/';
 
 // Bold
 @font-face {
+  font-display: swap;
   font-family: 'Brutal';
   font-style: normal;
   font-weight: map-get($FONT_WEIGHTS, 'BOLD');
@@ -32,6 +35,7 @@ $BRUTAL_FONT_DIR: '/static/fonts/brutal-type/';
 
 // Extra bold
 @font-face {
+  font-display: swap;
   font-family: 'Brutal';
   font-style: normal;
   font-weight: map-get($FONT_WEIGHTS, 'EXTRA BOLD');

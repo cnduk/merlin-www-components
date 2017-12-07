@@ -1,6 +1,7 @@
 @import "../_fonts";
 
 @font-face {
+    font-display: swap;
     font-family: 'CenturyGothic';
     font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
     font-style: normal;
@@ -13,6 +14,7 @@
 }
 
 @font-face {
+    font-display: swap;
     font-family: 'CenturyGothic';
     font-weight: map-get($FONT_WEIGHTS, 'BOLD');
     font-style: normal;

@@ -5,6 +5,7 @@ $AGENDA_FONT_DIR: '/static/fonts/agenda/';
 // Agenda
 // Medium
 @font-face {
+  font-display: swap;
   font-family: 'Agenda';
   font-style: normal;
   font-weight: map-get($FONT_WEIGHTS, 'MEDIUM');
@@ -15,6 +16,7 @@ $AGENDA_FONT_DIR: '/static/fonts/agenda/';
 
 // Medium Italic
 @font-face {
+  font-display: swap;
   font-family: 'Agenda';
   font-style: italic;
   font-weight: map-get($FONT_WEIGHTS, 'MEDIUM');
@@ -25,6 +27,7 @@ $AGENDA_FONT_DIR: '/static/fonts/agenda/';
 
 // Bold
 @font-face {
+  font-display: swap;
   font-family: 'Agenda';
   font-style: normal;
   font-weight: map-get($FONT_WEIGHTS, 'BOLD');
@@ -35,6 +38,7 @@ $AGENDA_FONT_DIR: '/static/fonts/agenda/';
 
 // Bold Italic
 @font-face {
+  font-display: swap;
   font-family: 'Agenda';
   font-style: italic;
   font-weight: map-get($FONT_WEIGHTS, 'BOLD');

@@ -1,6 +1,7 @@
 @import "../_fonts";
 
 @font-face {
+    font-display: swap;
     font-family: 'MillerDisplay';
     font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
     font-style: italic;
@@ -13,6 +14,7 @@
 }
 
 @font-face {
+    font-display: swap;
     font-family: 'MillerDisplay';
     font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
     font-style: normal;
@@ -25,6 +27,7 @@
 }
 
 @font-face {
+    font-display: swap;
     font-family: 'MillerDisplay';
     font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
     font-style: italic;
@@ -37,6 +40,7 @@
 }
 
 @font-face {
+    font-display: swap;
     font-family: 'MillerDisplay';
     font-weight: map-get($FONT_WEIGHTS, 'SEMI BOLD');
     font-style: normal;
@@ -50,6 +54,7 @@
 
 
 @font-face {
+    font-display: swap;
     font-family: 'MillerDisplay';
     font-weight: map-get($FONT_WEIGHTS, 'BOLD');
     font-style: normal;

@@ -5,6 +5,7 @@ $GROTESK_FONT_DIR: '/static/fonts/new-grotesk-square/';
 // New Grotesk Square
 // Light
 @font-face {
+  font-display: swap;
   font-family: 'New Grotesk Square';
   font-style: normal;
   font-weight: map-get($FONT_WEIGHTS, 'LIGHT');
@@ -14,6 +15,7 @@ $GROTESK_FONT_DIR: '/static/fonts/new-grotesk-square/';
 
 // Bold
 @font-face {
+  font-display: swap;
   font-family: 'New Grotesk Square';
   font-style: normal;
   font-weight: map-get($FONT_WEIGHTS, 'BOLD');

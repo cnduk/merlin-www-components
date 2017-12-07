@@ -13,6 +13,7 @@
 $EXCHANGE_FONT_DIR: '/static/fonts/exchange-web/';
 
 @font-face {
+  font-display: swap;
   font-family: 'Exchange Web';
   src: url($EXCHANGE_FONT_DIR + 'Exchange-Web-Italic.woff2') format('woff2'),
        url($EXCHANGE_FONT_DIR + 'Exchange-Web-Italic.woff') format('woff');
@@ -21,6 +22,7 @@ $EXCHANGE_FONT_DIR: '/static/fonts/exchange-web/';
 }
 
 @font-face {
+  font-display: swap;
   font-family: 'Exchange Web';
   src: url($EXCHANGE_FONT_DIR + 'Exchange-Web-Roman.woff2') format('woff2'),
        url($EXCHANGE_FONT_DIR + 'Exchange-Web-Roman.woff') format('woff');
@@ -29,6 +31,7 @@ $EXCHANGE_FONT_DIR: '/static/fonts/exchange-web/';
 }
 
 @font-face {
+  font-display: swap;
   font-family: 'Exchange Web';
   src: url($EXCHANGE_FONT_DIR + 'Exchange-Web-Semibold.woff2') format('woff2'),
        url($EXCHANGE_FONT_DIR + 'Exchange-Web-Semibold.woff') format('woff');

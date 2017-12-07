@@ -9,6 +9,7 @@ $FONT_DIR: '/static/fonts/Nobel/';
 // Adobe Caslon
 // Regular italic
 @font-face {
+  font-display: swap;
   font-family: 'Nobel';
   font-style: normal;
   font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
@@ -18,6 +19,7 @@ $FONT_DIR: '/static/fonts/Nobel/';
 
 // Semi bold
 @font-face {
+  font-display: swap;
   font-family: 'Nobel';
   font-style: normal;
   font-weight: map-get($FONT_WEIGHTS, 'BOLD');

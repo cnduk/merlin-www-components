@@ -1,4 +1,5 @@
 @font-face {
+  font-display: swap;
   font-family: 'ITC_FENICE';
   font-style: normal;
   font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
@@ -11,6 +12,7 @@
 }
 
 @font-face {
+  font-display: swap;
   font-family: 'ITC_FENICE';
   font-style: normal;
   font-weight: map-get($FONT_WEIGHTS, 'BOLD');

@@ -9,6 +9,7 @@ $FONT_DIR: '/static/fonts/ITCCaslon/';
 // ITC Caslon
 // Regular italic
 @font-face {
+  font-display: swap;
   font-family: 'ITC Caslon';
   font-style: normal;
   font-weight: map-get($FONT_WEIGHTS, 'NORMAL');

@@ -5,6 +5,7 @@ $STARLING_FONT_DIR: '/static/fonts/starling/';
 // Starling
 // Normal
 @font-face {
+  font-display: swap;
   font-family: 'Starling';
   font-style: normal;
   font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
@@ -15,6 +16,7 @@ $STARLING_FONT_DIR: '/static/fonts/starling/';
 
 // Roman Italic
 @font-face {
+  font-display: swap;
   font-family: 'Starling';
   font-style: italic;
   font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
@@ -25,6 +27,7 @@ $STARLING_FONT_DIR: '/static/fonts/starling/';
 
 // Bold
 @font-face {
+  font-display: swap;
   font-family: 'Starling';
   font-style: normal;
   font-weight: map-get($FONT_WEIGHTS, 'BOLD');
@@ -35,6 +38,7 @@ $STARLING_FONT_DIR: '/static/fonts/starling/';
 
 // Bold Italic
 @font-face {
+  font-display: swap;
   font-family: 'Starling';
   font-style: italic;
   font-weight: map-get($FONT_WEIGHTS, 'BOLD');
