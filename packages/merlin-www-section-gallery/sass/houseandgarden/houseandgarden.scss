@@ -70,6 +70,11 @@
 		border-right: 1px solid $mine-shaft;
 		border-bottom: 1px solid $mine-shaft;
 		padding: 40px;
+		text-align: left;
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		text-align: left;
 	}
 }
 
@@ -94,13 +99,13 @@
 	@include font("MILLER_DISPLAY", 25px, 700, 27px);
 	color: $mine-shaft;
 	letter-spacing: 0.5px;
-	margin: 5px 0 15px 0;
+	margin: 7px 0 10px 0;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-    	@include font-size(40px);
-    	@include line-height(43px);
+    	@include font-size(35px);
+    	@include line-height(38px);
     	letter-spacing: 0px;
-    	margin: 10px 0 25px 0;
+    	margin: 10px 0 10px 0;
 	}
 }
 
@@ -131,7 +136,7 @@
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
     	margin-bottom: 10px;
-    	margin-top: 25px;
+    	margin-top: 15px;
     }
 }
 
