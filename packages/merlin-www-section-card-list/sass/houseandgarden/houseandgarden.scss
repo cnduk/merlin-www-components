@@ -41,15 +41,21 @@
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             @include font-size(26px);
             @include line-height(26px);
-            border-bottom: 1px solid $mine-shaft;
+            border-bottom: none;
             letter-spacing: 6px;
-            padding-bottom: 11px;
+            padding-bottom: 20px;
         }
     }
 
     .c-card-section__btn {
         @include button-single();
         @include button-single-light();
+        width: 200px;
+
+         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+             width: initial;
+         }
+
         &:hover {
             @include button-single-light-hover();
         }
@@ -141,11 +147,18 @@
     .c-card-section__btn {
         @include button-single();
         @include button-single-dark();
+        margin-top: 30px;
+        width: 200px;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+             width: initial;
+         }
+
         &:hover {
             @include button-single-dark-hover();
         }
 
-        margin-top: 30px;
+
     }
 }
 
