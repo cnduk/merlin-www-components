@@ -32,6 +32,11 @@
     @include button-single;
     @include button-single-light;
     margin: 20px 0 0 0;
+    width: 200px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        width: initial;
+    }
 
     &:hover,
     &:focus {
