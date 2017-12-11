@@ -14,7 +14,7 @@
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(19px);
         @include line-height(25px);
-        margin-bottom: 40px;
+        margin-bottom: 10px;
     }
 }
 
@@ -36,7 +36,8 @@
 
 .bb-a {
     color: $mine-shaft;
-    border-bottom: 2px solid $careys-pink;
+    border-bottom: 1px solid $careys-pink;
+    padding-bottom: 1px;
 }
 
 .bb-h1,
