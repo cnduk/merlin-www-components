@@ -31,7 +31,7 @@
 .c-card-list--a-recommended,
 .c-card-list--c-video-articles,
 .c-card-list--c-curated,
-.c-card-list--c-tag,
+.c-card-list--c-tag,c-card-section--c-contributors
 .c-card-list--mag-articles,
 .c-card-list--v-genre-articles,
 .c-card-list--s-results {
@@ -43,18 +43,18 @@
         margin: 10px 0;
         width: 100%;
 
-        @include one-column-size() {
-            & + .c-card-list__item {
-                .c-card {
-                    border-top: 1px solid $silver;
-                    padding-top: 10px;
-
-                    &.c-card--dark {
-                        border-top: 1px solid $tundora;
-                    }
-                }
-            }
-        }
+        //@include one-column-size() {
+        //    & + .c-card-list__item {
+        //        .c-card {
+        //            border-top: 1px solid $silver;
+        //            padding-top: 10px;
+        //
+        //            &.c-card--dark {
+        //                border-top: 1px solid $tundora;
+        //            }
+        //        }
+        //    }
+        //}
 
         @include two-column-size() {
             width: 50%;
@@ -75,12 +75,12 @@
         margin: 10px 0;
         width: 100%;
 
-        & + .c-card-list__item {
-            .c-card {
-                border-top: 1px solid $tundora;
-                padding-top: 10px;
-            }
-        }
+        //& + .c-card-list__item {
+        //    .c-card {
+        //        border-top: 1px solid $tundora;
+        //        padding-top: 10px;
+        //    }
+        //}
 
         .c-card__images {
             &:after {
@@ -223,19 +223,19 @@
        padding: 0 10px;
        margin: 10px 0;
        width: 100%;
-       @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {}
+       //@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {}
 
        .c-card {
-           border-top: 1px solid $silver;
+           //border-top: 1px solid $silver;
            padding-top: 10px;
 
            @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
                padding-top: 20px;
            }
 
-           &.c-card--dark {
-
-           }
+           //&.c-card--dark {
+           //
+           //}
        }
 
        &:first-child {
@@ -243,9 +243,9 @@
                border-top: none;
                padding-top: 0;
 
-               &.c-card--dark {
-
-               }
+               //&.c-card--dark {
+               //
+               //}
            }
        }
    }
@@ -263,12 +263,12 @@
 
         @include one-column-size() {
             .c-card {
-                border-top: 1px solid $silver;
+                //border-top: 1px solid $silver;
                 padding-top: 10px;
 
-                &.c-card--dark {
-
-                }
+                //&.c-card--dark {
+                //
+                //}
             }
 
             &:first-child {
@@ -276,9 +276,9 @@
                     border-top: none;
                     padding-top: 0;
 
-                    &.c-card--dark {
-
-                    }
+                    //&.c-card--dark {
+                    //
+                    //}
                 }
             }
         }
