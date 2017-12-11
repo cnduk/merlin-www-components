@@ -38,20 +38,20 @@
 
 @mixin button-single-dark() {
 	background-color: transparent;
-	border: 1px solid $dove-gray;
+	border: 1px solid $trout;
 	color: $white;
 }
 
 @mixin button-single-dark-hover() {
-	background: $dove-gray;
-	border: 1px solid $dove-gray;
+	background: $trout;
+	border: 1px solid $trout;
 	color: $white;
 }
 
 @mixin button-single-dark-inactive() {
 	background-color: $steel-gray;
-	border: 1px solid $ebony-clay;
-	color: rgba($white, 0.2);
+	border: 1px solid $steel-clay;
+	color: rgba($trout, 0.2);
 }
 
 @mixin button-group() {
@@ -111,13 +111,13 @@
 
 @mixin button-group-two-dark() {
 	background: transparent;
-	border: 1px solid $silver-chalice;
-	color: $silver-chalice;
+	border: 1px solid $trout;
+	color: $white;
 }
 
 @mixin button-group-two-dark-hover() {
-	background-color: $silver-chalice;
-	border: 1px solid $silver-chalice;
+	background-color: $trout;
+	border: 1px solid $trout;
 	color: $white;
 }
 
