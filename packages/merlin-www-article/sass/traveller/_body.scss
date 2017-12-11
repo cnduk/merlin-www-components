@@ -28,7 +28,7 @@
 .a-body__content {}
 .a-infinite__message {
     box-sizing: border-box;
-    margin: 0 auto 40px auto;
+    margin: 0 auto $MOBILE_SLICE_MARGIN auto;
     max-width: $MAXIMUM_PAGE_WIDTH - $DESKTOP_SIDE_GUTTER*2;
     position: relative;
 
@@ -37,7 +37,7 @@
     }
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: 60px;
+        margin-bottom: $TABLET_SLICE_MARGIN;
     }
 }
 
