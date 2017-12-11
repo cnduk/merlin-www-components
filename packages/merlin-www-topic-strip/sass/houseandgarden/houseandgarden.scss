@@ -45,9 +45,9 @@
 
 li.c-topic-strip__item {
     font-size: initial;
-    border-right: 1px solid $silver;
+    border-right: none;
     margin-right: 10px;
-    padding-right: 10px;
+    padding-right: 0px;
 
     &:last-child {
         border-right: none;
