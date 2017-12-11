@@ -48,6 +48,14 @@
     @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
         @include card-splash-large();
     }
+
+    &:hover {
+        .c-card__title {
+            span {
+                box-shadow: inset 0 1em 0 0 $careys-pink;
+            }
+        }
+    }
 }
 
 .c-card--splash-small {
