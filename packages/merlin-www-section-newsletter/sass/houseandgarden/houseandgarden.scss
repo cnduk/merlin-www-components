@@ -104,7 +104,7 @@
 
 .c-newsletter__form__btn {
     @include button-single();
-    @include button-single-light();
+    @include button-single-dark();
 
     height: auto;
     margin-bottom: 20px;
@@ -114,7 +114,7 @@
     }
 
     &:hover {
-        @include button-single-light-hover();
+        @include button-single-dark-hover();
     }
 }
 
