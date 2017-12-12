@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-article",
-  "version": "1.20.35",
+  "version": "1.20.36",
   "description": "Article header, footer, share, content. Includes video too.",
   "main": "js/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-www-bbcode": "^1.6.27",
+    "@cnbritain/merlin-www-bbcode": "^1.6.28",
     "@cnbritain/merlin-www-buttons": "^1.3.18",
     "@cnbritain/merlin-www-card": "^1.8.23",
     "@cnbritain/merlin-www-common": "^1.7.16",
@@ -19,7 +19,7 @@
     "@cnbritain/merlin-www-js-infinitescroll": "^1.0.12",
     "@cnbritain/merlin-www-js-utils": "^1.3.5",
     "@cnbritain/merlin-www-marketing-cards": "^1.4.20",
-    "@cnbritain/merlin-www-section-card-list": "^1.7.30",
+    "@cnbritain/merlin-www-section-card-list": "^1.7.31",
     "@cnbritain/merlin-www-topic-strip": "^1.6.18",
     "eventemitter2": "^4.1.0"
   },
