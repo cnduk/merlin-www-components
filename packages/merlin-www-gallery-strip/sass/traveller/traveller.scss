@@ -13,25 +13,29 @@
 }
 
 .c-gallery-strip__link {}
-.c-gallery-strip__list {}
+ul.c-gallery-strip__list {
+    margin: 0 -6px;
+}
 li.c-gallery-strip__list__item {
-    background-color: $CAPE-HAZE;
+    padding: 0 6px;
 
     &:before {
+        background-color: $CAPE-HAZE;
         display: block;
         content: "";
         padding-top: 150%;
         position: relative;
+        z-index: -1;
     }
 
     img {
         bottom: 0;
         height: 100%;
-        left: 0;
+        left: 6px;
         position: absolute;
-        right: 0;
+        right: 6px;
         top: 0;
-        width: 100%;
+        width: calc(100% - 12px);
     }
 }
 
@@ -47,6 +51,8 @@ li.c-gallery-strip__list__item {
     @include font("PROXIMA NOVA CONDENSED", 24px, 600, 24px);
     background-color: rgba($BLACK, 0.33);
     color: $WHITE;
+    left: 6px;
+    right: 6px;
     z-index: 1;
 }
 
