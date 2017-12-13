@@ -67,14 +67,12 @@ li .c-figure__toolbar-listitem--more {
 
 .c-figure__title {
     @include font('MILLER_DISPLAY', 14px, null, 17px);
-
     color: $mine-shaft;
     margin: 0 0 5px 0;
     text-transform: uppercase;
 }
 .c-figure__caption {
     @include font('MILLER_DISPLAY', 14px, null, 17px);
-
     color: $mine-shaft;
     margin-bottom: 10px;
 
@@ -87,10 +85,10 @@ li .c-figure__toolbar-listitem--more {
 }
 .c-figure__credit {
     @include font('BRANDON GROTESQUE', 10px, 'BOLD', 10px);
-
     color: $dove-gray;
     letter-spacing: 1px;
     margin-top: 10px;
+    text-transform: uppercase;
 }
 
 .c-figure__magnifier {}
