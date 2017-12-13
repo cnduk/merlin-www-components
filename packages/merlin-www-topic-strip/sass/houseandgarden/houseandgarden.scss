@@ -45,9 +45,9 @@
 
 li.c-topic-strip__item {
     font-size: initial;
-    border-right: none;
+    border-right: 1px solid $silver;
     margin-right: 10px;
-    padding-right: 0px;
+    padding-right: 10px;
 
     &:last-child {
         border-right: none;
@@ -61,13 +61,17 @@ li.c-topic-strip__item {
     margin-right: -$MOBILE_SIDE_GUTTER;
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
-    text-align: center;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         margin-left: 0;
         margin-right: 0;
         padding-left: 0;
         padding-right: 0;
+    }
+
+    li.c-topic-strip__item {
+        border-right: none;
+        padding-right: 0px;
     }
 }
 
