@@ -66,12 +66,19 @@
     }
 }
 
-.c-card-list--c-video-articles {
-    margin-bottom: 40px;
+.c-card-list--a-recommended,
+.c-card-list--mag-articles,
+.c-card-list--v-genre-articles {
+    .c-card__image__icon {
+        background-color: $vanilla-ice;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: 60px;
+        svg {
+            fill: $mine-shaft;
+        }
     }
+}
+
+.c-card-list--c-video-articles {
 
     &:hover {
         .c-card__title {
