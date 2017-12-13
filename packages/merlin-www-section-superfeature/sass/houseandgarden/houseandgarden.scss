@@ -54,7 +54,7 @@
 .c-superfeature__content {
 	margin: 0 auto;
 	max-width: 700px;
-	padding: 15px 20px;
+	padding: 20px 20px 0 20px;
 	text-align: center;
 
 	@include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
