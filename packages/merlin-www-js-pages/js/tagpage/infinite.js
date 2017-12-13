@@ -132,7 +132,7 @@ export function onInfiniteLoadComplete( e ){
 export default function init(){
 
     // Check if tag_infinite_scroll is set to true
-    if(getStorage('tag_infinite_scroll')) return;
+    if(getStorage('infinite_stop')) return;
 
     infiniteScroller = new InfiniteScroll({
         'el': window,
