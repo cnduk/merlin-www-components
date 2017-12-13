@@ -26,8 +26,11 @@
     text-align: center;
 
     .ad__block {
-        background-color: $wild-sand;
+        background-color: $white;
         padding: 20px 0;
+        border-top: 1px solid $mercury;
+        border-bottom: 1px solid $mercury;
+        margin-top: -1px;
     }
 
     &.ad--native-large {
@@ -44,8 +47,11 @@
 
 .ad--article-header {
     .ad__block {
-        background-color: $wild-sand;
+        background-color: $white;
         padding: 20px 0;
+        border-top: 1px solid $mercury;
+        border-bottom: 1px solid $mercury;
+        margin-top: -1px;
     }
 }
 
