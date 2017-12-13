@@ -37,7 +37,7 @@
 
         svg {
             display: block;
-            fill: $mine-shaft;
+            fill: $careys-pink;
             height: 100%;
             margin: 0 auto;
             vertical-align: middle;
@@ -74,7 +74,7 @@
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             margin-bottom: 7px;
-            margin-top: 20px;
+            margin-top: 10px;
         }
     }
 
@@ -160,7 +160,7 @@
 
         svg {
             display: block;
-            fill: $mine-shaft;
+            fill: $careys-pink;
             height: 100%;
             margin: 0 auto;
             vertical-align: middle;
@@ -197,7 +197,7 @@
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             margin-bottom: 10px;
-            margin-top: 20px;
+            margin-top: 10px;
         }
     }
 

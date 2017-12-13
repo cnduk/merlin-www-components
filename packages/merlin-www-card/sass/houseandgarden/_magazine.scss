@@ -1,8 +1,16 @@
 // -------------------- //
 // Magazine
 // -------------------- //
-@mixin card-magazine() {}
-@mixin card-magazine-small() {}
+@mixin card-magazine() {
+    .c-card__title {
+        margin-top: 0;
+    }
+}
+@mixin card-magazine-small() {
+    .c-card__title {
+        margin-top: 0;
+    }
+}
 @mixin card-magazine-large() {
     .c-card__obj__header,
     .c-card__obj__body {
