@@ -14,7 +14,6 @@
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(19px);
         @include line-height(25px);
-        margin-bottom: 10px;
     }
 }
 
@@ -60,26 +59,26 @@
 }
 
 .bb-h2 {
-    @include font("MILLER_DISPLAY", 28px, 700, 31px);
+    @include font("MILLER_DISPLAY", 25px, 700, 28px);
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(30px);
-        @include line-height(33px);
+        @include font-size(27px);
+        @include line-height(30px);
     }
 }
 
 .bb-h3 {
-    @include font("MILLER_DISPLAY", 24px, 700, 27px);
+    @include font("MILLER_DISPLAY", 22px, 700, 25px);
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(28px);
-        @include line-height(31px);
+        @include font-size(24px);
+        @include line-height(27px);
     }
 }
 
 .bb-h4 {
     @include font("MILLER_DISPLAY", 20px, 700, 23px);
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(24px);
-        @include line-height(27px);
+        @include font-size(22px);
+        @include line-height(25px);
     }
 }
 
@@ -180,6 +179,7 @@
         }
 
         &:before {
+            @include font("MILLER_DISPLAY", 16px, 700, 24px);
             color: $white;
             content: counter(li);
             counter-increment: li;
@@ -193,6 +193,7 @@
             width: 23px;
 
             @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+                @include font("MILLER_DISPLAY", 19px, 700, 30px);
                 height: 28px;
                 width: 28px;
             }
@@ -229,14 +230,14 @@
 // -------------------- //
 .bb-dropcap {}
 .bb-dropcap--letter {
-    @include font("MILLER_DISPLAY", 87px, 300, 87px);
+    @include font("MILLER_DISPLAY", 86px, 400, 78px);
     box-sizing: border-box;
     color: $mine-shaft;
     float: left;
-    height: 90px;
     letter-spacing: 0;
+    margin-right: 32px;
+    margin-bottom: 10px;
     text-transform: capitalize;
-    width: 100px;
 
     .is-macos &,
     .is-linux & {
@@ -244,10 +245,10 @@
     }
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(119px);
-        @include line-height(119px);
-        height: 124px;
-        width: 136px;
+        @include font-size(128px);
+        @include line-height(117px);
+        margin-right: 52px;
+        margin-bottom: 0px;
     }
 }
 
@@ -400,12 +401,18 @@
 
 .bb-infobox__item__key {
     @include font("BRANDON GROTESQUE", 15px, 800, 15px);
-
+    border-bottom: 1px solid $mine-shaft;
     color: $mine-shaft;
+    display: inline-block;
     letter-spacing: 1px;
-    margin: 10px 0;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    padding-bottom: 2px;
     text-transform: uppercase;
-    text-decoration: underline;
+
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 .bb-infobox__item__value {
@@ -466,6 +473,7 @@
     color: $dove-gray;
     letter-spacing: 1px;
     margin-top: 10px;
+    text-transform: uppercase;
 }
 
 
