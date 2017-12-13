@@ -131,6 +131,10 @@
         height: 60px;
         line-height: 60px;
     }
+
+    &:hover{
+        color: $silver-chalice;
+    }
 }
 
 .n-main__sticker {

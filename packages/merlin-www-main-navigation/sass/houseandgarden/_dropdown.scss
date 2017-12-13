@@ -26,13 +26,13 @@
 
 .n-main__dropdown-list--left {
     border-top: none;
-    padding: 0 19px;
+    padding: 5px 50px 5px 20px;
 }
 
 .n-main__dropdown-list--follow {
     border-top: none;
     margin-right: -1px;
-    padding: 19px;
+    padding: 10px 20px 20px;
     white-space: nowrap;
 }
 
@@ -60,6 +60,10 @@
         margin-left: 8px;
         position: relative;
         top: -2px;
+    }
+
+     &:hover{
+        color: $silver-chalice;
     }
 }
 
