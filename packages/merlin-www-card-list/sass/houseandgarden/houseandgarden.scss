@@ -66,6 +66,22 @@
     }
 }
 
+.c-card-list--c-video-articles {
+    margin-bottom: 40px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 60px;
+    }
+
+    &:hover {
+        .c-card__title {
+            span {
+                box-shadow: inset 0 -0.4em 0 0 $trout;
+            }
+        }
+    }
+}
+
 .c-card-list--v-related-articles {
     margin: -10px -10px;
 
