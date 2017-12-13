@@ -6,6 +6,13 @@
         font-style: italic;
         text-transform: none;
     }
+
+   +.n-main__list-item {
+        &:before {
+            display: none;
+        }
+    }
+
 }
 
 .n-main__dropdown--follow__group {

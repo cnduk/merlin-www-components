@@ -106,12 +106,16 @@
 
     & + .n-main__list-item {
         &:before {
-            background-color: $mercury;
-            content: '';
-            height: 20px;
-            margin: 20px 0;
+            background: $mine-shaft;
+            content: "";
+            display: block;
+            height: 3px;
+            left: 0;
             position: absolute;
-            width: 1px;
+            margin-left: -1.5px;
+            margin-top: 28px;
+            transform: rotate(45deg);
+            width: 3px;
         }
     }
 }
@@ -129,7 +133,7 @@
     span {
         display: inline-block;
         height: 60px;
-        line-height: 60px;
+        line-height: 63px;
     }
 
     &:hover{
