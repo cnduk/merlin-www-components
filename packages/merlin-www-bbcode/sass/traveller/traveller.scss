@@ -10,7 +10,6 @@
 .bb-a {
     border-bottom: 1px solid $SHERPA-BLUE;
     color: $SHERPA-BLUE;
-    padding-bottom: 3px;
 }
 
 .bb-abbr {
@@ -699,12 +698,6 @@
 .bb-button {
     @include button-single-two();
     @include button-single-two-light();
-    margin: 28px 0;
-    width: 100%;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        width: auto;
-    }
 
     &:hover {
         @include button-single-two-light-hover();
