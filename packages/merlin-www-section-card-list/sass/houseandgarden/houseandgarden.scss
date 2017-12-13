@@ -1,325 +1,221 @@
 @import "@cnbritain/merlin-www-common:houseandgarden";
+@import "@cnbritain/merlin-www-topic-strip:houseandgarden";
+@import "@cnbritain/merlin-www-buttons:houseandgarden";
+@import "@cnbritain/merlin-www-card-list:houseandgarden";
+@import "@cnbritain/merlin-www-card:houseandgarden";
 
 @import "../wireframe/wireframe";
 
-.c-card-list--top-stories {
-    white-space: nowrap;
+.c-card-section {
+    margin-top: $MOBILE_SLICE_MARGIN;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
 
-    .c-card-list__item {
-        display: inline-block;
-        vertical-align: middle;
-        white-space: normal;
-        width: 280px;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $TABLET_SLICE_MARGIN;
+        margin-bottom: $TABLET_SLICE_MARGIN;
+    }
 
-        & + .c-card-list__item {
-            margin-left: 20px;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $DESKTOP_SLICE_MARGIN;
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+    }
+}
+
+.c-card-section--c-tag,
+.c-card-section--c-curated,
+.c-card-section--c-contributors,
+.c-card-section--mag-articles {
+    .c-card-section__title {
+        @include font("MILLER_DISPLAY", 20px, 400, 20px);
+        color: $mine-shaft;
+        letter-spacing: 4px;
+        margin-bottom: 20px;
+        margin-top: 0;
+        text-align: center;
+        text-transform: uppercase;
+
+        a {
+            color: inherit;
         }
 
-        &.is-hidden {
-            height: 0;
-            overflow: hidden;
-            visibility: hidden;
-            width: 0;
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            @include font-size(26px);
+            @include line-height(26px);
+            border-bottom: none;
+            letter-spacing: 6px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .c-card-section__btn {
+        @include button-single();
+        @include button-single-light();
+        width: 200px;
+
+         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+             width: initial;
+         }
+
+        &:hover {
+            @include button-single-light-hover();
         }
 
-        &:last-child {
-            margin-right: 20px;
+        margin-top: 30px;
+    }
+}
+
+.c-card-section--c-tag {
+    .c-card-section__title {
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            border-bottom: 1px solid $mine-shaft;
         }
     }
 }
 
-.c-card-list--a-recommended,
-.c-card-list--c-video-articles,
-.c-card-list--c-curated,
-.c-card-list--c-tag,c-card-section--c-contributors
-.c-card-list--mag-articles,
-.c-card-list--v-genre-articles,
-.c-card-list--s-results {
-    margin: -10px -10px;
+.c-card-section--a-recommended,
+.c-card-section--mag-magazines,
+.c-card-section--v-genre-articles {
+    background-color: $vanilla-ice;
+    margin: 0;
+    max-width: none;
+    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
 
-    .c-card-list__item {
-        display: inline-block;
-        padding: 0 10px;
-        margin: 10px 0;
-        width: 100%;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: $TABLET_SLICE_MARGIN;
+    }
 
-        //@include one-column-size() {
-        //    & + .c-card-list__item {
-        //        .c-card {
-        //            border-top: 1px solid $silver;
-        //            padding-top: 10px;
-        //
-        //            &.c-card--dark {
-        //                border-top: 1px solid $tundora;
-        //            }
-        //        }
-        //    }
-        //}
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: $DESKTOP_SLICE_MARGIN;
+    }
 
-        @include two-column-size() {
-            width: 50%;
-        }
+    .c-card-section__title {
+        @include font("MILLER_DISPLAY", 16px, 400, 16px);
+        color: $mine-shaft;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+        margin-top: 0;
+        text-transform: uppercase;
 
-        @include four-column-size() {
-            width: 25%;
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            @include font-size(20px);
+            @include line-height(20px);
         }
     }
 }
 
-.c-card-list--c-video-articles {
-    &:hover {
-        .c-card__title {
-            span {
-                box-shadow: inset 0 -0.4em 0 0 $trout;
-            }
-        }
-    }
+.c-card-section--v-genre-articles + .c-card-section--v-articles {
+    padding-top: 0;
 }
 
-.c-card-list--v-related-articles {
-    margin: -10px -10px;
+.c-card-section--c-video-articles,
+.c-card-section--v-related-articles {
+    background-color: $ebony-clay;
+    margin: 0;
+    max-width: none;
+    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
 
-    .c-card-list__item {
-        display: inline-block;
-        padding: 0 10px;
-        margin: 10px 0;
-        width: 100%;
-
-        //& + .c-card-list__item {
-        //    .c-card {
-        //        border-top: 1px solid $tundora;
-        //        padding-top: 10px;
-        //    }
-        //}
-
-        .c-card__images {
-            &:after {
-                @include font("BRANDON GROTESQUE", 10px, 700, 10px);
-                background-color: $ebony-clay;
-                bottom: 0;
-                color: $white;
-                content: "Now Playing";
-                left: 0;
-                letter-spacing: 1px;
-                opacity: 0;
-                padding: 5px;
-                position: absolute;
-                text-transform: uppercase;
-                white-space: nowrap;
-            }
-        }
-
-        &.is-active {
-            .c-card__images {
-                &:after {
-                    opacity: 1;
-                }
-            }
-
-            .c-card__image {
-                &:after {
-                    opacity: 1;
-                }
-            }
-        }
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: $TABLET_SLICE_MARGIN;
     }
-}
 
-.c-card-list--c-splash {
-    margin: -10px -10px;
-
-    .c-card-list__item {
-        display: inline-block;
-        padding: 0 10px;
-        margin: 10px 0;
-        vertical-align: middle;
-        width: 100%;
-
-        @include two-column-size() {
-            width: 50%;
-        }
-
-        @include four-column-size() {
-            width: 25%;
-        }
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: $DESKTOP_SLICE_MARGIN;
     }
-}
 
-.c-card-list--c-magazine-articles {
-    margin: -10px -10px;
-
-    .c-card-list__item {
-        display: inline-block;
-        padding: 0 10px;
-        margin: 10px 0;
-        width: 100%;
-
-        & + .c-card-list__item {
-            .c-card {
-                border-top: 1px solid $silver;
-                padding-top: 10px;
-
-                	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-                        border: none;
-                        padding-top: 0;
-                    }
-
-                &.c-card--dark {
-                    border-top: 1px solid $tundora;
-                }
-            }
-        }
+    .c-card-section__title {
+        @include font("BRANDON GROTESQUE", 13px, 700, 13px);
+        color: $white;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        margin-top: 0;
+        text-transform: uppercase;
     }
-}
 
-.c-card-list--c-contributors {
-    margin: -10px -10px;
-    text-align: center;
+    .c-card-section__logo {
+        height: 42px;
+        margin: 0 auto 30px auto;
+        width: 268px;
 
-    .c-card-list__item {
-        display: inline-block;
-        padding: 0 10px;
-        margin: 10px 0;
-        width: 100%;
+        svg {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
 
-        @include one-column-size() {
-            & + .c-card-list__item {
-                .c-card {
-                    border-top: 1px solid $silver;
-                    padding-top: 10px;
-
-                    &.c-card--dark {
-
-                    }
-                }
+            path {
+                fill: $WHITE;
             }
         }
 
-        @include two-column-size() {
-            width: 50%;
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            height: 52px;
+            width: 331px;
+        }
+    }
+
+    .c-card-section__btn {
+        @include button-single();
+        @include button-single-dark();
+        margin-top: 30px;
+        width: 200px;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+             width: initial;
         }
 
-        @include three-column-size() {
-            max-width: 275px;
-            width: 33.33333%;
+        &:hover {
+            @include button-single-dark-hover();
+        }
+
+
+    }
+}
+
+.c-card-section--v-related-articles {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: none;
+    }
+}
+
+.c-card-section--tg-articles,
+.c-card-section--v-articles {
+    background-color: $vanilla-ice;
+    margin: 0;
+    max-width: none;
+    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: $DESKTOP_SLICE_MARGIN;
+    }
+
+    .c-card-section__title {
+        @include font("MILLER_DISPLAY", 16px, 400, 16px);
+        color: $mine-shaft;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        margin-top: 0;
+        text-transform: uppercase;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            @include font-size(20px);
+            @include line-height(20px);
+        }
+    }
+
+    .c-card-list {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-right: 340px;
         }
     }
 }
 
-.c-card-list--tg-header-articles {
-    margin: -10px -10px;
+.c-card-section__constrain {}
+.c-card-section__logo {}
+.c-card-section__title {}
+.c-card-section__btn {
 
-    .c-card-list__item {
-        display: inline-block;
-        padding: 0 10px;
-        margin: 10px 0;
-        width: 100%;
-
-        @include two-column-size() {
-            width: 50%;
-        }
-
-        @include four-column-size() {
-            width: 33.33333%;
-        }
-    }
-}
-
-.c-card-list--tg-articles {
-   margin: -10px -10px;
-
-   .c-card-list__item {
-       display: inline-block;
-       padding: 0 10px;
-       margin: 10px 0;
-       width: 100%;
-       //@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {}
-
-       .c-card {
-           //border-top: 1px solid $silver;
-           padding-top: 10px;
-
-           @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-               padding-top: 20px;
-           }
-
-           //&.c-card--dark {
-           //
-           //}
-       }
-
-       &:first-child {
-           .c-card {
-               border-top: none;
-               padding-top: 0;
-
-               //&.c-card--dark {
-               //
-               //}
-           }
-       }
-   }
-}
-
-.c-card-list--tg-articles-grid,
-.c-card-list--v-articles {
-    margin: -10px -10px;
-
-    .c-card-list__item {
-        display: inline-block;
-        padding: 0 10px;
-        margin: 10px 0;
-        width: 100%;
-
-        @include one-column-size() {
-            .c-card {
-                //border-top: 1px solid $silver;
-                padding-top: 10px;
-
-                //&.c-card--dark {
-                //
-                //}
-            }
-
-            &:first-child {
-                .c-card {
-                    border-top: none;
-                    padding-top: 0;
-
-                    //&.c-card--dark {
-                    //
-                    //}
-                }
-            }
-        }
-
-        @include two-column-size() {
-            width: 50%;
-        }
-
-        @include four-column-size() {
-            width: 33.33333%;
-        }
-    }
-}
-
-.c-card-list--mag-magazines {
-    margin: -10px -10px;
-
-    .c-card-list__item {
-        display: inline-block;
-        margin: 10px 0;
-        padding: 0 10px;
-        width: 50%;
-    }
-
-    @include four-column-size() {
-        margin: -17px -9px;
-
-        .c-card-list__item {
-            margin: 17px 0;
-            padding: 0 9px;
-            width: 25%;
-        }
-    }
 }
