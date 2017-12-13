@@ -278,6 +278,7 @@
 .a-header__teaser {
     margin-top: 10px;
     margin-bottom: 20px;
+
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin-top: 10px;
         margin-bottom: 30px;
@@ -321,6 +322,10 @@
     margin-top: 20px;
     text-align: center;
     text-transform: uppercase;
+
+     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+         text-align: left;
+     }
 }
 
 .a-header__byline-item {
@@ -392,6 +397,7 @@ li.a-header__meta-item {
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin-bottom: 13px;
+        margin-top: 0px;
         text-align: left;
     }
 }
