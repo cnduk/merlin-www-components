@@ -171,6 +171,14 @@
     }
 }
 
+.c-card-section--c-video-articles{
+   margin-top: 40px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 60px;
+    }
+}
+
 .c-card-section--v-related-articles {
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         display: none;
