@@ -34,6 +34,7 @@ import {
     isAdNative,
     setGlobalNamespace
 } from '../utils';
+import initLinkTracking from './analytics';
 
 var DEFAULT_INIT_CONFIG = {
     'OPEN_X_URL': null,
@@ -67,6 +68,7 @@ export default function init(config){
     CardList.init();
     initInternationalRedirect();
     displayHiringMessage();
+    initLinkTracking();
 
     // Global namespace stuffs
     // Don't just use the abbreviation in case something else in the page
