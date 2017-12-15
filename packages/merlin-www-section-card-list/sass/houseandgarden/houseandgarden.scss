@@ -64,7 +64,8 @@
     }
 }
 
-.c-card-section--c-tag {
+.c-card-section--c-tag,
+.c-card-section--mag-articles {
     .c-card-section__title {
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
