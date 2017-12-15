@@ -69,7 +69,9 @@
 
 .c-card-list--a-recommended,
 .c-card-list--mag-articles,
-.c-card-list--v-genre-articles {
+.c-card-list--v-genre-articles,
+.c-card-list--tg-articles,
+.c-card-list--v-articles {
     .c-card__image__icon {
         background-color: $vanilla-ice;
 
@@ -80,8 +82,7 @@
 }
 
 .c-card-list--c-video-articles {
-
-    &:hover {
+    .c-card:hover {
         .c-card__title {
             span {
                 box-shadow: inset 0 -0.4em 0 0 $trout;
@@ -241,18 +242,18 @@
 
 .c-card-list--tg-articles-grid,
 .c-card-list--v-articles {
-    margin: -10px -10px;
+    margin: -20px -10px;
 
     .c-card-list__item {
         display: inline-block;
         padding: 0 10px;
-        margin: 10px 0;
+        margin: 20px 0;
         width: 100%;
 
         @include one-column-size() {
             .c-card {
                 //border-top: 1px solid $silver;
-                padding-top: 10px;
+                padding-top: 20px;
 
                 //&.c-card--dark {
                 //
