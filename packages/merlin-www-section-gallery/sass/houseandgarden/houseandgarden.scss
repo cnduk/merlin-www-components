@@ -3,36 +3,36 @@
 @import '../wireframe/wireframe';
 
 .c-gallery {
-	box-sizing: border-box;
-	margin-bottom: $MOBILE_SLICE_MARGIN;
-	margin-top: $MOBILE_SLICE_MARGIN;
-	max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
-	padding-left: $MOBILE_SIDE_GUTTER;
-	padding-right: $MOBILE_SIDE_GUTTER;
+    box-sizing: border-box;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+    margin-top: $MOBILE_SLICE_MARGIN;
+    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-	    margin-bottom: $TABLET_SLICE_MARGIN;
-	    margin-top: $TABLET_SLICE_MARGIN;
-	    padding-left: $TABLET_SIDE_GUTTER;
-	    padding-right: $TABLET_SIDE_GUTTER;
-	}
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: $TABLET_SLICE_MARGIN;
+        margin-top: $TABLET_SLICE_MARGIN;
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-	    margin-bottom: $DESKTOP_SLICE_MARGIN;
-	    margin-top: $DESKTOP_SLICE_MARGIN;
-	    padding-left: $DESKTOP_SIDE_GUTTER;
-	    padding-right: $DESKTOP_SIDE_GUTTER;
-	}
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+        margin-top: $DESKTOP_SLICE_MARGIN;
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
 }
 
 .c-gallery__wrapper {
-	&:hover {
-		.c-gallery__title {
-  			span {
-  				box-shadow: inset 0 -0.4em 0 0 $careys-pink;
-  			}
-		}
-	}
+    &:hover {
+        .c-gallery__title {
+            span {
+                box-shadow: inset 0 -0.4em 0 0 $careys-pink;
+            }
+        }
+    }
 }
 
 .c-gallery__image {
@@ -40,95 +40,103 @@
 }
 
 .c-gallery__image-remaining {
-	background-color: rgba($black, 0.5)
+    background-color: rgba($black, 0.5)
 }
 
 .c-gallery__image-remaining__text {
     border: 1px solid $white;
-	padding: 7px;
-	white-space: nowrap;
-
-
+    padding: 5px 7px;
+    white-space: nowrap;
 }
 
 .c-gallery__image-remaining__text-prefix {
-	@include font("BRANDON GROTESQUE", 25px, 700, 25px);
-	color: $white;
-	letter-spacing: 0px;
-	vertical-align: middle;
+    @include font("BRANDON GROTESQUE", 20px, 700, 20px);
+    color: $white;
+    letter-spacing: 0px;
+    vertical-align: middle;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font-size(25px);
+        @include line-height(25px);
+    }
 }
 
 .c-gallery__image-remaining__text-value {
-	@include font("BRANDON GROTESQUE", 35px, 700, 35px);
-	color: $white;
-	letter-spacing: 0px;
-	vertical-align: middle;
+    @include font("BRANDON GROTESQUE", 30px, 700, 30px);
+    color: $white;
+    letter-spacing: 0px;
+    vertical-align: middle;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font-size(35px);
+        @include line-height(35px);
+    }
 }
 
 .c-gallery__text {
-	padding: 20px 20px 0px 20px;
-	text-align: center;
+    padding: 20px 20px 0px 20px;
+    text-align: center;
 
-	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
-		border-top: 1px solid $mine-shaft;
-		border-right: 1px solid $mine-shaft;
-		border-bottom: 1px solid $mine-shaft;
-		padding: 50px;
-		text-align: left;
-		vertical-align: top;
-	}
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        border-top: 1px solid $mine-shaft;
+        border-right: 1px solid $mine-shaft;
+        border-bottom: 1px solid $mine-shaft;
+        padding: 50px;
+        text-align: left;
+        vertical-align: top;
+    }
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		text-align: left;
-	}
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        text-align: left;
+    }
 }
 
 .c-gallery__icon {
-	display: none;
+    display: none;
 }
 
 .c-gallery__tag {
-	@include font("BRANDON GROTESQUE", 10px, 700, 10px);
-	color: $mine-shaft;
-	letter-spacing: 1px;
-	margin-bottom: 5px;
-	margin-top: 0;
-	text-transform: uppercase;
+    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
+    color: $mine-shaft;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    text-transform: uppercase;
 
-	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
-		margin-bottom: 10px;
-	}
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        margin-bottom: 10px;
+    }
 }
 
 .c-gallery__title {
-	@include font("MILLER_DISPLAY", 25px, 700, 27px);
-	color: $mine-shaft;
-	letter-spacing: 0.5px;
-	margin: 7px 0 10px 0;
+    @include font("MILLER_DISPLAY", 25px, 700, 27px);
+    color: $mine-shaft;
+    letter-spacing: 0.5px;
+    margin: 7px 0 10px 0;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-    	@include font-size(35px);
-    	@include line-height(38px);
-    	letter-spacing: 0px;
-    	margin: 10px 0 10px 0;
-	}
+        @include font-size(35px);
+        @include line-height(38px);
+        letter-spacing: 0px;
+        margin: 10px 0 10px 0;
+    }
 }
 
 .c-gallery__teaser {
-	display: none;
+    display: none;
 
-	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
-		@include font("MILLER_DISPLAY", 16px, 400, 21px);
-		color: $mine-shaft;
-		display: block;
-		font-style: italic;
-		letter-spacing: 0px;
-		margin: 10px 0 15px 0;
-	}
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font("MILLER_DISPLAY", 16px, 400, 21px);
+        color: $mine-shaft;
+        display: block;
+        font-style: italic;
+        letter-spacing: 0px;
+        margin: 10px 0 15px 0;
+    }
 }
 
 .c-gallery__separator {
-	display: none;
+    display: none;
 }
 
 .c-gallery__byline {
@@ -140,8 +148,8 @@
     text-transform: uppercase;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-    	margin-bottom: 10px;
-    	margin-top: 15px;
+        margin-bottom: 10px;
+        margin-top: 15px;
     }
 }
 
@@ -159,7 +167,7 @@ ul.c-gallery__meta {
     text-transform: uppercase;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-    	margin-top: 10px;
+        margin-top: 10px;
     }
 }
 
