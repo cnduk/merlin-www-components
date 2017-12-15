@@ -76,12 +76,11 @@ export function getEventValues(domLink){
     var actionType = isButton ? 'Button' : 'Link';
     var actionLabel = isInternal ? 'Internal Click' : 'Outbound Click';
 
-    var eventCategory = isButton ? 'In-content Links' : 'Inline Links';
     var eventAction = actionType + ': ' + actionLabel;
     var eventLabel = url + ' | ' + domLink.innerText;
 
     return {
-        eventCategory: eventCategory,
+        eventCategory: 'In-content Links',
         eventAction: eventAction,
         eventLabel: eventLabel
     };
