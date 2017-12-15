@@ -161,32 +161,43 @@
 
 .ad--tag-header {
     .ad__block {
-        background-color: $wild-sand;
+        background-color: $white;
         padding: 20px 0;
+        border-top: 1px solid $mercury;
+        border-bottom: 1px solid $mercury;
+        margin-top: -1px;
     }
+
+    &.ad--native-large {
+        .ad__block {
+            background-color: transparent;
+            padding: 0;
+        }
+    }
+
 }
 
 .ad--tag-rail {
-    margin: 10px (-$MOBILE_SIDE_GUTTER + 20) 10px (-$MOBILE_SIDE_GUTTER + 20);
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin: 10px (-$TABLET_SIDE_GUTTER + 20) 10px (-$TABLET_SIDE_GUTTER + 20);
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        clear: right;
-        float: right;
-        margin: 20px -340px 0 40px;
-
-        &.stick-wrapper--fixed {
-            margin-right: -40px;
-        }
-    }
+    margin: 30px (-$MOBILE_SIDE_GUTTER + 20) 30px (-$MOBILE_SIDE_GUTTER + 20);
 
     .ad__block {
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             margin: -20px 0;
             padding: 20px 0;
+        }
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin: 30px (-$TABLET_SIDE_GUTTER + 20) 30px (-$TABLET_SIDE_GUTTER + 20);
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        clear: right;
+        float: right;
+        margin: 10px -340px 0 40px;
+
+        &.stick-wrapper--fixed {
+            margin-right: -40px;
         }
     }
 }
