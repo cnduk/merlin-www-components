@@ -1,12 +1,16 @@
 // -------------------- //
 // Portrait
 // -------------------- //
-@mixin card-portrait() {
-
-}
+@mixin card-portrait() {}
 
 @mixin card-portrait-small() {
-    .c-card {}
+    &:hover {
+        .c-card__title {
+            span {
+                box-shadow: inset 0 1em 0 0 $careys-pink;
+            }
+        }
+    }
     .c-card__link {}
 
     .c-card__obj {}

@@ -2,6 +2,13 @@
 // Video Related
 // -------------------- //
 @mixin card-v-related() {
+    &:hover {
+        .c-card__title {
+            span {
+                box-shadow: inset 0 1em 0 0 $trout;
+            }
+        }
+    }
     .c-card__image__icon {
         background-color: $ebony-clay;
 
@@ -14,6 +21,9 @@
     .c-card__byline,
     .c-card__teaser {
         color: $white;
+    }
+    .c-card__title {
+        margin-top: 0;
     }
     ul.c-card__meta,
     li.c-card__meta-item {
