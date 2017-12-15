@@ -98,5 +98,9 @@
 
     .c-footer__list-item--links {
         border-bottom: none;
+
+        .c-footer__list-item {
+            border-top: none;
+        }
     }
 }
