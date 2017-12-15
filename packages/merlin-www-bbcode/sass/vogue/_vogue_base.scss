@@ -457,8 +457,24 @@
 /**
  * Button
  */
-.bb-button {
+.bb-button {}
+.bb-button--light {
+    @include button-single();
+    @include button-single-light();
 
+    &:hover,
+    &:focus {
+        @include button-single-light-hover();
+    }
+}
+.bb-button--dark {
+    @include button-single();
+    @include button-single-dark();
+
+    &:hover,
+    &:focus {
+        @include button-single-dark-hover();
+    }
 }
 
 
