@@ -56,12 +56,11 @@
         color: $mine-shaft;
         letter-spacing: 1px;
         margin-bottom: 7px;
-        margin-top: 0px;
+        margin-top: 0;
         text-transform: uppercase;
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             margin-bottom: 10px;
-            margin-top: 20px;
         }
     }
 
@@ -143,7 +142,7 @@
 
     .c-card__obj {}
     .c-card__obj__header {
-        padding-right: 20px;
+        padding-right: 30px;
         width: 35%;
     }
 
@@ -179,12 +178,11 @@
         color: $mine-shaft;
         letter-spacing: 1px;
         margin-bottom: 7px;
-        margin-top: 0px;
+        margin-top: 0;
         text-transform: uppercase;
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             margin-bottom: 10px;
-            margin-top: 20px;
         }
     }
 
