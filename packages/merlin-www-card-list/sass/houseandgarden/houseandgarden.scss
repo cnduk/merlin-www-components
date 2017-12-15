@@ -99,13 +99,6 @@
         margin: 10px 0;
         width: 100%;
 
-        //& + .c-card-list__item {
-        //    .c-card {
-        //        border-top: 1px solid $tundora;
-        //        padding-top: 10px;
-        //    }
-        //}
-
         .c-card__images {
             &:after {
                 @include font("BRANDON GROTESQUE", 10px, 700, 10px);
@@ -116,7 +109,7 @@
                 left: 0;
                 letter-spacing: 1px;
                 opacity: 0;
-                padding: 5px;
+                padding: 10px;
                 position: absolute;
                 text-transform: uppercase;
                 white-space: nowrap;
