@@ -793,9 +793,6 @@ h4.bb-video__title {
 .bb-card__image {
     background-color: $dove-gray;
     padding-top: 100%;
-    @include min-screen($CARD_SWITCHER_WIDTH) {
-        padding-top: 66.66666%;
-    }
 }
 
 .bb-card__image__icon {
