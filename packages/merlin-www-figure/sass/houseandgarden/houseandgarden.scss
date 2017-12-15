@@ -80,11 +80,12 @@ li .c-figure__toolbar-listitem--more {
         > p {
             @include font-size(14px);
             @include line-height(17px);
+            margin-bottom: 10px;
         }
     }
 }
 .c-figure__credit {
-    @include font('BRANDON GROTESQUE', 10px, 'BOLD', 10px);
+    @include font('BRANDON GROTESQUE', 8px, 400);
     color: $dove-gray;
     letter-spacing: 1px;
     margin-top: 10px;
