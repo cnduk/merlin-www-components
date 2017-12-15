@@ -109,19 +109,18 @@
     padding-top: 0;
 }
 
-.c-card-section--c-video-articles,
 .c-card-section--v-related-articles {
     background-color: $ebony-clay;
     margin: 0;
     max-width: none;
-    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+    padding: 20px 20px 40px 20px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding: $TABLET_SLICE_MARGIN;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: $DESKTOP_SLICE_MARGIN;
+        padding: 0 20px 20px 20px;
     }
 
     .c-card-section__title {
@@ -173,10 +172,65 @@
 }
 
 .c-card-section--c-video-articles{
-   margin-top: 40px;
+    background-color: $ebony-clay;
+    margin: 40px 0 0 0;
+    max-width: none;
+    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: $TABLET_SLICE_MARGIN;
         margin-top: 60px;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: $DESKTOP_SLICE_MARGIN;
+    }
+
+    .c-card-section__title {
+        @include font("BRANDON GROTESQUE", 13px, 700, 13px);
+        color: $white;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        margin-top: 0;
+        text-transform: uppercase;
+    }
+
+    .c-card-section__logo {
+        height: 42px;
+        margin: 0 auto 30px auto;
+        width: 268px;
+
+        svg {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+
+            path {
+                fill: $WHITE;
+            }
+        }
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            height: 52px;
+            width: 331px;
+        }
+    }
+
+    .c-card-section__btn {
+        @include button-single();
+        @include button-single-dark();
+        margin-top: 30px;
+        width: 200px;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+             width: initial;
+        }
+
+        &:hover {
+            @include button-single-dark-hover();
+        }
+
+
     }
 }
 
