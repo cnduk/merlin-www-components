@@ -219,9 +219,9 @@
         background: $mine-shaft;
         content:"";
         display: block;
-        height: 7px;
+        height: 4px;
         margin-bottom: 12px;
-        width: 30px;
+        width: 25px;
     }
 }
 
@@ -230,25 +230,18 @@
 // -------------------- //
 .bb-dropcap {}
 .bb-dropcap--letter {
-    @include font("MILLER_DISPLAY", 86px, 400, 78px);
+    @include font("MILLER_DISPLAY", 80px, 400, 85px);
     box-sizing: border-box;
     color: $mine-shaft;
     float: left;
     letter-spacing: 0;
-    margin-right: 32px;
-    margin-bottom: 10px;
+    margin-right: 30px;
+    margin-bottom: 0;
     text-transform: capitalize;
 
-    .is-macos &,
-    .is-linux & {
-        //padding-top: 8px;
-    }
-
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(128px);
-        @include line-height(117px);
-        margin-right: 52px;
-        margin-bottom: 0px;
+        @include font-size(90px);
+        @include line-height(90px);
     }
 }
 
@@ -256,14 +249,22 @@
 // Embed
 // -------------------- //
 .bb-embed {
-    //margin: 40px 0;
+    margin: 30px 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin: 40px 0;
+    }
 }
 
 // -------------------- //
 // Interactive
 // -------------------- //
 .bb-interactive {
-    //margin: 40px 0;
+    margin: 30px 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin: 40px 0;
+    }
 }
 
 // -------------------- //
@@ -276,13 +277,13 @@
 }
 
 .bb-blockquote__quote {
-    @include font("BRANDON GROTESQUE", 18px, 400, 27px);
-    color: $silver-chalice;
+    @include font("MILLER_DISPLAY", 17px, 400, 23px);
+    color: $dove-gray;
     margin: 0;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(21px);
-        @include line-height(30px);
+        @include font-size(19px);
+        @include line-height(25px);
     }
 }
 
@@ -291,8 +292,9 @@
 }
 
 .bb-blockquote__credit {
-    @include font("BRANDON GROTESQUE", 10px, 400, 10px);
+    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
     color: $silver-chalice;
+    letter-spacing: 1px;
     text-transform: uppercase;
     margin-top: 15px;
 }
@@ -301,8 +303,12 @@
 // Pullquote
 // -------------------- //
 .bb-pullquote {
-    margin: 40px 0;
+    margin: 30px 0;
     text-align: center;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin: 40px 0;
+    }
 }
 
 .bb-pullquote__quote {
@@ -334,7 +340,7 @@
 // -------------------- //
 .bb-infobox {
     border: 1px solid $mine-shaft;
-    margin: 40px 0;
+    margin: 30px 0;
     overflow: visible;
     // 11px is the negative top on the title
     padding: (20px + 11px) 20px 30px 20px;
@@ -342,6 +348,7 @@
     text-align: center;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin: 40px 0;
         padding: (30px + 11px) 30px 40px 30px;
     }
 }
@@ -427,7 +434,7 @@
 // -------------------- //
 .bb-callout {
     border: 1px solid $mine-shaft;
-    margin: 40px 0;
+    margin: 30px 0;
     padding: 20px 20px 30px;
 
     > *:first-child {
@@ -439,6 +446,7 @@
     }
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin: 40px 0;
         padding: 30px 30px 40px;
     }
 }
@@ -462,14 +470,13 @@
 }
 
 .bb-figure__caption {
-
     .bb-p {
         margin: 0;
     }
 }
 
 .bb-figure__credit {
-    @include font("BRANDON GROTESQUE", 10px, 400, 10px);
+    @include font("BRANDON GROTESQUE", 8px, 400);
     color: $dove-gray;
     letter-spacing: 1px;
     margin-top: 10px;
@@ -480,82 +487,74 @@
 // -------------------- //
 // Question
 // -------------------- //
-.bb-question {
-    margin: 40px 0 20px;
+// -------------------- //
+// Answer
+// -------------------- //
+
+.bb-question,
+.bb-answer {
+    margin: 30px 0;
     position: relative;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin: 40px 0;
+    }
+}
+.bb-question + .bb-answer {
+    margin-top: -20px;
 }
 
-.bb-question__question {
+.bb-question__question,
+.bb-answer__answer {
     p {
-        @include font("MILLER_DISPLAY", 19px, 800, 19px);
+        @include font("MILLER_DISPLAY", 17px, 400, 23px);
         color: $mine-shaft;
         letter-spacing: 0;
         margin-bottom: 10px;
-        text-indent: 40px;
+        text-indent: 30px;
+
+        @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            @include font-size(19px);
+            @include line-height(25px);
+            text-indent: 35px;
+        }
     }
 }
 
-.bb-question__q {
-    @include font("BRANDON GROTESQUE", 19px, 700, 19px);
-    color: $careys-pink;
+.bb-question__q,
+.bb-answer__a {
+    @include font("BRANDON GROTESQUE", 19px, 700, 20px);
+    color: $mine-shaft;
     letter-spacing: 0;
     left: 0;
     position: absolute;
     text-indent: 0;
-}
 
-.bb-question__separator {
-    display: none;
-}
-
-.bb-question__author {
-    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
-    color: $mine-shaft;
-    letter-spacing: 0;
-    text-indent: 40px;
-    text-transform: uppercase;
-}
-
-.bb-question__by {
-    display: none;
-}
-
-// -------------------- //
-// Answer
-// -------------------- //
-.bb-answer {
-    margin: 20px 0 20px;
-    position: relative;
-}
-
-.bb-answer__answer {
-    p {
-        margin-bottom: 10px;
-        text-indent: 40px;
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(21px);
+        @include line-height(24px);
     }
 }
 
 .bb-answer__a {
-    @include font("BRANDON GROTESQUE", 19px, 700, 19px);
     color: $careys-pink;
-    left: 0;
-    letter-spacing: 0;
-    position: absolute;
-    text-indent: 0;
 }
 
-.bb-question__separator {
+.bb-question__separator,
+.bb-answer__separator {
     display: none;
 }
 
+.bb-question__author,
 .bb-answer__author {
     @include font("BRANDON GROTESQUE", 10px, 700, 10px);
     color: $mine-shaft;
     letter-spacing: 0;
-    text-indent: 40px;
+    text-indent: 0;
     text-transform: uppercase;
 }
 
+.bb-question__by,
 .bb-answer__by {
     display: none;
 }
@@ -564,11 +563,12 @@
 // Gallery
 // -------------------- //
 .bb-gallery {
-    border-bottom: 1px solid $silver;
-    border-left: 1px solid $silver;
-    border-right: 1px solid $silver;
-    border-top: 1px solid $silver;
-    margin: 40px 0;
+    border: 1px solid $silver;
+    margin: 30px 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin: 40px 0;
+    }
 }
 
 .bb-gallery__icon {
@@ -668,11 +668,12 @@ ul li.bb-gallery__col {
 // Video
 // -------------------- //
 .bb-video {
-    border-bottom: 1px solid $silver;
-    border-left: 1px solid $silver;
-    border-right: 1px solid $silver;
-    border-top: 1px solid $silver;
-    margin: 40px 0;
+    border: 1px solid $silver;
+    margin: 30px 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin: 40px 0;
+    }
 }
 
 .bb-video__title-icon {
@@ -738,8 +739,12 @@ h4.bb-video__title {
 // -------------------- //
 .bb-card {
     border: 1px solid $silver;
-    margin: 40px 0;
+    margin: 30px 0;
     padding: 15px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin: 40px 0;
+    }
 
     @include min-screen($CARD_SWITCHER_WIDTH) {
         padding: 20px;
