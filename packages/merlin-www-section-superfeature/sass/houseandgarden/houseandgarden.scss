@@ -49,6 +49,10 @@
         height: 100%;
         width: 100%;
     }
+
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        padding-top: 66.67%;
+    }
 }
 
 .c-superfeature__content {
