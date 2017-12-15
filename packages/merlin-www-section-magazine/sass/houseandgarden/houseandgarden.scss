@@ -6,39 +6,39 @@
 @import '../wireframe/wireframe';
 
 .c-magazine {
-	background-color: $vanilla-ice;
-	margin: $MOBILE_SLICE_MARGIN 0;
+    background-color: $vanilla-ice;
+    margin: $MOBILE_SLICE_MARGIN 0;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-		margin-bottom: $TABLET_SIDE_GUTTER;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: $TABLET_SIDE_GUTTER;
         margin-left: $TABLET_SIDE_GUTTER;
         margin-right: $TABLET_SIDE_GUTTER;
-		margin-top: $TABLET_SIDE_GUTTER;
+        margin-top: $TABLET_SIDE_GUTTER;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin-left: 0;
         margin-right: 0;
-		margin-top: $DESKTOP_SIDE_GUTTER;
+        margin-top: $DESKTOP_SIDE_GUTTER;
     }
 }
 
 .c-magazine__wrapper {
-	box-sizing: border-box;
-	margin: 0 auto;
-	max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
-	overflow: hidden;
-	padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
-	position: relative;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    overflow: hidden;
+    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+    position: relative;
 
-	@include tablet-size {
-	    padding: $TABLET_SLICE_MARGIN $TABLET_SIDE_GUTTER;
-	}
+    @include tablet-size {
+        padding: $TABLET_SLICE_MARGIN $TABLET_SIDE_GUTTER;
+    }
 
-	@include desktop-size {
-	    padding-left: $DESKTOP_SIDE_GUTTER;
-	    padding-right: $DESKTOP_SIDE_GUTTER;
-	}
+    @include desktop-size {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
 }
 
 .c-magazine__covers__wrapper {
@@ -48,84 +48,84 @@
 }
 
 .c-magazine__cover--print {
-	 img {
-		 @include desktop-size {
-			 width: 65%;
-		 }
-	 }
+     img {
+         @include desktop-size {
+             width: 65%;
+         }
+     }
 }
 .c-magazine__cover--tablet {
-	img {
-		border-radius: 8px;
-		padding: 16px 12px;
+    img {
+        border-radius: 8px;
+        padding: 16px 12px;
 
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-			border-radius: 15px;
-			padding: 30px 20px;
-			right: 0;
-			width: 40%;
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            border-radius: 15px;
+            padding: 30px 20px;
+            right: 0;
+            width: 40%;
 
-		}
-	}
+        }
+    }
 }
 
 .c-magazine__cover__image {
-	img {
-		background-color: $black;
-	}
+    img {
+        background-color: $black;
+    }
 }
 
 .c-magazine__title {
-	display: none;
+    display: none;
 }
 
 .c-magazine__content {}
 
 .c-magazine__content__title {
-	@include font("BRANDON GROTESQUE", 10px, 700, 10px);
-	color: $mine-shaft;
-	display: block;
-	letter-spacing: 1px;
-	margin-bottom: 7px;
-	margin-top: 20px;
-	text-align: center;
-	text-transform: uppercase;
+    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
+    color: $mine-shaft;
+    display: block;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-		margin-top: 0px;
-		text-align: left;
-	}
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 0px;
+        text-align: left;
+    }
 }
 
 .c-magazine__content__date {
-	@include font("MILLER_DISPLAY", 25px, 700, 27px);
-	color: $mine-shaft;
-	color: $mine-shaft;
-	letter-spacing: 0px;
-	margin-bottom: 20px;
-	margin-top: 7px;
-	text-align: center;
-	text-transform: uppercase;
+    @include font("MILLER_DISPLAY", 25px, 700, 27px);
+    color: $mine-shaft;
+    color: $mine-shaft;
+    letter-spacing: 0px;
+    margin-bottom: 20px;
+    margin-top: 7px;
+    text-align: center;
+    text-transform: uppercase;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-		@include font-size(40px);
-		@include line-height(43px);
-		letter-spacing: 0px;
-		text-align: left;
-	}
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(40px);
+        @include line-height(43px);
+        letter-spacing: 0px;
+        text-align: left;
+    }
 }
 
 .c-magazine__btn {
-	@include button-single();
-	@include button-single-light();
-	margin-top: 30px;
-	width: 200px;
+    @include button-single();
+    @include button-single-light();
+    margin-top: 30px;
+    width: 200px;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-		width: initial;
-	}
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        width: initial;
+    }
 
-	&:hover {
-		@include button-single-light-hover();
-	}
+    &:hover {
+        @include button-single-light-hover();
+    }
 }
