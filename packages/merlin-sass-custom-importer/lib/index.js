@@ -115,7 +115,11 @@ module.exports = function(merlinConfig={}, scopeName=null){
         }
 
         // sassUrl = correctSassPartials(sassUrl);
-        sassUrl = correctRealPath(sassUrl);
+        try {
+            sassUrl = correctRealPath(sassUrl);
+        } catch(err) {
+            return err;
+        }
 
         if(SESSION.has(sassUrl)){
             LOGGER.log('SKIP', `SASS${scope}::Skipping ${sassUrl}`);
