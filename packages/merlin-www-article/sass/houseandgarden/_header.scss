@@ -24,6 +24,10 @@
                 text-align: center;
             }
         }
+
+        .a-header__content {
+            padding-right: 0;
+        }
     }
 }
 .a-header--gallery {}
@@ -181,7 +185,7 @@
 }
 
 .a-header__image-credit {
-    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
+    @include font("BRANDON GROTESQUE", 8px, 700, 8px);
     color: $white;
     letter-spacing: 1px;
     margin-bottom: 5px;
