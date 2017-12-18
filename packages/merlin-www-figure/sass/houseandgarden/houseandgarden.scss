@@ -70,6 +70,18 @@ li .c-figure__toolbar-listitem--more {
     color: $mine-shaft;
     margin: 0 0 5px 0;
     text-transform: uppercase;
+
+    &:before {
+        background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M1.09,20,10,16l8.91,4L10,0,1.09,20' fill='#000'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        content: '';
+        display: inline-block;
+        height: 12px;
+        margin: 0 5px 0 0;
+        position: relative;
+        top: 2px;
+        width: 10px;
+    }
 }
 .c-figure__caption {
     @include font('MILLER_DISPLAY', 14px, null, 17px);
