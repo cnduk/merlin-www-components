@@ -20,6 +20,22 @@
 .c-superfeature__link {}
 
 .c-superfeature__images {}
+.c-superfeature__images--multiple {
+    .c-superfeature__image {
+        width: 50%;
+    }
+    .c-superfeature__image:nth-child(n+3) {
+        display: none;
+    }
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        .c-superfeature__image {
+            width: 25%;
+        }
+        .c-superfeature__image:nth-child(n+3) {
+            display: inline-block;
+        }
+    }
+}
 .c-superfeature__image {
 	&:after {
 		background-color: rgba($MUSTASAARI, 0.2);
