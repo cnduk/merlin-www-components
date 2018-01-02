@@ -93,6 +93,10 @@
     @include byline-prefix;
 }
 
+.a-header__date {
+    @include byline;
+}
+
 .a-header__podcast {
     @include font-size(13px);
 }
@@ -303,7 +307,7 @@ li.a-header__share-item {
 }
 
 .a-header__event {
-    background: $COLOUR_BG_SECONDARY;
+    border: 2px solid #000;
     margin-top: 20px;
     padding: 15px;
     text-align: center;
@@ -324,17 +328,21 @@ li.a-header__share-item {
 }
 
 .a-header__event-date {
-    @include font("GRAPHIK", 12px, 400, 15px, 20);
+    @include font("GRAPHIK", 11px, 400, 15px, 20);
     margin-top: 10px;
 }
 
 .a-header__event-btn {
-    @include font-size(13px);
-    display: block;
+    @include button-single;
+    @include button-single-light;
+
+    box-sizing: border-box;
+    display: inline-block;
     margin-top: 20px;
-    text-align: center;
-    @include tablet-size {
-        display: inline-block;
+    width: 100%;
+
+    &:hover, &:focus {
+        @include button-single-light-hover;
     }
 }
 

@@ -64,9 +64,9 @@
 }
 
 .a-event-author {
-    background: $COLOUR_BG_SECONDARY;
-    padding: 15px;
+    border: 2px solid #000;
     box-sizing: border-box;
+    padding: 15px;
 }
 .a-event-author__image {
     margin-bottom: 12px;
@@ -86,9 +86,19 @@
     @include font("GRAPHIK", 11px, null, 21px);
 }
 
+.a-event-author__separator--date {
+    margin: 10px 0;
+}
+
 .a-event-author__btn {
-    @include font-size(11px);
-    display: block;
+    @include button-single;
+    @include button-single-light;
+
     margin-top: 20px;
+    display: block;
     text-align: center;
+
+    &:hover, &:focus {
+        @include button-single-light-hover;
+    }
 }
