@@ -18,5 +18,10 @@
   "homepage": "https://github.com/cnduk/merlin-www-components#readme",
   "devDependencies": {
     "lerna": "2.0.0-beta.38"
+  },
+  "dependencies": {
+    "@cnbritain/merlin-sass-custom-importer": "^1.2.2",
+    "glob": "^7.1.2",
+    "node-sass": "^4.7.2"
   }
 }
