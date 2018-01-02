@@ -23,7 +23,7 @@
 
 	a {
 		color: inherit;
-		text-decoration: underline;
+		border-bottom: 1px $white solid;
 	}
 }
 
@@ -40,7 +40,7 @@
 
 @include desktop-size {
 	.c-cookie-warning {
-		padding: 20px 20px 20px 30px;
+		padding: 20px 20px 30px 20px;
 		width: 450px;
 	}
 }
