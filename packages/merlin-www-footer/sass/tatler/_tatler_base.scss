@@ -61,6 +61,11 @@ li.c-footer__list-item {
     height: 60px;
     letter-spacing: 1px;
     padding-left: $PADDING_SMALL;
+    margin: 0;
+
+    &:before {
+        display: none;
+    }
 
     a {
         text-decoration: none;
