@@ -6,6 +6,13 @@
 	background-color: $ebony-clay;
 	box-sizing: border-box;
 	padding: 30px 20px;
+	margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: table;
+        padding: 60px 0;
+    }
 }
 
 .srch-textbox {
