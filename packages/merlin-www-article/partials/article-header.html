@@ -86,9 +86,11 @@
                     {{/ data.syndication_profile }}
                 {{/ data.byline }}
 
-                {{# data.date }}
-                    <div class="a-header__date">{{ data.relative_time }}</div>
-                {{/ data.date }}
+                {{^ state.has_event_information }}
+                    {{# data.date }}
+                        <div class="a-header__date">{{ data.relative_time }}</div>
+                    {{/ data.date }}
+                {{/ state.has_event_information }}
             </div>
 
             {{# data.sponsor }}
