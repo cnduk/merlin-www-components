@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  * @module image
@@ -26,7 +26,7 @@ export default {
     /**
      * Initialises the loading of images
      */
-    'init': function(){
+    'init': function() {
         lazySizes.init();
     }
 
