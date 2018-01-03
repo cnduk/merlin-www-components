@@ -300,4 +300,24 @@
             width: 25%;
         }
     }
+
+    .c-card {
+
+        .c-card__title {
+            @include font-size(12px);
+
+                 @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+                     @include font-size(15px);
+                 }
+        }
+
+        &:hover {
+            .c-card__title {
+                span {
+                    border-bottom: 2px solid $careys-pink;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
 }
