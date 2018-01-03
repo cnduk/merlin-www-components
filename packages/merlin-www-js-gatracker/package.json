@@ -3,10 +3,16 @@
   "version": "1.3.7",
   "description": null,
   "main": "js/index.js",
-  "scripts": {},
+  "scripts": {
+    "lint": "eslint -c ../../.eslintrc.json ./js/**/*",
+    "prepublish": "npm run lint"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@cnbritain/merlin-www-js-utils": "^1.3.5"
+  },
+  "devDependencies": {
+    "eslint": "^4.14.0"
   }
 }
