@@ -1,5 +1,5 @@
 'use strict';
-/* globals SPR */
+/* globals SPR, gapi */
 
 import CONFIG_BRAND from '@cnbritain/merlin-www-common';
 import {
@@ -7,7 +7,9 @@ import {
     loadScript,
     loadSocialScripts
 } from '@cnbritain/merlin-www-js-utils/js/functions';
-import { ARTICLE_TYPES } from './constants';
+import {
+    ARTICLE_TYPES
+} from './constants';
 
 
 /**
@@ -16,9 +18,9 @@ import { ARTICLE_TYPES } from './constants';
  * @param  {Object} dest
  * @param  {String} type
  */
-export function bubbleEvent(src, dest, type){
-    src.on(type, function bubbleEvent_inner(e){
-        if(!e.bubbles) return;
+export function bubbleEvent(src, dest, type) {
+    src.on(type, function bubbleEvent_inner(e) {
+        if (!e.bubbles) return;
         dest.emit(type, e);
     });
 }
@@ -27,7 +29,7 @@ export function bubbleEvent(src, dest, type){
  * Checks if Simplereach is in the global namespace
  * @return {Boolean} [description]
  */
-export function hasSimpleReach(){
+export function hasSimpleReach() {
     return 'SPR' in window;
 }
 
@@ -35,7 +37,7 @@ export function hasSimpleReach(){
  * Loads the Simplereach script
  * @return {Promise}
  */
-export function loadSimplereach(){
+export function loadSimplereach() {
     var url = (document.location.protocol +
         '//d8rk54i4mohrb.cloudfront.net/js/reach.js');
     return loadScript(url);
@@ -45,15 +47,15 @@ export function loadSimplereach(){
  * Dispatches a simplereach collect
  * @param  {Object} config simple reach config
  */
-export function dispatchSimpleReachCollect(config){
-    if(hasSimpleReach()) SPR.Reach.collect(config);
+export function dispatchSimpleReachCollect(config) {
+    if (hasSimpleReach()) SPR.Reach.collect(config);
 }
 
 /**
  * Dispatches a simplereach stop
  */
-export function dispatchSimpleReachStop(){
-    if(hasSimpleReach()) SPR.stop();
+export function dispatchSimpleReachStop() {
+    if (hasSimpleReach()) SPR.stop();
 }
 
 /**
@@ -62,9 +64,9 @@ export function dispatchSimpleReachStop(){
  * @param  {Object|null} config simplereach config
  * @return {Promise}
  */
-export function dispatchSimpleReach(config){
-    if(hasSimpleReach()){
-        if(!config){
+export function dispatchSimpleReach(config) {
+    if (hasSimpleReach()) {
+        if (!config) {
             dispatchSimpleReachStop();
         } else {
             dispatchSimpleReachCollect(config);
@@ -72,8 +74,8 @@ export function dispatchSimpleReach(config){
         return Promise.resolve();
     } else {
         return loadSimplereach()
-            .then(function dispatchSimpleReach_inner(){
-                if(!config){
+            .then(function dispatchSimpleReach_inner() {
+                if (!config) {
                     dispatchSimpleReachStop();
                 } else {
                     dispatchSimpleReachCollect(config);
@@ -87,9 +89,9 @@ export function dispatchSimpleReach(config){
  * Updates social embeds in an article so they can render
  * @return {Promise}
  */
-export function updateSocialEmbeds(){
+export function updateSocialEmbeds() {
     return loadSocialScripts()
-        .then(function updateSocialEmbeds_inner(){
+        .then(function updateSocialEmbeds_inner() {
             // Instagram
             window.instgrm.Embeds.process();
 
@@ -98,15 +100,15 @@ export function updateSocialEmbeds(){
 
             // Facebook
             window.FB.init({
-                "version": 'v2.3',
-                "xfbml": true
+                'version': 'v2.3',
+                'xfbml': true
             });
 
             // Vine dont need to do anything as it uses postMessage and
             // maintains itself
 
             // Imgur, taken pretty much from their script
-            if(window.imgurEmbed.createIframe){
+            if (window.imgurEmbed.createIframe) {
                 window.imgurEmbed.createIframe();
             } else {
                 window.imgurEmbed.tasks++;
@@ -116,9 +118,9 @@ export function updateSocialEmbeds(){
             window.skyscanner.widgets.load();
 
             return Promise.resolve();
-        }, function updateSocialEmbeds_error(){
+        }, function updateSocialEmbeds_error() {
             console.error('Error', arguments);
-        })['catch'](function updateSocialEmbeds_catch(){
+        })['catch'](function updateSocialEmbeds_catch() {
             console.error('Error', arguments);
         });
 }
@@ -128,7 +130,7 @@ export function updateSocialEmbeds(){
  * @param  {HTMLElement} el
  * @return {String}    title of the article
  */
-export function getArticleTitle(el){
+export function getArticleTitle(el) {
     return el.querySelector('.a-header__title').innerText;
 }
 
@@ -137,7 +139,7 @@ export function getArticleTitle(el){
  * @param  {HTMLElement} el
  * @return {String}    url of the article
  */
-export function getArticleUrl(el){
+export function getArticleUrl(el) {
     return el.getAttribute('data-article-url');
 }
 
@@ -146,11 +148,11 @@ export function getArticleUrl(el){
  * @param  {HTMLElement} el
  * @return {Number}
  */
-export function getArticleType(el){
+export function getArticleType(el) {
     var articleType = el.getAttribute('data-article-type');
-    if(!articleType) return ARTICLE_TYPES.UNKNOWN;
+    if (!articleType) return ARTICLE_TYPES.UNKNOWN;
     articleType = articleType.toUpperCase();
-    if(ARTICLE_TYPES.hasOwnProperty(articleType)){
+    if (ARTICLE_TYPES.hasOwnProperty(articleType)) {
         return ARTICLE_TYPES[articleType];
     }
     return ARTICLE_TYPES.UNKNOWN;
@@ -161,11 +163,11 @@ export function getArticleType(el){
  * @param  {String} key
  * @return {*}
  */
-export function getStorage(key){
+export function getStorage(key) {
     var cnd = getNamespaceKey(CONFIG_BRAND.abbr);
     var prefix = cnd + '_';
     var storeKey = key;
-    if(key.substr(0, prefix.length) !== prefix){
+    if (key.substr(0, prefix.length) !== prefix) {
         storeKey = prefix + storeKey;
     }
     return window[cnd].Store.get(storeKey);
@@ -176,11 +178,11 @@ export function getStorage(key){
  * @param {String} key
  * @param {*} value
  */
-export function setStorage(key, val){
+export function setStorage(key, val) {
     var cnd = getNamespaceKey(CONFIG_BRAND.abbr);
     var prefix = cnd + '_';
     var storeKey = key;
-    if(key.substr(0, prefix.length) !== prefix){
+    if (key.substr(0, prefix.length) !== prefix) {
         storeKey = prefix + storeKey;
     }
     return window[cnd].Store.set(storeKey, val);
@@ -191,7 +193,7 @@ export function setStorage(key, val){
  * @param  {Article}  article
  * @return {Boolean}
  */
-export function isArticleGallery(article){
+export function isArticleGallery(article) {
     return article.type === ARTICLE_TYPES.GALLERY ||
         article.type === ARTICLE_TYPES['SHOW-SUMMARY'];
 }
@@ -200,14 +202,14 @@ export function isArticleGallery(article){
  * Loads youtube platform library and triggers a render on all subscribe
  * buttons
  */
-export function loadYoutubeSubscribe(){
+export function loadYoutubeSubscribe() {
     var promise = null;
-    if(!('gapi' in window)){
+    if (!('gapi' in window)) {
         promise = loadScript('https://apis.google.com/js/platform.js');
     } else {
         promise = Promise.resolve();
     }
-    promise.then(function(){
+    promise.then(function() {
         gapi.ytsubscribe.go();
     });
 }
