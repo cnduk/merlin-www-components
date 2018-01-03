@@ -4,11 +4,9 @@ import EventEmitter from 'eventemitter2';
 import {
     addClass,
     addEvent,
-    addEventOnce,
     delegate,
     getElementOffset,
     getWindowScrollTop,
-    hasClass,
     inherit,
     removeClass,
     removeEvent,
@@ -16,9 +14,7 @@ import {
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import ImageFigure from '@cnbritain/merlin-www-figure';
 
-import Article from './Article';
 import {
-    CLS_INFINITE_BTN,
     CLS_IMAGE_NAVIGATION,
     CLS_ARTICLE_GALLERY_IMAGE,
     CLS_ARTICLE_GALLERY_VIEW_THUMBNAIL,
@@ -62,12 +58,12 @@ function Gallery(el, options) {
     this.focusedImageIndex = -1;
 
     this._hooks = {
-        "imageElementscroll": null,
-        "navScroll": null,
-        "thumbnailClick": null
+        'imageElementscroll': null,
+        'navScroll': null,
+        'thumbnailClick': null
     };
 
-    this.parentArticle = _options.parentArticle || null
+    this.parentArticle = _options.parentArticle || null;
 
     /**
      * The bounds of the gallery container
@@ -132,9 +128,9 @@ function Gallery(el, options) {
 
 Gallery.prototype = inherit(EventEmitter.prototype, {
 
-    "constructor": Gallery,
+    'constructor': Gallery,
 
-    "_thumbnailClick": function(e){
+    '_thumbnailClick': function(e){
         var dataIndex = parseInt(
             e.delegateTarget.getAttribute('data-thumbnail-index'), 10);
         var elImage = this.imageElements[dataIndex];
@@ -146,7 +142,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
         // this.resize();
     },
 
-    "_init": function(){
+    '_init': function(){
         ImageFigure.init();
 
         // Image navigation create
@@ -188,7 +184,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
         this.updateNavScroll();
     },
 
-    "bindNavScrollListener": function(){
+    'bindNavScrollListener': function(){
         if(this.imageNavigation === null || this._hooks.navScroll !== null){
             return;
         }
@@ -196,7 +192,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
         addEvent(window, 'scroll', this._hooks.navScroll);
     },
 
-    "unbindNavScrollListener": function(){
+    'unbindNavScrollListener': function(){
         if(this.imageNavigation === null || this._hooks.navScroll === null){
             return;
         }
@@ -204,7 +200,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
         this._hooks.navScroll = null;
     },
 
-    "updateNavScroll": function(){
+    'updateNavScroll': function(){
         if(this.imageNavigation === null) return;
 
         // NOTE: 60 is the navigation height
@@ -239,7 +235,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
         }
     },
 
-    "gotoImage": function(imageIndex){
+    'gotoImage': function(imageIndex){
         var index = imageIndex;
         if(index < 0){
             index = 0;
@@ -262,19 +258,19 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
         });
     },
 
-    "bindImageScrollListener": function(){
+    'bindImageScrollListener': function(){
         if(this._hooks.imageElementscroll !== null) return;
         this._hooks.imageElementscroll = throttle(this.updateImageScroll, 100, this);
         addEvent(window, 'scroll', this._hooks.imageElementscroll);
     },
 
-    "unbindImageScrollListener": function(){
+    'unbindImageScrollListener': function(){
         if(this._hooks.scroll === null) return;
         removeEvent(window, 'scroll', this._hooks.imageElementscroll);
         this._hooks.imageElementscroll = null;
     },
 
-    "updateImageScroll": function(){
+    'updateImageScroll': function(){
         var scrollTop = getWindowScrollTop() + this._windowHeightHalf;
 
         var i = -1;
@@ -318,7 +314,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
         }
     },
 
-    "displayListView": function(){
+    'displayListView': function(){
         if(this.layoutView === 'list') return;
         this.layoutView = 'list';
 
@@ -337,7 +333,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
             'viewchange', events.galleryViewChange(this, this.layoutView));
     },
 
-    "displayThumbnailView": function(){
+    'displayThumbnailView': function(){
         if(this.layoutView === 'thumbnail') return;
         this.layoutView = 'thumbnail';
 

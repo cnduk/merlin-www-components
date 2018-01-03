@@ -5,8 +5,7 @@ import {
     addEvent,
     getElementOffset,
     inherit,
-    removeClass,
-    removeEvent
+    removeClass
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import * as events from './events';
 
@@ -23,7 +22,7 @@ function GalleryImageNavigation(el){
 
 GalleryImageNavigation.prototype = inherit(EventEmitter.prototype, {
 
-    "_init": function(){
+    '_init': function(){
         var btn = this.el.querySelector(CLS_NEXT_BUTTON);
         if(btn){
             addEvent(btn, 'click', function(){
@@ -43,29 +42,29 @@ GalleryImageNavigation.prototype = inherit(EventEmitter.prototype, {
         this.resize();
     },
 
-    "constructor": GalleryImageNavigation,
+    'constructor': GalleryImageNavigation,
 
-    "disableNextButton": function(){
+    'disableNextButton': function(){
         var btn = this.el.querySelector(CLS_NEXT_BUTTON);
         if(btn) btn.setAttribute('disabled', true);
     },
 
-    "disablePreviousButton": function(){
+    'disablePreviousButton': function(){
         var btn = this.el.querySelector(CLS_PREVIOUS_BUTTON);
         if(btn) btn.setAttribute('disabled', true);
     },
 
-    "enableNextButton": function(){
+    'enableNextButton': function(){
         var btn = this.el.querySelector(CLS_NEXT_BUTTON);
         if(btn) btn.removeAttribute('disabled');
     },
 
-    "enablePreviousButton": function(){
+    'enablePreviousButton': function(){
         var btn = this.el.querySelector(CLS_PREVIOUS_BUTTON);
         if(btn) btn.removeAttribute('disabled');
     },
 
-    "resize": function(){
+    'resize': function(){
         this.bounds = getElementOffset(this.el);
     }
 

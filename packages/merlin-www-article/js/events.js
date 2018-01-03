@@ -48,7 +48,7 @@ export function navPrevious(emitter){
 export function galleryViewChange(emitter, layoutView){
     return createEventTemplate('viewchange', emitter, {
         'bubbles': true,
-        "layoutView": layoutView
+        'layoutView': layoutView
     });
 }
 

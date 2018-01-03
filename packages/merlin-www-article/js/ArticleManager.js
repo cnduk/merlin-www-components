@@ -10,7 +10,6 @@ import {
     getWindowScrollTop,
     inherit,
     insertBefore,
-    loadScript,
     onPageLoad,
     removeEvent,
     throttle,
@@ -19,7 +18,6 @@ import {
 import { hasHistory } from '@cnbritain/merlin-www-js-utils/js/detect';
 import InfiniteScroll from '@cnbritain/merlin-www-js-infinitescroll';
 import {
-    ARTICLE_TYPES,
     CLS_ARTICLE_VIDEO_BODY,
     CLS_ARTICLE_VIDEO_EMBED
 } from './constants';
@@ -27,7 +25,6 @@ import {
     bubbleEvent,
     dispatchSimpleReach,
     dispatchSimpleReachStop,
-    getArticleType,
     getStorage,
     loadYoutubeSubscribe,
     setStorage
@@ -40,11 +37,11 @@ var INFINITE_BOTTOM_THRESHOLD = 500;
 var INFINITE_RESIZE_DEBOUNCE = 500;
 
 function ArticleManager(){
-    EventEmitter.call(this, { "wildcard": true });
+    EventEmitter.call(this, { 'wildcard': true });
 
     this._hooks = {
-        "resize": null,
-        "scroll": null
+        'resize': null,
+        'scroll': null
     };
     this._infiniteScroll = null;
     this._pageHeight = Number.Infinity;
@@ -58,7 +55,7 @@ function ArticleManager(){
 
 ArticleManager.prototype = inherit(EventEmitter.prototype, {
 
-    "_triggerFocusBlur": function(index){
+    '_triggerFocusBlur': function(index){
         var article = null;
         var eve = null;
 
@@ -74,7 +71,7 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         article.emit('focus', eve);
     },
 
-    "_onVideoChange": function _onVideoChange(e){
+    '_onVideoChange': function _onVideoChange(e){
 
         var config = VideoPlayer.playlist.videoConfigs[e.videoIndex];
 
@@ -110,7 +107,7 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         this._triggerFocusBlur(index);
     },
 
-    "_init": function _init(){
+    '_init': function _init(){
 
         // Resize
         onPageLoad(this.resize.bind(this, 0));
@@ -129,7 +126,7 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         this.on('focus', onArticleFocus);
     },
 
-    "_bindArticleBubbles": function _bindArticleBubbles(article){
+    '_bindArticleBubbles': function _bindArticleBubbles(article){
         bubbleEvent(article, this, 'focus');
         bubbleEvent(article, this, 'blur');
         bubbleEvent(article, this, 'imagefocus');
@@ -138,7 +135,7 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         bubbleEvent(article, this, 'expand');
     },
 
-    "add": function add(el, _options){
+    'add': function add(el, _options){
         var config = assign({
             'ads': null,
             'analytics': null,
@@ -158,9 +155,9 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         return article;
     },
 
-    "constructor": ArticleManager,
+    'constructor': ArticleManager,
 
-    "disableInfiniteScroll": function disableInfiniteScroll(){
+    'disableInfiniteScroll': function disableInfiniteScroll(){
         if(this._infiniteScroll === null) return;
 
         this._infiniteScroll.disable();
@@ -171,20 +168,20 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         this._hooks.resize = null;
 
         removeEvent(window, 'scroll', this._hooks.scroll);
-        this._hooks.scroll = null
+        this._hooks.scroll = null;
     },
 
-    "enableInfiniteScroll": function enableInfiniteScroll(){
+    'enableInfiniteScroll': function enableInfiniteScroll(){
         if(this._infiniteScroll !== null) return;
 
         this._infiniteScroll = new InfiniteScroll({
-            "el": window,
-            "trigger": infiniteScrollTrigger.bind(this),
-            "url": infiniteScrollUrl
+            'el': window,
+            'trigger': infiniteScrollTrigger.bind(this),
+            'url': infiniteScrollUrl
         });
 
-        this._infiniteScroll.on("loadError", onInfiniteLoadError.bind(this));
-        this._infiniteScroll.on("loadComplete",
+        this._infiniteScroll.on('loadError', onInfiniteLoadError.bind(this));
+        this._infiniteScroll.on('loadComplete',
             onInfiniteLoadComplete.bind(this));
         this._infiniteScroll.enable();
 
@@ -193,7 +190,7 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         addEvent(window, 'resize', this._hooks.resize);
     },
 
-    "getArticleByUid": function getArticleByUid(uid){
+    'getArticleByUid': function getArticleByUid(uid){
         var length = this.articles.length;
         while(length--){
             if(this.articles[length].uid === uid) return this.articles[length];
@@ -201,7 +198,7 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         return false;
     },
 
-    "resize": function resize(_start, _length){
+    'resize': function resize(_start, _length){
         if(arguments.length === 0) return;
 
         this._pageHeight = document.body.scrollHeight - window.innerHeight;
@@ -335,7 +332,7 @@ function onInfiniteLoadComplete(e){
         simplereach = responseJSON.config_simplereach.data;
     }
 
-    var article = this.add(articleEl, {
+    this.add(articleEl, {
         'ads': ads,
         'analytics': analytics,
         'infinite': true,
@@ -386,7 +383,7 @@ function onArticleFocus(e){
     dispatchSimpleReachStop();
     if(article.simplereach){
         var simplereachConfig = cloneObjectDeep(article.simplereach);
-        simplereachConfig['ref_url'] = lastUrl
+        simplereachConfig['ref_url'] = lastUrl;
         dispatchSimpleReach(simplereachConfig);
     }
 

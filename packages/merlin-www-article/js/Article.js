@@ -5,13 +5,11 @@ import {
     addEventOnce,
     getElementOffset,
     inherit,
-    removeClass,
-    stopEvent
+    removeClass
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import {
     CLS_INFINITE_BTN,
-    CLS_ARTICLE_GALLERY,
-    CLS_ARTICLE_VIDEO_PLAYER
+    CLS_ARTICLE_GALLERY
 } from './constants';
 import Gallery from './Gallery';
 import {
@@ -44,7 +42,7 @@ function Article(el, _options){
 
 Article.prototype = inherit(EventEmitter.prototype, {
 
-    "_bindBubblingEvents": function _bindBubblingEvents(){
+    '_bindBubblingEvents': function _bindBubblingEvents(){
         // Gallery
         if(this.gallery !== null){
             bubbleEvent(this.gallery, this, 'viewchange');
@@ -53,14 +51,14 @@ Article.prototype = inherit(EventEmitter.prototype, {
         }
     },
 
-    "_getArticleProperties": function _getArticleProperties(){
+    '_getArticleProperties': function _getArticleProperties(){
         this.properties = {
-            "title": getArticleTitle(this.el),
-            "url": getArticleUrl(this.el)
+            'title': getArticleTitle(this.el),
+            'url': getArticleUrl(this.el)
         };
     },
 
-    "_init": function _init(){
+    '_init': function _init(){
 
         // If article has come from infinite scroll, trigger social embeds to
         // update as the article body might contain embeds.
@@ -108,15 +106,15 @@ Article.prototype = inherit(EventEmitter.prototype, {
         this._getArticleProperties();
     },
 
-    "constructor": Article,
+    'constructor': Article,
 
-    "expand": function(){
+    'expand': function(){
         removeClass(this.el.parentNode, 'is-closed');
         this.resize();
         this.emit('expand', events.expand(this));
     },
 
-    "resize": function resize(){
+    'resize': function resize(){
         this.bounds = getElementOffset(this.el);
         if(this.gallery !== null) this.gallery.resize();
     }

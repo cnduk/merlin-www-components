@@ -10,8 +10,7 @@ import {
     getElementOffset,
     inherit,
     removeClass,
-    removeEvent,
-    throttle
+    removeEvent
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import InfiniteScroll from '@cnbritain/merlin-www-js-infinitescroll';
 import * as events from './events';
@@ -20,7 +19,7 @@ import { getStorage, setStorage } from './utils';
 var CLS_CARD_LIST = '.js-c-card-list';
 var CLS_CARD_LIST_ITEM = '.js-c-card-list__item';
 
-function Playlist(el, options){
+function Playlist(el){
     EventEmitter.call(this, {'wildcard': true});
 
     this._hooks = {
@@ -55,7 +54,6 @@ Playlist.prototype = inherit(EventEmitter.prototype, {
 
     _onListLoadError: function _onListLoadError(){
         // TODO: Error handle
-        console.log('error', this, arguments);
     },
 
     _onListLoadSuccess: function _onListLoadSuccess(e){
@@ -122,21 +120,21 @@ Playlist.prototype = inherit(EventEmitter.prototype, {
         if(this._infiniteScroll !== null) return;
 
         this._infiniteScroll = new InfiniteScroll({
-            "el": this.el.querySelector('.a-video__sidebar__list'),
-            "throttle": 150,
-            "trigger": function infiniteScrollTrigger(scrollY){
+            'el': this.el.querySelector('.a-video__sidebar__list'),
+            'throttle': 150,
+            'trigger': function infiniteScrollTrigger(scrollY){
                 return (this.el.scrollHeight/2) < scrollY;
             },
-            "url": function infiniteScrollUrl(pageCounter){
+            'url': function infiniteScrollUrl(pageCounter){
                 var url = getStorage('playlist_infinite_url');
                 return location.origin + url + '?page=' + (pageCounter + 1);
             }
         });
 
         this._infiniteScroll.on(
-            "loadError", this._onListLoadError.bind(this));
+            'loadError', this._onListLoadError.bind(this));
         this._infiniteScroll.on(
-            "loadComplete", this._onListLoadSuccess.bind(this));
+            'loadComplete', this._onListLoadSuccess.bind(this));
         this._infiniteScroll.enable();
 
         this._hooks.resize = debounce(this.resize, 200, this);

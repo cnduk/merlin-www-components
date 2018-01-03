@@ -9,7 +9,7 @@ import {
 import { bubbleEvent, loadYoutubeSubscribe } from './utils';
 import Playlist from './Playlist';
 
-function VideoPlayer(el, options){
+function VideoPlayer(el){
     EventEmitter.call(this, {'wildcard': true});
 
     this.el = el;

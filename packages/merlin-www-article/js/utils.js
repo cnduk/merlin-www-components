@@ -1,5 +1,5 @@
 'use strict';
-/* globals SPR */
+/* globals SPR, gapi */
 
 import CONFIG_BRAND from '@cnbritain/merlin-www-common';
 import {
@@ -98,8 +98,8 @@ export function updateSocialEmbeds(){
 
             // Facebook
             window.FB.init({
-                "version": 'v2.3',
-                "xfbml": true
+                'version': 'v2.3',
+                'xfbml': true
             });
 
             // Vine dont need to do anything as it uses postMessage and
