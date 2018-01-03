@@ -6,11 +6,9 @@ import overlayTemplate from '../../templates/magnifier-touch.mustache';
 
 import {
     addEvent,
-    addEventOnce,
     assign,
     clamp,
     inherit,
-    removeClass,
     removeElement,
     removeEvent
 } from '@cnbritain/merlin-www-js-utils/js/functions';
@@ -22,23 +20,25 @@ import {
     JS_MAGNIFIER_BUTTON_ZOOM_OUT,
     CLS_MAGNIFIER,
     CLS_MAGNIFIER_FULLSCREEN,
-    CLS_MAGNIFIER_IMAGE,
-    CLS_HAS_MAGNIFIER,
-    CLS_IS_HIDDEN
+    CLS_MAGNIFIER_IMAGE
 } from './constants';
 import * as events from './events';
-import { disableZoom, enableZoom, getElementMagnifierConfig } from './utils';
+import {
+    disableZoom,
+    enableZoom,
+    getElementMagnifierConfig
+} from './utils';
 
-function MagnifierTouch(el, options) {
+function MagnifierTouch(el) {
     EventEmitter.call(this);
 
     var _magnifierConfig = getElementMagnifierConfig(el);
 
     var _options = assign({
-        "maxScale": 2,
-        "minScale": calculateMinScale(
+        'maxScale': 2,
+        'minScale': calculateMinScale(
             _magnifierConfig.width, _magnifierConfig.height),
-        "scaleIncrement": 0.25
+        'scaleIncrement': 0.25
     }, _options);
 
     this._containerPosition = null;
@@ -48,12 +48,12 @@ function MagnifierTouch(el, options) {
     this._magnifierLayer = null;
     this._magnifierImage = null;
     this._transform = {
-        "scale": 1,
-        "tmpScale": 1,
-        "tmpX": 0,
-        "tmpY": 0,
-        "x": 0,
-        "y": 0
+        'scale': 1,
+        'tmpScale': 1,
+        'tmpX': 0,
+        'tmpY': 0,
+        'x': 0,
+        'y': 0
     };
 
     this.el = el;
@@ -67,14 +67,14 @@ function MagnifierTouch(el, options) {
 
 MagnifierTouch.prototype = inherit(EventEmitter.prototype, {
 
-    "_bindDom": function() {
-        this._magnifierLayer = document.createElement("div");
+    '_bindDom': function() {
+        this._magnifierLayer = document.createElement('div');
         this._magnifierLayer.className = [
             CLS_MAGNIFIER,
             CLS_MAGNIFIER_FULLSCREEN
         ].join(' ');
         this._magnifierLayer.innerHTML = overlayTemplate({
-            "image_url": this._magnifierConfig.url
+            'image_url': this._magnifierConfig.url
         });
         document.body.appendChild(this._magnifierLayer);
 
@@ -82,9 +82,11 @@ MagnifierTouch.prototype = inherit(EventEmitter.prototype, {
             '.' + CLS_MAGNIFIER_IMAGE);
     },
 
-    "_bindEvents": function() {
+    '_bindEvents': function() {
         this._hammer = new Hammer(this._magnifierLayer, {});
-        this._hammer.get("pinch").set({ "enable": true });
+        this._hammer.get('pinch').set({
+            'enable': true
+        });
 
         this._hooks.onClose = this.close.bind(this);
         this._hooks.onZoomIn = this.zoomIn.bind(this);
@@ -98,20 +100,20 @@ MagnifierTouch.prototype = inherit(EventEmitter.prototype, {
         var btnZoomOut = this._magnifierLayer.querySelector(
             '.' + JS_MAGNIFIER_BUTTON_ZOOM_OUT);
 
-        addEvent(btnClose, "touchend", this._hooks.onClose);
-        addEvent(btnZoomIn, "touchend", this._hooks.onZoomIn);
-        addEvent(btnZoomOut, "touchend", this._hooks.onZoomOut);
+        addEvent(btnClose, 'touchend', this._hooks.onClose);
+        addEvent(btnZoomIn, 'touchend', this._hooks.onZoomIn);
+        addEvent(btnZoomOut, 'touchend', this._hooks.onZoomOut);
 
         this._hammer.on('pan pinch panend pinchend', this._hooks.onPanPinch);
     },
 
-    "_onPanPinch": function(e){
+    '_onPanPinch': function(e) {
         var scale = this._transform.scale;
         var x = this._transform.x;
         var y = this._transform.y;
 
         // Scale
-        if(e.scale !== 1){
+        if (e.scale !== 1) {
             scale = this._transform.scale * e.scale;
             scale = clamp(this.minScale, this.maxScale, scale);
         }
@@ -126,35 +128,35 @@ MagnifierTouch.prototype = inherit(EventEmitter.prototype, {
             this._magnifierConfig.width,
             this._magnifierConfig.height
         );
-        if(clampedPosition){
+        if (clampedPosition) {
             x = clampedPosition.x;
             y = clampedPosition.y;
         }
 
         this._setImageTransform(x, y, scale);
 
-        if(e.type == 'pinchend' || e.type == 'panend'){
+        if (e.type == 'pinchend' || e.type == 'panend') {
             this._transform.scale = scale;
             this._transform.x = x;
             this._transform.y = y;
         }
     },
 
-    "_setImageTransform": function(x, y, scale) {
+    '_setImageTransform': function(x, y, scale) {
         var transform = [
-            "translate3d(" + x + "px, " + y + "px, 0)",
-            "scale3d(" + scale + ", " + scale + ", 1)"
+            'translate3d(' + x + 'px, ' + y + 'px, 0)',
+            'scale3d(' + scale + ', ' + scale + ', 1)'
         ];
-        setTransform(this._magnifierImage, transform.join(" "));
+        setTransform(this._magnifierImage, transform.join(' '));
     },
 
-    "_unbindDom": function() {
+    '_unbindDom': function() {
         this._magnifierImage = null;
         removeElement(this._magnifierLayer);
         this._magnifierLayer = null;
     },
 
-    "_unbindEvents": function() {
+    '_unbindEvents': function() {
 
         var btnClose = this._magnifierLayer.querySelector(
             '.' + JS_MAGNIFIER_BUTTON_CLOSE);
@@ -163,9 +165,9 @@ MagnifierTouch.prototype = inherit(EventEmitter.prototype, {
         var btnZoomOut = this._magnifierLayer.querySelector(
             '.' + JS_MAGNIFIER_BUTTON_ZOOM_OUT);
 
-        removeEvent(btnClose, "touchend", this._hooks.onClose);
-        removeEvent(btnZoomIn, "touchend", this._hooks.onZoomIn);
-        removeEvent(btnZoomOut, "touchend", this._hooks.onZoomOut);
+        removeEvent(btnClose, 'touchend', this._hooks.onClose);
+        removeEvent(btnZoomIn, 'touchend', this._hooks.onZoomIn);
+        removeEvent(btnZoomOut, 'touchend', this._hooks.onZoomOut);
 
         this._hammer.off('pan pinch panend pinchend', this._hooks.onPanPinch);
 
@@ -178,8 +180,8 @@ MagnifierTouch.prototype = inherit(EventEmitter.prototype, {
         this._hammer = null;
     },
 
-    "close": function() {
-        if(!this.isOpen) return;
+    'close': function() {
+        if (!this.isOpen) return;
 
         this.isOpen = false;
 
@@ -187,19 +189,19 @@ MagnifierTouch.prototype = inherit(EventEmitter.prototype, {
         this._unbindEvents();
         this._unbindDom();
 
-        this.emit("close", events.close(this));
+        this.emit('close', events.close(this));
     },
 
-    "constructor": MagnifierTouch,
+    'constructor': MagnifierTouch,
 
-    "destroy": function() {
+    'destroy': function() {
         this.close();
         this.removeAllListeners();
         this.el = null;
     },
 
-    "open": function() {
-        if(this.isOpen) return;
+    'open': function() {
+        if (this.isOpen) return;
 
         this.isOpen = true;
 
@@ -208,14 +210,14 @@ MagnifierTouch.prototype = inherit(EventEmitter.prototype, {
         this._bindEvents();
 
         this.zoom(this.minScale);
-        this.emit("open", events.open(this));
+        this.emit('open', events.open(this));
     },
 
-    "resize": function() {
-        this.emit("resize", events.resize(this));
+    'resize': function() {
+        this.emit('resize', events.resize(this));
     },
 
-    "zoom": function(scale){
+    'zoom': function(scale) {
         var _scale = clamp(this.minScale, this.maxScale, scale);
         var _x = this._transform.x;
         var _y = this._transform.y;
@@ -227,7 +229,7 @@ MagnifierTouch.prototype = inherit(EventEmitter.prototype, {
             this._magnifierConfig.width,
             this._magnifierConfig.height
         );
-        if(clampedPosition) {
+        if (clampedPosition) {
             _x = clampedPosition.x;
             _y = clampedPosition.y;
         }
@@ -239,27 +241,27 @@ MagnifierTouch.prototype = inherit(EventEmitter.prototype, {
         this._transform.y = _y;
     },
 
-    "zoomIn": function() {
+    'zoomIn': function() {
         this.zoom(this._transform.scale + this.scaleIncrement);
     },
 
-    "zoomOut": function() {
+    'zoomOut': function() {
         this.zoom(this._transform.scale - this.scaleIncrement);
     }
 
 });
 
-MagnifierTouch.bindElement = function(el, options){
+MagnifierTouch.bindElement = function(el, options) {
     // Get zoom button
     var button = el.querySelector('.' + JS_MAGNIFIER_BUTTON);
     var magnifier = null;
-    addEvent(button, 'touchend', function(e){
+    addEvent(button, 'touchend', function(e) {
         e.preventDefault();
 
         magnifier = new MagnifierTouch(el, options);
         magnifier.open();
 
-        magnifier.once('close', function(){
+        magnifier.once('close', function() {
             magnifier.destroy();
             magnifier = null;
         });
@@ -270,17 +272,17 @@ MagnifierTouch.bindElement = function(el, options){
 
 export default MagnifierTouch;
 
-function calculateMinScale(imageWidth, imageHeight){
+function calculateMinScale(imageWidth, imageHeight) {
     var minScale = 1;
     var outerPadding = 25;
     // Landscape
-    if( imageWidth > imageHeight ){
-        minScale = ( window.innerWidth - outerPadding - outerPadding ) /
+    if (imageWidth > imageHeight) {
+        minScale = (window.innerWidth - outerPadding - outerPadding) /
             imageWidth;
-    // Portrait or square
+        // Portrait or square
     } else {
-        minScale = ( window.innerHeight - outerPadding - outerPadding ) /
-        imageHeight;
+        minScale = (window.innerHeight - outerPadding - outerPadding) /
+            imageHeight;
     }
     return minScale;
 }
@@ -292,26 +294,26 @@ function clampPosition(_x, _y, scale, imageWidth, imageHeight) {
     var thisY = _y;
     var isClamped = false;
 
-    if(thisX > maxX) {
+    if (thisX > maxX) {
         thisX = maxX;
         isClamped = true;
-    } else if(thisX < -maxX) {
+    } else if (thisX < -maxX) {
         thisX = -maxX;
         isClamped = true;
     }
 
-    if(thisY > maxY) {
+    if (thisY > maxY) {
         thisY = maxY;
         isClamped = true;
-    } else if(thisY < -maxY) {
+    } else if (thisY < -maxY) {
         thisY = -maxY;
         isClamped = true;
     }
 
-    if(!isClamped) return false;
+    if (!isClamped) return false;
     return {
-        "x": thisX,
-        "y": thisY
+        'x': thisX,
+        'y': thisY
     };
 }
 

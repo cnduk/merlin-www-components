@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 import EventEmitter from 'eventemitter2';
 
@@ -43,10 +43,10 @@ function MagnifierMouse(el, options) {
     this.el = el;
     this.isOpen = false;
     this.padding = {
-        "bottom": _options.paddingBottom || 0,
-        "left": _options.paddingLeft || 0,
-        "right": _options.paddingRight || 0,
-        "top": _options.paddingTop || 0
+        'bottom': _options.paddingBottom || 0,
+        'left': _options.paddingLeft || 0,
+        'right': _options.paddingRight || 0,
+        'top': _options.paddingTop || 0
     };
 
     this.resize();
@@ -61,14 +61,14 @@ MagnifierMouse.prototype = inherit(EventEmitter.prototype, {
     },
 
     '_bindDOM': function() {
-        var magnifierLayer = this._magnifierLayer = document.createElement("div");
+        var magnifierLayer = this._magnifierLayer = document.createElement('div');
         magnifierLayer.className = [CLS_MAGNIFIER, CLS_IS_HIDDEN].join(' ');
-        magnifierLayer.setAttribute("title", "Click to close");
+        magnifierLayer.setAttribute('title', 'Click to close');
         magnifierLayer.style.backgroundImage = 'url(' + this._magnifierConfig.url + ')';
-        this.el.querySelector(".c-figure__wrapper").appendChild(magnifierLayer);
+        this.el.querySelector('.c-figure__wrapper').appendChild(magnifierLayer);
 
         // Force repaint :(
-        var w = magnifierLayer.offsetWidth;
+        var w = magnifierLayer.offsetWidth; // eslint-disable-line no-unused-vars
 
         preloadImage(this._magnifierConfig.url)
             .then(function(url) {
@@ -80,10 +80,10 @@ MagnifierMouse.prototype = inherit(EventEmitter.prototype, {
     '_bindEvents': function() {
         // Click to close
         this._hooks.onLayerClick = this.close.bind(this);
-        addEventOnce(this._magnifierLayer, "click", this._hooks.onLayerClick);
+        addEventOnce(this._magnifierLayer, 'click', this._hooks.onLayerClick);
         // Mousemove to pan
         this._hooks.onLayerMousemove = this._onLayerMousemove.bind(this);
-        addEvent(this._magnifierLayer, "mousemove", this._hooks.onLayerMousemove);
+        addEvent(this._magnifierLayer, 'mousemove', this._hooks.onLayerMousemove);
     },
 
     '_bindStyles': function() {
@@ -91,7 +91,7 @@ MagnifierMouse.prototype = inherit(EventEmitter.prototype, {
         addClass(this.el.querySelector('.' + CLS_FIGURE_TOOLBAR), CLS_IS_HIDDEN);
     },
 
-    "_onLayerMousemove": function(e) {
+    '_onLayerMousemove': function(e) {
         this.pan(
             e.pageX - this._containerPosition.left,
             e.pageY - this._containerPosition.top
@@ -115,10 +115,10 @@ MagnifierMouse.prototype = inherit(EventEmitter.prototype, {
 
     '_unbindEvents': function() {
         // Shouldnt need to removeEvent but just to be safes
-        removeEvent(this._magnifierLayer, "click", this._hooks.onLayerClick);
+        removeEvent(this._magnifierLayer, 'click', this._hooks.onLayerClick);
         this._hooks.onLayerClick = null;
         // Pan
-        removeEvent(this._magnifierLayer, "mousemove", this._hooks.onLayerMousemove);
+        removeEvent(this._magnifierLayer, 'mousemove', this._hooks.onLayerMousemove);
         this._hooks.onLayerMousemove = null;
     },
 
@@ -151,8 +151,8 @@ MagnifierMouse.prototype = inherit(EventEmitter.prototype, {
         this._bind();
         // Pan to the center
         this.pan(
-            this._containerPosition.width/2,
-            this._containerPosition.height/2
+            this._containerPosition.width / 2,
+            this._containerPosition.height / 2
         );
         this.emit('open', events.open(this));
     },
@@ -169,7 +169,7 @@ MagnifierMouse.prototype = inherit(EventEmitter.prototype, {
         var percX = mapValue(positionX, left, right, 0, 100);
         var percY = mapValue(positionY, top, bottom, 0, 100);
 
-        this._magnifierLayer.style.backgroundPosition = percX + "% " + percY + "%";
+        this._magnifierLayer.style.backgroundPosition = percX + '% ' + percY + '%';
     },
 
     'resize': function() {
@@ -188,27 +188,27 @@ function getPosition(el) {
         do {
             left += el.offsetLeft;
             top += el.offsetTop;
-        } while(el = el.offsetParent);
+        } while (el = el.offsetParent); //eslint-disable-line no-cond-assign
     }
     return {
-        "height": height,
-        "left": left,
-        "top": top,
-        "width": width
+        'height': height,
+        'left': left,
+        'top': top,
+        'width': width
     };
 }
 
-MagnifierMouse.bindElement = function(el, options){
+MagnifierMouse.bindElement = function(el, options) {
     // Get zoom button
     var button = el.querySelector('.' + JS_MAGNIFIER_BUTTON);
     var magnifier = null;
-    addEvent(button, 'click', function(e){
+    addEvent(button, 'click', function(e) {
         e.preventDefault();
 
         magnifier = new MagnifierMouse(el, options);
         magnifier.open();
 
-        magnifier.once('close', function(){
+        magnifier.once('close', function() {
             magnifier.destroy();
             magnifier = null;
         });
