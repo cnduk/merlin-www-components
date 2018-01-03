@@ -141,7 +141,9 @@ function setPersistedLevel(){
     var json = JSON.stringify(config);
     try {
         window.localStorage.setItem(LOG_LOCALSTORAGE_KEY, json);
-    } catch(err){}
+    } catch(err){
+        console.warn(err);
+    }
 }
 
 export function hijackConsole(){
