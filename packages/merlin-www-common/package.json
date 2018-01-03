@@ -3,9 +3,15 @@
   "version": "1.7.19",
   "description": "",
   "main": "js/index.js",
-  "scripts": {},
+  "scripts": {
+    "demo": "merlin-component-demo-server merlin.json",
+    "lint": "eslint -c ../../.eslintrc.json ./js/**/*"
+  },
   "dependencies": {
     "@cnbritain/merlin-www-assets": "^1.7.11"
+  },
+  "devDependencies": {
+    "eslint": "^4.14.0"
   },
   "author": "",
   "license": "ISC"
