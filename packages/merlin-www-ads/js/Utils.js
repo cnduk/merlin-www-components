@@ -1,5 +1,5 @@
 'use strict';
-/* globals googletag, OX, rubicontag */
+/* globals googletag, rubicontag, pbjs */
 
 /**
  * @module Utils
@@ -22,16 +22,14 @@ import {
  * @constant
  * @type {String}
  */
-var GPT_URL = '//www.googletagservices.com/tag/js/gpt.js';
-export var GPT_URL;
+export var GPT_URL = '//www.googletagservices.com/tag/js/gpt.js';
 
 
 /**
  * The rubicon script url. This needs to be set in order for it to work.
  * @type {String}
  */
-var RUBICON_URL = null;
-export var RUBICON_URL;
+export var RUBICON_URL = null;
 
 var RUBICON_LOADED = false;
 
@@ -41,8 +39,7 @@ var PAGE_AD_CONFIG = null;
  * The teads script url. This needs to be set in order for it to work.
  * @type {String}
  */
-var TEAD_URL = null;
-export var TEAD_URL;
+export var TEAD_URL = null;
 
 /**
  * Setting object for prebid.js. Contains adapter settings like Rubicon.
@@ -54,9 +51,8 @@ var PREBID_SETTINGS = {};
  * The url that should be used to load prebid
  * @type {String}
  */
-var PREBID_URL = null;
 // var PREBID_URL = '/static/js/prebid.js';
-export var PREBID_URL;
+export var PREBID_URL = null;
 
 /**
  * Prebid timeout in milliseconds
@@ -75,51 +71,51 @@ var PREBID_LOADED = false;
  * @type {Object}
  */
 var RUBICON_ALLOWED_SIZES = {
-  '468x60': true,
-  '728x90': true,
-  '120x600': true,
-  '160x600': true,
-  '300x600': true,
-  '200x200': true,
-  '250x250': true,
-  '300x250': true,
-  '336x280': true,
-  '300x100': true,
-  '980x120': true,
-  '250x360': true,
-  '180x500': true,
-  '980x150': true,
-  '468x400': true,
-  '930x180': true,
-  '320x50': true,
-  '300x50': true,
-  '300x300': true,
-  '300x1050': true,
-  '970x90': true,
-  '970x250': true,
-  '1000x90': true,
-  '320x80': true,
-  '320x150': true,
-  '1000x1000': true,
-  '640x480': true,
-  '320x480': true,
-  '1800x1000': true,
-  '320x320': true,
-  '320x160': true,
-  '980x240': true,
-  '980x300': true,
-  '980x400': true,
-  '480x300': true,
-  '970x310': true,
-  '970x210': true,
-  '480x320': true,
-  '768x1024': true,
-  '480x280': true,
-  '1000x300': true,
-  '320x100': true,
-  '800x250': true,
-  '200x600': true,
-  '600x300': true
+    '468x60': true,
+    '728x90': true,
+    '120x600': true,
+    '160x600': true,
+    '300x600': true,
+    '200x200': true,
+    '250x250': true,
+    '300x250': true,
+    '336x280': true,
+    '300x100': true,
+    '980x120': true,
+    '250x360': true,
+    '180x500': true,
+    '980x150': true,
+    '468x400': true,
+    '930x180': true,
+    '320x50': true,
+    '300x50': true,
+    '300x300': true,
+    '300x1050': true,
+    '970x90': true,
+    '970x250': true,
+    '1000x90': true,
+    '320x80': true,
+    '320x150': true,
+    '1000x1000': true,
+    '640x480': true,
+    '320x480': true,
+    '1800x1000': true,
+    '320x320': true,
+    '320x160': true,
+    '980x240': true,
+    '980x300': true,
+    '980x400': true,
+    '480x300': true,
+    '970x310': true,
+    '970x210': true,
+    '480x320': true,
+    '768x1024': true,
+    '480x280': true,
+    '1000x300': true,
+    '320x100': true,
+    '800x250': true,
+    '200x600': true,
+    '600x300': true
 };
 
 /**
@@ -314,8 +310,8 @@ export function checkTestAdConfig(refresh){
     // Unit
     tmp = window[key].Store.get(key + '_' + KEY_TEST_AD_UNIT);
     if(tmp){
-         TEST_AD_CONFIG.AD_UNIT = tmp;
-         window[key].Store.remove(key + '_' + KEY_TEST_AD_UNIT);
+        TEST_AD_CONFIG.AD_UNIT = tmp;
+        window[key].Store.remove(key + '_' + KEY_TEST_AD_UNIT);
     }
 
     // Zone
@@ -433,10 +429,10 @@ export function hasGroup(ad){
  * @return {Boolean}
  */
 function ignoreAttributeKey(key){
-    return key === "ad_network_id" || key === "ad_custom_targeting" ||
-        key === "ad_tag_prefix" || key === "ad_unit" || key === "ad_url" ||
-        key === "ad_zone" || key === "targeting_doctype" ||
-        key === "targeting_tags";
+    return key === 'ad_network_id' || key === 'ad_custom_targeting' ||
+        key === 'ad_tag_prefix' || key === 'ad_unit' || key === 'ad_url' ||
+        key === 'ad_zone' || key === 'targeting_doctype' ||
+        key === 'targeting_tags';
 }
 
 /**
@@ -569,7 +565,7 @@ export function parseAdKeyValues(value){
     // Unescape the values as jinja has escaped them to shit
     var tmp = unescapeJinjaValue( value );
     tmp = JSON.parse( tmp );
-    if( tmp === "" ) return null;
+    if( tmp === '' ) return null;
     return tmp;
 }
 
@@ -592,7 +588,7 @@ export function parseAdAttributes(el){
  * @return {Object}
  */
 export function mapAdElementAttributes(attribs){
-    var key = "";
+    var key = '';
     for(key in AD_ATTRIBUTE_MAP){
         if(!hasOwnProperty(AD_ATTRIBUTE_MAP, key)) continue;
         if(AD_ATTRIBUTE_MAP[key].required && !hasOwnProperty(attribs, key)){
@@ -714,7 +710,7 @@ export function refreshRubicon(ads){
 }
 
 export function registerGPT(ad){
-    return pushToGoogleTag(function(res){
+    return pushToGoogleTag(function(){
         // Create the slot
         var slot = googletag.defineSlot(ad.get('dfp'),
             ad.get('sizes'), ad.id);
@@ -808,11 +804,11 @@ function getPrebidAdUnits(ads){
         if(bids.length === 0) return;
 
         var adUnit = {
-           code: ad.id,
-           sizes: ad.get('sizes').filter(function(dims){
-            return RUBICON_ALLOWED_SIZES.hasOwnProperty(dims.join('x'));
-           }),
-           bids: bids
+            code: ad.id,
+            sizes: ad.get('sizes').filter(function(dims){
+                return RUBICON_ALLOWED_SIZES.hasOwnProperty(dims.join('x'));
+            }),
+            bids: bids
         };
 
         if(ad.get('sizemap')){
@@ -850,9 +846,7 @@ export function registerPrebid(ad){
                 pbjs.addAdUnits(adUnits);
 
                 pbjs.requestBids({
-                    bidsBackHandler: function(bidResponses){
-                        res();
-                    }
+                    bidsBackHandler: function(){ res(); }
                 });
             });
         } else {
@@ -885,21 +879,21 @@ export function setAdUrls(config){
     for(var key in config){
         if(!hasOwnProperty(config, key)) continue;
         switch(key){
-            case 'GPT_URL':
-                GPT_URL = config[key];
-                break;
-            case 'RUBICON_URL':
-                RUBICON_URL = config[key];
-                break;
-            case 'TEAD_URL':
-                TEAD_URL = config[key];
-                break;
-            case 'PREBID_URL':
-                PREBID_URL = config[key];
-                break;
-            case 'PREBID_SETTINGS':
-                PREBID_SETTINGS = config[key]
-                break;
+        case 'GPT_URL':
+            GPT_URL = config[key];
+            break;
+        case 'RUBICON_URL':
+            RUBICON_URL = config[key];
+            break;
+        case 'TEAD_URL':
+            TEAD_URL = config[key];
+            break;
+        case 'PREBID_URL':
+            PREBID_URL = config[key];
+            break;
+        case 'PREBID_SETTINGS':
+            PREBID_SETTINGS = config[key];
+            break;
         }
     }
 }
@@ -948,11 +942,11 @@ export function createPageImpressionElement(unit, zone, values){
     var attrs = {
         unit: unit,
         zone: zone,
-        sizes: "[[5, 5]]",
+        sizes: '[[5, 5]]',
         bidding: false,
         sizemap: null,
         values: JSON.stringify(values),
-        placement: "PAGE_IMPRESSION_TRACKER"
+        placement: 'PAGE_IMPRESSION_TRACKER'
     };
     var div = document.createElement('div');
     for(var key in attrs){

@@ -7,7 +7,9 @@ import {
     getParent,
     getParentUntil
 } from '@cnbritain/merlin-www-js-utils/js/functions';
-import { AD_STATES, setAdStateToStopped } from './Utils';
+import {
+    setAdStateToStopped
+} from './Utils';
 import InreadAd from './InreadAd';
 import InterstitialAd from './InterstitialAd';
 import NativeAd from './NativeAd';
@@ -23,7 +25,7 @@ window.GptAdSlots = {
      * Sets a blank slot on the page thus removing it
      * @param  {Window} window
      */
-    "setSlotWindowAsBlankAdvert": function(window) {
+    'setSlotWindowAsBlankAdvert': function(window) {
 
         var frame = null;
         var parentAd = null;
@@ -33,7 +35,7 @@ window.GptAdSlots = {
         if (!frame) return;
 
         // Get parent until .ad-block that stores the slots id
-        parentAd = getParent(frame, ".ad__container");
+        parentAd = getParent(frame, '.ad__container');
         if (!parentAd) return;
 
         // Destroy the ad
@@ -57,22 +59,22 @@ window.GptAdSlots = {
  * Native ads
  * ============================================================================
  */
- window.PromotionButtons = {
-     /**
-      * Adds a promoted article to the page
-      * @param  {Object} json Promotion data
-      * @param  {Window} win
-      */
-     "add": function(json, win) {
+window.PromotionButtons = {
+    /**
+     * Adds a promoted article to the page
+     * @param  {Object} json Promotion data
+     * @param  {Window} win
+     */
+    'add': function(json, win) {
 
         // Find the ad based on the window
         var elementFrame = getIframeFromWindow(win);
-        var adElement = getParent(elementFrame, ".ad__container");
+        var adElement = getParent(elementFrame, '.ad__container');
 
         // Check we have an ad block
         if (!adElement) return;
 
-        var id = adElement.getAttribute("id");
+        var id = adElement.getAttribute('id');
         var nativeAd = AdManager.slots[id];
 
         // Convert the ad
@@ -81,106 +83,106 @@ window.GptAdSlots = {
         // Render the advert
         NativeAd.render(nativeAd, json);
 
-     }
- };
+    }
+};
 
- /**
-  * Responsive ads
-  * ===========================================================================
-  */
+/**
+ * Responsive ads
+ * ===========================================================================
+ */
 
-  function secureUrl(url){
+function secureUrl(url) {
     url = url.replace(
         /^http:\/\/digital-assets\.condenast\.co\.uk\/co\/ads\/adbuilder/,
-        "https://cnda.condenast.co.uk/co/ads/adbuilder"
+        'https://cnda.condenast.co.uk/co/ads/adbuilder'
     );
     // For http://cnda.condenast.co.uk/co/ads/adbuilder/pausebutton.png
-    url = url.replace(/^http:\/\//, "https://");
+    url = url.replace(/^http:\/\//, 'https://');
     return url;
-  }
+}
 
-  function isSet(obj, key){
-    if(!obj.hasOwnProperty(key)) return false;
-    return obj[key] !== "" && obj[key] !== null && obj[key] !== undefined;
-  }
+function isSet(obj, key) {
+    if (!obj.hasOwnProperty(key)) return false;
+    return obj[key] !== '' && obj[key] !== null && obj[key] !== undefined;
+}
 
-  function secureAdSources(config){
+function secureAdSources(config) {
 
     // Background image
-    if(isSet(config, 'backgroundImageSrc')){
+    if (isSet(config, 'backgroundImageSrc')) {
         config.backgroundImageSrc = secureUrl(
             config.backgroundImageSrc);
     }
 
     // Video
-    if(isSet(config, 'videoSrcMp4')){
+    if (isSet(config, 'videoSrcMp4')) {
         config.videoSrcMp4 = secureUrl(config.videoSrcMp4);
     }
-    if(isSet(config, 'videoSrcMp4Below720')){
+    if (isSet(config, 'videoSrcMp4Below720')) {
         config.videoSrcMp4Below720 = secureUrl(
             config.videoSrcMp4Below720);
     }
-    if(isSet(config, 'videoSrcMp4Below640')){
+    if (isSet(config, 'videoSrcMp4Below640')) {
         config.videoSrcMp4Below640 = secureUrl(
             config.videoSrcMp4Below640);
     }
-    if(isSet(config, 'videoSrcWebM')){
+    if (isSet(config, 'videoSrcWebM')) {
         config.videoSrcWebM = secureUrl(config.videoSrcWebM);
     }
 
     // Logos
-    if(isSet(config, 'logos')){
-        config.logos.forEach(function eachLogo(logoConfig, index){
-            if(isSet(logoConfig.normal, 'src')){
+    if (isSet(config, 'logos')) {
+        config.logos.forEach(function eachLogo(logoConfig) {
+            if (isSet(logoConfig.normal, 'src')) {
                 logoConfig.normal.src = secureUrl(logoConfig.normal.src);
             }
         });
     }
 
     return config;
-  }
+}
 
- window.RESPONSIVEADS = {
+window.RESPONSIVEADS = {
 
-      /**
-       * A callback set from legacy bits. I have no clue what this is here for.
-       * @param  {Function} callback     [description]
-       * @param  {Window}   iframeWindow
-       */
-      'renderCallbackForGpt': function(callback, iframeWindow) {
-          var frameElement = getIframeFromWindow(iframeWindow);
-          var contentWindow = frameElement.contentDocument ||
-              frameElement.contentWindow.document;
+    /**
+     * A callback set from legacy bits. I have no clue what this is here for.
+     * @param  {Function} callback     [description]
+     * @param  {Window}   iframeWindow
+     */
+    'renderCallbackForGpt': function(callback, iframeWindow) {
+        var frameElement = getIframeFromWindow(iframeWindow);
+        var contentWindow = frameElement.contentDocument ||
+            frameElement.contentWindow.document;
 
-          frameElement.setAttribute("width", "100%");
-          callback(contentWindow.getElementsByTagName("body")[0]);
-      },
+        frameElement.setAttribute('width', '100%');
+        callback(contentWindow.getElementsByTagName('body')[0]);
+    },
 
-      /**
-       * Turns an iframe that said it was a responsive advert, into an element.
-       * @param  {Object} adConfig
-       * @param  {HTMLElement} el
-       */
-      'renderIframeIntoElement': function(adConfig, el) {
+    /**
+     * Turns an iframe that said it was a responsive advert, into an element.
+     * @param  {Object} adConfig
+     * @param  {HTMLElement} el
+     */
+    'renderIframeIntoElement': function(adConfig, el) {
 
-         // Update ad config to use secure urls
-         adConfig = secureAdSources(adConfig);
+        // Update ad config to use secure urls
+        adConfig = secureAdSources(adConfig);
 
-         // Find the responsive ad
-         var elementDoc = el.ownerDocument;
-         var elementWindow = elementDoc.defaultView || elementDoc.parentWindow;
-         var elementFrame = elementWindow.frameElement;
-         var elementAd = getParentUntil(elementFrame, ".ad__container");
-         addClass(elementAd, 'ad__container--responsive');
-         var elementId = elementAd.getAttribute("id");
+        // Find the responsive ad
+        var elementDoc = el.ownerDocument;
+        var elementWindow = elementDoc.defaultView || elementDoc.parentWindow;
+        var elementFrame = elementWindow.frameElement;
+        var elementAd = getParentUntil(elementFrame, '.ad__container');
+        addClass(elementAd, 'ad__container--responsive');
+        var elementId = elementAd.getAttribute('id');
 
-         // Update Ad to ResponsiveAd
-         var currentAd = AdManager.slots[elementId];
-         currentAd = ResponsiveAd.inheritFrom(currentAd);
-         currentAd.render(adConfig);
-      }
+        // Update Ad to ResponsiveAd
+        var currentAd = AdManager.slots[elementId];
+        currentAd = ResponsiveAd.inheritFrom(currentAd);
+        currentAd.render(adConfig);
+    }
 
-  };
+};
 
 /**
  * Teads
@@ -192,15 +194,15 @@ window.InreadSupport = {
      * @param  {Object} json Ad configuration
      * @param  {Window} win
      */
-    "requestAd": function(json, win) {
+    'requestAd': function(json, win) {
         // Find the ad based on the window
         var elementFrame = getIframeFromWindow(win);
-        var adElement = getParent(elementFrame, ".ad__container");
+        var adElement = getParent(elementFrame, '.ad__container');
 
         // Check we have an ad block
         if (!adElement) return;
 
-        var id = adElement.getAttribute("id");
+        var id = adElement.getAttribute('id');
         var inread = AdManager.slots[id];
 
         // Render the advert
@@ -219,15 +221,15 @@ window.INTERSTITIAL_AD = {
      * @param  {Object} gptSizeInfo Dunno
      * @param  {Window} win
      */
-    "displayInterstitialAd": function(json, gptSizeInfo, win) {
+    'displayInterstitialAd': function(json, gptSizeInfo, win) {
         // Find the ad based on the window
         var elementFrame = getIframeFromWindow(win);
-        var adElement = getParent(elementFrame, ".ad__container");
+        var adElement = getParent(elementFrame, '.ad__container');
 
         // Check we have an ad block
         if (!adElement) return;
 
-        var id = adElement.getAttribute("id");
+        var id = adElement.getAttribute('id');
         var interstitial = AdManager.slots[id];
 
         // Render the advert
@@ -237,7 +239,7 @@ window.INTERSTITIAL_AD = {
      * Some legacy thing
      * @param  {Object} e
      */
-    "gptInterstitialRenderEndedCallback": function(e) {
+    'gptInterstitialRenderEndedCallback': function(e) {
         window.INTERSTITIAL_AD.displayInterstitialAd(null, e.sizeInfo);
     }
 };
@@ -253,15 +255,15 @@ window.INTERSTITIAL_AD = {
  * @param  {String} elementId  The iframe id, NOT the .ad-block
  * @param  {String} sizeString
  */
-window.cn_rubicon_resize = function(elementId, sizeString){
-    var adSize = sizeString.split("x");
+window.cn_rubicon_resize = function(elementId, sizeString) {
+    var adSize = sizeString.split('x');
     adSize[0] = parseInt(adSize[0], 10);
     adSize[1] = parseInt(adSize[1], 10);
 
     var adEl = getParent(document.getElementById(elementId),
         '.ad__container');
-    if( !adEl ) return;
+    if (!adEl) return;
 
-    AdManager.slots[adEl.getAttribute("id")].forceSizeChange(adSize[0],
+    AdManager.slots[adEl.getAttribute('id')].forceSizeChange(adSize[0],
         adSize[1]);
 };

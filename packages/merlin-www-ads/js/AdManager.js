@@ -24,10 +24,8 @@ import {
 import {
     AD_STATES,
     getAdTypeBySize,
-    getSlot,
     isElInitialised,
     loadAdLibraries,
-    loadGPTLibrary,
     parseAdAttributes,
     pushToGoogleTag,
     refreshGPT,
@@ -120,7 +118,7 @@ AdManager.prototype = inherit(EventEmitter.prototype, {
                     googletag.enableServices();
                     // Events
                     googletag.pubads().addEventListener(
-                        "slotRenderEnded", onSlotRenderEnded.bind(this));
+                        'slotRenderEnded', onSlotRenderEnded.bind(this));
                     res();
                 }.bind(this));
             }.bind(this));

@@ -18,7 +18,7 @@ import {
  * @default
  * @type {Object}
  */
-var AD_DEFAULTS = {
+export var AD_DEFAULTS = {
     'bidding': false,
     'creativeId': null,
     'dfp': null,
@@ -36,7 +36,6 @@ var AD_DEFAULTS = {
     'values': null,
     'zone': null
 };
-export var AD_DEFAULTS;
 
 
 /**

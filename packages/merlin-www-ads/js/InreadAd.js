@@ -15,15 +15,15 @@ var InreadAd = {
         var config = cloneObjectDeep(json);
         config.slot = '#' + ad.id;
         config.callbacks = {
-            "ad": log("ad"),
-            "finish": onAdFinish.bind(ad),
-            "skip": log("skip"),
-            "mute": log("mute"),
-            "unmute": log("unmute"),
-            "pause": log("pause"),
-            "play": log("play"),
-            "loaded": log("loaded"),
-            "launch": onAdLaunch.bind(ad)
+            'ad': log('ad'),
+            'finish': onAdFinish.bind(ad),
+            'skip': log('skip'),
+            'mute': log('mute'),
+            'unmute': log('unmute'),
+            'pause': log('pause'),
+            'play': log('play'),
+            'loaded': log('loaded'),
+            'launch': onAdLaunch.bind(ad)
         };
 
         if( window.teads ){
@@ -37,7 +37,7 @@ var InreadAd = {
 
 };
 
-function log(type){
+function log(/*type*/){
     return function(){
         // console.log(type, this, arguments);
     };

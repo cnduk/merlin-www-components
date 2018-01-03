@@ -5,24 +5,19 @@ import {
     addClass,
     addEvent,
     assign,
-    debounce,
     hasOwnProperty,
-    isDefined,
-    removeClass,
-    removeEvent
+    removeClass
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 
 var AD_FLUFF = 12;
 var DEFAULT_AD_DATA = {
-    "linkUrl": '',
-    "lowImgSrc": '',
-    "hiImgSrc": '',
-    "videoSrcMp4": ''
+    'linkUrl': '',
+    'lowImgSrc': '',
+    'hiImgSrc': '',
+    'videoSrcMp4': ''
 };
 var LARGE_AD_HEIGHT = 600;
 var LARGE_AD_WIDTH = 1000;
-var SMALL_AD_HEIGHT = 400;
-var SMALL_AD_WIDTH = 700;
 var CLS_PLAYER_BTN = 'js-ad-video-btn';
 var CLS_PLAYER_VIDEO = 'js-ad-video-player';
 
@@ -39,7 +34,6 @@ var InterstitialAd = {
 
         var isLarge = isAdLarge(ad.el, json);
         var hasVideo = json.videoSrcMp4 !== '';
-        var adDimensions = getAdSize(json, isLarge);
 
         if(json === null && gptSizeInfo !== null){
             // Dunno what this is meant to do but its coming over from legacy
@@ -64,43 +58,10 @@ var InterstitialAd = {
  */
 function fireAnalytics(action, label){
     GATracker.SendAll( GATracker.SEND_HITTYPES.EVENT, {
-        "eventCategory": "Gallery",
-        "eventAction": action,
-        "eventLabel": label
+        'eventCategory': 'Gallery',
+        'eventAction': action,
+        'eventLabel': label
     });
-}
-
-/**
- * Gets the size of the Ad
- * @param  {Object}  json
- * @param  {Boolean} isLargeAd
-* @return {Object}
- */
-function getAdSize( json, isLargeAd ){
-
-    var height = isDefined(json.manHeight) ? json.manHeight : null;
-    var width = isDefined(json.manWidth) ? json.manWidth : null;
-
-    if( isLargeAd && ( !isDefined( height ) || !isDefined( width ) ) ){
-        if( !isDefined( height ) ){
-            height = LARGE_AD_HEIGHT;
-        }
-        if( !isDefined( width ) ){
-            width = LARGE_AD_WIDTH;
-        }
-    } else if( !isLargeAd && ( !isDefined( height ) || !isDefined( width ) ) ){
-        if( !isDefined( height ) ){
-            height = SMALL_AD_HEIGHT;
-        }
-        if( !isDefined( width ) ){
-            width = SMALL_AD_WIDTH;
-        }
-    }
-
-    return {
-        "height": height,
-        "width": width
-    };
 }
 
 /**
@@ -133,8 +94,8 @@ function getCacheBustUrl(url) {
  * @return {String}
  */
 function getImageUrl( adConfig, isLargeAd ){
-    if( isLargeAd && adConfig.hiImgSrc !== "" ) return adConfig.hiImgSrc;
-    if( adConfig.lowImgSrc === "" ) return adConfig.hiImgSrc;
+    if( isLargeAd && adConfig.hiImgSrc !== '' ) return adConfig.hiImgSrc;
+    if( adConfig.lowImgSrc === '' ) return adConfig.hiImgSrc;
     return adConfig.lowImgSrc;
 }
 
@@ -156,11 +117,11 @@ function insertVideoSource(nodeVideo, mp4){
         if(isInserted) return;
         isInserted = true;
 
-        var nodeSource = document.createElement("source");
-        nodeSource.setAttribute("src", mp4);
-        nodeSource.setAttribute("type", "video/mp4");
-        nodeSource.setAttribute("webkit-playsinline", "true");
-        nodeSource.setAttribute("autoplay", autoplay);
+        var nodeSource = document.createElement('source');
+        nodeSource.setAttribute('src', mp4);
+        nodeSource.setAttribute('type', 'video/mp4');
+        nodeSource.setAttribute('webkit-playsinline', 'true');
+        nodeSource.setAttribute('autoplay', autoplay);
         nodeVideo.appendChild(nodeSource);
     };
 }
@@ -174,8 +135,11 @@ function insertVideoSource(nodeVideo, mp4){
 function isAdLarge( el, json ){
     return (
         isSpaceAvailableForLargeAd( el ) && (
-            json.hiImgSrc !== "" || json.lowImgSrc !== "" ||
-            json.videoSrcMp4 !== ""));
+            json.hiImgSrc !== '' ||
+            json.lowImgSrc !== '' ||
+            json.videoSrcMp4 !== ''
+        )
+    );
 }
 
 /**
@@ -231,10 +195,10 @@ function stopVideo(ad){
  */
 function renderImageAd(ad, json, isLarge){
     var imageUrl = getImageUrl(json, isLarge);
-    var html = ('<img src="' + getCacheBustUrl(imageUrl) +
-        '" style="display:block;width:100%;" />');
+    var html = ('<img src=\'' + getCacheBustUrl(imageUrl) +
+        '\' style=\'display:block;width:100%;\' />');
     if(json.linkUrl){
-        html = '<a href="' + json.linkUrl + '" target="_top">' + html + '</a>';
+        html = '<a href=\'' + json.linkUrl + '\' target=\'_top\'>' + html + '</a>';
     }
     ad.el.innerHTML = html;
 }
@@ -243,21 +207,20 @@ function renderImageAd(ad, json, isLarge){
  * Renders the video advert
  * @param  {Ad}  ad
  * @param  {Object}  json
- * @param  {Boolean} isLarge
  */
-function renderVideoAd(ad, json, isLarge){
+function renderVideoAd(ad, json){
     // Render
     var fragment = document.createDocumentFragment();
 
-    var nodeVideo = document.createElement("video");
+    var nodeVideo = document.createElement('video');
     var insertVidSource = insertVideoSource(nodeVideo, json.videoSrcMp4);
     setStyle(nodeVideo, {
         'width': '100%'
     });
     nodeVideo.className = CLS_PLAYER_VIDEO;
     var posterImage = getImageUrl(json);
-    if( posterImage !== "" ){
-        nodeVideo.setAttribute("poster", posterImage);
+    if( posterImage !== '' ){
+        nodeVideo.setAttribute('poster', posterImage);
     } else {
         insertVidSource(false);
     }
