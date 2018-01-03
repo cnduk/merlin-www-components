@@ -47,15 +47,15 @@ var NativeAd = {
 
         // Update state
         switch(ad.state){
-            case AD_STATES.RENDERED:
-                setAdStateToRendered(ad);
-                break;
-            case AD_STATES.DESTROYED:
-                setAdStateToDestroyed(ad);
-                break;
-            case AD_STATES.STOPPED:
-                setAdStateToStopped(ad);
-                break;
+        case AD_STATES.RENDERED:
+            setAdStateToRendered(ad);
+            break;
+        case AD_STATES.DESTROYED:
+            setAdStateToDestroyed(ad);
+            break;
+        case AD_STATES.STOPPED:
+            setAdStateToStopped(ad);
+            break;
         }
         return ad;
     },
@@ -108,14 +108,14 @@ var NativeAd = {
  */
 function getNativeAdSize(nad){
     switch(nad.get('position')){
-        case 'promotion-large':
-            return NATIVE_AD_SIZES.LARGE;
-        case 'promotion-medium':
-            return NATIVE_AD_SIZES.MEDIUM;
-        case 'promotion-small':
-            return NATIVE_AD_SIZES.SMALL;
-        default:
-            return NATIVE_AD_SIZES.UNKNOWN;
+    case 'promotion-large':
+        return NATIVE_AD_SIZES.LARGE;
+    case 'promotion-medium':
+        return NATIVE_AD_SIZES.MEDIUM;
+    case 'promotion-small':
+        return NATIVE_AD_SIZES.SMALL;
+    default:
+        return NATIVE_AD_SIZES.UNKNOWN;
     }
 }
 
@@ -126,14 +126,14 @@ function getNativeAdSize(nad){
  */
 function getNativeAdSizeName(index){
     switch(index){
-        case NATIVE_AD_SIZES.UNKNOWN:
-            return 'unknown';
-        case NATIVE_AD_SIZES.SMALL:
-            return 'small';
-        case NATIVE_AD_SIZES.MEDIUM:
-            return 'medium';
-        case NATIVE_AD_SIZES.LARGE:
-            return 'large';
+    case NATIVE_AD_SIZES.UNKNOWN:
+        return 'unknown';
+    case NATIVE_AD_SIZES.SMALL:
+        return 'small';
+    case NATIVE_AD_SIZES.MEDIUM:
+        return 'medium';
+    case NATIVE_AD_SIZES.LARGE:
+        return 'large';
     }
 }
 

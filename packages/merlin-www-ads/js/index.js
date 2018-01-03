@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
 // Import legacy callbacks
-import * as Legacy from './LegacyCallbacks';
+import * as Legacy from './LegacyCallbacks'; // eslint-disable-line no-unused-vars
 
 // Import ad utils
 import * as Utils from './Utils';

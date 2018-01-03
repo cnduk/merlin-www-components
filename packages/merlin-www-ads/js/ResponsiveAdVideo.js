@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 
 import EventEmitter from 'eventemitter2';
@@ -11,15 +11,15 @@ import {
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 
 var VIDEO_EVENTS = {
-    "ENDED": "ended",
-    "PAUSE": "pause",
-    "PLAY": "play",
-    "RENDER": "render",
-    "STOP": "stop",
-    "off": function( el, type, fn ){
+    'ENDED': 'ended',
+    'PAUSE': 'pause',
+    'PLAY': 'play',
+    'RENDER': 'render',
+    'STOP': 'stop',
+    'off': function( el, type, fn ){
         removeEvent( el, type, fn );
     },
-    "on": function( el, type, fn ){
+    'on': function( el, type, fn ){
         return addEvent( el, type, fn );
     }
 };
@@ -119,7 +119,7 @@ ResponsiveAdVideo.prototype = inherit( EventEmitter.prototype, {
      * Binds events to the video player
      * @private
      */
-    "_bindEvents": function(){
+    '_bindEvents': function(){
         this._eventHooks.ended = this._onVideoEnded.bind(this);
         VIDEO_EVENTS.on( this.video, VIDEO_EVENTS.ENDED, this._eventHooks.ended );
     },
@@ -128,25 +128,25 @@ ResponsiveAdVideo.prototype = inherit( EventEmitter.prototype, {
      * Fired when the video has finished playing
      * @private
      */
-    "_onVideoEnded": function(){
+    '_onVideoEnded': function(){
         this.stop();
-        this.emit( "ended" );
+        this.emit( 'ended' );
     },
 
     /**
      * Renders the player
      * @private
      */
-    "_render": function(){
+    '_render': function(){
 
         if( this._rendered ) this._unbindEvents();
 
-        this.many( "ready", 1, this._bindEvents.bind(this) );
+        this.many( 'ready', 1, this._bindEvents.bind(this) );
 
         this.video = this._renderHTML5Video();
 
         this._rendered = true;
-        this.emit( "render" );
+        this.emit( 'render' );
 
     },
 
@@ -155,36 +155,36 @@ ResponsiveAdVideo.prototype = inherit( EventEmitter.prototype, {
      * @private
      * @return {HTMLNode} The video player
      */
-    "_renderHTML5Video": function(){
+    '_renderHTML5Video': function(){
 
-        var videoElement = document.createElement("video");
+        var videoElement = document.createElement('video');
 
         /**
          * Note: older chromes struggle to fire loadedmetadata and loadeddata
          * video events when there are multiple same videos on the web page.
          * Appending a cache bust tricks it into firing them
          */
-        videoElement.appendChild( createVideoSource( "video/webm",
+        videoElement.appendChild( createVideoSource( 'video/webm',
             cacheBuster(this.options.webm) ) );
-        videoElement.appendChild( createVideoSource( "video/mp4",
+        videoElement.appendChild( createVideoSource( 'video/mp4',
             cacheBuster(this.options.mp4) ) );
         if( this._autoplay ){
-            videoElement.setAttribute( "autoplay", true );
+            videoElement.setAttribute( 'autoplay', true );
         }
         if( this.isMuted ){
-            videoElement.setAttribute( "muted", true );
+            videoElement.setAttribute( 'muted', true );
         }
         if( this._loop ){
-            videoElement.setAttribute( "loop", true );
+            videoElement.setAttribute( 'loop', true );
         }
-        addEvent( videoElement, "loadedmetadata", onLoadedData.bind(this) );
+        addEvent( videoElement, 'loadedmetadata', onLoadedData.bind(this) );
 
         this.el.appendChild( videoElement );
 
         function onLoadedData(){
-            removeEvent( videoElement, "loadedmetadata", onLoadedData );
+            removeEvent( videoElement, 'loadedmetadata', onLoadedData );
             this.isReady = true;
-            this.emit("ready");
+            this.emit('ready');
         }
 
         return videoElement;
@@ -194,7 +194,7 @@ ResponsiveAdVideo.prototype = inherit( EventEmitter.prototype, {
      * Unbinds any events attached to the player
      * @private
      */
-    "_unbindEvents": function(){
+    '_unbindEvents': function(){
         VIDEO_EVENTS.off( this.video, VIDEO_EVENTS.ENDED, this._eventHooks.ended );
         this._eventHooks.ended = null;
     },
@@ -202,81 +202,81 @@ ResponsiveAdVideo.prototype = inherit( EventEmitter.prototype, {
     /**
      * @constructor
      */
-    "constructor": ResponsiveAdVideo,
+    'constructor': ResponsiveAdVideo,
 
     /**
      * Destroys the video player
      * @fires ResponsiveAdVideo#destroy
      */
-    "destroy": function(){
+    'destroy': function(){
         if( this._rendered ) this._unbindEvents();
         this.el.parentNode.removeChild( this.el );
-        this.emit( "destroy" );
+        this.emit( 'destroy' );
     },
 
     /**
      * Hides the video player
      */
-    "hide": function(){
+    'hide': function(){
         if( !this.isVisible ) return;
         this.isVisible = false;
-        removeClass( this.el, "responsive-ad__video--visible" );
+        removeClass( this.el, 'responsive-ad__video--visible' );
     },
 
     /**
      * Mutes the video
      * @fires ResponsiveAdVideo#mute
      */
-    "mute": function(){
+    'mute': function(){
         if( this.isMuted || this.video === null ) return;
-        this.video.setAttribute( "muted", true );
-        this.emit( "mute" );
+        this.video.setAttribute( 'muted', true );
+        this.emit( 'mute' );
     },
 
     /**
      * Pauses the video player
      * @fires ResponsiveAdVideo#pause
      */
-    "pause": function(){
+    'pause': function(){
         if( !this.isReady ) return;
         this.video.pause();
-        this.emit( "pause" );
+        this.emit( 'pause' );
     },
 
     /**
      * Plays the video player
      * @fires ResponsiveAdVideo#play
      */
-    "play": function(){
+    'play': function(){
         if( !this.isReady ) return;
         this.video.play();
-        this.emit( "play" );
+        this.emit( 'play' );
     },
 
     /**
      * Shows the video player
      */
-    "show": function(){
+    'show': function(){
         if( this.isVisible ) return;
         this.isVisible = true;
-        addClass( this.el, "responsive-ad__video--visible" );
+        addClass( this.el, 'responsive-ad__video--visible' );
     },
 
     /**
      * Stops the video player
      * @fires ResponsiveAdVideo#stop
      */
-    "stop": function(){
+    'stop': function(){
         if( !this.isReady ) return;
         this.video.pause();
         this.video.currentTime = 0;
-        this.emit( "stop" );
+        this.emit( 'stop' );
     },
 
     /**
      * Toggles the mute on the video
      */
-    "toggleMute": function(){
+    'toggleMute': function(){
         if( this.isMuted ) return this.unmute();
         this.mute();
     },
@@ -285,10 +285,10 @@ ResponsiveAdVideo.prototype = inherit( EventEmitter.prototype, {
      * Umutes the video
      * @fires RepsonsiveAdVideo#unmute
      */
-    "unmute": function(){
+    'unmute': function(){
         if( !this.isMuted || this.video === null ) return;
-        this.video.setAttribute( "muted", false );
-        this.emit( "unmute" );
+        this.video.setAttribute( 'muted', false );
+        this.emit( 'unmute' );
     }
 
 });
@@ -299,20 +299,7 @@ ResponsiveAdVideo.prototype = inherit( EventEmitter.prototype, {
  * @return {String}
  */
 function cacheBuster(url){
-    return url + "?" + Math.random();
-}
-
-/**
- * Creates an object containing video type and src information
- * @param  {String} type
- * @param  {String} src
- * @return {Object}
- */
-function createVideoObject( type, src ){
-    return {
-        "type": type,
-        "src": src
-    };
+    return url + '?' + Math.random();
 }
 
 /**
@@ -322,9 +309,9 @@ function createVideoObject( type, src ){
  * @return {HTMLNode}
  */
 function createVideoSource( type, src ){
-    var sourceElement = document.createElement("source");
-    sourceElement.setAttribute( "type", type );
-    sourceElement.setAttribute( "src", src );
+    var sourceElement = document.createElement('source');
+    sourceElement.setAttribute( 'type', type );
+    sourceElement.setAttribute( 'src', src );
     return sourceElement;
 }
 
