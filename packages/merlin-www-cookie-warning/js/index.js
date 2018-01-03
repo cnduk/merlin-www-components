@@ -19,8 +19,10 @@ export var COOKIE_DIALOG_COUNT = 'cnd_cookie_dialog_count';
 var JS_CLOSE_BUTTON = '.js-c-cookie-close-btn';
 var COUNT_LIMIT = 3;
 
-function CookieWarning(el){
-    EventEmitter.call(this, {wildcard: true});
+function CookieWarning(el) {
+    EventEmitter.call(this, {
+        wildcard: true
+    });
 
     this.el = el;
     this.isHidden = true;
@@ -32,49 +34,49 @@ function CookieWarning(el){
     this._init();
 }
 CookieWarning.prototype = inherit(EventEmitter.prototype, {
-    _bindListeners: function _bindListeners(){
+    _bindListeners: function _bindListeners() {
         this._hooks.click = this.remove.bind(this);
         addEvent(
             this.el.querySelector(JS_CLOSE_BUTTON), 'click',
             this._hooks.click);
     },
-    _unbindListeners: function _unbindListeners(){
-        if(this._hooks !== null){
+    _unbindListeners: function _unbindListeners() {
+        if (this._hooks !== null) {
             removeEvent(
                 this.el.querySelector(JS_CLOSE_BUTTON), 'click',
                 this._hooks.click);
             this._hooks = null;
         }
     },
-    _init: function _init(){
+    _init: function _init() {
 
         // Check if dialog has already been closed
         var isDialogClosed = getCookie(COOKIE_DIALOG_CLOSED);
-        if(isDialogClosed){
+        if (isDialogClosed) {
             this.remove();
             return;
         }
 
-        if(this.incrementCounter()){
+        if (this.incrementCounter()) {
             this._bindListeners();
             this.show();
         }
 
     },
     constructor: CookieWarning,
-    hide: function hide(){
-        if(this.isHidden) return;
+    hide: function hide() {
+        if (this.isHidden) return;
         this.isHidden = true;
         addClass(this.el, 'is-hidden');
         this.emit('visibilitychange', events.visibilitychange(this, 'hidden'));
     },
-    show: function show(){
-        if(!this.isHidden) return;
+    show: function show() {
+        if (!this.isHidden) return;
         this.isHidden = false;
         removeClass(this.el, 'is-hidden');
         this.emit('visibilitychange', events.visibilitychange(this, 'visible'));
     },
-    remove: function remove(){
+    remove: function remove() {
         deleteCookie(COOKIE_DIALOG_COUNT);
         setCookie(COOKIE_DIALOG_CLOSED, true, 365);
         this.hide();
@@ -84,21 +86,21 @@ CookieWarning.prototype = inherit(EventEmitter.prototype, {
         removeElement(this.el);
         this.el = null;
     },
-    incrementCounter: function incrementCounter(){
+    incrementCounter: function incrementCounter() {
         // Update page counter and remove after we've hit third page
         var pageCounter = getCookie(COOKIE_DIALOG_COUNT);
 
-        if(pageCounter === null){
+        if (pageCounter === null) {
             setCookie(COOKIE_DIALOG_COUNT, 1, 365);
 
         } else {
             pageCounter = parseInt(pageCounter, 10);
-            if(isNaN(pageCounter)){
+            if (isNaN(pageCounter)) {
                 setCookie(COOKIE_DIALOG_COUNT, 1, 365);
 
             } else {
                 pageCounter++;
-                if(pageCounter === COUNT_LIMIT){
+                if (pageCounter === COUNT_LIMIT) {
                     this.emit('limitexceeded', events.limitexceeded(this));
                     deleteCookie(COOKIE_DIALOG_COUNT);
                     setCookie(COOKIE_DIALOG_CLOSED, true, 365);
