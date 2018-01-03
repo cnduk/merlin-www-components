@@ -15,7 +15,9 @@ import {
     throttle,
     updateQueryString
 } from '@cnbritain/merlin-www-js-utils/js/functions';
-import { hasHistory } from '@cnbritain/merlin-www-js-utils/js/detect';
+import {
+    hasHistory
+} from '@cnbritain/merlin-www-js-utils/js/detect';
 import InfiniteScroll from '@cnbritain/merlin-www-js-infinitescroll';
 import {
     CLS_ARTICLE_VIDEO_BODY,
@@ -36,8 +38,10 @@ import VideoPlayer from './VideoPlayer';
 var INFINITE_BOTTOM_THRESHOLD = 500;
 var INFINITE_RESIZE_DEBOUNCE = 500;
 
-function ArticleManager(){
-    EventEmitter.call(this, { 'wildcard': true });
+function ArticleManager() {
+    EventEmitter.call(this, {
+        'wildcard': true
+    });
 
     this._hooks = {
         'resize': null,
@@ -55,11 +59,11 @@ function ArticleManager(){
 
 ArticleManager.prototype = inherit(EventEmitter.prototype, {
 
-    '_triggerFocusBlur': function(index){
+    '_triggerFocusBlur': function(index) {
         var article = null;
         var eve = null;
 
-        if(this.focusedIndex !== -1){
+        if (this.focusedIndex !== -1) {
             article = this.articles[this.focusedIndex];
             eve = events.blur(article);
             article.emit('blur', eve);
@@ -71,7 +75,7 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         article.emit('focus', eve);
     },
 
-    '_onVideoChange': function _onVideoChange(e){
+    '_onVideoChange': function _onVideoChange(e) {
 
         var config = VideoPlayer.playlist.videoConfigs[e.videoIndex];
 
@@ -89,7 +93,7 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         // Create article if needs to be
         var article = this.getArticleByUid(config.data_uid);
         var index = -1;
-        if(!article){
+        if (!article) {
             article = this.add(articleEl, {
                 analytics: config.config_analytics,
                 isInfinite: true,
@@ -107,7 +111,7 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         this._triggerFocusBlur(index);
     },
 
-    '_init': function _init(){
+    '_init': function _init() {
 
         // Resize
         onPageLoad(this.resize.bind(this, 0));
@@ -117,7 +121,7 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         addEvent(window, 'scroll', this._hooks.scroll);
 
         // Video changes
-        if(VideoPlayer !== null){
+        if (VideoPlayer !== null) {
             bubbleEvent(VideoPlayer, this, 'videoselect');
             bubbleEvent(VideoPlayer, this, 'videochange');
             VideoPlayer.on('videochange', this._onVideoChange.bind(this));
@@ -126,7 +130,7 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         this.on('focus', onArticleFocus);
     },
 
-    '_bindArticleBubbles': function _bindArticleBubbles(article){
+    '_bindArticleBubbles': function _bindArticleBubbles(article) {
         bubbleEvent(article, this, 'focus');
         bubbleEvent(article, this, 'blur');
         bubbleEvent(article, this, 'imagefocus');
@@ -135,7 +139,7 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         bubbleEvent(article, this, 'expand');
     },
 
-    'add': function add(el, _options){
+    'add': function add(el, _options) {
         var config = assign({
             'ads': null,
             'analytics': null,
@@ -157,8 +161,8 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
 
     'constructor': ArticleManager,
 
-    'disableInfiniteScroll': function disableInfiniteScroll(){
-        if(this._infiniteScroll === null) return;
+    'disableInfiniteScroll': function disableInfiniteScroll() {
+        if (this._infiniteScroll === null) return;
 
         this._infiniteScroll.disable();
         this._infiniteScroll.removeAllListeners();
@@ -171,8 +175,8 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         this._hooks.scroll = null;
     },
 
-    'enableInfiniteScroll': function enableInfiniteScroll(){
-        if(this._infiniteScroll !== null) return;
+    'enableInfiniteScroll': function enableInfiniteScroll() {
+        if (this._infiniteScroll !== null) return;
 
         this._infiniteScroll = new InfiniteScroll({
             'el': window,
@@ -190,27 +194,27 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         addEvent(window, 'resize', this._hooks.resize);
     },
 
-    'getArticleByUid': function getArticleByUid(uid){
+    'getArticleByUid': function getArticleByUid(uid) {
         var length = this.articles.length;
-        while(length--){
-            if(this.articles[length].uid === uid) return this.articles[length];
+        while (length--) {
+            if (this.articles[length].uid === uid) return this.articles[length];
         }
         return false;
     },
 
-    'resize': function resize(_start, _length){
-        if(arguments.length === 0) return;
+    'resize': function resize(_start, _length) {
+        if (arguments.length === 0) return;
 
         this._pageHeight = document.body.scrollHeight - window.innerHeight;
-        this._windowHeight = window.innerHeight/2;
+        this._windowHeight = window.innerHeight / 2;
 
         var start = _start < 0 ? 0 : parseInt(_start);
         var length = (
             _length === undefined ? this.articles.length : parseInt(_length));
-        if(length < 1) return;
+        if (length < 1) return;
 
         var articles = this.articles.slice(start, start + length);
-        articles.forEach(function article_resize(article){
+        articles.forEach(function article_resize(article) {
             article.resize();
         });
     }
@@ -221,12 +225,12 @@ var manager = new ArticleManager();
 export default manager;
 
 
-function infiniteScrollTrigger(scrollY){
+function infiniteScrollTrigger(scrollY) {
     return scrollY >= this._pageHeight - INFINITE_BOTTOM_THRESHOLD;
 }
 
 
-function infiniteScrollUrl(){
+function infiniteScrollUrl() {
     var referralUid = validateArticleUid(
         getStorage('article_referral_uid'));
     var excludeUid = validateArticleUid(
@@ -244,7 +248,7 @@ function infiniteScrollUrl(){
  * @param  {String} articleUid
  * @return {String}
  */
-function validateArticleUid(articleUid){
+function validateArticleUid(articleUid) {
     return String(articleUid).replace(/[\W]/gi, '');
 }
 
@@ -253,21 +257,21 @@ function validateArticleUid(articleUid){
  * and blur events on the article
  * @this ArticleManager
  */
-function onWindowScroll(){
+function onWindowScroll() {
     var scrollTop = getWindowScrollTop();
 
     var articlesLength = this.articles.length;
     var tmpArticle = null;
     var i = -1;
-    while(++i < articlesLength){
+    while (++i < articlesLength) {
         tmpArticle = this.articles[i];
 
         // If the tmp is the one that is currently focused, skip it
-        if(this.focusedIndex === i) continue;
+        if (this.focusedIndex === i) continue;
 
         // Check if tmp.top is over half the screen or bottom is halfway in
-        if(tmpArticle.bounds.top > scrollTop + this._windowHeight) continue;
-        if(tmpArticle.bounds.bottom < scrollTop + this._windowHeight) continue;
+        if (tmpArticle.bounds.top > scrollTop + this._windowHeight) continue;
+        if (tmpArticle.bounds.bottom < scrollTop + this._windowHeight) continue;
 
         // This article is in screen. Fire blur if focus article already set
         this._triggerFocusBlur(i);
@@ -276,31 +280,31 @@ function onWindowScroll(){
 
 }
 
-function onInfiniteLoadError(e){
+function onInfiniteLoadError(e) {
     this.disableInfiniteScroll();
     throw new Error('Failed at getting the next article', e);
 }
 
-function onInfiniteLoadComplete(e){
+function onInfiniteLoadComplete(e) {
 
     var responseText = e.originalRequest.responseText;
     var responseJSON = null;
     try {
         responseJSON = JSON.parse(responseText);
-    } catch(err){
+    } catch (err) {
         this.disableInfiniteScroll();
         throw new Error('Error trying to parse response JSON', err);
     }
-    if(!responseJSON.hasOwnProperty('data')) return;
+    if (!responseJSON.hasOwnProperty('data')) return;
     responseJSON = responseJSON.data;
 
     // Check that there is markup in the response or that we're not being told
     // to stop. There should be but just to be safe
-    if(!responseJSON.hasOwnProperty('template')){
+    if (!responseJSON.hasOwnProperty('template')) {
         this.disableInfiniteScroll();
         return;
 
-    } else if(responseJSON.stop){
+    } else if (responseJSON.stop) {
         this.disableInfiniteScroll();
     }
 
@@ -318,17 +322,17 @@ function onInfiniteLoadComplete(e){
     articleEl = articleEl[articleEl.length - 1];
 
     var ads = null;
-    if(responseJSON.hasOwnProperty('config_ad') && responseJSON.config_ad !== null){
+    if (responseJSON.hasOwnProperty('config_ad') && responseJSON.config_ad !== null) {
         ads = responseJSON.config_ad.data;
     }
 
     var analytics = null;
-    if(responseJSON.hasOwnProperty('config_analytics') && responseJSON.config_analytics !== null){
+    if (responseJSON.hasOwnProperty('config_analytics') && responseJSON.config_analytics !== null) {
         analytics = responseJSON.config_analytics.data;
     }
 
     var simplereach = null;
-    if(responseJSON.hasOwnProperty('config_simplereach') && responseJSON.config_simplereach !== null){
+    if (responseJSON.hasOwnProperty('config_simplereach') && responseJSON.config_simplereach !== null) {
         simplereach = responseJSON.config_simplereach.data;
     }
 
@@ -340,8 +344,8 @@ function onInfiniteLoadComplete(e){
     });
 
     // Update any local storage values
-    if(responseJSON.local_storage){
-        responseJSON.local_storage.forEach(function(item){
+    if (responseJSON.local_storage) {
+        responseJSON.local_storage.forEach(function(item) {
             setStorage(item.key, item.value);
         });
     }
@@ -355,19 +359,20 @@ function onInfiniteLoadComplete(e){
 }
 
 var isFirstArticle = true;
-function onArticleFocus(e){
+
+function onArticleFocus(e) {
 
     var article = e.target;
 
     // At the moment, the first article triggers the pageview and simplereach
     // using script tags in the page.
     // TODO: move that stuff out of the page and use this for everything
-    if(!article.isInfinite && isFirstArticle){
+    if (!article.isInfinite && isFirstArticle) {
         isFirstArticle = false;
         return;
 
-    // Scrolled down quick and focused next article before hitting the first
-    } else if(isFirstArticle) {
+        // Scrolled down quick and focused next article before hitting the first
+    } else if (isFirstArticle) {
         isFirstArticle = false;
     }
 
@@ -381,7 +386,7 @@ function onArticleFocus(e){
     // with focus has a simplereach config, it will then trigger a new
     // simplereach session.
     dispatchSimpleReachStop();
-    if(article.simplereach){
+    if (article.simplereach) {
         var simplereachConfig = cloneObjectDeep(article.simplereach);
         simplereachConfig['ref_url'] = lastUrl;
         dispatchSimpleReach(simplereachConfig);

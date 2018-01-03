@@ -14,13 +14,18 @@ import {
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import InfiniteScroll from '@cnbritain/merlin-www-js-infinitescroll';
 import * as events from './events';
-import { getStorage, setStorage } from './utils';
+import {
+    getStorage,
+    setStorage
+} from './utils';
 
 var CLS_CARD_LIST = '.js-c-card-list';
 var CLS_CARD_LIST_ITEM = '.js-c-card-list__item';
 
-function Playlist(el){
-    EventEmitter.call(this, {'wildcard': true});
+function Playlist(el) {
+    EventEmitter.call(this, {
+        'wildcard': true
+    });
 
     this._hooks = {
         resize: null
@@ -37,9 +42,9 @@ function Playlist(el){
 
 Playlist.prototype = inherit(EventEmitter.prototype, {
 
-    _bindPlayerListeners: function _bindPlayerListeners(){
-        var delegateFn = delegate(CLS_CARD_LIST_ITEM, function(e){
-            if(this.videoConfigs.length === 0) return;
+    _bindPlayerListeners: function _bindPlayerListeners() {
+        var delegateFn = delegate(CLS_CARD_LIST_ITEM, function(e) {
+            if (this.videoConfigs.length === 0) return;
             e.preventDefault();
             var index = getElementIndex(e.delegateTarget);
             this.select(index);
@@ -47,35 +52,35 @@ Playlist.prototype = inherit(EventEmitter.prototype, {
         addEvent(this.el, 'click', delegateFn);
     },
 
-    _init: function _init(){
+    _init: function _init() {
         this._bindPlayerListeners();
         this.resize();
     },
 
-    _onListLoadError: function _onListLoadError(){
+    _onListLoadError: function _onListLoadError() {
         // TODO: Error handle
     },
 
-    _onListLoadSuccess: function _onListLoadSuccess(e){
+    _onListLoadSuccess: function _onListLoadSuccess(e) {
 
         var responseText = e.originalRequest.responseText;
         var responseJSON = null;
         try {
             responseJSON = JSON.parse(responseText);
-        } catch(err){
+        } catch (err) {
             this.disableInfiniteScroll();
             throw new Error('Error trying to parse response JSON', err);
         }
-        if(!responseJSON.hasOwnProperty('data')) return;
+        if (!responseJSON.hasOwnProperty('data')) return;
         responseJSON = responseJSON.data;
 
         // Check that there is markup in the response or that we're not being told
         // to stop. There should be but just to be safe
-        if(!responseJSON.hasOwnProperty('template')){
+        if (!responseJSON.hasOwnProperty('template')) {
             this.disableInfiniteScroll();
             return;
 
-        } else if(responseJSON.stop){
+        } else if (responseJSON.stop) {
             this.disableInfiniteScroll();
         }
 
@@ -88,9 +93,9 @@ Playlist.prototype = inherit(EventEmitter.prototype, {
         );
 
         // Update any local storage values
-        if(responseJSON.local_storage){
-            responseJSON.local_storage.forEach(function(item){
-                if(/playlist_json$/.test(item.key)){
+        if (responseJSON.local_storage) {
+            responseJSON.local_storage.forEach(function(item) {
+                if (/playlist_json$/.test(item.key)) {
                     this.videoConfigs = this.videoConfigs.concat(
                         item.value);
                 } else {
@@ -105,8 +110,8 @@ Playlist.prototype = inherit(EventEmitter.prototype, {
 
     constructor: Playlist,
 
-    disableInfiniteScroll: function disableInfiniteScroll(){
-        if(this._infiniteScroll === null) return;
+    disableInfiniteScroll: function disableInfiniteScroll() {
+        if (this._infiniteScroll === null) return;
 
         this._infiniteScroll.disable();
         this._infiniteScroll.removeAllListeners();
@@ -116,16 +121,16 @@ Playlist.prototype = inherit(EventEmitter.prototype, {
         this._hooks.resize = null;
     },
 
-    enableInfiniteScroll: function enableInfiniteScroll(){
-        if(this._infiniteScroll !== null) return;
+    enableInfiniteScroll: function enableInfiniteScroll() {
+        if (this._infiniteScroll !== null) return;
 
         this._infiniteScroll = new InfiniteScroll({
             'el': this.el.querySelector('.a-video__sidebar__list'),
             'throttle': 150,
-            'trigger': function infiniteScrollTrigger(scrollY){
-                return (this.el.scrollHeight/2) < scrollY;
+            'trigger': function infiniteScrollTrigger(scrollY) {
+                return (this.el.scrollHeight / 2) < scrollY;
             },
-            'url': function infiniteScrollUrl(pageCounter){
+            'url': function infiniteScrollUrl(pageCounter) {
                 var url = getStorage('playlist_infinite_url');
                 return location.origin + url + '?page=' + (pageCounter + 1);
             }
@@ -141,34 +146,34 @@ Playlist.prototype = inherit(EventEmitter.prototype, {
         addEvent(window, 'resize', this._hooks.resize);
     },
 
-    loadConfigs: function loadConfigs(){
+    loadConfigs: function loadConfigs() {
         var configs = getPlaylistJson();
-        if(configs){
+        if (configs) {
             this.videoConfigs = configs;
         }
     },
 
-    resize: function resize(){
+    resize: function resize() {
         this.bounds = getElementOffset(this.el);
     },
 
-    select: function select(index){
-        if(index === this.selectedIndex){
+    select: function select(index) {
+        if (index === this.selectedIndex) {
             this.emit(
                 'videoselect', events.videoselect(this, this.selectedIndex));
             return;
         }
 
-        var selector = CLS_CARD_LIST_ITEM +':nth-child(' +
+        var selector = CLS_CARD_LIST_ITEM + ':nth-child(' +
             (this.selectedIndex + 1) + ')';
-        if(this.selectedIndex > -1){
+        if (this.selectedIndex > -1) {
             removeClass(this.el.querySelector(selector), 'is-active');
             // NOTE: do not need to update the section
             // removeClass(this.elSection.querySelector(selector), 'is-active');
         }
 
         this.selectedIndex = index;
-        selector = CLS_CARD_LIST_ITEM +':nth-child(' +
+        selector = CLS_CARD_LIST_ITEM + ':nth-child(' +
             (this.selectedIndex + 1) + ')';
         addClass(this.el.querySelector(selector), 'is-active');
         // NOTE: do not need to update the section
@@ -181,19 +186,20 @@ Playlist.prototype = inherit(EventEmitter.prototype, {
 
 export default Playlist;
 
-function getElementIndex(el){
+function getElementIndex(el) {
     var parent = el.parentNode;
     var len = parent.children.length;
-    while(len--) if(parent.children[len] === el) return len;
+    while (len--)
+        if (parent.children[len] === el) return len;
     return -1;
 }
 
-function getPlaylistJson(){
+function getPlaylistJson() {
     return getStorage('playlist_json');
 }
 
-function addChildrenToNode(node, children){
+function addChildrenToNode(node, children) {
     var i = -1;
     var len = children.length;
-    while(++i < len) node.appendChild(children[0]);
+    while (++i < len) node.appendChild(children[0]);
 }

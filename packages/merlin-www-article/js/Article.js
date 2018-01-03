@@ -21,8 +21,10 @@ import {
 } from './utils';
 import * as events from './events';
 
-function Article(el, _options){
-    EventEmitter.call(this, {'wildcard': true});
+function Article(el, _options) {
+    EventEmitter.call(this, {
+        'wildcard': true
+    });
 
     var options = _options || {};
 
@@ -42,50 +44,50 @@ function Article(el, _options){
 
 Article.prototype = inherit(EventEmitter.prototype, {
 
-    '_bindBubblingEvents': function _bindBubblingEvents(){
+    '_bindBubblingEvents': function _bindBubblingEvents() {
         // Gallery
-        if(this.gallery !== null){
+        if (this.gallery !== null) {
             bubbleEvent(this.gallery, this, 'viewchange');
             bubbleEvent(this.gallery, this, 'imagefocus');
             bubbleEvent(this.gallery, this, 'imageblur');
         }
     },
 
-    '_getArticleProperties': function _getArticleProperties(){
+    '_getArticleProperties': function _getArticleProperties() {
         this.properties = {
             'title': getArticleTitle(this.el),
             'url': getArticleUrl(this.el)
         };
     },
 
-    '_init': function _init(){
+    '_init': function _init() {
 
         // If article has come from infinite scroll, trigger social embeds to
         // update as the article body might contain embeds.
-        if(this.isInfinite) updateSocialEmbeds();
+        if (this.isInfinite) updateSocialEmbeds();
 
         // Check if the article contains a gallery
         var gallery = this.el.querySelector(CLS_ARTICLE_GALLERY);
-        if(this.gallery === null && gallery){
+        if (this.gallery === null && gallery) {
             this.gallery = new Gallery(gallery, {
                 parentArticle: this
             });
             // Listen to when the article focuses or blurs so we can add and remove
             // the scroll listener as and when needed
-            this.on('focus', function(){
+            this.on('focus', function() {
                 this.gallery.bindImageScrollListener();
                 this.gallery.bindNavScrollListener();
                 this.gallery.updateImageScroll();
                 this.gallery.updateNavScroll();
             }.bind(this));
-            this.on('blur', function(){
+            this.on('blur', function() {
                 this.gallery.unbindImageScrollListener();
                 this.gallery.unbindNavScrollListener();
                 this.gallery.updateImageScroll();
                 this.gallery.updateNavScroll();
             }.bind(this));
         } else {
-            if(this.gallery !== null){
+            if (this.gallery !== null) {
                 this.gallery.parentArticle = this;
             }
         }
@@ -94,7 +96,7 @@ Article.prototype = inherit(EventEmitter.prototype, {
         // in .a-infinite.is-closed. This will only display 3 images to prevent
         // loading a heck load. We listen once to the button click allowing
         // the gallery to expand
-        if(this.isInfinite && this.gallery !== null){
+        if (this.isInfinite && this.gallery !== null) {
             addEventOnce(
                 this.el.parentNode.querySelector(CLS_INFINITE_BTN),
                 'click',
@@ -108,15 +110,15 @@ Article.prototype = inherit(EventEmitter.prototype, {
 
     'constructor': Article,
 
-    'expand': function(){
+    'expand': function() {
         removeClass(this.el.parentNode, 'is-closed');
         this.resize();
         this.emit('expand', events.expand(this));
     },
 
-    'resize': function resize(){
+    'resize': function resize() {
         this.bounds = getElementOffset(this.el);
-        if(this.gallery !== null) this.gallery.resize();
+        if (this.gallery !== null) this.gallery.resize();
     }
 
 });

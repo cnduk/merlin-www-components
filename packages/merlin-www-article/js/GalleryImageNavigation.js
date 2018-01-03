@@ -12,8 +12,10 @@ import * as events from './events';
 var CLS_NEXT_BUTTON = '.g-image-nav__btn--next';
 var CLS_PREVIOUS_BUTTON = '.g-image-nav__btn--previous';
 
-function GalleryImageNavigation(el){
-    EventEmitter.call(this, {'wildcard': true});
+function GalleryImageNavigation(el) {
+    EventEmitter.call(this, {
+        'wildcard': true
+    });
     this.bounds = null;
     this.el = el;
 
@@ -22,17 +24,17 @@ function GalleryImageNavigation(el){
 
 GalleryImageNavigation.prototype = inherit(EventEmitter.prototype, {
 
-    '_init': function(){
+    '_init': function() {
         var btn = this.el.querySelector(CLS_NEXT_BUTTON);
-        if(btn){
-            addEvent(btn, 'click', function(){
+        if (btn) {
+            addEvent(btn, 'click', function() {
                 this.emit('next', events.navNext(this));
             }.bind(this));
         }
 
         btn = this.el.querySelector(CLS_PREVIOUS_BUTTON);
-        if(btn){
-            addEvent(btn, 'click', function(){
+        if (btn) {
+            addEvent(btn, 'click', function() {
                 this.emit('previous', events.navPrevious(this));
             }.bind(this));
         }
@@ -44,27 +46,27 @@ GalleryImageNavigation.prototype = inherit(EventEmitter.prototype, {
 
     'constructor': GalleryImageNavigation,
 
-    'disableNextButton': function(){
+    'disableNextButton': function() {
         var btn = this.el.querySelector(CLS_NEXT_BUTTON);
-        if(btn) btn.setAttribute('disabled', true);
+        if (btn) btn.setAttribute('disabled', true);
     },
 
-    'disablePreviousButton': function(){
+    'disablePreviousButton': function() {
         var btn = this.el.querySelector(CLS_PREVIOUS_BUTTON);
-        if(btn) btn.setAttribute('disabled', true);
+        if (btn) btn.setAttribute('disabled', true);
     },
 
-    'enableNextButton': function(){
+    'enableNextButton': function() {
         var btn = this.el.querySelector(CLS_NEXT_BUTTON);
-        if(btn) btn.removeAttribute('disabled');
+        if (btn) btn.removeAttribute('disabled');
     },
 
-    'enablePreviousButton': function(){
+    'enablePreviousButton': function() {
         var btn = this.el.querySelector(CLS_PREVIOUS_BUTTON);
-        if(btn) btn.removeAttribute('disabled');
+        if (btn) btn.removeAttribute('disabled');
     },
 
-    'resize': function(){
+    'resize': function() {
         this.bounds = getElementOffset(this.el);
     }
 

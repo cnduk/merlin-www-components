@@ -47,7 +47,9 @@ var CLS_IS_HIDDEN = 'is-hidden';
  * @param {Object}          options     Gallery options
  */
 function Gallery(el, options) {
-    EventEmitter.call(this, {'wildcard': true});
+    EventEmitter.call(this, {
+        'wildcard': true
+    });
     var _options = options || {};
 
     /**
@@ -130,7 +132,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
 
     'constructor': Gallery,
 
-    '_thumbnailClick': function(e){
+    '_thumbnailClick': function(e) {
         var dataIndex = parseInt(
             e.delegateTarget.getAttribute('data-thumbnail-index'), 10);
         var elImage = this.imageElements[dataIndex];
@@ -142,17 +144,17 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
         // this.resize();
     },
 
-    '_init': function(){
+    '_init': function() {
         ImageFigure.init();
 
         // Image navigation create
         if (this.el.querySelector(CLS_IMAGE_NAVIGATION)) {
             this.imageNavigation = new GalleryImageNavigation(
                 this.el.querySelector(CLS_IMAGE_NAVIGATION));
-            this.imageNavigation.on('next', function(){
+            this.imageNavigation.on('next', function() {
                 this.gotoImage(this.focusedImageIndex + 1);
             }.bind(this));
-            this.imageNavigation.on('previous', function(){
+            this.imageNavigation.on('previous', function() {
                 this.gotoImage(this.focusedImageIndex - 1);
             }.bind(this));
         }
@@ -174,34 +176,34 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
      * @public
      * @memberof! Gallery.prototype
      */
-    'resize': function resize(){
+    'resize': function resize() {
         this.bounds = getElementOffset(this.el);
         this._imagePositions = this.imageElements.map(getElementOffset);
-        this._windowHeightHalf = window.innerHeight/2;
-        if(this.imageNavigation !== null) this.imageNavigation.resize();
+        this._windowHeightHalf = window.innerHeight / 2;
+        if (this.imageNavigation !== null) this.imageNavigation.resize();
 
         this.updateImageScroll();
         this.updateNavScroll();
     },
 
-    'bindNavScrollListener': function(){
-        if(this.imageNavigation === null || this._hooks.navScroll !== null){
+    'bindNavScrollListener': function() {
+        if (this.imageNavigation === null || this._hooks.navScroll !== null) {
             return;
         }
         this._hooks.navScroll = this.updateNavScroll.bind(this);
         addEvent(window, 'scroll', this._hooks.navScroll);
     },
 
-    'unbindNavScrollListener': function(){
-        if(this.imageNavigation === null || this._hooks.navScroll === null){
+    'unbindNavScrollListener': function() {
+        if (this.imageNavigation === null || this._hooks.navScroll === null) {
             return;
         }
         removeEvent(window, 'scroll', this._hooks.navScroll);
         this._hooks.navScroll = null;
     },
 
-    'updateNavScroll': function(){
-        if(this.imageNavigation === null) return;
+    'updateNavScroll': function() {
+        if (this.imageNavigation === null) return;
 
         // NOTE: 60 is the navigation height
         var scrollY = getWindowScrollTop();
@@ -209,8 +211,8 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
         var bottom = this.bounds.bottom - 60 - this.imageNavigation.bounds.height;
 
         // Check if at bottom, set absolute
-        if(scrollY >= bottom){
-            if(this._imageNavigationState === 'absolute') return;
+        if (scrollY >= bottom) {
+            if (this._imageNavigationState === 'absolute') return;
             this._imageNavigationState = 'absolute';
             setAbsolute(
                 this.imageNavigation.el,
@@ -220,30 +222,30 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
         }
 
         // Check if at top, recent to normal
-        if(scrollY < top){
-            if(this._imageNavigationState === 'default') return;
+        if (scrollY < top) {
+            if (this._imageNavigationState === 'default') return;
             this._imageNavigationState = 'default';
             setDefault(this.imageNavigation.el);
             return;
         }
 
         // Stay as fixed
-        if(scrollY >= top){
-            if(this._imageNavigationState === 'fixed') return;
+        if (scrollY >= top) {
+            if (this._imageNavigationState === 'fixed') return;
             this._imageNavigationState = 'fixed';
             setFixed(this.imageNavigation.el, '60px');
         }
     },
 
-    'gotoImage': function(imageIndex){
+    'gotoImage': function(imageIndex) {
         var index = imageIndex;
-        if(index < 0){
+        if (index < 0) {
             index = 0;
-        } else if(index > this.imageElements.length - 1){
+        } else if (index > this.imageElements.length - 1) {
             index = this.imageElements.length - 1;
         }
 
-        if(index === this.focusedImageIndex) return;
+        if (index === this.focusedImageIndex) return;
 
         this._elementScroll.start({
             'x': 0,
@@ -258,33 +260,33 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
         });
     },
 
-    'bindImageScrollListener': function(){
-        if(this._hooks.imageElementscroll !== null) return;
+    'bindImageScrollListener': function() {
+        if (this._hooks.imageElementscroll !== null) return;
         this._hooks.imageElementscroll = throttle(this.updateImageScroll, 100, this);
         addEvent(window, 'scroll', this._hooks.imageElementscroll);
     },
 
-    'unbindImageScrollListener': function(){
-        if(this._hooks.scroll === null) return;
+    'unbindImageScrollListener': function() {
+        if (this._hooks.scroll === null) return;
         removeEvent(window, 'scroll', this._hooks.imageElementscroll);
         this._hooks.imageElementscroll = null;
     },
 
-    'updateImageScroll': function(){
+    'updateImageScroll': function() {
         var scrollTop = getWindowScrollTop() + this._windowHeightHalf;
 
         var i = -1;
         var length = this._imagePositions.length;
         var tmpPosition = null;
 
-        while(++i < length){
+        while (++i < length) {
             tmpPosition = this._imagePositions[i];
 
-            if(this.focusedImageIndex === i) continue;
-            if(tmpPosition.top > scrollTop) continue;
-            if(tmpPosition.bottom < scrollTop) continue;
+            if (this.focusedImageIndex === i) continue;
+            if (tmpPosition.top > scrollTop) continue;
+            if (tmpPosition.bottom < scrollTop) continue;
 
-            if(this.focusedImageIndex !== -1){
+            if (this.focusedImageIndex !== -1) {
                 this.emit(
                     'imageblur',
                     events.imageblur(this, this.focusedImageIndex)
@@ -297,11 +299,11 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
             );
 
             // Update image navigation is set
-            if(this.imageNavigation !== null){
-                if(this.focusedImageIndex === 0){
+            if (this.imageNavigation !== null) {
+                if (this.focusedImageIndex === 0) {
                     this.imageNavigation.enableNextButton();
                     this.imageNavigation.disablePreviousButton();
-                } else if(this.focusedImageIndex === this.imageElements.length - 1){
+                } else if (this.focusedImageIndex === this.imageElements.length - 1) {
                     this.imageNavigation.enablePreviousButton();
                     this.imageNavigation.disableNextButton();
                 } else {
@@ -314,8 +316,8 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
         }
     },
 
-    'displayListView': function(){
-        if(this.layoutView === 'list') return;
+    'displayListView': function() {
+        if (this.layoutView === 'list') return;
         this.layoutView = 'list';
 
         // Hide thumbnails
@@ -325,7 +327,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
         removeClass(this.el.querySelector(CLS_ARTICLE_GALLERY_VIEW_LIST),
             CLS_IS_HIDDEN);
 
-        if(this.imageNavigation !== null){
+        if (this.imageNavigation !== null) {
             removeClass(this.imageNavigation.el, CLS_IS_HIDDEN);
         }
 
@@ -333,8 +335,8 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
             'viewchange', events.galleryViewChange(this, this.layoutView));
     },
 
-    'displayThumbnailView': function(){
-        if(this.layoutView === 'thumbnail') return;
+    'displayThumbnailView': function() {
+        if (this.layoutView === 'thumbnail') return;
         this.layoutView = 'thumbnail';
 
         // Show thumbnails
@@ -344,7 +346,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
         addClass(this.el.querySelector(CLS_ARTICLE_GALLERY_VIEW_LIST),
             CLS_IS_HIDDEN);
 
-        if(this.imageNavigation !== null){
+        if (this.imageNavigation !== null) {
             addClass(this.imageNavigation.el, CLS_IS_HIDDEN);
         }
 
@@ -374,28 +376,28 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
 });
 
 
-function setAbsolute(el, top){
+function setAbsolute(el, top) {
     el.style.position = 'absolute';
     el.style.top = top;
 }
 
-function setDefault(el){
+function setDefault(el) {
     removeClass(el, 'is-fixed');
     el.style.position = '';
     el.style.top = '';
 }
 
-function setFixed(el, top){
+function setFixed(el, top) {
     addClass(el, 'is-fixed');
     el.style.position = 'fixed';
     el.style.top = top;
 }
 
 
-function toArray(collection){
+function toArray(collection) {
     var len = collection.length;
     var arr = new Array(len);
-    while(len--) arr[len] = collection[len];
+    while (len--) arr[len] = collection[len];
     return arr;
 }
 
