@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 import EventEmitter from 'eventemitter2';
 import {
