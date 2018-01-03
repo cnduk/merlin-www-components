@@ -164,80 +164,80 @@ Combobox.prototype = inherit(EventEmitter.prototype, {
 
         switch(e.keyCode) {
 
-            case KEYBOARD_CODES.TAB:
+        case KEYBOARD_CODES.TAB:
+            this.select(currentSelectedIndex);
+            if (this.isOpen) { this.closeList(); }
+            return;
+
+        case KEYBOARD_CODES.ESC:
+            this._input.value = this._optionValues[ this.selectedIndex ].label;
+            this._input.select();
+            if (this.isOpen) { this.closeList(); }
+            return stopEvent(e);
+
+        case KEYBOARD_CODES.ENTER:
+            if (e.shiftKey || e.altKey || e.ctrlKey) return;
+            if (!this.isOpen) {
+                this.openList();
+            } else {
                 this.select(currentSelectedIndex);
-                if (this.isOpen) { this.closeList(); }
-                return;
+                this.closeList();
+            }
+            return stopEvent(e);
 
-            case KEYBOARD_CODES.ESC:
-                this._input.value = this._optionValues[ this.selectedIndex ].label;
+        case KEYBOARD_CODES.ARROW_UP:
+            if (e.shiftKey || e.ctrlKey) return;
+            if (e.altKey) {
+                if (this.isOpen) this.select(currentSelectedIndex);
+                this.toggleList();
+            } else {
+                currentSelectedIndex = indexOf(this._options,
+                    this._selectedElement);
+                nextSelectedIndex = currentSelectedIndex - 1;
+
+                if (nextSelectedIndex < 0) return;
+
+                unselectOption(this._selectedElement);
+                this._selectedElement = this._options[ nextSelectedIndex ];
+                addClass(this._selectedElement, 'cbo__option--selected');
+                setScrollTop(this._list, this._selectedElement);
+                this._input.value = (this._optionValues[
+                    this._selectedElement.getAttribute('data-index') ].label);
                 this._input.select();
-                if (this.isOpen) { this.closeList(); }
-                return stopEvent(e);
 
-            case KEYBOARD_CODES.ENTER:
-                if (e.shiftKey || e.altKey || e.ctrlKey) return;
-                if (!this.isOpen) {
-                    this.openList();
-                } else {
-                    this.select(currentSelectedIndex);
-                    this.closeList();
-                }
-                return stopEvent(e);
+            }
+            return stopEvent(e);
 
-            case KEYBOARD_CODES.ARROW_UP:
-                if (e.shiftKey || e.ctrlKey) return;
-                if (e.altKey) {
-                    if (this.isOpen) this.select(currentSelectedIndex);
-                    this.toggleList();
-                } else {
-                    currentSelectedIndex = indexOf(this._options,
-                        this._selectedElement);
-                    nextSelectedIndex = currentSelectedIndex - 1;
+        case KEYBOARD_CODES.ARROW_DOWN:
+            if (e.shiftKey || e.ctrlKey) return;
+            if (e.altKey) {
+                if (this.isOpen) this.select(currentSelectedIndex);
+                this.toggleList();
+            } else {
+                currentSelectedIndex = indexOf(this._options,
+                    this._selectedElement);
+                nextSelectedIndex = currentSelectedIndex + 1;
 
-                    if (nextSelectedIndex < 0) return;
+                if (nextSelectedIndex >= this._options.length) return;
 
-                    unselectOption(this._selectedElement);
-                    this._selectedElement = this._options[ nextSelectedIndex ];
-                    addClass(this._selectedElement, 'cbo__option--selected');
-                    setScrollTop(this._list, this._selectedElement);
-                    this._input.value = (this._optionValues[
-                        this._selectedElement.getAttribute('data-index') ].label);
-                    this._input.select();
-
-                }
-                return stopEvent(e);
-
-            case KEYBOARD_CODES.ARROW_DOWN:
-                if (e.shiftKey || e.ctrlKey) return;
-                if (e.altKey) {
-                    if (this.isOpen) this.select(currentSelectedIndex);
-                    this.toggleList();
-                } else {
-                    currentSelectedIndex = indexOf(this._options,
-                        this._selectedElement);
-                    nextSelectedIndex = currentSelectedIndex + 1;
-
-                    if (nextSelectedIndex >= this._options.length) return;
-
-                    unselectOption(this._selectedElement);
-                    this._selectedElement = this._options[ nextSelectedIndex ];
-                    addClass(this._selectedElement, 'cbo__option--selected');
-                    setScrollTop(this._list, this._selectedElement);
-                    this._input.value = (this._optionValues[
-                        this._selectedElement.getAttribute('data-index') ].label);
-                    this._input.select();
-                }
+                unselectOption(this._selectedElement);
+                this._selectedElement = this._options[ nextSelectedIndex ];
+                addClass(this._selectedElement, 'cbo__option--selected');
+                setScrollTop(this._list, this._selectedElement);
+                this._input.value = (this._optionValues[
+                    this._selectedElement.getAttribute('data-index') ].label);
+                this._input.select();
+            }
             return stopEvent(e);
         }
     },
 
     '_onComboKeyPress': function(e) {
         switch(e.keyCode) {
-            case KEYBOARD_CODES.ARROW_DOWN:
-            case KEYBOARD_CODES.ARROW_UP:
-            case KEYBOARD_CODES.ENTER:
-                return stopEvent(e);
+        case KEYBOARD_CODES.ARROW_DOWN:
+        case KEYBOARD_CODES.ARROW_UP:
+        case KEYBOARD_CODES.ENTER:
+            return stopEvent(e);
         }
 
         return true;
@@ -245,21 +245,21 @@ Combobox.prototype = inherit(EventEmitter.prototype, {
 
     '_onComboKeyUp': function(e) {
         switch(e.keyCode) {
-            case KEYBOARD_CODES.ALT:
-            case KEYBOARD_CODES.ARROW_DOWN:
-            case KEYBOARD_CODES.ARROW_LEFT:
-            case KEYBOARD_CODES.ARROW_RIGHT:
-            case KEYBOARD_CODES.ARROW_UP:
-            case KEYBOARD_CODES.CTRL:
-            case KEYBOARD_CODES.DEL:
-            case KEYBOARD_CODES.END:
-            case KEYBOARD_CODES.ENTER:
-            case KEYBOARD_CODES.ESC:
-            case KEYBOARD_CODES.HOME:
-            case KEYBOARD_CODES.META:
-            case KEYBOARD_CODES.SHIFT:
-            case KEYBOARD_CODES.TAB:
-                return true;
+        case KEYBOARD_CODES.ALT:
+        case KEYBOARD_CODES.ARROW_DOWN:
+        case KEYBOARD_CODES.ARROW_LEFT:
+        case KEYBOARD_CODES.ARROW_RIGHT:
+        case KEYBOARD_CODES.ARROW_UP:
+        case KEYBOARD_CODES.CTRL:
+        case KEYBOARD_CODES.DEL:
+        case KEYBOARD_CODES.END:
+        case KEYBOARD_CODES.ENTER:
+        case KEYBOARD_CODES.ESC:
+        case KEYBOARD_CODES.HOME:
+        case KEYBOARD_CODES.META:
+        case KEYBOARD_CODES.SHIFT:
+        case KEYBOARD_CODES.TAB:
+            return true;
         }
 
         if (e.ctrlKey || e.metaKey) return true;
@@ -340,7 +340,7 @@ Combobox.prototype = inherit(EventEmitter.prototype, {
         // Render our stuff
         var container = createElement('div', {
             'cls': darkMode ? 'cbo cbo--dark' : 'cbo',
-            'html': isSearchable ? '<svg xmlns="http://www.w3.org/2000/svg" class="cbo__search" viewBox="0 0 10 10"><path d="M.7 3.9A3.22 3.22 0 0 1 3.9.7 3.14 3.14 0 0 1 7 3.9 3.08 3.08 0 0 1 3.8 7 3.12 3.12 0 0 1 .7 3.9M10 9.3L6.9 6.2a3.57 3.57 0 0 0 .8-2.3A3.9 3.9 0 0 0 3.8 0 3.82 3.82 0 0 0 0 3.9a3.8 3.8 0 0 0 3.8 3.8 3.57 3.57 0 0 0 2.3-.8L9.2 10z"/></svg>' : ''
+            'html': isSearchable ? '<svg xmlns=http://www.w3.org/2000/svg class=cbo__search viewBox=0 0 10 10><path d=M.7 3.9A3.22 3.22 0 0 1 3.9.7 3.14 3.14 0 0 1 7 3.9 3.08 3.08 0 0 1 3.8 7 3.12 3.12 0 0 1 .7 3.9M10 9.3L6.9 6.2a3.57 3.57 0 0 0 .8-2.3A3.9 3.9 0 0 0 3.8 0 3.82 3.82 0 0 0 0 3.9a3.8 3.8 0 0 0 3.8 3.8 3.57 3.57 0 0 0 2.3-.8L9.2 10z/></svg>' : ''
         });
 
         var inputAttrs = {
@@ -619,23 +619,23 @@ function indexOf(collection, item) {
     return -1;
 }
 
-function selectText(node, start, end) {
-    if (node.setSelectionRange) {
-        return node.setSelectionRange(start, end);
-    }
-    if (node.createTextRange) {
-        var range = node.createTextRange();
-        range.collapse(true);
-        range.moveEnd('character', start);
-        range.moveStart('character', end);
-        range.select();
-        return;
-    }
-    if (node.selectionStart) {
-        node.selectionStart = start;
-        node.selectionEnd = end;
-    }
-}
+// function selectText(node, start, end) {
+//     if (node.setSelectionRange) {
+//         return node.setSelectionRange(start, end);
+//     }
+//     if (node.createTextRange) {
+//         var range = node.createTextRange();
+//         range.collapse(true);
+//         range.moveEnd('character', start);
+//         range.moveStart('character', end);
+//         range.select();
+//         return;
+//     }
+//     if (node.selectionStart) {
+//         node.selectionStart = start;
+//         node.selectionEnd = end;
+//     }
+// }
 
 function setScrollTop(scrollNode, optionNode) {
     scrollNode.scrollTop = optionNode.offsetTop;
@@ -650,7 +650,7 @@ function stopEvent(e) {
 function toArray(collection){
     var len = collection.length;
     var arr = new Array(len);
-    while(len--) arr[len] = collection[len]
+    while(len--) arr[len] = collection[len];
     return arr;
 }
 
