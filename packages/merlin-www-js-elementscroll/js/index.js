@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 import EventEmitter from 'eventemitter2';
 
@@ -15,17 +15,17 @@ import {
 
 
 var DEFAULT_OPTIONS = {
-    "offset": {
-        "x": 0,
-        "y": 0
+    'offset': {
+        'x': 0,
+        'y': 0
     },
-    "relative": true,
-    "stopOnUserInput": true
+    'relative': true,
+    'stopOnUserInput': true
 };
 
 var DEFAULT_POSITION = {
-    "x": 0,
-    "y": 0
+    'x': 0,
+    'y': 0
 };
 
 /**
@@ -102,45 +102,43 @@ function ElementScroll(scrollElement) {
 }
 
 ElementScroll.prototype = inherit(EventEmitter.prototype, {
-    "constructor": ElementScroll,
+    'constructor': ElementScroll,
 
-    "_bindStopOnInput": function() {
-        this._userInput = function(){
+    '_bindStopOnInput': function() {
+        this._userInput = function() {
             this.stop();
         }.bind(this);
 
-        addEvent(this.el, "wheel", this._userInput);
-        addEvent(this.el, "touchstart", this._userInput);
+        addEvent(this.el, 'wheel', this._userInput);
+        addEvent(this.el, 'touchstart', this._userInput);
     },
 
-    "_complete": function() {
+    '_complete': function() {
         resetElementScroll(this);
-        this.emit("complete");
+        this.emit('complete');
     },
 
-    "_unbindStopOnInput": function() {
+    '_unbindStopOnInput': function() {
         if (this._userInput === null) return;
-        removeEvent(this.el, "wheel", this._userInput);
-        removeEvent(this.el, "touchstart", this._userInput);
+        removeEvent(this.el, 'wheel', this._userInput);
+        removeEvent(this.el, 'touchstart', this._userInput);
         this._userInput = null;
     },
 
-    "_update": function(time) {
+    '_update': function(time) {
         if (this._timeStart === null) this._timeStart = time;
 
         var totalTime = time - this._timeStart;
-        var scrollX = easeInOutQuad (totalTime, this._scrollStart.x,
+        var scrollX = easeInOutQuad(totalTime, this._scrollStart.x,
             this.scrollTarget.x, this.duration);
-        var scrollY = easeInOutQuad (totalTime, this._scrollStart.y,
+        var scrollY = easeInOutQuad(totalTime, this._scrollStart.y,
             this.scrollTarget.y, this.duration);
         this._setPosition(this.el, scrollX, scrollY);
-        this.emit("update", scrollY);
+        this.emit('update', scrollY);
 
         if (totalTime < this.duration) {
             this._frame = requestAnimationFrame(this._updateBound);
-        }
-
-        else {
+        } else {
             this._setPosition(this.el, this._scrollStart.x + this.scrollTarget.x,
                 this._scrollStart.y + this.scrollTarget.y);
             this._complete();
@@ -148,14 +146,14 @@ ElementScroll.prototype = inherit(EventEmitter.prototype, {
 
     },
 
-    "destroy": function() {
+    'destroy': function() {
         this.stop();
         this.removeAllListeners();
         this._setPosition = null;
         this._updateBound = null;
     },
 
-    "start": function(target, duration, _options) {
+    'start': function(target, duration, _options) {
         var options = assign({}, DEFAULT_OPTIONS, _options);
 
         if (this.isScrolling) this.stop();
@@ -170,8 +168,8 @@ ElementScroll.prototype = inherit(EventEmitter.prototype, {
 
         // Assign the scroll start
         this._scrollStart = assign({}, DEFAULT_POSITION, {
-            "x": getScrollLeft(this.el),
-            "y": getScrollTop(this.el)
+            'x': getScrollLeft(this.el),
+            'y': getScrollTop(this.el)
         });
 
         // Assign the scroll target
@@ -183,30 +181,28 @@ ElementScroll.prototype = inherit(EventEmitter.prototype, {
         // If the scrollTarget is not relative, it is absolute. So updated
         // the scrollTarget to be relative as everything is worked out based
         // on the change between the two values
-        if(!options.relative){
+        if (!options.relative) {
             this.scrollTarget.x -= this._scrollStart.x;
             this.scrollTarget.y -= this._scrollStart.y;
         }
 
         // Fire events
-        this.emit("start");
+        this.emit('start');
 
         // If we dont have request animation frame, just jump to the postition
         if (window.requestAnimationFrame) {
             this._frame = requestAnimationFrame(this._updateBound);
-        }
-
-        else {
+        } else {
             this._setPosition(this.scrollTarget.x, this.scrollTarget.y);
             this._complete();
         }
 
     },
 
-    "stop": function() {
+    'stop': function() {
         if (!this.isScrolling) return;
         resetElementScroll(this);
-        this.emit("stop");
+        this.emit('stop');
     }
 });
 
@@ -223,8 +219,8 @@ export default ElementScroll;
  * @return {Number}
  */
 function easeInOutQuad(t, b, c, d) {
-    if ((t/=d/2) < 1) return c/2*t*t + b;
-    return -c/2 * ((--t)*(t-2) - 1) + b;
+    if ((t /= d / 2) < 1) return c / 2 * t * t + b;
+    return -c / 2 * ((--t) * (t - 2) - 1) + b;
 }
 
 /**
