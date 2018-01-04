@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 import Item from './Item';
 import Manager from './Manager';
@@ -22,9 +22,9 @@ function Obstacle( el, _options ){
 
 Obstacle.prototype = inherit(Item.prototype, {
 
-    "constructor": Obstacle,
+    'constructor': Obstacle,
 
-    "destroy": function(){
+    'destroy': function(){
         Manager.removeObstacle( this );
         Item.prototype.destroy.call( this );
     }
@@ -33,7 +33,7 @@ Obstacle.prototype = inherit(Item.prototype, {
 
 Obstacle.createObstacle = function( base, _options ){
     var els = null;
-    if( typeof base === "string" ){
+    if( typeof base === 'string' ){
         els = toArray( document.querySelectorAll( base ) );
     } else {
         els = toArray( base );
