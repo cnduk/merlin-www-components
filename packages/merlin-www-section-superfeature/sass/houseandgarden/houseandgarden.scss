@@ -66,12 +66,12 @@
     @include font("BRANDON GROTESQUE", 10px, 700, 10px);
     color: $mine-shaft;
     letter-spacing: 1px;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
     margin-top: 0;
     text-transform: uppercase;
 
     @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 }
 
@@ -83,9 +83,9 @@
 
     @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
         @include font-size(50px);
-        @include line-height(53px);
+        @include line-height(55px);
         letter-spacing: 0px;
-        margin: 10px 0 20px 0;
+        margin: 15px 0 20px 0;
     }
 }
 
