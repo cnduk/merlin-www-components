@@ -97,13 +97,13 @@
     @include font("BRANDON GROTESQUE", 10px, null, 10px);
     color: $mine-shaft;
     letter-spacing: 1px;
-    margin-bottom: 7px;
+    margin-bottom: 5px;
     margin-top: 10px;
     text-transform: uppercase;
 
     @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-        margin-bottom: 5px;
-        margin-top: 10px;
+        margin-bottom: 7px;
+        margin-top: 15px;
     }
 }
 
@@ -117,11 +117,11 @@ ul.c-superfeature__meta {
     @include font("BRANDON GROTESQUE", 0px, 400, 10px);
     color: $dove-gray;
     letter-spacing: 1px;
-    margin-top: 7px;
+    margin-top: 5px;
     text-transform: uppercase;
 
     @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-        margin-top: 5px;
+        margin-top: 7px;
     }
 }
 
