@@ -4,7 +4,6 @@
     "description": "The javascript to the www app pages",
     "main": "js/index.js",
     "scripts": {
-        "demo": "merlin-component-demo-server merlin.json",
         "lint": "eslint -c ../../.eslintrc.json ./js/**/*",
         "prepublish": "npm run lint"
     },
