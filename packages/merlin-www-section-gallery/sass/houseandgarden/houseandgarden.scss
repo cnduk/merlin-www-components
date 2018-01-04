@@ -99,12 +99,12 @@
     @include font("BRANDON GROTESQUE", 10px, 700, 10px);
     color: $mine-shaft;
     letter-spacing: 1px;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
     margin-top: 0;
     text-transform: uppercase;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 }
 
@@ -118,7 +118,7 @@
         @include font-size(35px);
         @include line-height(38px);
         letter-spacing: 0px;
-        margin: 10px 0 10px 0;
+        margin: 15px 0 10px 0;
     }
 }
 
