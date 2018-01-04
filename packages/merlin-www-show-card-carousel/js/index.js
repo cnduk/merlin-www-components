@@ -5,7 +5,6 @@ import {
     addEvent,
     clamp,
     getBoundingClientRect,
-    getParent,
     removeClass,
     throttle
 } from '@cnbritain/merlin-www-js-utils/js/functions';
@@ -82,7 +81,6 @@ ShowItemCarousel.prototype = {
     'nextItems': function(){
         // Get the scroll group size and scrollLeft
         var scrollRect = getBoundingClientRect(this._elScroll);
-        var scrollLeft = this._elScroll.scrollLeft;
 
         // Get the stories position and sizes
         var elStories = getStoryElements(this._elScroll);
@@ -110,7 +108,6 @@ ShowItemCarousel.prototype = {
     'previousItems': function(){
         // Get the scroll group size and scrollLeft
         var scrollRect = getBoundingClientRect(this._elScroll);
-        var scrollLeft = this._elScroll.scrollLeft;
 
         // Get the stories position and sizes
         var elStories = getStoryElements(this._elScroll);
@@ -148,10 +145,10 @@ ShowItemCarousel.prototype = {
         left -= this._elScroll.scrollLeft;
 
         this._scroller = new ElementScroll( this._elScroll );
-        this._scroller.on("complete", onElementScrollFinish.bind(this));
-        this._scroller.on("stop", onElementScrollFinish.bind(this));
-        this._scroller.start({ "x": left, "y": 0 }, SCROLL_DURATION, {
-            "stopOnUserInput": false
+        this._scroller.on('complete', onElementScrollFinish.bind(this));
+        this._scroller.on('stop', onElementScrollFinish.bind(this));
+        this._scroller.start({ 'x': left, 'y': 0 }, SCROLL_DURATION, {
+            'stopOnUserInput': false
         });
     }
 
@@ -162,8 +159,8 @@ ShowItemCarousel.prototype = {
  * @param  {HTMLElement} el
  */
 function disableButton(el){
-    if( el.hasAttribute("disabled") ) return;
-    el.setAttribute("disabled", true);
+    if( el.hasAttribute('disabled') ) return;
+    el.setAttribute('disabled', true);
     addClass(el, 'btn-disabled');
 }
 
@@ -172,8 +169,8 @@ function disableButton(el){
  * @param  {HTMLElement} el
  */
 function enableButton(el){
-    if( !el.hasAttribute("disabled") ) return;
-    el.removeAttribute("disabled");
+    if( !el.hasAttribute('disabled') ) return;
+    el.removeAttribute('disabled');
     removeClass(el, 'btn-disabled');
 }
 
@@ -250,12 +247,12 @@ function onElementScrollFinish(){
 function normaliseToElement( elRect ){
     return function normaliseToElement_inner( rect ){
         return {
-            "bottom": rect.bottom - elRect.top,
-            "height": rect.height,
-            "left": rect.left - elRect.left,
-            "right": rect.right - elRect.left,
-            "top": rect.top - elRect.top,
-            "width": rect.width
+            'bottom': rect.bottom - elRect.top,
+            'height': rect.height,
+            'left': rect.left - elRect.left,
+            'right': rect.right - elRect.left,
+            'top': rect.top - elRect.top,
+            'width': rect.width
         };
     };
 }
