@@ -34,9 +34,9 @@ module.exports = function taskSassExport(taskConfig, browserSync){
                 outputStyle: outputStyle
             };
 
-            return gulp.src(file)
+            const task = gulp.src(file)
                 .pipe(sourcemaps.init())
-                .pipe(sass(sassConfig).on('error', sass.logError))
+                .pipe(sass.sync(sassConfig).on('error', sass.logError))
                 .pipe(autoprefixer({
                     browsers: [
                         "last 2 versions",
@@ -46,8 +46,12 @@ module.exports = function taskSassExport(taskConfig, browserSync){
                 .pipe(rename(renameConfig))
                 // I have a feeling I'm going to need to check this
                 .pipe(sourcemaps.write('./'))
-                .pipe(gulp.dest(taskConfig.sass.dest))
-                .pipe(browserSync.stream());
+                .pipe(gulp.dest(taskConfig.sass.dest));
+
+            if(ENV.isDev){
+                task.pipe(browserSync.stream());
+            }
+            return task;
         });
 
         return merge.apply(null, streams);
