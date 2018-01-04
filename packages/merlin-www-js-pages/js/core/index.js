@@ -1,14 +1,12 @@
-"use strict";
+'use strict';
 
 import es6Promise from 'es6-promise';
 
-import CONFIG_BRAND from '@cnbritain/merlin-www-common';
 import {
     addClass,
     addEvent,
     assign,
     getParent,
-    getNamespaceKey,
     removeClass,
     removeEvent
 } from '@cnbritain/merlin-www-js-utils/js/functions';
@@ -17,18 +15,27 @@ import {
     hasTouch
 } from '@cnbritain/merlin-www-js-utils/js/detect';
 // Need to import MainNavigation and CookieWarning to initialise bits
-import MainNavigation from '@cnbritain/merlin-www-main-navigation';
-import CookieWarning from '@cnbritain/merlin-www-cookie-warning';
+import MainNavigation from '@cnbritain/merlin-www-main-navigation'; // eslint-disable-line no-unused-vars
+import CookieWarning from '@cnbritain/merlin-www-cookie-warning'; // eslint-disable-line no-unused-vars
 import CommonImage from '@cnbritain/merlin-www-image';
 import store from '@cnbritain/merlin-www-js-store';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
 import TopStories from '@cnbritain/merlin-www-top-stories';
 import CardList from '@cnbritain/merlin-www-card-list';
-import { AdManager, AdDebugger, AdUtils } from '@cnbritain/merlin-www-ads';
-import { fartscroll, raptor } from '@cnbritain/merlin-www-goofs';
+import {
+    AdManager,
+    AdDebugger,
+    AdUtils
+} from '@cnbritain/merlin-www-ads';
+import {
+    fartscroll,
+    raptor
+} from '@cnbritain/merlin-www-goofs';
 import InternationalRedirect from '@cnbritain/merlin-www-international-redirect';
 
-import { CLS_STATE_IS_HIDDEN } from '../constants';
+import {
+    CLS_STATE_IS_HIDDEN
+} from '../constants';
 import {
     displayHiringMessage,
     isAdNative,
@@ -42,10 +49,10 @@ var DEFAULT_INIT_CONFIG = {
     'TEAD_URL': '//cdn.teads.tv/js/all-v2.js'
 };
 
-export default function init(config){
+export default function init(config) {
 
     var _config = DEFAULT_INIT_CONFIG;
-    if(config !== undefined){
+    if (config !== undefined) {
         _config = assign({}, DEFAULT_INIT_CONFIG, config);
     }
 
@@ -64,7 +71,9 @@ export default function init(config){
     });
 
     CommonImage.init();
-    TopStories.init({ scrollOffset: 30 });
+    TopStories.init({
+        scrollOffset: 30
+    });
     CardList.init();
     initInternationalRedirect();
     displayHiringMessage();
@@ -85,14 +94,14 @@ export default function init(config){
     raptor();
 }
 
-export function onAdRegister(e){
-    if(isAdNative(e.ad, 'promotion-small')){
+export function onAdRegister(e) {
+    if (isAdNative(e.ad, 'promotion-small')) {
         e.ad.once('render', onNativeAdRender);
         e.ad.once('stop', onNativeAdStop);
     }
 }
 
-export function onNativeAdRender(e){
+export function onNativeAdRender(e) {
     e.target.off('stop', onNativeAdStop);
 
     // Remove is-hidden from list item
@@ -100,26 +109,26 @@ export function onNativeAdRender(e){
     removeClass(listItem, CLS_STATE_IS_HIDDEN);
 }
 
-export function onNativeAdStop(e){
+export function onNativeAdStop(e) {
     e.target.off('render', onNativeAdRender);
 }
 
-export function initInternationalRedirect(){
-    if(InternationalRedirect.el !== null){
+export function initInternationalRedirect() {
+    if (InternationalRedirect.el !== null) {
         sendInternationRedirectEvent('Shown', null);
-        InternationalRedirect.on('visibilityChange', function(e){
+        InternationalRedirect.on('visibilityChange', function() {
             sendInternationRedirectEvent('Closed', null);
         });
-        InternationalRedirect.on('linkClick', function(e){
+        InternationalRedirect.on('linkClick', function(e) {
             sendInternationRedirectEvent('Link Click', e.country);
         });
-        InternationalRedirect.on('linkHover', function(e){
+        InternationalRedirect.on('linkHover', function(e) {
             sendInternationRedirectEvent('Link Hover', e.country);
         });
     }
 }
 
-export function sendInternationRedirectEvent(action, label){
+export function sendInternationRedirectEvent(action, label) {
     GATracker.SendAll(GATracker.SEND_HITTYPES.EVENT, {
         'eventAction': action,
         'eventCategory': 'CountryBanner',
@@ -128,17 +137,18 @@ export function sendInternationRedirectEvent(action, label){
     });
 }
 
-export function setupFartscroll(){
+export function setupFartscroll() {
     var tooterIcon = document.querySelector('.c-footer__list-item--logo svg');
 
-    if(!tooterIcon) return;
+    if (!tooterIcon) return;
 
     // Click the footer logo 5 times to activate the toots
     var tootCount = 0;
-    function onIconClick(){
-        if(++tootCount >= 5){
+
+    function onIconClick() {
+        if (++tootCount >= 5) {
             fartscroll();
-            removeEvent(tooterIcon, 'click', tootClicker);
+            removeEvent(tooterIcon, 'click', onIconClick);
             tooterIcon = null;
             tootCount = 0;
         }
@@ -147,13 +157,13 @@ export function setupFartscroll(){
     addEvent(tooterIcon, 'click', onIconClick);
 }
 
-export function setupHtmlClasses(){
+export function setupHtmlClasses() {
     var html = document.getElementsByTagName('html')[0];
 
     // Apply class to body root stating we are IE10.
     // IE10+ removed the option to use html statement comments.
     // This makes me upset that I have to do this.
-    if(getUserAgent.name === 'MSIE' && getUserAgent.version >= 10){
+    if (getUserAgent.name === 'MSIE' && getUserAgent.version >= 10) {
         addClass(html, 'is-ie' + getUserAgent.version);
     }
 
@@ -161,18 +171,18 @@ export function setupHtmlClasses(){
     var browser = getUserAgent.name;
     browser = browser.toLowerCase();
 
-    if (navigator.appVersion.indexOf("Win") !== -1){
-        os = "windows";
-    } else if (navigator.appVersion.indexOf("Mac") !== -1){
-        os = "macos";
-    } else if (navigator.appVersion.indexOf("X11") !== -1){
-        os = "unix";
-    } else if (navigator.appVersion.indexOf("Linux") !== -1){
-        os = "linux";
+    if (navigator.appVersion.indexOf('Win') !== -1) {
+        os = 'windows';
+    } else if (navigator.appVersion.indexOf('Mac') !== -1) {
+        os = 'macos';
+    } else if (navigator.appVersion.indexOf('X11') !== -1) {
+        os = 'unix';
+    } else if (navigator.appVersion.indexOf('Linux') !== -1) {
+        os = 'linux';
     }
 
     addClass(html, 'is-' + browser);
-    if(os !== null){
+    if (os !== null) {
         addClass(html, 'is-' + os);
     }
 

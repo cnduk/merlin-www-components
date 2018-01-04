@@ -1,12 +1,17 @@
 'use strict';
 
-import { ArticleManager, VideoPlayer } from '@cnbritain/merlin-www-article';
-import { getStorage } from '../utils';
+import {
+    ArticleManager,
+    VideoPlayer
+} from '@cnbritain/merlin-www-article';
+import {
+    getStorage
+} from '../utils';
 
-export default function init(){
-    if(VideoPlayer.playlist !== null){
+export default function init() {
+    if (VideoPlayer.playlist !== null) {
         VideoPlayer.playlist.loadConfigs();
-        if(!getStorage('playlist_infinite_stop')){
+        if (!getStorage('playlist_infinite_stop')) {
             VideoPlayer.playlist.enableInfiniteScroll();
         }
     }
@@ -14,7 +19,7 @@ export default function init(){
     var articleEl = document.querySelector('.a-main');
 
     var simplereachConfig = null;
-    if(window.__reach_config){
+    if (window.__reach_config) {
         simplereachConfig = window.__reach_config;
     }
 

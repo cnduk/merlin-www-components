@@ -19,8 +19,8 @@ var brandTracker = null;
  * @param  {String} str the url
  * @return {String}     The domain from the url
  */
-export function getDomain(str){
-    return str.replace(/^(https|http)?(:\/\/)?(www\.)?/i, "")
+export function getDomain(str) {
+    return str.replace(/^(https|http)?(:\/\/)?(www\.)?/i, '')
         .split(/[/?#]/)[0];
 }
 
@@ -29,7 +29,7 @@ export function getDomain(str){
  * @param  {String}  url the url to compare with
  * @return {Boolean}
  */
-export function isInternalUrl(url){
+export function isInternalUrl(url) {
     var urlDomain = getDomain(url);
     var currentDomain = getDomain(location.href);
     return urlDomain === currentDomain;
@@ -40,7 +40,7 @@ export function isInternalUrl(url){
  * @param  {HTMLNode}  domLink Anchor tag
  * @return {Boolean}
  */
-export function isBBCodeButton(domLink){
+export function isBBCodeButton(domLink) {
     return hasClass(domLink, 'bb-button');
 }
 
@@ -50,7 +50,7 @@ export function isBBCodeButton(domLink){
  * @param  {Object}  event   the click event
  * @return {Boolean}
  */
-export function isLinkNavigatingPage(domLink, event){
+export function isLinkNavigatingPage(domLink, event) {
     return !(
         event.type !== 'click' ||
         domLink.getAttribute('target') === '_blank' ||
@@ -67,7 +67,7 @@ export function isLinkNavigatingPage(domLink, event){
  * @param  {HTMLNode} domLink the anchor
  * @return {Object}         the values for GA
  */
-export function getEventValues(domLink){
+export function getEventValues(domLink) {
 
     var url = domLink.getAttribute('href');
     var isButton = isBBCodeButton(domLink);
@@ -90,13 +90,13 @@ export function getEventValues(domLink){
  * Retrieve the GA tracker for the brand
  * @return {GATracker}
  */
-export function getBrandTracker(){
-    if(brandTracker !== null) return brandTracker;
+export function getBrandTracker() {
+    if (brandTracker !== null) return brandTracker;
 
-    var tracker = GATracker.TRACKERS.filter(function(t){
-        return t.type === "brand";
+    var tracker = GATracker.TRACKERS.filter(function(t) {
+        return t.type === 'brand';
     })[0];
-    if(!tracker){
+    if (!tracker) {
         console.warn('No brand tracker found. Removing link events.');
         unbindEvents();
         return;
@@ -109,10 +109,10 @@ export function getBrandTracker(){
  * Click handler for when links and buttons are clicked
  * @param  {Object} e the click event object
  */
-export function onLinkClick(e){
+export function onLinkClick(e) {
 
     var tracker = getBrandTracker();
-    if(!tracker) return;
+    if (!tracker) return;
 
     var link = this;
 
@@ -121,11 +121,11 @@ export function onLinkClick(e){
 
     // If browser doesnt have beacon support, we have to preventDefault and
     // wait till the ga event has been sent then redirect the page
-    if(!hasBeacon && isNavigationPage){
-        if(!e.defaultPrevented){
+    if (!hasBeacon && isNavigationPage) {
+        if (!e.defaultPrevented) {
             e.preventDefault();
         }
-        eventValues.hitCallback = function(){
+        eventValues.hitCallback = function() {
             location.href = link.getAttribute('href');
         };
     }
@@ -136,10 +136,10 @@ export function onLinkClick(e){
 /**
  * Bind events to the document through a delegate
  */
-export function bindEvents(){
-    if(delegateHandler === null){
+export function bindEvents() {
+    if (delegateHandler === null) {
         delegateHandler = delegate('.bb-button, .bb-a', onLinkClick);
-        clickEvents.forEach(function(eventType){
+        clickEvents.forEach(function(eventType) {
             addEvent(document, eventType, delegateHandler);
         });
     }
@@ -148,9 +148,9 @@ export function bindEvents(){
 /**
  * Unbind events from the document
  */
-export function unbindEvents(){
-    if(delegateHandler !== null){
-        clickEvents.forEach(function(eventType){
+export function unbindEvents() {
+    if (delegateHandler !== null) {
+        clickEvents.forEach(function(eventType) {
             removeEvent(document, eventType, delegateHandler);
         });
         delegateHandler = null;
@@ -160,6 +160,6 @@ export function unbindEvents(){
 /**
  * Initialise link tracking
  */
-export default function initLinkTracking(){
+export default function initLinkTracking() {
     bindEvents();
 }

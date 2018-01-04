@@ -3,23 +3,28 @@
 import {
     addEvent,
     addHtml,
-    debounce,
-    getNamespaceKey,
-    getParent,
     onPageLoad,
-    removeClass,
-    removeElement,
     removeEvent,
     throttle,
     updateQueryString
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import InfiniteScroll from '@cnbritain/merlin-www-js-infinitescroll';
 import CardList from '@cnbritain/merlin-www-card-list';
-import { AdManager } from '@cnbritain/merlin-www-ads';
+import {
+    AdManager
+} from '@cnbritain/merlin-www-ads';
 
-import { getStorage, setStorage } from '../utils';
-import { nativeAdsShift, nativeAdsWaiting } from './ads';
-import { createStickGroup } from './sticky';
+import {
+    getStorage,
+    setStorage
+} from '../utils';
+import {
+    nativeAdsShift,
+    nativeAdsWaiting
+} from './ads';
+import {
+    createStickGroup
+} from './sticky';
 
 
 var INFINITE_BOTTOM_THRESHOLD = 1000;
@@ -30,18 +35,18 @@ var infiniteBodyScrollHeight = 0;
 var hookInfiniteResize = null;
 
 
-export function resize(){
+export function resize() {
     infiniteBodyScrollHeight = document.body.scrollHeight - window.innerHeight;
 }
 
-export function onInfiniteScrollTrigger(scrollY){
+export function onInfiniteScrollTrigger(scrollY) {
     return (
         nativeAdsWaiting === 0 &&
         scrollY >= (infiniteBodyScrollHeight - INFINITE_BOTTOM_THRESHOLD)
     );
 }
 
-export function getNextPageUrl(tagUrl, pageNumber, itemShift){
+export function getNextPageUrl(tagUrl, pageNumber, itemShift) {
     var tag_list_count = getStorage('list_counter');
     setStorage('list_counter', tag_list_count + 1);
 
@@ -53,13 +58,13 @@ export function getNextPageUrl(tagUrl, pageNumber, itemShift){
     return url;
 }
 
-export function onInfiniteScrollUrl(pageCounter){
+export function onInfiniteScrollUrl(pageCounter) {
     return location.origin + getNextPageUrl(
         getStorage('infinite_url'), pageCounter + 1, nativeAdsShift);
 }
 
 
-export function destroyInfiniteScroller(){
+export function destroyInfiniteScroller() {
     infiniteScroller.destroy();
     removeEvent(window, 'resize', hookInfiniteResize);
 
@@ -67,17 +72,17 @@ export function destroyInfiniteScroller(){
     hookInfiniteResize = null;
 }
 
-export function throwInfiniteError(message, e){
+export function throwInfiniteError(message, e) {
     destroyInfiniteScroller();
     throw new Error(message, e);
 }
 
 
-export function onInfiniteLoadError( e ){
+export function onInfiniteLoadError(e) {
     throwInfiniteError('Error trying to load url in infinite scroll', e);
 }
 
-export function insertSection(section){
+export function insertSection(section) {
 
     var docFragment = document.createDocumentFragment();
     var addToFragment = addHtml(docFragment);
@@ -96,28 +101,28 @@ export function insertSection(section){
 
 }
 
-export function onInfiniteLoadComplete( e ){
+export function onInfiniteLoadComplete(e) {
 
     var responseText = e.originalRequest.responseText;
     var responseJSON = null;
     try {
         responseJSON = JSON.parse(responseText);
-    } catch(err){
+    } catch (err) {
         throwInfiniteError('Error trying to parse response JSON', err);
     }
 
     // Add items to page
-    if(responseJSON.data.template) insertSection(responseJSON.data.template);
+    if (responseJSON.data.template) insertSection(responseJSON.data.template);
 
     // Update any local storage values
-    if(responseJSON.data.local_storage){
-        responseJSON.data.local_storage.forEach(function(item){
+    if (responseJSON.data.local_storage) {
+        responseJSON.data.local_storage.forEach(function(item) {
             setStorage(item.key, item.value);
         });
     }
 
     // Check if we need to stop
-    if(responseJSON.data.stop) destroyInfiniteScroller();
+    if (responseJSON.data.stop) destroyInfiniteScroller();
 
     // TODO: Page impression tracker
     resize();
@@ -129,10 +134,10 @@ export function onInfiniteLoadComplete( e ){
     AdManager.lazy();
 }
 
-export default function init(){
+export default function init() {
 
     // Check if tag_infinite_scroll is set to true
-    if(getStorage('infinite_stop')) return;
+    if (getStorage('infinite_stop')) return;
 
     infiniteScroller = new InfiniteScroll({
         'el': window,
