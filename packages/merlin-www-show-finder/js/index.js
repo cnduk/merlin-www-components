@@ -1,8 +1,13 @@
 'use strict';
 
 import Combobox from '@cnbritain/merlin-www-js-combobox';
-import { isAndroid, isIOS } from '@cnbritain/merlin-www-js-utils/js/detect';
-import { addEvent, getAttribute } from '@cnbritain/merlin-www-js-utils/js/functions';
+import {
+    isAndroid,
+    isIOS
+} from '@cnbritain/merlin-www-js-utils/js/detect';
+import {
+    addEvent
+} from '@cnbritain/merlin-www-js-utils/js/functions';
 
 function onChangeHandler() {
     //TODO: Find out if there's a nicer way of doing this in the current codes
@@ -17,10 +22,10 @@ export default {
         var length = comboboxElements.length;
         var comboboxes = new Array(length);
 
-        comboboxElements.forEach(function(el, index)  {
+        comboboxElements.forEach(function(el, index) {
             var comboSettings = {
-                "placeholder": el.getAttribute('data-placeholder') || false,
-                "searchable": false
+                'placeholder': el.getAttribute('data-placeholder') || false,
+                'searchable': false
             };
 
             if (!(isIOS || isAndroid) &&
@@ -34,12 +39,12 @@ export default {
             comboboxes[index] = new Combobox(el, comboSettings);
         });
     }
-}
+};
 
-function toArray(collection){
+function toArray(collection) {
     var len = collection.length;
     var arr = new Array(len);
     var i = -1;
-    while(++i < len) arr[i] = collection[i];
+    while (++i < len) arr[i] = collection[i];
     return arr;
 }
