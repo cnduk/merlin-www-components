@@ -62,7 +62,7 @@ function getDefaultConfig(pkgJson, merlinJson){
             },
             dest: getAbsDir(`${abbr}_backend/static/js/`)
         },
-        jshint: {
+        eslint: {
             src: [
                 getAbsDir('frontend/js/**/*.js')
             ]

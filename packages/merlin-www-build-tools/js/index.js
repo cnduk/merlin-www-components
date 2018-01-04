@@ -7,7 +7,7 @@ const runSequence = require('run-sequence');
 
 const utils = require('./utils');
 const copy = require('./tasks/copy');
-const jshint = require('./tasks/jshint');
+const eslint = require('./tasks/eslint');
 const sass = require('./tasks/sass');
 const js = require('./tasks/js');
 const serve = require('./tasks/serve');
@@ -20,7 +20,7 @@ module.exports = function(config = {}) {
     const taskConfig = merge(defaultConfig, config);
 
     gulp.task('copy', copy(taskConfig, browserSync));
-    gulp.task('jshint', jshint(taskConfig, browserSync));
+    gulp.task('eslint', eslint(taskConfig, browserSync));
     gulp.task('sass', sass(taskConfig, browserSync));
     gulp.task('js', js(taskConfig, browserSync));
     gulp.task('serve', serve(taskConfig, browserSync));
@@ -29,12 +29,12 @@ module.exports = function(config = {}) {
 
     gulp.task('dev', function(cb) {
         runSequence(
-            ['copy', 'sass', 'jshint', 'js'],
+            ['copy', 'sass', 'eslint', 'js'],
             'serve',
             cb
         );
     });
-    gulp.task('staging', ['copy', 'sass', 'jshint', 'js'])
-    gulp.task('production', ['copy', 'sass', 'jshint', 'js'])
+    gulp.task('staging', ['copy', 'sass', 'eslint', 'js'])
+    gulp.task('production', ['copy', 'sass', 'eslint', 'js'])
 
 }
