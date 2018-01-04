@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "lerna bootstrap --hoist"
   },
   "repository": {
     "type": "git",
@@ -17,10 +18,11 @@
   },
   "homepage": "https://github.com/cnduk/merlin-www-components#readme",
   "devDependencies": {
-    "lerna": "2.0.0-beta.38"
+    "lerna": "2.0.0-beta.38",
+    "eslint": "^4.14.0"
   },
   "dependencies": {
-    "@cnbritain/merlin-sass-custom-importer": "^1.2.2",
+    "@cnbritain/merlin-sass-custom-importer": "^2.9.5",
     "glob": "^7.1.2",
     "node-sass": "^4.7.2"
   }
