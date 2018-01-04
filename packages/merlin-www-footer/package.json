@@ -1,17 +1,17 @@
 {
   "name": "@cnbritain/merlin-www-footer",
-  "version": "1.4.28",
+  "version": "1.4.29",
   "description": "",
   "main": "index.js",
   "scripts": {
     "demo": "merlin-component-demo-server merlin.json"
   },
   "dependencies": {
-    "@cnbritain/merlin-www-common": "^1.7.21",
-    "@cnbritain/merlin-www-image": "^1.6.6"
+    "@cnbritain/merlin-www-common": "^1.7.22",
+    "@cnbritain/merlin-www-image": "^1.6.7"
   },
   "devDependencies": {
-    "@cnbritain/merlin-component-demo-server": "^2.9.4"
+    "@cnbritain/merlin-component-demo-server": "^2.9.5"
   },
   "author": "",
   "license": "ISC"
