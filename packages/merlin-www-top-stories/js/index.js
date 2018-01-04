@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 import Card from '@cnbritain/merlin-www-card';
 import {
@@ -34,12 +34,12 @@ export default {
      * Initialises the top stories. This displays the arrows for scrolling the
      * list and lazyloads the images on the cards
      */
-    'init': function(options){
+    'init': function(options) {
         // Javascript running so display the navigation
-        var topStories = document.querySelectorAll(".c-top-stories");
+        var topStories = document.querySelectorAll('.c-top-stories');
         var length = topStories.length;
-        while( length-- ){
-            TopStoryList.push(new TopStoriesNavigation(topStories[length], (options ? options : {}) ));
+        while (length--) {
+            TopStoryList.push(new TopStoriesNavigation(topStories[length], (options ? options : {})));
         }
 
         // Trigger the cards to load
@@ -53,7 +53,7 @@ export default {
  * @class TopStoriesNavigation
  * @param {HTMLElement} el
  */
-function TopStoriesNavigation(el, options){
+function TopStoriesNavigation(el, options) {
 
     /**
      * The button elements
@@ -104,7 +104,7 @@ function TopStoriesNavigation(el, options){
             SCROLL_THROTTLE));
 
     // Arrow buttons
-    if(this._btns.length > 0){
+    if (this._btns.length > 0) {
         addEvent(this._btns[0], 'click', this.previousItems.bind(this));
         addEvent(this._btns[1], 'click', this.nextItems.bind(this));
     }
@@ -119,10 +119,9 @@ TopStoriesNavigation.prototype = {
      * @public
      * @memberof! TopStoriesNavigation.prototype
      */
-    'nextItems': function(){
+    'nextItems': function() {
         // Get the scroll group size and scrollLeft
         var scrollRect = getBoundingClientRect(this._elScroll);
-        var scrollLeft = this._elScroll.scrollLeft;
 
         // Get the stories position and sizes
         var elStories = getStoryElements(this._elScroll);
@@ -133,15 +132,15 @@ TopStoriesNavigation.prototype = {
         var offscreenIndex = -1;
         var i = -1;
         var length = storyRects.length;
-        while(++i < length){
-            if( storyRects[i].right > scrollRect.width ){
+        while (++i < length) {
+            if (storyRects[i].right > scrollRect.width) {
                 offscreenIndex = i;
                 break;
             }
         }
-        if( offscreenIndex === -1) return;
+        if (offscreenIndex === -1) return;
 
-        this.scrollTo(storyRects[ offscreenIndex ].left + (window.innerWidth > scrollRect.width ? 0 : -this._scrollOffset));
+        this.scrollTo(storyRects[offscreenIndex].left + (window.innerWidth > scrollRect.width ? 0 : -this._scrollOffset));
     },
 
     /**
@@ -149,10 +148,9 @@ TopStoriesNavigation.prototype = {
      * @public
      * @memberof! TopStoriesNavigation.prototype
      */
-    'previousItems': function(){
+    'previousItems': function() {
         // Get the scroll group size and scrollLeft
         var scrollRect = getBoundingClientRect(this._elScroll);
-        var scrollLeft = this._elScroll.scrollLeft;
 
         // Get the stories position and sizes
         var elStories = getStoryElements(this._elScroll);
@@ -162,13 +160,13 @@ TopStoriesNavigation.prototype = {
         // Find the first element that is offscreen or partially off
         var offscreenIndex = -1;
         var length = storyRects.length;
-        while(length--){
-            if( storyRects[length].left < 0 ){
+        while (length--) {
+            if (storyRects[length].left < 0) {
                 offscreenIndex = length;
                 break;
             }
         }
-        if( offscreenIndex === -1) return;
+        if (offscreenIndex === -1) return;
 
         this.scrollTo(-scrollRect.width + storyRects[offscreenIndex].right + (window.innerWidth > scrollRect.width ? 0 : this._scrollOffset));
     },
@@ -179,8 +177,8 @@ TopStoriesNavigation.prototype = {
      * @memberof! TopStoriesNavigation.prototype
      * @param  {Number} x
      */
-    'scrollTo': function(x){
-        if( this._scroller !== null ){
+    'scrollTo': function(x) {
+        if (this._scroller !== null) {
             this._scroller.destroy();
             this._scroller = null;
         }
@@ -191,11 +189,14 @@ TopStoriesNavigation.prototype = {
             this._elScroll.scrollLeft + x);
         left -= this._elScroll.scrollLeft;
 
-        this._scroller = new ElementScroll( this._elScroll );
-        this._scroller.on("complete", onElementScrollFinish.bind(this));
-        this._scroller.on("stop", onElementScrollFinish.bind(this));
-        this._scroller.start({ "x": left, "y": 0 }, SCROLL_DURATION, {
-            "stopOnUserInput": false
+        this._scroller = new ElementScroll(this._elScroll);
+        this._scroller.on('complete', onElementScrollFinish.bind(this));
+        this._scroller.on('stop', onElementScrollFinish.bind(this));
+        this._scroller.start({
+            'x': left,
+            'y': 0
+        }, SCROLL_DURATION, {
+            'stopOnUserInput': false
         });
     }
 
@@ -206,9 +207,9 @@ TopStoriesNavigation.prototype = {
  * Disables a button
  * @param  {HTMLElement} el
  */
-function disableButton(el){
-    if( el.hasAttribute("disabled") ) return;
-    el.setAttribute("disabled", true);
+function disableButton(el) {
+    if (el.hasAttribute('disabled')) return;
+    el.setAttribute('disabled', true);
     addClass(el, 'btn-disabled');
 }
 
@@ -216,9 +217,9 @@ function disableButton(el){
  * Enables a button
  * @param  {HTMLElement} el
  */
-function enableButton(el){
-    if( !el.hasAttribute("disabled") ) return;
-    el.removeAttribute("disabled");
+function enableButton(el) {
+    if (!el.hasAttribute('disabled')) return;
+    el.removeAttribute('disabled');
     removeClass(el, 'btn-disabled');
 }
 
@@ -227,7 +228,7 @@ function enableButton(el){
  * @param  {HTMLElement} el
  * @return {Array.<HTMLElement>}
  */
-function getStoryElements(el){
+function getStoryElements(el) {
     return toArray(el.querySelectorAll('.js-c-card-list__item'));
 }
 
@@ -236,7 +237,7 @@ function getStoryElements(el){
  * @param  {HTMLElement}  el
  * @return {Boolean}
  */
-function isScrollAtEnd(el){
+function isScrollAtEnd(el) {
     return el.scrollLeft === el.scrollWidth - el.offsetWidth;
 }
 
@@ -245,14 +246,14 @@ function isScrollAtEnd(el){
  * @param  {HTMLElement}  el
  * @return {Boolean}
  */
-function isScrollAtStart(el){
+function isScrollAtStart(el) {
     return el.scrollLeft === 0;
 }
 
 /**
  * Callback for when an element has finished scrolling
  */
-function onElementScrollFinish(){
+function onElementScrollFinish() {
     this._scroller.destroy();
     this._scroller = null;
 
@@ -265,15 +266,15 @@ function onElementScrollFinish(){
  * @param  {Object} elRect
  * @return {Object}
  */
-function normaliseToElement( elRect ){
-    return function normaliseToElement_inner( rect ){
+function normaliseToElement(elRect) {
+    return function normaliseToElement_inner(rect) {
         return {
-            "bottom": rect.bottom - elRect.top,
-            "height": rect.height,
-            "left": rect.left - elRect.left,
-            "right": rect.right - elRect.left,
-            "top": rect.top - elRect.top,
-            "width": rect.width
+            'bottom': rect.bottom - elRect.top,
+            'height': rect.height,
+            'left': rect.left - elRect.left,
+            'right': rect.right - elRect.left,
+            'top': rect.top - elRect.top,
+            'width': rect.width
         };
     };
 }
@@ -281,7 +282,7 @@ function normaliseToElement( elRect ){
 /**
  * Callback for scroll event
  */
-function onScroll(){
+function onScroll() {
     if (window.innerWidth > 1024) {
         updateButtonStates(this._elScroll, this._btns);
     }
@@ -292,10 +293,10 @@ function onScroll(){
  * @param  {*} collection
  * @return {Array}
  */
-function toArray(collection){
+function toArray(collection) {
     var length = collection.length;
     var o = new Array(length);
-    while(length--) o[length] = collection[length];
+    while (length--) o[length] = collection[length];
     return o;
 }
 
@@ -304,15 +305,15 @@ function toArray(collection){
  * @param  {HTMLElement} scroll
  * @param  {Array.<HTMLElement>} btns
  */
-function updateButtonStates(scroll, btns){
-    if( isScrollAtStart( scroll ) ){
-        disableButton( btns[0] );
-        enableButton( btns[1] );
-    } else if( isScrollAtEnd( scroll ) ){
-        enableButton( btns[0] );
-        disableButton( btns[1] );
+function updateButtonStates(scroll, btns) {
+    if (isScrollAtStart(scroll)) {
+        disableButton(btns[0]);
+        enableButton(btns[1]);
+    } else if (isScrollAtEnd(scroll)) {
+        enableButton(btns[0]);
+        disableButton(btns[1]);
     } else {
-        enableButton( btns[0] );
-        enableButton( btns[1] );
+        enableButton(btns[0]);
+        enableButton(btns[1]);
     }
 }
