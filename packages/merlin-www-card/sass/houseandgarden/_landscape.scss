@@ -213,12 +213,12 @@
         color: $mine-shaft;
         letter-spacing: 1px;
         margin-bottom: 5px;
-        margin-top: 7px;
+        margin-top: 10px;
         text-transform: uppercase;
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             margin-bottom: 7px;
-            margin-top: 10px;
+            margin-top: 15px;
         }
     }
 
