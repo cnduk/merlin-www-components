@@ -1,14 +1,11 @@
 'use strict';
 
-import { ArticleManager } from '@cnbritain/merlin-www-article';
-import { ARTICLE_TYPES } from '@cnbritain/merlin-www-article/js/constants';
 import {
-    addEvent,
-    debounce,
-    getWindowScrollTop,
-    throttle
+    ArticleManager
+} from '@cnbritain/merlin-www-article';
+import {
+    debounce
 } from '@cnbritain/merlin-www-js-utils/js/functions';
-import { AdManager } from '@cnbritain/merlin-www-ads';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
 
 var allowAllFocus = false;
@@ -20,11 +17,11 @@ export default function init() {
 }
 
 
-export function onArticleImageFocus(e){
+export function onArticleImageFocus(e) {
     sendGalleryImagePageview(e.target.parentArticle, e.imageIndex);
 }
 
-export function onArticleFocus(e){
+export function onArticleFocus(e) {
     var article = e.target;
 
     // Update the analytics to include ad block changes
@@ -33,13 +30,13 @@ export function onArticleFocus(e){
     // NOTE: first article to focus is super likely to be non infinite scroll
     // article so to avoid it, we dont send a pageview if its not infinite
     // and is the first time.
-    if(allowAllFocus || (!allowAllFocus && article.isInfinite)){
+    if (allowAllFocus || (!allowAllFocus && article.isInfinite)) {
         allowAllFocus = true;
         sendPageview(article);
     }
 }
 
-export function onArticleExpand(e){
+export function onArticleExpand(e) {
     sendCustomEvent({
         'eventCategory': 'Infinite scroll',
         'eventAction': 'Expand gallery',
@@ -55,10 +52,10 @@ export function sendGalleryImagePageview(article, imageIndex) {
     var analytics = article.analytics;
 
     var CREDIT_DIMENSION = GATracker.getDimensionByIndex(
-        "GALLERY_PHOTO_CREDIT");
+        'GALLERY_PHOTO_CREDIT');
     var POSITION_DIMENSION = GATracker.getDimensionByIndex(
-        "GALLERY_POSITION");
-    var BASE_URL = GATracker.getDimensionByIndex("BASE_URL");
+        'GALLERY_POSITION');
+    var BASE_URL = GATracker.getDimensionByIndex('BASE_URL');
 
     var image = article.gallery.imageElements[imageIndex];
     var imageUid = image.querySelector('.c-figure').getAttribute('id');

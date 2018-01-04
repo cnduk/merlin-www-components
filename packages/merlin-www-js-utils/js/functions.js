@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  * Modifies Element.prototype.matches
@@ -15,7 +15,7 @@ Element.prototype.matches = Element.prototype.matchesSelector ||
  * @module functions
  */
 
-import { supportBoxModel } from "./detect";
+import { supportBoxModel } from './detect';
 
 /**
  * Adds a class to an element
@@ -29,7 +29,7 @@ export function addClass( el, cls ){
     }
 
     if( el.classList ) return el.classList.add( _cls );
-    el.className += " " + _cls;
+    el.className += ' ' + _cls;
 }
 
 /**
@@ -40,7 +40,7 @@ export function addClass( el, cls ){
  */
 export function addEvent( el, type, fn ){
     if( document.addEventListener ) return el.addEventListener( type, fn, false );
-    return el.attachEvent( "on" + type, fn );
+    return el.attachEvent( 'on' + type, fn );
 }
 
 /**
@@ -62,13 +62,13 @@ export function addEventOnce( el, type, fn ){
  * @param {HTMLElement} node
  */
 export function addHtml( node ){
-    var tmp = document.createElement("div");
+    var tmp = document.createElement('div');
     return function addHtml_inner( html ){
         tmp.innerHTML = html;
         while(tmp.children.length > 0){
             node.appendChild( tmp.children[0] );
         }
-        tmp.innerHTML = "";
+        tmp.innerHTML = '';
     };
 }
 
@@ -86,19 +86,19 @@ export function ajax( options ){
                 request.onreadystatechange = null;
                 if( request.status === 200 ){
                     resolve({
-                        "event": e,
-                        "request": request
+                        'event': e,
+                        'request': request
                     });
                 } else {
                     reject({
-                        "event": e,
-                        "request": request
+                        'event': e,
+                        'request': request
                     });
                 }
             }
         };
 
-        request.open( "GET", options.url );
+        request.open( 'GET', options.url );
         // Add referrer as cloudfront sucks up the referrer
         request.setRequestHeader('rollbar-referrer', document.location.href);
         request.send( null );
@@ -344,7 +344,7 @@ export function fireEvent(el, type, bubble, cancelable){
     }
     var _bubble = isDefined(bubble) ? bubble : false;
     var _cancelable = isDefined(cancelable) ? cancelable : true;
-    e = document.createEvent("HTMLEvents");
+    e = document.createEvent('HTMLEvents');
     e.initEvent(type, _bubble, _cancelable);
     return !el.dispatchEvent(e);
 }
@@ -370,12 +370,12 @@ export function getBoundingClientRect( el ){
     var height = el.innerHeight;
     var width = el.innerWidth;
     return {
-        "bottom": height,
-        "height": height,
-        "left": 0,
-        "right": width,
-        "top": 0,
-        "width": width
+        'bottom': height,
+        'height': height,
+        'left': 0,
+        'right': width,
+        'top': 0,
+        'width': width
     };
 }
 
@@ -425,12 +425,12 @@ export function getElementOffset( el ){
     var right = elementBox.right + extraX;
 
     return {
-        "bottom": bottom,
-        "height": elementBox.height,
-        "left": left,
-        "right": right,
-        "top": top,
-        "width": elementBox.width
+        'bottom': bottom,
+        'height': elementBox.height,
+        'left': left,
+        'right': right,
+        'top': top,
+        'width': elementBox.width
     };
 }
 
@@ -440,8 +440,8 @@ export function getElementOffset( el ){
  * @return {*}   The target of the event
  */
 export function getEventTarget( e ) {
-  var eve = e || window.event;
-  return eve.target || eve.srcElement;
+    var eve = e || window.event;
+    return eve.target || eve.srcElement;
 }
 
 /**
@@ -598,7 +598,7 @@ export function hasClass( el, cls ) {
     }
 
     if( el.classList ) return el.classList.contains( _cls );
-    return !!el.className.match( new RegExp( "(\\s|^)" + _cls + "(\\s|$)" ) );
+    return !!el.className.match( new RegExp( '(\\s|^)' + _cls + '(\\s|$)' ) );
 }
 
 /**
@@ -652,7 +652,7 @@ export function isArray(src){
  * @return {Boolean}
  */
 export function isArticleAdSlot( placement ){
-    return placement === "article-side" || placement === "article-infinite";
+    return placement === 'article-side' || placement === 'article-infinite';
 }
 
 /**
@@ -670,7 +670,7 @@ export function isDefined( value ){
  * @return {Boolean}
  */
 export function isEmptyString( value ){
-    return typeof value === "string" && value === "";
+    return typeof value === 'string' && value === '';
 }
 
 /**
@@ -688,7 +688,7 @@ export function isElement( value ){
  * @return {Boolean}
  */
 export function isHeaderAdSlot( placement ){
-    return placement === "nav-above";
+    return placement === 'nav-above';
 }
 
 /**
@@ -707,7 +707,7 @@ export function isObject(src){
  * @return {Boolean}
  */
 export function isSplashAdSlot( placement ){
-    return placement === "tag-inside" || placement === "tag-infinite";
+    return placement === 'tag-inside' || placement === 'tag-infinite';
 }
 
 /**
@@ -731,11 +731,11 @@ export function loadScript( url, options ){
         if( options && options.node ){
             node = options.node;
         } else {
-            node = document.head || document.getElementsByTagName("head")[0];
+            node = document.head || document.getElementsByTagName('head')[0];
         }
-        var script = document.createElement("script");
+        var script = document.createElement('script');
         script.async = true;
-        script.type = "text/javascript";
+        script.type = 'text/javascript';
         script.src = url;
         script.onload = function(){
             this.onload = this.onerror = null;
@@ -743,7 +743,7 @@ export function loadScript( url, options ){
         };
         script.onerror = function(){
             this.onload = this.onerror = null;
-            reject( new Error( "Error loading script: " + url ) );
+            reject( new Error( 'Error loading script: ' + url ) );
         };
         node.appendChild( script );
     });
@@ -764,43 +764,43 @@ export function loadSocialScripts(){
     var skyscannerPromise = null;
 
     // Twitter
-    if( !("twttr" in window) ){
-        twitterPromise = loadScript( "//platform.twitter.com/widgets.js" );
+    if( !('twttr' in window) ){
+        twitterPromise = loadScript( '//platform.twitter.com/widgets.js' );
     } else {
         twitterPromise = Promise.resolve();
     }
 
     // Vine
-    if( !("VINE_EMBEDS" in window) ){
-        vinePromise = loadScript( "https://platform.vine.co/static/scripts/embed.js" );
+    if( !('VINE_EMBEDS' in window) ){
+        vinePromise = loadScript( 'https://platform.vine.co/static/scripts/embed.js' );
     } else {
         vinePromise = Promise.resolve();
     }
 
     // Facebook
-    if( !("FB" in window) ){
-        facebookPromise = loadScript( "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3" );
+    if( !('FB' in window) ){
+        facebookPromise = loadScript( '//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3' );
     } else {
         facebookPromise = Promise.resolve();
     }
 
     // Instagram
-    if( !("instgrm" in window) ){
-        instagramPromise = loadScript( "//platform.instagram.com/en_US/embeds.js" );
+    if( !('instgrm' in window) ){
+        instagramPromise = loadScript( '//platform.instagram.com/en_US/embeds.js' );
     } else {
         instagramPromise = Promise.resolve();
     }
 
     // Imgur
-    if( !("imgurEmbed" in window) ){
-        imgurPromise = loadScript("//s.imgur.com/min/embed.js");
+    if( !('imgurEmbed' in window) ){
+        imgurPromise = loadScript('//s.imgur.com/min/embed.js');
     } else {
         imgurPromise = Promise.resolve();
     }
 
     // Skyscanner
-    if( !("skyscanner" in window) ){
-        skyscannerPromise = loadScript("https://widgets.skyscanner.net/widget-server/js/loader.js");
+    if( !('skyscanner' in window) ){
+        skyscannerPromise = loadScript('https://widgets.skyscanner.net/widget-server/js/loader.js');
     } else {
         skyscannerPromise = Promise.resolve();
     }
@@ -821,7 +821,7 @@ export function loadSocialScripts(){
  * @return {Boolean}
  */
 export function not( value ){
-    if( typeof value === "function" ){
+    if( typeof value === 'function' ){
         return function not_inner(){
             var len = arguments.length;
             var args = new Array(len);
@@ -839,7 +839,7 @@ export function not( value ){
 export function onPageLoad( loadFn ){
 
     // If the page has already loaded, just run the function
-    if( document.readyState === "complete" ){
+    if( document.readyState === 'complete' ){
         loadFn();
 
     // Page hasn't loaded so store the loadFn and apply a listener if we
@@ -847,7 +847,7 @@ export function onPageLoad( loadFn ){
     } else {
         onPageLoad._fns.push( loadFn );
         if( onPageLoad._fns.length === 1 ){
-            addEventOnce( window, "load", onPageLoadListener );
+            addEventOnce( window, 'load', onPageLoadListener );
         }
     }
 
@@ -868,8 +868,8 @@ onPageLoad._fns = [];
 export function onPageReady( readyFn ){
 
     // If the page has already loaded, just run the function
-    if( document.readyState === "complete" ||
-        document.readyState === "interactive" ){
+    if( document.readyState === 'complete' ||
+        document.readyState === 'interactive' ){
         readyFn();
 
     // Page hasn't loaded so store the readyFn and apply a listener if we
@@ -877,7 +877,7 @@ export function onPageReady( readyFn ){
     } else {
         onPageReady._fns.push( readyFn );
         if( onPageReady._fns.length === 1 ){
-            addEventOnce( window, "DOMContentLoaded", onPageReadyListener );
+            addEventOnce( window, 'DOMContentLoaded', onPageReadyListener );
         }
     }
 
@@ -912,8 +912,8 @@ export function padValue( value, width, chr ) {
  * @return {String}
  */
 export function randomUUID(){
-    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(c) {
-        var r = Math.random()*16|0, v = c === "x" ? r : (r&0x3|0x8);
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random()*16|0, v = c === 'x' ? r : (r&0x3|0x8);
         return v.toString(16);
     });
 }
@@ -931,8 +931,8 @@ export function removeClass( el, cls ){
 
     if( el.classList ) return el.classList.remove( _cls );
     if( !hasClass( el, _cls ) ) return;
-    var reg = new RegExp("(\\s|^)" + _cls + "(\\s|$)");
-    el.className = el.className.replace( reg, " " );
+    var reg = new RegExp('(\\s|^)' + _cls + '(\\s|$)');
+    el.className = el.className.replace( reg, ' ' );
 }
 
 /**
@@ -952,7 +952,7 @@ export function removeElement( el ){
  */
 export function removeEvent( el, type, fn ){
     if( document.removeEventListener ) return el.removeEventListener( type, fn );
-    return el.detachEvent( "on" + type, fn );
+    return el.detachEvent( 'on' + type, fn );
 }
 
 /**
@@ -962,11 +962,11 @@ export function removeEvent( el, type, fn ){
  * @param {Number} days  amount of days the cookie should last
  */
 export function setCookie(key, value, days){
-    var expires = "";
+    var expires = '';
     if(days){
         var date = new Date();
         date.setTime(date.getTime() + (days*24*60*60*1000));
-        expires = "; expires=" + date.toGMTString();
+        expires = '; expires=' + date.toGMTString();
     }
     document.cookie = key + '=' + value + expires + '; path=/';
 }
@@ -1006,8 +1006,8 @@ export function throttle( fn, threshhold, scope ) {
  * @return {Boolean}
  */
 export function toBoolean( value ){
-    if( !isDefined( value ) || value === "" ) return false;
-    if( value === "true" ) return true;
+    if( !isDefined( value ) || value === '' ) return false;
+    if( value === 'true' ) return true;
     return !!value;
 }
 
@@ -1027,7 +1027,7 @@ export function toggleClass( el, cls ){
  * @return {*}
  */
 export function unescapeJinjaValue(value){
-    var tmp = document.createElement("div");
+    var tmp = document.createElement('div');
     tmp.innerHTML = value;
     var unescaped = tmp.textContent;
     tmp = null;

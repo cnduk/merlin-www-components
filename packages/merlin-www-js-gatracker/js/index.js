@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /* globals ga, COMSCORE */
 
 import { assign } from '@cnbritain/merlin-www-js-utils/js/functions';
@@ -23,7 +23,7 @@ function GATracker(id, _config){
      * @type {String}
      */
     this._name = (_config && _config.name !== undefined ?
-        _config.name : "TRACKER" + GATracker.TRACKERS.length);
+        _config.name : 'TRACKER' + GATracker.TRACKERS.length);
 
     /**
      * The tracking id
@@ -37,36 +37,36 @@ function GATracker(id, _config){
      * @public
      * @type {String}
      */
-    this.type = _config && _config.type !== undefined ? _config.type : "brand";
+    this.type = _config && _config.type !== undefined ? _config.type : 'brand';
 
 
     var config = {
-        "allowLinker": !!( _config && _config.linker ),
-        "cookieDomain": _config && _config.cookieDomain !== undefined ?
-                        _config.cookieDomain :
-                        "auto",
-        "name": this._name,
-        "trackingId": this._id
+        'allowLinker': !!( _config && _config.linker ),
+        'cookieDomain': _config && _config.cookieDomain !== undefined ?
+            _config.cookieDomain :
+            'auto',
+        'name': this._name,
+        'trackingId': this._id
     };
-    ga( "create", config );
+    ga( 'create', config );
 
     /**
      * See if we need to require displayfeatures
      */
     if( _config && _config.displayFeatures === true ){
-        ga( this._name + ".require", "displayfeatures" );
+        ga( this._name + '.require', 'displayfeatures' );
     }
 
     /**
      * See if we need to require autolinker
      */
     if( _config && _config.linker !== undefined ){
-        ga( this._name + ".require", "linker" );
-        ga( this._name + ".linker:autoLink", _config.linker );
+        ga( this._name + '.require', 'linker' );
+        ga( this._name + '.linker:autoLink', _config.linker );
     }
 
     if(_config && _config.optimizeId !== undefined){
-        ga(this._name + ".require", _config.optimizeId);
+        ga(this._name + '.require', _config.optimizeId);
     }
 
     /**
@@ -131,12 +131,12 @@ GATracker.SetAll = function SetAll( fieldName, value ){
  */
 GATracker.prototype = {
 
-    "constructor": GATracker,
+    'constructor': GATracker,
 
     /**
      * Reset all the custom dimensions on the tracker
      */
-    "resetCustomDimensions": function(){
+    'resetCustomDimensions': function(){
         var resetValues = {};
         for(var key in GATracker.DIMENSION_BY_INDEX){
             if(!GATracker.DIMENSION_BY_INDEX.hasOwnProperty(key)) continue;
@@ -152,21 +152,21 @@ GATracker.prototype = {
      * @param  {String} hitType
      * @param  {Object} config  Data to send along with the call
      */
-    "send": function( hitType, config ){
+    'send': function( hitType, config ){
         var options = assign( {
-            "comscore": true
+            'comscore': true
         }, config, {
-            "hitType": hitType
+            'hitType': hitType
         } );
 
         var comscore = options.comscore;
         delete options.comscore;
 
-        ga( this._name + ".send", options );
+        ga( this._name + '.send', options );
 
         // Whenever we send a pageview, send a comscore beacon
         if( hitType === GATracker.SEND_HITTYPES.PAGEVIEW && comscore &&
-            this.type === "brand" ){
+            this.type === 'brand' ){
             sendComscore( location.href );
         }
 
@@ -179,7 +179,7 @@ GATracker.prototype = {
      * @param  {String/Object} fieldName Either a key or an object with data
      * @param  {String/Number} value
      */
-    "set": function( fieldName, value ){
+    'set': function( fieldName, value ){
         var setData = fieldName;
 
         if( arguments.length === 2 ){
@@ -189,11 +189,11 @@ GATracker.prototype = {
 
         // If the tracker is `conde`, we need to remove custom dimensions. We
         // might not need to do this but just to be safe :)
-        if( this.type !== "brand" ){
+        if( this.type !== 'brand' ){
             setData = removeCustomDimensions( setData );
         }
 
-        ga( this._name + ".set", setData );
+        ga( this._name + '.set', setData );
     }
 };
 
@@ -207,7 +207,7 @@ GATracker.getDimensionByIndex = function( index ){
     if( GATracker.INDEX_BY_DIMENSION.hasOwnProperty( index ) ){
         return GATracker.INDEX_BY_DIMENSION[ index ];
     }
-    throw new TypeError( index + " is not a valid index" );
+    throw new TypeError( index + ' is not a valid index' );
 };
 
 /**
@@ -220,7 +220,7 @@ GATracker.getIndexByDimension = function( dimension ){
     if( GATracker.DIMENSION_BY_INDEX.hasOwnProperty( dimension ) ){
         return GATracker.DIMENSION_BY_INDEX[ dimension ];
     }
-    throw new TypeError( dimension + " is not a valid dimension" );
+    throw new TypeError( dimension + ' is not a valid dimension' );
 };
 
 /**
@@ -229,34 +229,34 @@ GATracker.getIndexByDimension = function( dimension ){
  * @type {Object}
  */
 GATracker.INDEX_BY_DIMENSION = {
-    "PAGE_TEMPLATE": "dimension1",
-    "BASE_URL": "dimension3",
-    "UPDATE_DATE": "dimension22",
-    "PUBLISH_DATE": "dimension10",
-    "AUTHOR": "dimension7",
-    "GALLERY_URL": "dimension33",
-    "PRIMARY_TAG": "dimension4",
-    "TAGS": "dimension6",
-    "MAGAZINE_CONTENT": "dimension19",
-    "MAGAZINE_ISSUE": "dimension20",
-    "UMBRACO_ID": "dimension35",
-    "MERLIN_ID": "dimension36",
-    "PAGE_AGE": "dimension9",
-    "GALLERY_LENGTH": "dimension13",
-    "GALLERY_POSITION": "dimension12",
-    "GALLERY_PHOTO_CREDIT": "dimension11",
-    "PLATFORM": "dimension5",
-    "AD_BLOCKER": "dimension43",
-    "WORD_COUNT": "dimension8",
-    "DISPLAY_DATE": "dimension45",
-    "NAME_OF_DAY": "dimension41",
-    "PUBLISH_DATE_HOUR": "dimension42",
-    "SYNDICATED": "dimension48",
-    "SYNDICATION_SOURCE": "dimension49",
-    "SYNDICATION_ORIGINAL_URL": "dimension50",
-    "SYNDICATION_ORIGINAL_LANGUAGE": "dimension51",
-    "SPONSORED": "dimension46",
-    "SPONSOR": "dimension47"
+    'PAGE_TEMPLATE': 'dimension1',
+    'BASE_URL': 'dimension3',
+    'UPDATE_DATE': 'dimension22',
+    'PUBLISH_DATE': 'dimension10',
+    'AUTHOR': 'dimension7',
+    'GALLERY_URL': 'dimension33',
+    'PRIMARY_TAG': 'dimension4',
+    'TAGS': 'dimension6',
+    'MAGAZINE_CONTENT': 'dimension19',
+    'MAGAZINE_ISSUE': 'dimension20',
+    'UMBRACO_ID': 'dimension35',
+    'MERLIN_ID': 'dimension36',
+    'PAGE_AGE': 'dimension9',
+    'GALLERY_LENGTH': 'dimension13',
+    'GALLERY_POSITION': 'dimension12',
+    'GALLERY_PHOTO_CREDIT': 'dimension11',
+    'PLATFORM': 'dimension5',
+    'AD_BLOCKER': 'dimension43',
+    'WORD_COUNT': 'dimension8',
+    'DISPLAY_DATE': 'dimension45',
+    'NAME_OF_DAY': 'dimension41',
+    'PUBLISH_DATE_HOUR': 'dimension42',
+    'SYNDICATED': 'dimension48',
+    'SYNDICATION_SOURCE': 'dimension49',
+    'SYNDICATION_ORIGINAL_URL': 'dimension50',
+    'SYNDICATION_ORIGINAL_LANGUAGE': 'dimension51',
+    'SPONSORED': 'dimension46',
+    'SPONSOR': 'dimension47'
 };
 
 /**
@@ -265,34 +265,34 @@ GATracker.INDEX_BY_DIMENSION = {
  * @type {Object}
  */
 GATracker.DIMENSION_BY_INDEX = {
-    "dimension1": "PAGE_TEMPLATE",
-    "dimension3": "BASE_URL",
-    "dimension22": "UPDATE_DATE",
-    "dimension10": "PUBLISH_DATE",
-    "dimension7": "AUTHOR",
-    "dimension33": "GALLERY_URL",
-    "dimension4": "PRIMARY_TAG",
-    "dimension6": "TAGS",
-    "dimension19": "MAGAZINE_CONTENT",
-    "dimension20": "MAGAZINE_ISSUE",
-    "dimension35": "UMBRACO_ID",
-    "dimension36": "MERLIN_ID",
-    "dimension9": "PAGE_AGE",
-    "dimension13": "GALLERY_LENGTH",
-    "dimension12": "GALLERY_POSITION",
-    "dimension11": "GALLERY_PHOTO_CREDIT",
-    "dimension5": "PLATFORM",
-    "dimension43": "AD_BLOCKER",
-    "dimension8": "WORD_COUNT",
-    "dimension45": "DISPLAY_DATE",
-    "dimension41": "NAME_OF_DAY",
-    "dimension42": "PUBLISH_DATE_HOUR",
-    "dimension48": "SYNDICATED",
-    "dimension49": "SYNDICATION_SOURCE",
-    "dimension50": "SYNDICATION_ORIGINAL_URL",
-    "dimension51": "SYNDICATION_ORIGINAL_LANGUAGE",
-    "dimension46": "SPONSORED",
-    "dimension47": "SPONSOR"
+    'dimension1': 'PAGE_TEMPLATE',
+    'dimension3': 'BASE_URL',
+    'dimension22': 'UPDATE_DATE',
+    'dimension10': 'PUBLISH_DATE',
+    'dimension7': 'AUTHOR',
+    'dimension33': 'GALLERY_URL',
+    'dimension4': 'PRIMARY_TAG',
+    'dimension6': 'TAGS',
+    'dimension19': 'MAGAZINE_CONTENT',
+    'dimension20': 'MAGAZINE_ISSUE',
+    'dimension35': 'UMBRACO_ID',
+    'dimension36': 'MERLIN_ID',
+    'dimension9': 'PAGE_AGE',
+    'dimension13': 'GALLERY_LENGTH',
+    'dimension12': 'GALLERY_POSITION',
+    'dimension11': 'GALLERY_PHOTO_CREDIT',
+    'dimension5': 'PLATFORM',
+    'dimension43': 'AD_BLOCKER',
+    'dimension8': 'WORD_COUNT',
+    'dimension45': 'DISPLAY_DATE',
+    'dimension41': 'NAME_OF_DAY',
+    'dimension42': 'PUBLISH_DATE_HOUR',
+    'dimension48': 'SYNDICATED',
+    'dimension49': 'SYNDICATION_SOURCE',
+    'dimension50': 'SYNDICATION_ORIGINAL_URL',
+    'dimension51': 'SYNDICATION_ORIGINAL_LANGUAGE',
+    'dimension46': 'SPONSORED',
+    'dimension47': 'SPONSOR'
 };
 
 /**
@@ -302,16 +302,16 @@ GATracker.DIMENSION_BY_INDEX = {
  * @type {Array}
  */
 // GATracker.DOMAINS = [
-//     "bridesmagazine.co.uk",
-//     "cntraveller.com",
-//     "condenast.co.uk",
-//     "houseandgarden.co.uk",
-//     "glamourmagazine.co.uk",
-//     "gq-magazine.co.uk",
-//     "tatler.com",
-//     "vanityfair.co.uk",
-//     "vogue.co.uk",
-//     "wired.co.uk"
+//     'bridesmagazine.co.uk',
+//     'cntraveller.com',
+//     'condenast.co.uk',
+//     'houseandgarden.co.uk',
+//     'glamourmagazine.co.uk',
+//     'gq-magazine.co.uk',
+//     'tatler.com',
+//     'vanityfair.co.uk',
+//     'vogue.co.uk',
+//     'wired.co.uk'
 // ];
 
 /**
@@ -320,14 +320,14 @@ GATracker.DIMENSION_BY_INDEX = {
  * @type {Object}
  */
 GATracker.REFERRERS = {
-    "EXTERNAL": "External",
-    "HOMEPAGE": "Homepage",
-    "INCONTENT_LINK": "In-content link",
-    "INFINITE_SCROLL": "Infinite scroll",
-    "MAGAZINE_PAGE": "Magazine page",
-    "RELATED_READING_LIST": "Related reading list",
-    "TAG_PAGE": "Tag page",
-    "TOP STORIES LIST": "Top stories list"
+    'EXTERNAL': 'External',
+    'HOMEPAGE': 'Homepage',
+    'INCONTENT_LINK': 'In-content link',
+    'INFINITE_SCROLL': 'Infinite scroll',
+    'MAGAZINE_PAGE': 'Magazine page',
+    'RELATED_READING_LIST': 'Related reading list',
+    'TAG_PAGE': 'Tag page',
+    'TOP STORIES LIST': 'Top stories list'
 };
 
 /**
@@ -336,14 +336,14 @@ GATracker.REFERRERS = {
  * @type {Object}
  */
 GATracker.SEND_HITTYPES = {
-    "EVENT": "event",
-    "EXCEPTION": "exception",
-    "ITEM": "item",
-    "PAGEVIEW": "pageview",
-    "SCREENVIEW": "screenview",
-    "SOCIAL": "social",
-    "TIMING": "timing",
-    "TRANSACTION": "transaction"
+    'EVENT': 'event',
+    'EXCEPTION': 'exception',
+    'ITEM': 'item',
+    'PAGEVIEW': 'pageview',
+    'SCREENVIEW': 'screenview',
+    'SOCIAL': 'social',
+    'TIMING': 'timing',
+    'TRANSACTION': 'transaction'
 };
 
 /**
@@ -374,7 +374,7 @@ GATracker.COMSCORE_PUBLISHED_ID = 15335235;
  */
 function removeCustomDimensions( data ){
     var filtered = {};
-    var key = "";
+    var key = '';
     for(key in data){
         if(!data.hasOwnProperty(key)) continue;
         if(RE_DIMENSION.test(key)) continue;
@@ -389,11 +389,11 @@ function removeCustomDimensions( data ){
  * @return {Boolean}
  */
 function sendComscore( url ){
-    if( "COMSCORE" in window && window.COMSCORE !== null ){
+    if( 'COMSCORE' in window && window.COMSCORE !== null ){
         return COMSCORE.beacon({
-            "c1": "2",
-            "c2": GATracker.COMSCORE_PUBLISHED_ID,
-            "c4": url
+            'c1': '2',
+            'c2': GATracker.COMSCORE_PUBLISHED_ID,
+            'c4': url
         });
     }
     return false;

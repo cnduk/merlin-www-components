@@ -4,7 +4,9 @@
   "description": "",
   "main": "js/index.js",
   "scripts": {
-    "demo": "merlin-component-demo-server merlin.json"
+    "demo": "merlin-component-demo-server merlin.json",
+    "lint": "eslint -c ../../.eslintrc.json ./js/**/*",
+    "prepublish": "npm run lint"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +15,7 @@
     "@cnbritain/merlin-www-image": "^1.6.4"
   },
   "devDependencies": {
-    "@cnbritain/merlin-component-demo-server": "^2.9.3"
+    "@cnbritain/merlin-component-demo-server": "^2.9.3",
+    "eslint": "^4.14.0"
   }
 }

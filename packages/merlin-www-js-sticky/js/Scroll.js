@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 import EventEmitter from 'eventemitter2';
 import Group from './Group';
@@ -29,23 +29,23 @@ function Scroll( el, _options ){
     this.el = el;
     this.isPaused = false;
     this.offset = {
-        "bottom": 0,
-        "left": 0,
-        "right": 0,
-        "top": 0
+        'bottom': 0,
+        'left': 0,
+        'right': 0,
+        'top': 0
     };
     this.position = {
-        "left": 0,
-        "top": 0
+        'left': 0,
+        'top': 0
     };
     this.size = {
-        "height": 0,
-        "width": 0
+        'height': 0,
+        'width': 0
     };
 
-     /**
-      * @private
-      */
+    /**
+     * @private
+     */
     this._eventHooks = {};
     this._lastScrollY = 0;
 
@@ -55,15 +55,15 @@ function Scroll( el, _options ){
      */
     if( options.throttle !== undefined ){
         // Type check please
-        if( typeof options.throttle !== "number" ){
-            throw new TypeError( "throttle must be of type number" );
+        if( typeof options.throttle !== 'number' ){
+            throw new TypeError( 'throttle must be of type number' );
         }
         this._eventHooks.scroll = throttle( this.update,
             options.throttle, this );
     } else {
         this._eventHooks.scroll = this.update.bind( this );
     }
-    this.el.addEventListener( "scroll", this._eventHooks.scroll );
+    this.el.addEventListener( 'scroll', this._eventHooks.scroll );
 
     /* Add the scroll item to the manager */
     Manager.addScroll( this );
@@ -72,8 +72,8 @@ function Scroll( el, _options ){
 
 Scroll.prototype = inherit( EventEmitter.prototype, {
 
-    "_updateDown": function( group, scrollY ){
-        // console.log("Down");
+    '_updateDown': function( group, scrollY ){
+        // console.log('Down');
 
         var children = group.children;
         var i = -1;
@@ -150,15 +150,15 @@ Scroll.prototype = inherit( EventEmitter.prototype, {
 
     },
 
-    "_updateNeutral": function( group, scrollY ){
+    '_updateNeutral': function( group, scrollY ){
         group.children.forEach(function( child ){
             if( child._setNeutral ) child._setNeutral();
         });
         this._updateDown( group, scrollY );
     },
 
-    "_updateUp": function( group, scrollY ){
-        // console.log("Up");
+    '_updateUp': function( group, scrollY ){
+        // console.log('Up');
 
         var children = group.children;
         var length = children.length;
@@ -213,15 +213,15 @@ Scroll.prototype = inherit( EventEmitter.prototype, {
 
     },
 
-    "addChild": function( item, _options ){
+    'addChild': function( item, _options ){
         if( !isGroup( item ) ) throw new
-            TypeError("item must be of type Group");
+            TypeError('item must be of type Group');
         if( this.hasChild( item ) ) return false;
 
         // Defaults
         var options = assign({
-            "silent": false,
-            "sort": true
+            'silent': false,
+            'sort': true
         }, _options );
 
         // Check if the item already belongs to a group
@@ -231,14 +231,14 @@ Scroll.prototype = inherit( EventEmitter.prototype, {
         applyItemToScroll( item, this );
 
         this.children.push( item );
-        if( !options.silent ) this.emit( "add", item );
+        if( !options.silent ) this.emit( 'add', item );
         if( options.sort ) this.sortChildren();
     },
 
-    "addChildren": function( items, _options ){
+    'addChildren': function( items, _options ){
         var options = assign({
-            "silent": false,
-            "sort": true
+            'silent': false,
+            'sort': true
         }, _options);
         var sortOption = options.sort;
         options.sort = false;
@@ -250,26 +250,26 @@ Scroll.prototype = inherit( EventEmitter.prototype, {
         if( sortOption ) this.sortChildren();
     },
 
-    "constructor": Scroll,
+    'constructor': Scroll,
 
-    "hasChild": function( item, returnIndex ){
+    'hasChild': function( item, returnIndex ){
         if( !item ) return false;
         if( !isGroup( item ) ) return false;
         var index = this.children.indexOf( item );
-        if( !!returnIndex ) return index;
+        if( returnIndex ) return index;
         return index !== -1;
     },
 
-    "insertChild": function( item, index, _options ){
+    'insertChild': function( item, index, _options ){
         if( index < 0 || index > this.children.length - 1 ) return false;
         if( !isGroup( item ) ) throw new
-            TypeError("item must be of type Group");
+            TypeError('item must be of type Group');
         if( this.hasChild( item ) ) return false;
 
         // Defaults
         var options = assign({
-            "silent": false,
-            "sort": true
+            'silent': false,
+            'sort': true
         }, _options );
 
         // Check if the item already belongs to a group
@@ -279,17 +279,17 @@ Scroll.prototype = inherit( EventEmitter.prototype, {
         applyItemToScroll( item, this );
 
         this.children.splice( index, 0, item );
-        if( !options.silent ) this.emit( "insert", item, index );
+        if( !options.silent ) this.emit( 'insert', item, index );
         if( options.sort ) this.sortChildren();
     },
 
-    "pause": function( silent ){
+    'pause': function(){
         if( this.isPaused ) return;
         this.isPaused = true;
-        if( !this.silent ) this.emit( "pause" );
+        if( !this.silent ) this.emit( 'pause' );
     },
 
-    "recalculate": function( includeChildren ){
+    'recalculate': function( includeChildren ){
         var bounds = getElementOffset( this.el );
         this.size.height = bounds.height;
         this.size.width = bounds.width;
@@ -300,27 +300,27 @@ Scroll.prototype = inherit( EventEmitter.prototype, {
         }
     },
 
-    "removeChild": function( item, _options ){
+    'removeChild': function( item, _options ){
         var index = -1;
         if( ( index = this.hasChild( item, true ) ) === -1 ) return false;
 
         var options = assign({
-            "silent": false,
+            'silent': false,
         }, _options );
 
         item.scroll = null;
 
         this.children.splice( index, 1 );
-        if( !options.silent ) this.emit( "remove", item );
+        if( !options.silent ) this.emit( 'remove', item );
     },
 
-    "resume": function( silent ){
+    'resume': function(){
         if( !this.isPaused ) return;
         this.isPaused = false;
-        if( !this.silent ) this.emit( "resume" );
+        if( !this.silent ) this.emit( 'resume' );
     },
 
-    "sortChildren": function( includeChildren ){
+    'sortChildren': function( includeChildren ){
         if( this.children.length > 1 ){
             this.children.sort(function( a, b ){
                 return a.position.top - b.position.top;
@@ -329,10 +329,10 @@ Scroll.prototype = inherit( EventEmitter.prototype, {
         if( includeChildren ){
             this.children.forEach(function(group){ group.sortChildren(true); });
         }
-        this.emit( "sort", this.children );
+        this.emit( 'sort', this.children );
     },
 
-    "update": function(){
+    'update': function(){
         // If its paused, dont update
         if( this.isPaused ) return;
 
@@ -342,16 +342,16 @@ Scroll.prototype = inherit( EventEmitter.prototype, {
         this._lastScrollY = scrollY;
 
         var fn = null;
-        if( scrollDirection === "down" ){
+        if( scrollDirection === 'down' ){
             fn = this._updateDown.bind(this);
-        } else if( scrollDirection === "up" ) {
+        } else if( scrollDirection === 'up' ) {
             fn = this._updateUp.bind(this);
         } else {
             fn = this._updateNeutral.bind(this);
         }
         var screenRect = {
-            "bottom": scrollY + this.size.height,
-            "top": scrollY
+            'bottom': scrollY + this.size.height,
+            'top': scrollY
         };
         var onScreenGroups = this.children.filter(isGroupOnScreen(screenRect));
         if( onScreenGroups.length === 0 ){
@@ -361,7 +361,7 @@ Scroll.prototype = inherit( EventEmitter.prototype, {
             fn( group, scrollY );
         });
 
-        this.emit( "update", scrollY, lastScrollY, scrollDirection );
+        this.emit( 'update', scrollY, lastScrollY, scrollDirection );
     }
 
 } );
@@ -390,9 +390,9 @@ function getNextChildInGroup( group, children, start ){
 }
 
 function getScrollDirection( scrollY, lastScrollY ){
-    if( scrollY > lastScrollY ) return "down";
-    if( scrollY < lastScrollY ) return "up";
-    return "neutral";
+    if( scrollY > lastScrollY ) return 'down';
+    if( scrollY < lastScrollY ) return 'up';
+    return 'neutral';
 }
 
 function isLastInGroup( child, children ){
@@ -419,9 +419,9 @@ function isObstacle( item ){
     return item instanceof Obstacle;
 }
 
-function isStick( item ){
-    return item instanceof Stick;
-}
+// function isStick( item ){
+//     return item instanceof Stick;
+// }
 
 
 export default Scroll;

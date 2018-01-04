@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 export { default as Group } from './Group';
 export { default as Manager } from './Manager';

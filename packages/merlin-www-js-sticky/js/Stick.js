@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 import Item from './Item';
 import Manager from './Manager';
@@ -25,13 +25,13 @@ function Stick( el, _options ){
     /**
      * @private
      */
-    this._elStick = this.el.querySelector( ".stick-element" );
+    this._elStick = this.el.querySelector( '.stick-element' );
     this._elWrapper = this.el;
     this._absoluteTop = 0;
 
     // Throw error if we cant find a stick element
     if( !this._elStick ){
-        throw new TypeError("element does not contain a .stick-element");
+        throw new TypeError('element does not contain a .stick-element');
     }
 
     /* Add the scroll item to the manager */
@@ -41,79 +41,79 @@ function Stick( el, _options ){
 
 Stick.prototype = inherit(Item.prototype, {
 
-    "_setAbsolute": function( top, silent ){
+    '_setAbsolute': function( top, silent ){
         if( this.state === Stick.STATE_ABSOLUTE ) return;
         this.state = Stick.STATE_ABSOLUTE;
         this._absoluteTop = top;
 
-        swapClass( this._elStick, "stick-element--fixed",
-            "stick-element--absolute" );
-        swapClass( this._elWrapper, "stick-wrapper--fixed",
-            "stick-wrapper--absolute" );
+        swapClass( this._elStick, 'stick-element--fixed',
+            'stick-element--absolute' );
+        swapClass( this._elWrapper, 'stick-wrapper--fixed',
+            'stick-wrapper--absolute' );
 
         setStyles( this._elWrapper, {
-            "height": this.size.height + "px"
+            'height': this.size.height + 'px'
         });
         setStyles( this._elStick, {
-            "marginTop": "",
-            "position": "relative",
-            "top": (this._absoluteTop - this.position.top + this.offset.top) + "px"
+            'marginTop': '',
+            'position': 'relative',
+            'top': (this._absoluteTop - this.position.top + this.offset.top) + 'px'
         });
 
-        if( !silent ) this.emit( "statechange", this.state );
+        if( !silent ) this.emit( 'statechange', this.state );
     },
 
-    "_setFixed": function( silent ){
+    '_setFixed': function( silent ){
         if( this.state === Stick.STATE_FIXED ) return;
         this.state = Stick.STATE_FIXED;
 
-        swapClass( this._elStick, "stick-element--absolute",
-            "stick-element--fixed" );
-        swapClass( this._elWrapper, "stick-wrapper--absolute",
-            "stick-wrapper--fixed" );
+        swapClass( this._elStick, 'stick-element--absolute',
+            'stick-element--fixed' );
+        swapClass( this._elWrapper, 'stick-wrapper--absolute',
+            'stick-wrapper--fixed' );
 
         setStyles( this._elWrapper, {
-            "height": this.size.height + "px"
+            'height': this.size.height + 'px'
         });
         setStyles( this._elStick, {
-            "marginTop": -(this.position.top - this.offset.top) + "px",
-            "position": "fixed",
-            "top": ""
+            'marginTop': -(this.position.top - this.offset.top) + 'px',
+            'position': 'fixed',
+            'top': ''
         });
 
-        if( !silent ) this.emit( "statechange", this.state );
+        if( !silent ) this.emit( 'statechange', this.state );
     },
 
-    "_setInitial": function( silent ){
+    '_setInitial': function( silent ){
         if( this.state === Stick.STATE_INITIAL ) return;
         this.state = Stick.STATE_INITIAL;
 
-        removeClass( this._elStick, "stick-element--absolute" );
-        removeClass( this._elStick, "stick-element--fixed" );
-        removeClass( this._elWrapper, "stick-wrapper--absolute" );
-        removeClass( this._elWrapper, "stick-wrapper--fixed" );
+        removeClass( this._elStick, 'stick-element--absolute' );
+        removeClass( this._elStick, 'stick-element--fixed' );
+        removeClass( this._elWrapper, 'stick-wrapper--absolute' );
+        removeClass( this._elWrapper, 'stick-wrapper--fixed' );
 
         setStyles( this._elWrapper, {
-            "height": ""
+            'height': ''
         });
         setStyles( this._elStick, {
-            "marginTop": "",
-            "position": "",
-            "top": ""
+            'marginTop': '',
+            'position': '',
+            'top': ''
         });
 
-        if( !silent ) this.emit( "statechange", this.state );
+        if( !silent ) this.emit( 'statechange', this.state );
     },
 
-    "_setNeutral": function( silent ){
+    '_setNeutral': function( silent ){
         if( this.state === Stick.STATE_NEUTRAL ) return;
         this.state = Stick.STATE_NEUTRAL;
-        if( !silent ) this.emit( "statechange", this.state );
+        if( !silent ) this.emit( 'statechange', this.state );
     },
 
-    "constructor": Item,
+    'constructor': Item,
 
-    "destroy": function(){
+    'destroy': function(){
         this.state = null;
         this._elStick = null;
         this._elWrapper = null;
@@ -122,41 +122,41 @@ Stick.prototype = inherit(Item.prototype, {
         Item.prototype.destroy.call( this );
     },
 
-    "recalculate": function(){
+    'recalculate': function(){
         var state = this.state;
         this._setInitial( true );
 
         Item.prototype.recalculate.call( this );
 
         switch( state ){
-            case Stick.STATE_FIXED:
-                this._setFixed( true );
-                break;
-            case Stick.STATE_ABSOLUTE:
-                this._setAbsolute( this._absoluteTop, true );
-                break;
+        case Stick.STATE_FIXED:
+            this._setFixed( true );
+            break;
+        case Stick.STATE_ABSOLUTE:
+            this._setAbsolute( this._absoluteTop, true );
+            break;
         }
     },
 
-    "updateOffset": function( offset ){
+    'updateOffset': function( offset ){
         this.offset = assign({}, this.offset, {
-            "bottom": 0,
-            "left": 0,
-            "right": 0,
-            "top": 0
+            'bottom': 0,
+            'left': 0,
+            'right': 0,
+            'top': 0
         }, offset);
 
         switch( this.state ){
-            case Stick.STATE_FIXED:
-                setStyles( this._elStick, {
-                    "marginTop": -(this.position.top - this.offset.top) + "px"
-                });
-                break;
-            case Stick.STATE_ABSOLUTE:
-                setStyles( this._elStick, {
-                    "top": (this._absoluteTop - this.position.top + this.offset.top) + "px"
-                });
-                break;
+        case Stick.STATE_FIXED:
+            setStyles( this._elStick, {
+                'marginTop': -(this.position.top - this.offset.top) + 'px'
+            });
+            break;
+        case Stick.STATE_ABSOLUTE:
+            setStyles( this._elStick, {
+                'top': (this._absoluteTop - this.position.top + this.offset.top) + 'px'
+            });
+            break;
         }
     }
 
@@ -164,7 +164,7 @@ Stick.prototype = inherit(Item.prototype, {
 
 Stick.createStick = function( base, _options ){
     var els = null;
-    if( typeof base === "string" ){
+    if( typeof base === 'string' ){
         els = toArray( document.querySelectorAll( base ) );
     } else if( isArray( base ) ){
         els = base.slice(0);
@@ -189,16 +189,16 @@ Stick.createStick = function( base, _options ){
 
 Stick.getStateTitleFromIndex = function( index ){
     switch( index ){
-        case 0:
-            return "Initial";
-        case 1:
-            return "Fixed";
-        case 2:
-            return "Absolute";
-        case 3:
-            return "Neutral";
-        default:
-            return "Unknown";
+    case 0:
+        return 'Initial';
+    case 1:
+        return 'Fixed';
+    case 2:
+        return 'Absolute';
+    case 3:
+        return 'Neutral';
+    default:
+        return 'Unknown';
     }
 };
 

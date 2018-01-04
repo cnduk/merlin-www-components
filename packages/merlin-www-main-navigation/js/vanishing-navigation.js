@@ -19,14 +19,16 @@ var CLS_VANISH_HIDDEN = 'is-hidden';
 var MIN_HIDDEN_Y = 400;
 var THROTTLE_MS = 300;
 
-function VanishingNavigation(el, settings){
-    EventEmitter.call(this, {'wildcard': true});
+function VanishingNavigation(el) {
+    EventEmitter.call(this, {
+        'wildcard': true
+    });
 
     this._isEnabled = false;
     this._isPaused = false;
     this._isVisible = true;
     this._hooks = {
-        "scroll": null
+        'scroll': null
     };
     this._lastScrollY = 0;
     this._offsetY = 0;
@@ -38,21 +40,21 @@ VanishingNavigation.prototype = inherit(EventEmitter.prototype, {
 
     'constructor': VanishingNavigation,
 
-    hide: function hide(){
-        if(!this._isVisible) return;
+    hide: function hide() {
+        if (!this._isVisible) return;
         this._isVisible = false;
         addClass(this.el, CLS_VANISH_HIDDEN);
         this.emit('visibilitychange', events.visibilitychange(this, 'hidden'));
     },
-    show: function show(){
-        if(this._isVisible) return;
+    show: function show() {
+        if (this._isVisible) return;
         this._isVisible = true;
         removeClass(this.el, CLS_VANISH_HIDDEN);
         this.emit('visibilitychange', events.visibilitychange(this, 'visible'));
     },
 
-    enable: function enable(){
-        if(this.isEnabled) return;
+    enable: function enable() {
+        if (this.isEnabled) return;
         this.isEnabled = true;
 
         addClass(this.el, CLS_VANISH);
@@ -60,8 +62,8 @@ VanishingNavigation.prototype = inherit(EventEmitter.prototype, {
         addEvent(window, 'scroll', this._hooks.scroll);
         this.emit('enable', events.enable(this));
     },
-    disable: function disable(){
-        if(!this._isEnabled) return;
+    disable: function disable() {
+        if (!this._isEnabled) return;
         this._isEnabled = false;
 
         removeClass(this.el, CLS_VANISH);
@@ -69,8 +71,8 @@ VanishingNavigation.prototype = inherit(EventEmitter.prototype, {
         this._hooks.scroll = null;
         this.emit('disable', events.disable(this));
     },
-    update: function update(){
-        if(this._isPaused) return;
+    update: function update() {
+        if (this._isPaused) return;
 
         var scrollY = getWindowScrollTop();
         var scrollVelocity = scrollY - this._lastScrollY;
@@ -79,27 +81,27 @@ VanishingNavigation.prototype = inherit(EventEmitter.prototype, {
         this.emit('update', events.update(this, scrollY, scrollVelocity));
 
         // Check if we are in the min Y
-        if(scrollY - this._offsetY <= MIN_HIDDEN_Y){
-            if(!this._isVisible) this.show();
+        if (scrollY - this._offsetY <= MIN_HIDDEN_Y) {
+            if (!this._isVisible) this.show();
             return;
         }
 
         // Check if we're scrolling up and visible
-        if(!this._isVisible && scrollVelocity < 0){
+        if (!this._isVisible && scrollVelocity < 0) {
             return this.show();
         }
 
         // Check if we are greater than our min Y
-        if(this._isVisible && scrollVelocity > 0){
+        if (this._isVisible && scrollVelocity > 0) {
             return this.hide();
         }
     },
 
-    pause: function pause(){
+    pause: function pause() {
         this._isPaused = true;
         this.emit('pause', events.pause(this));
     },
-    unpause: function unpause(){
+    unpause: function unpause() {
         this._isPaused = false;
         this.emit('unpause', events.unpause(this));
     }

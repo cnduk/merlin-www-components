@@ -5,12 +5,13 @@
   "main": "js/index.js",
   "scripts": {
     "docs": "jsdoc2md js/*.js > readme.md",
-    "jshint": "jshint js"
+    "lint": "eslint -c ../../.eslintrc.json ./js/**/*",
+    "prepublish": "npm run lint"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "jsdoc-to-markdown": "^3.0.0",
-    "jshint": "^2.9.4"
+    "eslint": "^4.14.0"
   }
 }

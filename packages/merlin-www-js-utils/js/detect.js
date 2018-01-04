@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /* globals DocumentTouch */
 
 /**
@@ -47,13 +47,13 @@ export var getUserAgent = (function getUserAgent() {
  * window.history support
  * @type {Boolean}
  */
-export var hasHistory = !!( "history" in window && typeof window.history.replaceState === "function" );
+export var hasHistory = !!( 'history' in window && typeof window.history.replaceState === 'function' );
 
 /**
  * Touch support
  * @type {Boolean}
  */
-export var hasTouch = !!("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
+export var hasTouch = !!('ontouchstart' in window || window.DocumentTouch && document instanceof DocumentTouch);
 
 /**
  * Android useragent sniff
@@ -90,9 +90,9 @@ export var isWindows = /Win/i.test( platform );
  * @return {Boolean}
  */
 export var supportBoxModel = (function supportBoxModel(){
-    var div = document.createElement("div");
-    var body = document.getElementsByTagName("body")[0];
-    div.style.width = div.style.paddingLeft = "1px";
+    var div = document.createElement('div');
+    var body = document.getElementsByTagName('body')[0];
+    div.style.width = div.style.paddingLeft = '1px';
     body.appendChild( div );
     var support = div.offsetWidth === 2;
     body.removeChild( div );
@@ -105,6 +105,6 @@ export var supportBoxModel = (function supportBoxModel(){
  * @return {Boolean}
  */
 export var supportsHTML5Video = (function supportsHTML5Video(){
-    var video = document.createElement("video");
+    var video = document.createElement('video');
     return video && video.play;
 })();

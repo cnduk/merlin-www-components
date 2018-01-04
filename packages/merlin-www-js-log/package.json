@@ -3,7 +3,13 @@
   "version": "1.0.4",
   "description": null,
   "main": "js/index.js",
-  "scripts": {},
+  "scripts": {
+    "lint": "eslint -c ../../.eslintrc.json ./js/**/*",
+    "prepublish": "npm run lint"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.14.0"
+  }
 }

@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 import EventEmitter from 'eventemitter2';
 
@@ -8,7 +8,7 @@ import {
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 
 var DEFAULT_OPTIONS = {
-    "silent": false
+    'silent': false
 };
 
 function Manager(){
@@ -39,10 +39,10 @@ Manager.prototype = inherit( EventEmitter.prototype, {
      * @param  {Group} item
      * @param  {Object} _options
      */
-    "addGroup": function( item, _options ){
+    'addGroup': function( item, _options ){
         var options = getOptions( _options );
         addItem( this.groups, item );
-        if( !options.silent ) this.emit( "add", item );
+        if( !options.silent ) this.emit( 'add', item );
     },
 
     /**
@@ -50,10 +50,10 @@ Manager.prototype = inherit( EventEmitter.prototype, {
      * @param  {Obstacle} item
      * @param  {Object} _options
      */
-    "addObstacle": function( item, _options ){
+    'addObstacle': function( item, _options ){
         var options = getOptions( _options );
         addItem( this.obstacles, item );
-        if( !options.silent ) this.emit( "add", item );
+        if( !options.silent ) this.emit( 'add', item );
     },
 
     /**
@@ -61,10 +61,10 @@ Manager.prototype = inherit( EventEmitter.prototype, {
      * @param  {Scroll} item
      * @param  {Object} _options
      */
-    "addScroll": function( item, _options ){
+    'addScroll': function( item, _options ){
         var options = getOptions( _options );
         addItem( this.scrolls, item );
-        if( !options.silent ) this.emit( "add", item );
+        if( !options.silent ) this.emit( 'add', item );
     },
 
     /**
@@ -72,13 +72,13 @@ Manager.prototype = inherit( EventEmitter.prototype, {
      * @param  {Stick} item
      * @param  {Object} _options
      */
-    "addStick": function( item, _options ){
+    'addStick': function( item, _options ){
         var options = getOptions( _options );
         addItem( this.stickies, item );
-        if( !options.silent ) this.emit( "add", item );
+        if( !options.silent ) this.emit( 'add', item );
     },
 
-    "constructor": Manager,
+    'constructor': Manager,
 
     /**
      * Checks if the item is in the group list
@@ -86,7 +86,7 @@ Manager.prototype = inherit( EventEmitter.prototype, {
      * @param  {Boolean} returnIndex Whether we want an index returned
      * @return {Boolean/Number}
      */
-    "hasGroup": function( item, returnIndex ){
+    'hasGroup': function( item, returnIndex ){
         return hasItem( this.groups, item, returnIndex );
     },
 
@@ -96,7 +96,7 @@ Manager.prototype = inherit( EventEmitter.prototype, {
      * @param  {Boolean} returnIndex Whether we want an index returned
      * @return {Boolean/Number}
      */
-    "hasObstacle": function( item, returnIndex ){
+    'hasObstacle': function( item, returnIndex ){
         return hasItem( this.obstacles, item, returnIndex );
     },
 
@@ -106,7 +106,7 @@ Manager.prototype = inherit( EventEmitter.prototype, {
      * @param  {Boolean} returnIndex Whether we want an index returned
      * @return {Boolean/Number}
      */
-    "hasScroll": function( item, returnIndex ){
+    'hasScroll': function( item, returnIndex ){
         return hasItem( this.scrolls, item, returnIndex );
     },
 
@@ -116,14 +116,14 @@ Manager.prototype = inherit( EventEmitter.prototype, {
      * @param  {Boolean} returnIndex Whether we want an index returned
      * @return {Boolean/Number}
      */
-    "hasStick": function( item, returnIndex ){
+    'hasStick': function( item, returnIndex ){
         return hasItem( this.stickies, item, returnIndex );
     },
 
     /**
      * Triggers a recalculate on all groups and children, and scrolls
      */
-    "recalculate": function(){
+    'recalculate': function(){
         this.groups.forEach( recalculateItem );
         this.scrolls.forEach( recalculateItem );
     },
@@ -133,10 +133,10 @@ Manager.prototype = inherit( EventEmitter.prototype, {
      * @param  {Group} item
      * @param  {Object} _options
      */
-    "removeGroup": function( item, _options ){
+    'removeGroup': function( item, _options ){
         var options = getOptions( _options );
         if( removeItem( this.groups, item ) && !options.silent ){
-            this.emit( "remove", item );
+            this.emit( 'remove', item );
         }
     },
 
@@ -145,10 +145,10 @@ Manager.prototype = inherit( EventEmitter.prototype, {
      * @param  {Obstacle} item
      * @param  {Object} _options
      */
-    "removeObstacle": function( item, _options ){
+    'removeObstacle': function( item, _options ){
         var options = getOptions( _options );
         if( removeItem( this.obstacles, item ) && !options.silent ){
-            this.emit( "remove", item );
+            this.emit( 'remove', item );
         }
     },
 
@@ -157,10 +157,10 @@ Manager.prototype = inherit( EventEmitter.prototype, {
      * @param  {Scroll} item
      * @param  {Object} _options
      */
-    "removeScroll": function( item, _options ){
+    'removeScroll': function( item, _options ){
         var options = getOptions( _options );
         if( removeItem( this.scrolls, item ) && !options.silent ){
-            this.emit( "remove", item );
+            this.emit( 'remove', item );
         }
     },
 
@@ -169,10 +169,10 @@ Manager.prototype = inherit( EventEmitter.prototype, {
      * @param  {Stick} item
      * @param  {Object} _options
      */
-    "removeStick": function( item, _options ){
+    'removeStick': function( item, _options ){
         var options = getOptions( _options );
         if( removeItem( this.stickies, item ) && !options.silent ){
-            this.emit( "remove", item );
+            this.emit( 'remove', item );
         }
     },
 
@@ -202,7 +202,7 @@ function hasItem( haystack, needle, returnIndex ){
         if(haystack[index] === needle) break;
         if(haystack[index].el === needle) break;
     }
-    if( !!returnIndex ) return index;
+    if( returnIndex ) return index;
     return index !== -1;
 }
 

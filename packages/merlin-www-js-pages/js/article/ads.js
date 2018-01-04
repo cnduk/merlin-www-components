@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 import {
     debounce,
@@ -7,13 +7,20 @@ import {
     removeClass
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 
-import { AdManager, AdUtils } from '@cnbritain/merlin-www-ads';
-import { ArticleManager } from '@cnbritain/merlin-www-article';
-import { ARTICLE_TYPES } from '@cnbritain/merlin-www-article/js/constants';
+import {
+    AdManager,
+    AdUtils
+} from '@cnbritain/merlin-www-ads';
+import {
+    ArticleManager
+} from '@cnbritain/merlin-www-article';
+import {
+    ARTICLE_TYPES
+} from '@cnbritain/merlin-www-article/js/constants';
 
 var debouncedRecalculateArticleSize = debounce(recalculateArticleSize, 300);
 
-export default function init(){
+export default function init() {
     // If an ad in the article page fires a stop, remove it from the page
     AdManager.on('render', onAdRender);
     AdManager.on('stop', onAdStop);
@@ -25,51 +32,51 @@ export default function init(){
     AdManager.lazy();
 }
 
-export function recalculateArticleSize(){
+export function recalculateArticleSize() {
     var start = ArticleManager.focusedIndex;
     var length = ArticleManager.articles.length;
     ArticleManager.resize(start, length);
 
-    if(ArticleManager.focusedIndex > -1){
+    if (ArticleManager.focusedIndex > -1) {
         var focusArticle = ArticleManager.articles[ArticleManager.focusedIndex];
-        if(focusArticle.type === ARTICLE_TYPES.GALLERY){
+        if (focusArticle.type === ARTICLE_TYPES.GALLERY) {
             focusArticle.gallery.imageNavigation.resize();
         }
     }
 }
 
-export function renderTopStoriesAd(ad){
+export function renderTopStoriesAd(ad) {
     var listItem = getParent(ad.el, '.js-c-card-list__item');
     removeClass(listItem, 'is-hidden');
 }
 
-export function onAdRender(e){
-    if(hasClass(e.ad.el.parentNode, 'js-ad-top-stories')){
+export function onAdRender(e) {
+    if (hasClass(e.ad.el.parentNode, 'js-ad-top-stories')) {
         renderTopStoriesAd(e.ad);
     }
     debouncedRecalculateArticleSize();
 }
 
-export function onAdStop(e){
+export function onAdStop(e) {
     // Top stories ad
-    if(hasClass(e.ad.el.parentNode, 'js-ad-top-stories')) return;
+    if (hasClass(e.ad.el.parentNode, 'js-ad-top-stories')) return;
 
     // Remove it from the page
     var ad = getParent(e.ad.el, '.ad--article');
     e.ad.destroy();
-    if(ad.parentNode) ad.parentNode.removeChild(ad);
+    if (ad.parentNode) ad.parentNode.removeChild(ad);
     debouncedRecalculateArticleSize();
 }
 
-export function onArticleExpand(e){
+export function onArticleExpand(e) {
     var article = e.target;
     AdManager.lazy(article.el);
     ArticleManager.resize(ArticleManager.articles.indexOf(article));
 }
 
-export function firePageImpression(e){
+export function firePageImpression(e) {
     var article = e.target;
-    if(article.ads === null) return;
+    if (article.ads === null) return;
     var impressionElement = AdUtils.createPageImpressionElement(
         article.ads.ad_unit, article.ads.ad_zone, article.ads.key_values);
     document.body.appendChild(impressionElement);
@@ -94,14 +101,14 @@ export function onArticleAdd(e) {
         }
     }
 
-    if(e.infinite){
+    if (e.infinite) {
         e.article.once('focus', firePageImpression);
     }
 
 }
 
-export function getHeaderAd(el, isGallery){
-    if(isGallery){
+export function getHeaderAd(el, isGallery) {
+    if (isGallery) {
         return el.parentNode.previousElementSibling.querySelector(
             '.ad__container');
     } else {

@@ -1,7 +1,9 @@
 'use strict';
 
-import { default as initAds } from './ads';
+import {
+    default as initAds
+} from './ads';
 
-export default function init(){
+export default function init() {
     initAds();
 }

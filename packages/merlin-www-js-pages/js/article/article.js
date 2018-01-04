@@ -7,20 +7,25 @@ import {
     throttle
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import MainNavigation from '@cnbritain/merlin-www-main-navigation/js/main-navigation';
-import { ArticleManager } from '@cnbritain/merlin-www-article';
-import { isArticleGallery } from '@cnbritain/merlin-www-article/js/utils';
-import { ARTICLE_TYPES } from '@cnbritain/merlin-www-article/js/constants';
-import { getStorage, setStorage } from '../utils.js';
+import {
+    ArticleManager
+} from '@cnbritain/merlin-www-article';
+import {
+    isArticleGallery
+} from '@cnbritain/merlin-www-article/js/utils';
+import {
+    getStorage
+} from '../utils.js';
 
 var articleGallery = null;
-var windowHeightHalf = window.innerHeight/2;
+var windowHeightHalf = window.innerHeight / 2;
 
-export default function init(){
+export default function init() {
 
     ArticleManager.on('focus', onArticleFocus);
     ArticleManager.on('blur', onArticleBlur);
     ArticleManager.on('imagefocus', onGalleryImageFocus);
-    if(getStorage('infinite_stop') === true){
+    if (getStorage('infinite_stop') === true) {
         ArticleManager.disableInfiniteScroll();
     } else {
         ArticleManager.enableInfiniteScroll();
@@ -28,7 +33,7 @@ export default function init(){
 
     var articleEl = document.querySelector('.a-main');
     var simplereachConfig = null;
-    if(window.__reach_config){
+    if (window.__reach_config) {
         simplereachConfig = window.__reach_config;
     }
 
@@ -39,7 +44,7 @@ export default function init(){
         'simplereach': simplereachConfig
     });
 
-    if(MainNavigation.galleryNavigation !== null){
+    if (MainNavigation.galleryNavigation !== null) {
         MainNavigation.galleryNavigation.on(
             'viewchange', onNavigationViewChange);
     }
@@ -49,21 +54,21 @@ export default function init(){
 
 }
 
-export function onArticleBlur(e){
-    if(isArticleGallery(e.target)){
+export function onArticleBlur(e) {
+    if (isArticleGallery(e.target)) {
         articleGallery = null;
     }
 }
 
-export function onArticleFocus(e){
+export function onArticleFocus(e) {
 
     var article = e.target;
     var isGallery = isArticleGallery(article);
 
-    if(isGallery){
+    if (isGallery) {
         var gallery = article.gallery;
 
-        if(gallery.layoutView === 'list'){
+        if (gallery.layoutView === 'list') {
             MainNavigation.galleryNavigation.displayListView();
         } else {
             MainNavigation.galleryNavigation.displayGridView();
@@ -78,13 +83,13 @@ export function onArticleFocus(e){
 
 }
 
-export function onGalleryImageFocus(e){
+export function onGalleryImageFocus(e) {
     MainNavigation.galleryNavigation.setGalleryCounter(e.imageIndex + 1);
 }
 
-export function onNavigationViewChange(e){
-    if(articleGallery === null) return;
-    if(e.view === 'grid'){
+export function onNavigationViewChange(e) {
+    if (articleGallery === null) return;
+    if (e.view === 'grid') {
         articleGallery.gallery.displayThumbnailView();
     } else {
         articleGallery.gallery.displayListView();
@@ -92,18 +97,18 @@ export function onNavigationViewChange(e){
     ArticleManager.resize(0);
 }
 
-export function onWindowResize(){
-    windowHeightHalf = window.innerHeight/2;
+export function onWindowResize() {
+    windowHeightHalf = window.innerHeight / 2;
 }
 
-export function onWindowScroll(){
-    if(articleGallery === null) return;
+export function onWindowScroll() {
+    if (articleGallery === null) return;
     var scrollY = getWindowScrollTop();
-    if(articleGallery.gallery.bounds.top > scrollY + windowHeightHalf){
+    if (articleGallery.gallery.bounds.top > scrollY + windowHeightHalf) {
         MainNavigation.hideGallery();
         return;
     }
-    if(articleGallery.gallery.bounds.bottom < scrollY + windowHeightHalf){
+    if (articleGallery.gallery.bounds.bottom < scrollY + windowHeightHalf) {
         MainNavigation.hideGallery();
         return;
     }

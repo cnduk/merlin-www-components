@@ -1,19 +1,21 @@
 'use strict';
 
 import CookieWarning from '@cnbritain/merlin-www-cookie-warning';
-import { ArticleManager } from '@cnbritain/merlin-www-article';
+import {
+    ArticleManager
+} from '@cnbritain/merlin-www-article';
 
-export default function init(){
-    if(CookieWarning.el !== null){
+export default function init() {
+    if (CookieWarning.el !== null) {
         CookieWarning.once('remove', onCookieRemove);
         ArticleManager.on('add', onArticleAdd);
     }
 }
 
-export function onCookieRemove(){
+export function onCookieRemove() {
     ArticleManager.off('add', onArticleAdd);
 }
 
-export function onArticleAdd(e){
+export function onArticleAdd() {
     CookieWarning.incrementCounter();
 }

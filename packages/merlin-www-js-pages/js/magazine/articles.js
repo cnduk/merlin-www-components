@@ -13,7 +13,11 @@ import {
     ID_MAGAZINE_ARTICLES_BUTTON,
     ID_MAGAZINE_ARTICLES_HOOK
 } from '../constants';
-import { getStorage, appendChildren } from '../utils';
+import {
+    appendChildren,
+    getStorage,
+    setStorage
+} from '../utils';
 
 var CLS_HIDDEN = 'global__hidden';
 
@@ -40,9 +44,9 @@ export function getUrl(month, year, page, coverStoryUid) {
         page: Number(page)
     };
 
-    if(coverStoryUid !== null && coverStoryUid !== false){
+    if (coverStoryUid !== null && coverStoryUid !== false) {
         queryValues['exclude_uid'] = coverStoryUid;
-    } else if(hasCoverStory){
+    } else if (hasCoverStory) {
         queryValues['shift'] = -1;
     }
 
@@ -62,7 +66,7 @@ export function onAjaxError() {
     throw new Error('Error trying to load more articles');
 }
 
-export function insertArticles(section){
+export function insertArticles(section) {
     var docFragment = document.createDocumentFragment();
     var addToFragment = addHtml(docFragment);
 
@@ -88,8 +92,8 @@ export function onAjaxSuccess(e) {
     if (responseJSON.data.template) insertArticles(responseJSON.data.template);
 
     // Update any local storage values
-    if(responseJSON.data.local_storage){
-        responseJSON.data.local_storage.forEach(function(item){
+    if (responseJSON.data.local_storage) {
+        responseJSON.data.local_storage.forEach(function(item) {
             setStorage(item.key, item.value);
         });
     }

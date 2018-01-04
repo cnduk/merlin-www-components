@@ -4,9 +4,11 @@ import CONFIG_BRAND from '@cnbritain/merlin-www-common';
 import {
     getNamespaceKey
 } from '@cnbritain/merlin-www-js-utils/js/functions';
-import { AdUtils } from '@cnbritain/merlin-www-ads';
+import {
+    AdUtils
+} from '@cnbritain/merlin-www-ads';
 
-export function displayHiringMessage(){
+export function displayHiringMessage() {
     var hiring = [
         '%c',
         ' _    _                             _     _      _             ',
@@ -38,11 +40,11 @@ export function displayHiringMessage(){
  * @param  {String} key
  * @return {*}
  */
-export function getStorage(key){
+export function getStorage(key) {
     var cnd = getNamespaceKey(CONFIG_BRAND.abbr);
     var prefix = cnd + '_';
     var storeKey = key;
-    if(key.substr(0, prefix.length) !== prefix){
+    if (key.substr(0, prefix.length) !== prefix) {
         storeKey = prefix + storeKey;
     }
     return window[cnd].Store.get(storeKey);
@@ -53,11 +55,11 @@ export function getStorage(key){
  * @param {String} key
  * @param {*} val
  */
-export function setStorage(key, val){
+export function setStorage(key, val) {
     var cnd = getNamespaceKey(CONFIG_BRAND.abbr);
     var prefix = cnd + '_';
     var storeKey = key;
-    if(key.substr(0, prefix.length) !== prefix){
+    if (key.substr(0, prefix.length) !== prefix) {
         storeKey = prefix + storeKey;
     }
     return window[cnd].Store.set(storeKey, val);
@@ -68,10 +70,10 @@ export function setStorage(key, val){
  * @param  {*} collection
  * @return {Array}
  */
-export function toArray(collection){
+export function toArray(collection) {
     var len = collection.length;
     var arr = new Array(len);
-    while(len--) arr[len] = collection[len];
+    while (len--) arr[len] = collection[len];
     return arr;
 }
 
@@ -81,25 +83,25 @@ export function toArray(collection){
  * @return {Boolean}
  */
 var _NATIVE_SIZES = ['promotion-small', 'promotion-medium', 'promotion-large'];
-export function isAdNative(adModel, nativeSize){
+export function isAdNative(adModel, nativeSize) {
     var adSizes = adModel.get('sizes');
     var len = adSizes.length;
 
-    if(nativeSize !== undefined && _NATIVE_SIZES.indexOf(nativeSize) === -1){
+    if (nativeSize !== undefined && _NATIVE_SIZES.indexOf(nativeSize) === -1) {
         throw new Error('Unknown native ad size: ' + nativeSize);
     }
-    if(nativeSize !== undefined){
+    if (nativeSize !== undefined) {
         var positionRe = new RegExp('^' + nativeSize, 'i');
     } else {
         var positionRe = new RegExp('^promotion-', 'i');
     }
 
     var adType = null;
-    while(len--){
+    while (len--) {
         adType = AdUtils.getAdTypeBySize(adSizes[len][0], adSizes[len][1]);
 
-        if(adType !== AdUtils.AD_SIZES.NATIVE) continue;
-        if(!positionRe.test(adModel.get('position'))) continue;
+        if (adType !== AdUtils.AD_SIZES.NATIVE) continue;
+        if (!positionRe.test(adModel.get('position'))) continue;
 
         return true;
     }
@@ -111,7 +113,7 @@ export function isAdNative(adModel, nativeSize){
  * Return the global namespace for the brand
  * @return {object}
  */
-export function getGlobalNamespace(){
+export function getGlobalNamespace() {
     return window[getNamespaceKey(CONFIG_BRAND.abbr)];
 }
 
@@ -119,7 +121,7 @@ export function getGlobalNamespace(){
  * Set the value in the global namespace for the brand
  * @param {object} obj
  */
-export function setGlobalNamespace(obj){
+export function setGlobalNamespace(obj) {
     window[getNamespaceKey(CONFIG_BRAND.abbr)] = obj;
 }
 
@@ -135,8 +137,8 @@ export function setGlobalNamespace(obj){
  * @param  {HTMLElement} el
  * @param  {Array.<HTMLElement>} children
  */
-export function appendChildren(el, children){
-  Array.prototype.forEach.call(children, function(child){
-      el.appendChild(child);
-  });
+export function appendChildren(el, children) {
+    Array.prototype.forEach.call(children, function(child) {
+        el.appendChild(child);
+    });
 }

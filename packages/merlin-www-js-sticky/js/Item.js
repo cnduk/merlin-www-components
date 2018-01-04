@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 import EventEmitter from 'eventemitter2';
 import Group from './Group';
@@ -15,7 +15,7 @@ var id = 0;
 function Item( el, _options ){
 
     var options = assign( {
-        "group": null
+        'group': null
     }, _options );
 
     /**
@@ -30,18 +30,18 @@ function Item( el, _options ){
     this.id = id++;
     this.group = options.group;
     this.offset = {
-        "bottom": 0,
-        "left": 0,
-        "right": 0,
-        "top": 0
+        'bottom': 0,
+        'left': 0,
+        'right': 0,
+        'top': 0
     };
     this.position = {
-        "left": 0,
-        "top": 0
+        'left': 0,
+        'top': 0
     };
     this.size = {
-        "height": 0,
-        "width": 0
+        'height': 0,
+        'width': 0
     };
 
     /**
@@ -66,9 +66,9 @@ function Item( el, _options ){
 
 Item.prototype = inherit(EventEmitter.prototype, {
 
-    "constructor": Item,
+    'constructor': Item,
 
-    "destroy": function(){
+    'destroy': function(){
         this.removeAllListeners();
         this.el = null;
         this.group = null;
@@ -77,7 +77,7 @@ Item.prototype = inherit(EventEmitter.prototype, {
         this.size = null;
     },
 
-    "recalculate": function(){
+    'recalculate': function(){
         var bounds = getElementOffset( this.el );
         this.size.height = bounds.height;
         this.size.width = bounds.width;
@@ -88,7 +88,7 @@ Item.prototype = inherit(EventEmitter.prototype, {
 } );
 
 function getElement( thing ){
-    if( typeof thing === "string" ) return document.querySelector( thing );
+    if( typeof thing === 'string' ) return document.querySelector( thing );
     if( thing instanceof HTMLElement ) return thing;
     return;
 }

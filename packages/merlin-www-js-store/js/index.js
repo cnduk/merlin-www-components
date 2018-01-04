@@ -7,7 +7,7 @@
 import store from 'store';
 
 var exportedStore = store;
-if( !store.enabled ){
+if (!store.enabled) {
     /**
      * Create a real basic fallback so we just store information in an object.
      * This mimics the same methods as store.
@@ -21,7 +21,7 @@ if( !store.enabled ){
          * @static
          * @function clear
          */
-        'clear': function(){
+        'clear': function() {
             exportedStoreData = {};
         },
 
@@ -31,10 +31,10 @@ if( !store.enabled ){
          * @function forEach
          * @param  {Function} callback
          */
-        'forEach': function( callback ){
-            for( var key in exportedStoreData ){
-                if( exportedStoreData.hasOwnProperty( key ) ){
-                    callback( key, this.get( key ) );
+        'forEach': function(callback) {
+            for (var key in exportedStoreData) {
+                if (exportedStoreData.hasOwnProperty(key)) {
+                    callback(key, this.get(key));
                 }
             }
         },
@@ -47,7 +47,7 @@ if( !store.enabled ){
          * @param  {*} defaultVal Default value if key is not found
          * @return {*}
          */
-        'get': function( key, defaultVal ){
+        'get': function(key, defaultVal) {
             var val = store.deserialize(exportedStoreData[key]);
             return (val === undefined ? defaultVal : val);
         },
@@ -58,11 +58,11 @@ if( !store.enabled ){
          * @static
          * @return {Object}
          */
-        'getAll': function(){
+        'getAll': function() {
             var ret = {};
-            for( var key in exportedStoreData ){
-                if( exportedStoreData.hasOwnProperty( key ) ){
-                    ret[ key ] = store.deserialize( exportedStoreData[ key ] );
+            for (var key in exportedStoreData) {
+                if (exportedStoreData.hasOwnProperty(key)) {
+                    ret[key] = store.deserialize(exportedStoreData[key]);
                 }
             }
             return ret;
@@ -74,9 +74,9 @@ if( !store.enabled ){
          * @static
          * @param  {String} key
          */
-        'remove': function( key ){
-            exportedStoreData[ key ] = null;
-            delete exportedStoreData[ key ];
+        'remove': function(key) {
+            exportedStoreData[key] = null;
+            delete exportedStoreData[key];
         },
 
         /**
@@ -87,9 +87,9 @@ if( !store.enabled ){
          * @param  {*} val
          * @return {*}     The value
          */
-        'set': function( key, val ){
+        'set': function(key, val) {
             if (val === undefined) {
-                return this.remove( key );
+                return this.remove(key);
             }
             exportedStoreData[key] = store.serialize(val);
             return val;
