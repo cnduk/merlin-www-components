@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 import ShowItemCarousel from '@cnbritain/merlin-www-show-card-carousel';
 
@@ -18,14 +18,14 @@ export default {
         var tgHeaderExpandBtn = document.querySelector('.js-tg-header__expand-btn');
 
         if (tgHeaderExpandBtn) {
-        	addEventOnce(
-        	    tgHeaderExpandBtn,
-        	    'click',
-        	    this.expand.bind(this)
-        	);
+            addEventOnce(
+                tgHeaderExpandBtn,
+                'click',
+                this.expand.bind(this)
+            );
         }
     },
     'expand': function() {
-    	removeClass(document.querySelector('.js-tg-header__description'), 'is-closed');
+        removeClass(document.querySelector('.js-tg-header__description'), 'is-closed');
     }
 };
