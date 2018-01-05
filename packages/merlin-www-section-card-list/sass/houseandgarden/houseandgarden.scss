@@ -179,6 +179,7 @@
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding: $TABLET_SLICE_MARGIN;
+        margin-bottom: 60px;
         margin-top: 60px;
     }
 
