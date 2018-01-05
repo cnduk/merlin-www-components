@@ -1,141 +1,142 @@
 {
-    "name": "@cnbritain/merlin-www-tag-header", 
+    "name": "@cnbritain/merlin-www-tag-header",
     "demo": {
         "all": {
             "themes": [
-                "wireframe", 
-                "vogue", 
-                "glamour", 
-                "missvogue", 
-                "wired", 
-                "tatler", 
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue",
+                "wired",
+                "tatler",
                 "bystander"
-            ], 
-            "main": "index", 
+            ],
+            "main": "index",
             "data": "all"
-        }, 
+        },
         "navigation_list": {
             "themes": [
-                "wireframe", 
-                "vogue", 
-                "glamour", 
-                "missvogue", 
-                "wired", 
-                "tatler", 
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue",
+                "wired",
+                "tatler",
                 "bystander"
-            ], 
-            "main": "index", 
+            ],
+            "main": "index",
             "data": "navigation_list"
-        }, 
+        },
         "hair_file": {
             "themes": [
-                "wireframe", 
-                "vogue", 
-                "glamour", 
-                "missvogue", 
-                "tatler", 
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue",
+                "tatler",
                 "bystander"
-            ], 
-            "main": "index", 
+            ],
+            "main": "index",
             "data": "hair_file"
-        }, 
+        },
         "style_file": {
             "themes": [
-                "wireframe", 
-                "vogue", 
-                "glamour", 
-                "missvogue", 
-                "tatler", 
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue",
+                "tatler",
                 "bystander"
-            ], 
-            "main": "index", 
+            ],
+            "main": "index",
             "data": "style_file"
-        }, 
+        },
         "card_list": {
             "themes": [
-                "wireframe", 
-                "vogue", 
-                "glamour", 
-                "missvogue", 
-                "wired", 
-                "tatler", 
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue",
+                "wired",
+                "tatler",
                 "bystander"
-            ], 
-            "main": "index", 
+            ],
+            "main": "index",
             "data": "card_list"
-        }, 
+        },
         "show_list": {
             "themes": [
-                "vogue", 
-                "missvogue", 
-                "tatler", 
+                "vogue",
+                "missvogue",
+                "tatler",
                 "bystander"
-            ], 
-            "main": "index", 
+            ],
+            "main": "index",
             "data": "show_list"
-        }, 
+        },
         "event_information": {
             "themes": [
-                "wireframe", 
-                "vogue", 
-                "glamour", 
-                "missvogue", 
-                "wired", 
-                "tatler", 
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue",
+                "wired",
+                "tatler",
                 "bystander"
-            ], 
-            "main": "index", 
+            ],
+            "main": "index",
             "data": "event_information"
-        }, 
+        },
         "image": {
             "themes": [
-                "wireframe", 
-                "vogue", 
-                "glamour", 
-                "missvogue", 
-                "wired", 
-                "tatler", 
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue",
+                "wired",
+                "tatler",
                 "bystander"
-            ], 
-            "main": "index", 
+            ],
+            "main": "index",
             "data": "image"
         }
-    }, 
+    },
     "js": {
         "demo": "demo/demo.js"
-    }, 
+    },
     "themes": {
-        "tatler": "sass/tatler/tatler.scss", 
-        "wireframe": "sass/wireframe/wireframe.scss", 
-        "glamour": "sass/glamour/glamour.scss", 
-        "bystander": "sass/bystander/bystander.scss", 
-        "wired": "sass/wired/wired.scss", 
-        "missvogue": "sass/missvogue/missvogue.scss", 
+        "tatler": "sass/tatler/tatler.scss",
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "bystander": "sass/bystander/bystander.scss",
+        "wired": "sass/wired/wired.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
         "vogue": "sass/vogue/vogue.scss"
-    }, 
+    },
     "partials": {
-        "event-information": "partials/event-information.html", 
+        "event-information": "partials/event-information.html",
         "index": "partials/index.html"
-    }, 
+    },
     "dependencies": [
-        "@cnbritain/merlin-www-card-list", 
-        "@cnbritain/merlin-www-common", 
-        "@cnbritain/merlin-www-gallery-strip", 
-        "@cnbritain/merlin-www-image", 
-        "@cnbritain/merlin-www-show-card-carousel", 
-        "@cnbritain/merlin-www-topic-strip"
-    ], 
-    "currentTheme": null, 
-    "main": "index", 
+        "@cnbritain/merlin-www-card-list",
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-gallery-strip",
+        "@cnbritain/merlin-www-image",
+        "@cnbritain/merlin-www-show-card-carousel",
+        "@cnbritain/merlin-www-topic-strip",
+        "@cnbritain/merlin-www-js-utils"
+    ],
+    "currentTheme": null,
+    "main": "index",
     "data": {
-        "all": "data/all.json", 
-        "navigation_list": "data/navigation_list.json", 
-        "hair_file": "data/hair_file.json", 
-        "style_file": "data/style_file.json", 
-        "card_list": "data/card_list.json", 
-        "show_list": "data/show_list.json", 
-        "event_information": "data/event_information.json", 
+        "all": "data/all.json",
+        "navigation_list": "data/navigation_list.json",
+        "hair_file": "data/hair_file.json",
+        "style_file": "data/style_file.json",
+        "card_list": "data/card_list.json",
+        "show_list": "data/show_list.json",
+        "event_information": "data/event_information.json",
         "image": "data/image.json"
-    }, 
+    },
     "description": null
 }
