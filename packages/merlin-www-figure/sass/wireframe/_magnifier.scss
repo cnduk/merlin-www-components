@@ -6,18 +6,17 @@
 }
 
 .c-figure__magnifier {
+    @include opacity(1);
+    @include vendor-prefix(transition, opacity 0.3s ease-in-out);
     background-color: #fff;
     background-repeat: no-repeat;
     bottom: 0;
     cursor: move;
     left: 0;
-    @include opacity(1);
     overflow: hidden;
     position: absolute;
     right: 0;
     top: 0;
-    @include vendor-prefix(transition, opacity 0.3s ease-in-out);
-    z-index: 10;
 }
 
 .c-figure__magnifier,
