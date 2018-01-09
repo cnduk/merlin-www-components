@@ -13,9 +13,11 @@ import {
     toggleClas,
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import {
+    CLS_IS_VISIBLE,
     CLS_FIGURE,
     CLS_FIGURE_CONTAINER,
-    CLS_FIGURE_TOOLBAR
+    CLS_FIGURE_TOOLBAR,
+    CLS_FIGURE_TOOLBAR_MORE
 } from './constants';
 import {
     hasElementMagnifierConfig,
@@ -35,6 +37,8 @@ export default {
 
 };
 
+var focusedFigure = null;
+
 function initialiseFigures() {
     var figureEls = document.querySelectorAll('.' + CLS_FIGURE);
     if (!figureEls) return;
@@ -47,6 +51,8 @@ function initialiseFigures() {
         initialiseMagnifier(figureEls[i]);
         initialiseToolbarToggle(figureEls[i]);
     }
+
+    initBackgroundBlur();
 }
 
 function initialiseMagnifier(el) {
@@ -58,34 +64,61 @@ function initialiseMagnifier(el) {
     }
 }
 
-function initialiseToolbarToggle(el) {
-    if (!hasTouch) return;
-    initBackgroundBlur();
-    removeClass(el, 'is-hover');
-    addClass(el, 'is-touch');
-    var isFocused = true;
-    addEvent(el.querySelector('.' + CLS_FIGURE_CONTAINER), 'click', function(e) {
-        isFocused = !isFocused;
-        if (isFocused) {
-            this.querySelector('.' + CLS_FIGURE_TOOLBAR).focus();
-        } else {
-            this.querySelector('.' + CLS_FIGURE_TOOLBAR).blur();
-        }
-        e.stopPropagation();
-    });
+var hasBackgroundBlur = false;
+var focusedFigure = null;
+
+function focusFigure(elFigure){
+    focusedFigure = elFigure;
+    elFigure.setAttribute('is-focused', true);
+    addClass(elFigure.querySelector('.' + CLS_FIGURE_TOOLBAR), CLS_IS_VISIBLE);
 }
 
-var hasBackgroundBlur = false;
+function blurFigure(elFigure){
+    elFigure.removeAttribute('is-focused');
+    removeClass(
+        elFigure.querySelector('.' + CLS_FIGURE_TOOLBAR), CLS_IS_VISIBLE);
+    focusedFigure = null;
+}
+
+function preventDefault(e){
+    e.preventDefault();
+}
+
+function initialiseToolbarToggle(el) {
+    if (!hasTouch) return;
+
+    removeClass(el, 'is-hover');
+    addClass(el, 'is-touch');
+
+    addEvent(el.querySelector('.' + CLS_FIGURE_TOOLBAR), 'focus', focusFigure);
+    addEvent(el.querySelector('.' + CLS_FIGURE_TOOLBAR), 'blur', blurFigure);
+
+    addEvent(el.querySelector('.' + CLS_FIGURE_CONTAINER), 'click', function(e) {
+        var isFocused = Boolean(this.getAttribute('is-focused'));
+
+        if(!isFocused) {
+            focusFigure(this);
+        } else {
+            blurFigure(this);
+        }
+    });
+
+    addEvent(
+        el.querySelector('.' + CLS_FIGURE_TOOLBAR_MORE + ' a'), 'click',
+        preventDefault);
+}
 
 function initBackgroundBlur() {
     if (hasBackgroundBlur) return;
+
     hasBackgroundBlur = true;
     addEvent(document.body, 'touchend', function(e) {
-        if (hasClass(document.activeElement, CLS_FIGURE_TOOLBAR)) {
-            var parent = getParent(e.target, '.' + CLS_FIGURE_TOOLBAR);
-            if (!parent || !hasClass(parent, CLS_FIGURE_TOOLBAR)) {
-                document.activeElement.blur();
-            }
+        if(focusedFigure !== null){
+            var parent = getParent(e.target, '.' + CLS_FIGURE_CONTAINER);
+            // If the parent also happens to be a figure, ignore triggering
+            // a blur because the figure will do it
+            if(focusedFigure === parent) return;
+            blurFigure(focusedFigure);
         }
     });
 }

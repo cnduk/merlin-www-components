@@ -77,7 +77,7 @@ li.c-figure__toolbar-listitem {
 
 .is-hover .c-figure__toolbar:hover,
 .is-hover .c-figure__toolbar:focus,
-.is-touch .c-figure__toolbar:focus {
+.is-touch .c-figure__toolbar.is-visible {
     .c-figure__toolbar-listitem--share,
     .c-figure__toolbar-listitem--zoom {
         display: inline-block;
