@@ -486,12 +486,12 @@ export function getObjectValues(obj, keys){
  * @return {HTMLNode/Boolean}
  */
  export function getParent( el, selector ){
-     if( el !== document && el.matches( selector ) ) return el;
-     var parent = getParentUntil( el, selector );
-     if( parent && parent !== document && parent.matches( selector ) ){
-         return parent;
-     }
-     return false;
+    if( el !== document && el.matches( selector ) ) return el;
+    var parent = getParentUntil( el, selector );
+    if( parent && parent !== document && parent.matches( selector ) ){
+        return parent;
+    }
+    return false;
  }
 
 /**
