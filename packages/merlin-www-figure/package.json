@@ -1,6 +1,6 @@
 {
     "name": "@cnbritain/merlin-www-figure",
-    "version": "1.4.28",
+    "version": "1.4.29",
     "description": "",
     "main": "js/index.js",
     "scripts": {
@@ -13,7 +13,7 @@
     "dependencies": {
         "@cnbritain/merlin-www-common": "^1.7.22",
         "@cnbritain/merlin-www-image": "^1.6.8",
-        "@cnbritain/merlin-www-js-utils": "^1.3.10",
+        "@cnbritain/merlin-www-js-utils": "^1.3.11",
         "eventemitter2": "^4.1.0",
         "hammerjs": "^2.0.6",
         "hogan.js": "^3.0.2"
