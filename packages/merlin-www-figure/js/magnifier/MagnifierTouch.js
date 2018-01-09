@@ -100,7 +100,7 @@ MagnifierTouch.prototype = inherit(EventEmitter.prototype, {
         var btnZoomOut = this._magnifierLayer.querySelector(
             '.' + JS_MAGNIFIER_BUTTON_ZOOM_OUT);
 
-        addEvent(btnClose, 'touchend', this._hooks.onClose);
+        addEvent(btnClose, 'click', this._hooks.onClose);
         addEvent(btnZoomIn, 'touchend', this._hooks.onZoomIn);
         addEvent(btnZoomOut, 'touchend', this._hooks.onZoomOut);
 
