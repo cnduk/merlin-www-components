@@ -485,12 +485,14 @@ export function getObjectValues(obj, keys){
  * @param  {String} selector
  * @return {HTMLNode/Boolean}
  */
-export function getParent( el, selector ){
-    if( el !== document && el.matches( selector ) ) return el;
-    var parent = getParentUntil( el, selector );
-    if( parent !== document && parent.matches( selector ) ) return parent;
-    return false;
-}
+ export function getParent( el, selector ){
+     if( el !== document && el.matches( selector ) ) return el;
+     var parent = getParentUntil( el, selector );
+     if( parent && parent !== document && parent.matches( selector ) ){
+         return parent;
+     }
+     return false;
+ }
 
 /**
  * Gets the previous element matching the selector. If it doesn't match,
