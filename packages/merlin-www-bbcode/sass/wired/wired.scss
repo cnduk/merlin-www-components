@@ -318,7 +318,7 @@
 .bb-infobox__title {
     @include font("BRUTAL", 15px, 'BOLD');
     border-bottom: 2px solid $black;
-    margin: 0;
+    margin: 0 0 20px 0;
     padding-bottom: 10px;
     text-transform: uppercase;
 }
