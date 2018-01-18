@@ -277,6 +277,16 @@
 
 }
 
+.bb-infobox__body {
+    > *:first-child {
+        margin-top: 0;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
 .bb-infobox__title {
     @include font('NOBEL', 20px);
     margin: 0;
