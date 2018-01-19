@@ -1,57 +1,16 @@
+@import '@cnbritain/merlin-www-common:vogue';
+
 .c-card--dark {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    &.c-card--inline {
-        background-color: transparent;
-    }
-
-    .c-card__tag {
-        color: $COLOR_MAIN_INACTIVE;
-    }
-
-    .c-card__title,
-    .c-card__byline,
-    .c-card__sponsor {
-        color: $COLOR_MAIN_PAGE;
-    }
-
-    .c-card__image__icon {
-        background-color: $COLOUR_BG_DARK;
-
-        path {
-            fill: $COLOR_MAIN_INACTIVE;
-        }
-    }
-
-    .c-card__meta {
-        border-top-color: $COLOR_MAIN_SECONDARY;
-    }
-
-    .c-card__separator {}
-
-    .c-card__byline-prefix {
-        color: #888;
-    }
-
-    .c-card__byline-name {
-        color: #bdbdbd;
-    }
-
-    // Need to be specific to overwrite global__list-reset
-    li.c-card__meta-item {
-        & + li.c-card__meta-item {
-            border-left: 1px solid #444;
-        }
-
-        color: $COLOR_TYPE_META;
-
-        &--tag {
-            color: $COLOR_MAIN_INACTIVE;
-        }
-
-        path {
-            fill: $COLOR_TYPE_META;
+    &.c-card--landscape,
+    &.c-card--portrait,
+    &.c-card--switcher,
+    &.c-card--hero {
+        .c-card__tag,
+        .c-card__title,
+        .c-card__byline,
+        .c-card__byline-name,
+        .c-card__byline-prefix {
+            color: $white;
         }
     }
 }

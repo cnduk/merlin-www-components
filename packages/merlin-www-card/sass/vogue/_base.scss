@@ -1,181 +1,60 @@
 .c-card {}
-.c-card:hover,
-.c-card:focus {
-    .c-card__title,
-    .c-card__byline-name {
-        @include card-text-links-hover();
-    }
-    .c-card__image {
-        @include card-image-links-hover();
-    }
-}
+.c-card__link {}
 
+.c-card__obj {}
+.c-card__obj__header {}
+
+.c-card__images {}
 .c-card__image {
-    background: $COLOUR_BG_ACCENT1;
-    @include card-image-links-normal();
-    @include transition(all 0.3s ease);
+    background-color: $gallery;
 }
+.c-card__image__icon {}
 
-.c-card__image__icon {
-    background-color: #fff;
-    bottom: 0;
-    height: 30px;
-    left: 0;
-    line-height: 30px;
-    position: absolute;
-    text-align: center;
-    width: 30px;
-
-    svg {
-        display: block;
-        height: 100%;
-        margin: 0 auto;
-        vertical-align: middle;
-        width: 14px;
+.c-card__obj__body {
+    .c-card__header {
+        > :last-child {
+            margin-bottom: 0;
+        }
     }
 
-    path {
-        fill: $COLOR_TYPE_META;
-    }
-
-    @include card-portrait-to-landscape-size() {
-        height: 40px;
-        width: 40px;
-
-        svg {
-            width: 16px;
+    .c-card__footer {
+        > :last-child {
+            margin-bottom: 0;
         }
     }
 }
 
-.c-card__tag {
-    @include c-card-primary-tag;
-    @include card-portrait-to-landscape-size() {
-        margin-bottom: 8px;
-    }
-    margin: 0 0 4px 0;
-}
+.c-card__header {}
 
-.c-card__title {
-    margin: 0 0 6px 0;
-    @include c-card-title;
-    @include transition(all 0.3s ease);
+.c-card__tag {}
+.c-card__title {}
+.c-card__teaser {}
+.c-card__separator {}
 
-    @include card-portrait-to-landscape-size() {
-        margin: 0 0 $MARGIN_XX_SMALL 0;
-    }
-}
+.c-card__footer {}
 
-.c-card__teaser {
-    display: none;
-    margin: $MARGIN_XX_SMALL 0;
+.c-card__byline {}
+.c-card__byline--sponsorship {}
 
-    @include c-card-description;
-    @include card-portrait-to-landscape-size() {
-        display: block;
-    }
-}
+.c-card__byline-prefix {}
+.c-card__byline-name {}
 
-.c-card__separator {
-    display: none;
-}
-
-.c-card__rating {
-    @include c-card-rating;
-    margin-bottom: 8px;
-    margin-top: 8px;
-
-    li {
-        display: inline-block;
-        margin-right: 4px;
-        vertical-align: middle;
-
-        &:last-child {
-            margin-left: 8px;
-        }
-    }
-}
-
-.c-card__rating-mark {
-    background-color: $COLOUR_BG_ACCENT1;
-    height: 8px;
-    width: 8px;
-}
-.c-card__rating-mark--fill {
-    background-color: $COLOUR_BG_DARK;
-}
-
-.c-card__byline,
-.c-card__sponsor {
-    @include c-card-byline;
-    margin: 6px 0 8px 0;
-
-    @include card-portrait-to-landscape-size() {
-        margin: $MARGIN_XX_SMALL 0 $MARGIN_X_SMALL 0;
-    }
-}
-.c-card__byline-prefix,
-.c-card__sponsor-label {
-    @include c-card-byline-prefix;
-    margin-right: 2px;
-}
-.c-card__byline-name,
-.c-card__sponsor-title {
-    @include c-card-byline-name;
-}
-
-.c-card__meta {
-    @include c-card-meta;
-    display: inline-block;
-    @include card-portrait-to-landscape-size() {
-        padding-top: 8px;
-    }
-}
-
-.c-card__meta-item--tag {
-    @include c-card-meta-tag;
-}
-
-// Need to be specific to overwrite global__list-reset
+.c-card__meta {}
 li.c-card__meta-item {
-    &:not(:last-child) {
-        padding-right: 8px;
-    }
-
-    & + li.c-card__meta-item {
-        border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-        padding-left: 8px;
-    }
-}
-
-.c-card__meta-item--gallery {
     svg {
-        height: 10px;
-        margin-right: 3px;
-        margin-top: 0;
-        width: 10px;
-    }
-    path {
-        fill: $COLOR_TYPE_META;
-    }
-}
-
-.c-card__meta-item--duration {
-    svg {
-        height: 9px;
-        margin-right: 3px;
-        width: 9px;
+        height: 8px;
+        width: 8px;
     }
 
-    path {
-        fill: $COLOR_TYPE_META;
+    &--gallery {
+        svg {
+            display: none;
+        }
     }
-}
 
-.c-card__more {
-    @include c-card-more;
-}
-
-.c-card__image__remaining {
-    background-color: rgba(0, 0, 0, 0.38);
+    &--duration {
+        svg {
+            display: none;
+        }
+    }
 }

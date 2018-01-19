@@ -2,42 +2,8 @@
 // Cover
 // -------------------- //
 @mixin card-cover() {
-    .c-card__obj {}
-    .c-card__obj__header {
-        display: block;
-        padding: 0;
-        width: auto;
-    }
-
     .c-card__image--custom {
-        padding-top: 131.730769231%;
-    }
-
-    .c-card__obj__body {
-        display: block;
-        padding: 0;
-        padding-top: 20px;
-        width: 100%;
-    }
-
-    .c-card__teaser {
-        display: none;
-    }
-
-    .c-card__separator {
-        display: none;
-    }
-
-    .c-card__tag {
-        margin-bottom: 8px;
-    }
-
-    .c-card__title {
-        @include font("ITC CASLON");
-        @include font-weight(400);
-        color: #111111;
-        margin-bottom: 15px;
-        text-align: center;
+        padding-top: 135.8064516%;
     }
 }
 
@@ -45,18 +11,26 @@
     .c-card__title {
         @include font-size(17px);
         @include line-height(20px);
-
+        margin-top: 24px;
+        text-align: center;
+        text-transform: uppercase;
     }
 }
 
 @mixin card-cover-large() {
     .c-card__title {
         @include font-size(20px);
-        @include line-height(25px);
+        @include line-height(24px);
+        margin-top: 24px;
+        text-align: center;
+        text-transform: uppercase;
     }
 }
 
 .c-card--cover {
+    @include card-portrait();
+    @include card-portrait-large();
+
     @include card-cover();
     @include card-cover-small();
 
@@ -66,11 +40,17 @@
 }
 
 .c-card--cover-small {
+    @include card-portrait();
+    @include card-portrait-large();
+
     @include card-cover();
     @include card-cover-small();
 }
 
 .c-card--cover-large {
+    @include card-portrait();
+    @include card-portrait-large();
+
     @include card-cover();
     @include card-cover-large();
 }

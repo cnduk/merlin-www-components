@@ -2,18 +2,24 @@
 // Portrait
 // -------------------- //
 @mixin card-portrait() {
+
+}
+
+@mixin card-portrait-small() {
+    .c-card {}
+    .c-card__link {}
+
     .c-card__obj {}
-    .c-card__obj__header {
-        display: block;
-        margin-bottom: $MARGIN_SMALL;
-        padding: 0;
-        width: auto;
-    }
+    .c-card__obj__header {}
+
+    .c-card__images {}
+    .c-card__image {}
 
     .c-card__image__icon {
-        bottom: 0;
+        background-color: $white;
         height: 40px;
         left: 0;
+        bottom: 0;
         width: 40px;
 
         svg {
@@ -21,15 +27,28 @@
             height: 100%;
             margin: 0 auto;
             vertical-align: middle;
-            width: 16px;
+            width: 20px;
+            fill: $dove-gray;
         }
     }
 
-    .c-card__obj__body {
-        display: block;
-        margin-top: $MARGIN_XX_SMALL;
-        padding: 0;
-        width: 100%;
+    .c-card__obj__body {}
+    .c-card__header {}
+
+    .c-card__tag {
+        @include font("NOBEL", 11px, 400, 16px);
+        color: $guardsman-red;
+        letter-spacing: 1px;
+        margin-bottom: 6px;
+        margin-top: 20px;
+        text-transform: uppercase;
+    }
+
+    .c-card__title {
+        @include font("ITC CASLON", 20px, 400, 24px);
+        color: $cod-gray;
+        margin-bottom: 16px;
+        margin-top: 8px;
     }
 
     .c-card__teaser {
@@ -40,22 +59,157 @@
         display: none;
     }
 
+    .c-card__footer {
+        > :first-child {
+            margin-top: 8px;
+        }
+    }
+
+    .c-card__byline {
+        @include font("NOBEL", 11px, 400, 16px);
+        margin-bottom: 4px;
+        margin-top: 8px;
+    }
+
+    .c-card__byline--sponsorship {}
+
+    .c-card__byline-prefix {
+        color: $dove-gray;
+        font-style: italic;
+        margin-right: 2px;
+    }
+
+    .c-card__byline-name {
+        color: $cod-gray;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    ul.c-card__meta {
+        @include font("NOBEL", 11px, 400, 16px);
+        color: $dove-gray;
+        margin-top: 4px;
+    }
+
+    li.c-card__meta-item {
+        & + li.c-card__meta-item {
+            &:before {
+                background-color: $dove-gray;
+                border-radius: 50%;
+                content: "";
+                display: inline-block;
+                height: 2px;
+                margin: 1px 4px;
+                width: 2px;
+            }
+        }
+    }
+}
+
+@mixin card-portrait-large() {
+    .c-card {}
+    .c-card__link {}
+
+    .c-card__obj {}
+    .c-card__obj__header {}
+
+    .c-card__images {}
+    .c-card__image {}
+
+    .c-card__image__icon {
+        background-color: $white;
+        height: 40px;
+        left: 0;
+        bottom: 0;
+        width: 40px;
+
+        svg {
+            display: block;
+            height: 100%;
+            margin: 0 auto;
+            vertical-align: middle;
+            width: 20px;
+            fill: $dove-gray;
+        }
+    }
+
+    .c-card__obj__body {}
+    .c-card__header {}
+
     .c-card__tag {
-        margin-bottom: 8px;
+        @include font("NOBEL", 11px, 400, 16px);
+        color: $guardsman-red;
+        letter-spacing: 1px;
+        margin-bottom: 6px;
+        margin-top: 20px;
+        text-transform: uppercase;
     }
 
     .c-card__title {
-        margin-bottom: 15px;
+        @include font("ITC CASLON", 20px, 400, 24px);
+        color: $cod-gray;
+        margin-bottom: 16px;
+        margin-top: 8px;
+    }
+
+    .c-card__teaser {
+        display: none;
+    }
+
+    .c-card__separator {
+        display: none;
+    }
+
+    .c-card__footer {
+        > :first-child {
+            margin-top: 8px;
+        }
+    }
+
+    .c-card__byline {
+        @include font("NOBEL", 11px, 400, 16px);
+        margin-bottom: 4px;
+        margin-top: 8px;
+    }
+
+    .c-card__byline--sponsorship {}
+
+    .c-card__byline-prefix {
+        color: $dove-gray;
+        font-style: italic;
+        margin-right: 2px;
+    }
+
+    .c-card__byline-name {
+        color: $cod-gray;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    ul.c-card__meta {
+        @include font("NOBEL", 11px, 400, 16px);
+        color: $dove-gray;
+        margin-top: 4px;
+    }
+
+    li.c-card__meta-item {
+        & + li.c-card__meta-item {
+            &:before {
+                background-color: $dove-gray;
+                border-radius: 50%;
+                content: "";
+                display: inline-block;
+                height: 2px;
+                margin: 1px 4px;
+                width: 2px;
+            }
+        }
     }
 }
-@mixin card-portrait-small() {}
-@mixin card-portrait-large() {}
 
 .c-card--portrait {
     @include card-portrait();
-    // NOTE: we dont have any changes
-    // @include card-portrait-small();
-    // @include card-portrait-large();
+    @include card-portrait-large();
 }
 
 .c-card--portrait-small {
