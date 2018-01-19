@@ -1,34 +1,396 @@
-.bb-embed {
-    margin: $MARGIN_LARGE 0;
+// -------------------- //
+// Defaults
+// -------------------- //
+
+.bb-a {
+    color: $guardsman-red;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
+.bb-abbr {
+    text-decoration: underline dotted;
+}
 
-.bb-figure {
+.bb-em {
+    font-style: italic;
+}
+
+.bb-h1,
+.bb-h2,
+.bb-h3,
+.bb-h4,
+.bb-h5,
+.bb-h6 {
+    color: $cod-gray;
+    margin: 30px 0 20px 0;
+}
+
+.bb-h1 {
+    @include font("ITC CASLON", 34px, 600, 36px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(45px);
+        @include font-weight(400);
+        @include line-height(48px);
+    }
+}
+
+.bb-h2 {
+    @include font("ITC CASLON", 24px, 600, 28px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(34px);
+        @include line-height(36px);
+    }
+}
+
+.bb-h3 {
+    @include font("ITC CASLON", 20px, 600, 24px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(24px);
+        @include line-height(28px);
+    }
+}
+
+.bb-h4 {
+    @include font("ITC CASLON", 17px, 600, 20px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(20px);
+        @include line-height(24px);
+    }
+}
+
+.bb-h5 {
+    @include font("ITC CASLON", 15px, 600, 18px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(17px);
+        @include line-height(20px);
+    }
+}
+
+.bb-h6 {
+    @include font("ITC CASLON", 12px, 600, 16px);
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(15px);
+        @include line-height(18px);
+    }
+}
+
+.bb-hr {
+    border-top: 1px solid $gallery;
+    height: 0;
+    margin: 10px 0;
+}
+
+.bb-p {
+    @include font("ADOBE CASLON", 18px, 400, 28px);
+    color: $cod-gray;
+    margin: 0 0 28px 0;
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(20px);
+        @include line-height(32px);
+        margin: 0 0 32px 0;
+    }
+}
+
+.bb-pre {
+    @include font-size(14px);
+    @include line-height(21px);
+    background: $alabaster-f9;
+    border-radius: 4px;
+    border: solid 1px $gallery;
+    color: $dove-gray;
+    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    margin: 40px 0;
+    padding: 20px;
+    white-space: pre-wrap;
+}
+
+.bb-small {
+    color: $mine-shaft-333;
+    @include font('ADOBE CASLON', 14px, null, 20px);
+}
+
+.bb-strong {
+    @include font-weight(700);
+}
+
+.bb-ul,
+.bb-ol {
+    @include font("ADOBE CASLON", 18px, 400, 28px);
+    color: $mine-shaft-222;
+    list-style-type: none;
+    margin: 40px 0;
+    padding-left: 32px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(20px);
+        @include line-height(32px);
+    }
+}
+
+.bb-li {
+    position: relative;
+}
+
+.bb-ul {
+    .bb-li:before {
+        background-color: $cod-gray;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: 8px;
+        left: -28px;
+        position: absolute;
+        top: 10px;
+        width: 8px;
+
+        @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            top: 12px;
+        }
+    }
+}
+
+.bb-ol {
+    counter-reset: section;
+
+    .bb-li {
+        counter-increment: section;
+    }
+
+    .bb-li:before {
+        @include font("ADOBE CASLON", 18px, 700, 28px);
+        content: counter(section) '.';
+        position: absolute;
+        left: -28px;
+
+        @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            @include line-height(32px);
+        }
+    }
+}
+
+// -------------------- //
+// Note
+// -------------------- //
+.bb-note {
+    @include font('ADOBE CASLON', 14px, 400, 18px);
+    border-top: 1px solid $gallery;
+    color: $dove-gray;
+    padding-top: 15px;
+}
+
+// -------------------- //
+// Dropcap
+// -------------------- //
+.bb-dropcap {}
+.bb-dropcap--letter {
+    @include font("ITC CASLON", 84px, 400, 84px);
     box-sizing: border-box;
-    margin: $MARGIN_LARGE 0;
+    color: $cod-gray;
+    float: left;
+    height: 112px;
+    margin-right: 14px;
+    text-transform: capitalize;
+
+    .is-macos &,
+    .is-linux & {
+        padding-top: 8px;
+    }
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(96px);
+        @include line-height(96px);
+        height: 128px;
+        margin-right: 16px;
+    }
 }
 
-.bb-figure__caption,
-.bb-figure__credit {
-    margin: $MARGIN_X_SMALL 0 0 0;
+// -------------------- //
+// Embed
+// -------------------- //
+.bb-embed {
+    margin: 40px 0;
+}
+
+// -------------------- //
+// Interactive
+// -------------------- //
+.bb-interactive {
+    margin: 40px 0;
+}
+
+// -------------------- //
+// Blockquote
+// -------------------- //
+.bb-blockquote {
+    border-left: 2px solid $alto;
+    margin: 0 0 10px 0;
+    padding-left: 30px;
+}
+
+.bb-blockquote__quote {
+    @include font("ADOBE CASLON", 18px, 400, 24px);
+    color: $dove-gray;
+    font-style: italic;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(20px);
+        @include line-height(28px);
+    }
+}
+
+.bb-blockquote__separator {
+    display: none;
+}
+
+.bb-blockquote__credit {
+    @include font("NOBEL", 11px, 400, 16px)
+    color: $dove-gray;
+    letter-spacing: 1px;
+    margin: 10px 0 0 0;
+    text-transform: uppercase;
+}
+
+// -------------------- //
+// Pullquote
+// -------------------- //
+.bb-pullquote {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.bb-pullquote__quote {
+    color: $cod-gray;
+    @include font("ADOBE CASLON", 28px, 700, 32px, 10);
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(34px);
+        @include line-height(40px);
+    }
+}
+
+.bb-pullquote__separator {
+    display: none;
+}
+
+.bb-pullquote__credit {
+    @include font("NOBEL", 11px, 400, 16px)
+    color: $cod-gray;
+    letter-spacing: 1px;
+    margin: 10px 0 0 0;
+    text-transform: uppercase;
+}
+
+// -------------------- //
+// Infobox
+// -------------------- //
+.bb-infobox {
+    background-color: $wild-sand;
+    margin: 40px 0;
+    padding: 32px 20px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        padding: 32px;
+    }
+}
+
+.bb-infobox__title {
+    @include font("NOBEL", 18px, 700, 24px);
+    color: $cod-gray;
+    letter-spacing: 1.08px;
+    margin-bottom: 4px;
+    margin-top: 0;
+    text-transform: uppercase;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(20px);
+        @include line-height(24px);
+        letter-spacing: 1.2px;
+    }
+}
+
+.bb-infobox__hr {
+    background-color: $gallery;
+    border: none;
+    height: 1px;
+    margin-bottom: 24px;
+    margin-top: 4px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin-top: 32px;
+    }
+}
+
+.bb-infobox__item {
+    margin: 24px 0 0 0;
+}
+
+.bb-infobox__item__key {
+    @include font("NOBEL", 14px, 700, 16px);
+    color: $cod-gray;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.bb-infobox__item__value {
+    @include font("ADOBE CASLON", 14px, 400, 20px);
+    color: $mine-shaft-222;
+    margin: 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(16px);
+        @include line-height(22px);
+    }
+}
+
+// -------------------- //
+// Callout
+// -------------------- //
+.bb-callout {
+    background-color: $wild-sand;
+    margin: 40px 0;
+    padding: 32px 20px;
+
+    > *:first-child {
+        margin-top: 0;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        padding: 32px;
+    }
+}
+
+// -------------------- //
+// Figure
+// -------------------- //
+.bb-figure {
+    margin: 40px 0;
+}
+
+.bb-figure__wrapper {
+
 }
 
 .bb-figure__caption {
-
-    p {
-        color: $COLOR_MAIN_TERTIARY;
-        @include font('ADOBE CASLON', 13px, null, 18px);
-    }
-
-    & + .bb-figure__credit {
-        margin: 8px 0 0 0;
+    .bb-p {
+        color: $dove-gray;
+        @include font('ADOBE CASLON', 13px, 400, 18px);
+        margin: 15px 0;
     }
 }
 
 .bb-figure__credit {
-    color: $COLOR_MAIN_INACTIVE;
-    @include font('NOBEL', 9px);
-    letter-spacing: 0.05em;
+    @include font('NOBEL', 10px, 400, 12px, 50);
+    color: $silver;
+    margin: 15px 0;
     text-transform: uppercase;
 
     &:before {
@@ -36,110 +398,172 @@
     }
 }
 
-.bb-figure--portrait {
-    @include min-screen(600px){
-        margin: 45px auto;
-        max-width: 70%;
+// -------------------- //
+// Question
+// -------------------- //
+.bb-question {
+    margin: 40px 0;
+    position: relative;
+}
+
+.bb-question__question {
+    .bb-p {
+        @include font-weight(700);
+        margin-bottom: 8px;
+        text-indent: 32px;
     }
 }
 
-.bb-note {
-    border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-    color: $COLOR_TYPE_META;
-    @include font('ADOBE CASLON', 15px, 'NORMAL');
-    padding-top: $PADDING_X_SMALL;
+.bb-question__q {
+    @include font-weight(700);
+    color: $mine-shaft-222;
+    left: 0;
+    position: absolute;
+    text-indent: 0;
+}
 
-    a {
-        color: $COLOR_TYPE_META;
-        @include secondary-links(true);
+.bb-question__separator {
+    display: none;
+}
+
+.bb-question__author {
+    @include font("NOBEL", 11px, 400, 16px)
+    color: $dove-gray;
+    letter-spacing: 1px;
+    margin: 8px 0 0 0;
+    text-transform: uppercase;
+}
+
+.bb-question__by {
+    display: none;
+}
+
+// -------------------- //
+// Answer
+// -------------------- //
+.bb-answer {
+    margin: 40px 0;
+    position: relative;
+}
+
+.bb-answer__answer {
+    .bb-p {
+        margin-bottom: 8px;
+        text-indent: 32px;
     }
 }
 
-.bb-dropcap {}
-.bb-dropcap--letter {
-    box-sizing: border-box;
-    color: $COLOR_TYPE_HEADING;
-    float: left;
-    @include font('ITC CASLON');
-    font-size: 3.2em;
-    line-height: 0.5em;
-    margin-right: 0.21em;
-    padding-top: 0.28em;
-    text-align: left;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        font-size: 5.45em;
-        margin-right: 0.14em;
-        padding-top: 0.25em;
-    }
-
-    // Fix dropcap position in IE
-    .gt-ie8 &,
-    .is-ie10 & {
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-            margin-top: -0.05em;
-        }
-    }
-
+.bb-answer__a {
+    @include font-weight(700);
+    color: $mine-shaft-222;
+    left: 0;
+    position: absolute;
+    text-indent: 0;
 }
 
-
-.bb-interactive {
-    margin: $MARGIN_LARGE 0;
+.bb-answer__separator {
+    display: none;
 }
 
+.bb-answer__author {
+    @include font("NOBEL", 11px, 400, 16px)
+    color: $dove-gray;
+    letter-spacing: 1px;
+    margin: 8px 0 0 0;
+    text-transform: uppercase;
+}
 
-/**
- * Gallery
- */
+.bb-answer__by {
+    display: none;
+}
+
+// -------------------- //
+// Gallery
+// -------------------- //
 .bb-gallery {
-    margin: $MARGIN_LARGE 0;
-    @include opacity(1);
-    @include transition(opacity 0.3s ease-in-out);
+    border-bottom: 1px solid $gallery;
+    border-left: 1px solid $gallery;
+    border-right: 1px solid $gallery;
+    border-top: 1px solid $gallery;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin: 40px 0;
 
     &:hover {
-        @include card-image-links-hover();
-    }
-}
-.bb-gallery__col {
-    &:before {
-        display: none;
-    }
 
-    img {
-        width: 100%;
     }
 }
-.bb-gallery__title {
-    @include font('ADOBE CASLON', 20px, 'BOLD', 24px);
-    color: #000;
-    margin: 0 0 $MARGIN_XX_SMALL 5px;
-    width: calc(100% - 30px);
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(24px);
-        @include line-height(30px);
-    }
-}
 .bb-gallery__icon {
-    vertical-align: top;
-}
-.bb-gallery__icon--gallery {
+    display: table-cell;
+    height: 48px;
+    padding: 12px;
+    position: relative;
+    vertical-align: middle;
+    width: 48px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        padding: 16px;
+    }
+
+    &:before {
+        border-radius: 50%;
+        border: 1px solid $gallery;
+        box-sizing: border-box;
+        content: "";
+        height: 48px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 48px;
+    }
+
     svg {
-        display: inline-block;
-        fill: $COLOR_TYPE_META;
-        vertical-align: baseline;
-        width: 18px;
+        display: block;
+        fill: $cod-gray;
+        height: 100%;
+        margin: 0 auto;
+        width: 20px;
     }
 }
+
+.bb-gallery__title {
+    @include font("ADOBE CASLON", 16px, 400, 20px);
+    color: $cod-gray;
+    display: table-cell;
+    padding-bottom: 12px;
+    padding-right: 12px;
+    padding-top: 12px;
+    vertical-align: middle;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(20px);
+        @include line-height(24px);
+        padding-bottom: 16px;
+        padding-right: 16px;
+        padding-top: 16px;
+    }
+}
+
+.bb-gallery__link {}
+.bb-gallery__cols {}
+.bb-gallery__col {
+    background-color: $gallery;
+}
+
 .bb-gallery__remaining {
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba($black, 0.5);
+    white-space: nowrap;
 }
 
 .bb-gallery__remaining-text {
-    @include font('NOBEL', 24px, 'NORMAL');
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(35px);
+    @include font("NOBEL", 20px, 700, 20px);
+    color: $white;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(24px);
+        @include line-height(24px);
     }
 }
 
@@ -151,271 +575,280 @@
     }
 
     .bb-gallery__col:first-child:before {
-        @include c-card-label($COLOR_TYPE_LINK, #fff, 'VIEW COLLECTION');
+        @include c-card-label($guardsman-red, $white, 'VIEW COLLECTION');
         padding: 14px 10px 14px 12px;
-        // NOTE: needed to reset before from li
-        border-radius: 0;
-        height: auto;
-        top: auto;
-        width: auto;
     }
 }
 
-
-/**
- * Question & Answer
- */
-.bb-question,
-.bb-answer {}
-.bb-question__question,
-.bb-answer__answer {
-    @include font('ADOBE CASLON', 18px, 'NORMAL');
-}
-
-.bb-question__question,
-.bb-question__question p {
-    font-weight: map-get($FONT_WEIGHTS, 'BOLD');
-}
-
-.bb-question__q,
-.bb-answer__a {
-    color: $COLOR_TYPE_BODY;
-    @include font('NOBEL', 18px, 'BOLD');
-}
-
-.bb-question__separator,
-.bb-answer__separator {
-    display: none;
-}
-
-.bb-question__author,
-.bb-answer__author {
-    @include font('NOBEL', 11px, null, 11px);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.bb-question__by,
-.bb-answer__by {
-    color: $COLOR_MAIN_TERTIARY;
-    @include font('ADOBE CASLON', 12px);
-    font-family: Adobe Caslon, serif;
-    letter-spacing: normal;
-    font-style: italic;
-    text-transform: lowercase;
-}
-
-
-/**
- * Pullquote
- */
-.bb-pullquote {
-    margin: $MARGIN_LARGE 0;
-}
-.bb-pullquote__quote {
-    font-weight: 700;
-
-    &:before,
-    &:after {
-        content: '';
-    }
-}
-.bb-pullquote__separator {
-    display: none;
-}
-.bb-pullquote__credit {
-    color: $COLOR_TYPE_HEADING;
-    @include font('NOBEL', 12px, 'NORMAL');
-    letter-spacing: 1px;
-    margin-top: $MARGIN_SMALL;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-
-/**
- * Blockquote
- */
-.bb-blockquote {
-    margin: $MARGIN_LARGE 0;
-}
-
-.bb-blockquote__quote {
-    color: $COLOR_TYPE_META;
-    @include font-size(18px);
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(20px);
-    }
-}
-
-.bb-blockquote__separator {
-    display: none;
-}
-
-.bb-blockquote__credit {
-    color: $COLOR_TYPE_META;
-    @include font('NOBEL', 12px, 'NORMAL');
-    font-style: normal;
-    letter-spacing: 1px;
-    margin-top: $MARGIN_SMALL;
-    text-transform: uppercase;
-}
-
-
-/**
- * Infobox
- */
-.bb-infobox {
-    background-color: $COLOR_MAIN_ACCENT2;
-    margin: $MARGIN_LARGE 0;
-    padding: $PADDING_MEDIUM $PADDING_SMALL;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: $PADDING_LARGE;
-    }
-
-}
-
-.bb-infobox__body {
-    > *:first-child {
-        margin-top: 0;
-    }
-
-    > *:last-child {
-        margin-bottom: 0;
-    }
-}
-
-.bb-infobox__title {
-    @include font('NOBEL', 20px);
-    margin: 0;
-    text-transform: uppercase;
-}
-
-.bb-infobox__hr {
-    border: none;
-    border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT1;
-    margin: $MARGIN_SMALL 0;
-}
-
-.bb-infobox__item {
-    margin: $MARGIN_MEDIUM 0;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
-
-.bb-infobox__item__key {
-    @include font('NOBEL', 15px, 'BOLD');
-    padding-bottom: $PADDING_X_SMALL;
-    text-transform: uppercase;
-}
-
-.bb-infobox__item__value {
-    @include font('ADOBE CASLON', 17px);
-    margin: 0;
-}
-
-
-/**
- * Callout
- */
-.bb-callout {
-    background-color: $COLOR_MAIN_ACCENT2;
-    margin: $MARGIN_LARGE 0;
-    padding: $PADDING_MEDIUM $PADDING_SMALL;
-
-    > *:first-child {
-        margin-top: 0;
-    }
-    > *:last-child {
-        margin-bottom: 0;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: $PADDING_LARGE;
-    }
-}
-
-
-/**
- * Video
- */
+// -------------------- //
+// Video
+// -------------------- //
 .bb-video {
-    position: relative;
+    border-bottom: 1px solid $gallery;
+    border-left: 1px solid $gallery;
+    border-right: 1px solid $gallery;
+    border-top: 1px solid $gallery;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
     margin: 40px 0;
 
     &:hover {
-        .bb-video__image {
-            @include card-image-links-hover();
-        }
+
+    }
+}
+
+.bb-video__title-icon {
+    display: table-cell;
+    height: 48px;
+    padding: 12px;
+    position: relative;
+    vertical-align: middle;
+    width: 48px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        padding: 16px;
+    }
+
+    &:before {
+        border-radius: 50%;
+        border: 1px solid $gallery;
+        box-sizing: border-box;
+        content: "";
+        height: 48px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 48px;
+    }
+
+    svg {
+        display: block;
+        fill: $cod-gray;
+        height: 100%;
+        margin: 0 auto;
+        width: 20px;
     }
 }
 
 .bb-video__title {
-    @include font('ADOBE CASLON', 20px, 700, 24px);
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(24px);
-        @include line-height(27px);
-    }
-    margin-bottom: 10px;
-    margin-top: 0;
-}
+    @include font("ADOBE CASLON", 16px, 400, 20px);
+    color: $cod-gray;
+    display: table-cell;
+    padding-bottom: 12px;
+    padding-right: 12px;
+    padding-top: 12px;
+    vertical-align: middle;
 
-.bb-video__title-icon {
-    margin-right: 5px;
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-right: 10px;
-    }
-
-    svg {
-        fill: $COLOR_MAIN_TERTIARY;
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(20px);
+        @include line-height(24px);
+        padding-bottom: 16px;
+        padding-right: 16px;
+        padding-top: 16px;
     }
 }
 
 .bb-video__wrapper {}
-.bb-video__image {}
 .bb-video__image-icon {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    @include vendor-prefix(transform, translate(-50%, -50%));
-    width: 45px;
-    height: 45px;
-    background-color: $COLOR_BUTTON_CTA_LIGHT;
+    display: none;
+}
 
-    svg {
-        display: block;
-        fill: $COLOR_MAIN_PAGE;
-        width: 15px;
-        height: 100%;
-        margin: 0 auto;
+.bb-video__link {}
+
+// -------------------- //
+// Button
+// -------------------- //
+.bb-button {}
+.bb-button--light {
+    @include button-single();
+    @include button-single-light();
+
+    &:hover,
+    &:focus {
+        @include button-single-light-hover();
     }
 }
 
-.bb-video__link {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    opacity: 0;
+.bb-button--dark {
+    @include button-single();
+    @include button-single-dark();
+
+    &:hover,
+    &:focus {
+        @include button-single-dark-hover();
+    }
 }
 
+// -------------------- //
+// Card
+// -------------------- //
+.bb-card {
+    border-radius: 4px;
+    border: 1px solid $alto;
+    margin: 40px 0;
+    padding: 12px;
 
-/**
- * Show Gallery
- */
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        padding: 16px;
+
+        &:before {
+            @include font("ITC CASLON", 14px, 400, 16px);
+            bottom: 16px;
+            color: $dove-gray;
+            content: "Continue Reading";
+            font-style: italic;
+            position: absolute;
+            right: 16px;
+        }
+    }
+
+    &:hover {
+        // border: 1px solid $FAROE-GRAY;
+    }
+}
+
+.bb-card__link {}
+
+.bb-card__obj {
+    display: table;
+    width: 100%;
+}
+
+.bb-card__obj__header {
+    display: table-cell;
+    padding-right: 6px;
+    vertical-align: top;
+    width: 92px;
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        padding-right: 8px;
+        width: 174px;
+    }
+}
+
+.bb-card__images {}
+.bb-card__image {
+    background-color: $gallery;
+    padding-top: 100%;
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        padding-top: 66.66666%;
+    }
+}
+
+.bb-card__image__icon {
+    background-color: $white;
+    height: 40px;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+
+    svg {
+        display: block;
+        height: 100%;
+        margin: 0 auto;
+        vertical-align: middle;
+        width: 20px;
+        fill: $dove-gray;
+    }
+}
+
+.bb-card__obj__body {
+    display: table-cell;
+    padding-left: 6px;
+    vertical-align: top;
+    width: auto;
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        padding-left: 8px;
+    }
+}
+
+.bb-card__header {}
+
+.bb-card__tag {
+    @include font("NOBEL", 11px, 400, 16px);
+    color: $dove-gray;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.bb-card__title {
+    @include font("ADOBE CASLON", 17px, 400, 20px);
+    color: $cod-gray;
+    margin-bottom: 8px;
+    margin-top: 6px;
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include font-size(20px);
+        @include line-height(24px);
+        margin-bottom: 16px;
+        margin-top: 8px;
+    }
+}
+
+.bb-card__teaser {
+    display: none;
+}
+
+.bb-card__separator {
+    display: none;
+}
+
+.bb-card__footer {}
+
+.bb-card__byline {
+    @include font("NOBEL", 11px, 400, 16px);
+    margin-bottom: 4px;
+    margin-top: 8px;
+}
+
+.bb-card__byline--sponsorship {}
+
+.bb-card__byline-prefix {
+    color: $dove-gray;
+    font-style: italic;
+}
+
+.bb-card__byline-name {
+    color: $cod-gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+ul.bb-card__meta {
+    @include font("NOBEL", 11px, 400, 16px);
+    color: $dove-gray;
+    margin-top: 4px;
+}
+
+li.bb-card__meta-item {
+    & + li.bb-card__meta-item {
+        &:before {
+            background-color: $dove-gray;
+            border-radius: 50%;
+            content: "";
+            display: inline-block;
+            height: 2px;
+            margin: 1px 4px;
+            width: 2px;
+        }
+    }
+}
+
+// -------------------- //
+// Show Gallery
+// -------------------- //
 .bb-show-gallery {
     .c-gallery-strip__detail {
-        margin: -37px $MARGIN_SMALL 0 $MARGIN_SMALL;
+        margin: -37px 20px 0 20px;
     }
 
     .c-gallery-strip__title {
         @include font('ADOBE CASLON', 20px, 700, 24px);
-        margin: 0 0 $MARGIN_XX_SMALL 0;
+        margin: 0 0 10px 0;
     }
 
     .c-gallery-strip__list__item {
@@ -453,156 +886,12 @@
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         .c-gallery-strip__detail {
-            margin: -40px $MARGIN_SMALL 0 $MARGIN_SMALL;
+            margin: -40px 20px 0 20px;
         }
+
         .c-gallery-strip__title {
             @include font-size(24px);
             @include line-height(28px);
-        }
-    }
-
-}
-
-
-/**
- * Button
- */
-.bb-button {}
-.bb-button--light {
-    @include button-single();
-    @include button-single-light();
-
-    &:hover,
-    &:focus {
-        @include button-single-light-hover();
-    }
-}
-.bb-button--dark {
-    @include button-single();
-    @include button-single-dark();
-
-    &:hover,
-    &:focus {
-        @include button-single-dark-hover();
-    }
-}
-
-
-/**
- * Card
- */
-.bb-card {
-    background-color: #F9F9F9;
-    border: 1px solid #EAEAEA;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin: 40px 0;
-    padding: 15px;
-
-    &:hover,
-    &:focus {
-        .bb-card__title,
-        .bb-card__byline-name {
-            @include card-text-links-hover();
-        }
-
-        .bb-card__image {
-            @include card-image-links-hover();
-        }
-    }
-
-    .bb-card__obj {
-        display: table;
-        width: 100%;
-    }
-
-    .bb-card__obj__header,
-    .bb-card__obj__body {
-        display: table-cell;
-        vertical-align: middle;
-    }
-
-    .bb-card__obj__header {
-        padding-right: 10px;
-        width: 100px;
-    }
-
-    .bb-card__images {
-        .bb-card__image {
-            padding-top: 100%;
-        }
-    }
-
-    .bb-card__obj__body {
-        padding-left: 10px;
-    }
-
-    .bb-card__image {
-        background: $COLOUR_BG_ACCENT1;
-        @include card-image-links-normal();
-        @include transition(all 0.3s ease);
-    }
-
-    .bb-card__tag {
-        @include c-card-primary-tag-small;
-        // @include card-portrait-to-landscape-size() {
-        //     margin-bottom: 8px;
-        // }
-        margin: 0 0 4px 0;
-    }
-
-    .bb-card__title {
-        margin: 0 0 6px 0;
-        @include c-card-inline-title-medium;
-        @include transition(all 0.3s ease);
-
-        // @include card-portrait-to-landscape-size() {
-        //     margin: 0 0 $MARGIN_XX_SMALL 0;
-        // }
-    }
-
-    .bb-card__separator {
-        display: none;
-    }
-
-    .bb-card__byline,
-    .bb-card__sponsor {
-        @include c-card-byline-small;
-        margin: 4px 0 4px 0;
-
-        // @include card-portrait-to-landscape-size() {
-        //     margin: 8px 0 2px 0;
-        // }
-    }
-
-    .bb-card__byline-prefix,
-    .bb-card__sponsor-label {
-        @include c-card-byline-prefix;
-        margin-right: 2px;
-    }
-
-    .bb-card__byline-name,
-    .bb-card__sponsor-title {
-        @include c-card-byline-name-small;
-    }
-
-    .bb-card__meta {
-        @include c-card-meta-small;
-    }
-
-    .bb-card__meta-item--tag {
-        @include c-card-meta-tag;
-    }
-
-    // Need to be specific to overwrite global__list-reset
-    li.bb-card__meta-item {
-        &:not(:last-child) {
-            padding-right: 8px;
-        }
-
-        & + li.bb-card__meta-item {
-            border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-            padding-left: 8px;
         }
     }
 }
