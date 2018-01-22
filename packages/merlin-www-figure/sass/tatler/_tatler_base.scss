@@ -15,7 +15,7 @@
 
 .c-figure__title,
 .c-figure__caption,
-.c-figure__caption p {
+.c-figure__caption .bb-p {
     @include font('AGENDA', 16px, 'MEDIUM', 18px);
     letter-spacing: 0.5px;
 }
@@ -25,10 +25,10 @@
 }
 
 .c-figure__caption,
-.c-figure__caption p {
+.c-figure__caption .bb-p {
     margin: 0 0 10px;
 
-    a {
+    .bb-a {
         color: $cinnabar;
         text-decoration: none;
         border-bottom: 1px solid rgba($cinnabar, 0.8);
@@ -128,7 +128,7 @@ li.c-figure__toolbar-listitem {
     }
 
     .c-figure__caption,
-    .c-figure__caption p {
+    .c-figure__caption .bb-p {
         margin: 0 0 14px;
     }
 
