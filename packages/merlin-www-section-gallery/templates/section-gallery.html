@@ -14,7 +14,7 @@
 				{{# data.image_remaining }}
 					<div class="c-gallery__image-remaining">
 	    				<div class="c-gallery__image-remaining__text">
-	    					<span class="c-gallery__image-remaining__text-prefix">+</span>
+	    					<span class="c-gallery__image-remaining__text-prefix">{{ translation.remaining_prefix }}</span>
 	    					<span class="c-gallery__image-remaining__text-value">{{ data.image_remaining }}</span>
 	    				</div>
 	    			</div>
@@ -44,20 +44,20 @@
 
 	            <hr class="c-gallery__separator" />
 
-	            {{# data.sponsor }}
+	            {{# state.has_sponsor }}
                     <p class="c-gallery__byline c-gallery__byline--sponsorship {{ style.cls }}">
-                        <span class="c-gallery__byline-prefix">In partnership with </span>
+                        <span class="c-gallery__byline-prefix">{{ translation.sponsor_prefix }} </span>
                         <span class="c-gallery__byline-name">{{ data.title }}</span>
                     </p>
-	            {{/ data.sponsor }}
-	            {{^ data.sponsor }}
+	            {{/ state.has_sponsor }}
+	            {{^ state.has_sponsor }}
 	                {{# data.byline }}
 	                    <p class="c-gallery__byline">
-	                        <span class="c-gallery__byline-prefix">By</span>
+	                        <span class="c-gallery__byline-prefix">{{ translation.byline_prefix }}</span>
 	                        <span class="c-gallery__byline-name">{{ data.byline }}</span>
 	                    </p>
 	                {{/ data.byline }}
-	            {{/ data.sponsor }}
+	            {{/ state.has_sponsor }}
 
 				{{# data.meta_list }}
 				    <ul class="global__list-reset c-gallery__meta {{ style.cls }}">
