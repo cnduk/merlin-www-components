@@ -34,11 +34,11 @@
 				{{/ data.icon }}
 
 				{{# state.is_featured }}
-				    <div class='c-card__image-label c-card__image-label--featured'>Featured</div>
+				    <div class='c-card__image-label c-card__image-label--featured'>{{ translation.featured_label }}</div>
 				{{/ state.is_featured }}
 				{{^ state.is_featured }}
 				    {{# state.is_latest }}
-				        <div class='c-card__image-label c-card__image-label--latest'>Latest</div>
+				        <div class='c-card__image-label c-card__image-label--latest'>{{ translation.latest_label }}</div>
 				    {{/ state.is_latest }}
 				{{/ state.is_featured }}
 
@@ -79,20 +79,20 @@
 					</ul>
 				{{/ data.review_information }}
 
-				{{# data.sponsor }}
+				{{# state.has_sponsor }}
 				    <p class="c-card__byline c-card__byline--sponsorship {{ style.cls }}">
-				        <span class="c-card__byline-prefix">In partnership with </span>
-				        <span class="c-card__byline-name">{{ data.title }}</span>
+				        <span class="c-card__byline-prefix">{{ translation.sponsorship_prefix }} </span>
+				        <span class="c-card__byline-name">{{ data.sponsor.data.title }}</span>
 				    </p>
-				{{/ data.sponsor }}
-				{{^ data.sponsor }}
+				{{/ state.has_sponsor }}
+				{{^ state.has_sponsor }}
 				    {{# data.byline }}
 				        <p class="c-card__byline">
-				            <span class="c-card__byline-prefix">By</span>
+				            <span class="c-card__byline-prefix">{{ translation.byline_prefix }}</span>
 				            <span class="c-card__byline-name">{{ data.byline }}</span>
 				        </p>
 				    {{/ data.byline }}
-				{{/ data.sponsor }}
+				{{/ state.has_sponsor }}
 
                 {{# data.meta_list }}
                     <ul class="global__list-reset c-card__meta {{ style.cls }}">
