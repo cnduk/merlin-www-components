@@ -102,9 +102,7 @@ export function insertSection(section) {
     hook.parentNode.insertBefore(docFragment, hook);
 
     // Loaded in a new section so we need to create a new sticky group
-    if (docFragment.querySelector('.stick-group')) {
-        createStickGroup(docFragment.querySelector('.stick-group'));
-    }
+    createStickGroup(hook.previousElementSibling);
 
     addToFragment = null;
     hook = null;
