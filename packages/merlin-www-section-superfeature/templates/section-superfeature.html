@@ -30,20 +30,20 @@
             <p class="c-superfeature__teaser"><span>{{ data.teaser }}</span></p>
         {{/ data.teaser }}
 
-        {{# data.sponsor }}
+        {{# state.has_sponsor }}
             <p class="c-superfeature__byline c-superfeature__byline--sponsorship {{ style.cls }}">
-                <span class="c-superfeature__byline-prefix">In partnership with </span>
+                <span class="c-superfeature__byline-prefix">{{ translation.sponsor_prefix }} </span>
                 <span class="c-superfeature__byline-name">{{ data.title }}</span>
             </p>
-        {{/ data.sponsor }}
-        {{^ data.sponsor }}
+        {{/ state.has_sponsor }}
+        {{^ state.has_sponsor }}
             {{# data.byline }}
                 <p class="c-superfeature__byline">
-                    <span class="c-superfeature__byline-prefix">By</span>
+                    <span class="c-superfeature__byline-prefix">{{ translation.byline_prefix }}</span>
                     <span class="c-superfeature__byline-name">{{ data.byline }}</span>
                 </p>
             {{/ data.byline }}
-        {{/ data.sponsor }}
+        {{/ state.has_sponsor }}
 
         {{# data.meta_list }}
             <ul class="global__list-reset c-superfeature__meta {{ style.cls }}">
