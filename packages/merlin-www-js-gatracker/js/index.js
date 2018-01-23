@@ -256,7 +256,8 @@ GATracker.INDEX_BY_DIMENSION = {
     'SYNDICATION_ORIGINAL_URL': 'dimension50',
     'SYNDICATION_ORIGINAL_LANGUAGE': 'dimension51',
     'SPONSORED': 'dimension46',
-    'SPONSOR': 'dimension47'
+    'SPONSOR': 'dimension47',
+    'CONTENT_SOURCE': 'dimension52'
 };
 
 /**
@@ -292,7 +293,8 @@ GATracker.DIMENSION_BY_INDEX = {
     'dimension50': 'SYNDICATION_ORIGINAL_URL',
     'dimension51': 'SYNDICATION_ORIGINAL_LANGUAGE',
     'dimension46': 'SPONSORED',
-    'dimension47': 'SPONSOR'
+    'dimension47': 'SPONSOR',
+    'dimension52': 'CONTENT_SOURCE'
 };
 
 /**
