@@ -62,8 +62,10 @@
             {{/ data.image_list }}
         </div>
 
-        <div class="a-gallery__message">
-            <button class="global__button-reset a-gallery__message-btn js-a-gallery__message-btn">VIEW ALL {{ data.image_list.data.length }} IMAGES</button>
-        </div>
+        {{# state.is_closed }}
+            <div class="a-gallery__message">
+                <button class="global__button-reset a-gallery__message-btn js-a-gallery__message-btn">VIEW ALL {{ data.image_list.data.length }} IMAGES</button>
+            </div>
+        {{/ state.is_closed }}
     </div>
 </section>
