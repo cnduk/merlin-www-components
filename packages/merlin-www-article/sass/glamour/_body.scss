@@ -43,38 +43,23 @@
 
 .a-infinite {
     &.is-closed {
-        // This we want to hide:
-        //  - .g-gallery-menu
-        //  - everything but first 3 images in gallery
-        //  - share
-        //
-        // We force things to hide to avoid images from being loaded
-        .a-gallery__nav,
-        .a-gallery__section .a-gallery__images:nth-of-type( n + 6 ),
-        .a-gallery__section .ad--gallery:nth-of-type( n + 1 ),
-        .a-related-tags,
-        .a-footer-share,
-        .a-footer {
-            display: none;
-        }
-
-        .a-infinite__message {
-            display: block;
+        .a-gallery__image-listitem:nth-of-type(3) {
+            padding-bottom: 0;
         }
     }
 }
 
 .a-infinite__message {
     display: none;
-    margin: $MOBILE_SLICE_MARGIN 0;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
     text-align: center;
 
     @include tablet-size {
-        margin: $TABLET_SLICE_MARGIN 0;
+        margin-bottom: $TABLET_SLICE_MARGIN;
     }
 
     @include desktop-size {
-        margin: $DESKTOP_SLICE_MARGIN 0;
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
     }
 }
 

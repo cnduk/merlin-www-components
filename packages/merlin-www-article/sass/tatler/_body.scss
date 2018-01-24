@@ -70,12 +70,7 @@
     box-sizing: border-box;
     margin: 0 auto;
     padding-bottom: 40px;
-    max-width: $MAXIMUM_PAGE_WIDTH - $DESKTOP_SIDE_GUTTER * 2;
     position: relative;
-
-    @include desktop-size {
-        padding-right: $ARTICLE_RIGHT_TOTAL;
-    }
 
     @include tablet-size {
         padding-bottom: 60px;
