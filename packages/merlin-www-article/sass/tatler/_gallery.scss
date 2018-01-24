@@ -6,6 +6,23 @@
 
 }
 
+.a-gallery__message {
+    margin-bottom: 40px;
+
+    @include tablet-size {
+        margin-bottom: 60px;
+    }
+}
+
+.a-gallery__message-btn {
+    @include button-single;
+    @include button-single-light;
+
+    &:hover {
+        @include button-single-light-hover;
+    }
+}
+
 .a-gallery__thumbnail-list {
     margin-left: 0px;
     margin-right: 0px;
