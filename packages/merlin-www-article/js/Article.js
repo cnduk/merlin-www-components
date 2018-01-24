@@ -111,7 +111,7 @@ Article.prototype = inherit(EventEmitter.prototype, {
     'constructor': Article,
 
     'expand': function() {
-        removeClass(this.el.parentNode, 'is-closed');
+        removeClass(this.el.querySelector(CLS_ARTICLE_GALLERY), 'is-closed');
         this.resize();
         this.emit('expand', events.expand(this));
     },
