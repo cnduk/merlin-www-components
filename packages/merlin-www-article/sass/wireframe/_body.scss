@@ -99,10 +99,9 @@
          * We force things to hide to avoid images from being loaded
          */
         .g-image-nav,
-        .a-gallery__view--list .a-gallery__image-listitem:nth-of-type( n + 4 ),
-        // .a-gallery__section .g-ad:nth-of-type( n + 1 ),
-        .a-footer,
-        .c-card-section--a-recommended {
+        .a-gallery__view--list
+        .a-gallery__image-listitem:nth-of-type( n + 4 ),
+        .a-footer {
             display: none;
         }
 
@@ -113,8 +112,20 @@
 }
 
 .a-infinite__message {
+    box-sizing: border-box;
     display: none;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
     text-align: center;
+
+    @include common-medium-size() {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include common-large-size() {
+        padding-right: $ARTICLE_RIGHT_TOTAL + $DESKTOP_SIDE_GUTTER;
+    }
 }
 
 .a-infinite__message-btn {}
