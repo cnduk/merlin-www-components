@@ -30,6 +30,7 @@
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
 }
+
 .a-body--gallery {}
 .a-body--video {
     max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
@@ -65,6 +66,7 @@
         }
     }
 }
+
 .a-body__clear {
     clear: both;
 }
@@ -77,55 +79,13 @@
     width: 100%;
     word-wrap: break-word;
 
-    @include common-large-size(){
+    @include common-large-size() {
         padding: 0 $ARTICLE_RIGHT_TOTAL 0 0;
     }
 
-    @include article-large-size(){
+    @include article-large-size() {
         padding: 0 $ARTICLE_RIGHT_TOTAL 0 $ARTICLE_LEFT_TOTAL;
     }
 }
 
 .a-body__content {}
-
-.a-infinite {
-    &.is-closed {
-        /**
-         * This we want to hide:
-         *  - .g-gallery-menu
-         *  - everything but first 3 images in gallery
-         *  - share
-         *
-         * We force things to hide to avoid images from being loaded
-         */
-        .g-image-nav,
-        .a-gallery__view--list
-        .a-gallery__image-listitem:nth-of-type( n + 4 ),
-        .a-footer {
-            display: none;
-        }
-
-        .a-infinite__message {
-            display: block;
-        }
-    }
-}
-
-.a-infinite__message {
-    box-sizing: border-box;
-    display: none;
-    margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
-    text-align: center;
-
-    @include common-medium-size() {
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
-    }
-
-    @include common-large-size() {
-        padding-right: $ARTICLE_RIGHT_TOTAL + $DESKTOP_SIDE_GUTTER;
-    }
-}
-
-.a-infinite__message-btn {}
