@@ -80,3 +80,20 @@ li.a-gallery__image-listitem {
 li.a-gallery__thumbnail {}
 .a-gallery__thumbnail-image {}
 .a-gallery__thumbnail-hover {}
+
+.a-gallery__message {
+    margin-bottom: 40px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 60px;
+    }
+}
+
+.a-gallery__message-btn {
+    @include button-single();
+    @include button-single-dark();
+
+    &:hover {
+        @include button-single-dark-hover();
+    }
+}

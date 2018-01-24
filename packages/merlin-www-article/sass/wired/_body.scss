@@ -42,34 +42,3 @@
         @include font-weight(700);
     }
 }
-
-.a-infinite__message {
-    box-sizing: border-box;
-    margin: 0 auto;
-    position: relative;
-}
-
-.a-infinite__message-btn {}
-.a-infinite {
-    .a-infinite__message-btn {
-        @include button-single();
-        @include button-single-light();
-
-        &:hover {
-            @include button-single-light-hover();
-        }
-    }
-}
-
-.a-infinite--gallery {
-    background-color: #000;
-
-    .a-infinite__message-btn {
-        @include button-single();
-        @include button-single-dark();
-
-        &:hover {
-            @include button-single-dark-hover();
-        }
-    }
-}
