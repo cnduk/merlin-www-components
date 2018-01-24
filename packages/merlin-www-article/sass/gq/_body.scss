@@ -18,22 +18,3 @@
 
 .a-body__wrapper {}
 .a-body__content {}
-
-.a-infinite__message {
-    box-sizing: border-box;
-    margin: 0 auto 40px auto;
-    position: relative;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: 60px;
-    }
-}
-
-.a-infinite__message-btn {
-    @include button-single();
-    @include button-single-light();
-
-    &:hover {
-        @include button-single-light-hover();
-    }
-}
