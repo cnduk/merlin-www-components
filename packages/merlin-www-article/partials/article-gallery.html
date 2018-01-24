@@ -1,4 +1,4 @@
-<section class="a-gallery js-a-gallery">
+<section class="a-gallery js-a-gallery{{# state.is_closed }} is-closed{{/ state.is_closed }}">
     <div class="a-gallery__wrapper">
 
         {{# data.navigation }}
@@ -60,6 +60,10 @@
                     {{/ data.items }}
                 </ul>
             {{/ data.image_list }}
+        </div>
+
+        <div class="a-gallery__message">
+            <button class="global__button-reset a-gallery__message-btn js-a-gallery__message-btn">VIEW ALL {{ data.image_list.data.length }} IMAGES</button>
         </div>
     </div>
 </section>
