@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-build-tools",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Build tools for the www app",
   "main": "js/index.js",
   "scripts": {},
@@ -27,6 +27,7 @@
     "minimist": "^1.2.0",
     "mustache-loader": "1.2.0",
     "run-sequence": "2.2.0",
+    "through2": "^2.0.3",
     "webpack": "^3.0.0",
     "webpack-stream": "4",
     "workbox-build": "^2.0.0"
