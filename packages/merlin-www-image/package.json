@@ -1,21 +1,21 @@
 {
-    "name": "@cnbritain/merlin-www-image",
-    "version": "1.6.8",
-    "description": "",
-    "main": "js/index.js",
-    "scripts": {
-        "demo": "merlin-component-demo-server merlin.json",
-        "lint": "eslint -c ../../.eslintrc.json ./js/**/*",
-        "prepublish": "npm run lint"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "@cnbritain/merlin-www-assets": "^1.7.13",
-        "lazysizes": "^4.0.0"
-    },
-    "devDependencies": {
-        "@cnbritain/merlin-component-demo-server": "^2.9.6",
-        "eslint": "^4.14.0"
-    }
+  "name": "@cnbritain/merlin-www-image",
+  "version": "1.6.9",
+  "description": "",
+  "main": "js/index.js",
+  "scripts": {
+    "demo": "merlin-component-demo-server merlin.json",
+    "lint": "eslint -c ../../.eslintrc.json ./js/**/*",
+    "prepublish": "npm run lint"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cnbritain/merlin-www-assets": "^1.7.13",
+    "lazysizes": "^4.0.0"
+  },
+  "devDependencies": {
+    "@cnbritain/merlin-component-demo-server": "^2.9.6",
+    "eslint": "^4.14.0"
+  }
 }
