@@ -22,7 +22,7 @@
 .c-footer__list--right {
     @include screen(1100px, $MAXIMUM_PAGE_WIDTH + $PADDING_LARGE) {
         & > .c-footer__list-item:last-child {
-            padding-right: $PADDING_LARGE;
+            padding-right: 16px;
         }
     }
 }
@@ -63,8 +63,12 @@ li.c-footer__list-item {
     padding-left: $PADDING_SMALL;
     margin: 0;
 
+    @include min-screen(1100px) {
+        padding-left: 16px;
+    }
+
     &:before {
-        display: none;
+        content: none;
     }
 
     a {
@@ -95,8 +99,9 @@ li.c-footer__list-item--logo {
 
     @include min-screen(1100px) {
         clear: right;
-        padding-left: 45px;
         margin-right: 0;
         margin-top: 0;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
