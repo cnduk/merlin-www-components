@@ -63,12 +63,12 @@ li.c-footer__list-item--logo {
             background-color: #000;
 
             @include min-screen(1100px) {
-                display: inline-block;
-                height: 12px;
-                width: 1px;
-                margin: 0 0 0 20px;
-                background-color: rgba(255, 255, 255, 0.4);
+                content: none;
             }
+        }
+
+        @include min-screen(1100px) {
+            padding-left: 19px;
         }
 
         @include max-screen(1099px) {
