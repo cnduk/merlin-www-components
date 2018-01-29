@@ -162,9 +162,21 @@ function monkeypatchGitRawCommits(){
         transformStream._transform = transformCommit;
 
         sourceReadableStream.pipe(transformStream);
-        transformStream.pipe(through2.obj((chunk, enc, cb) => {
+        let isError = false;
+        transformStream.pipe(through2(function(chunk, enc, cb) {
             outputReadableStream.push(chunk);
+            isError = false;
+
             cb();
+        }, function(cb) {
+            setImmediate(function() {
+                if (!isError) {
+                    outputReadableStream.push(null);
+                    outputReadableStream.emit('close');
+                }
+
+                cb();
+            });
         }));
 
         return outputReadableStream;
