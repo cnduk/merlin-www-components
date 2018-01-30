@@ -66,21 +66,32 @@ li .c-figure__toolbar-listitem--more {
 }
 
 .c-figure__title {
-    @include font('MILLER_DISPLAY', 14px, null, 17px);
+    @include font('MILLER_DISPLAY', 17px, null, 23px);
     color: $mine-shaft;
     margin: 0 0 5px 0;
     text-transform: uppercase;
+
+     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(19px);
+        @include line-height(25px);
+     }
 
     &:before {
         background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M1.09,20,10,16l8.91,4L10,0,1.09,20' fill='#000'/%3E%3C/svg%3E");
         background-repeat: no-repeat;
         content: '';
         display: inline-block;
-        height: 12px;
-        margin: 0 5px 0 0;
+        height: 14px;
+        margin: 0 10px 0 0;
         position: relative;
         top: 2px;
-        width: 10px;
+        width: 14px;
+
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            height: 16px;
+            margin: 0 10px 0 0;
+            width: 15px;
+        }
     }
 }
 .c-figure__caption {
@@ -90,9 +101,15 @@ li .c-figure__toolbar-listitem--more {
 
     &.has-bbcode {
         > p {
-            @include font-size(14px);
-            @include line-height(17px);
+            @include font-size(17px);
+            @include line-height(23px);
             margin-bottom: 10px;
+
+             @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+                @include font-size(19px);
+                @include line-height(25px);
+                margin-bottom: 30px;
+             }
         }
     }
 }
