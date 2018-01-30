@@ -2,7 +2,7 @@
     .a-share {
         margin: 40px 0 40px 0;
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            margin-bottom: 60px;
+            margin: 60px 0 40px 0;
         }
     }
 }
