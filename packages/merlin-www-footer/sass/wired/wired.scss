@@ -54,6 +54,8 @@ li.c-footer__list-item--logo {
 }
 
 .c-footer__list-item--links {
+    font-size: 0;
+
     .c-footer__list-item {
         &:after {
             content: '';

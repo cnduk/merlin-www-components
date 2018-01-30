@@ -30,6 +30,8 @@
 }
 
 .c-footer__list-item--links {
+    font-size: 0;
+
     @include max-screen(1099px) {
         background-color: $COLOUR_BG_DARK;
     }
