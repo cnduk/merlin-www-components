@@ -4,7 +4,7 @@
     position: relative;
 
     .n-main__nav-search {
-        background-color: $black;
+        background-color: $advert-dark;
         width: 60px;
     }
 
@@ -14,8 +14,6 @@
         width: 20px;
     }
 }
-
-
 
 .n-menu__search-search {
     float: right;
@@ -38,7 +36,7 @@
         background-color: $ebony-clay;
         border: none;
         box-sizing: border-box;
-        color: $silver-chalice;
+        color: $white;
         height: 60px;
         letter-spacing: 1px;
         padding: 0;
