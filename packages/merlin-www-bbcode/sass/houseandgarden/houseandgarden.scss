@@ -60,9 +60,11 @@
 
 .bb-h2 {
     @include font("MILLER_DISPLAY", 25px, 700, 28px);
+    margin-top: 20px;
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(27px);
         @include line-height(30px);
+        margin-top: 30px;
     }
 }
 
