@@ -67,55 +67,15 @@ var PREBID_TIMEOUT = 1000;
 var PREBID_LOADED = false;
 
 /**
- * Ad sizes the Rubicon allows
+ * Ad sizes we only want to send to Rubicon
  * @type {Object}
  */
 var RUBICON_ALLOWED_SIZES = {
-    '468x60': true,
     '728x90': true,
-    '120x600': true,
-    '160x600': true,
     '300x600': true,
-    '200x200': true,
-    '250x250': true,
     '300x250': true,
-    '336x280': true,
-    '300x100': true,
-    '980x120': true,
-    '250x360': true,
-    '180x500': true,
-    '980x150': true,
-    '468x400': true,
-    '930x180': true,
-    '320x50': true,
-    '300x50': true,
-    '300x300': true,
-    '300x1050': true,
-    '970x90': true,
     '970x250': true,
-    '1000x90': true,
-    '320x80': true,
-    '320x150': true,
-    '1000x1000': true,
-    '640x480': true,
-    '320x480': true,
-    '1800x1000': true,
-    '320x320': true,
-    '320x160': true,
-    '980x240': true,
-    '980x300': true,
-    '980x400': true,
-    '480x300': true,
-    '970x310': true,
-    '970x210': true,
-    '480x320': true,
-    '768x1024': true,
-    '480x280': true,
-    '1000x300': true,
-    '320x100': true,
-    '800x250': true,
-    '200x600': true,
-    '600x300': true
+    '970x90': true
 };
 
 /**
