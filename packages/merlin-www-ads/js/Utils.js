@@ -810,10 +810,7 @@ export function registerPrebid(ad){
             pbjs.que.push(function() {
                 var adUnits = getPrebidAdUnits([ad]);
                 pbjs.addAdUnits(adUnits);
-
-                pbjs.requestBids({
-                    bidsBackHandler: function(){ res(); }
-                });
+                res();
             });
         } else {
             res();
