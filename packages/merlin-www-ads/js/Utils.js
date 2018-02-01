@@ -494,6 +494,12 @@ export function loadPrebidLibrary(){
 
     window.pbjs = window.pbjs || {};
     window.pbjs.que = window.pbjs.que || [];
+    pbjs.que.push(function() {
+        pbjs.setConfig({
+            // debug: true,
+            enableSendAllBids: true
+        });
+    });
 
     var prebidPromise = loadScript(PREBID_URL)
         .then(function(){
