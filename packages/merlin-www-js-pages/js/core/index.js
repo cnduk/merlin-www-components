@@ -46,7 +46,9 @@ import initLinkTracking from './analytics';
 var DEFAULT_INIT_CONFIG = {
     'OPEN_X_URL': null,
     'RUBICON_URL': null,
-    'TEAD_URL': '//cdn.teads.tv/js/all-v2.js'
+    'TEAD_URL': '//cdn.teads.tv/js/all-v2.js',
+    'PREBID_URL': null,
+    'PREBID_SETTINGS': {}
 };
 
 export default function init(config) {
@@ -67,7 +69,9 @@ export default function init(config) {
     AdUtils.setAdUrls({
         OPEN_X_URL: _config['OPEN_X_URL'],
         RUBICON_URL: _config['RUBICON_URL'],
-        TEAD_URL: _config['TEAD_URL']
+        TEAD_URL: _config['TEAD_URL'],
+        PREBID_URL: _config['PREBID_URL'],
+        PREBID_SETTINGS: _config['PREBID_SETTINGS']
     });
 
     CommonImage.init();
