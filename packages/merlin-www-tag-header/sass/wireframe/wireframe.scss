@@ -19,7 +19,7 @@
 .tg-header__separator {}
 .tg-header__description {
     &.is-closed {
-        > :nth-child(n+4):nth-last-child(n+2) {
+        > :nth-child(n+3):nth-last-child(n+2) {
             display: none;
         }
 
