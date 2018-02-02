@@ -1,5 +1,7 @@
 .a-sidebar-content {
-
+     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-botttom: 60px;
+     }
 }
 
 .a-sidebar-content__list {
