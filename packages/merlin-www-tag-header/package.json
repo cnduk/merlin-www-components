@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-tag-header",
-  "version": "1.4.61",
+  "version": "1.5.0",
   "description": null,
   "main": "js/index.js",
   "scripts": {
@@ -11,16 +11,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-www-card-list": "^1.8.52",
-    "@cnbritain/merlin-www-common": "^1.7.25",
-    "@cnbritain/merlin-www-gallery-strip": "^1.3.36",
-    "@cnbritain/merlin-www-image": "^1.6.10",
+    "@cnbritain/merlin-www-card-list": "^1.9.0",
+    "@cnbritain/merlin-www-common": "^1.8.0",
+    "@cnbritain/merlin-www-gallery-strip": "^1.4.0",
+    "@cnbritain/merlin-www-image": "^1.7.0",
     "@cnbritain/merlin-www-js-utils": "^1.3.11",
-    "@cnbritain/merlin-www-show-card-carousel": "^1.4.47",
-    "@cnbritain/merlin-www-topic-strip": "^1.6.31"
+    "@cnbritain/merlin-www-show-card-carousel": "^1.5.0",
+    "@cnbritain/merlin-www-topic-strip": "^1.7.0"
   },
   "devDependencies": {
-    "@cnbritain/merlin-component-demo-server": "^2.9.6",
+    "@cnbritain/merlin-component-demo-server": "^2.10.0",
     "eslint": "^4.14.0"
   }
 }
