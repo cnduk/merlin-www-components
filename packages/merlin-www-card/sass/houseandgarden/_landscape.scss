@@ -187,7 +187,7 @@
     }
 
     .c-card__title {
-        @include font("MILLER_DISPLAY", 27px, 700, 29px);
+        @include font("MILLER_DISPLAY", 35px, 700, 38px);
         color: $mine-shaft;
         letter-spacing: 0px;
         margin-bottom: 7px;
