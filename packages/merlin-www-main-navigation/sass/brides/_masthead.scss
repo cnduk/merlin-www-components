@@ -1,0 +1,21 @@
+.n-main__header-logo {
+    display: inline-block;
+    height: 100px;
+    max-width: none;
+    position: relative;
+    text-align: center;
+
+    a {
+        display: inline-block;
+    }
+
+    svg, img {
+        height: 100px;
+        padding: 20px 0;
+        fill: $black;
+    }
+}
+
+.n-main__header-logo--takeover {
+
+}

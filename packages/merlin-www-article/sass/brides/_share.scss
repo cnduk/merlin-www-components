@@ -1,0 +1,57 @@
+.a-share {
+    margin-top: 25px;
+    position: relative;
+}
+.a-share__wrapper {}
+
+.a-share__title {
+    @include font("MILLER_DISPLAY", 16px, 700, 11px);
+    color: $black;
+    letter-spacing: 0px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.a-share__list {
+    font-size: 0;
+    height: 40px;
+    text-align: left;
+}
+
+.a-share__list-item {
+    display: inline-block;
+    font-size: initial;
+    height: 40px;
+
+    & + .a-share__list-item {
+        margin-left: 8px;
+    }
+}
+
+.a-share__list-item--mobile {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        display: none;
+    }
+}
+
+.a-share__youtube {
+    display: block;
+    margin: 20px auto 0 auto;
+    text-align: center;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: inline-block;
+        margin-left: 8px;
+        margin-top: 4px;
+    }
+
+    //Overwrite default specificity
+    .a-share__youtube__title {
+        display: none !important;
+    }
+}
+
+.a-share__youtube__title {}
+
+

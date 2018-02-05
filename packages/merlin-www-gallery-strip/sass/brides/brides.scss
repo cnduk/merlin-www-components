@@ -1,0 +1,187 @@
+@import '@cnbritain/merlin-www-common:brides';
+
+@import '../wireframe/wireframe';
+
+.c-gallery-strip {
+    margin: 30px 0;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 40px 0;
+    }
+}
+.c-gallery-strip__wrapper {
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    position: relative;
+}
+
+.c-gallery-strip__link {}
+.c-gallery-strip__list {}
+li.c-gallery-strip__list__item {
+    background-color: $wild-sand;
+
+    &:before {
+        display: block;
+        content: "";
+        padding-top: 150%;
+        position: relative;
+    }
+
+    img {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.c-gallery-strip__detail {
+    position: relative;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+
+    }
+}
+
+.c-gallery-strip__remaining {
+    background-color: rgba($mine-shaft, 0.7);
+    color: $white;
+    z-index: 1;
+}
+
+.c-gallery-strip__remaining__prefix {
+    @include font("BRANDON GROTESQUE", 20px, 700, 25px);
+    vertical-align: middle;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(25px);
+        @include line-height(30px);
+    }
+}
+
+.c-gallery-strip__remaining__value {
+    @include font("BRANDON GROTESQUE", 25px, 700, 25px);
+    vertical-align: middle;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(30px);
+        @include line-height(30px);
+    }
+}
+
+.c-gallery-strip__title {
+    @include font("MILLER_DISPLAY", 25px, 700, 27px);
+    color: $mine-shaft;
+    letter-spacing: 0px;
+    margin: 15px 0 0 0;
+    text-align: center;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(27px);
+        @include line-height(29px);
+        margin: 20px 0 0 0;
+    }
+}
+
+.c-gallery-strip__subtitle {
+    @include font("MILLER_DISPLAY", 18px, 400, 22px);
+    color: $mine-shaft;
+    font-style: italic;
+    letter-spacing: 0px;
+    margin: 10px 0 0 0;
+    text-align: center;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin-top: 15px;
+    }
+}
+
+.c-gallery-strip--tag {
+    margin: 25px 0;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 60px 0;
+    }
+
+    .c-gallery-strip__list {
+        text-align: center;
+    }
+
+    .c-gallery-strip__list__item:nth-child(n+4) {
+        display: none;
+    }
+
+    .c-gallery-strip__list__item:nth-child(3) {
+        .c-gallery-strip__remaining {
+            display: block;
+        }
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+6) {
+            display: inline-block;
+        }
+
+        .c-gallery-strip__list__item:nth-child(3) {
+            .c-gallery-strip__remaining {
+                display: none;
+            }
+        }
+
+        .c-gallery-strip__list__item:nth-child(6) {
+            .c-gallery-strip__remaining {
+                display: block;
+            }
+        }
+
+        .c-gallery-strip__list__item {
+            display: inline-block;
+            width: 16.66%;
+        }
+
+        .c-gallery-strip__detail {
+
+        }
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+8) {
+            display: inline-block;
+        }
+
+        .c-gallery-strip__list__item:nth-child(6) {
+            .c-gallery-strip__remaining {
+                display: none;
+            }
+        }
+        .c-gallery-strip__list__item:nth-child(8) {
+
+            .c-gallery-strip__remaining {
+                display: block;
+            }
+        }
+
+        .c-gallery-strip__list__item {
+            width: 12.5%;
+        }
+    }
+}
+
+.c-gallery-strip--gutters {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        .c-gallery-strip__list {
+
+        }
+
+        .c-gallery-strip__list__item {
+
+        }
+
+        .c-gallery-strip__remaining {
+
+        }
+    }
+}

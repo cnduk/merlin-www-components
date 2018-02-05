@@ -1,0 +1,18 @@
+ .a-main {}
+
+.a-main--gallery {}
+.a-main--video {
+    .a-body__content {
+        padding-left: 0;
+    }
+}
+
+.a-body {}
+.a-body--gallery {}
+.a-body--video {}
+.a-body__clear {
+    clear: both;
+}
+
+.a-body__wrapper {}
+.a-body__content {}

@@ -1,0 +1,59 @@
+.c-card {
+	&:hover {
+		.c-card__title {
+			span {
+				box-shadow: inset 0 -0.4em 0 0 $careys-pink;
+			}
+		}
+	}
+}
+.c-card__link {}
+
+.c-card__obj {}
+.c-card__obj__header {}
+
+.c-card__images {}
+.c-card__image {
+	background-color: $mercury;
+}
+.c-card__image__icon {}
+
+.c-card__obj__body {
+	.c-card__header {}
+	.c-card__footer {}
+}
+
+.c-card__header {}
+
+.c-card__tag {}
+.c-card__title {}
+.c-card__teaser {}
+.c-card__separator {}
+
+.c-card__footer {}
+
+.c-card__byline {}
+.c-card__byline--sponsorship {}
+
+.c-card__byline-prefix {}
+.c-card__byline-name {}
+
+.c-card__meta {}
+li.c-card__meta-item {
+	svg {
+		height: 8px;
+		width: 8px;
+	}
+
+	&--gallery {
+		svg {
+			display: none;
+		}
+	}
+
+	&--duration {
+		svg {
+			display: none;
+		}
+	}
+}

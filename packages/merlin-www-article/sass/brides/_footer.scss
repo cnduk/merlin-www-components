@@ -1,0 +1,37 @@
+.a-footer {
+    .a-share {
+        margin: 40px 0 40px 0;
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin: 60px 0 40px 0;
+        }
+    }
+}
+
+.a-footer--gallery {}
+
+.a-footer--video {
+    .a-footer__wrapper {
+        padding-left: 0;
+    }
+
+    .c-topic-strip--article-related {
+        text-align: left;
+    }
+
+    .a-related-tags {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-top: 48px;
+        }
+    }
+}
+
+.a-footer__wrapper {}
+
+.a-related-tags {
+    margin: 40px 0 40px 0;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 60px;
+    }
+}
+
+.a-related-tags__wrapper {}

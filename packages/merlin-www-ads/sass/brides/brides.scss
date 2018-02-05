@@ -1,0 +1,238 @@
+.ad__title {
+    @include font("BRANDON GROTESQUE", 8px, 400);
+    color: $dove-gray;
+    display: block;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+    text-align: left;
+    text-transform: uppercase;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: none;
+    }
+}
+
+.ad__block {}
+
+.ad--homepage {
+    text-align: center;
+
+    .ad__block {
+        background-color: $white;
+        padding: 20px 0;
+        border-top: 1px solid $mercury;
+        border-bottom: 1px solid $mercury;
+        margin-top: -1px;
+    }
+
+    &.ad--native-large {
+        .ad__block {
+            background-color: transparent;
+            padding: 0;
+        }
+    }
+}
+
+.ad--article {
+    text-align: center;
+}
+
+.ad--article-header {
+    .ad__block {
+        background-color: $white;
+        padding: 20px 0;
+        border-top: 1px solid $mercury;
+        border-bottom: 1px solid $mercury;
+        margin-top: -1px;
+    }
+}
+
+.ad--article-video {
+    .ad__block {
+        background-color: $steel-gray;
+        border: none;
+        padding: 20px 0;
+    }
+}
+
+.ad--article-rail {
+    margin-bottom: 40px;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    margin-top: 40px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        position: absolute;
+        margin: 0;
+        right: 0;
+        width: 300px;
+    }
+
+    .ad__block {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin: -20px 0;
+            padding: 20px 0;
+        }
+    }
+}
+
+.ad--article-rail-top {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+.ad--article-inline {
+    margin-bottom: 40px;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    margin-top: 40px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.ad--gallery {
+    text-align: center;
+}
+
+.ad--gallery-inline {
+    margin-bottom: 40px;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    margin-top: 40px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.ad--gallery-side {
+    display: none;
+    margin: 0 auto $DESKTOP_SLICE_MARGIN auto;
+    width: 300px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: block;
+        margin-bottom: 0;
+        position: absolute;
+        right: 0;
+    }
+
+    .ad__block {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin: -20px 0;
+            padding: 20px 0;
+        }
+    }
+}
+
+.ad--tag {
+    text-align: center;
+}
+
+.ad--tag-header {
+    .ad__block {
+        background-color: $white;
+        padding: 20px 0;
+        border-top: 1px solid $mercury;
+        border-bottom: 1px solid $mercury;
+        margin-top: -1px;
+    }
+
+    &.ad--native-large {
+        .ad__block {
+            background-color: transparent;
+            padding: 0;
+        }
+    }
+
+}
+
+.ad--tag-rail {
+    margin: 30px (-$MOBILE_SIDE_GUTTER + 20) 30px (-$MOBILE_SIDE_GUTTER + 20);
+
+    .ad__block {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin: -20px 0;
+            padding: 20px 0;
+        }
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin: 30px (-$TABLET_SIDE_GUTTER + 20) 30px (-$TABLET_SIDE_GUTTER + 20);
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        clear: right;
+        float: right;
+        margin: 10px -340px 0 40px;
+
+        &.stick-wrapper--fixed {
+            margin-right: -40px;
+        }
+    }
+}
+
+.ad--tag-rail-top {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        left: 100%;
+        position: absolute;
+        top: 0;
+    }
+}
+
+.ad--tag-inline {
+    padding: 0 10px;
+    position: relative;
+    margin: 10px (-$MOBILE_SIDE_GUTTER);
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 20px;
+        margin-left: -$DESKTOP_SIDE_GUTTER;
+        margin-right: (-$DESKTOP_SIDE_GUTTER + -340px + -20px);
+        margin-top: 20px;
+
+        .ad__block {
+            left: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            right: 50%;
+            width: 100vw;
+        }
+
+    }
+}

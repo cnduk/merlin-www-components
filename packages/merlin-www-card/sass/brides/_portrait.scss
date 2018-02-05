@@ -1,0 +1,273 @@
+// -------------------- //
+// Portrait
+// -------------------- //
+@mixin card-portrait() {}
+
+@mixin card-portrait-small() {
+    &:hover {
+        .c-card__title {
+            span {
+                box-shadow: inset 0 1em 0 0 $careys-pink;
+            }
+        }
+    }
+    .c-card__link {}
+
+    .c-card__obj {}
+    .c-card__obj__header {}
+
+    .c-card__images {}
+    .c-card__image {}
+
+    .c-card__image__icon {
+        background-color: $white;
+        bottom: 0;
+        height: 40px;
+        left: 0;
+        position: absolute;
+        width: 40px;
+
+        svg {
+            display: block;
+            fill: $mine-shaft;
+            height: 100%;
+            margin: 0 auto;
+            vertical-align: middle;
+            width: 20px;
+        }
+    }
+
+    .c-card__obj__body {}
+    .c-card__header {}
+
+    .c-card__tag {
+        @include font("BRANDON GROTESQUE", 10px, 700, 10px);
+        color: $mine-shaft;
+        letter-spacing: 1px;
+        margin-bottom: 7px;
+        margin-top: 20px;
+        text-transform: uppercase;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-bottom: 10px;
+        }
+    }
+
+    .c-card__title {
+        @include font("MILLER_DISPLAY", 18px, 700, 21px);
+        color: $mine-shaft;
+        letter-spacing: 0px;
+        margin-bottom: 10px;
+        margin-top: 7px;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+    }
+
+    .c-card__teaser {
+        @include font("MILLER_DISPLAY", 16px, 400, 20px);
+        color: $mine-shaft;
+        font-style: italic;
+        letter-spacing: 1px;
+        margin-bottom: 7px;
+        margin-top: 7px;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-bottom: 10px;
+            margin-top: 5px;
+        }
+    }
+
+    .c-card__separator {
+        display: none;
+    }
+
+    .c-card__footer {}
+    .c-card__byline {
+        @include font("BRANDON GROTESQUE", 10px, null, 13px);
+        color: $mine-shaft;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        margin-top: 10px;
+        text-transform: uppercase;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-bottom: 7px;
+            margin-top: 15px;
+        }
+    }
+
+    .c-card__byline--sponsorship {}
+    .c-card__byline-prefix {}
+    .c-card__byline-name {
+        @include font-weight(700);
+    }
+
+    ul.c-card__meta {
+        @include font("BRANDON GROTESQUE", 0px, 400, 10px);
+        color: $dove-gray;
+        letter-spacing: 1px;
+        margin-top: 5px;
+        text-transform: uppercase;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-top: 7px;
+        }
+    }
+
+    li.c-card__meta-item {
+        @include font("BRANDON GROTESQUE", 10px, 400, 10px);
+        color: $dove-gray;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        & + li.c-card__meta-item {
+            border-left: 1px solid rgba(169, 169, 169, 0.3);
+            margin-left: 7px;
+            padding-left: 7px;
+        }
+    }
+}
+
+@mixin card-portrait-large() {
+    .c-card {}
+    .c-card__link {}
+
+    .c-card__obj {}
+    .c-card__obj__header {}
+
+    .c-card__images {}
+    .c-card__image {}
+
+    .c-card__image__icon {
+        background-color: $white;
+        bottom: 0;
+        height: 40px;
+        left: 0;
+        position: absolute;
+        width: 40px;
+
+        svg {
+            display: block;
+            fill: $mine-shaft;
+            height: 100%;
+            margin: 0 auto;
+            vertical-align: middle;
+            width: 20px;
+        }
+    }
+
+    .c-card__obj__body {}
+    .c-card__header {}
+
+    .c-card__tag {
+        @include font("BRANDON GROTESQUE", 10px, 700, 10px);
+        color: $mine-shaft;
+        letter-spacing: 1px;
+        margin-bottom: 7px;
+        margin-top: 20px;
+        text-transform: uppercase;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-bottom: 10px;
+        }
+    }
+
+    .c-card__title {
+        @include font("MILLER_DISPLAY", 27px, 700, 29px);
+        color: $mine-shaft;
+        letter-spacing: 0px;
+        margin-bottom: 10px;
+        margin-top: 7px;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+    }
+
+    .c-card__teaser {
+        @include font("MILLER_DISPLAY", 16px, 400, 20px);
+        color: $mine-shaft;
+        font-style: italic;
+        letter-spacing: 1px;
+        margin-bottom: 7px;
+        margin-top: 7px;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-bottom: 10px;
+            margin-top: 5px;
+        }
+    }
+
+    .c-card__separator {
+        display: none;
+    }
+
+    .c-card__footer {}
+    .c-card__byline {
+        @include font("BRANDON GROTESQUE", 10px, null, 13px);
+        color: $mine-shaft;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        margin-top: 10px;
+        text-transform: uppercase;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-bottom: 7px;
+            margin-top: 15px;
+        }
+    }
+
+    .c-card__byline--sponsorship {}
+    .c-card__byline-prefix {}
+    .c-card__byline-name {
+        @include font-weight(700);
+    }
+
+    ul.c-card__meta {
+        @include font("BRANDON GROTESQUE", 0px, 400, 10px);
+        color: $dove-gray;
+        letter-spacing: 1px;
+        margin-top: 5px;
+        text-transform: uppercase;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-top: 7px;
+        }
+    }
+
+    li.c-card__meta-item {
+        @include font("BRANDON GROTESQUE", 10px, 400, 10px);
+        color: $dove-gray;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        border-right: 1px solid rgba(169, 169, 169, 0.3);
+        margin-right: 7px;
+        padding-right: 7px;
+
+        &:last-child {
+            border-right: none;
+            margin-right: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.c-card--portrait {
+    @include card-portrait();
+    @include card-portrait-large();
+}
+
+.c-card--portrait-small {
+    @include card-portrait();
+    @include card-portrait-small();
+}
+
+.c-card--portrait-large {
+    @include card-portrait();
+    @include card-portrait-large();
+}
