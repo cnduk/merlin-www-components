@@ -57,7 +57,7 @@
 }
 
 .a-header__hero {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     position: relative;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
@@ -95,6 +95,23 @@
     background-color: $wild-sand;
     position: relative;
     width: 100%;
+
+    &:after {
+    	background-color: rgba($silver-chalice, 0.2);
+    	bottom: 0;
+    	content: '';
+    	height: 100%;
+    	left: 0;
+    	position: absolute;
+    	right: 0;
+    	top: 0;
+    	width: 100%;
+
+    	// Matches hero crop breakpoint
+    	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    		background-color: rgba($silver-chalice, 0.15);
+    	}
+    }
 
     img {
         display: block;
@@ -213,6 +230,7 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
+        max-width: 800px;
     }
 }
 
@@ -515,5 +533,34 @@ li.a-header__meta-item {
             max-height: 50px;
             margin-top: 0;
         }
+    }
+}
+
+.a-header.has-hero {
+
+    .a-header__wrapper {
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin: 0 auto;
+            paddging-left: 0;
+            padding-right: 0;
+            max-width: 800px;
+        }
+    }
+
+    .a-header__sponsor{
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin: 0 auto;
+            margin-top: 25px;
+        }
+    }
+
+    .a-header__teaser{
+        margin-bottom: 25px;
+    }
+
+    .a-share {
+        margin-top: 30px;
     }
 }
