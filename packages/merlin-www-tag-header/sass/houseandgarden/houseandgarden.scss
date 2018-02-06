@@ -80,7 +80,7 @@
 }
 
 .tg-header__wrapper {
-    max-width: $MAXIMUM_PAGE_WIDTH;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -95,8 +95,8 @@
     text-align: center;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(65px);
-        @include line-height(68px);
+        @include font-size(60px);
+        @include line-height(65px);
         margin-bottom: 20px;
     }
 }
@@ -168,5 +168,16 @@
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin: 60px auto;
+    }
+}
+
+.tg-header__expand-btn {
+	color: $silver-chalice;
+    @include font("BRANDON GROTESQUE", 15px, 700, 15px);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &:hover {
+        color: $silver;
     }
 }
