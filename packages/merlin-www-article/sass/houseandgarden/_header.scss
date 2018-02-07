@@ -4,32 +4,8 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin: 60px 0;
     }
-
-    &.has-hero {
-        margin-top: 0;
-
-        .a-header__teaser {
-            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-                text-align: center;
-
-                p {
-                    text-align: center;
-                }
-            }
-        }
-
-        .a-header__date,
-        .a-share .a-share__list {
-            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-                text-align: center;
-            }
-        }
-
-        .a-header__content {
-            padding-right: 0;
-        }
-    }
 }
+
 .a-header--gallery {}
 .a-header--video {
     .a-header__content {
@@ -56,62 +32,21 @@
     }
 }
 
-.a-header__hero {
-    margin-bottom: 20px;
+.a-header__image {
+    margin-top: 40px;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    padding: 0;
     position: relative;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: 20px;
+        margin-top: 60px;
     }
-
-    .a-header__tag,
-    .a-header__tag__primary,
-    .a-header__tag__secondary,
-    .a-header__title {
-        color: $white;
-        margin-top: 0;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            text-align: center;
-        }
-    }
-
-    .a-header__title {
-        margin-bottom: 0;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            text-align: center;
-        }
-    }
-}
-
-.a-header__image {
-    margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
-    position: relative;
 }
 
 .a-header__image-constrain {
     background-color: $wild-sand;
     position: relative;
     width: 100%;
-
-    &:after {
-    	background-color: rgba($silver-chalice, 0.2);
-    	bottom: 0;
-    	content: '';
-    	height: 100%;
-    	left: 0;
-    	position: absolute;
-    	right: 0;
-    	top: 0;
-    	width: 100%;
-
-    	// Matches hero crop breakpoint
-    	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-    		background-color: rgba($silver-chalice, 0.15);
-    	}
-    }
 
     img {
         display: block;
@@ -159,78 +94,74 @@
     }
 }
 
-.a-header__image-content {
-    bottom: 0;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    padding: 0 5px;
-    position: absolute;
-    text-align: center;
-    width: 100%;
-
-    > *:last-child {
-        margin-bottom: 0;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        text-align: right;
-    }
-}
-
 .a-header__image-title {
-    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
-    color: $white;
-    letter-spacing: 1px;
-    text-align: center;
+    @include font('MILLER_DISPLAY', 17px, null, 23px, 0);
+    color: $mine-shaft;
+    margin: 10px auto 5px auto;
+    max-width: $ARTICLE_TOTAL;
+    text-transform: uppercase;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-      @include font-size(15px);
-      @include line-height(15px);
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(19px);
+        @include line-height(25px);
+    }
+
+    &:before {
+        background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M1.09,20,10,16l8.91,4L10,0,1.09,20' fill='#000'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        content: '';
+        display: inline-block;
+        height: 14px;
+        margin: 0 10px 0 0;
+        position: relative;
+        top: 2px;
+        width: 14px;
+
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            height: 16px;
+            margin: 0 10px 0 0;
+            width: 15px;
+        }
+    }
+
+    @include min-screen($ARTICLE_TOTAL) {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
     }
 }
 
 .a-header__image-caption {
-    margin-bottom: 5px;
-    margin-top: 0;
+    margin: 0 auto;
+    max-width: $ARTICLE_TOTAL;
 
-    p {
-        @include font("MILLER_DISPLAY", 14px, 400, 17px);
-        color: $white;
-        letter-spacing: 0px;
-        margin: 0;
+    @include min-screen($ARTICLE_TOTAL) {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
+
+    .bb-p {
+        @include font('MILLER_DISPLAY', 17px, null, 23px, 0);
+        color: $mine-shaft;
+        margin: 5px auto 10px auto;
+
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            @include font-size(19px);
+            @include line-height(25px);
+        }
     }
 }
 
 .a-header__image-credit {
-    @include font("BRANDON GROTESQUE", 8px, 700, 8px);
-    color: $white;
+    @include font('BRANDON GROTESQUE', 10px, 400, 10px);
+    color: $dove-gray;
     letter-spacing: 1px;
-    margin-bottom: 5px;
-    margin-top: 0;
+    margin: 10px auto 0 auto;
+    max-width: $ARTICLE_TOTAL;
     text-transform: uppercase;
-}
 
-.a-header__hero-content {
-    box-sizing: border-box;
-    left: 50%;
-    max-width: 1024px + $DESKTOP_SIDE_GUTTER*2;
-    padding-left: $MOBILE_SIDE_GUTTER;
-    padding-right: $MOBILE_SIDE_GUTTER;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include min-screen($ARTICLE_TOTAL) {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
-        max-width: 800px;
     }
 }
 
@@ -533,34 +464,5 @@ li.a-header__meta-item {
             max-height: 50px;
             margin-top: 0;
         }
-    }
-}
-
-.a-header.has-hero {
-
-    .a-header__wrapper {
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            margin: 0 auto;
-            paddging-left: 0;
-            padding-right: 0;
-            max-width: 800px;
-        }
-    }
-
-    .a-header__sponsor{
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            margin: 0 auto;
-            margin-top: 25px;
-        }
-    }
-
-    .a-header__teaser{
-        margin-bottom: 25px;
-    }
-
-    .a-share {
-        margin-top: 30px;
     }
 }
