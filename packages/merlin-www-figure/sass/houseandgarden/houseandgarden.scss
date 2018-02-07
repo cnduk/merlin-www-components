@@ -95,9 +95,14 @@ li .c-figure__toolbar-listitem--more {
     }
 }
 .c-figure__caption {
-    @include font('MILLER_DISPLAY', 14px, null, 17px);
+    @include font('MILLER_DISPLAY', 17px, null, 23px);
     color: $mine-shaft;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(19px);
+        @include line-height(25px);
+    }
 
     &.has-bbcode {
         > p {
@@ -108,7 +113,6 @@ li .c-figure__toolbar-listitem--more {
              @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
                 @include font-size(19px);
                 @include line-height(25px);
-                margin-bottom: 60px;
              }
         }
     }
@@ -117,7 +121,7 @@ li .c-figure__toolbar-listitem--more {
     @include font('BRANDON GROTESQUE', 10px, 400);
     color: $dove-gray;
     letter-spacing: 1.5px;
-    margin-top: 10px;
+    margin-top: 20px;
     text-transform: uppercase;
 }
 
