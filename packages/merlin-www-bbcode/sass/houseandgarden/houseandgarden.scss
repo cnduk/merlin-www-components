@@ -37,7 +37,11 @@
 .bb-a {
     color: $mine-shaft;
     border-bottom: 2px solid $careys-pink;
-    padding-bottom: 1px;
+
+    &:hover{
+        color: $mine-shaft;
+        background: $careys-pink;
+    }
 }
 
 .bb-h1,
