@@ -88,10 +88,7 @@
 }
 
 .a-header__image-constrain--custom {
-    padding-top: 100%;
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-        padding-top: 52%;
-    }
+    padding-top: 58.6%;
 }
 
 .a-header__image-title {
