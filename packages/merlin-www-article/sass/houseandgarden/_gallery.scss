@@ -71,7 +71,7 @@
 
 ul.a-gallery__image-list {}
 li.a-gallery__image-listitem {
-    margin-bottom: 0px;
+    margin-bottom: 40px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin-bottom: 60px;
