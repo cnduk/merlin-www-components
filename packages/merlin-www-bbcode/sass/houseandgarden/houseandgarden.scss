@@ -613,7 +613,7 @@
 }
 
 h4.bb-gallery__title {
-    @include font("MILLER_DISPLAY", 15px, 600, 15px);
+    @include font("MILLER_DISPLAY", 15px, 700, 15px);
     color: $mine-shaft;
     display: table-cell;
     letter-spacing: 0.5px;
@@ -717,7 +717,7 @@ ul li.bb-gallery__col {
 }
 
 h4.bb-video__title {
-    @include font("MILLER_DISPLAY", 15px, 600, 15px);
+    @include font("MILLER_DISPLAY", 15px, 700, 15px);
     color: $mine-shaft;
     letter-spacing: 0.5px;
     margin: 0;
