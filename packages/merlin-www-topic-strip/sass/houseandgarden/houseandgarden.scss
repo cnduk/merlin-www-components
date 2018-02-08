@@ -4,7 +4,17 @@
 @import "../wireframe/wireframe";
 
 .c-topic-strip {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
     text-align: left;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        width: auto;
+        white-space: inherit;
+        overflow-x: inherit;
+    }
 }
 
 .c-topic-strip--bleed {
@@ -26,7 +36,7 @@
     margin-top: 20px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: 25px;
+        margin-top: 15px;
         text-align: center;
     }
 }
@@ -48,6 +58,10 @@ li.c-topic-strip__item {
     border-right: 1px solid $silver;
     margin-right: 10px;
     padding-right: 10px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 5px;
+    }
 
     &:last-child {
         border-right: none;
