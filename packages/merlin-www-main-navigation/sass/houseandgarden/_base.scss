@@ -74,7 +74,7 @@
 }
 
 .n-main__nav-title {
-    @include font("MILLER_DISPLAY", 18px, 600, 60px);
+    @include font("MILLER_DISPLAY", 18px, 700, 60px);
     color: $mine-shaft;
     display: none;
     left: 180px;
@@ -129,13 +129,13 @@
 }
 
 .n-main__nav-link {
-    @include font("BRANDON GROTESQUE", 14px, 700, 15px);
+    @include font("BRANDON GROTESQUE", 13px, 700, 13px);
     box-sizing: border-box;
     color: $mine-shaft;
     display: inline-block;
     height: 60px;
     letter-spacing: 1px;
-    margin: 0 19px;
+    margin: 0 16px;
     text-transform: uppercase;
 
     span {
