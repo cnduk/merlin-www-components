@@ -156,6 +156,9 @@
         @include button-group();
         @include button-group-light();
 
+        @include font-size(12px);
+        @include line-height(12px);
+
         &:hover {
             @include button-group-light-hover();
         }
