@@ -63,7 +63,7 @@
 
 .g-image-nav__btn[disabled] {
     svg {
-        fill: $PORCELAIN;
+
     }
 }
 
@@ -105,13 +105,13 @@ li.a-gallery__thumbnail {
 
 .a-gallery__thumbnail-image {}
 .a-gallery__thumbnail-hover {
-    background-color: rgba($BLACK, 0.2);
+    background-color: rgba($black, 0.2);
     left: 2px;
     right: 2px;
     width: auto;
 
     svg {
-        fill: $WHITE;
+        fill: $white;
         width: 38px;
     }
 
