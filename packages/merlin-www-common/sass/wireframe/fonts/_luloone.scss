@@ -3,15 +3,14 @@
 @import "../_fonts";
 
 @font-face {
-    font-display: swap;
 	font-family: 'LuloOne-Bold';
 	font-display: swap;
 	font-style: normal;
 	font-weight: 700;
-	src: url('/static/fonts/lulo-one/LuloOne-Bold.eot') format('embedded-opentype'),
-		 url('/static/fonts/lulo-one/LuloOne-Bold.ttf') format('truetype'),
-		 url('/static/fonts/lulo-one/LuloOne-Bold.woff') format('woff'),
-		 url('/static/fonts/lulo-one/LuloOne-Bold.woff2') format('woff2');
+    src: url('/static/fonts/lulo-one/LuloOne-Bold.woff2') format('woff2'),
+         url('/static/fonts/lulo-one/LuloOne-Bold.woff') format('woff'),
+         url('/static/fonts/lulo-one/LuloOne-Bold.ttf') format('truetype'),
+         url('/static/fonts/lulo-one/LuloOne-Bold.eot') format('embedded-opentype');
 }
 
 $_FONT_FAMILY: LuloOne-Bold, sans-serif;
