@@ -18,18 +18,18 @@
 
 .tg-header__separator {}
 .tg-header__description {
-	&.is-closed {
-		:nth-child(n+4):nth-last-child(n+2) {
-			display: none;
-		}
+    &.is-closed {
+        > :nth-child(n+3):nth-last-child(n+2) {
+            display: none;
+        }
 
-		.tg-header__description-expand {
-			display: block;
-		}
-	}
+        .tg-header__description-expand {
+            display: block;
+        }
+    }
 }
 .tg-header__description-expand {
-	display: none;
+    display: none;
 }
 .tg-header__expand-btn {}
 .tg-header__topic-strip {}

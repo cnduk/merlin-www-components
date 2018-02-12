@@ -98,7 +98,7 @@ Article.prototype = inherit(EventEmitter.prototype, {
         // the gallery to expand
         if (this.isInfinite && this.gallery !== null) {
             addEventOnce(
-                this.el.parentNode.querySelector(CLS_INFINITE_BTN),
+                this.el.querySelector(CLS_INFINITE_BTN),
                 'click',
                 this.expand.bind(this)
             );
@@ -111,7 +111,7 @@ Article.prototype = inherit(EventEmitter.prototype, {
     'constructor': Article,
 
     'expand': function() {
-        removeClass(this.el.parentNode, 'is-closed');
+        removeClass(this.el.querySelector(CLS_ARTICLE_GALLERY), 'is-closed');
         this.resize();
         this.emit('expand', events.expand(this));
     },

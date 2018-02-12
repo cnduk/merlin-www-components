@@ -1,0 +1,110 @@
+@import "@cnbritain/merlin-www-common:brides";
+@import "@cnbritain/merlin-www-buttons:brides";
+
+@import "../wireframe/wireframe";
+
+.c-topic-strip {
+    text-align: left;
+}
+
+.c-topic-strip--bleed {
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+}
+
+.c-topic-strip--c-card-section {
+    margin-bottom: 25px;
+    margin-top: 20px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 25px;
+        text-align: center;
+    }
+}
+
+.c-topic-strip__title {
+    @include font("MILLER_DISPLAY", 12px, 400, 12px);
+    color: $mine-shaft;
+    font-style: italic;
+    letter-spacing: 0;
+    margin-right: 10px;
+}
+
+.c-topic-strip__list {
+    font-size: 0;
+}
+
+li.c-topic-strip__item {
+    font-size: initial;
+    border-right: 1px solid $silver;
+    margin-right: 10px;
+    padding-right: 10px;
+
+    &:last-child {
+        border-right: none;
+        margin-right: 0;
+        padding-right: 0;
+    }
+}
+
+.c-topic-strip--article-related {
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+
+    li.c-topic-strip__item {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: -10px;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        white-space: normal;
+
+        .c-topic-strip__item {
+            margin-bottom: 10px;
+            margin-right: 10px;
+
+            & + .c-topic-strip__item {
+                @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+.c-topic-strip__btn {
+    @include button-group();
+    @include button-group-light();
+
+    @include font("BRANDON GROTESQUE", 12px, 700, 12px);
+    letter-spacing: 1px;
+
+    &:hover {
+        @include button-group-light-hover();
+    }
+}
+
+.c-topic-strip__btn--related {
+    @include button-group-two();
+    @include button-group-two-light();
+
+    &:hover {
+        @include button-group-two-light-hover();
+    }
+}

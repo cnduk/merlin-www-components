@@ -30,7 +30,7 @@
 
 .n-main__cover {
     display: inline-block;
-    margin-right: 12px;
+    margin-right: 10px;
     vertical-align: middle;
     width: 90px;
 
@@ -44,23 +44,20 @@
 }
 
 .n-main__cover__offer {
-    // padding: 20px 20px 20px 0;
-    @include font("MILLER_DISPLAY", 13px, 700, 15px);
-    color: $black;
+    @include font("MILLER_DISPLAY", 14px, 700, 16px);
+    color: $mine-shaft;
     display: inline-block;
-    font-style: italic;
-    max-width: 130px;
-    text-transform: uppercase;
-    vertical-align: middle;
-    vertical-align: middle;
+    font-style: normal;
+    letter-spacing: 0;
+    max-width: 150px;
+    vertical-align: top;
     white-space: pre-line;
     position: relative;
 
     &:before {
-        border: 1px solid $black;
         bottom: 0;
         content: '';
-        height: calc(100% + 20px);
+        height: calc(100% + 17px);
         left: -13px;
         position: absolute;
         right: 0;
@@ -76,8 +73,13 @@ a.n-main__cover__btn {
     @include button-single-light();
 
     font-style: normal;
-    margin-top: 11px;
-    padding: 8px;
+    @include font-size(10px);
+    @include line-height(10px);
+    border: solid 1px $mine-shaft;
+    color: $mine-shaft;
+    letter-spacing: 1px;
+    margin-top: 7px;
+    padding: 6px 8px;
     width: auto;
 
     &:hover {
@@ -86,8 +88,9 @@ a.n-main__cover__btn {
 }
 
 .n-menu__subscribe {
+    background: $vanilla-ice;
     margin: 50px 0;
-    padding: 0 20px;
+    padding: 20px 20px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding-left: 30px;
@@ -103,7 +106,6 @@ a.n-main__cover__btn {
     width: auto;
 
     &:before {
-        border: 1px solid $black;
         bottom: 0;
         content: '';
         height: calc(100% - 20px);
@@ -119,12 +121,6 @@ a.n-main__cover__btn {
 .n-menu__subscribe-col {
     display: table-cell;
     vertical-align: middle;
-    // width: 50%;
-
-    &:nth-child(2) {
-        padding: 20px 20px 20px 0;
-        max-width: 130px;
-    }
 }
 
 .n-menu__subscribe-covers {
@@ -138,8 +134,8 @@ a.n-main__cover__btn {
 
     &:nth-child(1) {
         display: inline-block;
-        margin-right: 55px;
-        width: 105px;
+        margin-right: 25px;
+        width: 91px;
     }
 
     &:nth-child(2) {
@@ -156,11 +152,9 @@ a.n-main__cover__btn {
 }
 
 .n-menu__subscribe-message {
-    @include font("MILLER_DISPLAY", 13px, 700, 15px);
-    color: $black;
-    font-style: italic;
-    // max-width: 240px;
-    text-transform: uppercase;
+    @include font("MILLER_DISPLAY", 17px, 700, 21px);
+    color: $mine-shaft;
+    letter-spacing: 0;
     vertical-align: top;
     white-space: pre-line;
 }
@@ -169,10 +163,10 @@ a.n-menu__subscribe-btn {
     @include button-single();
     @include button-single-light();
 
-    @include font-size(10px);
+    @include font-size(11px);
     @include line-height(10px);
-    margin-top: 10px;
-    padding: 8px;
+    margin-top: 7px;
+    padding: 10px;
     width: auto;
 
     &:hover {

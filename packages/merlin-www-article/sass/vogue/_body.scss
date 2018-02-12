@@ -21,20 +21,3 @@
         @include body-links(true);
     }
 }
-
-.a-infinite__message {
-    margin: 0 0 40px 0;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin: 0 0 60px 0;
-    }
-}
-
-.a-infinite__message-btn {
-    @include button-single();
-    @include button-single-light();
-
-    &:hover {
-        @include button-single-light-hover();
-    }
-}

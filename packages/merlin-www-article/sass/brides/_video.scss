@@ -1,0 +1,82 @@
+.a-logo {}
+.a-logo--video {
+    background-color: $ebony-clay;
+    padding: 40px 0;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 60px 0;
+    }
+
+    .a-logo__wrapper {
+        height: 38px;
+        margin: 0 auto;
+        width: 230px;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            height: 45px;
+            width: 315px;
+        }
+    }
+
+    svg {
+        fill: $white;
+    }
+}
+
+.a-video {
+    background-color: $ebony-clay;
+}
+
+.a-video__wrapper {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.a-video__player {}
+.a-video__player__wrapper {}
+
+.a-video__sidebar {
+    background-color: $ebony-clay;
+    padding: 0 20px 20px 20px;
+}
+
+.a-video__sidebar__wrapper {}
+
+.a-video__sidebar__title {
+    @include font("BRANDON GROTESQUE", 14px, 700, 14px);
+    color: $white;
+    letter-spacing: 1px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.a-video__sidebar__list {
+    left: 20px;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+    right: 20px;
+    top: 40px;
+}
+
+.a-video__content-body {}
+
+.a-video__ad {
+    .ad__block {
+        margin: 40px 0;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

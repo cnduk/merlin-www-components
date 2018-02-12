@@ -1,117 +1,111 @@
-<article class="a-main{{# data.article.state.is_sponsored }} is-legit-content{{/ data.article.state.is_sponsored }}{{# data.article.state.is_gallery }} a-main--gallery{{/ data.article.state.is_gallery }} {{^ data.article.state.has_body }} has-body{{/ data.article.state.has_body }}" data-article-url="{{ data.article.data.url }}" data-article-type="{{ data.article.data.type }}" data-article-uid="{{ data.article.data.uid }}">
-    {{# data.article }}
-        {{> @cnbritain/merlin-www-article/article-header }}
+<article class="a-main{{# state.is_sponsored }} is-legit-content{{/ state.is_sponsored }}{{# state.is_gallery }} a-main--gallery{{/ state.is_gallery }} {{^ state.has_body }} has-body{{/ state.has_body }}" data-article-url="{{ data.url }}" data-article-type="{{ data.type }}" data-article-uid="{{ data.uid }}">
+    {{> @cnbritain/merlin-www-article/article-header }}
 
-        {{# state.has_body }}
-            <div class="a-body stick-group">
-                <div class="a-body__wrapper">
-                    {{# data.event_information }}
-                        <aside class="a-event-author">
-                            {{# data.location }}
-                                <div class='a-event-author__location'>{{ . }}</div>
-                            {{/ data.location }}
+    {{# state.has_body }}
+        <div class="a-body stick-group">
+            <div class="a-body__wrapper">
+                {{# data.event_information }}
+                    <aside class="a-event-author">
+                        {{# data.location }}
+                            <div class='a-event-author__location'>{{ . }}</div>
+                        {{/ data.location }}
 
-                            {{# data.date_range_html }}
-                                <hr class="a-event-author__separator a-event-author__separator--date" />
-                                <div class='a-event-author__date'>
-                                    {{ &. }}
-                                </div>
-                            {{/ data.date_range_html }}
-
-                            {{# data.ticket_link }}
-                                <a href="{{ &data.url }}" class='a-event-author__btn {{ style.cls }}'>{{ data.title }}</a>
-                            {{/ data.ticket_link }}
-                        </aside>
-                    {{/ data.event_information }}
-
-                    <aside class="a-author">
-                        {{^ state.has_multiple_profiles }}
-                            {{# data.profiles }}
-                                {{# data.image }}
-                                    <div class="a-author__image">
-                                        {{> @cnbritain/merlin-www-image }}
-                                    </div>
-                                {{/ data.image }}
-                            {{/ data.profiles }}
-                        {{/ state.has_multiple_profiles }}
-
-                        {{# data.byline }}
-                            <p class="a-author__byline a-author__byline--authors">
-                                <span class="a-author__byline-prefix">{{ translation.author_byline_prefix }}</span>
-                                <span class="a-author__byline-name">{{ &data.byline }}</span>
-                            </p>
-                        {{/ data.byline }}
-
-                        {{^ state.has_multiple_profiles }}
-                            {{# data.profiles }}
-                                {{# data.teaser }}
-                                    <div class="a-author__bio has-bbcode">{{ &. }}</div>
-                                {{/ data.teaser }}
-                            {{/ data.profiles }}
-                        {{/ state.has_multiple_profiles }}
-
-                        {{# data.photographer_profile }}
-                            <hr class="a-author__separator a-author__separator--byline" />
-                            <div class="a-author__byline a-author__byline--photographer">
-                                <span class="a-author__byline-prefix">{{ translation.author_photography_prefix }}</span>
-                                {{# state.has_link }}
-                                    <span class="a-author__byline-name"><a class="{{ data.link.style.cls }}" href="{{ &data.link.data.url }}" title="{{ data.link.data.title }}">{{ data.name }}</a></span>
-                                {{/ state.has_link }}
-                                {{^ state.has_link }}
-                                    <span class="a-author__byline-name">{{ data.name }}</span>
-                                {{/ state.has_link }}
+                        {{# data.date_range_html }}
+                            <hr class="a-event-author__separator a-event-author__separator--date" />
+                            <div class='a-event-author__date'>
+                                {{ &. }}
                             </div>
-                        {{/ data.photographer_profile }}
+                        {{/ data.date_range_html }}
 
-                        {{# data.syndication_profile }}
-                            <hr class="a-author__separator a-author__separator--syndication" />
-                            <div class="a-author__byline a-author__byline--syndication">
-                                {{# state.has_link }}
-                                    <span class="a-author__byline-prefix">{{ translation.author_syndication_prefix }}</span> <span class="a-author__byline-name"><a class="{{ data.link.style.cls }}" title="{{ data.link.data.title }}" href="{{ &data.link.data.url }}">{{ data.name }}</a></span>
-                                {{/ state.has_link }}
-                                {{^ state.has_link }}
-                                    <span class="a-author__byline-prefix">Originally published by</span> <span class="a-author__byline-name">{{ data.name }}</span>
-                                {{/ state.has_link }}
-                            </div>
-                        {{/ data.syndication_profile }}
-
-                        {{^ state.has_event_information }}
-                            {{# data.date }}
-                                <hr class="a-author__separator a-author__separator--date">
-                                <div class="a-author__article-date">{{ data.label }}</div>
-                            {{/ data.date }}
-                        {{/ state.has_event_information }}
+                        {{# data.ticket_link }}
+                            <a href="{{ &data.url }}" class='a-event-author__btn {{ style.cls }}'>{{ data.title }}</a>
+                        {{/ data.ticket_link }}
                     </aside>
+                {{/ data.event_information }}
 
-                    {{# data.review_information }}
-                        {{> @cnbritain/merlin-www-article/article-review }}
-                    {{/ data.review_information }}
+                <aside class="a-author">
+                    {{^ state.has_multiple_profiles }}
+                        {{# data.profiles }}
+                            {{# data.image }}
+                                <div class="a-author__image">
+                                    {{> @cnbritain/merlin-www-image }}
+                                </div>
+                            {{/ data.image }}
+                        {{/ data.profiles }}
+                    {{/ state.has_multiple_profiles }}
 
-                    {{# data.podcast }}
-                        {{> @cnbritain/merlin-www-article/article-podcast }}
-                    {{/ data.podcast }}
+                    {{# data.byline }}
+                        <p class="a-author__byline a-author__byline--authors">
+                            <span class="a-author__byline-prefix">{{ translation.author_byline_prefix }}</span>
+                            <span class="a-author__byline-name">{{ &data.byline }}</span>
+                        </p>
+                    {{/ data.byline }}
 
-                    <div class='a-body__content has-bbcode'>
-                        {{ &data.body }}
-                        <div class="a-body__clear"></div>
-                    </div>
+                    {{^ state.has_multiple_profiles }}
+                        {{# data.profiles }}
+                            {{# data.teaser }}
+                                <div class="a-author__bio has-bbcode">{{ &. }}</div>
+                            {{/ data.teaser }}
+                        {{/ data.profiles }}
+                    {{/ state.has_multiple_profiles }}
 
-                    {{# data.marketing_card }}
-                        {{> @cnbritain/merlin-www-marketing-cards }}
-                    {{/ data.marketing_card }}
+                    {{# data.photographer_profile }}
+                        <hr class="a-author__separator a-author__separator--byline" />
+                        <div class="a-author__byline a-author__byline--photographer">
+                            <span class="a-author__byline-prefix">{{ translation.author_photography_prefix }}</span>
+                            {{# state.has_link }}
+                                <span class="a-author__byline-name"><a class="{{ data.link.style.cls }}" href="{{ &data.link.data.url }}" title="{{ data.link.data.title }}">{{ data.name }}</a></span>
+                            {{/ state.has_link }}
+                            {{^ state.has_link }}
+                                <span class="a-author__byline-name">{{ data.name }}</span>
+                            {{/ state.has_link }}
+                        </div>
+                    {{/ data.photographer_profile }}
 
+                    {{# data.syndication_profile }}
+                        <hr class="a-author__separator a-author__separator--syndication" />
+                        <div class="a-author__byline a-author__byline--syndication">
+                            {{# state.has_link }}
+                                <span class="a-author__byline-prefix">{{ translation.author_syndication_prefix }}</span> <span class="a-author__byline-name"><a class="{{ data.link.style.cls }}" title="{{ data.link.data.title }}" href="{{ &data.link.data.url }}">{{ data.name }}</a></span>
+                            {{/ state.has_link }}
+                            {{^ state.has_link }}
+                                <span class="a-author__byline-prefix">{{ translation.author_syndication_prefix }}</span> <span class="a-author__byline-name">{{ data.name }}</span>
+                            {{/ state.has_link }}
+                        </div>
+                    {{/ data.syndication_profile }}
+
+                    {{^ state.has_event_information }}
+                        {{# data.date }}
+                            <hr class="a-author__separator a-author__separator--date">
+                            <div class="a-author__article-date">{{ data.label }}</div>
+                        {{/ data.date }}
+                    {{/ state.has_event_information }}
+                </aside>
+
+                {{# data.review_information }}
+                    {{> @cnbritain/merlin-www-article/article-review }}
+                {{/ data.review_information }}
+
+                {{# data.podcast }}
+                    {{> @cnbritain/merlin-www-article/article-podcast }}
+                {{/ data.podcast }}
+
+                <div class='a-body__content has-bbcode'>
+                    {{ &data.body }}
+                    <div class="a-body__clear"></div>
                 </div>
+
+                {{# data.marketing_card }}
+                    {{> @cnbritain/merlin-www-marketing-cards }}
+                {{/ data.marketing_card }}
+
             </div>
-        {{/ state.has_body }}
+        </div>
+    {{/ state.has_body }}
 
-        {{# data.gallery }}
-            {{> @cnbritain/merlin-www-article/article-gallery }}
-        {{/ data.gallery }}
+    {{# data.gallery }}
+        {{> @cnbritain/merlin-www-article/article-gallery }}
+    {{/ data.gallery }}
 
-        {{> @cnbritain/merlin-www-article/article-footer }}
-    {{/ data.article }}
+    {{> @cnbritain/merlin-www-article/article-footer }}
 </article>
-
-{{# data.recommended }}
-    {{> @cnbritain/merlin-www-section-card-list }}
-{{/ data.recommended }}

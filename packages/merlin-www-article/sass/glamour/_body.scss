@@ -41,53 +41,6 @@
     }
 }
 
-.a-infinite {
-    &.is-closed {
-        // This we want to hide:
-        //  - .g-gallery-menu
-        //  - everything but first 3 images in gallery
-        //  - share
-        //
-        // We force things to hide to avoid images from being loaded
-        .a-gallery__nav,
-        .a-gallery__section .a-gallery__images:nth-of-type( n + 6 ),
-        .a-gallery__section .ad--gallery:nth-of-type( n + 1 ),
-        .a-related-tags,
-        .a-footer-share,
-        .a-footer {
-            display: none;
-        }
-
-        .a-infinite__message {
-            display: block;
-        }
-    }
-}
-
-.a-infinite__message {
-    display: none;
-    margin: $MOBILE_SLICE_MARGIN 0;
-    text-align: center;
-
-    @include tablet-size {
-        margin: $TABLET_SLICE_MARGIN 0;
-    }
-
-    @include desktop-size {
-        margin: $DESKTOP_SLICE_MARGIN 0;
-    }
-}
-
-.a-infinite__message-btn {
-    @include button-single;
-    @include button-single-light;
-    min-width: 150px;
-
-    &:hover {
-        @include button-single-light-hover;
-    }
-}
-
 .a-footer {}
 
 .a-body--gallery {

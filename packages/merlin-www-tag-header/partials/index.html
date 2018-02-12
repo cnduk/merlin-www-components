@@ -26,6 +26,24 @@
                 {{/ state.is_body_expandable }}
             {{/ data.body }}
 
+            {{# data.sponsor }}
+                <div class="tg-header__sponsor">
+                    <span class="tg-header__sponsor-prefix">In partnership with</span>
+
+                    {{# data.image }}
+                        <div class="tg-header__sponsor-image">
+                            {{> @cnbritain/merlin-www-image }}
+                        </div>
+                    {{/ data.image }}
+
+                    {{^ data.image }}
+                        {{# data.link }}
+                            <a class="tg-header__sponsor-name" href="{{ &data.url }}" {{# state.is_nofollow }} rel="nofollow" {{/ state.is_nofollow }}>{{ data.title }}</a>
+                        {{/ data.link }}
+                    {{/ data.image }}
+                </div>
+            {{/ data.sponsor }}
+
             {{# data.event_information }}
                 {{> @cnbritain/merlin-www-tag-header/event-information }}
             {{/ data.event_information }}

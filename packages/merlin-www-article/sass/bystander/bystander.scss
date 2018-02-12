@@ -47,11 +47,11 @@
     }
 }
 
-.a-infinite--gallery {
+.a-infinite {
     background: $cod-gray;
 }
 
-.a-infinite__message-btn {
+.a-gallery__message-btn {
     @include button-single;
     @include button-single-dark;
 

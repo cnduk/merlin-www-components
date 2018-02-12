@@ -7,11 +7,15 @@
 	box-sizing: border-box;
 	padding: 30px 20px;
 	margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+		padding: 50px 60px;
+
+	}
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        display: table;
-        padding: 60px 0;
+        padding: 40px 60px;
+		width: 100%;
     }
 }
 
@@ -26,34 +30,25 @@
 	padding: 12px 0;
 	text-align: center;
 	width: 100%;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+		@include font-size(60px);
+		@include line-height(60px);
+
+		padding: 20px 0;
+	}
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		text-align: center;
+
+	}
 }
 
 .srch-results {
 	@include font('BRANDON GROTESQUE', 12px, 'BOLD', 12px);
-
 	color: $silver-chalice;
+	letter-spacing: 1px;
 	margin: 20px 0 0 0;
 	text-align: center;
 	text-transform: uppercase;
-}
-
-
-@include tablet-size {
-
-	.srch-main {
-		padding: 50px 60px;
-	}
-
-	.srch-textbox {
-		@include font-size(65px);
-		@include line-height(65px);
-
-		padding: 30px 0;
-		text-align: left;
-	}
-
-	.srch-results {
-		text-align: left;
-	}
-
 }

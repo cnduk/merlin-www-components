@@ -66,24 +66,28 @@
 .n-menu__subscribe__wrapper {}
 
 .n-menu__subscribe-cols {
-    display: flex;
+    display: table;
     width: 100%;
 }
 
 .n-menu__subscribe-col {
+    display: table-cell;
     vertical-align: middle;
+    text-align: right;
     width: 50%;
 
     &:nth-child(2) {
-        @include tablet-size {
-            padding-left: 30px;
-        }
+        text-align: left;
+        padding-left: 10px;
     }
 }
 
 .n-menu__subscribe-covers {
+    display: inline-block;
+    padding-right: 10px;
     position: relative;
     font-size: 0;
+    width: 100px + 31px;
 }
 
 .n-menu__subscribe-cover {
@@ -101,6 +105,7 @@
         bottom: 0;
         left: 45px;
         position: absolute;
+        right: 10px;
         width: 75px;
     }
 }

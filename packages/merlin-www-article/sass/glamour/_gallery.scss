@@ -27,6 +27,28 @@
     }
 }
 
+.a-gallery__message {
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+
+    @include tablet-size {
+        margin-bottom: $TABLET_SLICE_MARGIN;
+    }
+
+    @include desktop-size {
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+    }
+}
+
+.a-gallery__message-btn {
+    @include button-single;
+    @include button-single-light;
+    min-width: 150px;
+
+    &:hover {
+        @include button-single-light-hover;
+    }
+}
+
 .a-gallery__thumbnails {
     @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         margin-left: -$MOBILE_SIDE_GUTTER;

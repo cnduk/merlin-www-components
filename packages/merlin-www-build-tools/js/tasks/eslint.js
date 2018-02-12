@@ -41,7 +41,7 @@ module.exports = function taskEsLintExport(taskConfig, browserSync){
                     ]
                 }
             }))
-            .pipe(eslint.failAfterError())
-            .pipe(eslint.format('stylish'));
+            .pipe(eslint.format('stylish'))
+            .pipe(eslint.failAfterError());
     };
 }
