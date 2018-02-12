@@ -2,3 +2,91 @@
 
 @import './_mixins';
 @import '../wireframe/wireframe';
+
+a.btn-single,
+a.btn-group,
+a.btn-share,
+a.btn-related {
+    @include button-reset();
+}
+
+.btn-single,
+a.btn-single {
+    @include button-single;
+}
+
+.btn-single--light,
+a.btn-single--light {
+    @include button-single-light;
+
+    &:hover {
+        @include button-single-light-hover;
+    }
+}
+
+.btn-single--dark,
+a.btn-single--dark {
+    @include button-single-dark;
+
+    &:hover {
+        @include button-single-dark-hover;
+    }
+}
+
+.btn-group,
+a.btn-group {
+    @include button-group;
+}
+
+.btn-group--light,
+a.btn-group--light {
+    @include button-group-light;
+
+    &:hover {
+        @include button-group-light-hover;
+    }
+}
+
+.btn-group--dark,
+a.btn-group--dark {
+    @include button-group-dark;
+
+    &:hover {
+        @include button-group-dark-hover;
+    }
+}
+
+
+.btn-top-stories,
+a.btn-top-stories {
+    @include button-top-stories();
+
+    &:hover:not(.btn-disabled):not([disabled]),
+    &:focus:not(.btn-disabled):not([disabled]) {
+        @include button-top-stories-hover();
+    }
+
+    &.btn-disabled,
+    &[disabled] {
+        @include button-top-stories-disabled();
+    }
+}
+
+.btn-share,
+a.btn-share {
+    @include button-share();
+}
+
+@each $name, $color in $COLOUR_SOCIAL {
+    .btn-share--#{$name},
+    a.btn-share--#{$name} {
+        &.btn-share--light {
+            @include button-share-light($name);
+        }
+
+        &:hover,
+        &:hover.btn-share--light {
+            @include button-share-light-hover($name);
+        }
+    }
+}
