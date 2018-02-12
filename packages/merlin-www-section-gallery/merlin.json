@@ -1,52 +1,53 @@
 {
-    "name": "@cnbritain/merlin-www-section-gallery", 
+    "name": "@cnbritain/merlin-www-section-gallery",
     "demo": {
         "all": {
             "themes": [
-                "wireframe", 
-                "vogue", 
-                "glamour", 
-                "missvogue", 
-                "wired", 
-                "tatler", 
+                "wireframe",
+                "vogue",
+                "glamour",
+                "missvogue",
+                "wired",
+                "tatler",
                 "bystander"
-            ], 
-            "main": "gallery", 
+            ],
+            "main": "gallery",
             "data": "all"
-        }, 
+        },
         "gq": {
             "themes": [
-                "gq", 
+                "gq",
                 "bystander"
-            ], 
-            "main": "gallery", 
+            ],
+            "main": "gallery",
             "data": "gq"
         }
-    }, 
+    },
     "js": {
         "demo": "demo/demo.js"
-    }, 
+    },
     "themes": {
-        "gq": "sass/gq/gq.scss", 
-        "tatler": "sass/tatler/tatler.scss", 
-        "wireframe": "sass/wireframe/wireframe.scss", 
-        "glamour": "sass/glamour/glamour.scss", 
-        "bystander": "sass/bystander/bystander.scss", 
-        "wired": "sass/wired/wired.scss", 
-        "missvogue": "sass/missvogue/missvogue.scss", 
+        "gq": "sass/gq/gq.scss",
+        "tatler": "sass/tatler/tatler.scss",
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "glamour_redux": "sass/glamour_redux/glamour_redux.scss",
+        "bystander": "sass/bystander/bystander.scss",
+        "wired": "sass/wired/wired.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
         "vogue": "sass/vogue/vogue.scss"
-    }, 
+    },
     "partials": {
         "gallery": "templates/section-gallery.html"
-    }, 
+    },
     "dependencies": [
-        "@cnbritain/merlin-www-common", 
+        "@cnbritain/merlin-www-common",
         "@cnbritain/merlin-www-image"
-    ], 
-    "currentTheme": null, 
-    "main": "gallery", 
+    ],
+    "currentTheme": null,
+    "main": "gallery",
     "data": {
-        "all": "demo/data/all.json", 
+        "all": "demo/data/all.json",
         "gq": "demo/data/gq.json"
     }
 }
