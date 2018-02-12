@@ -84,7 +84,8 @@ const BRAND_THEMES = [
     "vogue",
     "wired",
     "houseandgarden",
-    "brides"
+    "brides",
+    "glamour_redux"
 ];
 
 module.exports = function(merlinConfig={}, scopeName=null){
