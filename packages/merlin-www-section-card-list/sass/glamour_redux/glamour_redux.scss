@@ -4,3 +4,46 @@
 @import "@cnbritain/merlin-www-card:glamour_redux";
 
 @import "../wireframe/wireframe";
+
+.c-card-section {
+    margin-top: $MOBILE_SLICE_MARGIN;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $TABLET_SLICE_MARGIN;
+        margin-bottom: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $DESKTOP_SLICE_MARGIN;
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+    }
+}
+
+.c-card-section--c-curated,
+.c-card-section--c-tag {
+    .c-card-section__title {
+        @include font("MILLER_DISPLAY", 30px, 600, 30px);
+        color: $dune;
+        margin: 0 0 15px 0;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            @include font-size(45px);
+            @include line-height(45px);
+        }
+
+        a {
+            color: inherit;
+        }
+    }
+
+    .c-card-section__btn {
+        @include button-single();
+        @include button-single-light();
+        &:hover {
+            @include button-single-light-hover();
+        }
+
+        margin-top: 30px;
+    }
+}
