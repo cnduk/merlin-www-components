@@ -2,7 +2,8 @@
 
 import {
     addEvent,
-    debounce
+    debounce,
+    hasClass
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import {
     ArticleManager
@@ -31,7 +32,7 @@ import {
 } from '../utils';
 
 var articleScroller = null;
-var debouncedUpdateAll = debounce(updateAll, 200);
+var debouncedUpdateAll = debounce(updateAll, 300);
 
 
 export default function init() {
@@ -86,7 +87,7 @@ export function onWindowResize() {
 
 export function itemHasId(id) {
     return function(item) {
-        var block = item.el.querySelector('.ad-container');
+        var block = item.el.querySelector('.ad__container');
         return block && block.hasAttribute('id') &&
             block.getAttribute('id') === id;
     };
@@ -114,8 +115,7 @@ export function onAdStop(e) {
     var group = item.group;
     group.removeChild(item);
     item.destroy();
-    group.recalculate(true);
-    group.sortChildren();
+    updateAll();
 }
 
 
@@ -171,42 +171,67 @@ export function createStickyItems(nodeGroup, nodeStick, nodeObstacles) {
 }
 
 
+function toArray(collection){
+    var len = collection.length;
+    var arr = new Array(len);
+    while(len--) arr[len] = collection[len];
+    return arr;
+}
+
+
 export function hasChildren(el) {
     return el.children.length > 0;
 }
 
+export function filterStoppedAds(el){
+    if(!hasClass(el, 'ad__main')) return true;
+    var container = el.querySelector('.ad__container');
+    if(!container.hasAttribute('data-ad-stopped')) return true;
+    return container.getAttribute('data-ad-stopped') !== 'true';
+}
+
+export function createStickyArticleBody(article){
+    var stickGroup = article.el.querySelector('.a-body' + CLS_STICK_GROUP);
+    if(!stickGroup) return;
+    var stickyWrappers = toArray(stickGroup.querySelectorAll(
+        CLS_STICK_WRAPPER)).filter(filterStoppedAds);
+    var stickyObstacles = toArray(stickGroup.querySelectorAll(
+        CLS_STICK_OBSTACLE)).filter(filterStoppedAds);
+
+    createStickyItems(stickGroup, stickyWrappers, stickyObstacles);
+}
+
+export function createStickyGallery(article){
+    var stickGroup = article.el.querySelector(
+        '.js-g-view-list' + CLS_STICK_GROUP);
+    if(!stickGroup) return;
+    var stickyWrappers = toArray(stickGroup.querySelectorAll(
+        CLS_STICK_WRAPPER)).filter(filterStoppedAds);
+    var stickyObstacles = toArray(stickGroup.querySelectorAll(
+        CLS_STICK_OBSTACLE)).filter(filterStoppedAds);
+
+    createStickyItems(stickGroup, stickyWrappers, stickyObstacles);
+}
+
 export function onArticleAdd(e) {
     var currentArticle = e.article;
-    var stickGroup = currentArticle.el.querySelector(CLS_STICK_GROUP);
-    var stickyWrappers = null;
-    var stickyObstacles = null;
-    var stickyConfig = null;
 
-    if (!currentArticle.isInfinite || currentArticle.type === ARTICLE_TYPES.ARTICLE) {
-        stickyWrappers = currentArticle.el.querySelectorAll(CLS_STICK_WRAPPER);
-        stickyObstacles = currentArticle.el.querySelectorAll(CLS_STICK_OBSTACLE);
+    // Create sticky for article body if it exists
+    createStickyArticleBody(currentArticle);
 
-        createStickyItems(stickGroup, stickyWrappers, stickyObstacles);
-        debouncedUpdateAll();
-
-    } else if (currentArticle.type === ARTICLE_TYPES.GALLERY && currentArticle.isInfinite) {
-
-        stickyWrappers = [currentArticle.el.querySelector(
-            CLS_STICK_WRAPPER)];
-        stickyObstacles = currentArticle.el.querySelectorAll(CLS_STICK_OBSTACLE);
-        stickyConfig = createStickyItems(
-            stickGroup, stickyWrappers, stickyObstacles);
-        debouncedUpdateAll();
-
-        currentArticle.once('expand', function() {
-            var group = stickyConfig.group;
-            var wrappers = toArray(currentArticle.el.querySelectorAll(
-                CLS_STICK_WRAPPER)).filter(hasChildren);
-            var obstacles = currentArticle.el.querySelectorAll(
-                CLS_STICK_OBSTACLE);
-            createStickyItems(group, wrappers, obstacles);
-            stickyConfig = null;
-            debouncedUpdateAll();
-        });
+    // If gallery, create sticky if not from infinite scroll, otherwise, create
+    // on expand event
+    if(currentArticle.type === ARTICLE_TYPES.GALLERY){
+        if(currentArticle.isInfinite){
+            currentArticle.once('expand', function() {
+                createStickyGallery(currentArticle);
+                debouncedUpdateAll();
+            });
+        } else {
+            createStickyGallery(currentArticle);
+        }
     }
+
+    debouncedUpdateAll();
+
 }
