@@ -1,0 +1,21 @@
+// -------------------- //
+// Magazine
+// -------------------- //
+@mixin card-magazine() {}
+@mixin card-magazine-small() {}
+@mixin card-magazine-large() {}
+
+.c-card--magazine {
+    @include card-magazine();
+    @include card-magazine-small();
+}
+
+.c-card--magazine-small {
+    @include card-magazine();
+    @include card-magazine-small();
+}
+
+.c-card--magazine-large {
+    @include card-magazine();
+    @include card-magazine-large();
+}

@@ -1,0 +1,20 @@
+// -------------------- //
+// Top Stories
+// -------------------- //
+@mixin card-top-stories() {}
+@mixin card-top-stories-small() {}
+@mixin card-top-stories-large() {}
+
+.c-card--top-stories {
+
+}
+
+.c-card--top-stories-small {
+    @include card-top-stories();
+    @include card-top-stories-small();
+}
+
+.c-card--top-stories-large {
+    @include card-top-stories();
+    @include card-top-stories-large();
+}

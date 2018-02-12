@@ -1,0 +1,17 @@
+// -------------------- //
+// Switcher
+// -------------------- //
+@mixin card-switcher() {}
+@mixin card-switcher-small() {}
+@mixin card-switcher-large() {}
+
+.c-card--switcher {}
+.c-card--switcher-small {
+    @include card-switcher();
+    @include card-switcher-small();
+}
+
+.c-card--switcher-large {
+    @include card-switcher();
+    @include card-switcher-large();
+}

@@ -1,0 +1,17 @@
+// -------------------- //
+// /Contributor
+// -------------------- //
+@mixin card-contributor() {}
+@mixin card-contributor-small() {}
+@mixin card-contributor-large() {}
+
+.c-card--contributor {}
+.c-card--contributor-small {
+    @include card-contributor();
+    @include card-contributor-small();
+}
+
+.c-card--contributor-large {
+    @include card-contributor();
+    @include card-contributor-large();
+}
