@@ -80,6 +80,7 @@ a.btn-share {
 @each $name, $color in $COLOUR_SOCIAL {
     .btn-share--#{$name},
     a.btn-share--#{$name} {
+
         &.btn-share--light {
             @include button-share-light($name);
         }
