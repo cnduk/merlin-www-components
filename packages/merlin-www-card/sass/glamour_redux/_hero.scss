@@ -5,13 +5,30 @@
 @mixin card-hero-small() {}
 @mixin card-hero-large() {}
 
-.c-card--hero {}
+.c-card--hero {
+    @include card-portrait();
+    @include card-portrait-large();
+
+    @include card-hero();
+    @include card-hero-small();
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include card-hero-large();
+    }
+}
+
 .c-card--hero-small {
+    @include card-portrait();
+    @include card-portrait-large();
+
     @include card-hero();
     @include card-hero-small();
 }
 
 .c-card--hero-large {
+    @include card-portrait();
+    @include card-portrait-large();
+
     @include card-hero();
     @include card-hero-large();
 }

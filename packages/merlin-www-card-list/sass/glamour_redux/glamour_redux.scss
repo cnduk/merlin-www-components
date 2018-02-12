@@ -10,6 +10,11 @@
 .c-card-list--c-curated,
 .c-card-list--c-tag {
     flex-direction: column;
+    margin: -10px;
+
+    .c-card-list__item {
+        padding: 10px;
+    }
 
     @include two-column-size() {
         flex-direction: row;
