@@ -1,5 +1,65 @@
 @import '@cnbritain/merlin-www-common:glamour_redux';
-@import '@cnbritain/merlin-www-card-list:glamour_redux';
-@import '@cnbritain/merlin-www-card:glamour_redux';
+@import "@cnbritain/merlin-www-buttons:glamour_redux";
 
 @import '../wireframe/wireframe';
+
+@import "../wireframe/wireframe";
+
+.c-topic-strip {
+    text-align: left;
+}
+
+.c-topic-strip--bleed {}
+.c-topic-strip--c-card-section {
+    display: none;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: auto;
+    }
+}
+
+.c-topic-strip__title {
+    display: none;
+}
+
+.c-topic-strip__list {
+    font-size: 0;
+}
+
+li.c-topic-strip__item {
+    font-size: initial;
+
+    & + li.c-topic-strip__item {
+        margin-left: 10px;
+    }
+}
+
+.c-topic-strip--article-related {
+    // margin-left: -$MOBILE_SIDE_GUTTER;
+    // margin-right: -$MOBILE_SIDE_GUTTER;
+    // padding-left: $MOBILE_SIDE_GUTTER;
+    // padding-right: $MOBILE_SIDE_GUTTER;
+    // text-align: center;
+
+    // @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    //     margin-left: 0;
+    //     margin-right: 0;
+    //     padding-left: 0;
+    //     padding-right: 0;
+    // }
+}
+
+.c-topic-strip__btn {
+    @include button-group();
+    @include button-group-light();
+
+    &:hover {
+        @include button-group-light-hover();
+    }
+}
