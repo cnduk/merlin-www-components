@@ -16,22 +16,10 @@
         width: 100%;
     }
 
-    .c-card__obj__header {
-        flex: 0 0 auto;
-    }
-
-    .c-card__obj__body {
-        flex: 1 0 auto;
-    }
-
     .c-card__header,
     .c-card__footer {
         display: flex;
         flex-direction: column;
-    }
-
-    .c-card__header {
-        flex: 1 0 auto;
     }
 }
 
@@ -120,10 +108,13 @@
     .c-card__image {}
     .c-card__image__icon {}
     .c-card__obj__body {
+        flex: 1 0 auto;
         padding: 15px 15px 20px 15px;
     }
 
-    .c-card__header {}
+    .c-card__header {
+        flex: 1 0 auto;
+    }
 
     .c-card__tag {
         @include font("GRAPHIK", 10px, 600, 10px);
