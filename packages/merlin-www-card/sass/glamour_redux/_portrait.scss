@@ -43,19 +43,72 @@
     .c-card__images {}
     .c-card__image {}
     .c-card__image__icon {}
-    .c-card__obj__body {}
+    .c-card__obj__body {
+        padding: 10px 0 0 0;
+    }
+
     .c-card__header {}
-    .c-card__tag {}
-    .c-card__title {}
-    .c-card__teaser {}
-    .c-card__separator {}
+
+    .c-card__tag {
+        @include font("GRAPHIK", 10px, 600, 10px);
+        background: $azalea;
+        bottom: 0;
+        color: $astronaut;
+        left: 0;
+        letter-spacing: 1.5px;
+        padding: 8px;
+        position: absolute;
+        text-transform: uppercase;
+    }
+
+    .c-card__title {
+        @include font("MILLER_DISPLAY", 18px, 600, 21px);
+        color: $dune;
+        margin: 0 0 13px 0;
+    }
+
+    .c-card__teaser {
+        display: none;
+    }
+
+    .c-card__separator {
+        display: none;
+    }
+
     .c-card__footer {}
-    .c-card__byline {}
+    .c-card__byline {
+        @include font("GRAPHIK", 10px, 400, 10px);
+        color: $dune;
+        letter-spacing: 1.5px;
+        margin: 0 0 6px 0;
+        text-transform: uppercase;
+    }
+
     .c-card__byline--sponsorship {}
     .c-card__byline-prefix {}
     .c-card__byline-name {}
-    ul.c-card__meta {}
-    li.c-card__meta-item {}
+
+    ul.c-card__meta {
+        @include font("GRAPHIK", 10px, 400, 10px);
+        color: $dune;
+        letter-spacing: 1.5px;
+        margin: 0 0 0 0;
+        text-transform: uppercase;
+    }
+
+    li.c-card__meta-item {
+        & + li.c-card__meta-item {
+            &:before {
+                background-color: $azalea;
+                border-radius: 50%;
+                content: "";
+                display: inline-block;
+                height: 3px;
+                margin: 1px 4px;
+                width: 3px;
+            }
+        }
+    }
 }
 
 @mixin card-portrait-large() {
@@ -66,24 +119,76 @@
     .c-card__images {}
     .c-card__image {}
     .c-card__image__icon {}
-    .c-card__obj__body {}
+    .c-card__obj__body {
+        padding: 15px 15px 20px 15px;
+    }
+
     .c-card__header {}
-    .c-card__tag {}
-    .c-card__title {}
-    .c-card__teaser {}
-    .c-card__separator {}
+
+    .c-card__tag {
+        @include font("GRAPHIK", 10px, 600, 10px);
+        background: $azalea;
+        bottom: 0;
+        color: $astronaut;
+        left: 0;
+        letter-spacing: 1.5px;
+        padding: 8px;
+        position: absolute;
+        text-transform: uppercase;
+    }
+
+    .c-card__title {
+        @include font("MILLER_DISPLAY", 23px, 600, 28px);
+        color: $dune;
+        margin: 0 0 30px 0;
+    }
+
+    .c-card__teaser {
+        display: none;
+    }
+
+    .c-card__separator {
+        display: none;
+    }
+
     .c-card__footer {}
-    .c-card__byline {}
+    .c-card__byline {
+        @include font("GRAPHIK", 10px, 400, 10px);
+        color: $dune;
+        letter-spacing: 1.5px;
+        margin: 0 0 6px 0;
+        text-transform: uppercase;
+    }
+
     .c-card__byline--sponsorship {}
     .c-card__byline-prefix {}
     .c-card__byline-name {}
-    ul.c-card__meta {}
-    li.c-card__meta-item {}
+
+    ul.c-card__meta {
+        @include font("GRAPHIK", 10px, 400, 10px);
+        color: $dune;
+        letter-spacing: 1.5px;
+        margin: 0 0 0 0;
+        text-transform: uppercase;
+    }
+
+    li.c-card__meta-item {
+        & + li.c-card__meta-item {
+            &:before {
+                background-color: $azalea;
+                border-radius: 50%;
+                content: "";
+                display: inline-block;
+                height: 3px;
+                margin: 1px 4px;
+                width: 3px;
+            }
+        }
+    }
 }
 
 .c-card--portrait {
-    @include card-portrait();
-    @include card-portrait-small();
+
 }
 
 .c-card--portrait-small {
