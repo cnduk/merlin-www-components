@@ -6,26 +6,22 @@
 @import "../wireframe/wireframe";
 
 .c-splash-section {}
-.c-splash-section__wrapper {
-    margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
-    position: relative;
-    width: 100%;
-}
-
+.c-splash-section__wrapper {}
 .c-splash-hero {
     margin-bottom: 40px;
 }
 
 .c-splash-hero__wrapper {
     box-shadow: 20px 20px 0px 0px $azalea;
-    position: relative;
     font-size: 0;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    position: relative;
+    position: relative;
+    width: 100%;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         display: table;
-        padding-top: 0;
-        width: 100%;
     }
 }
 
@@ -130,17 +126,25 @@ li.c-splash-hero__meta-item {
 }
 
 .c-splash-list {
-    margin-left: $MOBILE_SIDE_GUTTER;
-    margin-right: $MOBILE_SIDE_GUTTER;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: $TABLET_SIDE_GUTTER;
-        margin-right: $TABLET_SIDE_GUTTER;
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: $DESKTOP_SIDE_GUTTER;
-        margin-right: $DESKTOP_SIDE_GUTTER;
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
     }
 }
-.c-splash-list__wrapper {}
+
+.c-splash-list__wrapper {
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    position: relative;
+    width: 100%;
+}
