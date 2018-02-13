@@ -25,7 +25,8 @@
         right: 0;
         bottom: -20px;
         width: calc(100% - 20px);
-        border-bottom: 20px solid deeppink;
+        bborder-bottom: 20px solid transparent;
+        border-image: url("/static/img/pattern-1.jpg") 20;
 
          @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
              display: none;
@@ -43,7 +44,8 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         max-width: 100%;
         padding: 40px 0;
-        border: solid 20px deeppink;
+        border: solid 20px transparent;
+        border-image: url("/static/img/pattern-1.jpg") 20;
     }
 
 }
