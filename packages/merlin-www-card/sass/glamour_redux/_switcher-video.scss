@@ -6,15 +6,40 @@
 @mixin card-switcher-video-large() {}
 
 .c-card--switcher-video {
+    @include card-landscape();
+    @include card-landscape-small();
 
+    @include card-switcher-video();
+    @include card-switcher-video-small();
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        .c-card__obj__header {
+            padding: 0;
+        }
+
+        .c-card__tag {
+            right: initial;
+            top: initial;
+            transform: translateX(0);
+        }
+
+        @include card-portrait();
+        @include card-portrait-large();
+    }
 }
 
 .c-card--switcher-video-small {
+    @include card-landscape();
+    @include card-landscape-small();
+
     @include card-switcher-video();
     @include card-switcher-video-small();
 }
 
 .c-card--switcher-video-large {
+    @include card-portrait();
+    @include card-portrait-large();
+
     @include card-switcher-video();
     @include card-switcher-video-large();
 }

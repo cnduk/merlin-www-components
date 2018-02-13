@@ -6,15 +6,29 @@
 @mixin card-splash-large() {}
 
 .c-card--splash {
+    @include card-portrait();
+    @include card-portrait-large();
 
+    @include card-splash();
+    @include card-splash-small();
+
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+        @include card-splash-large();
+    }
 }
 
 .c-card--splash-small {
+    @include card-portrait();
+    @include card-portrait-large();
+
     @include card-splash();
     @include card-splash-small();
 }
 
 .c-card--splash-large {
+    @include card-portrait();
+    @include card-portrait-large();
+
     @include card-splash();
     @include card-splash-large();
 }

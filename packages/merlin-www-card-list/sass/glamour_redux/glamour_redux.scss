@@ -7,7 +7,8 @@
 }
 
 .c-card-list--c-curated,
-.c-card-list--c-tag {
+.c-card-list--c-tag,
+.c-card-list--c-video-articles {
     flex-direction: column;
     margin: -10px;
 
@@ -22,6 +23,32 @@
         .c-card-list__item {
             width: 50%;
         }
+    }
+
+    @include four-column-size() {
+        .c-card-list__item {
+            width: 25%;
+        }
+    }
+}
+
+.c-card-list--tg-articles {
+    flex-direction: column;
+    margin: -10px;
+
+    .c-card-list__item {
+        padding: 10px;
+    }
+}
+
+.c-card-list--mag-magazines {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: -10px;
+
+    .c-card-list__item {
+        padding: 10px;
+        width: 50%;
     }
 
     @include four-column-size() {
