@@ -6,7 +6,6 @@
 .c-gallery {
     margin-bottom: $MOBILE_SLICE_MARGIN;
     margin-top: $MOBILE_SLICE_MARGIN;
-    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
     padding: 0;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
@@ -61,6 +60,7 @@
 }
 
 .c-gallery__text {
+    background-color: $white;
     padding: 20px;
     position: relative;
 
