@@ -15,14 +15,14 @@
         margin-top: $DESKTOP_SLICE_MARGIN;
     }
 
-    //need update when we have the image
     &::after {
         content: "";
         position: absolute;
         right: 0;
         bottom: -20px;
         width: calc(100% - 20px);
-        border-bottom: 20px solid deeppink;
+        border-bottom: 20px solid transparent;
+        border-image: url("/static/img/pattern-2.jpg") 20;
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             display: none;
@@ -37,10 +37,10 @@
     padding: 20px 20px 30px;
     position: relative;
 
-    //need update when we have the image
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: 60px 60px 0;
-        border: solid 20px deeppink;
+        padding: 60px;
+        border: solid 20px transparent;
+        border-image: url("/static/img/pattern-2.jpg") 20;
     }
 
 }
@@ -69,7 +69,7 @@
     @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
         display: table-cell;
         width: 50%;
-        vertical-align: bottom;
+        vertical-align: middle;
     }
 }
 .c-magazine__covers__wrapper {
@@ -82,6 +82,7 @@
 .c-magazine__cover {
     position: relative;
 }
+
 .c-magazine__cover--print {
     img {
         width: 67%;
@@ -97,7 +98,7 @@
         background-color: #000;
         border-radius: 7px;
         padding: 15px 8px;
-        width: 40%;
+        width: 47%;
         position: absolute;
         right: 0;
         bottom: 0;
@@ -117,12 +118,13 @@
     @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
         display: table-cell;
         width: 50%;
-        vertical-align: middle;
+        vertical-align: top;
     }
 }
 
 .c-magazine__content__title {
-    @include font('GRAPHIK', 10px, 'NORMAL', 11px);
+    @include font('GRAPHIK', 10px, 'SEMI BOLD', 11px);
+    color: $astronaut;
     display: block;
     letter-spacing: 1.5px;
     margin-bottom: 10px;
