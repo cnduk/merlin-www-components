@@ -170,15 +170,6 @@ export function createStickyItems(nodeGroup, nodeStick, nodeObstacles) {
     };
 }
 
-
-function toArray(collection){
-    var len = collection.length;
-    var arr = new Array(len);
-    while(len--) arr[len] = collection[len];
-    return arr;
-}
-
-
 export function hasChildren(el) {
     return el.children.length > 0;
 }
