@@ -56,7 +56,6 @@
     @include font("MILLER_DISPLAY", 30px, 'SEMI BOLD', 35px);
     color: $dune;
     margin-bottom: 20px;
-   // margin-top: 20px;
     text-align: center;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
@@ -76,6 +75,11 @@
 	    width: 70px;
         margin: 0 auto;
         margin-bottom: 20px;
+
+      @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        height: 90px;
+        width: 90px;
+      }
     }
 }
 
