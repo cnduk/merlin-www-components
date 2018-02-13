@@ -48,3 +48,26 @@
         margin-top: 30px;
     }
 }
+
+.c-card-section--tg-articles {
+    .c-card-section__title {
+        @include font("MILLER_DISPLAY", 30px, 600, 30px);
+        color: $dune;
+        margin: 0 0 15px 0;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            @include font-size(45px);
+            @include line-height(45px);
+        }
+
+        a {
+            color: inherit;
+        }
+    }
+
+    .c-card-list {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-right: 340px;
+        }
+    }
+}
