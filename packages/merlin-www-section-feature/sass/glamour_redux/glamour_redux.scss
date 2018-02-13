@@ -49,7 +49,7 @@
 }
 
 .c-feature__content {
-    padding: 15px 15px 20px 15px;
+    padding: 20px;
     position: relative;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
