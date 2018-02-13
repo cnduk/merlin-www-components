@@ -57,3 +57,12 @@
         }
     }
 }
+
+.c-card-list--c-magazine-articles {
+    flex-direction: column;
+    margin: -10px;
+
+    .c-card-list__item {
+        padding: 10px;
+    }
+}
