@@ -12,7 +12,7 @@
 
 @mixin button-single() {
     @include button-reset();
-	@include font("GRAPHIK", 14px, 'BOLS', 14px);
+	@include font("GRAPHIK", 14px, 'BOLD', 14px);
 	letter-spacing: 1.5px;
 	padding-bottom: 10px;
 	text-transform: uppercase;
