@@ -14,6 +14,22 @@ $advert-light: #f9f8f7;
 $advert-dark: #373330;
 $white: #ffffff;
 
+// ----- Social Colours -----//
+$COLOUR_SOCIAL: map-merge($COLOUR_SOCIAL, (
+    "email": #373330,
+    "facebook": #3B5998,
+    "pinterest": #CB2027,
+    "twitter": #55ACEE,
+    "whatsapp": #4DC247
+));
+
+$COLOUR_SOCIAL_HOVER: (
+    "email": #1C1A18,
+    "facebook": #314A7F,
+    "pinterest": #A71B21,
+    "twitter": #50A2DF,
+    "whatsapp": #42A73D
+);
 
 // ----- Breakpoints ----- //
 $DESKTOP_SIDE_GUTTER: 60px;

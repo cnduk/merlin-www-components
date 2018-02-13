@@ -158,19 +158,17 @@
 
 @mixin button-share-light($name) {
     background-color: map-get($COLOUR_SOCIAL, $name);
-    fill: $COLOUR_SOCIAL_ICON;
 
     path {
-   		fill: $white;
+        fill: $white;
     }
 }
 
 @mixin button-share-light-hover($name) {
-	background-color: map-get($COLOUR_SOCIAL_HOVER, $name);
-    fill: $COLOUR_SOCIAL_ICON;
+    background-color: map-get($COLOUR_SOCIAL_HOVER, $name);
 
     path {
-   		fill: $white;
+        fill: $white;
     }
 }
 
