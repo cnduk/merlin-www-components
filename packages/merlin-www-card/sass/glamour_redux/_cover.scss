@@ -1,11 +1,68 @@
 // -------------------- //
 // Cover
 // -------------------- //
-@mixin card-cover() {}
-@mixin card-cover-small() {}
-@mixin card-cover-large() {}
+@mixin card-cover() {
+    .c-card__obj {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 
-.c-card--cover {}
+    .c-card__obj__header,
+    .c-card__obj__body {
+        display: flex;
+        flex-direction: column;
+        vertical-align: inherit;
+        width: 100%;
+    }
+
+    .c-card__header,
+    .c-card__footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .c-card__image--custom {
+        padding-top: 135.8064516%;
+    }
+
+    &:hover {
+        .c-card__title {
+            background-color: $astronaut;
+            color: $azalea;
+        }
+    }
+}
+
+@mixin card-cover-small() {
+    .c-card__title {
+        @include font("GRAPHIK", 10px, 600, 30px);
+        background-color: $azalea;
+        color: $astronaut;
+        height: 30px;
+        letter-spacing: 1.5px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+@mixin card-cover-large() {
+    .c-card__title {
+        @include font-size(13px);
+        @include line-height(40px);
+        height: 40px;
+    }
+}
+
+.c-card--cover {
+    @include card-cover();
+    @include card-cover-small();
+
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+        @include card-cover-large();
+    }
+}
+
 .c-card--cover-small {
     @include card-cover();
     @include card-cover-small();
