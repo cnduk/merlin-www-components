@@ -5,7 +5,7 @@
 @import '../wireframe/wireframe';
 
 .c-magazine {
-    background-color: red;
+    background-color: $white;
     position: relative;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
