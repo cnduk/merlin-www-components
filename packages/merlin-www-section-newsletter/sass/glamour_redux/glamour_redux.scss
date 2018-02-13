@@ -2,3 +2,158 @@
 @import "@cnbritain/merlin-www-buttons:glamour_redux";
 
 @import "../wireframe/wireframe";
+
+.c-newsletter {
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $MOBILE_SLICE_MARGIN;
+    position: relative;
+    text-align: center;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+        margin-left: $DESKTOP_SLICE_MARGIN;
+        margin-right: $DESKTOP_SLICE_MARGIN;
+        margin-top: $DESKTOP_SLICE_MARGIN;
+    }
+
+    //need update when we have the image
+    &::after{
+        content : "";
+        position: absolute;
+        right: 0;
+        bottom: -20px;
+        width: calc(100% - 20px);
+        border-bottom: 20px solid deeppink;
+
+         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+             display: none;
+         }
+    }
+}
+
+.c-newsletter__wrapper {
+    background: $white;
+    margin: 0 auto;
+    padding: 30px $MOBILE_SIDE_GUTTER;
+    position: relative;
+
+    //need update when we have the image
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        max-width: 100%;
+        padding: 40px 0;
+        border: solid 20px deeppink;
+    }
+
+}
+
+.c-newsletter__logo {
+    display: none;
+}
+
+.c-newsletter__title {
+    @include font("MILLER_DISPLAY", 30px, 'SEMI BOLD', 35px);
+    color: $dune;
+    margin-bottom: 20px;
+   // margin-top: 20px;
+    text-align: center;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(45px);
+        @include line-height(45px);
+        letter-spacing:-0.5px;
+    }
+
+    &:before{
+        content:"";
+        background: #d8d8d8;
+        border-radius: 50%;
+	    box-sizing: border-box;
+        display: block;
+	    height: 70px;
+        text-align: center;
+	    width: 70px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+}
+
+.c-newsletter__description {
+    @include font("GRAPHIK", 15px, 'SEMI BOLD', 19px);
+    color: $dune;
+    margin: 20px 0 20px 0;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin: 20px auto;
+        text-align: center;
+        width: 570px;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(19px);
+        @include line-height(23px);
+    }
+}
+
+.c-newsletter__form {
+    width: 100%;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        width: auto;
+    }
+}
+
+.c-newsletter__form__text {
+    @include font("GRAPHIK", 13px, 'NORMAL', 13px);
+    background: #efefef;
+    box-sizing: border-box;
+    color: $dune;
+    height: 40px;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    text-align: center;
+
+    @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT ) {
+        float: left;
+        width: 420px;
+        text-align: left;
+    }
+
+    &::placeholder {
+        color: $dune;
+    }
+}
+
+.c-newsletter__form__btn {
+    @include button-single();
+    @include font("GRAPHIK", 13px, 'SEMI BOLD', 13px);
+    background-color: $dune;
+	color: $white;
+    height: 40px;
+    letter-spacing: 1px;
+    padding-top: 10px;
+    margin-bottom: 15px;
+
+    @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT ) {
+        float: left;
+        width: 140px;
+        margin-left: 10px;
+    }
+
+    &:hover {
+        background-color: $white;
+        border: solid 1px $dune;
+        color: $dune;
+    }
+}
+
+.c-newsletter__legal {
+    @include font("GRAPHIK", 11px, 'NORMAL', 11px);
+    color: $dune;
+
+    a{
+        color: $dune;
+        text-decoration: underline;
+    }
+}
