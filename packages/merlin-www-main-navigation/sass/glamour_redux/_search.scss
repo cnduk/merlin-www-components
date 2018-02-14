@@ -1,19 +1,14 @@
 .n-menu__search {
-    margin: 0 20px;
-    border-bottom: 1px solid $ISABEL;
     overflow: hidden;
     position: relative;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin: 0 30px;
-    }
-
     .n-main__nav-search {
-        width: 20px;
+        background-color: $dune;
+        width: 60px;
     }
 
     svg {
-        fill: $MUSTASAARI;
+        fill: $white;
         height: 100%;
         width: 20px;
     }
@@ -32,17 +27,20 @@
     top: 0;
 
     input {
-        @include font("PROXIMA NOVA CONDENSED", 16px, 400, 60px);
-        background-color: $WHITE;
+        @include font("GRAPHIK", 16px, 600, 60px);
+        background-color: $advert-dark;
         border: none;
-        box-sizing: border-box;
-        color: $MUSTASAARI;
+        color: $white;
         height: 60px;
-        padding: 0;
+        padding: 0 0 0 20px;
         width: 100%;
 
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            padding: 0 0 0 30px;
+        }
+
         &::placeholder {
-            color: $MANATEE;
+            color: $natural-gray;
         }
 
         &:focus {
@@ -52,7 +50,7 @@
 }
 
 .n-search {
-    background-color: rgba($WHITE, 0.9);
+    background-color: $advert-dark;
 
     &.has-overlay {
         left: 0;
