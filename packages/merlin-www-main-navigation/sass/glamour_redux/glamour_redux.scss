@@ -1,0 +1,26 @@
+@import "@cnbritain/merlin-www-common:glamour_redux";
+@import "@cnbritain/merlin-www-buttons:glamour_redux";
+@import "@cnbritain/merlin-www-search-header:glamour_redux";
+
+@import "../wireframe/wireframe";
+
+@import "_base";
+// @import "_promo";
+@import "_masthead";
+@import "_dropdown";
+@import "_social";
+@import "_search";
+@import "_gallery";
+
+.n-vanishing-nav {
+    .n-main__sticker-child {
+        @include vendor-prefix(transform, translate(0, 0%));
+        @include vendor-prefix(transition, transform 0.2s ease-in-out);
+    }
+
+    &.is-hidden {
+        .n-main__sticker-child {
+            @include vendor-prefix(transform, translate(0, -100%));
+        }
+    }
+}

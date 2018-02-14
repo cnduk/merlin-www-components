@@ -1,0 +1,47 @@
+@import "@cnbritain/merlin-www-common:glamour_redux";
+@import "@cnbritain/merlin-www-buttons:glamour_redux";
+
+@import "../wireframe/wireframe";
+
+.c-topic-strip {
+    text-align: left;
+}
+
+.c-topic-strip--bleed {}
+.c-topic-strip--c-card-section {
+    display: none;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 12px;
+        width: auto
+    }
+}
+
+.c-topic-strip__title {
+    display: none;
+}
+
+.c-topic-strip__list {
+    font-size: 0;
+}
+
+li.c-topic-strip__item {
+    font-size: initial;
+
+    & + li.c-topic-strip__item {
+        margin-left: 10px;
+    }
+}
+
+.c-topic-strip--article-related {}
+.c-topic-strip__btn {
+    @include button-group();
+    @include button-group-light();
+
+    &:hover {
+        @include button-group-light-hover();
+    }
+}

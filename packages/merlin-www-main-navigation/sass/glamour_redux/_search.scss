@@ -1,0 +1,70 @@
+.n-menu__search {
+    overflow: hidden;
+    position: relative;
+
+    .n-main__nav-search {
+        background-color: $dune;
+        width: 60px;
+    }
+
+    svg {
+        fill: $white;
+        height: 100%;
+        width: 20px;
+    }
+}
+
+.n-menu__search-search {
+    float: right;
+}
+
+.n-menu__search-textbox {
+    display: inline-block;
+    left: 0;
+    height: 60px;
+    position: absolute;
+    right: 60px;
+    top: 0;
+
+    input {
+        @include font("GRAPHIK", 16px, 600, 60px);
+        background-color: $advert-dark;
+        border: none;
+        color: $white;
+        height: 60px;
+        padding: 0 0 0 20px;
+        width: 100%;
+
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            padding: 0 0 0 30px;
+        }
+
+        &::placeholder {
+            color: $natural-gray;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.n-search {
+    background-color: $advert-dark;
+
+    &.has-overlay {
+        left: 0;
+        padding-bottom: 100%;
+        position: absolute;
+        right: 0;
+        top: auto;
+        z-index: 3;
+
+        &.is-stuck {
+            bottom: 0;
+            padding-bottom: 0;
+            position: fixed;
+            top: 60px;
+        }
+    }
+}

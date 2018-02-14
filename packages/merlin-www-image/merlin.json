@@ -1,39 +1,40 @@
 {
-    "name": "@cnbritain/merlin-www-image", 
+    "name": "@cnbritain/merlin-www-image",
     "js": {
         "demo": "demo/demo.js"
-    }, 
+    },
     "themes": {
-        "tatler": "sass/tatler/tatler.scss", 
-        "wireframe": "sass/wireframe/wireframe.scss", 
-        "glamour": "sass/glamour/glamour.scss", 
-        "bystander": "sass/bystander/bystander.scss", 
-        "wired": "sass/wired/wired.scss", 
-        "vogue": "sass/vogue/vogue.scss"
-    }, 
+        "tatler": "sass/tatler/tatler.scss",
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "bystander": "sass/bystander/bystander.scss",
+        "wired": "sass/wired/wired.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "glamour_redux": "sass/glamour_redux/glamour_redux.scss"
+    },
     "partials": {
-        "image-svg": "templates/partials/image-svg.html", 
-        "image-image": "templates/partials/image-image.html", 
-        "image": "templates/image.html", 
-        "image-picture": "templates/partials/image-picture.html", 
-        "image-linked": "templates/partials/image-linked.html", 
-        "image-base": "templates/partials/image-base.html", 
+        "image-svg": "templates/partials/image-svg.html",
+        "image-image": "templates/partials/image-image.html",
+        "image": "templates/image.html",
+        "image-picture": "templates/partials/image-picture.html",
+        "image-linked": "templates/partials/image-linked.html",
+        "image-base": "templates/partials/image-base.html",
         "image-static": "templates/partials/image-static.html"
-    }, 
+    },
     "dependencies": [
         "@cnbritain/merlin-www-assets"
-    ], 
-    "currentTheme": null, 
-    "main": "image", 
+    ],
+    "currentTheme": null,
+    "main": "image",
     "data": {
-        "picture": "demo/data/picture.json", 
-        "static-image-lazyload": "demo/data/image-static-lazyload.json", 
-        "picture-lazyload": "demo/data/picture-lazyload.json", 
-        "svg": "demo/data/svg.json", 
-        "image": "demo/data/image.json", 
-        "static-image": "demo/data/image-static.json", 
-        "image-lazyload": "demo/data/image-lazyload.json", 
-        "linked-image": "demo/data/linked-image.json", 
+        "picture": "demo/data/picture.json",
+        "static-image-lazyload": "demo/data/image-static-lazyload.json",
+        "picture-lazyload": "demo/data/picture-lazyload.json",
+        "svg": "demo/data/svg.json",
+        "image": "demo/data/image.json",
+        "static-image": "demo/data/image-static.json",
+        "image-lazyload": "demo/data/image-lazyload.json",
+        "linked-image": "demo/data/linked-image.json",
         "linked-image-lazyload": "demo/data/linked-image-lazyload.json"
     }
 }

@@ -1,7 +1,7 @@
 {
     "name": "@cnbritain/merlin-www-js-store",
-    "version": "1.0.6",
-    "description": "Localstorage module that basically uses the Store",
+    "version": "1.1.0",
+    "description": "JS module that acts as data storage",
     "main": "js/index.js",
     "scripts": {
         "lint": "eslint -c ../../.eslintrc.json ./js/**/*",
@@ -9,9 +9,6 @@
     },
     "author": "",
     "license": "ISC",
-    "dependencies": {
-        "store": "^2.0.4"
-    },
     "devDependencies": {
         "eslint": "^4.14.0"
     }

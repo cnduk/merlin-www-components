@@ -1,0 +1,151 @@
+@import "@cnbritain/merlin-www-common:glamour_redux";
+@import "@cnbritain/merlin-www-image:glamour_redux";
+
+@import "../wireframe/wireframe";
+
+.c-gallery {
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+    margin-top: $MOBILE_SLICE_MARGIN;
+    padding: 0;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: $TABLET_SLICE_MARGIN;
+        margin-top: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+        margin-top: $DESKTOP_SLICE_MARGIN;
+    }
+}
+
+.c-gallery__wrapper {
+    box-shadow: 20px 20px 0px 0px $azalea;
+}
+
+.c-gallery__image {
+
+}
+
+.c-gallery__image-remaining {
+    background-color: rgba($astronaut, 0.6)
+}
+
+.c-gallery__image-remaining__text {
+    white-space: nowrap;
+}
+
+.c-gallery__image-remaining__text-prefix {
+    @include font("GRAPHIK", 18px, 600, 18px);
+    color: $azalea;
+    letter-spacing: 0px;
+    vertical-align: middle;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font-size(25px);
+        @include line-height(25px);
+    }
+}
+
+.c-gallery__image-remaining__text-value {
+    @include font("GRAPHIK", 30px, 600, 30px);
+    color: $azalea;
+    letter-spacing: 0px;
+    vertical-align: middle;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font-size(40px);
+        @include line-height(40px);
+    }
+}
+
+.c-gallery__text {
+    background-color: $white;
+    padding: 20px;
+    position: relative;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        padding: 30px 60px;
+    }
+}
+
+.c-gallery__icon {
+    display: none;
+}
+
+.c-gallery__tag {
+    @include font("GRAPHIK", 10px, 600, 10px);
+    background: $azalea;
+    color: $astronaut;
+    left: 0;
+    letter-spacing: 1.5px;
+    padding: 8px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    transform: translateY(-100%);
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        background-color: transparent;
+        left: initial;
+        margin: 0 0 20px 0;
+        padding: 0;
+        position: relative;
+        top: initial;
+        transform: translateY(0);
+    }
+}
+
+.c-gallery__title {
+    @include font("MILLER_DISPLAY", 23px, 600, 28px);
+    color: $dune;
+    margin: 0 0 10px 0;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font-size(40px);
+        @include line-height(45px);
+        margin: 0 0 30px 0;
+    }
+}
+
+.c-gallery__teaser {
+    @include font("GRAPHIK", 14px, 600, 18px);
+    color: $dune;
+    display: block;
+    letter-spacing: 0px;
+    margin: 0 0 30px 0;
+}
+
+.c-gallery__separator {
+    display: none;
+}
+
+.c-gallery__byline {
+    @include font("GRAPHIK", 10px, 400, 10px);
+    color: $dune;
+    letter-spacing: 1.5px;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+}
+
+ul.c-gallery__meta {
+    @include font("GRAPHIK", 10px, 400, 10px);
+    color: $dune;
+    letter-spacing: 1.5px;
+    margin: 0 0 0 0;
+    text-transform: uppercase;
+}
+
+li.c-gallery__meta-item {
+    & + li.c-gallery__meta-item {
+        &:before {
+            background-color: $azalea;
+            border-radius: 50%;
+            content: "";
+            display: inline-block;
+            height: 3px;
+            margin: 1px 4px;
+            width: 3px;
+        }
+    }
+}

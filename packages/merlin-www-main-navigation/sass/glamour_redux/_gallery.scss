@@ -1,0 +1,71 @@
+.n-gallery-nav {
+    @include opacity(0);
+    @include transition(opacity 0.2s ease-in-out, visibility 0.2s ease-in-out);
+    background-color: $azalea;
+    bottom: 0;
+    height: 60px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
+
+    &.is-visible {
+        @include opacity(1);
+        visibility: visible;
+    }
+}
+
+.n-gallery-counter {
+    @include line-height(60px);
+    // padding: 0 24px;
+}
+
+.n-gallery-counter__current {
+    // @include font("PROXIMA NOVA CONDENSED", 20px, 600, 20px);
+    // color: $SHERPA-BLUE;
+    // letter-spacing: 1px;
+}
+
+.n-gallery-counter__slash {
+    // @include font("PROXIMA NOVA CONDENSED", 14px, 600, 20px);
+    // color: $MUSTASAARI;
+    // margin: 0 6px;
+}
+
+.n-gallery-counter__total {
+    // @include font("PROXIMA NOVA CONDENSED", 14px, 600, 20px);
+    // color: $MUSTASAARI;
+    // letter-spacing: 1px;
+}
+
+
+.n-gallery-toggle,
+a.n-gallery-close {
+    display: inline-block;
+    font-size: 0;
+    height: 60px;
+    line-height: 60px;
+    width: 60px;
+
+    svg {
+        height: 100%;
+        fill: $dune;
+        width: 20px;
+    }
+}
+.n-gallery-toggle--list,
+.n-gallery-toggle--grid {
+    display: inline-block;
+    font-size: 0;
+    height: 60px;
+    line-height: 60px;
+    width: 60px;
+
+    svg {
+        height: 100%;
+        fill: $dune;
+        width: 20px;
+    }
+}

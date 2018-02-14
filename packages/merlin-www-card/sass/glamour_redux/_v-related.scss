@@ -1,0 +1,20 @@
+// -------------------- //
+// Video Related
+// -------------------- //
+@mixin card-v-related() {}
+@mixin card-v-related-small() {}
+@mixin card-v-related-large() {}
+
+.c-card--v-related {
+
+}
+
+.c-card--v-related-small {
+    @include card-v-related();
+    @include card-v-related-small();
+}
+
+.c-card--v-related-large {
+    @include card-v-related();
+    @include card-v-related-large();
+}
