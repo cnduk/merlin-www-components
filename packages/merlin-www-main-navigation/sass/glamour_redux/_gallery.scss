@@ -1,100 +1,71 @@
-// .n-gallery-nav {
-//     @include opacity(0);
-//     @include transition(opacity 0.2s ease-in-out, visibility 0.2s ease-in-out);
-//     background-color: $WHITE;
-//     bottom: 0;
-//     height: 60px;
-//     left: 0;
-//     position: absolute;
-//     right: 0;
-//     top: 0;
-//     visibility: hidden;
-//     width: 100%;
+.n-gallery-nav {
+    @include opacity(0);
+    @include transition(opacity 0.2s ease-in-out, visibility 0.2s ease-in-out);
+    background-color: $azalea;
+    bottom: 0;
+    height: 60px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
 
-//     &.is-visible {
-//         @include opacity(1);
-//         visibility: visible;
-//     }
+    &.is-visible {
+        @include opacity(1);
+        visibility: visible;
+    }
+}
 
-//     &:before {
-//         @include vendor-prefix(transform, translateX(-50%));
-//         background-color: $ISABEL;
-//         box-shadow: 0px 2px 4px 0px rgba($BLACK, 0.04);
-//         bottom: 0;
-//         content: '';
-//         height: 1px;
-//         left: 50%;
-//         position: absolute;
-//         width: 100vw;
-//     }
-// }
+.n-gallery-counter {
+    @include line-height(60px);
+    // padding: 0 24px;
+}
 
-// .n-gallery-counter {
-//     @include line-height(60px);
-//     padding: 0 24px;
-// }
+.n-gallery-counter__current {
+    // @include font("PROXIMA NOVA CONDENSED", 20px, 600, 20px);
+    // color: $SHERPA-BLUE;
+    // letter-spacing: 1px;
+}
 
-// .n-gallery-counter__current {
-//     @include font("PROXIMA NOVA CONDENSED", 20px, 600, 20px);
-//     color: $SHERPA-BLUE;
-//     letter-spacing: 1px;
-// }
+.n-gallery-counter__slash {
+    // @include font("PROXIMA NOVA CONDENSED", 14px, 600, 20px);
+    // color: $MUSTASAARI;
+    // margin: 0 6px;
+}
 
-// .n-gallery-counter__slash {
-//     @include font("PROXIMA NOVA CONDENSED", 14px, 600, 20px);
-//     color: $MUSTASAARI;
-//     margin: 0 6px;
-// }
-
-// .n-gallery-counter__total {
-//     @include font("PROXIMA NOVA CONDENSED", 14px, 600, 20px);
-//     color: $MUSTASAARI;
-//     letter-spacing: 1px;
-// }
+.n-gallery-counter__total {
+    // @include font("PROXIMA NOVA CONDENSED", 14px, 600, 20px);
+    // color: $MUSTASAARI;
+    // letter-spacing: 1px;
+}
 
 
-// .n-gallery-toggle,
-// a.n-gallery-close {
-//     border-left: 1px solid $ISABEL;
-//     display: inline-block;
-//     font-size: 0;
-//     height: 60px;
-//     line-height: 60px;
-//     width: 60px;
+.n-gallery-toggle,
+a.n-gallery-close {
+    display: inline-block;
+    font-size: 0;
+    height: 60px;
+    line-height: 60px;
+    width: 60px;
 
-//     @include min-screen($MAXIMUM_PAGE_WIDTH + 1) {
-//         border-right: 1px solid $ISABEL;
-//     }
+    svg {
+        height: 100%;
+        fill: $dune;
+        width: 20px;
+    }
+}
+.n-gallery-toggle--list,
+.n-gallery-toggle--grid {
+    display: inline-block;
+    font-size: 0;
+    height: 60px;
+    line-height: 60px;
+    width: 60px;
 
-//     &:hover {
-//         svg {
-//             fill: $SHERPA-BLUE;
-//         }
-//     }
-
-//     svg {
-//         height: 100%;
-//         fill: $MUSTASAARI;
-//         width: 20px;
-//     }
-// }
-// .n-gallery-toggle--list,
-// .n-gallery-toggle--grid {
-//     display: inline-block;
-//     font-size: 0;
-//     height: 60px;
-//     line-height: 60px;
-//     width: 60px;
-
-//     &:hover {
-//         svg {
-//             fill: $SHERPA-BLUE;
-//         }
-//     }
-
-//     svg {
-//         height: 100%;
-//         fill: $MUSTASAARI;
-//         width: 20px;
-//     }
-// }
+    svg {
+        height: 100%;
+        fill: $dune;
+        width: 20px;
+    }
+}

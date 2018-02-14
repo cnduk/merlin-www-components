@@ -92,12 +92,12 @@
     }
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        left: 162px;
+        left: 192px;
     }
 
     @include min-screen($MAXIMUM_PAGE_WIDTH + 60px) {
         position: absolute;
-        left: 132px;
+        left: 162px;
     }
 }
 
