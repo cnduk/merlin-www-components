@@ -60,14 +60,14 @@
 
                 {{# data.byline }}
                     <span class="a-header__byline-item">
-                        <span class="a-header__byline-prefix">By</span>
+                        <span class="a-header__byline-prefix">{{ translation.header_byline_prefix }}</span>
                         <span class="a-header__byline-name">{{ &data.byline }}</span>
                     </span>
                 {{/ data.byline }}
 
                 {{# data.syndication_profile }}
                     <span class="a-header__byline-item a-header__byline-item--syndication">
-                        <span class="a-header__byline-prefix">Originally published by </span>
+                        <span class="a-header__byline-prefix">{{ translation.header_syndication_prefix }} </span>
                         {{# state.has_link }}
                             <span class="a-header__byline-name"><a class="{{ data.link.style.cls }}" title="{{ data.link.data.title }}" href="{{ &data.link.data.url }}">{{ data.name }}</a></span>
                         {{/ state.has_link }}
@@ -95,7 +95,7 @@
 
             {{# data.sponsor }}
                 <div class="a-header__sponsor">
-                    <span class='a-header__sponsor-prefix'>In partnership with</span>
+                    <span class='a-header__sponsor-prefix'>{{ translation.header_sponsorship_prefix }}</span>
 
                     {{# data.image }}
                         <div class="a-header__sponsor-image">

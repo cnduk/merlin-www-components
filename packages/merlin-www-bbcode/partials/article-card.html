@@ -36,14 +36,14 @@
 			<div class="bb-card__footer">
 				{{# data.sponsor }}
 				    <p class="bb-card__byline bb-card__byline--sponsorship {{ style.cls }}">
-				        <span class="bb-card__byline-prefix">In partnership with </span>
+				        <span class="bb-card__byline-prefix">{{ translation.sponsor_prefix }} </span>
 				        <span class="bb-card__byline-name">{{ data.title }}</span>
 				    </p>
 				{{/ data.sponsor }}
 				{{^ data.sponsor }}
 				    {{# data.byline }}
 				        <p class="bb-card__byline">
-				            <span class="bb-card__byline-prefix">By</span>
+				            <span class="bb-card__byline-prefix">{{ translation.byline_prefix }}</span>
 				            <span class="bb-card__byline-name">{{ data.byline }}</span>
 				        </p>
 				    {{/ data.byline }}
