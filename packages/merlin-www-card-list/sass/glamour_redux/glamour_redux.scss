@@ -67,3 +67,32 @@
         padding: 10px;
     }
 }
+
+.c-card-list--top-stories {
+    display: block;
+    white-space: nowrap;
+
+    .c-card-list__item {
+        display: inline-block;
+        vertical-align: top;
+        white-space: normal;
+        width: 280px;
+
+        & + .c-card-list__item {
+            margin-left: 20px;
+        }
+
+        &.is-hidden {
+            height: 0;
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+            visibility: hidden;
+            width: 0;
+        }
+
+        &:last-child {
+            margin-right: 20px;
+        }
+    }
+}
