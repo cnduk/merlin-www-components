@@ -12,147 +12,147 @@
 
 @mixin button-single() {
     @include button-reset();
-	@include font("GRAPHIK", 14px, 'SEMI BOLD', 14px);
-	padding: 2px 2px 10px;
-	text-transform: uppercase;
+    @include font("GRAPHIK", 14px, 'SEMI BOLD', 14px);
+    padding: 2px 2px 10px;
+    text-transform: uppercase;
 }
 
 @mixin button-single-light() {
     background-color: transparent;
-	border-bottom: 1px solid $dune;
-	color: $dune;
+    border-bottom: 1px solid $dune;
+    color: $dune;
 }
 
 @mixin button-single-light-hover() {
     background-color: $dune;
-	border-bottom: 1px solid $dune;
-	color: $white;
+    border-bottom: 1px solid $dune;
+    color: $white;
 }
 
 @mixin button-single-light-inactive() {
     background-color: transparent;
-	border-bottom: 1px solid $cloud;
-	color: $cloud;
+    border-bottom: 1px solid $cloud;
+    color: $cloud;
 }
 
 @mixin button-single-dark() {
     background-color: transparent;
-	border-bottom: 1px solid $white;
-	color: $white;
+    border-bottom: 1px solid $white;
+    color: $white;
 }
 
 @mixin button-single-dark-hover() {
     background-color: $white;
-	border-bottom: 1px solid $white;
-	color: $dune;
+    border-bottom: 1px solid $white;
+    color: $dune;
 }
 
 @mixin button-single-dark-inactive() {
     background-color: transparent;
-	border-bottom: 1px solid $cloud;
-	color: $cloud;
+    border-bottom: 1px solid $cloud;
+    color: $cloud;
 }
 
 @mixin button-group() {
     @include button-reset();
-	@include font("GRAPHIK", 10px, 'SEMI BOLD', 10px);
-	letter-spacing: 1px;
+    @include font("GRAPHIK", 10px, 'SEMI BOLD', 10px);
+    letter-spacing: 1px;
     padding: 10px;
-	text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 @mixin button-group-light() {
     background-color: transparent;
-	border: 1px solid $dune;
-	color: $dune;
+    border: 1px solid $dune;
+    color: $dune;
 }
 
 @mixin button-group-light-hover() {
     background-color: $dune;
-	border: 1px solid $dune;
-	color: $white;
+    border: 1px solid $dune;
+    color: $white;
 }
 
 @mixin button-group-light-disabled() {
     background-color: transparent;
-	border: 1px solid $cloud;
-	color: $cloud;
+    border: 1px solid $cloud;
+    color: $cloud;
 }
 
 @mixin button-group-dark() {
     background-color: transparent;
-	border: 1px solid $white;
-	color: $white;
+    border: 1px solid $white;
+    color: $white;
 }
 
 @mixin button-group-dark-hover() {
     background-color: $white;
-	border: 1px solid $white;
-	color: $dune;
+    border: 1px solid $white;
+    color: $dune;
 }
 
 @mixin button-group-dark-disabled() {
     background-color: transparent;
-	border: 1px solid $cloud;
-	color: $cloud;
+    border: 1px solid $cloud;
+    color: $cloud;
 }
 
 @mixin button-group-two() {
     @include button-reset();
-	@include font("GRAPHIK", 13px, 'SEMI BOLD', 13px);
-	letter-spacing: 1px;
+    @include font("GRAPHIK", 13px, 'SEMI BOLD', 13px);
+    letter-spacing: 1px;
     padding: 10px;
-	text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 @mixin button-group-two-light() {
     background-color: transparent;
-	border: 1px solid $dune;
-	color: $dune;
+    border: 1px solid $dune;
+    color: $dune;
 }
 
 @mixin button-group-two-light-hover() {
     background-color: $dune;
-	border: 1px solid $dune;
-	color: $white;
+    border: 1px solid $dune;
+    color: $white;
 }
 
 @mixin button-group-two-light-disabled() {
     background-color: transparent;
-	border: 1px solid $cloud;
-	color: $cloud;
+    border: 1px solid $cloud;
+    color: $cloud;
 }
 
 @mixin button-group-two-dark() {
     background-color: transparent;
-	border: 1px solid $white;
-	color: $white;
+    border: 1px solid $white;
+    color: $white;
 }
 
 @mixin button-group-two-dark-hover() {
     background-color: $white;
-	border: 1px solid $white;
-	color: $dune;
+    border: 1px solid $white;
+    color: $dune;
 }
 
 @mixin button-group-two-dark-disabled() {
     background-color: transparent;
-	border: 1px solid $cloud;
-	color: $cloud;
+    border: 1px solid $cloud;
+    color: $cloud;
 }
 
 @mixin button-share {
     @include button-reset();
-	border-radius: 50%;
-	box-sizing: border-box;
-	height: 40px;
-	width: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 40px;
+    width: 40px;
     text-align: center;
 
-	svg {
-	    height: 100%;
-	    width: 16px;
-	}
+    svg {
+        height: 100%;
+        width: 16px;
+    }
 }
 
 @mixin button-share-light($name) {
@@ -173,9 +173,9 @@
 
 @mixin button-top-stories() {
     background-color: $white;
-    height: 62px;
-	transition: opacity .1s ease-in-out;
-    width: 62px;
+    height: 50%;
+    transition: opacity .1s ease-in-out;
+    width: 60px;
 
     svg {
         fill: $dune;
@@ -183,7 +183,7 @@
         width: 16px;
     }
 
-	svg,
+    svg,
     path {
         fill: $dune;
         transition: all .1s ease-in-out;
@@ -193,15 +193,15 @@
 @mixin button-top-stories-hover() {
     background: $dune;
 
-	svg {
-	    fill: $white;
-	}
+    svg {
+        fill: $white;
+    }
 }
 
 @mixin button-top-stories-disabled() {
     background: $white;
 
-	svg {
-	    fill: $concrete;
-	}
+    svg {
+        fill: $concrete;
+    }
 }

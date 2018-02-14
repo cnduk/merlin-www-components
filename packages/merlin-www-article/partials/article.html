@@ -36,7 +36,7 @@
 
                     {{# data.byline }}
                         <p class="a-author__byline a-author__byline--authors">
-                            <span class="a-author__byline-prefix">By</span>
+                            <span class="a-author__byline-prefix">{{ translation.author_byline_prefix }}</span>
                             <span class="a-author__byline-name">{{ &data.byline }}</span>
                         </p>
                     {{/ data.byline }}
@@ -52,7 +52,7 @@
                     {{# data.photographer_profile }}
                         <hr class="a-author__separator a-author__separator--byline" />
                         <div class="a-author__byline a-author__byline--photographer">
-                            <span class="a-author__byline-prefix">Photography by</span>
+                            <span class="a-author__byline-prefix">{{ translation.author_photography_prefix }}</span>
                             {{# state.has_link }}
                                 <span class="a-author__byline-name"><a class="{{ data.link.style.cls }}" href="{{ &data.link.data.url }}" title="{{ data.link.data.title }}">{{ data.name }}</a></span>
                             {{/ state.has_link }}
@@ -66,10 +66,10 @@
                         <hr class="a-author__separator a-author__separator--syndication" />
                         <div class="a-author__byline a-author__byline--syndication">
                             {{# state.has_link }}
-                                <span class="a-author__byline-prefix">Originally published by</span> <span class="a-author__byline-name"><a class="{{ data.link.style.cls }}" title="{{ data.link.data.title }}" href="{{ &data.link.data.url }}">{{ data.name }}</a></span>
+                                <span class="a-author__byline-prefix">{{ translation.author_syndication_prefix }}</span> <span class="a-author__byline-name"><a class="{{ data.link.style.cls }}" title="{{ data.link.data.title }}" href="{{ &data.link.data.url }}">{{ data.name }}</a></span>
                             {{/ state.has_link }}
                             {{^ state.has_link }}
-                                <span class="a-author__byline-prefix">Originally published by</span> <span class="a-author__byline-name">{{ data.name }}</span>
+                                <span class="a-author__byline-prefix">{{ translation.author_syndication_prefix }}</span> <span class="a-author__byline-name">{{ data.name }}</span>
                             {{/ state.has_link }}
                         </div>
                     {{/ data.syndication_profile }}

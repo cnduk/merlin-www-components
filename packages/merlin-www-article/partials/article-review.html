@@ -9,7 +9,7 @@
 
     {{# data.conclusion_positive }}
         <div class='a-review__item a-review__item--positive'>
-            <div class='a-review__key'>Pros</div>
+            <div class='a-review__key'>{{ translation.positive_title }}</div>
             <hr class='a-review__separator' />
             <div class='a-review__value'>{{ . }}</div>
         </div>
@@ -17,7 +17,7 @@
 
     {{# data.conclusion_negative }}
         <div class='a-review__item a-review__item--negative'>
-            <div class='a-review__key'>Cons</div>
+            <div class='a-review__key'>{{ translation.negative_title }}</div>
             <hr class='a-review__separator' />
             <div class='a-review__value'>{{ . }}</div>
         </div>
@@ -25,7 +25,7 @@
 
     {{# data.price_text }}
         <div class='a-review__item a-review__item--price'>
-            <div class='a-review__key'>Price</div>
+            <div class='a-review__key'>{{ translation.price_title }}</div>
             <hr class='a-review__separator' />
             <div class='a-review__value'>{{ . }}</div>
             <hr class='a-review__separator' />

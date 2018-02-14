@@ -72,3 +72,31 @@
         }
     }
 }
+
+.c-card-section--a-recommended {
+    background-color: $concrete;
+    max-width: none;
+    padding-bottom: $MOBILE_SLICE_MARGIN;
+    padding-top: $MOBILE_SLICE_MARGIN;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-top: $TABLET_SLICE_MARGIN;
+        padding-bottom: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-top: $DESKTOP_SLICE_MARGIN;
+        padding-bottom: $DESKTOP_SLICE_MARGIN;
+    }
+
+    .c-card-section__title {
+        @include font("MILLER_DISPLAY", 25px, 600, 25px);
+        color: $dune;
+        margin: 0 0 15px 0;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            @include font-size(30px);
+            @include line-height(30px);
+        }
+    }
+}

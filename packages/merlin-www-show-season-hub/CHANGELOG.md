@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.5.0"></a>
+# [1.5.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-season-hub@1.4.14...@cnbritain/merlin-www-show-season-hub@1.5.0) (2018-02-14)
+
+
+### Features
+
+* **merlin-www-show-season-hub:** add translation to partials ([99a4c36](https://github.com/cnduk/merlin-www-components/commit/99a4c36))
+
+
+
+
+<a name="1.4.13"></a>
+## [1.4.13](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-season-hub@1.4.12...@cnbritain/merlin-www-show-season-hub@1.4.13) (2018-02-14)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-season-hub
+
 <a name="1.4.4"></a>
 ## [1.4.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-season-hub@1.4.3...@cnbritain/merlin-www-show-season-hub@1.4.4) (2018-02-09)
 

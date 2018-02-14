@@ -1,0 +1,299 @@
+.has-open-menu {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.n-main {
+    background-color: $azalea;
+    z-index: 10;
+}
+
+.n-main__wrapper {
+
+}
+
+.n-main__header {
+    height: 102px;
+    text-align: center;
+}
+
+.n-main__nav {
+    height: 60px;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+}
+
+.n-main__nav-logo {
+    height: 60px;
+    left: 20px;
+    overflow: hidden;
+    position: fixed;
+    width: 130px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        left: 30px;
+    }
+
+    a {
+        bottom: 0;
+        height: 60px;
+        line-height: 60px;
+        position: absolute;
+        transition: bottom 0.2s ease-in-out;
+        vertical-align: middle;
+        width: 100%;
+    }
+
+    svg, img {
+        fill: $dune;
+        height: 60px;
+        width: 100%;
+    }
+
+    &.is-hidden {
+        a {
+            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+                bottom: -60px;
+            }
+        }
+    }
+
+    @include min-screen($MAXIMUM_PAGE_WIDTH + 60px) {
+        left: auto;
+    }
+}
+
+.n-main__nav-logo--takeover {
+    svg, img {
+
+    }
+}
+
+.n-main__nav-title {
+    @include font("GRAPHIK", 16px, 600, 16px);
+    color: $dune;
+    display: none;
+    left: 182px;
+    letter-spacing: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 202px;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    @include min-screen(600px) {
+        display: block;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        left: 192px;
+    }
+
+    @include min-screen($MAXIMUM_PAGE_WIDTH + 60px) {
+        position: absolute;
+        left: 162px;
+    }
+}
+
+.n-main__list-item {
+    vertical-align: top;
+}
+
+.n-main__nav-link {
+    @include font("GRAPHIK", 16px, 600, 16px);
+    color: $dune;
+    display: inline-block;
+    height: 60px;
+    letter-spacing: 0;
+    margin: 0 20px;
+
+    span {
+        display: inline-block;
+        height: 60px;
+        line-height: 60px;
+    }
+
+    &:hover {
+
+    }
+}
+
+.n-main__sticker {
+    z-index: 3;
+}
+
+.n-main__sticker-child {
+    background-color: $azalea;
+}
+
+.n-main__nav-hamburger {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    width: 60px;
+
+    .n-main__nav-hamburger__icon {
+        cursor: pointer;
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        width: 60px;
+
+        svg {
+            display: inline-block;
+            fill: $dune;
+            height: 20px;
+            line-height: 60px;
+            vertical-align: middle;
+        }
+    }
+
+    .n-main__nav-hamburger__close-icon {
+        cursor: pointer;
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        width: 60px;
+
+        svg {
+            display: inline-block;
+            fill: $dune;
+            height: 20px;
+            line-height: 60px;
+            vertical-align: middle;
+        }
+    }
+}
+
+.n-main__nav-search {
+    display: inline-block;
+    float: right;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    width: 60px;
+
+    .n-main__nav-search__icon {
+        background-color: transparent;
+        cursor: pointer;
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        width: 60px;
+
+        svg {
+            display: inline-block;
+            fill: $dune;
+            height: 20px;
+            line-height: 60px;
+            vertical-align: middle;
+        }
+
+        &:hover {
+
+        }
+    }
+
+    .n-main__nav-search__close-icon {
+        background-color: transparent;
+        cursor: pointer;
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        width: 60px;
+
+        svg {
+            display: inline-block;
+            fill: $dune;
+            height: 20px;
+            line-height: 60px;
+            vertical-align: middle;
+        }
+
+        &:hover {
+
+        }
+    }
+}
+
+.n-menu {
+    background-color: $azalea;
+    -webkit-overflow-scrolling: touch;
+
+    &.is-visible {
+        bottom: 0;
+        overflow: auto;
+        position: fixed;
+        top: 60px;
+        width: 100%;
+        z-index: 2;
+    }
+}
+
+.n-menu__top-stories {
+    .c-top-stories {
+        display: block;
+    }
+
+    .c-top-stories__overflow {
+        padding-left: 20px;
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            padding-left: 30px;
+        }
+    }
+}
+
+.n-menu__nav {
+    .n-menu__nav__wrapper {
+        border-bottom: 1px solid $dune;
+        padding-bottom: 20px;
+        margin: 0 20px 30px 20px;
+        overflow: hidden;
+
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            margin: 0 30px 30px 30px;
+        }
+    }
+
+    a {
+        .n-menu__nav-item {
+            border-bottom: 1px solid $dune;
+            float: left;
+            height: 60px;
+            position: relative;
+            width: 100%;
+
+            .n-menu__nav-link {
+                @include font("GRAPHIK", 15px, 600, 15px);
+                color: $dune;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                word-break: break-word;
+            }
+
+            &--more {
+                border-bottom: none;
+                height: 40px;
+                width: 50%;
+
+                .n-menu__nav-link {
+                    transform: translateY(0);
+                    bottom: 0;
+                    top: initial;
+                }
+            }
+
+            &:hover,
+            &:focus {
+
+            }
+        }
+    }
+}
