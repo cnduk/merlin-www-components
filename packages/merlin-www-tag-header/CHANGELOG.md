@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.7.0"></a>
+# [1.7.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.6.16...@cnbritain/merlin-www-tag-header@1.7.0) (2018-02-14)
+
+
+### Features
+
+* **merlin-www-tag-header:** add translation to partials ([e94defa](https://github.com/cnduk/merlin-www-components/commit/e94defa))
+
+
+
+
 <a name="1.6.14"></a>
 ## [1.6.14](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.6.13...@cnbritain/merlin-www-tag-header@1.6.14) (2018-02-14)
 

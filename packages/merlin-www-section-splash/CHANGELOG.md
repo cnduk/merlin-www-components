@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.5.0"></a>
+# [1.5.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-splash@1.4.20...@cnbritain/merlin-www-section-splash@1.5.0) (2018-02-14)
+
+
+### Bug Fixes
+
+* **merlin-www-section-splash:** correct sponsor title value ([32e8790](https://github.com/cnduk/merlin-www-components/commit/32e8790))
+
+
+### Features
+
+* **merlin-www-section-splash:** add translation to partial ([f2784ad](https://github.com/cnduk/merlin-www-components/commit/f2784ad))
+
+
+
+
 <a name="1.4.18"></a>
 ## [1.4.18](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-splash@1.4.17...@cnbritain/merlin-www-section-splash@1.4.18) (2018-02-14)
 

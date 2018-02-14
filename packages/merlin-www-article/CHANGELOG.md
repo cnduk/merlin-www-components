@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.22.0"></a>
+# [1.22.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.21.23...@cnbritain/merlin-www-article@1.22.0) (2018-02-14)
+
+
+### Features
+
+* **merlin-www-article:** add translation keys to partials ([1a12cac](https://github.com/cnduk/merlin-www-components/commit/1a12cac))
+
+
+
+
 <a name="1.21.22"></a>
 ## [1.21.22](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.21.21...@cnbritain/merlin-www-article@1.21.22) (2018-02-14)
 

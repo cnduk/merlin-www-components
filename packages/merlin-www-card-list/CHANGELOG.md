@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.9.18"></a>
+## [1.9.18](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card-list@1.9.17...@cnbritain/merlin-www-card-list@1.9.18) (2018-02-14)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-card-list
+
 <a name="1.9.15"></a>
 ## [1.9.15](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card-list@1.9.14...@cnbritain/merlin-www-card-list@1.9.15) (2018-02-14)
 

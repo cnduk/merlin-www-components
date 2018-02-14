@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-marketing-cards@1.5.16...@cnbritain/merlin-www-marketing-cards@1.6.0) (2018-02-14)
+
+
+### Features
+
+* **merlin-www-marketing-cards:** add translation to brand and topic cards ([26c6b7c](https://github.com/cnduk/merlin-www-components/commit/26c6b7c))
+
+
+
+
 <a name="1.5.16"></a>
 ## [1.5.16](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-marketing-cards@1.5.15...@cnbritain/merlin-www-marketing-cards@1.5.16) (2018-02-14)
 
