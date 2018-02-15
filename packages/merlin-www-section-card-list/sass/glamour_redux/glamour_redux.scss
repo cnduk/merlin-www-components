@@ -100,3 +100,42 @@
         }
     }
 }
+
+.c-card-section--v-related-articles {
+    background-color: $dune;
+    max-width: none;
+    padding-bottom: $MOBILE_SLICE_MARGIN;
+    padding-top: $MOBILE_SLICE_MARGIN;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-top: $TABLET_SLICE_MARGIN;
+        padding-bottom: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-top: $DESKTOP_SLICE_MARGIN;
+        padding-bottom: $DESKTOP_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: none;
+    }
+
+    .c-card-section__title {
+        @include font("GRAPHIK", 14px, 400, 14px);
+        color: $white;
+        letter-spacing: 1px;
+        margin: 0 0 20px 0;
+        text-transform: uppercase;
+    }
+
+    .c-card-section__btn {
+        @include button-single();
+        @include button-single-dark();
+        &:hover {
+            @include button-single-dark-hover();
+        }
+
+        margin-top: 30px;
+    }
+}

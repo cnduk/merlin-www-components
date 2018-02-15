@@ -31,6 +31,18 @@
     .a-footer__wrapper {
         padding-left: 0;
     }
+
+    .c-topic-strip--article-related {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            text-align: left;
+        }
+    }
+
+    .a-related-tags {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-top: 40px;
+        }
+    }
 }
 
 .a-footer__wrapper {}

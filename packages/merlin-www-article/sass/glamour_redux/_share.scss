@@ -45,7 +45,7 @@
 .a-share__youtube {
     display: block;
     margin: 20px auto 0 auto;
-    text-align: center;
+    text-align: left;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         display: inline-block;
