@@ -1,20 +1,47 @@
 // -------------------- //
 // Video Related
 // -------------------- //
-@mixin card-v-related() {}
-@mixin card-v-related-small() {}
-@mixin card-v-related-large() {}
+@mixin card-v-related() {
+    .c-card__tag,
+    .c-card__title,
+    .c-card__byline,
+    ul.c-card__meta {
+        color: $white;
+    }
+}
+
+@mixin card-v-related-small() {
+    .c-card__obj__body {
+        padding-top: 0;
+    }
+}
+
+@mixin card-v-related-large() {
+    .c-card__obj__body {
+        padding-top: 0;
+    }
+}
 
 .c-card--v-related {
+    @include card-landscape();
+    @include card-landscape-small();
 
+    @include card-v-related();
+    @include card-v-related-small();
 }
 
 .c-card--v-related-small {
+    @include card-landscape();
+    @include card-landscape-small();
+
     @include card-v-related();
     @include card-v-related-small();
 }
 
 .c-card--v-related-large {
+    @include card-landscape();
+    @include card-landscape-small();
+
     @include card-v-related();
     @include card-v-related-large();
 }
