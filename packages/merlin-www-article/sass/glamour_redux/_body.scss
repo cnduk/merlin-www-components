@@ -13,12 +13,13 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin: 48px 0;
     }
-
 }
 .a-body--gallery {}
 .a-body--video {
+    margin: 30px 0 40px 0;
+
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: 48px;
+        margin: 40px 0;
     }
 }
 .a-body__clear {
