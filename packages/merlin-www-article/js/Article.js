@@ -62,9 +62,9 @@ Article.prototype = inherit(EventEmitter.prototype, {
 
     '_init': function _init() {
 
-        // If article has come from infinite scroll, trigger social embeds to
-        // update as the article body might contain embeds.
-        if (this.isInfinite) updateSocialEmbeds();
+        // Due instagram being a crap script, we stop oembeds from loading
+        // in their script and load it in once and trigger instagram.t
+        updateSocialEmbeds();
 
         // Check if the article contains a gallery
         var gallery = this.el.querySelector(CLS_ARTICLE_GALLERY);
