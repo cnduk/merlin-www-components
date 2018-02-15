@@ -1,0 +1,29 @@
+.a-main {}
+
+.a-main--gallery {}
+.a-main--video {
+    .a-body__content {
+        padding-left: 0;
+    }
+}
+
+.a-body {
+    margin: 32px 0;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 48px 0;
+    }
+
+}
+.a-body--gallery {}
+.a-body--video {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 48px;
+    }
+}
+.a-body__clear {
+    clear: both;
+}
+
+.a-body__wrapper {}
+.a-body__content {}
