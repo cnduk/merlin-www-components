@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.22.8"></a>
+## [1.22.8](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.22.7...@cnbritain/merlin-www-article@1.22.8) (2018-02-15)
+
+
+### Bug Fixes
+
+* **merlin-www-article:** always run updateSocialEmbeds() when initialising articles ([d623d78](https://github.com/cnduk/merlin-www-components/commit/d623d78))
+
+
+
+
 <a name="1.22.0"></a>
 # [1.22.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.21.23...@cnbritain/merlin-www-article@1.22.0) (2018-02-14)
 
