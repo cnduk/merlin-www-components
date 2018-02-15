@@ -483,7 +483,7 @@
     display: inline-block;
     height: 38px;
     left: 0;
-    padding-top: 10px;
+    padding-top: 7px;
     position: absolute;
     text-indent: 0;
     text-align: center;
@@ -723,16 +723,16 @@ h4.bb-video__title {
 
     &:hover,
     &:focus {
-        @include button-single-light-hover();
+        @include button-group-light-hover();
     }
 }
 .bb-button--dark {
-    @include button-single();
-    @include button-single-dark();
+    @include button-group();
+    @include button-group-dark();
 
     &:hover,
     &:focus {
-        @include button-single-dark-hover();
+        @include button-group-dark-hover();
     }
 }
 
