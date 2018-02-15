@@ -1,0 +1,22 @@
+.a-sidebar-content {
+
+}
+
+.a-sidebar-content__list {
+
+}
+
+.a-sidebar-content__list-item {
+    & + .a-sidebar-content__list-item {
+        margin-top: 20px;
+    }
+}
+
+.a-sidebar-content__title {
+    @include font("GRAPHIK", 15px, 600, 15px);
+    color: $dune;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
