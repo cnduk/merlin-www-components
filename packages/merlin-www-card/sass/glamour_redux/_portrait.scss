@@ -224,7 +224,8 @@
 }
 
 .c-card--portrait {
-
+    @include card-portrait();
+    @include card-portrait-large();
 }
 
 .c-card--portrait-small {
