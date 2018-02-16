@@ -655,11 +655,10 @@ ul li.bb-gallery__col {
 }
 
 .bb-video__title-icon {
-   // display: table-cell;
     padding-left: 10px;
     left: 0;
     margin: 0 auto;
-    margin-top: 8px;
+    margin-top: 5px;
     position: absolute;
     vertical-align: middle;
     width: 56px;
@@ -694,9 +693,12 @@ ul li.bb-gallery__col {
 h4.bb-video__title {
     @include font("GRAPHIK", 16px, 'NORMAL', 18px);
     color: $astronaut;
-    display: table-cell;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     padding: 20px 10px 20px 56px;
     vertical-align: middle;
+    min-height: 66px;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(18px);
