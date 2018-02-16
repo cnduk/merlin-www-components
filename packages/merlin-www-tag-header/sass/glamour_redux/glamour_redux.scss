@@ -8,3 +8,300 @@
 @import "@cnbritain/merlin-www-topic-strip:glamour_redux";
 
 @import "../wireframe/wireframe";
+
+.tg-header {
+    margin: 32px 0;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 48px 0;
+    }
+
+    &.has-hero {
+        margin-top: 0;
+    }
+}
+
+.tg-header--video {
+    .tg-header__intro__image {
+        margin: 0 auto;
+        width: 160px;
+
+        svg {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+        }
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            width: 250px;
+        }
+    }
+}
+
+.tg-header--profile {
+    .tg-header__intro__image {
+        border-radius: 50%;
+        height: 90px;
+        margin: 0 auto 15px auto;
+        overflow: hidden;
+        padding: 5px;
+        position: relative;
+        width: 90px;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            height: 130px;
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 130px;
+        }
+
+        &:before {
+            background-image: url('../../static/img/pattern-1.jpg');
+            background-position: center;
+            border-radius: 50%;
+            bottom: -5px;
+            content: '';
+            left: -5px;
+            overflow: hidden;
+            position: absolute;
+            right: -5px;
+            top: -5px;
+            z-index: -1;
+
+            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+                bottom: -10px;
+                left: -10px;
+                right: -10px;
+                top: -10px;
+            }
+        }
+
+        img {
+            border-radius: 50%;
+            height: 80px;
+            overflow: hidden;
+            width: 80px;
+
+            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+                width: 110px;
+                height: 110px;
+            }
+        }
+    }
+
+    .tg-header__title {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            @include font-size(40px);
+            @include line-height(45px);
+        }
+    }
+}
+
+.tg-header--brand,
+.tg-header--event,
+.tg-header--topic {
+    .tg-header__intro__image {
+        margin: 0 auto 15px auto;
+        width: 160px;
+
+        img {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+        }
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            width: 250px;
+        }
+    }
+}
+
+.tg-header__wrapper {
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    margin: 0 auto;
+}
+
+.tg-header__intro {
+    padding: 0 $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0 $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0 $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.tg-header__hero {
+    position: relative;
+
+    .tg-header__title {
+        color: $white;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.tg-header__hero-image {
+    padding-top: 32%;
+
+    img {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.tg-header__intro__image {}
+
+.tg-header__title {
+    @include font("MILLER_DISPLAY", 37px, 600, 40px);
+    color: $dune;
+    text-align: center;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(75px);
+        @include line-height(75px);
+    }
+}
+
+.tg-header__sponsor {
+    @include font("GRAPHIK", 10px, 400, 13px);
+    border-top: 1px solid $cloud;
+    color: $dune;
+    display: table;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    padding-top: 5px;
+    position: relative;
+    text-transform: uppercase;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        border-top: none;
+        padding: 0;
+    }
+}
+
+.tg-header__sponsor-prefix {
+    display: inline-block;
+    white-space: nowrap;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+.tg-header__sponsor-name {
+    color: $dune;
+    padding-left: 5px;
+}
+
+.tg-header__sponsor-image {
+    img {
+        height: auto;
+        margin: 10px auto 0 0;
+        max-height: 40px;
+        max-width: 140px;
+        width: auto;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: table-cell;
+        margin-top: 0;
+        padding-left: 10px;
+        vertical-align: middle;
+
+        img {
+            max-height: 48px;
+            margin-top: 0;
+        }
+    }
+}
+
+.tg-header__separator {
+    display: none;
+}
+
+.tg-header__description {
+    color: $dune;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 40px;
+    }
+
+    .bb-a {
+        color: inherit;
+    }
+
+    .bb-p {
+        color: inherit;
+    }
+
+    > *:first-child {
+        margin-top: 0;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.tg-header__description-expand {
+    margin-top: 20px;
+}
+
+.tg-header__expand-btn {
+    @include button-single();
+    @include button-single-light();
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
+
+.tg-header__topic-strip {
+    margin: 12px auto;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 24px auto;
+    }
+
+    .c-topic-strip {
+        text-align: center;
+    }
+
+    .c-topic-strip__btn {
+        @include button-group();
+        @include button-group-light();
+
+        &:hover {
+            @include button-group-light-hover();
+        }
+    }
+}
+
+.tg-header__cards {
+    margin: 40px auto;
+    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER*2;
+    padding: 0 $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0 $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 48px auto;
+        padding: 0 $DESKTOP_SIDE_GUTTER;
+    }
+}
