@@ -50,8 +50,7 @@
     }
 }
 
-.c-card-section--tg-articles,
-.c-card-section--v-articles {
+.c-card-section--tg-articles {
     .c-card-section__title {
         @include font("MILLER_DISPLAY", 30px, 600, 30px);
         color: $dune;
@@ -74,8 +73,7 @@
     }
 }
 
-.c-card-section--a-recommended,
-.c-card-section--v-genre-articles {
+.c-card-section--a-recommended {
     background-color: $concrete;
     max-width: none;
     padding-bottom: $MOBILE_SLICE_MARGIN;

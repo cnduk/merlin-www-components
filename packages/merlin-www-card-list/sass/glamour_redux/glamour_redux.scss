@@ -11,8 +11,7 @@
 .c-card-list--c-splash,
 .c-card-list--c-tag,
 .c-card-list--c-video-articles,
-.c-card-list--s-results,
-.c-card-list--v-genre-articles {
+.c-card-list--s-results{
     flex-direction: column;
     margin: -10px;
 
@@ -36,36 +35,39 @@
     }
 }
 
+.c-card-list--c-contributors{
+    flex-direction: column;
+    margin: -10px;
+
+    .c-card-list__item {
+        padding: 10px;
+
+        & + .c-card-list__item {
+            padding-top: 20px;
+
+             @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+                padding-top: 10px;
+             }
+        }
+
+    }
+
+    @include three-column-size() {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .c-card-list__item {
+            width: 33.3%;
+        }
+    }
+}
+
 .c-card-list--tg-articles {
     flex-direction: column;
     margin: -10px;
 
     .c-card-list__item {
         padding: 10px;
-    }
-}
-
-.c-card-list--v-articles {
-    flex-direction: column;
-    margin: -10px;
-
-    .c-card-list__item {
-        padding: 10px;
-    }
-
-    @include two-column-size() {
-        flex-direction: row;
-        flex-wrap: wrap;
-
-        .c-card-list__item {
-            width: 50%;
-        }
-    }
-
-    @include four-column-size() {
-        .c-card-list__item {
-            width: 33.33333%;
-        }
     }
 }
 
