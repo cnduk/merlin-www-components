@@ -32,7 +32,7 @@
     height: 40px;
 
     & + .a-share__list-item {
-        margin-left: 10px;
+        margin-left: 5px;
     }
 }
 
@@ -49,7 +49,7 @@
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         display: inline-block;
-        margin-left: 8px;
+        margin-left: 5px;
         margin-top: 4px;
     }
 
