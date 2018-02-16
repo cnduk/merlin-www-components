@@ -8,6 +8,10 @@
     ul.c-card__meta {
         color: $white;
     }
+
+    .c-card__tag {
+        display: none;
+    }
 }
 
 @mixin card-v-related-small() {
