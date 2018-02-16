@@ -33,9 +33,7 @@
     }
 
     .c-topic-strip--article-related {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            text-align: left;
-        }
+        text-align: left;
     }
 
     .a-related-tags {
