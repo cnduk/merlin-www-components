@@ -65,17 +65,19 @@
                     </span>
                 {{/ data.byline }}
 
-                {{# data.syndication_profile }}
+                {{# state.has_syndication }}
                     <span class="a-header__byline-item a-header__byline-item--syndication">
                         <span class="a-header__byline-prefix">{{ translation.header_syndication_prefix }} </span>
-                        {{# state.has_link }}
-                            <span class="a-header__byline-name"><a class="{{ data.link.style.cls }}" title="{{ data.link.data.title }}" href="{{ &data.link.data.url }}">{{ data.name }}</a></span>
-                        {{/ state.has_link }}
-                        {{^ state.has_link }}
-                            <span class="a-header__byline-name">{{ data.name }}</span>
-                        {{/ state.has_link }}
+                        {{# data.syndication_profile }}
+                            {{# state.has_link }}
+                                <span class="a-header__byline-name"><a class="{{ data.link.style.cls }}" title="{{ data.link.data.title }}" href="{{ &data.link.data.url }}">{{ data.name }}</a></span>
+                            {{/ state.has_link }}
+                            {{^ state.has_link }}
+                                <span class="a-header__byline-name">{{ data.name }}</span>
+                            {{/ state.has_link }}
+                        {{/ data.syndication_profile }}
                     </span>
-                {{/ data.syndication_profile }}
+                {{/ state.has_syndication }}
 
                 {{# data.byline }}
                     </div>
@@ -93,23 +95,24 @@
                 {{/ state.has_event_information }}
             </div>
 
-            {{# data.sponsor }}
+            {{# state.is_sponsored }}
                 <div class="a-header__sponsor">
                     <span class='a-header__sponsor-prefix'>{{ translation.header_sponsorship_prefix }}</span>
+                    {{# data.sponsor }}
+                        {{# data.image }}
+                            <div class="a-header__sponsor-image">
+                                {{> @cnbritain/merlin-www-image }}
+                            </div>
+                        {{/ data.image }}
 
-                    {{# data.image }}
-                        <div class="a-header__sponsor-image">
-                            {{> @cnbritain/merlin-www-image }}
-                        </div>
-                    {{/ data.image }}
-
-                    {{^ data.image }}
-                        {{# data.link }}
-                            <a class='a-header__sponsor-name' href="{{ &data.url }}" {{# state.is_nofollow }} rel="nofollow" {{/ state.is_nofollow }}>{{ data.title }}</a>
-                        {{/ data.link }}
-                    {{/ data.image }}
+                        {{^ data.image }}
+                            {{# data.link }}
+                                <a class='a-header__sponsor-name' href="{{ &data.url }}" {{# state.is_nofollow }} rel="nofollow" {{/ state.is_nofollow }}>{{ data.title }}</a>
+                            {{/ data.link }}
+                        {{/ data.image }}
+                    {{/ data.sponsor }}
                 </div>
-            {{/ data.sponsor }}
+            {{/ state.is_sponsored }}
 
             <div class="a-share">
                 {{# data.share_list }}
