@@ -26,7 +26,10 @@
 @mixin card-portrait-small() {
     .c-card {}
     .c-card__link {}
-    .c-card__obj {}
+    .c-card__obj {
+        background-color: $white;
+    }
+
     .c-card__obj__header {}
     .c-card__images {}
     .c-card__image {}
@@ -124,7 +127,10 @@
 @mixin card-portrait-large() {
     .c-card {}
     .c-card__link {}
-    .c-card__obj {}
+    .c-card__obj {
+        background-color: $white;
+    }
+
     .c-card__obj__header {}
     .c-card__images {}
     .c-card__image {}
@@ -152,7 +158,6 @@
     }
 
     .c-card__obj__body {
-        background-color: $white;
         flex: 1 0 auto;
         padding: 15px 15px 20px 15px;
     }

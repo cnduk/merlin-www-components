@@ -110,7 +110,10 @@
 @mixin card-landscape-large() {
     .c-card {}
     .c-card__link {}
-    .c-card__obj {}
+    .c-card__obj {
+        background-color: $white;
+    }
+
     .c-card__obj__header {
         padding-right: 30px;
         width: 46%;
@@ -123,7 +126,6 @@
     }
 
     .c-card__obj__body {
-        background-color: $white;
         flex: 1 0 auto;
         padding: 50px 30px 30px 0;
         width: 54%;
