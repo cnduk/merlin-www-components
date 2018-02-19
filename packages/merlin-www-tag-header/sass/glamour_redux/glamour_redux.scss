@@ -9,6 +9,7 @@
 
 @import "../wireframe/wireframe";
 
+
 .tg-header {
     margin: 32px 0;
 
@@ -21,107 +22,66 @@
     }
 }
 
-.tg-header--video {
-    .tg-header__intro__image {
-        margin: 0 auto;
-        width: 160px;
-
-        svg {
-            display: inline-block;
-            height: 100%;
-            width: 100%;
-        }
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            width: 250px;
-        }
-    }
-}
-
-.tg-header--profile {
-    .tg-header__intro__image {
-        border-radius: 50%;
-        height: 90px;
-        margin: 0 auto 15px auto;
-        overflow: hidden;
-        padding: 5px;
-        position: relative;
-        width: 90px;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            height: 130px;
-            margin-bottom: 20px;
-            padding: 10px;
-            width: 130px;
-        }
-
-        &:before {
-            background-image: url('../../static/img/pattern-1.jpg');
-            background-position: center;
-            border-radius: 50%;
-            bottom: -5px;
-            content: '';
-            left: -5px;
-            overflow: hidden;
-            position: absolute;
-            right: -5px;
-            top: -5px;
-            z-index: -1;
-
-            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-                bottom: -10px;
-                left: -10px;
-                right: -10px;
-                top: -10px;
-            }
-        }
-
-        img {
-            border-radius: 50%;
-            height: 80px;
-            overflow: hidden;
-            width: 80px;
-
-            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-                width: 110px;
-                height: 110px;
-            }
-        }
-    }
-
-    .tg-header__title {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            @include font-size(40px);
-            @include line-height(45px);
-        }
-    }
-}
-
-.tg-header--brand,
-.tg-header--event,
-.tg-header--topic {
-    .tg-header__intro__image {
-        margin: 0 auto 15px auto;
-        width: 160px;
-
-        img {
-            display: inline-block;
-            height: 100%;
-            width: 100%;
-        }
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            width: 250px;
-        }
-    }
-}
-
 .tg-header__wrapper {
     max-width: $MAXIMUM_PAGE_WIDTH;
     margin: 0 auto;
 }
 
 .tg-header__intro {
+    background-color: $azalea;
+    overflow: hidden;
+    padding: 30px $MOBILE_SIDE_GUTTER;
+    position: relative;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 62px $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 62px $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.tg-header__hero {
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+}
+
+.tg-header__intro__image {
+    max-width: 220px;
+    position: relative;
+    z-index: 1;
+}
+
+.tg-header__title {
+    @include font("MILLER_DISPLAY", 37px, 600, 40px);
+    color: $dune;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+
+    .has-hero & {
+        color: $white;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(75px);
+        @include line-height(75px);
+    }
+}
+
+.tg-header__description,
+.tg-header__sponsor,
+.tg-header__event-meta,
+.tg-header__topic-strip {
     padding: 0 $MOBILE_SIDE_GUTTER;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
@@ -130,46 +90,6 @@
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         padding: 0 $DESKTOP_SIDE_GUTTER;
-    }
-}
-
-.tg-header__hero {
-    position: relative;
-
-    .tg-header__title {
-        color: $white;
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
-
-.tg-header__hero-image {
-    background-color: $pampas;
-    padding-top: 32%;
-
-    img {
-        bottom: 0;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 100%;
-    }
-}
-
-.tg-header__intro__image {}
-
-.tg-header__title {
-    @include font("MILLER_DISPLAY", 37px, 600, 40px);
-    color: $dune;
-    text-align: center;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(75px);
-        @include line-height(75px);
     }
 }
 
@@ -304,5 +224,106 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin: 48px auto;
         padding: 0 $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+
+.tg-header--video {
+    .tg-header__intro__image {
+        margin: 0 auto;
+        width: 160px;
+
+        svg {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+        }
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            width: 250px;
+        }
+    }
+}
+
+.tg-header--profile {
+
+    .tg-header__primary {
+        background-color: transparent;
+    }
+
+    .tg-header__intro__image {
+        border-radius: 50%;
+        height: 90px;
+        margin: 0 auto 15px auto;
+        overflow: hidden;
+        padding: 5px;
+        position: relative;
+        width: 90px;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            height: 130px;
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 130px;
+        }
+
+        &:before {
+            background-image: url('/static/img/pattern-1.jpg');
+            background-position: center;
+            border-radius: 50%;
+            bottom: -5px;
+            content: '';
+            left: -5px;
+            overflow: hidden;
+            position: absolute;
+            right: -5px;
+            top: -5px;
+            z-index: -1;
+
+            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+                bottom: -10px;
+                left: -10px;
+                right: -10px;
+                top: -10px;
+            }
+        }
+
+        img {
+            border-radius: 50%;
+            height: 80px;
+            overflow: hidden;
+            width: 80px;
+
+            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+                width: 110px;
+                height: 110px;
+            }
+        }
+    }
+
+    .tg-header__title {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            @include font-size(40px);
+            @include line-height(45px);
+        }
+    }
+}
+
+.tg-header--brand,
+.tg-header--event,
+.tg-header--topic {
+    .tg-header__intro__image {
+        margin: 0 auto 15px auto;
+        width: 160px;
+
+        img {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+        }
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            width: 250px;
+        }
     }
 }
