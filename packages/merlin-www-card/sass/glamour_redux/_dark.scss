@@ -12,4 +12,18 @@
             color: $white;
         }
     }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        &:hover {
+            .c-card__title {
+                span {
+                    box-shadow: inset 0 -2px 0 0 $white;
+                }
+            }
+
+            .c-card__image {
+                transform: scale(1.04);
+            }
+        }
+    }
 }
