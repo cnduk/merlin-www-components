@@ -115,15 +115,15 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         // Resize
         onPageLoad(this.resize.bind(this, 0));
 
-        // Scroll listener for focus and blur events
-        this._hooks.scroll = throttle(onWindowScroll, 33, this);
-        addEvent(window, 'scroll', this._hooks.scroll);
-
         // Video changes
         if (VideoPlayer !== null) {
             bubbleEvent(VideoPlayer, this, 'videoselect');
             bubbleEvent(VideoPlayer, this, 'videochange');
             VideoPlayer.on('videochange', this._onVideoChange.bind(this));
+        } else {
+            // Scroll listener for focus and blur events
+            this._hooks.scroll = throttle(onWindowScroll, 33, this);
+            addEvent(window, 'scroll', this._hooks.scroll);
         }
 
         this.on('focus', onArticleFocus);
