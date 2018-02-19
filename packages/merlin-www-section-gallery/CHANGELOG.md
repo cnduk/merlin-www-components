@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.6.7"></a>
+## [1.6.7](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.6.6...@cnbritain/merlin-www-section-gallery@1.6.7) (2018-02-19)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-gallery
+
 <a name="1.6.0"></a>
 # [1.6.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.5.14...@cnbritain/merlin-www-section-gallery@1.6.0) (2018-02-14)
 

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.4.21"></a>
+## [1.4.21](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-cookie-warning@1.4.20...@cnbritain/merlin-www-cookie-warning@1.4.21) (2018-02-19)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-cookie-warning
+
 <a name="1.4.12"></a>
 ## [1.4.12](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-cookie-warning@1.4.11...@cnbritain/merlin-www-cookie-warning@1.4.12) (2018-02-14)
 

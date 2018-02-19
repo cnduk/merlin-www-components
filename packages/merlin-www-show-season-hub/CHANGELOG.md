@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.5.9"></a>
+## [1.5.9](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-season-hub@1.5.8...@cnbritain/merlin-www-show-season-hub@1.5.9) (2018-02-19)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-season-hub
+
 <a name="1.5.0"></a>
 # [1.5.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-season-hub@1.4.14...@cnbritain/merlin-www-show-season-hub@1.5.0) (2018-02-14)
 

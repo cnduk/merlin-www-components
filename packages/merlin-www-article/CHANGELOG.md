@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.22.21"></a>
+## [1.22.21](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.22.20...@cnbritain/merlin-www-article@1.22.21) (2018-02-19)
+
+
+### Bug Fixes
+
+* **merlin-www-article:** apply scroll listener if no video player ([5beddc5](https://github.com/cnduk/merlin-www-components/commit/5beddc5))
+
+
+
+
 <a name="1.22.16"></a>
 ## [1.22.16](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.22.15...@cnbritain/merlin-www-article@1.22.16) (2018-02-16)
 
