@@ -50,6 +50,20 @@
     }
 }
 
+.c-card-section--c-video-articles {
+    .c-card-section__logo {
+        height: auto;
+        margin-bottom: 15px;
+        width: 220px;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-left: auto;
+            margin-right: auto;
+            width: 406px;
+        }
+    }
+}
+
 .c-card-section--tg-articles,
 .c-card-section--v-articles {
     .c-card-section__title {
