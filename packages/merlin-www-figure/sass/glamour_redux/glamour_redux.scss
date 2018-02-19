@@ -1,2 +1,96 @@
 @import '@cnbritain/merlin-www-common:glamour_redux';
+@import '@cnbritain/merlin-www-bbcode:glamour_redux';
+
 @import '../wireframe/wireframe';
+
+
+.c-figure__container {
+    background-color: $concrete;
+    margin-bottom: 15px;
+}
+
+
+.c-figure__toolbar {
+    height: 40px;
+}
+.c-figure__toolbar-list {
+    height: 40px;
+}
+li.c-figure__toolbar-listitem {
+    background-color: $white;
+    height: 40px;
+    width: 40px;
+
+    svg {
+        width: 40%;
+    }
+
+    path {
+        fill: $dune;
+    }
+
+}
+
+@each $name, $colour in $COLOUR_SOCIAL {
+    li.c-figure__toolbar-listitem--#{$name} {
+
+        path {
+            fill: $colour;
+        }
+
+        &:hover {
+            background-color: map-get($COLOUR_SOCIAL_HOVER, $name);
+
+            path {
+                fill: $white;
+            }
+        }
+    }
+}
+
+li.c-figure__toolbar-listitem--zoom {
+    path {
+        fill: $astronaut;
+    }
+
+    &:hover {
+        background-color: $astronaut;
+
+        path {
+            fill: $white;
+        }
+    }
+}
+
+.c-figure__title {
+    @include font("GRAPHIK", 16px, 'SEMIBOLD', 24px);
+    color: $dune;
+    margin: 0 0 4px 0;
+}
+
+// Contains bbcode so will be inherited from that stylesheet
+.c-figure__caption {
+    margin-bottom: 20px;
+
+    > * {
+        margin-bottom: 0;
+    }
+}
+
+.c-figure__credit {
+    @include font('GRAPHIK', 8px, 'NORMAL', 8px);
+    color: $natural-gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    &:before {
+        content: 'CREDIT: ';
+    }
+}
+
+
+.c-figure__magnifier-button {}
+.c-figure__magnifier--full-screen {
+    background-color: $concrete;
+    z-index: 15;
+}
