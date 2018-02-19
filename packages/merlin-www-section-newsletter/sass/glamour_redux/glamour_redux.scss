@@ -36,11 +36,11 @@
 .c-newsletter__wrapper {
     background: $white;
     margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
     padding: 30px $MOBILE_SIDE_GUTTER;
     position: relative;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        max-width: 100%;
         padding: 40px 0;
         border: solid 20px transparent;
         border-image: url("/static/img/pattern-1.jpg") 20;
@@ -70,11 +70,11 @@
         background-size: 100% 100%;
         border-radius: 50%;
         position: relative;
-	    box-sizing: border-box;
+        box-sizing: border-box;
         display: block;
-	    height: 70px;
+        height: 70px;
         text-align: center;
-	    width: 70px;
+        width: 70px;
         margin: 0 auto;
         margin-bottom: 20px;
         z-index: 1;
@@ -137,7 +137,7 @@
     @include button-single();
     @include font("GRAPHIK", 13px, 'SEMI BOLD', 13px);
     background-color: $dune;
-	color: $white;
+    color: $white;
     height: 40px;
     letter-spacing: 1px;
     padding-top: 10px;
