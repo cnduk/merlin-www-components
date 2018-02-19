@@ -74,7 +74,7 @@
 }
 
 .n-main__nav-title {
-    @include font("GRAPHIK", 16px, 600, 16px);
+    @include font("GRAPHIK", 16px, 600, 60px);
     color: $dune;
     display: none;
     left: 182px;
@@ -120,7 +120,7 @@
     }
 
     &:hover {
-        border-bottom: 2px solid $dune;
+
     }
 }
 

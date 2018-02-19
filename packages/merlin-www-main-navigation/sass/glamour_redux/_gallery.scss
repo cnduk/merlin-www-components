@@ -18,27 +18,20 @@
 }
 
 .n-gallery-counter {
+    @include font('GRAPHIK', 16px, 'SEMI BOLD', 16px);
     @include line-height(60px);
-    // padding: 0 24px;
+    padding: 0 10px;
 }
 
 .n-gallery-counter__current {
-    // @include font("PROXIMA NOVA CONDENSED", 20px, 600, 20px);
-    // color: $SHERPA-BLUE;
-    // letter-spacing: 1px;
+    @include font-size(18px);
+    @include line-height(18px);
+    padding-right: 5px;
 }
 
-.n-gallery-counter__slash {
-    // @include font("PROXIMA NOVA CONDENSED", 14px, 600, 20px);
-    // color: $MUSTASAARI;
-    // margin: 0 6px;
-}
+.n-gallery-counter__slash {}
 
-.n-gallery-counter__total {
-    // @include font("PROXIMA NOVA CONDENSED", 14px, 600, 20px);
-    // color: $MUSTASAARI;
-    // letter-spacing: 1px;
-}
+.n-gallery-counter__total {}
 
 
 .n-gallery-toggle,
