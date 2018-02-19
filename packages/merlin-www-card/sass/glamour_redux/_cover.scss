@@ -32,6 +32,20 @@
             color: $azalea;
         }
     }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        &:hover {
+            .c-card__title {
+                span {
+                    box-shadow: none;
+                }
+            }
+
+            .c-card__image {
+                transform: none;
+            }
+        }
+    }
 }
 
 @mixin card-cover-small() {
