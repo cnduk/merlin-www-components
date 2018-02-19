@@ -22,7 +22,7 @@
 }
 
 .n-main__dropdown-list--left {
-    padding: 10px 20px 5px 20px;
+    padding: 10px 20px 10px 20px;
     min-width: 160px;
 }
 
@@ -35,29 +35,39 @@
     position: relative;
 
     .n-main__nav-link {
-        @include line-height(40px);
+        @include line-height(30px);
         color: $dune;
         display: inline-block;
         margin: 0;
-        height: 40px;
+        height: 30px;
         white-space: nowrap;
 
         span {
             display: inline-block;
-            height: 15px;
-            line-height: 15px;
+            height: 30px;
+            line-height: 30px;
             vertical-align: top;
         }
 
         &:hover {
+            border-bottom: none;
 
+            &:before {
+                background-color: $dune;
+                content: '';
+                height: 100%;
+                left: -20px;
+                position: absolute;
+                top: 0;
+                width: 2px;
+            }
         }
     }
 }
 
 .n-main__dropdown-link {
     &:hover {
-        color: $dune;
+        border-bottom: none;
     }
 
     &:after {
