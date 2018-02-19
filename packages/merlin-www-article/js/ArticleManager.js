@@ -108,7 +108,6 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
 
         // Focus and blur events
         this._triggerFocusBlur(index);
-        this._triggerFocusBlur(index);
     },
 
     '_init': function _init() {
