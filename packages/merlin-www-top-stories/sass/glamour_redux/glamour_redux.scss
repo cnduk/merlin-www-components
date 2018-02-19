@@ -10,6 +10,7 @@
     padding: 10px 0;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        border-bottom: 3px solid $concrete;
         display: block;
     }
 
@@ -36,6 +37,7 @@
 
 .c-top-stories__nav {
     border-left: 3px solid $concrete;
+    border-right: 3px solid $concrete;
     bottom: -10px;
     position: absolute;
     right: 0;
@@ -44,7 +46,7 @@
     z-index: 2;
 
     @include min-screen($MAXIMUM_PAGE_WIDTH + 3) {
-        border-right: 3px solid $concrete;
+        // border-right: 3px solid $concrete;
     }
 }
 
