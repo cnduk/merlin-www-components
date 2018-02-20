@@ -53,7 +53,7 @@
 }
 
 .c-gallery__image-remaining__text-prefix {
-    @include font("GRAPHIK", 18px, 600, 18px);
+    @include font("GRAPHIK", 18px, 400, 18px);
     color: $azalea;
     letter-spacing: 0px;
     vertical-align: middle;
@@ -65,7 +65,7 @@
 }
 
 .c-gallery__image-remaining__text-value {
-    @include font("GRAPHIK", 30px, 600, 30px);
+    @include font("GRAPHIK", 30px, 400, 30px);
     color: $azalea;
     letter-spacing: 0px;
     vertical-align: middle;
