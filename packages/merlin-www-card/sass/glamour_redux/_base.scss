@@ -19,7 +19,9 @@
 .c-card__link {}
 
 .c-card__obj {}
-.c-card__obj__header {}
+.c-card__obj__header {
+    position: relative;
+}
 
 .c-card__images {
     overflow: hidden;

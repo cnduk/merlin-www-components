@@ -48,7 +48,6 @@
         @include font("GRAPHIK", 10px, 600, 10px);
         color: $astronaut;
         letter-spacing: 1.5px;
-        padding-left: 10px;
         position: absolute;
         right: 0;
         text-transform: uppercase;
@@ -145,7 +144,6 @@
         @include font("GRAPHIK", 10px, 600, 10px);
         color: $astronaut;
         letter-spacing: 1.5px;
-        padding-left: 30px;
         position: absolute;
         right: 0;
         text-transform: uppercase;
@@ -154,9 +152,9 @@
     }
 
     .c-card__title {
-        @include font("MILLER_DISPLAY", 18px, 600, 21px);
+        @include font("MILLER_DISPLAY", 30px, 600, 35px);
         color: $dune;
-        margin: 0 0 10px 0;
+        margin: 20px 0;
     }
 
     .c-card__teaser {
