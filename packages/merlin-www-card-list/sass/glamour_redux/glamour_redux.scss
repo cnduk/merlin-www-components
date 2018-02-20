@@ -39,7 +39,7 @@
 }
 
 .c-card-list--tg-articles {
-    flex-direction: column;
+    display: block;
     margin: -10px;
 
     .c-card-list__item {
