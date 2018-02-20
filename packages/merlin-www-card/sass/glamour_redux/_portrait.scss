@@ -24,12 +24,10 @@
 }
 
 @mixin card-portrait-small() {
-    .c-card {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            &:hover {
-                .c-card__image {
-                    transform: scale(1.04);
-                }
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        &:hover {
+            .c-card__image {
+                transform: scale(1.04);
             }
         }
     }
@@ -134,12 +132,10 @@
 }
 
 @mixin card-portrait-large() {
-    .c-card {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            &:hover {
-                .c-card__image {
-                    transform: scale(1.04);
-                }
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        &:hover {
+            .c-card__image {
+                transform: scale(1.04);
             }
         }
     }

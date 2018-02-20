@@ -24,7 +24,6 @@
 }
 
 @mixin card-landscape-small() {
-    .c-card {}
     .c-card__link {}
     .c-card__obj {}
     .c-card__obj__header {
@@ -108,7 +107,14 @@
 }
 
 @mixin card-landscape-large() {
-    .c-card {}
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        &:hover {
+            .c-card__image {
+                transform: scale(1.04);
+            }
+        }
+    }
+
     .c-card__link {}
     .c-card__obj {
         background-color: $white;
