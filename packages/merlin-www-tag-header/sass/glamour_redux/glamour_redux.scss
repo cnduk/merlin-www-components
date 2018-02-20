@@ -239,6 +239,9 @@
             width: 100%;
         }
 
+        .svg-logo-block { fill: #ffffff; }
+        .svg-logo{ fill: #373330; }
+
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             width: 250px;
         }
