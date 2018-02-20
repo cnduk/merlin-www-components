@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.6.13"></a>
+## [1.6.13](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-marketing-cards@1.6.12...@cnbritain/merlin-www-marketing-cards@1.6.13) (2018-02-20)
+
+
+### Bug Fixes
+
+* **merlin-www-marketing-card:** default topic marketing card widths to wireframe ([d757ef5](https://github.com/cnduk/merlin-www-components/commit/d757ef5))
+
+
+
+
 <a name="1.6.12"></a>
 ## [1.6.12](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-marketing-cards@1.6.11...@cnbritain/merlin-www-marketing-cards@1.6.12) (2018-02-20)
 
