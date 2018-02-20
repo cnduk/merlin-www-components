@@ -10,7 +10,7 @@
     padding: 10px 0;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        border-bottom: 3px solid $concrete;
+        border-bottom: 1px solid $concrete;
         display: block;
     }
 
