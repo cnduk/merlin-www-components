@@ -46,7 +46,8 @@
 
 
 .a-marketing-card--brand .a-marketing-card__col,
-.a-marketing-card--event .a-marketing-card__col {
+.a-marketing-card--event .a-marketing-card__col,
+.a-marketing-card--topic .a-marketing-card__col {
     @include marketing-card-medium-size(){
         width: 120px;
 
