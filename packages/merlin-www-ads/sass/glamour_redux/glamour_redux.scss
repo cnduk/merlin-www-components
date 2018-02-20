@@ -1,14 +1,21 @@
+
+@import '@cnbritain/merlin-www-common:glamour_redux';
+
+@import '../wireframe/wireframe';
+@import '../wireframe/_debug';
+
+.ad__main {}
+
+.ad__block {}
+
 .ad__title {
-    // @include font("PROXIMA NOVA CONDENSED", 10px, 400, 10px);
-    // color: $MANATEE;
-    // display: block;
-    // letter-spacing: 1px;
-    // margin-bottom: 8px;
-    // margin-top: 0;
-    // padding-left: $MOBILE_SIDE_GUTTER;
-    // padding-right: $MOBILE_SIDE_GUTTER;
-    // text-align: left;
-    // text-transform: uppercase;
+    @include font('GRAPHIK', 10px, 'NORMAL', 10px);
+    color: $dune;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    padding: 0 $MOBILE_SIDE_GUTTER;
+    text-align: left;
+    text-transform: uppercase;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding-left: $TABLET_SIDE_GUTTER;
@@ -16,21 +23,25 @@
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        display: none;
+        padding-left: 0;
+        padding-right: 0;
     }
-}
-
-.ad__block {
 
 }
+
+.ad__container {
+    background: $pampas;
+    padding: 20px;
+}
+
+
+
+
+
+
 
 .ad--homepage {
     text-align: center;
-
-    .ad__block {
-        background-color: $advert-light;
-        padding: 15px 0;
-    }
 
     &.ad--native-large {
         .ad__block {
@@ -40,21 +51,19 @@
     }
 }
 
-.ad--article {
+
+
+
+.ad--article,
+.ad--gallery {
     text-align: center;
 }
 
-.ad--article-header {
-    .ad__block {
-        background-color: $advert-light;
-        padding: 15px 0;
-    }
-}
+.ad--article-header {}
 
 .ad--article-video {
-    .ad__block {
+    .ad__container {
         background-color: $advert-dark;
-        padding: 15px 0;
     }
 }
 
@@ -74,10 +83,13 @@
         margin: 0;
         right: 0;
         width: 300px;
-    }
 
-    .ad__block {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        .ad__container {
+            background: transparent;
+            padding: 0;
+        }
+
+        .ad__block {
             margin: -20px 0;
             padding: 20px 0;
         }
@@ -109,15 +121,36 @@
     }
 }
 
-.ad--gallery {
-    text-align: center;
+
+
+.ad--gallery-side {
+    display: none;
+
+    .ad__container {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    @include min-screen(940px) {
+        display: block;
+        margin: 0 auto 60px auto;
+        position: absolute;
+        right: 0;
+        width: 300px;
+    }
 }
 
+.ad--gallery__interstitial-image,
+.ad--gallery__interstitial-video {
+    cursor: pointer;
+    max-width: 100%;
+}
+
+
 .ad--gallery-inline {
-    margin-bottom: 40px;
-    margin-left: -$MOBILE_SIDE_GUTTER;
-    margin-right: -$MOBILE_SIDE_GUTTER;
-    margin-top: 40px;
+    cursor: pointer;
+    margin: 40px (-$MOBILE_SIDE_GUTTER);
+    text-align: center;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         margin-left: -$TABLET_SIDE_GUTTER;
@@ -127,39 +160,24 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin-left: 0;
         margin-right: 0;
-    }
-}
 
-.ad--gallery-side {
-    display: none;
-    margin: 0 auto $DESKTOP_SLICE_MARGIN auto;
-    width: 300px;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        display: block;
-        margin-bottom: 0;
-        position: absolute;
-        right: 0;
-    }
-
-    .ad__block {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            margin: -20px 0;
-            padding: 20px 0;
+        .ad__container {
+            background-color: transparent;
+            padding: 0;
         }
     }
+
 }
+
+
+
+
 
 .ad--tag {
     text-align: center;
 }
 
-.ad--tag-header {
-    .ad__block {
-        background-color: $advert-light;
-        padding: 15px 0;
-    }
-}
+.ad--tag-header {}
 
 .ad--tag-rail {
     // 10px - width of card list side padding
@@ -177,15 +195,20 @@
         &.stick-wrapper--fixed {
             margin-right: -40px;
         }
-    }
 
-    .ad__block {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        .ad__block {
             margin: -20px 0;
             padding: 20px 0;
         }
+
+        .ad__container {
+            background-color: transparent;
+            padding: 0;
+        }
     }
 }
+
+
 
 .ad--tag-rail-top {
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
@@ -219,5 +242,16 @@
             width: 100vw;
         }
 
+    }
+}
+
+
+
+.ad--native-small,
+.ad--native-medium,
+.ad--native-large {
+    &:not(.is-hidden) .ad__container {
+        background-color: transparent;
+        padding: 0;
     }
 }
