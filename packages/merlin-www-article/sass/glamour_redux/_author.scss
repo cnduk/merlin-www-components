@@ -1,4 +1,8 @@
-.a-author {}
+.a-author {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        text-align: center;
+    }
+}
 
 .a-author__image {
     border-radius: 50%;
@@ -73,6 +77,11 @@
 .a-author__article-date {
     @include font("GRAPHIK", 10px, 400, 10px);
     color: $dune;
+    letter-spacing: 1.5px;
     margin-top: 6px;
     text-transform: uppercase;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 13px;
+    }
 }
