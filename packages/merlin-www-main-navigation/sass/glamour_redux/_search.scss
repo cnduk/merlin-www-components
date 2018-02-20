@@ -8,9 +8,12 @@
     }
 
     svg {
-        fill: $white;
         height: 100%;
         width: 20px;
+    }
+
+    path {
+        fill: $white;
     }
 }
 
