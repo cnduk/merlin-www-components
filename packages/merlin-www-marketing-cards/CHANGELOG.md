@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.6.12"></a>
+## [1.6.12](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-marketing-cards@1.6.11...@cnbritain/merlin-www-marketing-cards@1.6.12) (2018-02-20)
+
+
+### Bug Fixes
+
+* **merlin-www-marketing-cards:** correct brand image size for glamour ([eb18e36](https://github.com/cnduk/merlin-www-components/commit/eb18e36))
+
+
+
+
 <a name="1.6.10"></a>
 ## [1.6.10](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-marketing-cards@1.6.9...@cnbritain/merlin-www-marketing-cards@1.6.10) (2018-02-19)
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.3.52"></a>
+## [1.3.52](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.3.51...@cnbritain/merlin-www-js-pages@1.3.52) (2018-02-20)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** sort children after recalculating group changes in tag page sticky ([f6a5cc5](https://github.com/cnduk/merlin-www-components/commit/f6a5cc5))
+
+
+
+
 <a name="1.3.50"></a>
 ## [1.3.50](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.3.49...@cnbritain/merlin-www-js-pages@1.3.50) (2018-02-19)
 

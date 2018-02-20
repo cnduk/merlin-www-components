@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.5.16"></a>
+## [1.5.16](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-splash@1.5.15...@cnbritain/merlin-www-section-splash@1.5.16) (2018-02-20)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-splash
+
 <a name="1.5.14"></a>
 ## [1.5.14](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-splash@1.5.13...@cnbritain/merlin-www-section-splash@1.5.14) (2018-02-19)
 

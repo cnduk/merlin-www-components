@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.9.30"></a>
+## [1.9.30](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card-list@1.9.29...@cnbritain/merlin-www-card-list@1.9.30) (2018-02-20)
+
+
+### Bug Fixes
+
+* **merlin-www-card-list:** remove flex fro tg-articles in glamour redux ([5067ca7](https://github.com/cnduk/merlin-www-components/commit/5067ca7))
+
+
+
+
 <a name="1.9.29"></a>
 ## [1.9.29](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card-list@1.9.28...@cnbritain/merlin-www-card-list@1.9.29) (2018-02-19)
 
