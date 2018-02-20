@@ -88,12 +88,14 @@ export function onStickRender(e) {
         parentGroupIndex = Manager.hasGroup(parentGroup, true);
         if (parentGroupIndex > -1) {
             Manager.groups[parentGroupIndex].recalculate(true);
+            Manager.groups[parentGroupIndex].sortChildren();
         }
 
         // If we dont have a parent, recalc all the groups for the moment
     } else {
         Manager.groups.forEach(function(group) {
             group.recalculate(true);
+            group.sortChildren();
         });
     }
 
