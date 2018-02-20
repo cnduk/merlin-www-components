@@ -14,6 +14,9 @@
     max-width: $MAXIMUM_PAGE_WIDTH;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+
         &:hover {
             .c-splash-hero__title {
                 span {
