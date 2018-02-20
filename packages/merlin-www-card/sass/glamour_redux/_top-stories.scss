@@ -10,6 +10,23 @@
     .c-card__obj__body {
         padding-top: 0;
     }
+
+    .c-card__title {
+        height: 63px;
+        position: relative;
+        overflow: hidden;
+
+        &:after {
+            background: linear-gradient(to right, rgba($white, 0), rgba($white, 1) 70%);
+            bottom: 0;
+            content: '';
+            display: block;
+            height: 21px;
+            position: absolute;
+            right: 0;
+            width: 100%;
+        }
+    }
 }
 
 @mixin card-top-stories-large() {
