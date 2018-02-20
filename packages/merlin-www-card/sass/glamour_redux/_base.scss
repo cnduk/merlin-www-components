@@ -31,6 +31,7 @@
 
 .c-card__image {
     background-color: $pampas;
+    transition: transform 200ms ease-in-out;
 }
 
 .c-card__image__icon {}
