@@ -47,12 +47,12 @@
     .c-card__tag {
         @include font("GRAPHIK", 10px, 600, 10px);
         color: $astronaut;
+        left: 100%;
         letter-spacing: 1.5px;
         position: absolute;
-        right: 0;
         text-transform: uppercase;
-        top: 0;
-        transform: translateX(100%);
+        top: 30px;
+        white-space: nowrap;
     }
 
     .c-card__title {
@@ -143,12 +143,12 @@
     .c-card__tag {
         @include font("GRAPHIK", 10px, 600, 10px);
         color: $astronaut;
+        left: 100%;
         letter-spacing: 1.5px;
         position: absolute;
-        right: 0;
         text-transform: uppercase;
         top: 30px;
-        transform: translateX(100%);
+        white-space: nowrap;
     }
 
     .c-card__title {
