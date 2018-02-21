@@ -11,12 +11,10 @@
     margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 40px;
     max-width: $MAXIMUM_PAGE_WIDTH;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding-left: $DESKTOP_SIDE_GUTTER;
-        padding-right: $DESKTOP_SIDE_GUTTER;
-
         &:hover {
             .c-splash-hero__title {
                 span {
@@ -145,17 +143,19 @@ li.c-splash-hero__meta-item {
 }
 
 .c-splash-list {
-    margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    margin: 0 auto 40px auto;
+    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER*2;
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: $TABLET_SLICE_MARGIN;
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: $TABLET_SLICE_MARGIN;
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
