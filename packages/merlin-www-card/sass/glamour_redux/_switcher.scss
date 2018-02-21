@@ -22,9 +22,7 @@
         }
 
         .c-card__tag {
-            right: initial;
             top: initial;
-            transform: translateX(0);
         }
 
         @include card-portrait();
