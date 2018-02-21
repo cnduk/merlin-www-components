@@ -5,12 +5,19 @@
 @import '../wireframe/wireframe';
 
 .c-magazine {
+    margin-bottom: $MOBILE_SLICE_MARGIN + 20px;
+    margin-top: $MOBILE_SLICE_MARGIN;
     position: relative;
 
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $TABLET_SLICE_MARGIN;
+        margin-bottom: $TABLET_SLICE_MARGIN + 20px;
+    }
+
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: $DESKTOP_SLICE_MARGIN;
-        margin-left: $DESKTOP_SLICE_MARGIN;
-        margin-right: $DESKTOP_SLICE_MARGIN;
+        margin-bottom: $DESKTOP_SLICE_MARGIN + 20px;
+        margin-left: $DESKTOP_SIDE_GUTTER;
+        margin-right: $DESKTOP_SIDE_GUTTER;
         margin-top: $DESKTOP_SLICE_MARGIN;
     }
 
@@ -33,7 +40,7 @@
     background-color: $white;
     box-sizing: border-box;
     margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    max-width: $MAXIMUM_PAGE_WIDTH;
     padding: 20px 20px 30px;
     position: relative;
 
@@ -89,6 +96,7 @@
 
         @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
             margin-left: 0;
+            width: 65%;
         }
     }
 }
@@ -105,7 +113,7 @@
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             border-radius: 15px;
             padding: 30px 20px;
-            width: 45%;
+            width: 52%;
         }
     }
 }
@@ -117,7 +125,7 @@
     @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
         display: table-cell;
         width: 50%;
-        vertical-align: top;
+        vertical-align: middle;
     }
 }
 
@@ -139,7 +147,8 @@
 }
 
 .c-magazine__content__date {
-    @include font('MILLER_DISPLAY', 30px, 'NORMAL', 34px);
+    @include font('MILLER_DISPLAY', 30px, 600, 34px);
+    color: $dune;
     letter-spacing: 0;
     margin: 10px 0 30px;
     text-align: center;
