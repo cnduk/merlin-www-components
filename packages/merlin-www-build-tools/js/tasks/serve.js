@@ -17,4 +17,4 @@ module.exports = function taskServeExport(taskConfig, browserSync){
         // HTML and mustache
         gulp.watch(taskConfig.watch.html).on('change', browserSync.reload);
     };
-}
+};

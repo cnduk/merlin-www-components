@@ -1,8 +1,8 @@
 'use strict';
+/* globals process, setImmediate, Buffer */
+/* eslint-disable no-console */
 
 monkeypatchGitRawCommits();
-
-const fs = require('fs');
 
 const gulp = require('gulp');
 const conventionalChangelog = require('gulp-conventional-changelog');
@@ -14,8 +14,9 @@ const minimist = require('minimist');
 
 const utils = require('../utils');
 
-
+/* eslint-disable no-unused-vars */
 module.exports = function taskReleaseExports(taskConfig, browserSync) {
+/* eslint-enable no-unused-vars */
 
     const args = minimist(process.argv.slice(2));
 
@@ -27,11 +28,11 @@ module.exports = function taskReleaseExports(taskConfig, browserSync) {
         return gulp.src(taskConfig.release.changelog, {
             buffer: false
         })
-        .pipe(conventionalChangelog({
-            preset: 'angular',
-            releaseCount: 0
-        }))
-        .pipe(gulp.dest('./'));
+            .pipe(conventionalChangelog({
+                preset: 'angular',
+                releaseCount: 0
+            }))
+            .pipe(gulp.dest('./'));
     });
 
     gulp.task('bump-version', function() {
@@ -47,10 +48,10 @@ module.exports = function taskReleaseExports(taskConfig, browserSync) {
         return gulp.src([
             taskConfig.release.package
         ])
-        .pipe(bump({
-            type: bumpType
-        }).on('error', flog))
-        .pipe(gulp.dest('./'));
+            .pipe(bump({
+                type: bumpType
+            }).on('error', flog))
+            .pipe(gulp.dest('./'));
     });
 
     gulp.task('commit-changes', function() {
@@ -59,12 +60,12 @@ module.exports = function taskReleaseExports(taskConfig, browserSync) {
             taskConfig.release.package,
             taskConfig.release.changelog
         ])
-        .pipe(git.add())
-        .pipe(git.commit(msg));
+            .pipe(git.add())
+            .pipe(git.commit(msg));
     });
 
     gulp.task('push-changes', function (cb) {
-      git.push('origin', 'master', cb);
+        git.push('origin', 'master', cb);
     });
 
     gulp.task('create-new-tag', function(cb) {
@@ -101,7 +102,7 @@ module.exports = function taskReleaseExports(taskConfig, browserSync) {
             }
         );
     };
-}
+};
 
 /**
  * Currently in GQ we have a commit message that is 17000+ characters long.
@@ -123,8 +124,10 @@ function monkeypatchGitRawCommits(){
     const stream = require('stream');
     const through2 = require('through2');
 
+    /* eslint-disable no-unused-vars */
     // Require this in case its not already been loaded into require.cache
     const gitRawCommits = require('git-raw-commits');
+    /* eslint-enable no-unused-vars */
 
     // Find git raw commit module key in cache
     let gitRawCommitKey = null;
