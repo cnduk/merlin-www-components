@@ -42,7 +42,7 @@
         max-width: none;
         padding-left: 0;
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            padding-right: 360px;
+            padding-right: 350px;
         }
     }
 
@@ -228,8 +228,11 @@
     background-color: $white;
     margin: 0 auto;
     max-width: $ARTICLE_TOTAL;
-    padding: 0 350px 0 0;
     position: relative;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-right: 350px;
+    }
 }
 
 .a-header__title {
