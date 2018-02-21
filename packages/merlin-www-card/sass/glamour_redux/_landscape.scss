@@ -32,11 +32,11 @@
     }
 
     .c-card__images {}
-    .c-card__image {}
-    .c-card__image__icon {
+    .c-card__images-icon {
         display: none;
     }
 
+    .c-card__image {}
     .c-card__obj__body {
         padding-top: 20px;
         width: 61%;
@@ -125,11 +125,11 @@
     }
 
     .c-card__images {}
-    .c-card__image {}
-    .c-card__image__icon {
+    .c-card__images-icon {
         display: none;
     }
 
+    .c-card__image {}
     .c-card__obj__body {
         flex: 1 0 auto;
         padding: 50px 30px 30px 0;

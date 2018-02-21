@@ -39,8 +39,7 @@
 
     .c-card__obj__header {}
     .c-card__images {}
-    .c-card__image {}
-    .c-card__image__icon {
+    .c-card__images-icon {
         background-color: $azalea;
         position: absolute;
         width: 26px;
@@ -63,6 +62,7 @@
         }
     }
 
+    .c-card__image {}
     .c-card__obj__body {
         padding: 10px 0 0 0;
     }
@@ -147,8 +147,7 @@
 
     .c-card__obj__header {}
     .c-card__images {}
-    .c-card__image {}
-    .c-card__image__icon {
+    .c-card__images-icon {
         background-color: $azalea;
         position: absolute;
         width: 26px;
@@ -171,6 +170,7 @@
         }
     }
 
+    .c-card__image {}
     .c-card__obj__body {
         flex: 1 0 auto;
         padding: 15px 15px 20px 15px;
