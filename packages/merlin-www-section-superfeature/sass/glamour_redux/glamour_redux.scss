@@ -4,18 +4,21 @@
 @import "../wireframe/wireframe";
 
 .c-superfeature {
-    margin-bottom: $MOBILE_SLICE_MARGIN;
+    // 20px added to offset box shadow
+    margin-bottom: $MOBILE_SLICE_MARGIN + 20px;
     margin-top: $MOBILE_SLICE_MARGIN;
     max-width: $MAXIMUM_PAGE_WIDTH;
     padding: 0;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: $TABLET_SLICE_MARGIN;
+        // 20px added to offset box shadow
+        margin-bottom: $TABLET_SLICE_MARGIN + 20px;
         margin-top: $TABLET_SLICE_MARGIN;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: $DESKTOP_SLICE_MARGIN;
+        // 20px added to offset box shadow
+        margin-bottom: $DESKTOP_SLICE_MARGIN + 20px;
         margin-top: $DESKTOP_SLICE_MARGIN;
     }
 
