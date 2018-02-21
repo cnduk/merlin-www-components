@@ -60,9 +60,7 @@
         width: 220px;
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            margin-left: auto;
-            margin-right: auto;
-            width: 406px;
+            width: 300px;
         }
 
         .svg-logo-block { fill: #f6d3d5; }
