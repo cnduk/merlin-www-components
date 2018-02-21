@@ -49,6 +49,7 @@
 }
 
 .c-splash-hero__images {
+    background-color: $white;
     overflow: hidden;
 }
 
@@ -126,6 +127,11 @@ ul.c-splash-hero__meta {
     letter-spacing: 1.5px;
     margin: 0 0 0 0;
     text-transform: uppercase;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        bottom: 40px;
+        position: absolute;
+    }
 }
 
 li.c-splash-hero__meta-item {
