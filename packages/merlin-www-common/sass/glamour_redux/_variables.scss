@@ -16,23 +16,23 @@ $white: #ffffff;
 
 // ----- Social Colours -----//
 $COLOUR_SOCIAL: map-merge($COLOUR_SOCIAL, (
-        "email": #373330,
-        "facebook": #3B5998,
-        "pinterest": #CB2027,
-        "twitter": #55ACEE,
-        "whatsapp": #4DC247,
-        "instagram": #C32AA3,
-        "youtube": #FF0000
+    "email": #373330,
+    "facebook": #3B5998,
+    "pinterest": #CB2027,
+    "twitter": #55ACEE,
+    "whatsapp": #4DC247,
+    "instagram": #C32AA3,
+    "youtube": #FF0000
 ));
 
 $COLOUR_SOCIAL_HOVER: (
-        "email": #1C1A18,
-        "facebook": #314A7F,
-        "pinterest": #A71B21,
-        "twitter": #50A2DF,
-        "whatsapp": #42A73D,
-        "instagram": #A02186,
-        "youtube": #D70101
+    "email": #1C1A18,
+    "facebook": #314A7F,
+    "pinterest": #A71B21,
+    "twitter": #50A2DF,
+    "whatsapp": #42A73D,
+    "instagram": #A02186,
+    "youtube": #D70101
 );
 
 // ----- Breakpoints ----- //
