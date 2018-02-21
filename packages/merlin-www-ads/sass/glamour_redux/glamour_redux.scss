@@ -41,7 +41,10 @@
         background-color: transparent;
     }
 
+
     &.ad--native-large {
+        text-align: inherit;
+
         .ad__container {
             padding: 0;
         }
