@@ -17,14 +17,12 @@
             padding: 0;
         }
 
-        .c-card__image__icon {
+        .c-card__images-icon {
             display: block;
         }
 
         .c-card__tag {
-            right: initial;
             top: initial;
-            transform: translateX(0);
         }
 
         @include card-portrait();
