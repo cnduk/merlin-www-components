@@ -35,17 +35,17 @@
     position: relative;
 
     .n-main__nav-link {
-        @include line-height(30px);
+        @include line-height(40px);
         color: $dune;
         display: inline-block;
         margin: 0;
-        height: 35px;
+        height: 40px;
         white-space: nowrap;
 
         span {
             display: inline-block;
-            height: 30px;
-            line-height: 30px;
+            height: 40px;
+            line-height: 40px;
             vertical-align: top;
         }
 
