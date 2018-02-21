@@ -12,19 +12,21 @@
     }
 
     .c-card__title {
+        @include font-size(16px);
+        @include line-height(21px);
         height: 63px;
         position: relative;
         overflow: hidden;
 
         &:after {
-            background: linear-gradient(to right, rgba($white, 0), rgba($white, 1) 70%);
+            background: linear-gradient(to right, rgba($white ,0), $white 90%);
             bottom: 0;
             content: '';
             display: block;
             height: 21px;
             position: absolute;
             right: 0;
-            width: 100%;
+            width: 50%;
         }
     }
 }
