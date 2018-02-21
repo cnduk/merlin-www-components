@@ -7,7 +7,7 @@ const fs = require('fs');
 const gulp = require('gulp');
 const conventionalChangelog = require('gulp-conventional-changelog');
 const bump = require('gulp-bump');
-const gutil = require('gulp-util');
+const flog = require('fancy-log');
 const git = require('gulp-git');
 const runSequence = require('run-sequence');
 const minimist = require('minimist');
@@ -49,7 +49,7 @@ module.exports = function taskReleaseExports(taskConfig, browserSync) {
         ])
         .pipe(bump({
             type: bumpType
-        }).on('error', gutil.log))
+        }).on('error', flog))
         .pipe(gulp.dest('./'));
     });
 
