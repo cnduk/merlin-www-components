@@ -89,13 +89,21 @@ a.n-main__cover__btn {
 
 .n-menu__subscribe-col {
     display: table-cell;
+    text-align: right;
     vertical-align: middle;
     width: 50%;
+
+    &:nth-child(2) {
+        padding-left: 10px;
+        text-align: left;
+    }
 }
 
 .n-menu__subscribe-covers {
-    position: relative;
+    display: inline-block;
     font-size: 0;
+    position: relative;
+    width: 85px + 52px;
 }
 
 .n-menu__subscribe-cover {
