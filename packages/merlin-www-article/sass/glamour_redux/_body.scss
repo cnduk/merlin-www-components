@@ -2,6 +2,9 @@
 
 .a-main--gallery {}
 .a-main--video {
+    background-color: $white;
+    overflow: hidden;
+
     .a-body__content {
         padding-left: 0;
     }
