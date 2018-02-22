@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.22.38"></a>
+## [1.22.38](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.22.37...@cnbritain/merlin-www-article@1.22.38) (2018-02-22)
+
+
+### Bug Fixes
+
+* **merlin-www-article:** add classes to article main ([e1c8ebf](https://github.com/cnduk/merlin-www-components/commit/e1c8ebf))
+
+
+
+
 <a name="1.22.35"></a>
 ## [1.22.35](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.22.34...@cnbritain/merlin-www-article@1.22.35) (2018-02-22)
 
