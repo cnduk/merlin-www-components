@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.6.48"></a>
+## [1.6.48](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-main-navigation@1.6.47...@cnbritain/merlin-www-main-navigation@1.6.48) (2018-02-22)
+
+
+### Bug Fixes
+
+* **merlin-www-main-navigation:** center promo mags in travellers hamburger menu ([abccd23](https://github.com/cnduk/merlin-www-components/commit/abccd23))
+
+
+
+
 <a name="1.6.38"></a>
 ## [1.6.38](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-main-navigation@1.6.37...@cnbritain/merlin-www-main-navigation@1.6.38) (2018-02-20)
 
