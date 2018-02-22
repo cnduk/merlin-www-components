@@ -20,7 +20,9 @@ AdDebugger.prototype = {
 
     'debug': function(force){
         for(var key in AdManager.slots){
-            if(!AdManager.slots.hasOwnProperty(key)) continue;
+            if(!AdManager.slots.hasOwnProperty(key) || !AdManager.slots[key]){
+                continue;
+            }
             if(!force && isAdDebugging(AdManager.slots[key])) continue;
             if(AdManager.slots[key].state !== AD_STATES.RENDERED) continue;
             if(force) clearDebugAd(AdManager.slots[key]);
