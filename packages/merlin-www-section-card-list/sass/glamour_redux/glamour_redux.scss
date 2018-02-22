@@ -26,7 +26,8 @@
 .c-card-section--mag-articles,
 .c-card-section--mag-magazines,
 .c-card-section--tg-articles,
-.c-card-section--v-articles {
+.c-card-section--v-articles,
+.c-card-section--v-genre-articles {
     .c-card-section__title {
         @include font("MILLER_DISPLAY", 30px, 600, 30px);
         color: $dune;
@@ -79,7 +80,7 @@
 
 .c-card-section--a-recommended {
     background-color: $concrete;
-    margin-bottom: 0;
+    margin: 0;
     max-width: none;
     padding-bottom: $MOBILE_SLICE_MARGIN;
     padding-top: $MOBILE_SLICE_MARGIN;
@@ -95,19 +96,20 @@
     }
 
     .c-card-section__title {
-        @include font("MILLER_DISPLAY", 25px, 600, 25px);
+        @include font("MILLER_DISPLAY", 30px, 600, 30px);
         color: $dune;
         margin: 0 0 15px 0;
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            @include font-size(30px);
-            @include line-height(30px);
+            @include font-size(35px);
+            @include line-height(35px);
         }
     }
 }
 
 .c-card-section--v-related-articles {
     background-color: $dune;
+    margin: 0;
     max-width: none;
     padding-bottom: $MOBILE_SLICE_MARGIN;
     padding-top: $MOBILE_SLICE_MARGIN;

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.10.23"></a>
+## [1.10.23](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.10.22...@cnbritain/merlin-www-ads@1.10.23) (2018-02-22)
+
+
+### Bug Fixes
+
+* **merlin-www-ads:** check ad slot is still around before debugging ([72ac73b](https://github.com/cnduk/merlin-www-components/commit/72ac73b))
+
+
+
+
 <a name="1.10.19"></a>
 ## [1.10.19](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.10.18...@cnbritain/merlin-www-ads@1.10.19) (2018-02-20)
 
