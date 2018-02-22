@@ -86,7 +86,7 @@
 }
 
 .bb-h6 {
-    @include font("MILLER_DISPLAY", 25px, 'SEMI BOLD', 30px);
+    @include font("MILLER_DISPLAY", 16px, 'SEMI BOLD', 21px);
     letter-spacing: -0.5px;
 }
 
@@ -206,16 +206,16 @@
 .bb-dropcap--letter {
     @include font("MILLER_DISPLAY", 30px, 'SEMI BOLD', 30px);
     border: solid 4px $azalea;
-    color: $dune;
+    color: $astronaut;
     float: left;
     letter-spacing: 0;
     margin-right: 10px;
     margin-bottom: 0;
-    padding: 30px;
+    padding: 26px;
     text-transform: capitalize;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        padding: 37px;
+        padding: 34px;
         margin-right: 15px;
     }
 }
@@ -251,7 +251,7 @@
     padding-left: 20px;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-     margin: 0 0 30px 0;
+        margin: 0 0 30px 0;
     }
 }
 
@@ -273,8 +273,9 @@
 .bb-blockquote__credit {
     @include font("GRAPHIK", 10px, 'NORMAL', 10px);
     color: $astronaut;
-    text-transform: uppercase;
+    letter-spacing: 1.5px;
     margin-top: 25px;
+    text-transform: uppercase;
 }
 
 // -------------------- //
@@ -483,7 +484,7 @@
     display: inline-block;
     height: 38px;
     left: 0;
-    padding-top: 7px;
+    padding-top: 11px;
     position: absolute;
     text-indent: 0;
     text-align: center;
@@ -620,7 +621,7 @@ ul li.bb-gallery__col {
 
 
 .bb-gallery__remaining-text--prefix {
-    @include font("GRAPHIK", 18px, 'SEMI BOLD', 18px);
+    @include font("GRAPHIK", 18px, 400, 18px);
     bottom: 3px;
     color: $banana-mania;
     position: relative;
@@ -633,7 +634,7 @@ ul li.bb-gallery__col {
 }
 
 .bb-gallery__remaining-text--value{
-    @include font("GRAPHIK", 30px, 'SEMI BOLD', 30px);
+    @include font("GRAPHIK", 30px, 400, 30px);
     color: $banana-mania;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
@@ -750,7 +751,7 @@ h4.bb-video__title {
         padding: 20px;
 
         &:before {
-            @include font("GRAPHIK", 10px, 700, 10px);
+            @include font("GRAPHIK", 10px, 600, 10px);
             bottom: 0;
             content: "Continue Reading";
             letter-spacing: 1.5px;
@@ -829,7 +830,7 @@ p.bb-card__tag {
 }
 
 h3.bb-card__title {
-    @include font("MILLER_DISPLAY", 16px, 'BOLD', 19px);
+    @include font("MILLER_DISPLAY", 16px, 'SEMI BOLD', 19px);
     color: $dune;
     letter-spacing: 0;
 
