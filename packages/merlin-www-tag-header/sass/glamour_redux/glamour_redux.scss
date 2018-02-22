@@ -11,7 +11,7 @@
 
 
 .tg-header {
-    margin: 32px 0;
+    margin: 0 0 32px 0;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin: 48px 0;
@@ -56,7 +56,6 @@
 }
 
 .tg-header__intro__image {
-    max-width: 220px;
     position: relative;
     z-index: 1;
 }
@@ -213,6 +212,17 @@
     }
 }
 
+.tg-header__event-meta {
+    @include font("GRAPHIK", 10px, 400, 10px);
+    color: $dune;
+    margin-top: 6px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.tg-header__event-meta__start-date {}
+.tg-header__event-meta__location {}
+
 .tg-header__cards {
     margin: 40px auto;
     max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER*2;
@@ -244,7 +254,7 @@
         .svg-logo{ fill: #373330; }
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            width: 250px;
+            width: 430px;
         }
     }
 }
