@@ -8,6 +8,8 @@
     border-radius: 50%;
     height: 90px;
     margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
     overflow: hidden;
     padding: 5px;
     position: relative;
@@ -83,5 +85,54 @@
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin-top: 13px;
+    }
+}
+
+
+.a-event-author {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        text-align: center;
+    }
+}
+
+.a-event-author__image {
+    height: 90px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90px;
+}
+
+.a-event-author__separator {
+    display: none;
+}
+
+.a-event-author__title {}
+.a-event-author__location {
+    @include font("GRAPHIK", 10px, 400, 10px);
+    color: $dune;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.a-event-author__date {
+    @include font("GRAPHIK", 10px, 400, 10px);
+    color: $dune;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    margin-top: 13px;
+    text-transform: uppercase;
+}
+
+.a-event-author__btn {
+    @include button-group();
+    @include button-group-light();
+    margin-bottom: 20px;
+    margin-top: 13px;
+    text-align: center;
+
+    &:hover {
+        @include button-group-light-hover();
     }
 }
