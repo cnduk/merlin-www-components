@@ -97,7 +97,7 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         @include font-size(19px);
         @include line-height(23px);
-        margin: 10px 0 20px 0;
+        margin: 10px auto 20px auto;
     }
 }
 
