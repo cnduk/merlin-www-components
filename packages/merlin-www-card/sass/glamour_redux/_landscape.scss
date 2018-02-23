@@ -39,7 +39,7 @@
     .c-card__image {}
     .c-card__obj__body {
         padding-top: 20px;
-        width: 61%;
+        width: 70%;
     }
 
     .c-card__header {}
@@ -58,7 +58,7 @@
     .c-card__title {
         @include font("MILLER_DISPLAY", 18px, 600, 21px);
         color: $dune;
-        margin: 0 0 13px 0;
+        margin: 0 0 8px 0;
     }
 
     .c-card__teaser {
