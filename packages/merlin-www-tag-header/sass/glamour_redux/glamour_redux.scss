@@ -29,6 +29,7 @@
 
 .tg-header__intro {
     background-color: $azalea;
+    overflow: hidden;
     padding: 30px $MOBILE_SIDE_GUTTER;
     position: relative;
 
@@ -39,36 +40,17 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         padding: 62px $DESKTOP_SIDE_GUTTER;
     }
-
-    &:before {
-        background-color: $azalea;
-        content: '';
-        height: 100%;
-        left: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
-        position: absolute;
-        right: 50%;
-        top: 0;
-        width: 100vw;
-    }
 }
 
 .tg-header__hero {
+    left: 0;
     height: 100%;
-    left: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    overflow: hidden;
     position: absolute;
-    right: 50%;
-    top: 0;
-    width: 100vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
 
     img {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
         width: 100%;
     }
 }
@@ -112,18 +94,17 @@
 
 .tg-header__sponsor {
     @include font("GRAPHIK", 10px, 400, 13px);
-    border-top: 1px solid $cloud;
     color: $dune;
     display: table;
-    letter-spacing: 1px;
-    margin-bottom: 30px;
-    margin-top: 20px;
-    padding-top: 5px;
+    letter-spacing: 1.5px;
+    margin: 20px auto 40px;
     position: relative;
+    text-align: center;
     text-transform: uppercase;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         border-top: none;
+        margin: 30px auto 40px;
         padding: 0;
     }
 }
@@ -146,8 +127,8 @@
 .tg-header__sponsor-image {
     img {
         height: auto;
-        margin: 10px auto 0 0;
-        max-height: 40px;
+        margin: 10px auto 0 auto;
+        max-height: 50px;
         max-width: 140px;
         width: auto;
     }
@@ -176,7 +157,7 @@
     text-align: center;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 
     .bb-a {
@@ -233,8 +214,8 @@
 .tg-header__event-meta {
     @include font("GRAPHIK", 10px, 400, 10px);
     color: $dune;
-    letter-spacing: 1.5px;
     margin-top: 6px;
+    letter-spacing: 1.5px;
     text-align: center;
     text-transform: uppercase;
 }
