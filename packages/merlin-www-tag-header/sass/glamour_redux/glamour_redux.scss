@@ -29,7 +29,6 @@
 
 .tg-header__intro {
     background-color: $azalea;
-    overflow: hidden;
     padding: 30px $MOBILE_SIDE_GUTTER;
     position: relative;
 
@@ -40,17 +39,36 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         padding: 62px $DESKTOP_SIDE_GUTTER;
     }
+
+    &:before {
+        background-color: $azalea;
+        content: '';
+        height: 100%;
+        left: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        position: absolute;
+        right: 50%;
+        top: 0;
+        width: 100vw;
+    }
 }
 
 .tg-header__hero {
-    left: 0;
     height: 100%;
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
+    right: 50%;
+    top: 0;
+    width: 100vw;
 
     img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
         width: 100%;
     }
 }
