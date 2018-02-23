@@ -32,6 +32,10 @@
 .ad__container {
     background: $pampas;
     padding: 20px;
+
+     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+         padding: 20px;
+     }
 }
 
 .ad--homepage {
