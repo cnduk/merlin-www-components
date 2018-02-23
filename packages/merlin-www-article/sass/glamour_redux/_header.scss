@@ -307,6 +307,7 @@
 .a-header__date {
     @include font("GRAPHIK", 10px, 400, 10px);
     color: $dune;
+    letter-spacing: 1.5px;
     margin-top: 6px;
     text-transform: uppercase;
 }
@@ -366,7 +367,7 @@ li.a-header__meta-item {
     border-top: 1px solid $cloud;
     color: $dune;
     display: table;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     margin-bottom: 30px;
     margin-top: 20px;
     padding-top: 5px;
@@ -398,7 +399,7 @@ li.a-header__meta-item {
     img {
         height: auto;
         margin: 10px auto 0 0;
-        max-height: 40px;
+        max-height: 50px;
         max-width: 140px;
         width: auto;
     }
