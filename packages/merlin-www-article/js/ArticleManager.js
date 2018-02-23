@@ -37,6 +37,7 @@ import VideoPlayer from './VideoPlayer';
 
 var INFINITE_BOTTOM_THRESHOLD = 500;
 var INFINITE_RESIZE_DEBOUNCE = 500;
+var isFirstArticle = true;
 
 function ArticleManager() {
     EventEmitter.call(this, {
@@ -107,6 +108,7 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         loadYoutubeSubscribe();
 
         // Focus and blur events
+        isFirstArticle = false;
         this._triggerFocusBlur(index);
     },
 
@@ -356,8 +358,6 @@ function onInfiniteLoadComplete(e) {
     docFragment = null;
     addHtmlToFragment = null;
 }
-
-var isFirstArticle = true;
 
 function onArticleFocus(e) {
 
