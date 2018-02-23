@@ -314,6 +314,7 @@
 ul.a-header__meta {
     @include font("GRAPHIK", 10px, 400, 10px);
     color: $dune;
+    letter-spacing: 1.5px;
     margin-top: 6px;
     text-transform: uppercase;
 }
