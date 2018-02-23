@@ -39,7 +39,7 @@
 }
 
 .a-video__sidebar {
-    background-color: $dune;
+    background-color: #2f2c2a;
     padding: 20px;
 }
 
@@ -69,8 +69,10 @@
 
 .a-video__ad {
     .ad__block {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            padding: 0;
+        .ad__container {
+            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+                padding: 0;
+            }
         }
     }
 }
