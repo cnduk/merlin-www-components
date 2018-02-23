@@ -1,4 +1,4 @@
-<article class="a-main{{# state.is_sponsored }} is-legit-content{{/ state.is_sponsored }}{{# state.is_gallery }} a-main--gallery{{/ state.is_gallery }} {{^ state.has_body }} has-body{{/ state.has_body }}" data-article-url="{{ data.url }}" data-article-type="{{ data.type }}" data-article-uid="{{ data.uid }}">
+<article class="a-main{{# state.is_sponsored }} is-legit-content{{/ state.is_sponsored }}{{# state.is_gallery }} a-main--gallery{{/ state.is_gallery }} {{^ state.has_body }} has-body{{/ state.has_body }} {{ style.cls }}" data-article-url="{{ data.url }}" data-article-type="{{ data.type }}" data-article-uid="{{ data.uid }}">
     {{> @cnbritain/merlin-www-article/article-header }}
 
     {{# state.has_body }}
@@ -49,30 +49,30 @@
                         {{/ data.profiles }}
                     {{/ state.has_multiple_profiles }}
 
-                    {{# data.photographer_profile }}
+                    {{# state.has_photographer }}
                         <hr class="a-author__separator a-author__separator--byline" />
                         <div class="a-author__byline a-author__byline--photographer">
                             <span class="a-author__byline-prefix">{{ translation.author_photography_prefix }}</span>
-                            {{# state.has_link }}
-                                <span class="a-author__byline-name"><a class="{{ data.link.style.cls }}" href="{{ &data.link.data.url }}" title="{{ data.link.data.title }}">{{ data.name }}</a></span>
-                            {{/ state.has_link }}
-                            {{^ state.has_link }}
-                                <span class="a-author__byline-name">{{ data.name }}</span>
-                            {{/ state.has_link }}
+                            {{# data.photographer_profile.state.has_link }}
+                                <span class="a-author__byline-name"><a class="{{ data.photographer_profile.data.link.style.cls }}" href="{{ &data.photographer_profile.data.link.data.url }}" title="{{ data.photographer_profile.data.link.data.title }}">{{ data.photographer_profile.data.name }}</a></span>
+                            {{/ data.photographer_profile.state.has_link }}
+                            {{^ data.photographer_profile.state.has_link }}
+                                <span class="a-author__byline-name">{{ data.photographer_profile.data.name }}</span>
+                            {{/ data.photographer_profile.state.has_link }}
                         </div>
-                    {{/ data.photographer_profile }}
+                    {{/ state.has_photographer }}
 
-                    {{# data.syndication_profile }}
+                    {{# state.has_syndication }}
                         <hr class="a-author__separator a-author__separator--syndication" />
                         <div class="a-author__byline a-author__byline--syndication">
-                            {{# state.has_link }}
-                                <span class="a-author__byline-prefix">{{ translation.author_syndication_prefix }}</span> <span class="a-author__byline-name"><a class="{{ data.link.style.cls }}" title="{{ data.link.data.title }}" href="{{ &data.link.data.url }}">{{ data.name }}</a></span>
-                            {{/ state.has_link }}
-                            {{^ state.has_link }}
-                                <span class="a-author__byline-prefix">{{ translation.author_syndication_prefix }}</span> <span class="a-author__byline-name">{{ data.name }}</span>
-                            {{/ state.has_link }}
+                            {{# data.syndication_profile.state.has_link }}
+                                <span class="a-author__byline-prefix">{{ translation.author_syndication_prefix }}</span> <span class="a-author__byline-name"><a class="{{ data.syndication_profile.data.link.style.cls }}" title="{{ data.syndication_profile.data.link.data.title }}" href="{{ &data.syndication_profile.data.link.data.url }}">{{ data.syndication_profile.data.name }}</a></span>
+                            {{/ data.syndication_profile.state.has_link }}
+                            {{^ data.syndication_profile.state.has_link }}
+                                <span class="a-author__byline-prefix">{{ translation.author_syndication_prefix }}</span> <span class="a-author__byline-name">{{ data.syndication_profile.data.name }}</span>
+                            {{/ data.syndication_profile.state.has_link }}
                         </div>
-                    {{/ data.syndication_profile }}
+                    {{/ state.has_syndication }}
 
                     {{^ state.has_event_information }}
                         {{# data.date }}
