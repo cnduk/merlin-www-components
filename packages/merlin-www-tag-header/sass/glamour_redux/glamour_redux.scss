@@ -215,6 +215,7 @@
 .tg-header__event-meta {
     @include font("GRAPHIK", 10px, 400, 10px);
     color: $dune;
+    letter-spacing: 1.5px;
     margin-top: 6px;
     text-align: center;
     text-transform: uppercase;
@@ -328,8 +329,13 @@
 .tg-header--event,
 .tg-header--topic {
     .tg-header__intro__image {
-        margin: 0 auto 15px auto;
-        width: 160px;
+        margin: 0 auto 20px auto;
+        width: 130px;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin: 0 auto 30px auto;
+            width: 160px;
+        }
 
         img {
             display: inline-block;
@@ -338,7 +344,7 @@
         }
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            width: 250px;
+            width: 180px;
         }
     }
 }
