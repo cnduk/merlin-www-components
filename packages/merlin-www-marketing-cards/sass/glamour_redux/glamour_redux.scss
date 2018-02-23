@@ -39,10 +39,13 @@
     }
 }
 
-.a-marketing-card__brand {}
+.a-marketing-card__brand {
+    padding-right: 20px;
+}
 .a-marketing-card__brand__img {
     margin: 0 auto 20px auto;
-    max-width: 140px;
+    width: 100%;
+    max-width: 160px;
 }
 
 .a-marketing-card__brand__prefix {
@@ -114,6 +117,7 @@
         width: 160px;
     }
     .a-marketing-card__magazine__cover--tablet {
+        background: #000;
         width: 118px;
     }
 
