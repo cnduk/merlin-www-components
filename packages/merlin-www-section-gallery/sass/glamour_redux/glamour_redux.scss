@@ -89,7 +89,7 @@
     position: relative;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        padding: 30px 60px;
+        padding: 30px 60px 30px 40px;
     }
 }
 
