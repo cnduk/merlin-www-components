@@ -37,8 +37,8 @@
     .c-card__link {}
     .c-card__obj {}
     .c-card__obj__header {
-        padding-right: 10px;
-        width: 34%;
+        padding-right: 13px;
+        width: 37%;
 
         @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
             padding-right: 0;
@@ -81,8 +81,8 @@
         }
 
         &:before {
-            background-image: url('../../static/img/pattern-2.jpg');
-            background-position: center;
+            background-image: url('../../static/img/pattern-1.jpg');
+            background-position: 100%;
             border-radius: 50%;
             bottom: -5px;
             content: '';
@@ -115,6 +115,7 @@
         text-align: left;
 
          @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            @include font("MILLER_DISPLAY", 23px, 600, 28px);
             text-align: center;
          }
     }
