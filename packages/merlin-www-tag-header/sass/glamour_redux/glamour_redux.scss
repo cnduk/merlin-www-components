@@ -66,6 +66,9 @@
     width: 100vw;
 
     img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
         width: 100%;
     }
 }
