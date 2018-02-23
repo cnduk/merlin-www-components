@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.22.39"></a>
+## [1.22.39](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.22.38...@cnbritain/merlin-www-article@1.22.39) (2018-02-23)
+
+
+### Bug Fixes
+
+* **merlin-www-article:** use article states for syndication and photographer profile ([a2b3299](https://github.com/cnduk/merlin-www-components/commit/a2b3299))
+
+
+
+
 <a name="1.22.38"></a>
 ## [1.22.38](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.22.37...@cnbritain/merlin-www-article@1.22.38) (2018-02-22)
 
