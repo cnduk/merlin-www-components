@@ -492,6 +492,10 @@
     vertical-align: middle;
     width: 38px;
     top: -7px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        padding-top: 5px;
+    }
 }
 
 .bb-question__q {
