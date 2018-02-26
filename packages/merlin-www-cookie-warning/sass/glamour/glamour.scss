@@ -1,58 +1,60 @@
 @import '@cnbritain/merlin-www-common:glamour';
+
 @import '../wireframe/wireframe';
 
 .c-cookie-warning {
-    background-color: #FFF;
-    border: 3px solid #000;
-    padding: 20px;
+    background-color: $dune;
+    border-left: 1px solid $cloud;
+    border-right: 1px solid $cloud;
+    border-top: 1px solid $cloud;
+    padding: 10px 60px 20px 10px;
+    z-index: 10;
 }
+
+.c-cookie-warning__table {
+
+}
+
+.c-cookie-warning__table-cell {
+
+}
+
+.c-cookie-warning__table-cell--message {
+
+}
+
 .c-cookie-warning__table-cell--cta {
-    vertical-align: top;
-    width: 30px;
+    width: 0;
 }
+
 .c-cookie-warning__message {
-    color: #000;
-    @include font('GRAPHIK', 13px, 'SEMI BOLD', 17px);
-    margin-bottom: 0;
-    margin-top: 0;
-    padding-right: 20px;
+    @include font("GRAPHIK", 12px, 600, 16px);
+    color: $white;
+    margin: 0;
 
     a {
-        border-bottom: 2px solid #000;
+        border-bottom: 1px solid $white;
         color: inherit;
-        padding-bottom: 3px;
     }
 }
+
 .c-cookie-warning__button {
-    background-color: transparent;
-    border: 2px solid #000;
-    border-radius: 50%;
-    height: 30px;
-    padding: 0;
-    width: 30px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
 
     svg {
-        display: inline-block;
-        height: 10px;
-        margin: 0 auto;
-        width: 10px;
-    }
-    path {
-        stroke: #000;
-        stroke-width: 6px;
-    }
-}
-
-@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
-    .c-cookie-warning {
-        max-width: 630px;
-        padding: 30px;
-        width: 40%;
-    }
-
-    .c-cookie-warning__message {
-        @include font-size(15px);
-        @include line-height(20px);
-        padding-right: 30px;
+        background-color: $natural-gray;
+        border-radius: 50%;
+        fill: $dune;
+        height: 20px;
+        left: 50%;
+        padding: 6px;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
     }
 }
