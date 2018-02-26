@@ -4,34 +4,46 @@
 @import "../wireframe/wireframe";
 
 .c-newsletter {
-    @include section-margins;
-
-    box-sizing: border-box;
-    color: $COLOUR_MAIN;
-    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
-    padding: 0 $MOBILE_SIDE_GUTTER;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $MOBILE_SLICE_MARGIN;
     position: relative;
     text-align: center;
-    width: 100%;
 
-    @include tablet-size {
-        padding: 0 $TABLET_SIDE_GUTTER;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+        margin-left: $DESKTOP_SLICE_MARGIN;
+        margin-right: $DESKTOP_SLICE_MARGIN;
+        margin-top: $DESKTOP_SLICE_MARGIN;
     }
 
-    @include desktop-size {
-        padding: 0 $DESKTOP_SIDE_GUTTER;
+    &::after{
+        content : "";
+        position: absolute;
+        right: 0;
+        bottom: -20px;
+        width: calc(100% - 20px);
+        border-bottom: 20px solid transparent;
+        border-image: url("/static/img/pattern-1.jpg") 20;
+
+         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+             display: none;
+         }
     }
 }
 
 .c-newsletter__wrapper {
-    border-bottom: 2px solid $COLOUR_BORDER_SOLID;
-    border-top: 2px solid $COLOUR_BORDER_SOLID;
-    padding: 30px 0;
+    background: $white;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    padding: 30px $MOBILE_SIDE_GUTTER;
+    position: relative;
 
-    @include tablet-size {
-        border-bottom: 2px solid $COLOUR_BORDER_SOLID;
-        border-top: 2px solid $COLOUR_BORDER_SOLID;
-        padding: 50px 0px;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 40px 0;
+        border: solid 20px transparent;
+        border-image: url("/static/img/pattern-1.jpg") 20;
     }
 }
 
@@ -40,116 +52,118 @@
 }
 
 .c-newsletter__title {
-    @include title-magazine;
-    color: $COLOUR_MAIN;
-    font-weight: 800;
-    letter-spacing: 0.0em;
-    margin: 0 0 15px;
+    @include font("MILLER_DISPLAY", 30px, 'SEMI BOLD', 34px);
+    color: $dune;
+    letter-spacing:0;
+    margin-bottom: 20px;
+    text-align: center;
 
-    @include tablet-size {
-        @include title-magazine-desktop;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(40px);
+        @include line-height(45px);
+        margin-bottom: 10px;
 
-        margin: 0 0 20px;
+    }
+
+    &:before{
+        content:"";
+        background: url("/static/img/GL-newsletter.jpg") no-repeat;
+        background-size: 100% 100%;
+        border-radius: 50%;
+        position: relative;
+        box-sizing: border-box;
+        display: block;
+        height: 90px;
+        text-align: center;
+        width: 90px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        z-index: 1;
     }
 }
 
 .c-newsletter__description {
-    @include font('GRAPHIK', 15px, $line-height: 19px);
-    margin-bottom: 20px;
-    margin: 0 auto;
-    max-width: 760px;
+    @include font("GRAPHIK", 15px, 'SEMI BOLD', 18px);
+    color: $dune;
+    letter-spacing:-0.5px;
+    margin: 20px 0 20px 0;
 
-    @include tablet-size {
-        @include font-size(17px);
-        @include line-height(22px);
-        margin-bottom: 40px;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin: 20px auto;
+        text-align: center;
+        width: 570px;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(19px);
+        @include line-height(23px);
+        margin: 10px auto 20px auto;
     }
 }
 
 .c-newsletter__form {
-    margin: 0 auto;
-    margin-bottom: 30px;
-    margin-top: 30px;
     width: 100%;
 
-    @include tablet-size {
-        display: inline-block;
-        height: 40px;
-        margin-bottom: 40px;
-        margin-top: 0;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         width: auto;
     }
 }
 
 .c-newsletter__form__text {
-    @include font('GRAPHIK', 17px, 400, 17px, 20);
-
-    background: $COLOUR_BG_MAIN;
-    border: 0;
-    border-bottom: 1px solid $COLOUR_BORDER_INPUT;
-    border-radius: 0;
+    @include font("GRAPHIK", 14px, 'NORMAL', 14px);
+    background: #efefef;
     box-sizing: border-box;
-    display: block;
+    color: $dune;
     height: 40px;
-    letter-spacing: 0.05em;
-    margin-bottom: 15px;
-    padding: 0;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
     text-align: center;
-    width: 100%;
 
-    @include tablet-size {
+    @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
         float: left;
-        margin-bottom: 0;
-        padding-left: 10px;
-        text-align: left;
         width: 420px;
+        text-align: left;
     }
 
-    &:focus {
-        outline: 0;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(16px);
+        @include line-height(16px);
+    }
+
+    &::placeholder {
+        color: $dune;
     }
 }
 
 .c-newsletter__form__btn {
     @include button-single();
-    @include button-single-light();
-    @include font('GRAPHIK', 13px, 'SEMI BOLD', 13px, 20);
-
-    display: block;
+    @include font("GRAPHIK", 13px, 'SEMI BOLD', 13px);
+    background-color: $dune;
+    color: $white;
     height: 40px;
-    margin-top: 15px;
-    padding: 0;
-    text-transform: none;
-    width: 100%;
+    letter-spacing: 1px;
+    padding-top: 10px;
+    margin-bottom: 15px;
 
-    @include tablet-size {
-        @include font-size(13px);
+    @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
         float: left;
-        margin-left: 20px;
-        margin-top: 0px;
-        padding: 10px;
-        width: 110px;
+        width: 140px;
+        margin-left: 10px;
     }
 
-    &:focus {
-        outline: 0;
-    }
     &:hover {
-        @include button-single-light-hover();
+        background-color: $white;
+        border: solid 1px $dune;
+        color: $dune;
     }
 }
 
 .c-newsletter__legal {
-    @include font('GRAPHIK', 11px, $line-height: 15px);
-    margin: 0;
-    width: 100%;
+    @include font("GRAPHIK", 11px, 'NORMAL', 11px);
+    color: $dune;
 
-    a:hover {
-        border: 0;
+    a{
+        color: $dune;
+        text-decoration: underline;
     }
-}
-
-.c-newsletter__privacy {
-    color: $COLOUR_MAIN;
-    text-decoration: underline;
 }
