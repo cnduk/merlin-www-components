@@ -1,5 +1,5 @@
-@import "@cnbritain/merlin-www-common:glamour";
-@import "@cnbritain/merlin-www-buttons:glamour";
+@import "@cnbritain/merlin-www-common:glamour_redux";
+@import "@cnbritain/merlin-www-buttons:glamour_redux";
 
 @import "../wireframe/wireframe";
 // -------------------- //
@@ -398,24 +398,27 @@
 // -------------------- //
 // Callout
 // -------------------- //
-//.bb-callout {
-//    //border: 1px solid $mine-shaft;
-//    margin: 30px 0;
-//    padding: 20px 20px 30px;
-//
-//    > *:first-child {
-//        margin-top: 0;
-//    }
-//
-//    > *:last-child {
-//        margin-bottom: 0;
-//    }
-//
-//    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-//        margin: 40px 0;
-//        padding: 30px 30px 40px;
-//    }
-//}
+.bb-callout {
+    border: 4px solid $mandy;
+    margin: 25px 0;
+    overflow: visible;
+    padding: 20px;
+    position: relative;
+    text-align: left;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        margin: 35px 0;
+        padding: 30px;
+    }
+
+    > *:first-child {
+        margin-top: 0;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
 
 // -------------------- //
 // Figure
