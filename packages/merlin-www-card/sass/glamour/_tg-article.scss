@@ -1,7 +1,37 @@
-.c-card--tg-article {
+// -------------------- //
+// Tag Article
+// -------------------- //
+@mixin card-tg-article() {}
+@mixin card-tg-article-small() {
+    @include card-portrait();
+    // Portrait large is used for the general small portrait cards
+    @include card-portrait-large();
+}
+@mixin card-tg-article-large() {
     @include card-landscape();
-    @include card-landscape-small();
-    @include min-screen(600px){
-        @include card-landscape-large();
+    @include card-landscape-large();
+}
+
+.c-card--tg-article {
+    @include card-tg-article();
+    @include card-tg-article-small();
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include card-tg-article-large();
+        .c-card__tag {
+            background-color: transparent;
+            bottom: auto;
+            padding: 0;
+        }
     }
+}
+
+.c-card--tg-article-small {
+    @include card-tg-article();
+    @include card-tg-article-small();
+}
+
+.c-card--tg-article-large {
+    @include card-tg-article();
+    @include card-tg-article-large();
 }

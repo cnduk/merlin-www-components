@@ -3,92 +3,218 @@
 // -------------------- //
 @mixin card-landscape() {
     .c-card__obj {
-        box-sizing: border-box;
-        display: table;
+        display: flex;
+        flex-direction: row;
         width: 100%;
     }
 
     .c-card__obj__header,
     .c-card__obj__body {
-        display: table-cell;
+        display: flex;
+        flex-direction: column;
+        vertical-align: inherit;
+        width: 100%;
     }
 
-    .c-card__obj__header {
-        padding-right: 15px;
-        vertical-align: top;
-    }
-
-    .c-card__obj__body {
-        padding-left: 0;
-        vertical-align: middle;
-        width: 55%;
-    }
-
-    .c-card__image {
-        margin-bottom: 0;
-    }
-
-    .c-card__title {
-        @include title-card-landscape;
-
-        margin-bottom: 10px;
-        margin-top: 0;
-    }
-
-    .c-card__separator {
-        margin: 10px 0;
-        width: 15px;
-    }
-
-    .c-card__byline {
-        margin-bottom: 3px;
-    }
-
-    // Need to be specific to overwrite global__list-reset
-    li.c-card__meta-item {
-        margin-bottom: 0;
+    .c-card__header,
+    .c-card__footer {
+        display: flex;
+        flex-direction: column;
     }
 }
 
 @mixin card-landscape-small() {
+    .c-card__link {}
+    .c-card__obj {}
     .c-card__obj__header {
-        width: 45%;
+        padding-right: 10px;
+        width: 39%;
     }
+
+    .c-card__images {}
+    .c-card__images-icon {
+        display: none;
+    }
+
+    .c-card__image {}
     .c-card__obj__body {
-        width: 55%;
+        padding-top: 20px;
+        width: 70%;
+    }
+
+    .c-card__header {}
+
+    .c-card__tag {
+        @include font("GRAPHIK", 10px, 600, 10px);
+        color: $astronaut;
+        left: 100%;
+        letter-spacing: 1.5px;
+        position: absolute;
+        text-transform: uppercase;
+        top: 0;
+        white-space: nowrap;
+    }
+
+    .c-card__title {
+        @include font("MILLER_DISPLAY", 18px, 600, 21px);
+        color: $dune;
+        margin: 0 0 8px 0;
+    }
+
+    .c-card__teaser {
+        display: none;
+    }
+
+    .c-card__separator {
+        display: none;
+    }
+
+    .c-card__footer {}
+    .c-card__byline {
+        @include font("GRAPHIK", 10px, 400, 10px);
+        color: $dune;
+        letter-spacing: 1.5px;
+        margin: 0 0 6px 0;
+        text-transform: uppercase;
+    }
+
+    .c-card__byline--sponsorship {}
+    .c-card__byline-prefix {}
+    .c-card__byline-name {}
+
+    ul.c-card__meta {
+        @include font("GRAPHIK", 10px, 400, 10px);
+        color: $dune;
+        letter-spacing: 1.5px;
+        margin: 0 0 0 0;
+        text-transform: uppercase;
+    }
+
+    li.c-card__meta-item {
+        & + li.c-card__meta-item {
+            &:before {
+                background-color: $azalea;
+                border-radius: 50%;
+                content: "";
+                display: inline-block;
+                height: 3px;
+                margin: 1px 4px;
+                width: 3px;
+            }
+        }
     }
 }
 
 @mixin card-landscape-large() {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        &:hover {
+            .c-card__image {
+                transform: scale(1.04);
+            }
+        }
+    }
+
+    .c-card__link {}
+    .c-card__obj {
+        background-color: $white;
+    }
+
     .c-card__obj__header {
         padding-right: 30px;
-        width: 35%;
+        width: 46%;
     }
+
+    .c-card__images {}
+    .c-card__images-icon {
+        display: none;
+    }
+
+    .c-card__image {}
     .c-card__obj__body {
-        padding-right: 100px;
-        width: 65%;
+        flex: 1 0 auto;
+        padding: 50px 30px 30px 0;
+        width: 54%;
     }
+
+    .c-card__header {
+        flex: 1 0 auto;
+    }
+
+    .c-card__tag {
+        @include font("GRAPHIK", 10px, 600, 10px);
+        color: $astronaut;
+        left: 100%;
+        letter-spacing: 1.5px;
+        position: absolute;
+        text-transform: uppercase;
+        top: 30px;
+        white-space: nowrap;
+    }
+
     .c-card__title {
-        @include font-size(30px);
-        @include line-height(33px);
-        margin-bottom: 20px;
+        @include font("MILLER_DISPLAY", 30px, 600, 35px);
+        color: $dune;
+        margin: 0 0 20px;
+    }
+
+    .c-card__teaser {
+        @include font("GRAPHIK", 14px, 600, 18px);
+        color: $dune;
+        display: block;
+        letter-spacing: 0px;
+        margin: 0 0 30px 0;
+    }
+
+    .c-card__separator {
+        display: none;
+    }
+
+    .c-card__footer {}
+    .c-card__byline {
+        @include font("GRAPHIK", 10px, 400, 10px);
+        color: $dune;
+        letter-spacing: 1.5px;
+        margin: 0 0 6px 0;
+        text-transform: uppercase;
+    }
+
+    .c-card__byline--sponsorship {}
+    .c-card__byline-prefix {}
+    .c-card__byline-name {}
+
+    ul.c-card__meta {
+        @include font("GRAPHIK", 10px, 400, 10px);
+        color: $dune;
+        letter-spacing: 1.5px;
+        margin: 0 0 0 0;
+        text-transform: uppercase;
+    }
+
+    li.c-card__meta-item {
+        & + li.c-card__meta-item {
+            &:before {
+                background-color: $azalea;
+                border-radius: 50%;
+                content: "";
+                display: inline-block;
+                height: 3px;
+                margin: 1px 4px;
+                width: 3px;
+            }
+        }
     }
 }
 
 .c-card--landscape {
-    @include card-landscape;
-    @include card-landscape-small;
-    @include min-screen($CARD_SWITCHER_WIDTH) {
-        @include card-landscape-large;
-    }
+
 }
 
 .c-card--landscape-small {
-    @include card-landscape;
-    @include card-landscape-small;
+    @include card-landscape();
+    @include card-landscape-small();
 }
 
 .c-card--landscape-large {
-    @include card-landscape;
-    @include card-landscape-large;
+    @include card-landscape();
+    @include card-landscape-large();
 }

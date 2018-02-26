@@ -1,40 +1,40 @@
 // -------------------- //
 // Magazine
 // -------------------- //
-@mixin card-magazine() {
-    @include card-landscape;
-}
-@mixin card-magazine-small() {
-    @include card-landscape-small;
-}
+@mixin card-magazine() {}
+@mixin card-magazine-small() {}
 @mixin card-magazine-large() {
-    @include card-landscape-large;
+    .c-card__obj__header {
+        width: 70px;
+    }
 
     .c-card__obj__body {
-        padding-right: 0;
+        padding-top: 0;
     }
 
-    .c-card__title {
-        @include line-height(21px);
-        margin-bottom: 10px;
+    .c-card__tag {
+        display: none;
     }
-
 }
 
 .c-card--magazine {
-    @include card-magazine;
-    @include card-magazine-small;
-    @include min-screen($CARD_SWITCHER_WIDTH) {
-        @include card-magazine-large;
+    @include card-landscape();
+    @include card-landscape-small();
+
+    @include card-magazine();
+    @include card-magazine-small();
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include card-magazine-large();
     }
 }
 
 .c-card--magazine-small {
-    @include card-magazine;
-    @include card-magazine-small;
+    @include card-magazine();
+    @include card-magazine-small();
 }
 
 .c-card--magazine-large {
-    @include card-magazine;
-    @include card-magazine-large;
+    @include card-magazine();
+    @include card-magazine-large();
 }
