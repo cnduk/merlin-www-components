@@ -1,9 +1,59 @@
-@import '@cnbritain/merlin-www-common:glamour';
+@import "@cnbritain/merlin-www-common:glamour";
 @import "@cnbritain/merlin-www-buttons:glamour";
 
-@import '../wireframe/wireframe';
+@import "../wireframe/wireframe";
 
-.c-topic-strip {}
+.c-topic-strip {
+    text-align: left;
+}
+
+.c-topic-strip--bleed {}
+.c-topic-strip--c-card-section {
+    display: none;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: auto
+    }
+}
+
+.c-topic-strip__title {
+    display: none;
+}
+
+.c-topic-strip__list {
+    font-size: 0;
+}
+
+li.c-topic-strip__item {
+    font-size: initial;
+
+    & + li.c-topic-strip__item {
+        margin-left: 10px;
+    }
+}
+
+.c-topic-strip--article-related {
+    margin-bottom: -10px;
+    text-align: center;
+    white-space: normal;
+
+    .c-topic-strip__item {
+        margin-bottom: 10px;
+        margin-right: 10px;
+
+        & + .c-topic-strip__item {
+            margin-left: 0;
+        }
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        text-align: left;
+    }
+}
 
 .c-topic-strip__btn {
     @include button-group();
@@ -13,90 +63,3 @@
         @include button-group-light-hover();
     }
 }
-
-//li added due to specificity of .global__list-reset li setting margin to 0
-li.c-topic-strip__item {
-    & + & {
-        margin-left: 10px;
-
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-            margin-left: 15px;
-        }
-    }
-}
-
-.c-topic-strip__title {
-    @include font('GRAPHIK', 13px, 'SEMI BOLD', 16px);
-    padding-right: 5px;
-}
-
-
-.c-topic-strip--bleed {
-    @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: -$MOBILE_SIDE_GUTTER;
-        margin-right: -$MOBILE_SIDE_GUTTER;
-        padding-left: $MOBILE_SIDE_GUTTER;
-        padding-right: $MOBILE_SIDE_GUTTER;
-
-        .c-topic-strip__list {
-            display: inline-block;
-            margin-left: -$MOBILE_SIDE_GUTTER;
-            margin-right: -$MOBILE_SIDE_GUTTER;
-            padding-left: $MOBILE_SIDE_GUTTER;
-            padding-right: $MOBILE_SIDE_GUTTER;
-        }
-    }
-}
-
-.c-topic-strip--c-card-section {
-    padding-bottom: 20px;
-    text-align: left;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding-bottom: 30px;
-        text-align: center;
-    }
-}
-
-.c-topic-strip--article-related {
-    box-sizing: border-box;
-    padding-left: $MOBILE_SIDE_GUTTER;
-    padding-right: $MOBILE_SIDE_GUTTER;
-    text-align: left;
-
-    .c-topic-strip__btn--related {
-        @include font-weight('MEDIUM');
-    }
-
-    li.c-topic-strip__item {
-        margin-left: 0;
-        margin-right: 10px;
-
-        & + .c-topic-strip__item {
-            margin-left: 0;
-        }
-    }
-
-    @include tablet-size {
-        margin-bottom: -10px;
-        padding-left: 0;
-        padding-right: 0;
-        white-space: normal;
-
-        li.c-topic-strip__item {
-            margin: 0 10px 10px 0;
-        }
-    }
-
-    @include desktop-size {
-        white-space: normal;
-        margin-bottom: -10px;
-        margin-top: 0;
-
-        li.c-topic-strip__item {
-            margin-bottom: 10px;
-            margin-right: 10px;
-        }
-    }
-}
-
