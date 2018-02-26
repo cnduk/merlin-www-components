@@ -1,261 +1,59 @@
 @import '../wireframe/_variables';
 
+// ----- Colours ----- //
+$dune: #373330;
+$natural-gray: #938c86;
+$cloud: #c9c5bf;
+$pampas: #f9f8f7;
+$concrete: #f3f3f3;
+$azalea: #f6d3d5;
+$astronaut: #2c3781;
+$banana-mania: #fceaaa;
+$mandy: #ea6066;
+$advert-light: #f9f8f7;
+$advert-dark: #373330;
+$white: #ffffff;
 
-
-////
-// Typography
-// ============================================================================
-////
-$TYPE_FONT_SIZE: 18px;
-$TYPE_LINE_HEIGHT: 25px;
-$TYPE_LARGE_COPY_WIDTH: 600px;
-
-////
-// Colours
-// ============================================================================
-// MAIN
-////
-$COLOUR_MAIN: #000;
-$COLOUR_MAIN_DARK: #fff;
-$COLOUR_MAIN_SECONDARY: #333;
-$COLOUR_MAIN_TERTIARY: #757575;
-$COLOUR_MAIN_HIGHLIGHT: #57b1ff;
-$COLOUR_META_DARK: #888;
-
-////
-// ============================================================================
-// BACKGROUNDS
-////
-$COLOUR_BG_MAIN: #fff;
-$COLOUR_BG_DARK: #000;
-$COLOUR_BG_SECONDARY: #f5f5f5;
-$COLOUR_BG_TERTIARY: #333;
-$COLOUR_BG_QUATERNARY: #3d3d3d; // D:
-$COLOUR_BG_ACCENT: #e5e5e5;
-$COLOUR_BG_ACCENT_SECONDARY: #252525;
-$COLOUR_BG_GALLERY_REMAINING: rgba(254,248,134,0.90);
-$COLOUR_BG_AD: #f9f9f9;
-$COLOUR_BG_FOOTER: #131313;
-
-////
-// ============================================================================
-// SECTIONS
-////
-$COLOUR_SECTION_CARD_LIST: transparent;
-$COLOUR_SECTION_CONTRIBUTORS: #f5f5f5;
-$COLOUR_SECTION_FEATURE: #fdebe3;
-$COLOUR_SECTION_GALLERY: #fefbde;
-$COLOUR_SECTION_GALLERY_STRIP: #f5f5f5;
-$COLOUR_SECTION_LIST: #f0f6f0;
-$COLOUR_SECTION_MAGAZINE: #f5f5f5;
-$COLOUR_SECTION_SHOW_FINDER: #fdebeb;
-$COLOUR_SECTION_SHOW_SEASON: #f5f5f5;
-$COLOUR_SECTION_SHOW_SUMMARY: #f5f5f5;
-$COLOUR_SECTION_SUBSCRIBE: #f5f5f5;
-$COLOUR_SECTION_SUPERFEATURE: #000;
-$COLOUR_SECTION_VIDEO: #000;
-
-////
-// ============================================================================
-// BORDERS + SEPARATORS
-////
-$COLOUR_BORDER_DOTTED: #000;
-$COLOUR_BORDER_SOLID: #000;
-$COLOUR_BORDER_DOTTED_DARK: #fff;
-$COLOUR_BORDER_SOLID_DARK: #fff;
-$COLOUR_BORDER_NAVIGATION_TOP: #333;
-$COLOUR_BORDER_NAVIGATION_BOTTOM: #333;
-$COLOUR_BORDER_INPUT: #333;
-$COLOUR_SEPARATOR: #333;
-$COLOUR_SEPARATOR_ALT: rgba(0, 0, 0, .3);
-$COLOUR_SEPARATOR_ALT_DARK: rgba(255, 255, 255, .3);
-$COLOUR_SEPARATOR_DARK: #fff;
-$COLOUR_META_SEPARATOR_DARK: #888;
-$COLOUR_SEPARATOR_NAVIGATION: #f5f5f5;
-$COLOUR_SEPARATOR_LIVE_SHOW: rgba(0, 0, 0, .3); // TODO: Remove this special case
-
-
-////
-// ============================================================================
-// CARDS
-////
-$COLOUR_CARD_ICON: #fff;
-$COLOUR_CARD_ICON_BACKGROUND: #000;
-////
-// ============================================================================
-// BUTTONS
-////
-$COLOUR_BUTTON_HIGHLIGHT_INACTIVE: $COLOUR_MAIN_HIGHLIGHT;
-$COLOUR_BUTTON_HIGHLIGHT_ACTIVE: $COLOUR_MAIN_HIGHLIGHT;
-$COLOUR_BUTTON_HIGHLIGHT_ICON_INACTIVE: #6cc6ff;
-$COLOUR_BUTTON_HIGHLIGHT_ICON_ACTIVE: #fff;
-
-$COLOUR_BUTTON_LIGHT: #000;
-$COLOUR_BUTTON_LIGHT_BG: transparent;
-$COLOUR_BUTTON_LIGHT_BORDER: #000;
-$COLOUR_BUTTON_LIGHT_HOVER: #fff;
-$COLOUR_BUTTON_LIGHT_BG_HOVER: #000;
-$COLOUR_BUTTON_LIGHT_BORDER_HOVER: #000;
-
-$COLOUR_BUTTON_DARK: #fff;
-$COLOUR_BUTTON_DARK_BG: #333;
-$COLOUR_BUTTON_DARK_BORDER: transparent;
-$COLOUR_BUTTON_DARK_HOVER: #000;
-$COLOUR_BUTTON_DARK_BG_HOVER: #fff;
-$COLOUR_BUTTON_DARK_BORDER_HOVER: transparent;
-
-$COLOUR_BUTTON_GROUP_LIGHT: #000;
-$COLOUR_BUTTON_GROUP_LIGHT_BG: #f5f5f5;
-$COLOUR_BUTTON_GROUP_LIGHT_HOVER: #fff;
-$COLOUR_BUTTON_GROUP_LIGHT_HOVER_BG: #000;
-
-$COLOUR_BUTTON_GALLERY_ASIDE: #000;
-$COLOUR_BUTTON_GALLERY_ASIDE_BG: #fff;
-$COLOUR_BUTTON_GALLERY_ASIDE_HOVER: #fff;
-$COLOUR_BUTTON_GALLERY_ASIDE_BG_HOVER: #000;
-
-$COLOUR_BUTTON_GALLERY_NAV: #000;
-$COLOUR_BUTTON_GALLERY_NAV_BG: #fff;
-$COLOUR_BUTTON_GALLERY_NAV_HOVER: #000;
-$COLOUR_BUTTON_GALLERY_NAV_BG_HOVER: #f5f5f5;
-$COLOUR_BUTTON_GALLERY_NAV_BORDER: #f5f5f5;
-
-
-////
-// Social colours
-// ============================================================================
-////
-$COLOUR_EMAIL: #333;
-$COLOUR_EMAIL_HOVER: #000;
-$COLOUR_EMAIL_DARK: #666;
-$COLOUR_EMAIL_DARK_HOVER: #333;
-
-$COLOUR_FACEBOOK: #3b5998;
-$COLOUR_FACEBOOK_HOVER: #3b5998;
-$COLOUR_FACEBOOK_DARK: #3b5998;
-$COLOUR_FACEBOOK_DARK_HOVER: #3b5998;
-
-$COLOUR_INSTAGRAM: #e1306c;
-$COLOUR_INSTAGRAM_HOVER: #e1306c;
-$COLOUR_INSTAGRAM_DARK: #e1306c;
-$COLOUR_INSTAGRAM_DARK_HOVER: #e1306c;
-
-$COLOUR_PINTEREST: #bd081c;
-$COLOUR_PINTEREST_HOVER: #bd081c;
-$COLOUR_PINTEREST_DARK: #bd081c;
-$COLOUR_PINTEREST_DARK_HOVER: #bd081c;
-
-$COLOUR_TWITTER: #55acee;
-$COLOUR_TWITTER_HOVER: #55acee;
-$COLOUR_TWITTER_DARK: #55acee;
-$COLOUR_TWITTER_DARK_HOVER: #55acee;
-
-$COLOUR_YOUTUBE: #cd201f;
-$COLOUR_YOUTUBE_HOVER: #cd201f;
-$COLOUR_YOUTUBE_DARK: #cd201f;
-$COLOUR_YOUTUBE_DARK_HOVER: #cd201f;
-
-$COLOUR_WHATSAPP: #43d854;
-$COLOUR_WHATSAPP_HOVER: #43d854;
-$COLOUR_WHATSAPP_DARK: #43d854;
-$COLOUR_WHATSAPP_DARK_HOVER: #43d854;
-
-$COLOUR_SOCIAL_ICON: #f5f5f5;
-$COLOUR_SOCIAL_ICON_DARK: #fff;
-
-$COLOUR_SOCIAL: (
-    "email": $COLOUR_EMAIL,
-    "facebook": $COLOUR_FACEBOOK,
-    "instagram": $COLOUR_INSTAGRAM,
-    "pinterest": $COLOUR_PINTEREST,
-    "twitter": $COLOUR_TWITTER,
-    "youtube": $COLOUR_YOUTUBE,
-    "whatsapp": $COLOUR_WHATSAPP
-);
+// ----- Social Colours -----//
+$COLOUR_SOCIAL: map-merge($COLOUR_SOCIAL, (
+    "email": #373330,
+    "facebook": #3B5998,
+    "pinterest": #CB2027,
+    "twitter": #55ACEE,
+    "whatsapp": #4DC247,
+    "instagram": #C32AA3,
+    "youtube": #FF0000
+));
 
 $COLOUR_SOCIAL_HOVER: (
-    "email": $COLOUR_EMAIL_HOVER,
-    "facebook": $COLOUR_FACEBOOK_HOVER,
-    "instagram": $COLOUR_INSTAGRAM_HOVER,
-    "pinterest": $COLOUR_PINTEREST_HOVER,
-    "twitter": $COLOUR_TWITTER_HOVER,
-    "youtube": $COLOUR_YOUTUBE_HOVER,
-    "whatsapp": $COLOUR_WHATSAPP_HOVER
+    "email": #1C1A18,
+    "facebook": #314A7F,
+    "pinterest": #A71B21,
+    "twitter": #50A2DF,
+    "whatsapp": #42A73D,
+    "instagram": #A02186,
+    "youtube": #D70101
 );
 
-$COLOUR_SOCIAL_DARK: (
-    "email": $COLOUR_EMAIL_DARK,
-    "facebook": $COLOUR_FACEBOOK_DARK,
-    "instagram": $COLOUR_INSTAGRAM_DARK,
-    "pinterest": $COLOUR_PINTEREST_DARK,
-    "twitter": $COLOUR_TWITTER_DARK,
-    "youtube": $COLOUR_YOUTUBE_DARK,
-    "whatsapp": $COLOUR_WHATSAPP_DARK
-);
-
-$COLOUR_SOCIAL_DARK_HOVER: (
-    "email": $COLOUR_EMAIL_DARK_HOVER,
-    "facebook": $COLOUR_FACEBOOK_DARK_HOVER,
-    "instagram": $COLOUR_INSTAGRAM_DARK_HOVER,
-    "pinterest": $COLOUR_PINTEREST_DARK_HOVER,
-    "twitter": $COLOUR_TWITTER_DARK_HOVER,
-    "youtube": $COLOUR_YOUTUBE_DARK_HOVER,
-    "whatsapp": $COLOUR_WHATSAPP_DARK_HOVER
-);
-
-$COLOUR_SOCIAL_LIGHT: $COLOUR_SOCIAL;
-
-
-$MAIN_NAVIGATION_HEIGHT: 60px;
-
-
-////
-// Module variables
-// ============================================================================
-////
-
-// Gutters to use on the desktop sized site
+// ----- Breakpoints ----- //
 $DESKTOP_SIDE_GUTTER: 60px;
-// Gutters to use on the tablet sized site
 $TABLET_SIDE_GUTTER: 60px;
-// Gutters to use on the mobile sized site
 $MOBILE_SIDE_GUTTER: 20px;
-// Margins to use on the desktop sized site
-$DESKTOP_SLICE_MARGIN: 50px;
-// Margins to use on the tablet sized site
-$TABLET_SLICE_MARGIN: 40px;
-// Margins to use on the mobile sized site
+
+$DESKTOP_SLICE_MARGIN: 60px;
+$TABLET_SLICE_MARGIN: 60px;
 $MOBILE_SLICE_MARGIN: 40px;
 
+$DESKTOP_SIDE_GUTTER_BREAKPOINT: 1024px;
+$TABLET_SIDE_GUTTER_BREAKPOINT: 700px;
 
-////
-// Card
-// ============================================================================
-////
+$CARD_SWITCHER_WIDTH: 600px;
+$CARD_LIST_2_COLUMN_BREAKPOINT: 600px;
+$CARD_LIST_3_COLUMN_BREAKPOINT: 940px;
+$CARD_LIST_4_COLUMN_BREAKPOINT: 1024px;
 
-// The width the card should switch between landscape and portrait layouts
-$CARD_SWITCHER_WIDTH: 700px;
+$FEATURE_LARGE_BREAKPOINT: 800px;
+$SUPERFEATURE_LARGE_BREAKPOINT: 700px;
 
-
-/**
- * Card list
- * ============================================================================
- */
-
-//Breakpoints for card list configurations
-$CARD_LIST_2_COLUMN_BREAKPOINT: 700px;
-
-
-////
-// Magazine subscribe
-// ============================================================================
-////
-
-// The width of the magazine covers when on larger screens
-$MAGAZINE_SUBSCRIBE_COVER_LARGE: 200px;
-
-////
-// Shows
-// ============================================================================
-////
-$SEASON_HUB_TAB_HEIGHT: 45px;
+$TYPE_MEDIUM_COPY_WIDTH: 700px;
+$TYPE_LARGE_COPY_WIDTH: 1024px;
