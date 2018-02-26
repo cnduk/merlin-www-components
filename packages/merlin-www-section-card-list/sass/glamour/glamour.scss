@@ -6,356 +6,143 @@
 @import "../wireframe/wireframe";
 
 .c-card-section {
-    @include section-margins;
+    margin-top: $MOBILE_SLICE_MARGIN;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
 
-    box-sizing: border-box;
-    max-width: none;
-    padding-left: $MOBILE_SIDE_GUTTER;
-    padding-right: $MOBILE_SIDE_GUTTER;
-
-    @include tablet-size {
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $TABLET_SLICE_MARGIN;
+        margin-bottom: $TABLET_SLICE_MARGIN;
     }
 
-    @include desktop-size {
-        padding-left: $DESKTOP_SIDE_GUTTER;
-        padding-right: $DESKTOP_SIDE_GUTTER;
-    }
-
-    .c-card-section__constrain {
-        max-width: $MAXIMUM_PAGE_WIDTH;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $DESKTOP_SLICE_MARGIN;
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
     }
 }
 
-.c-card-section__btn {
-    @include button-single;
-    @include button-single-light;
-    display: inline-block;
-    min-width: 150px;
-
-    &:hover {
-        @include button-single-light-hover;
-    }
-}
-
-.c-card-section--dark {
-    color: $COLOUR_MAIN_DARK;
-}
-
-// .c-card-section--c-curated,
-// .c-card-section--s-results,
-// .c-card-section--v-genre-articles,
-// .c-card-section--c-video-articles,
-// .c-card-section--c-tag,
-// .c-card-section--c-contributors,
-// .c-card-section--mag-articles,
-// .c-card-section--c-magazine-articles,
-// .c-card-section--mag-magazines,
-// .c-card-section--sh-shows,
-// .c-card-section--tg-articles,
-// .c-card-section--sh-articles,
-// .c-card-section--v-articles,
-// .c-card-section--tg-header-articles {
-//     .c-card-section__constrain {
-//         max-width: $MAXIMUM_PAGE_WIDTH;
-//     }
-// }
-
+.c-card-section--c-curated,
+.c-card-section--c-tag,
+.c-card-section--c-video-articles,
+.c-card-section--mag-articles,
+.c-card-section--mag-magazines,
 .c-card-section--tg-articles,
-.c-card-section--v-articles {
+.c-card-section--v-articles,
+.c-card-section--v-genre-articles {
     .c-card-section__title {
-        @include title-section;
+        @include font("MILLER_DISPLAY", 25px, 600, 30px);
+        color: $dune;
+        margin: 0 0 15px 0;
 
-        display: inline-block;
-        margin-bottom: 20px;
-        margin-top: 0;
-        padding: 0;
-        text-align: center;
-        text-transform: uppercase;
-        width: 100%;
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            @include font-size(35px);
+            @include line-height(35px);
+        }
 
-        .c-card-section--dark & {
-            border-color: $COLOUR_BORDER_SOLID_DARK;
+        a {
+            color: inherit;
         }
     }
 
-    @include desktop-size {
-        .c-card-section__title {
-            margin-bottom: 25px;
-            position: relative;
-            text-align: left;
-            width: 100%;
-
-            &:before {
-                background-color: #000;
-                content: '';
-                height: 1px;
-                left: 0;
-                margin-top: -14px;
-                position: absolute;
-                right: 0;
-                top: 100%;
-                z-index: -1;
-            }
-
-            span {
-                background-color: $COLOUR_BG_MAIN;
-                padding-left: 0px;
-                padding-right: 30px;
-            }
+    .c-card-section__btn {
+        @include button-single();
+        @include button-single-light();
+        &:hover {
+            @include button-single-light-hover();
         }
-        .c-card-list {
-            margin-right: 360px;
-            position: relative;
-        }
+
+        margin-top: 30px;
     }
 }
 
 .c-card-section--c-video-articles {
-    background: $COLOUR_SECTION_VIDEO;
-    padding-bottom: 40px;
-    padding-top: 30px;
-
-    .c-card-section__btn {
-        @include button-single-dark();
-        margin-top: 40px;
-
-        &:hover {
-            @include button-single-dark-hover();
-        }
-    }
-
     .c-card-section__logo {
-        margin: 0 auto 30px;
-        text-align: center;
-        width: 215px;
+        height: auto;
+        margin-bottom: 15px;
+        width: 220px;
 
-        svg {
-            max-width: 100%;
-            width: 100%;
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            width: 300px;
         }
+
+        .svg-logo-block { fill: #f6d3d5; }
+        .svg-logo { fill: #373330; }
     }
+}
 
-    @include tablet-size {
-        .c-card-section__logo {
-            width: 200px;
-        }
-    }
-
-    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
-        max-width: none;
-        padding: 80px 60px;
-
-        .c-card-section__logo {
-            margin-bottom: 40px;
-            width: 250px;
+.c-card-section--tg-articles,
+.c-card-section--v-articles {
+    .c-card-list {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-right: 340px;
         }
     }
 }
 
-.c-card-section--mag-articles,
-.c-card-section--v-genre-articles {
-    .c-card-section__title {
-        @include title-section;
-
-        display: inline-block;
-        margin-bottom: 20px;
-        margin-top: 0;
-        padding: 0;
-        text-align: center;
-        text-transform: uppercase;
-        width: 100%;
-
-        .c-card-section--dark & {
-            border-color: $COLOUR_BORDER_SOLID_DARK;
-        }
-    }
-
-    @include desktop-size {
-        .c-card-section__title {
-            margin-bottom: 25px;
-            position: relative;
-            text-align: left;
-            width: 100%;
-
-            &:before {
-                background-color: #000;
-                content: '';
-                height: 1px;
-                left: 0;
-                margin-top: -14px;
-                position: absolute;
-                right: 0;
-                top: 100%;
-                z-index: -1;
-            }
-
-            span {
-                background-color: $COLOUR_BG_MAIN;
-                padding-left: 0px;
-                padding-right: 30px;
-            }
-        }
-    }
-}
-
-
-.c-card-section--c-curated,
-.c-card-section--c-contributors,
-.c-card-section--c-tag {
-    .c-card-section__title {
-        @include title-section;
-
-        display: inline-block;
-        margin-bottom: 20px;
-        margin-top: 0;
-        padding: 0;
-        text-align: center;
-        text-transform: uppercase;
-        width: 100%;
-
-        a {
-            color: #000;
-        }
-
-        .c-card-section--dark & {
-            border-color: $COLOUR_BORDER_SOLID_DARK;
-
-            a {
-                color: #fff;
-            }
-        }
-
-    }
-
-    .c-card-section__btn {
-        display: inline-block;
-        margin-top: 30px;
-    }
-
-    @include desktop-size {
-        .c-card-section__title {
-            @include title-section-desktop;
-
-            margin-bottom: 25px;
-            position: relative;
-            text-align: center;
-            width: 100%;
-
-            &:before {
-                background-color: #000;
-                content: '';
-                height: 2px;
-                left: 0;
-                margin-top: -14px;
-                position: absolute;
-                right: 0;
-                top: 100%;
-                z-index: -1;
-            }
-
-            span {
-                background-color: $COLOUR_BG_MAIN;
-                padding-left: 30px;
-                padding-right: 30px;
-            }
-        }
-
-        .c-card-section__btn {
-            margin-top: 40px;
-        }
-    }
-}
-
-.c-card-section--a-recommended,
-.c-card-section--mag-magazines {
-    background-color: $COLOUR_BG_SECONDARY;
+.c-card-section--a-recommended {
+    background-color: $concrete;
     margin: 0;
-    padding: 40px $MOBILE_SIDE_GUTTER $MOBILE_SIDE_GUTTER $MOBILE_SIDE_GUTTER;
+    max-width: none;
+    padding-bottom: $MOBILE_SLICE_MARGIN;
+    padding-top: $MOBILE_SLICE_MARGIN;
 
-    .c-card-section__constrain {
-        max-width: $ARTICLE_TOTAL;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-top: $TABLET_SLICE_MARGIN;
+        padding-bottom: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-top: $DESKTOP_SLICE_MARGIN;
+        padding-bottom: $DESKTOP_SLICE_MARGIN;
     }
 
     .c-card-section__title {
-        @include title-list;
+        @include font("MILLER_DISPLAY", 30px, 600, 30px);
+        color: $dune;
+        margin: 0 0 15px 0;
 
-        display: inline-block;
-        margin-bottom: 20px;
-        margin-top: 0;
-        padding: 0;
-        text-align: center;
-        text-transform: uppercase;
-        width: 100%;
-
-        span {
-            background-color: $COLOUR_BG_SECONDARY;
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            @include font-size(35px);
+            @include line-height(35px);
         }
     }
-
-    @include tablet-size {
-        padding: $TABLET_SIDE_GUTTER;
-    }
-
-    @include desktop-size {
-        padding: $DESKTOP_SIDE_GUTTER;
-
-        .c-card-section__title {
-            margin-bottom: 25px;
-            margin-top: 0;
-            position: relative;
-            text-align: left;
-            width: 100%;
-
-            &:before {
-                background-color: #000;
-                content: '';
-                height: 1px;
-                left: 0;
-                margin-top: -14px;
-                position: absolute;
-                right: 0;
-                top: 100%;
-                z-index: 0;
-            }
-
-            span {
-                padding-left: 0px;
-                padding-right: 30px;
-                position: relative;
-                z-index: 1;
-            }
-
-        }
-    }
-
 }
 
 .c-card-section--v-related-articles {
-    background-color: $COLOUR_BG_DARK;
-    color: #fff;
+    background-color: $dune;
+    margin: 0;
     max-width: none;
-    padding-bottom: $PADDING_SMALL;
-    padding-left: $MOBILE_SIDE_GUTTER;
-    padding-right: $MOBILE_SIDE_GUTTER;
+    padding-bottom: $MOBILE_SLICE_MARGIN;
+    padding-top: $MOBILE_SLICE_MARGIN;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-top: $TABLET_SLICE_MARGIN;
+        padding-bottom: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-top: $DESKTOP_SLICE_MARGIN;
+        padding-bottom: $DESKTOP_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        display: none;
+    }
 
     .c-card-section__title {
-        @include font("GRAPHIK", 15px, 'MEDIUM', 16px);
-        color: #fff;
-        letter-spacing: 0.5px;
-        margin: 0;
-        padding: $PADDING_SMALL 0;
-        position: relative;
+        @include font("GRAPHIK", 14px, 400, 14px);
+        color: $white;
+        letter-spacing: 1px;
+        margin: 0 0 20px 0;
         text-transform: uppercase;
     }
 
-    @include tablet-size {
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
-    }
+    .c-card-section__btn {
+        @include button-single();
+        @include button-single-dark();
+        &:hover {
+            @include button-single-dark-hover();
+        }
 
-    @include desktop-size {
-        display: none;
+        margin-top: 30px;
     }
 }
