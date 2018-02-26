@@ -91,6 +91,10 @@
     @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
         padding: 30px 60px;
         text-align: center;
+        margin-top: -20px;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin-top: -140px;
     }
 }
