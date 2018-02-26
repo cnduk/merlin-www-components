@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-gallery-strip@1.5.12...@cnbritain/merlin-www-gallery-strip@1.6.0) (2018-02-26)
+
+
+### Features
+
+* **merlin-www-gallery-strip:** apply new glamour theme ([ab90300](https://github.com/cnduk/merlin-www-components/commit/ab90300))
+
+
+
+
 <a name="1.5.7"></a>
 ## [1.5.7](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-gallery-strip@1.5.6...@cnbritain/merlin-www-gallery-strip@1.5.7) (2018-02-19)
 

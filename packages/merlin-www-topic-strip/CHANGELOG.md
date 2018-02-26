@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.0"></a>
+# [1.8.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-topic-strip@1.7.32...@cnbritain/merlin-www-topic-strip@1.8.0) (2018-02-26)
+
+
+### Features
+
+* **merlin-www-topic-strip:** apply new glamour theme ([da39af7](https://github.com/cnduk/merlin-www-components/commit/da39af7))
+
+
+
+
 <a name="1.7.26"></a>
 ## [1.7.26](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-topic-strip@1.7.25...@cnbritain/merlin-www-topic-strip@1.7.26) (2018-02-19)
 

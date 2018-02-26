@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.11.0"></a>
+# [1.11.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.10.28...@cnbritain/merlin-www-ads@1.11.0) (2018-02-26)
+
+
+### Bug Fixes
+
+* **merlin-www-ads:** rename glamour_redux to glamour for main theme file ([add89ec](https://github.com/cnduk/merlin-www-components/commit/add89ec))
+
+
+### Features
+
+* **merlin-www-ads:** apply new glamour styles ([97f6f57](https://github.com/cnduk/merlin-www-components/commit/97f6f57))
+
+
+
+
 <a name="1.10.23"></a>
 ## [1.10.23](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.10.22...@cnbritain/merlin-www-ads@1.10.23) (2018-02-22)
 

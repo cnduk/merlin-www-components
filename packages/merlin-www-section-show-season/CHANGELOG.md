@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-show-season@1.5.52...@cnbritain/merlin-www-section-show-season@1.6.0) (2018-02-26)
+
+
+### Features
+
+* **merlin-www-section-show-season:** apply new glamour theme ([c3cade9](https://github.com/cnduk/merlin-www-components/commit/c3cade9))
+
+
+
+
 <a name="1.5.50"></a>
 ## [1.5.50](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-show-season@1.5.49...@cnbritain/merlin-www-section-show-season@1.5.50) (2018-02-26)
 

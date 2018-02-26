@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-footer@1.5.25...@cnbritain/merlin-www-footer@1.6.0) (2018-02-26)
+
+
+### Features
+
+* **merlin-www-footer:** apply new glamour theme ([3cd23b3](https://github.com/cnduk/merlin-www-components/commit/3cd23b3))
+
+
+
+
 <a name="1.5.20"></a>
 ## [1.5.20](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-footer@1.5.19...@cnbritain/merlin-www-footer@1.5.20) (2018-02-19)
 

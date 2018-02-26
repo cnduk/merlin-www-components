@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.7.0"></a>
+# [1.7.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-top-stories@1.6.48...@cnbritain/merlin-www-top-stories@1.7.0) (2018-02-26)
+
+
+### Features
+
+* **merlin-www-top-stories:** apply new glamour theme ([f2939e0](https://github.com/cnduk/merlin-www-components/commit/f2939e0))
+
+
+
+
 <a name="1.6.46"></a>
 ## [1.6.46](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-top-stories@1.6.45...@cnbritain/merlin-www-top-stories@1.6.46) (2018-02-26)
 

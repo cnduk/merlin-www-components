@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-pagination@1.5.31...@cnbritain/merlin-www-pagination@1.6.0) (2018-02-26)
+
+
+### Features
+
+* **merlin-www-pagination:** apply new glamour theme ([d13d460](https://github.com/cnduk/merlin-www-components/commit/d13d460))
+
+
+
+
 <a name="1.5.25"></a>
 ## [1.5.25](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-pagination@1.5.24...@cnbritain/merlin-www-pagination@1.5.25) (2018-02-19)
 

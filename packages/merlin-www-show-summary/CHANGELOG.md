@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.4.55"></a>
+## [1.4.55](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.4.54...@cnbritain/merlin-www-show-summary@1.4.55) (2018-02-26)
+
+
+### Bug Fixes
+
+* **merlin-www-show-summary:** add gq theme to merlin.json ([8bbf781](https://github.com/cnduk/merlin-www-components/commit/8bbf781))
+
+
+
+
 <a name="1.4.52"></a>
 ## [1.4.52](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.4.51...@cnbritain/merlin-www-show-summary@1.4.52) (2018-02-26)
 

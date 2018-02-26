@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.5.0"></a>
+# [1.5.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-cookie-warning@1.4.26...@cnbritain/merlin-www-cookie-warning@1.5.0) (2018-02-26)
+
+
+### Features
+
+* **merlin-www-cookie-warning:** apply new glamour theme ([12f2880](https://github.com/cnduk/merlin-www-components/commit/12f2880))
+
+
+
+
 <a name="1.4.21"></a>
 ## [1.4.21](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-cookie-warning@1.4.20...@cnbritain/merlin-www-cookie-warning@1.4.21) (2018-02-19)
 

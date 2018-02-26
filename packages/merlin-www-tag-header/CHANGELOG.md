@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.0"></a>
+# [1.8.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.7.40...@cnbritain/merlin-www-tag-header@1.8.0) (2018-02-26)
+
+
+### Features
+
+* **merlin-www-tag-header:** apply new glamour theme ([793081d](https://github.com/cnduk/merlin-www-components/commit/793081d))
+
+
+
+
 <a name="1.7.36"></a>
 ## [1.7.36](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.7.35...@cnbritain/merlin-www-tag-header@1.7.36) (2018-02-26)
 

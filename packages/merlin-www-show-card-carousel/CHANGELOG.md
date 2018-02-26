@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-card-carousel@1.5.44...@cnbritain/merlin-www-show-card-carousel@1.6.0) (2018-02-26)
+
+
+### Features
+
+* **merlin-www-show-card-carousel:** remove old glamour theme ([6481038](https://github.com/cnduk/merlin-www-components/commit/6481038))
+
+
+
+
 <a name="1.5.43"></a>
 ## [1.5.43](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-card-carousel@1.5.42...@cnbritain/merlin-www-show-card-carousel@1.5.43) (2018-02-26)
 

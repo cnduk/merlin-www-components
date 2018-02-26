@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.11.0"></a>
+# [1.11.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card@1.10.23...@cnbritain/merlin-www-card@1.11.0) (2018-02-26)
+
+
+### Bug Fixes
+
+* **merlin-www-card:** rename glamour_redux to glamour for main theme file ([60ce8df](https://github.com/cnduk/merlin-www-components/commit/60ce8df))
+
+
+### Features
+
+* **merlin-www-card:** apply new glamour theme ([4194c47](https://github.com/cnduk/merlin-www-components/commit/4194c47))
+
+
+
+
 <a name="1.10.22"></a>
 ## [1.10.22](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card@1.10.21...@cnbritain/merlin-www-card@1.10.22) (2018-02-26)
 

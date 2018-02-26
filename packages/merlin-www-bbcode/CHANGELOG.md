@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.10.0"></a>
+# [1.10.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.9.19...@cnbritain/merlin-www-bbcode@1.10.0) (2018-02-26)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** correct glamour import path ([e931c16](https://github.com/cnduk/merlin-www-components/commit/e931c16))
+* **merlin-www-bbcode:** rename glamour_redux to glamour for main theme file ([dfd58ca](https://github.com/cnduk/merlin-www-components/commit/dfd58ca))
+
+
+### Features
+
+* **merlin-www-bbcode:** apply new glamour theme ([e22d09a](https://github.com/cnduk/merlin-www-components/commit/e22d09a))
+
+
+
+
 <a name="1.9.16"></a>
 ## [1.9.16](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.9.15...@cnbritain/merlin-www-bbcode@1.9.16) (2018-02-22)
 

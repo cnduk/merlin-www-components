@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.9.0"></a>
+# [1.9.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.8.55...@cnbritain/merlin-www-section-card-list@1.9.0) (2018-02-26)
+
+
+### Features
+
+* **merlin-www-section-card-list:** apply new glamour theme ([7aaf85f](https://github.com/cnduk/merlin-www-components/commit/7aaf85f))
+
+
+
+
 <a name="1.8.53"></a>
 ## [1.8.53](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.8.52...@cnbritain/merlin-www-section-card-list@1.8.53) (2018-02-26)
 

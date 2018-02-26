@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-figure@1.5.28...@cnbritain/merlin-www-figure@1.6.0) (2018-02-26)
+
+
+### Features
+
+* **merlin-www-figure:** apply new glamour theme ([4640d83](https://github.com/cnduk/merlin-www-components/commit/4640d83))
+
+
+
+
 <a name="1.5.25"></a>
 ## [1.5.25](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-figure@1.5.24...@cnbritain/merlin-www-figure@1.5.25) (2018-02-22)
 

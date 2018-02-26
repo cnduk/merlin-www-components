@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-splash@1.5.36...@cnbritain/merlin-www-section-splash@1.6.0) (2018-02-26)
+
+
+### Features
+
+* **merlin-www-section-splash:** apply new glamour theme ([f397f68](https://github.com/cnduk/merlin-www-components/commit/f397f68))
+
+
+
+
 <a name="1.5.32"></a>
 ## [1.5.32](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-splash@1.5.31...@cnbritain/merlin-www-section-splash@1.5.32) (2018-02-26)
 

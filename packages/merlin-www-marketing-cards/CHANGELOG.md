@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.7.0"></a>
+# [1.7.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-marketing-cards@1.6.18...@cnbritain/merlin-www-marketing-cards@1.7.0) (2018-02-26)
+
+
+### Features
+
+* **merlin-www-marketing-cards:** apply new glamour theme ([80500da](https://github.com/cnduk/merlin-www-components/commit/80500da))
+
+
+
+
 <a name="1.6.13"></a>
 ## [1.6.13](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-marketing-cards@1.6.12...@cnbritain/merlin-www-marketing-cards@1.6.13) (2018-02-20)
 
