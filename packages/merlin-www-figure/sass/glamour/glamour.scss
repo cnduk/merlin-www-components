@@ -1,131 +1,96 @@
 @import '@cnbritain/merlin-www-common:glamour';
+@import '@cnbritain/merlin-www-bbcode:glamour';
+
 @import '../wireframe/wireframe';
 
+
 .c-figure__container {
+    background-color: $concrete;
     margin-bottom: 15px;
-    position: relative;
 }
 
-.c-figure__wrapper {
-    background-color: $COLOUR_BG_AD;
-}
 
 .c-figure__toolbar {
-    border: 1px solid $COLOUR_BUTTON_GALLERY_NAV_BORDER;
-    bottom: 15px;
-    height: 45px;
-    right: 15px;
-
-    @include tablet-size {
-        bottom: 20px;
-        right: 20px;
-    }
+    height: 40px;
 }
-
+.c-figure__toolbar-list {
+    height: 40px;
+}
 li.c-figure__toolbar-listitem {
-    background-color: $COLOUR_BUTTON_GALLERY_ASIDE_BG;
-    border-bottom: 0;
-    height: 45px;
-    transition: background .1s ease-in-out;
-    width: 45px;
+    background-color: $azalea;
+    height: 40px;
+    width: 40px;
 
     svg {
-        fill: $COLOUR_BUTTON_GALLERY_ASIDE;
-        width: 37%;
+        width: 40%;
     }
 
-    &:hover {
-        background-color: $COLOUR_BUTTON_GALLERY_ASIDE_BG_HOVER;
-
-        svg {
-            fill: $COLOUR_BUTTON_GALLERY_ASIDE_HOVER;
-        }
+    path {
+        fill: $astronaut;
     }
+
 }
 
 @each $name, $colour in $COLOUR_SOCIAL {
     li.c-figure__toolbar-listitem--#{$name} {
-        svg {
+
+        path {
             fill: $colour;
         }
 
         &:hover {
-            background-color: $colour;
-            svg {
-                fill: $COLOUR_SOCIAL_ICON;
+            background-color: map-get($COLOUR_SOCIAL_HOVER, $name);
+
+            path {
+                fill: $white;
             }
         }
     }
 }
 
 li.c-figure__toolbar-listitem--zoom {
-    &:hover {
-        background-color: $COLOUR_BUTTON_GALLERY_ASIDE;
+    path {
+        fill: $astronaut;
+    }
 
-        svg {
-            fill: $COLOUR_BUTTON_GALLERY_ASIDE_BG;
+    &:hover {
+        background-color: $astronaut;
+
+        path {
+            fill: $white;
         }
     }
 }
 
-.c-figure__title,
-.c-figure__caption,
-.c-figure__credit {
-    width: 100%;
-
-    @include desktop-size {
-        max-width: 700px;
-    }
-}
-
 .c-figure__title {
-    @include title-image-credit;
-
-    margin-bottom: 0px;
-
-    span {
-        @include font-size(13px);
-
-        padding-right: 10px;
-    }
+    @include font("GRAPHIK", 16px, 'SEMIBOLD', 24px);
+    color: $dune;
+    margin: 0 0 4px 0;
 }
 
+// Contains bbcode so will be inherited from that stylesheet
 .c-figure__caption {
-    @include font('GRAPHIK', 15px, 'NORMAL', 19px);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 
-    .bb-p {
-        @include font('GRAPHIK', 15px, 'NORMAL', 19px);
+    > * {
+        margin-bottom: 0;
     }
-}
-
-.c-figure__title + .c-figure__caption {
-    margin-top: -5px;
 }
 
 .c-figure__credit {
-    @include font('GRAPHIK', 10px, 400, 13px);
-    color: #b2b2b2;
-    letter-spacing: 0.02em;
+    @include font('GRAPHIK', 8px, 'NORMAL', 8px);
+    color: $natural-gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 
-    strong {
-        font-weight: 500;
+    &:before {
+        content: 'CREDIT: ';
     }
 }
 
-.is-hover .c-figure__toolbar:hover,
-.is-hover .c-figure__toolbar:focus,
-.is-touch .c-figure__toolbar:focus {
-    .c-figure__toolbar-listitem + .c-figure__toolbar-listitem {
-        border-left: 1px solid $COLOUR_BUTTON_GALLERY_NAV_BORDER;
-    }
-}
 
-.c-figure__magnifier-button + .c-figure__magnifier-button {
-    border-top: 1px solid $COLOUR_BORDER_SOLID;
-}
-
+.c-figure__magnifier-button {}
 .c-figure__magnifier--full-screen {
-    background-color: $COLOUR_BG_SECONDARY;
+    background-color: $concrete;
     z-index: 15;
 }
