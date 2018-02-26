@@ -94,18 +94,23 @@
             z-index: -1;
         }
 
+      .c-card__image--square {
+        border-radius: 50%;
+        overflow: hidden;
+
         img {
-            border-radius: 50%;
-            height: 100px;
-            overflow: hidden;
-            width: 100px;
+          border-radius: 50%;
+          height: 100px;
+          overflow: hidden;
+          width: 100px;
 
-            @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-                height: 140px;
-                width: 140px;
+          @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            height: 140px;
+            width: 140px;
 
-            }
+          }
         }
+      }
     }
 
     .c-card__title {
