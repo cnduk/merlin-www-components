@@ -134,6 +134,11 @@
     letter-spacing: 1.5px;
     margin: 0 0 6px 0;
     text-transform: uppercase;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        bottom: 50px;
+        position: absolute;
+    }
 }
 
 ul.c-splash-hero__meta {
