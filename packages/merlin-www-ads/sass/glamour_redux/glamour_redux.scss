@@ -53,6 +53,14 @@
             padding: 0;
         }
     }
+
+    &:not(.is-hidden) {
+        & + .c-splash-section {
+            .c-splash-hero {
+                margin-top: 0;
+            }
+        }
+    }
 }
 
 .ad--article,

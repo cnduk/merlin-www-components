@@ -11,12 +11,13 @@
     margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 40px;
+    margin-top: 20px;
     max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER*2;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
+        margin-top: 40px;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
