@@ -2,57 +2,257 @@
 // Portrait
 // -------------------- //
 @mixin card-portrait() {
+    .c-card__obj {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 
     .c-card__obj__header,
     .c-card__obj__body {
-        display: block;
-        width: auto;
+        display: flex;
+        flex-direction: column;
+        vertical-align: inherit;
+        width: 100%;
     }
 
-    .c-card__image {
-        margin-bottom: 15px;
+    .c-card__header,
+    .c-card__footer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@mixin card-portrait-small() {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        &:hover {
+            .c-card__image {
+                transform: scale(1.04);
+            }
+        }
+    }
+
+    .c-card__link {}
+    .c-card__obj {
+        background-color: $white;
+    }
+
+    .c-card__obj__header {}
+    .c-card__images {}
+    .c-card__images-icon {
+        background-color: $azalea;
+        position: absolute;
+        width: 30px;
+        height: 38px;
+        left: 0;
+        bottom: 0;
+
+        svg {
+            display: block;
+            height: 100%;
+            margin: 0 auto;
+            vertical-align: middle;
+            width: 10px;
+            fill: $astronaut;
+        }
+
+        & + .c-card__tag {
+            margin-left: 30px;
+            padding-left: 0;
+        }
+    }
+
+    .c-card__image {}
+    .c-card__obj__body {
+        padding: 10px 0 0 0;
+    }
+
+    .c-card__header {}
+
+    .c-card__tag {
+        @include font("GRAPHIK", 10px, 600, 10px);
+        background: $azalea;
+        bottom: 0;
+        color: $astronaut;
+        left: 0;
+        letter-spacing: 1.5px;
+        padding: 14px;
+        position: absolute;
+        text-transform: uppercase;
     }
 
     .c-card__title {
-        @include title-card-portrait;
-
-        margin-bottom: 15px;
-        margin-top: 0;
+        @include font("MILLER_DISPLAY", 18px, 600, 21px);
+        color: $dune;
+        margin: 0 0 13px 0;
     }
 
-    .c-card__separator {
-        margin: 10px 0;
-    }
-
-    .c-card__separator--sponsor {
+    .c-card__teaser {
         display: none;
     }
 
+    .c-card__separator {
+        display: none;
+    }
+
+    .c-card__footer {}
     .c-card__byline {
-        margin-bottom: 7px;
+        @include font("GRAPHIK", 10px, 400, 10px);
+        color: $dune;
+        letter-spacing: 1.5px;
+        margin: 0 0 6px 0;
+        text-transform: uppercase;
+    }
+
+    .c-card__byline--sponsorship {}
+    .c-card__byline-prefix {}
+    .c-card__byline-name {}
+
+    ul.c-card__meta {
+        @include font("GRAPHIK", 10px, 400, 10px);
+        color: $dune;
+        letter-spacing: 1.5px;
+        margin: 0 0 0 0;
+        text-transform: uppercase;
+    }
+
+    li.c-card__meta-item {
+        & + li.c-card__meta-item {
+            &:before {
+                background-color: $azalea;
+                border-radius: 50%;
+                content: "";
+                display: inline-block;
+                height: 3px;
+                margin: 1px 4px;
+                width: 3px;
+            }
+        }
     }
 }
-@mixin card-portrait-small() {}
+
 @mixin card-portrait-large() {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        &:hover {
+            .c-card__image {
+                transform: scale(1.04);
+            }
+        }
+    }
+
+    .c-card__link {}
+    .c-card__obj {
+        background-color: $white;
+    }
+
+    .c-card__obj__header {}
+    .c-card__images {}
+    .c-card__images-icon {
+        background-color: $azalea;
+        position: absolute;
+        width: 30px;
+        height: 38px;
+        left: 0;
+        bottom: 0;
+
+        svg {
+            display: block;
+            height: 100%;
+            margin: 0 auto;
+            vertical-align: middle;
+            width: 10px;
+            fill: $astronaut;
+        }
+
+        & + .c-card__tag {
+            margin-left: 30px;
+            padding-left: 0;
+        }
+    }
+
+    .c-card__image {}
+    .c-card__obj__body {
+        flex: 1 0 auto;
+        padding: 15px 15px 20px 15px;
+    }
+
+    .c-card__header {
+        flex: 1 0 auto;
+    }
+
+    .c-card__tag {
+        @include font("GRAPHIK", 10px, 600, 10px);
+        background: $azalea;
+        bottom: 0;
+        color: $astronaut;
+        left: 0;
+        letter-spacing: 1.5px;
+        padding: 14px;
+        position: absolute;
+        text-transform: uppercase;
+    }
+
+    .c-card__title {
+        @include font("MILLER_DISPLAY", 23px, 600, 28px);
+        color: $dune;
+        margin: 0 0 30px 0;
+    }
+
+    .c-card__teaser {
+        display: none;
+    }
+
+    .c-card__separator {
+        display: none;
+    }
+
+    .c-card__footer {}
     .c-card__byline {
-        margin-bottom: 5px;
+        @include font("GRAPHIK", 10px, 400, 10px);
+        color: $dune;
+        letter-spacing: 1.5px;
+        margin: 0 0 6px 0;
+        text-transform: uppercase;
+    }
+
+    .c-card__byline--sponsorship {}
+    .c-card__byline-prefix {}
+    .c-card__byline-name {}
+
+    ul.c-card__meta {
+        @include font("GRAPHIK", 10px, 400, 10px);
+        color: $dune;
+        letter-spacing: 1.5px;
+        margin: 0 0 0 0;
+        text-transform: uppercase;
+    }
+
+    li.c-card__meta-item {
+        & + li.c-card__meta-item {
+            &:before {
+                background-color: $azalea;
+                border-radius: 50%;
+                content: "";
+                display: inline-block;
+                height: 3px;
+                margin: 1px 4px;
+                width: 3px;
+            }
+        }
     }
 }
 
 .c-card--portrait {
-    @include card-portrait;
-    @include card-portrait-small;
-    @include desktop-size {
-        @include card-portrait-large;
-    }
+    @include card-portrait();
+    @include card-portrait-large();
 }
 
 .c-card--portrait-small {
-    @include card-portrait;
-    @include card-portrait-small;
+    @include card-portrait();
+    @include card-portrait-small();
 }
 
 .c-card--portrait-large {
-    @include card-portrait;
-    @include card-portrait-large;
+    @include card-portrait();
+    @include card-portrait-large();
 }
