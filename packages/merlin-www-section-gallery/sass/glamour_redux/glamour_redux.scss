@@ -83,12 +83,16 @@
     }
 }
 
-.c-gallery__text {
+.c-feature__text {
     background-color: $white;
     padding: 20px;
     position: relative;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        padding: 30px 40px;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         padding: 30px 60px 30px 40px;
     }
 }
@@ -126,6 +130,11 @@
     margin: 0 0 10px 0;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font-size(35px);
+        @include line-height(38px);
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         @include font-size(40px);
         @include line-height(45px);
         margin: 0 0 30px 0;
