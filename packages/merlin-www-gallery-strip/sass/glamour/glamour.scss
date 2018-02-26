@@ -3,174 +3,155 @@
 @import '../wireframe/wireframe';
 
 .c-gallery-strip {
-    margin-bottom: $MARGIN_LARGE;
-    margin-top: $MARGIN_LARGE;
+    margin: 20px 0;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 40px 0;
+    }
 }
 
 .c-gallery-strip__wrapper {
-    display: table;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER*2;
+    padding: 0 $MOBILE_SIDE_GUTTER;
     position: relative;
-    width: 100%;
 
-    &:hover,
-    &:focus {
-        .c-gallery-strip__title,
-        .c-gallery-strip__subtitle {}
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0 $TABLET_SIDE_GUTTER;
+    }
 
-        .c-gallery-strip__list {}
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0 $DESKTOP_SIDE_GUTTER;
     }
 }
 
 .c-gallery-strip__link {}
+ul.c-gallery-strip__list {
 
-.c-gallery-strip__list {}
-.c-gallery-strip__list__item {}
-.c-gallery-strip__images__image {}
+}
 
-.c-gallery-strip__images {
-    display: table-footer-group;
-    width: 100%;
+li.c-gallery-strip__list__item {
+    &:before {
+        background-color: $pampas;
+        display: block;
+        content: "";
+        padding-top: 150%;
+        position: relative;
+        z-index: -1;
+    }
+
+    img {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
 }
 
 .c-gallery-strip__detail {
-    display: table-header-group;
-    width: 100%;
+    position: relative;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+
+    }
 }
 
 .c-gallery-strip__remaining {
-    background-color: $COLOUR_BG_GALLERY_REMAINING;
-    border-radius: 50%;
-    color: $COLOUR_MAIN;
-    height: 0;
-    margin: 40% 15%;
-    width: 70%;
-    padding-bottom: 70%;
-
-    @include gallery-slice-at-large() {
-        height: 0;
-        margin: 45% 20%;
-        padding-bottom: 60%;
-        width: 60%;
-    }
-}
-
-.c-gallery-strip__remaining__label {
-    white-space: nowrap;
-    padding-top: 100%;
-}
-
-.c-gallery-strip__remaining__prefix {
-    @include font-size(23px);
-    @include font-weight(500);
-    margin-right: -2px;
-
-    @include gallery-slice-at-large() {
-        @include font-size(25px);
-        margin-right: -1px;
-    }
-}
-
-.c-gallery-strip__remaining__value {
-    @include font('GRAPHIK', 23px, 'SEMI BOLD');
-
-    @include gallery-slice-at-large() {
-        @include font-size(25px);
-    }
+    @include font("GRAPHIK", 30px, 400, 30px);
+    background-color: rgba($astronaut, 0.6);
+    color: $azalea;
+    z-index: 1;
 }
 
 .c-gallery-strip__title {
-    @include title-section;
+    @include font("MILLER_DISPLAY", 23px, 600, 28px);
+    color: $dune;
+    margin: 20px 0 0 0;
+    text-align: left;
 
-    display: inline-block;
-    margin-bottom: 20px;
-    margin-top: 30px;
-    padding: 0;
-    text-align: center;
-    text-transform: uppercase;
-    width: 100%;
-
-    .c-card-section--dark & {
-        border-color: $COLOUR_BORDER_SOLID_DARK;
-    }
-
-    @include desktop-size {
-        @include title-section-desktop;
-
-        margin-bottom: 25px;
-        position: relative;
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(40px);
+        @include line-height(45px);
+        margin: 32px 0 0 0;
         text-align: center;
-        width: 100%;
-
-        &:before {
-            background-color: #000;
-            content: '';
-            height: 2px;
-            left: 0;
-            margin-top: -14px;
-            position: absolute;
-            right: 0;
-            top: 100%;
-            z-index: -1;
-        }
-
-        span {
-            background-color: $COLOUR_BG_MAIN;
-            padding-left: 30px;
-            padding-right: 30px;
-        }
     }
 }
 
 .c-gallery-strip__subtitle {
-    display: none;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+
+    }
 }
 
-
 .c-gallery-strip--tag {
+    margin: 20px 0;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 40px 0;
+    }
+
     .c-gallery-strip__list {
         text-align: center;
     }
-    .c-gallery-strip__list__item:nth-child(n+4){
+
+    .c-gallery-strip__list__item:nth-child(n+4) {
         display: none;
     }
-    .c-gallery-strip__list__item:nth-child(3){
+
+    .c-gallery-strip__list__item:nth-child(3) {
         .c-gallery-strip__remaining {
             display: block;
         }
     }
+
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+6){
+        .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+6) {
             display: inline-block;
         }
-        .c-gallery-strip__list__item:nth-child(3){
+
+        .c-gallery-strip__list__item:nth-child(3) {
             .c-gallery-strip__remaining {
                 display: none;
             }
         }
-        .c-gallery-strip__list__item:nth-child(6){
+
+        .c-gallery-strip__list__item:nth-child(6) {
             .c-gallery-strip__remaining {
                 display: block;
             }
         }
+
         .c-gallery-strip__list__item {
             display: inline-block;
             width: 16.66%;
         }
+
+        .c-gallery-strip__detail {
+
+        }
     }
+
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+8){
+        .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+8) {
             display: inline-block;
         }
-        .c-gallery-strip__list__item:nth-child(6){
+
+        .c-gallery-strip__list__item:nth-child(6) {
             .c-gallery-strip__remaining {
                 display: none;
             }
         }
-        .c-gallery-strip__list__item:nth-child(8){
+        .c-gallery-strip__list__item:nth-child(8) {
+
             .c-gallery-strip__remaining {
                 display: block;
             }
         }
+
         .c-gallery-strip__list__item {
             width: 12.5%;
         }
@@ -178,13 +159,17 @@
 }
 
 .c-gallery-strip--gutters {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         .c-gallery-strip__list {
-            margin: 0;
+
         }
+
         .c-gallery-strip__list__item {
-            padding: 0;
+
         }
-        .c-gallery-strip__remaining {}
+
+        .c-gallery-strip__remaining {
+
+        }
     }
 }
