@@ -253,6 +253,10 @@
         .svg-logo-block { fill: #ffffff; }
         .svg-logo{ fill: #373330; }
 
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            width: 300px;
+        }
+
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             width: 430px;
         }
