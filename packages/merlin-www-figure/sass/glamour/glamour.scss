@@ -81,6 +81,7 @@ li.c-figure__toolbar-listitem--zoom {
     @include font('GRAPHIK', 8px, 'NORMAL', 8px);
     color: $natural-gray;
     letter-spacing: 1px;
+    margin-top: 20px;
     text-transform: uppercase;
 
     &:before {
