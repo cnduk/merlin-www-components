@@ -71,10 +71,10 @@
 
     .c-card__footer {}
     .c-card__byline {
-        @include font("GRAPHIK", 10px, 400, 10px);
+        @include font("GRAPHIK", 9px, 400, 11px);
         color: $dune;
         letter-spacing: 1.5px;
-        margin: 0 0 6px 0;
+        margin: 0;
         text-transform: uppercase;
     }
 
