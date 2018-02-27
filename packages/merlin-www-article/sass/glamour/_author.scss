@@ -132,6 +132,10 @@
     margin-bottom: 20px;
     margin-top: 13px;
     text-transform: uppercase;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 13px;
+    }
 }
 
 .a-event-author__btn {
@@ -140,6 +144,12 @@
     margin-bottom: 20px;
     margin-top: 13px;
     text-align: center;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 13px;
+        margin-top:0;
+        width: 100%;
+    }
 
     &:hover {
         @include button-group-light-hover();
