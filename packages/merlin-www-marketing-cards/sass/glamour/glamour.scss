@@ -11,6 +11,7 @@
 .a-marketing-card__col {
     text-align: center;
 }
+
 .a-marketing-card__col + .a-marketing-card__col {}
 
 .a-marketing-card__title {
@@ -19,8 +20,9 @@
     margin: 0;
     padding-bottom: 10px;
 }
+
 .a-marketing-card__desc {
-     @include font('GRAPHIK', 15px, 'SEMI BOLD', 15px);
+    @include font('GRAPHIK', 15px, 'SEMI BOLD', 20px);
     color: $dune;
 }
 
@@ -42,6 +44,7 @@
 .a-marketing-card__brand {
     padding-right: 20px;
 }
+
 .a-marketing-card__brand__img {
     margin: 0 auto 20px auto;
     width: 100%;
@@ -56,6 +59,7 @@
     margin: 0 0 10px 0;
     text-transform: uppercase;
 }
+
 .a-marketing-card__brand__name {
     @include font('GRAPHIK', 10px, 'NORMAL', 10px);
     color: $dune;
@@ -73,13 +77,16 @@
     margin: 0 auto 10px auto;
     width: 200px;
 }
+
 .a-marketing-card__magazine__cover {}
 .a-marketing-card__magazine__cover--print {
     width: 137px;
 }
+
 .a-marketing-card__magazine__cover--tablet {
     width: 100px;
 }
+
 .a-marketing-card__magazine__cover--mobile {
     display: none;
 }
