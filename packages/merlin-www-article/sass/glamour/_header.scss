@@ -198,8 +198,8 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         bottom: 0;
         left: 50%;
-        padding-left: $DESKTOP_SIDE_GUTTER;
-        padding-right: $DESKTOP_SIDE_GUTTER;
+        padding-left: 110px;
+        padding-right: 110px;
         padding-top: 30px;
         position: absolute;
         transform: translateX(-50%);

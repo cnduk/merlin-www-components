@@ -57,10 +57,19 @@
     margin-bottom: 13px;
     margin-top: 13px;
 
+     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 25px;
+        margin-top: 10px;
+     }
+
     .bb-p {
         @include font("MILLER_DISPLAY", 12px, 400, 16px);
         color: $dune;
         margin: 0 0 13px 0;
+
+         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            @include font-size(13px);
+         }
 
         &:last-child {
             margin-bottom: 0;
