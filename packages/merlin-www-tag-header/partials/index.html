@@ -1,6 +1,18 @@
-<header class="tg-header {{ style.cls }}">
+<header class="tg-header {{ style.cls }} {{# state.has_hero }}has-hero{{/ state.has_hero }}">
     <div class='tg-header__wrapper'>
         <div class="tg-header__intro">
+
+            {{# data.hero_image }}
+                <div class="tg-header__hero">
+                    {{> @cnbritain/merlin-www-image }}
+                </div>
+
+                {{# data.credit }}
+                    <div class="tg-header__hero-credit">
+                        {{ . }}
+                    </div>
+                {{/ data.credit }}
+            {{/ data.hero_image }}
 
             {{# data.image }}
                 <div class="tg-header__intro__image">
@@ -11,51 +23,50 @@
             {{# data.title }}
                 <h1 class="tg-header__title"><span>{{ data.title }}</span></h1>
             {{/ data.title }}
-
-            {{# data.body }}
-                {{# state.is_body_expandable }}
-                    <div class="tg-header__description js-tg-header__description is-closed">
-                        {{ &data.body }}
-                        <div class="tg-header__description-expand">
-                            <button class="global__button-reset tg-header__expand-btn js-tg-header__expand-btn">{{ translation.intro_continue_reading }}</button>
-                        </div>
-                    </div>
-                {{/ state.is_body_expandable }}
-                {{^ state.is_body_expandable }}
-                    <div class="tg-header__description js-tg-header__description">{{ &data.body }}</div>
-                {{/ state.is_body_expandable }}
-            {{/ data.body }}
-
-            {{# data.sponsor }}
-                <div class="tg-header__sponsor">
-                    <span class="tg-header__sponsor-prefix">In partnership with</span>
-
-                    {{# data.image }}
-                        <div class="tg-header__sponsor-image">
-                            {{> @cnbritain/merlin-www-image }}
-                        </div>
-                    {{/ data.image }}
-
-                    {{^ data.image }}
-                        {{# data.link }}
-                            <a class="tg-header__sponsor-name" href="{{ &data.url }}" {{# state.is_nofollow }} rel="nofollow" {{/ state.is_nofollow }}>{{ data.title }}</a>
-                        {{/ data.link }}
-                    {{/ data.image }}
-                </div>
-            {{/ data.sponsor }}
-
-            {{# data.event_information }}
-                {{> @cnbritain/merlin-www-tag-header/event-information }}
-            {{/ data.event_information }}
-
-            {{# data.navigation_list }}
-                <hr class="tg-header__separator" />
-                <div class='tg-header__topic-strip'>
-                    {{> @cnbritain/merlin-www-topic-strip }}
-                </div>
-            {{/ data.navigation_list }}
-
         </div>
+
+        {{# data.body }}
+            {{# state.is_body_expandable }}
+                <div class="tg-header__description js-tg-header__description is-closed">
+                    {{ &data.body }}
+                    <div class="tg-header__description-expand">
+                        <button class="global__button-reset tg-header__expand-btn js-tg-header__expand-btn">{{ translation.intro_continue_reading }}</button>
+                    </div>
+                </div>
+            {{/ state.is_body_expandable }}
+            {{^ state.is_body_expandable }}
+                <div class="tg-header__description js-tg-header__description">{{ &data.body }}</div>
+            {{/ state.is_body_expandable }}
+        {{/ data.body }}
+
+        {{# data.sponsor }}
+            <div class="tg-header__sponsor">
+                <span class="tg-header__sponsor-prefix">In partnership with</span>
+
+                {{# data.image }}
+                    <div class="tg-header__sponsor-image">
+                        {{> @cnbritain/merlin-www-image }}
+                    </div>
+                {{/ data.image }}
+
+                {{^ data.image }}
+                    {{# data.link }}
+                        <a class="tg-header__sponsor-name" href="{{ &data.url }}" {{# state.is_nofollow }} rel="nofollow" {{/ state.is_nofollow }}>{{ data.title }}</a>
+                    {{/ data.link }}
+                {{/ data.image }}
+            </div>
+        {{/ data.sponsor }}
+
+        {{# data.event_information }}
+            {{> @cnbritain/merlin-www-tag-header/event-information }}
+        {{/ data.event_information }}
+
+        {{# data.navigation_list }}
+            <hr class="tg-header__separator" />
+            <div class='tg-header__topic-strip'>
+                {{> @cnbritain/merlin-www-topic-strip }}
+            </div>
+        {{/ data.navigation_list }}
     </div>
 
     {{# data.card_list }}
