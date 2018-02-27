@@ -79,6 +79,10 @@
         padding: 14px;
         position: absolute;
         text-transform: uppercase;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            padding: 8px;
+        }
     }
 
     .c-card__title {
