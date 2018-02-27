@@ -29,15 +29,15 @@
 
 .tg-header__intro {
     background-color: #fbddde;
-    padding: 30px $MOBILE_SIDE_GUTTER;
+    padding: 30px 20px;
     position: relative;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: 62px $TABLET_SIDE_GUTTER;
+        padding: 60px $TABLET_SIDE_GUTTER;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: 62px $DESKTOP_SIDE_GUTTER;
+        padding: 60px 60px;
     }
 
     &:before {
@@ -350,22 +350,18 @@
 .tg-header--event,
 .tg-header--topic {
     .tg-header__intro__image {
-        margin: 0 auto 20px auto;
-        width: 130px;
+        margin: 0 auto 0 auto;
+        width: 200px;
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            margin: 0 auto 30px auto;
-            width: 160px;
+            margin: 0 auto 0 auto;
+            width: 250px;
         }
 
         img {
             display: inline-block;
             height: 100%;
             width: 100%;
-        }
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            width: 180px;
         }
     }
 }
