@@ -156,9 +156,10 @@
         color: $dune;
         margin: 0 0 20px;
 
-         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             margin: 0 0 10px;
-         }
+        }
+    }
 
     .c-card__teaser {
         @include font("GRAPHIK", 14px, 600, 18px);
