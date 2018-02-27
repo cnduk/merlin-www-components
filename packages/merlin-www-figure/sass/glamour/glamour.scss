@@ -7,6 +7,10 @@
 .c-figure__container {
     background-color: $concrete;
     margin-bottom: 15px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        border: 1px solid $concrete;
+    }
 }
 
 
