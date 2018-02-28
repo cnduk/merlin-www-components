@@ -183,10 +183,10 @@
 
 .ad--tag-rail {
     // 10px - width of card list side padding
-    margin: 5px (-$MOBILE_SIDE_GUTTER + 10) 5px (-$MOBILE_SIDE_GUTTER + 10);
+    margin: 40px (-$MOBILE_SIDE_GUTTER + 10) 40px (-$MOBILE_SIDE_GUTTER + 10);
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin: 5px (-$TABLET_SIDE_GUTTER + 10) 5px (-$TABLET_SIDE_GUTTER + 10);
+        margin: 40px (-$TABLET_SIDE_GUTTER + 10) 40px (-$TABLET_SIDE_GUTTER + 10);
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
