@@ -11,6 +11,7 @@
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         display: block;
+        border-bottom: 1px solid $concrete;
     }
 
     &.has-navigation {
@@ -35,19 +36,13 @@
 }
 
 .c-top-stories__nav {
-    border-left: 3px solid $concrete;
-    border-right: 3px solid $concrete;
+    border-left: 1px solid $concrete;
     bottom: -10px;
     position: absolute;
-    right: 0;
+    right: -5px;
     top: -10px;
     width: 60px;
     z-index: 2;
-
-    @include min-screen($MAXIMUM_PAGE_WIDTH + 3) {
-        border-left: 3px solid $concrete;
-        right: -5px;
-    }
 }
 
 .c-top-stories__nav-btn {
