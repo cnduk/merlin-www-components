@@ -38,7 +38,7 @@
 }
 
 .a-author__byline {
-    @include font("GRAPHIK", 10px, 400, 10px);
+    @include font("GRAPHIK", 10px, 400, 12px);
     color: $dune;
     letter-spacing: 1.5px;
     margin-bottom: 6px;
@@ -86,7 +86,7 @@
 }
 
 .a-author__article-date {
-    @include font("GRAPHIK", 10px, 400, 10px);
+    @include font("GRAPHIK", 10px, 400, 12px);
     color: $dune;
     letter-spacing: 1.5px;
     margin-top: 6px;
@@ -118,7 +118,7 @@
 
 .a-event-author__title {}
 .a-event-author__location {
-    @include font("GRAPHIK", 10px, 400, 10px);
+    @include font("GRAPHIK", 10px, 400, 12px);
     color: $dune;
     letter-spacing: 1.5px;
     margin-bottom: 6px;
@@ -126,7 +126,7 @@
 }
 
 .a-event-author__date {
-    @include font("GRAPHIK", 10px, 400, 10px);
+    @include font("GRAPHIK", 10px, 400, 12px);
     color: $dune;
     letter-spacing: 1.5px;
     margin-bottom: 20px;
