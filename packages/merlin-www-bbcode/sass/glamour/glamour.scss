@@ -433,13 +433,15 @@
 
 .bb-figure__wrapper {
     &:not(:last-child) {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 }
 
 .bb-figure__caption {
+
     .bb-p {
         margin: 0;
+        @include font("GRAPHIK", 14px, 'NORMAL', 19px);
     }
 }
 
@@ -450,7 +452,6 @@
     margin-top: 15px;
     text-transform: uppercase;
 }
-
 
 // -------------------- //
 // Question / Answer
