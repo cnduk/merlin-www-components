@@ -73,6 +73,16 @@
     }
 }
 
+.tg-header__hero-credit {
+    @include font("GRAPHIK", 10px, 400, 10px);
+    bottom: 10px;
+    color: $white;
+    letter-spacing: 1.5px;
+    position: absolute;
+    right: 10px;
+    text-transform: uppercase;
+}
+
 .tg-header__intro__image {
     position: relative;
     z-index: 1;
