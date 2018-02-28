@@ -67,9 +67,13 @@ li.c-figure__toolbar-listitem--zoom {
 }
 
 .c-figure__title {
-    @include font("GRAPHIK", 16px, 'SEMIBOLD', 24px);
+    @include font("GRAPHIK", 16px, 'SEMI BOLD', 24px);
     color: $dune;
     margin: 0 0 4px 0;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font("GRAPHIK", 18px, 'SEMI BOLD', 28px);
+    }
 }
 
 // Contains bbcode so will be inherited from that stylesheet
