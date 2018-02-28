@@ -19,14 +19,23 @@
 
 @mixin button-single-light() {
     background-color: transparent;
-    border-bottom: 1px solid $dune;
     color: $dune;
+    padding: 0;
+
+    &:after{
+        content:'';
+        display: block;
+        border-top: solid 1px $dune;
+        border-bottom: solid 2px transparent;
+        margin: 10px 0;
+    }
 }
 
 @mixin button-single-light-hover() {
-    background-color: $dune;
-    border-bottom: 1px solid $dune;
-    color: $white;
+    &:hover:after{
+        border-top: solid 1px $dune;
+        border-bottom: solid 2px $dune;
+    }
 }
 
 @mixin button-single-light-inactive() {
