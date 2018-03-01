@@ -1125,3 +1125,22 @@ export function updateQueryString(url, args){
     var querystring = getQueryString(currentArgs);
     return hostUrl + '?' + querystring;
 }
+
+
+/**
+ * Transfer any query arguments from the current url to the one specified
+ * @param  {String} url
+ * @return {String}     url with query arguments
+ */
+export function transferQueryArgs(url){
+    // Strip off any current ones from the url
+    var newUrl = getUrlHost(url);
+    var queryArgs = location.href.split('?');
+
+    if(queryArgs.length > 1){
+        queryArgs.shift();
+        newUrl = newUrl + '?' + queryArgs.join('&');
+    }
+
+    return newUrl;
+}

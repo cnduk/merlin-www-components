@@ -1,7 +1,13 @@
 'use strict';
 /* globals ga, COMSCORE */
 
-import { assign } from '@cnbritain/merlin-www-js-utils/js/functions';
+import {
+    assign,
+    getQueryArgs,
+    getQueryString,
+    getUrlHost,
+    isDefined
+} from '@cnbritain/merlin-www-js-utils/js/functions';
 
 /**
  * RegEx to check if the string is a dimension
@@ -9,6 +15,23 @@ import { assign } from '@cnbritain/merlin-www-js-utils/js/functions';
  * @type {RegExp}
  */
 var RE_DIMENSION = /^dimension/;
+
+/**
+ * List of query args to remove from the location value
+ * @constant
+ * @type {Array}
+ */
+var IGNORE_PARAMS = [
+    'TestAdTargeting',
+    'TestAdKeyValue',
+    'TestAdNetworkId',
+    'TestAdUnit',
+    'TestAdZone',
+    'email',
+    'noads',
+    'exclude_uid',
+    'referral_uid'
+];
 
 /**
  * @class GATracker
@@ -185,6 +208,12 @@ GATracker.prototype = {
         if( arguments.length === 2 ){
             setData = {};
             setData[ fieldName ] = value;
+        }
+
+        // Update location value to remove specific query params
+        if(setData.hasOwnProperty('location') &&
+            isDefined(setData['location'])){
+            setData['location'] = filterQueryParams(setData['location']);
         }
 
         // If the tracker is `conde`, we need to remove custom dimensions. We
@@ -399,6 +428,25 @@ function sendComscore( url ){
         });
     }
     return false;
+}
+
+function filterQueryParams(url){
+    var hostUrl = getUrlHost(url);
+    var queryArgs = getQueryArgs(url);
+    var filteredArgs = {};
+
+    for(var key in queryArgs){
+        if(!queryArgs.hasOwnProperty(key)) continue;
+        if(IGNORE_PARAMS.indexOf(key) !== -1) continue;
+        filteredArgs[key] = queryArgs[key];
+    }
+
+    var queryString = getQueryString(filteredArgs);
+    if(queryString === ''){
+        return hostUrl;
+    } else {
+        return hostUrl + '?' + queryString;
+    }
 }
 
 export default GATracker;

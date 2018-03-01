@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-figure",
-  "version": "1.6.5",
+  "version": "1.6.6",
   "description": "",
   "main": "js/index.js",
   "scripts": {
@@ -11,10 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-www-bbcode": "^1.10.3",
+    "@cnbritain/merlin-www-bbcode": "^1.10.4",
     "@cnbritain/merlin-www-common": "^1.10.0",
     "@cnbritain/merlin-www-image": "^1.8.0",
-    "@cnbritain/merlin-www-js-utils": "^1.3.11",
+    "@cnbritain/merlin-www-js-utils": "^1.4.0",
     "eventemitter2": "^4.1.0",
     "hammerjs": "^2.0.6",
     "hogan.js": "^3.0.2"

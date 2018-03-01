@@ -13,6 +13,7 @@ import {
     onPageLoad,
     removeEvent,
     throttle,
+    transferQueryArgs,
     updateQueryString
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import {
@@ -330,6 +331,9 @@ function onInfiniteLoadComplete(e) {
     var analytics = null;
     if (responseJSON.hasOwnProperty('config_analytics') && responseJSON.config_analytics !== null) {
         analytics = responseJSON.config_analytics.data;
+        // Transfer current query arguments from the current url over to the
+        // new location value
+        analytics['location'] = transferQueryArgs(analytics['location']);
     }
 
     var simplereach = null;

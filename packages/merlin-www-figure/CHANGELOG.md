@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.6.6"></a>
+## [1.6.6](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-figure@1.6.5...@cnbritain/merlin-www-figure@1.6.6) (2018-03-01)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-figure
+
 <a name="1.6.0"></a>
 # [1.6.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-figure@1.5.28...@cnbritain/merlin-www-figure@1.6.0) (2018-02-26)
 
