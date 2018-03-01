@@ -333,7 +333,7 @@ function onInfiniteLoadComplete(e) {
         analytics = responseJSON.config_analytics.data;
         // Transfer current query arguments from the current url over to the
         // new location value
-        analytics['location'] = transferQueryArgs(analytics['location'])
+        analytics['location'] = transferQueryArgs(analytics['location']);
     }
 
     var simplereach = null;
