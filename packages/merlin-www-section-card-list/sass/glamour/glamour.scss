@@ -6,17 +6,12 @@
 @import "../wireframe/wireframe";
 
 .c-card-section {
-    margin-top: $MOBILE_SLICE_MARGIN;
     margin-bottom: $MOBILE_SLICE_MARGIN;
+    margin-top: $MOBILE_SLICE_MARGIN;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: $TABLET_SLICE_MARGIN;
         margin-bottom: $TABLET_SLICE_MARGIN;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: $DESKTOP_SLICE_MARGIN;
-        margin-bottom: $DESKTOP_SLICE_MARGIN;
+        margin-top: $TABLET_SLICE_MARGIN;
     }
 }
 
@@ -82,12 +77,12 @@
     background-color: $concrete;
     margin: 0;
     max-width: none;
-    padding-bottom: 40px;
-    padding-top: 30px;
+    padding-bottom: $MOBILE_SLICE_MARGIN;
+    padding-top: $MOBILE_SLICE_MARGIN;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding-bottom: 60px;
-        padding-top: 40px;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-top: $TABLET_SLICE_MARGIN;
+        padding-bottom: $TABLET_SLICE_MARGIN;
     }
 
     .c-card-section__title {
@@ -111,11 +106,6 @@
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding-top: $DESKTOP_SLICE_MARGIN;
-        padding-bottom: $DESKTOP_SLICE_MARGIN;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         display: none;
     }
 
@@ -136,4 +126,18 @@
 
         margin-top: 30px;
     }
+}
+
+.c-card-section--mag-articles,
+.c-card-section--mag-magazines,
+.c-card-section--v-genre-articles,
+.c-card-section--v-articles,
+.c-card-section--tg-articles{
+
+    .c-card-section__title {
+        @include font("MILLER_DISPLAY", 25px, 600, 25px);
+        color: $dune;
+        margin: 0 0 15px 0;
+    }
+
 }
