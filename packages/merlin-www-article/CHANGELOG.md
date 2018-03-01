@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.23.10"></a>
+## [1.23.10](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.23.9...@cnbritain/merlin-www-article@1.23.10) (2018-03-01)
+
+
+### Bug Fixes
+
+* **merlin-www-article:** eslint fix ([159b702](https://github.com/cnduk/merlin-www-components/commit/159b702))
+* **merlin-www-article:** transfer query args from current url to analytics url from infinite scroll ([332ec6d](https://github.com/cnduk/merlin-www-components/commit/332ec6d))
+
+
+
+
 <a name="1.23.0"></a>
 # [1.23.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.22.45...@cnbritain/merlin-www-article@1.23.0) (2018-02-26)
 
