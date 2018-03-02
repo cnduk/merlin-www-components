@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.1"></a>
+## [1.8.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-superfeature@1.8.0...@cnbritain/merlin-www-section-superfeature@1.8.1) (2018-03-02)
+
+
+### Bug Fixes
+
+* **merlin-www-section-superfeature:** dump teaser into html as is ([5f916d8](https://github.com/cnduk/merlin-www-components/commit/5f916d8))
+
+
+
+
 <a name="1.8.0"></a>
 # [1.8.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-superfeature@1.7.14...@cnbritain/merlin-www-section-superfeature@1.8.0) (2018-02-26)
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.11.3"></a>
+## [1.11.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.11.2...@cnbritain/merlin-www-ads@1.11.3) (2018-03-02)
+
+
+### Bug Fixes
+
+* **merlin-www-ads:** adjust native ads to go full width for glamour ([0083be0](https://github.com/cnduk/merlin-www-components/commit/0083be0))
+
+
+
+
 <a name="1.11.2"></a>
 ## [1.11.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.11.1...@cnbritain/merlin-www-ads@1.11.2) (2018-03-01)
 
