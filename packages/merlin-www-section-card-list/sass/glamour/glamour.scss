@@ -69,6 +69,18 @@
     }
 }
 
+.c-card-section--tg-articles,
+.c-card-section--v-articles {
+    margin-top: 30px;
+    padding-top: 0;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 40px;
+        padding-top: 0;
+    }
+}
+
+
 .c-card-section--c-video-articles {
     .c-card-section__logo {
         height: auto;
