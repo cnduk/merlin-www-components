@@ -130,7 +130,7 @@
     @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
         @include font-size(40px);
         @include line-height(45px);
-        margin: 0 0 30px 0;
+        margin: 0 0 20px 0;
     }
 }
 
