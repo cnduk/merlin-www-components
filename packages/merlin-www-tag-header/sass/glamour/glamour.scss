@@ -71,6 +71,14 @@
         transform: translateY(-50%);
         width: 100%;
     }
+
+    &:after {
+        background-color: rgba($dune, 0.1);
+        content: '';
+        height: 100%;
+        position: absolute;
+        width: 100%;
+    }
 }
 
 .tg-header__hero-credit {
