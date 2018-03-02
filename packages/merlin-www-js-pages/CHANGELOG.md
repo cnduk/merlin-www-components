@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.3.97"></a>
+## [1.3.97](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.3.96...@cnbritain/merlin-www-js-pages@1.3.97) (2018-03-02)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** add show summary pages to list of sticky article pages ([5962aa7](https://github.com/cnduk/merlin-www-components/commit/5962aa7))
+
+
+
+
 <a name="1.3.96"></a>
 ## [1.3.96](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.3.95...@cnbritain/merlin-www-js-pages@1.3.96) (2018-03-02)
 
