@@ -212,7 +212,8 @@ export function onArticleAdd(e) {
 
     // If gallery, create sticky if not from infinite scroll, otherwise, create
     // on expand event
-    if(currentArticle.type === ARTICLE_TYPES.GALLERY){
+    if(currentArticle.type === ARTICLE_TYPES.GALLERY ||
+        currentArticle.type === ARTICLE_TYPES['SHOW-SUMMARY']){
         if(currentArticle.isInfinite){
             currentArticle.once('expand', function() {
                 createStickyGallery(currentArticle);
