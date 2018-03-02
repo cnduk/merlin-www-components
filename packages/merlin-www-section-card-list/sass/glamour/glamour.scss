@@ -17,12 +17,7 @@
 
 .c-card-section--c-curated,
 .c-card-section--c-tag,
-.c-card-section--c-video-articles,
-.c-card-section--mag-articles,
-.c-card-section--mag-magazines,
-.c-card-section--tg-articles,
-.c-card-section--v-articles,
-.c-card-section--v-genre-articles {
+.c-card-section--c-video-articles {
     .c-card-section__title {
         @include font("MILLER_DISPLAY", 25px, 600, 30px);
         color: $dune;
@@ -49,6 +44,31 @@
     }
 }
 
+.c-card-section--a-recommended,
+.c-card-section--tg-articles,
+.c-card-section--mag-articles,
+.c-card-section--mag-magazines,
+.c-card-section--v-articles,
+.c-card-section--v-genre-articles {
+    padding-bottom: 40px;
+    padding-top: 30px;
+
+    .c-card-section__title {
+        @include font("MILLER_DISPLAY", 25px, 600, 25px);
+        color: $dune;
+        margin: 0 0 15px 0;
+
+        a {
+            color: inherit;
+        }
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-bottom: 60px;
+        padding-top: 40px;
+    }
+}
+
 .c-card-section--c-video-articles {
     .c-card-section__logo {
         height: auto;
@@ -64,6 +84,7 @@
     }
 }
 
+// Section card list with right columns for rail ad
 .c-card-section--tg-articles,
 .c-card-section--v-articles {
     .c-card-list {
@@ -77,20 +98,6 @@
     background-color: $concrete;
     margin: 0;
     max-width: none;
-    padding-bottom: $MOBILE_SLICE_MARGIN;
-    padding-top: $MOBILE_SLICE_MARGIN;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding-top: $TABLET_SLICE_MARGIN;
-        padding-bottom: $TABLET_SLICE_MARGIN;
-    }
-
-    .c-card-section__title {
-        @include font("MILLER_DISPLAY", 25px, 600, 25px);
-        color: $dune;
-        margin: 0 0 15px 0;
-
-    }
 }
 
 .c-card-section--v-related-articles {
@@ -128,16 +135,3 @@
     }
 }
 
-.c-card-section--mag-articles,
-.c-card-section--mag-magazines,
-.c-card-section--v-genre-articles,
-.c-card-section--v-articles,
-.c-card-section--tg-articles{
-
-    .c-card-section__title {
-        @include font("MILLER_DISPLAY", 25px, 600, 25px);
-        color: $dune;
-        margin: 0 0 15px 0;
-    }
-
-}
