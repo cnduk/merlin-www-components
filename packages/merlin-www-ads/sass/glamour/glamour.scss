@@ -261,5 +261,11 @@
 
     .ad__block {
         display: flex;
+        flex-basis: 100%;
+        height: 100%;
+        width: 100%;
+    }
+    .ad__container {
+        width: 100%;
     }
 }
