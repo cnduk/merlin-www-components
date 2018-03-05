@@ -56,6 +56,13 @@ function GATracker(id, _config){
     this._id = id;
 
     /**
+     * Client id of the tracker created by GA. This is not the same as id.
+     * @private
+     * @type {Number}
+     */
+    this._clientId = null;
+
+    /**
      * The type of GATracker
      * @public
      * @type {String}
@@ -90,6 +97,12 @@ function GATracker(id, _config){
 
     if(_config && _config.optimizeId !== undefined){
         ga(this._name + '.require', _config.optimizeId);
+    }
+
+    if(this.type === 'brand'){
+        ga(function gaClientId(){
+            this._clientId = ga.getByName(this._name).get('clientId');
+        }.bind(this));
     }
 
     /**
@@ -176,23 +189,32 @@ GATracker.prototype = {
      * @param  {Object} config  Data to send along with the call
      */
     'send': function( hitType, config ){
-        var options = assign( {
-            'comscore': true
-        }, config, {
-            'hitType': hitType
-        } );
+        ga(function gaSend(){
+            var options = assign( {
+                'comscore': true
+            }, config, {
+                'hitType': hitType
+            } );
 
-        var comscore = options.comscore;
-        delete options.comscore;
+            var comscore = options.comscore;
+            delete options.comscore;
 
-        ga( this._name + '.send', options );
+            // Set the clientId as a custom dimension if its defined
+            if(this._clientId !== null){
+                this.set(
+                    GATracker.getDimensionByIndex('CLIENT_ID'),
+                    this._clientId
+                );
+            }
 
-        // Whenever we send a pageview, send a comscore beacon
-        if( hitType === GATracker.SEND_HITTYPES.PAGEVIEW && comscore &&
-            this.type === 'brand' ){
-            sendComscore( location.href );
-        }
+            ga( this._name + '.send', options );
 
+            // Whenever we send a pageview, send a comscore beacon
+            if( hitType === GATracker.SEND_HITTYPES.PAGEVIEW && comscore &&
+                this.type === 'brand' ){
+                sendComscore( location.href );
+            }
+        }.bind(this));
     },
 
     /**
@@ -203,26 +225,29 @@ GATracker.prototype = {
      * @param  {String/Number} value
      */
     'set': function( fieldName, value ){
-        var setData = fieldName;
+        var argLength = arguments.length;
+        ga(function gaSet(){
+            var setData = fieldName;
 
-        if( arguments.length === 2 ){
-            setData = {};
-            setData[ fieldName ] = value;
-        }
+            if( argLength === 2 ){
+                setData = {};
+                setData[ fieldName ] = value;
+            }
 
-        // Update location value to remove specific query params
-        if(setData.hasOwnProperty('location') &&
-            isDefined(setData['location'])){
-            setData['location'] = filterQueryParams(setData['location']);
-        }
+            // Update location value to remove specific query params
+            if(setData.hasOwnProperty('location') &&
+                isDefined(setData['location'])){
+                setData['location'] = filterQueryParams(setData['location']);
+            }
 
-        // If the tracker is `conde`, we need to remove custom dimensions. We
-        // might not need to do this but just to be safe :)
-        if( this.type !== 'brand' ){
-            setData = removeCustomDimensions( setData );
-        }
+            // If the tracker is `conde`, we need to remove custom dimensions. We
+            // might not need to do this but just to be safe :)
+            if( this.type !== 'brand' ){
+                setData = removeCustomDimensions( setData );
+            }
 
-        ga( this._name + '.set', setData );
+            ga( this._name + '.set', setData );
+        }.bind(this));
     }
 };
 
@@ -286,7 +311,8 @@ GATracker.INDEX_BY_DIMENSION = {
     'SYNDICATION_ORIGINAL_LANGUAGE': 'dimension51',
     'SPONSORED': 'dimension46',
     'SPONSOR': 'dimension47',
-    'CONTENT_SOURCE': 'dimension52'
+    'CONTENT_SOURCE': 'dimension52',
+    'CLIENT_ID': 'dimension107'
 };
 
 /**
@@ -323,7 +349,8 @@ GATracker.DIMENSION_BY_INDEX = {
     'dimension51': 'SYNDICATION_ORIGINAL_LANGUAGE',
     'dimension46': 'SPONSORED',
     'dimension47': 'SPONSOR',
-    'dimension52': 'CONTENT_SOURCE'
+    'dimension52': 'CONTENT_SOURCE',
+    'dimension107': 'CLIENT_ID'
 };
 
 /**
