@@ -554,7 +554,7 @@
 // Gallery
 // -------------------- //
 .bb-gallery {
-   background: $banana-mania;
+    background: $astronaut;
     margin: 25px 0;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
@@ -575,7 +575,7 @@
 
     &:before {
         content:"";
-        background: $astronaut;
+        background: $azalea;
         border-radius: 50%;
         display: inline-block;
         height: 35px;
@@ -587,7 +587,7 @@
 
     svg {
         display: inline-block;
-        fill: $banana-mania;
+        fill: $astronaut;
         margin: 0 auto;
         margin-top: 6px;
         margin-left: 10px;
@@ -598,7 +598,7 @@
 
 h4.bb-gallery__title {
     @include font("GRAPHIK", 16px, 'NORMAL', 18px);
-    color: $astronaut;
+    color: $azalea;
     display: table-cell;
     padding: 20px 10px;
     vertical-align: middle;
@@ -613,7 +613,7 @@ h4.bb-gallery__title {
 .bb-gallery__link {}
 .bb-gallery__cols {}
 ul li.bb-gallery__col {
-    background-color: $banana-mania;
+    background-color: $astronaut;
     margin: 0;
     padding: 0;
 
@@ -631,7 +631,7 @@ ul li.bb-gallery__col {
 .bb-gallery__remaining-text--prefix {
     @include font("GRAPHIK", 18px, 400, 18px);
     bottom: 3px;
-    color: $banana-mania;
+    color: $azalea;
     position: relative;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
@@ -643,7 +643,7 @@ ul li.bb-gallery__col {
 
 .bb-gallery__remaining-text--value{
     @include font("GRAPHIK", 30px, 400, 30px);
-    color: $banana-mania;
+    color: $azalea;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(40px);
@@ -655,7 +655,7 @@ ul li.bb-gallery__col {
 // Video
 // -------------------- //
 .bb-video {
-    background: $banana-mania;
+    background: $astronaut;
     margin: 25px 0;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
@@ -678,7 +678,7 @@ ul li.bb-gallery__col {
 
     &:before {
         content:"";
-        background: $astronaut;
+        background: $azalea;
         border-radius: 50%;
         display: inline-block;
         height: 35px;
@@ -690,7 +690,7 @@ ul li.bb-gallery__col {
 
     svg {
         display: inline-block;
-        fill: $banana-mania;
+        fill: $astronaut;
         margin: 0 auto;
         margin-left: 12px;
         margin-top: 2px;
@@ -701,7 +701,7 @@ ul li.bb-gallery__col {
 
 h4.bb-video__title {
     @include font("GRAPHIK", 16px, 'NORMAL', 18px);
-    color: $astronaut;
+    color: $azalea;
     display: flex;
     flex-direction: row;
     align-items: center;
