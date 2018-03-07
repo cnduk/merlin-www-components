@@ -1,6 +1,6 @@
 'use strict';
 export default {
-    "abbr": "hg",
-    "name": "House & Garden",
-    "promo_name": "houseandgarden"
-}
+    'abbr': 'hg',
+    'name': 'House & Garden',
+    'promo_name': 'houseandgarden'
+};
