@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-js-utils",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "",
   "main": "js/index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "eslint": "^4.14.0",
-    "jsdoc-to-markdown": "^3.0.0",
-    "eslint-plugin-compat": "^2.2.0"
+    "eslint-plugin-compat": "^2.2.0",
+    "jsdoc-to-markdown": "^3.0.0"
   }
 }

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.5.5"></a>
+## [1.5.5](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-international-redirect@1.5.4...@cnbritain/merlin-www-international-redirect@1.5.5) (2018-03-09)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-international-redirect
+
 <a name="1.5.1"></a>
 ## [1.5.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-international-redirect@1.5.0...@cnbritain/merlin-www-international-redirect@1.5.1) (2018-03-01)
 
