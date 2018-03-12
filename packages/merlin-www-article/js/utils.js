@@ -138,9 +138,13 @@ export function getArticleTitle(el) {
  * Get the url of the article
  * @param  {HTMLElement} el
  * @return {String}    url of the article
+ *
+ * In merlin-www-core, we remove the protocol as to allow us on the frontend
+ * to switch between https and http.
  */
 export function getArticleUrl(el) {
-    return el.getAttribute('data-article-url');
+    return window.location.protocol + '//' +
+        el.getAttribute('data-article-url');
 }
 
 /**
