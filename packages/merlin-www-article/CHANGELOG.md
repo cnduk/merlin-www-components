@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.23.19"></a>
+## [1.23.19](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.23.18...@cnbritain/merlin-www-article@1.23.19) (2018-03-12)
+
+
+### Bug Fixes
+
+* **merlin-www-article:** fix missing template strings in video header ([bbfdad9](https://github.com/cnduk/merlin-www-components/commit/bbfdad9))
+* **merlin-www-article:** self assign the protocol when generating article url ([f57fbd4](https://github.com/cnduk/merlin-www-components/commit/f57fbd4))
+
+
+
+
 <a name="1.23.18"></a>
 ## [1.23.18](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.23.17...@cnbritain/merlin-www-article@1.23.18) (2018-03-09)
 
