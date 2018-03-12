@@ -139,12 +139,20 @@ export function getArticleTitle(el) {
  * @param  {HTMLElement} el
  * @return {String}    url of the article
  *
- * In merlin-www-core, we remove the protocol as to allow us on the frontend
- * to switch between https and http.
+ * We switch protocol to the current one for history.replaceState.
  */
 export function getArticleUrl(el) {
-    return window.location.protocol + '//' +
-        el.getAttribute('data-article-url');
+
+    var url = el.getAttribute('data-article-url');
+    // https:
+    if(url.substr(0, 6) === 'https:'){
+        url = url.substr(6);
+    // http:
+    } else if(url.substr(0, 5) === 'http:'){
+        url = url.substr(5);
+    }
+
+    return window.location.protocol + url;
 }
 
 /**
