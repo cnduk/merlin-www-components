@@ -13,9 +13,9 @@
                     <div class="a-header__byline">
                 {{/ data.byline }}
                 {{^ data.byline }}
-                    {{# data.syndication_profile }}
+                    {{# state.has_syndication_profile }}
                         <div class="a-header__byline">
-                    {{/ data.syndication_profile }}
+                    {{/ state.has_syndication_profile }}
                 {{/ data.byline }}
 
                 {{# data.byline }}
@@ -25,45 +25,49 @@
                     </span>
                 {{/ data.byline }}
 
-                {{# data.syndication_profile }}
+                {{# state.has_syndication_profile }}
                     <span class="a-header__byline-item a-header__byline-item--syndication">
                         <span class="a-header__byline-prefix">{{ translation.header_syndication_prefix }} </span>
-                        {{# state.has_link }}
-                            <span class="a-header__byline-name"><a class="{{ data.link.style.cls }}" title="{{ data.link.data.title }}" href="{{ &data.link.data.url }}">{{ data.name }}</a></span>
-                        {{/ state.has_link }}
-                        {{^ state.has_link }}
-                            <span class="a-header__byline-name">{{ data.name }}</span>
-                        {{/ state.has_link }}
+                        {{# data.syndication_profile }}
+                            {{# state.has_link }}
+                                <span class="a-header__byline-name"><a class="{{ data.link.style.cls }}" title="{{ data.link.data.title }}" href="{{ &data.link.data.url }}">{{ data.name }}</a></span>
+                            {{/ state.has_link }}
+                            {{^ state.has_link }}
+                                <span class="a-header__byline-name">{{ data.name }}</span>
+                            {{/ state.has_link }}
+                        {{/ data.syndication_profile }}
                     </span>
-                {{/ data.syndication_profile }}
+                {{/ state.has_syndication_profile }}
 
                 {{# data.byline }}
                     </div>
                 {{/ data.byline }}
                 {{^ data.byline }}
-                    {{# data.syndication_profile }}
+                    {{# state.has_syndication_profile }}
                         </div>
-                    {{/ data.syndication_profile }}
+                    {{/ state.has_syndication_profile }}
                 {{/ data.byline }}
             </div>
 
-            {{# data.sponsor }}
+            {{# state.is_sponsored }}
                 <div class="a-header__sponsor">
                     <span class='a-header__sponsor-prefix'>{{ translation.header_sponsorship_prefix }}</span>
 
-                    {{# data.image }}
-                        <div class="a-header__sponsor-image">
-                            {{> @cnbritain/merlin-www-image }}
-                        </div>
-                    {{/ data.image }}
+                    {{# data.sponsor }}
+                        {{# data.image }}
+                            <div class="a-header__sponsor-image">
+                                {{> @cnbritain/merlin-www-image }}
+                            </div>
+                        {{/ data.image }}
 
-                    {{^ data.image }}
-                        {{# data.link }}
-                            <a class='a-header__sponsor-name' href="{{ &data.url }}">{{ data.title }}</a>
-                        {{/ data.link }}
-                    {{/ data.image }}
+                        {{^ data.image }}
+                            {{# data.link }}
+                                <a class='a-header__sponsor-name' href="{{ &data.url }}">{{ data.title }}</a>
+                            {{/ data.link }}
+                        {{/ data.image }}
+                    {{/ data.sponsor }}
                 </div>
-            {{/ data.sponsor }}
+            {{/ state.is_sponsored }}
 
             {{# data.meta_list }}
                 <ul class="global__list-reset a-header__meta {{ style.cls }}">
