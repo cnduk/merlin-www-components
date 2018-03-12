@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.23.20"></a>
+## [1.23.20](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.23.19...@cnbritain/merlin-www-article@1.23.20) (2018-03-12)
+
+
+### Bug Fixes
+
+* **merlin-www-article:** change method for generating article url with protocol ([5456002](https://github.com/cnduk/merlin-www-components/commit/5456002))
+
+
+
+
 <a name="1.23.19"></a>
 ## [1.23.19](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.23.18...@cnbritain/merlin-www-article@1.23.19) (2018-03-12)
 
