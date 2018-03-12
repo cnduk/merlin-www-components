@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.12.0"></a>
+# [1.12.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.11.8...@cnbritain/merlin-www-ads@1.12.0) (2018-03-12)
+
+
+### Features
+
+* **merlin-www-ads:** remove responsive ad code ([8938589](https://github.com/cnduk/merlin-www-components/commit/8938589))
+
+
+
+
 <a name="1.11.8"></a>
 ## [1.11.8](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.11.7...@cnbritain/merlin-www-ads@1.11.8) (2018-03-09)
 
