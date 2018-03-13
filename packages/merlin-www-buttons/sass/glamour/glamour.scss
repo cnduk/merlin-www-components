@@ -27,6 +27,10 @@ a.btn-single--light {
 .btn-single--dark,
 a.btn-single--dark {
     @include button-single-dark;
+
+    &:hover {
+       @include button-single-dark-hover;
+    }
 }
 
 .btn-group,
