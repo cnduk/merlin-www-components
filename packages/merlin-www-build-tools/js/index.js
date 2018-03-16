@@ -14,7 +14,7 @@ const serve = require('./tasks/serve');
 const release = require('./tasks/release');
 const sw = require('./tasks/sw');
 
-module.exports = function(config = {}) {
+module.exports = function(config = {}, gulp) {
     const defaultConfig = utils.getDefaultConfig(
         config.package, config.merlin);
     const taskConfig = merge(defaultConfig, config);
@@ -23,18 +23,29 @@ module.exports = function(config = {}) {
     gulp.task('eslint', eslint(taskConfig, browserSync));
     gulp.task('sass', sass(taskConfig, browserSync));
     gulp.task('js', js(taskConfig, browserSync));
-    gulp.task('serve', serve(taskConfig, browserSync));
+    gulp.task('serve', serve(taskConfig, browserSync, gulp));
     gulp.task('release', release(taskConfig, browserSync));
     gulp.task('sw', sw(taskConfig, browserSync));
 
-    gulp.task('dev', function(cb) {
-        runSequence(
-            ['copy', 'sass', 'eslint', 'js'],
-            'serve',
-            cb
-        );
-    });
-    gulp.task('staging', ['copy', 'sass', 'eslint', 'js'])
-    gulp.task('production', ['copy', 'sass', 'eslint', 'js'])
+    gulp.task(
+        'dev',
+        gulp.series(
+            gulp.parallel('copy', 'sass', 'eslint', 'js'),
+            'serve'
+        )
+    );
 
+    gulp.task(
+        'staging',
+        gulp.series(
+            gulp.parallel('copy', 'sass', 'eslint', 'js')
+        )
+    );
+
+    gulp.task(
+        'production',
+        gulp.series(
+            gulp.parallel('copy', 'sass', 'eslint', 'js')
+        )
+    );
 }
