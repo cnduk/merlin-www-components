@@ -2,7 +2,7 @@
 
 const gulp = require('gulp');
 
-module.exports = function taskServeExport(taskConfig, browserSync, gulp){
+module.exports = function taskServeExport(taskConfig, browserSync){
     return function taskServe(){
         browserSync.init({
             port: 3000,

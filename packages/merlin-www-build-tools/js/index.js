@@ -13,7 +13,7 @@ const serve = require('./tasks/serve');
 const release = require('./tasks/release');
 const sw = require('./tasks/sw');
 
-module.exports = function(config = {}, gulp) {
+module.exports = function(config = {}) {
     const defaultConfig = utils.getDefaultConfig(
         config.package, config.merlin);
     const taskConfig = merge(defaultConfig, config);
@@ -22,7 +22,7 @@ module.exports = function(config = {}, gulp) {
     gulp.task('eslint', eslint(taskConfig, browserSync));
     gulp.task('sass', sass(taskConfig, browserSync));
     gulp.task('js', js(taskConfig, browserSync));
-    gulp.task('serve', serve(taskConfig, browserSync, gulp));
+    gulp.task('serve', serve(taskConfig, browserSync));
     gulp.task('release', release(taskConfig, browserSync));
     gulp.task('sw', sw(taskConfig, browserSync));
 
