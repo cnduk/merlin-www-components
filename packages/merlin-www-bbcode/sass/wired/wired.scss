@@ -601,6 +601,7 @@
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         margin: 60px 0;
+        overflow: hidden;
     }
 
 }
@@ -727,10 +728,7 @@
     }
 }
 
-.bb-video__wrapper {
-    clear: both;
-}
-
+.bb-video__wrapper {}
 .bb-video__image-icon {
     background-color: $black;
     height: 50px;
