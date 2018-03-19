@@ -3,7 +3,6 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const merge = require('lodash.merge');
-const runSequence = require('run-sequence');
 
 const utils = require('./utils');
 const copy = require('./tasks/copy');

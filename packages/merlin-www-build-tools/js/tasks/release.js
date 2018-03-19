@@ -9,7 +9,6 @@ const conventionalChangelog = require('gulp-conventional-changelog');
 const bump = require('gulp-bump');
 const flog = require('fancy-log');
 const git = require('gulp-git');
-const runSequence = require('run-sequence');
 const minimist = require('minimist');
 
 const utils = require('../utils');
@@ -20,11 +19,18 @@ module.exports = function taskReleaseExports(taskConfig, browserSync) {
 
     const args = minimist(process.argv.slice(2));
 
+    function validateArgs(done){
+        if (!args.patch && !args.minor && !args.major) {
+            throw new Error('No version bump specified! Quitting release.');
+        }
+        done();
+    }
+
     gulp.task('create-changelog', function(done){
         utils.createFileNotExist(taskConfig.release.changelog, done);
     });
 
-    gulp.task('changelog', function() {
+    gulp.task('changelog', function(done) {
         return gulp.src(taskConfig.release.changelog, {
             buffer: false
         })
@@ -78,31 +84,19 @@ module.exports = function taskReleaseExports(taskConfig, browserSync) {
         });
     });
 
+    return gulp.series(
+        validateArgs,
+        'create-changelog',
+        'bump-version',
+        'changelog',
+        'commit-changes',
+        'push-changes',
+        'create-new-tag'
+    );
 
-    return function taskRelease(done) {
-
-        // Check we have a version bump
-        if (!args.patch && !args.minor && !args.major) {
-            console.error('No version bump specified! Quitting release.');
-            return done();
-        }
-
-        runSequence(
-            'create-changelog',
-            'bump-version',
-            'changelog',
-            'commit-changes',
-            'push-changes',
-            'create-new-tag',
-            function(error) {
-                if (error) {
-                    console.log(error.message);
-                }
-                done(error);
-            }
-        );
-    };
 };
+
+
 
 /**
  * Currently in GQ we have a commit message that is 17000+ characters long.
