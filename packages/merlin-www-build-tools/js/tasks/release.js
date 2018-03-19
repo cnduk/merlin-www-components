@@ -30,7 +30,7 @@ module.exports = function taskReleaseExports(taskConfig, browserSync) {
         utils.createFileNotExist(taskConfig.release.changelog, done);
     });
 
-    gulp.task('changelog', function(done) {
+    gulp.task('changelog', function() {
         return gulp.src(taskConfig.release.changelog, {
             buffer: false
         })
