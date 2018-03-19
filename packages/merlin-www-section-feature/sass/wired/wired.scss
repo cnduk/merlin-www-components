@@ -94,6 +94,7 @@
 .c-feature__byline-prefix {
     @include font("EXCHANGE WEB", 11px);
     font-style: italic;
+    margin-right: 3px;
 }
 
 .c-feature__byline-name {

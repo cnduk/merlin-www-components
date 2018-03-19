@@ -46,14 +46,23 @@
 
 @mixin button-single-dark() {
     background-color: transparent;
-    border-bottom: 1px solid $white;
     color: $white;
+    padding: 0;
+
+    &:after{
+        content:'';
+        display: block;
+        border-top: solid 1px $white;
+        border-bottom: solid 2px transparent;
+        margin: 10px 0;
+    }
 }
 
 @mixin button-single-dark-hover() {
-    background-color: $white;
-    border-bottom: 1px solid $white;
-    color: $dune;
+     &:hover:after{
+        border-top: solid 1px $white;
+        border-bottom: solid 2px $white;
+    }
 }
 
 @mixin button-single-dark-inactive() {

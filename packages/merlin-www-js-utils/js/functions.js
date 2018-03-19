@@ -704,6 +704,23 @@ export function isObject(src){
 }
 
 /**
+ * Checks if the object is a plain object
+ * @param  {*}  o
+ * @return {Boolean}
+ */
+export function isPlainObject(o) {
+    if (o !== null && typeof o === 'object') {
+        if (typeof Object.getPrototypeOf === 'function') {
+            var proto = Object.getPrototypeOf(o);
+            return proto === Object.prototype || proto === null;
+        }
+        return Object.prototype.toString.call(o) === '[object Object]';
+    }
+
+    return false;
+}
+
+/**
  * Checks if the placement is a splash slot
  * @param  {String}  placement
  * @return {Boolean}
