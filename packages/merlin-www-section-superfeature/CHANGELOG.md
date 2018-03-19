@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.7"></a>
+## [1.8.7](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-superfeature@1.8.6...@cnbritain/merlin-www-section-superfeature@1.8.7) (2018-03-19)
+
+
+### Bug Fixes
+
+* **merlin-www-section-superfeature:** Wired Spacing in the byline has dropped out [ch2079] ([a134e42](https://github.com/cnduk/merlin-www-components/commit/a134e42))
+
+
+
+
 <a name="1.8.5"></a>
 ## [1.8.5](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-superfeature@1.8.4...@cnbritain/merlin-www-section-superfeature@1.8.5) (2018-03-09)
 

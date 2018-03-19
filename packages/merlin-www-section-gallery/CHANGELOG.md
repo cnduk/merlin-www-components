@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.7.7"></a>
+## [1.7.7](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.7.6...@cnbritain/merlin-www-section-gallery@1.7.7) (2018-03-19)
+
+
+### Bug Fixes
+
+* **merlin-www-section-gallery:** Wired Spacing in the byline has dropped out [ch2079] ([e3b421d](https://github.com/cnduk/merlin-www-components/commit/e3b421d))
+
+
+
+
 <a name="1.7.5"></a>
 ## [1.7.5](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.7.4...@cnbritain/merlin-www-section-gallery@1.7.5) (2018-03-09)
 
