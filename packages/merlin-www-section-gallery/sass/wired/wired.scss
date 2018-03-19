@@ -125,6 +125,7 @@ li.c-gallery__image-item {
 .c-gallery__byline-prefix {
     @include font("EXCHANGE WEB", 11px);
     font-style: italic;
+    margin-right: 3px;
 }
 
 .c-gallery__byline-name {
