@@ -11,10 +11,10 @@
 
 
 .tg-header {
-    margin: 0 0 32px 0;
+    margin: 30px 0;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin: 0 0 48px 0;
+        margin: 60px 0;
     }
 
     &.has-hero {
@@ -277,6 +277,8 @@
 
 
 .tg-header--video {
+    margin-top: 0;
+
     .tg-header__intro__image {
         margin: 0 auto;
         width: 160px;
@@ -305,6 +307,10 @@
     .tg-header__intro {
         background-color: transparent;
         padding: 0;
+
+        &:before {
+            content: none;
+        }
     }
 
     .tg-header__intro__image {
@@ -358,9 +364,11 @@
     }
 
     .tg-header__title {
+        margin: 15px 0 10px 0;
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             @include font-size(40px);
             @include line-height(45px);
+            margin: 20px 0;
         }
     }
 }
