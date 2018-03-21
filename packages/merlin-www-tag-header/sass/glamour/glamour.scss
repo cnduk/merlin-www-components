@@ -305,15 +305,6 @@
 
 .tg-header--profile {
 
-    .tg-header__intro {
-        background-color: transparent;
-        padding: 0;
-
-        &:before {
-            content: none;
-        }
-    }
-
     .tg-header__intro__image {
         border-radius: 50%;
         height: 90px;
@@ -333,6 +324,7 @@
         &:before {
             background-image: url('/static/img/pattern-1.jpg');
             background-position: center;
+            background-size: 400%;
             border-radius: 50%;
             bottom: -5px;
             content: '';
@@ -365,11 +357,32 @@
     }
 
     .tg-header__title {
+        @include font-size(30px);
+        @include line-height(35px);
+
         margin: 15px 0 10px 0;
+
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             @include font-size(40px);
             @include line-height(45px);
-            margin: 20px 0;
+            margin: 20px 0 10px 0;
+        }
+    }
+
+    .tg-header__intro {
+        background-color: transparent;
+        padding: 0;
+
+        &:before {
+            content: none;
+        }
+    }
+
+    .tg-header__description {
+        margin: 10px auto;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-top: 10px;
         }
     }
 }
