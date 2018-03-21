@@ -18,6 +18,11 @@
 }
 
 .c-topic-strip__item {
+
+    &:before {
+        display: none;
+    }
+
     & + & {
         margin-left: $MARGIN_XX_SMALL;
 
