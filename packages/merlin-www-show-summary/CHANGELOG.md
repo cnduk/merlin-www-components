@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.4.77"></a>
+## [1.4.77](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.4.76...@cnbritain/merlin-www-show-summary@1.4.77) (2018-03-21)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
 <a name="1.4.73"></a>
 ## [1.4.73](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.4.72...@cnbritain/merlin-www-show-summary@1.4.73) (2018-03-19)
 
