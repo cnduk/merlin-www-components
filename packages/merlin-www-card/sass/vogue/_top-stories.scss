@@ -2,51 +2,58 @@
 // Top Stories
 // -------------------- //
 @mixin card-top-stories() {
+    .c-card__obj {
+        display: table;
+        width: 100%;
+    }
 
-}
+    .c-card__obj__header,
+    .c-card__obj__body {
+        display: table-cell;
+        vertical-align: middle;
+    }
 
-@mixin card-top-stories-small() {
     .c-card__obj__header {
-        padding-right: 8px;
         width: 33.33333%;
     }
 
     .c-card__obj__body {
-        padding-left: 8px;
-        width: auto;
+        padding-left: 20px;
     }
 
     .c-card__title {
         @include font-size(15px);
         @include line-height(18px);
-        margin-top: 0;
     }
+
+    .c-card__teaser,
+    .c-card__separator,
+    .c-card__byline,
+    .c-card__tag,
+    .c-card__image__icon {
+        display: none;
+    }
+
+    .c-card__byline--sponsorship {
+        display: block;
+        margin-bottom: 0;
+    }
+
 }
 
-@mixin card-top-stories-large() {
-
-}
+@mixin card-top-stories-small() {}
+@mixin card-top-stories-large() {}
 
 .c-card--top-stories {
-    @include card-landscape();
-    @include card-landscape-small();
-
     @include card-top-stories();
-    @include card-top-stories-small();
 }
 
 .c-card--top-stories-small {
-    @include card-landscape();
-    @include card-landscape-small();
-
     @include card-top-stories();
     @include card-top-stories-small();
 }
 
 .c-card--top-stories-large {
-    @include card-landscape();
-    @include card-landscape-small();
-
     @include card-top-stories();
     @include card-top-stories-large();
 }

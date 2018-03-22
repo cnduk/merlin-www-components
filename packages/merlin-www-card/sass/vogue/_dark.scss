@@ -1,16 +1,50 @@
-@import '@cnbritain/merlin-www-common:vogue';
-
 .c-card--dark {
-    &.c-card--landscape,
-    &.c-card--portrait,
-    &.c-card--switcher,
-    &.c-card--hero {
-        .c-card__tag,
-        .c-card__title,
-        .c-card__byline,
-        .c-card__byline-name,
-        .c-card__byline-prefix {
-            color: $white;
+
+    .c-card__tag {
+        color: $silver;
+    }
+
+    .c-card__title,
+    .c-card__byline,
+    .c-card__sponsor {
+        color: $white;
+    }
+
+    .c-card__image__icon {
+        background-color: $mine-shaft-222;
+
+        path {
+            fill: $silver;
         }
+    }
+
+    .c-card__meta {
+        border-top-color: $mine-shaft-333;
+    }
+
+    .c-card__byline-prefix {
+        color: $dove-gray;
+    }
+
+    .c-card__byline-name {
+        color: $silver;
+    }
+
+    // Need to be specific to overwrite global__list-reset
+    .c-card__meta-item {
+        color: $dove-gray;
+
+        path {
+            fill: $dove-gray;
+        }
+
+        &--tag {
+            color: $silver;
+        }
+
+        & + li.c-card__meta-item {
+            border-left: 1px solid $mine-shaft-222;
+        }
+
     }
 }

@@ -2,41 +2,29 @@
 // Switcher
 // -------------------- //
 @mixin card-switcher() {}
-@mixin card-switcher-small() {}
-@mixin card-switcher-large() {}
-
-.c-card--switcher {
+@mixin card-switcher-small() {
     @include card-landscape();
     @include card-landscape-small();
+}
+@mixin card-switcher-large() {
+    @include card-portrait();
+    @include card-portrait-large();
+}
 
+.c-card--switcher {
     @include card-switcher();
-    @include card-switcher-small();
-
+    @include card-switcher-small()
     @include min-screen($CARD_SWITCHER_WIDTH) {
-        .c-card__obj__header,
-        .c-card__obj__body {
-            display: block;
-            padding: 0;
-            width: auto;
-        }
-
-        @include card-portrait();
-        @include card-portrait-large();
+        @include card-switcher-large();
     }
 }
 
 .c-card--switcher-small {
-    @include card-landscape();
-    @include card-landscape-small();
-
     @include card-switcher();
-    @include card-switcher-small();
+    @include card-switcher-small()
 }
 
 .c-card--switcher-large {
-    @include card-portrait();
-    @include card-portrait-large();
-
     @include card-switcher();
     @include card-switcher-large();
 }

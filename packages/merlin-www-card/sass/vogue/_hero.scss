@@ -1,24 +1,27 @@
 // -------------------- //
 // Hero
 // -------------------- //
-@mixin card-hero() {}
+@mixin card-hero() {
+    @include card-portrait;
+}
 
 @mixin card-hero-small() {
+    @include card-portrait-small;
+
     .c-card__image {
         padding-top: 66.66666%;
     }
 }
 
 @mixin card-hero-large() {
+    @include card-portrait-large;
+
     .c-card__image {
         padding-top: 100%;
     }
 }
 
 .c-card--hero {
-    @include card-portrait();
-    @include card-portrait-large();
-
     @include card-hero();
     @include card-hero-small();
 
@@ -28,17 +31,11 @@
 }
 
 .c-card--hero-small {
-    @include card-portrait();
-    @include card-portrait-large();
-
     @include card-hero();
     @include card-hero-small();
 }
 
 .c-card--hero-large {
-    @include card-portrait();
-    @include card-portrait-large();
-
     @include card-hero();
     @include card-hero-large();
 }
