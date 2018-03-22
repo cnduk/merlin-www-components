@@ -1,118 +1,114 @@
 @import '@cnbritain/merlin-www-common:vogue';
 
 @mixin button-reset() {
-    border-bottom: none;
     display: inline-block;
     text-decoration: none;
-
-    &:hover {
-        border-bottom: none;
-    }
 }
 
 @mixin button-single(){
     @include button-reset();
     @include font('NOBEL', 12px);
+    @include transition(all 0.1s ease-in-out);
+
+    color: $guardsman-red;
     letter-spacing: 1px;
     padding: $PADDING_X_SMALL;
     text-transform: uppercase;
-    @include transition(all 0.1s ease-in-out);
 }
 
 @mixin button-single-light() {
-    border: $_VOGUE_BORDER_WIDTH solid $COLOR_BUTTON_CTA_LIGHT;
-    color: $COLOR_BUTTON_CTA_LIGHT;
+    border: $_VOGUE_BORDER_WIDTH solid $guardsman-red;
 }
 
 @mixin button-single-light-hover() {
-    background-color: $COLOR_BUTTON_CTA_LIGHT;
+    background-color: $guardsman-red;
     border: $_VOGUE_BORDER_WIDTH solid transparent;
-    color: #fff;
-    text-decoration: none;
+    color: $white;
 }
 
 @mixin button-single-dark() {
-    border: $_VOGUE_BORDER_WIDTH solid $COLOR_BUTTON_CTA_DARK;
-    color: $COLOR_BUTTON_CTA_DARK;
+    border: $_VOGUE_BORDER_WIDTH solid $white;
+    color: $white;
 }
 
 @mixin button-single-dark-hover() {
-    background-color: $COLOR_BUTTON_CTA_DARK;
+    background-color: $white;
     border: $_VOGUE_BORDER_WIDTH solid transparent;
-    color: $COLOR_TYPE_HEADING;
-    text-decoration: none;
+    color: $cod-gray;
 }
 
 @mixin button-single-two(){
     @include button-reset();
     @include font('NOBEL', 12px);
+    @include transition(all 0.1s ease-in-out);
+
+    color: $white;
     letter-spacing: 1px;
     padding: $PADDING_X_SMALL;
     text-transform: uppercase;
-    @include transition(all 0.1s ease-in-out);
 }
 
 @mixin button-single-two-light() {
-    background-color: $COLOR_BUTTON_CTA_LIGHT;
+    background-color: $guardsman-red;
     border: 1px solid transparent;
-    color: $COLOR_BUTTON_CTA_DARK;
 }
 
 @mixin button-single-two-light-hover() {
     background-color: transparent;
-    border: $_VOGUE_BORDER_WIDTH solid $COLOR_BUTTON_CTA_LIGHT;
-    color: $COLOR_BUTTON_CTA_LIGHT;
-    text-decoration: none;
+    border: $_VOGUE_BORDER_WIDTH solid $guardsman-red;
+    color: $guardsman-red;
 }
 
 @mixin button-single-two-dark() {
-
+    background-color: $white;
+    border: $_VOGUE_BORDER_WIDTH solid transparent;
+    color: $cod-gray;
 }
-
 @mixin button-single-two-dark-hover() {
-
+    background-color: transparent;
+    border: $_VOGUE_BORDER_WIDTH solid $white;
+    color: $white;
 }
 
 @mixin button-group(){
     @include button-reset();
     @include font('NOBEL', 10px);
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(11px);
-    }
+    @include transition(all 0.1s ease-in-out);
+
+    color: $guardsman-red;
     padding: $PADDING_XX_SMALL;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
-    @include transition(all 0.1s ease-in-out);
 }
 
 @mixin button-group-light(){
-    border: $_VOGUE_BORDER_WIDTH solid $COLOR_BUTTON_CTA_LIGHT;
-    color: $COLOR_BUTTON_CTA_LIGHT;
+    border: $_VOGUE_BORDER_WIDTH solid $guardsman-red;
 }
 
 @mixin button-group-light-hover(){
-    background-color: $COLOR_BUTTON_CTA_LIGHT;
+    background-color: $guardsman-red;
     border: $_VOGUE_BORDER_WIDTH solid transparent;
-    color: #fff;
-    text-decoration: none;
+    color: $white;
 }
 
 @mixin button-group-dark() {
-    border: $_VOGUE_BORDER_WIDTH solid $COLOR_BUTTON_CTA_DARK;
-    color: $COLOR_BUTTON_CTA_DARK;
+    border: $_VOGUE_BORDER_WIDTH solid $white;
+    color: $white;
 }
 
 @mixin button-group-dark-hover() {
-    background-color: $COLOR_BUTTON_CTA_DARK;
-    color: $COLOR_TYPE_HEADING;
+    background-color: $white;
+    color: $cod-gray;
     text-decoration: none;
 }
 
 @mixin button-top-stories() {
-    background-color: $COLOUR_BG_ACCENT2;
-    height: 50%;
     @include transition(all 0.1s ease-in-out);
+
+    background-color: $wild-sand;
+    color: $guardsman-red;
+    height: 50%;
     width: 60px;
 
     svg {
@@ -127,16 +123,17 @@
 }
 
 @mixin button-top-stories-hover() {
-    background: $COLOR_MAIN_ACCENT1;
+    background: $alto;
 }
 
 @mixin button-top-stories-disabled() {
     svg, path {
-        fill: $COLOR_BUTTON_ACTION_INACTIVE;
+        fill: $silver;
     }
 }
 
 @mixin button-share {
+    color: $guardsman-red;
     display: inline-block;
     height: 45px;
     line-height: 45px;
@@ -147,7 +144,7 @@
 
     svg {
         height: 100%;
-        fill: #fff;
+        fill: $white;
         width: 16px;
     }
 }
@@ -161,7 +158,7 @@
 @mixin button-share-light-hover($name){
     background-color: map-get($COLOUR_SOCIAL_DARK, $name);
     path {
-        fill: #fff;
+        fill: $white;
     }
 }
 
@@ -174,18 +171,20 @@
 }
 
 @mixin button-related() {
-    border: $_VOGUE_BORDER_WIDTH solid $COLOR_BORDER_SOLID_ACCENT2;
-    color: $COLOR_MAIN_TERTIARY;
+    @include button-reset;
     @include font('NOBEL', 11px);
+    @include transition(all 0.1s ease-in-out);
+
+    background-color: $white;
+    border: $_VOGUE_BORDER_WIDTH solid $loot-box;
+    color: $dove-gray;
     letter-spacing: 1px;
     padding: $PADDING_XX_SMALL;
     text-transform: uppercase;
-    @include transition(all 0.1s ease-in-out);
 }
 
 @mixin button-related-hover(){
-    background-color: #fff;
-    border: $_VOGUE_BORDER_WIDTH solid $COLOR_BORDER_DOTTED;
-    color: $COLOR_MAIN_TERTIARY;
+    border: $_VOGUE_BORDER_WIDTH solid $dove-gray;
+    color: $dove-gray;
     text-decoration: none;
 }
