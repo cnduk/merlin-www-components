@@ -101,6 +101,34 @@
         @include card-image-links-hover();
     }
 }
+
+.bb-gallery__icon {
+    display: table-cell;
+    vertical-align: top;
+    padding-right: 5px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-right: 10px;
+    }
+
+    svg {
+        fill: $COLOR_TYPE_META;
+        width: 18px;
+    }
+}
+
+.bb-gallery__title {
+    @include font('ADOBE CASLON', 20px, 'BOLD', 24px);
+    color: #000;
+    display: table-cell;
+    padding-bottom: 10px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(24px);
+        @include line-height(30px);
+    }
+}
+
 .bb-gallery__col {
     &:before {
         display: none;
@@ -110,28 +138,7 @@
         width: 100%;
     }
 }
-.bb-gallery__title {
-    @include font('ADOBE CASLON', 20px, 'BOLD', 24px);
-    color: #000;
-    margin: 0 0 $MARGIN_XX_SMALL 5px;
-    width: calc(100% - 30px);
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(24px);
-        @include line-height(30px);
-    }
-}
-.bb-gallery__icon {
-    vertical-align: top;
-}
-.bb-gallery__icon--gallery {
-    svg {
-        display: inline-block;
-        fill: $COLOR_TYPE_META;
-        vertical-align: baseline;
-        width: 18px;
-    }
-}
 .bb-gallery__remaining {
     background-color: rgba(0,0,0,0.3);
 }
@@ -344,7 +351,6 @@
  * Video
  */
 .bb-video {
-    position: relative;
     margin: 40px 0;
 
     &:hover {
@@ -354,25 +360,32 @@
     }
 }
 
-.bb-video__title {
-    @include font('ADOBE CASLON', 20px, 700, 24px);
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(24px);
-        @include line-height(27px);
-    }
-    margin-bottom: 10px;
-    margin-top: 0;
-}
+.bb-video__icon {
+    display: table-cell;
+    padding-right: 5px;
+    vertical-align: top;
 
-.bb-video__title-icon {
-    margin-right: 5px;
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-right: 10px;
+        padding-right: 10px;
     }
 
     svg {
         fill: $COLOR_MAIN_TERTIARY;
+        width: 14px;
     }
+}
+
+.bb-video__title {
+    @include font('ADOBE CASLON', 20px, 'BOLD', 24px);
+    color: #000;
+    display: table-cell;
+    padding-bottom: 10px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(24px);
+        @include line-height(27px);
+    }
+
 }
 
 .bb-video__wrapper {}
