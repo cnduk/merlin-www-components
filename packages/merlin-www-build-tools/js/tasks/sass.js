@@ -21,7 +21,7 @@ module.exports = function taskSassExport(taskConfig, browserSync) {
             restructure: true,
             sourceMap: true,
             debug: false
-        }
+        };
 
         if (!ENV.isDev) {
             outputStyle = 'compressed';
@@ -50,10 +50,10 @@ module.exports = function taskSassExport(taskConfig, browserSync) {
                         'last 2 versions',
                         'ie >= 10'
                     ]
-                }))
+                }));
 
             if (!ENV.isDev) {
-                task.pipe(csso(cssoConfig))
+                task.pipe(csso(cssoConfig));
             }
 
             task.pipe(rename(renameConfig))
