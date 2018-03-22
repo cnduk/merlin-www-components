@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.12"></a>
+## [1.8.12](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-topic-strip@1.8.11...@cnbritain/merlin-www-topic-strip@1.8.12) (2018-03-21)
+
+
+### Bug Fixes
+
+* **merlin-www-topic-strip:** remove pseudo before dot in vogue ([63411f7](https://github.com/cnduk/merlin-www-components/commit/63411f7))
+
+
+
+
 <a name="1.8.6"></a>
 ## [1.8.6](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-topic-strip@1.8.5...@cnbritain/merlin-www-topic-strip@1.8.6) (2018-03-09)
 

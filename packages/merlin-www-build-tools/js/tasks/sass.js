@@ -1,6 +1,7 @@
 'use strict';
 
 const gulp = require('gulp');
+const csso = require('gulp-csso');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const rename = require('gulp-rename');
@@ -12,14 +13,23 @@ const utils = require('../utils');
 
 const ENV = utils.getEnvironment();
 
-module.exports = function taskSassExport(taskConfig, browserSync){
-    return function taskSass(){
+module.exports = function taskSassExport(taskConfig, browserSync) {
+    return function taskSass() {
         let outputStyle = 'expanded';
         let renameConfig = {};
-        if(!ENV.isDev){
+        let cssoConfig = {
+            restructure: true,
+            sourceMap: true,
+            debug: false
+        };
+
+        if (!ENV.isDev) {
             outputStyle = 'compressed';
-            renameConfig = { suffix: '.min' };
+            renameConfig = {
+                suffix: '.min'
+            };
         }
+
         SASS_IMPORTER.LOGGER.enabled = ENV.isDev;
 
         const streams = taskConfig.sass.src.map((file) => {
@@ -40,15 +50,21 @@ module.exports = function taskSassExport(taskConfig, browserSync){
                         'last 2 versions',
                         'ie >= 10'
                     ]
-                }))
-                .pipe(rename(renameConfig))
+                }));
+
+            if (!ENV.isDev) {
+                task.pipe(csso(cssoConfig));
+            }
+
+            task.pipe(rename(renameConfig))
                 // I have a feeling I'm going to need to check this
                 .pipe(sourcemaps.write('./'))
                 .pipe(gulp.dest(taskConfig.sass.dest));
 
-            if(ENV.isDev){
+            if (ENV.isDev) {
                 task.pipe(browserSync.stream());
             }
+
             return task;
         });
 

@@ -1,24 +1,24 @@
 {
-    "name": "@cnbritain/merlin-www-ads",
-    "version": "1.12.2",
-    "description": "",
-    "main": "js/index.js",
-    "scripts": {
-        "demo": "merlin-component-demo-server merlin.json",
-        "lint": "eslint -c ../../.eslintrc.json ./js/**/*",
-        "prepublish": "npm run lint"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "@cnbritain/merlin-www-common": "^1.10.5",
-        "@cnbritain/merlin-www-js-gatracker": "^1.4.3",
-        "@cnbritain/merlin-www-js-utils": "^1.5.0",
-        "eventemitter2": "^4.1.0",
-        "hogan.js": "^3.0.2"
-    },
-    "devDependencies": {
-        "eslint": "^4.14.0",
-        "eslint-plugin-compat": "^2.2.0"
-    }
+  "name": "@cnbritain/merlin-www-ads",
+  "version": "1.12.4",
+  "description": "",
+  "main": "js/index.js",
+  "scripts": {
+    "demo": "merlin-component-demo-server merlin.json",
+    "lint": "eslint -c ../../.eslintrc.json ./js/**/*",
+    "prepublish": "npm run lint"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cnbritain/merlin-www-common": "^1.10.7",
+    "@cnbritain/merlin-www-js-gatracker": "^1.4.5",
+    "@cnbritain/merlin-www-js-utils": "^1.5.2",
+    "eventemitter2": "^4.1.0",
+    "hogan.js": "^3.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.14.0",
+    "eslint-plugin-compat": "^2.2.0"
+  }
 }

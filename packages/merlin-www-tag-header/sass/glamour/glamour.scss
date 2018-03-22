@@ -11,10 +11,10 @@
 
 
 .tg-header {
-    margin: 0 0 32px 0;
+    margin: 30px 0;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin: 0 0 48px 0;
+        margin: 60px 0;
     }
 
     &.has-hero {
@@ -202,6 +202,7 @@
     }
 
     .bb-p {
+        @include font-weight(600);
         color: inherit;
     }
 
@@ -277,6 +278,8 @@
 
 
 .tg-header--video {
+    margin-top: 0;
+
     .tg-header__intro__image {
         margin: 0 auto;
         width: 160px;
@@ -302,11 +305,6 @@
 
 .tg-header--profile {
 
-    .tg-header__intro {
-        background-color: transparent;
-        padding: 0;
-    }
-
     .tg-header__intro__image {
         border-radius: 50%;
         height: 90px;
@@ -326,6 +324,7 @@
         &:before {
             background-image: url('/static/img/pattern-1.jpg');
             background-position: center;
+            background-size: 400%;
             border-radius: 50%;
             bottom: -5px;
             content: '';
@@ -358,9 +357,32 @@
     }
 
     .tg-header__title {
+        @include font-size(30px);
+        @include line-height(35px);
+
+        margin: 15px 0 10px 0;
+
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             @include font-size(40px);
             @include line-height(45px);
+            margin: 20px 0 10px 0;
+        }
+    }
+
+    .tg-header__intro {
+        background-color: transparent;
+        padding: 0;
+
+        &:before {
+            content: none;
+        }
+    }
+
+    .tg-header__description {
+        margin: 10px auto;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-top: 10px;
         }
     }
 }
@@ -368,6 +390,8 @@
 .tg-header--brand,
 .tg-header--event,
 .tg-header--topic {
+    margin-top: 0;
+
     .tg-header__intro__image {
         margin: 0 auto 0 auto;
         width: 200px;
