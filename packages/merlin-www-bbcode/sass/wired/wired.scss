@@ -590,6 +590,7 @@
 // -------------------- //
 // Gallery
 // -------------------- //
+
 .bb-gallery {
     margin: 30px 0;
 
@@ -601,19 +602,24 @@
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         margin: 60px 0;
-        overflow: hidden;
     }
 
 }
 
 .bb-gallery__icon {
-    float: left;
+    display: inline-block;
+    height: auto;
+    left: 0px;
+    position: absolute;
+    width: 20px;
 
     svg {
         width: 20px;
     }
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        width: 30px;
+
         svg {
             width: 30px;
         }
@@ -632,9 +638,7 @@
     }
 }
 
-.bb-gallery__cols {
-    clear: both;
-}
+.bb-gallery__cols {}
 .bb-gallery__col {}
 .bb-gallery__col--2-2 {}
 .bb-gallery__col--1-1 {}
@@ -693,6 +697,29 @@
 
 }
 
+.bb-video__icon {
+    display: inline-block;
+    height: auto;
+    left: 0px;
+    position: absolute;
+    top: -2px;
+    width: 20px;
+
+    svg {
+        width: 20px;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        left: 0;
+        top: -6px;
+        width: 30px;
+
+        svg {
+            width: 30px;
+        }
+    }
+}
+
 .bb-video__title {
     @include font("BRUTAL", 17px, 700, 20px);
     color: $black;
@@ -705,30 +732,8 @@
     }
 }
 
-.bb-video__title-icon {
-    display: inline-block;
-    height: auto;
-    left: -30px;
-    position: absolute;
-    top: -2px;
-    width: 20px;
-
-    svg {
-        width: 20px;
-    }
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        left: -40px;
-        top: -6px;
-        width: 30px;
-
-        svg {
-            width: 30px;
-        }
-    }
-}
-
 .bb-video__wrapper {}
+
 .bb-video__image-icon {
     background-color: $black;
     height: 50px;

@@ -563,14 +563,13 @@
 }
 
 .bb-gallery__icon {
-    display: table-cell;
-    padding: 10px;
-    margin: 0 auto;
+    display:table-cell;
+    padding-left: 10px;
     vertical-align: middle;
-    width: 35px;
+    width: 56px;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        padding: 20px 10px 20px 20px;
+        padding-left: 20px;
     }
 
     &:before {
@@ -579,7 +578,7 @@
         border-radius: 50%;
         display: inline-block;
         height: 35px;
-        margin-top: -4px;
+        margin-top: -8px;
         position:absolute;
         vertical-align: middle;
         width: 35px;
@@ -589,24 +588,23 @@
         display: inline-block;
         fill: $astronaut;
         margin: 0 auto;
-        margin-top: 6px;
         margin-left: 10px;
+        margin-top: 2px;
         position: relative;
         width: 16px;
     }
 }
 
-h4.bb-gallery__title {
+.bb-gallery__title {
     @include font("GRAPHIK", 16px, 'NORMAL', 18px);
     color: $azalea;
-    display: table-cell;
-    padding: 20px 10px;
-    vertical-align: middle;
+    display:table-cell;
+    padding: 20px 10px 20px 0;
+    min-height: 66px;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(18px);
         @include line-height(18px);
-        padding: 20px 20px 20px 10px;
     }
 }
 
@@ -664,11 +662,8 @@ ul li.bb-gallery__col {
 }
 
 .bb-video__title-icon {
+    display: table-cell;
     padding-left: 10px;
-    left: 0;
-    margin: 0 auto;
-    margin-top: 5px;
-    position: absolute;
     vertical-align: middle;
     width: 56px;
 
@@ -699,20 +694,16 @@ ul li.bb-gallery__col {
     }
 }
 
-h4.bb-video__title {
+.bb-video__title {
     @include font("GRAPHIK", 16px, 'NORMAL', 18px);
     color: $azalea;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 20px 10px 20px 56px;
-    vertical-align: middle;
+    display: table-cell;
+    padding: 20px 10px 20px 0;
     min-height: 66px;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(18px);
         @include line-height(18px);
-        padding: 20px 10px 20px 66px;
     }
 }
 
