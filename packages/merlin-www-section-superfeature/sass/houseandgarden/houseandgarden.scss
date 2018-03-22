@@ -36,9 +36,12 @@
 }
 
 .c-superfeature__image-custom {
-    //(height / width) * 100%
-    padding-top: 41.6666%;
+    padding-top: 66.66666%;
     position: relative;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-top: 41.6666%;
+    }
 
     .c-superfeature__image__wrapper img {
         position: absolute;

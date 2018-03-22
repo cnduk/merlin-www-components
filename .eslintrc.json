@@ -30,6 +30,13 @@
             {
                 "allow": ["warn", "error"]
             }
+        ],
+        "compat/compat": "error"
+    },
+    "plugins": ["compat"],
+    "settings": {
+        "polyfills": [
+            "promises"
         ]
     }
 }

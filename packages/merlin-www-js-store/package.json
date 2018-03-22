@@ -1,18 +1,16 @@
 {
-    "name": "@cnbritain/merlin-www-js-store",
-    "version": "1.0.6",
-    "description": "Localstorage module that basically uses the Store",
-    "main": "js/index.js",
-    "scripts": {
-        "lint": "eslint -c ../../.eslintrc.json ./js/**/*",
-        "prepublish": "npm run lint"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "store": "^2.0.4"
-    },
-    "devDependencies": {
-        "eslint": "^4.14.0"
-    }
+  "name": "@cnbritain/merlin-www-js-store",
+  "version": "1.1.4",
+  "description": "JS module that acts as data storage",
+  "main": "js/index.js",
+  "scripts": {
+    "lint": "eslint -c ../../.eslintrc.json ./js/**/*",
+    "prepublish": "npm run lint"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.14.0",
+    "eslint-plugin-compat": "^2.2.0"
+  }
 }

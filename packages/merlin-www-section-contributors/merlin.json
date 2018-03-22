@@ -1,26 +1,26 @@
 {
-    "name": "@cnbritain/merlin-www-section-contributors", 
+    "name": "@cnbritain/merlin-www-section-contributors",
     "js": {
         "demo": "demo/demo.js"
-    }, 
+    },
     "themes": {
-        "tatler": "sass/tatler/tatler.scss", 
-        "wireframe": "sass/wireframe/wireframe.scss", 
-        "glamour": "sass/glamour/glamour.scss", 
-        "bystander": "sass/bystander/bystander.scss", 
-        "wired": "sass/wired/wired.scss", 
-        "missvogue": "sass/missvogue/missvogue.scss", 
+        "tatler": "sass/tatler/tatler.scss",
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "bystander": "sass/bystander/bystander.scss",
+        "wired": "sass/wired/wired.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
         "vogue": "sass/vogue/vogue.scss"
-    }, 
+    },
     "partials": {
         "section": "templates/section.html"
-    }, 
+    },
     "dependencies": [
-        "@cnbritain/merlin-www-common", 
+        "@cnbritain/merlin-www-common",
         "@cnbritain/merlin-www-section-card-list"
-    ], 
-    "currentTheme": null, 
-    "main": "section", 
+    ],
+    "currentTheme": null,
+    "main": "section",
     "data": {
         "contributors": "demo/data/contributors.json"
     }

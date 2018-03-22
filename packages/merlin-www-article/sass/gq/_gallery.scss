@@ -8,6 +8,23 @@
 
 .a-gallery__wrapper {}
 
+.a-gallery__message {
+    margin-bottom: 40px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 60px;
+    }
+}
+
+.a-gallery__message-btn {
+    @include button-single();
+    @include button-single-light();
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
+
 .g-image-nav {
 	@include vendor-prefix(transition-duration, 300ms);
 	width: $MOBILE_SIDE_GUTTER;
@@ -102,9 +119,11 @@ li.a-gallery__thumbnail {
         padding: 0 10px;
     }
 }
+
 .a-gallery__thumbnail-image {
 	background-color: $albaster;
 }
+
 .a-gallery__thumbnail-hover {
     left: 2px;
     right: 2px;

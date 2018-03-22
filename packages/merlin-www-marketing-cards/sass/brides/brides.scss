@@ -1,0 +1,169 @@
+// @include marketing-card-medium-size(){
+
+@import '@cnbritain/merlin-www-common:brides';
+@import '@cnbritain/merlin-www-buttons:brides';
+
+@import '../wireframe/wireframe';
+
+.a-marketing-card {
+    background-color: $vanilla-ice;
+    padding: 40px 0;
+}
+
+.a-marketing-card__col {
+    text-align: center;
+}
+.a-marketing-card__col + .a-marketing-card__col {}
+
+.a-marketing-card__title {
+    @include font('MILLER_DISPLAY', 18px, 'BOLD', 22px);
+
+    color: $mine-shaft;
+    margin: 0 0 10px 0;
+}
+.a-marketing-card__desc {
+    @include font('MILLER_DISPLAY', 14px, 'NORMAL', 19px);
+
+    color: $mine-shaft;
+    font-style: italic;
+    margin: 0;
+}
+.a-marketing-card__link {
+    @include button-single;
+    @include button-single-light;
+    margin: 20px 0 0 0;
+    width: 200px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        width: initial;
+    }
+
+    &:hover,
+    &:focus {
+        @include button-single-light-hover;
+    }
+}
+
+.a-marketing-card__brand {}
+.a-marketing-card__brand__img {
+    margin: 0 auto 20px auto;
+    max-width: 140px;
+}
+.a-marketing-card__brand__prefix {
+    @include font('BRANDON GROTESQUE', 10px, 'NORMAL', 10px);
+
+    color: $mine-shaft;
+    display: block;
+    letter-spacing: 1px;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+}
+.a-marketing-card__brand__name {
+    @include font('BRANDON GROTESQUE', 20px, 'BOLD', 20px);
+
+    color: $mine-shaft;
+    display: block;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+
+    a {
+        color: inherit;
+    }
+}
+
+.a-marketing-card__magazine {
+    margin: 0 auto 20px auto;
+    width: 150px;
+}
+.a-marketing-card__magazine__cover {}
+.a-marketing-card__magazine__cover--print {
+    width: 95px;
+}
+.a-marketing-card__magazine__cover--tablet {
+    width: 58px;
+}
+.a-marketing-card__magazine__cover--mobile {
+    display: none;
+}
+
+.a-marketing-card--brand {}
+.a-marketing-card--event {}
+.a-marketing-card--topic {}
+.a-marketing-card--magazine {}
+
+.a-marketing-card--brand .a-marketing-card__col,
+.a-marketing-card--topic .a-marketing-card__col,
+.a-marketing-card--event .a-marketing-card__col {}
+
+
+
+
+@include marketing-card-medium-size(){
+
+    .a-marketing-card {
+        padding: 40px;
+    }
+
+    .a-marketing-card__col {
+        text-align: left;
+    }
+
+    .a-marketing-card__title {
+        @include font-size(21px);
+        @include line-height(26px);
+    }
+    .a-marketing-card__desc {
+        @include font-size(18px);
+        @include line-height(22px);
+    }
+
+    .a-marketing-card__magazine {
+        margin-bottom: 0;
+        width: 250px;
+    }
+    .a-marketing-card__magazine__cover--print {
+        width: 160px;
+    }
+    .a-marketing-card__magazine__cover--tablet {
+        width: 100px;
+    }
+
+    .a-marketing-card--event .a-marketing-card__col {
+        padding-right: 40px;
+        width: 140px;
+
+        + .a-marketing-card__col {
+            border-left: 1px solid $black;
+            padding-left: 40px;
+            padding-right: 0;
+            width: auto;
+        }
+    }
+
+    .a-marketing-card--topic .a-marketing-card__col,
+    .a-marketing-card--brand .a-marketing-card__col {
+        padding-right: 40px;
+        text-align: center;
+        width: 180px;
+
+        + .a-marketing-card__col {
+            border-left: 1px solid $black;
+            padding-left: 40px;
+            padding-right: 0;
+            text-align: left;
+            width: auto;
+        }
+    }
+
+    .a-marketing-card--magazine .a-marketing-card__col {
+        padding-right: 40px;
+        width: 250px;
+
+        + .a-marketing-card__col {
+            width: auto;
+        }
+    }
+
+}
+
+

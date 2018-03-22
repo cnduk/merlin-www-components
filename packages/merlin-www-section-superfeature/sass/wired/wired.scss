@@ -74,6 +74,7 @@
 .c-superfeature__byline-prefix {
     @include font("EXCHANGE WEB", 11px);
     font-style: italic;
+    margin-right: 3px;
 }
 
 .c-superfeature__byline-name {

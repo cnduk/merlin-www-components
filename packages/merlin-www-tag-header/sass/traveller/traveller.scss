@@ -8,15 +8,27 @@
 
 .tg-header {
 	margin: 32px 0;
-	padding: 0 $MOBILE_SIDE_GUTTER;
-
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-		padding: 0 $TABLET_SIDE_GUTTER;
-	}
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin: 48px 0;
-        padding: 0 $DESKTOP_SIDE_GUTTER;
+    }
+
+    &.has-hero {
+    	margin-top: 0;
+
+    	.tg-header__intro {
+    		padding: 0;
+    	}
+
+    	.tg-header__title {
+    		color: $WHITE;
+    		left: 50%;
+    		margin-bottom: 0;
+    		position: absolute;
+    		top: 50%;
+    		transform: translate(-50%, -50%);
+    		white-space: nowrap;
+    	}
     }
 }
 
@@ -117,7 +129,73 @@
 	margin: 0 auto;
 }
 
-.tg-header__intro {}
+.tg-header__hero {
+	background-color: $CAPE-HAZE;
+	margin: 0 auto;
+	padding-top: 56.25%;
+	position: relative;
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		padding-top: 30%;
+	}
+
+	&:after {
+		background-color: rgba($MUSTASAARI, 0.2);
+		bottom: 0;
+		content: '';
+		height: 100%;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 100%;
+
+		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+			background-color: rgba($MUSTASAARI, 0.15);
+		}
+	}
+
+    img {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.tg-header__hero-credit {
+	@include font("PROXIMA NOVA CONDENSED", 12px, 400, 12px);
+	bottom: 20px;
+	color: $WHITE;
+	letter-spacing: 1px;
+	position: absolute;
+	right: 50%;
+	text-transform: uppercase;
+	transform: translateX(50%);
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		bottom: 4px;
+		right: 4px;
+		transform: none;
+	}
+}
+
+.tg-header__intro {
+	padding: 0 $MOBILE_SIDE_GUTTER;
+	position: relative;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+		padding: 0 $TABLET_SIDE_GUTTER;
+	}
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0 $DESKTOP_SIDE_GUTTER;
+    }
+}
+
 .tg-header__intro__image {}
 
 .tg-header__title {
@@ -214,11 +292,17 @@
 	color: $MUSTASAARI;
 	margin: 12px auto 24px auto;
 	max-width: 800px;
+	padding: 0 $MOBILE_SIDE_GUTTER;
 	text-align: center;
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		margin-top: 16px;
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+		padding: 0 $TABLET_SIDE_GUTTER;
 	}
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		margin-top: 16px;
+        padding: 0 $DESKTOP_SIDE_GUTTER;
+    }
 
 	.bb-a {
 	    color: inherit;
@@ -251,10 +335,16 @@
 
 .tg-header__topic-strip {
 	margin: 12px auto;
+	padding: 0 $MOBILE_SIDE_GUTTER;
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		margin: 24px auto;
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+		padding: 0 $TABLET_SIDE_GUTTER;
 	}
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		margin: 24px auto;
+        padding: 0 $DESKTOP_SIDE_GUTTER;
+    }
 
 	.c-topic-strip {
 		text-align: center;
@@ -273,8 +363,14 @@
 .tg-header__cards {
 	margin: 32px auto;
 	max-width: $MAXIMUM_PAGE_WIDTH;
+	padding: 0 $MOBILE_SIDE_GUTTER;
+
+	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+		padding: 0 $TABLET_SIDE_GUTTER;
+	}
 
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 	    margin: 48px auto;
+        padding: 0 $DESKTOP_SIDE_GUTTER;
 	}
 }

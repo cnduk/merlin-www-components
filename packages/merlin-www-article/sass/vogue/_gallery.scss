@@ -9,24 +9,22 @@
 
 .a-gallery__wrapper {}
 
+.a-gallery__message {
+    margin-bottom: 40px;
 
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 60px;
+    }
+}
 
+.a-gallery__message-btn {
+    @include button-single();
+    @include button-single-light();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
 
 .a-gallery__thumbnail-list {
     margin-left: 0px;
@@ -37,6 +35,7 @@
         margin-right: -10px;
     }
 }
+
 li.a-gallery__thumbnail {
     box-sizing: border-box;
     margin: 2px 0 0 0;
@@ -51,9 +50,11 @@ li.a-gallery__thumbnail {
         padding: 0 10px;
     }
 }
+
 .a-gallery__thumbnail-image {
     background-color: $COLOUR_BG_ADVERT;
 }
+
 .a-gallery__thumbnail-hover {
     background-color: rgba(0, 0, 0, 0.38);
     left: 1px;
@@ -74,12 +75,6 @@ li.a-gallery__thumbnail {
         }
     }
 }
-
-
-
-
-
-
 
 li.a-gallery__image-listitem {
     margin-bottom: $MARGIN_LARGE;
@@ -105,14 +100,6 @@ li.a-gallery__image-listitem {
     }
 }
 
-
-
-
-
-
-
-
-
 .g-image-nav {
     padding: $PADDING_SMALL $PADDING_X_SMALL;
 }
@@ -121,13 +108,16 @@ li.a-gallery__image-listitem {
 .g-image-nav__btn {
     background-color: $COLOUR_BG_PAGE;
 }
+
 .g-image-nav__btn--previous {
     padding-bottom: $PADDING_SMALL;
 }
+
 .g-image-nav__btn--next {
     border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT1;
     padding-top: $PADDING_SMALL;
 }
+
 .g-image-nav__btn[disabled] {
     svg {
         fill: $COLOR_BUTTON_ACTION_INACTIVE;

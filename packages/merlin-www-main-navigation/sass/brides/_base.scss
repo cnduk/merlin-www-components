@@ -1,0 +1,346 @@
+.has-open-menu {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.n-main {
+    background-color: $white;
+    z-index: 10;
+}
+
+.n-main__wrapper {
+
+}
+
+.n-main__header {
+    height: 140px;
+    text-align: center;
+}
+
+.n-main__nav {
+    height: 60px;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+}
+
+.n-main__nav-logo {
+    height: 60px;
+    left: 20px;
+    overflow: hidden;
+    position: fixed;
+    width: 110px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        left: 30px;
+    }
+
+    a {
+        bottom: 0;
+        height: 60px;
+        line-height: 60px;
+        position: absolute;
+        transition: bottom 0.2s ease-in-out;
+        vertical-align: middle;
+        width: 110px;
+    }
+
+    svg, img {
+        fill: $mine-shaft;
+        height: 60px;
+        width: 100%;
+    }
+
+    &.is-hidden {
+        a {
+            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+                bottom: -60px;
+            }
+        }
+    }
+
+    @include min-screen($MAXIMUM_PAGE_WIDTH + 60px) {
+        left: auto;
+    }
+}
+
+.n-main__nav-logo--takeover {
+    svg, img {
+
+    }
+}
+
+.n-main__nav-title {
+    @include font("MILLER_DISPLAY", 18px, 600, 60px);
+    color: $mine-shaft;
+    display: none;
+    left: 180px;
+    letter-spacing: 0px;
+    overflow: hidden;
+    position: fixed;
+    right: 90px;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    @include min-screen(600px) {
+        display: block;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        // left: 162px;
+    }
+
+    @include min-screen($MAXIMUM_PAGE_WIDTH + 60px) {
+        position: absolute;
+        left: 150px;
+    }
+}
+
+
+.n-main__list-item {
+    position: relative;
+    vertical-align: top;
+
+    & + .n-main__list-item {
+        &:before {
+            background: $mine-shaft;
+            content: "";
+            display: block;
+            height: 3px;
+            left: 0;
+            position: absolute;
+            margin-left: -1.5px;
+            margin-top: 28px;
+            transform: rotate(45deg);
+            width: 3px;
+        }
+    }
+}
+.n-gallery-nav {
+    .n-main__list-item + .n-main__list-item {
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.n-main__nav-link {
+    @include font("MILLER_DISPLAY", 15px, 400, 15px);
+    box-sizing: border-box;
+    color: $mine-shaft;
+    display: inline-block;
+    height: 60px;
+    letter-spacing: 2px;
+    margin: 0 19px;
+    text-transform: uppercase;
+
+    span {
+        display: inline-block;
+        height: 60px;
+        line-height: 63px;
+    }
+
+    &:hover{
+        color: $silver-chalice;
+    }
+}
+
+.n-main__sticker {
+    z-index: 3;
+
+    &:before {
+        @include vendor-prefix(transform, translateX(-50%));
+        background-color: $mercury;
+        top: 0;
+        content: '';
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        width: 100vw;
+    }
+}
+
+.n-main__sticker-child {
+    background-color: $white;
+
+    &:before {
+        @include vendor-prefix(transform, translateX(-50%));
+        background-color: $mercury;
+        bottom: 0;
+        content: '';
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        width: 100vw;
+    }
+}
+
+.n-main__nav-hamburger {
+    border-left: 1px solid $mercury;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    width: 60px;
+
+    .n-main__nav-hamburger__icon {
+        cursor: pointer;
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        width: 60px;
+
+        svg {
+            display: inline-block;
+            fill: $mine-shaft;
+            height: 24px;
+            line-height: 60px;
+            vertical-align: middle;
+        }
+    }
+
+    .n-main__nav-hamburger__close-icon {
+        cursor: pointer;
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        width: 60px;
+
+        svg {
+            display: inline-block;
+            fill: $mine-shaft;
+            height: 20px;
+            line-height: 60px;
+            vertical-align: middle;
+        }
+    }
+}
+
+.n-main__nav-search {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        border-left: 1px solid $mercury;
+    }
+
+    @include min-screen($MAXIMUM_PAGE_WIDTH + 1) {
+        border-right: 1px solid $mercury;
+    }
+
+    display: inline-block;
+    float: right;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    width: 60px;
+
+    .n-main__nav-search__icon {
+        background-color: transparent;
+        cursor: pointer;
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        width: 60px;
+
+        svg {
+            display: inline-block;
+            fill: $mine-shaft;
+            height: 20px;
+            line-height: 60px;
+            vertical-align: middle;
+        }
+    }
+
+    .n-main__nav-search__close-icon {
+        background-color: transparent;
+        cursor: pointer;
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        width: 60px;
+
+        svg {
+            display: inline-block;
+            fill: $mine-shaft;
+            height: 20px;
+            line-height: 60px;
+            vertical-align: middle;
+        }
+    }
+}
+
+.n-menu {
+    background-color: $white;
+    -webkit-overflow-scrolling: touch;
+
+    &.is-visible {
+        bottom: 0;
+        overflow: auto;
+        position: fixed;
+        top: 60px;
+        width: 100%;
+        z-index: 2;
+    }
+}
+
+.n-menu__top-stories {
+    .c-top-stories {
+        display: block;
+    }
+
+    .c-top-stories__overflow {
+        padding-left: 20px;
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            padding-left: 30px;
+        }
+    }
+}
+
+.n-menu__nav {
+    margin-bottom: 20px;
+
+    .n-menu__nav__wrapper {
+        margin: 0 20px;
+        overflow: hidden;
+
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            margin: 0 30px;
+        }
+    }
+
+    a {
+        .n-menu__nav-item {
+            border-bottom: 1px solid $mercury;
+            float: left;
+            height: 60px;
+            position: relative;
+            width: 100%;
+
+            .n-menu__nav-link {
+                @include font("MILLER_DISPLAY", 18px, 400, 18px);
+                @include vendor-prefix(transform, translateY(-50%));
+                color: $mine-shaft;
+                letter-spacing: 2px;
+                position: absolute;
+                text-transform: uppercase;
+                top: 50%;
+                word-break: break-word;
+            }
+
+            &--more {
+                border-bottom: none;
+                height: 45px;
+                width: 50%;
+
+                .n-menu__nav-link {
+                    @include font-size(15px);
+                    @include line-height(15px);
+                    @include vendor-prefix(transform, none);
+                    bottom: 0;
+                    top: initial;
+                }
+            }
+        }
+    }
+}

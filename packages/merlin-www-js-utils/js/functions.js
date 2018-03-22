@@ -704,6 +704,23 @@ export function isObject(src){
 }
 
 /**
+ * Checks if the object is a plain object
+ * @param  {*}  o
+ * @return {Boolean}
+ */
+export function isPlainObject(o) {
+    if (o !== null && typeof o === 'object') {
+        if (typeof Object.getPrototypeOf === 'function') {
+            var proto = Object.getPrototypeOf(o);
+            return proto === Object.prototype || proto === null;
+        }
+        return Object.prototype.toString.call(o) === '[object Object]';
+    }
+
+    return false;
+}
+
+/**
  * Checks if the placement is a splash slot
  * @param  {String}  placement
  * @return {Boolean}
@@ -1124,4 +1141,23 @@ export function updateQueryString(url, args){
     var hostUrl = getUrlHost(url);
     var querystring = getQueryString(currentArgs);
     return hostUrl + '?' + querystring;
+}
+
+
+/**
+ * Transfer any query arguments from the current url to the one specified
+ * @param  {String} url
+ * @return {String}     url with query arguments
+ */
+export function transferQueryArgs(url){
+    // Strip off any current ones from the url
+    var newUrl = getUrlHost(url);
+    var queryArgs = location.href.split('?');
+
+    if(queryArgs.length > 1){
+        queryArgs.shift();
+        newUrl = newUrl + '?' + queryArgs.join('&');
+    }
+
+    return newUrl;
 }

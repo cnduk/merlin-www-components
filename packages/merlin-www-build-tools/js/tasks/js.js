@@ -1,4 +1,5 @@
 'use strict';
+/* globals __dirname */
 
 const fs = require('fs');
 const path = require('path');
@@ -13,14 +14,15 @@ const utils = require('../utils');
 const DYNAMIC_CONFIG_URL = /\{\{ DYNAMIC_CONFIG_URL \}\}/;
 const ENV = utils.getEnvironment();
 
+/* eslint-disable no-unused-vars */
 module.exports = function taskJsExport(taskConfig, browserSync){
-
+/* eslint-enable no-unused-vars */
     const pluginDir = fs.realpathSync(path.resolve(
         __dirname,
         '..',
         '..',
         'node_modules'
-    ))
+    ));
 
     return function taskJs(){
 
@@ -35,7 +37,9 @@ module.exports = function taskJsExport(taskConfig, browserSync){
                         var configKey = 'default';
                         try {
                             configKey = taskConfig.package.cnOptions.brandConfig;
+                        /* eslint-disable no-empty */
                         } catch(err){}
+                        /* eslint-enable no-empty */
                         // Check if the value is undefined
                         configKey = configKey === undefined ? 'default' : configKey;
                         ctx.request = `./${configKey}`;
@@ -44,7 +48,7 @@ module.exports = function taskJsExport(taskConfig, browserSync){
                     name: 'core',
                     filename: 'core.js'
                 })
-            ]
+            ];
         } else {
             outputFile = '[name].min.js';
             plugins = [
@@ -53,7 +57,9 @@ module.exports = function taskJsExport(taskConfig, browserSync){
                         var configKey = 'default';
                         try {
                             configKey = taskConfig.package.cnOptions.brandConfig;
+                        /* eslint-disable no-empty */
                         } catch(err){}
+                        /* eslint-enable no-empty */
                         // Check if the value is undefined
                         configKey = configKey === undefined ? 'default' : configKey;
                         ctx.request = `./${configKey}`;
@@ -66,7 +72,7 @@ module.exports = function taskJsExport(taskConfig, browserSync){
                 new webpack.optimize.UglifyJsPlugin({
                     sourceMap: true
                 })
-            ]
+            ];
         }
 
         const webpackConfig = {
@@ -82,11 +88,11 @@ module.exports = function taskJsExport(taskConfig, browserSync){
                 'filename': outputFile,
                 'path': taskConfig.js.dest
             },
-            devtool: "source-map",
-            "resolveLoader": {
-                "modules": [
+            devtool: 'source-map',
+            resolveLoader: {
+                modules: [
                     pluginDir,
-                    "node_modules"
+                    'node_modules'
                 ]
             }
         };
@@ -95,4 +101,4 @@ module.exports = function taskJsExport(taskConfig, browserSync){
             .pipe(webpackStream(webpackConfig, webpack))
             .pipe(gulp.dest(taskConfig.js.dest));
     };
-}
+};

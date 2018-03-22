@@ -1,113 +1,33 @@
+.a-main {}
 
+.a-main--gallery {}
+.a-main--video {
+    background-color: $white;
+    overflow: hidden;
+
+    .a-body__content {
+        padding-left: 0;
+    }
+}
+
+.a-body {
+    margin: 32px 0;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 48px 0;
+    }
+}
+.a-body--gallery {}
+.a-body--video {
+    margin: 30px 0 40px 0;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 40px 0;
+    }
+}
 .a-body__clear {
     clear: both;
 }
 
-// Im not sure about this
-.a-body__content {
-    > p:first-child {
-        margin-top: 0;
-    }
-}
-
-.a-gallery {
-
-}
-
-.a-footer--gallery {
-
-}
-
-.a-main {
-    margin: 0 auto;
-    margin-top: 30px;
-    @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT) {
-        margin-top: 60px;
-    }
-    // max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
-    min-height: 600px; //600px as a double sky might be in the article
-    position: relative;
-}
-
-.a-main--gallery {
-    max-width: initial;
-    overflow-y: hidden;
-
-    .a-gallery {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: $MAXIMUM_PAGE_WIDTH;
-        // max-width: $ARTICLE_TOTAL + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
-    }
-}
-
-.a-infinite {
-    &.is-closed {
-        // This we want to hide:
-        //  - .g-gallery-menu
-        //  - everything but first 3 images in gallery
-        //  - share
-        //
-        // We force things to hide to avoid images from being loaded
-        .a-gallery__nav,
-        .a-gallery__section .a-gallery__images:nth-of-type( n + 6 ),
-        .a-gallery__section .ad--gallery:nth-of-type( n + 1 ),
-        .a-related-tags,
-        .a-footer-share,
-        .a-footer {
-            display: none;
-        }
-
-        .a-infinite__message {
-            display: block;
-        }
-    }
-}
-
-.a-infinite__message {
-    display: none;
-    margin: $MOBILE_SLICE_MARGIN 0;
-    text-align: center;
-
-    @include tablet-size {
-        margin: $TABLET_SLICE_MARGIN 0;
-    }
-
-    @include desktop-size {
-        margin: $DESKTOP_SLICE_MARGIN 0;
-    }
-}
-
-.a-infinite__message-btn {
-    @include button-single;
-    @include button-single-light;
-    min-width: 150px;
-
-    &:hover {
-        @include button-single-light-hover;
-    }
-}
-
-.a-footer {}
-
-.a-body--gallery {
-    .a-body__wrapper {
-        max-width: $ARTICLE_TOTAL+110px;
-
-        @include common-large-size(){
-            padding-right: $ARTICLE_RIGHT_TOTAL+5px;
-        }
-
-        @include article-large-size(){
-            padding-right: $ARTICLE_RIGHT_TOTAL+5px;
-        }
-    }
-}
-
-.a-body--video {
-    .a-body__content {
-        box-sizing: border-box;
-        max-width: 840px + 360px;
-        padding-left: 0;
-    }
-}
+.a-body__wrapper {}
+.a-body__content {}

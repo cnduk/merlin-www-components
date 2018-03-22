@@ -138,9 +138,21 @@ export function getArticleTitle(el) {
  * Get the url of the article
  * @param  {HTMLElement} el
  * @return {String}    url of the article
+ *
+ * We switch protocol to the current one for history.replaceState.
  */
 export function getArticleUrl(el) {
-    return el.getAttribute('data-article-url');
+
+    var url = el.getAttribute('data-article-url');
+    // https:
+    if(url.substr(0, 6) === 'https:'){
+        url = url.substr(6);
+    // http:
+    } else if(url.substr(0, 5) === 'http:'){
+        url = url.substr(5);
+    }
+
+    return window.location.protocol + url;
 }
 
 /**

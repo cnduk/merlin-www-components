@@ -1,0 +1,143 @@
+@import "@cnbritain/merlin-www-common:brides";
+@import "@cnbritain/merlin-www-image:brides";
+
+@import "../wireframe/wireframe";
+
+.c-superfeature {
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+    margin-top: $MOBILE_SLICE_MARGIN;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: $TABLET_SLICE_MARGIN;
+        margin-top: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+        margin-top: $DESKTOP_SLICE_MARGIN;
+    }
+
+    &:hover {
+        .c-superfeature__title {
+            span {
+                box-shadow: inset 0 -0.4em 0 0 $careys-pink;
+            }
+        }
+    }
+}
+
+.c-superfeature__link {}
+
+.c-superfeature__images {}
+.c-superfeature__image {}
+
+.c-superfeature__image__wrapper {
+    background-color: $mercury;
+}
+
+.c-superfeature__image-custom {
+    //(height / width) * 100%
+    padding-top: 41.6666%;
+    position: relative;
+
+    .c-superfeature__image__wrapper img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.c-superfeature__content {
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 20px 20px 0 20px;
+    text-align: center;
+
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        padding: 40px;
+    }
+}
+
+.c-superfeature__tag {
+    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
+    color: $mine-shaft;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+    margin-top: 0;
+    text-transform: uppercase;
+
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        margin-bottom: 15px;
+    }
+}
+
+.c-superfeature__title {
+    @include font("MILLER_DISPLAY", 25px, 700, 27px);
+    color: $mine-shaft;
+    letter-spacing: 0.5px;
+    margin: 7px 0 10px 0;
+
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        @include font-size(50px);
+        @include line-height(55px);
+        letter-spacing: 0px;
+        margin: 15px 0 20px 0;
+    }
+}
+
+.c-superfeature__teaser {
+    display: none;
+}
+
+.c-superfeature__byline {
+    @include font("BRANDON GROTESQUE", 10px, null, 10px);
+    color: $mine-shaft;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    text-transform: uppercase;
+
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        margin-bottom: 7px;
+        margin-top: 15px;
+    }
+}
+
+.c-superfeature__byline--sponsorship {}
+.c-superfeature__byline-prefix {}
+.c-superfeature__byline-name {
+    @include font-weight(700);
+}
+
+ul.c-superfeature__meta {
+    @include font("BRANDON GROTESQUE", 0px, 400, 10px);
+    color: $dove-gray;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    text-transform: uppercase;
+
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        margin-top: 7px;
+    }
+}
+
+li.c-superfeature__meta-item {
+    @include font("BRANDON GROTESQUE", 10px, 400, 10px);
+    color: $dove-gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    border-right: 1px solid $silver;
+    margin-right: 7px;
+    padding-right: 7px;
+
+    &:last-child {
+        border-right: none;
+        margin-right: 0;
+        padding-right: 0;
+    }
+}

@@ -69,7 +69,12 @@
 .c-feature__teaser {
     @include font("BRUTAL", 15px, null, 17px);
     color: $black;
+    display: none;
     margin: 10px auto;
+
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+        display: block;
+    }
 }
 
 .c-feature__title + *:not(.c-feature__teaser),
@@ -94,6 +99,7 @@
 .c-feature__byline-prefix {
     @include font("EXCHANGE WEB", 11px);
     font-style: italic;
+    margin-right: 3px;
 }
 
 .c-feature__byline-name {

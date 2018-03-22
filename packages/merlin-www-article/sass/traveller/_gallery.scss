@@ -9,6 +9,23 @@
     }
 }
 
+.a-gallery__message {
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: $TABLET_SLICE_MARGIN;
+    }
+}
+
+.a-gallery__message-btn {
+    @include button-single();
+    @include button-single-light();
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
+
 .g-image-nav {
     display: none;
     width: $MOBILE_SIDE_GUTTER;

@@ -2,35 +2,70 @@
 // Cover
 // -------------------- //
 @mixin card-cover() {
-    @include card-portrait;
+    .c-card__obj {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .c-card__obj__header,
+    .c-card__obj__body {
+        display: flex;
+        flex-direction: column;
+        vertical-align: inherit;
+        width: 100%;
+    }
+
+    .c-card__header,
+    .c-card__footer {
+        display: flex;
+        flex-direction: column;
+    }
+
     .c-card__image--custom {
-        padding-top: 131.7307692%;
+        padding-top: 135.8064516%;
     }
-    .c-card__title {
-        margin: 15px 0 0;
-        text-align: center;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        &:hover {
+            .c-card__title {
+                background-color: $astronaut;
+                color: $azalea;
+
+                span {
+                    box-shadow: none;
+                }
+            }
+        }
     }
 }
+
 @mixin card-cover-small() {
-    @include card-portrait-small;
     .c-card__title {
-        @include font('GRAPHIK', 15px, 400, null, 20);
-        padding-bottom: 0;
+        @include font("GRAPHIK", 10px, 600, 30px);
+        background-color: $azalea;
+        color: $astronaut;
+        height: 30px;
+        letter-spacing: 1.5px;
+        text-align: center;
+        text-transform: uppercase;
     }
 }
+
 @mixin card-cover-large() {
-    @include card-portrait-large;
     .c-card__title {
-        @include font('GRAPHIK', 17px, 400, null, 20);
-        padding-bottom: 20px;
+        @include font-size(13px);
+        @include line-height(40px);
+        height: 40px;
     }
 }
 
 .c-card--cover {
-    @include card-cover;
-    @include card-cover-small;
-    @include min-screen($CARD_SWITCHER_WIDTH) {
-        @include card-cover-large;
+    @include card-cover();
+    @include card-cover-small();
+
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+        @include card-cover-large();
     }
 }
 

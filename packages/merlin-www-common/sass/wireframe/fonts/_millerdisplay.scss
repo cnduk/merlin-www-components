@@ -68,10 +68,9 @@
 
 
 // Font configs
-$_FONT_FAMILY: MillerDisplay, sans-serif;
+$_FONT_FAMILY: MillerDisplay, serif;
 $_FONT_MILLER_DISPLAY: map-merge($FONT_GROUP_DEFAULT, (
     'FAMILY': $_FONT_FAMILY,
-    'LETTER SPACING': 0.02em,
     'LINE HEIGHT': 1em
 ));
 $FONT_GROUPS: map-merge($FONT_GROUPS, ('MILLER_DISPLAY': $_FONT_MILLER_DISPLAY));

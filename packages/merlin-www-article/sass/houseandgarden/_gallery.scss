@@ -9,6 +9,23 @@
     }
 }
 
+.a-gallery__message {
+    margin-bottom: 40px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 60px;
+    }
+}
+
+.a-gallery__message-btn {
+    @include button-single();
+    @include button-single-light();
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
+
 .g-image-nav {
     width: $MOBILE_SIDE_GUTTER;
 
@@ -46,7 +63,7 @@
 
 .g-image-nav__btn[disabled] {
     svg {
-        fill: $PORCELAIN;
+
     }
 }
 
@@ -54,10 +71,10 @@
 
 ul.a-gallery__image-list {}
 li.a-gallery__image-listitem {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: 40px;
+        margin-bottom: 60px;
     }
 }
 
@@ -88,13 +105,13 @@ li.a-gallery__thumbnail {
 
 .a-gallery__thumbnail-image {}
 .a-gallery__thumbnail-hover {
-    background-color: rgba($BLACK, 0.2);
+    background-color: rgba($black, 0.2);
     left: 2px;
     right: 2px;
     width: auto;
 
     svg {
-        fill: $WHITE;
+        fill: $white;
         width: 38px;
     }
 

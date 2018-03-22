@@ -1,0 +1,48 @@
+@import "@cnbritain/merlin-www-common:houseandgarden";
+@import "@cnbritain/merlin-www-buttons:houseandgarden";
+
+.a-podcast {
+    margin: 40px 0;
+}
+
+.a-podcast__player {
+    margin-bottom: 20px;
+    max-width: 797px;
+    width: 100%;
+}
+
+.a-podcast__list {
+    overflow: hidden;
+}
+
+.a-podcast__list-item {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+        float: left;
+
+        &:not(:last-child) {
+            margin-bottom: 0;
+            margin-right: 10px;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.a-podcast__btn {
+    @include button-single();
+    @include button-single-light();
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+        width: auto;
+    }
+}

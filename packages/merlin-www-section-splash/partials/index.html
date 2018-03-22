@@ -30,20 +30,20 @@
 	        	            <h3 class="c-splash-hero__title"><span>{{ data.title }}</span></h3>
 	        	        {{/ data.title }}
 
-	        	        {{# data.sponsor }}
+	        	        {{# state.has_sponsor }}
 	        	            <p class="c-splash-hero__byline c-splash-hero__byline--sponsorship {{ style.cls }}">
-	        	                <span class="c-splash-hero__byline-prefix">In partnership with </span>
-	        	                <span class="c-splash-hero__byline-name">{{ data.title }}</span>
+	        	                <span class="c-splash-hero__byline-prefix">{{ translation.sponsor_prefix }} </span>
+	        	                <span class="c-splash-hero__byline-name">{{ data.sponsor.data.title }}</span>
 	        	            </p>
-	        	        {{/ data.sponsor }}
-	        	        {{^ data.sponsor }}
+	        	        {{/ state.has_sponsor }}
+	        	        {{^ state.has_sponsor }}
 	        	            {{# data.byline }}
 	        	                <p class="c-splash-hero__byline">
-	        	                    <span class="c-splash-hero__byline-prefix">By</span>
+	        	                    <span class="c-splash-hero__byline-prefix">{{ translation.byline_prefix }}</span>
 	        	                    <span class="c-splash-hero__byline-name">{{ data.byline }}</span>
 	        	                </p>
 	        	            {{/ data.byline }}
-	        	        {{/ data.sponsor }}
+	        	        {{/ state.has_sponsor }}
 
 	        	        {{# data.meta_list }}
 	        	            <ul class="global__list-reset c-splash-hero__meta {{ style.cls }}">

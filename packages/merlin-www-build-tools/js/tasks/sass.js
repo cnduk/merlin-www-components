@@ -1,6 +1,4 @@
-"use strict";
-
-const path = require('path');
+'use strict';
 
 const gulp = require('gulp');
 const sass = require('gulp-sass');
@@ -39,8 +37,8 @@ module.exports = function taskSassExport(taskConfig, browserSync){
                 .pipe(sass.sync(sassConfig).on('error', sass.logError))
                 .pipe(autoprefixer({
                     browsers: [
-                        "last 2 versions",
-                        "ie >= 10"
+                        'last 2 versions',
+                        'ie >= 10'
                     ]
                 }))
                 .pipe(rename(renameConfig))
@@ -57,4 +55,4 @@ module.exports = function taskSassExport(taskConfig, browserSync){
         return merge.apply(null, streams);
 
     };
-}
+};

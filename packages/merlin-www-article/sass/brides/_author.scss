@@ -1,0 +1,88 @@
+.a-author {}
+
+.a-author__image {
+    border-radius: 50%;
+    height: 80px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    width: 80px;
+
+    &:before {
+        background-color: $silver;
+        border-radius: 50%;
+        bottom: 0;
+        content: '';
+        height: 80px;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80px;
+        z-index: -1;
+    }
+
+    img {
+        border-radius: 50%;
+        height: 80px;
+        overflow: hidden;
+        width: 80px;
+    }
+}
+
+.a-author__byline {
+    @include font("BRANDON GROTESQUE", 10px, 400, 10px);
+    color: $mine-shaft;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    text-transform: uppercase;
+
+    a {
+        color: $mine-shaft;
+    }
+
+    .a-author__byline-name {
+        @include font("BRANDON GROTESQUE", 10px, 700, 10px);
+        letter-spacing: 1px;
+    }
+
+    .a-author__byline-prefix,
+    .a-author__byline-conjunction {
+        color: $dove-gray;
+    }
+}
+
+.a-author__bio {
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+    p {
+        @include font("MILLER_DISPLAY", 14px, 400, 19px);
+        color: $mine-shaft;
+        letter-spacing: 0px;
+        margin: 0 0 8px 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    a {
+        color: inherit;
+    }
+}
+
+.a-author__separator {
+    display: none;
+}
+
+.a-author__article-date {
+    @include font("BRANDON GROTESQUE", 10px, 400, 10px);
+    color: $dove-gray;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    text-transform: uppercase;
+}

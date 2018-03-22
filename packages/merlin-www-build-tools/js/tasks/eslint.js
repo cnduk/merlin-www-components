@@ -2,46 +2,47 @@
 
 const gulp = require('gulp');
 const eslint = require('gulp-eslint');
-
+/* eslint-disable no-unused-vars */
 module.exports = function taskEsLintExport(taskConfig, browserSync){
-    return function taskEsLint(done){
+/* eslint-enable no-unused-vars */
+    return function taskEsLint(){
         return gulp.src(taskConfig.eslint.src)
             .pipe(eslint({
-                "env": {
-                    "browser": true,
-                    "commonjs": true,
-                    "es6": true
+                env: {
+                    browser: true,
+                    commonjs: true,
+                    es6: true
                 },
-                "extends": "eslint:recommended",
-                "parserOptions": {
-                    "sourceType": "module"
+                extends: 'eslint:recommended',
+                parserOptions: {
+                    sourceType: 'module'
                 },
-                "rules": {
-                    "indent": [
-                        "error",
+                rules: {
+                    indent: [
+                        'error',
                         4
                     ],
-                    "linebreak-style": [
-                        "error",
-                        "unix"
+                    'linebreak-style': [
+                        'error',
+                        'unix'
                     ],
-                    "quotes": [
-                        "error",
-                        "single"
+                    quotes: [
+                        'error',
+                        'single'
                     ],
-                    "semi": [
-                        "error",
-                        "always"
+                    semi: [
+                        'error',
+                        'always'
                     ],
-                    "no-console": [
-                        "error",
+                    'no-console': [
+                        'error',
                         {
-                            "allow": ["warn", "error"]
+                            'allow': ['warn', 'error']
                         }
                     ]
                 }
             }))
-            .pipe(eslint.failAfterError())
-            .pipe(eslint.format('stylish'));
+            .pipe(eslint.format('stylish'))
+            .pipe(eslint.failAfterError());
     };
-}
+};

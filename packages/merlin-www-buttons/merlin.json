@@ -1,35 +1,35 @@
 {
-    "name": "@cnbritain/merlin-www-buttons", 
-    "js": {}, 
+    "name": "@cnbritain/merlin-www-buttons",
+    "js": {},
     "themes": {
-        "gq": "sass/gq/gq.scss", 
-        "tatler": "sass/tatler/tatler.scss", 
-        "wireframe": "sass/wireframe/wireframe.scss", 
-        "glamour": "sass/glamour/glamour.scss", 
-        "bystander": "sass/bystander/bystander.scss", 
-        "wired": "sass/wired/wired.scss", 
-        "missvogue": "sass/missvogue/missvogue.scss", 
+        "gq": "sass/gq/gq.scss",
+        "tatler": "sass/tatler/tatler.scss",
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "bystander": "sass/bystander/bystander.scss",
+        "wired": "sass/wired/wired.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
         "vogue": "sass/vogue/vogue.scss"
-    }, 
+    },
     "partials": {
         "button": "templates/button.html"
-    }, 
+    },
     "dependencies": [
         "@cnbritain/merlin-www-common"
-    ], 
-    "currentTheme": null, 
-    "main": "button", 
+    ],
+    "currentTheme": null,
+    "main": "button",
     "data": {
-        "share-dark": "demo/data/share-dark.json", 
-        "group-light": "demo/data/group-light.json", 
-        "group": "demo/data/group.json", 
-        "share": "demo/data/share.json", 
-        "top-stories": "demo/data/top-stories.json", 
-        "single": "demo/data/single.json", 
-        "single-light": "demo/data/single-light.json", 
-        "related": "demo/data/related.json", 
-        "group-dark": "demo/data/group-dark.json", 
-        "share-light": "demo/data/share-light.json", 
+        "share-dark": "demo/data/share-dark.json",
+        "group-light": "demo/data/group-light.json",
+        "group": "demo/data/group.json",
+        "share": "demo/data/share.json",
+        "top-stories": "demo/data/top-stories.json",
+        "single": "demo/data/single.json",
+        "single-light": "demo/data/single-light.json",
+        "related": "demo/data/related.json",
+        "group-dark": "demo/data/group-dark.json",
+        "share-light": "demo/data/share-light.json",
         "single-dark": "demo/data/single-dark.json"
     }
 }

@@ -1,86 +1,112 @@
+
 @import '@cnbritain/merlin-www-common:glamour';
 
 @import '../wireframe/wireframe';
 @import '../wireframe/_debug';
 
-.ad__title {
-    @include font('GRAPHIK');
+.ad__main {}
 
-    margin: 0 0 5px;
+.ad__block {}
+
+.ad__title {
+    @include font('GRAPHIK', 10px, 'NORMAL', 10px);
+    color: $dune;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    padding: 0 $MOBILE_SIDE_GUTTER;
     text-align: left;
+    text-transform: uppercase;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
 }
 
-.ad--article {
+.ad__container {
+    background: $pampas;
+    padding: 20px;
+
+     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+         padding: 20px;
+     }
+}
+
+.ad--homepage {
     text-align: center;
 
     .ad__container {
-        background: $COLOUR_BG_SECONDARY;
-        padding: 20px 0;
+        background-color: transparent;
     }
 
-    .ad__title {
-        @include font('GRAPHIK', 10px, 'NORMAL');
 
-        margin: 0 0 5px;
-        padding-left: $MOBILE_SIDE_GUTTER;
-        padding-right: $MOBILE_SIDE_GUTTER;
-        text-align: left;
-        text-transform: uppercase;
-    }
+    &.ad--native-large {
+        text-align: inherit;
 
-    @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT) {
-        .ad__title {
-            padding-left: $TABLET_SIDE_GUTTER;
-            padding-right: $TABLET_SIDE_GUTTER;
+        .ad__container {
+            padding: 0;
         }
     }
 
-    @include min-screen(940px) {
+    &:not(.is-hidden) {
+        & + .c-splash-section {
+            .c-splash-hero {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.ad--article,
+.ad--gallery {
+    text-align: center;
+}
+
+.ad--article-header {}
+
+.ad--article-video {
+    .ad__container {
+        background-color: $advert-dark;
+    }
+}
+
+.ad--article-rail {
+    margin-bottom: 40px;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    margin-top: 40px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        position: absolute;
+        margin: 0;
+        right: 0;
+        width: 300px;
+
         .ad__container {
             background: transparent;
             padding: 0;
         }
 
-        .ad__title {
-            display: none;
+        .ad__block {
+            margin: -20px 0;
+            padding: 20px 0;
         }
     }
 }
 
-.ad--article-header {
-    margin-bottom: 30px;
-    margin-top: 0;
-    text-align: center;
-
-    .ad__container {
-        background: $COLOUR_BG_AD;
-        padding: 20px 0;
-    }
-
-    @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT) {
-        margin-bottom: 60px;
-        margin-top: 0;
-    }
-}
-
-.ad--article-rail {
-    margin: 40px (-$MOBILE_SIDE_GUTTER);
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
-        margin-left: -$TABLET_SIDE_GUTTER;
-        margin-right: -$TABLET_SIDE_GUTTER;
-    }
-
-    @include min-screen( $DESKTOP_SIDE_GUTTER_BREAKPOINT ){
-        position: absolute;
-        right: 0;
-        margin: 0;
-        width: 300px;
-    }
-}
-
 .ad--article-rail-top {
-    @include min-screen( $DESKTOP_SIDE_GUTTER_BREAKPOINT ){
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         position: absolute;
         right: 0;
         top: 0;
@@ -88,51 +114,36 @@
 }
 
 .ad--article-inline {
-    margin: 45px (-$MOBILE_SIDE_GUTTER);
+    margin-bottom: 40px;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    margin-top: 40px;
 
-    @include min-screen(700px) {
-        margin: 40px (-$TABLET_SIDE_GUTTER);
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen(940px) {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin-left: 0;
         margin-right: 0;
-
-        .ad__container {
-            padding: 20px;
-        }
-
-        .ad__title {
-            display: block;
-            padding-left: 0;
-        }
     }
-}
-
-.ad--article-video {
-    margin-bottom: 0;
-
-    .ad__container {
-        background-color: #131313;
-    }
-}
-
-.ad--gallery-inline {
-    cursor: pointer;
-    padding-bottom: 60px;
-    text-align: center;
 }
 
 .ad--gallery-side {
     display: none;
-    margin: 0 auto 60px;
-    width: 300px;
+
+    .ad__container {
+        background-color: transparent;
+        padding: 0;
+    }
 
     @include min-screen(940px) {
         display: block;
-        margin-bottom: 0;
+        margin: 0 auto 60px auto;
         position: absolute;
         right: 0;
+        width: 300px;
     }
 }
 
@@ -142,189 +153,59 @@
     max-width: 100%;
 }
 
-.ad--homepage {
+.ad--gallery-inline {
+    cursor: pointer;
+    margin: 40px (-$MOBILE_SIDE_GUTTER);
     text-align: center;
-
-    &:not(.is-hidden) .ad__block {
-        background: $COLOUR_BG_AD;
-        margin-bottom: 40px;
-        margin-top: 0;
-        padding: 20px 0;
-    }
-}
-
-.ad--homepage-top {
-    &:not(.is-hidden) .ad__block {
-        margin-top: 0;
-    }
-}
-
-.ad--show {
-    text-align: center;
-
-    .ad__container {
-        background: $COLOUR_BG_SECONDARY;
-        padding: 20px 0;
-    }
-
-    .ad__title {
-        color: $COLOUR_MAIN_SECONDARY;
-        margin: 0 0 5px;
-        padding-left: $MOBILE_SIDE_GUTTER;
-        padding-right: $MOBILE_SIDE_GUTTER;
-        text-align: left;
-    }
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        .ad__title {
-            padding-left: $TABLET_SIDE_GUTTER;
-            padding-right: $TABLET_SIDE_GUTTER;
-        }
-    }
-
-    @include min-screen(940px) {
-        .ad__container {
-            background: transparent;
-            padding: 0;
-        }
-
-        .ad__title {
-            display: none;
-        }
-    }
-}
-
-.ad--show-rail {
-    margin-bottom: 60px;
-    margin-left: -$MOBILE_SIDE_GUTTER;
-    margin-right: -$MOBILE_SIDE_GUTTER;
-    margin-top: 60px;
-
-    @include min-screen(700px) {
         margin-left: -$TABLET_SIDE_GUTTER;
         margin-right: -$TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen(940px) {
-        margin: 0;
-        position: absolute;
-        right: 0;
-        width: 300px;
-    }
-}
-
-.ad--show-rail-top {
-    @include min-screen(940px) {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-}
-
-
-.ad--show-season {
-    margin-bottom: 60px;
-    margin-left: -$MOBILE_SIDE_GUTTER;
-    margin-right: -$MOBILE_SIDE_GUTTER;
-    margin-top: 60px;
-
-    @include min-screen(700px) {
-        margin-left: -$TABLET_SIDE_GUTTER;
-        margin-right: -$TABLET_SIDE_GUTTER;
-    }
-
-    @include min-screen(940px) {
-        .ad__container {
-            background: $COLOUR_BG_SECONDARY;
-            padding: 20px 0;
-        }
-
-        .ad__title {
-            display: block;
-        }
-    }
-
-    @include min-screen($SHOWS_SEASON_HUB_LARGE_BREAKPOINT) {
-        margin: 0;
-        position: absolute;
-        right: $DESKTOP_SIDE_GUTTER;
-        top: 0;
-        width: 300px;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: 0;
+        margin-right: 0;
 
         .ad__container {
-            background: transparent;
+            background-color: transparent;
             padding: 0;
         }
-
-        .ad__title {
-            display: none;
-        }
     }
+
 }
 
 .ad--tag {
     text-align: center;
-
-    .ad__container {
-        background: $COLOUR_BG_AD;
-        padding: 20px 0;
-    }
-
-    .ad__title {
-        @include font('GRAPHIK', 10px, 'NORMAL');
-
-        margin: 0 0 5px;
-        padding-left: $MOBILE_SIDE_GUTTER;
-        padding-right: $MOBILE_SIDE_GUTTER;
-        text-align: left;
-    }
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        .ad__title {
-            padding-left: $TABLET_SIDE_GUTTER;
-            padding-right: $TABLET_SIDE_GUTTER;
-        }
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        .ad__title {
-            display: none;
-        }
-    }
 }
 
-
-
+.ad--tag-header {}
 
 .ad--tag-rail {
-    margin-bottom: 60px;
-    margin-left: -$MOBILE_SIDE_GUTTER;
-    margin-right: -$MOBILE_SIDE_GUTTER;
-    margin-top: 60px;
+    // 10px - width of card list side padding
+    margin: 40px (-$MOBILE_SIDE_GUTTER + 10) 40px (-$MOBILE_SIDE_GUTTER + 10);
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: -$TABLET_SIDE_GUTTER + 20;
-        margin-right: -$TABLET_SIDE_GUTTER + 20;
+        margin: 40px (-$TABLET_SIDE_GUTTER + 10) 40px (-$TABLET_SIDE_GUTTER + 10);
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         clear: right;
         float: right;
-        margin: 0 -340px 0 40px;
+        margin: 10px -340px 0 40px;
 
         &.stick-wrapper--fixed {
             margin-right: -40px;
         }
 
-    }
-
-    @include min-screen(940px) {
-        .ad__container {
-            background: transparent;
-            padding: 0;
+        .ad__block {
+            margin: -20px 0;
+            padding: 20px 0;
         }
-        .ad__title {
-            display: none;
+
+        .ad__container {
+            background-color: transparent;
+            padding: 0;
         }
     }
 }
@@ -337,26 +218,21 @@
     }
 }
 
-
-.ad--tag-inline,
-.ad--tag-infinite {
-    margin-bottom: 60px;
-    margin-top: 60px;
-}
-
 .ad--tag-inline {
+    padding: 0 10px;
+    position: relative;
+    margin: 5px (-$MOBILE_SIDE_GUTTER);
 
-    margin-left: -$MOBILE_SIDE_GUTTER;
-    margin-right: -$MOBILE_SIDE_GUTTER;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         margin-left: -$TABLET_SIDE_GUTTER;
         margin-right: -$TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
-        margin-left: 0;
-        margin-right: -340px;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 20px;
+        margin-left: -$DESKTOP_SIDE_GUTTER;
+        margin-right: (-$DESKTOP_SIDE_GUTTER + -340px + -10px);
+        margin-top: 20px;
 
         .ad__block {
             left: 50%;
@@ -366,12 +242,30 @@
             width: 100vw;
         }
     }
-
 }
 
+.ad--native-small,
+.ad--native-medium,
 .ad--native-large {
-    &:not(.is-hidden) .ad__block {
+    &:not(.is-hidden) .ad__container {
         background-color: transparent;
         padding: 0;
+    }
+}
+
+.ad--native-medium {
+    display: flex;
+    flex-basis: 100%;
+    height: 100%;
+    width: 100%;
+
+    .ad__block {
+        display: flex;
+        flex-basis: 100%;
+        height: 100%;
+        width: 100%;
+    }
+    .ad__container {
+        width: 100%;
     }
 }

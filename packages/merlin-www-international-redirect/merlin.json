@@ -1,56 +1,56 @@
 {
-    "name": "@cnbritain/merlin-www-international-redirect", 
+    "name": "@cnbritain/merlin-www-international-redirect",
     "demo": {
         "glamour": {
             "themes": [
-                "glamour", 
+                "glamour",
                 "bystander"
-            ], 
-            "main": "international-redirect", 
+            ],
+            "main": "international-redirect",
             "data": "glamour"
-        }, 
+        },
         "tatler": {
             "themes": [
-                "tatler", 
+                "tatler",
                 "bystander"
-            ], 
-            "main": "international-redirect", 
+            ],
+            "main": "international-redirect",
             "data": "tatler"
-        }, 
+        },
         "vogue": {
             "themes": [
-                "vogue", 
-                "missvogue", 
+                "vogue",
+                "missvogue",
                 "bystander"
-            ], 
-            "main": "international-redirect", 
+            ],
+            "main": "international-redirect",
             "data": "vogue"
         }
-    }, 
+    },
     "js": {
         "demo": "demo/demo.js"
-    }, 
+    },
     "themes": {
-        "tatler": "sass/tatler/tatler.scss", 
-        "wireframe": "sass/wireframe/wireframe.scss", 
-        "glamour": "sass/glamour/glamour.scss", 
-        "bystander": "sass/bystander/bystander.scss", 
-        "missvogue": "sass/missvogue/missvogue.scss", 
+        "tatler": "sass/tatler/tatler.scss",
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "bystander": "sass/bystander/bystander.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
         "vogue": "sass/vogue/vogue.scss"
-    }, 
+    },
     "partials": {
         "international-redirect": "templates/international-redirect.html"
-    }, 
+    },
     "dependencies": [
-        "@cnbritain/merlin-www-common", 
-        "@cnbritain/merlin-www-image", 
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-image",
         "@cnbritain/merlin-www-js-utils"
-    ], 
-    "currentTheme": null, 
-    "main": "international-redirect", 
+    ],
+    "currentTheme": null,
+    "main": "international-redirect",
     "data": {
-        "glamour": "data/glamour.json", 
-        "tatler": "data/vogue.json", 
+        "glamour": "data/glamour.json",
+        "tatler": "data/vogue.json",
         "vogue": "data/vogue.json"
     }
 }

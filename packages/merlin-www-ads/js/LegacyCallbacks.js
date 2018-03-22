@@ -4,8 +4,7 @@ import {
     addClass,
     createEventTemplate,
     getIframeFromWindow,
-    getParent,
-    getParentUntil
+    getParent
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import {
     setAdStateToStopped
@@ -13,7 +12,6 @@ import {
 import InreadAd from './InreadAd';
 import InterstitialAd from './InterstitialAd';
 import NativeAd from './NativeAd';
-import ResponsiveAd from './ResponsiveAd';
 import AdManager from './AdManager';
 
 /**
@@ -84,104 +82,6 @@ window.PromotionButtons = {
         NativeAd.render(nativeAd, json);
 
     }
-};
-
-/**
- * Responsive ads
- * ===========================================================================
- */
-
-function secureUrl(url) {
-    url = url.replace(
-        /^http:\/\/digital-assets\.condenast\.co\.uk\/co\/ads\/adbuilder/,
-        'https://cnda.condenast.co.uk/co/ads/adbuilder'
-    );
-    // For http://cnda.condenast.co.uk/co/ads/adbuilder/pausebutton.png
-    url = url.replace(/^http:\/\//, 'https://');
-    return url;
-}
-
-function isSet(obj, key) {
-    if (!obj.hasOwnProperty(key)) return false;
-    return obj[key] !== '' && obj[key] !== null && obj[key] !== undefined;
-}
-
-function secureAdSources(config) {
-
-    // Background image
-    if (isSet(config, 'backgroundImageSrc')) {
-        config.backgroundImageSrc = secureUrl(
-            config.backgroundImageSrc);
-    }
-
-    // Video
-    if (isSet(config, 'videoSrcMp4')) {
-        config.videoSrcMp4 = secureUrl(config.videoSrcMp4);
-    }
-    if (isSet(config, 'videoSrcMp4Below720')) {
-        config.videoSrcMp4Below720 = secureUrl(
-            config.videoSrcMp4Below720);
-    }
-    if (isSet(config, 'videoSrcMp4Below640')) {
-        config.videoSrcMp4Below640 = secureUrl(
-            config.videoSrcMp4Below640);
-    }
-    if (isSet(config, 'videoSrcWebM')) {
-        config.videoSrcWebM = secureUrl(config.videoSrcWebM);
-    }
-
-    // Logos
-    if (isSet(config, 'logos')) {
-        config.logos.forEach(function eachLogo(logoConfig) {
-            if (isSet(logoConfig.normal, 'src')) {
-                logoConfig.normal.src = secureUrl(logoConfig.normal.src);
-            }
-        });
-    }
-
-    return config;
-}
-
-window.RESPONSIVEADS = {
-
-    /**
-     * A callback set from legacy bits. I have no clue what this is here for.
-     * @param  {Function} callback     [description]
-     * @param  {Window}   iframeWindow
-     */
-    'renderCallbackForGpt': function(callback, iframeWindow) {
-        var frameElement = getIframeFromWindow(iframeWindow);
-        var contentWindow = frameElement.contentDocument ||
-            frameElement.contentWindow.document;
-
-        frameElement.setAttribute('width', '100%');
-        callback(contentWindow.getElementsByTagName('body')[0]);
-    },
-
-    /**
-     * Turns an iframe that said it was a responsive advert, into an element.
-     * @param  {Object} adConfig
-     * @param  {HTMLElement} el
-     */
-    'renderIframeIntoElement': function(adConfig, el) {
-
-        // Update ad config to use secure urls
-        adConfig = secureAdSources(adConfig);
-
-        // Find the responsive ad
-        var elementDoc = el.ownerDocument;
-        var elementWindow = elementDoc.defaultView || elementDoc.parentWindow;
-        var elementFrame = elementWindow.frameElement;
-        var elementAd = getParentUntil(elementFrame, '.ad__container');
-        addClass(elementAd, 'ad__container--responsive');
-        var elementId = elementAd.getAttribute('id');
-
-        // Update Ad to ResponsiveAd
-        var currentAd = AdManager.slots[elementId];
-        currentAd = ResponsiveAd.inheritFrom(currentAd);
-        currentAd.render(adConfig);
-    }
-
 };
 
 /**

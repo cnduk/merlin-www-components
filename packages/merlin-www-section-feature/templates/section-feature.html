@@ -38,20 +38,20 @@
                     <p class="c-feature__teaser">{{ &data.teaser }}</p>
                 {{/ data.teaser }}
 
-                {{# data.sponsor }}
+                {{# state.has_sponsor }}
                     <p class="c-feature__byline c-feature__byline--sponsorship {{ style.cls }}">
-                        <span class="c-feature__byline-prefix">In partnership with </span>
-                        <span class="c-feature__byline-name">{{ data.title }}</span>
+                        <span class="c-feature__byline-prefix">{{ translation.sponsor_prefix }} </span>
+                        <span class="c-feature__byline-name">{{ data.sponsor.data.title }}</span>
                     </p>
-                {{/ data.sponsor }}
-                {{^ data.sponsor }}
+                {{/ state.has_sponsor }}
+                {{^ state.has_sponsor }}
                     {{# data.byline }}
                         <p class="c-feature__byline">
-                            <span class="c-feature__byline-prefix">By</span>
+                            <span class="c-feature__byline-prefix">{{ translation.byline_prefix }}</span>
                             <span class="c-feature__byline-name">{{ data.byline }}</span>
                         </p>
                     {{/ data.byline }}
-                {{/ data.sponsor }}
+                {{/ state.has_sponsor }}
 
                 {{# data.meta_list }}
                     <ul class="global__list-reset c-feature__meta {{ style.cls }}">

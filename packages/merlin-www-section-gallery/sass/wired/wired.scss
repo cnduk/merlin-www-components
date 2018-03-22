@@ -105,7 +105,12 @@ li.c-gallery__image-item {
 .c-gallery__teaser {
     @include font("BRUTAL", 15px, null, 17px);
     color: $white;
+    display: none;
     margin: 10px auto;
+
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+        display: block;
+    }
 }
 
 .c-gallery__separator {
@@ -125,6 +130,7 @@ li.c-gallery__image-item {
 .c-gallery__byline-prefix {
     @include font("EXCHANGE WEB", 11px);
     font-style: italic;
+    margin-right: 3px;
 }
 
 .c-gallery__byline-name {

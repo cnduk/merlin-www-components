@@ -2,552 +2,191 @@
 
 @import "../wireframe/wireframe";
 
-// Common curated, article recommended, magazine articles, video genre articles
-// Contains four cards
-// Goes one, two, four
-.c-card-list--c-curated,
+.c-card-list {
+    display: flex;
+}
+
 .c-card-list--a-recommended,
-.c-card-list--v-genre-articles,
+.c-card-list--c-curated,
+.c-card-list--c-splash,
+.c-card-list--c-tag,
 .c-card-list--c-video-articles,
-.c-card-list--c-tag {
-    margin: 0 -15px;
+.c-card-list--mag-articles,
+.c-card-list--s-results,
+.c-card-list--v-genre-articles {
+    flex-direction: column;
+    margin: -10px;
 
     .c-card-list__item {
-        padding: 0 15px;
-        width: 100%;
+        padding: 0 10px;
+        margin: 10px 0;
     }
-
-    @include one-column-size() {
-        .c-card-list__item + .c-card-list__item {
-            margin-top: 15px;
-
-            .c-card {
-                border-top: 1px solid $COLOUR_BORDER_SOLID;
-                padding-top: 15px;
-
-                &.c-card--dark {
-                    border-top: 1px solid #333;
-                }
-            }
-        }
-    }
-
 
     @include two-column-size() {
-        .c-card-list__item {
-            display: inline-block;
-            margin-bottom: 30px;
-            width: 50%;
+        flex-direction: row;
+        flex-wrap: wrap;
 
-            @include last(2){
-                margin-bottom: 0;
-            }
+        .c-card-list__item {
+            width: 50%;
         }
     }
 
     @include four-column-size() {
         .c-card-list__item {
-            margin-bottom: 0;
             width: 25%;
         }
     }
 }
 
-.c-card-list--s-results {
-    margin: 0 -15px;
-
-    .c-card-list__item {
-        padding: 0 15px;
-        width: 100%;
-    }
-
-    @include one-column-size() {
-        .c-card-list__item + .c-card-list__item {
-            margin-top: 15px;
-
-            .c-card {
-                border-top: 1px solid $COLOUR_BORDER_SOLID;
-                padding-top: 15px;
-
-                &.c-card--dark {
-                    border-top: 1px solid #333;
-                }
-            }
-        }
-    }
-
-
-    @include two-column-size() {
-        .c-card-list__item {
-            display: inline-block;
-            margin-bottom: 30px;
-            width: 50%;
-
-            @include last(2){
-                margin-bottom: 0;
-            }
-        }
-    }
-
-    @include four-column-size() {
-        .c-card-list__item {
-            margin-bottom: 60px;
-            width: 25%;
-
-            @include last(4){
-                margin-bottom: 0;
-            }
-        }
-    }
-}
-
-
-
-
-
-// Contains 3 cards
-// Goes one, three
-// With line inbetween
-.c-card-list--c-contributors {
-    margin: 0 -15px;
-
-    .c-card-list__item {
-        padding: 0 15px;
-        width: 100%;
-    }
-
-    @include one-column-size() {
-        .c-card-list__item + .c-card-list__item {
-            margin-top: 15px;
-
-            .c-card {
-                border-top: 1px solid $COLOUR_BORDER_SOLID;
-                padding-top: 15px;
-
-                &.c-card--dark {
-                    border-top: 1px solid #333;
-                }
-            }
-        }
-    }
-
-    @include two-column-size(){
-        .c-card-list__item {
-            display: inline-block;
-            margin-bottom: 0;
-            margin-top: 0;
-            width: 33.3%;
-        }
-    }
-}
-
-
-// Contains up to 8 cards
-// Goes one, two, four
-.c-card-list--mag-articles {
-    margin: 0 -15px;
-
-    .c-card-list__item {
-        padding: 0 15px;
-        width: 100%;
-    }
-
-    @include one-column-size() {
-        .c-card-list__item + .c-card-list__item {
-            margin-top: 15px;
-
-            .c-card {
-                border-top: 1px solid $COLOUR_BORDER_SOLID;
-                padding-top: 15px;
-
-                &.c-card--dark {
-                    border-top: 1px solid #333;
-                }
-            }
-        }
-    }
-
-
-    @include two-column-size() {
-        .c-card-list__item {
-            display: inline-block;
-            margin-bottom: 30px;
-            width: 50%;
-
-            @include last(2){
-                margin-bottom: 0;
-            }
-        }
-    }
-
-    @include four-column-size(){
-        .c-card-list__item {
-            margin-bottom: 60px;
-            width: 25%;
-
-            @include last(4){
-                margin-bottom: 0;
-            }
-        }
-    }
-}
-
-// Common tag
-// Contains 5 cards
-// Goes one, two, three, five
-// .c-card-list--c-tag {
-//     margin: 0 -20px;
-//     text-align: center;
-
-//     .c-card-list__item {
-//         padding: 0 20px;
-//         text-align: left;
-//         width: 100%;
-//     }
-
-//     @include one-column-size(){
-//         .c-card-list__item + .c-card-list__item {
-//             margin-top: 20px;
-
-//             .c-card {
-//                 border-top: 1px solid $COLOUR_BORDER_SOLID;
-//                 padding-top: 20px;
-
-//                 &.c-card--dark {
-//                     border-top: 1px solid #333;
-//                 }
-//             }
-//         }
-//     }
-
-
-//     @include two-column-size(){
-//         .c-card-list__item {
-//             display: inline-block;
-//             margin-bottom: 30px;
-//             width: 50%;
-
-//             @include last(1){
-//                 margin-bottom: 0;
-//             }
-//         }
-//     }
-
-//     @include three-column-size(){
-//         .c-card-list__item {
-//             margin-bottom: 30px;
-//             width: 33.3%;
-
-//             @include last(2){
-//                 margin-bottom: 0;
-//             }
-//         }
-//     }
-
-//     @include five-column-size(){
-//         .c-card-list__item {
-//             margin-bottom: 0;
-//             width: 20%;
-//         }
-//     }
-// }
-
-
-// Gallery recommended, common magazine articles
-// Contains 3 cards
-// Goes one, three
-.c-card-list--g-recommended {
-    margin: 0 -15px;
-
-    .c-card-list__item {
-        margin-bottom: 40px;
-        margin-top: 15px;
-        padding: 0 15px;
-        width: 100%;
-    }
-
-    @include three-column-size() {
-        .c-card-list__item {
-            display: inline-block;
-            margin-bottom: 0;
-            margin-top: 0;
-            width: 33.3%;
-        }
-    }
-}
-
-
-.c-card-list--c-magazine-articles {
-    @include tablet-size {
-        .c-card-list__item {
-            .c-card {
-                .c-card__obj {
-                    table-layout: fixed;
-                }
-
-                .c-card__obj__header {
-                    width: 70px;
-                }
-            }
-
-            .c-card__title {
-                @include font-size(17px);
-            }
-        }
-    }
-
-    .c-card-list__item + .c-card-list__item {
-        margin-top: 15px;
-
-        .c-card {
-            border-top: 1px solid $COLOUR_BORDER_SOLID;
-            padding-top: 15px;
-
-            &.c-card--dark {
-                border-top: 1px solid #333;
-            }
-        }
-
-        @include tablet-size {
-            margin-top: 20px;
-
-            .c-card {
-                border-top: none;
-                padding-top: 0;
-
-                &.c-card--dark {
-                    border-top: none;
-                }
-            }
-        }
-    }
-}
-
-
-// Magazine magazines, show summary shows
-// Contains four columns
-// Goes two, four
-.c-card-list--mag-magazines,
-.c-card-list--sh-shows {
-    margin: 0 -15px;
+.c-card-list--tg-articles {
+    display: block;
+    margin: -10px;
 
     .c-card-list__item {
         display: inline-block;
-        margin-bottom: 30px;
-        padding: 0 15px;
-        width: 50%;
+        padding: 0 10px;
+        margin: 10px 0;
+    }
+}
+
+.c-card-list--c-contributors,
+.c-card-list--tg-header-articles,
+.c-card-list--v-articles {
+    flex-direction: column;
+    margin: -10px;
+
+    .c-card-list__item {
+        padding: 0 10px;
+        margin: 10px 0;
     }
 
-    @include four-column-size(){
-        .c-card-list__item {
-            margin-bottom: 40px;
-            width: 25%;
+    @include two-column-size() {
+        flex-direction: row;
+        flex-wrap: wrap;
 
-            @include last(4){
-                margin-bottom: 0;
-            }
+        .c-card-list__item {
+            width: 50%;
+        }
+    }
+
+    @include four-column-size() {
+        .c-card-list__item {
+            width: 33.33333%;
         }
     }
 }
 
 .c-card-list--mag-magazines {
-    margin: 0 -10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: -10px;
 
     .c-card-list__item {
         padding: 0 10px;
+        margin: 10px 0;
+        width: 50%;
     }
 
     @include four-column-size() {
-        margin: 0 -15px;
-
         .c-card-list__item {
-            padding: 0 15px;
+            width: 25%;
         }
     }
 }
 
-
-// Tagpage articles, show season articles, video articles
-// This has to be done a little bit differently as an ad might be between
-// each .c-card-list__item
-// Contains one column
-// Goes one
-.c-card-list--tg-articles,
-.c-card-list--sh-articles {
+.c-card-list--c-magazine-articles {
+    flex-direction: column;
+    margin: -10px;
 
     .c-card-list__item {
-        margin-top: 15px;
-        width: 100%;
-
-        .c-card {
-            border-top: 1px solid $COLOUR_BORDER_SOLID;
-            padding-top: 15px;
-        }
-
-        @include desktop-size {
-            margin-top: 30px;
-
-            .c-card {
-                padding-top: 30px;
-            }
-        }
-
-        @include first(1){
-            margin-top: 0;
-
-            .c-card {
-                border-top: none;
-                padding-top: 0;
-            }
-        }
-
-    }
-}
-
-
-
-
-// Video articles
-// Contains three columns
-// Goes one, two, three
-.c-card-list--v-articles {
-    margin: 0 -15px;
-
-    .c-card-list__item {
-        padding: 0 15px;
-        width: 100%;
-    }
-
-    @include one-column-size(){
-        .c-card-list__item + .c-card-list__item {
-            margin-top: 15px;
-
-            .c-card {
-                border-top: 1px solid $COLOUR_BORDER_SOLID;
-                padding-top: 15px;
-
-                &.c-card--dark {
-                    border-top: 1px solid #333;
-                }
-            }
-        }
-    }
-
-
-    @include two-column-size(){
-        .c-card-list__item {
-            display: inline-block;
-            margin-bottom: 30px;
-            width: 50%;
-
-            @include last(2){
-                margin-bottom: 0;
-            }
-        }
-    }
-
-    // This is suppose to be a 4 column trigger with 33.33%
-    @include four-column-size(){
-        .c-card-list__item {
-            margin-bottom: 60px;
-            width: 33.33%;
-
-            @include last(3){
-                margin-bottom: 0;
-            }
-        }
-    }
-}
-
-
-// Tag header articles
-// Contains 3 cards
-// Goes one, two, three
-.c-card-list--tg-header-articles {
-    margin: 0 -15px;
-    text-align: center;
-
-    .c-card-list__item {
-        padding: 0 15px;
-        text-align: left;
-        width: 100%;
-    }
-
-    @include one-column-size(){
-        .c-card-list__item + .c-card-list__item {
-            margin-top: 15px;
-
-            .c-card {
-                border-top: 1px solid $COLOUR_BORDER_SOLID;
-                padding-top: 15px;
-
-                &.c-card--dark {
-                    border-top: 1px solid #333;
-                }
-            }
-        }
-    }
-
-
-    @include two-column-size(){
-        .c-card-list__item {
-            display: inline-block;
-            margin-bottom: 30px;
-            width: 50%;
-
-            @include last(1){
-                margin-bottom: 0;
-            }
-        }
-    }
-
-    @include three-column-size(){
-        .c-card-list__item {
-            margin-bottom: 0;
-            width: 33.33%;
-        }
+        padding: 0 10px;
+        margin: 10px 0;
     }
 }
 
 .c-card-list--top-stories {
+    display: block;
     white-space: nowrap;
 
     .c-card-list__item {
         display: inline-block;
+        vertical-align: top;
         white-space: normal;
+        width: 280px;
 
-        // & + .c-card-list__item {
-        //     margin-left: 20px;
-        // }
+        & + .c-card-list__item {
+            margin-left: 20px;
+        }
 
         &.is-hidden {
             height: 0;
+            margin: 0;
             overflow: hidden;
+            padding: 0;
             visibility: hidden;
             width: 0;
         }
 
-        // &:last-child {
-        //     margin-right: 20px;
-        // }
+        &:last-child {
+            margin-right: 20px;
+        }
     }
 }
 
+
 .c-card-list--v-related-articles {
+    flex-direction: column;
+    margin: -10px;
 
     .c-card-list__item {
-        @include transition(opacity 0.3s ease-out)
-        opacity: 1;
-        width: 100%;
+        padding: 0 10px;
+        margin: 13px 0;
+
+        .c-card__images {
+            &:after {
+                @include font("GRAPHIK", 10px, 600, 10px);
+                color: $white;
+                content: "Now Playing";
+                left: 50%;
+                letter-spacing: 1px;
+                opacity: 0;
+                position: absolute;
+                text-transform: uppercase;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                transition-duration: 300ms;
+                white-space: nowrap;
+            }
+        }
+
+        .c-card__image {
+            &:after {
+                background-color: rgba($dune, 0.8);
+                bottom: 0;
+                content: "";
+                height: 100%;
+                left: 0;
+                opacity: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                transition-duration: 300ms;
+                width: 100%;
+            }
+        }
 
         &.is-active {
-            opacity: 0.5;
-        }
-    }
+            .c-card__images {
+                &:after {
+                    opacity: 1;
+                }
+            }
 
-    .c-card-list__item + .c-card-list__item {
-        border-top: 1px solid $COLOUR_SEPARATOR;
-        margin-top: 20px;
-        padding-top: 20px;
+            .c-card__image {
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
     }
 }

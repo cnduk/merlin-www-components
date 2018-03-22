@@ -21,7 +21,9 @@
                 </div>
             {{/ data.link_list }}
 
-            <li class='c-footer__list-item'>&copy; Cond&eacute; Nast UK 2017</li>
+            {{# data.copyright }}
+                <li class='c-footer__list-item'>{{ &. }}</li>
+            {{/ data.copyright }}
 
             <li class='c-footer__list-item c-footer__list-item--logo'>
                 {{# data.right_logo }}

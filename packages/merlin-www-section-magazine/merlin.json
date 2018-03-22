@@ -1,32 +1,32 @@
 {
-    "name": "@cnbritain/merlin-www-section-magazine", 
+    "name": "@cnbritain/merlin-www-section-magazine",
     "js": {
         "demo": "demo/demo.js"
-    }, 
+    },
     "themes": {
-        "gq": "sass/gq/gq.scss", 
-        "tatler": "sass/tatler/tatler.scss", 
-        "wireframe": "sass/wireframe/wireframe.scss", 
-        "glamour": "sass/glamour/glamour.scss", 
-        "bystander": "sass/bystander/bystander.scss", 
-        "wired": "sass/wired/wired.scss", 
-        "missvogue": "sass/missvogue/missvogue.scss", 
+        "gq": "sass/gq/gq.scss",
+        "tatler": "sass/tatler/tatler.scss",
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "bystander": "sass/bystander/bystander.scss",
+        "wired": "sass/wired/wired.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
         "vogue": "sass/vogue/vogue.scss"
-    }, 
+    },
     "partials": {
         "section": "templates/section.html"
-    }, 
+    },
     "dependencies": [
-        "@cnbritain/merlin-www-common", 
-        "@cnbritain/merlin-www-buttons", 
-        "@cnbritain/merlin-www-image", 
-        "@cnbritain/merlin-www-card", 
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-buttons",
+        "@cnbritain/merlin-www-image",
+        "@cnbritain/merlin-www-card",
         "@cnbritain/merlin-www-card-list"
-    ], 
-    "currentTheme": null, 
-    "main": "section", 
+    ],
+    "currentTheme": null,
+    "main": "section",
     "data": {
-        "magazine-without-articles": "demo/data/magazine-without-articles.json", 
+        "magazine-without-articles": "demo/data/magazine-without-articles.json",
         "magazine-with-articles": "demo/data/magazine-with-articles.json"
     }
 }

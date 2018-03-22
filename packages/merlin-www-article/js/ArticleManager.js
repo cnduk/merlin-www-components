@@ -13,6 +13,7 @@ import {
     onPageLoad,
     removeEvent,
     throttle,
+    transferQueryArgs,
     updateQueryString
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import {
@@ -37,6 +38,7 @@ import VideoPlayer from './VideoPlayer';
 
 var INFINITE_BOTTOM_THRESHOLD = 500;
 var INFINITE_RESIZE_DEBOUNCE = 500;
+var isFirstArticle = true;
 
 function ArticleManager() {
     EventEmitter.call(this, {
@@ -107,7 +109,7 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         loadYoutubeSubscribe();
 
         // Focus and blur events
-        this._triggerFocusBlur(index);
+        isFirstArticle = false;
         this._triggerFocusBlur(index);
     },
 
@@ -116,15 +118,15 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         // Resize
         onPageLoad(this.resize.bind(this, 0));
 
-        // Scroll listener for focus and blur events
-        this._hooks.scroll = throttle(onWindowScroll, 33, this);
-        addEvent(window, 'scroll', this._hooks.scroll);
-
         // Video changes
         if (VideoPlayer !== null) {
             bubbleEvent(VideoPlayer, this, 'videoselect');
             bubbleEvent(VideoPlayer, this, 'videochange');
             VideoPlayer.on('videochange', this._onVideoChange.bind(this));
+        } else {
+            // Scroll listener for focus and blur events
+            this._hooks.scroll = throttle(onWindowScroll, 33, this);
+            addEvent(window, 'scroll', this._hooks.scroll);
         }
 
         this.on('focus', onArticleFocus);
@@ -329,6 +331,9 @@ function onInfiniteLoadComplete(e) {
     var analytics = null;
     if (responseJSON.hasOwnProperty('config_analytics') && responseJSON.config_analytics !== null) {
         analytics = responseJSON.config_analytics.data;
+        // Transfer current query arguments from the current url over to the
+        // new location value
+        analytics['location'] = transferQueryArgs(analytics['location']);
     }
 
     var simplereach = null;
@@ -357,8 +362,6 @@ function onInfiniteLoadComplete(e) {
     docFragment = null;
     addHtmlToFragment = null;
 }
-
-var isFirstArticle = true;
 
 function onArticleFocus(e) {
 

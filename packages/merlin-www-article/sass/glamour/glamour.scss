@@ -1,22 +1,37 @@
-@import '@cnbritain/merlin-www-common:glamour';
+@import "@cnbritain/merlin-www-common:glamour";
 
-@import '@cnbritain/merlin-www-bbcode:glamour';
-@import '@cnbritain/merlin-www-buttons:glamour';
-@import '@cnbritain/merlin-www-figure:glamour';
-@import '@cnbritain/merlin-www-image:glamour';
-@import '@cnbritain/merlin-www-marketing-cards:glamour';
-@import '@cnbritain/merlin-www-section-card-list:glamour';
-@import '@cnbritain/merlin-www-topic-strip:glamour';
+@import "@cnbritain/merlin-www-buttons:glamour";
+@import "@cnbritain/merlin-www-image:glamour";
+@import "@cnbritain/merlin-www-figure:glamour";
+@import "@cnbritain/merlin-www-topic-strip:glamour";
+@import "@cnbritain/merlin-www-section-card-list:glamour";
+@import "@cnbritain/merlin-www-marketing-cards:glamour";
+@import "@cnbritain/merlin-www-bbcode:glamour";
 
-@import '../wireframe/wireframe';
+// @import "../wireframe/wireframe";
 
+@import "../wireframe/_author";
 @import "./_author";
+
+@import "../wireframe/_body";
 @import "./_body";
+
+@import "../wireframe/_footer";
 @import "./_footer";
+
+@import "../wireframe/_gallery";
 @import "./_gallery";
+
 @import "./_header";
+
+@import "../wireframe/_share";
 @import "./_share";
+
+@import "../wireframe/_sidebar";
 @import "./_sidebar";
+
+@import "../wireframe/_video";
 @import "./_video";
+
 @import "./_review";
 @import "./_podcast";

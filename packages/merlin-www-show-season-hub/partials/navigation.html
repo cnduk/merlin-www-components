@@ -1,13 +1,13 @@
 <div class="sh-season-hub-viewer__nav">
     <ul class="global__list-reset sh-season-hub-viewer__tabs">
         {{# state.has_latest_shows }}
-            <li role="button" class="sh-season-hub-viewer__tabs__tab sh-season-hub-viewer__tabs__tab--latest"><label for="chkLatestShows-{{ data.id }}">Latest Shows</label></li>
+            <li role="button" class="sh-season-hub-viewer__tabs__tab sh-season-hub-viewer__tabs__tab--latest"><label for="chkLatestShows-{{ data.id }}">{{ translation.latest_show_title }}</label></li>
         {{/ state.has_latest_shows }}
         {{# state.has_highlighted_shows }}
-            <li role="button" class="sh-season-hub-viewer__tabs__tab sh-season-hub-viewer__tabs__tab--highlights"><label for="chkHighlights-{{ data.id }}">Highlights</label></li>
+            <li role="button" class="sh-season-hub-viewer__tabs__tab sh-season-hub-viewer__tabs__tab--highlights"><label for="chkHighlights-{{ data.id }}">{{ translation.highlights_title }}</label></li>
         {{/ state.has_highlighted_shows }}
         {{# state.has_a_to_z_shows }}
-            <li role="button" class="sh-season-hub-viewer__tabs__tab sh-season-hub-viewer__tabs__tab--az"><label for="chkAZ-{{ data.id }}">A-Z</label></li>
+            <li role="button" class="sh-season-hub-viewer__tabs__tab sh-season-hub-viewer__tabs__tab--az"><label for="chkAZ-{{ data.id }}">{{ translation.a_z_title }}</label></li>
         {{/ state.has_a_to_z_shows }}
     </ul>
 </div>

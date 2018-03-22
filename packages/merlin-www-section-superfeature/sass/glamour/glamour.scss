@@ -3,132 +3,175 @@
 
 @import "../wireframe/wireframe";
 
-$SUPERFEATURE_MEDIUM_VIEW: 800px;
-$SUPERFEATURE_LARGE_VIEW: 1024px;
-
 .c-superfeature {
+    // 20px added to offset box shadow
+    margin-bottom: $MOBILE_SLICE_MARGIN + 20px;
     margin-top: $MOBILE_SLICE_MARGIN;
-    margin-bottom: $MOBILE_SLICE_MARGIN;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    padding: 0;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        // 20px added to offset box shadow
+        margin-bottom: $TABLET_SLICE_MARGIN + 20px;
         margin-top: $TABLET_SLICE_MARGIN;
-        margin-bottom: $TABLET_SLICE_MARGIN;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        // 20px added to offset box shadow
+        margin-bottom: $DESKTOP_SLICE_MARGIN + 20px;
         margin-top: $DESKTOP_SLICE_MARGIN;
-        margin-bottom: $DESKTOP_SLICE_MARGIN;
     }
 
-    text-align: left;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        &:hover {
+            .c-superfeature__title {
+                span {
+                    box-shadow: inset 0 -3px 0 0 $azalea;
+                }
+            }
+        }
+    }
 }
 
+.c-superfeature__link {}
+
+.c-superfeature__images {
+    overflow: hidden;
+}
+
+.c-superfeature__images--multiple {
+    .c-superfeature__image {
+        width: 50%;
+    }
+
+    .c-superfeature__image:nth-child(n+3) {
+        display: none;
+    }
+
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        .c-superfeature__image {
+            width: 25%;
+        }
+        .c-superfeature__image:nth-child(n+3) {
+            display: inline-block;
+        }
+    }
+}
 .c-superfeature__image {
-    img {
-        width: 100%;
-    }
+
 }
 
-.c-superfeature__byline {
-    @include byline;
-    margin-bottom: 5px;
-    margin-top: 15px;
-}
+.c-superfeature__image__wrapper {
+    background-color: $pampas;
+    padding-top: 100%;
 
-.c-superfeature__byline-name {
-    @include byline-name;
-}
-
-.c-superfeature__byline-prefix {
-    @include byline-prefix;
-}
-
-.c-superfeature__byline--sponsorship {
-    .c-superfeature__byline-prefix {
-        font-style: italic;
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        padding-top: 46.875%;
     }
 }
 
 .c-superfeature__content {
-    background: $COLOUR_SECTION_SUPERFEATURE;
-    color: $COLOUR_MAIN_DARK;
-    padding: 30px 20px;
-    text-align: center;
+    background-color: $white;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 20px;
+    position: relative;
 
-    @include min-screen($SUPERFEATURE_MEDIUM_VIEW) {
-        padding: 30px 80px 40px;
-        text-align: left;
-    }
-
-    @include min-screen($SUPERFEATURE_LARGE_VIEW) {
-        background: $COLOUR_SECTION_SUPERFEATURE;
-        box-sizing: border-box;
-        color: $COLOUR_MAIN_DARK;
-        bottom: 0px;
-        padding: 40px;
+    &:before {
+        content: '';
         position: absolute;
-        right: 0px;
-        text-align: left;
-        width: 50%;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        box-shadow: 20px 20px 0px 0px $azalea;
+        z-index: -1;
     }
 
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        padding: 30px 60px;
+        text-align: center;
+        margin-top: -20px;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: -140px;
+    }
+}
+
+.c-superfeature__tag {
+    @include font("GRAPHIK", 10px, 600, 10px);
+    background: $azalea;
+    color: $astronaut;
+    left: 0;
+    letter-spacing: 1.5px;
+    padding: 14px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    transform: translateY(-100%);
+
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        background-color: transparent;
+        left: initial;
+        margin: 0 0 20px 0;
+        padding: 0;
+        position: relative;
+        top: initial;
+        transform: translateY(0);
+    }
+}
+
+.c-superfeature__title {
+    @include font("MILLER_DISPLAY", 23px, 600, 28px);
+    color: $dune;
+    margin: 0 0 10px 0;
+
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        @include font-size(40px);
+        @include line-height(45px);
+        margin: 0 0 20px 0;
+    }
 }
 
 .c-superfeature__teaser {
-    @include font('GRAPHIK', 15px, 'NORMAL', 20px);
-    margin-bottom: 15px;
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        @include font('GRAPHIK', 17px, 'LIGHT', 22px);
-        margin-bottom: 15px;
-        margin-top: 8px;
-    }
-}
-
-.c-superfeature__meta {
-    @include meta-default;
-    line-height: 18px;
-}
-
-li.c-superfeature__meta-item {
-    @include meta-item-dark;
-
-    margin-bottom: 0;
-}
-
-li.c-superfeature__meta-item + li.c-superfeature__meta-item {
-    @include meta-item-dark-sibling;
-}
-
-.c-superfeature__meta-item--tag {
-    @include meta-item-tag;
-
-    color: $COLOUR_MAIN_DARK;
+    @include font("GRAPHIK", 14px, 600, 18px);
+    color: $dune;
+    display: block;
+    letter-spacing: 0px;
+    margin: 0 0 30px 0;
 }
 
 .c-superfeature__separator {
     display: none;
 }
 
-.c-superfeature__title {
-    @include title-feature;
-
-    margin: 0 0 10px;
-
-    @include min-screen($SUPERFEATURE_MEDIUM_VIEW) {
-        @include title-feature-desktop;
-
-        margin-bottom: 20px;
-    }
-
-    @include min-screen($SUPERFEATURE_LARGE_VIEW) {
-        @include title-feature-desktop;
-        margin-bottom: 8px;
-    }
+.c-superfeature__byline {
+    @include font("GRAPHIK", 10px, 400, 10px);
+    color: $dune;
+    letter-spacing: 1.5px;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
 }
 
-.c-superfeature__tag {
-    @include font('GRAPHIK', 13px, 'NORMAL', 18px, 20);
-    color: #fff;
-    margin: 0 0 10px 0;
+ul.c-superfeature__meta {
+    @include font("GRAPHIK", 10px, 400, 10px);
+    color: $dune;
+    letter-spacing: 1.5px;
+    margin: 0 0 0 0;
+    text-transform: uppercase;
+}
+
+li.c-superfeature__meta-item {
+    & + li.c-superfeature__meta-item {
+        &:before {
+            background-color: $azalea;
+            border-radius: 50%;
+            content: "";
+            display: inline-block;
+            height: 3px;
+            margin: 1px 4px;
+            width: 3px;
+        }
+    }
 }

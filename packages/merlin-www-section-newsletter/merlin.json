@@ -1,31 +1,31 @@
 {
-    "name": "@cnbritain/merlin-www-section-newsletter", 
+    "name": "@cnbritain/merlin-www-section-newsletter",
     "js": {
         "demo": "demo/demo.js"
-    }, 
+    },
     "themes": {
-        "tatler": "sass/tatler/tatler.scss", 
-        "wireframe": "sass/wireframe/wireframe.scss", 
-        "glamour": "sass/glamour/glamour.scss", 
-        "bystander": "sass/bystander/bystander.scss", 
-        "wired": "sass/wired/wired.scss", 
-        "missvogue": "sass/missvogue/missvogue.scss", 
+        "tatler": "sass/tatler/tatler.scss",
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "bystander": "sass/bystander/bystander.scss",
+        "wired": "sass/wired/wired.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
         "vogue": "sass/vogue/vogue.scss"
-    }, 
+    },
     "partials": {
         "section": "templates/section.html"
-    }, 
+    },
     "dependencies": [
-        "@cnbritain/merlin-www-common", 
-        "@cnbritain/merlin-www-buttons", 
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-buttons",
         "@cnbritain/merlin-www-image"
-    ], 
-    "currentTheme": null, 
-    "main": "section", 
+    ],
+    "currentTheme": null,
+    "main": "section",
     "data": {
-        "newsletter-no-description": "demo/data/newsletter-no-description.json", 
-        "newsletter-nothing": "demo/data/newsletter-nothing.json", 
-        "newsletter": "demo/data/newsletter.json", 
+        "newsletter-no-description": "demo/data/newsletter-no-description.json",
+        "newsletter-nothing": "demo/data/newsletter-nothing.json",
+        "newsletter": "demo/data/newsletter.json",
         "newsletter-no-title": "demo/data/newsletter-no-title.json"
     }
 }

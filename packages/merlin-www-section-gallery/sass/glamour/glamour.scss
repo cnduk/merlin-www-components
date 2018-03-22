@@ -4,136 +4,191 @@
 @import "../wireframe/wireframe";
 
 .c-gallery {
-    @include section-margins;
+    // 20px added to offset the box shadow
+    margin-bottom: $MOBILE_SLICE_MARGIN + 20px;
+    margin-top: $MOBILE_SLICE_MARGIN;
+    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER*2;
+    padding: 0;
 
-    padding-left: 0;
-    padding-right: 0;
-
-    @include tablet-size {
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        // 20px added to offset the box shadow
+        margin-bottom: $TABLET_SLICE_MARGIN + 20px;
+        margin-top: $TABLET_SLICE_MARGIN;
     }
 
-    @include desktop-size {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
+        // 20px added to offset the box shadow
+        margin-bottom: $DESKTOP_SLICE_MARGIN + 20px;
+        margin-top: $DESKTOP_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        &:hover {
+            .c-feature__title {
+                span {
+                    box-shadow: inset 0 -3px 0 0 $azalea;
+                }
+            }
+        }
     }
 }
 
-.c-gallery__byline {
-    @include byline;
-    margin-bottom: 5px;
-    margin-top: 15px;
+.c-gallery__wrapper {
+    box-shadow: 20px 20px 0px 0px $azalea;
 }
 
-.c-gallery__byline-name {
-    @include byline-name;
+.c-gallery__image-item {
+    overflow: hidden;
 }
 
-.c-gallery__byline-prefix {
-    @include byline-prefix;
+.c-gallery__images {
+    background-color: $white;
 }
 
-.c-gallery__teaser {
-    @include font('GRAPHIK', 15px, 'NORMAL', 20px);
-    margin-bottom: 15px;
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        @include font('GRAPHIK', 17px, 'LIGHT', 23px);
-        margin-bottom: 15px;
-        margin-top: 8px;
-    }
+.c-gallery__image {
+    background-color: $pampas;
 }
 
 .c-gallery__image-remaining {
-    @include font('GRAPHIK', 23px, 'SEMI BOLD');
+    background-color: rgba($astronaut, 0.6)
+}
+
+.c-gallery__image-remaining__text {
     white-space: nowrap;
-    &:before {
-	    background-color: $COLOUR_BG_GALLERY_REMAINING;
-	    color: $COLOUR_MAIN;
-    	content: '';
-    	padding: 30%;
-    	position: absolute;
-    	left: 50%;
-    	top: 50%;
-    	@include vendor-prefix(transform, translate(-50%, -50%));
-    	border-radius: 50%;
-    }
 }
 
 .c-gallery__image-remaining__text-prefix {
-	@include font-size(19px);
-	margin-right: -2px;
-}
-.c-gallery__image-remaining__text-value {}
+    @include font("GRAPHIK", 18px, 400, 18px);
+    color: $azalea;
+    letter-spacing: 0px;
+    vertical-align: middle;
 
-.c-gallery__images {}
-.c-gallery__meta {
-    @include meta-default;
-    line-height: 18px;
-}
-li.c-gallery__meta-item {
-    @include meta-item;
-    @include global-meta-item;
-
-    &:last-child {
-        padding-right: 0;
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font-size(25px);
+        @include line-height(25px);
     }
+}
+
+.c-gallery__image-remaining__text-value {
+    @include font("GRAPHIK", 30px, 400, 30px);
+    color: $azalea;
+    letter-spacing: 0px;
+    vertical-align: middle;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font-size(40px);
+        @include line-height(40px);
+    }
+}
+
+.c-gallery__text {
+    background-color: $white;
+    padding: 20px;
+    position: relative;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        padding: 30px 40px;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 30px 60px 30px 40px;
+    }
+}
+
+.c-gallery__icon {
+    display: none;
+}
+
+.c-gallery__tag {
+    @include font("GRAPHIK", 10px, 600, 10px);
+    background: $azalea;
+    color: $astronaut;
+    left: 0;
+    letter-spacing: 1.5px;
+    padding: 8px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    transform: translateY(-100%);
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        background-color: transparent;
+        left: initial;
+        margin: 0 0 20px 0;
+        padding: 0;
+        position: relative;
+        top: initial;
+        transform: translateY(0);
+    }
+}
+
+.c-gallery__title {
+    @include font("MILLER_DISPLAY", 23px, 600, 28px);
+    color: $dune;
+    margin: 0 0 10px 0;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font-size(35px);
+        @include line-height(38px);
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(40px);
+        @include line-height(45px);
+        margin: 0 0 20px 0;
+    }
+}
+
+.c-gallery__teaser {
+    @include font("GRAPHIK", 14px, 600, 18px);
+    color: $dune;
+    display: block;
+    letter-spacing: 0px;
+    margin: 0;
 }
 
 .c-gallery__separator {
     display: none;
 }
 
-.c-gallery__text {
-    background-color: $COLOUR_SECTION_GALLERY;
-    color: $COLOUR_MAIN;
-    text-align: center;
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-    	text-align: left;
-    }
-}
-
-.c-gallery__text__wrapper {
-    padding: 30px 20px;
-
-	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
-		padding: 20px 60px;
-	}
-}
-
-.c-gallery__icon {
-    height: 19px;
-    width: 24px;
-    margin: 0 auto;
-    margin-bottom: 13px;
-
-    svg {
-        display: block;
-        vertical-align: top;
-        fill: $COLOUR_MAIN;
-    }
+.c-gallery__byline {
+    @include font("GRAPHIK", 10px, 400, 10px);
+    color: $dune;
+    letter-spacing: 1.5px;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        display: inline-block;
-        height: 21px;
-        width: 21px;
-        margin-bottom: 10px;
-        padding-right: 5px;
+        bottom: 50px;
+        position: absolute;
     }
 }
 
-.c-gallery__title {
-    @include title-feature;
-    margin-top: 0;
-    margin-bottom: 10px;
+ul.c-gallery__meta {
+    @include font("GRAPHIK", 10px, 400, 10px);
+    color: $dune;
+    letter-spacing: 1.5px;
+    margin: 0 0 0 0;
+    text-transform: uppercase;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-	    @include title-feature-desktop;
-	    margin-bottom: 8px;
+        bottom: 40px;
+        position: absolute;
     }
 }
 
-.c-gallery__wrapper {
-    background-color: $COLOUR_BG_SECONDARY;
+li.c-gallery__meta-item {
+    & + li.c-gallery__meta-item {
+        &:before {
+            background-color: $azalea;
+            border-radius: 50%;
+            content: "";
+            display: inline-block;
+            height: 3px;
+            margin: 1px 4px;
+            width: 3px;
+        }
+    }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-section-gallery",
-  "version": "1.4.31",
+  "version": "1.7.10",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,10 +9,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@cnbritain/merlin-component-demo-server": "^2.9.6"
+    "@cnbritain/merlin-component-demo-server": "^2.10.5"
   },
   "dependencies": {
-    "@cnbritain/merlin-www-common": "^1.7.22",
-    "@cnbritain/merlin-www-image": "^1.6.8"
+    "@cnbritain/merlin-www-common": "^1.10.7",
+    "@cnbritain/merlin-www-image": "^1.8.6"
   }
 }

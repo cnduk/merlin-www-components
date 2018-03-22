@@ -10,11 +10,11 @@ module.exports = function taskServeExport(taskConfig, browserSync){
             proxy: taskConfig.watch.proxy
         });
         // Sass
-        gulp.watch(taskConfig.watch.sass, ['sass']);
+        gulp.watch(taskConfig.watch.sass, gulp.parallel('sass'));
         // JS
-        gulp.watch(taskConfig.watch.js, ['eslint', 'js'])
+        gulp.watch(taskConfig.watch.js, gulp.parallel('eslint', 'js'))
             .on('change', browserSync.reload);
         // HTML and mustache
         gulp.watch(taskConfig.watch.html).on('change', browserSync.reload);
     };
-}
+};

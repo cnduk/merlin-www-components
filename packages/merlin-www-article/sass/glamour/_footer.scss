@@ -1,95 +1,56 @@
 .a-footer {
     .a-share {
-        margin: 50px 0;
-    }
-}
+        margin: 30px 0 40px 0;
+        text-align: center;
 
-// Footer sponsor
-.a-footer-sponsor {
-    @include font-size(12px);
-
-    background-color: $COLOUR_BG_SECONDARY;
-    padding: 30px 15px;
-
-    @include tablet-size {
-        padding: 50px;
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin: 40px 0 60px 0;
+            text-align: left;
+        }
     }
 
-    a {
-        color: $COLOUR_MAIN;
-    }
-}
-
-.a-footer-sponsor__body {
-    @include font('GRAPHIK', 16px);
-
-    margin: 30px 0;
-}
-
-.a-footer-sponsor__btn {
-    text-align: center;
-    text-transform: uppercase;
-
-    @include tablet-size {
-        min-width: 200px;
-    }
-}
-
-.a-footer-sponsor__header {
-    margin: 0 0 30px;
-
-    span {
-        @include font('GRAPHIK');
-
-        font-style: italic;
-    }
-
-    a {
-        @include font('GRAPHIK', $weight: 'SEMI BOLD');
-
-        font-style: normal;
-        text-transform: uppercase;
-    }
-}
-
-.a-footer-sponsor__header-image {
-    margin-top: 10px;
-
-    .global__a--center & {
-        display: block;
-        margin: 10px auto 0;
-    }
-
-    @include tablet-size {
-        display: inline-block;
-        margin: 0 0 0 10px;
-        vertical-align: middle;
-
-        .global__a--center & {
+    .a-share__title {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             display: inline-block;
-            margin: 0 0 0 10px;
+            margin: 0 10px 0 0;
+            vertical-align: middle;
+        }
+    }
+
+    .a-share__list {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            display: inline-block;
+            vertical-align: middle;
         }
     }
 }
 
-.a-footer-sponsor__intro {
-    @include font('GRAPHIK', 17px, 'SEMI BOLD');
+.a-footer--gallery {}
 
-    margin: 30px 0;
+.a-footer--video {
+    .a-footer__wrapper {
+        padding-left: 0;
+    }
+
+    .c-topic-strip--article-related {
+        text-align: left;
+    }
+
+    .a-related-tags {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin-top: 40px;
+        }
+    }
 }
+
+.a-footer__wrapper {}
 
 .a-related-tags {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
-    border-top: 1px solid rgba(0, 0, 0, 0.10);
-    margin: $MOBILE_SLICE_MARGIN (-$MOBILE_SIDE_GUTTER);
-    padding: 20px 0;
+    margin: 40px 0 30px 0;
 
-    @include tablet-size {
-        margin: $TABLET_SLICE_MARGIN 0;
-    }
-
-    @include desktop-size {
-        margin: $DESKTOP_SLICE_MARGIN 0;
-        padding: 25px 0;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 60px 0 40px 0;
     }
 }
+
+.a-related-tags__wrapper {}

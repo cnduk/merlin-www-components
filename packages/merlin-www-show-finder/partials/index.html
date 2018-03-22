@@ -5,8 +5,8 @@
                <div class="sh-finder__item sh-finder__item--label">Show finder</div>
                 {{# state.has_designers }}
                     <div class="sh-finder__item sh-finder__item--combo">
-                       <select data-searchable="true" data-placeholder="Search designers">
-                           <option disabled selected>Search designers</option>
+                       <select data-searchable="true" data-placeholder="{{ translation.designer_placeholder }}">
+                           <option disabled selected>{{ translation.designer_placeholder }}</option>
                            {{# data.designers }}
                                 <option value="{{ &data.url }}">{{ data.title }}</option>
                            {{/ data.designers }}
@@ -16,7 +16,7 @@
                 {{# state.has_seasons }}
                     <div class="sh-finder__item sh-finder__item--combo">
                         <select>
-                            <option disabled selected>Search seasons</option>
+                            <option disabled selected>{{ translation.season_placeholder }}</option>
                             {{# data.seasons }}
                                 <option value="{{ &data.url }}">{{ data.title }}</option>
                             {{/ data.seasons }}

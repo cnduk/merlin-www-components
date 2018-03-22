@@ -6,6 +6,195 @@
     letter-spacing: 1px;
 }
 
+.bb-a {
+    color: $COLOUR_TYPE_LINK;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.bb-abbr {}
+
+.bb-h1,
+.bb-h2,
+.bb-h3,
+.bb-h4,
+.bb-h5,
+.bb-h6 {
+    @include font('STARLING');
+
+    color: $COLOUR_TYPE_HEADING;
+    font-variant-ligatures: common-ligatures; // let's get ligatured
+    line-height: 1.2;
+    margin: $MARGIN_MEDIUM 0 $MARGIN_SMALL 0;
+}
+
+@each $level, $heading in $HEADINGS {
+    %h-#{$level} {
+        @include font(
+            'STARLING',
+            map-get($heading, small),
+            map-get($heading, weight),
+            map-get($heading, small-line-height)
+        );
+
+        @media (min-width: 600px) {
+            @include font(
+                'STARLING',
+                map-get($heading, large),
+                map-get($heading, weight),
+                map-get($heading, large-line-height)
+            );
+
+            letter-spacing: map-get($heading, letter-spacing);
+        }
+    }
+
+    #{map-get($heading, h)}, .h-#{$level} {
+        @extend %h-#{$level};
+    }
+}
+
+.bb-hr {
+    border-top: 1px solid $COLOUR_BORDER_SOLID;
+    height: 0;
+    margin: 15px 0;
+}
+
+.bb-mark {
+    background: $COLOUR_BG_HIGHLIGHT;
+}
+
+.bb-p {
+    @include font('STARLING', 18px, 'NORMAL', 25px);
+
+    color: $COLOUR_TYPE_BODY;
+
+    @include desktop-size {
+        @include font('STARLING', 18px, 'NORMAL', 28px);
+    }
+}
+
+.bb-pre {
+    @include font-size(17px);
+    @include line-height(20px);
+
+    border: 1px solid $gray;
+    color: $COLOUR_PRE_TEXT;
+    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    letter-spacing: 1px;
+    margin: 30px 0;
+    padding: 20px;
+    white-space: pre-wrap;
+
+    @include desktop-size {
+        padding: 40px;
+    }
+
+}
+
+.bb-small {}
+
+.bb-ul, .bb-ol {
+    @include font('AGENDA');
+    @include font-size(15px);
+    @include line-height(22px);
+
+    color: $COLOUR_TYPE_BODY;
+    list-style-type: none;
+    margin: 30px 0;
+    padding: 0;
+
+    @include desktop-size {
+        @include font-size(17px);
+        @include line-height(22px);
+
+        margin: 60px 0;
+        padding: 0 20px;
+    }
+
+    .bb-li {
+        position: relative;
+        margin: 1em 0;
+    }
+}
+
+.bb-ul {
+    .bb-li {
+        padding-left: 20px;
+        letter-spacing: .3px;
+
+        @include desktop-size {
+            padding-left: 20px;
+        }
+
+        &:before {
+            background: $COLOUR_MAIN_HIGHLIGHT;
+            border-radius: 50%;
+            content: '';
+            display: block;
+            height: 8px;
+            left: 0;
+            position: absolute;
+            top: 7px;
+            width: 8px;
+        }
+    }
+}
+
+.bb-ol {
+    counter-reset: section;
+
+    .bb-li {
+        padding-left: 40px;
+        margin: 1em 0;
+        letter-spacing: .3px;
+
+        @include desktop-size {
+            padding-left: 45px;
+        }
+
+        &:before {
+            @include font('AGENDA', 16px, 'BOLD', 23px);
+
+            border-radius: 50%;
+            border: 1px solid $COLOUR_MAIN_HIGHLIGHT;
+            color: $COLOUR_MAIN_HIGHLIGHT;
+            content: counter(section);
+            counter-increment: section;
+            display: block;
+            height: 25px;
+            left: 0;
+            padding: 0;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            width: 25px;
+            vertical-align: middle;
+
+            @include desktop-size {
+                @include font-size(16px);
+
+                height: 30px;
+                line-height: 30px;
+                width: 30px;
+            }
+        }
+    }
+}
+
+.bb-pre {
+    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+}
+
+.bb-code {
+    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    display: inline;
+}
+
+
 /**
  * Twitter, Instagram, Vine, Facebook, Vimeo, Youtube
  */
@@ -47,12 +236,12 @@
 }
 
 .bb-figure__caption,
-.bb-figure__caption p {
+.bb-figure__caption .bb-p {
     @include font('AGENDA', 16px, 'MEDIUM', 18px);
     letter-spacing: 0.5px;
     margin: 15px 0 0 0;
 
-    a {
+    .bb-a {
         color: $cinnabar;
         text-decoration: none;
         border-bottom: 1px solid rgba($cinnabar, 0.8);
@@ -246,9 +435,9 @@
 }
 
 .bb-question__question,
-.bb-question__question p,
+.bb-question__question .bb-p,
 .bb-answer__answer,
-.bb-answer__answer p {
+.bb-answer__answer .bb-p {
     @include font('STARLING', 18px, 'BOLD', 24px);
 
     @include desktop-size {
@@ -257,12 +446,17 @@
 }
 
 .bb-question__question,
-.bb-question__question p {
+.bb-question__question .bb-p {
     color: $mine-shaft;
+    margin-bottom: 15px;
+
+    @include desktop-size {
+        margin-bottom: 20px;
+    }
 }
 
 .bb-answer__answer,
-.bb-answer__answer p {
+.bb-answer__answer .bb-p {
     color: $COLOUR_MAIN_ACCENT;
     margin-bottom: 15px;
 

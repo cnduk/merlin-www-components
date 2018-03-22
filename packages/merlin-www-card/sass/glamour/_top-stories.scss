@@ -1,42 +1,61 @@
 // -------------------- //
 // Top Stories
 // -------------------- //
-@mixin card-top-stories() {
-    @include card-landscape;
-    .c-card__title {
-        @include font-size(15px);
-        @include line-height(18px);
+@mixin card-top-stories() {}
+@mixin card-top-stories-small() {
+    .c-card__obj__header {
+        width: 90px;
     }
-    .c-card__meta-item {
-        @include font-size(11px);
-        @include line-height(11px);
-        letter-spacing: tracking(30);
 
-        + li.c-card__meta-item {
-            @include line-height(11px);
+    .c-card__obj__body {
+        padding-top: 0;
+    }
+
+    .c-card__title {
+        @include font-size(16px);
+        @include line-height(19px);
+        height: 74px;
+        position: relative;
+        overflow: hidden;
+
+        &:after {
+            background: linear-gradient(to right, rgba($white ,0), $white 90%);
+            bottom: 0;
+            content: '';
+            display: block;
+            height: 21px;
+            position: absolute;
+            right: 0;
+            width: 50%;
         }
     }
 }
 
-@mixin card-top-stories-small() {
-    @include card-landscape-small;
-}
-
 @mixin card-top-stories-large() {
-    @include card-landscape-small;
+    .c-card__obj__header {
+        width: 32%;
+    }
+
+    .c-card__obj__body {
+        padding-top: 0;
+        width: 68%;
+    }
 }
 
 .c-card--top-stories {
-    @include card-top-stories;
-    @include card-top-stories-small;
+    @include card-landscape();
+    @include card-landscape-small();
+
+    @include card-top-stories();
+    @include card-top-stories-small();
 }
 
 .c-card--top-stories-small {
-    @include card-top-stories;
-    @include card-top-stories-small;
+    @include card-top-stories();
+    @include card-top-stories-small();
 }
 
 .c-card--top-stories-large {
-    @include card-top-stories;
-    @include card-top-stories-large;
+    @include card-top-stories();
+    @include card-top-stories-large();
 }

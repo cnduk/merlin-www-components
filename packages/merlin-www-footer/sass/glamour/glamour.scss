@@ -4,8 +4,8 @@
 @import "../wireframe/wireframe";
 
 .c-footer {
-    background-color: $COLOUR_BG_DARK;
-    color: $COLOUR_MAIN_DARK;
+    background-color: $dune;
+    color: $white;
 }
 
 .c-footer__wrapper {
@@ -14,64 +14,58 @@
 }
 
 .c-footer__list {
-    color: $COLOUR_MAIN_DARK;
+    color: $white;
 }
 
 .c-footer__list--left {
     @include min-screen(1100px) {
         & .c-footer__list-item:first-child {
-            padding-left: 40px;
+            padding-left: 30px;
         }
     }
 }
 .c-footer__list--right {
     @include min-screen(1100px) {
         & > .c-footer__list-item:last-child {
-            padding-right: 40px;
+            padding-right: 15px;
         }
     }
 }
 
 .c-footer__list-item--links {
-    @include max-screen(1099px) {
-        background-color: #131313;
-    }
+    font-size: 0;
 
+     .c-footer__list-item:first-child{
+         &:before {
+            content: '';
+            display: block;
+            height: 1px;
+            width: calc(100% - 20px);
+            background-color: rgba(147,140,134, 0.4);
+
+            @include min-screen(1100px) {
+                content: none;
+            }
+        }
+     }
     .c-footer__list-item {
         @include max-screen(1099px) {
             &:last-child:after {
                 content: none;
             }
         }
-
-        &:after {
-            background-color: $COLOUR_MAIN_SECONDARY;
-            content: '';
-            display: block;
-            height: 1px;
-            margin-left: -20px;
-            padding-right: 20px;
-            width: 100%;
-
-            @include min-screen(1100px) {
-                display: inline-block;
-                height: 12px;
-                width: 1px;
-                margin: 0 0 0 20px;
-                padding: 0;
-                background-color: rgba(255, 255, 255, 0.4);
-            }
-        }
     }
 }
 
 li.c-footer__list-item {
-    @include font('GRAPHIK', 13px, 300, 60px, 20);
-
+    @include font('GRAPHIK', 12px, 'SEMI BOLD', 60px, 20);
     height: 60px;
-    letter-spacing: 0.025em;
-    padding-left: 20px;
     margin: 0;
+    padding-left: 20px;
+
+    @include min-screen(1100px) {
+        padding-left: 25px;
+    }
 
     a {
         text-decoration: none;
@@ -86,39 +80,34 @@ li.c-footer__list-item {
     }
 }
 
+li.c-footer__list-item{
+    &:before {
+        content: '';
+        display: block;
+        height: 1px;
+        width: calc(100% - 20px);
+        background-color: rgba(147,140,134, 0.4);
+    }
+}
+
 li.c-footer__list-item--logo {
     margin-top: -60px;
     margin-right: 20px;
 
     svg {
-        fill: #fff;
+        fill: $white;
         height: 60px;
         width: 30px;
     }
 
     @include min-screen( 1100px ) {
         clear: right;
-        padding-left: 45px;
+        padding-left: 25px;
         margin-right: 0;
         margin-top: 0;
     }
+
+    &:before {
+        display: none;
+    }
 }
-
-// li.c-footer__list-break {
-//     margin: 0 20px;
-//     height: 1px;
-//     background-color: $COLOR_MAIN_SECONDARY;
-
-//     @include max-screen(1099px) {
-//         &:last-child {
-//             display: none;
-//         }
-//     }
-
-//     @include min-screen(1100px) {
-//         height: 12px;
-//         width: 1px;
-//         margin: 0 0 0 20px;
-//         background-color: rgba(255, 255, 255, 0.4);
-//     }
-// }

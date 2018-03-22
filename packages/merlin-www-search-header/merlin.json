@@ -1,54 +1,54 @@
 {
-    "name": "@cnbritain/merlin-www-search-header", 
+    "name": "@cnbritain/merlin-www-search-header",
     "demo": {
         "no-results-label": {
             "themes": [
-                "wireframe", 
-                "vogue", 
-                "missvogue", 
-                "glamour", 
-                "wired", 
-                "tatler", 
+                "wireframe",
+                "vogue",
+                "missvogue",
+                "glamour",
+                "wired",
+                "tatler",
                 "bystander"
-            ], 
-            "main": "index", 
+            ],
+            "main": "index",
             "data": "no-results-label"
-        }, 
+        },
         "results-label": {
             "themes": [
-                "wireframe", 
-                "vogue", 
-                "missvogue", 
-                "glamour", 
-                "wired", 
-                "tatler", 
+                "wireframe",
+                "vogue",
+                "missvogue",
+                "glamour",
+                "wired",
+                "tatler",
                 "bystander"
-            ], 
-            "main": "index", 
+            ],
+            "main": "index",
             "data": "results-label"
         }
-    }, 
-    "js": {}, 
+    },
+    "js": {},
     "themes": {
-        "tatler": "sass/tatler/tatler.scss", 
-        "wireframe": "sass/wireframe/wireframe.scss", 
-        "glamour": "sass/glamour/glamour.scss", 
-        "bystander": "sass/bystander/bystander.scss", 
-        "wired": "sass/wired/wired.scss", 
-        "missvogue": "sass/missvogue/missvogue.scss", 
+        "tatler": "sass/tatler/tatler.scss",
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "bystander": "sass/bystander/bystander.scss",
+        "wired": "sass/wired/wired.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
         "vogue": "sass/vogue/vogue.scss"
-    }, 
+    },
     "partials": {
         "index": "partials/index.html"
-    }, 
+    },
     "dependencies": [
         "@cnbritain/merlin-www-common"
-    ], 
-    "currentTheme": null, 
-    "main": "index", 
+    ],
+    "currentTheme": null,
+    "main": "index",
     "data": {
-        "no-results-label": "data/no-results-label.json", 
+        "no-results-label": "data/no-results-label.json",
         "results-label": "data/results-label.json"
-    }, 
+    },
     "description": null
 }

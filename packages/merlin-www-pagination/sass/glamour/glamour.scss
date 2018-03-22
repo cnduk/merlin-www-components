@@ -7,13 +7,13 @@
 .c-pagination__item {}
 .c-pagination__item--active {}
 .c-pagination__btn {
-    @include button-single();
-    @include button-single-light();
+    @include button-group();
+    @include button-group-light();
 
     &:hover, &:focus {
-        @include button-single-light-hover();
+        @include button-group-light-hover();
     }
 }
 .c-pagination__btn--active {
-    @include button-single-light-hover();
+    @include button-group-light-hover();
 }

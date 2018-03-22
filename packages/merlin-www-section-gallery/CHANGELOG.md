@@ -1,0 +1,82 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+<a name="1.7.7"></a>
+## [1.7.7](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.7.6...@cnbritain/merlin-www-section-gallery@1.7.7) (2018-03-19)
+
+
+### Bug Fixes
+
+* **merlin-www-section-gallery:** Wired Spacing in the byline has dropped out [ch2079] ([e3b421d](https://github.com/cnduk/merlin-www-components/commit/e3b421d))
+
+
+
+
+<a name="1.7.5"></a>
+## [1.7.5](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.7.4...@cnbritain/merlin-www-section-gallery@1.7.5) (2018-03-09)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-gallery
+
+<a name="1.7.1"></a>
+## [1.7.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.7.0...@cnbritain/merlin-www-section-gallery@1.7.1) (2018-03-02)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-gallery
+
+<a name="1.7.0"></a>
+# [1.7.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.6.15...@cnbritain/merlin-www-section-gallery@1.7.0) (2018-02-26)
+
+
+### Features
+
+* **merlin-www-section-gallery:** apply new glamour theme ([3640542](https://github.com/cnduk/merlin-www-components/commit/3640542))
+
+
+
+
+<a name="1.6.7"></a>
+## [1.6.7](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.6.6...@cnbritain/merlin-www-section-gallery@1.6.7) (2018-02-19)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-gallery
+
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.5.14...@cnbritain/merlin-www-section-gallery@1.6.0) (2018-02-14)
+
+
+### Bug Fixes
+
+* **merlin-www-section-gallery:** correct sponsor title value ([fcde4cb](https://github.com/cnduk/merlin-www-components/commit/fcde4cb))
+
+
+### Features
+
+* **merlin-www-section-gallery:** add translation to partials ([8bfb305](https://github.com/cnduk/merlin-www-components/commit/8bfb305))
+
+
+
+
+<a name="1.5.13"></a>
+## [1.5.13](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.5.12...@cnbritain/merlin-www-section-gallery@1.5.13) (2018-02-14)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-gallery
+
+<a name="1.5.4"></a>
+## [1.5.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.5.3...@cnbritain/merlin-www-section-gallery@1.5.4) (2018-02-09)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-gallery

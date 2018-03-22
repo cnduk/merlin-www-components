@@ -86,19 +86,11 @@ export function firePageImpression(e) {
 export function onArticleAdd(e) {
     var article = e.article;
 
-    if (article.type === ARTICLE_TYPES.GALLERY) {
-        if (article.isInfinite) {
-            AdManager.display(getHeaderAd(article.el, true));
-        } else {
-            AdManager.lazy();
-        }
+    if (e.infinite) {
+        AdManager.display(getHeaderAd(article.el));
+        AdManager.lazy(article.el);
     } else {
-        if (e.infinite) {
-            AdManager.display(getHeaderAd(article.el));
-            AdManager.lazy(article.el);
-        } else {
-            AdManager.lazy();
-        }
+        AdManager.lazy();
     }
 
     if (e.infinite) {
@@ -107,11 +99,6 @@ export function onArticleAdd(e) {
 
 }
 
-export function getHeaderAd(el, isGallery) {
-    if (isGallery) {
-        return el.parentNode.previousElementSibling.querySelector(
-            '.ad__container');
-    } else {
-        return el.previousElementSibling.querySelector('.ad__container');
-    }
+export function getHeaderAd(el) {
+    return el.previousElementSibling.querySelector('.ad__container');
 }

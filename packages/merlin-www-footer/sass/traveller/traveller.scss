@@ -27,6 +27,8 @@
 .c-footer__list--right {}
 
 .c-footer__list-item--links {
+    font-size: 0;
+
     .c-footer__list-item {
         @include max-screen(1099px) {
             border-top: 1px solid rgba($WHITE, 0.1);
@@ -38,7 +40,7 @@
         }
 
         @include min-screen(1100px) {
-            margin-right: 32px;
+            margin-right: 16px;
         }
     }
 }

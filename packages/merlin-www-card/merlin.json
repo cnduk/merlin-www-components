@@ -1,32 +1,32 @@
 {
-    "name": "@cnbritain/merlin-www-card", 
+    "name": "@cnbritain/merlin-www-card",
     "js": {
         "demo": "demo/demo.js"
-    }, 
+    },
     "themes": {
-        "gq": "sass/gq/gq.scss", 
-        "tatler": "sass/tatler/tatler.scss", 
-        "wireframe": "sass/wireframe/wireframe.scss", 
-        "glamour": "sass/glamour/glamour.scss", 
-        "bystander": "sass/bystander/bystander.scss", 
-        "wired": "sass/wired/wired.scss", 
-        "missvogue": "sass/missvogue/missvogue.scss", 
+        "gq": "sass/gq/gq.scss",
+        "tatler": "sass/tatler/tatler.scss",
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "bystander": "sass/bystander/bystander.scss",
+        "wired": "sass/wired/wired.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
         "vogue": "sass/vogue/vogue.scss"
-    }, 
+    },
     "partials": {
         "card": "templates/card.html"
-    }, 
+    },
     "dependencies": [
-        "@cnbritain/merlin-www-image", 
+        "@cnbritain/merlin-www-image",
         "@cnbritain/merlin-www-common"
-    ], 
-    "currentTheme": null, 
-    "main": "card", 
+    ],
+    "currentTheme": null,
+    "main": "card",
     "data": {
-        "portrait": "demo/data/portrait.json", 
-        "hero": "demo/data/hero.json", 
-        "top-stories": "demo/data/top-stories.json", 
-        "landscape": "demo/data/landscape.json", 
+        "portrait": "demo/data/portrait.json",
+        "hero": "demo/data/hero.json",
+        "top-stories": "demo/data/top-stories.json",
+        "landscape": "demo/data/landscape.json",
         "switcher": "demo/data/switcher.json"
     }
 }

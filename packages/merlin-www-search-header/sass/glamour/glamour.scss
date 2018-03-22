@@ -3,54 +3,64 @@
 @import '../wireframe/wireframe';
 
 .srch-main {
-    background-color: $COLOUR_BG_DARK;
-    box-sizing: border-box;
-    color: $COLOUR_MAIN_DARK;
+    background-color: $dune;
     overflow: hidden;
-    padding: 0 $MOBILE_SIDE_GUTTER;
+    padding: 20px;
+    width: 100%;
 
-    @include tablet-size {
-        padding: 0 $TABLET_SIDE_GUTTER;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: $TABLET_SLICE_MARGIN $TABLET_SIDE_GUTTER;
     }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: $DESKTOP_SLICE_MARGIN $DESKTOP_SIDE_GUTTER;
+    }
+
+    // .has-overlay & {}
 }
 
 .srch-textbox {
-    @include font('GRAPHIK', 17px, 'NORMAL', 17px);
-
+    @include font("GRAPHIK", 16px, 600, 16px);
     appearance: none;
     background-color: transparent;
-    border: 0;
-    color: $COLOUR_MAIN_DARK;
+    border-bottom: 1px solid $natural-gray;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    color: $white;
     display: block;
-    margin: 40px auto;
+    margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
-    padding: 10px 20px;
+    padding: 0 0 15px 0;
     width: 100%;
 
-    @include tablet-size {
-        @include font-size(60px);
-
-        margin-bottom: 60px;
-    }
-
     &::placeholder {
-        color: $COLOUR_MAIN_TERTIARY;
+        color: $natural-gray;
     }
 
     &:focus {
-        border-bottom: 1px solid #3a3a3a;
         outline: none;
     }
 
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(45px);
+        @include line-height(45px);
+        padding: 0 0 20px 0;
+    }
 }
 
 .srch-results {
-    @include font('GRAPHIK', 12px, 'LIGHT', 40px, 20);
+    @include font("GRAPHIK", 10px, 400, 10px);
+    color: $white;
+    letter-spacing: 1.5px;
+    margin-top: 15px;
+    text-transform: uppercase;
 
-    display: block;
-    margin-bottom: 40px;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 30px;
+    }
 
     span {
-        @include font-weight('SEMI BOLD');
+        @include font-weight(600);
     }
 }

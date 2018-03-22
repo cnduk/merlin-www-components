@@ -1,216 +1,134 @@
 .a-gallery {
-    @include section-margins;
-
-    background-color: $COLOUR_BG_MAIN;
-    box-sizing: border-box;
-    color: $COLOUR_MAIN;
-    padding-left: $MOBILE_SIDE_GUTTER;
-    padding-right: $MOBILE_SIDE_GUTTER;
-
-    @include tablet-size {
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
-    }
-
-    @include desktop-size {
-        padding-left: $DESKTOP_SIDE_GUTTER;
-        padding-right: $DESKTOP_SIDE_GUTTER;
-    }
+    margin: 0 auto;
 }
 
 .a-gallery__wrapper {
-    margin: 0 auto;
-    max-width: 1440px;
-
-    @include min-screen(940px) {
-        padding-right: 350px;
+    max-width: $ARTICLE_TOTAL;
+    @include min-screen($ARTICLE_TOTAL) {
+        padding-right: $ARTICLE_RIGHT_TOTAL;
     }
 }
 
-.a-gallery__thumbnails {
-    @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: -$MOBILE_SIDE_GUTTER;
-        margin-right: -$MOBILE_SIDE_GUTTER;
+.a-gallery__message {
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: $TABLET_SLICE_MARGIN;
     }
 }
 
-.a-gallery__thumbnail__hover {
-    svg {
-        width: 15%;
-    }
-}
-
-li.a-gallery__image-listitem {
-    padding-bottom: 40px;
-
-    &:last-child {
-        padding-bottom: 0;
-    }
-}
-
-.a-gallery__image {
-    margin-bottom: 15px;
-    position: relative;
-
-    @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: -$MOBILE_SIDE_GUTTER;
-        margin-right: -$MOBILE_SIDE_GUTTER;
-    }
-}
-
-.a-gallery__image__wrapper {
-    background-color: $COLOUR_BG_AD;
-}
-
-.a-gallery__aside {
-    border: 1px solid $COLOUR_BUTTON_GALLERY_NAV_BORDER;
-    bottom: 15px;
-    height: 45px;
-    right: 15px;
-
-    @include tablet-size {
-        bottom: 20px;
-        right: 20px;
-    }
-}
-
-.a-gallery__aside__btn {
-    background-color: $COLOUR_BUTTON_GALLERY_ASIDE_BG;
-    border-bottom: 0;
-    height: 45px;
-    transition: background .1s ease-in-out;
-    width: 45px;
-
-    & + .a-gallery__aside__btn {
-        border-left: 1px solid $COLOUR_BUTTON_GALLERY_NAV_BORDER;
-    }
-
-    svg {
-        fill: $COLOUR_BUTTON_GALLERY_ASIDE;
-        width: 37%;
-    }
+.a-gallery__message-btn {
+    @include button-single();
+    @include button-single-light();
 
     &:hover {
-        background-color: $COLOUR_BUTTON_GALLERY_ASIDE_BG_HOVER;
-
-        svg {
-            fill: $COLOUR_BUTTON_GALLERY_ASIDE_HOVER;
-        }
+        @include button-single-light-hover();
     }
 }
-
-@each $name, $colour in $COLOUR_SOCIAL {
-    .a-gallery__aside__btn--#{$name} {
-        svg {
-            fill: $colour;
-        }
-
-        &:hover {
-            background-color: $colour;
-            svg {
-                fill: $COLOUR_SOCIAL_ICON;
-            }
-        }
-    }
-}
-
-.a-gallery__aside__btn--zoom {
-    &:hover {
-        background-color: $COLOUR_BUTTON_GALLERY_ASIDE;
-
-        svg {
-            fill: $COLOUR_BUTTON_GALLERY_ASIDE_BG;
-        }
-    }
-}
-
-.a-gallery__image__title,
-.a-gallery__image__caption,
-.a-gallery__image__credit {
-    width: 100%;
-
-    @include desktop-size {
-        max-width: 700px;
-    }
-}
-
-.a-gallery__image__title {
-    @include title-image-credit;
-
-    margin-bottom: 0px;
-
-    span {
-        @include font-size(13px);
-
-        padding-right: 10px;
-    }
-}
-
-.a-gallery__image__caption {
-    @include font('GRAPHIK', 15px, 'NORMAL', 19px);
-    margin-bottom: 10px;
-
-    .bb-p {
-        @include font('GRAPHIK', 15px, 'NORMAL', 19px);
-    }
-}
-
-.a-gallery__image__title + .a-gallery__image__caption {
-    margin-top: -5px;
-}
-
-.a-gallery__image__credit {
-    @include font('GRAPHIK', 10px, 400, 13px);
-    color: #b2b2b2;
-    letter-spacing: 0.02em;
-
-    strong {
-        font-weight: 500;
-    }
-}
-
-
-
-
 
 .g-image-nav {
-    width: 60px;
+    width: $MOBILE_SIDE_GUTTER;
+
+    @include tablet-size {
+        width: $TABLET_SIDE_GUTTER;
+    }
+
+    @include desktop-size {
+        width: $DESKTOP_SIDE_GUTTER;
+    }
 }
 
 .g-image-nav__btns {
-    width: 50px;
+    margin: 0 auto;
+    width: 35px;
 }
 
 .g-image-nav__btn {
-    @include opacity(1);
+    background-color: $concrete;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
 
-    background-color: $COLOUR_BUTTON_GALLERY_NAV_BG;
-    height: 50px;
-    transition: opacity .1s ease-in-out;
-    width: 50px;
+    &:hover {
+        background-color: $dune;
+    }
 
     svg {
-        fill: $COLOUR_BUTTON_GALLERY_NAV;
-        height: 100%;
-        transition: fill .1s ease-in-out;
+        fill: $white;
+        height: 15px;
         width: 15px;
     }
+}
 
-    &:focus,
-    &:hover {
-        background-color: $COLOUR_BUTTON_GALLERY_NAV_BG_HOVER;
-        svg {
-            fill: $COLOUR_BUTTON_GALLERY_NAV_HOVER;
-        }
-    }
-
-    &[disabled]{
-        @include opacity(0.3);
-    }
-
+.g-image-nav__btn--previous {
+    margin-top: 5px;
 }
 
 .g-image-nav__btn--next {
-    border-top: 1px solid $COLOUR_SEPARATOR_NAVIGATION;
+    margin-top: 5px;
 }
 
+.g-image-nav__btn[disabled] {
+
+}
+
+.a-gallery__view {
+
+    &--list {
+
+    }
+}
+
+ul.a-gallery__image-list {}
+li.a-gallery__image-listitem {
+    margin-bottom: 48px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 60px;
+    }
+}
+
+.a-gallery__thumbnail-list {
+    margin-left: -2px;
+    margin-right: -2px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+}
+
+li.a-gallery__thumbnail {
+    box-sizing: border-box;
+    margin: 4px 0 0 0;
+    padding: 0 2px;
+
+    &:nth-child(-n+3) {
+        margin-top: 0;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 24px 0 0 0;
+        padding: 0 12px;
+    }
+}
+
+.a-gallery__thumbnail-image {
+
+}
+.a-gallery__thumbnail-hover {
+    background-color: $dune;
+    left: 2px;
+    right: 2px;
+    width: auto;
+
+    svg {
+        fill: $white;
+        width: 38px;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        left: 12px;
+        right: 12px;
+    }
+}

@@ -7,11 +7,6 @@
     position: relative;
 }
 .ad__container {}
-.ad__container--responsive {
-    iframe {
-        max-width: $MAXIMUM_PAGE_WIDTH;
-    }
-}
 
 .ad__main.is-hidden {
     //Allows for margin collapse

@@ -1,104 +1,158 @@
 .a-author {
-    @include font('GRAPHIK', 11px, 'NORMAL', 12px, 20);
-
-    a {
-        color: $COLOUR_MAIN;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        text-align: center;
     }
-}
-
-.a-author__article-date,
-.a-author__bio,
-.a-author__byline {
-    @include byline;
-
-    @include article-total-size {
-        @include byline-desktop;
-    }
-}
-
-.a-author__article-date {
-    @include font-size(11px);
-}
-
-.a-author__bio,
-.a-author__bio p {
-    @include font('GRAPHIK', 11px, 'NORMAL', 13px);
-}
-
-.a-author__article-date,
-.a-author__bio {
-    margin: 12px 0;
-}
-
-.a-author__byline {
-    margin: 10px 0;
-}
-
-.a-author__byline-name {
-    @include byline-name;
-}
-
-.a-author__byline-prefix {
-    @include byline-prefix;
 }
 
 .a-author__image {
-    margin-bottom: 15px;
-    width: 60%;
+    border-radius: 50%;
+    height: 90px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding: 5px;
+    position: relative;
+    width: 90px;
+
+    &:before {
+        background-image: url('../../static/img/pattern-1.jpg');
+        background-position: center;
+        border-radius: 50%;
+        background-size: 400%;
+        bottom: -5px;
+        content: '';
+        left: -5px;
+        overflow: hidden;
+        position: absolute;
+        right: -5px;
+        top: -5px;
+        z-index: -1;
+    }
 
     img {
         border-radius: 50%;
+        height: 80px;
+        overflow: hidden;
+        width: 80px;
     }
 }
 
-.a-author__separator,
-.a-event-author__separator {
+.a-author__byline {
+    @include font("GRAPHIK", 10px, 400, 12px);
+    color: $dune;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+
+    a {
+        color: inherit;
+    }
+}
+
+.a-author__byline-name {}
+.a-author__byline-prefix,
+.a-author__byline-conjunction {}
+
+.a-author__bio {
+    margin-bottom: 13px;
+    margin-top: 13px;
+
+     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 25px;
+        margin-top: 10px;
+     }
+
+    .bb-p {
+        @include font("MILLER_DISPLAY", 12px, 400, 16px);
+        color: $dune;
+        margin: 0 0 13px 0;
+
+         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            @include font-size(13px);
+         }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    a {
+        color: inherit;
+    }
+}
+
+.a-author__separator {
     display: none;
+}
 
-    @include article-total-size {
-        background: #000;
-        border: 0;
-        display: block;
-        height: 1px;
+.a-author__article-date {
+    @include font("GRAPHIK", 10px, 400, 12px);
+    color: $dune;
+    letter-spacing: 1.5px;
+    margin-top: 6px;
+    text-transform: uppercase;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 13px;
     }
 }
+
 
 .a-event-author {
-    border: 2px solid #000;
-    box-sizing: border-box;
-    padding: 15px;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        text-align: center;
+    }
 }
+
 .a-event-author__image {
-    margin-bottom: 12px;
+    height: 90px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90px;
 }
 
-.a-event-author__title {
-    @include font("GRAPHIK", 14px, 600, 18px);
-    letter-spacing: normal;
-    margin-bottom: 6px;
+.a-event-author__separator {
+    display: none;
 }
 
+.a-event-author__title {}
 .a-event-author__location {
-    @include font("GRAPHIK", 14px, null, 18px);
+    @include font("GRAPHIK", 10px, 400, 12px);
+    color: $dune;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
 }
 
 .a-event-author__date {
-    @include font("GRAPHIK", 11px, null, 21px);
-}
+    @include font("GRAPHIK", 10px, 400, 12px);
+    color: $dune;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    margin-top: 13px;
+    text-transform: uppercase;
 
-.a-event-author__separator--date {
-    margin: 10px 0;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 13px;
+    }
 }
 
 .a-event-author__btn {
-    @include button-single;
-    @include button-single-light;
-
-    margin-top: 20px;
-    display: block;
+    @include button-group();
+    @include button-group-light();
+    margin-bottom: 20px;
+    margin-top: 13px;
     text-align: center;
 
-    &:hover, &:focus {
-        @include button-single-light-hover;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: 13px;
+        margin-top:0;
+        width: 100%;
+    }
+
+    &:hover {
+        @include button-group-light-hover();
     }
 }

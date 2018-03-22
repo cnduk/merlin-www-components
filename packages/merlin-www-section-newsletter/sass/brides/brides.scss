@@ -1,0 +1,135 @@
+@import "@cnbritain/merlin-www-common:brides";
+@import "@cnbritain/merlin-www-buttons:brides";
+
+@import "../wireframe/wireframe";
+
+.c-newsletter {
+    background: $ebony-clay;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $MOBILE_SLICE_MARGIN;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $TABLET_SLICE_MARGIN;
+        margin-bottom: $TABLET_SLICE_MARGIN;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: $DESKTOP_SLICE_MARGIN;
+    }
+
+    position: relative;
+    text-align: center;
+}
+
+.c-newsletter__wrapper {
+    margin: 0 auto;
+    max-width: 570px;
+    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+    position: relative;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        max-width: 1560px;
+        padding: $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.c-newsletter__logo {
+    display: none;
+}
+
+.c-newsletter__title {
+    @include font("MILLER_DISPLAY", 20px, 400, 20px);
+    color: $white;
+    letter-spacing:4px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(26px);
+        @include line-height(26px);
+        letter-spacing:6px;
+    }
+}
+
+.c-newsletter__description {
+    @include font("MILLER_DISPLAY", 14px, 400, 19px);
+    color: $white;
+    font-style: italic;
+    letter-spacing: 0px;
+    margin: 10px 0 20px 0;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(16px);
+        @include line-height(20px);
+    }
+}
+
+.c-newsletter__form {
+    width: 100%;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        width: auto;
+    }
+}
+
+.c-newsletter__form__text {
+    @include font("BRANDON GROTESQUE", 11px, 700, 11px);
+    border-radius: 0;
+    border: 1px solid $mine-shaft;
+    box-sizing: border-box;
+    color: $silver-chalice;
+    height: 47px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    padding: 17px 16px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        text-align: left;
+    }
+
+    &::placeholder {
+        color: $silver-chalice;
+    }
+}
+
+.c-newsletter__form__btn {
+    @include button-single();
+    @include button-single-dark();
+
+    height: auto;
+    margin-bottom: 20px;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-left: 10px;
+    }
+
+    &:hover {
+        @include button-single-dark-hover();
+    }
+}
+
+.c-newsletter__legal {
+    @include font("BRANDON GROTESQUE", 8px, 700, 8px);
+    color: $silver-chalice;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+         @include font-size(9px);
+         @include line-height(9px);
+     }
+}
+
+.c-newsletter__privacy {
+    border-bottom: 1px solid $silver-chalice;
+    color: $silver-chalice;
+}

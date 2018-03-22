@@ -5,6 +5,7 @@
 @import "../wireframe/_defaults";
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -15,6 +16,7 @@ body {
 }
 
 body {
+    background-color: $concrete;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;

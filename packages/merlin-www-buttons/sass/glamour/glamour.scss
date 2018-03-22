@@ -5,62 +5,57 @@
 
 a.btn-single,
 a.btn-group,
-a.btn-share {
-    border-bottom: 0;
-    display: inline-block;
-    text-decoration: none;
-
-    &:hover {
-        border-bottom: 0;
-    }
+a.btn-share,
+a.btn-related {
+    @include button-reset();
 }
 
 .btn-single,
 a.btn-single {
-    @include button-single();
+    @include button-single;
 }
-
 
 .btn-single--light,
 a.btn-single--light {
-    @include button-single-light();
+    @include button-single-light;
 
     &:hover {
-        @include button-single-light-hover();
+       @include button-single-light-hover;
     }
 }
 
 .btn-single--dark,
 a.btn-single--dark {
-    @include button-single-dark();
+    @include button-single-dark;
 
     &:hover {
-        @include button-single-dark-hover();
+       @include button-single-dark-hover;
     }
 }
 
 .btn-group,
 a.btn-group {
-    @include button-group();
+    @include button-group;
 }
 
 .btn-group--light,
 a.btn-group--light {
-    @include button-group-light();
+    @include button-group-light;
 
     &:hover {
-        @include button-group-light-hover();
+        @include button-group-light-hover;
     }
 }
 
 .btn-group--dark,
 a.btn-group--dark {
-    @include button-group-dark();
+    @include button-group-dark;
 
     &:hover {
-        @include button-group-dark-hover();
+        @include button-group-dark-hover;
     }
 }
+
 
 .btn-top-stories,
 a.btn-top-stories {
@@ -77,31 +72,14 @@ a.btn-top-stories {
     }
 }
 
-
-
-%btn-share {
-    display: inline-block;
-    height: 40px;
-    line-height: 40px;
-    padding-bottom: 0;
-    width: 40px;
-
-    svg {
-        height: 100%;
-        width: 50%;
-    }
-}
-
 .btn-share,
 a.btn-share {
     @include button-share();
 }
 
-@each $name, $colour in $COLOUR_SOCIAL {
+@each $name, $color in $COLOUR_SOCIAL {
     .btn-share--#{$name},
     a.btn-share--#{$name} {
-        background-color: $COLOUR_SOCIAL_ICON;
-        fill: #{$colour};
 
         &.btn-share--light {
             @include button-share-light($name);
@@ -111,24 +89,5 @@ a.btn-share {
         &:hover.btn-share--light {
             @include button-share-light-hover($name);
         }
-    }
-}
-
-.btn--trend,
-a.btn--trend {
-    @include button-trend();
-
-    &:focus,
-    &:hover {
-        @include button-trend-hover();
-    }
-}
-
-.btn-related,
-a.btn-related {
-    @include button-related();
-
-    &:hover {
-        @include button-related-hover();
     }
 }

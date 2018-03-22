@@ -5,24 +5,49 @@
 @import '../wireframe/wireframe';
 
 .c-magazine {
-    @include section-margins;
-    background-color: $COLOUR_BG_SECONDARY;
+    margin-bottom: $MOBILE_SLICE_MARGIN + 20px;
+    margin-top: $MOBILE_SLICE_MARGIN;
+    position: relative;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: $TABLET_SLICE_MARGIN;
+        margin-bottom: $TABLET_SLICE_MARGIN + 20px;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: $DESKTOP_SLICE_MARGIN + 20px;
+        margin-left: $DESKTOP_SIDE_GUTTER;
+        margin-right: $DESKTOP_SIDE_GUTTER;
+        margin-top: $DESKTOP_SLICE_MARGIN;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -20px;
+        width: calc(100% - 20px);
+        border-bottom: 20px solid transparent;
+        border-image: url("/static/img/pattern-2.jpg") 20;
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            display: none;
+        }
+    }
 }
 
 .c-magazine__wrapper {
+    background-color: $white;
     box-sizing: border-box;
     margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
-    padding: 40px 20px;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    padding: 20px 20px 30px;
     position: relative;
 
-    @include tablet-size {
-        padding: 80px 60px;
-    }
-
-    @include desktop-size {
-        padding-left: $DESKTOP_SIDE_GUTTER;
-        padding-right: $DESKTOP_SIDE_GUTTER;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 60px;
+        border: solid 20px transparent;
+        border-image: url("/static/img/pattern-2.jpg") 20;
     }
 }
 
@@ -34,47 +59,44 @@
     width: 100%;
     z-index: 1;
 
-    @include tablet-size {
+    @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
         width: 50%;
         height: 100%;
     }
 }
 
 .c-magazine__title {
-    @include font('MILLER_DISPLAY', 17px);
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    text-align: center;
-    @include tablet-size {
-        display: none;
-    }
+    display: none;
 }
 
 .c-magazine__covers {
     position: relative;
 
-    @include tablet-size {
+    @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
         display: table-cell;
         width: 50%;
         vertical-align: middle;
     }
 }
 .c-magazine__covers__wrapper {
-    @include tablet-size {
-        padding-right: 70px;
+
+    @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-right: 60px;
     }
 }
 
 .c-magazine__cover {
     position: relative;
 }
+
 .c-magazine__cover--print {
     img {
-        width: 60%;
-        margin-left: $MOBILE_SIDE_GUTTER;
+        width: 67%;
+        margin-left: 0;
 
-        @include tablet-size {
+        @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
             margin-left: 0;
+            width: 65%;
         }
     }
 }
@@ -83,93 +105,74 @@
         background-color: #000;
         border-radius: 7px;
         padding: 15px 8px;
-        width: 40%;
+        width: 47%;
         position: absolute;
-        right: $MOBILE_SIDE_GUTTER;
+        right: 0;
         bottom: 0;
 
-        @include desktop-size {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             border-radius: 15px;
             padding: 30px 20px;
-            width: 45%;
+            width: 52%;
         }
     }
 }
-// .c-magazine__cover--mobile {
-//     img {
-//         background-color: #000;
-//         // border-radius: 20px;
-//         // padding: 20px 5px;
-//         width: 10%;
-//         position: absolute;
-//         left: 0;
-//         bottom: 0;
-//     }
-// }
-
-.c-magazine__cover__image {}
 
 .c-magazine__content {
     position: relative;
     z-index: 1;
 
-    @include tablet-size {
+    @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
         display: table-cell;
         width: 50%;
         vertical-align: middle;
     }
 }
-.c-magazine__content__wrapper {
 
-}
-
-.c-magazine__content__date {
-    @include font('MILLER_DISPLAY', 25px, 600, 28px);
-    margin: 30px 0;
+.c-magazine__content__title {
+    @include font('GRAPHIK', 10px, 'SEMI BOLD', 11px);
+    color: $astronaut;
+    display: block;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    margin-top: 30px;
     text-align: center;
-    text-transform: capitalize;
+    text-transform: uppercase;
 
-    @include tablet-size {
-        @include font-size(35px);
-        @include line-height(38px);
-        margin: 20px 0;
+    @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        display: block;
+        margin-top: 0;
         text-align: left;
     }
 }
-.c-magazine__content__title {
-    @include font('MILLER_DISPLAY', 19px);
-    display: none;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    @include tablet-size {
-        display: block;
-        margin-bottom: 20px;
+
+.c-magazine__content__date {
+    @include font('MILLER_DISPLAY', 30px, 600, 34px);
+    color: $dune;
+    letter-spacing: 0;
+    margin: 10px 0 30px;
+    text-align: center;
+    text-transform: capitalize;
+
+    @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(40px);
+        @include line-height(45px);
+        margin: 10px 0 40px;
+        text-align: left;
     }
 }
-.c-magazine__content__subtitle {}
 
 .c-magazine__btn {
     @include button-single;
     @include button-single-light;
-    @include font('GRAPHIK', 13px, 600, 13px, 20);
-    box-sizing: border-box;
     display: inline-block;
-    margin: 30px 0 0 0;
-    text-transform: capitalize;
-    text-align: center;
-    width: 100%;
+    margin: 30px 0 0;
 
     &:hover {
         @include button-single-light-hover;
     }
 
-    @include tablet-size {
-        padding: 10px;
-        margin-top: 40px;
-        width: 110px;
+    @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 30px;
     }
-}
-
-.c-magazine__btn__wrapper {
-
 }

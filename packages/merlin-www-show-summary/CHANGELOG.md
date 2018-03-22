@@ -1,0 +1,159 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+<a name="1.4.77"></a>
+## [1.4.77](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.4.76...@cnbritain/merlin-www-show-summary@1.4.77) (2018-03-21)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.4.73"></a>
+## [1.4.73](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.4.72...@cnbritain/merlin-www-show-summary@1.4.73) (2018-03-19)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.4.70"></a>
+## [1.4.70](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.4.69...@cnbritain/merlin-www-show-summary@1.4.70) (2018-03-12)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.4.69"></a>
+## [1.4.69](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.4.68...@cnbritain/merlin-www-show-summary@1.4.69) (2018-03-09)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.4.68"></a>
+## [1.4.68](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.4.67...@cnbritain/merlin-www-show-summary@1.4.68) (2018-03-05)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.4.64"></a>
+## [1.4.64](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.4.63...@cnbritain/merlin-www-show-summary@1.4.64) (2018-03-02)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.4.63"></a>
+## [1.4.63](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.4.62...@cnbritain/merlin-www-show-summary@1.4.63) (2018-03-01)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.4.55"></a>
+## [1.4.55](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.4.54...@cnbritain/merlin-www-show-summary@1.4.55) (2018-02-26)
+
+
+### Bug Fixes
+
+* **merlin-www-show-summary:** add gq theme to merlin.json ([8bbf781](https://github.com/cnduk/merlin-www-components/commit/8bbf781))
+
+
+
+
+<a name="1.4.52"></a>
+## [1.4.52](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.4.51...@cnbritain/merlin-www-show-summary@1.4.52) (2018-02-26)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.4.48"></a>
+## [1.4.48](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.4.47...@cnbritain/merlin-www-show-summary@1.4.48) (2018-02-23)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.4.47"></a>
+## [1.4.47](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.4.46...@cnbritain/merlin-www-show-summary@1.4.47) (2018-02-22)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.4.46"></a>
+## [1.4.46](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.4.45...@cnbritain/merlin-www-show-summary@1.4.46) (2018-02-22)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.4.37"></a>
+## [1.4.37](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.4.36...@cnbritain/merlin-www-show-summary@1.4.37) (2018-02-20)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.4.35"></a>
+## [1.4.35](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.4.34...@cnbritain/merlin-www-show-summary@1.4.35) (2018-02-19)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.4.20"></a>
+## [1.4.20](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.4.19...@cnbritain/merlin-www-show-summary@1.4.20) (2018-02-14)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.4.17"></a>
+## [1.4.17](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.4.16...@cnbritain/merlin-www-show-summary@1.4.17) (2018-02-14)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.4.7"></a>
+## [1.4.7](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.4.6...@cnbritain/merlin-www-show-summary@1.4.7) (2018-02-09)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.3.57"></a>
+## [1.3.57](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.3.56...@cnbritain/merlin-www-show-summary@1.3.57) (2018-02-01)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.3.56"></a>
+## [1.3.56](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.3.55...@cnbritain/merlin-www-show-summary@1.3.56) (2018-02-01)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
