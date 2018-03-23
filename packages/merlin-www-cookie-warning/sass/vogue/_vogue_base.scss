@@ -1,6 +1,6 @@
 .c-cookie-warning {
-    background-color: #FFF;
-    border: 2px solid #EAEAEA;
+    background-color: $white;
+    border: 2px solid $loot-box;
     border-radius: 4px 4px 0 0;
     box-shadow: 0px 2px 6px 2px rgba(102, 102, 102, 0.06);
     padding: 16px $MOBILE_SIDE_GUTTER;
@@ -9,8 +9,8 @@
     width: 30px;
 }
 .c-cookie-warning__message {
-    color: #666;
     @include font('NOBEL', 12px, null, 16px);
+    color: $dove-gray;
     margin-bottom: 0;
     margin-top: 0;
 
@@ -21,7 +21,7 @@
 }
 .c-cookie-warning__button {
     background-color: transparent;
-    border: 1px solid $COLOR_BORDER_DOTTED;
+    border: 1px solid $dove-gray;
     border-radius: 50%;
     height: 22px;
     padding: 0;
