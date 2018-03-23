@@ -1,0 +1,37 @@
+.n-menu__social {
+    margin: 30px 20px;
+    text-align: center;
+
+    ul {
+        font-size: 0;
+    }
+}
+
+.n-menu__social-title {
+    color: $dove-gray;
+    @include font('ADOBE CASLON', 14px, 400, 14px);
+    text-transform: capitalize;
+    font-style: italic;
+    margin: 0 0 10px 0;
+}
+
+.n-menu__social-brand {}
+
+.n-menu__social-item {
+    position: relative;
+    display: inline-block;
+
+    & + .n-menu__social-item {
+
+    }
+}
+
+.n-menu__newsletter-btn {
+    @include button-single();
+    @include button-single-light();
+    margin-bottom: 40px;
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+}

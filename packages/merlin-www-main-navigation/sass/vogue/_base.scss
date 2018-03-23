@@ -1,0 +1,333 @@
+.has-open-menu {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.n-main {
+    background-color: $white;
+    z-index: 10;
+}
+
+.n-main__wrapper {
+
+}
+
+.n-main__header {
+    height: 140px;
+    text-align: center;
+}
+
+.n-main__nav {
+    height: 60px;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+}
+
+.n-main__nav-logo {
+    height: 60px;
+    left: 20px;
+    overflow: hidden;
+    position: fixed;
+    width: 118px;
+
+    @include tablet-size {
+        left: 30px;
+    }
+
+    a {
+        bottom: 0;
+        height: 60px;
+        line-height: 60px;
+        position: absolute;
+        transition: bottom 0.2s ease-in-out;
+        vertical-align: middle;
+        width: 118px;
+    }
+
+    svg, img {
+        height: 60px;
+        width: 100%;
+    }
+
+    &.is-hidden {
+        a {
+            @include desktop-size {
+                bottom: -60px;
+            }
+        }
+    }
+
+    @include min-screen($MAXIMUM_PAGE_WIDTH + 60px) {
+        left: auto;
+    }
+}
+
+.n-main__nav-logo--takeover {
+    svg, img {
+
+    }
+}
+
+.n-main__nav-title {
+    @include font('ITC CASLON', 15px, 400, 60px, -0.01);
+    display: none;
+    overflow: hidden;
+    padding-left: 170px;
+    padding-right: 155px;
+    position: fixed;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    @include min-screen(600px) {
+        padding-left: 180px;
+        display: block;
+    }
+
+    @include tablet-size {
+        @include font-size(20px);
+    }
+}
+
+.n-main__list-item {
+    vertical-align: top;
+}
+
+.n-main__nav-link {
+    @include font('NOBEL', 12px, 700, 12px);
+    color: $cod-gray;
+    display: block;
+    letter-spacing: 1px;
+    padding: 0 15px;
+    text-transform: uppercase;
+
+    span {
+        display: inline-block;
+        height: 60px;
+        line-height: 60px;
+    }
+
+    &:hover {
+        color: $guardsman-red;
+    }
+}
+
+.n-main__sticker {
+    z-index: 3;
+
+    &:before {
+        @include vendor-prefix(transform, translateX(-50%));
+        background-color: $white;
+        border-bottom: 1px solid $gallery;
+        content: '';
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+    }
+}
+
+.n-main__sticker-child {
+    background-color: $white;
+
+    &:before {
+        @include vendor-prefix(transform, translateX(-50%));
+        background-color: $white;
+        border-bottom: 1px solid $gallery;
+        box-shadow: 0px 2px 5px 0px rgba(102, 102, 102, 0.06);
+        content: '';
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+    }
+}
+
+.n-main__nav-hamburger {
+    border-left: 1px solid $gallery;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    width: 60px;
+
+    .n-main__nav-hamburger__icon {
+        cursor: pointer;
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        width: 60px;
+
+        svg {
+            display: inline-block;
+            fill: $cod-gray;
+            height: 15px;
+            line-height: 60px;
+            vertical-align: middle;
+        }
+    }
+
+    .n-main__nav-hamburger__close-icon {
+        cursor: pointer;
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        width: 60px;
+
+        svg {
+            display: inline-block;
+            fill: $cod-gray;
+            height: 15px;
+            line-height: 60px;
+            vertical-align: middle;
+        }
+    }
+}
+
+.n-main__nav-search {
+    @include desktop-size {
+        border-left: 1px solid $gallery;
+    }
+
+    @include min-screen($MAXIMUM_PAGE_WIDTH + 1) {
+        border-right: 1px solid $gallery;
+    }
+
+    display: inline-block;
+    float: right;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    width: 60px;
+
+    .n-main__nav-search__icon {
+        background-color: transparent;
+        cursor: pointer;
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        width: 60px;
+
+        svg {
+            display: inline-block;
+            fill: $cod-gray;
+            height: 20px;
+            line-height: 60px;
+            vertical-align: middle;
+        }
+
+        &:hover {
+            svg {
+                fill: $guardsman-red;
+            }
+        }
+    }
+
+    .n-main__nav-search__close-icon {
+        background-color: transparent;
+        cursor: pointer;
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        width: 60px;
+
+        svg {
+            display: inline-block;
+            fill: $cod-gray;
+            height: 20px;
+            line-height: 60px;
+            vertical-align: middle;
+        }
+
+        &:hover {
+            svg {
+                fill: $guardsman-red;
+            }
+        }
+    }
+}
+
+.n-menu {
+    background-color: $white;
+    -webkit-overflow-scrolling: touch;
+
+    &.is-visible {
+        bottom: 0;
+        overflow: auto;
+        position: fixed;
+        top: 60px;
+        width: 100%;
+        z-index: 2;
+    }
+}
+
+.n-menu__top-stories {
+    .c-top-stories {
+        display: block;
+    }
+
+    .c-top-stories__overflow {
+        padding-left: 20px;
+        @include tablet-size {
+            padding-left: 30px;
+        }
+    }
+}
+
+.n-menu__nav {
+    margin-bottom: 30px;
+
+    .n-menu__nav__wrapper {
+        margin: 0 20px;
+        overflow: hidden;
+
+        @include tablet-size {
+            margin: 0 30px;
+        }
+    }
+
+    a {
+        .n-menu__nav-item {
+            border-bottom: 1px solid $gallery;
+            float: left;
+            height: 60px;
+            position: relative;
+            width: 100%;
+
+            .n-menu__nav-link {
+                @include font('NOBEL', 15px, 700, 15px);
+                @include vendor-prefix(transform, translateY(-50%));
+                color: $cod-gray;
+                letter-spacing: 1px;
+                position: absolute;
+                text-transform: uppercase;
+                top: 50%;
+                word-break: break-word;
+            }
+
+            &--more {
+                border-bottom: none;
+                height: 40px;
+                width: 50%;
+
+                .n-menu__nav-link {
+                    @include font-size(12px);
+                    @include line-height(12px);
+                    @include vendor-prefix(transform, none);
+                    bottom: 0;
+                    top: initial;
+                }
+            }
+
+            &:hover,
+            &:focus {
+
+            }
+        }
+    }
+}

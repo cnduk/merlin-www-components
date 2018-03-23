@@ -1,0 +1,133 @@
+.n-main__covers {
+    box-sizing: border-box;
+    display: none;
+    left: 60px;
+    position: absolute;
+    top: 60px;
+
+    @include desktop-size {
+        display: block;
+    }
+
+    @include min-screen(1440px) {
+        left: 0;
+    }
+}
+
+.n-main__covers__wrapper {
+
+}
+
+.n-main__cover {
+    display: inline-block;
+    margin-right: 12px;
+    width: 80px;
+
+    img {
+        width: 100%;
+    }
+
+    &:nth-child(2) {
+        display: none;
+    }
+}
+
+.n-main__cover__offer {
+    display: inline-block;
+    vertical-align: top;
+    @include font('ADOBE CASLON', 12px, 400, 15px);
+    color: $dove-gray;
+    white-space: pre-line;
+}
+
+.n-main__cover__btn,
+a.n-main__cover__btn {
+    @include button-single();
+    @include button-single-light();
+    @include font-size(10px);
+    @include line-height(10px);
+    font-style: normal;
+    margin-top: 10px;
+    padding: 4px;
+    width: auto;
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
+
+.n-menu__subscribe {
+    background-color: $wild-sand;
+    margin: 30px 0;
+    padding: 20px 0;
+
+    // @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    //     padding: 30px;
+    //     padding: 30px;
+    // }
+}
+
+.n-menu__subscribe__wrapper {}
+.n-menu__subscribe-cols {
+    display: table;
+    width: 100%;
+}
+
+.n-menu__subscribe-col {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+    width: 50%;
+
+    &:nth-child(2) {
+        padding-left: 10px;
+        text-align: left;
+    }
+}
+
+.n-menu__subscribe-covers {
+    display: inline-block;
+    font-size: 0;
+    position: relative;
+    width: 85px + 52px;
+}
+
+.n-menu__subscribe-cover {
+    &:nth-child(1) {
+        width: 85px;
+    }
+
+    &:nth-child(2) {
+        background-color: $cod-gray;
+        border-bottom: 8px solid $cod-gray;
+        border-left: 4px solid $cod-gray;
+        border-radius: 3px;
+        border-right: 4px solid $cod-gray;
+        border-top: 8px solid $cod-gray;
+        bottom: 0;
+        left: 60px;
+        position: absolute;
+        width: 48px;
+    }
+}
+
+.n-menu__subscribe-message {
+    @include font('ADOBE CASLON', 12px, 400, 15px);
+    color: $dove-gray;
+    white-space: pre-line;
+}
+
+a.n-menu__subscribe-btn {
+    @include button-single-two();
+    @include button-single-two-light();
+
+    @include font-size(12px);
+    @include line-height(12px);
+    margin-top: 12px;
+    padding: 10px;
+    width: auto;
+
+    &:hover {
+        @include button-single-two-light-hover();
+    }
+}
