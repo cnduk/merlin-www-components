@@ -36,18 +36,18 @@
 }
 
 .n-gallery-counter__current {
-    @include font('ITC CASLON', 20px, 400, 20px, -0.01);
+    @include font('ITC CASLON', 20px, 400, 20px, -10);
     color: $cod-gray;
 }
 
 .n-gallery-counter__slash {
-    @include font('ITC CASLON', 15px, 400, 15px, -0.01);
+    @include font('ITC CASLON', 15px, 400, 15px, -10);
     color: $cod-gray;
     padding: 0 5px;
 }
 
 .n-gallery-counter__total {
-    @include font('ITC CASLON', 15px, 400, 15px, -0.01);
+    @include font('ITC CASLON', 15px, 400, 15px, -10);
     color: $cod-gray;
 }
 

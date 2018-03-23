@@ -73,7 +73,7 @@
 }
 
 .n-main__nav-title {
-    @include font('ITC CASLON', 15px, 400, 60px, -0.01);
+    @include font('ITC CASLON', 15px, 400, 60px, -10);
     display: none;
     overflow: hidden;
     padding-left: 170px;

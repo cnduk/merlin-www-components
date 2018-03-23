@@ -23,7 +23,7 @@
     top: 0;
 
     input {
-        @include font('ITC CASLON', 17px, 400, 60px, -0.01);
+        @include font('ITC CASLON', 17px, 400, 60px, -10);
         background-color: $mine-shaft-222;
         border: none;
         box-sizing: border-box;
