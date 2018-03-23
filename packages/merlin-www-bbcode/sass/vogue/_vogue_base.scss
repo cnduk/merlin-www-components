@@ -477,93 +477,64 @@
     display: none;
 }
 
-// -------------------- //
-// Gallery
-// -------------------- //
+/**
+ * Gallery
+ */
 .bb-gallery {
-    border-bottom: 1px solid $gallery;
-    border-left: 1px solid $gallery;
-    border-right: 1px solid $gallery;
-    border-top: 1px solid $gallery;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    margin: 40px 0;
+    margin: $MARGIN_LARGE 0;
+    @include opacity(1);
+    @include transition(opacity 0.3s ease-in-out);
 
     &:hover {
-
+        @include card-image-links-hover();
     }
 }
 
 .bb-gallery__icon {
     display: table-cell;
-    height: 48px;
-    padding: 12px;
-    position: relative;
-    vertical-align: middle;
-    width: 48px;
+    vertical-align: top;
+    padding-right: 5px;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        padding: 16px;
-    }
-
-    &:before {
-        border-radius: 50%;
-        border: 1px solid $gallery;
-        box-sizing: border-box;
-        content: "";
-        height: 48px;
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 48px;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-right: 10px;
     }
 
     svg {
-        display: block;
-        fill: $cod-gray;
-        height: 100%;
-        margin: 0 auto;
-        width: 20px;
+        fill: $COLOR_TYPE_META;
+        width: 18px;
     }
 }
 
 .bb-gallery__title {
-    @include font("ADOBE CASLON", 16px, 400, 20px);
-    color: $cod-gray;
+    @include font('ADOBE CASLON', 20px, 'BOLD', 24px);
+    color: #000;
     display: table-cell;
-    padding-bottom: 12px;
-    padding-right: 12px;
-    padding-top: 12px;
-    vertical-align: middle;
+    padding-bottom: 10px;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(20px);
-        @include line-height(24px);
-        padding-bottom: 16px;
-        padding-right: 16px;
-        padding-top: 16px;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(24px);
+        @include line-height(30px);
     }
 }
 
-.bb-gallery__link {}
-.bb-gallery__cols {}
 .bb-gallery__col {
-    background-color: $gallery;
+    &:before {
+        display: none;
+    }
+
+    img {
+        width: 100%;
+    }
 }
 
 .bb-gallery__remaining {
-    background-color: rgba($black, 0.5);
-    white-space: nowrap;
+    background-color: rgba(0,0,0,0.3);
 }
 
 .bb-gallery__remaining-text {
-    @include font("NOBEL", 20px, 700, 20px);
-    color: $white;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(24px);
-        @include line-height(24px);
+    @include font('NOBEL', 24px, 'NORMAL');
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(35px);
     }
 }
 
@@ -575,86 +546,85 @@
     }
 
     .bb-gallery__col:first-child:before {
-        @include c-card-label($guardsman-red, $white, 'VIEW COLLECTION');
+        @include c-card-label($COLOR_TYPE_LINK, #fff, 'VIEW COLLECTION');
         padding: 14px 10px 14px 12px;
+        // NOTE: needed to reset before from li
+        border-radius: 0;
+        height: auto;
+        top: auto;
+        width: auto;
     }
 }
 
-// -------------------- //
-// Video
-// -------------------- //
+/**
+ * Video
+ */
 .bb-video {
-    border-bottom: 1px solid $gallery;
-    border-left: 1px solid $gallery;
-    border-right: 1px solid $gallery;
-    border-top: 1px solid $gallery;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
     margin: 40px 0;
 
     &:hover {
-
+        .bb-video__image {
+            @include card-image-links-hover();
+        }
     }
 }
 
-.bb-video__title-icon {
+.bb-video__icon {
     display: table-cell;
-    height: 48px;
-    padding: 12px;
-    position: relative;
-    vertical-align: middle;
-    width: 48px;
+    padding-right: 5px;
+    vertical-align: top;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        padding: 16px;
-    }
-
-    &:before {
-        border-radius: 50%;
-        border: 1px solid $gallery;
-        box-sizing: border-box;
-        content: "";
-        height: 48px;
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 48px;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-right: 10px;
     }
 
     svg {
-        display: block;
-        fill: $cod-gray;
-        height: 100%;
-        margin: 0 auto;
-        width: 20px;
+        fill: $COLOR_MAIN_TERTIARY;
+        width: 14px;
     }
 }
 
 .bb-video__title {
-    @include font("ADOBE CASLON", 16px, 400, 20px);
-    color: $cod-gray;
+    @include font('ADOBE CASLON', 20px, 'BOLD', 24px);
+    color: #000;
     display: table-cell;
-    padding-bottom: 12px;
-    padding-right: 12px;
-    padding-top: 12px;
-    vertical-align: middle;
+    padding-bottom: 10px;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(20px);
-        @include line-height(24px);
-        padding-bottom: 16px;
-        padding-right: 16px;
-        padding-top: 16px;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(24px);
+        @include line-height(27px);
     }
+
 }
 
 .bb-video__wrapper {}
+.bb-video__image {}
 .bb-video__image-icon {
-    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include vendor-prefix(transform, translate(-50%, -50%));
+    width: 45px;
+    height: 45px;
+    background-color: $COLOR_BUTTON_CTA_LIGHT;
+
+    svg {
+        display: block;
+        fill: $COLOR_MAIN_PAGE;
+        width: 15px;
+        height: 100%;
+        margin: 0 auto;
+    }
 }
 
-.bb-video__link {}
+.bb-video__link {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+}
 
 // -------------------- //
 // Button

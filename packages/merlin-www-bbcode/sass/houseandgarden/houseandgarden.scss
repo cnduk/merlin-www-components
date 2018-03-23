@@ -478,13 +478,7 @@
 }
 
 .bb-figure__caption {
-    @include font('MILLER_DISPLAY', 14px, null, 17px);
-    color: $mine-shaft;
-    margin-bottom: 10px;
-
     .bb-p {
-        @include font-size(14px);
-        @include line-height(17px);
         margin: 0;
     }
 }
@@ -618,22 +612,18 @@
     }
 }
 
-h4.bb-gallery__title {
+.bb-gallery__title {
     @include font("MILLER_DISPLAY", 15px, 700, 15px);
     color: $mine-shaft;
     display: table-cell;
     letter-spacing: 0.5px;
-    padding-bottom: 12px;
-    padding-right: 12px;
-    padding-top: 12px;
+    margin: 0;
+    padding-right: 10px;
     vertical-align: middle;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(18px);
         @include line-height(18px);
-        padding-bottom: 16px;
-        padding-right: 16px;
-        padding-top: 16px;
     }
 }
 
@@ -690,7 +680,8 @@ ul li.bb-gallery__col {
     }
 }
 
-.bb-video__title-icon {
+.bb-video__icon {
+    display: table-cell;
     height: 40px;
     padding: 10px;
     position: relative;
@@ -722,11 +713,13 @@ ul li.bb-gallery__col {
     }
 }
 
-h4.bb-video__title {
+.bb-video__title {
     @include font("MILLER_DISPLAY", 15px, 700, 15px);
     color: $mine-shaft;
+    display: table-cell;
     letter-spacing: 0.5px;
     margin: 0;
+    padding-right: 10px;
     vertical-align: middle;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
@@ -741,7 +734,6 @@ h4.bb-video__title {
 }
 
 .bb-video__link {}
-
 
 // -------------------- //
 // Button

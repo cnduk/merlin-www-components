@@ -262,8 +262,7 @@ Scroll.prototype = inherit(EventEmitter.prototype, {
 
     'insertChild': function(item, index, _options) {
         if (index < 0 || index > this.children.length - 1) return false;
-        if (!isGroup(item)) throw new
-        TypeError('item must be of type Group');
+        if (!isGroup(item)) throw new TypeError('item must be of type Group');
         if (this.hasChild(item)) return false;
 
         // Defaults

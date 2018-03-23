@@ -94,8 +94,9 @@ Group.prototype = inherit(EventEmitter.prototype, {
 
     'insertChild': function(item, index, _options) {
         if (index < 0 || index > this.children.length - 1) return false;
-        if (!isStick(item) && !isObstacle(item)) throw new
-        TypeError('item must be of type Stick');
+        if (!isStick(item) && !isObstacle(item)){
+            throw new TypeError('item must be of type Stick');
+        }
         if (this.hasChild(item)) return false;
 
         // Defaults
