@@ -1,0 +1,372 @@
+
+h1, h2, h3, h4, h5, h5 {
+    font-variant-ligatures: common-ligatures;
+}
+
+
+// -------------------- //
+// Paragraphs
+// -------------------- //
+.bb-p {
+    @include font("ADOBE CASLON", 18px, 'NORMAL');
+    color: $mine-shaft-333;
+    margin: 1em 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(20px);
+    }
+}
+
+// -------------------- //
+// Headings
+// -------------------- //
+.bb-h1,
+.bb-h2,
+.bb-h3,
+.bb-h4,
+.bb-h5,
+.bb-h6 {
+    color: $cod-gray;
+    margin: 30px 0 20px 0;
+}
+
+.bb-h1 {
+    @include font("ITC CASLON", 35px);
+}
+
+.bb-h2 {
+    @include font("ITC CASLON", 24px);
+}
+
+.bb-h3 {
+    @include font("ITC CASLON", 20px);
+}
+
+.bb-h4 {
+    @include font("ITC CASLON", 17px);
+}
+
+.bb-h5 {
+    @include font("ITC CASLON", 15px);
+}
+
+.bb-h6 {
+    @include font("ITC CASLON", 12px);
+}
+
+@include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    .bb-h1 {
+        @include font-size(50px);
+    }
+
+    .bb-h2 {
+        @include font-size(29px);
+    }
+
+    .bb-h3 {
+        @include font-size(24px);
+    }
+
+    .bb-h4 {
+        @include font-size(20px);
+    }
+
+    .bb-h5 {
+        @include font-size(15px);
+    }
+
+    .bb-h6 {
+        @include font-size(12px);
+    }
+}
+
+// -------------------- //
+// Horizontal rule
+// -------------------- //
+.bb-hr {
+    border-top: 1px solid $gallery;
+    height: 0;
+    margin: 10px 0;
+}
+
+// -------------------- //
+// Preformatted
+// -------------------- //
+.bb-pre {
+    @include font-size(14px);
+    @include line-height(21px);
+
+    background: $alabaster-f9;
+    border-radius: 4px;
+    border: solid 1px $gallery;
+    color: $dove-gray;
+    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    margin: 40px 0;
+    padding: 20px;
+    white-space: pre-wrap;
+}
+
+// -------------------- //
+// Lists
+// -------------------- //
+.bb-ul,
+.bb-ol {
+    @include font("ADOBE CASLON", 18px, null, 27px);
+
+    color: $mine-shaft-222;
+    list-style-type: none;
+    margin: 20px 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(20px);
+        @include line-height(30px);
+    }
+}
+
+.bb-li {
+    margin: 0.4em 0;
+    position: relative;
+}
+
+.bb-ul {
+    padding-left: 20px;
+
+    .bb-li:before {
+        background-color: $cod-gray;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: 8px;
+        left: -20px;
+        position: absolute;
+        top: 10px;
+        width: 8px;
+
+        @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            top: 11px;
+        }
+    }
+}
+
+.bb-ol {
+    counter-reset: section;
+    padding-left: 40px;
+
+    .bb-li:before {
+        @include font('NOBEL', 12px, 'NORMAL');
+
+        background: $mine-shaft-222;
+        color: $white;
+        counter-increment: section;
+        content: counters(section,".");
+        height: 20px;
+        left: -40px;
+        line-height: 20px;
+        position: absolute;
+        text-align: center;
+        top: 2px;
+        width: 20px;
+
+        @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+            top: 3px;
+        }
+    }
+}
+
+
+// -------------------- //
+// Note
+// -------------------- //
+.bb-note {
+    @include font('ADOBE CASLON', 15px, 'NORMAL');
+    border-top: 1px solid $loot-box;
+    color: $dove-gray;
+    margin: 1em 0;
+    padding-top: $PADDING_X_SMALL;
+
+    a {
+        color: $dove-gray;
+        @include secondary-links(true);
+    }
+}
+
+// -------------------- //
+// Blockquote
+// -------------------- //
+.bb-blockquote {
+    border-left: 2px solid $alto;
+    margin: $MARGIN_LARGE 0;
+    padding-left: 20px;
+}
+
+.bb-blockquote__quote {
+    @include font("ADOBE CASLON", 18px);
+    color: $dove-gray;
+    font-style: italic;
+    margin: 1em 0;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(20px);
+    }
+}
+
+.bb-blockquote__separator {
+    display: none;
+}
+
+.bb-blockquote__credit {
+    @include font("NOBEL", 12px)
+    color: $dove-gray;
+    letter-spacing: 1px;
+    margin: 20px 0 0 0;
+    text-transform: uppercase;
+}
+
+// -------------------- //
+// Pullquote
+// -------------------- //
+.bb-pullquote {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.bb-pullquote__quote {
+    @include font("ADOBE CASLON", 24px, 'BOLD', 28px);
+    color: $cod-gray;
+    display: block;
+
+    &:before,
+    &:after {
+        content: '';
+    }
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(29px);
+        @include line-height(35px);
+    }
+}
+
+.bb-pullquote__separator {
+    display: none;
+}
+
+.bb-pullquote__credit {
+    @include font("NOBEL", 12px);
+    color: $cod-gray;
+    letter-spacing: 1px;
+    margin: 20px 0 0 0;
+    text-transform: uppercase;
+}
+
+
+
+// -------------------- //
+// Infobox
+// -------------------- //
+.bb-infobox {
+    background-color: $wild-sand;
+    margin: $MARGIN_LARGE 0;
+    padding: $PADDING_MEDIUM $PADDING_SMALL;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        padding: $PADDING_LARGE;
+    }
+}
+
+.bb-infobox__title {
+    @include font('NOBEL', 20px, 'NORMAL');
+    color: $cod-gray;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.bb-infobox__hr {
+    background-color: $gallery;
+    border: none;
+    height: 1px;
+    margin: $MARGIN_SMALL 0;
+}
+
+.bb-infobox__item {
+    margin: $MARGIN_MEDIUM 0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.bb-infobox__item__key {
+    @include font('NOBEL', 15px, 'BOLD');
+    padding-bottom: $PADDING_X_SMALL;
+    text-transform: uppercase;
+}
+
+.bb-infobox__item__value {
+    @include font('ADOBE CASLON', 17px);
+    margin: 0;
+}
+
+// -------------------- //
+// Callout
+// -------------------- //
+.bb-callout {
+    background-color: $wild-sand;
+    margin: $MARGIN_LARGE 0;
+    padding: $PADDING_MEDIUM $PADDING_SMALL;
+
+    > *:first-child {
+        margin-top: 0;
+    }
+    > *:last-child {
+        margin-bottom: 0;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: $PADDING_LARGE;
+    }
+}
+
+
+
+/**
+ * Question & Answer
+ */
+.bb-question,
+.bb-answer {}
+.bb-question__question,
+.bb-answer__answer {
+    @include font('ADOBE CASLON', 18px, 'NORMAL');
+}
+
+.bb-question__question,
+.bb-question__question p {
+    font-weight: map-get($FONT_WEIGHTS, 'BOLD');
+}
+
+.bb-question__q,
+.bb-answer__a {
+    color: $mine-shaft-333;
+    @include font('NOBEL', 18px, 'BOLD');
+}
+
+.bb-question__separator,
+.bb-answer__separator {
+    display: none;
+}
+
+.bb-question__author,
+.bb-answer__author {
+    @include font('NOBEL', 11px, null, 11px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.bb-question__by,
+.bb-answer__by {
+    @include font('ADOBE CASLON', 12px);
+    color: $dove-gray;
+    font-family: Adobe Caslon, serif;
+    letter-spacing: normal;
+    font-style: italic;
+    text-transform: lowercase;
+}

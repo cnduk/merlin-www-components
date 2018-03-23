@@ -1,0 +1,92 @@
+
+// -------------------- //
+// Anchor
+// -------------------- //
+.bb-a {
+    color: $guardsman-red;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+// -------------------- //
+// Abbreviation
+// -------------------- //
+.bb-abbr {}
+
+// -------------------- //
+// Italic
+// -------------------- //
+.bb-em {}
+
+// -------------------- //
+// Small
+// -------------------- //
+.bb-small {
+    @include font('ADOBE CASLON', 13px);
+    color: $mine-shaft-333;
+}
+
+// -------------------- //
+// Bold
+// -------------------- //
+.bb-strong {}
+
+// -------------------- //
+// Dropcap
+// -------------------- //
+.bb-dropcap {}
+.bb-dropcap--letter {
+    @include font('ITC CASLON');
+
+    box-sizing: border-box;
+    color: $cod-gray;
+    float: left;
+    // This is all done in ems as it will adjust if the paragraph font size
+    // changes
+    font-size: 3.2em;
+    line-height: 0.5em;
+    margin-right: 0.21em;
+    padding-top: 0.28em;
+    text-align: left;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        font-size: 5.45em;
+        margin-right: 0.14em;
+        padding-top: 0.25em;
+
+        // Fix dropcap position in IE
+        .gt-ie8 &,
+        .is-ie10 & {
+            margin-top: -0.05em;
+        }
+    }
+}
+
+
+// -------------------- //
+// Button
+// -------------------- //
+.bb-button {
+    @include button-single();
+}
+.bb-button--light {
+    @include button-single-light();
+
+    &:hover,
+    &:focus {
+        @include button-single-light-hover();
+    }
+}
+
+.bb-button--dark {
+    @include button-single-dark();
+
+    &:hover,
+    &:focus {
+        @include button-single-dark-hover();
+    }
+}
