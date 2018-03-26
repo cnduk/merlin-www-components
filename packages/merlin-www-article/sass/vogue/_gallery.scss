@@ -1,7 +1,7 @@
 .a-gallery {
     margin: 30px auto;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         margin-top: 40px;
         margin-bottom: 60px;
     }
@@ -12,7 +12,7 @@
 .a-gallery__message {
     margin-bottom: 40px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         margin-bottom: 60px;
     }
 }
@@ -30,7 +30,7 @@
     margin-left: 0px;
     margin-right: 0px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         margin-left: -10px;
         margin-right: -10px;
     }
@@ -45,14 +45,14 @@ li.a-gallery__thumbnail {
         margin-top: 0;
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         margin: 20px 0 0 0;
         padding: 0 10px;
     }
 }
 
 .a-gallery__thumbnail-image {
-    background-color: $COLOUR_BG_ADVERT;
+    background-color: $alabaster-f9;
 }
 
 .a-gallery__thumbnail-hover {
@@ -62,11 +62,11 @@ li.a-gallery__thumbnail {
     width: auto;
 
     svg {
-        fill: #fff;
+        fill: $white;
         width: 30px;
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         left: 10px;
         right: 10px;
 
@@ -77,14 +77,14 @@ li.a-gallery__thumbnail {
 }
 
 li.a-gallery__image-listitem {
-    margin-bottom: $MARGIN_LARGE;
+    margin-bottom: 40px;
 
     &:last-child {
         margin-bottom: 0;
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
-        margin-bottom: $MARGIN_X_LARGE;
+    @include tablet-size{
+        margin-bottom: 60px;
 
         &:last-child {
             margin-bottom: 0;
@@ -93,33 +93,33 @@ li.a-gallery__image-listitem {
 }
 
 .c-figure__container {
-    margin-bottom: $MARGIN_SMALL;
+    margin-bottom: 20px;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: $MARGIN_MEDIUM;
+    @include desktop-size {
+        margin-bottom: 30px;
     }
 }
 
 .g-image-nav {
-    padding: $PADDING_SMALL $PADDING_X_SMALL;
+    padding: 20px 15px;
 }
 
 .g-image-nav__btns {}
 .g-image-nav__btn {
-    background-color: $COLOUR_BG_PAGE;
+    background-color: $white;
 }
 
 .g-image-nav__btn--previous {
-    padding-bottom: $PADDING_SMALL;
+    padding-bottom: 20px;
 }
 
 .g-image-nav__btn--next {
-    border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT1;
-    padding-top: $PADDING_SMALL;
+    border-top: 1px solid $gallery;
+    padding-top: 20px;
 }
 
 .g-image-nav__btn[disabled] {
     svg {
-        fill: $COLOR_BUTTON_ACTION_INACTIVE;
+        fill: $silver;
     }
 }
