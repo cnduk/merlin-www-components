@@ -1,20 +1,20 @@
 .c-newsletter {
-    background-color: $COLOUR_BG_ACCENT2;
-    padding: $PADDING_X_LARGE 0 55px 0;
+    background-color: $wild-sand;
+    padding: 60px 0 55px 0;
     text-align: center;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: $PADDING_XX_LARGE 0 75px 0;
+        padding: 80px 0 75px 0;
     }
 }
 
 .c-newsletter__wrapper {
     margin: 0 auto;
     max-width: 670px;
-    padding: 0 $MOBILE_SIDE_GUTTER;
+    padding: 0 20px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: 0 $PADDING_LARGE;
+        padding: 0 40px;
     }
 }
 
@@ -24,7 +24,7 @@
 
 .c-newsletter__title {
     @include font('NOBEL', 20px, 700, 20px);
-    margin-bottom: $MARGIN_SMALL;
+    margin-bottom: 20px;
     margin-top: 0;
     text-transform: uppercase;
 
@@ -35,9 +35,9 @@
 }
 
 .c-newsletter__description {
-    color: $COLOR_MAIN_TERTIARY;
+    color: $dove-gray;
     @include font('ADOBE CASLON', 15px, null, 20px);
-    margin-bottom: $MARGIN_SMALL;
+    margin-bottom: 20px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         @include font-size(17px);
@@ -55,25 +55,25 @@
 }
 
 .c-newsletter__form__text {
-    border: 1px solid $COLOR_BORDER_SOLID_ACCENT1;
-    color: $COLOR_MAIN_TERTIARY;
+    border: 1px solid $alto;
+    color: $dove-gray;
     @include font('NOBEL', 14px, null, 15px);
     height: 45px;
     letter-spacing: 0.025em;
-    margin-bottom: $MARGIN_XX_SMALL;
-    padding: $PADDING_XX_SMALL $PADDING_X_SMALL;
+    margin-bottom: 10px;
+    padding: 10px 15px;
 
     &:focus {
-        border: 1px solid $COLOR_MAIN_INACTIVE;
+        border: 1px solid $silver;
     }
 }
 
 .c-newsletter__form__btn {
     height: 45px;
-    margin-bottom: $MARGIN_MEDIUM;
+    margin-bottom: 30px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: $MARGIN_XX_SMALL;
+        margin-left: 10px;
     }
 
     @include button-single-two();
@@ -84,14 +84,14 @@
 }
 
 .c-newsletter__legal {
-    color: $COLOR_MAIN_TERTIARY;
+    color: $dove-gray;
     @include font('NOBEL', 11px, null, 18px);
     letter-spacing: 0.025em;
     margin: 0;
 }
 
 .c-newsletter__privacy {
-    color: $COLOR_MAIN_TERTIARY;
+    color: $dove-gray;
     font-weight: 700;
     text-decoration: underline;
 }
