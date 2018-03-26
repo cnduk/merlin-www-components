@@ -1,4 +1,3 @@
-$TITLE_SIZE: 24px;
 
 .c-gallery-strip {
     margin-bottom: $MARGIN_LARGE;
@@ -12,11 +11,11 @@ $TITLE_SIZE: 24px;
     &:focus {
         .c-gallery-strip__title,
         .c-gallery-strip__subtitle {
-            @include card-text-links-hover();
+            opacity: 0.7;
         }
 
         .c-gallery-strip__list {
-            @include card-image-links-hover();
+            opacity: 0.8;
         }
     }
 }
@@ -24,48 +23,46 @@ $TITLE_SIZE: 24px;
 .c-gallery-strip__link {}
 
 .c-gallery-strip__list {
-    @include card-image-links-normal();
     @include transition(opacity 0.3s ease);
+    opacity: 1;
 }
 .c-gallery-strip__list__item {}
 .c-gallery-strip__images__image {}
 
 
 .c-gallery-strip__detail {
-    background: #fff;
+    background: $white;
     margin: -$MARGIN_LARGE $MARGIN_SMALL 0 $MARGIN_SMALL;
     padding: $PADDING_SMALL $PADDING_SMALL 0 $PADDING_SMALL;
     position: relative;
     text-align: center;
     z-index: 1;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
-        margin-left: $MARGIN_LARGE;
-        margin-right: $MARGIN_LARGE;
-    }
 }
 
 .c-gallery-strip__remaining {
     background-color: rgba(0,0,0,0.3);
 }
 .c-gallery-strip__remaining__label {
-    color: #fff;
     @include font('NOBEL', 24px);
+    color: $white;
 }
 .c-gallery-strip__remaining__prefix {}
 .c-gallery-strip__remaining__value {}
 
 .c-gallery-strip__title {
-    @include font('ITC CASLON', $TITLE_SIZE, 400);
-    margin: 0 0 15px 0;
+    @include font('ITC CASLON', 24px, 'NORMAL');
     @include transition(opacity 0.3s ease);
+    color: $cod-gray;
+    margin: 0 0 15px 0;
+    opacity: 1;
 }
 .c-gallery-strip__subtitle {
-    color: $COLOR_TYPE_META;
     @include font('NOBEL', 10px);
-    letter-spacing: 1px;
-    text-transform: uppercase;
     @include transition(opacity 0.3s ease);
+    color: $dove-gray;
+    letter-spacing: 1px;
+    opacity: 1;
+    text-transform: uppercase;
 }
 
 
@@ -81,7 +78,25 @@ $TITLE_SIZE: 24px;
             display: block;
         }
     }
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+}
+
+.c-gallery-strip--gutters {}
+
+@include tablet-size {
+    .c-gallery-strip__detail {
+        margin-left: $MARGIN_LARGE;
+        margin-right: $MARGIN_LARGE;
+    }
+    .c-gallery-strip--tag {
+        .c-gallery-strip__list__item {
+            display: inline-block;
+            width: 16.66%;
+        }
+        .c-gallery-strip__detail {
+            margin-left: auto;
+            margin-right: auto;
+            width: 320px;
+        }
         .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+6){
             display: inline-block;
         }
@@ -95,17 +110,26 @@ $TITLE_SIZE: 24px;
                 display: block;
             }
         }
-        .c-gallery-strip__list__item {
-            display: inline-block;
-            width: 16.66%;
+    }
+    .c-gallery-strip--gutters {
+        .c-gallery-strip__list {
+            margin: 0 -3px;
         }
-        .c-gallery-strip__detail {
-            margin-left: auto;
-            margin-right: auto;
-            width: 320px;
+        .c-gallery-strip__list__item {
+            padding: 0 3px;
+        }
+        .c-gallery-strip__remaining {
+            left: 3px;
+            right: 3px;
         }
     }
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+}
+
+@include desktop-size {
+    .c-gallery-strip--tag {
+        .c-gallery-strip__list__item {
+            width: 12.5%;
+        }
         .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+8){
             display: inline-block;
         }
@@ -118,24 +142,6 @@ $TITLE_SIZE: 24px;
             .c-gallery-strip__remaining {
                 display: block;
             }
-        }
-        .c-gallery-strip__list__item {
-            width: 12.5%;
-        }
-    }
-}
-
-.c-gallery-strip--gutters {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
-        .c-gallery-strip__list {
-            margin: 0 -3px;
-        }
-        .c-gallery-strip__list__item {
-            padding: 0 3px;
-        }
-        .c-gallery-strip__remaining {
-            left: 3px;
-            right: 3px;
         }
     }
 }
