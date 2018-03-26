@@ -1,7 +1,7 @@
 .srch-main {
-    background-color: $COLOUR_BG_DARK;
+    background-color: $mine-shaft-222;
     box-sizing: border-box;
-    color: $COLOR_MAIN_PAGE;
+    color: $white;
     overflow: hidden;
     padding: 55px $MOBILE_SIDE_GUTTER;
 
@@ -9,12 +9,8 @@
         padding: 45px $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: 45px $DESKTOP_SIDE_GUTTER;
-    }
-
     form {
-        border-bottom: 1px solid $COLOR_MAIN_SECONDARY;
+        border-bottom: 1px solid $mine-shaft-333;
     }
 }
 
@@ -23,7 +19,7 @@
     @include vendor-prefix(appearance, none);
     background-color: transparent;
     border: none;
-    color: $COLOR_MAIN_PAGE;
+    color: $white;
     display: block;
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
@@ -31,19 +27,19 @@
     width: 100%;
 
     &::-webkit-input-placeholder {
-       color: $COLOR_MAIN_PAGE;
+       color: $white;
     }
 
     &:-moz-placeholder {
-       color: $COLOR_MAIN_PAGE;
+       color: $white;
     }
 
     &::-moz-placeholder {
-       color: $COLOR_MAIN_PAGE;
+       color: $white;
     }
 
     &:-ms-input-placeholder {
-       color: $COLOR_MAIN_PAGE;
+       color: $white;
     }
 
     &:focus {
@@ -58,7 +54,7 @@
 
 .srch-results {
     @include font('ADOBE CASLON', 15px, null, 15px);
-    color: $COLOR_MAIN_TERTIARY;
+    color: $dove-gray;
     margin-top: 10px;
     text-transform: lowercase;
 }
