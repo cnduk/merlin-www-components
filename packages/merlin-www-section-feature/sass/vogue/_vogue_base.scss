@@ -118,7 +118,8 @@ li.c-feature__meta-item {
     }
 }
 
-@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+@include feature-slice-at-large {
+
     .c-feature {
         padding: $DESKTOP_SIDE_GUTTER;
     }
