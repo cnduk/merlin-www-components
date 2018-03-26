@@ -1,5 +1,5 @@
 .sh-item-carousel {
-    border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT1;
+    border-top: 1px solid $alto;
     margin-top: 40px;
     padding-top: 30px;
 
@@ -30,14 +30,16 @@ li.sh-item-carousel__list__item {
 }
 
 .sh-item-carousel__title {
-    @include font('NOBEL', 12px);
+    @include font('NOBEL', 12px, 'NORMAL');
+    color: $cod-gray;
     letter-spacing: 1px;
+    margin-bottom: 20px;
     text-transform: uppercase;
 }
 .sh-item-carousel__title__item {
     & + & {
-        border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT1;
-        color: $COLOR_TYPE_META;
+        border-left: 1px solid $alto;
+        color: $dove-gray;
     }
 }
 .sh-item-carousel__title__item--title {
