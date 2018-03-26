@@ -1,11 +1,11 @@
 .tg-header {
     margin-bottom: $MOBILE_SLICE_MARGIN;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         margin-bottom: $TABLET_SLICE_MARGIN;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         margin-bottom: $DESKTOP_SLICE_MARGIN;
     }
 }
@@ -14,10 +14,10 @@
     margin-bottom: 0;
 
     .tg-header__intro {
-        padding: $PADDING_LARGE 0 $PADDING_MEDIUM 0;
+        padding: 40px 0 30px 0;
 
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-            padding: $PADDING_X_LARGE 0 $PADDING_LARGE 0;
+        @include tablet-size {
+            padding: 60px 0 40px 0;
         }
     }
 }
@@ -26,11 +26,11 @@
 
     .tg-header__intro__image,
     .tg-header__intro svg {
-        margin-bottom: $MARGIN_MEDIUM;
+        margin-bottom: 30px;
         width: 213px;
 
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-            margin-bottom: $MARGIN_LARGE;
+        @include tablet-size {
+            margin-bottom: 40px;
             width: 320px;
         }
     }
@@ -44,12 +44,12 @@
         padding-left: $MOBILE_SIDE_GUTTER;
         padding-right: $MOBILE_SIDE_GUTTER;
 
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include tablet-size {
             padding-left: $TABLET_SIDE_GUTTER;
             padding-right: $TABLET_SIDE_GUTTER;
         }
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include desktop-size {
             padding-left: $DESKTOP_SIDE_GUTTER;
             padding-right: $DESKTOP_SIDE_GUTTER;
         }
@@ -57,45 +57,45 @@
 }
 
 // .tg-header + [class*="-ad"] .ad-block:not(.is-hidden) {
-//     padding: $PADDING_LARGE 0 0 0;
+//     padding: 40px 0 0 0;
 
-//     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-//         padding: $PADDING_X_LARGE 0 0 0;
+//     @include tablet-size {
+//         padding: 60px 0 0 0;
 //     }
 // }
 
 .tg-header__wrapper {
     padding: 0 $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         padding: 0 $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         padding: 0 $DESKTOP_SIDE_GUTTER;
     }
 }
 
 .tg-header__intro {
-    padding: $PADDING_LARGE 0 0 0;
+    padding: 40px 0 0 0;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: $PADDING_X_LARGE 0 0 0;
+    @include tablet-size {
+        padding: 60px 0 0 0;
     }
 }
 
 .tg-header__intro__image,
 .tg-header__intro svg {
     display: block;
-    margin: 0 auto $MARGIN_SMALL auto;
+    margin: 0 auto 20px auto;
     width: 160px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: $MARGIN_MEDIUM;
+    @include tablet-size {
+        margin-bottom: 30px;
         width: 250px;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         width: 250px;
     }
 
@@ -105,13 +105,13 @@
 }
 
 .tg-header__title {
-    @include line-height(36px);
-    margin: 0 0 $MARGIN_X_SMALL 0;
+    @include font('ITC_CASLON', 36px, 400, 36px);
+    margin: 0 0 15px 0;
     text-align: center;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
+    @include desktop-size{
         @include line-height(50px);
-        margin-bottom: $MARGIN_SMALL;
+        margin-bottom: 20px;
     }
 
     &:last-child {
@@ -124,24 +124,24 @@
 }
 
 .tg-header__description {
-    color: $COLOR_TYPE_META;
+    color: $dove-gray;
     @include font('ADOBE CASLON', 16px, null, 20px);
-    margin: $MARGIN_X_SMALL auto 22px auto;
+    margin: 15px auto 22px auto;
     max-width: 680px;
     text-align: center;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         @include font-size(20px);
         @include line-height(25px);
-        margin: $MARGIN_X_SMALL auto $MARGIN_MEDIUM auto;
+        margin: 15px auto 30px auto;
     }
 }
 
 .tg-header__topic-strip {
-    margin: 25px 0 $MARGIN_LARGE 0;
+    margin: 25px 0 40px 0;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin: $MARGIN_MEDIUM 0 $MARGIN_X_LARGE 0;
+    @include tablet-size {
+        margin: 30px 0 60px 0;
     }
 }
 .c-topic-strip__item--topic a {
@@ -149,17 +149,17 @@
 }
 
 .tg-header__cards {
-    margin: 0 auto $MARGIN_LARGE auto;
+    margin: 0 auto 40px auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
@@ -169,11 +169,11 @@
 .tg-header__style-file {
     padding: 40px $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         padding: 40px $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         padding: 40px $DESKTOP_SIDE_GUTTER;
     }
 
@@ -209,7 +209,7 @@
 
 .tg-header__event-meta {
     @include font('ADOBE CASLON', 0px, null, 20px);
-    color: $COLOR_TYPE_META;
+    color: $dove-gray;
     margin: 40px 0;
     max-width: 680px;
     text-align: center;
@@ -224,9 +224,9 @@
     display: block;
 }
 
-@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+@include tablet-size {
     .tg-header__event-meta {
-        margin: $MARGIN_X_SMALL auto $MARGIN_MEDIUM auto;
+        margin: 15px auto 30px auto;
     }
     .tg-header__event-meta__start-date {
         display: inline-block;
@@ -238,7 +238,7 @@
             position: relative;
 
             &:before {
-                background: $COLOR_BORDER_SOLID_ACCENT2;
+                background: $gallery;
                 content: '';
                 display: block;
                 left: 0;
