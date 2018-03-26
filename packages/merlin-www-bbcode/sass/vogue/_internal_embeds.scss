@@ -64,7 +64,7 @@
         width: 18px;
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         padding-right: 10px;
     }
 }
@@ -75,7 +75,7 @@
     display: table-cell;
     padding-bottom: 10px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         @include font-size(24px);
         @include line-height(30px);
     }
@@ -97,7 +97,7 @@
 
 .bb-gallery__remaining-text {
     @include font('NOBEL', 24px, 'NORMAL');
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         @include font-size(35px);
     }
 }
@@ -150,7 +150,7 @@
         width: 14px;
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         padding-right: 10px;
     }
 }
@@ -161,7 +161,7 @@
     display: table-cell;
     padding-bottom: 10px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         @include font-size(24px);
         @include line-height(27px);
     }
@@ -348,7 +348,7 @@
 
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         .c-gallery-strip__list__item {
             &:nth-child(3) {
                 .c-gallery-strip__remaining {
@@ -364,7 +364,7 @@
         }
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         .c-gallery-strip__detail {
             margin: -40px $MARGIN_SMALL 0 $MARGIN_SMALL;
         }

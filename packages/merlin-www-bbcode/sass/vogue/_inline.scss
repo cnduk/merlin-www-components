@@ -53,7 +53,7 @@
     padding-top: 0.28em;
     text-align: left;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    @include text-size-large {
         font-size: 5.45em;
         margin-right: 0.14em;
         padding-top: 0.25em;
