@@ -126,7 +126,7 @@ li.c-gallery__meta-item {
     text-transform: uppercase;
 }
 
-@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+@include feature-slice-at-large {
     .c-gallery {
         padding: $DESKTOP_SIDE_GUTTER;
     }
