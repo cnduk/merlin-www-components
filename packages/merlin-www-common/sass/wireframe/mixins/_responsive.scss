@@ -127,3 +127,9 @@
         @content;
     }
 }
+
+@mixin feature-slice-at-large(){
+    @include min-screen( $FEATURE_LARGE_BREAKPOINT ){
+        @content;
+    }
+}
