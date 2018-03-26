@@ -4,83 +4,103 @@
     margin-top: $MOBILE_SLICE_MARGIN;
     margin-bottom: $MOBILE_SLICE_MARGIN;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         margin-top: $TABLET_SLICE_MARGIN;
         margin-bottom: $TABLET_SLICE_MARGIN;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         margin-top: $DESKTOP_SLICE_MARGIN;
         margin-bottom: $DESKTOP_SLICE_MARGIN;
     }
 
-    &:focus,
     &:hover {
-        .c-superfeature__title,
+        .c-superfeature__title {
+            span {
+                opacity: 0.7;
+            }
+        }
+
         .c-superfeature__byline-name {
-            @include card-text-links-hover();
+            opacity: 0.7;
         }
+    }
+}
+.c-superfeature__link {}
+
+.c-superfeature__images {}
+.c-superfeature__images--multiple {
+    .c-superfeature__image {
+        width: 50%;
+    }
+
+    .c-superfeature__image:nth-child(n+3) {
+        display: none;
+    }
+
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
         .c-superfeature__image {
-            // @include card-image-links-hover();
+            width: 25%;
+        }
+
+        .c-superfeature__image:nth-child(n+3) {
+            display: inline-block;
         }
     }
 }
 
-.c-superfeature__tag {
-    @include c-card-primary-tag;
-    margin-top: 0;
-    margin-bottom: 8px;
-}
-
-.c-superfeature__byline {
-    @include c-card-byline;
-    margin-bottom: 14px;
-    margin-top: $MARGIN_XX_SMALL;
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        margin-bottom: $MARGIN_SMALL;
-        margin-top: $MARGIN_X_SMALL;
-    }
-
-    @include transition(opacity 0.3s ease-in-out);
-}
-
-.c-superfeature__byline-prefix {
-    @include c-card-byline-prefix;
-    margin-right: 2px;
-}
-
-.c-superfeature__byline-name {
-    @include c-card-byline-name;
+.c-superfeature__image {}
+.c-superfeature__image__wrapper {
+    background-color: $gallery;
 }
 
 .c-superfeature__content {
-    background-color: $COLOUR_BG_PAGE;
+    background-color: $white;
     margin-left: $MOBILE_SIDE_GUTTER;
     margin-right: $MOBILE_SIDE_GUTTER;
-    padding: $PADDING_SMALL $PADDING_LARGE $PADDING_LARGE $PADDING_LARGE;
+    margin-top: -40px;
+    padding: 20px 40px 40px 40px;
+    position: relative;
+    text-align: center;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         margin-left: $TABLET_SIDE_GUTTER;
         margin-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
         max-width: 760px;
-        padding: $PADDING_LARGE $PADDING_X_LARGE 0 $PADDING_X_LARGE;
+        margin-top: -72px;
+        padding: 40px 60px 0 60px;
     }
 
     @include min-screen(1000px) {
         margin-left: auto;
         margin-right: auto;
     }
+}
 
-    position: relative;
-    text-align: center;
+.c-superfeature__tag {
+    @include font('NOBEL', 10px, 400, 14px);
+    color: $dove-gray;
+    margin-bottom: 8px;
+    margin-top: 0;
 
-    margin-top: -$MARGIN_LARGE;
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        margin-top: -72px;
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        @include font-size(11px);
+        @include line-height(15px);
+    }
+}
+
+.c-superfeature__title {
+    @include font('ITC CASLON', 24px, 400, 26px);
+    margin: 0 0 10px 0;
+    transition: opacity 300ms ease-in-out;
+
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        @include font-size(41px);
+        @include line-height(45px);
+        margin-bottom: 20px;
     }
 }
 
@@ -88,72 +108,70 @@
     display: none;
 }
 
-.c-superfeature__images--multiple {
+.c-superfeature__byline {
+    @include font-size(10px);
+    @include line-height(14px);
+    margin-bottom: 14px;
+    margin-top: 10px;
 
-    .c-superfeature__image {
-        width: 50%;
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        @include font-size(11px);
+        @include line-height(15px);
+        margin-bottom: 20px;
+        margin-top: 15px;
     }
-    .c-superfeature__image:nth-child(n+3) {
-        display: none;
-    }
-
-    @include tablet-size {
-        .c-superfeature__image {
-            width: 25%;
-        }
-        .c-superfeature__image:nth-child(n+3) {
-            display: inline-block;
-        }
-    }
-
 }
 
-.c-superfeature__image {
-    img {
-        width: 100%;
-    }
-
-    @include transition(opacity 0.3s ease-in-out);
+.c-superfeature__byline-prefix {
+    @include font('ADOBE CASLON', 12px);
+    color: $dove-gray;
+    font-style: italic;
+    margin-right: 2px;
+    text-transform: lowercase;
 }
 
-.c-superfeature__meta {
+.c-superfeature__byline-name {
+    @include font('NOBEL', 10px);
+    color: $cod-gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: opacity 300ms ease-in-out;
+
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        @include font-size(11px);
+    }
+}
+
+ul.c-superfeature__meta {
+    @include font('NOBEL', 10px, 400, 16px);
+    color: $dove-gray;
     display: inline-block;
-    @include min-screen($CARD_SWITCHER_WIDTH) {
-        border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        @include font-size(11px);
+        @include line-height(20px);
+        border-top: 1px solid $gallery;
+        border-top: 1px solid $gallery;
         padding-top: 8px;
     }
-
-    @include c-card-meta;
-
-    .c-superfeature__meta-item {
-        &:not(:last-child) {
-            padding-right: $PADDING_XX_SMALL;
-        }
-
-        & + .c-superfeature__meta-item {
-            border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-            padding-left: $PADDING_XX_SMALL;
-        }
-
-        &--tag {
-            @include c-card-meta-tag;
-        }
-    }
 }
 
-.c-superfeature__separator {
-    display: none;
-}
-
-.c-superfeature__title {
-    @include font('ITC CASLON', 24px, null, 26px);
-    margin: 0 0 $MARGIN_XX_SMALL 0;
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        @include font-size(41px);
-        @include line-height(45px);
-        margin-bottom: $MARGIN_SMALL;
+li.c-superfeature__meta-item {
+    & + li.c-superfeature__meta-item {
+        &:before {
+            background-color: $gallery;
+            content: "";
+            display: inline-block;
+            height: 16px;
+            margin: 0px 10px;
+            vertical-align: middle;
+            width: 1px;
+        }
     }
 
-    @include transition(opacity 0.3s ease-in-out);
+    &--tag {
+        color: $guardsman-red;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
 }
