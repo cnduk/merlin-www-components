@@ -1,14 +1,13 @@
 .c-card-section--c-contributors {
-
     .c-card-section__title {
         @include font('NOBEL', 20px);
-        margin-bottom: $MARGIN_MEDIUM;
+        margin-bottom: 30px;
         text-align: center;
         text-transform: uppercase;
     }
 
     .c-card-list__item {
-        border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+        border-top: 1px solid $gallery;
         margin-bottom: 20px;
         padding-top: 20px;
 
@@ -32,13 +31,13 @@
             position: relative;
 
             span {
-                background-color: #fff;
+                background-color: $white;
                 padding: 0 50px;
                 position: relative;
             }
 
             &:before {
-                @include dotted-line($COLOR_BORDER_DOTTED, 1px, 3px);
+                @include dotted-line($dove-gray, 1px, 3px);
                 content: '';
                 height: 1px;
                 left: 0;
