@@ -1,26 +1,18 @@
 .a-review {
-    background-color: $COLOUR_BG_ACCENT2;
+    background-color: $wild-sand;
     margin: $MARGIN_LARGE 0;
     padding: $PADDING_MEDIUM $PADDING_SMALL;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
-        padding: $PADDING_LARGE;
-    }
 }
 
 .a-review__item {
     margin-bottom: $MARGIN_MEDIUM;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
-        margin-bottom: $MARGIN_LARGE;
-    }
 
     &:last-child {
         margin-bottom: 0;
     }
 }
 .a-review__item--rating {
-    border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT1;
+    border-top: 1px solid $loot-box;
     padding-top: $PADDING_SMALL;
 }
 
@@ -38,21 +30,30 @@
     @include font('ADOBE CASLON', 17px);
 }
 
+.a-review__rating {
+    @include font('NOBEL', 11px, 'BOLD');
+    display: inline-block;
+}
+
 .a-review__rating-list {
     display: inline-block;
 }
 
 li.a-review__rating-list__item {
-    background-color: $COLOR_BORDER_SOLID_ACCENT1;
+    background-color: $loot-box;
     height: 8px;
     margin-right: 4px;
     width: 8px;
 }
 li.a-review__rating-list__item--active {
-    background-color: $COLOUR_BG_DARK;
+    background-color: $mine-shaft-222;
 }
 
-.a-review__rating {
-    display: inline-block;
-    @include font('NOBEL', 11px, 'BOLD');
+@include tablet-size {
+    .a-review {
+        padding: $PADDING_LARGE;
+    }
+    .a-review__item {
+        margin-bottom: $MARGIN_LARGE;
+    }
 }

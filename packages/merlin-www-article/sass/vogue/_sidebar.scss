@@ -23,14 +23,15 @@
 
 .a-sidebar-content__title {
     @include font('NOBEL', 15px, 700, 16px);
+    color: $cod-gray;
     margin: 0;
     text-transform: uppercase;
 
     &::after {
+        @include dotted-line($dove-gray, 1px, 3px);
         content: '';
         display: block;
         height: 1px;
         margin-top: 5px;
-        @include dotted-line($COLOR_BORDER_DOTTED, 1px, 3px);
     }
 }

@@ -1,11 +1,35 @@
-.a-author,
-.a-event-author {
+.a-event-author {}
+.a-event-author__location {
+    @include font('ADOBE CASLON', 14px, null, 20px);
+    color: $dove-gray;
+}
+.a-event-author__separator {
+    border: none;
+    border-top: 1px solid $gallery;
+    margin: 10px 0;
+}
+.a-event-author__date {
+    @include font('NOBEL', 11px);
+    color: $dove-gray;
+    letter-spacing: 0.025em;
+}
+.a-event-author__btn {
+    @include button-single;
+    @include button-single-light;
+    margin-top: 20px;
+    padding: 8px;
+
+    &:hover,
+    &:focus {
+        @include button-single-light-hover;
+    }
+}
+
+
+.a-author {
+    .bb-a,
     a {
         color: $cod-gray;
-
-        &:hover {
-            border-bottom: 1px solid;
-        }
     }
 }
 
@@ -19,7 +43,7 @@
     margin-bottom: 20px;
     margin-top: -8px;
 
-    p {
+    .bb-p {
         @include font('ADOBE CASLON', 13px, 400, 16px);
         color: $dove-gray;
         margin-top: 0;
@@ -28,6 +52,13 @@
 
 .a-author__byline {
     margin: 0 0 10px 0;
+
+    a {
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid;
+        }
+    }
 }
 .a-author__byline--authors {
     line-height: 1em;
@@ -56,10 +87,9 @@
     width: 50px;
 }
 
-.a-author__separator,
-.a-event-author__separator {
-    border-top: 1px solid $gallery;
+.a-author__separator {
     border: none;
+    border-top: 1px solid $gallery;
     margin: 10px 0;
 }
 
