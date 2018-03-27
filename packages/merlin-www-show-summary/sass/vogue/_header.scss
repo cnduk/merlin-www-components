@@ -4,42 +4,42 @@
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
 
-    @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ){
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
-    }
-
-    @include min-screen( $DESKTOP_SIDE_GUTTER_BREAKPOINT ){
-        padding-left: $DESKTOP_SIDE_GUTTER;
-        padding-right: $DESKTOP_SIDE_GUTTER;
     }
 }
 
 .sh-article-header__content {
-    padding: $PADDING_LARGE 0 0 0;
+    padding: 40px 0 0 0;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: $PADDING_X_LARGE $ARTICLE_RIGHT_TOTAL 0 0;
+        padding: 60px 360px 0 0;
     }
 
     @include min-screen($ARTICLE_TOTAL) {
-        padding: $PADDING_X_LARGE $ARTICLE_RIGHT_TOTAL 0 $ARTICLE_LEFT_TOTAL;
+        padding: 60px 360px 0 230px;
     }
 }
 
-
-
-
-
 .sh-article-header__tag {
     @include font('NOBEL', 11px);
-    margin-bottom: $MARGIN_X_SMALL;
+    margin-bottom: 15px;
     text-transform: uppercase;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
         @include font-size(12px);
     }
+
+    a {
+        color: $guardsman-red;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
+
 .sh-article-header__tag-season {
     @include font-weight('BOLD');
     letter-spacing: 1px;
@@ -47,58 +47,71 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-
-
-
-
-
 .sh-article-header__title {
-    @include line-height(36px);
-    margin: $MARGIN_X_SMALL 0;
+    @include font('ITC CASLON', 35px, 'NORMAL', 36px);
+    color: $cod-gray;
+    letter-spacing: -0.01em;
+    margin: 15px 0;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include line-height(54px)
-        margin: $MARGIN_SMALL 0;
+        @include font-size(50px);
+        @include line-height(54px);
+        margin: 20px 0;
     }
 }
 
-
-
-
-
 .sh-article-header__meta-summary {
-    color: $COLOR_TYPE_META;
+    color: $dove-gray;
     @include font('NOBEL', 11px);
-    margin: $MARGIN_X_SMALL 0;
+    letter-spacing: 0.025em;
+    margin: 15px 0;
 
     svg {
-        fill: $COLOR_TYPE_META;
-        margin-right: $MARGIN_XX_SMALL;
+        display: inline-block;
+        fill: $dove-gray;
+        height: 100%;
+        margin-right: 10px;
+        vertical-align: bottom;
+        width: 8px;
     }
+
+    a {
+        color: $guardsman-red;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @include min-screen($ARTICLE_TOTAL) {
+        display: none;
+    }
+
 }
 
 .sh-article-header__share {
-    margin-top: $MARGIN_SMALL;
-
+    margin-top: 20px;
     // We have to set this as the about section gets in the way and prevents
     // margins from collapsing
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
-        @include dotted-line($COLOR_BORDER_DOTTED, 1px, 3px);
+        @include dotted-line($dove-gray, 1px, 3px);
         margin-top: 25px;
-        padding-top: $PADDING_SMALL;
+        padding-top: 20px;
         width: 100%;
     }
 }
+
 .sh-article-header__share-list {
-    border: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+    border: 1px solid $gallery;
     //Needs to be set or iOS increase li element height
     height: 45px;
 }
+
 .sh-article-header__share-item {
     //Needs to be set or iOS increase li element height
     height: 45px;
 
     & + & {
-        border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+        border-left: 1px solid $gallery;
     }
 }

@@ -4,14 +4,9 @@
     margin-bottom: 40px;
     margin-top: 30px;
 
-    @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ){
-        margin-top: 40px;
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
         margin-bottom: 60px;
-    }
-
-    @include min-screen( $DESKTOP_SIDE_GUTTER_BREAKPOINT ){
         margin-top: 40px;
-        margin-bottom: 60px;
     }
 
     .sh-article__body-content a {
@@ -20,47 +15,35 @@
 
 }
 
-
-
 .sh-article__body-expander {
-    color: $COLOR_TYPE_META;
     @include font('ADOBE CASLON', 18px);
+    color: $dove-gray;
     font-style: italic;
     text-align: left;
     text-decoration: underline;
 
     &:hover,
     &:focus {
-        border-bottom-color: rgba($COLOR_BORDER_DOTTED, 1);
+        border-bottom-color: rgba($dove-gray, 1);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .sh-article__body-author {
     a {
         border-bottom: none;
-        color: $COLOR_TYPE_HEADING;
+        color: $cod-gray;
+
         &:hover {
             border-bottom: none;
         }
     }
 }
+
 .sh-article__body-author__image {
     border-radius: 50%;
-    margin-right: $MARGIN_SMALL;
+    margin-right: 20px;
 }
+
 .sh-article__body-author__byline {
     &:hover {
         a {
@@ -70,11 +53,12 @@
 }
 
 .sh-article__body-author__byline-prefix {
-    color: $COLOR_MAIN_TERTIARY;
     @include font('ADOBE CASLON', 12px);
+    color: $dove-gray;
     font-style: italic;
     text-transform: lowercase;
 }
+
 .sh-article__body-author__byline-name {
     @include font('NOBEL', 11px);
     letter-spacing: 1px;
