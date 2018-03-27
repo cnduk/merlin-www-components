@@ -69,6 +69,12 @@
     }
 }
 
+@mixin article-header-large-size(){
+    @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT){
+        @content
+    }
+}
+
 @mixin article-medium-size(){
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         @content

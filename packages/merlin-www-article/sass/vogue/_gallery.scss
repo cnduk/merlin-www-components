@@ -1,20 +1,11 @@
 .a-gallery {
     margin: 30px auto;
-
-    @include tablet-size {
-        margin-top: 40px;
-        margin-bottom: 60px;
-    }
 }
 
 .a-gallery__wrapper {}
 
 .a-gallery__message {
     margin-bottom: 40px;
-
-    @include tablet-size {
-        margin-bottom: 60px;
-    }
 }
 
 .a-gallery__message-btn {
@@ -29,11 +20,6 @@
 .a-gallery__thumbnail-list {
     margin-left: 0px;
     margin-right: 0px;
-
-    @include tablet-size {
-        margin-left: -10px;
-        margin-right: -10px;
-    }
 }
 
 li.a-gallery__thumbnail {
@@ -43,11 +29,6 @@ li.a-gallery__thumbnail {
 
     &:nth-child(-n+3){
         margin-top: 0;
-    }
-
-    @include tablet-size {
-        margin: 20px 0 0 0;
-        padding: 0 10px;
     }
 }
 
@@ -65,15 +46,6 @@ li.a-gallery__thumbnail {
         fill: $white;
         width: 30px;
     }
-
-    @include tablet-size {
-        left: 10px;
-        right: 10px;
-
-        svg {
-            width: 40px;
-        }
-    }
 }
 
 li.a-gallery__image-listitem {
@@ -82,22 +54,10 @@ li.a-gallery__image-listitem {
     &:last-child {
         margin-bottom: 0;
     }
-
-    @include tablet-size{
-        margin-bottom: 60px;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
 }
 
 .c-figure__container {
     margin-bottom: 20px;
-
-    @include desktop-size {
-        margin-bottom: 30px;
-    }
 }
 
 .g-image-nav {
@@ -121,5 +81,45 @@ li.a-gallery__image-listitem {
 .g-image-nav__btn[disabled] {
     svg {
         fill: $silver;
+    }
+}
+
+
+@include tablet-size {
+    .a-gallery {
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+    .a-gallery__message {
+        margin-bottom: 60px;
+    }
+    .a-gallery__thumbnail-list {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    li.a-gallery__thumbnail {
+        margin: 20px 0 0 0;
+        padding: 0 10px;
+    }
+    .a-gallery__thumbnail-hover {
+        left: 10px;
+        right: 10px;
+
+        svg {
+            width: 40px;
+        }
+    }
+    li.a-gallery__image-listitem {
+        margin-bottom: 60px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@include desktop-size {
+    .c-figure__container {
+        margin-bottom: 30px;
     }
 }

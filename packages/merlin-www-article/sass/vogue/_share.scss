@@ -3,6 +3,7 @@
 
 .a-share__title {
     @include font('NOBEL', 15px, 'BOLD');
+    color: $cod-gray;
     margin: 0 0 $MARGIN_SMALL 0;
     text-transform: uppercase;
 }
@@ -14,16 +15,15 @@
 }
 
 .a-share__list-item {
-    border-bottom: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-    border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-    border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+    border-bottom: 1px solid $loot-box;
+    border-left: 1px solid $loot-box;
+    border-top: 1px solid $loot-box;
     box-sizing: border-box;
     font-size: initial;
     height: 45px;
 
     &:last-child {
-        border-right: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+        border-right: 1px solid $loot-box;
     }
 }
-
 .a-share__list-item--mobile {}

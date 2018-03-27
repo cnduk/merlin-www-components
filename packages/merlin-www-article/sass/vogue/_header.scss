@@ -4,25 +4,12 @@
 
 .a-header__content {
     padding: 40px 0 0 0;
-
-    @include desktop-size {
-        padding: 60px $ARTICLE_RIGHT_TOTAL 0 0;
-    }
-
-    @include min-screen($ARTICLE_TOTAL) {
-        padding: 60px $ARTICLE_RIGHT_TOTAL 0 $ARTICLE_LEFT_TOTAL;
-    }
 }
 
 .a-header__title {
-    @include font('ADOBE CASLON', 35px, 400, 36px);
+    @include font('ITC CASLON', 35px, 400, 36px);
+    color: $cod-gray;
     margin: 15px 0;
-
-    @include desktop-size {
-        @include font-size(50px);
-        @include line-height(54px)
-        margin: 20px 0;
-    }
 }
 
 .a-header__teaser {
@@ -31,41 +18,30 @@
         color: $dove-gray;
         margin: 15px 0;
         word-break: break-word;
-
-        @include desktop-size {
-            @include font-size(18px);
-            @include line-height(25px);
-        }
     }
-}
-
-.a-header__separator {
-    @include dotted-line($dove-gray, 1px, 3px);
-    border: none;
-    height: 1px;
-    margin: 25px 0 20px 0;
 }
 
 .a-header__about {}
 
 .a-header__byline {
     margin-bottom: 8px;
-
-    a {
-        color: inherit;
-
-        &:hover {
-            border-bottom: 1px solid;
-        }
-    }
 }
 .a-header__byline-item {
     margin-right: 8px;
 }
+.a-header__byline a,
+.a-header__sponsor a {
+    color: $cod-gray;
+
+    &:hover,
+    &:focus {
+        border-bottom: 1px solid;
+    }
+}
 
 .a-header__byline-name {
     @include font('NOBEL', 10px);
-    color: #111;
+    color: $cod-gray;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -111,34 +87,21 @@
 }
 
 .a-header__image-title {
-    color: $cod-gray;
     @include font('ADOBE CASLON', 15px, 700, 20px);
+    color: $cod-gray;
 }
-
 .a-header__image-caption .bb-p {
-    color: $dove-gray;
     @include font('ADOBE CASLON', 13px, null, 18px);
+    color: $dove-gray;
 }
-
 .a-header__image-credit {
-    &:before {
-        content: 'Credit: ';
-    }
-
-    color: $silver;
     @include font('NOBEL', 9px);
+    color: $silver;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-}
 
-.a-header__separator--hero {
-    background: none;
-    border-bottom: 1px solid $gallery;
-    margin: 15px $MOBILE_SIDE_GUTTER 0 $MOBILE_SIDE_GUTTER;
-
-    @include tablet-size {
-        margin-left: 0;
-        margin-right: 0;
+    &:before {
+        content: 'Credit: ';
     }
 }
 
@@ -154,10 +117,6 @@
 .a-header__tag__primary,
 .a-header__tag__secondary {
     @include font('NOBEL', 11px);
-
-    @include desktop-size {
-        @include font-size(12px);
-    }
 }
 
 // Force primary tag to be certain colour
@@ -171,13 +130,23 @@
 .a-header__tag__secondary {
     color: #08AEE6;
 }
-
 .a-header__tag__secondary + .a-header__tag__primary {
     border-left: 1px solid $gallery;
     margin-left: 10px;
     padding-left: 10px;
 }
 
+.a-header__separator {
+    @include dotted-line($dove-gray, 1px, 3px);
+    border: none;
+    height: 1px;
+    margin: 25px 0 20px 0;
+}
+.a-header__separator--hero {
+    background: none;
+    border-bottom: 1px solid $gallery;
+    margin: 15px $MOBILE_SIDE_GUTTER 0 $MOBILE_SIDE_GUTTER;
+}
 .a-header__separator--sponsor {
     @include dotted-line($gallery, 1px, 1px);
     height: 1px;
@@ -190,47 +159,27 @@
 .a-header__sponsor {
     margin: 15px 0 0 0;
 
-    @include desktop-size {
-        margin: 20px 0;
-    }
-
-    &::after {
-        content: '';
+    &:after {
         @include dotted-line($dove-gray, 1px, 3px);
-        border: none;
+        content: '';
         display: none;
         height: 1px;
         margin: 30px 0 20px 0;
-
-        @include desktop-size {
-            display: block;
-        }
     }
 }
-
 .a-header__sponsor-prefix {
     @include font('ADOBE CASLON', 11px, 400, 14px);
     color: $dove-gray;
     font-style: italic;
     text-transform: lowercase;
 
-    @include desktop-size {
-        @include font('ADOBE CASLON', 12px, 400, 15px);
-    }
 }
-
 .a-header__sponsor-name {
     @include font('NOBEL', 10px, 400, 14px);
     color: $cod-gray;
     font-style: normal;
-    letter-spacing: 1px;
     text-transform: uppercase;
-
-    @include desktop-size {
-        @include font('NOBEL', 11px, 400, 15px);
-    }
 }
-
 .a-header__sponsor-image {
     height: 50px;
     margin-top: 10px;
@@ -239,25 +188,12 @@
         height: 50px;
         max-height: 50px;
     }
-
-    @include desktop-size {
-        margin-left: 5px;
-        margin-top: 0;
-    }
 }
 
 .a-header__meta {
     @include font('NOBEL', 10px, 400, 16px);
     color: $dove-gray;
-
-    @include min-screen($CARD_SWITCHER_WIDTH) {
-        @include font-size(11px);
-        @include line-height(20px);
-    }
-
-
 }
-
 .a-header__meta-item {
     text-transform: uppercase;
 
@@ -270,7 +206,6 @@
         padding-left: 8px;
     }
 }
-
 .a-header__meta-item--date {
     letter-spacing: 0.025em;
     text-transform: initial;
@@ -280,20 +215,37 @@
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-.a-header__meta-item {}
 
-.a-header__event {}
-.a-header__event-title {}
-.a-header__event-location {}
-.a-header__event-date {}
-.a-header__event-btn {}
+.a-header__event {
+    margin: 20px 0 0 0;
+}
+.a-header__event-title,
+.a-header__event-location {
+    @include font('ADOBE CASLON', 14px, null, 20px);
+    color: $dove-gray;
+}
+.a-header__event-location,
+.a-header__event-date {
+    margin-top: 4px;
+}
+.a-header__event-date {
+    @include font('NOBEL', 11px);
+    color: $dove-gray;
+    letter-spacing: 0.025em;
+}
+.a-header__event-btn {
+    @include button-single;
+    @include button-single-light;
+    margin-top: 20px;
+    padding: 8px;
 
-.a-share__youtube {
-    @include tablet-size {
-        margin-left: 10px;
-        margin-top: 23px;
+    &:hover,
+    &:focus {
+        @include button-single-light-hover;
     }
 }
+
+.a-share__youtube {}
 .a-share__youtube__title {
     @include font('NOBEL', 9px, 400, 11px);
     text-transform: uppercase;
@@ -305,11 +257,79 @@
     .a-header__separator {
         display: none;
     }
+}
 
-    @include desktop-size {
+@include card-portrait-to-landscape-size {
+    .a-header__meta {
+        @include font-size(11px);
+        @include line-height(20px);
+    }
+}
+
+@include tablet-size {
+    .a-header__separator--hero {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .a-share__youtube {
+        margin-left: 10px;
+        margin-top: 23px;
+    }
+}
+
+@include desktop-size {
+    .a-header__content {
+        padding: 60px $ARTICLE_RIGHT_TOTAL 0 0;
+    }
+    .a-header__tag__primary,
+    .a-header__tag__secondary {
+        @include font-size(12px);
+    }
+    .a-header__title {
+        @include font-size(50px);
+        @include line-height(54px)
+        margin: 20px 0;
+    }
+    .a-header__teaser {
+        .bb-p {
+            @include font-size(18px);
+            @include line-height(25px);
+        }
+    }
+    .a-header__sponsor {
+        margin: 20px 0;
+
+        &::after {
+            display: block;
+        }
+    }
+    .a-header__sponsor:after {
+        display: block;
+    }
+
+    .a-header__sponsor-prefix {
+        @include font-size(12px);
+        @include line-height(15px);
+    }
+
+    .a-header__sponsor-name {
+        @include font-size(11px);
+        @include line-height(15px);
+    }
+
+    .a-header__sponsor-image {
+        margin-left: 5px;
+        margin-top: 0;
+    }
+    .a-header--video {
         .a-header__meta-item {
             @include font-size(12px);
         }
     }
 }
 
+@include article-large-size {
+    .a-header__content {
+        padding: 60px $ARTICLE_RIGHT_TOTAL 0 $ARTICLE_LEFT_TOTAL;
+    }
+}
