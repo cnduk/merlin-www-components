@@ -1,0 +1,25 @@
+.ad--gallery {}
+.ad--gallery-inline {
+    cursor: pointer;
+    padding-bottom: 60px;
+    text-align: center;
+}
+.ad--gallery-side {
+    display: none;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 300px;
+}
+
+.ad--gallery__interstitial-image,
+.ad--gallery__interstitial-video {
+    cursor: pointer;
+    max-width: 100%;
+}
+
+@include desktop-size {
+    .ad--gallery-side {
+        display: block;
+    }
+}

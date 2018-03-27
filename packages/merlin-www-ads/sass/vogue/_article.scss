@@ -1,0 +1,87 @@
+.ad--article {
+    text-align: center;
+
+    .ad__container {
+        background: $alabaster-f9;
+        padding: 20px 0;
+    }
+
+    .ad__title {
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
+        text-align: left;
+    }
+}
+
+.ad--article-header {
+    .ad__container {
+        background-color: $alabaster-f9;
+        padding: 20px 0;
+    }
+}
+
+.ad--article-video {
+    .ad__container {
+        background-color: $mine-shaft-333;
+    }
+}
+
+.ad--article-rail {
+    margin-bottom: 60px;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    margin-top: 60px;
+}
+.ad--article-rail-top {}
+
+.ad--article-inline {
+    margin: 45px (-$MOBILE_SIDE_GUTTER);
+}
+
+@include tablet-size {
+    .ad--article {
+        .ad__title {
+            padding-left: $TABLET_SIDE_GUTTER;
+            padding-right: $TABLET_SIDE_GUTTER;
+        }
+    }
+    .ad--article-rail {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+    .ad--article-inline {
+        margin: 40px (-$TABLET_SIDE_GUTTER);
+    }
+}
+
+@include desktop-size {
+    .ad--article {
+        .ad__container {
+            background: transparent;
+            padding: 0;
+        }
+        .ad__title {
+            display: none;
+        }
+    }
+    .ad--article-rail {
+        position: absolute;
+        right: 0;
+        margin: 0;
+        width: 300px;
+    }
+    .ad--article-rail-top {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .ad--article-inline {
+        margin-left: 0;
+        margin-right: 0;
+
+        .ad__title {
+            display: block;
+            padding-left: 0;
+        }
+    }
+}

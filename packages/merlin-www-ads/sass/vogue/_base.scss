@@ -1,0 +1,14 @@
+.ad__main {
+    &.is-hidden {
+        .ad__container {
+            padding: 0;
+        }
+    }
+}
+.ad__title {
+    @include font('NOBEL', 10px, 'NORMAL');
+    color: $silver;
+    margin: 0 0 5px 0;
+    text-align: left;
+    text-transform: uppercase;
+}
