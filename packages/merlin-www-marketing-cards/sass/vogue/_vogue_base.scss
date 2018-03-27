@@ -1,12 +1,8 @@
 .a-marketing-card {
-    background-color: $COLOUR_BG_ADVERT;
     @include font('ADOBE CASLON');
+    background-color: $alabaster-f9;
     margin: $MARGIN_SMALL 0;
     padding: $PADDING_MEDIUM $PADDING_SMALL;
-
-    @include marketing-card-medium-size(){
-        padding: 0;
-    }
 }
 .a-marketing-card--brand {}
 .a-marketing-card--event {}
@@ -14,10 +10,6 @@
 .a-marketing-card--magazine {
     .a-marketing-card__col {
         text-align: center;
-
-        @include marketing-card-medium-size(){
-            text-align: left;
-        }
     }
 }
 
@@ -29,10 +21,19 @@
     @include font('NOBEL', 11px);
     letter-spacing: 1px;
     text-transform: uppercase;
+
+    a {
+        color: $guardsman-red;
+
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid;
+        }
+    }
 }
 .a-marketing-card__brand__prefix {
-    color: $COLOR_TYPE_META;
     @include font('ADOBE CASLON', 12px);
+    color: $dove-gray;
     text-transform: italic;
 
     & + .a-marketing-card__brand__img {
@@ -40,38 +41,16 @@
     }
 }
 
-.a-marketing-card__col {
-    @include marketing-card-medium-size(){
-        padding: 40px;
-    }
-}
-
-
-.a-marketing-card--brand .a-marketing-card__col,
-.a-marketing-card--topic .a-marketing-card__col,
-.a-marketing-card--event .a-marketing-card__col {
-    @include marketing-card-medium-size(){
-        & + .a-marketing-card__col {
-            border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-        }
-    }
-}
-
-
-
+.a-marketing-card__col {}
 
 .a-marketing-card__desc {
-    color: $COLOR_TYPE_META;
     @include font('ADOBE CASLON', 15px);
+    color: $dove-gray;
     margin: 0 0 $MARGIN_SMALL 0;
 }
 
 .a-marketing-card__magazine {
     margin: 0 auto $MARGIN_SMALL auto;
-
-    @include marketing-card-medium-size(){
-        margin-bottom: 0;
-    }
 }
 .a-marketing-card__magazine__cover {}
 .a-marketing-card__magazine__cover--desktop {}
@@ -88,11 +67,35 @@
 }
 
 .a-marketing-card__title {
-    color: $COLOR_TYPE_BODY;
     @include font('ADOBE CASLON', 17px, 'SEMI BOLD', 25px);
+    color: $mine-shaft-333;
     margin: 0 0 $MARGIN_XX_SMALL 0;
+}
 
-    @include marketing-card-medium-size(){
+
+@include marketing-card-medium-size(){
+    .a-marketing-card {
+        padding: 0;
+    }
+    .a-marketing-card--magazine {
+        .a-marketing-card__col {
+            text-align: left;
+        }
+    }
+    .a-marketing-card__col {
+        padding: 40px;
+    }
+    .a-marketing-card--brand .a-marketing-card__col,
+    .a-marketing-card--topic .a-marketing-card__col,
+    .a-marketing-card--event .a-marketing-card__col {
+        & + .a-marketing-card__col {
+            border-left: 1px solid $loot-box;
+        }
+    }
+    .a-marketing-card__magazine {
+        margin-bottom: 0;
+    }
+    .a-marketing-card__title {
         @include font-size(20px);
     }
 }
