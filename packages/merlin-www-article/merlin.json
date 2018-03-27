@@ -75,7 +75,9 @@
         "video-header": "partials/video-header.html",
         "article-header": "partials/article-header.html",
         "article-review": "partials/article-review.html",
-        "article-podcast": "partials/article-podcast.html"
+        "article-podcast": "partials/article-podcast.html",
+        "article-author": "partials/article-author.html",
+        "article-event-author": "partials/article-event-author.html"
     },
     "dependencies": [
         "@cnbritain/merlin-www-figure",
