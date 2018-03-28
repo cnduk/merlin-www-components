@@ -37,15 +37,6 @@
         vertical-align: middle;
         width: 14px;
     }
-
-    @include card-portrait-to-landscape-size() {
-        height: 40px;
-        width: 40px;
-
-        svg {
-            width: 16px;
-        }
-    }
 }
 
 .c-card__tag {
@@ -54,12 +45,6 @@
     letter-spacing: 1px;
     margin: 0 0 4px 0;
     text-transform: uppercase;
-
-    @include card-portrait-to-landscape-size() {
-        @include font-size(11px);
-        @include line-height(15px);
-        margin-bottom: 8px;
-    }
 }
 
 .c-card__title {
@@ -70,12 +55,6 @@
     //Forces ligatures on Firefox
     font-variant-ligatures: common-ligatures;
     margin: 0 0 6px 0;
-
-    @include card-portrait-to-landscape-size() {
-        @include font-size(20px);
-        @include line-height(25px);
-        margin: 0 0 $MARGIN_XX_SMALL 0;
-    }
 }
 
 .c-card__teaser {
@@ -83,10 +62,6 @@
     color: $dove-gray;
     display: none;
     margin: $MARGIN_XX_SMALL 0;
-
-    @include card-portrait-to-landscape-size() {
-        display: block;
-    }
 }
 
 .c-card__separator {
@@ -123,12 +98,6 @@
     @include font-size(10px);
     @include line-height(14px);
     margin: 6px 0 8px 0;
-
-    @include card-portrait-to-landscape-size() {
-        @include font-size(11px);
-        @include line-height(15px);
-        margin: $MARGIN_XX_SMALL 0 $MARGIN_X_SMALL 0;
-    }
 }
 .c-card__byline-prefix,
 .c-card__sponsor-label {
@@ -144,23 +113,12 @@
     color: $COLOR_TYPE_HEADING;
     letter-spacing: 1px;
     text-transform: uppercase;
-
-    @include card-portrait-to-landscape-size() {
-        @include font-size(11px);
-    }
 }
 
 .c-card__meta {
     @include font('NOBEL', 10px, null, 16px);
     color: $dove-gray;
     display: inline-block;
-
-    @include card-portrait-to-landscape-size() {
-        @include font-size(11px);
-        @include line-height(20px);
-        border-top: 1px solid $gallery;
-        padding-top: 8px;
-    }
 }
 
 // Need to be specific to overwrite global__list-reset
@@ -205,10 +163,49 @@ li.c-card__meta-item {
     }
 }
 
-.c-card__more {
-    @include c-card-more;
-}
-
 .c-card__image__remaining {
     background-color: rgba(0, 0, 0, 0.38);
+}
+
+
+@include card-portrait-to-landscape-size {
+    .c-card__image__icon {
+        height: 40px;
+        width: 40px;
+
+        svg {
+            width: 16px;
+        }
+    }
+    .c-card__tag {
+        @include font-size(11px);
+        @include line-height(15px);
+        margin-bottom: 8px;
+    }
+
+    .c-card__title {
+        @include font-size(20px);
+        @include line-height(25px);
+        margin: 0 0 $MARGIN_XX_SMALL 0;
+    }
+
+    .c-card__teaser {
+        display: block;
+    }
+    .c-card__byline,
+    .c-card__sponsor {
+        @include font-size(11px);
+        @include line-height(15px);
+        margin: $MARGIN_XX_SMALL 0 $MARGIN_X_SMALL 0;
+    }
+    .c-card__byline-name,
+    .c-card__sponsor-title {
+        @include font-size(11px);
+    }
+    .c-card__meta {
+        @include font-size(11px);
+        @include line-height(20px);
+        border-top: 1px solid $gallery;
+        padding-top: 8px;
+    }
 }
