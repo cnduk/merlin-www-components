@@ -1,6 +1,6 @@
 .a-logo {}
 .a-logo--video {
-    background-color: #222;
+    background-color: $mine-shaft-222;
     padding: 60px 0 40px 0;
 
     .a-logo__wrapper {
@@ -13,48 +13,36 @@
     }
 }
 
-.a-video {
-    &::before {
-        background-color: $COLOUR_BG_DARK;
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: -$MOBILE_SIDE_GUTTER;
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-            top: -$TABLET_SIDE_GUTTER;
-        }
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            top: -$DESKTOP_SIDE_GUTTER;
-        }
-    }
+.a-video:before {
+    background-color: $mine-shaft-222;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -$MOBILE_SIDE_GUTTER;
 }
 
 .a-video__wrapper {}
 
 .a-video__player {
-    background-color: #222;
+    background-color: $mine-shaft-222;
 }
-
 .a-video__player__wrapper {}
 
 .a-video__sidebar {
-    background-color: #333;
+    background-color: $mine-shaft-333;
     padding: 0 20px 20px 20px;
 }
-
 .a-video__sidebar__wrapper {}
-
 .a-video__sidebar__title {
     @include font('NOBEL', 12px, 'BOLD', 15px);
-    color: #fff;
+    color: $white;
     margin: 0;
     padding: 20px 0;
     position: relative;
     text-align: left;
     text-transform: uppercase;
 }
-
 .a-video__sidebar__list {
     left: 20px;
     padding-bottom: 20px;
@@ -62,31 +50,17 @@
 }
 
 .a-video__related {
-    background-color: $COLOUR_BG_DARK;
-    color: $COLOR_MAIN_PAGE;
+    background-color: $mine-shaft-222;
+    color: $white;
     max-width: none;
     padding-bottom: $PADDING_SMALL;
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        display: none;
-    }
-
-    .c-card__title {
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-    }
 }
 .a-video__related__wrapper {}
 .a-video__related__title {
-    color: $COLOR_MAIN_PAGE;
-    @include font("NOBEL", 15px, 700, 16px);
+    @include font("NOBEL", 15px, 'BOLD', 16px);
+    color: $white;
     margin: 0;
     padding: $PADDING_SMALL 0;
     position: relative;
@@ -104,8 +78,27 @@
 
 .a-video__ad {
     margin-bottom: 40px;
+}
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
+
+@include tablet-size {
+    .a-video:before {
+        top: -$TABLET_SIDE_GUTTER;
+    }
+    .a-video__related {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+}
+
+@include desktop-size {
+    .a-video:before {
+        top: -$DESKTOP_SIDE_GUTTER;
+    }
+    .a-video__related {
+        display: none;
+    }
+    .a-video__ad {
         margin-bottom: 0;
         top: $PADDING_X_LARGE;
     }
