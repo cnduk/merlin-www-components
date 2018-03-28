@@ -1,4 +1,7 @@
 .c-card--dark {
+    // Needed to make the font a bit nicer on a dark background
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
     .c-card__tag {
         color: $silver;
@@ -43,7 +46,7 @@
         }
 
         & + li.c-card__meta-item {
-            border-left: 1px solid $mine-shaft-222;
+            border-left: 1px solid $mine-shaft-333;
         }
 
     }
