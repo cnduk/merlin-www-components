@@ -1,12 +1,14 @@
+/**
+ * Search specific bits
+ * =============================================================================
+ */
 .n-menu__search {
     background-color: $mine-shaft-222;
     overflow: hidden;
     position: relative;
 
-    svg {
+    path {
         fill: $white;
-        height: 100%;
-        width: 20px;
     }
 }
 
@@ -17,26 +19,24 @@
 .n-menu__search-textbox {
     display: inline-block;
     left: 0;
-    height: 60px;
+    height: $MAIN_NAVIGATION_HEIGHT;
     position: absolute;
-    right: 60px;
+    right: $MAIN_NAVIGATION_HEIGHT;
     top: 0;
 
     input {
-        @include font('ITC CASLON', 17px, 400, 60px, -10);
+        @include font('ITC CASLON', 17px, null, 17px);
         background-color: $mine-shaft-222;
         border: none;
         box-sizing: border-box;
-        color: $white;
-        height: 60px;
-        padding: 0 20px;
+        color: $dove-gray;
+        height: $MAIN_NAVIGATION_HEIGHT - 3;
+        padding: 0 $PADDING_SMALL;
+        margin-top: 3px;
         width: 100%;
 
-        &::placeholder {
-            color: $dove-gray;
-        }
-
         &:focus {
+            color: $white;
             outline: none;
         }
     }
@@ -57,7 +57,7 @@
             bottom: 0;
             padding-bottom: 0;
             position: fixed;
-            top: 60px;
+            top: $MAIN_NAVIGATION_HEIGHT;
         }
     }
 }

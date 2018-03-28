@@ -1,3 +1,12 @@
+$GALLERY_NAV_ICONS_BREAKPOINT: 410px;
+$MASTHEAD_HEIGHT: 90px;
+
+@mixin navigation-large-size {
+    @include min-screen($MAIN_NAVIGATION_MOBILE_BREAKPOINT){
+        @content
+    }
+}
+
 @import "_base";
 @import "_promo";
 @import "_masthead";
@@ -5,3 +14,5 @@
 @import "_social";
 @import "_search";
 @import "_gallery";
+@import "_menu";
+@import "_misc";

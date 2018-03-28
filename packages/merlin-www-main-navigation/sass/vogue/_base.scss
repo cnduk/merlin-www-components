@@ -1,333 +1,210 @@
 .has-open-menu {
     height: 100%;
-    left: 0;
     overflow: hidden;
     position: fixed;
-    top: 0;
     width: 100%;
+    left: 0;
+    top: 0;
 }
 
 .n-main {
-    background-color: $white;
     z-index: 10;
 }
-
 .n-main__wrapper {
-
-}
-
-.n-main__header {
-    height: 140px;
-    text-align: center;
+    max-width: none;
 }
 
 .n-main__nav {
-    height: 60px;
+    background-color: $white;
+    height: $MAIN_NAVIGATION_HEIGHT;
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
 }
 
 .n-main__nav-logo {
-    height: 60px;
-    left: 20px;
+    height: $MAIN_NAVIGATION_HEIGHT;
+    left: $PADDING_SMALL;
     overflow: hidden;
     position: fixed;
     width: 118px;
 
-    @include tablet-size {
-        left: 30px;
+    a {
+        @include transition(bottom 200ms ease-in-out);
+        bottom: 0;
+        height: $MAIN_NAVIGATION_HEIGHT;
+        line-height: $MAIN_NAVIGATION_HEIGHT;
+        position: absolute;
+        vertical-align: middle;
     }
 
-    a {
-        bottom: 0;
-        height: 60px;
-        line-height: 60px;
-        position: absolute;
-        transition: bottom 0.2s ease-in-out;
+    svg, img {
         vertical-align: middle;
         width: 118px;
     }
 
-    svg, img {
-        height: 60px;
-        width: 100%;
-    }
-
     &.is-hidden {
         a {
-            @include desktop-size {
-                bottom: -60px;
+            @include navigation-large-size {
+                bottom: -($MAIN_NAVIGATION_HEIGHT);
             }
         }
     }
 
-    @include min-screen($MAXIMUM_PAGE_WIDTH + 60px) {
+    @include min-screen($MAXIMUM_PAGE_WIDTH + $PADDING_SMALL + $PADDING_SMALL){
         left: auto;
     }
-}
 
+}
 .n-main__nav-logo--takeover {
     svg, img {
-
+        height: $MAIN_NAVIGATION_HEIGHT;
     }
 }
 
-.n-main__nav-title {
-    @include font('ITC CASLON', 15px, 400, 60px, -10);
-    display: none;
-    overflow: hidden;
-    padding-left: 170px;
-    padding-right: 155px;
-    position: fixed;
-    text-overflow: ellipsis;
-    vertical-align: middle;
-    white-space: nowrap;
+.n-main__nav-hamburger {
+    border-left: 1px solid $loot-box;
+    box-sizing: border-box;
+    display: inline-block;
+    height: $MAIN_NAVIGATION_HEIGHT;
+    line-height: $MAIN_NAVIGATION_HEIGHT;
+    text-align: center;
+    width: $MAIN_NAVIGATION_HEIGHT;
 
-    @include min-screen(600px) {
-        padding-left: 180px;
-        display: block;
+    svg {
+        display: inline-block;
+        fill: $black;
+        height: 15px;
+        line-height: $MAIN_NAVIGATION_HEIGHT;
+        vertical-align: middle;
     }
 
-    @include tablet-size {
-        @include font-size(20px);
+    &:hover,
+    &:focus {
+        svg {
+            fill: $guardsman-red;
+        }
+    }
+
+    @include navigation-large-size {
+        display: none;
     }
 }
 
+.n-main__nav-hamburger__icon,
+.n-main__nav-hamburger__close-icon {
+    background-color: transparent;
+    cursor: pointer;
+    display: block;
+    height: $MAIN_NAVIGATION_HEIGHT;
+    line-height: $MAIN_NAVIGATION_HEIGHT;
+    width: $MAIN_NAVIGATION_HEIGHT;
+}
+
+.n-main__nav-search {
+    display: inline-block;
+    float: right;
+    height: $MAIN_NAVIGATION_HEIGHT;
+    line-height: $MAIN_NAVIGATION_HEIGHT;
+    text-align: center;
+    width: $MAIN_NAVIGATION_HEIGHT;
+
+    svg {
+        display: inline-block;
+        fill: $black;
+        height: 20px;
+        line-height: $MAIN_NAVIGATION_HEIGHT;
+        vertical-align: middle;
+    }
+
+    &:hover,
+    &:focus {
+        svg {
+            fill: $guardsman-red;
+        }
+    }
+
+    @include desktop-size {
+        border-left: 1px solid $loot-box;
+    }
+
+    @include min-screen($MAXIMUM_PAGE_WIDTH + 1) {
+        border-right: 1px solid $loot-box;
+    }
+}
+
+.n-main__nav-search__icon,
+.n-main__nav-search__close-icon {
+    background-color: transparent;
+    cursor: pointer;
+    display: block;
+    height: $MAIN_NAVIGATION_HEIGHT;
+    line-height: $MAIN_NAVIGATION_HEIGHT;
+    width: $MAIN_NAVIGATION_HEIGHT;
+}
+
+.n-main__nav-group {}
+.n-main__nav-group--left {}
+.n-main__nav-group--right {}
 .n-main__list-item {
     vertical-align: top;
 }
 
+.n-main__nav-signpost {
+    @include line-height($MAIN_NAVIGATION_HEIGHT);
+    display: none;
+    margin-left: 140px;
+    margin-right: $MAIN_NAVIGATION_HEIGHT;
+    overflow: hidden;
+    padding: 0 $PADDING_SMALL;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .n-main__nav-link {
-    @include font('NOBEL', 12px, 700, 12px);
+    @include font('NOBEL', 12px, 'BOLD', 12px);
     color: $cod-gray;
     display: block;
     letter-spacing: 1px;
-    padding: 0 15px;
+    padding: 0 $PADDING_X_SMALL;
     text-transform: uppercase;
 
     span {
         display: inline-block;
-        height: 60px;
-        line-height: 60px;
+        height: $MAIN_NAVIGATION_HEIGHT;
+        line-height: $MAIN_NAVIGATION_HEIGHT;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
         color: $guardsman-red;
     }
 }
 
 .n-main__sticker {
     z-index: 3;
-
-    &:before {
-        @include vendor-prefix(transform, translateX(-50%));
-        background-color: $white;
-        border-bottom: 1px solid $gallery;
-        content: '';
-        height: 1px;
-        left: 50%;
-        position: absolute;
-        top: 0;
-        width: 100vw;
-    }
 }
-
 .n-main__sticker-child {
     background-color: $white;
-
-    &:before {
-        @include vendor-prefix(transform, translateX(-50%));
-        background-color: $white;
-        border-bottom: 1px solid $gallery;
-        box-shadow: 0px 2px 5px 0px rgba(102, 102, 102, 0.06);
-        content: '';
-        height: 1px;
-        left: 50%;
-        position: absolute;
-        bottom: 0;
-        width: 100vw;
-    }
+    border-bottom: 1px solid $loot-box;
+    box-shadow: 0px 2px 5px 0px rgba(102, 102, 102, 0.06);
 }
 
-.n-main__nav-hamburger {
-    border-left: 1px solid $gallery;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-    width: 60px;
+.n-main__nav-title {
+    @include font('ITC CASLON', 15px, 'NORMAL', $MAIN_NAVIGATION_HEIGHT + 4);
+    display: none;
+    padding-left: 170px;
+    padding-right: 155px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
 
-    .n-main__nav-hamburger__icon {
-        cursor: pointer;
-        display: block;
-        height: 60px;
-        line-height: 60px;
-        width: 60px;
-
-        svg {
-            display: inline-block;
-            fill: $cod-gray;
-            height: 15px;
-            line-height: 60px;
-            vertical-align: middle;
-        }
-    }
-
-    .n-main__nav-hamburger__close-icon {
-        cursor: pointer;
-        display: block;
-        height: 60px;
-        line-height: 60px;
-        width: 60px;
-
-        svg {
-            display: inline-block;
-            fill: $cod-gray;
-            height: 15px;
-            line-height: 60px;
-            vertical-align: middle;
-        }
-    }
-}
-
-.n-main__nav-search {
-    @include desktop-size {
-        border-left: 1px solid $gallery;
-    }
-
-    @include min-screen($MAXIMUM_PAGE_WIDTH + 1) {
-        border-right: 1px solid $gallery;
-    }
-
-    display: inline-block;
-    float: right;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-    width: 60px;
-
-    .n-main__nav-search__icon {
-        background-color: transparent;
-        cursor: pointer;
-        display: block;
-        height: 60px;
-        line-height: 60px;
-        width: 60px;
-
-        svg {
-            display: inline-block;
-            fill: $cod-gray;
-            height: 20px;
-            line-height: 60px;
-            vertical-align: middle;
-        }
-
-        &:hover {
-            svg {
-                fill: $guardsman-red;
-            }
-        }
-    }
-
-    .n-main__nav-search__close-icon {
-        background-color: transparent;
-        cursor: pointer;
-        display: block;
-        height: 60px;
-        line-height: 60px;
-        width: 60px;
-
-        svg {
-            display: inline-block;
-            fill: $cod-gray;
-            height: 20px;
-            line-height: 60px;
-            vertical-align: middle;
-        }
-
-        &:hover {
-            svg {
-                fill: $guardsman-red;
-            }
-        }
-    }
-}
-
-.n-menu {
-    background-color: $white;
-    -webkit-overflow-scrolling: touch;
-
-    &.is-visible {
-        bottom: 0;
-        overflow: auto;
-        position: fixed;
-        top: 60px;
-        width: 100%;
-        z-index: 2;
-    }
-}
-
-.n-menu__top-stories {
-    .c-top-stories {
+    @include min-screen(600px) {
         display: block;
     }
 
-    .c-top-stories__overflow {
-        padding-left: 20px;
-        @include tablet-size {
-            padding-left: 30px;
-        }
-    }
-}
-
-.n-menu__nav {
-    margin-bottom: 30px;
-
-    .n-menu__nav__wrapper {
-        margin: 0 20px;
-        overflow: hidden;
-
-        @include tablet-size {
-            margin: 0 30px;
-        }
+    @include tablet-size {
+        @include font-size(20px);
     }
 
-    a {
-        .n-menu__nav-item {
-            border-bottom: 1px solid $gallery;
-            float: left;
-            height: 60px;
-            position: relative;
-            width: 100%;
-
-            .n-menu__nav-link {
-                @include font('NOBEL', 15px, 700, 15px);
-                @include vendor-prefix(transform, translateY(-50%));
-                color: $cod-gray;
-                letter-spacing: 1px;
-                position: absolute;
-                text-transform: uppercase;
-                top: 50%;
-                word-break: break-word;
-            }
-
-            &--more {
-                border-bottom: none;
-                height: 40px;
-                width: 50%;
-
-                .n-menu__nav-link {
-                    @include font-size(12px);
-                    @include line-height(12px);
-                    @include vendor-prefix(transform, none);
-                    bottom: 0;
-                    top: initial;
-                }
-            }
-
-            &:hover,
-            &:focus {
-
-            }
-        }
-    }
 }

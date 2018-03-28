@@ -1,0 +1,90 @@
+/**
+ * Hamburger menu
+ * =============================================================================
+ */
+.n-menu {
+    background-color: $white;
+    -webkit-overflow-scrolling: touch;
+
+    &.is-visible {
+        bottom: 0;
+        overflow: auto;
+        position: fixed;
+        top: $MAIN_NAVIGATION_HEIGHT;
+        width: 100%;
+        z-index: 2;
+    }
+}
+.n-menu__top-stories {
+    .c-top-stories {
+        display: block;
+        padding: 0;
+    }
+
+    .c-top-stories__wrapper {
+        padding: 0 $PADDING_SMALL;
+    }
+
+    .c-top-stories__overflow {
+        margin: 0 (-$MARGIN_SMALL);
+        padding: $PADDING_SMALL;
+    }
+}
+
+.n-menu__nav {}
+.n-menu__nav__wrapper {
+    margin: 0 $MARGIN_SMALL;
+    overflow: hidden;
+}
+
+.n-menu__nav-item {
+    border-bottom: 1px solid $loot-box;
+    float: left;
+    height: 60px;
+    position: relative;
+    width: 100%;
+
+    &:hover,
+    &:focus {
+        color: $guardsman-red;
+    }
+}
+.n-menu__nav-item--more {
+    border-bottom: none;
+    height: 40px;
+    width: 50%;
+}
+
+.n-menu__nav-link {
+    @include font('NOBEL', 15px, 'BOLD', 15px);
+    @include vendor-prefix(transform, translateY(-50%));
+    letter-spacing: 1px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 50%;
+    word-break: break-word;
+
+    .n-menu__nav-item--more & {
+        @include font-size(12px);
+        @include line-height(12px);
+        @include vendor-prefix(transform, none);
+        top: initial;
+        bottom: 0;
+    }
+}
+
+
+/**
+ * Newsletter button
+ * =============================================================================
+ */
+.n-menu__newsletter-btn {
+    @include button-single();
+    @include button-single-light();
+    margin-bottom: $MARGIN_LARGE;
+
+    &:hover,
+    &:focus {
+        @include button-single-light-hover();
+    }
+}
