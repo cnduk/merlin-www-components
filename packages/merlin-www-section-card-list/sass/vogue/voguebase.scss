@@ -25,18 +25,17 @@
 }
 
 .c-card-section__title {
-    @include font-weight('BOLD');
+    color: $cod-gray;
+    font-weight: bold;
+
+    a {
+        color: inherit;
+    }
 }
 
 .c-card-section__logo {
     height: 30px;
     margin-bottom: 30px;
-
-    @include tablet-size {
-        height: 40px;
-        margin-bottom: 60px;
-    }
-
     text-align: center;
 
     svg {
@@ -48,31 +47,31 @@
             fill: $white;
         }
     }
+
+    @include tablet-size {
+        height: 40px;
+        margin-bottom: 60px;
+    }
 }
 
 .c-card-section__btn {
     @include button-single();
     @include button-single-light();
-    &:hover {
+    margin-top: 35px;
+
+    &:hover,
+    &:focus {
         @include button-single-light-hover();
     }
-    margin-top: 35px;
 }
 
 .c-card-section--c-curated,
 .c-card-section--c-tag {
     .c-card-section__title {
-        @include font('NOBEL', 20px, 700, 20px);
+        @include font('NOBEL', 20px, null, 20px);
         margin-bottom: 30px;
         text-align: center;
         text-transform: uppercase;
-
-        a {
-            color: inherit;
-            &:hover {
-                text-decoration: none;
-            }
-        }
 
         @include tablet-size {
             @include font-size(25px);
@@ -107,28 +106,8 @@
     max-width: none;
     padding: 40px $MOBILE_SIDE_GUTTER;
 
-    @include tablet-size {
-        padding: 80px $TABLET_SIDE_GUTTER;
-    }
-
-    @include desktop-size {
-        padding: 80px $DESKTOP_SIDE_GUTTER;
-    }
-
-
-    .c-card-section__btn {
-        width: auto;
-
-        @include button-single();
-        @include button-single-dark();
-
-        &:hover {
-            @include button-single-dark-hover();
-        }
-    }
-
     .c-card-section__title {
-        @include font('NOBEL', 15px, 700, 15px);
+        @include font('NOBEL', 15px, null, 15px);
         color: $white;
         margin-bottom: 30px;
         margin-top: 0;
@@ -137,6 +116,25 @@
         text-align: left;
         text-transform: uppercase;
     }
+
+    .c-card-section__btn {
+        @include button-single();
+        @include button-single-dark();
+        width: auto;
+
+        &:hover,
+        &:focus {
+            @include button-single-dark-hover();
+        }
+    }
+
+    @include tablet-size {
+        padding: 80px $TABLET_SIDE_GUTTER;
+    }
+
+    @include desktop-size {
+        padding: 80px $DESKTOP_SIDE_GUTTER;
+    }
 }
 
 .c-card-section--v-related-articles {
@@ -144,26 +142,26 @@
     max-width: none;
     padding: 0 $MOBILE_SIDE_GUTTER;
 
-    .c-card-section__btn {
-        margin-bottom: 20px;
-        width: auto;
-
-        @include button-single();
-        @include button-single-dark();
-
-        &:hover {
-            @include button-single-dark-hover();
-        }
-    }
-
     .c-card-section__title {
+        @include font("NOBEL", 15px, null, 16px);
         color: $white;
-        @include font("NOBEL", 15px, 700, 16px);
         margin: 0;
         padding: 20px 0;
         position: relative;
         text-align: left;
         text-transform: uppercase;
+    }
+
+    .c-card-section__btn {
+        @include button-single();
+        @include button-single-dark();
+        margin-bottom: 20px;
+        width: auto;
+
+        &:hover,
+        &:focus {
+            @include button-single-dark-hover();
+        }
     }
 
     @include tablet-size {
@@ -180,7 +178,7 @@
 .c-card-section--mag-magazines,
 .c-card-section--mag-articles {
     .c-card-section__title {
-        @include font("NOBEL", 14px, 700, 16px, 25);
+        @include font("NOBEL", 14px, null, 16px, 25);
         color: $cod-gray;
         margin-bottom: 20px;
         margin-top: 0;
@@ -190,7 +188,7 @@
 
 .c-card-section--v-genre-articles {
     .c-card-section__title {
-        @include font('NOBEL', 15px, 700, 15px);
+        @include font('NOBEL', 15px, null, 15px);
         margin-bottom: 30px;
         margin-top: 0;
         padding-bottom: 10px;
@@ -221,17 +219,12 @@
     margin-top: 0;
     max-width: none;
 
-    @include tablet-size {
-        padding-bottom: 60px;
-        padding-top: 60px;
-    }
-
     .c-card-section__constrain {
         max-width: $ARTICLE_TOTAL;
     }
 
     .c-card-section__title {
-        @include font('NOBEL', 15px, 700, 15px);
+        @include font('NOBEL', 15px, null, 15px);
         margin-bottom: 30px;
         margin-top: 0;
         padding-bottom: 10px;
@@ -257,6 +250,11 @@
     .c-card__meta {
         border-top: 1px solid $alto;
     }
+
+    @include tablet-size {
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
 }
 
 .c-card-section--mag-magazines {
@@ -272,7 +270,8 @@
 .c-card-section--tg-articles,
 .c-card-section--sh-latest-articles {
     .c-card-section__title {
-        @include font('NOBEL', 15px, 700, 15px);
+        @include section-right-sidebar();
+        @include font('NOBEL', 15px, null, 15px);
         margin-bottom: 30px;
         padding-bottom: 10px;
         position: relative;
@@ -289,7 +288,6 @@
             top: 100%;
         }
     }
-    @include section-right-sidebar();
 }
 .c-card-section--sh-articles {}
 .c-card-section--tg-header-articles {}
