@@ -191,10 +191,11 @@
 }
 
 .a-header__meta {
-    @include font('NOBEL', 10px, 400, 16px);
-    color: $dove-gray;
+    font-size: 0;
 }
 .a-header__meta-item {
+    @include font('NOBEL', 10px, 400, 16px);
+    color: $dove-gray;
     text-transform: uppercase;
 
     &:not(:last-child) {
@@ -256,6 +257,14 @@
 .a-header--video {
     .a-header__separator {
         display: none;
+    }
+    .a-header__meta-item a {
+        color: $guardsmen-red;
+
+        &:hover
+        &:focus {
+            text-decoration: underline;
+        }
     }
 }
 
