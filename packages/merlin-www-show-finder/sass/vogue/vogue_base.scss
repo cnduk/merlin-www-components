@@ -22,6 +22,9 @@
 
 .sh-finder__item {}
 .sh-finder__item--label {
+    // Needed to make the font a bit nicer on a dark background
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     display: none;
     font-weight: bold;
     margin-bottom: $MARGIN_SMALL;
