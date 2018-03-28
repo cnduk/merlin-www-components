@@ -148,12 +148,14 @@
 
 @include three-column-size {
     .ad--show {
+        .ad__title {
+            display: none;
+        }
+    }
+    .ad--show-rail {
         .ad__container {
             background: transparent;
             padding: 0;
-        }
-        .ad__title {
-            display: none;
         }
     }
     .ad--show-rail-top {
