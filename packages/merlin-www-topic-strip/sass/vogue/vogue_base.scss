@@ -11,7 +11,7 @@
 .c-topic-strip__btn {
     @include button-group();
     @include button-group-light();
-    @include font-size(12px);
+    @include font-size(11px);
 
     &:hover {
         @include button-group-light-hover();
