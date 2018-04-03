@@ -1,3 +1,7 @@
 @import '@cnbritain/merlin-www-common:missvogue';
 @import '../wireframe/wireframe';
 @import '../vogue/_voguebase';
+
+li.c-figure__toolbar-listitem--zoom:hover {
+    background-color: $cerulean;
+}
