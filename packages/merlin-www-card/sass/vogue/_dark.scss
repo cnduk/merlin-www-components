@@ -22,7 +22,7 @@
     }
 
     .c-card__meta {
-        border-top-color: $mine-shaft-333;
+        border-top-color: $tundora;
     }
 
     .c-card__byline-prefix {
@@ -46,7 +46,7 @@
         }
 
         & + li.c-card__meta-item {
-            border-left: 1px solid $mine-shaft-333;
+            border-left: 1px solid $tundora;
         }
 
     }
