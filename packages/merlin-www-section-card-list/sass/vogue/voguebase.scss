@@ -269,8 +269,9 @@
 .c-card-section--v-articles,
 .c-card-section--tg-articles,
 .c-card-section--sh-latest-articles {
+    @include section-right-sidebar();
+
     .c-card-section__title {
-        @include section-right-sidebar();
         @include font('NOBEL', 15px, null, 15px);
         margin-bottom: 30px;
         padding-bottom: 10px;
