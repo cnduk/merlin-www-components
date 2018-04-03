@@ -2,5 +2,9 @@
 @import "@cnbritain/merlin-www-image:missvogue";
 
 @import '../wireframe/wireframe';
-
 @import "../vogue/voguebase";
+
+.c-card__tag,
+.c-card__meta-item--tag {
+    color: $cerulean;
+}
