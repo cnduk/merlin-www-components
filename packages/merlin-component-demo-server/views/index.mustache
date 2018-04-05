@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="/editor/css/page.css">
+    </head>
+    <body>
+        <main>
+            <div class="component-sidebar">
+                <h1 class="component-name">{{ component.name }}</h1>
+                <div class="component-sidebar__group">
+                    <label class="component-setting__label" for="cboPartial">Partial:</label>
+                    <select class="component-setting__value" id="cboPartial">
+                        {{# component.partials }}
+                            <option {{# main }}selected{{/ main }}>{{ name }}</option>
+                        {{/ component.partials }}
+                    </select>
+                </div>
+                <div class="component-sidebar__group">
+                    <label class="component-setting__label" for="cboThemes">Themes:</label>
+                    <select class="component-setting__value" id="cboThemes">
+                        {{# component.themes }}
+                            <option>{{ . }}</option>
+                        {{/ component.themes }}
+                    </select>
+                </div>
+                <div class="component-sidebar__group">
+                    <label class="component-setting__label" for="cboData">Data:</label>
+                    <select class="component-setting__value" id="cboData">
+                        {{# component.data }}
+                            <option>{{ . }}</option>
+                        {{/ component.data }}
+                    </select>
+                </div>
+                <div class="component-sidebar__group">
+                    <label class="component-setting__label">
+                        <input type="checkbox" id="chkJavascript" checked>
+                        Enable javascript
+                    </label>
+                </div>
+                <div class="component-sidebar__group">
+                    <label class="component-setting__label">Preview size:</label>
+                    <input class="component-setting__number" type="number" id="txtPreviewWidth" min="0" placeholder="Width" /> x <input class="component-setting__number" type="number" id="txtPreviewHeight" min="0" placeholder="Height" />
+                    <button class="component-setting__button" id="btnResizeSmall">Small</button>
+                    <button class="component-setting__button" id="btnResizeMedium">Medium</button>
+                    <button class="component-setting__button" id="btnResizeLarge">Large</button>
+                </div>
+                <div class="component-sidebar__group">
+                    <label class="component-setting__label">Dependencies:</label>
+                    <select class="component-setting__list" size="10">
+                        {{# component.dependencies }}
+                            <option>{{ . }}</option>
+                        {{/ component.dependencies }}
+                    </select>
+                </div>
+            </div>
+            <div class="component-preview">
+                <iframe class="component-iframe" id="ifrRender" src="about:blank" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+            </div>
+        </main>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/editor/js/page.js"></script>
+    </body>
+</html>

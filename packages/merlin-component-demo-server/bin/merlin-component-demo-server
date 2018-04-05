@@ -1,26 +1,29 @@
 #!/usr/bin/env node
 
 const path = require('path');
-
 const package = require('../package.json');
 const cli = require('commander');
-const MerlinComponentDemoServer = require('../lib/index');
 
-cli
-    .version(package.version)
-    .usage('[options] <file>')
-    .option('-p, --port <number>', 'Server port')
-    .option('-v, --verbose', 'Verbose mode')
-    .parse(process.argv);
+const {DEFAULT_PORT} = require('../lib/constants');
+const Utils = require('../lib/utils');
+const {Logger, Server, ComponentManager} = require('../lib');
 
+async function main(){
+    cli
+        .version(package.version)
+        .usage('[options] <file>')
+        .option('-p, --port <number>', 'Server port')
+        .option('-v, --verbose', 'Verbose mode')
+        .parse(process.argv);
 
-MerlinComponentDemoServer.LOGGER.enabled = cli.verbose;
+    Logger.enabled = cli.verbose;
 
-MerlinComponentDemoServer.loadJSON(path.resolve(cli.args[0]))
-    .then((merlinConfig) => {
-        const server = new MerlinComponentDemoServer(
-            merlinConfig, cli.port || 3000);
-    }, (err) => {
-        console.error(err);
-        process.exit(1);
-    });
+    const filename = path.resolve(cli.args[0]);
+    const component = await ComponentManager.create(filename);
+    const port = cli.port || DEFAULT_PORT;
+
+    const s = new Server(component);
+    s.run(port);
+}
+
+main();
