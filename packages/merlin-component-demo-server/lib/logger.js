@@ -1,41 +1,56 @@
+'use strict';
+
 const chalk = require('chalk');
 
 const sassImporter = require('@cnbritain/merlin-sass-custom-importer');
 
-const LOGGER = {
-    _enabled: false,
+class Logger {
+
+    constructor(){
+        this._enabled = false;
+    }
+
     get enabled(){
         return this._enabled;
-    },
+    }
     set enabled(value){
         this._enabled = value;
         sassImporter.LOGGER.enabled = value;
-    },
-    'log': function(mode, ...args){
+    }
+
+    log(mode, ...args){
         if(!this.enabled) return;
         this[mode](...args);
-    },
-    'DATA': function(...args){
+    }
+
+    DATA(...args){
         console.log(chalk.red(...args));
-    },
-    'TEMPLATE': function(...args){
+    }
+
+    TEMPLATE(...args){
         console.log(chalk.magenta(...args));
-    },
-    'PARTIAL': function(...args){
+    }
+
+    PARTIAL(...args){
         console.log(chalk.cyan(...args));
-    },
-    'SASS': function(...args){
+    }
+
+    SASS(...args){
         console.log(chalk.yellow(...args));
-    },
-    'SERVER': function(...args){
+    }
+
+    SERVER(...args){
         console.log(chalk.bold.green(...args));
-    },
-    'JS': function(...args){
+    }
+
+    JS(...args){
         console.log(chalk.blue(...args));
-    },
-    'COMPONENT': function(...args){
+    }
+
+    COMPONENT(...args){
         console.log(chalk.italic(...args));
     }
-};
 
-module.exports = LOGGER;
+}
+
+module.exports = new Logger();
