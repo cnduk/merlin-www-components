@@ -52,9 +52,15 @@
 }
 
 .sh-article-header__title {
+    @include font("ITC_FENICE", 30px, 700, 32px, -4);
     letter-spacing: 0;
     margin-top: 16px;
     margin-bottom: 10px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(50px);
+        @include line-height(54px);
+    }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         margin-top: 20px;
