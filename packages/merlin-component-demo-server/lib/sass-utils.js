@@ -3,16 +3,16 @@
 const sass = require('node-sass');
 const sassImporter = require('@cnbritain/merlin-sass-custom-importer');
 
-const LOGGER = require('./logger');
+const Logger = require('./logger');
 const { promiseError } = require('./utils');
 
-function loadSass(file, config){
+function compileSass(file, merlinConfig){
     return new Promise((resolve, reject) => {
-        const importer = sassImporter(config, config.name);
+        const importer = sassImporter(merlinConfig, merlinConfig.name);
 
         promiseSass({ file, importer }).then((sassContents) => {
 
-            LOGGER.log('SASS', `Loaded sass - '${file}'`);
+            Logger.log('SASS', `Loaded sass - '${file}'`);
             importer.SESSION.reset();
             resolve(sassContents.css.toString());
 
@@ -33,5 +33,5 @@ function promiseSass(...args){
 }
 
 module.exports = {
-    loadSass
+    compileSass
 };

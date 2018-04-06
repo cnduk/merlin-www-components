@@ -2,7 +2,12 @@
 
 const fs = require('fs');
 
-const LOGGER = require('./logger');
+const Logger = require('./Logger');
+
+function promiseError(err){
+    console.error(err);
+    process.exit(1);
+}
 
 function loadFile(filename, encoding='utf8'){
     return new Promise((resolve, reject) => {
@@ -22,19 +27,14 @@ function loadJSON(file){
             .then((data) => {
                 try {
                     const json = JSON.parse(data);
-                    LOGGER.log('DATA', `Loaded data - '${file}'`);
+                    Logger.log('DATA', `Loaded data - '${file}'`);
                     resolve(json);
                 } catch(err){
-                    LOGGER.log('DATA', `Failed data - ${file}`);
+                    Logger.log('DATA', `Failed data - ${file}`);
                     reject(err);
                 }
             }, promiseError);
     });
-}
-
-function promiseError(err){
-    console.error(err);
-    process.exit(1);
 }
 
 module.exports = {

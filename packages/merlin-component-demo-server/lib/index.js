@@ -1,7 +1,11 @@
 'use strict';
 
-const LOGGER = require('./logger');
-const MerlinComponentDemoServer = require('./MerlinComponentDemoServer');
+const Logger = require('./Logger');
+const Server = require('./Server');
+const ComponentManager = require('./ComponentManager');
 
-module.exports = MerlinComponentDemoServer;
-module.exports.LOGGER = LOGGER;
+module.exports = {
+    Logger,
+    Server,
+    ComponentManager
+};
