@@ -69,6 +69,12 @@
     }
 }
 
+@mixin article-header-large-size(){
+    @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT){
+        @content
+    }
+}
+
 @mixin article-medium-size(){
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         @content
@@ -124,6 +130,24 @@
 }
 @mixin gallery-slice-at-large(){
     @include min-screen( $GALLERY_LARGE_BREAKPOINT ){
+        @content;
+    }
+}
+
+@mixin feature-slice-at-large(){
+    @include min-screen( $FEATURE_LARGE_BREAKPOINT ){
+        @content;
+    }
+}
+
+@mixin text-size-medium(){
+    @include min-screen( $TYPE_MEDIUM_COPY_WIDTH ){
+        @content;
+    }
+}
+
+@mixin text-size-large(){
+    @include min-screen( $TYPE_LARGE_COPY_WIDTH ){
         @content;
     }
 }

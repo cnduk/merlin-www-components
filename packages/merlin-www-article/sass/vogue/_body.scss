@@ -11,13 +11,4 @@
 }
 
 .a-body__wrapper {}
-
-.a-body__content {
-    & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
-        @include font-weight-fix();
-    }
-
-    a:not([class]) {
-        @include body-links(true);
-    }
-}
+.a-body__content {}

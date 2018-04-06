@@ -1,10 +1,9 @@
 // -------------------- //
 // Switcher
 // -------------------- //
-@mixin card-switcher() {
-    @include card-landscape();
-}
+@mixin card-switcher() {}
 @mixin card-switcher-small() {
+    @include card-landscape();
     @include card-landscape-small();
 }
 @mixin card-switcher-large() {

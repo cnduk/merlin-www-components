@@ -1,46 +1,80 @@
-.a-author,
-.a-event-author {
+.a-event-author {}
+.a-event-author__location {
+    @include font('ADOBE CASLON', 14px, null, 20px);
+    color: $dove-gray;
+}
+.a-event-author__separator {
+    border: none;
+    border-top: 1px solid $gallery;
+    margin: 10px 0;
+}
+.a-event-author__date {
+    @include font('NOBEL', 11px);
+    color: $dove-gray;
+    letter-spacing: 0.025em;
+}
+.a-event-author__btn {
+    @include button-single;
+    @include button-single-light;
+    margin-top: 20px;
+    padding: 8px;
+
+    &:hover,
+    &:focus {
+        @include button-single-light-hover;
+    }
+}
+
+
+.a-author {
+    .bb-a,
     a {
-        color: $COLOR_TYPE_HEADING;
-        @include aside-links(true);
+        color: $cod-gray;
     }
 }
 
 .a-author__article-date {
-    color: $COLOR_TYPE_META;
     @include font('NOBEL', 11px);
+    color: $dove-gray;
     letter-spacing: 0.025em;
 }
 
 .a-author__bio {
-    margin-bottom: $MARGIN_SMALL;
+    margin-bottom: 20px;
     margin-top: -8px;
 
-    p {
-        color: $COLOR_TYPE_META;
-        @include font('ADOBE CASLON', 13px, null, 16px);
+    .bb-p {
+        @include font('ADOBE CASLON', 13px, 400, 16px);
+        color: $dove-gray;
         margin-top: 0;
     }
 }
 
 .a-author__byline {
     margin: 0 0 10px 0;
+
+    a {
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid;
+        }
+    }
 }
 .a-author__byline--authors {
     line-height: 1em;
-    margin-bottom: $MARGIN_SMALL;
+    margin-bottom: 20px;
 }
 
 .a-author__byline-name {
     @include font('NOBEL', 11px);
-    color: $COLOR_TYPE_META;
+    color: $dove-gray;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 .a-author__byline-prefix,
 .a-author__byline-conjunction {
-    color: $COLOR_MAIN_TERTIARY;
     @include font('ADOBE CASLON', 12px);
+    color: $dove-gray;
     font-style: italic;
     text-transform: lowercase;
 }
@@ -48,16 +82,15 @@
 .a-author__image,
 .a-event-author__image {
     border-radius: 50%;
-    margin-bottom: $MARGIN_SMALL;
+    margin-bottom: 20px;
     overflow: hidden;
     width: 50px;
 }
 
-.a-author__separator,
-.a-event-author__separator {
+.a-author__separator {
     border: none;
-    border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-    margin: $MARGIN_XX_SMALL 0;
+    border-top: 1px solid $gallery;
+    margin: 10px 0;
 }
 
 .a-author__separator--date {

@@ -1,0 +1,90 @@
+.ad--tag {
+    text-align: center;
+
+    .ad__container {
+        background: $alabaster-f9;
+        padding: 20px 0;
+    }
+
+    .ad__title {
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
+        text-align: left;
+    }
+}
+
+.ad--tag-inline,
+.ad--tag-infinite {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.ad--tag-inline {
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+}
+.ad--tag-rail {
+    margin-bottom: 60px;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    margin-top: 60px;
+}
+.ad--tag-rail-top {}
+
+@include tablet-size {
+    .ad--tag {
+        .ad__title {
+            padding-left: $TABLET_SIDE_GUTTER;
+            padding-right: $TABLET_SIDE_GUTTER;
+        }
+    }
+    .ad--tag-inline {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+    .ad--tag-rail {
+        margin-left: -$TABLET_SIDE_GUTTER + 20;
+        margin-right: -$TABLET_SIDE_GUTTER + 20;
+    }
+}
+
+@include three-column-size {
+    .ad--tag-rail {
+        .ad__container {
+            background: transparent;
+            padding: 0;
+        }
+        .ad__title {
+            display: none;
+        }
+    }
+}
+
+@include desktop-size {
+    .ad--tag-inline {
+        margin-left: 0;
+        margin-right: -340px;
+
+        .ad__block {
+            left: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            right: 50%;
+            width: 100vw;
+        }
+    }
+    .ad--tag-rail {
+        clear: right;
+        float: right;
+        margin: 0 -340px 0 40px;
+
+        &.stick-wrapper--fixed {
+            margin-right: -40px;
+        }
+    }
+    .ad--tag-rail-top {
+        left: 100%;
+        position: absolute;
+        top: 0;
+    }
+}

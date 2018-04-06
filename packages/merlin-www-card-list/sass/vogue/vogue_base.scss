@@ -21,11 +21,11 @@
             margin-top: 20px;
 
             .c-card {
-                border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+                border-top: 1px solid $gallery;
                 padding-top: 20px;
 
                 &.c-card--dark {
-                    border-top: 1px solid $COLOR_MAIN_SECONDARY;
+                    border-top: 1px solid $mine-shaft-333;
                 }
             }
         }
@@ -87,13 +87,13 @@
             margin-top: 20px;
 
             .c-card {
-                border-color: $COLOR_BORDER_SOLID_ACCENT1;
+                border-color: $alto;
             }
         }
     }
 
     li.c-card__meta-item + li.c-card__meta-item {
-        border-left-color: $COLOR_BORDER_SOLID_ACCENT1;
+        border-left-color: $alto;
     }
 }
 
@@ -115,11 +115,11 @@
             margin-top: 20px;
 
             .c-card {
-                border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+                border-top: 1px solid $gallery;
                 padding-top: 20px;
 
                 &.c-card--dark {
-                    border-top: 1px solid $COLOR_MAIN_SECONDARY;
+                    border-top: 1px solid $mine-shaft-333;
                 }
             }
         }
@@ -245,11 +245,11 @@
         width: 100%;
 
         .c-card {
-            border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+            border-top: 1px solid $gallery;
             padding-top: 20px;
 
             &.c-card--dark {
-                border-top: 1px solid $COLOR_MAIN_SECONDARY;
+                border-top: 1px solid $mine-shaft-333;
             }
         }
 
@@ -292,11 +292,11 @@
             margin-top: 20px;
 
             .c-card {
-                border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+                border-top: 1px solid $gallery;
                 padding-top: 20px;
 
                 &.c-card--dark {
-                    border-top: 1px solid $COLOR_MAIN_SECONDARY;
+                    border-top: 1px solid $mine-shaft-333;
                 }
             }
         }
@@ -346,11 +346,11 @@
             margin-top: 20px;
 
             .c-card {
-                border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+                border-top: 1px solid $gallery;
                 padding-top: 20px;
 
                 &.c-card--dark {
-                    border-top: 1px solid $COLOR_MAIN_SECONDARY;
+                    border-top: 1px solid $mine-shaft-333;
                 }
             }
         }
@@ -382,7 +382,7 @@
 
     .c-card-list__item {
         display: inline-block;
-        margin-right: $MARGIN_MEDIUM;
+        margin-right: 30px;
         width: 280px;
         white-space: normal;
 
@@ -412,7 +412,7 @@
     }
 
     .c-card-list__item + .c-card-list__item {
-        border-top: 1px solid #444;
+        border-top: 1px solid $mine-shaft-333;
         margin-top: 12px;
         padding-top: 12px;
     }

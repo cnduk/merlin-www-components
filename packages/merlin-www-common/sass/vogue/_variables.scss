@@ -1,17 +1,29 @@
 @import '../wireframe/_variables';
 
-$cod-gray: #111111;
-$mine-shaft-333: #333333;
-$dove-gray: #666666;
-$silver: #bdbdbd;
-$gallery: #eaeaea;
-$wild-sand: #f4f4f4;
-$white: #ffffff;
-$guardsman-red: #c00000;
-$mine-shaft-222: #222222;
 $alabaster-f9: #f9f9f9;
 $alabaster-fc: #fcfcfc;
 $alto: #e0e0e0;
+$black: #000000;
+$cod-gray: #111111;
+$dove-gray: #666666;
+$gallery: #eaeaea;
+$guardsman-red: #c00000;
+$loot-box: #eaeaea;
+$mine-shaft-222: #222222;
+$mine-shaft-333: #333333;
+$tundora: #444444;
+$silver: #bdbdbd;
+$white: #ffffff;
+$wild-sand: #f4f4f4;
+
+// ----- Breakpoints ----- //
+$MOBILE_SIDE_GUTTER: 20px;
+$TABLET_SIDE_GUTTER: 60px;
+$DESKTOP_SIDE_GUTTER: 60px;
+
+$MOBILE_SLICE_MARGIN: 40px;
+$TABLET_SLICE_MARGIN: 60px;
+$DESKTOP_SLICE_MARGIN: 60px;
 
 /**
  * COLOURS
@@ -174,18 +186,18 @@ $CARD_LIST_5_COLUMN_BREAKPOINT: 1024px;
  */
 $GALLERY_MEDIUM_BREAKPOINT: 800px;
 
-// Gutters to use on the desktop sized site
-$DESKTOP_SIDE_GUTTER: $MARGIN_X_LARGE;
-// Gutters to use on the tablet sized site
-$TABLET_SIDE_GUTTER: $MARGIN_X_LARGE;
-// Gutters to use on the mobile sized site
-$MOBILE_SIDE_GUTTER: $MARGIN_SMALL;
-// Margins to use on the desktop sized site
-$DESKTOP_SLICE_MARGIN: $MARGIN_X_LARGE;
-// Margins to use on the tablet sized site
-$TABLET_SLICE_MARGIN: $MARGIN_X_LARGE;
-// Margins to use on the mobile sized site
-$MOBILE_SLICE_MARGIN: $MARGIN_LARGE;
+//// Gutters to use on the desktop sized site
+//$DESKTOP_SIDE_GUTTER: $MARGIN_X_LARGE;
+//// Gutters to use on the tablet sized site
+//$TABLET_SIDE_GUTTER: $MARGIN_X_LARGE;
+//// Gutters to use on the mobile sized site
+//$MOBILE_SIDE_GUTTER: $MARGIN_SMALL;
+//// Margins to use on the desktop sized site
+//$DESKTOP_SLICE_MARGIN: $MARGIN_X_LARGE;
+//// Margins to use on the tablet sized site
+//$TABLET_SLICE_MARGIN: $MARGIN_X_LARGE;
+//// Margins to use on the mobile sized site
+//$MOBILE_SLICE_MARGIN: $MARGIN_LARGE;
 
 /**
  * Article

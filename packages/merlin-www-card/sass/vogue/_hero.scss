@@ -1,33 +1,22 @@
 // -------------------- //
 // Hero
 // -------------------- //
-// Note: we force a padding-top on the image here as the image goes from
-// landscape to square
 @mixin card-hero() {
-    @include card-portrait();
-
-    .c-card__image--picture img {
-        bottom: 0;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 100%;
-    }
+    @include card-portrait;
 }
+
 @mixin card-hero-small() {
-    @include card-portrait-small();
-    .c-card__image--picture {
+    @include card-portrait-small;
+
+    .c-card__image {
         padding-top: 66.66666%;
     }
-    .c-card__title {
-        @include c-card-title-medium();
-    }
 }
+
 @mixin card-hero-large() {
-    @include card-portrait-large();
-    .c-card__image--picture {
+    @include card-portrait-large;
+
+    .c-card__image {
         padding-top: 100%;
     }
 }
@@ -35,7 +24,8 @@
 .c-card--hero {
     @include card-hero();
     @include card-hero-small();
-    @include min-screen($CARD_SWITCHER_WIDTH){
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
         @include card-hero-large();
     }
 }

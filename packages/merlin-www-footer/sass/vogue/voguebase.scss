@@ -1,8 +1,8 @@
 @import "../wireframe/wireframe";
 
 .c-footer {
-    background-color: $COLOR_MAIN_PRIMARY;
-    color: $COLOR_MAIN_PAGE;
+    background-color: $cod-gray;
+    color: $white;
 }
 
 .c-footer__wrapper {
@@ -11,20 +11,20 @@
 }
 
 .c-footer__list {
-    color: $COLOR_MAIN_PAGE;
+    color: $white;
 }
 
 .c-footer__list--left {
     @include min-screen(1100px) {
         & .c-footer__list-item:first-child {
-            padding-left: $PADDING_LARGE;
+            padding-left: 40px;
         }
     }
 }
 .c-footer__list--right {
     @include min-screen(1100px) {
         & > .c-footer__list-item:last-child {
-            padding-right: $PADDING_LARGE;
+            padding-right: 40px;
         }
     }
 }
@@ -33,7 +33,7 @@
     font-size: 0;
 
     @include max-screen(1099px) {
-        background-color: $COLOUR_BG_DARK;
+        background-color: $mine-shaft-222;
     }
 
     .c-footer__list-item {
@@ -47,8 +47,8 @@
             content: '';
             display: block;
             height: 1px;
-            width: calc(100% - #{$MARGIN_SMALL});
-            background-color: $COLOR_MAIN_SECONDARY;
+            width: calc(100% - 20px);
+            background-color: $mine-shaft-333;
 
             @include min-screen(1100px) {
                 content: none;
@@ -58,13 +58,13 @@
 }
 
 li.c-footer__list-item {
-    @include font('NOBEL', 14px, null, 60px);
+    @include font('NOBEL', 14px, 400, 60px);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
     height: 60px;
     letter-spacing: 0.025em;
-    padding-left: $PADDING_SMALL;
+    padding-left: 20px;
 
     @include min-screen(1100px) {
         padding-left: 16px;
@@ -86,14 +86,14 @@ li.c-footer__list-item {
 
 li.c-footer__list-item--logo {
     margin-top: -60px;
-    margin-right: $MARGIN_SMALL;
+    margin-right: 20px;
 
     svg {
         height: 60px;
         width: 30px;
     }
 
-    @include min-screen( 1100px ) {
+    @include min-screen(1100px) {
         clear: right;
         padding-left: 45px;
         margin-right: 0;

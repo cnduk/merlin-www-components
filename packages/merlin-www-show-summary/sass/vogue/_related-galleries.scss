@@ -1,11 +1,13 @@
 .sh-article__galleries {
-    border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT1;
-    margin: $MARGIN_LARGE 0;
-    padding-top: $PADDING_MEDIUM;
+    border-top: 1px solid $alto;
+    margin: 40px 0;
+    padding-top: 30px;
 }
+
 .sh-article__galleries-list {
     margin: 0 -5px;
 }
+
 .sh-article__galleries-item__title {
     @include font('NOBEL', 12px, 'BOLD', 12px);
     letter-spacing: 0.025em;

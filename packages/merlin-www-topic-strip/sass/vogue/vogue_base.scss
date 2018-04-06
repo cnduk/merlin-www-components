@@ -1,7 +1,7 @@
 .c-topic-strip {}
 
 .c-topic-strip__title {
-    @include font('NOBEL', 11px, 700, 11px);
+    @include font('NOBEL', 12px, 700, 12px);
 
     color: $COLOR_MAIN_PRIMARY;
     padding-right: 20px;
@@ -11,6 +11,7 @@
 .c-topic-strip__btn {
     @include button-group();
     @include button-group-light();
+    @include font-size(11px);
 
     &:hover {
         @include button-group-light-hover();

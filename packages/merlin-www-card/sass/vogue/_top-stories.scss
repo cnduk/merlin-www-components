@@ -24,7 +24,6 @@
     .c-card__title {
         @include font-size(15px);
         @include line-height(18px);
-        margin-bottom: 6px;
     }
 
     .c-card__teaser,
@@ -35,15 +34,15 @@
         display: none;
     }
 
+    .c-card__meta {
+        border-top: none;
+    }
+
     .c-card__byline--sponsorship {
         display: block;
         margin-bottom: 0;
     }
 
-    .c-card__meta {
-        border-top: none;
-        padding-top: 0;
-    }
 }
 
 @mixin card-top-stories-small() {}
@@ -51,8 +50,6 @@
 
 .c-card--top-stories {
     @include card-top-stories();
-    // @include card-top-stories-small();
-    // @include card-top-stories-large();
 }
 
 .c-card--top-stories-small {

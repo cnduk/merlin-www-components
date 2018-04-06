@@ -2,3 +2,11 @@
 @import '@cnbritain/merlin-www-image:missvogue';
 
 @import "../vogue/voguebase";
+
+.c-gallery {
+    background-color: $pig-pink;
+}
+.c-gallery__tag,
+.c-gallery__meta-item--tag {
+    color: $cerulean;
+}

@@ -3,73 +3,51 @@
 .a-header__wrapper {}
 
 .a-header__content {
-    padding: $PADDING_LARGE 0 0 0;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: $PADDING_X_LARGE $ARTICLE_RIGHT_TOTAL 0 0;
-    }
-
-    @include min-screen($ARTICLE_TOTAL) {
-        padding: $PADDING_X_LARGE $ARTICLE_RIGHT_TOTAL 0 $ARTICLE_LEFT_TOTAL;
-    }
+    padding: 40px 0 0 0;
 }
 
 .a-header__title {
-    @include line-height(36px);
-    margin: $MARGIN_X_SMALL 0;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include line-height(54px)
-        margin: $MARGIN_SMALL 0;
-    }
+    @include font('ITC CASLON', 35px, 400, 36px);
+    color: $cod-gray;
+    margin: 15px 0;
 }
 
-.a-header__teaser p {
-    @include font('ADOBE CASLON', 16px, 'NORMAL', 20px);
-    color: $COLOR_TYPE_META;
-    margin: $MARGIN_X_SMALL 0;
-    word-break: break-word;
-
-    a {
-        color: $COLOR_TYPE_META;
-        @include secondary-links(true);
+.a-header__teaser {
+    .bb-p {
+        @include font('ADOBE CASLON', 16px, 'NORMAL', 20px);
+        color: $dove-gray;
+        margin: 15px 0;
+        word-break: break-word;
     }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(18px);
-        @include line-height(25px);
-    }
-}
-
-.a-header__separator {
-    @include dotted-line($COLOR_BORDER_DOTTED, 1px, 3px);
-    border: none;
-    height: 1px;
-    margin: 25px 0 $MARGIN_SMALL 0;
 }
 
 .a-header__about {}
 
 .a-header__byline {
     margin-bottom: 8px;
-
-    a {
-        color: inherit;
-    }
 }
 .a-header__byline-item {
     margin-right: 8px;
 }
+.a-header__byline a,
+.a-header__sponsor a {
+    color: $cod-gray;
+
+    &:hover,
+    &:focus {
+        border-bottom: 1px solid;
+    }
+}
 
 .a-header__byline-name {
     @include font('NOBEL', 10px);
-    color: #111;
+    color: $cod-gray;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 .a-header__byline-prefix,
 .a-header__byline-conjunction {
-    color: $COLOR_MAIN_TERTIARY;
+    color: $dove-gray;
     @include font('ADOBE CASLON', 12px);
     font-style: italic;
     text-transform: lowercase;
@@ -77,15 +55,16 @@
 
 .a-header__date {
     @include font('NOBEL', 10px);
-    color: $COLOR_TYPE_META;
+    color: $dove-gray;
     letter-spacing: 0.025em;
 }
 
 .a-header__image {
-    padding-top: $PADDING_LARGE;
+    padding-top: 40px;
 }
 .a-header__image-constrain {
-    margin-bottom: $MARGIN_X_SMALL;
+    background-color: $gallery;
+    margin-bottom: 15px;
     padding-top: 66.666666666667%;
 
     img {
@@ -108,34 +87,21 @@
 }
 
 .a-header__image-title {
-    color: $COLOR_MAIN_PRIMARY;
     @include font('ADOBE CASLON', 15px, 700, 20px);
+    color: $cod-gray;
 }
-
-.a-header__image-caption p {
-    color: $COLOR_MAIN_TERTIARY;
+.a-header__image-caption .bb-p {
     @include font('ADOBE CASLON', 13px, null, 18px);
+    color: $dove-gray;
 }
-
 .a-header__image-credit {
-    &:before {
-        content: 'Credit: ';
-    }
-
-    color: $COLOR_MAIN_INACTIVE;
     @include font('NOBEL', 9px);
+    color: $silver;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-}
 
-.a-header__separator--hero {
-    background: none;
-    border-bottom: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-    margin: $MARGIN_X_SMALL $MOBILE_SIDE_GUTTER 0 $MOBILE_SIDE_GUTTER;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: 0;
-        margin-right: 0;
+    &:before {
+        content: 'Credit: ';
     }
 }
 
@@ -144,39 +110,45 @@
     -moz-osx-font-smoothing: grayscale;
     font-weight: 700;
     letter-spacing: 1px;
-    margin: 0 0 $MARGIN_X_SMALL 0;
+    margin: 0 0 15px 0;
     text-transform: uppercase;
 }
 
 .a-header__tag__primary,
 .a-header__tag__secondary {
     @include font('NOBEL', 11px);
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(12px);
-    }
 }
 
 // Force primary tag to be certain colour
 // even on miss vogue sub brand page
 // cannot use variable for highlight as overwritten
 .a-header__tag__primary {
-    color: #C00000;
+    color: $guardsman-red;
 }
 
 // Only sub brands have a secondary tag
 .a-header__tag__secondary {
     color: #08AEE6;
 }
-
 .a-header__tag__secondary + .a-header__tag__primary {
-    border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+    border-left: 1px solid $gallery;
     margin-left: 10px;
     padding-left: 10px;
 }
 
+.a-header__separator {
+    @include dotted-line($dove-gray, 1px, 3px);
+    border: none;
+    height: 1px;
+    margin: 25px 0 20px 0;
+}
+.a-header__separator--hero {
+    background: none;
+    border-bottom: 1px solid $gallery;
+    margin: 15px $MOBILE_SIDE_GUTTER 0 $MOBILE_SIDE_GUTTER;
+}
 .a-header__separator--sponsor {
-    @include dotted-line($COLOR_BORDER_SOLID_ACCENT2, 1px, 1px);
+    @include dotted-line($gallery, 1px, 1px);
     height: 1px;
     margin: 0 0 8px 0;
     width: 45px;
@@ -185,78 +157,45 @@
 .a-main.is-legit-content {}
 
 .a-header__sponsor {
-    margin: $MARGIN_X_SMALL 0 0 0;
+    margin: 15px 0 0 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin: $MARGIN_SMALL 0;
-    }
-
-    &::after {
+    &:after {
+        @include dotted-line($dove-gray, 1px, 3px);
         content: '';
-        @include dotted-line($COLOR_BORDER_DOTTED, 1px, 3px);
-        border: none;
         display: none;
         height: 1px;
-        margin: $MARGIN_MEDIUM 0 $MARGIN_SMALL 0;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            display: block;
-        }
+        margin: 30px 0 20px 0;
     }
 }
-
 .a-header__sponsor-prefix {
-    @include font('ADOBE CASLON', 11px, null, 14px);
-    color: $COLOR_MAIN_TERTIARY;
+    @include font('ADOBE CASLON', 11px, 400, 14px);
+    color: $dove-gray;
     font-style: italic;
     text-transform: lowercase;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font('ADOBE CASLON', 12px, null, 15px);
-    }
 }
-
 .a-header__sponsor-name {
-    @include font('NOBEL', 10px, null, 14px);
-    color: $COLOR_MAIN_PRIMARY;
+    @include font('NOBEL', 10px, 400, 14px);
+    color: $cod-gray;
     font-style: normal;
-    letter-spacing: 1px;
     text-transform: uppercase;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font('NOBEL', 11px, null, 15px);
-    }
 }
-
 .a-header__sponsor-image {
     height: 50px;
-    margin-top: $MARGIN_XX_SMALL;
+    margin-top: 10px;
 
     img {
         height: 50px;
         max-height: 50px;
     }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: $MARGIN_XXX_SMALL;
-        margin-top: 0;
-    }
 }
 
 .a-header__meta {
-    @include c-card-meta-small;
-    color: $COLOR_TYPE_META;
-    @include font('NOBEL', 10px);
-
-    @include min-screen($CARD_SWITCHER_WIDTH) {
-        @include c-card-meta-medium;
-        border-top: none;
-    }
-
-
+    font-size: 0;
 }
-
 .a-header__meta-item {
+    @include font('NOBEL', 10px, 400, 16px);
+    color: $dove-gray;
     text-transform: uppercase;
 
     &:not(:last-child) {
@@ -264,34 +203,52 @@
     }
 
     & + .a-header__meta-item {
-        border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+        border-left: 1px solid $gallery;
         padding-left: 8px;
     }
 }
-
 .a-header__meta-item--date {
     letter-spacing: 0.025em;
     text-transform: initial;
 }
 .a-header__meta-item--tag {
-    @include c-card-meta-tag;
+    color: $guardsman-red;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
-.a-header__meta-item {}
 
-.a-header__event {}
-.a-header__event-title {}
-.a-header__event-location {}
-.a-header__event-date {}
-.a-header__event-btn {}
+.a-header__event {
+    margin: 20px 0 0 0;
+}
+.a-header__event-title,
+.a-header__event-location {
+    @include font('ADOBE CASLON', 14px, null, 20px);
+    color: $dove-gray;
+}
+.a-header__event-location,
+.a-header__event-date {
+    margin-top: 4px;
+}
+.a-header__event-date {
+    @include font('NOBEL', 11px);
+    color: $dove-gray;
+    letter-spacing: 0.025em;
+}
+.a-header__event-btn {
+    @include button-single;
+    @include button-single-light;
+    margin-top: 20px;
+    padding: 8px;
 
-.a-share__youtube {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
-        margin-left: 10px;
-        margin-top: 23px;
+    &:hover,
+    &:focus {
+        @include button-single-light-hover;
     }
 }
+
+.a-share__youtube {}
 .a-share__youtube__title {
-    @include font('NOBEL', 9px, 'NORMAL', 11px);
+    @include font('NOBEL', 9px, 400, 11px);
     text-transform: uppercase;
 }
 
@@ -301,11 +258,87 @@
     .a-header__separator {
         display: none;
     }
+    .a-header__meta-item a {
+        color: $guardsman-red;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        &:hover
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+}
+
+@include card-portrait-to-landscape-size {
+    .a-header__meta {
+        @include font-size(11px);
+        @include line-height(20px);
+    }
+}
+
+@include tablet-size {
+    .a-header__separator--hero {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .a-share__youtube {
+        margin-left: 10px;
+        margin-top: 23px;
+    }
+}
+
+@include desktop-size {
+    .a-header__content {
+        padding: 60px $ARTICLE_RIGHT_TOTAL 0 0;
+    }
+    .a-header__tag__primary,
+    .a-header__tag__secondary {
+        @include font-size(12px);
+    }
+    .a-header__title {
+        @include font-size(50px);
+        @include line-height(54px)
+        margin: 20px 0;
+    }
+    .a-header__teaser {
+        .bb-p {
+            @include font-size(18px);
+            @include line-height(25px);
+        }
+    }
+    .a-header__sponsor {
+        margin: 20px 0;
+
+        &::after {
+            display: block;
+        }
+    }
+    .a-header__sponsor:after {
+        display: block;
+    }
+
+    .a-header__sponsor-prefix {
+        @include font-size(12px);
+        @include line-height(15px);
+    }
+
+    .a-header__sponsor-name {
+        @include font-size(11px);
+        @include line-height(15px);
+    }
+
+    .a-header__sponsor-image {
+        margin-left: 5px;
+        margin-top: 0;
+    }
+    .a-header--video {
         .a-header__meta-item {
             @include font-size(12px);
         }
     }
 }
 
+@include article-large-size {
+    .a-header__content {
+        padding: 60px $ARTICLE_RIGHT_TOTAL 0 $ARTICLE_LEFT_TOTAL;
+    }
+}

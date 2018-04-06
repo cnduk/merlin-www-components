@@ -1,10 +1,15 @@
 $_BUTTON_SIZE: 20px;
 
 .c-int-redirect {
-    background-color: $COLOUR_BG_ACCENT2;
+    background-color: $wild-sand;
 
     a {
-        color: $COLOR_TYPE_META;
+        color: $dove-gray;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
     }
 }
 
@@ -14,8 +19,8 @@ $_BUTTON_SIZE: 20px;
 }
 
 .c-int-redirect__btn {
-    background-color: $COLOUR_BG_ACCENT2;
-    border: 1px solid $COLOR_BORDER_DOTTED;
+    background-color: $wild-sand;
+    border: 1px solid $dove-gray;
     border-radius: 50%;
     height: $_BUTTON_SIZE;
     padding: 0;
@@ -33,8 +38,8 @@ li.c-int-redirect__list__item {
 }
 
 .c-int-redirect__msg {
-    color: $COLOR_TYPE_META;
     @include font('ADOBE CASLON', 16px);
+    color: $dove-gray;
 
     label {
         text-decoration: underline;

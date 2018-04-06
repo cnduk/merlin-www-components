@@ -1,0 +1,63 @@
+/**
+ * Search specific bits
+ * =============================================================================
+ */
+.n-menu__search {
+    background-color: $mine-shaft-222;
+    overflow: hidden;
+    position: relative;
+
+    path {
+        fill: $white;
+    }
+}
+
+.n-menu__search-search {
+    float: right;
+}
+
+.n-menu__search-textbox {
+    display: inline-block;
+    left: 0;
+    height: $MAIN_NAVIGATION_HEIGHT;
+    position: absolute;
+    right: $MAIN_NAVIGATION_HEIGHT;
+    top: 0;
+
+    input {
+        @include font('ITC CASLON', 17px, null, 17px);
+        background-color: $mine-shaft-222;
+        border: none;
+        box-sizing: border-box;
+        color: $dove-gray;
+        height: $MAIN_NAVIGATION_HEIGHT - 3;
+        padding: 0 $PADDING_SMALL;
+        margin-top: 3px;
+        width: 100%;
+
+        &:focus {
+            color: $white;
+            outline: none;
+        }
+    }
+}
+
+.n-search {
+    background-color: rgba(17, 17, 17, 0.95);
+
+    &.has-overlay {
+        left: 0;
+        padding-bottom: 100%;
+        position: absolute;
+        right: 0;
+        top: auto;
+        z-index: 3;
+
+        &.is-stuck {
+            bottom: 0;
+            padding-bottom: 0;
+            position: fixed;
+            top: $MAIN_NAVIGATION_HEIGHT;
+        }
+    }
+}

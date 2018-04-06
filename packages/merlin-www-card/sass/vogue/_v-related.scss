@@ -12,16 +12,12 @@
         display: table-cell;
         vertical-align: middle;
     }
-}
 
-@mixin card-v-related-small() {
     .c-card__obj__header {
-        padding-right: 10px;
         width: 33.33%;
         vertical-align: top;
     }
     .c-card__obj__body {
-        padding-left: 10px;
         width: auto;
     }
 
@@ -37,11 +33,16 @@
     }
 }
 
-@mixin card-v-related-large($has_small:false) {
-    @if not $has_small {
-        @include card-v-related-small;
+@mixin card-v-related-small() {
+    .c-card__obj__header {
+        padding-right: 10px;
     }
+    .c-card__obj__body {
+        padding-left: 10px;
+    }
+}
 
+@mixin card-v-related-large() {
     .c-card__obj__header {
         padding-right: 12px;
     }
@@ -55,7 +56,7 @@
     @include card-v-related();
     @include card-v-related-small();
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include card-v-related-large($has_small:true);
+        @include card-v-related-large();
     }
 }
 

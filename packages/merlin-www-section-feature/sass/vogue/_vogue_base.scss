@@ -1,24 +1,18 @@
 .c-feature {
-    background-color: $COLOUR_BG_FEATURE;
-    max-width: none;
+    background-color: $wild-sand;
     padding: $MOBILE_SIDE_GUTTER;
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: $DESKTOP_SIDE_GUTTER;
-    }
+
     &:focus,
     &:hover {
         .c-feature__title,
         .c-feature__byline-name {
-            @include card-text-links-hover();
+            opacity: 0.7;
+            text-decoration: none;
         }
         .c-feature__image {
-            @include card-image-links-hover();
+            opacity: 0.8;
         }
     }
-}
-
-.c-feature--gallery {
-    background-color: $COLOUR_BG_GALLERY;
 }
 
 .c-feature__constrain {
@@ -29,25 +23,14 @@
 .c-feature__wrapper {}
 .c-feature__images {}
 .c-feature__content {
-    background: #fff;
+    background: $white;
     padding: $PADDING_LARGE $PADDING_MEDIUM;
     text-align: center;
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        padding: $PADDING_X_LARGE;
-    }
-
-    .c-feature__icon {
-        border: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-        margin: 0 auto $MARGIN_MEDIUM auto;
-        padding: $PADDING_XX_SMALL;
-        width: 15px;
-        height: 15px;
-    }
 }
 
 .c-feature__image {
-    @include card-image-links-normal();
     @include transition(all 0.3s ease-in-out);
+    opacity: 1;
 }
 
 .c-feature__image--portrait {
@@ -56,70 +39,115 @@
 }
 
 .c-feature__icon {
-    background-color: $COLOR_MAIN_PAGE;
-    fill: $COLOR_MAIN_TERTIARY;
+    background-color: $white;
+    border: 1px solid $loot-box;
+    fill: $dove-gray;
+    height: 15px;
+    margin: 0 auto $MARGIN_MEDIUM auto;
+    padding: $PADDING_XX_SMALL;
+    width: 15px;
 }
 .c-feature__icon--gallery {}
 .c-feature__icon--video {}
 .c-feature__icon--podcast {}
+
 .c-feature__tag {
-    @include c-card-primary-tag;
-    margin-top: 0;
+    @include font('NOBEL', 10px, null, 16px);
+    color: $guardsman-red;
+    letter-spacing: 1px;
     margin-bottom: 8px;
+    margin-top: 0;
+    text-transform: uppercase;
 }
+
 .c-feature__title {
-    @include font('ITC CASLON', 24px, null, 26px);
+    @include font('ITC CASLON', 24px, 'NORMAL', 26px);
+    color: $cod-gray;
+    margin-top: $MARGIN_MEDIUM;
     margin-bottom: $MARGIN_XX_SMALL;
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+}
+
+.c-feature__teaser,
+.c-feature__separator {
+    display: none;
+}
+
+.c-feature__byline {
+    @include font-size(10px);
+    @include line-height(14px);
+    color: $mine-shaft-333;
+    margin-bottom: 14px;
+    margin-top: $MARGIN_XX_SMALL;
+}
+.c-feature__byline-prefix {
+    @include font('ADOBE CASLON', 12px);
+    color: $dove-gray;
+    font-style: italic;
+    margin-right: 2px;
+    text-transform: lowercase;
+}
+.c-feature__byline-name {
+    @include font('NOBEL', 10px);
+    color: $cod-gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.c-feature__meta {
+    @include font('NOBEL', 10px, null, 16px);
+    color: $dove-gray;
+    display: inline-block;
+}
+
+li.c-feature__meta-item {
+    padding-right: $PADDING_XX_SMALL;
+
+    & + .c-feature__meta-item {
+        border-left: 1px solid $loot-box;
+        padding-left: $PADDING_XX_SMALL;
+    }
+
+    &:last-child {
+        padding-right: 0;
+    }
+
+    &--tag {
+        color: $guardsman-red;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+}
+
+@include feature-slice-at-large {
+
+    .c-feature {
+        padding: $DESKTOP_SIDE_GUTTER;
+    }
+    .c-feature__content {
+        padding: $PADDING_X_LARGE;
+    }
+    .c-feature__tag {
+        @include font-size(11px);
+        @include line-height(20px);
+    }
+    .c-feature__title {
         @include font-size(35px);
         @include line-height(40px);
         margin-bottom: $MARGIN_X_SMALL;
     }
-}
-.c-feature__teaser {
-    display: none;
-}
-.c-feature__separator {
-    display: none;
-}
-.c-feature__byline {
-    @include c-card-byline;
-    margin-bottom: 14px;
-    margin-top: $MARGIN_XX_SMALL;
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    .c-feature__byline {
+        @include font-size(11px);
+        @include line-height(15px);
         margin-bottom: $MARGIN_SMALL;
         margin-top: $MARGIN_X_SMALL;
     }
-}
-.c-feature__byline-prefix {
-    @include c-card-byline-prefix;
-    margin-right: 2px;
-}
-.c-feature__byline-name {
-    @include c-card-byline-name;
-}
-.c-feature__meta {
-    display: inline-block;
-    @include min-screen($CARD_SWITCHER_WIDTH) {
-        border-top: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-        padding-top: 8px;
+    .c-feature__byline-name {
+        @include font-size(11px);
     }
-
-    @include c-card-meta;
-
-    .c-feature__meta-item {
-        &:not(:last-child) {
-            padding-right: $PADDING_XX_SMALL;
-        }
-
-        & + .c-feature__meta-item {
-            border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-            padding-left: $PADDING_XX_SMALL;
-        }
-
-        &--tag {
-            @include c-card-meta-tag;
-        }
+    .c-feature__meta {
+        @include font-size(11px);
+        @include line-height(20px);
+        border-top: 1px solid $loot-box;
+        padding-top: 8px;
     }
 }

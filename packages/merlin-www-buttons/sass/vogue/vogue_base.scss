@@ -5,19 +5,12 @@ a.btn-single {
     @include button-single();
 }
 
-%btn-single--light {
-
-}
-
-%btn-single--light--hover {
-
-}
-
 .btn-single--light,
 a.btn-single--light {
     @include button-single-light();
 
-    &:hover {
+    &:hover,
+    &:focus {
         @include button-single-light-hover();
     }
 }
@@ -26,7 +19,8 @@ a.btn-single--light {
 a.btn-single--dark {
     @include button-single-dark();
 
-    &:hover {
+    &:hover,
+    &:focus {
         @include button-single-dark-hover();
     }
 }
@@ -36,19 +30,12 @@ a.btn-single-two {
     @include button-single-two();
 }
 
-%btn-single-two--light {
-
-}
-
-%btn-single-two--light--hover {
-
-}
-
 .btn-single-two--light,
 a.btn-single-two--light {
     @include button-single-two-light();
 
-    &:hover {
+    &:hover,
+    &:focus {
         @include button-single-two-light-hover();
     }
 }
@@ -57,7 +44,8 @@ a.btn-single-two--light {
 a.btn-single-two--dark {
     @include button-single-two-dark();
 
-    &:hover {
+    &:hover,
+    &:focus {
         @include button-single-two-dark-hover();
     }
 }
@@ -71,7 +59,8 @@ a.btn-group {
 a.btn-group--light {
     @include button-group-light();
 
-    &:hover {
+    &:hover,
+    &:focus {
         @include button-group-light-hover();
     }
 }
@@ -80,7 +69,8 @@ a.btn-group--light {
 a.btn-group--dark {
     @include button-group-dark();
 
-    &:hover {
+    &:hover,
+    &:focus {
         @include button-group-dark-hover();
     }
 }
@@ -166,7 +156,8 @@ a.btn-share--monotone {}
 a.btn-related {
     @include button-related();
 
-    &:hover {
+    &:hover,
+    &:focus {
         @include button-related-hover();
     }
 }

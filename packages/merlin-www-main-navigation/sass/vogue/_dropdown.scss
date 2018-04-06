@@ -1,0 +1,122 @@
+/**
+ * Dropdown items
+ * =============================================================================
+ */
+.n-main__dropdown {}
+.n-main__dropdown--follow {
+    .n-main__dropdown-link {
+        @include font('ADOBE CASLON', 14px, null, 14px);
+        color: $dove-gray;
+        font-style: italic;
+        text-transform: capitalize;
+        padding-right: $PADDING_MEDIUM;
+
+        //Typekit Caslon font doesn't quite align to center
+        box-sizing: border-box;
+        height: $MAIN_NAVIGATION_HEIGHT;
+        padding-top: 2px;
+    }
+    .n-main__dropdown-list-item {
+        @include font-size(12px);
+        text-align: center;
+    }
+}
+.n-main__dropdown--follow__group {
+    font-size: 0;
+    margin-top: $MARGIN_XX_SMALL;
+
+    &:last-child {
+        margin-top: 23px;
+        padding-bottom: $PADDING_MEDIUM;
+    }
+}
+.n-main__dropdown__btn-share {
+    @include button-share();
+
+    height: 50px;
+    position: relative;
+    width: 50px;
+
+    svg {
+        display: block;
+        margin: 0 auto;
+    }
+
+    & + .n-main__dropdown__btn-share:before {
+        background-color: $loot-box;
+        content: '';
+        display: inline-block;
+        height: 20px;
+        left: -1px;
+        margin: $MARGIN_X_SMALL 0px;
+        position: absolute;
+        width: 1px;
+    }
+}
+@each $name, $color in $COLOUR_SOCIAL {
+
+    .n-main__dropdown__btn-share--#{$name} {
+        @include button-share-light($name);
+
+        &:hover,
+        &:focus {
+            @include button-share-light-hover($name);
+        }
+
+        &.btn-share--dark {
+            @include button-share-dark($name);
+            &:hover,
+            &:focus {
+                @include button-share-dark-hover($name);
+            }
+        }
+    }
+}
+
+.n-main__dropdown__btn--newsletter {
+    @include button-single();
+    @include button-single-light();
+
+    &:hover,
+    &:focus {
+        @include button-single-light-hover();
+    }
+}
+
+.n-main__dropdown-list {
+    background-color: $white;
+    border: 1px solid $loot-box;
+    border-top: none;
+    box-shadow: 0px 2px 5px 0px rgba(102, 102, 102, 0.06);
+}
+.n-main__dropdown-list--left {
+    min-width: 180px;
+    padding: 14px 0;
+}
+.n-main__dropdown-list--right {
+    // Offset the border in .n-main__dropdown--list
+    right: -1px;
+}
+.n-main__dropdown-list--follow {
+    padding: 0 $PADDING_XX_SMALL $PADDING_XX_SMALL $PADDING_XX_SMALL;
+    z-index: 3;
+}
+.n-main__dropdown-link {
+    &:after {
+        left: 10px;
+        position: relative;
+        top: -2px;
+    }
+}
+.n-main__dropdown-list-item {
+    @include font-size(15px);
+    background-color: $white;
+    white-space: nowrap;
+    z-index: 3;
+
+    span {
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+    }
+}

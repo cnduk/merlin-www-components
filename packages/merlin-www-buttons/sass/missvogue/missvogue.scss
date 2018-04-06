@@ -3,6 +3,95 @@
 $_VOGUE_BORDER_WIDTH: 2px;
 
 @import '../vogue/_mixins';
-@import '../vogue/_placeholders';
+
+@mixin button-single(){
+    @include button-reset();
+    @include font('NOBEL', 12px);
+    @include transition(all 0.1s ease-in-out);
+
+    color: $cerulean;
+    letter-spacing: 1px;
+    padding: $PADDING_X_SMALL;
+    text-transform: uppercase;
+}
+
+@mixin button-single-light() {
+    border: $_VOGUE_BORDER_WIDTH solid $cerulean;
+}
+
+@mixin button-single-light-hover() {
+    background-color: $cerulean;
+    border: $_VOGUE_BORDER_WIDTH solid transparent;
+    color: $white;
+}
+
+@mixin button-single-two-light() {
+    background-color: $cerulean;
+    border: 1px solid transparent;
+}
+
+@mixin button-single-two-light-hover() {
+    background-color: transparent;
+    border: $_VOGUE_BORDER_WIDTH solid $cerulean;
+    color: $cerulean;
+}
+
+@mixin button-group(){
+    @include button-reset();
+    @include font('NOBEL', 10px);
+    @include transition(all 0.1s ease-in-out);
+
+    color: $cerulean;
+    padding: $PADDING_XX_SMALL;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@mixin button-group-light(){
+    border: $_VOGUE_BORDER_WIDTH solid $cerulean;
+}
+
+@mixin button-group-light-hover(){
+    background-color: $cerulean;
+    border: $_VOGUE_BORDER_WIDTH solid transparent;
+    color: $white;
+}
+
+@mixin button-top-stories() {
+    @include transition(all 0.1s ease-in-out);
+
+    background-color: $wild-sand;
+    color: $cerulean;
+    height: 50%;
+    width: 60px;
+
+    svg {
+        height: 100%;
+        width: 11px;
+    }
+
+    svg, path {
+        fill: $COLOR_BUTTON_ACTION_ACTIVE;
+        @include transition(all 0.1s ease-in-out);
+    }
+}
+
+@mixin button-share {
+    color: $cerulean;
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+    //Overwrites defaults padding bottom 2px
+    padding-bottom: 0;
+    text-align: center;
+    width: 45px;
+
+    svg {
+        height: 100%;
+        fill: $white;
+        width: 16px;
+    }
+}
 
 @import '../vogue/vogue_base';

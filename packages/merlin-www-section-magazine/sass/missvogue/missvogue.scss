@@ -4,3 +4,13 @@
 
 @import '../wireframe/wireframe';
 @import '../vogue/vogue_base';
+
+.c-magazine__title {
+    color: $cerulean;
+}
+
+.c-magazine__content__title {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        color: $cerulean
+    }
+}

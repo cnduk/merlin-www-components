@@ -1,131 +1,19 @@
 @import "../wireframe/wireframe";
 
 .c-gallery {
-    background-color: $COLOUR_BG_GALLERY;
+    background-color: $wild-sand;
     max-width: none;
     padding: $MOBILE_SIDE_GUTTER;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: $DESKTOP_SIDE_GUTTER;
-    }
 
     &:hover,
     &:focus {
         .c-gallery__title,
         .c-gallery__byline-name {
-            @include card-text-links-hover();
+            opacity: 0.7;
         }
         .c-gallery__images {
-            @include card-image-links-hover();
+            opacity: 0.8;
         }
-    }
-}
-
-.c-gallery__byline {
-    @include c-card-byline;
-    margin-bottom: 14px;
-    margin-top: $MARGIN_XX_SMALL;
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        margin-bottom: $MARGIN_SMALL;
-        margin-top: $MARGIN_X_SMALL;
-    }
-}
-
-.c-gallery__byline-name {
-    @include c-card-byline-name;
-}
-
-.c-gallery__byline-prefix {
-    @include c-card-byline-prefix;
-    margin-right: 2px;
-}
-
-.c-gallery__teaser {
-    display: none;
-}
-
-.c-gallery__image-remaining {
-    background-color: rgba(0, 0, 0, 0.38);
-    color: $COLOR_MAIN_PAGE;
-    @include font('NOBEL', 24px, null, 25px);
-}
-
-.c-gallery__images {
-    @include card-image-links-normal();
-    @include transition(all 0.3s ease-in-out);
-}
-
-.c-gallery__meta {
-    display: inline-block;
-    @include c-card-meta;
-
-    .c-gallery__meta-item {
-        &:not(:last-child) {
-            padding-right: 8px;
-        }
-
-        & + .c-gallery__meta-item {
-            border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-            padding-left: 8px;
-        }
-    }
-}
-
-.c-gallery__meta-item--date {}
-.c-gallery__meta-item--tag {
-    @include c-card-meta-tag;
-}
-.c-gallery__separator {
-    display: none;
-}
-
-.c-gallery__text {
-    text-align: center;
-}
-
-.c-gallery__text__wrapper {
-    background-color: $COLOR_MAIN_PAGE;
-    padding: $PADDING_LARGE $PADDING_MEDIUM;
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        padding: $PADDING_LARGE $PADDING_X_LARGE;
-    }
-
-    // @include gallery-slice-at-large(){
-    //     padding: $PADDING_X_LARGE $PADDING_X_LARGE;
-    // }
-}
-
-.c-gallery__icon {
-    display: none;
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        border: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
-        display: block;
-        height: 15px;
-        margin: 0 auto $MARGIN_MEDIUM auto;
-        padding: 15px;
-        width: 15px;
-
-        svg {
-            fill: $COLOR_BORDER_DOTTED;
-        }
-    }
-}
-
-.c-gallery__tag {
-    @include c-card-primary-tag;
-    margin-top: 0;
-    margin-bottom: 8px;
-}
-
-.c-gallery__title {
-    margin: 0 0 $MARGIN_XX_SMALL 0;
-    @include font('ITC CASLON', 24px, null, 26px);
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        margin: 0 0 $MARGIN_X_SMALL 0;
-        @include font-size(35px);
-        @include line-height(40px);
     }
 }
 
@@ -133,4 +21,141 @@
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
     width: 100%;
+}
+
+.c-gallery__images {
+    @include transition(all 0.3s ease-in-out);
+    opacity: 1;
+}
+
+.c-gallery__image-remaining {
+    @include font('NOBEL', 24px, null, 25px);
+    background-color: rgba(0, 0, 0, 0.38);
+    color: $white;
+}
+
+.c-gallery__text {
+    text-align: center;
+}
+
+.c-gallery__text__wrapper {
+    background-color: $white;
+    padding: $PADDING_LARGE $PADDING_MEDIUM;
+}
+
+.c-gallery__icon {
+    border: 1px solid $loot-box;
+    display: none;
+    height: 15px;
+    margin: 0 auto $MARGIN_MEDIUM auto;
+    padding: 15px;
+    width: 15px;
+
+    svg {
+        fill: $dove-gray;
+    }
+}
+
+.c-gallery__tag {
+    @include font('NOBEL', 10px, null, 16px);
+    color: $guardsman-red;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.c-gallery__title {
+    @include font('ITC CASLON', 24px, 'NORMAL', 26px);
+    @include transition(all 0.3s ease-in-out);
+    color: $cod-gray;
+    margin: 0 0 $MARGIN_XX_SMALL 0;
+}
+
+.c-gallery__teaser,
+.c-gallery__separator {
+    display: none;
+}
+
+.c-gallery__byline {
+    @include font-size(10px);
+    @include line-height(14px);
+    margin-bottom: 14px;
+    margin-top: $MARGIN_XX_SMALL;
+}
+
+.c-gallery__byline-name {
+    @include font('NOBEL', 10px);
+    @include transition(all 0.3s ease-in-out);
+    color: $cod-gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.c-gallery__byline-prefix {
+    @include font('ADOBE CASLON', 12px);
+    color: $dove-gray;
+    font-style: italic;
+    text-transform: lowercase;
+    margin-right: 2px;
+}
+
+.c-gallery__meta {
+    @include font('NOBEL', 10px, null, 16px);
+    color: $dove-gray;
+    display: inline-block;
+}
+
+li.c-gallery__meta-item {
+    padding-right: 8px;
+
+    &:last-child {
+        padding-right: 0;
+    }
+
+    & + .c-gallery__meta-item {
+        border-left: 1px solid $loot-box;
+        padding-left: 8px;
+    }
+}
+
+.c-gallery__meta-item--date {}
+.c-gallery__meta-item--tag {
+    color: $guardsman-red;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+@include gallery-slice-at-large {
+    .c-gallery {
+        padding: $DESKTOP_SIDE_GUTTER;
+    }
+    .c-gallery__text__wrapper {
+        padding: $PADDING_LARGE $PADDING_X_LARGE;
+    }
+    .c-gallery__icon {
+        display: block;
+    }
+    .c-gallery__tag {
+        @include font-size(11px);
+        @include line-height(15px);
+    }
+    .c-gallery__title {
+        @include font-size(35px);
+        @include line-height(40px);
+        margin: 0 0 $MARGIN_X_SMALL 0;
+    }
+    .c-gallery__byline {
+        @include font-size(11px);
+        @include line-height(15px);
+        margin-bottom: $MARGIN_SMALL;
+        margin-top: $MARGIN_X_SMALL;
+    }
+    .c-gallery__byline-name {
+        @include font-size(11px);
+    }
+    .c-gallery__meta {
+        @include font-size(11px);
+        @include line-height(20px);
+    }
 }

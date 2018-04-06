@@ -99,9 +99,6 @@
 .c-card--landscape {
     @include card-landscape();
     @include card-landscape-small();
-    // @include min-screen(800px) {
-    //     @include card-landscape-large();
-    // }
 }
 
 .c-card--landscape-small {

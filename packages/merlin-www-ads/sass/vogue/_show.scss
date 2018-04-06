@@ -1,0 +1,166 @@
+.ad--show {
+    text-align: center;
+
+    .ad__container {
+        background: $alabaster-f9;
+        padding: 20px 0;
+    }
+
+    .ad__title {
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
+        text-align: left;
+    }
+}
+
+.ad--show-inline {
+    .ad__container {
+        background: $alabaster-f9;
+        padding: 20px 0;
+        text-align: center;
+    }
+}
+
+.ad--show-rail,
+.ad--show-season  {
+    margin-bottom: 60px;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    margin-top: 60px;
+}
+
+
+.ad--show-top {
+    .ad__container {
+        background-color: $mine-shaft-333;
+        padding: 20px 0;
+    }
+}
+
+.ad--show-content {
+    text-align: center;
+
+    .ad__container {
+        background: $alabaster-f9;
+        padding: 20px 0;
+    }
+
+    .ad__title {
+        margin: 0 0 5px 0;
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
+        text-align: left;
+    }
+}
+
+.ad--tag-inline,
+.ad--tag-infinite,
+.ad--show-inline {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.ad--tag-inline,
+.ad--show-inline {
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+}
+
+
+
+
+
+
+@include text-size-medium {
+    .ad--show-rail,
+    .ad--show-season {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+}
+
+@include three-column-size {
+    .ad--show-rail {
+        position: absolute;
+        right: 0;
+        margin: 0;
+        width: 300px;
+    }
+    .ad--show-season {
+        .ad__container {
+            background: $alabaster-f9;
+            padding: 20px 0;
+        }
+        .ad__title {
+            display: block;
+        }
+    }
+}
+
+@include min-screen($SHOWS_SEASON_HUB_LARGE_BREAKPOINT){
+    .ad--show-season {
+        position: absolute;
+        right: $DESKTOP_SIDE_GUTTER;
+        margin: 0;
+        top: 0;
+        width: 300px;
+
+        .ad__container {
+            background: transparent;
+            padding: 0;
+        }
+        .ad__title {
+            display: none;
+        }
+    }
+}
+
+@include tablet-size {
+    .ad--show,
+    .ad--show-content {
+        .ad__title {
+            padding-left: $TABLET_SIDE_GUTTER;
+            padding-right: $TABLET_SIDE_GUTTER;
+        }
+    }
+    .ad--tag-inline,
+    .ad--show-inline {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+}
+
+@include desktop-size {
+    .ad--tag-inline,
+    .ad--show-inline {
+        margin-left: 0;
+        margin-right: -340px;
+
+        .ad__block {
+            left: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            right: 50%;
+            width: 100vw;
+        }
+    }
+}
+
+@include three-column-size {
+    .ad--show {
+        .ad__title {
+            display: none;
+        }
+    }
+    .ad--show-rail {
+        .ad__container {
+            background: transparent;
+            padding: 0;
+        }
+    }
+    .ad--show-rail-top {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}

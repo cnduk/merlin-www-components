@@ -1,23 +1,26 @@
+
 .c-card {}
 .c-card:hover,
 .c-card:focus {
     .c-card__title,
     .c-card__byline-name {
-        @include card-text-links-hover();
+        opacity: 0.7;
+        text-decoration: none;
     }
     .c-card__image {
-        @include card-image-links-hover();
+        opacity: 0.8;
     }
 }
 
 .c-card__image {
-    background: $COLOUR_BG_ACCENT1;
-    @include card-image-links-normal();
     @include transition(all 0.3s ease);
+
+    background-color: $gallery;
+    opacity: 1;
 }
 
 .c-card__image__icon {
-    background-color: #fff;
+    background-color: $white;
     bottom: 0;
     height: 30px;
     left: 0;
@@ -28,52 +31,37 @@
 
     svg {
         display: block;
+        fill: $dove-gray;
         height: 100%;
         margin: 0 auto;
         vertical-align: middle;
         width: 14px;
     }
-
-    path {
-        fill: $COLOR_TYPE_META;
-    }
-
-    @include card-portrait-to-landscape-size() {
-        height: 40px;
-        width: 40px;
-
-        svg {
-            width: 16px;
-        }
-    }
 }
 
 .c-card__tag {
-    @include c-card-primary-tag;
-    @include card-portrait-to-landscape-size() {
-        margin-bottom: 8px;
-    }
+    @include font('NOBEL', 10px, null, 16px);
+    color: $guardsman-red;
+    letter-spacing: 1px;
     margin: 0 0 4px 0;
+    text-transform: uppercase;
 }
 
 .c-card__title {
-    margin: 0 0 6px 0;
-    @include c-card-title;
+    @include font('ITC CASLON', 17px, 'NORMAL', 20px);
     @include transition(all 0.3s ease);
 
-    @include card-portrait-to-landscape-size() {
-        margin: 0 0 $MARGIN_XX_SMALL 0;
-    }
+    color: $COLOR_TYPE_HEADING;
+    //Forces ligatures on Firefox
+    font-variant-ligatures: common-ligatures;
+    margin: 0 0 6px 0;
 }
 
 .c-card__teaser {
+    @include font('ADOBE CASLON', 15px);
+    color: $dove-gray;
     display: none;
     margin: $MARGIN_XX_SMALL 0;
-
-    @include c-card-description;
-    @include card-portrait-to-landscape-size() {
-        display: block;
-    }
 }
 
 .c-card__separator {
@@ -81,7 +69,7 @@
 }
 
 .c-card__rating {
-    @include c-card-rating;
+    @include font('NOBEL', 11px, 'BOLD');
     margin-bottom: 8px;
     margin-top: 8px;
 
@@ -97,43 +85,40 @@
 }
 
 .c-card__rating-mark {
-    background-color: $COLOUR_BG_ACCENT1;
+    background-color: $gallery;
     height: 8px;
     width: 8px;
 }
 .c-card__rating-mark--fill {
-    background-color: $COLOUR_BG_DARK;
+    background-color: $mine-shaft-222;
 }
 
 .c-card__byline,
 .c-card__sponsor {
-    @include c-card-byline;
+    @include font-size(10px);
+    @include line-height(14px);
     margin: 6px 0 8px 0;
-
-    @include card-portrait-to-landscape-size() {
-        margin: $MARGIN_XX_SMALL 0 $MARGIN_X_SMALL 0;
-    }
 }
 .c-card__byline-prefix,
 .c-card__sponsor-label {
-    @include c-card-byline-prefix;
+    @include font('ADOBE CASLON', 12px);
+    color: $dove-gray;
+    font-style: italic;
+    text-transform: lowercase;
     margin-right: 2px;
 }
 .c-card__byline-name,
 .c-card__sponsor-title {
-    @include c-card-byline-name;
+    @include font('NOBEL', 10px);
+    color: $COLOR_TYPE_HEADING;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .c-card__meta {
-    @include c-card-meta;
+    @include font('NOBEL', 10px, null, 16px);
+    color: $dove-gray;
     display: inline-block;
-    @include card-portrait-to-landscape-size() {
-        padding-top: 8px;
-    }
-}
-
-.c-card__meta-item--tag {
-    @include c-card-meta-tag;
 }
 
 // Need to be specific to overwrite global__list-reset
@@ -143,9 +128,15 @@ li.c-card__meta-item {
     }
 
     & + li.c-card__meta-item {
-        border-left: 1px solid $COLOR_BORDER_SOLID_ACCENT2;
+        border-left: 1px solid $gallery;
         padding-left: 8px;
     }
+}
+
+.c-card__meta-item--tag {
+    color: $guardsman-red;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .c-card__meta-item--gallery {
@@ -156,7 +147,7 @@ li.c-card__meta-item {
         width: 10px;
     }
     path {
-        fill: $COLOR_TYPE_META;
+        fill: $dove-gray;
     }
 }
 
@@ -168,14 +159,53 @@ li.c-card__meta-item {
     }
 
     path {
-        fill: $COLOR_TYPE_META;
+        fill: $dove-gray;
     }
-}
-
-.c-card__more {
-    @include c-card-more;
 }
 
 .c-card__image__remaining {
     background-color: rgba(0, 0, 0, 0.38);
+}
+
+
+@include card-portrait-to-landscape-size {
+    .c-card__image__icon {
+        height: 40px;
+        width: 40px;
+
+        svg {
+            width: 16px;
+        }
+    }
+    .c-card__tag {
+        @include font-size(11px);
+        @include line-height(15px);
+        margin-bottom: 8px;
+    }
+
+    .c-card__title {
+        @include font-size(20px);
+        @include line-height(25px);
+        margin: 0 0 $MARGIN_XX_SMALL 0;
+    }
+
+    .c-card__teaser {
+        display: block;
+    }
+    .c-card__byline,
+    .c-card__sponsor {
+        @include font-size(11px);
+        @include line-height(15px);
+        margin: $MARGIN_XX_SMALL 0 $MARGIN_X_SMALL 0;
+    }
+    .c-card__byline-name,
+    .c-card__sponsor-title {
+        @include font-size(11px);
+    }
+    .c-card__meta {
+        @include font-size(11px);
+        @include line-height(20px);
+        border-top: 1px solid $gallery;
+        padding-top: 8px;
+    }
 }

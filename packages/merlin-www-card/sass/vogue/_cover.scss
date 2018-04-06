@@ -2,28 +2,17 @@
 // Cover
 // -------------------- //
 @mixin card-cover() {
-    .c-card__obj {}
-    .c-card__obj__header {
-        display: block;
-        padding: 0;
-        width: auto;
-    }
 
     .c-card__image--custom {
         padding-top: 131.730769231%;
     }
 
     .c-card__obj__body {
-        display: block;
-        padding: 0;
         padding-top: 20px;
         width: 100%;
     }
 
-    .c-card__teaser {
-        display: none;
-    }
-
+    .c-card__teaser,
     .c-card__separator {
         display: none;
     }
@@ -33,9 +22,6 @@
     }
 
     .c-card__title {
-        @include font("ITC CASLON");
-        @include font-weight(400);
-        color: #111111;
         margin-bottom: 15px;
         text-align: center;
     }
@@ -45,7 +31,6 @@
     .c-card__title {
         @include font-size(17px);
         @include line-height(20px);
-
     }
 }
 

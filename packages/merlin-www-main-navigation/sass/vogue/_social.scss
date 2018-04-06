@@ -1,0 +1,39 @@
+/**
+ * Social specific buttons
+ * =============================================================================
+ */
+.n-menu__social {
+    margin: $MARGIN_MEDIUM $MARGIN_SMALL $MARGIN_MEDIUM $MARGIN_SMALL;
+    text-align: center;
+
+    ul {
+        font-size: 0;
+    }
+}
+.n-menu__social-title {
+    @include font('ADOBE CASLON', 14px, null, 14px);
+    color: $dove-gray;
+    text-transform: capitalize;
+    font-style: italic;
+
+    margin: 0 0 $MARGIN_XX_SMALL 0;
+}
+.n-menu__social-brand {}
+li.n-menu__social-item {
+    position: relative;
+    display: inline-block;
+
+    & + .n-menu__social-item:before {
+        background-color: $loot-box;
+        content: '';
+        display: inline-block;
+        height: 20px;
+        margin: $MARGIN_X_SMALL 0px;
+        width: 1px;
+    }
+
+    .btn-share {
+        height: 50px;
+        width: 50px;
+    }
+}

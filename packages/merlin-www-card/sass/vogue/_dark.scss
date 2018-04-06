@@ -1,57 +1,53 @@
 .c-card--dark {
+    // Needed to make the font a bit nicer on a dark background
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    &.c-card--inline {
-        background-color: transparent;
-    }
-
     .c-card__tag {
-        color: $COLOR_MAIN_INACTIVE;
+        color: $silver;
     }
 
     .c-card__title,
     .c-card__byline,
     .c-card__sponsor {
-        color: $COLOR_MAIN_PAGE;
+        color: $white;
     }
 
     .c-card__image__icon {
-        background-color: $COLOUR_BG_DARK;
+        background-color: $mine-shaft-222;
 
         path {
-            fill: $COLOR_MAIN_INACTIVE;
+            fill: $silver;
         }
     }
 
     .c-card__meta {
-        border-top-color: $COLOR_MAIN_SECONDARY;
+        border-top-color: $tundora;
     }
 
-    .c-card__separator {}
-
     .c-card__byline-prefix {
-        color: #888;
+        color: $dove-gray;
     }
 
     .c-card__byline-name {
-        color: #bdbdbd;
+        color: $silver;
     }
 
     // Need to be specific to overwrite global__list-reset
-    li.c-card__meta-item {
-        & + li.c-card__meta-item {
-            border-left: 1px solid #444;
-        }
-
-        color: $COLOR_TYPE_META;
-
-        &--tag {
-            color: $COLOR_MAIN_INACTIVE;
-        }
+    .c-card__meta-item {
+        color: $dove-gray;
 
         path {
-            fill: $COLOR_TYPE_META;
+            fill: $dove-gray;
         }
+
+        &--tag {
+            color: $silver;
+        }
+
+        & + li.c-card__meta-item {
+            border-left: 1px solid $tundora;
+        }
+
     }
 }

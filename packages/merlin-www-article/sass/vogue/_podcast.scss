@@ -1,8 +1,3 @@
-@import "@cnbritain/merlin-www-common:vogue";
-@import "@cnbritain/merlin-www-buttons:vogue";
-
-@import "../wireframe/wireframe";
-
 .a-podcast {
     margin: $MARGIN_MEDIUM 0 $MARGIN_LARGE 0;
 }
@@ -17,25 +12,26 @@
 
 li.a-podcast__list-item {
     margin: 0 0 $MARGIN_X_SMALL 0;
-
-    @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT) {
-        display: inline-block;
-    }
 }
 
 .a-podcast__btn {
     @include button-single();
     @include button-single-light();
     box-sizing: border-box;
-    display: block;
     text-align: center;
     width: 100%;
 
     &:hover {
         @include button-single-light-hover();
     }
+}
 
-    @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT) {
+@include article-header-large-size {
+    li.a-podcast__list-item {
+        display: inline-block;
+    }
+
+    .a-podcast__btn {
         width: auto;
     }
 }

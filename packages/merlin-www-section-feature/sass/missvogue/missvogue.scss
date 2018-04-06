@@ -3,3 +3,15 @@
 
 @import '../wireframe/wireframe';
 @import '../vogue/_vogue_base';
+
+.c-feature {
+    background-color: $mint-tulip;
+}
+.c-feature--gallery {
+    background-color: $pig-pink;
+}
+
+.c-feature__tag,
+li.c-feature__meta-item--tag {
+    color: $cerulean;
+}
