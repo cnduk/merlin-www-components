@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.12.0"></a>
+# [1.12.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.11.2...@cnbritain/merlin-www-bbcode@1.12.0) (2018-04-06)
+
+
+### Features
+
+* **merlin-www-bbcode:** migrate to use bb-* tags ([4728044](https://github.com/cnduk/merlin-www-components/commit/4728044))
+
+
+
+
 <a name="1.11.1"></a>
 ## [1.11.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.11.0...@cnbritain/merlin-www-bbcode@1.11.1) (2018-03-29)
 

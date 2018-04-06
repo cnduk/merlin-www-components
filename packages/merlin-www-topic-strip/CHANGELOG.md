@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.9.3"></a>
+## [1.9.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-topic-strip@1.9.2...@cnbritain/merlin-www-topic-strip@1.9.3) (2018-04-06)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-topic-strip
+
 <a name="1.9.1"></a>
 ## [1.9.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-topic-strip@1.9.0...@cnbritain/merlin-www-topic-strip@1.9.1) (2018-03-29)
 

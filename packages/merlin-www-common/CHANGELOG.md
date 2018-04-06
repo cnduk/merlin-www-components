@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.12.0"></a>
+# [1.12.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-common@1.11.1...@cnbritain/merlin-www-common@1.12.0) (2018-04-06)
+
+
+### Features
+
+* **merlin-www-common:** add article-header-large-size mixin to wireframe ([abc8330](https://github.com/cnduk/merlin-www-components/commit/abc8330))
+* **merlin-www-common:** add feature-slice-at-large mixin to wireframe ([87add8a](https://github.com/cnduk/merlin-www-components/commit/87add8a))
+* **merlin-www-common:** add text-size-medium and text-size-large mixins to wireframe ([45d91ea](https://github.com/cnduk/merlin-www-components/commit/45d91ea))
+* **merlin-www-common:** updated defaults and variables for new bb-* tags ([79b79aa](https://github.com/cnduk/merlin-www-components/commit/79b79aa))
+
+
+
+
 <a name="1.11.1"></a>
 ## [1.11.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-common@1.11.0...@cnbritain/merlin-www-common@1.11.1) (2018-03-29)
 

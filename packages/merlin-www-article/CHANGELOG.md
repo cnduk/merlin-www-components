@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.25.0"></a>
+# [1.25.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.24.2...@cnbritain/merlin-www-article@1.25.0) (2018-04-06)
+
+
+### Features
+
+* **merlin-www-article:** split article author and event into smaller partials ([899b5b9](https://github.com/cnduk/merlin-www-components/commit/899b5b9))
+
+
+
+
 <a name="1.24.1"></a>
 ## [1.24.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.24.0...@cnbritain/merlin-www-article@1.24.1) (2018-03-29)
 
