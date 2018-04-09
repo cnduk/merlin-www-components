@@ -24,6 +24,7 @@
     .c-card__title {
         @include font-size(15px);
         @include line-height(18px);
+        margin-bottom: 6px;
     }
 
     .c-card__teaser,
@@ -36,6 +37,7 @@
 
     .c-card__meta {
         border-top: none;
+        padding-top: 0;
     }
 
     .c-card__byline--sponsorship {
