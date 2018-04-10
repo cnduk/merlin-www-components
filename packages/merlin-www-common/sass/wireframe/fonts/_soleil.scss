@@ -5,7 +5,7 @@
  */
 
 // Font configs
-$_FONT: "soleil", serif;
+$_FONT: "soleil", sans-serif;
 $FONT_SOLEIL: map-merge($FONT_GROUP_DEFAULT, (
     'FAMILY': $_FONT,
     'LETTER SPACING': normal,
