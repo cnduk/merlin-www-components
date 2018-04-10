@@ -1,0 +1,14 @@
+@import "../_fonts";
+
+/**
+ * These fonts are hosted by TypeKit
+ */
+
+// Font configs
+$_FONT: "freight-display-pro", serif;
+$FONT_FREIGHT_DISPLAY_PRO: map-merge($FONT_GROUP_DEFAULT, (
+    'FAMILY': $_FONT,
+    'LETTER SPACING': normal,
+    'LINE HEIGHT': 1.5em
+));
+$FONT_GROUPS: map-merge($FONT_GROUPS, ('FREIGHT DISPLAY PRO': $FONT_FREIGHT_DISPLAY_PRO));
