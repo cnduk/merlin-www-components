@@ -12,6 +12,7 @@
     const btnResizeSmall = document.getElementById('btnResizeSmall');
     const btnResizeMedium = document.getElementById('btnResizeMedium');
     const btnResizeLarge = document.getElementById('btnResizeLarge');
+    const colBackground = document.getElementById('colBackground');
 
     const SANDBOX_VALUE = [
         'allow-forms',
@@ -163,6 +164,10 @@
         };
     }
 
+    function setBackgroundColor(e){
+        document.querySelector('.component-preview').style.backgroundColor = e.target.value;
+    }
+
     function initSettings(){
         cboPartial.addEventListener('change', onSettingChange('PARTIAL'));
         cboThemes.addEventListener('change', onSettingChange('THEME'));
@@ -174,6 +179,7 @@
         btnResizeSmall.addEventListener('click', () => setResizePreset('SMALL'));
         btnResizeMedium.addEventListener('click', () => setResizePreset('MEDIUM'));
         btnResizeLarge.addEventListener('click', () => setResizePreset('LARGE'));
+        colBackground.addEventListener('input', setBackgroundColor);
         socket.on('render', onRender);
     }
 
