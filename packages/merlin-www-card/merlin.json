@@ -11,7 +11,8 @@
         "bystander": "sass/bystander/bystander.scss",
         "wired": "sass/wired/wired.scss",
         "missvogue": "sass/missvogue/missvogue.scss",
-        "vogue": "sass/vogue/vogue.scss"
+        "vogue": "sass/vogue/vogue.scss",
+        "brides": "sass/brides/brides.scss"
     },
     "partials": {
         "card": "templates/card.html"
@@ -27,6 +28,13 @@
         "hero": "demo/data/hero.json",
         "top-stories": "demo/data/top-stories.json",
         "landscape": "demo/data/landscape.json",
-        "switcher": "demo/data/switcher.json"
+        "switcher": "demo/data/switcher.json",
+        "all-landscape": "demo/data/all-landscape.json",
+        "all-portrait": "demo/data/all-portrait.json",
+        "all-show": "demo/data/all-show.json",
+        "all-switcher": "demo/data/all-switcher.json",
+        "all-switcher-video": "demo/data/all-switcher-video.json",
+        "all-tag-article": "demo/data/all-tag-article.json",
+        "all-top-stories": "demo/data/all-top-stories.json"
     }
 }
