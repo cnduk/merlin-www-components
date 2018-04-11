@@ -1,46 +1,22 @@
 @import '../wireframe/_variables';
 
 // ----- Colours ----- //
-$ABBEY: #4B4D4F;
-$ADVERT-DARK: #0D242C;
-$ADVERT-LIGHT: #FAFBFC;
-$BALI-HAI: #60909E;
-$BLACK: #000000;
-$CAPE-HAZE: #F4F6F6;
-$CASPER: #A4BDC9;
-$FAROE-GRAY: #D0D6D8;
-$ISABEL: #ECEEEE;
-$JUNGLE: #082028;
-$MANATEE: #9098A2;
-$MISTY-ROSE: #FCE0D6;
-$MUSTASAARI: #111314;
-$PORCELAIN: #E4E7E8;
-$RAVEN: #737E8B;
-$SHERPA-BLUE: #003D4C;
-$WHITE: #FFFFFF;
-
-$advert-dark: #202132;
-$advert-light: #f5f5f5;
-$black-olive: #3b3b3b;
-$black: #000000;
-$bright-navy-blue: #167ac6;
-$careys-pink: #ecc6cb;
-$dove-gray: #707070;
-$ebony-clay: #27293e;
-$mercury: #e6e6e6;
-$mine-shaft: #262626;
-$silver-chalice: #a9a9a9;
-$silver: #cccccc;
-$steel-gray: #202132;
-$trout: #4A4B5F;
-$tundora: #424242;
-$vanilla-ice: #fbf2f3;
 $white: #ffffff;
-$wild-sand: #f5f5f5;
-
-// ----- Social Colours -----//
-// $COLOUR_EMAIL: $SHERPA-BLUE;
-// $COLOUR_SOCIAL: map-merge($COLOUR_SOCIAL, ("email": $COLOUR_EMAIL));
+$diamond: #f9f9f9;
+$ballet-grey: #d4d4d3;
+$candle-grey: #929090;
+$ascot-grey: #4e4a4c;
+$stroller-grey: #322e30;
+$tux-grey: #141012;
+$black: #000000;
+$pink-rose: #ea356c;
+$chestnut-rose: #d63152;
+$sweet-pea: #ffb2ad;
+$blossom: #fbe5e7;
+$champagne: #ffeee2;
+$sapphire: #038a99;
+$azure: #dcedec;
+$advert: #f9f9f8;
 
 // ----- Breakpoints ----- //
 $DESKTOP_SIDE_GUTTER: 60px;
@@ -53,14 +29,6 @@ $MOBILE_SLICE_MARGIN: 40px;
 
 $DESKTOP_SIDE_GUTTER_BREAKPOINT: 1024px;
 $TABLET_SIDE_GUTTER_BREAKPOINT: 700px;
-
-// $CARD_SWITCHER_WIDTH: 600px;
-// $CARD_LIST_2_COLUMN_BREAKPOINT: 600px;
-// $CARD_LIST_3_COLUMN_BREAKPOINT: 940px;
-// $CARD_LIST_4_COLUMN_BREAKPOINT: 1024px;
-
-// $FEATURE_LARGE_BREAKPOINT: 800px;
-// $SUPERFEATURE_LARGE_BREAKPOINT: 700px;
 
 $TYPE_MEDIUM_COPY_WIDTH: 700px;
 $TYPE_LARGE_COPY_WIDTH: 1024px;
