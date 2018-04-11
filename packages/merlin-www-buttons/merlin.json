@@ -9,7 +9,8 @@
         "bystander": "sass/bystander/bystander.scss",
         "wired": "sass/wired/wired.scss",
         "missvogue": "sass/missvogue/missvogue.scss",
-        "vogue": "sass/vogue/vogue.scss"
+        "vogue": "sass/vogue/vogue.scss",
+        "brides": "sass/brides/brides.scss"
     },
     "partials": {
         "button": "templates/button.html"
@@ -30,6 +31,9 @@
         "related": "demo/data/related.json",
         "group-dark": "demo/data/group-dark.json",
         "share-light": "demo/data/share-light.json",
-        "single-dark": "demo/data/single-dark.json"
+        "single-dark": "demo/data/single-dark.json",
+        "single-two-light": "demo/data/single-two-light.json",
+        "single-three-light": "demo/data/single-three-light.json",
+        "single-three-dark": "demo/data/single-three-dark.json"
     }
 }
