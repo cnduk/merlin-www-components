@@ -3,44 +3,47 @@
 @import '../wireframe/wireframe';
 
 .c-cookie-warning {
-	background-color: $ebony-clay;
-	padding: 20px 20px 40px 20px;
+	background-color: $azure;
+	padding: 12px 20px;
 }
 
 .c-cookie-warning__table {}
 .c-cookie-warning__table-cell {}
 .c-cookie-warning__table-cell--message {}
 .c-cookie-warning__table-cell--cta {
-	padding-left: 20px;
-	vertical-align: top;
-	width: 30px;
+	padding-left: 16px;
+	vertical-align: middle;
+	width: 20px;
 }
 
 .c-cookie-warning__message {
-	@include font('MILLER_DISPLAY', 17px, 'BOLD', 19px);
-	color: $white;
+	@include font("SOLEIL", 12px, 'NORMAL', 16px);
+	color: $sapphire;
+	letter-spacing: 0.01em;
 	margin: 0;
 
 	a {
 		color: inherit;
-		border-bottom: 1px $white solid;
+		text-decoration: underline;
 	}
 }
 
 .c-cookie-warning__button {
-	height: 30px;
-	width: 30px;
+	border-radius: 50%;
+	border: 1px solid $sapphire;
+	height: 20px;
+	width: 20px;
 
 	svg {
-		height: 30px;
-		fill: $silver-chalice;
-		width: 30px;
+		height: 7.3px;
+		fill: $sapphire;
+		width: 7.3px;
 	}
 }
 
-@include desktop-size {
-	.c-cookie-warning {
-		padding: 20px 20px 30px 20px;
-		width: 450px;
+.c-cookie-warning {
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		width: 360px;
 	}
 }
+
