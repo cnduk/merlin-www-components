@@ -1,7 +1,7 @@
 @import '@cnbritain/merlin-www-common:brides';
 
-@import './_mixins';
 @import '../wireframe/wireframe';
+@import './_mixins';
 
 a.btn-single,
 a.btn-group,
@@ -19,17 +19,49 @@ a.btn-single {
 a.btn-single--light {
     @include button-single-light;
 
-    &:hover {
+    &:hover,
+    &:focus {
         @include button-single-light-hover;
     }
 }
 
-.btn-single--dark,
-a.btn-single--dark {
-    @include button-single-dark;
+.btn-single-two,
+a.btn-single-two {
+    @include button-single-two;
+}
 
-    &:hover {
-        @include button-single-dark-hover;
+.btn-single-two--light,
+a.btn-single-two--light {
+    @include button-single-two-light;
+
+    &:hover,
+    &:focus {
+        @include button-single-two-light-hover;
+    }
+}
+
+.btn-single-three,
+a.btn-single-three {
+    @include button-single-three;
+}
+
+.btn-single-three--light,
+a.btn-single-three--light {
+    @include button-single-three-light;
+
+    &:hover,
+    &:focus {
+        @include button-single-three-light-hover;
+    }
+}
+
+.btn-single-three--dark,
+a.btn-single-three--dark {
+    @include button-single-three-dark;
+
+    &:hover,
+    &:focus {
+        @include button-single-three-dark-hover;
     }
 }
 
@@ -42,73 +74,33 @@ a.btn-group {
 a.btn-group--light {
     @include button-group-light;
 
-    &:hover {
+    &:hover,
+    &:focus {
         @include button-group-light-hover;
-    }
-}
-
-.btn-group--dark,
-a.btn-group--dark {
-    @include button-group-dark;
-
-    &:hover {
-        @include button-group-dark-hover;
-    }
-}
-
-.btn-group-two,
-a.btn-group-two {
-    @include button-group-two;
-}
-
-.btn-group-two--light,
-a.btn-group-two--light {
-    @include button-group-two-light;
-
-    &:hover {
-        @include button-group-two-light-hover;
-    }
-}
-
-.btn-group-two--dark,
-a.btn-group-two--dark {
-    @include button-group-two-dark;
-
-    &:hover {
-        @include button-group-two-dark-hover;
-    }
-}
-
-.btn-top-stories,
-a.btn-top-stories {
-    @include button-top-stories();
-
-    &:hover:not(.btn-disabled):not([disabled]),
-    &:focus:not(.btn-disabled):not([disabled]) {
-        @include button-top-stories-hover();
-    }
-
-    &.btn-disabled,
-    &[disabled] {
-        @include button-top-stories-disabled();
     }
 }
 
 .btn-share,
 a.btn-share {
-    @include button-share();
+    @include button-share;
 }
 
-@each $name, $color in $COLOUR_SOCIAL {
-    .btn-share--#{$name},
-    a.btn-share--#{$name} {
-        &.btn-share--light {
-            @include button-share-light($name);
-        }
+.btn-share--light,
+a.btn-share--light {
+    @include button-share-light;
 
-        &:hover,
-        &:hover.btn-share--light {
-            @include button-share-light-hover($name);
-        }
+    &:hover,
+    &:focus {
+        @include button-share-light-hover;
+    }
+}
+
+.btn-share--dark,
+a.btn-share--dark {
+    @include button-share-dark;
+
+    &:hover,
+    &:focus {
+        @include button-share-dark-hover;
     }
 }
