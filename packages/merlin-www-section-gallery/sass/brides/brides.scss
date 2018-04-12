@@ -3,7 +3,6 @@
 @import '../wireframe/wireframe';
 
 .c-gallery {
-    box-sizing: border-box;
     margin-bottom: $MOBILE_SLICE_MARGIN;
     margin-top: $MOBILE_SLICE_MARGIN;
     max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
@@ -23,102 +22,183 @@
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
-}
 
-.c-gallery__wrapper {
-    &:hover {
-        .c-gallery__title {
-            span {
-                box-shadow: inset 0 -0.4em 0 0 $careys-pink;
-            }
+    .c-gallery__text {
+        @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+
         }
     }
 }
 
-.c-gallery__image {
-    background-color: $mercury;
+.c-gallery__wrapper {}
+
+.c-gallery__images {
+    position: relative;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        padding-right: 12px;
+        width: 62.5%;
+
+        &:before {
+            background-color: $white;
+            content: '';
+            height: 32px;
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 32px;
+            z-index: 1;
+        }
+    }
+
+    &:after {
+        background-color: $pink-rose;
+        bottom: 0;
+        content: '';
+        height: 32px;
+        left: 50%;
+        position: absolute;
+        transform: translateY(50%);
+        width: 1px;
+        z-index: 1;
+
+        @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+            bottom: 50%;
+            height: 1px;
+            left: initial;
+            right: 12px;
+            transform: translateX(50%);
+            width: 32px;
+        }
+    }
 }
 
+ul.c-gallery__image-list {}
+li.c-gallery__image-item {
+    width: 33.33333%;
+
+    &:first-child {
+        width: 66.66666%;
+    }
+
+    &:nth-last-child(2) {
+        display: none;
+    }
+}
+
+.c-gallery__image {}
+
 .c-gallery__image-remaining {
-    background-color: rgba($black, 0.5)
+    background-color: rgba($black, 0.25);
+    color: $white;
+    height: 50%;
+    width: 33.33333%;
 }
 
 .c-gallery__image-remaining__text {
-    border: 1px solid $white;
-    padding: 5px 7px;
-    white-space: nowrap;
-}
-
-.c-gallery__image-remaining__text-prefix {
-    @include font("BRANDON GROTESQUE", 20px, 700, 20px);
-    color: $white;
-    letter-spacing: 0px;
-    vertical-align: middle;
+    @include font("SOLEIL", 24px, 400, 24px);
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        @include font-size(25px);
-        @include line-height(25px);
+        @include font-size(32px);
+        @include font-size(32px);
     }
 }
 
-.c-gallery__image-remaining__text-value {
-    @include font("BRANDON GROTESQUE", 30px, 700, 30px);
-    color: $white;
-    letter-spacing: 0px;
-    vertical-align: middle;
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        @include font-size(35px);
-        @include line-height(35px);
-    }
-}
+.c-gallery__image-remaining__text-prefix {}
+.c-gallery__image-remaining__text-value {}
 
 .c-gallery__text {
-    padding: 20px 20px 0px 20px;
+    position: relative;
     text-align: center;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        border-top: 1px solid $mine-shaft;
-        border-right: 1px solid $mine-shaft;
-        border-bottom: 1px solid $mine-shaft;
-        padding: 70px;
-        text-align: left;
-        vertical-align: top;
+        padding-left: 12px;
+
+        &:before {
+            border: 1px solid $ballet-grey;
+            bottom: 0;
+            content: '';
+            left: 12px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+}
+
+.c-gallery__text__wrapper {
+    > * {
+        padding: 0 20px;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        text-align: left;
+    > :nth-child(2) {
+        margin-top: 28px;
+    }
+
+    > :last-child {
+        margin-bottom: 44px;
+    }
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        > :first-child {
+            margin-top: 40px;
+        }
+
+        > :nth-child(2) {
+            margin-top: inherit;
+        }
+
+        > :last-child {
+            margin-bottom: 68px;
+        }
     }
 }
 
 .c-gallery__icon {
     display: none;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        background-color: $blossom;
+        border-radius: 50%;
+        display: block;
+        height: 48px;
+        margin: 0 auto 24px auto;
+        padding: 0;
+        width: 48px;
+
+        svg {
+            display: block;
+            height: 100%;
+            margin: 0 auto;
+            vertical-align: middle;
+            width: 16px;
+            fill: $pink-rose;
+        }
+    }
 }
 
 .c-gallery__tag {
-    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
-    color: $mine-shaft;
-    letter-spacing: 1px;
-    margin-bottom: 7px;
-    margin-top: 0;
+    @include font("SOLEIL", 12px, 400, 16px, 18);
+    color: $pink-rose;
+    margin: 0 0 6px 0;
     text-transform: uppercase;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        margin-bottom: 15px;
+
     }
 }
 
 .c-gallery__title {
-    @include font("MILLER_DISPLAY", 25px, 700, 27px);
-    color: $mine-shaft;
-    letter-spacing: 0.5px;
-    margin: 7px 0 10px 0;
+    @include font("FREIGHT DISPLAY PRO", 32px, 400, 32px, 10);
+    color: $stroller-grey;
+    margin: 6px 0 0 0;
+    text-align: center;
+    text-transform: capitalize;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        @include font-size(35px);
-        @include line-height(38px);
-        letter-spacing: 0px;
-        margin: 15px 0 10px 0;
+        @include font-size(40px);
+        @include line-height(40px);
     }
 }
 
@@ -126,12 +206,9 @@
     display: none;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        @include font("MILLER_DISPLAY", 16px, 400, 21px);
-        color: $mine-shaft;
-        display: block;
-        font-style: italic;
-        letter-spacing: 0px;
-        margin: 10px 0 15px 0;
+        @include font("SOLEIL", 14px, 400, 20px, 30);
+        color: $ascot-grey;
+        margin: 18px 0 0 0;
     }
 }
 
@@ -140,50 +217,39 @@
 }
 
 .c-gallery__byline {
-    @include font("BRANDON GROTESQUE", 10px, null, 10px);
-    color: $mine-shaft;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-    margin-top: 10px;
+    @include font('SOLEIL', 10px, 400, 16px, 12);
+    color: $stroller-grey;
+    margin: 18px 0 0 0;
+    text-align: center;
     text-transform: uppercase;
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        margin-bottom: 7px;
-        margin-top: 15px;
-    }
 }
 
 .c-gallery__byline--sponsorship {}
 .c-gallery__byline-prefix {}
 .c-gallery__byline-name {
-    @include font-weight(700);
+    font-weight: bold;
 }
 
 ul.c-gallery__meta {
-    @include font("BRANDON GROTESQUE", 0px, 400, 10px);
-    color: $dove-gray;
-    letter-spacing: 1px;
-    margin-top: 5px;
+    @include font('SOLEIL', 10px, 400, 12px, 12);
+    color: $candle-grey;
     text-transform: uppercase;
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        margin-top: 7px;
-    }
+    margin: 6px 0 0 0;
 }
 
 li.c-gallery__meta-item {
-    @include font("BRANDON GROTESQUE", 10px, 400, 10px);
-    color: $dove-gray;
-    letter-spacing: 1px;
+    @include font('SOLEIL', 10px, 400, 12px, 12);
+    color: $candle-grey;
     text-transform: uppercase;
 
-    border-right: 1px solid $silver;
-    margin-right: 7px;
-    padding-right: 7px;
-
-    &:last-child {
-        border-right: none;
-        margin-right: 0;
-        padding-right: 0;
+    & + li.c-gallery__meta-item {
+        &:before {
+            background-color: $candle-grey;
+            content: "";
+            display: inline-block;
+            height: 2px;
+            margin: 2px 8px;
+            width: 2px;
+        }
     }
 }
