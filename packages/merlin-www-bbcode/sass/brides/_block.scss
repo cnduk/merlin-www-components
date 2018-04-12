@@ -1,0 +1,414 @@
+
+/**
+ * Headings
+ */
+
+.bb-h1 {
+    @include font('FREIGHT DISPLAY PRO', 34px, 'NORMAL', 36px);
+    color: $stroller-grey;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+
+.bb-h2 {
+    @include font('FREIGHT DISPLAY PRO', 28px, null, 32px);
+    color: $ascot-grey;
+    letter-spacing: 0.03em;
+    margin: 40px auto 14px auto;
+}
+
+.bb-h3 {
+    @include font('FREIGHT DISPLAY PRO', 20px, null, 24px);
+    color: $ascot-grey;
+    letter-spacing: 0.03em;
+    margin: 40px auto 14px auto;
+}
+
+.bb-h4 {
+    @include font('FREIGHT DISPLAY PRO', 16px, null, 20px);
+    color: $ascot-grey;
+    letter-spacing: 0.18em;
+    margin: 40px auto 14px auto;
+    text-transform: uppercase;
+}
+
+.bb-h5 {
+    @include font('SOLEIL', 14px, null, 16px);
+    color: $candle-grey;
+    letter-spacing: 0.18em;
+    margin: 40px auto 14px auto;
+    text-transform: uppercase;
+}
+
+.bb-h6 {
+    @include font('SOLEIL', 14px, null, 16px);
+    color: $ascot-grey;
+    letter-spacing: 0.03em;
+    margin: 40px auto 14px auto;
+}
+
+/**
+ * Paragraph
+ */
+
+.bb-p {
+    @include font('FREIGHT DISPLAY PRO', 18px, null, 26px);
+    color: $ascot-grey;
+    letter-spacing: 0.03em;
+    margin: 0 0 26px 0;
+}
+
+/**
+ * Quotes
+ */
+
+.bb-blockquote {
+    background-color: $azure;
+    color: $sapphire;
+    margin: 40px 0;
+    padding: 20px 24px;
+    text-align: center;
+}
+.bb-blockquote__quote {
+    @include font('FREIGHT DISPLAY PRO', 18px, null, 26px);
+    font-style: italic;
+    letter-spacing: 0.03em;
+}
+.bb-blockquote__separator {
+    display: none;
+}
+.bb-blockquote__credit {
+    @include font('SOLEIL', 12px, null, 16px);
+    letter-spacing: 0.12em;
+    margin: 8px 0 0 0;
+    text-transform: uppercase;
+}
+
+.bb-pullquote {
+    color: $pink-rose;
+    margin: 30px 0 40px 0;
+    text-align: center;
+
+    &:before {
+        background-color: $sweet-pea;
+        content: '';
+        display: block;
+        height: 32px;
+        margin: 0 auto 8px auto;
+        width: 1px;
+    }
+}
+.bb-pullquote__quote {
+    @include font('FREIGHT DISPLAY PRO', 24px, 'BOLD', 28px);
+    letter-spacing: 0.02em;
+}
+.bb-pullquote__separator {
+    display: none;
+}
+.bb-pullquote__credit {
+    @include font('SOLEIL', 12px, null, 16px);
+    letter-spacing: 0.12em;
+    margin: 10px 0 0 0;
+    text-transform: uppercase;
+}
+
+/**
+ * List
+ */
+
+.bb-li {
+    @include font('FREIGHT DISPLAY PRO', 18px, null, 26px);
+    color: $ascot-grey;
+    letter-spacing: 0.03em;
+    position: relative;
+}
+.bb-ul {
+    .bb-li {
+        padding-left: 32px;
+
+        &:before {
+            background-color: $pink-rose;
+            border-radius: 50%;
+            content: '';
+            display: block;
+            height: 8px;
+            left: 0;
+            position: absolute;
+            top: 9px;
+            width: 8px;
+        }
+    }
+}
+.bb-ol {
+    counter-reset: section;
+    list-style-type: none;
+    padding-left: 32px;
+
+    .bb-li:before {
+        @include font('SOLEIL', 14px, 'BOLD');
+        color: $pink-rose;
+        content: counters(section, ".") ". ";
+        counter-increment: section;
+        left: -32px;
+        position: absolute;
+        top: 3px;
+    }
+}
+
+
+/**
+ * Question and Answer
+ */
+
+.bb-question {
+    margin: 40px 0 18px 0;
+}
+.bb-answer {
+    margin: 18px 0 40px 0;
+}
+.bb-question__question,
+.bb-answer__answer {
+    @include font('FREIGHT DISPLAY PRO', 18px, null, 26px);
+    color: $ascot-grey;
+    letter-spacing: 0.03em;
+}
+.bb-question__question {
+    font-style: italic;
+}
+.bb-question__q,
+.bb-answer__a {
+    @include font('SOLEIL', 14px, 'BOLD');
+    margin-right: 32px;
+    position: relative;
+}
+.bb-question__q {
+    color: $pink-rose;
+}
+.bb-answer__a {
+    color: $sapphire;
+}
+.bb-question__q:before,
+.bb-answer__a:before {
+    content: '';
+    display: block;
+    height: 1px;
+    position: absolute;
+    right: -24px;
+    top: 50%;
+    width: 24px;
+}
+.bb-question__q:before {
+    background-color: $pink-rose;
+}
+.bb-answer__a:before {
+    background-color: $sapphire;
+}
+.bb-question__separator,
+.bb-answer__separator {
+    display: none;
+}
+.bb-question__author,
+.bb-answer__author {
+    @include font('SOLEIL', 12px, null, 16px);
+    letter-spacing: 0.12em;
+    margin: 14px 0 26px 0;
+    text-transform: uppercase;
+}
+.bb-question__author {
+    color: $pink-rose;
+}
+.bb-answer__author {
+    color: $sapphire;
+}
+
+/**
+ * Note
+ */
+
+.bb-note {
+    @include font('SOLEIL', 12px, null, 16px);
+    background-color: $white;
+    border: 1px solid $ballet-grey;
+    color: $candle-grey;
+    letter-spacing: 0.03em;
+    margin: 40px 0;
+    padding: 34px 20px;
+    position: relative;
+    text-align: center;
+}
+.bb-note:before {
+    background-color: $ballet-grey;
+    content: '';
+    display: block;
+    height: 32px;
+    left: 50%;
+    position: absolute;
+    top: -16px;
+    width: 1px;
+}
+
+/**
+ * Infobox
+ */
+
+.bb-infobox {
+    background-color: $white;
+    border: 1px solid $ballet-grey;
+    margin: 40px 0;
+    padding: 34px 20px;
+    position: relative;
+    text-align: center;
+}
+.bb-infobox:before {
+    background-color: $ballet-grey;
+    content: '';
+    display: block;
+    height: 32px;
+    left: 50%;
+    position: absolute;
+    top: -16px;
+    width: 1px;
+}
+.bb-infobox__title {
+    @include font('FREIGHT DISPLAY PRO', 32px, 'NORMAL', 32px);
+    background-image: linear-gradient(rgba($champagne, 0.75), rgba($champagne, 0.75));
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 1px 16px;
+    color: $stroller-grey;
+    display: inline;
+    font-style: italic;
+    letter-spacing: 0.01em;
+    margin: 0 0 20px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.bb-infobox__hr {
+    display: none;
+}
+
+.bb-infobox__item {
+    margin: 20px 0 26px 0;
+}
+.bb-infobox__item__key {
+    @include font('SOLEIL', 12px, null, 16px);
+    color: $candle-grey;
+    letter-spacing: 0.12em;
+    margin: 0;
+    text-transform: uppercase;
+}
+.bb-infobox__item__value {
+    @include font('SOLEIL', 14px, null, 20px);
+    color: $ascot-grey;
+    letter-spacing: 0.03em;
+    margin: 0;
+}
+.bb-infobox__item__key + .bb-infobox__item__value {
+    margin-top: 12px;
+}
+
+
+/**
+ * Code
+ */
+
+.bb-pre {
+    @include font-size(14px);
+    @include line-height(20px);
+    background-color: $diamond;
+    border: 1px solid rgba($ballet-grey, 0.75);
+    border-radius: 4px;
+    color: $candle-grey;
+    font-family: monospace;
+    margin: 40px 0;
+    padding: 20px;
+    white-space: pre-wrap;
+}
+
+
+@include text-size-large {
+
+    .bb-h1 {
+        @include font-size(48px);
+        @include line-height(48px);
+        margin: 48px auto 16px auto;
+    }
+
+    .bb-h2,
+    .bb-h3,
+    .bb-h4,
+    .bb-h5,
+    .bb-h6 {
+        margin: 48px auto 16px auto;
+    }
+
+    .bb-p {
+        @include font-size(20px);
+        @include line-height(30px);
+        margin: 0 0 30px 0;
+    }
+
+    .bb-blockquote {
+        margin: 48px 0;
+        padding: 28px 32px;
+    }
+    .bb-blockquote__quote {
+        @include font-size(20px);
+        @include line-height(30px);
+    }
+
+    .bb-pullquote {
+        margin-bottom: 48px;
+    }
+    .bb-pullquote__quote {
+        @include font-size(32px);
+        @include line-height(40px);
+    }
+    .bb-pullquote__credit {
+        margin: 18px 0 0 0;
+    }
+
+    .bb-ol {
+        .bb-li:before {
+            @include font-size(16px);
+        }
+    }
+
+    .bb-question {
+        margin: 48px 0 18px 0;
+    }
+    .bb-answer {
+        margin: 18px 0 48px 0;
+    }
+
+    .bb-question__question,
+    .bb-answer__answer {
+        @include font-size(20px);
+        @include line-height(30px);
+    }
+
+    .bb-question__q,
+    .bb-answer__a {
+        @include font-size(16px);
+    }
+
+    .bb-question__author,
+    .bb-answer__author {
+        margin: 16px 0 30px 0;
+    }
+
+    .bb-note {
+        margin: 48px 0;
+        padding: 46px 32px;
+    }
+
+    .bb-infobox {
+        margin: 48px 0;
+        padding: 46px 32px;
+    }
+
+    .bb-pre {
+        margin: 48px 0;
+    }
+}

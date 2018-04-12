@@ -1,4 +1,10 @@
 .c-card {}
+.c-card:hover,
+.c-card:focus {
+    .c-card__title {
+        color: $pink-rose;
+    }
+}
 .c-card__link {}
 
 .c-card__obj {}
@@ -17,6 +23,29 @@
 
 .c-card__header {}
 .c-card__footer {}
+
+.c-card__rating {
+    font-size: 0;
+}
+li.c-card__rating-mark {
+    background-color: rgba($ballet-grey, 0.5);
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+}
+li.c-card__rating-mark + .c-card__rating-mark {
+    margin-left: 2px;
+}
+li.c-card__rating-mark--fill {
+    background-color: $sweet-pea;
+}
+li.c-card__rating-label {
+    @include font('SOLEIL', 12px, 'BOLD', 12px);
+    color: $ascot-grey;
+    display: inline-block;
+    letter-spacing: 0.03em;
+    margin-left: 12px;
+}
 
 .c-card__byline {}
 .c-card__byline--sponsorship {}

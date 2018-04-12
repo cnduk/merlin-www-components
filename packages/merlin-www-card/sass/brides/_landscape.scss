@@ -4,8 +4,7 @@
 @mixin card-landscape() {
 
     .c-card__teaser,
-    .c-card__separator,
-    .c-card__rating {
+    .c-card__separator {
         display: none;
     }
 
@@ -31,6 +30,10 @@
         @include font('FREIGHT DISPLAY PRO', null, 'NORMAL', null);
         color: $stroller-grey;
         text-transform: capitalize;
+    }
+
+    .c-card__rating {
+        text-align: left;
     }
 
     .c-card__byline {

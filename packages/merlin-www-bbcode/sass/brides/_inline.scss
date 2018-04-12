@@ -1,0 +1,49 @@
+
+.bb-a {
+    color: inherit;
+    border-bottom: 1px solid $sweet-pea;
+
+    &:hover,
+    &:focus {
+        color: $pink-rose;
+        border-color: $pink-rose;
+    }
+}
+
+.bb-mark {
+    background-color: $champagne;
+}
+
+// TODO: tidy this once we have fonts in
+.bb-dropcap {
+    @include font('FREIGHT DISPLAY PRO', 102px, 'BOLD', 102px);
+    color: $sweet-pea;
+    float: left;
+    margin: 0 12px 14px 0;
+    text-transform: uppercase;
+}
+
+@include text-size-large {
+
+    .bb-dropcap {
+        @include font-size(116px);
+        @include line-height(116px);
+    }
+
+}
+
+.bb-small {
+    @include font('SOLEIL', 12px, null, 16px);
+    color: $candle-grey;
+    letter-spacing: 0.03em;
+}
+
+.bb-button {
+    @include button-single;
+    @include button-single-light;
+
+    &:hover,
+    &:focus {
+        @include button-single-light-hover;
+    }
+}
