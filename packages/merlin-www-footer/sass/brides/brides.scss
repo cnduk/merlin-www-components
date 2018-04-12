@@ -4,8 +4,12 @@
 @import "../wireframe/wireframe";
 
 .c-footer {
-    background-color: $mine-shaft;
+    background-color: $tux-grey;
     padding: 0 20px;
+
+     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+         padding: 0 30px;
+     }
 }
 
 .c-footer__wrapper {
@@ -15,10 +19,22 @@
 
 .c-footer__list {}
 
-.c-footer__list-item {
-    @include font("BRANDON GROTESQUE", 14px, 'BOLD', 14px);
+.c-footer__list--left {
+     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+         float: left;
+     }
+}
 
+.c-footer__list-item {
+    @include font("SOLEIL", 12px, 'NORMAL', 12px);
+    letter-spacing:0.01em;
     color: $white;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: 24px;
+        border-top: none;
+        position: relative;
+    }
 
     a {
         color: inherit;
@@ -26,81 +42,70 @@
         display: block;
         text-decoration: none;
     }
-}
-.c-footer__list-item--logo {
-    bottom: -10px;
-    padding: 0;
-    position: absolute;
-    right: 0;
-    width: 80px;
 
-    svg {
-        fill: $white;
+    svg{
+        width: 156px;
     }
 }
 
-.c-footer__list--left {}
 .c-footer__list--right {
     position: relative;
 
-    .c-footer__list-item {
-        padding: 20px 0;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        float: right;
+        width: 84%;
+    }
+
+    &.c-footer__list-item--logo{
+        padding: 0;
     }
 }
+
 .c-footer__list-item--links {
-    border-bottom: 1px solid $tundora;
+    border-bottom: 1px solid $stroller-grey;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+         border-bottom: none;
+         display: inline-block;
+         text-align: center;
+         width: 89%;
+
+          & > .c-footer__list-item:last-child {
+            padding-right: 24px;
+        }
+     }
 
     .c-footer__list-item {
-        border-top: 1px solid $tundora;
-    }
-}
+        border-top: 1px solid $stroller-grey;
+        padding-top: 23.5px;
+        padding-bottom: 23.5px;
 
-
-@include min-screen(1100px) {
-    .c-footer__list-item a:hover {
-        text-decoration: underline;
-    }
-
-    li.c-footer__list-item {
-        border-top: none;
-        position: relative;
-
-        &:before {
-            background-color: $tundora;
-            content: '';
-            display: block;
-            height: 20px;
-            left: 0;
-            position: absolute;
-            top: 17px;
-            width: 1px;
-        }
-
-        &:first-child:before {
-            display: none;
-        }
-    }
-
-    li.c-footer__list-item--logo {
-        position: relative;
-        top: -5px;
-
-        &:before {
-            display: none;
-        }
-    }
-
-    .c-footer__list--right {
-        .c-footer__list-item {
-            padding: 20px;
-        }
-    }
-
-    .c-footer__list-item--links {
-        border-bottom: none;
-
-        .c-footer__list-item {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             border-top: none;
+            display: inline-block;
         }
     }
 }
+
+.c-footer__list-item--logo {
+    bottom: 0px;
+    line-height: 60px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    width: 86px;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        position: relative;
+    }
+
+    svg {
+        display: inline-block;
+        fill: $white;
+        height: 30px;
+        width: 30px;
+        vertical-align: middle;
+    }
+}
+
+
