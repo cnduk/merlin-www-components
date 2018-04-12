@@ -1,0 +1,599 @@
+{
+    "translation": {
+        "byline_prefix": "By",
+        "latest_label": "Latest",
+        "sponsorship_prefix": "In partnership with",
+        "featured_label": "Featured"
+    },
+    "state": {
+        "is_hero": false,
+        "is_switcher": false,
+        "is_switcher_video": true,
+        "has_sponsor": true,
+        "is_splash": false,
+        "is_contributor": false,
+        "is_show": false,
+        "is_tag_article": false,
+        "is_cover": false,
+        "is_magazine": false,
+        "is_top_stories": false,
+        "is_landscape": false,
+        "is_portrait": false
+    },
+    "data": {
+        "primary_tag": {
+            "translation": {},
+            "state": {
+                "has_link": true,
+                "is_sponsored": false
+            },
+            "data": {
+                "link": {
+                    "translation": {},
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "data": {
+                        "url": "#",
+                        "title": "Primary tag"
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "Link"
+                },
+                "sponsor": null,
+                "event_information": null,
+                "title": "Primary tag"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "Tag"
+        },
+        "byline": "Dan Palmer",
+        "title": "Card title of article that could be long",
+        "review_information": {
+            "translation": {
+                "positive_title": "Pros",
+                "price_title": "Price",
+                "negative_title": "Cons"
+            },
+            "state": {},
+            "data": {
+                "score_negative_count": [6, 7, 8, 9, 10],
+                "thing_name": "Thing name",
+                "price_text": "Price text",
+                "thing": "Thing",
+                "conclusion_positive": "Positive",
+                "score": 5,
+                "conclusion_negative": "Negative",
+                "score_positive_count": [1, 2, 3, 4, 5],
+                "max_score": 10
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "ReviewInformation"
+        },
+        "meta_list": {
+            "translation": {},
+            "state": {},
+            "data": {
+                "items": [{
+                    "translation": {},
+                    "state": {
+                        "is_first": true,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {},
+                            "state": {
+                                "is_profile": false,
+                                "is_episode_number": false,
+                                "is_duration": false,
+                                "is_gallery": false,
+                                "is_tag": true,
+                                "has_icon": false,
+                                "is_location": false,
+                                "has_link": true,
+                                "is_event_location": false,
+                                "is_video_topic": false,
+                                "is_event_date": false,
+                                "is_date": false,
+                                "is_creative_director": false
+                            },
+                            "data": {
+                                "title": "Meta tag title",
+                                "meta_type": "tag",
+                                "link": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_blank": false,
+                                        "is_nofollow": false
+                                    },
+                                    "data": {
+                                        "url": "#",
+                                        "title": "Meta tag title"
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "Link"
+                                },
+                                "icon": null
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "Meta"
+                        },
+                        "index": 0
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "ListItem"
+                }, {
+                    "translation": {},
+                    "state": {
+                        "is_first": false,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {},
+                            "state": {
+                                "is_profile": false,
+                                "is_episode_number": false,
+                                "is_duration": false,
+                                "is_gallery": false,
+                                "is_tag": false,
+                                "has_icon": false,
+                                "is_location": false,
+                                "has_link": false,
+                                "is_event_location": false,
+                                "is_video_topic": false,
+                                "is_event_date": false,
+                                "is_date": true,
+                                "is_creative_director": false
+                            },
+                            "data": {
+                                "title": "09 Feb 2018",
+                                "meta_type": "date",
+                                "link": null,
+                                "icon": null
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "Meta"
+                        },
+                        "index": 1
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "ListItem"
+                }, {
+                    "translation": {},
+                    "state": {
+                        "is_first": false,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {},
+                            "state": {
+                                "is_profile": false,
+                                "is_episode_number": false,
+                                "is_duration": false,
+                                "is_gallery": false,
+                                "is_tag": false,
+                                "has_icon": false,
+                                "is_location": false,
+                                "has_link": false,
+                                "is_event_location": false,
+                                "is_video_topic": false,
+                                "is_event_date": true,
+                                "is_date": false,
+                                "is_creative_director": false
+                            },
+                            "data": {
+                                "title": "13 Dec 2018 - 13 Dec 2019",
+                                "meta_type": "event_date",
+                                "link": null,
+                                "icon": null
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "Meta"
+                        },
+                        "index": 2
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "ListItem"
+                }, {
+                    "translation": {},
+                    "state": {
+                        "is_first": false,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {},
+                            "state": {
+                                "is_profile": false,
+                                "is_episode_number": false,
+                                "is_duration": false,
+                                "is_gallery": false,
+                                "is_tag": false,
+                                "has_icon": false,
+                                "is_location": false,
+                                "has_link": false,
+                                "is_event_location": true,
+                                "is_video_topic": false,
+                                "is_event_date": false,
+                                "is_date": false,
+                                "is_creative_director": false
+                            },
+                            "data": {
+                                "title": "A location",
+                                "meta_type": "event_location",
+                                "link": null,
+                                "icon": null
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "Meta"
+                        },
+                        "index": 3
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "ListItem"
+                }, {
+                    "translation": {},
+                    "state": {
+                        "is_first": false,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {},
+                            "state": {
+                                "is_profile": false,
+                                "is_episode_number": false,
+                                "is_duration": false,
+                                "is_gallery": true,
+                                "is_tag": false,
+                                "has_icon": true,
+                                "is_location": false,
+                                "has_link": false,
+                                "is_event_location": false,
+                                "is_video_topic": false,
+                                "is_event_date": false,
+                                "is_date": false,
+                                "is_creative_director": false
+                            },
+                            "data": {
+                                "title": "11 items",
+                                "meta_type": "gallery",
+                                "link": null,
+                                "icon": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_static": false,
+                                        "is_portrait": false,
+                                        "is_image": false,
+                                        "is_square": false,
+                                        "is_svg": true,
+                                        "is_lazyload": false,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_landscape": false
+                                    },
+                                    "data": {
+                                        "credit": null,
+                                        "description": null,
+                                        "title": null,
+                                        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
+                                        "look_number": null,
+                                        "width": null,
+                                        "alt_text": null
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "SVG"
+                                }
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "Meta"
+                        },
+                        "index": 4
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "ListItem"
+                }, {
+                    "translation": {},
+                    "state": {
+                        "is_first": false,
+                        "is_last": true
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {},
+                            "state": {
+                                "is_profile": true,
+                                "is_episode_number": false,
+                                "is_duration": false,
+                                "is_gallery": false,
+                                "is_tag": false,
+                                "has_icon": false,
+                                "is_location": false,
+                                "has_link": false,
+                                "is_event_location": false,
+                                "is_video_topic": false,
+                                "is_event_date": false,
+                                "is_date": false,
+                                "is_creative_director": false
+                            },
+                            "data": {
+                                "title": "Dan Palmer",
+                                "meta_type": "profile",
+                                "link": null,
+                                "icon": null
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "Meta"
+                        },
+                        "index": 5
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "ListItem"
+                }],
+                "length": 6
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "MetaList"
+        },
+        "image_list": {
+            "translation": {},
+            "state": {},
+            "data": {
+                "items": [{
+                    "translation": {},
+                    "state": {
+                        "is_first": true,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {},
+                            "state": {
+                                "is_static": false,
+                                "is_portrait": false,
+                                "is_image": true,
+                                "is_square": false,
+                                "is_svg": false,
+                                "is_lazyload": true,
+                                "is_linked": false,
+                                "is_picture": false,
+                                "is_landscape": true
+                            },
+                            "data": {
+                                "description": null,
+                                "title": null,
+                                "orientation": "landscape",
+                                "look_number": null,
+                                "alt_text": null,
+                                "filename": null,
+                                "credit": null,
+                                "image_url": "https://vg-images.condecdn.net/image/placeholder/crop/405/landscape/f/placeholder.jpg",
+                                "srcset": "https://vg-images.condecdn.net/image/placeholder/crop/405/landscape/f/placeholder.jpg 405w",
+                                "width": null,
+                                "uid": "placeholder"
+                            },
+                            "style": {
+                                "padding_top": "66.666666667%",
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "Image"
+                        },
+                        "index": 0
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": "c-card__image--landscape"
+                    },
+                    "type": "ListItem"
+                }],
+                "length": 1
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "List"
+        },
+        "teaser": "This is a teaser of the an article!",
+        "link": {
+            "translation": {},
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false
+            },
+            "data": {
+                "url": "#",
+                "title": "Card title of article that could be long"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "Link"
+        },
+        "sponsor": {
+            "translation": {},
+            "state": {
+                "has_link": true
+            },
+            "data": {
+                "image": null,
+                "link": {
+                    "translation": {},
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "data": {
+                        "url": "#",
+                        "title": "Sponsor title"
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "Link"
+                },
+                "event_information": null,
+                "title": "Sponsor title"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "SponsorTag"
+        },
+        "event_information": {
+            "translation": {},
+            "state": {},
+            "data": {
+                "date_range_html": "<time datetime=\"2018-12-13\">13 Dec 2018</time> - <time datetime=\"2019-12-13\">13 Dec 2019</time>",
+                "end_date": {
+                    "translation": {},
+                    "state": {},
+                    "data": {
+                        "date": "2019-12-13 12:12:12+00:00",
+                        "relative_time": "1 minute ago",
+                        "label": "13 December 2019"
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "Date"
+                },
+                "title": "Event title",
+                "date_range_label": "13 Dec 2018 - 13 Dec 2019",
+                "image": null,
+                "ticket_link": {
+                    "translation": {},
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "data": {
+                        "url": "#ticketurl",
+                        "title": "Book tickets"
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "Link"
+                },
+                "location": "A location",
+                "start_date": {
+                    "translation": {},
+                    "state": {},
+                    "data": {
+                        "date": "2018-12-13 12:12:12+00:00",
+                        "relative_time": "1 minute ago",
+                        "label": "13 December 2018"
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "Date"
+                }
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "EventInformation"
+        },
+        "icon": {
+            "translation": {},
+            "state": {
+                "is_static": false,
+                "is_portrait": false,
+                "is_image": false,
+                "is_square": false,
+                "is_svg": true,
+                "is_lazyload": false,
+                "is_linked": false,
+                "is_picture": false,
+                "is_landscape": false
+            },
+            "data": {
+                "credit": null,
+                "description": null,
+                "title": null,
+                "svg_content": "<svg class=\"c-card__image__icon--gallery\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
+                "look_number": null,
+                "width": null,
+                "alt_text": null
+            },
+            "style": {
+                "inline": "",
+                "cls": "c-card__image__icon--gallery"
+            },
+            "type": "SVG"
+        }
+    },
+    "style": {
+        "inline": "",
+        "cls": "c-card--switcher-video"
+    },
+    "type": "SwitcherVideoCard"
+}
