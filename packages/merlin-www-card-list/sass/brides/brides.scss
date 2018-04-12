@@ -9,10 +9,10 @@
         display: inline-block;
         vertical-align: middle;
         white-space: normal;
-        width: 280px;
+        width: 290px;
 
         & + .c-card-list__item {
-            margin-left: 20px;
+            margin-left: 24px;
         }
 
         &.is-hidden {
@@ -23,7 +23,7 @@
         }
 
         &:last-child {
-            margin-right: 20px;
+            margin-right: 24px;
         }
     }
 }
@@ -72,10 +72,10 @@
 .c-card-list--tg-articles,
 .c-card-list--v-articles {
     .c-card__image__icon {
-        background-color: $vanilla-ice;
+        //background-color: $vanilla-ice;
 
         svg {
-            fill: $mine-shaft;
+            //fill: $mine-shaft;
         }
     }
 }
@@ -84,7 +84,7 @@
     .c-card:hover {
         .c-card__title {
             span {
-                box-shadow: inset 0 -0.4em 0 0 $trout;
+                //box-shadow: inset 0 -0.4em 0 0 $trout;
             }
         }
     }
@@ -102,7 +102,7 @@
         .c-card__images {
             &:after {
                 @include font("BRANDON GROTESQUE", 10px, 700, 10px);
-                background-color: $ebony-clay;
+                //background-color: $ebony-clay;
                 bottom: 0;
                 color: $white;
                 content: "Now Playing";
@@ -314,7 +314,7 @@
         &:hover {
             .c-card__title {
                 span {
-                    border-bottom: 2px solid $careys-pink;
+                    //border-bottom: 2px solid $careys-pink;
                     box-shadow: none;
                 }
             }
