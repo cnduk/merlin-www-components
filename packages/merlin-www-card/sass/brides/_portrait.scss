@@ -4,8 +4,7 @@
 @mixin card-portrait() {
 
     .c-card__teaser,
-    .c-card__separator,
-    .c-card__rating {
+    .c-card__separator {
         display: none;
     }
 
@@ -68,6 +67,10 @@
         margin: 6px 0;
         text-align: center;
         text-transform: capitalize;
+    }
+
+    .c-card__rating {
+        text-align: center;
     }
 
     .c-card__byline {
