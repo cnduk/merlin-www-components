@@ -5,10 +5,11 @@
 @import "../wireframe/wireframe";
 
 .c-top-stories {
-    background-color: $white;
-    border-bottom: 1px solid $mercury;
+    background-color: $diamond;
+    border-bottom: 1px solid rgba($ballet-grey, 0.2);
+    border-top: 1px solid rgba($ballet-grey, 0.2);
     display: none;
-    padding: 10px 0;
+    padding: 24px 0;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         display: block;
@@ -24,11 +25,11 @@
 .c-top-stories__wrapper {
     box-sizing: border-box;
     position: relative;
-    padding-left: 30px;
+    padding-left: 24px;
     transform: translateZ(0);
 
     @media (min-width: 1440px) and (max-width: 1500px) {
-        padding-left: calc(30px - (100vw - 1440px)/2 );
+        padding-left: calc(24px - (100vw - 1440px)/2 );
     }
 
     @include min-screen(1500px) {
@@ -37,16 +38,16 @@
 }
 
 .c-top-stories__nav {
-    border-left: 1px solid $ISABEL;
-    bottom: -10px;
+    border-left: 1px solid $ballet-grey;
+    bottom: -24px;
     position: absolute;
     right: 0;
-    top: -10px;
+    top: -24px;
     width: 60px;
     z-index: 2;
 
     @include min-screen($MAXIMUM_PAGE_WIDTH + 1) {
-        border-right: 1px solid $mercury;
+        border-right: 1px solid $ballet-grey;
     }
 }
 
@@ -55,7 +56,7 @@
 }
 
 .c-top-stories__nav-btn--left {
-    border-top: 1px solid $mercury;
+    border-top: 1px solid $ballet-grey;
     top: 50%;
 }
 
@@ -68,15 +69,15 @@
 }
 
 .c-top-stories__overflow {
-    margin-left: -30px;
+    margin-left: -24px;
     max-width: $MAXIMUM_PAGE_WIDTH;
     overflow-y: hidden;
-    padding-left: 30px;
+    padding-left: 24px;
     transform: translateZ(0);
 
     @media (min-width: 1440px) and (max-width: 1500px) {
-        padding-left: calc(30px - (100vw - 1440px)/2 );
-        margin-left: calc(-30px + (100vw - 1440px)/2 );
+        padding-left: calc(24px - (100vw - 1440px)/2 );
+        margin-left: calc(-24px + (100vw - 1440px)/2 );
     }
 
     @include min-screen(1500px) {
