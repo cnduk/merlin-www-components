@@ -1,88 +1,86 @@
-.a-author {}
+.a-event-author {
+    text-align: center;
+}
+.a-event-author__location {
+    @include font('SOLEIL', 12px, null, 16px);
+    color: $stroller-grey;
+    letter-spacing: 0.03em;
+    margin: 8px 0 10px 0;
+}
+.a-event-author__separator {
+    display: none;
+}
+.a-event-author__date {
+    @include font('SOLEIL', 10px, null, 15px);
+    color: $candle-grey;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+.a-event-author__btn {
+    @include button-single-three;
+    @include button-single-three-light;
+    margin: 8px 0;
+    padding: 10px 38px;
 
-.a-author__image {
-    border-radius: 50%;
-    height: 80px;
-    margin-bottom: 20px;
-    overflow: hidden;
-    position: relative;
-    width: 80px;
-
-    &:before {
-        background-color: $silver;
-        border-radius: 50%;
-        bottom: 0;
-        content: '';
-        height: 80px;
-        left: 0;
-        overflow: hidden;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 80px;
-        z-index: -1;
-    }
-
-    img {
-        border-radius: 50%;
-        height: 80px;
-        overflow: hidden;
-        width: 80px;
+    &:hover,
+    &:focus {
+        @include button-single-three-light-hover;
     }
 }
 
-.a-author__byline {
-    @include font("BRANDON GROTESQUE", 10px, 400, 10px);
-    color: $mine-shaft;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    margin-top: 0;
+
+.a-author {
+    text-align: center;
+}
+
+.a-author__article-date {
+    @include font('SOLEIL', 10px, null, 15px);
+    color: $candle-grey;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-
-    a {
-        color: $mine-shaft;
-    }
-
-    .a-author__byline-name {
-        @include font("BRANDON GROTESQUE", 10px, 700, 10px);
-        letter-spacing: 1px;
-    }
-
-    .a-author__byline-prefix,
-    .a-author__byline-conjunction {
-        color: $dove-gray;
-    }
 }
 
 .a-author__bio {
-    margin-bottom: 10px;
-    margin-top: 10px;
+    @include font('SOLEIL', 12px, null, 16px);
+    color: $stroller-grey;
+    letter-spacing: 0.03em;
+    margin: 8px 0 10px 0;
+}
 
-    p {
-        @include font("MILLER_DISPLAY", 14px, 400, 19px);
-        color: $mine-shaft;
-        letter-spacing: 0px;
-        margin: 0 0 8px 0;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
+.a-author__byline {
+    @include font('SOLEIL', 10px, null, 16px);
+    color: $ascot-grey;
+    margin: 6px 0;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 
     a {
         color: inherit;
     }
 }
+.a-author__byline--authors {}
+
+.a-author__byline-name {
+    font-weight: bold;
+}
+.a-author__byline-prefix,
+.a-author__byline-conjunction {}
+
+.a-author__image,
+.a-event-author__image {
+    margin: 0 auto 14px auto;
+    width: 66px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.a-author__image {
+    border-radius: 50%;
+    overflow: hidden;
+}
 
 .a-author__separator {
     display: none;
-}
-
-.a-author__article-date {
-    @include font("BRANDON GROTESQUE", 10px, 400, 10px);
-    color: $dove-gray;
-    letter-spacing: 1px;
-    margin-bottom: 0;
-    margin-top: 10px;
-    text-transform: uppercase;
 }
