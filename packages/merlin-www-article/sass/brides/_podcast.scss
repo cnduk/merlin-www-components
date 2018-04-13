@@ -1,48 +1,59 @@
-@import "@cnbritain/merlin-www-common:houseandgarden";
-@import "@cnbritain/merlin-www-buttons:houseandgarden";
-
 .a-podcast {
     margin: 40px 0;
 }
-
+.a-podcast__audio {
+    margin: 0 0 24px 0;
+}
 .a-podcast__player {
-    margin-bottom: 20px;
-    max-width: 797px;
     width: 100%;
 }
-
-.a-podcast__list {
-    overflow: hidden;
+.a-podcast__list {}
+li.a-podcast__list-item {
+    margin: 10px 0;
 }
-
-.a-podcast__list-item {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
-        float: left;
-
-        &:not(:last-child) {
-            margin-bottom: 0;
-            margin-right: 10px;
-        }
-    }
-
-    &:not(:last-child) {
-        margin-bottom: 10px;
-    }
-}
-
-.a-podcast__btn {
-    @include button-single();
-    @include button-single-light();
+.a-podcast__btn {}
+.a-podcast__btn--itunes,
+.a-podcast__btn--rss {
+    @include button-single-three;
+    @include button-single-three-light;
     box-sizing: border-box;
-    display: inline-block;
-    text-align: center;
+    border-radius: 0;
+    height: 48px;
+    line-height: 48px;
+    padding-bottom: 0;
+    padding-top: 0;
     width: 100%;
 
-    &:hover {
-        @include button-single-light-hover();
+    &:hover,
+    &:focus {
+        @include button-single-three-light-hover;
     }
+}
+.a-podcast__btn--download {
+    @include button-single;
+    @include button-single-light;
+    box-sizing: border-box;
+    height: 48px;
+    line-height: 48px;
+    padding-bottom: 0;
+    padding-top: 0;
+    width: 100%;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+    &:hover,
+    &:focus {
+        @include button-single-light-hover;
+    }
+}
+
+@include article-header-large-size {
+    .a-podcast {
+        margin: 48px 0;
+    }
+    li.a-podcast__list-item {
+        display: inline-block;
+        margin: 0 10px 0 0;
+    }
+    .a-podcast__btn {
         width: auto;
     }
 }
