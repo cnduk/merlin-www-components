@@ -1,0 +1,948 @@
+{
+    "translation": {},
+    "state": {
+        "is_show_season": false,
+        "is_gallery": false,
+        "is_contributors": false,
+        "is_superfeature": false,
+        "is_splash": true,
+        "is_show_summary": false,
+        "is_newsletter": false,
+        "is_cardlist": false,
+        "is_magazine": false,
+        "is_feature": false
+    },
+    "data": {
+        "splash_hero": {
+            "translation": {
+                "byline_prefix": "By",
+                "sponsor_prefix": "In partnership with"
+            },
+            "state": {
+                "is_show_season": false,
+                "is_gallery": false,
+                "is_contributors": false,
+                "has_sponsor": false,
+                "is_superfeature": true,
+                "is_splash": false,
+                "is_show_summary": false,
+                "is_newsletter": false,
+                "is_cardlist": false,
+                "is_magazine": false,
+                "is_feature": false
+            },
+            "data": {
+                "primary_tag": {
+                    "translation": {},
+                    "state": {
+                        "has_link": true,
+                        "is_sponsored": false
+                    },
+                    "data": {
+                        "link": {
+                            "translation": {},
+                            "state": {
+                                "is_blank": false,
+                                "is_nofollow": false
+                            },
+                            "data": {
+                                "url": "http://localhost:3000/topic/city-breaks",
+                                "title": "City Breaks"
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "Link"
+                        },
+                        "sponsor": null,
+                        "event_information": null,
+                        "title": "City Breaks"
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "Tag"
+                },
+                "byline": null,
+                "meta_list": null,
+                "title": "The 19 best festivals in London for summer 2018",
+                "image_list": {
+                    "translation": {},
+                    "state": {},
+                    "data": {
+                        "items": [{
+                            "translation": {},
+                            "state": {
+                                "is_first": true,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_static": false,
+                                        "is_portrait": false,
+                                        "is_image": true,
+                                        "is_square": false,
+                                        "is_svg": false,
+                                        "is_lazyload": true,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_landscape": true
+                                    },
+                                    "data": {
+                                        "description": "<p class=\"bb-p\">Citadel festival, Victoria Park</p>",
+                                        "title": null,
+                                        "orientation": "landscape",
+                                        "look_number": null,
+                                        "alt_text": null,
+                                        "filename": null,
+                                        "credit": "Danny North",
+                                        "image_url": "https://tr-images.condecdn.net/image/MoRx7r7pYmm/crop/405/landscape/f/festivalgoer-at-citadel-festival-london-conde-nast-traveller-1jun17-danny-north.jpg",
+                                        "srcset": "https://tr-images.condecdn.net/image/MoRx7r7pYmm/crop/405/landscape/f/festivalgoer-at-citadel-festival-london-conde-nast-traveller-1jun17-danny-north.jpg 405w, https://tr-images.condecdn.net/image/MoRx7r7pYmm/crop/810/landscape/f/festivalgoer-at-citadel-festival-london-conde-nast-traveller-1jun17-danny-north.jpg 810w",
+                                        "width": null,
+                                        "uid": "MoRx7r7pYmm"
+                                    },
+                                    "style": {
+                                        "padding_top": "66.666666667%",
+                                        "inline": "",
+                                        "cls": "c-superfeature__image--landscape"
+                                    },
+                                    "type": "Image"
+                                },
+                                "index": 0
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": "c-superfeature__image-portrait"
+                            },
+                            "type": "ListItem"
+                        }],
+                        "length": 1
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "List"
+                },
+                "profiles": null,
+                "teaser": null,
+                "link": {
+                    "translation": {},
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "data": {
+                        "url": "http://localhost:3000/gallery/best-festivals-in-london",
+                        "title": "The 19 best festivals in London for summer 2018"
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "Link"
+                },
+                "sponsor": null
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "SectionSuperfeature"
+        },
+        "splash_list": {
+            "translation": {},
+            "state": {},
+            "data": {
+                "items": [{
+                    "translation": {},
+                    "state": {
+                        "is_first": true,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {
+                                "byline_prefix": "By",
+                                "latest_label": "Latest",
+                                "sponsorship_prefix": "In partnership with",
+                                "featured_label": "Featured"
+                            },
+                            "state": {
+                                "is_thumbnail": false,
+                                "is_hero": false,
+                                "is_switcher": false,
+                                "is_switcher_video": false,
+                                "has_sponsor": true,
+                                "is_splash": true,
+                                "is_contributor": false,
+                                "is_show": false,
+                                "is_tag_article": false,
+                                "is_cover": false,
+                                "is_magazine": false,
+                                "is_top_stories": false,
+                                "is_landscape": false,
+                                "is_portrait": false
+                            },
+                            "data": {
+                                "primary_tag": {
+                                    "translation": {},
+                                    "state": {
+                                        "has_link": true,
+                                        "is_sponsored": false
+                                    },
+                                    "data": {
+                                        "link": {
+                                            "translation": {},
+                                            "state": {
+                                                "is_blank": false,
+                                                "is_nofollow": false
+                                            },
+                                            "data": {
+                                                "url": "http://localhost:3000/topic/style-culture",
+                                                "title": "Style & Culture"
+                                            },
+                                            "style": {
+                                                "inline": "",
+                                                "cls": ""
+                                            },
+                                            "type": "Link"
+                                        },
+                                        "sponsor": null,
+                                        "event_information": null,
+                                        "title": "Style & Culture"
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "Tag"
+                                },
+                                "byline": null,
+                                "title": "An epic road trip from west to east Africa",
+                                "review_information": null,
+                                "meta_list": null,
+                                "image_list": {
+                                    "translation": {},
+                                    "state": {},
+                                    "data": {
+                                        "items": [{
+                                            "translation": {},
+                                            "state": {
+                                                "is_first": true,
+                                                "is_last": false
+                                            },
+                                            "data": {
+                                                "item": {
+                                                    "translation": {},
+                                                    "state": {
+                                                        "is_static": false,
+                                                        "is_portrait": false,
+                                                        "is_image": true,
+                                                        "is_square": true,
+                                                        "is_svg": false,
+                                                        "is_lazyload": true,
+                                                        "is_linked": false,
+                                                        "is_picture": false,
+                                                        "is_landscape": false
+                                                    },
+                                                    "data": {
+                                                        "description": "<p class=\"bb-p\">An entourage at the Ashanti king's festival in Kumasi, Ghana, Africa</p>",
+                                                        "title": "",
+                                                        "orientation": "square",
+                                                        "look_number": null,
+                                                        "alt_text": "",
+                                                        "filename": null,
+                                                        "credit": "Jessica Antola",
+                                                        "image_url": "https://tr-images.condecdn.net/image/9x8LJzdPeZx/crop/200/square/f/a0hgwvu.jpg",
+                                                        "srcset": "https://tr-images.condecdn.net/image/9x8LJzdPeZx/crop/200/square/f/a0hgwvu.jpg 200w, https://tr-images.condecdn.net/image/9x8LJzdPeZx/crop/300/square/f/a0hgwvu.jpg 300w, https://tr-images.condecdn.net/image/9x8LJzdPeZx/crop/400/square/f/a0hgwvu.jpg 400w, https://tr-images.condecdn.net/image/9x8LJzdPeZx/crop/600/square/f/a0hgwvu.jpg 600w",
+                                                        "width": null,
+                                                        "uid": "9x8LJzdPeZx"
+                                                    },
+                                                    "style": {
+                                                        "padding_top": "100%",
+                                                        "inline": "",
+                                                        "cls": ""
+                                                    },
+                                                    "type": "Image"
+                                                },
+                                                "index": 0
+                                            },
+                                            "style": {
+                                                "inline": "",
+                                                "cls": "c-card__image--square"
+                                            },
+                                            "type": "ListItem"
+                                        }],
+                                        "length": 1
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "List"
+                                },
+                                "teaser": null,
+                                "link": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_blank": false,
+                                        "is_nofollow": false
+                                    },
+                                    "data": {
+                                        "url": "/gallery/road-trip-in-africa",
+                                        "title": "An epic road trip from west to east Africa"
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "Link"
+                                },
+                                "sponsor": {
+                                    "translation": {},
+                                    "state": {
+                                        "has_link": true
+                                    },
+                                    "data": {
+                                        "image": null,
+                                        "link": {
+                                            "translation": {},
+                                            "state": {
+                                                "is_blank": false,
+                                                "is_nofollow": false
+                                            },
+                                            "data": {
+                                                "url": "http://localhost:3000/topic/style-culture",
+                                                "title": "Style & Culture"
+                                            },
+                                            "style": {
+                                                "inline": "",
+                                                "cls": ""
+                                            },
+                                            "type": "Link"
+                                        },
+                                        "event_information": null,
+                                        "title": "Style & Culture"
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "SponsorTag"
+                                },
+                                "event_information": null,
+                                "icon": null
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": "c-card--splash"
+                            },
+                            "type": "SplashCard"
+                        },
+                        "index": 0
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "ListItem"
+                }, {
+                    "translation": {},
+                    "state": {
+                        "is_first": false,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {
+                                "byline_prefix": "By",
+                                "latest_label": "Latest",
+                                "sponsorship_prefix": "In partnership with",
+                                "featured_label": "Featured"
+                            },
+                            "state": {
+                                "is_thumbnail": false,
+                                "is_hero": false,
+                                "is_switcher": false,
+                                "is_switcher_video": false,
+                                "has_sponsor": true,
+                                "is_splash": true,
+                                "is_contributor": false,
+                                "is_show": false,
+                                "is_tag_article": false,
+                                "is_cover": false,
+                                "is_magazine": false,
+                                "is_top_stories": false,
+                                "is_landscape": false,
+                                "is_portrait": false
+                            },
+                            "data": {
+                                "primary_tag": {
+                                    "translation": {},
+                                    "state": {
+                                        "has_link": true,
+                                        "is_sponsored": false
+                                    },
+                                    "data": {
+                                        "link": {
+                                            "translation": {},
+                                            "state": {
+                                                "is_blank": false,
+                                                "is_nofollow": false
+                                            },
+                                            "data": {
+                                                "url": "http://localhost:3000/topic/eating-drinking",
+                                                "title": "Eating & Drinking"
+                                            },
+                                            "style": {
+                                                "inline": "",
+                                                "cls": ""
+                                            },
+                                            "type": "Link"
+                                        },
+                                        "sponsor": null,
+                                        "event_information": null,
+                                        "title": "Eating & Drinking"
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "Tag"
+                                },
+                                "byline": null,
+                                "title": "The 15 best coffee shops in London",
+                                "review_information": null,
+                                "meta_list": null,
+                                "image_list": {
+                                    "translation": {},
+                                    "state": {},
+                                    "data": {
+                                        "items": [{
+                                            "translation": {},
+                                            "state": {
+                                                "is_first": true,
+                                                "is_last": false
+                                            },
+                                            "data": {
+                                                "item": {
+                                                    "translation": {},
+                                                    "state": {
+                                                        "is_static": false,
+                                                        "is_portrait": false,
+                                                        "is_image": true,
+                                                        "is_square": true,
+                                                        "is_svg": false,
+                                                        "is_lazyload": true,
+                                                        "is_linked": false,
+                                                        "is_picture": false,
+                                                        "is_landscape": false
+                                                    },
+                                                    "data": {
+                                                        "description": "<p class=\"bb-p\">E5 Bakehouse, London Fields</p>",
+                                                        "title": "",
+                                                        "orientation": "square",
+                                                        "look_number": null,
+                                                        "alt_text": "",
+                                                        "filename": null,
+                                                        "credit": null,
+                                                        "image_url": "https://tr-images.condecdn.net/image/QW9aVPvX6zG/crop/200/square/f/E5-Bakehouse-03-London-Conde-Nast-Traveller-17jan18-pr.jpg",
+                                                        "srcset": "https://tr-images.condecdn.net/image/QW9aVPvX6zG/crop/200/square/f/E5-Bakehouse-03-London-Conde-Nast-Traveller-17jan18-pr.jpg 200w, https://tr-images.condecdn.net/image/QW9aVPvX6zG/crop/300/square/f/E5-Bakehouse-03-London-Conde-Nast-Traveller-17jan18-pr.jpg 300w, https://tr-images.condecdn.net/image/QW9aVPvX6zG/crop/400/square/f/E5-Bakehouse-03-London-Conde-Nast-Traveller-17jan18-pr.jpg 400w, https://tr-images.condecdn.net/image/QW9aVPvX6zG/crop/600/square/f/E5-Bakehouse-03-London-Conde-Nast-Traveller-17jan18-pr.jpg 600w",
+                                                        "width": null,
+                                                        "uid": "QW9aVPvX6zG"
+                                                    },
+                                                    "style": {
+                                                        "padding_top": "100%",
+                                                        "inline": "",
+                                                        "cls": ""
+                                                    },
+                                                    "type": "Image"
+                                                },
+                                                "index": 0
+                                            },
+                                            "style": {
+                                                "inline": "",
+                                                "cls": "c-card__image--square"
+                                            },
+                                            "type": "ListItem"
+                                        }],
+                                        "length": 1
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "List"
+                                },
+                                "teaser": null,
+                                "link": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_blank": false,
+                                        "is_nofollow": false
+                                    },
+                                    "data": {
+                                        "url": "/gallery/best-coffee-in-london",
+                                        "title": "The 15 best coffee shops in London"
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "Link"
+                                },
+                                "sponsor": {
+                                    "translation": {},
+                                    "state": {
+                                        "has_link": true
+                                    },
+                                    "data": {
+                                        "image": null,
+                                        "link": {
+                                            "translation": {},
+                                            "state": {
+                                                "is_blank": false,
+                                                "is_nofollow": false
+                                            },
+                                            "data": {
+                                                "url": "http://localhost:3000/topic/eating-drinking",
+                                                "title": "Eating & Drinking"
+                                            },
+                                            "style": {
+                                                "inline": "",
+                                                "cls": ""
+                                            },
+                                            "type": "Link"
+                                        },
+                                        "event_information": null,
+                                        "title": "Eating & Drinking"
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "SponsorTag"
+                                },
+                                "event_information": null,
+                                "icon": null
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": "c-card--splash"
+                            },
+                            "type": "SplashCard"
+                        },
+                        "index": 1
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "ListItem"
+                }, {
+                    "translation": {},
+                    "state": {
+                        "is_first": false,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {
+                                "byline_prefix": "By",
+                                "latest_label": "Latest",
+                                "sponsorship_prefix": "In partnership with",
+                                "featured_label": "Featured"
+                            },
+                            "state": {
+                                "is_thumbnail": false,
+                                "is_hero": false,
+                                "is_switcher": false,
+                                "is_switcher_video": false,
+                                "has_sponsor": true,
+                                "is_splash": true,
+                                "is_contributor": false,
+                                "is_show": false,
+                                "is_tag_article": false,
+                                "is_cover": false,
+                                "is_magazine": false,
+                                "is_top_stories": false,
+                                "is_landscape": false,
+                                "is_portrait": false
+                            },
+                            "data": {
+                                "primary_tag": {
+                                    "translation": {},
+                                    "state": {
+                                        "has_link": true,
+                                        "is_sponsored": false
+                                    },
+                                    "data": {
+                                        "link": {
+                                            "translation": {},
+                                            "state": {
+                                                "is_blank": false,
+                                                "is_nofollow": false
+                                            },
+                                            "data": {
+                                                "url": "http://localhost:3000/topic/eating-drinking",
+                                                "title": "Eating & Drinking"
+                                            },
+                                            "style": {
+                                                "inline": "",
+                                                "cls": ""
+                                            },
+                                            "type": "Link"
+                                        },
+                                        "sponsor": null,
+                                        "event_information": null,
+                                        "title": "Eating & Drinking"
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "Tag"
+                                },
+                                "byline": null,
+                                "title": "The best restaurants in Yangon, Myanmar",
+                                "review_information": null,
+                                "meta_list": null,
+                                "image_list": {
+                                    "translation": {},
+                                    "state": {},
+                                    "data": {
+                                        "items": [{
+                                            "translation": {},
+                                            "state": {
+                                                "is_first": true,
+                                                "is_last": false
+                                            },
+                                            "data": {
+                                                "item": {
+                                                    "translation": {},
+                                                    "state": {
+                                                        "is_static": false,
+                                                        "is_portrait": false,
+                                                        "is_image": true,
+                                                        "is_square": true,
+                                                        "is_svg": false,
+                                                        "is_lazyload": true,
+                                                        "is_linked": false,
+                                                        "is_picture": false,
+                                                        "is_landscape": false
+                                                    },
+                                                    "data": {
+                                                        "description": "<p class=\"bb-p\">Paribawga,  Yangon, Myanmar</p>",
+                                                        "title": "",
+                                                        "orientation": "square",
+                                                        "look_number": null,
+                                                        "alt_text": "",
+                                                        "filename": null,
+                                                        "credit": null,
+                                                        "image_url": "https://tr-images.condecdn.net/image/3Z3B0Y52EdP/crop/200/square/f/paribawga-cafe-yangon-02-conde-nast-traveller-29march18-pr.jpg",
+                                                        "srcset": "https://tr-images.condecdn.net/image/3Z3B0Y52EdP/crop/200/square/f/paribawga-cafe-yangon-02-conde-nast-traveller-29march18-pr.jpg 200w, https://tr-images.condecdn.net/image/3Z3B0Y52EdP/crop/300/square/f/paribawga-cafe-yangon-02-conde-nast-traveller-29march18-pr.jpg 300w, https://tr-images.condecdn.net/image/3Z3B0Y52EdP/crop/400/square/f/paribawga-cafe-yangon-02-conde-nast-traveller-29march18-pr.jpg 400w, https://tr-images.condecdn.net/image/3Z3B0Y52EdP/crop/600/square/f/paribawga-cafe-yangon-02-conde-nast-traveller-29march18-pr.jpg 600w",
+                                                        "width": null,
+                                                        "uid": "3Z3B0Y52EdP"
+                                                    },
+                                                    "style": {
+                                                        "padding_top": "100%",
+                                                        "inline": "",
+                                                        "cls": ""
+                                                    },
+                                                    "type": "Image"
+                                                },
+                                                "index": 0
+                                            },
+                                            "style": {
+                                                "inline": "",
+                                                "cls": "c-card__image--square"
+                                            },
+                                            "type": "ListItem"
+                                        }],
+                                        "length": 1
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "List"
+                                },
+                                "teaser": null,
+                                "link": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_blank": false,
+                                        "is_nofollow": false
+                                    },
+                                    "data": {
+                                        "url": "/article/best-restaurants-in-yangon",
+                                        "title": "The best restaurants in Yangon, Myanmar"
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "Link"
+                                },
+                                "sponsor": {
+                                    "translation": {},
+                                    "state": {
+                                        "has_link": true
+                                    },
+                                    "data": {
+                                        "image": null,
+                                        "link": {
+                                            "translation": {},
+                                            "state": {
+                                                "is_blank": false,
+                                                "is_nofollow": false
+                                            },
+                                            "data": {
+                                                "url": "http://localhost:3000/topic/eating-drinking",
+                                                "title": "Eating & Drinking"
+                                            },
+                                            "style": {
+                                                "inline": "",
+                                                "cls": ""
+                                            },
+                                            "type": "Link"
+                                        },
+                                        "event_information": null,
+                                        "title": "Eating & Drinking"
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "SponsorTag"
+                                },
+                                "event_information": null,
+                                "icon": null
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": "c-card--splash"
+                            },
+                            "type": "SplashCard"
+                        },
+                        "index": 2
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "ListItem"
+                }, {
+                    "translation": {},
+                    "state": {
+                        "is_first": false,
+                        "is_last": true
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {
+                                "byline_prefix": "By",
+                                "latest_label": "Latest",
+                                "sponsorship_prefix": "In partnership with",
+                                "featured_label": "Featured"
+                            },
+                            "state": {
+                                "is_thumbnail": false,
+                                "is_hero": false,
+                                "is_switcher": false,
+                                "is_switcher_video": false,
+                                "has_sponsor": true,
+                                "is_splash": true,
+                                "is_contributor": false,
+                                "is_show": false,
+                                "is_tag_article": false,
+                                "is_cover": false,
+                                "is_magazine": false,
+                                "is_top_stories": false,
+                                "is_landscape": false,
+                                "is_portrait": false
+                            },
+                            "data": {
+                                "primary_tag": {
+                                    "translation": {},
+                                    "state": {
+                                        "has_link": true,
+                                        "is_sponsored": false
+                                    },
+                                    "data": {
+                                        "link": {
+                                            "translation": {},
+                                            "state": {
+                                                "is_blank": false,
+                                                "is_nofollow": false
+                                            },
+                                            "data": {
+                                                "url": "http://localhost:3000/topic/bars",
+                                                "title": "Bars"
+                                            },
+                                            "style": {
+                                                "inline": "",
+                                                "cls": ""
+                                            },
+                                            "type": "Link"
+                                        },
+                                        "sponsor": null,
+                                        "event_information": null,
+                                        "title": "Bars"
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "Tag"
+                                },
+                                "byline": null,
+                                "title": "The best bars in London right now",
+                                "review_information": null,
+                                "meta_list": null,
+                                "image_list": {
+                                    "translation": {},
+                                    "state": {},
+                                    "data": {
+                                        "items": [{
+                                            "translation": {},
+                                            "state": {
+                                                "is_first": true,
+                                                "is_last": false
+                                            },
+                                            "data": {
+                                                "item": {
+                                                    "translation": {},
+                                                    "state": {
+                                                        "is_static": false,
+                                                        "is_portrait": false,
+                                                        "is_image": true,
+                                                        "is_square": true,
+                                                        "is_svg": false,
+                                                        "is_lazyload": true,
+                                                        "is_linked": false,
+                                                        "is_picture": false,
+                                                        "is_landscape": false
+                                                    },
+                                                    "data": {
+                                                        "description": "<p class=\"bb-p\">George's Bar, King's Cross, London</p>",
+                                                        "title": "",
+                                                        "orientation": "square",
+                                                        "look_number": null,
+                                                        "alt_text": "",
+                                                        "filename": null,
+                                                        "credit": null,
+                                                        "image_url": "https://tr-images.condecdn.net/image/V83gq8Q9OEB/crop/200/square/f/georges-bar-kings-cross-03-london-conde-nast-traveller-14march18-pr.jpg",
+                                                        "srcset": "https://tr-images.condecdn.net/image/V83gq8Q9OEB/crop/200/square/f/georges-bar-kings-cross-03-london-conde-nast-traveller-14march18-pr.jpg 200w, https://tr-images.condecdn.net/image/V83gq8Q9OEB/crop/300/square/f/georges-bar-kings-cross-03-london-conde-nast-traveller-14march18-pr.jpg 300w, https://tr-images.condecdn.net/image/V83gq8Q9OEB/crop/400/square/f/georges-bar-kings-cross-03-london-conde-nast-traveller-14march18-pr.jpg 400w, https://tr-images.condecdn.net/image/V83gq8Q9OEB/crop/600/square/f/georges-bar-kings-cross-03-london-conde-nast-traveller-14march18-pr.jpg 600w",
+                                                        "width": null,
+                                                        "uid": "V83gq8Q9OEB"
+                                                    },
+                                                    "style": {
+                                                        "padding_top": "100%",
+                                                        "inline": "",
+                                                        "cls": ""
+                                                    },
+                                                    "type": "Image"
+                                                },
+                                                "index": 0
+                                            },
+                                            "style": {
+                                                "inline": "",
+                                                "cls": "c-card__image--square"
+                                            },
+                                            "type": "ListItem"
+                                        }],
+                                        "length": 1
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "List"
+                                },
+                                "teaser": null,
+                                "link": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_blank": false,
+                                        "is_nofollow": false
+                                    },
+                                    "data": {
+                                        "url": "/gallery/best-bars-london",
+                                        "title": "The best bars in London right now"
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "Link"
+                                },
+                                "sponsor": {
+                                    "translation": {},
+                                    "state": {
+                                        "has_link": true
+                                    },
+                                    "data": {
+                                        "image": null,
+                                        "link": {
+                                            "translation": {},
+                                            "state": {
+                                                "is_blank": false,
+                                                "is_nofollow": false
+                                            },
+                                            "data": {
+                                                "url": "http://localhost:3000/topic/bars",
+                                                "title": "Bars"
+                                            },
+                                            "style": {
+                                                "inline": "",
+                                                "cls": ""
+                                            },
+                                            "type": "Link"
+                                        },
+                                        "event_information": null,
+                                        "title": "Bars"
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "SponsorTag"
+                                },
+                                "event_information": null,
+                                "icon": null
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": "c-card--splash"
+                            },
+                            "type": "SplashCard"
+                        },
+                        "index": 3
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "ListItem"
+                }],
+                "length": 4
+            },
+            "style": {
+                "inline": "",
+                "cls": "c-card-list--c-splash"
+            },
+            "type": "List"
+        }
+    },
+    "style": {
+        "inline": "",
+        "cls": ""
+    },
+    "type": "SectionSplash"
+}
