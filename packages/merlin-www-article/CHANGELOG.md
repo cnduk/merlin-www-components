@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.26.0"></a>
+# [1.26.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.25.0...@cnbritain/merlin-www-article@1.26.0) (2018-04-13)
+
+
+### Features
+
+* **merlin-www-article:** move hero image text content into new div ([f88af1f](https://github.com/cnduk/merlin-www-components/commit/f88af1f))
+
+
+
+
 <a name="1.25.0"></a>
 # [1.25.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.24.2...@cnbritain/merlin-www-article@1.25.0) (2018-04-06)
 

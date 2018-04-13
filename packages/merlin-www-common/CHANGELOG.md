@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.13.0"></a>
+# [1.13.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-common@1.12.0...@cnbritain/merlin-www-common@1.13.0) (2018-04-13)
+
+
+### Bug Fixes
+
+* **merlin-www-common:** correct soleil fallback font ([afd0442](https://github.com/cnduk/merlin-www-components/commit/afd0442))
+* **merlin-www-common:** remove search textbox accessibility ui removal ([bf8ef09](https://github.com/cnduk/merlin-www-components/commit/bf8ef09))
+
+
+### Features
+
+* **merlin-www-common:** add brides ([31bca7b](https://github.com/cnduk/merlin-www-components/commit/31bca7b))
+* **merlin-www-common:** add freight display pro and soleil font definitions ([8b58db5](https://github.com/cnduk/merlin-www-components/commit/8b58db5))
+* **merlin-www-common:** update brides fonts to freight display pro and soleil ([5629368](https://github.com/cnduk/merlin-www-components/commit/5629368))
+
+
+
+
 <a name="1.12.0"></a>
 # [1.12.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-common@1.11.1...@cnbritain/merlin-www-common@1.12.0) (2018-04-06)
 

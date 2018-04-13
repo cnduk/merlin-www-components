@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.14.0"></a>
+# [1.14.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card@1.13.0...@cnbritain/merlin-www-card@1.14.0) (2018-04-13)
+
+
+### Bug Fixes
+
+* **merlin-www-card:** add more demo data ([b56bf7a](https://github.com/cnduk/merlin-www-components/commit/b56bf7a))
+* **merlin-www-card:** correct missing top stories styling on title for vogue ([96717af](https://github.com/cnduk/merlin-www-components/commit/96717af))
+
+
+### Features
+
+* **merlin-www-card:** add brides ([290d666](https://github.com/cnduk/merlin-www-components/commit/290d666))
+* **merlin-www-card:** add rating and hover style to brides ([c26e139](https://github.com/cnduk/merlin-www-components/commit/c26e139))
+
+
+
+
 <a name="1.13.0"></a>
 # [1.13.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card@1.12.2...@cnbritain/merlin-www-card@1.13.0) (2018-04-06)
 

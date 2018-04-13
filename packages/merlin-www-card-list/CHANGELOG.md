@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.12.0"></a>
+# [1.12.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card-list@1.11.3...@cnbritain/merlin-www-card-list@1.12.0) (2018-04-13)
+
+
+### Features
+
+* **merlin-www-card-list:** basic styles ([3f11059](https://github.com/cnduk/merlin-www-components/commit/3f11059))
+* **merlin-www-card-list:** splash card list styles ([5308470](https://github.com/cnduk/merlin-www-components/commit/5308470))
+
+
+
+
 <a name="1.11.3"></a>
 ## [1.11.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card-list@1.11.2...@cnbritain/merlin-www-card-list@1.11.3) (2018-04-06)
 
