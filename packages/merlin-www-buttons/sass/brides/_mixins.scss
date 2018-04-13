@@ -90,6 +90,19 @@
 
 @mixin button-share(){
     border-radius: 50%;
+    height: 40px;
+    position: relative;
+    width: 40px;
+
+    svg {
+        display: block;
+        left: 50%;
+        margin-left: -8px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+    }
 }
 
 @mixin button-share-light(){
