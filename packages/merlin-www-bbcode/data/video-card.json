@@ -1,72 +1,97 @@
 {
-    "type": "BBCodeVideo",
+    "translation": {
+        "answer_title_prefix": "A.",
+        "question_byline_prefix": "By",
+        "question_title_prefix": "Q.",
+        "answer_byline_prefix": "By"
+    },
     "state": {
         "has_icon": true,
         "is_video": true
     },
     "data": {
         "image": {
-            "type": "Image",
+            "translation": {},
             "state": {
                 "is_static": false,
+                "is_portrait": false,
                 "is_image": true,
-                "is_picture": false,
+                "is_square": false,
+                "is_svg": false,
+                "is_lazyload": true,
                 "is_linked": false,
-                "is_svg": false
+                "is_picture": false,
+                "is_landscape": true
             },
             "data": {
-                "credit": null,
-                "image_url": "https://vg-images.condecdn.net/image/ejxpV2xkA0l/crop/405/landscape",
-                "description": "",
-                "lazyload": true,
-                "title": "",
-                "srcset": "https://vg-images.condecdn.net/image/ejxpV2xkA0l/crop/405/landscape 405w, https://vg-images.condecdn.net/image/ejxpV2xkA0l/crop/810/landscape 810w, https://vg-images.condecdn.net/image/ejxpV2xkA0l/crop/1020/landscape 1020w",
+                "description": null,
+                "title": null,
+                "orientation": "landscape",
                 "look_number": null,
-                "width": null,
                 "alt_text": null,
-                "orientation": "landscape"
+                "filename": null,
+                "credit": null,
+                "image_url": "https://vg-staging-images.condecdn.net/image/4WGb0J0gmXw/crop/405/landscape/f/golden-ticket-cms-thumbnail.png",
+                "srcset": "https://vg-staging-images.condecdn.net/image/4WGb0J0gmXw/crop/405/landscape/f/golden-ticket-cms-thumbnail.png 405w",
+                "width": null,
+                "uid": "4WGb0J0gmXw"
             },
             "style": {
-                "cls": "img-lazyload "
-            }
-        },
-        "title": "In the Bag of Sarah Harris",
-        "link": {
-            "type": "Link",
-            "state": {},
-            "data": {
-                "url": "/video/in-the-bag-of-sarah-harris/",
-                "title": "In the Bag of Sarah Harris"
-            },
-            "style": {
+                "padding_top": "66.666666667%",
+                "inline": "",
                 "cls": ""
-            }
+            },
+            "type": "Image"
+        },
+        "title": "Win A Ticket To Versace\u2019s AW18 Show With British Vogue",
+        "link": {
+            "translation": {},
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false
+            },
+            "data": {
+                "url": "/video/win-a-ticket-to-versaces-aw18-show-with-british-vogue",
+                "title": "Win A Ticket To Versace\u2019s AW18 Show With British Vogue"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "Link"
         },
         "icon": {
-            "type": "SVG",
+            "translation": {},
             "state": {
                 "is_static": false,
+                "is_portrait": false,
                 "is_image": false,
-                "is_picture": false,
+                "is_square": false,
+                "is_svg": true,
+                "is_lazyload": false,
                 "is_linked": false,
-                "is_svg": true
+                "is_picture": false,
+                "is_landscape": false
             },
             "data": {
                 "credit": null,
                 "description": null,
-                "lazyload": true,
                 "title": null,
-                "svg_content": "<svg id=\"type-video\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 14.73 16\"><title>type-video</title><path d=\"M0,16V0L14.73,8ZM1,1.68V14.32L12.63,8Z\" transform=\"translate(0 0)\"/></svg>",
+                "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 14.73 16\"><title>type-video</title><path d=\"M0 16V0l14.73 8zM1 1.68v12.64L12.63 8z\"/></svg>",
                 "look_number": null,
                 "width": null,
                 "alt_text": null
             },
             "style": {
-                "cls": "img-lazyload "
-            }
+                "inline": "",
+                "cls": ""
+            },
+            "type": "SVG"
         }
     },
     "style": {
+        "inline": "",
         "cls": ""
-    }
+    },
+    "type": "BBCode"
 }

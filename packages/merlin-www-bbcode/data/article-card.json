@@ -1,186 +1,163 @@
 {
-    "type": "BBCodeArticle",
+    "translation": {
+        "answer_title_prefix": "A.",
+        "question_byline_prefix": "By",
+        "question_title_prefix": "Q.",
+        "answer_byline_prefix": "By"
+    },
     "state": {
         "is_article": true
     },
     "data": {
-        "card": {
-            "type": "InlineCard",
-            "state": {
-                "is_hero": false,
-                "is_switcher": false,
-                "is_contributor": false,
-                "is_show": false,
-                "is_inline": true,
-                "is_landscape": false,
-                "is_top_stories": false,
-                "is_magazine": false,
-                "is_portrait": false
-            },
+        "primary_tag": {
             "data": {
-                "primary_tag": {
-                    "type": "Tag",
-                    "state": {},
+                "title": "primary tag"
+            }
+        },
+        "byline": "Dan Palmer",
+        "meta_list": {
+            "translation": {},
+            "state": {},
+            "data": {
+                "items": [{
+                    "translation": {},
+                    "state": {
+                        "is_first": true,
+                        "is_last": false
+                    },
                     "data": {
-                        "link": {
-                            "type": "Link",
-                            "state": {},
+                        "item": {
+                            "translation": {},
+                            "state": {
+                                "is_profile": false,
+                                "is_episode_number": false,
+                                "is_duration": false,
+                                "is_gallery": false,
+                                "is_tag": false,
+                                "has_icon": false,
+                                "is_location": false,
+                                "has_link": false,
+                                "is_event_location": false,
+                                "is_video_topic": false,
+                                "is_event_date": false,
+                                "is_date": true,
+                                "is_creative_director": false
+                            },
                             "data": {
-                                "url": "http://localhost:3000/person/prince-charles/",
-                                "title": "Prince Charles"
+                                "title": "03 Apr 2018",
+                                "meta_type": "date",
+                                "link": null,
+                                "icon": null
                             },
                             "style": {
+                                "inline": "",
                                 "cls": ""
-                            }
+                            },
+                            "type": "Meta"
                         },
-                        "event_information": null,
-                        "title": "Prince Charles"
+                        "index": 0
                     },
                     "style": {
+                        "inline": "",
                         "cls": ""
-                    }
-                },
-                "byline": "Dolly Jones",
-                "title": "Wool And The Gang",
-                "review_information": null,
-                "meta_list": {
-                    "type": "List",
-                    "state": {},
-                    "data": {
-                        "items": [{
-                            "type": "ListItem",
-                            "state": {
-                                "is_first": true,
-                                "is_last": false
-                            },
-                            "data": {
-                                "item": {
-                                    "type": "Meta",
-                                    "state": {},
-                                    "data": {
-                                        "title": "Prince Charles",
-                                        "meta_type": "tag",
-                                        "link": {
-                                            "type": "Link",
-                                            "state": {},
-                                            "data": {
-                                                "url": "http://localhost:3000/person/prince-charles/",
-                                                "title": "Prince Charles"
-                                            },
-                                            "style": {
-                                                "cls": ""
-                                            }
-                                        },
-                                        "icon": null
-                                    },
-                                    "style": {
-                                        "cls": ""
-                                    }
-                                }
-                            },
-                            "style": {
-                                "cls": ""
-                            }
-                        }, {
-                            "type": "ListItem",
-                            "state": {
-                                "is_first": false,
-                                "is_last": true
-                            },
-                            "data": {
-                                "item": {
-                                    "type": "Meta",
-                                    "state": {},
-                                    "data": {
-                                        "title": "10 Sep 2016",
-                                        "meta_type": "date",
-                                        "link": null,
-                                        "icon": null
-                                    },
-                                    "style": {
-                                        "cls": ""
-                                    }
-                                }
-                            },
-                            "style": {
-                                "cls": ""
-                            }
-                        }],
-                        "length": 2
                     },
-                    "style": {
-                        "cls": ""
-                    }
-                },
-                "image_list": {
-                    "type": "List",
-                    "state": {},
-                    "data": {
-                        "items": [{
-                            "type": "ListItem",
-                            "state": {
-                                "is_first": true,
-                                "is_last": false
-                            },
-                            "data": {
-                                "item": {
-                                    "type": "Image",
-                                    "state": {
-                                        "is_static": false,
-                                        "is_image": true,
-                                        "is_picture": false,
-                                        "is_linked": false,
-                                        "is_svg": false
-                                    },
-                                    "data": {
-                                        "credit": null,
-                                        "image_url": "https://vg-images.condecdn.net/image/Kk9jpw6OkvX/crop/405/landscape",
-                                        "description": "",
-                                        "lazyload": true,
-                                        "title": "",
-                                        "srcset": "https://vg-images.condecdn.net/image/Kk9jpw6OkvX/crop/405/landscape 405w",
-                                        "look_number": null,
-                                        "width": null,
-                                        "alt_text": null,
-                                        "orientation": "landscape"
-                                    },
-                                    "style": {
-                                        "cls": "img-lazyload "
-                                    }
-                                }
-                            },
-                            "style": {
-                                "cls": "c-card__image--landscape"
-                            }
-                        }],
-                        "length": 1
-                    },
-                    "style": {
-                        "cls": ""
-                    }
-                },
-                "teaser": "Prince Charles and friends celebrate the Campaign For Wool",
-                "link": {
-                    "type": "Link",
-                    "state": {},
-                    "data": {
-                        "url": "/article/prince-charles-campaign-for-wool-ethics-interview",
-                        "title": "Wool And The Gang"
-                    },
-                    "style": {
-                        "cls": ""
-                    }
-                },
-                "sponsor": null,
-                "event_information": null,
-                "icon": null
+                    "type": "ListItem"
+                }],
+                "length": 1
             },
             "style": {
-                "cls": "c-card--inline"
+                "inline": "",
+                "cls": ""
+            },
+            "type": "MetaList"
+        },
+        "title": "butts",
+        "image_list": {
+            "translation": {},
+            "state": {},
+            "data": {
+                "items": [{
+                    "translation": {},
+                    "state": {
+                        "is_first": true,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {},
+                            "state": {
+                                "is_static": false,
+                                "is_portrait": false,
+                                "is_image": true,
+                                "is_square": true,
+                                "is_svg": false,
+                                "is_lazyload": true,
+                                "is_linked": false,
+                                "is_picture": false,
+                                "is_landscape": false
+                            },
+                            "data": {
+                                "description": null,
+                                "title": null,
+                                "orientation": "square",
+                                "look_number": null,
+                                "alt_text": null,
+                                "filename": null,
+                                "credit": null,
+                                "image_url": "https://vg-staging-images.condecdn.net/image/placeholder/crop/200/square/f/placeholder",
+                                "srcset": "https://vg-staging-images.condecdn.net/image/placeholder/crop/200/square/f/placeholder 200w, https://vg-staging-images.condecdn.net/image/placeholder/crop/300/square/f/placeholder 300w, https://vg-staging-images.condecdn.net/image/placeholder/crop/400/square/f/placeholder 400w, https://vg-staging-images.condecdn.net/image/placeholder/crop/600/square/f/placeholder 600w",
+                                "width": null,
+                                "uid": "placeholder"
+                            },
+                            "style": {
+                                "padding_top": "100%",
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "Image"
+                        },
+                        "index": 0
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "ListItem"
+                }],
+                "length": 1
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "List"
+        },
+        "profiles": null,
+        "link": {
+            "translation": {},
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false
+            },
+            "data": {
+                "url": "/article/butts",
+                "title": "butts"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "Link"
+        },
+        "sponsor": {
+            "data": {
+                "title": "Sponsor title"
             }
         }
     },
     "style": {
+        "inline": "",
         "cls": ""
-    }
+    },
+    "type": "BBCode"
 }
