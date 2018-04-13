@@ -10,276 +10,62 @@
     margin-top: $MOBILE_SLICE_MARGIN;
     margin-bottom: $MOBILE_SLICE_MARGIN;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         margin-top: $TABLET_SLICE_MARGIN;
         margin-bottom: $TABLET_SLICE_MARGIN;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         margin-top: $DESKTOP_SLICE_MARGIN;
         margin-bottom: $DESKTOP_SLICE_MARGIN;
     }
 }
 
-.c-card-section--c-tag,
 .c-card-section--c-curated,
-.c-card-section--c-contributors,
-.c-card-section--mag-articles {
+.c-card-section--c-tag {
+    .c-card-section__title-wrapper {
+        margin-bottom: 36px;
+
+        @include desktop-size {
+            margin-bottom: 44px;
+        }
+    }
+
     .c-card-section__title {
-        @include font("MILLER_DISPLAY", 20px, 400, 20px);
-        //color: $mine-shaft;
-        letter-spacing: 4px;
-        margin-bottom: 20px;
-        margin-top: 0;
+        @include font("FREIGHT DISPLAY PRO", 40px, 400, 40px, 20);
+        color: $stroller-grey;
+        font-style: italic;
+        margin: 0 0 24px 0;
         text-align: center;
-        text-transform: uppercase;
 
-        a {
-            color: inherit;
+        @include desktop-size {
+            @include font-size(48px);
+            @include line-height(48px);
+            margin: 0 0 28px 0;
         }
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            @include font-size(26px);
-            @include line-height(26px);
-            border-bottom: none;
-            letter-spacing: 6px;
-            padding-bottom: 20px;
+        span {
+            box-shadow: inset 0 -0.25em 0 0 $white, inset 0 -0.65em 0 0 rgba($champagne, 0.7);
         }
     }
 
     .c-card-section__btn {
-        @include button-single();
-        @include button-single-light();
-        width: 200px;
+        @include button-single-two();
+        @include button-single-two-light();
+        margin-top: 42px;
 
-         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-             width: initial;
-         }
-
-        &:hover {
-            @include button-single-light-hover();
-        }
-
-        margin-top: 30px;
-    }
-}
-
-.c-card-section--c-tag,
-.c-card-section--mag-articles {
-    .c-card-section__title {
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            //border-bottom: 1px solid $mine-shaft;
-        }
-    }
-}
-
-.c-card-section--a-recommended,
-.c-card-section--mag-magazines,
-.c-card-section--v-genre-articles {
-    //background-color: $vanilla-ice;
-    margin: 0;
-    max-width: none;
-    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: $TABLET_SLICE_MARGIN;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: $DESKTOP_SLICE_MARGIN;
-    }
-
-    .c-card-section__title {
-        @include font("MILLER_DISPLAY", 16px, 400, 16px);
-        //color: $mine-shaft;
-        letter-spacing: 2px;
-        margin-bottom: 15px;
-        margin-top: 0;
-        text-transform: uppercase;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            @include font-size(20px);
-            @include line-height(20px);
-        }
-    }
-}
-
-.c-card-section--v-genre-articles + .c-card-section--v-articles {
-    padding-top: 0;
-}
-
-.c-card-section--v-related-articles {
-    //background-color: $ebony-clay;
-    margin: 0;
-    max-width: none;
-    padding: 20px 20px 40px 20px;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: $TABLET_SLICE_MARGIN;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: 0 20px 20px 20px;
-    }
-
-    .c-card-section__title {
-        @include font("BRANDON GROTESQUE", 13px, 700, 13px);
-        //color: $white;
-        letter-spacing: 1px;
-        margin-bottom: 20px;
-        margin-top: 0;
-        text-transform: uppercase;
-    }
-
-    .c-card-section__logo {
-        height: 42px;
-        margin: 0 auto 30px auto;
-        width: 268px;
-
-        svg {
-            display: inline-block;
-            height: 100%;
-            width: 100%;
-
-            path {
-                fill: $WHITE;
-            }
-        }
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            height: 52px;
-            width: 331px;
-        }
-    }
-
-    .c-card-section__btn {
-        @include button-single();
-        @include button-single-dark();
-        margin-top: 30px;
-        width: 200px;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-             width: initial;
+        @include desktop-size {
+            margin-top: 50px;
         }
 
         &:hover {
-            @include button-single-dark-hover();
+            @include button-single-two-light-hover();
         }
 
-
-    }
-}
-
-.c-card-section--c-video-articles{
-    //background-color: $ebony-clay;
-    margin: 40px 0 0 0;
-    max-width: none;
-    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: $TABLET_SLICE_MARGIN;
-        margin-bottom: 60px;
-        margin-top: 60px;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: $DESKTOP_SLICE_MARGIN;
-    }
-
-    .c-card-section__title {
-        @include font("BRANDON GROTESQUE", 13px, 700, 13px);
-        //color: $white;
-        letter-spacing: 1px;
-        margin-bottom: 20px;
-        margin-top: 0;
-        text-transform: uppercase;
-    }
-
-    .c-card-section__logo {
-        height: 42px;
-        margin: 0 auto 30px auto;
-        width: 268px;
-
-        svg {
-            display: inline-block;
-            height: 100%;
-            width: 100%;
-
-            path {
-                //fill: $WHITE;
-            }
-        }
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            height: 52px;
-            width: 331px;
-        }
-    }
-
-    .c-card-section__btn {
-        @include button-single();
-        @include button-single-dark();
-        margin-top: 30px;
-        width: 200px;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-             width: initial;
-        }
-
-        &:hover {
-            @include button-single-dark-hover();
-        }
-
-
-    }
-}
-
-.c-card-section--v-related-articles {
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        display: none;
-    }
-}
-
-.c-card-section--tg-articles,
-.c-card-section--v-articles {
-    //background-color: $vanilla-ice;
-    margin: 0;
-    max-width: none;
-    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: $TABLET_SLICE_MARGIN;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: $DESKTOP_SLICE_MARGIN;
-    }
-
-    .c-card-section__title {
-        @include font("MILLER_DISPLAY", 16px, 400, 16px);
-        //color: $mine-shaft;
-        letter-spacing: 2px;
-        margin-bottom: 20px;
-        margin-top: 0;
-        text-transform: uppercase;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            @include font-size(20px);
-            @include line-height(20px);
-        }
-    }
-
-    .c-card-list {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            margin-right: 340px;
-        }
     }
 }
 
 .c-card-section__constrain {}
 .c-card-section__logo {}
 .c-card-section__title {}
-.c-card-section__btn {
-
-}
+.c-card-section__btn {}
