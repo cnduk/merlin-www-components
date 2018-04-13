@@ -153,6 +153,14 @@ li.bb-gallery__col {
             padding-top: 50%;
         }
     }
+    .bb-gallery__col:nth-child(3){
+        .bb-gallery__remaining {
+            display: block;
+        }
+    }
+    .bb-gallery__col:nth-child(n+4) {
+        display: none;
+    }
 }
 
 .bb-gallery__cols--4 {
@@ -163,6 +171,14 @@ li.bb-gallery__col {
         .bb-gallery--show-summary & {
             padding-top: 75%;
         }
+    }
+    .bb-gallery__col:nth-child(4){
+        .bb-gallery__remaining {
+            display: block;
+        }
+    }
+    .bb-gallery__col:nth-child(n+5) {
+        display: none;
     }
 }
 
@@ -186,6 +202,14 @@ li.bb-gallery__col {
         .bb-gallery--show-summary & {
             padding-top: 37.5%;
         }
+    }
+    .bb-gallery__col:nth-child(5){
+        .bb-gallery__remaining {
+            display: block;
+        }
+    }
+    .bb-gallery__col:nth-child(n+6) {
+        display: none;
     }
 }
 
