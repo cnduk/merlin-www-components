@@ -110,37 +110,17 @@ li.c-topic-strip__item {
     }
 }
 
-// TODO
 .c-topic-strip--article-related {
-    // margin-left: -$MOBILE_SIDE_GUTTER;
-    // margin-right: -$MOBILE_SIDE_GUTTER;
-    // padding-left: $MOBILE_SIDE_GUTTER;
-    // padding-right: $MOBILE_SIDE_GUTTER;
+    margin: 40px 0 0 0;
+    text-align: center;
 
-    // li.c-topic-strip__item {
-    //     border-right: none;
-    //     padding-right: 0;
-    // }
+    &:after {
+        display: none;
+    }
 
-    // @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-    //     margin-bottom: -10px;
-    //     margin-left: 0;
-    //     margin-right: 0;
-    //     padding-left: 0;
-    //     padding-right: 0;
-    //     white-space: normal;
-
-    //     .c-topic-strip__item {
-    //         margin-bottom: 10px;
-    //         margin-right: 10px;
-
-    //         & + .c-topic-strip__item {
-    //             @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-    //                 margin-left: 0;
-    //             }
-    //         }
-    //     }
-    // }
+    @include article-large-size {
+        margin-top: 48px;
+    }
 }
 
 .c-topic-strip__btn {
