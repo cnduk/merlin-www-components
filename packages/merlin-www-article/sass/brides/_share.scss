@@ -4,11 +4,23 @@
 
 .a-share__wrapper {}
 
-.a-share__title {}
+.a-share__title {
+    @include font('SOLEIL', 14px, null, 16px);
+    box-shadow: inset 0 -0.5em 0 0 $azure;
+    color: $sapphire;
+    display: inline-block;
+    letter-spacing: 0.03em;
+    margin: 0 0 16px 0;
+    text-align: center;
+}
 
-.a-share__list {}
+.a-share__list {
+    font-size: 0;
+}
 
-.a-share__list-item {}
+li.a-share__list-item {
+    margin: 0 5px;
+}
 .a-share__list-item--mobile {}
 
 .a-share__youtube {}
