@@ -1,0 +1,30 @@
+// -------------------- //
+// Splash
+// -------------------- //
+@mixin card-splash() {}
+@mixin card-splash-small() {}
+@mixin card-splash-large() {}
+
+.c-card--splash {
+    @include card-landscape();
+    @include card-landscape-small();
+
+    @include card-splash();
+    @include card-splash-small();
+}
+
+.c-card--splash-small {
+    @include card-landscape();
+    @include card-landscape-small();
+
+    @include card-splash();
+    @include card-splash-small();
+}
+
+.c-card--splash-large {
+    @include card-landscape();
+    @include card-landscape-small();
+
+    @include card-splash();
+    @include card-splash-large();
+}
