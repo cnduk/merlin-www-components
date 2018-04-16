@@ -1,0 +1,155 @@
+{
+    "translation": {},
+    "state": {},
+    "data": {
+        "card_list": {
+            "translation": {},
+            "state": {},
+            "data": {
+                "items": [{
+                    "translation": {},
+                    "state": {
+                        "is_first": true,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {
+                                "byline_prefix": "By",
+                                "latest_label": "Latest",
+                                "sponsorship_prefix": "In partnership with",
+                                "featured_label": "Featured"
+                            },
+                            "state": {
+                                "is_thumbnail": false,
+                                "is_hero": false,
+                                "is_switcher": false,
+                                "is_switcher_video": false,
+                                "has_sponsor": false,
+                                "is_splash": false,
+                                "is_contributor": false,
+                                "is_show": false,
+                                "is_tag_article": false,
+                                "is_cover": false,
+                                "is_magazine": false,
+                                "is_top_stories": false,
+                                "is_landscape": false,
+                                "is_portrait": true
+                            },
+                            "data": {
+                                "primary_tag": null,
+                                "byline": "Naomi Campbell",
+                                "title": "Naomi Campbell Presents Tribute To Azzedine Ala\u00efa at the Fashion Awards",
+                                "review_information": null,
+                                "meta_list": null,
+                                "image_list": {
+                                    "translation": {},
+                                    "state": {},
+                                    "data": {
+                                        "items": [{
+                                            "translation": {},
+                                            "state": {
+                                                "is_first": true,
+                                                "is_last": false
+                                            },
+                                            "data": {
+                                                "item": {
+                                                    "translation": {},
+                                                    "state": {
+                                                        "is_static": false,
+                                                        "is_portrait": false,
+                                                        "is_image": true,
+                                                        "is_square": true,
+                                                        "is_svg": false,
+                                                        "is_lazyload": true,
+                                                        "is_linked": false,
+                                                        "is_picture": false,
+                                                        "is_landscape": false
+                                                    },
+                                                    "data": {
+                                                        "description": null,
+                                                        "title": null,
+                                                        "orientation": "square",
+                                                        "look_number": null,
+                                                        "alt_text": null,
+                                                        "filename": null,
+                                                        "credit": "Getty Images",
+                                                        "image_url": "https://vg-images.condecdn.net/image/9n26Ll3qadG/crop/200/square/f/GettyImages-885562530_master.jpg",
+                                                        "srcset": "https://vg-images.condecdn.net/image/9n26Ll3qadG/crop/200/square/f/GettyImages-885562530_master.jpg 200w, https://vg-images.condecdn.net/image/9n26Ll3qadG/crop/300/square/f/GettyImages-885562530_master.jpg 300w, https://vg-images.condecdn.net/image/9n26Ll3qadG/crop/400/square/f/GettyImages-885562530_master.jpg 400w, https://vg-images.condecdn.net/image/9n26Ll3qadG/crop/600/square/f/GettyImages-885562530_master.jpg 600w",
+                                                        "width": null,
+                                                        "uid": "9n26Ll3qadG"
+                                                    },
+                                                    "style": {
+                                                        "padding_top": "100%",
+                                                        "inline": "",
+                                                        "cls": ""
+                                                    },
+                                                    "type": "Image"
+                                                },
+                                                "index": 0
+                                            },
+                                            "style": {
+                                                "inline": "",
+                                                "cls": "c-card__image--square"
+                                            },
+                                            "type": "ListItem"
+                                        }],
+                                        "length": 1
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "List"
+                                },
+                                "teaser": null,
+                                "link": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_blank": false,
+                                        "is_nofollow": false
+                                    },
+                                    "data": {
+                                        "url": "/article/naomi-campbell-azzedine-alaia-tribute-fashion-awards",
+                                        "title": "Naomi Campbell Presents Tribute To Azzedine Ala\u00efa at the Fashion Awards"
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "Link"
+                                },
+                                "sponsor": null,
+                                "event_information": null,
+                                "icon": null
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": "c-card--portrait-small"
+                            },
+                            "type": "PortraitCard"
+                        },
+                        "index": 0
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "ListItem"
+                }],
+                "length": 1
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "List"
+        },
+        "title": "Read next"
+    },
+    "style": {
+        "inline": "",
+        "cls": ""
+    },
+    "type": "ArticleSidebar"
+}
