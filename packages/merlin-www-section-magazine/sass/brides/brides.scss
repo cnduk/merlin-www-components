@@ -1,33 +1,18 @@
-@import "@cnbritain/merlin-www-common:brides";
-@import "@cnbritain/merlin-www-card-list:brides";
-@import "@cnbritain/merlin-www-card:brides";
-@import "@cnbritain/merlin-www-buttons:brides";
+@import '@cnbritain/merlin-www-common:brides';
+@import '@cnbritain/merlin-www-card-list:brides';
+@import '@cnbritain/merlin-www-card:brides';
+@import '@cnbritain/merlin-www-buttons:brides';
 
 @import '../wireframe/wireframe';
 
 .c-magazine {
-    background-color: $vanilla-ice;
-    margin: $MOBILE_SLICE_MARGIN 0;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: $TABLET_SIDE_GUTTER;
-        margin-left: $TABLET_SIDE_GUTTER;
-        margin-right: $TABLET_SIDE_GUTTER;
-        margin-top: $TABLET_SIDE_GUTTER;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: $DESKTOP_SIDE_GUTTER;
-    }
+    background-color: $diamond;
 }
 
 .c-magazine__wrapper {
     box-sizing: border-box;
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
-    overflow: hidden;
     padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
     position: relative;
 
@@ -41,37 +26,33 @@
     }
 }
 
+.c-magazine__covers {
+    border-bottom: 1px solid $ballet-grey;
+    margin: 0 0 28px 0;
+
+    @include tablet-size {
+        border-top: 1px solid $ballet-grey;
+    }
+}
+
 .c-magazine__covers__wrapper {
     @include tablet-size {
-        padding-right: 60px;
+        padding: 48px;
     }
 }
 
 .c-magazine__cover--print {
-     img {
-         @include desktop-size {
-             width: 65%;
-         }
-     }
-}
-.c-magazine__cover--tablet {
     img {
-        border-radius: 8px;
-        padding: 16px 12px;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            border-radius: 15px;
-            padding: 30px 20px;
-            right: 0;
-            width: 40%;
-
-        }
+        box-shadow: 0 0 24px 0 rgba($black, 0.2);
     }
 }
 
-.c-magazine__cover__image {
+.c-magazine__cover--tablet {
     img {
-        background-color: $black;
+        background: $tux-grey;
+        border: 1px solid $candle-grey;
+        border-radius: 4px;
+        box-shadow: 0 0 24px 0 rgba($black, 0.2);
     }
 }
 
@@ -79,53 +60,54 @@
     display: none;
 }
 
-.c-magazine__content {}
+.c-magazine__content {
+    @include tablet-size {
+        border-bottom: 1px solid $ballet-grey;
+        border-left: 1px solid $ballet-grey;
+        border-top: 1px solid $ballet-grey;
+    }
+}
+
+.c-magazine__content__wrapper {
+    @include tablet-size {
+        padding: 48px;
+    }
+}
 
 .c-magazine__content__title {
-    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
-    color: $mine-shaft;
+    @include font('SOLEIL', 12px, 400, 16px, 18);
+    color: $pink-rose;
     display: block;
-    letter-spacing: 1px;
-    margin-bottom: 7px;
-    margin-top: 20px;
+    margin: 0 0 6px 0;
     text-align: center;
     text-transform: uppercase;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: 0px;
-        text-align: left;
-    }
 }
 
 .c-magazine__content__date {
-    @include font("MILLER_DISPLAY", 25px, 700, 27px);
-    color: $mine-shaft;
-    color: $mine-shaft;
-    letter-spacing: 0px;
-    margin-bottom: 20px;
-    margin-top: 7px;
+    @include font('FREIGHT DISPLAY PRO', 34px, 400, 36px, 10);
+    color: $stroller-grey;
+    font-style: italic;
+    margin: 6px 0 28px 0;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         @include font-size(40px);
-        @include line-height(43px);
-        letter-spacing: 0px;
-        text-align: left;
+        @include line-height(40px);
+        margin-bottom: 42px;
     }
 }
 
-.c-magazine__btn {
-    @include button-single();
-    @include button-single-light();
-    margin-top: 30px;
-    width: 200px;
+.c-magazine__btn-wrapper {
+    margin-top: 32px;
+    text-align: center;
+}
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        width: initial;
-    }
+.c-magazine__btn {
+    @include button-single-two();
+    @include button-single-two-light();
 
     &:hover {
-        @include button-single-light-hover();
+        @include button-single-two-light-hover();
     }
 }
