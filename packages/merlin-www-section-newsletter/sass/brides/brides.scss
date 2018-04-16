@@ -5,10 +5,10 @@
 
 .c-newsletter {
     background-color: $diamond;
-    background-image: url('../img/newsletter-small.jpg');
-    background-position: center center;
+    background-image: url('/static/img/newsletter-small.jpg');
+    background-position: center top;
     background-repeat: no-repeat;
-    background-size: 1440px auto;
+    background-size: 100% auto;
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
     padding: 60px 0;
@@ -16,7 +16,7 @@
     text-align: center;
 
     @include tablet-size {
-        background-image: url('../img/newsletter-large.jpg');
+        background-image: url('/static/img/newsletter-large.jpg');
         padding: 80px 0;
     }
 
@@ -54,16 +54,24 @@
 }
 
 .c-newsletter__logo {
-    @include tablet-size {
+    width: 208px;
 
+    svg {
+        fill: $white;
+        width: 208px;
+    }
+
+    @include tablet-size {
+        width: 540px;
+
+        svg {
+            width: 540px;
+        }
     }
 }
 
 .c-newsletter__title {
-
-    @include tablet-size {
-
-    }
+    display: none;
 }
 
 .c-newsletter__description {
