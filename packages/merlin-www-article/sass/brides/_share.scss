@@ -23,7 +23,15 @@ li.a-share__list-item {
 }
 .a-share__list-item--mobile {}
 
-.a-share__youtube {}
-.a-share__youtube__title {}
+.a-share__youtube {
+    margin: 24px 0 0 0;
+}
+.a-share__youtube__title {
+    @include font('SOLEIL', 9px, null, 12px);
+    color: $candle-grey;
+    letter-spacing: 0.18em;
+    margin: 0 0 0 16px;
+    text-transform: uppercase;
+}
 
 
