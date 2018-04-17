@@ -1,30 +1,42 @@
 // -------------------- //
 // Video Related
 // -------------------- //
-@mixin card-v-related() {}
-@mixin card-v-related-small() {}
-@mixin card-v-related-large() {}
+@mixin card-v-related() {
+    @include card-landscape;
+}
+@mixin card-v-related-small() {
+    @include card-landscape-small;
+
+    .c-card__obj__header {
+        width: 50%;
+    }
+
+    .c-card__image {
+        border-radius: 0;
+    }
+
+    .c-card__title {
+        @include font('SOLEIL', 14px, 'NORMAL', 18px);
+        color: $ascot-grey;
+        letter-spacing: 0.01em;
+    }
+
+}
+@mixin card-v-related-large() {
+    @include card-landscape-small;
+}
 
 .c-card--v-related {
-    @include card-landscape();
-    @include card-landscape-small();
-
-    @include card-v-related();
-    @include card-v-related-small();
+    @include card-v-related;
+    @include card-v-related-small;
 }
 
 .c-card--v-related-small {
-    @include card-landscape();
-    @include card-landscape-small();
-
-    @include card-v-related();
-    @include card-v-related-small();
+    @include card-v-related;
+    @include card-v-related-small;
 }
 
 .c-card--v-related-large {
-    @include card-landscape();
-    @include card-landscape-small();
-
-    @include card-v-related();
-    @include card-v-related-large();
+    @include card-v-related;
+    @include card-v-related-large;
 }
