@@ -1,0 +1,59 @@
+{
+    "data": {
+        "description": "Sign up for our weekly newsletter to discover expert wedding planning tips, stylish fashion and beauty looks, and romantic honeymoon destinations for you and your special one.",
+        "logo": {
+            "translation": {},
+            "state": {
+                "is_static": false,
+                "is_portrait": false,
+                "is_image": false,
+                "is_square": false,
+                "is_svg": false,
+                "is_lazyload": false,
+                "is_linked": false,
+                "is_picture": true,
+                "is_landscape": false
+            },
+            "data": {
+                "credit": null,
+                "width": null,
+                "sources": [{
+                    "media": "(min-width: 700px)",
+                    "srcset": "/static/img/newsletter-logo-large.svg 540w"
+                }, {
+                    "media": "(min-width: 0px)",
+                    "srcset": "/static/img/newsletter-logo-small.svg 208w"
+                }],
+                "description": null,
+                "title": null,
+                "image_url": "/static/img/newsletter-logo-small.svg",
+                "look_number": null,
+                "id": "7f697b6a-398f-4635-adf3-0615a58e896a",
+                "alt_text": null,
+                "uid": "m74pbA84m4P"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "Picture"
+        },
+        "submit_url": "/newsletters",
+        "title": "Brides Newsletter"
+    },
+    "state": {
+        "is_cardlist": false,
+        "is_contributors": false,
+        "is_feature": false,
+        "is_gallery": false,
+        "is_magazine": false,
+        "is_newsletter": true,
+        "is_show_season": false,
+        "is_show_summary": false,
+        "is_superfeature": false
+    },
+    "style": {
+        "cls": ""
+    },
+    "type": "SectionNewsletter"
+}
