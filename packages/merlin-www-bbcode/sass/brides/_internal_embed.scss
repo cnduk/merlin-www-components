@@ -184,6 +184,34 @@
 }
 
 
+/**
+ * Figure
+ */
+
+.bb-figure {
+    margin: 40px 0;
+}
+.bb-figure__wrapper {}
+.bb-figure__content {
+    border-left: 1px solid $ballet-grey;
+    margin: 12px 0 0 0;
+    padding: 0 0 0 12px;
+}
+.bb-figure__caption {
+    @include font('SOLEIL', 12px, null, 16px);
+    color: $candle-grey;
+    letter-spacing: 0.03em;
+}
+.bb-figure__credit {
+    @include font('SOLEIL', 9px, null, 12px);
+    color: rgba($candle-grey, 0.75);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.bb-figure__caption + .bb-figure__credit {
+    margin-top: 6px;
+}
 
 
 
@@ -243,4 +271,10 @@
         @include line-height(32px);
     }
 
+}
+
+@include text-size-large {
+    .bb-figure {
+        margin: 48px 0;
+    }
 }
