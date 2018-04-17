@@ -4,10 +4,12 @@
             {{> @cnbritain/merlin-www-image}}
         {{/ data.image }}
     </div>
-    {{# data.image.data.description }}
-        <figcaption class="bb-figure__caption">{{ &. }}</figcaption>
-    {{/ data.image.data.description }}
-    {{# data.image.data.credit }}
-        <div class="bb-figure__credit">{{ &. }}</div>
-    {{/ data.image.data.credit }}
+    <div class="bb-figure__content">
+        {{# data.image.data.description }}
+            <figcaption class="bb-figure__caption">{{ &. }}</figcaption>
+        {{/ data.image.data.description }}
+        {{# data.image.data.credit }}
+            <div class="bb-figure__credit">{{ &. }}</div>
+        {{/ data.image.data.credit }}
+    </div>
 </figure>
