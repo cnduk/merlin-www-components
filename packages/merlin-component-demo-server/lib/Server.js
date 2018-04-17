@@ -7,6 +7,7 @@ const express = require('express');
 const mustacheExpress = require('mustache-express');
 const chokidar = require('chokidar');
 const Mustache = require('mustache');
+const opn = require('opn');
 const {DEFAULT_PORT, COMPONENTS} = require('./constants');
 const Logger = require('./Logger');
 const ComponentManager = require('./ComponentManager');
@@ -151,6 +152,7 @@ class Server {
         this._initSocket();
         this._initWatch();
         this._http.listen(port, () => {
+            opn(`http://localhost:${port}`);
             Logger.log('SERVER', `Running on port ${port}`);
         });
     }
