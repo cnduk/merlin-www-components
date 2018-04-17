@@ -1,46 +1,25 @@
 .n-main__dropdown {}
-.n-main__dropdown--follow {
-    .n-main__dropdown-link {
-        @include font("MILLER_DISPLAY", 15px, 400, 15px);
-        color: $mine-shaft;
-        font-style: italic;
-        text-transform: none;
-    }
 
-   +.n-main__list-item {
-        &:before {
-            display: none;
-        }
-    }
-
-}
-
-.n-main__dropdown--follow__group {
-    font-size: 0;
-    text-align: center;
-
-    & + .n-main__dropdown--follow__group {
-        margin-top: 20px;
-    }
-}
-
-.n-main__dropdown-list {
-    background-color: $white;
-    border: 1px solid $mercury;
-    margin-top: -1px;
-    z-index: 1;
-}
+.n-main__dropdown-list {}
 
 .n-main__dropdown-list--left {
+    background-color: $champagne;
     border-top: none;
-    padding: 5px 50px 5px 20px;
-}
+    margin-top: -1px;
+    padding: 22px 36px;
+    z-index: 1;
 
-.n-main__dropdown-list--follow {
-    border-top: none;
-    margin-right: -1px;
-    padding: 10px 20px 20px;
-    white-space: nowrap;
+    &:before {
+        content:"";
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 10px solid $champagne;
+        height: 0;
+        left: 62px;
+        position: absolute;
+        top: -10px;
+        width: 0;
+    }
 }
 
 .n-main__dropdown-list-item {
@@ -57,49 +36,116 @@
             height: 38px;
             line-height: 38px;
         }
+
+        &:hover{
+            color: $pink-rose;
+            border-bottom: none;
+        }
     }
 }
 
 .n-main__dropdown-link {
     &:after {
-        border-top-color: $mine-shaft;
+        border-top-color: $ballet-grey;
         border-width: 4px;
         margin-left: 8px;
         position: relative;
         top: -2px;
     }
-
-     &:hover{
-        color: $silver-chalice;
-    }
 }
 
-a.n-main__dropdown__btn-share,
-.n-main__dropdown__btn-share {
-    font-size: initial;
+.n-main__dropdown__btn-share{
+    @include button-share();
+    @include button-share-dark();
 
     & + .n-main__dropdown__btn-share {
         margin-left: 14px;
     }
+
+    &:hover{
+        @include button-share-dark-hover();
+    }
 }
 
 @each $name, $color in $COLOUR_SOCIAL {
-    .n-main__dropdown__btn-share--#{$name},
-    a.n-main__dropdown__btn-share--#{$name} {
-        @include button-share();
-        @include button-share-light($name);
+    .n-main__dropdown__btn-share--#{$name}{
+        @include button-share-dark();
+        display: inline-block;
 
         &:hover {
-            @include button-share-light-hover($name);
+            @include button-share-dark-hover();
         }
     }
 }
 
-.n-main__dropdown__btn {
-    @include button-single();
-    @include button-single-light();
+.n-main__dropdown-list--right {
+    background-color: $champagne;
+    border-top: none;
+    margin-top: 16px;
+    padding: 22px 24px;
+    z-index: 1;
+
+    &:before {
+        content:"";
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 10px solid $champagne;
+        height: 0;
+        right: 25px;
+        position: absolute;
+        top: -10px;
+        width: 0;
+    }
+}
+
+.n-main__dropdown--follow {
+    .n-main__dropdown-link {
+        @include button-single-three();
+        @include button-single-three-light();
+        margin-top: 19px;
+        padding: 0 11px;
+        height: 24px;
+        line-height: 24px;
+
+        span{
+            line-height:24px;
+        }
+
+        &:hover {
+            color: $candle-grey;
+            border-bottom: solid 1px $ballet-grey;
+        }
+    }
+
+   +.n-main__list-item {
+        &:before {
+            display: none;
+        }
+    }
+
+}
+
+.n-main__dropdown--follow__group {
+    font-size: 0;
+    height: 40px;
+    text-align: center;
+
+    & + .n-main__dropdown--follow__group {
+        margin-top: 20px;
+    }
+}
+
+.n-main__dropdown__btn--newsletter{
+    @include button-single-three();
+    @include button-single-three-dark();
+    padding: 18px 41px;
 
     &:hover {
-        @include button-single-light-hover();
+       @include button-single-three-dark-hover();
     }
+}
+
+.n-main__dropdown-list--follow {
+    border-top: none;
+    white-space: nowrap;
 }

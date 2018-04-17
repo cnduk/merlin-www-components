@@ -12,9 +12,7 @@
     z-index: 10;
 }
 
-.n-main__wrapper {
-
-}
+.n-main__wrapper {}
 
 .n-main__header {
     height: 140px;
@@ -34,7 +32,7 @@
     position: fixed;
     width: 110px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         left: 30px;
     }
 
@@ -49,7 +47,7 @@
     }
 
     svg, img {
-        fill: $mine-shaft;
+        fill: $stroller-grey;
         height: 60px;
         width: 100%;
     }
@@ -67,15 +65,11 @@
     }
 }
 
-.n-main__nav-logo--takeover {
-    svg, img {
-
-    }
-}
+.n-main__nav-logo--takeover {}
 
 .n-main__nav-title {
-    @include font("MILLER_DISPLAY", 18px, 600, 60px);
-    color: $mine-shaft;
+    //@include font("MILLER_DISPLAY", 18px, 600, 60px);
+    color: red;
     display: none;
     left: 180px;
     letter-spacing: 0px;
@@ -90,36 +84,17 @@
         display: block;
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        // left: 162px;
-    }
-
     @include min-screen($MAXIMUM_PAGE_WIDTH + 60px) {
         position: absolute;
         left: 150px;
     }
 }
 
-
 .n-main__list-item {
     position: relative;
     vertical-align: top;
-
-    & + .n-main__list-item {
-        &:before {
-            background: $mine-shaft;
-            content: "";
-            display: block;
-            height: 3px;
-            left: 0;
-            position: absolute;
-            margin-left: -1.5px;
-            margin-top: 28px;
-            transform: rotate(45deg);
-            width: 3px;
-        }
-    }
 }
+
 .n-gallery-nav {
     .n-main__list-item + .n-main__list-item {
         &:before {
@@ -129,14 +104,13 @@
 }
 
 .n-main__nav-link {
-    @include font("MILLER_DISPLAY", 15px, 400, 15px);
+    @include font("FREIGHT DISPLAY PRO", 18px, 'NORMAL', 18px);
     box-sizing: border-box;
-    color: $mine-shaft;
+    color: $stroller-grey;
     display: inline-block;
     height: 60px;
-    letter-spacing: 2px;
-    margin: 0 19px;
-    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin: 0 16px;
 
     span {
         display: inline-block;
@@ -145,7 +119,13 @@
     }
 
     &:hover{
-        color: $silver-chalice;
+        color: $pink-rose;
+        border-bottom: solid 1px $pink-rose;
+    }
+
+    &.n-main__dropdown-link:hover{
+        color: $stroller-grey;
+        border-bottom: none;
     }
 }
 
@@ -154,7 +134,8 @@
 
     &:before {
         @include vendor-prefix(transform, translateX(-50%));
-        background-color: $mercury;
+        background-color: $white;
+        border-top: solid 1px $ballet-grey;
         top: 0;
         content: '';
         height: 1px;
@@ -169,8 +150,10 @@
 
     &:before {
         @include vendor-prefix(transform, translateX(-50%));
-        background-color: $mercury;
+        background-color: $white;
+        border-bottom: solid 1px $ballet-grey;
         bottom: 0;
+        box-shadow: 0 2px 4px rgba($black, 0.04);
         content: '';
         height: 1px;
         left: 50%;
@@ -180,23 +163,24 @@
 }
 
 .n-main__nav-hamburger {
-    border-left: 1px solid $mercury;
-    height: 60px;
-    line-height: 60px;
+    border-left: 1px solid $ballet-grey;
+    height: 32px;
+    line-height: 32px;
+    margin-top: 14px;
     text-align: center;
     width: 60px;
 
     .n-main__nav-hamburger__icon {
         cursor: pointer;
         display: block;
-        height: 60px;
-        line-height: 60px;
+        height: 32px;
+        line-height: 32px;
         width: 60px;
 
         svg {
             display: inline-block;
-            fill: $mine-shaft;
-            height: 24px;
+            fill: $stroller-grey;
+            height: 20px;
             line-height: 60px;
             vertical-align: middle;
         }
@@ -205,14 +189,14 @@
     .n-main__nav-hamburger__close-icon {
         cursor: pointer;
         display: block;
-        height: 60px;
-        line-height: 60px;
+        height: 32px;
+        line-height: 32px;
         width: 60px;
 
         svg {
             display: inline-block;
-            fill: $mine-shaft;
-            height: 20px;
+            fill: $stroller-grey;
+            height: 16px;
             line-height: 60px;
             vertical-align: middle;
         }
@@ -221,17 +205,18 @@
 
 .n-main__nav-search {
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        border-left: 1px solid $mercury;
+        border-left: 1px solid $ballet-grey;
     }
 
     @include min-screen($MAXIMUM_PAGE_WIDTH + 1) {
-        border-right: 1px solid $mercury;
+        border-right: 1px solid $ballet-grey;
     }
 
     display: inline-block;
     float: right;
-    height: 60px;
-    line-height: 60px;
+    height: 32px;
+    line-height: 32px;
+    margin-top: 14px;
     text-align: center;
     width: 60px;
 
@@ -239,13 +224,13 @@
         background-color: transparent;
         cursor: pointer;
         display: block;
-        height: 60px;
-        line-height: 60px;
+        height: 32px;
+        line-height: 32px;
         width: 60px;
 
         svg {
             display: inline-block;
-            fill: $mine-shaft;
+            fill: $stroller-grey;
             height: 20px;
             line-height: 60px;
             vertical-align: middle;
@@ -256,13 +241,14 @@
         background-color: transparent;
         cursor: pointer;
         display: block;
-        height: 60px;
-        line-height: 60px;
+        height: 32px;
+        line-height: 32px;
+        margin-top: 14px;
         width: 60px;
 
         svg {
             display: inline-block;
-            fill: $mine-shaft;
+            fill: $stroller-grey;
             height: 20px;
             line-height: 60px;
             vertical-align: middle;
@@ -275,6 +261,7 @@
     -webkit-overflow-scrolling: touch;
 
     &.is-visible {
+        background-color: $champagne;
         bottom: 0;
         overflow: auto;
         position: fixed;
@@ -291,39 +278,39 @@
 
     .c-top-stories__overflow {
         padding-left: 20px;
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             padding-left: 30px;
         }
     }
 }
 
 .n-menu__nav {
-    margin-bottom: 20px;
+    margin-bottom: 32px;
+    margin-top: 14px;
 
     .n-menu__nav__wrapper {
         margin: 0 20px;
         overflow: hidden;
 
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             margin: 0 30px;
         }
     }
 
     a {
         .n-menu__nav-item {
-            border-bottom: 1px solid $mercury;
             float: left;
-            height: 60px;
+            height: 48px;
             position: relative;
             width: 100%;
 
             .n-menu__nav-link {
-                @include font("MILLER_DISPLAY", 18px, 400, 18px);
+                @include font("FREIGHT DISPLAY PRO", 24px, 'NORMAL', 21px);
                 @include vendor-prefix(transform, translateY(-50%));
-                color: $mine-shaft;
-                letter-spacing: 2px;
+                color: $stroller-grey;
+                letter-spacing: 0.03em;
                 position: absolute;
-                text-transform: uppercase;
                 top: 50%;
                 word-break: break-word;
             }
@@ -334,8 +321,8 @@
                 width: 50%;
 
                 .n-menu__nav-link {
-                    @include font-size(15px);
-                    @include line-height(15px);
+                    @include font-size(16px);
+                    @include line-height(16px);
                     @include vendor-prefix(transform, none);
                     bottom: 0;
                     top: initial;

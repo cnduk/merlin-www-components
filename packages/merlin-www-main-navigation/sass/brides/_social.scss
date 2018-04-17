@@ -1,5 +1,5 @@
 .n-menu__social {
-    margin: 50px 20px 20px 20px;
+    margin: 32px 20px 20px 20px;
     text-align: center;
 
     ul {
@@ -8,10 +8,10 @@
 }
 
 .n-menu__social-title {
-    @include font("MILLER_DISPLAY", 15px, 400, 15px);
-    color: $mine-shaft;
-    font-style: italic;
-    margin: 0 0 10px 0;
+    @include font("SOLEIL", 12px, 'NORMAL', 12px);
+    color: $ascot-grey;
+    text-transform: uppercase;
+    margin: 0 0 26px 0;
 }
 
 .n-menu__social-brand {}
@@ -21,16 +21,17 @@
     display: inline-block;
 
     & + .n-menu__social-item {
-        margin-left: 12px;
+        margin-left: 8px;
     }
 }
 
 .n-menu__newsletter-btn {
-    @include button-single();
-    @include button-single-light();
-    margin-bottom: 50px;
+    @include button-single-three();
+    @include button-single-three-dark();
+    margin-bottom: 32px;
+    padding: 18px 41px;
 
     &:hover {
-        @include button-single-light-hover();
+       @include button-single-three-dark-hover();
     }
 }
