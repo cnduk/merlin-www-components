@@ -1,157 +1,106 @@
 @import '@cnbritain/merlin-www-common:brides';
+@import '@cnbritain/merlin-www-bbcode:brides';
 
 @import '../wireframe/wireframe';
 
-.c-figure {}
+
+.c-figure {
+    margin: 0 16px 44px 16px;
+}
 
 .c-figure__container {
-    background-color: $advert-light;
-    margin-bottom: 10px;
-}
-.c-figure__wrapper {}
-
-.c-figure__toolbar {
-    bottom: 0;
-    height: 60px;
-    position: absolute;
-    right: 0;
-}
-.c-figure__toolbar-listitem {
-    background-color: $white;
-    height: 60px;
-    width: 60px;
-
-    svg {
-        width: 20px;
-    }
-}
-
-@each $name, $color in $COLOUR_SOCIAL_LIGHT {
-    .c-figure__toolbar-listitem--#{$name} {
-
-        svg, path {
-            fill: map-get($COLOUR_SOCIAL_LIGHT, $name);
-        }
-
-        &:hover,
-        &:focus {
-            background-color: map-get($COLOUR_SOCIAL_LIGHT, $name);
-
-            svg, path {
-                fill: $white;
-            }
-        }
-    }
-}
-
-li .c-figure__toolbar-listitem--more {
-    svg, path {
-        fill: $mine-shaft;
-    }
-}
-
-.c-figure__toolbar-listitem--zoom {
-    svg, path {
-        fill: $mine-shaft;
-    }
-
-    &:hover,
-    &:focus {
-        background-color: $mine-shaft;
-
-        svg, path {
-            fill: $white;
-        }
-    }
+    background-color: $diamond;
+    margin: 0 -16px;
 }
 
 .c-figure__title {
-    @include font('MILLER_DISPLAY', 17px, null, 23px);
-    color: $mine-shaft;
-    margin: 0 0 5px 0;
-    text-transform: uppercase;
-
-     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(19px);
-        @include line-height(25px);
-     }
-
-    &:before {
-        background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M1.09,20,10,16l8.91,4L10,0,1.09,20' fill='#000'/%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        content: '';
-        display: inline-block;
-        height: 14px;
-        margin: 0 10px 0 0;
-        position: relative;
-        top: 2px;
-        width: 14px;
-
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-            height: 16px;
-            margin: 0 10px 0 0;
-            width: 15px;
-        }
-    }
+    @include font('FREIGHT DISPLAY PRO', 32px, 'NORMAL', 32px);
+    box-shadow: inset 0 -0.25em 0 0 $white, inset 0 -0.65em 0 0 $champagne;
+    color: $stroller-grey;
+    display: inline;
+    letter-spacing: 0.01em;
 }
+
 .c-figure__caption {
-    @include font('MILLER_DISPLAY', 14px, null, 17px);
-    color: $mine-shaft;
-    margin-bottom: 10px;
-
-    &.has-bbcode {
-        > p {
-            @include font-size(17px);
-            @include line-height(23px);
-            margin-bottom: 20px;
-
-             @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-                @include font-size(19px);
-                @include line-height(25px);
-                margin-bottom: 60px;
-             }
-        }
+    & :last-child {
+        margin-bottom: 0;
     }
 }
-.c-figure__credit {
-    @include font('BRANDON GROTESQUE', 10px, 400);
-    color: $dove-gray;
-    letter-spacing: 1.5px;
+
+.c-figure__title + .c-figure__caption {
     margin-top: 10px;
-    text-transform: uppercase;
 }
 
-.c-figure__magnifier {}
+.c-figure__credit {
+    @include font('SOLEIL', 9px, null, 12px);
+    color: $candle-grey;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.c-figure__title + .c-figure__credit,
+.c-figure__caption + .c-figure__credit {
+    margin-top: 16px;
+}
+
+.c-figure__toolbar {
+    bottom: 16px;
+
+    height: 44px;
+    right: 16px;
+}
+.c-figure__toolbar-list {
+    font-size: 0;
+}
+li.c-figure__toolbar-listitem {
+    background-color: rgba($black, 0.75);
+    border-radius: 50%;
+    height: 44px;
+    margin-left: 8px;
+    width: 44px;
+
+    svg {
+        fill: $white;
+        width: 16px;
+    }
+}
+
+// .c-figure__magnifier {}
 .c-figure__magnifier--full-screen {
-    background-color: $advert-light;
+    background-color: $diamond;
+}
+
+.c-figure__magnifier-toolbar {
+    right: 16px;
+    top: 16px;
 }
 
 .c-figure__magnifier-button {
-    padding: 0;
-    width: 60px;
-    height: 60px;
+    background-color: rgba($black, 0.75);
+    border-radius: 50%;
+    height: 44px;
+    margin-bottom: 8px;
+    width: 44px;
 
     svg {
-        width: 20px;
+        width: 16px;
     }
-}
-.c-figure__magnifier-button--close {
-    svg {
-        border: 1px solid #fff;
-        fill: #fff;
-        stroke: #fff;
-    }
-}
 
-.c-figure__magnifier-button--zoom-in,
-.c-figure__magnifier-button--zoom-out {
-    svg {
-        fill: #000;
-        stroke: #000;
+    path {
+        fill: $white;
+        stroke: $white;
     }
 }
 
-.c-figure__magnifier-toolbar {}
-.c-figure__magnifier-toolbar-item {}
-.c-figure__magnifier-image {}
-.c-figure__magnifier-image-center {}
+@include desktop-size {
+
+    .c-figure {
+        margin-bottom: 68px;
+    }
+
+    .c-figure__title + .c-figure__caption {
+        margin-top: 16px;
+    }
+
+}
