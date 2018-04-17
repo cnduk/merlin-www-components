@@ -5,7 +5,8 @@
         "toolbar_list": {
             "type": "List",
             "state": {},
-            "data": {                "items": [{
+            "data": {
+                "items": [{
                     "type": "ListItem",
                     "state": {
                         "is_first": true,
@@ -495,7 +496,7 @@
                 "is_landscape": true
             },
             "data": {
-                "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus reprehenderit, velit vel consectetur vitae quo dolorum quod voluptates architecto corrupti id doloribus tempore unde eius possimus repudiandae impedit rem quisquam.",
+                "description": "<p class=\"bb-p\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus reprehenderit, velit vel consectetur vitae quo dolorum quod voluptates architecto corrupti id doloribus tempore unde eius possimus repudiandae impedit rem quisquam.</p>",
                 "title": "Example title to sit here",
                 "orientation": "landscape",
                 "look_number": null,
