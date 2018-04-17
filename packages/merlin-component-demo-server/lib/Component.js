@@ -148,6 +148,13 @@ class Component {
         return partials;
     }
 
+    async renderStyles(themeName){
+        return await compileSass(
+            this.themes.get(themeName),
+            this.config
+        );
+    }
+
     async render(partialName, themeName, dataName, enableJS){
 
         // Mustache render
@@ -159,12 +166,9 @@ class Component {
 
         // Get sass
         // TODO: cache this?
-        const compiledSass = await compileSass(
-            this.themes.get(themeName),
-            this.config
-        );
+        const compiledSass = await this.renderStyles(themeName);
         const styles = `
-            <style type="text/css">
+            <style id="elStyles" type="text/css">
                 ${compiledSass}
             </style>
         `;

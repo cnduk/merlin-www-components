@@ -148,6 +148,12 @@
         renderToFrame(e);
     }
 
+    function onRenderStyles(e){
+        const win = getIframeWindow(ifrRender);
+        const elStyles = win.document.getElementById('elStyles');
+        elStyles.innerText = e;
+    }
+
     /**
      * Handler for combobox changes
      * @param  {String} settingKey key in settings
@@ -182,6 +188,7 @@
         btnResizeLarge.addEventListener('click', () => setResizePreset('LARGE'));
         colBackground.addEventListener('input', setBackgroundColor);
         socket.on('render', onRender);
+        socket.on('renderStyles', onRenderStyles);
     }
 
 })();

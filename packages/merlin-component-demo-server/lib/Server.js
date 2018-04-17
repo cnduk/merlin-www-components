@@ -103,6 +103,7 @@ class Server {
         const watcher = chokidar.watch(this.component.getWatchFiles());
         watcher.on('change', async (filename) => {
             const fileExt = path.extname(filename);
+            let onlyStyles = false;
 
             switch (fileExt){
 
@@ -118,6 +119,7 @@ class Server {
                 // Themes
                 case '.css':
                 case '.scss':
+                    onlyStyles = true;
                     break;
 
                 // JS
@@ -133,8 +135,14 @@ class Server {
 
             }
 
-            const html = await render(this.component);
-            this._io.emit('render', html);
+            if(onlyStyles){
+                const newCss = await renderStyles(this.component);
+                this._io.emit('renderStyles', newCss);
+            } else {
+                const html = await render(this.component);
+                this._io.emit('render', html);
+            }
+
         });
     }
 
@@ -157,6 +165,13 @@ class Server {
         });
     }
 
+}
+
+async function renderStyles(component){
+    const styles = await component.renderStyles(
+        RENDER_SETTINGS.THEME
+    );
+    return styles;
 }
 
 async function render(component){
