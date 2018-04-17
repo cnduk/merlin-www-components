@@ -5,30 +5,38 @@
 
 .c-pagination {
     font-size: 0;
-    margin: $MOBILE_SLICE_MARGIN 0;
+    margin: $MOBILE_SLICE_MARGIN 0 ($MOBILE_SLICE_MARGIN + -12px) 0;
+    padding: 0 $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin: $TABLET_SLICE_MARGIN 0;
+    @include tablet-size {
+        margin: $TABLET_SLICE_MARGIN 0 ($TABLET_SLICE_MARGIN + -12px) 0;
+        padding: 0 $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin: $DESKTOP_SLICE_MARGIN 0;
+    @include desktop-size {
+        margin: $DESKTOP_SLICE_MARGIN 0 ($DESKTOP_SLICE_MARGIN + -12px) 0;
+        padding: 0 $DESKTOP_SIDE_GUTTER;
     }
 }
-.c-pagination__item + .c-pagination__item {
-    margin-left: 10px;
+
+.c-pagination__item {
+    & + .c-pagination__item {
+        margin-bottom: 12px;
+        margin-left: 12px;
+    }
 }
+
 .c-pagination__item--active {}
 .c-pagination__btn {
-    @include button-single();
-    @include button-single-light();
+    @include button-single-three();
+    @include button-single-three-light();
 
     &:hover,
     &:focus {
-        @include button-single-light-hover();
+        @include button-single-three-light-hover();
     }
 }
-.c-pagination__btn--active {
-    @include button-single-light-hover();
-}
 
+.c-pagination__btn--active {
+    @include button-single-three-light-hover();
+}
