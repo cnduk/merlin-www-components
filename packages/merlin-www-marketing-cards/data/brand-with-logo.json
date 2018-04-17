@@ -46,7 +46,7 @@
                 "cls": ""
             }
         },
-        "title": null,
+        "title": "Example title with some words",
         "logo": {
             "type": "LinkedImage",
             "state": {
@@ -114,9 +114,12 @@
                 "cls": ""
             }
         },
-        "desc": null
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     "style": {
         "cls": "a-marketing-card--brand"
+    },
+    "translation": {
+        "title_prefix": "In partnership with"
     }
 }
