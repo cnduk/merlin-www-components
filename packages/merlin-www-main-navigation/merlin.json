@@ -1,9 +1,19 @@
 {
     "name": "@cnbritain/merlin-www-main-navigation",
+    "demo": {
+        "data": {
+            "main-navigation-promotion-desktop": "demo/data/main-navigation-promotion-desktop.json",
+            "main-navigation": "demo/data/main-navigation.json",
+            "main-navigation-masthead": "demo/data/main-navigation-masthead.json",
+            "main-navigation-promotion-mobile": "demo/data/main-navigation-promotion-mobile.json",
+            "main-navigation-gallery": "demo/data/main-navigation-gallery.json"
+        }
+    },
     "js": {
         "demo": "demo/demo.js"
     },
     "themes": {
+        "brides": "sass/brides/brides.scss",
         "gq": "sass/gq/gq.scss",
         "tatler": "sass/tatler/tatler.scss",
         "wireframe": "sass/wireframe/wireframe.scss",
