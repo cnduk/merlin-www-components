@@ -8,7 +8,7 @@
     background-image: url('/static/img/newsletter-small.jpg');
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
     padding: 60px 0;
@@ -54,6 +54,7 @@
 }
 
 .c-newsletter__logo {
+    margin: 0 auto;
     width: 208px;
 
     svg {
