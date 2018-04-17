@@ -65,6 +65,24 @@
     }
 }
 
+.c-card-section--tg-articles {
+    .c-card-section__title {
+        @include font("SOLEIL", 14px, 700, 17px, 30);
+        color: $sapphire;
+        margin-bottom: 28px;
+
+        span {
+            box-shadow: inset 0 -0.25em 0 0 $white, inset 0 -0.65em 0 0 rgba($azure, 0.7);
+        }
+    }
+
+    .c-card-list {
+        @include desktop-size {
+            margin-right: 340px;
+        }
+    }
+}
+
 .c-card-section__constrain {}
 .c-card-section__logo {}
 .c-card-section__title {}

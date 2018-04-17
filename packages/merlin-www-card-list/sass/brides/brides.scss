@@ -42,14 +42,47 @@
     }
 }
 
-.c-card-list--c-magazine-articles {
-    margin: -12px -12px;
+.c-card-list--tg-articles {
+    margin: -8px -12px;
+
+    .c-card-list__item {
+        display: inline-block;
+        margin: 8px 0;
+        padding: 0 12px;
+        vertical-align: middle;
+        width: 100%;
+    }
+
+    .c-card-list__item {
+        .c-card {
+            border-top: 1px solid $ballet-grey;
+            padding-top: 16px;
+        }
+
+        &:first-child {
+            .c-card {
+                border-top: none;
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+.c-card-list--tg-header-articles {
+    margin: -21px -12px;
 
     .c-card-list__item {
         display: inline-block;
         padding: 0 12px;
-        margin: 12px 0;
-        vertical-align: middle;
+        margin: 21px 0;
         width: 100%;
+
+        @include two-column-size() {
+            width: 50%;
+        }
+
+        @include four-column-size() {
+            width: 33.33333%;
+        }
     }
 }
