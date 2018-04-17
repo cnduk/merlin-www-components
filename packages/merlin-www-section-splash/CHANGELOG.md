@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.0"></a>
+# [1.8.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-splash@1.7.3...@cnbritain/merlin-www-section-splash@1.8.0) (2018-04-13)
+
+
+### Features
+
+* **merlin-www-card-list:** splash card list styles ([5308470](https://github.com/cnduk/merlin-www-components/commit/5308470))
+
+
+
+
 <a name="1.7.3"></a>
 ## [1.7.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-splash@1.7.2...@cnbritain/merlin-www-section-splash@1.7.3) (2018-04-06)
 

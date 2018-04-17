@@ -2,60 +2,15 @@
 
 @import "../wireframe/wireframe";
 
-.c-card-list--top-stories {
-    white-space: nowrap;
-
-    .c-card-list__item {
-        display: inline-block;
-        vertical-align: middle;
-        white-space: normal;
-        width: 290px;
-
-        & + .c-card-list__item {
-            margin-left: 24px;
-        }
-
-        &.is-hidden {
-            height: 0;
-            overflow: hidden;
-            visibility: hidden;
-            width: 0;
-        }
-
-        &:last-child {
-            margin-right: 24px;
-        }
-    }
-}
-
-.c-card-list--a-recommended,
-.c-card-list--c-video-articles,
 .c-card-list--c-curated,
-.c-card-list--c-tag,
-.c-card-section--c-contributors,
-.c-card-list--mag-articles,
-.c-card-list--v-genre-articles,
-.c-card-list--s-results {
-    margin: -10px -10px;
+.c-card-list--c-tag {
+    margin: -21px -12px;
 
     .c-card-list__item {
         display: inline-block;
-        padding: 0 10px;
-        margin: 10px 0;
+        padding: 0 12px;
+        margin: 21px 0;
         width: 100%;
-
-        //@include one-column-size() {
-        //    & + .c-card-list__item {
-        //        .c-card {
-        //            border-top: 1px solid $silver;
-        //            padding-top: 10px;
-        //
-        //            &.c-card--dark {
-        //                border-top: 1px solid $tundora;
-        //            }
-        //        }
-        //    }
-        //}
 
         @include two-column-size() {
             width: 50%;
@@ -67,78 +22,13 @@
     }
 }
 
-.c-card-list--a-recommended,
-.c-card-list--v-genre-articles,
-.c-card-list--tg-articles,
-.c-card-list--v-articles {
-    .c-card__image__icon {
-        //background-color: $vanilla-ice;
-
-        svg {
-            //fill: $mine-shaft;
-        }
-    }
-}
-
-.c-card-list--c-video-articles {
-    .c-card:hover {
-        .c-card__title {
-            span {
-                //box-shadow: inset 0 -0.4em 0 0 $trout;
-            }
-        }
-    }
-}
-
-.c-card-list--v-related-articles {
-    margin: -10px -10px;
-
-    .c-card-list__item {
-        display: inline-block;
-        padding: 0 10px;
-        margin: 10px 0;
-        width: 100%;
-
-        .c-card__images {
-            &:after {
-                @include font("BRANDON GROTESQUE", 10px, 700, 10px);
-                //background-color: $ebony-clay;
-                bottom: 0;
-                color: $white;
-                content: "Now Playing";
-                left: 0;
-                letter-spacing: 1px;
-                opacity: 0;
-                padding: 10px;
-                position: absolute;
-                text-transform: uppercase;
-                white-space: nowrap;
-            }
-        }
-
-        &.is-active {
-            .c-card__images {
-                &:after {
-                    opacity: 1;
-                }
-            }
-
-            .c-card__image {
-                &:after {
-                    opacity: 1;
-                }
-            }
-        }
-    }
-}
-
 .c-card-list--c-splash {
-    margin: -10px -10px;
+    margin: -12px -12px;
 
     .c-card-list__item {
         display: inline-block;
-        padding: 0 10px;
-        margin: 10px 0;
+        padding: 0 12px;
+        margin: 12px 0;
         vertical-align: middle;
         width: 100%;
 
@@ -153,171 +43,13 @@
 }
 
 .c-card-list--c-magazine-articles {
-    margin: -10px -10px;
+    margin: -12px -12px;
 
     .c-card-list__item {
         display: inline-block;
-        padding: 0 10px;
-        margin: 10px 0;
+        padding: 0 12px;
+        margin: 12px 0;
+        vertical-align: middle;
         width: 100%;
-    }
-}
-
-.c-card-list--c-contributors {
-    margin: -10px -10px;
-    text-align: center;
-
-    .c-card-list__item {
-        display: inline-block;
-        padding: 0 10px;
-        margin: 10px 0;
-        width: 100%;
-
-        @include two-column-size() {
-            width: 50%;
-        }
-
-        @include three-column-size() {
-            max-width: 275px;
-            width: 33.33333%;
-        }
-    }
-}
-
-.c-card-list--tg-header-articles {
-    margin: -10px -10px;
-
-    .c-card-list__item {
-        display: inline-block;
-        padding: 0 10px;
-        margin: 10px 0;
-        width: 100%;
-
-        @include two-column-size() {
-            width: 50%;
-        }
-
-        @include four-column-size() {
-            width: 33.33333%;
-        }
-    }
-}
-
-.c-card-list--tg-articles {
-   margin: -10px -10px;
-
-   .c-card-list__item {
-       display: inline-block;
-       padding: 0 10px;
-       margin: 10px 0;
-       width: 100%;
-       //@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {}
-
-       .c-card {
-           //border-top: 1px solid $silver;
-           padding-top: 10px;
-
-           @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-               padding-top: 20px;
-           }
-
-           //&.c-card--dark {
-           //
-           //}
-       }
-
-       &:first-child {
-           .c-card {
-               border-top: none;
-               padding-top: 0;
-
-               //&.c-card--dark {
-               //
-               //}
-           }
-       }
-   }
-}
-
-.c-card-list--tg-articles-grid,
-.c-card-list--v-articles {
-    margin: -20px -10px;
-
-    .c-card-list__item {
-        display: inline-block;
-        padding: 0 10px;
-        margin: 20px 0;
-        width: 100%;
-
-        @include one-column-size() {
-            .c-card {
-                //border-top: 1px solid $silver;
-                padding-top: 20px;
-
-                //&.c-card--dark {
-                //
-                //}
-            }
-
-            &:first-child {
-                .c-card {
-                    border-top: none;
-                    padding-top: 0;
-
-                    //&.c-card--dark {
-                    //
-                    //}
-                }
-            }
-        }
-
-        @include two-column-size() {
-            width: 50%;
-        }
-
-        @include four-column-size() {
-            width: 33.33333%;
-        }
-    }
-}
-
-.c-card-list--mag-magazines {
-    margin: -10px -10px;
-
-    .c-card-list__item {
-        display: inline-block;
-        margin: 10px 0;
-        padding: 0 10px;
-        width: 50%;
-    }
-
-    @include four-column-size() {
-        margin: -17px -9px;
-
-        .c-card-list__item {
-            margin: 17px 0;
-            padding: 0 9px;
-            width: 25%;
-        }
-    }
-
-    .c-card {
-
-        .c-card__title {
-            @include font-size(12px);
-
-                 @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-                     @include font-size(15px);
-                 }
-        }
-
-        &:hover {
-            .c-card__title {
-                span {
-                    //border-bottom: 2px solid $careys-pink;
-                    box-shadow: none;
-                }
-            }
-        }
     }
 }

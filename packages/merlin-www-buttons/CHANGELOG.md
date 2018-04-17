@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.7.0"></a>
+# [1.7.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-buttons@1.6.3...@cnbritain/merlin-www-buttons@1.7.0) (2018-04-13)
+
+
+### Bug Fixes
+
+* **merlin-www-buttons:** correct text align brides button ([67f49c3](https://github.com/cnduk/merlin-www-components/commit/67f49c3))
+* **merlin-www-buttons:** set size on brides share buttons ([2fa4c93](https://github.com/cnduk/merlin-www-components/commit/2fa4c93))
+
+
+### Features
+
+* **merlin-www-buttons:** add brides ([6939cfc](https://github.com/cnduk/merlin-www-components/commit/6939cfc))
+* **merlin-www-buttons:** added more demos and brides to merlin ([8392fc2](https://github.com/cnduk/merlin-www-components/commit/8392fc2))
+
+
+
+
 <a name="1.6.3"></a>
 ## [1.6.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-buttons@1.6.2...@cnbritain/merlin-www-buttons@1.6.3) (2018-04-06)
 

@@ -54,6 +54,7 @@
         "demo": "demo/demo.js"
     },
     "themes": {
+        "brides": "sass/brides/brides.scss",
         "gq": "sass/gq/gq.scss",
         "tatler": "sass/tatler/tatler.scss",
         "wireframe": "sass/wireframe/wireframe.scss",
@@ -63,21 +64,21 @@
         "glamour": "sass/glamour/glamour.scss"
     },
     "partials": {
-        "video-body": "partials/video-body.html",
-        "article-sidebar": "partials/article-sidebar.html",
-        "video-player": "partials/video-player.html",
-        "article-gallery": "partials/article-gallery.html",
-        "video-footer": "partials/video-footer.html",
-        "video": "partials/video.html",
-        "video-embed": "partials/video-embed.html",
-        "article-footer": "partials/article-footer.html",
         "article": "partials/article.html",
-        "video-header": "partials/video-header.html",
-        "article-header": "partials/article-header.html",
-        "article-review": "partials/article-review.html",
-        "article-podcast": "partials/article-podcast.html",
         "article-author": "partials/article-author.html",
-        "article-event-author": "partials/article-event-author.html"
+        "article-event-author": "partials/article-event-author.html",
+        "article-footer": "partials/article-footer.html",
+        "article-gallery": "partials/article-gallery.html",
+        "article-header": "partials/article-header.html",
+        "article-podcast": "partials/article-podcast.html",
+        "article-review": "partials/article-review.html",
+        "article-sidebar": "partials/article-sidebar.html",
+        "video": "partials/video.html",
+        "video-body": "partials/video-body.html",
+        "video-embed": "partials/video-embed.html",
+        "video-footer": "partials/video-footer.html",
+        "video-header": "partials/video-header.html",
+        "video-player": "partials/video-player.html"
     },
     "dependencies": [
         "@cnbritain/merlin-www-figure",
@@ -99,7 +100,14 @@
         "article-gallery": "data/article-gallery.json",
         "article-video": "data/article-video.json",
         "article-article": "data/article-article.json",
-        "article-review": "data/article-review.json"
+        "article-review": "data/article-review.json",
+
+        "article-podcast": "data/article-podcast.json",
+        "article-author": "data/article-author.json",
+        "article-event-author": "data/article-event-author.json",
+        "article-header": "data/article-header.json",
+        "article-footer": "data/article-footer.json",
+        "article-sidebar": "data/article-sidebar.json"
     },
     "description": "Article header, footer, share, content, review. Includes video too."
 }

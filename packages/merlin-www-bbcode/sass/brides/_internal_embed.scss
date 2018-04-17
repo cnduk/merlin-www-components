@@ -1,0 +1,246 @@
+
+/**
+ * Article card
+ */
+
+.bb-card {
+    border: 1px solid $ballet-grey;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+.bb-card__obj {
+    display: table;
+    width: 100%;
+}
+
+.bb-card__obj__header,
+.bb-card__obj__body {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.bb-card__obj__body {
+    padding-left: 16px;
+}
+
+.bb-card__image {
+    padding-top: 66.66%;
+}
+
+.bb-card__title {
+    @include font('SOLEIL', 14px, 'NORMAL', 18px);
+    color: $ascot-grey;
+    letter-spacing: 0.01em;
+}
+
+.bb-card__tag {
+    @include font('SOLEIL', 12px, null, 12px);
+    color: $candle-grey;
+    display: none;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.bb-card__separator,
+.bb-card__footer {
+    display: none;
+}
+
+
+
+
+/**
+ * Gallery card
+ */
+
+.bb-gallery {
+    border: 1px solid $ballet-grey;
+    padding-top: 12px;
+}
+
+.bb-gallery__icon {
+    display: table-cell;
+    padding-left: 12px;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    vertical-align: middle;
+
+    &:before {
+        background-color: $blossom;
+        border-radius: 50%;
+        box-sizing: border-box;
+        content: "";
+        display: block;
+        left: 12px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        width: 40px;
+        z-index: 1;
+    }
+
+    svg {
+        display: block;
+        fill: $pink-rose;
+        height: 16px;
+        left: 12px + 12px;
+        margin: -8px 0 0 0;
+        position: absolute;
+        top: 50%;
+        width: 18px;
+        z-index: 2;
+    }
+}
+
+.bb-gallery__title {
+    @include font('SOLEIL', 14px, 'NORMAL', 18px);
+    color: $ascot-grey;
+    display: table-cell;
+    letter-spacing: 0.01em;
+    padding: 0 12px;
+    vertical-align: middle;
+}
+
+.bb-gallery__link {}
+.bb-gallery__cols {
+    margin-top: 12px;
+}
+.bb-gallery__col {}
+
+.bb-gallery__remaining {
+    background-color: rgba($black, 0.25);
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.bb-gallery__remaining-text {
+    @include font('SOLEIL', 24px, 'BOLD', 24px);
+    color: $white;
+    letter-spacing: 0.01em;
+}
+
+
+
+
+
+.bb-video {
+    border: 1px solid $ballet-grey;
+    padding-top: 12px;
+}
+
+.bb-video__icon {
+    display: table-cell;
+    padding-left: 12px;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    vertical-align: middle;
+
+    &:before {
+        background-color: $blossom;
+        border-radius: 50%;
+        box-sizing: border-box;
+        content: "";
+        display: block;
+        left: 12px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        width: 40px;
+        z-index: 1;
+    }
+
+    svg {
+        display: block;
+        fill: $pink-rose;
+        height: 16px;
+        left: 12px + 12px;
+        margin: -4px 0 0 0;
+        position: absolute;
+        top: 16px;
+        width: 18px;
+        z-index: 2;
+    }
+}
+
+.bb-video__title {
+    @include font('SOLEIL', 14px, 'NORMAL', 18px);
+    color: $ascot-grey;
+    display: table-cell;
+    letter-spacing: 0.01em;
+    padding: 0 12px;
+    vertical-align: middle;
+}
+
+.bb-video__wrapper {
+    margin-top: 12px;
+}
+
+.bb-video__image-icon {
+    display: none;
+}
+
+
+
+
+
+@include card-portrait-to-landscape-size {
+
+    .bb-card:before {
+        @include font('SOLEIL', 12px, null, 12px);
+        color: $candle-grey;
+        bottom: 16px;
+        content: "Continue Reading";
+        position: absolute;
+        right: 16px;
+    }
+
+    .bb-card__obj__header,
+    .bb-card__obj__body {
+        vertical-align: top;
+    }
+
+    .bb-card__obj__header {
+        width: 175px;
+    }
+
+    .bb-card__obj__body {
+        width: auto;
+    }
+
+    .bb-card__tag {
+        display: block;
+    }
+
+    .bb-card__title {
+        margin: 6px 0 0 0;
+    }
+
+    .bb-gallery__icon,
+    .bb-video__icon {
+        padding-left: 16px;
+
+        &:before {
+            left: 16px;
+        }
+
+        svg {
+            left: 16px + 12px;
+        }
+    }
+
+    .bb-gallery__title,
+    .bb-video__title {
+        @include font-size(16px);
+        @include line-height(20px);
+    }
+
+    .bb-gallery__remaining-text {
+        @include font-size(32px);
+        @include line-height(32px);
+    }
+
+}

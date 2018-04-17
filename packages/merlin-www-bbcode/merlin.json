@@ -249,7 +249,9 @@
             "data": "instagram"
         }
     },
-    "js": {},
+    "js": {
+        "demo": "demo/demo.js"
+    },
     "themes": {
         "brides": "sass/brides/brides.scss",
         "gq": "sass/gq/gq.scss",

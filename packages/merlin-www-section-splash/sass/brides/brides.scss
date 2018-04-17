@@ -9,16 +9,17 @@
 	margin-bottom: $MOBILE_SLICE_MARGIN;
 	margin-top: $MOBILE_SLICE_MARGIN;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	@include tablet-size {
 	    margin-bottom: $TABLET_SLICE_MARGIN;
 	    margin-top: $TABLET_SLICE_MARGIN;
 	}
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	@include desktop-size {
 	    margin-bottom: $DESKTOP_SLICE_MARGIN;
 	    margin-top: $DESKTOP_SLICE_MARGIN;
 	}
 }
+
 .c-splash-section__wrapper {
 	margin: 0 auto;
 	max-width: $MAXIMUM_PAGE_WIDTH;
@@ -26,132 +27,151 @@
 	width: 100%;
 }
 
-.c-splash-hero {
-	&:hover {
-		.c-splash-hero__title {
-  			span {
-  				box-shadow: inset 0 -0.4em 0 0 $careys-pink;
-  			}
-		}
-	}
-}
+.c-splash-hero {}
 .c-splash-hero__wrapper {
 	position: relative;
 }
 
-.c-splash-hero__images {}
+.c-splash-hero__images {
+    position: relative;
+
+    &:after {
+        background-color: $pink-rose;
+        bottom: 0;
+        content: '';
+        height: 32px;
+        left: 50%;
+        position: absolute;
+        transform: translateY(50%);
+        width: 1px;
+        z-index: 1;
+    }
+}
+
 .c-splash-hero__image {}
 
 .c-splash-hero__image__wrapper {
-	background-color: $mercury;
+	background-color: $diamond;
+    padding-top: 90%;
+
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        padding-top: 50%;
+    }
 }
 
 .c-splash-hero__content {
-	margin: 0 auto;
-	max-width: 700px;
-	padding: 20px 20px 20px 20px;
-	text-align: center;
+    position: relative;
+    text-align: center;
 
-	@include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-		padding: 40px;
-	}
+    > * {
+        padding: 0 20px;
+    }
+
+    > :first-child {
+        margin-top: 28px;
+    }
+
+    > :last-child {
+        margin-bottom: 44px;
+    }
+
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        > :first-child {
+            margin-top: 40px;
+        }
+
+        > :last-child {
+            margin-bottom: 68px;
+        }
+    }
 }
 
 .c-splash-hero__tag {
-	@include font("BRANDON GROTESQUE", 10px, 700, 10px);
-	color: $mine-shaft;
-	letter-spacing: 1px;
-	margin-bottom: 7px;
-	margin-top: 0;
-	text-transform: uppercase;
-
-	@include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-		margin-bottom: 15px;
-	}
-}
-
-.c-splash-hero__title {
-	@include font("MILLER_DISPLAY", 25px, 700, 27px);
-	color: $mine-shaft;
-	letter-spacing: 0.5px;
-	margin: 7px 0 10px 0;
-
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-    	@include font-size(50px);
-    	@include line-height(55px);
-    	letter-spacing: 0px;
-    	margin: 15px 0 20px 0;
-	}
-}
-
-.c-splash-hero__teaser {
-	display: none;
-}
-
-.c-splash-hero__byline {
-    @include font("BRANDON GROTESQUE", 10px, null, 10px);
-    color: $mine-shaft;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-    margin-top: 10px;
+    @include font("SOLEIL", 12px, 400, 16px, 18);
+    color: $pink-rose;
+    margin: 0 0 6px 0;
     text-transform: uppercase;
 
     @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-    	margin-bottom: 7px;
-    	margin-top: 15px;
+
     }
+}
+
+.c-splash-hero__title {
+    @include font("FREIGHT DISPLAY PRO", 32px, 400, 32px, 10);
+    color: $stroller-grey;
+    margin: 6px 0 0 0;
+    text-align: center;
+    text-transform: capitalize;
+
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        @include font-size(40px);
+        @include line-height(40px);
+    }
+}
+
+.c-splash-hero__teaser {
+    display: none;
+
+    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        @include font("SOLEIL", 14px, 400, 20px, 30);
+        color: $ascot-grey;
+        margin: 18px 0 0 0;
+    }
+}
+
+.c-splash-hero__byline {
+    @include font('SOLEIL', 10px, 400, 16px, 12);
+    color: $stroller-grey;
+    margin: 18px 0 0 0;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .c-splash-hero__byline--sponsorship {}
 .c-splash-hero__byline-prefix {}
 .c-splash-hero__byline-name {
-    @include font-weight(700);
+    font-weight: bold;
 }
 
 ul.c-splash-hero__meta {
-    @include font("BRANDON GROTESQUE", 0px, 400, 10px);
-    color: $dove-gray;
-    letter-spacing: 1px;
-    margin-top: 5px;
+    @include font('SOLEIL', 10px, 400, 12px, 12);
+    color: $candle-grey;
     text-transform: uppercase;
-
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-    	margin-top: 7px;
-    }
+    margin: 6px 0 0 0;
 }
 
 li.c-splash-hero__meta-item {
-    @include font("BRANDON GROTESQUE", 10px, 400, 10px);
-    color: $dove-gray;
-    letter-spacing: 1px;
+    @include font('SOLEIL', 10px, 400, 12px, 12);
+    color: $candle-grey;
     text-transform: uppercase;
 
-    border-right: 1px solid $silver;
-    margin-right: 7px;
-    padding-right: 7px;
-
-    &:last-child {
-        border-right: none;
-        margin-right: 0;
-        padding-right: 0;
+    & + li.c-splash-hero__meta-item {
+        &:before {
+            background-color: $candle-grey;
+            content: "";
+            display: inline-block;
+            height: 2px;
+            margin: 2px 8px;
+            width: 2px;
+        }
     }
 }
 
 .c-splash-list {
 	margin: 0 $MOBILE_SIDE_GUTTER $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
-	padding-bottom: 30px;
-	border-bottom: 1px solid $silver;
+	padding-bottom: 36px;
+	border-bottom: 1px solid $ballet-grey;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	@include tablet-size {
 	    margin-left: $TABLET_SIDE_GUTTER;
 	    margin-right: $TABLET_SIDE_GUTTER;
 	}
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	@include desktop-size {
 	    margin-left: $DESKTOP_SIDE_GUTTER;
 	    margin-right: $DESKTOP_SIDE_GUTTER;
 	}
-
 }
 
 .c-splash-list__wrapper {}

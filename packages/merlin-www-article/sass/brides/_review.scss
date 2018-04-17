@@ -1,26 +1,25 @@
+
 .a-review {
-    border: 1px solid $mine-shaft;
-    margin: 30px 0;
-    overflow: visible;
-    padding: 20px 20px 30px 20px;
+    background-color: $white;
+    border: 1px solid $ballet-grey;
+    margin: 40px 0;
+    padding: 34px 20px;
     position: relative;
     text-align: center;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        padding: 30px 30px 40px 30px;
-    }
+}
+.a-review:before {
+    background-color: $ballet-grey;
+    content: '';
+    display: block;
+    height: 32px;
+    left: 50%;
+    position: absolute;
+    top: -16px;
+    width: 1px;
 }
 
 .a-review__item {
-    margin: 0 auto 20px auto;
-
-    &:last-child {
-        margin-bottom: 0;
-
-        .bb-infobox__item__value {
-            margin: 0;
-        }
-    }
+    margin: 20px 0 26px 0;
 }
 
 .a-review__separator {
@@ -28,65 +27,43 @@
 }
 
 .a-review__key {
-  @include font("BRANDON GROTESQUE", 15px, 800, 15px);
-
-  color: $mine-shaft;
-  letter-spacing: 1px;
-  margin: 10px 0;
-  text-transform: uppercase;
-  text-decoration: underline;
+    @include font('SOLEIL', 12px, null, 16px);
+    color: $candle-grey;
+    letter-spacing: 0.12em;
+    margin: 0;
+    text-transform: uppercase;
 }
-
 .a-review__value {
-    @include font("MILLER_DISPLAY", 16px, 400, 20px);
-    color: $mine-shaft;
-    margin: 10px 0;
+    @include font('SOLEIL', 14px, null, 20px);
+    color: $ascot-grey;
+    letter-spacing: 0.03em;
+    margin-top: 12px;
 }
 
-.a-review__item--rating {
-    margin: 30px 0;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-      margin: 40px 0;
-    }
-}
+.a-review__item--rating {}
 
 .a-review__rating-list {
+    display: inline-block;
     font-size: 0;
-    display: inline-block;
-    margin: 10px 0;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-      display: inline-block;
-        overflow: inherit;
-    }
 }
 
-li.a-review__rating-list__item {
-    background-color: $vanilla-ice;
+.a-review__rating-list__item {
+    background-color: rgba($ballet-grey, 0.5);
     display: inline-block;
-    float: initial;
-    height: 13px;
-    margin-right: 4px;
-    width: 13px;
-    border-radius: 50px;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-right: 5px;
-    }
+    height: 8px;
+    width: 8px;
 }
-
-li.a-review__rating-list__item--active {
-    background-color: $careys-pink;
+.a-review__rating-list__item + .a-review__rating-list__item {
+    margin-left: 2px;
+}
+.a-review__rating-list__item--active {
+    background-color: $sweet-pea;
 }
 
 .a-review__rating {
-    @include font("BRANDON GROTESQUE", 14px, 700, 14px);
-    color: $careys-pink;
+    @include font('SOLEIL', 12px, 'BOLD', 12px);
+    color: $ascot-grey;
     display: inline-block;
-    margin-bottom: 10px;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-      vertical-align: text-top;
-    }
+    letter-spacing: 0.03em;
+    margin-left: 12px;
 }

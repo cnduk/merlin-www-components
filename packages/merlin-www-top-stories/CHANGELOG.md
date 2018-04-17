@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.9.0"></a>
+# [1.9.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-top-stories@1.8.3...@cnbritain/merlin-www-top-stories@1.9.0) (2018-04-13)
+
+
+### Bug Fixes
+
+* **merlin-www-top-stories:** correct border spacing on glamour ([8e111fc](https://github.com/cnduk/merlin-www-components/commit/8e111fc))
+
+
+### Features
+
+* **merlin-www-top-stories:** add brides to merlin config ([5ce69fd](https://github.com/cnduk/merlin-www-components/commit/5ce69fd))
+
+
+
+
 <a name="1.8.3"></a>
 ## [1.8.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-top-stories@1.8.2...@cnbritain/merlin-www-top-stories@1.8.3) (2018-04-06)
 

@@ -163,33 +163,34 @@
                     {{/ data.item }}
                 </div>
                 {{# data.item }}
-                    {{# data.title }}
-                        <div class="a-header__image-title">{{ data.title }}</div>
-                    {{/ data.title }}
+                    <div class="a-header__image-content">
+                        {{# data.title }}
+                            <div class="a-header__image-title">{{ data.title }}</div>
+                        {{/ data.title }}
 
-                    {{# data.description }}
-                        <figcaption class="a-header__image-caption has-bbcode">
-                            {{ &data.description }}
-                        </figcaption>
-                    {{/ data.description }}
+                        {{# data.description }}
+                            <figcaption class="a-header__image-caption has-bbcode">
+                                {{ &data.description }}
+                            </figcaption>
+                        {{/ data.description }}
 
-                    {{# data.credit }}
-                        <div class="a-header__image-credit">
-                            {{ data.credit }}
-                        </div>
-                    {{/ data.credit }}
+                        {{# data.credit }}
+                            <div class="a-header__image-credit">
+                                {{ data.credit }}
+                            </div>
+                        {{/ data.credit }}
 
-                    {{! Does this make me a bad person? }}
-                    {{# data.title }}
-                        <hr class="a-header__separator a-header__separator--hero" />
-                    {{/ data.title }}
-                    {{^ data.title }}{{# data.description }}
-                        <hr class="a-header__separator a-header__separator--hero" />
-                    {{/ data.description }}{{/ data.title }}
-                    {{^ data.title }}{{^ data.description }}{{# data.credit }}
-                        <hr class="a-header__separator a-header__separator--hero" />
-                    {{/ data.credit }}{{/ data.description }}{{/ data.title }}
-
+                        {{! Does this make me a bad person? }}
+                        {{# data.title }}
+                            <hr class="a-header__separator a-header__separator--hero" />
+                        {{/ data.title }}
+                        {{^ data.title }}{{# data.description }}
+                            <hr class="a-header__separator a-header__separator--hero" />
+                        {{/ data.description }}{{/ data.title }}
+                        {{^ data.title }}{{^ data.description }}{{# data.credit }}
+                            <hr class="a-header__separator a-header__separator--hero" />
+                        {{/ data.credit }}{{/ data.description }}{{/ data.title }}
+                    </div>
                 {{/ data.item }}
             </figure>
         {{/ data.items }}

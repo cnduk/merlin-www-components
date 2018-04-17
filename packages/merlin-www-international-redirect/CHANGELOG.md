@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.7.0"></a>
+# [1.7.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-international-redirect@1.6.3...@cnbritain/merlin-www-international-redirect@1.7.0) (2018-04-13)
+
+
+### Features
+
+* **merlin-www-international-redirect:** add brides to merlin config ([b613ab9](https://github.com/cnduk/merlin-www-components/commit/b613ab9))
+
+
+
+
 <a name="1.6.3"></a>
 ## [1.6.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-international-redirect@1.6.2...@cnbritain/merlin-www-international-redirect@1.6.3) (2018-04-06)
 

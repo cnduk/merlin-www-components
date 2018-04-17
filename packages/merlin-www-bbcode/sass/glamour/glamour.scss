@@ -599,7 +599,7 @@
     @include font("GRAPHIK", 16px, 'NORMAL', 18px);
     color: $azalea;
     display:table-cell;
-    padding: 20px 10px 20px 0;
+    padding: 20px 10px 20px 10px;
     min-height: 66px;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
@@ -661,8 +661,9 @@ ul li.bb-gallery__col {
     }
 }
 
-.bb-video__title-icon {
+.bb-video__icon {
     display: table-cell;
+    height: auto;
     padding-left: 10px;
     vertical-align: middle;
     width: 56px;
@@ -698,7 +699,7 @@ ul li.bb-gallery__col {
     @include font("GRAPHIK", 16px, 'NORMAL', 18px);
     color: $azalea;
     display: table-cell;
-    padding: 20px 10px 20px 0;
+    padding: 20px 10px 20px 10px;
     min-height: 66px;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {

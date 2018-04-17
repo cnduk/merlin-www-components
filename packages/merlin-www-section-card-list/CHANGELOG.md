@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.11.0"></a>
+# [1.11.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.10.3...@cnbritain/merlin-www-section-card-list@1.11.0) (2018-04-13)
+
+
+### Features
+
+* **merlin-www-section-card-list:** brides data and styles ([3104932](https://github.com/cnduk/merlin-www-components/commit/3104932))
+
+
+
+
 <a name="1.10.3"></a>
 ## [1.10.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.10.2...@cnbritain/merlin-www-section-card-list@1.10.3) (2018-04-06)
 

@@ -48,6 +48,7 @@
     border-radius: 30px;
     letter-spacing: 0;
     padding: 18px 38px;
+    text-align: center;
 }
 
 @mixin button-single-three-light() {
@@ -89,11 +90,25 @@
 
 @mixin button-share(){
     border-radius: 50%;
+<<<<<<< HEAD
     width: 40px;
     height: 40px;
 
     svg {
         height: 100%;
+=======
+    height: 40px;
+    position: relative;
+    width: 40px;
+
+    svg {
+        display: block;
+        left: 50%;
+        margin-left: -8px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+>>>>>>> 249209f16a63cdbfae7eedb08aeeb74cb3789b75
         width: 16px;
     }
 }

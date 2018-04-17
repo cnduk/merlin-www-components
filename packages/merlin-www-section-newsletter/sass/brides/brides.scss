@@ -4,106 +4,120 @@
 @import "../wireframe/wireframe";
 
 .c-newsletter {
-    background: $ebony-clay;
-    margin-bottom: $MOBILE_SLICE_MARGIN;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: $MOBILE_SLICE_MARGIN;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: $TABLET_SLICE_MARGIN;
-        margin-bottom: $TABLET_SLICE_MARGIN;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: $DESKTOP_SLICE_MARGIN;
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: $DESKTOP_SLICE_MARGIN;
-    }
-
+    background-color: $diamond;
+    background-image: url('/static/img/newsletter-small.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    padding: 60px 0;
     position: relative;
     text-align: center;
+
+    @include tablet-size {
+        background-image: url('/static/img/newsletter-large.jpg');
+        padding: 80px 0;
+    }
+
+    &:before {
+        background-color: rgba($black, 0.05);
+        bottom: 0;
+        content: '';
+        height: 100%;
+        left: 50%;
+        max-width: $MAXIMUM_PAGE_WIDTH;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+
+    &:after {
+        @include font("SOLEIL", 9px, 400, 10px, 60);
+        bottom: 4px;
+        color: $white;
+        content: "Ed Miles";
+        position: absolute;
+        right: 4px;
+        text-shadow: 0 2px 8px rgba($black, 0.2);
+        text-transform: uppercase;
+    }
 }
 
 .c-newsletter__wrapper {
     margin: 0 auto;
     max-width: 570px;
-    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+    padding: 0 $MOBILE_SIDE_GUTTER;
     position: relative;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        max-width: 1560px;
-        padding: $DESKTOP_SIDE_GUTTER;
-    }
 }
 
 .c-newsletter__logo {
-    display: none;
-}
+    width: 208px;
 
-.c-newsletter__title {
-    @include font("MILLER_DISPLAY", 20px, 400, 20px);
-    color: $white;
-    letter-spacing:4px;
-    margin-bottom: 10px;
-    margin-top: 0px;
-    text-align: center;
-    text-transform: uppercase;
+    svg {
+        fill: $white;
+        width: 208px;
+    }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(26px);
-        @include line-height(26px);
-        letter-spacing:6px;
+    @include tablet-size {
+        width: 540px;
+
+        svg {
+            width: 540px;
+        }
     }
 }
 
-.c-newsletter__description {
-    @include font("MILLER_DISPLAY", 14px, 400, 19px);
-    color: $white;
-    font-style: italic;
-    letter-spacing: 0px;
-    margin: 10px 0 20px 0;
+.c-newsletter__title {
+    display: none;
+}
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(16px);
+.c-newsletter__description {
+    @include font("SOLEIL", 12px, 400, 16px, 30);
+    color: $white;
+    margin: 16px 0 32px 0;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba($black, 0.2);
+
+    @include tablet-size {
+        @include font-size(14px);
         @include line-height(20px);
+        margin: 22px 0 40px 0;
     }
 }
 
 .c-newsletter__form {
     width: 100%;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include tablet-size {
         width: auto;
     }
 }
 
 .c-newsletter__form__text {
-    @include font("BRANDON GROTESQUE", 11px, 700, 11px);
-    border-radius: 0;
-    border: 1px solid $mine-shaft;
-    box-sizing: border-box;
-    color: $silver-chalice;
-    height: 47px;
-    letter-spacing: 1px;
+    @include font("SOLEIL", 14px, 400, 14px, 20);
+    apperance: none;
+    background-color: $white;
+    border: 1px solid $stroller-grey;
+    color: $stroller-grey;
+    height: 60px;
     margin-bottom: 10px;
-    padding: 17px 16px;
     text-align: center;
-    text-transform: uppercase;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         text-align: left;
     }
 
     &::placeholder {
-        color: $silver-chalice;
+        color: $stroller-grey;
     }
 }
 
 .c-newsletter__form__btn {
     @include button-single();
-    @include button-single-dark();
+    @include button-single-light();
 
     height: auto;
     margin-bottom: 20px;
@@ -113,23 +127,18 @@
     }
 
     &:hover {
-        @include button-single-dark-hover();
+        @include button-single-light-hover();
     }
 }
 
 .c-newsletter__legal {
-    @include font("BRANDON GROTESQUE", 8px, 700, 8px);
-    color: $silver-chalice;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-
-     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-         @include font-size(9px);
-         @include line-height(9px);
-     }
+    @include font("SOLEIL", 12px, 400, 16px);
+    color: $white;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba($black, 0.2);
 }
 
 .c-newsletter__privacy {
-    border-bottom: 1px solid $silver-chalice;
-    color: $silver-chalice;
+    border-bottom: 1px solid $white;
+    color: $white;
 }

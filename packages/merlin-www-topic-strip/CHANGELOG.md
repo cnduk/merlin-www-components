@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.10.0"></a>
+# [1.10.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-topic-strip@1.9.3...@cnbritain/merlin-www-topic-strip@1.10.0) (2018-04-13)
+
+
+### Features
+
+* **merlin-www-topic-strip:** styles for brides and wrapper added to template ([2883a86](https://github.com/cnduk/merlin-www-components/commit/2883a86))
+
+
+
+
 <a name="1.9.3"></a>
 ## [1.9.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-topic-strip@1.9.2...@cnbritain/merlin-www-topic-strip@1.9.3) (2018-04-06)
 

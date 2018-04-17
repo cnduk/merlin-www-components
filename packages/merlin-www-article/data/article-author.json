@@ -1,0 +1,227 @@
+{
+    "translation": {
+        "footer_share_title": "Share this article",
+        "header_byline_prefix": "By",
+        "header_syndication_prefix": "Originally published by",
+        "header_sponsorship_prefix": "In partnership with",
+        "author_syndication_prefix": "Originally published by",
+        "author_byline_prefix": "By",
+        "author_photography_prefix": "Photography by"
+    },
+    "state": {
+        "has_multiple_profiles": false,
+        "has_syndication": true,
+        "has_event_information": false,
+        "is_sponsored": false,
+        "has_body": true,
+        "has_photographer": true
+    },
+    "data": {
+        "syndication_profile": {
+            "data": {
+                "name": "Syndication name",
+                "link": {
+                    "data": {
+                        "title": "Syndication name",
+                        "url": "#url"
+                    },
+                    "style": {
+                        "cls": ""
+                    },
+                    "state": {}
+                }
+            },
+            "state": {
+                "has_link": false
+            }
+        },
+        "photographer_profile": {
+            "translation": {},
+            "state": {
+                "has_link": false,
+                "has_image": false
+            },
+            "data": {
+                "bio": null,
+                "image": null,
+                "link": null,
+                "teaser": null,
+                "name": "Simon Butts"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "Profile"
+        },
+        "date": {
+            "translation": {},
+            "state": {},
+            "data": {
+                "date": "2018-02-14 09:22:56+00:00",
+                "relative_time": "14 Feb 2018",
+                "label": "Wednesday 14 February 2018"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "Date"
+        },
+        "byline": "<a href=\"/profile/anders-christian-madsen\">Anders Christian Madsen</a> and <a href=\"/profile/adam-welch\">Adam Welch</a>",
+        "review_information": null,
+        "profiles": [{
+            "translation": {},
+            "state": {
+                "has_link": true,
+                "has_image": false
+            },
+            "data": {
+                "bio": "<p class=\"bb-p\">Anders is the fashion critic at British Vogue.</p>",
+                "image": null,
+                "link": {
+                    "translation": {},
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "data": {
+                        "url": "http://localhost:3000/profile/anders-christian-madsen",
+                        "title": "Anders Christian Madsen"
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "Link"
+                },
+                "teaser": "Example teaser sitting here in the <em class=\"bb-em\">author</em> panel",
+                "name": "Anders Christian Madsen"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "Profile"
+        }, {
+            "translation": {},
+            "state": {
+                "has_link": true,
+                "has_image": true
+            },
+            "data": {
+                "bio": null,
+                "image": {
+                    "translation": {},
+                    "state": {
+                        "is_static": false,
+                        "is_linked": true,
+                        "is_svg": false,
+                        "is_image": false,
+                        "is_picture": false
+                    },
+                    "data": {
+                        "image": {
+                            "translation": {},
+                            "state": {
+                                "is_static": false,
+                                "is_portrait": false,
+                                "is_image": true,
+                                "is_square": true,
+                                "is_svg": false,
+                                "is_lazyload": true,
+                                "is_linked": false,
+                                "is_picture": false,
+                                "is_landscape": false
+                            },
+                            "data": {
+                                "description": null,
+                                "title": null,
+                                "orientation": "square",
+                                "look_number": null,
+                                "alt_text": null,
+                                "filename": null,
+                                "credit": null,
+                                "image_url": "https://vg-staging-images.condecdn.net/image/Ld0ELElxAa8/crop/200/square/f/some_picture_of_a_face.jpg",
+                                "srcset": "https://vg-staging-images.condecdn.net/image/Ld0ELElxAa8/crop/200/square/f/some_picture_of_a_face.jpg 200w, https://vg-staging-images.condecdn.net/image/Ld0ELElxAa8/crop/300/square/f/some_picture_of_a_face.jpg 300w",
+                                "width": null,
+                                "uid": "Ld0ELElxAa8"
+                            },
+                            "style": {
+                                "padding_top": "100%",
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "Image"
+                        },
+                        "link": {
+                            "translation": {},
+                            "state": {
+                                "is_blank": false,
+                                "is_nofollow": false
+                            },
+                            "data": {
+                                "url": "http://localhost:3000/profile/adam-welch",
+                                "title": "Adam Welch"
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "Link"
+                        }
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "LinkedImage"
+                },
+                "link": {
+                    "translation": {},
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "data": {
+                        "url": "http://localhost:3000/profile/adam-welch",
+                        "title": "Adam Welch"
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "Link"
+                },
+                "teaser": null,
+                "name": "Adam Welch"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "Profile"
+        }],
+        "event_information": {
+            "data": {
+                "translation": {},
+                "state": {},
+                "data": {
+                    "date": "2018-02-14 09:22:56+00:00",
+                    "relative_time": "14 Feb 2018",
+                    "label": "Wednesday 14 February 2018"
+                },
+                "style": {
+                    "inline": "",
+                    "cls": ""
+                },
+                "type": "Date"
+            }
+        }
+    },
+    "style": {
+        "inline": "",
+        "cls": ""
+    },
+    "type": "Article"
+}

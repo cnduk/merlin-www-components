@@ -4,9 +4,11 @@
     "main": "section-splash",
     "currentTheme": null,
     "data": {
+        "brides": "data/brides.json",
         "gq": "data/gq.json"
     },
     "themes": {
+        "brides": "sass/brides/brides.scss",
         "wireframe": "sass/wireframe/wireframe.scss",
         "gq": "sass/gq/gq.scss",
         "traveller": "sass/traveller/traveller.scss",
@@ -15,7 +17,15 @@
     "partials": {
         "section-splash": "partials/index.html"
     },
-    "js": {},
+    "js": {
+        "demo": "demo/demo.js"
+    },
     "demo": null,
-    "dependencies": []
+    "dependencies": [
+        "@cnbritain/merlin-www-buttons",
+        "@cnbritain/merlin-www-card",
+        "@cnbritain/merlin-www-card-list",
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-image"
+    ]
 }

@@ -1,0 +1,584 @@
+{
+    "translation": {
+        "footer_share_title": "Share this article",
+        "header_byline_prefix": "By",
+        "header_syndication_prefix": "Originally published by",
+        "header_sponsorship_prefix": "In partnership with",
+        "author_syndication_prefix": "Originally published by",
+        "author_byline_prefix": "By",
+        "author_photography_prefix": "Photography by"
+    },
+    "state": {
+        "has_multiple_profiles": true,
+        "has_syndication": false,
+        "has_event_information": true,
+        "is_gallery": false,
+        "is_preview": false,
+        "is_article": true,
+        "has_hero": true,
+        "is_sponsored": false,
+        "is_recipe": false,
+        "is_spa_review": false,
+        "has_primary_tag": true,
+        "has_closed_gallery": false,
+        "has_body": true,
+        "has_secondary_tag": false,
+        "is_long_body": true,
+        "is_podcast": true,
+        "is_video": false,
+        "has_photographer": true
+    },
+    "data": {
+        "syndication_profile": {
+            "data": {
+                "name": "Syndication profile",
+                "link": {
+                    "data": {
+                        "title": "Syndication profile",
+                        "url": "#link"
+                    }
+                }
+            },
+            "state": {
+                "has_link": true
+            }
+        },
+        "share_list": {
+            "translation": {},
+            "state": {},
+            "data": {
+                "items": [{
+                    "translation": {},
+                    "state": {
+                        "is_first": true,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {},
+                            "state": {
+                                "is_static": false,
+                                "is_linked": true,
+                                "is_svg": false,
+                                "is_image": false,
+                                "is_picture": false
+                            },
+                            "data": {
+                                "image": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_static": false,
+                                        "is_portrait": false,
+                                        "is_image": false,
+                                        "is_square": false,
+                                        "is_svg": true,
+                                        "is_lazyload": false,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_landscape": false
+                                    },
+                                    "data": {
+                                        "credit": null,
+                                        "description": null,
+                                        "title": null,
+                                        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M16 13.6H0V2.4h16v11.2zm-15-1h14V3.8L8 8.6 1 3.8v8.8zm1.1-9.2l5.9 4 5.9-4H2.1z\"/></svg>",
+                                        "look_number": null,
+                                        "width": null,
+                                        "alt_text": null
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "SVG"
+                                },
+                                "link": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_blank": true,
+                                        "is_nofollow": false
+                                    },
+                                    "data": {
+                                        "url": "mailto:?body=http://localhost:3000/article/calvin-klein-aw18-show-front-row&subject=No%20Show%20On%20Planet%20Fashion%20Attracts%20The%20Celebrity%20Turnout%20Of%20Calvin%20Klein",
+                                        "title": "email"
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": "btn-share btn-share--light btn-share--email"
+                                    },
+                                    "type": "Link"
+                                }
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "LinkedImage"
+                        },
+                        "index": 0
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "ListItem"
+                }, {
+                    "translation": {},
+                    "state": {
+                        "is_first": false,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {},
+                            "state": {
+                                "is_static": false,
+                                "is_linked": true,
+                                "is_svg": false,
+                                "is_image": false,
+                                "is_picture": false
+                            },
+                            "data": {
+                                "image": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_static": false,
+                                        "is_portrait": false,
+                                        "is_image": false,
+                                        "is_square": false,
+                                        "is_svg": true,
+                                        "is_lazyload": false,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_landscape": false
+                                    },
+                                    "data": {
+                                        "credit": null,
+                                        "description": null,
+                                        "title": null,
+                                        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M14.4 4.7v.4c0 4.3-3.3 9.3-9.3 9.3-1.9 0-3.6-.5-5-1.5h.8c1.5 0 3-.5 4.1-1.4-1.4 0-2.6-1-3.1-2.3.2 0 .4.1.6.1.3 0 .6 0 .9-.1C1.8 9 .6 7.7.6 6.1c.4.2.9.4 1.5.4C1.2 5.9.7 4.9.7 3.7c0-.6.2-1.2.4-1.7 1.6 2 4 3.3 6.8 3.4-.1-.1-.1-.4-.1-.6 0-1.8 1.5-3.3 3.3-3.3.9 0 1.8.4 2.4 1 .7-.1 1.5-.4 2.1-.8-.2.8-.8 1.4-1.4 1.8.6 0 1.2-.2 1.8-.5-.4.7-1 1.3-1.6 1.7z\"/></svg>",
+                                        "look_number": null,
+                                        "width": null,
+                                        "alt_text": null
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "SVG"
+                                },
+                                "link": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_blank": true,
+                                        "is_nofollow": false
+                                    },
+                                    "data": {
+                                        "url": "https://twitter.com/intent/tweet?url=http://localhost:3000/article/calvin-klein-aw18-show-front-row&text=No%20Show%20On%20Planet%20Fashion%20Attracts%20The%20Celebrity%20Turnout%20Of%20Calvin%20Klein",
+                                        "title": "twitter"
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": "btn-share btn-share--light btn-share--twitter"
+                                    },
+                                    "type": "Link"
+                                }
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "LinkedImage"
+                        },
+                        "index": 1
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "ListItem"
+                }, {
+                    "translation": {},
+                    "state": {
+                        "is_first": false,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {},
+                            "state": {
+                                "is_static": false,
+                                "is_linked": true,
+                                "is_svg": false,
+                                "is_image": false,
+                                "is_picture": false
+                            },
+                            "data": {
+                                "image": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_static": false,
+                                        "is_portrait": false,
+                                        "is_image": false,
+                                        "is_square": false,
+                                        "is_svg": true,
+                                        "is_lazyload": false,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_landscape": false
+                                    },
+                                    "data": {
+                                        "credit": null,
+                                        "description": null,
+                                        "title": null,
+                                        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M5.9 3.1v2.2H4.3V8h1.6v8h3.3V8h2.2s.2-1.3.3-2.7H9.2V3.4c0-.3.4-.6.7-.6h1.8V0H9.3C5.8 0 5.9 2.7 5.9 3.1zm0 0\"/></svg>",
+                                        "look_number": null,
+                                        "width": null,
+                                        "alt_text": null
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "SVG"
+                                },
+                                "link": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_blank": true,
+                                        "is_nofollow": false
+                                    },
+                                    "data": {
+                                        "url": "https://www.facebook.com/dialog/share?app_id=449870811704655&display=popup&href=http://localhost:3000/article/calvin-klein-aw18-show-front-row&redirect_uri=http://localhost:3000/article/calvin-klein-aw18-show-front-row&picture=https://vg-staging-images.condecdn.net/image/yqEeeZM16vG/crop/1440/0.523560209424/f/rexfeatures_9376146ae.jpg",
+                                        "title": "facebook"
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": "btn-share btn-share--light btn-share--facebook"
+                                    },
+                                    "type": "Link"
+                                }
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "LinkedImage"
+                        },
+                        "index": 2
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "ListItem"
+                }, {
+                    "translation": {},
+                    "state": {
+                        "is_first": false,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {},
+                            "state": {
+                                "is_static": false,
+                                "is_linked": true,
+                                "is_svg": false,
+                                "is_image": false,
+                                "is_picture": false
+                            },
+                            "data": {
+                                "image": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_static": false,
+                                        "is_portrait": false,
+                                        "is_image": false,
+                                        "is_square": false,
+                                        "is_svg": true,
+                                        "is_lazyload": false,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_landscape": false
+                                    },
+                                    "data": {
+                                        "credit": null,
+                                        "description": null,
+                                        "title": null,
+                                        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M12.1 9.6c0-.1-.2-.1-.4-.2s-1.1-.6-1.3-.6c-.2-.1-.3-.1-.4.1-.1.1-.5.6-.6.7-.1.1-.2.1-.4 0s-.9-.3-1.6-.9c-.6-.5-1-1.1-1.1-1.3-.1-.2 0-.3.1-.4l.3-.3c.1-.1.1-.2.2-.3.1-.1 0-.2 0-.3 0-.1-.4-1-.6-1.4-.2-.5-.3-.5-.4-.5h-.4c-.1 0-.3 0-.5.2-.2.3-.7.7-.7 1.7 0 .9.7 1.8.8 1.9.1.1 1.3 2.1 3.3 2.9 2 .8 2 .5 2.3.5.4 0 1.1-.5 1.3-.9.2-.5.2-.8.1-.9m-4-8.4c-3.6 0-6.6 2.9-6.6 6.6 0 1.4.5 2.8 1.3 3.8L2 14.1l2.5-.8c1 .7 2.3 1.1 3.6 1.1 3.6 0 6.6-2.9 6.6-6.6 0-3.6-2.9-6.6-6.6-6.6M16 7.8c0 4.3-3.5 7.8-7.9 7.8-1.4 0-2.7-.4-3.8-1L0 16l1.4-4.2C.7 10.6.3 9.2.3 7.8.3 3.5 3.8 0 8.1 0 12.5 0 16 3.5 16 7.8\"/></svg>",
+                                        "look_number": null,
+                                        "width": null,
+                                        "alt_text": null
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "SVG"
+                                },
+                                "link": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_blank": true,
+                                        "is_nofollow": false
+                                    },
+                                    "data": {
+                                        "url": "whatsapp://send?text=http://localhost:3000/article/calvin-klein-aw18-show-front-row",
+                                        "title": "whatsapp"
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": "btn-share btn-share--light btn-share--whatsapp"
+                                    },
+                                    "type": "Link"
+                                }
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "LinkedImage"
+                        },
+                        "index": 3
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": "a-share__list-item--mobile"
+                    },
+                    "type": "ListItem"
+                }, {
+                    "translation": {},
+                    "state": {
+                        "is_first": false,
+                        "is_last": true
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {},
+                            "state": {
+                                "is_static": false,
+                                "is_linked": true,
+                                "is_svg": false,
+                                "is_image": false,
+                                "is_picture": false
+                            },
+                            "data": {
+                                "image": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_static": false,
+                                        "is_portrait": false,
+                                        "is_image": false,
+                                        "is_square": false,
+                                        "is_svg": true,
+                                        "is_lazyload": false,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_landscape": false
+                                    },
+                                    "data": {
+                                        "credit": null,
+                                        "description": null,
+                                        "title": null,
+                                        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M8 0C3.6 0 0 3.6 0 8c0 3.3 2 6.1 4.8 7.3 0-.6 0-1.2.1-1.8.2-.6 1-4.4 1-4.4s-.2-.5-.2-1.2c0-1.2.7-2.1 1.5-2.1s1.1.5 1.1 1.2-.5 1.8-.7 2.8c-.2.8.4 1.5 1.3 1.5 1.5 0 2.5-1.9 2.5-4.3 0-1.8-1.2-3.1-3.3-3.1-2.4 0-3.9 1.8-3.9 3.8 0 .7.2 1.2.5 1.6.1.2.2.2.1.4 0 .1-.1.5-.2.6-.1.2-.2.3-.4.2-1.1-.5-1.6-1.7-1.6-3.1 0-2.3 1.9-5 5.7-5 3.1 0 5.1 2.2 5.1 4.6 0 3.1-1.7 5.5-4.3 5.5-.9 0-1.7-.5-2-1 0 0-.5 1.8-.6 2.2-.2.6-.5 1.2-.8 1.7.8.5 1.5.6 2.3.6 4.4 0 8-3.6 8-8s-3.6-8-8-8z\"/></svg>",
+                                        "look_number": null,
+                                        "width": null,
+                                        "alt_text": null
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "SVG"
+                                },
+                                "link": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_blank": true,
+                                        "is_nofollow": false
+                                    },
+                                    "data": {
+                                        "url": "https://www.pinterest.com/pin/create/button/?url=http://localhost:3000/article/calvin-klein-aw18-show-front-row&description=No%20Show%20On%20Planet%20Fashion%20Attracts%20The%20Celebrity%20Turnout%20Of%20Calvin%20Klein&media=https://vg-staging-images.condecdn.net/image/yqEeeZM16vG/crop/1620/f/rexfeatures_9376146ae.jpg",
+                                        "title": "pinterest"
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": "btn-share btn-share--light btn-share--pinterest"
+                                    },
+                                    "type": "Link"
+                                }
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "LinkedImage"
+                        },
+                        "index": 4
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "ListItem"
+                }],
+                "length": 5
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "List"
+        },
+        "image_list": {
+            "translation": {},
+            "state": {},
+            "data": {
+                "items": [{
+                    "translation": {},
+                    "state": {
+                        "is_first": true,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {},
+                            "state": {
+                                "is_static": false,
+                                "is_portrait": false,
+                                "is_image": true,
+                                "is_square": false,
+                                "is_svg": false,
+                                "is_lazyload": true,
+                                "is_linked": false,
+                                "is_picture": false,
+                                "is_landscape": true
+                            },
+                            "data": {
+                                "description": "<p class=\"bb-p\">Image <strong class=\"bb-strong\">description</strong></p>",
+                                "title": "Image title",
+                                "orientation": "landscape",
+                                "look_number": null,
+                                "alt_text": "Image title",
+                                "filename": null,
+                                "credit": "Image credit",
+                                "image_url": "https://vg-staging-images.condecdn.net/image/ZQeNOP6Q27R/crop/405/landscape/f/1020jpe0g.jpeg",
+                                "srcset": "https://vg-staging-images.condecdn.net/image/ZQeNOP6Q27R/crop/405/landscape/f/1020jpe0g.jpeg 405w, https://vg-staging-images.condecdn.net/image/ZQeNOP6Q27R/crop/810/landscape/f/1020jpe0g.jpeg 810w, https://vg-staging-images.condecdn.net/image/ZQeNOP6Q27R/crop/1020/landscape/f/1020jpe0g.jpeg 1020w",
+                                "width": null,
+                                "uid": "ZQeNOP6Q27R"
+                            },
+                            "style": {
+                                "padding_top": "66.666666667%",
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "Image"
+                        },
+                        "index": 0
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": "a-header__image-constrain--landscape"
+                    },
+                    "type": "ListItem"
+                }],
+                "length": 1
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "List"
+        },
+        "teaser": "This is an example teaser for the article!",
+        "sponsor": null,
+        "date": {
+            "translation": {},
+            "state": {},
+            "data": {
+                "date": "2018-02-14 09:22:56+00:00",
+                "relative_time": "14 Feb 2018",
+                "label": "Wednesday 14 February 2018"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "Date"
+        },
+        "primary_tag": {
+            "translation": {},
+            "state": {
+                "has_link": true,
+                "is_sponsored": false
+            },
+            "data": {
+                "link": {
+                    "translation": {},
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "data": {
+                        "url": "http://localhost:3000/person/calvin-klein",
+                        "title": "Calvin Klein"
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "Link"
+                },
+                "sponsor": null,
+                "event_information": null,
+                "title": "Calvin Klein"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "Tag"
+        },
+        "byline": "<a href=\"/profile/anders-christian-madsen\">Anders Christian Madsen</a> and <a href=\"/profile/adam-welch\">Adam Welch</a>",
+        "title": "No Show On Planet Fashion Attracts The Celebrity Turnout Of Calvin Klein",
+        "url": "http://localhost:3000/article/calvin-klein-aw18-show-front-row",
+        "review_information": null,
+        "secondary_tag": null,
+        "event_information": {
+            "data": {
+                "title": "Event title",
+                "location": "Event location",
+                "ticket_link": {
+                    "data": {
+                        "title": "Ticket link",
+                        "url": "#link"
+                    }
+                },
+                "date_range_html": "<time>14 Feb 2018</time>"
+            }
+        },
+        "link": {
+            "translation": {},
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false
+            },
+            "data": {
+                "url": "http://localhost:3000/article/calvin-klein-aw18-show-front-row",
+                "title": "No Show On Planet Fashion Attracts The Celebrity Turnout Of Calvin Klein"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "Link"
+        },
+        "type": "podcast"
+    },
+    "style": {
+        "inline": "",
+        "cls": ""
+    },
+    "type": "Article"
+}

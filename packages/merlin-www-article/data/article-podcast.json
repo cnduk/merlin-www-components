@@ -1,0 +1,84 @@
+{
+    "translation": {},
+    "state": {},
+    "data": {
+        "rss_url": "http://localhost:3000/rss/podcast",
+        "title": "Podcast title ha",
+        "analytics_url": "http://www.podtrac.com/pts/redirect.mp3/butts.mp3",
+        "podcast_url": "butts.mp3",
+        "series_tag": {
+            "translation": {},
+            "state": {
+                "has_link": true,
+                "is_sponsored": false
+            },
+            "data": {
+                "link": {
+                    "translation": {},
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "data": {
+                        "url": "http://localhost:3000/series/what-would-you-do",
+                        "title": "What Would You Do"
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "Link"
+                },
+                "sponsor": null,
+                "event_information": null,
+                "title": "What Would You Do"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "Tag"
+        },
+        "duration": "10:10:10",
+        "topic_tag": {
+            "translation": {},
+            "state": {
+                "has_link": true,
+                "is_sponsored": false
+            },
+            "data": {
+                "link": {
+                    "translation": {},
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "data": {
+                        "url": "http://localhost:3000/topic/10-best",
+                        "title": "10 Best"
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "Link"
+                },
+                "sponsor": null,
+                "event_information": null,
+                "title": "10 Best"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "Tag"
+        },
+        "itunes_url": "itpc://localhost:3000/rss/podcast",
+        "episode_number": null
+    },
+    "style": {
+        "inline": "",
+        "cls": ""
+    },
+    "type": "Podcast"
+}

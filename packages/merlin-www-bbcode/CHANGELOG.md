@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.13.0"></a>
+# [1.13.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.12.0...@cnbritain/merlin-www-bbcode@1.13.0) (2018-04-13)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** add js ([70aca6c](https://github.com/cnduk/merlin-www-components/commit/70aca6c))
+* **merlin-www-bbcode:** correct gallery col styles in wireframe ([94ec75b](https://github.com/cnduk/merlin-www-components/commit/94ec75b))
+* **merlin-www-bbcode:** correct padding on glamour gallery card title ([44ea511](https://github.com/cnduk/merlin-www-components/commit/44ea511))
+* **merlin-www-bbcode:** correct video embed for glamour ([1f28564](https://github.com/cnduk/merlin-www-components/commit/1f28564))
+
+
+### Features
+
+* **merlin-www-bbcode:** add inline and block styles for brides ([f6f64f9](https://github.com/cnduk/merlin-www-components/commit/f6f64f9))
+* **merlin-www-bbcode:** add styles for article, gallery and video card for brides ([48b4f20](https://github.com/cnduk/merlin-www-components/commit/48b4f20))
+* **merlin-www-bbcode:** update article, gallery and video data ([58e93c6](https://github.com/cnduk/merlin-www-components/commit/58e93c6))
+
+
+
+
 <a name="1.12.0"></a>
 # [1.12.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.11.2...@cnbritain/merlin-www-bbcode@1.12.0) (2018-04-06)
 
