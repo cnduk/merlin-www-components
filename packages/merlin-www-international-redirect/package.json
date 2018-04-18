@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-international-redirect",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "",
   "main": "js/index.js",
   "scripts": {
@@ -12,12 +12,12 @@
   "license": "ISC",
   "dependencies": {
     "@cnbritain/merlin-www-common": "^1.13.1",
-    "@cnbritain/merlin-www-image": "^1.9.5",
+    "@cnbritain/merlin-www-image": "^1.9.6",
     "@cnbritain/merlin-www-js-utils": "^1.6.1",
     "eventemitter2": "^4.1.0"
   },
   "devDependencies": {
-    "@cnbritain/merlin-component-demo-server": "^3.1.1",
+    "@cnbritain/merlin-component-demo-server": "^3.2.0",
     "eslint": "^4.14.0",
     "eslint-plugin-compat": "^2.2.0"
   }

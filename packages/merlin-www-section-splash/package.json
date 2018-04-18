@@ -1,6 +1,6 @@
 {
     "name": "@cnbritain/merlin-www-section-splash",
-    "version": "1.8.1",
+    "version": "1.8.2",
     "description": null,
     "main": "js/index.js",
     "scripts": {
@@ -9,13 +9,13 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "@cnbritain/merlin-component-demo-server": "^3.1.1"
+        "@cnbritain/merlin-component-demo-server": "^3.2.0"
     },
     "dependencies": {
-        "@cnbritain/merlin-www-buttons": "^1.7.1",
-        "@cnbritain/merlin-www-card": "^1.14.1",
-        "@cnbritain/merlin-www-card-list": "^1.12.1",
+        "@cnbritain/merlin-www-buttons": "^1.7.2",
+        "@cnbritain/merlin-www-card": "^1.15.0",
+        "@cnbritain/merlin-www-card-list": "^1.12.2",
         "@cnbritain/merlin-www-common": "^1.13.1",
-        "@cnbritain/merlin-www-image": "^1.9.5"
+        "@cnbritain/merlin-www-image": "^1.9.6"
     }
 }

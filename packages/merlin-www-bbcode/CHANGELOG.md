@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.14.0"></a>
+# [1.14.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.13.1...@cnbritain/merlin-www-bbcode@1.14.0) (2018-04-18)
+
+
+### Features
+
+* **merlin-www-bbcode:** add content wrapper for images ([2cd9490](https://github.com/cnduk/merlin-www-components/commit/2cd9490))
+* **merlin-www-bbcode:** add figure styles for brides ([e26fe0c](https://github.com/cnduk/merlin-www-components/commit/e26fe0c))
+
+
+
+
 <a name="1.13.0"></a>
 # [1.13.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.12.0...@cnbritain/merlin-www-bbcode@1.13.0) (2018-04-13)
 

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.27.0"></a>
+# [1.27.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.26.1...@cnbritain/merlin-www-article@1.27.0) (2018-04-18)
+
+
+### Bug Fixes
+
+* **merlin-www-article:** swap section card list for card list ([d574d28](https://github.com/cnduk/merlin-www-components/commit/d574d28))
+
+
+### Features
+
+* **merlin-www-article:** add gallery styles ([ecb52e5](https://github.com/cnduk/merlin-www-components/commit/ecb52e5))
+
+
+
+
 <a name="1.26.0"></a>
 # [1.26.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.25.0...@cnbritain/merlin-www-article@1.26.0) (2018-04-13)
 

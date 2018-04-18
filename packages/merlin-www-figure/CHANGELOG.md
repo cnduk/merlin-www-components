@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.0"></a>
+# [1.8.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-figure@1.7.5...@cnbritain/merlin-www-figure@1.8.0) (2018-04-18)
+
+
+### Features
+
+* **merlin-www-figure:** add brides ([2d87648](https://github.com/cnduk/merlin-www-components/commit/2d87648))
+
+
+
+
 <a name="1.7.4"></a>
 ## [1.7.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-figure@1.7.3...@cnbritain/merlin-www-figure@1.7.4) (2018-04-13)
 

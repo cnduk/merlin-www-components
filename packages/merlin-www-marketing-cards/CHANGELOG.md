@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.9.0"></a>
+# [1.9.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-marketing-cards@1.8.5...@cnbritain/merlin-www-marketing-cards@1.9.0) (2018-04-18)
+
+
+### Bug Fixes
+
+* **merlin-www-marketing-cards:** update data ([fae6787](https://github.com/cnduk/merlin-www-components/commit/fae6787))
+
+
+### Features
+
+* **merlin-www-marketing-cards:** add brides styles ([8b10f72](https://github.com/cnduk/merlin-www-components/commit/8b10f72))
+
+
+
+
 <a name="1.8.4"></a>
 ## [1.8.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-marketing-cards@1.8.3...@cnbritain/merlin-www-marketing-cards@1.8.4) (2018-04-13)
 
