@@ -4,85 +4,71 @@
 
 .a-gallery__wrapper {
     max-width: $ARTICLE_TOTAL;
-    @include min-screen($ARTICLE_TOTAL) {
-        padding-right: $ARTICLE_RIGHT_TOTAL;
-    }
 }
 
+/**
+ * Infinite scroll message
+ */
 .a-gallery__message {
-    margin-bottom: 40px;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: 60px;
-    }
+    margin: 44px;
 }
 
 .a-gallery__message-btn {
-    @include button-single();
-    @include button-single-light();
+    @include button-single;
+    @include button-single-light;
 
-    &:hover {
-        @include button-single-light-hover();
+    &:hover,
+    &:focus {
+        @include button-single-light-hover;
     }
 }
 
+/**
+ * Gallery navigation
+ */
 .g-image-nav {
-    width: $MOBILE_SIDE_GUTTER;
-
-    @include tablet-size {
-        width: $TABLET_SIDE_GUTTER;
-    }
-
-    @include desktop-size {
-        width: $DESKTOP_SIDE_GUTTER;
-    }
+    padding-right: 14px;
+    width: 32px;
 }
 
 .g-image-nav__btns {
     margin: 0 auto;
-    width: 40px;
+    width: 32px;
 }
 
 .g-image-nav__btn {
-    width: 40px;
-    height: 40px;
+    padding: 16px 0;
+    width: 32px;
 
     svg {
-        width: 20px;
-        height: 20px;
+        fill: $stroller-grey;
+        width: 16px;
     }
 }
 
-.g-image-nav__btn--previous {
-
-}
-
+.g-image-nav__btn--previous {}
 .g-image-nav__btn--next {
-
+    border-top: 1px solid $ballet-grey;
 }
-
 .g-image-nav__btn[disabled] {
     svg {
-        fill: $PORCELAIN;
+        fill: $ballet-grey;
     }
 }
 
+/**
+ * Image and thumbnail views
+ */
 .a-gallery__view {}
 
-ul.a-gallery__image-list {}
-li.a-gallery__image-listitem {
-    margin-bottom: 0px;
+.a-gallery__image-list {}
+.a-gallery__image-listitem {}
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: 60px;
-    }
-}
+ul.a-gallery__thumbnail-list {
+    margin-left: -1px;
+    margin-right: -1px;
 
-.a-gallery__thumbnail-list {
-    margin-left: -2px;
-    margin-right: -2px;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
         margin-left: -12px;
         margin-right: -12px;
     }
@@ -90,33 +76,49 @@ li.a-gallery__image-listitem {
 
 li.a-gallery__thumbnail {
     box-sizing: border-box;
-    margin: 4px 0 0 0;
-    padding: 0 2px;
+    padding: 1px;
 
-    &:nth-child(-n+3) {
-        margin-top: 0;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin: 24px 0 0 0;
-        padding: 0 12px;
+    @include desktop-size {
+        padding: 12px;
     }
 }
 
 .a-gallery__thumbnail-image {}
 .a-gallery__thumbnail-hover {
-    background-color: rgba($BLACK, 0.2);
-    left: 2px;
-    right: 2px;
+    background-color: rgba($black, 0.3);
+    bottom: 1px;
+    left: 1px;
+    height: auto;
+    right: 1px;
+    top: 1px;
     width: auto;
 
     svg {
-        fill: $WHITE;
-        width: 38px;
+        fill: $white;
+        width: 40px;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
+        bottom: 12px;
         left: 12px;
         right: 12px;
+        top: 12px;
     }
 }
+
+
+@include article-large-size {
+
+    .a-gallery__wrapper {
+        padding-right: $ARTICLE_RIGHT_TOTAL;
+    }
+
+    .a-gallery__message {
+        margin: 68px;
+    }
+
+}
+
+@include tablet-size {}
+
+@include desktop-size {}
