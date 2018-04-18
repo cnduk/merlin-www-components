@@ -148,10 +148,22 @@
         renderToFrame(e);
     }
 
+    /**
+     * Its quicker to create a new node and replace it instead of updating
+     * the innerText of a <style> node.
+     */
     function onRenderStyles(e){
         const win = getIframeWindow(ifrRender);
         const elStyles = win.document.getElementById('elStyles');
-        elStyles.innerText = e;
+        const styleParent = elStyles.parentNode;
+
+        // Add news ones
+        const newStyles = document.createElement('style');
+        newStyles.type = 'text/css';
+        newStyles.appendChild(document.createTextNode(e));
+        newStyles.id = 'elStyles';
+
+        styleParent.replaceChild(newStyles, elStyles);
     }
 
     /**
