@@ -2,58 +2,58 @@
 
 @import '../wireframe/wireframe';
 
-.srch-main {
-	background-color: $ebony-clay;
-	box-sizing: border-box;
-	padding: 30px 20px;
-	margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
+// .srch-main {
+// 	background-color: $ebony-clay;
+// 	box-sizing: border-box;
+// 	padding: 30px 20px;
+// 	margin: 0 auto;
+//     max-width: $MAXIMUM_PAGE_WIDTH;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        display: table;
-        padding: 60px 0;
-    }
-}
+//     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+//         display: table;
+//         padding: 60px 0;
+//     }
+// }
 
-.srch-textbox {
-	@include font('MILLER_DISPLAY', 35px, 'BOLD', 35px);
+// .srch-textbox {
+// 	@include font('MILLER_DISPLAY', 35px, 'BOLD', 35px);
 
-	appearance: none;
-	background-color: transparent;
-	border: none;
-	border-bottom: 1px solid $silver-chalice;
-	color: $white;
-	padding: 12px 0;
-	text-align: center;
-	width: 100%;
-}
+// 	appearance: none;
+// 	background-color: transparent;
+// 	border: none;
+// 	border-bottom: 1px solid $silver-chalice;
+// 	color: $white;
+// 	padding: 12px 0;
+// 	text-align: center;
+// 	width: 100%;
+// }
 
-.srch-results {
-	@include font('BRANDON GROTESQUE', 12px, 'BOLD', 12px);
+// .srch-results {
+// 	@include font('BRANDON GROTESQUE', 12px, 'BOLD', 12px);
 
-	color: $silver-chalice;
-	margin: 20px 0 0 0;
-	text-align: center;
-	text-transform: uppercase;
-}
+// 	color: $silver-chalice;
+// 	margin: 20px 0 0 0;
+// 	text-align: center;
+// 	text-transform: uppercase;
+// }
 
 
-@include tablet-size {
+// @include tablet-size {
 
-	.srch-main {
-		padding: 50px 60px;
-	}
+// 	.srch-main {
+// 		padding: 50px 60px;
+// 	}
 
-	.srch-textbox {
-		@include font-size(65px);
-		@include line-height(65px);
+// 	.srch-textbox {
+// 		@include font-size(65px);
+// 		@include line-height(65px);
 
-		padding: 30px 0;
-		text-align: left;
-	}
+// 		padding: 30px 0;
+// 		text-align: left;
+// 	}
 
-	.srch-results {
-		text-align: left;
-	}
+// 	.srch-results {
+// 		text-align: left;
+// 	}
 
-}
+// }
