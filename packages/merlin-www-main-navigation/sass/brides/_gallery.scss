@@ -1,85 +1,85 @@
-.n-gallery-nav {
-    @include opacity(0);
-    @include transition(opacity 0.2s ease-in-out, visibility 0.2s ease-in-out);
-    background-color: $white;
-    bottom: 0;
-    height: 60px;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    visibility: hidden;
-    width: 100%;
+// .n-gallery-nav {
+//     @include opacity(0);
+//     @include transition(opacity 0.2s ease-in-out, visibility 0.2s ease-in-out);
+//     background-color: $white;
+//     bottom: 0;
+//     height: 60px;
+//     left: 0;
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+//     visibility: hidden;
+//     width: 100%;
 
-    &.is-visible {
-        @include opacity(1);
-        visibility: visible;
-    }
+//     &.is-visible {
+//         @include opacity(1);
+//         visibility: visible;
+//     }
 
-    &:before {
-        @include vendor-prefix(transform, translateX(-50%));
-        background-color: red;
-        bottom: 0;
-        content: '';
-        height: 1px;
-        left: 50%;
-        position: absolute;
-        width: 100vw;
-    }
-}
+//     &:before {
+//         @include vendor-prefix(transform, translateX(-50%));
+//         background-color: red;
+//         bottom: 0;
+//         content: '';
+//         height: 1px;
+//         left: 50%;
+//         position: absolute;
+//         width: 100vw;
+//     }
+// }
 
-.n-gallery-counter {
-    @include line-height(60px);
-    padding: 0 20px;
-}
+// .n-gallery-counter {
+//     @include line-height(60px);
+//     padding: 0 20px;
+// }
 
-.n-gallery-counter__current {
-    @include font("BRANDON GROTESQUE", 15px, 700, 20px);
-    color: red;
-    letter-spacing: 0px;
-    padding-right: 5px;
-}
+// .n-gallery-counter__current {
+//     @include font("BRANDON GROTESQUE", 15px, 700, 20px);
+//     color: red;
+//     letter-spacing: 0px;
+//     padding-right: 5px;
+// }
 
-.n-gallery-counter__slash {
-    @include font("BRANDON GROTESQUE", 15px, 400, 20px);
-    color: red;
-    letter-spacing: 0px;
-    padding-right: 5px;
-}
+// .n-gallery-counter__slash {
+//     @include font("BRANDON GROTESQUE", 15px, 400, 20px);
+//     color: red;
+//     letter-spacing: 0px;
+//     padding-right: 5px;
+// }
 
-.n-gallery-counter__total {
-    @include font("BRANDON GROTESQUE", 15px, 400, 20px);
-    color: red;
-    letter-spacing: 0px;
-}
+// .n-gallery-counter__total {
+//     @include font("BRANDON GROTESQUE", 15px, 400, 20px);
+//     color: red;
+//     letter-spacing: 0px;
+// }
 
-.n-gallery-toggle,
-a.n-gallery-close {
-    display: inline-block;
-    font-size: 0;
-    height: 60px;
-    line-height: 60px;
-    width: 60px;
+// .n-gallery-toggle,
+// a.n-gallery-close {
+//     display: inline-block;
+//     font-size: 0;
+//     height: 60px;
+//     line-height: 60px;
+//     width: 60px;
 
-    svg {
-        height: 100%;
-        fill: red;
-        width: 20px;
-    }
-}
-.n-gallery-toggle--list,
-.n-gallery-toggle--grid {
-    border-left: 1px solid red;
-    border-right: 1px solid red;
-    display: inline-block;
-    font-size: 0;
-    height: 60px;
-    line-height: 60px;
-    width: 60px;
+//     svg {
+//         height: 100%;
+//         fill: red;
+//         width: 20px;
+//     }
+// }
+// .n-gallery-toggle--list,
+// .n-gallery-toggle--grid {
+//     border-left: 1px solid red;
+//     border-right: 1px solid red;
+//     display: inline-block;
+//     font-size: 0;
+//     height: 60px;
+//     line-height: 60px;
+//     width: 60px;
 
-    svg {
-        height: 100%;
-        fill: red;
-        width: 20px;
-    }
-}
+//     svg {
+//         height: 100%;
+//         fill: red;
+//         width: 20px;
+//     }
+// }
