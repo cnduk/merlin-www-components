@@ -186,3 +186,24 @@
         }
     }
 }
+
+.c-card-list--mag-magazines {
+    margin: -22px -8px;
+
+    @include four-column-size() {
+        margin: -34px -12px;
+    }
+
+    .c-card-list__item {
+        display: inline-block;
+        padding: 0 8px;
+        margin: 22px 0;
+        width: 50%;
+
+        @include four-column-size() {
+            margin: 34px 0;
+            padding: 0 12px;
+            width: 25%;
+        }
+    }
+}
