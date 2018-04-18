@@ -9,6 +9,10 @@
 @mixin card-switcher-large() {
     @include card-portrait;
     @include card-portrait-large;
+
+    .c-card__image {
+        border-radius: 0;
+    }
 }
 
 .c-card--switcher {
