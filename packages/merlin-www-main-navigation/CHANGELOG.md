@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.8"></a>
+## [1.8.8](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-main-navigation@1.8.7...@cnbritain/merlin-www-main-navigation@1.8.8) (2018-04-18)
+
+
+### Bug Fixes
+
+* **merlin-www-main-navigation:** correct search parts after styling for brides ([0f4b531](https://github.com/cnduk/merlin-www-components/commit/0f4b531))
+
+
+
+
 <a name="1.8.7"></a>
 ## [1.8.7](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-main-navigation@1.8.6...@cnbritain/merlin-www-main-navigation@1.8.7) (2018-04-18)
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.14.0"></a>
+# [1.14.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.13.4...@cnbritain/merlin-www-ads@1.14.0) (2018-04-18)
+
+
+### Features
+
+* **merlin-www-ads:** add brides styles ([4b862e7](https://github.com/cnduk/merlin-www-components/commit/4b862e7))
+
+
+
+
 <a name="1.13.3"></a>
 ## [1.13.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.13.2...@cnbritain/merlin-www-ads@1.13.3) (2018-04-13)
 
