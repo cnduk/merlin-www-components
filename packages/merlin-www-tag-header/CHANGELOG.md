@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.10.1"></a>
+## [1.10.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.10.0...@cnbritain/merlin-www-tag-header@1.10.1) (2018-04-19)
+
+
+### Bug Fixes
+
+* **merlin-www-tag-header:** add brides to merlin ([e4282b3](https://github.com/cnduk/merlin-www-components/commit/e4282b3))
+
+
+
+
 <a name="1.10.0"></a>
 # [1.10.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.9.9...@cnbritain/merlin-www-tag-header@1.10.0) (2018-04-19)
 
