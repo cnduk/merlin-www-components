@@ -248,6 +248,32 @@
 }
 
 /**
+ * Callout
+ */
+
+.bb-callout {
+    background-color: $white;
+    border: 1px solid $ballet-grey;
+    margin: 40px 0;
+    padding: 34px 20px;
+    position: relative;
+
+    :last-child {
+        margin-bottom: 0;
+    }
+}
+.bb-callout:before {
+    background-color: $ballet-grey;
+    content: '';
+    display: block;
+    height: 32px;
+    left: 50%;
+    position: absolute;
+    top: -16px;
+    width: 1px;
+}
+
+/**
  * Infobox
  */
 
@@ -258,6 +284,11 @@
     padding: 34px 20px;
     position: relative;
     text-align: center;
+
+    :last-child {
+        margin-bottom: 0;
+    }
+
 }
 .bb-infobox:before {
     background-color: $ballet-grey;
