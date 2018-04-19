@@ -68,10 +68,10 @@
 .n-main__nav-logo--takeover {}
 
 .n-main__nav-title {
-    //@include font("MILLER_DISPLAY", 18px, 600, 60px);
-    color: red;
+    @include font("FREIGHT DISPLAY PRO", 24px, 400, 60px, 10);
+    color: $stroller-grey;
     display: none;
-    left: 180px;
+    left: 162px;
     letter-spacing: 0px;
     overflow: hidden;
     position: fixed;
@@ -84,9 +84,13 @@
         display: block;
     }
 
+    @include desktop-size {
+        left: 172px;
+    }
+
     @include min-screen($MAXIMUM_PAGE_WIDTH + 60px) {
         position: absolute;
-        left: 150px;
+        left: 142px;
     }
 }
 
