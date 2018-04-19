@@ -8,11 +8,14 @@
 
 .a-related-tags {
     margin: 40px auto 0 auto;
-    max-width: 580px;
 }
 .a-related-tags__wrapper {}
 
-.a-footer--gallery {}
+.a-footer--gallery {
+    .a-footer__wrapper {
+        max-width: $ARTICLE_TOTAL;
+    }
+}
 .a-footer--video {}
 
 @include article-large-size {

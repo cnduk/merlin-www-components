@@ -134,11 +134,15 @@
 }
 
 .a-header__image-caption {
-    @include font('SOLEIL', 12px, null, 16px);
-    color: $candle-grey;
-    letter-spacing: 0.03em;
     margin: 0;
     padding: 0;
+
+    .bb-p {
+        @include font('SOLEIL', 12px, null, 16px);
+        color: $candle-grey;
+        letter-spacing: 0.03em;
+        margin: 0 0 6px 0;
+    }
 }
 
 .a-header__image-credit {
@@ -210,6 +214,10 @@
         @include font-size(16px);
         @include line-height(24px);
         margin-bottom: 26px;
+    }
+
+    .a-header__image {
+        padding: 0;
     }
 
     .a-header--gallery {
