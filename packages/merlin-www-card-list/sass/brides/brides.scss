@@ -209,3 +209,18 @@
         }
     }
 }
+
+.c-card-list--c-contributors {
+    .c-card-list__item {
+        display: inline-block;
+        margin: 0 0 21px 0;
+        width: 100%;
+    }
+
+    @include tablet-size {
+        .c-card-list__item {
+            width: 33.33%;
+        }
+    }
+
+}
