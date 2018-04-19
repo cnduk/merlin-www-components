@@ -1,0 +1,47 @@
+// -------------------- //
+// Contributor
+// -------------------- //
+@mixin card-contributor() {
+    @include card-portrait;
+
+    margin: 0 auto;
+    max-width: 280px;
+
+    .c-card__images {
+        border: 1px solid $ballet-grey;
+        border-radius: 50%;
+        margin: 0 auto 56px auto;
+        max-width: 124px;
+        padding: 6px;
+    }
+    .c-card__images:after {
+        bottom: -44px;
+    }
+
+    .c-card__image {
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+}
+@mixin card-contributor-small() {
+    @include card-portrait-small;
+}
+@mixin card-contributor-large() {
+    @include card-portrait-small;
+}
+
+.c-card--contributor {
+    @include card-contributor;
+    @include card-contributor-small;
+}
+
+.c-card--contributor-small {
+    @include card-contributor;
+    @include card-contributor-small;
+}
+
+.c-card--contributor-large {
+    @include card-contributor;
+    @include card-contributor-large;
+}
