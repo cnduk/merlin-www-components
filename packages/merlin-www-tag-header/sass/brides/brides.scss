@@ -1,172 +1,270 @@
 @import "@cnbritain/merlin-www-common:brides";
-@import "@cnbritain/merlin-www-card-list:brides";
+
 @import "@cnbritain/merlin-www-image:brides";
 @import "@cnbritain/merlin-www-topic-strip:brides";
+@import "@cnbritain/merlin-www-card-list:brides";
+@import "@cnbritain/merlin-www-gallery-strip:brides";
 
 @import "../wireframe/wireframe";
 
+
+
 .tg-header {
-    margin: $MOBILE_SLICE_MARGIN 0;
-    padding: 0 $MOBILE_SIDE_GUTTER;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin: $TABLET_SLICE_MARGIN 0;
-        padding: 0 $TABLET_SIDE_GUTTER;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin: $DESKTOP_SLICE_MARGIN 0;
-        padding: 0 $DESKTOP_SIDE_GUTTER;
-    }
-}
-
-.tg-header--video {
-    .tg-header__intro__image {
-        height: 38px;
-        margin: 0 auto;
-        width: 230px;
-
-        svg {
-            fill: $mine-shaft;
-        }
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            height: 45px;
-            width: 315px;
-        }
-    }
-}
-
-.tg-header--profile {
-    .tg-header__intro__image {
-        border-radius: 50%;
-        height: 85px;
-        margin: 0 auto 20px auto;
-        overflow: hidden;
-        width: 85px;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            width: 130px;
-            height: 130px;
-        }
-
-        img {
-            border-radius: 50%;
-            height: 100%;
-            overflow: hidden;
-            width: 100%;
-        }
-    }
-}
-
-.tg-header--brand,
-.tg-header--event,
-.tg-header--topic {
-    .tg-header__intro__image {
-        margin-bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 200px;
-
-        img {
-            width: 100%;
-        }
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            margin-bottom: 30px;
-            width: 250px;
-        }
-    }
-}
-
-.tg-header__wrapper {
-    max-width: $MAXIMUM_PAGE_WIDTH;
-    margin: 0 auto;
-}
-
-.tg-header__intro {}
-.tg-header__intro__image {}
-
-.tg-header__title {
-    @include font("MILLER_DISPLAY", 40px, 'NORMAL', 41px);
-    color: $mine-shaft;
-    letter-spacing: 0;
-    margin: 0 0 10px 0;
+    padding: 36px 0 0 0;
     text-align: center;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(65px);
-        @include line-height(68px);
-        margin-bottom: 20px;
-    }
 }
-
 .tg-header__separator {
     display: none;
 }
 
-.tg-header__description {
-    color: $mine-shaft;
-    margin: 10px auto 30px auto;
-    text-align: center;
+@include tablet-size {
+    padding-top: 48px;
+}
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin: 20px auto 40px auto;
+
+/**
+ * Intro
+ * Hero, logo and title
+ */
+
+.tg-header__intro {
+    padding: 0 $MOBILE_SIDE_GUTTER;
+}
+
+.tg-header__hero {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+
+    img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+    }
+}
+.tg-header__hero-credit {}
+
+.tg-header__intro__image {
+    margin: 0 auto 24px auto;
+    max-width: 168px;
+
+    img {
+        display: block;
+        margin: 0 auto;
     }
 
-    a {
-        border-bottom: 2px solid $careys-pink;
-        color: $mine-shaft;
-        padding-bottom: 2px;
+    @include tablet-size {
+        max-width: 240px;
     }
 
-    p {
-        @include font("MILLER_DISPLAY", 18px, 400, 22px);
-        color: $mine-shaft;
-        font-style: italic;
-        letter-spacing: 0;
+}
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            @include font-size(23px);
-            @include line-height(28px);
-        }
+.tg-header__title {
+    @include font("FREIGHT DISPLAY PRO", 48px, 'NORMAL', 44px, 20);
+    color: $stroller-grey;
+    display: block;
+    font-style: italic;
+    margin: 0 auto;
+    max-width: 800px;
+
+    span {
+        box-shadow: inset 0 -0.25em 0 0 $white,
+                    inset 0 -0.65em 0 0 rgba($champagne, 0.7);
     }
 
-    > *:first-child {
-        margin-top: 0;
-    }
-
-    > *:last-child {
-        margin-bottom: 0;
+    @include tablet-size {
+        @include font-size(72px);
+        @include line-height(72px);
     }
 }
 
-.tg-header__topic-strip {
-    margin: 20px auto;
+.has-hero {
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin: 30px auto;
+    .tg-header__intro {
+        overflow: hidden;
+        padding-top: 66.875%;
+        position: relative;
+
+        @include tablet-size {
+            padding-top: 30%;
+        }
     }
+
+    .tg-header__title {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+
+        color: $white;
+        text-shadow: 0 2px 16px rgba($black, 0.33);
+
+        span {
+            box-shadow: none;
+        }
+    }
+
+}
+
+
+/**
+ * Description + expand
+ */
+
+.tg-header__description {
+    margin: 36px auto 42px auto;
+    max-width: 800px;
+    padding: 0 $MOBILE_SIDE_GUTTER;
+}
+.tg-header__description-expand {}
+.tg-header__expand-btn {
+    @include button-single;
+    @include button-single-light;
+
+    &:hover,
+    &:focus {
+        @include button-single-light-hover;
+    }
+}
+
+
+
+/**
+ * Sponsor
+ */
+
+.tg-header__sponsor {
+    @include font('SOLEIL', 10px, null, 16px);
+    border-top: 1px solid $ballet-grey;
+    color: $stroller-grey;
+    letter-spacing:0.12em;
+    margin: 26px $MOBILE_SIDE_GUTTER;
+    padding: 18px 0 0 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    a {
+        color: inherit;
+    }
+}
+.tg-header__sponsor-prefix {}
+.tg-header__sponsor-image {
+    display: block;
+    margin: 4px auto 0 auto;
+    max-width: 120px;
+    vertical-align: middle;
+}
+.tg-header__sponsor-name {
+    font-weight: bold;
+}
+
+@include tablet-size {
+    .tg-header__sponsor {
+        display: inline-block;
+        margin-top: 34px;
+    }
+    .tg-header__sponsor-image {
+        display: inline-block;
+        margin-left: 10px;
+    }
+}
+
+
+/**
+ * Event information
+ */
+
+.tg-header__event-meta {
+    @include font('SOLEIL', 14px, null, 16px, 20);
+    color: $candle-grey;
+    margin: 28px auto 44px auto;
+    text-align: center;
+}
+.tg-header__event-meta__start-date {}
+.tg-header__event-meta__location {}
+
+
+
+
+/**
+ * Navigation list
+ */
+
+.tg-header__topic-strip {
+    margin: 42px auto 36px auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
 
     .c-topic-strip {
         text-align: center;
     }
+}
 
-    .c-topic-strip__btn {
-        @include button-group();
-        @include button-group-light();
+@include tablet-size {
+    .tg-header__topic-strip {
+        margin-bottom: 44px;
+    }
+}
 
-        &:hover {
-            @include button-group-light-hover();
+
+
+
+/**
+ * Featured cards
+ */
+
+.tg-header__cards {
+    margin: 36px auto 0 auto;
+    padding: 0 $MOBILE_SIDE_GUTTER;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+}
+
+@include tablet-size {
+    .tg-header__cards {
+        padding: 0 $TABLET_SIDE_GUTTER;
+    }
+}
+
+
+/**
+ * Show card carousel
+ */
+
+
+
+/**
+ * Style files
+ */
+
+
+
+
+
+
+
+
+
+/**
+ * Header variants
+ */
+
+.tg-header--profile {
+    .tg-header__intro__image {
+        border-radius: 50%;
+        max-width: 72px;
+        overflow: hidden;
+    }
+}
+
+@include tablet-size {
+    .tg-header--profile {
+        .tg-header__intro__image {
+            max-width: 96px;
         }
     }
 }
 
-.tg-header__cards {
-    margin: 25px auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin: 60px auto;
-    }
-}
