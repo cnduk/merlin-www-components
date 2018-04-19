@@ -14,22 +14,28 @@
     background-color: $champagne;
 }
 
-// TODO: tidy this once we have fonts in
 .bb-dropcap {
     @include font('FREIGHT DISPLAY PRO', 102px, 'BOLD', 102px);
     color: $sweet-pea;
     float: left;
-    margin: 0 12px 14px 0;
+    // This is the same height as 3 lines of text
+    height: 0.75em;
+    // Margin bottom helps to kick out the fourth line
+    margin: 0 12px 15px 0;
     text-transform: uppercase;
+}
+// NOTE: firefox aligns up nicely already
+// .is-firefox .bb-dropcap {}
+.is-chrome .bb-dropcap,
+.is-safari .bb-dropcap {
+    margin-top: -0.1em;
 }
 
 @include text-size-large {
-
     .bb-dropcap {
         @include font-size(116px);
         @include line-height(116px);
     }
-
 }
 
 .bb-small {
