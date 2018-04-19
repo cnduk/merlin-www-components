@@ -1,118 +1,78 @@
 @import '@cnbritain/merlin-www-common:brides';
+@import '@cnbritain/merlin-www-image:brides';
 
 @import '../wireframe/wireframe';
 
 .c-gallery-strip {
-    margin: 30px 0;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin: 40px 0;
-    }
+    margin: 36px auto 0 auto;
 }
+
 .c-gallery-strip__wrapper {
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
     position: relative;
 }
 
-.c-gallery-strip__link {}
-.c-gallery-strip__list {}
-li.c-gallery-strip__list__item {
-    background-color: $wild-sand;
+// Image
+.c-gallery-strip__images {
+    position: relative;
+}
+.c-gallery-strip__images:after {
+    background-color: $pink-rose;
+    bottom: -16px;
+    display: block;
+    content: '';
+    height: 32px;
+    left: 50%;
+    position: absolute;
+    width: 1px;
+}
 
-    &:before {
-        display: block;
-        content: "";
-        padding-top: 150%;
-        position: relative;
-    }
-
+.c-gallery-strip__list__item {
     img {
-        bottom: 0;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
         width: 100%;
     }
 }
 
-.c-gallery-strip__detail {
-    position: relative;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-
-    }
-}
-
 .c-gallery-strip__remaining {
-    background-color: rgba($mine-shaft, 0.7);
+    @include font('SOLEIL', 24px, 'BOLD', 24px, 10);
+    background-color: rgba($black, 0.25);
     color: $white;
-    z-index: 1;
 }
+.c-gallery-strip__remaining__label {}
 
-.c-gallery-strip__remaining__prefix {
-    @include font("BRANDON GROTESQUE", 20px, 700, 25px);
-    vertical-align: middle;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(25px);
-        @include line-height(30px);
+@include desktop-size {
+    .c-gallery-strip__remaining {
+        @include font-size(32px);
+        @include line-height(32px);
     }
 }
 
-.c-gallery-strip__remaining__value {
-    @include font("BRANDON GROTESQUE", 25px, 700, 25px);
-    vertical-align: middle;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(30px);
-        @include line-height(30px);
-    }
+
+
+// Content
+.c-gallery-strip__detail {
+    margin: 28px 0 0 0;
 }
 
 .c-gallery-strip__title {
-    @include font("MILLER_DISPLAY", 25px, 700, 27px);
-    color: $mine-shaft;
-    letter-spacing: 0px;
-    margin: 15px 0 0 0;
+    @include font('FREIGHT DISPLAY PRO', 24px, 'NORMAL', 28px);
+    color: $stroller-grey;
+    letter-spacing: 0.01em;
+    margin: 6px 0;
     text-align: center;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(27px);
-        @include line-height(29px);
-        margin: 20px 0 0 0;
-    }
+    text-transform: capitalize;
 }
 
-.c-gallery-strip__subtitle {
-    @include font("MILLER_DISPLAY", 18px, 400, 22px);
-    color: $mine-shaft;
-    font-style: italic;
-    letter-spacing: 0px;
-    margin: 10px 0 0 0;
-    text-align: center;
+.c-gallery-strip__subtitle {}
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        margin-top: 15px;
-    }
-}
 
+
+// Variants
 .c-gallery-strip--tag {
-    margin: 25px 0;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin: 60px 0;
-    }
-
-    .c-gallery-strip__list {
-        text-align: center;
-    }
-
-    .c-gallery-strip__list__item:nth-child(n+4) {
-        display: none;
-    }
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
 
     .c-gallery-strip__list__item:nth-child(3) {
         .c-gallery-strip__remaining {
@@ -120,7 +80,18 @@ li.c-gallery-strip__list__item {
         }
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    .c-gallery-strip__list__item:nth-child(n+4) {
+        display: none;
+    }
+
+    @include tablet-size {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+
+        .c-gallery-strip__list__item {
+            width: 16.66%;
+        }
+
         .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+6) {
             display: inline-block;
         }
@@ -137,18 +108,16 @@ li.c-gallery-strip__list__item {
             }
         }
 
-        .c-gallery-strip__list__item {
-            display: inline-block;
-            width: 16.66%;
-        }
-
-        .c-gallery-strip__detail {
-
-        }
+        .c-gallery-strip__detail {}
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+8) {
+    @include desktop-size {
+
+        .c-gallery-strip__list__item {
+            width: 12.5%;
+        }
+
+        .c-gallery-strip__list__item:nth-child(-n+8) {
             display: inline-block;
         }
 
@@ -158,30 +127,10 @@ li.c-gallery-strip__list__item {
             }
         }
         .c-gallery-strip__list__item:nth-child(8) {
-
             .c-gallery-strip__remaining {
                 display: block;
             }
         }
 
-        .c-gallery-strip__list__item {
-            width: 12.5%;
-        }
-    }
-}
-
-.c-gallery-strip--gutters {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        .c-gallery-strip__list {
-
-        }
-
-        .c-gallery-strip__list__item {
-
-        }
-
-        .c-gallery-strip__remaining {
-
-        }
     }
 }
