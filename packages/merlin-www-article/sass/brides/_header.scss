@@ -35,9 +35,8 @@
 }
 
 .a-header__title {
-    @include font('FREIGHT DISPLAY PRO', 34px, 'NORMAL', 36px);
+    @include font('FREIGHT DISPLAY PRO', 34px, 'NORMAL', 36px, 10);
     color: $stroller-grey;
-    letter-spacing: 0.01em;
     margin: 0 0 14px 0;
     text-align: center;
     text-transform: capitalize;
@@ -71,6 +70,29 @@
 }
 .a-header__byline-prefix,
 .a-header__byline-conjunction {}
+
+
+.a-header__sponsor {
+    @include font('SOLEIL', 10px, null, 16px, 120);
+    border-top: 1px solid $ballet-grey;
+    color: $stroller-grey;
+    margin: 26px 0;
+    padding: 18px 0 0 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+.a-header__sponsor-prefix {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+.a-header__sponsor-name {}
+.a-header__sponsor-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 120px;
+}
+
+
 
 .a-header__meta {
     font-size: 0;
@@ -209,6 +231,22 @@
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
+
+    .a-header__content {
+        text-align: center;
+    }
+
+    .a-header__sponsor {
+        display: inline-block;
+        margin: 34px auto 26px auto;
+    }
+    .a-header__sponsor-prefix {}
+    .a-header__sponsor-name {}
+    .a-header__sponsor-image {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
 }
 
 
@@ -271,8 +309,3 @@
 
 // .a-header__hero {}
 // .a-header__hero-content {}
-
-// .a-header__sponsor {}
-// .a-header__sponsor-prefix {}
-// .a-header__sponsor-name {}
-// .a-header__sponsor-image {}
