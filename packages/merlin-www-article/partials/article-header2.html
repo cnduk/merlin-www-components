@@ -1,0 +1,229 @@
+<header class="a-header{{# state.has_hero }} has-hero{{/ state.has_hero }}{{# state.is_gallery }}{{^ state.has_body }} a-header--gallery{{/ state.has_body }}{{/ state.is_gallery }}">
+
+    {{# state.has_hero }}
+        <div class="a-header__hero">
+            {{# data.image_list }}
+                {{# data.items }}
+                    <figure class="a-header__image">
+                        <div class="a-header__image-constrain {{ style.cls }}">
+                            {{# data.item }}
+                                {{> @cnbritain/merlin-www-image }}
+                            {{/ data.item }}
+                        </div>
+                        {{# data.item }}
+                            <div class="a-header__image-content">
+                                {{# data.title }}
+                                    <div class="a-header__image-title">{{ data.title }}</div>
+                                {{/ data.title }}
+
+                                {{# data.description }}
+                                    <figcaption class="a-header__image-caption">
+                                        {{ &data.description }}
+                                    </figcaption>
+                                {{/ data.description }}
+
+                                {{# data.credit }}
+                                    <div class="a-header__image-credit">
+                                        {{ data.credit }}
+                                    </div>
+                                {{/ data.credit }}
+                            </div>
+                        {{/ data.item }}
+                    </figure>
+                {{/ data.items }}
+            {{/ data.image_list }}
+
+            <div class="a-header__hero-content">
+                {{# state.has_primary_tag }}
+                    <div class="a-header__tag">
+                {{/ state.has_primary_tag }}
+                {{^ state.has_primary_tag }}
+                    {{# state.has_secondary_tag }}
+                        <div class="a-header__tag">
+                    {{/ state.has_secondary_tag }}
+                {{/ state.has_primary_tag }}
+
+                {{# data.secondary_tag }}
+                    {{# state.has_link }}
+                        <a href="{{ &data.link.data.url }}" {{# data.link.state.is_blank }}target="_blank"{{/ data.link.state.is_blank }} class="a-header__tag__secondary">{{ data.title }}</a>
+                    {{/ state.has_link }}
+                    {{^ state.has_link }}
+                        <span class="a-header__tag__secondary">{{ data.title }}</span>
+                    {{/ state.has_link }}
+                {{/ data.secondary_tag }}
+
+                {{# data.primary_tag }}
+                    {{# state.has_link }}
+                        <a href="{{ &data.link.data.url }}" {{# data.link.state.is_blank }}target="_blank"{{/ data.link.state.is_blank }} class="a-header__tag__primary">{{ data.title }}</a>
+                    {{/ state.has_link }}
+                    {{^ state.has_link }}
+                        <span class="a-header__tag__primary">{{ data.title }}</span>
+                    {{/ state.has_link }}
+                {{/ data.primary_tag }}
+
+                {{# state.has_primary_tag }}
+                    </div>
+                {{/ state.has_primary_tag }}
+                {{^ state.has_primary_tag }}
+                    {{# state.has_secondary_tag }}
+                        </div>
+                    {{/ state.has_secondary_tag }}
+                {{/ state.has_primary_tag }}
+
+                {{# data.title }}
+                    <h1 class="a-header__title">{{ data.title }}</h1>
+                {{/ data.title }}
+            </div>
+        </div>
+    {{/ state.has_hero }}
+
+    <div class="a-header__wrapper">
+        <div class="a-header__content">
+            {{^ state.has_hero }}
+            {{# state.has_primary_tag }}
+                <div class="a-header__tag">
+            {{/ state.has_primary_tag }}
+            {{^ state.has_primary_tag }}
+                {{# state.has_secondary_tag }}
+                    <div class="a-header__tag">
+                {{/ state.has_secondary_tag }}
+            {{/ state.has_primary_tag }}
+
+            {{# data.secondary_tag }}
+                {{# state.has_link }}
+                    <a href="{{ &data.link.data.url }}" {{# data.link.state.is_blank }}target="_blank"{{/ data.link.state.is_blank }} class="a-header__tag__secondary">{{ data.title }}</a>
+                {{/ state.has_link }}
+                {{^ state.has_link }}
+                    <span class="a-header__tag__secondary">{{ data.title }}</span>
+                {{/ state.has_link }}
+            {{/ data.secondary_tag }}
+
+            {{# data.primary_tag }}
+                {{# state.has_link }}
+                    <a href="{{ &data.link.data.url }}" {{# data.link.state.is_blank }}target="_blank"{{/ data.link.state.is_blank }} class="a-header__tag__primary">{{ data.title }}</a>
+                {{/ state.has_link }}
+                {{^ state.has_link }}
+                    <span class="a-header__tag__primary">{{ data.title }}</span>
+                {{/ state.has_link }}
+            {{/ data.primary_tag }}
+
+            {{# state.has_primary_tag }}
+                </div>
+            {{/ state.has_primary_tag }}
+            {{^ state.has_primary_tag }}
+                {{# state.has_secondary_tag }}
+                    </div>
+                {{/ state.has_secondary_tag }}
+            {{/ state.has_primary_tag }}
+
+            {{# data.title }}
+                <h1 class="a-header__title">{{ data.title }}</h1>
+            {{/ data.title }}
+            {{/ state.has_hero }}
+
+            {{# data.teaser }}
+                <div class="a-header__teaser">{{ &data.teaser }}</div>
+            {{/ data.teaser }}
+
+            <div class="a-header__about">
+                {{# data.byline }}
+                    <div class="a-header__byline">
+                {{/ data.byline }}
+                {{^ data.byline }}
+                    {{# data.syndication_profile }}
+                        <div class="a-header__byline">
+                    {{/ data.syndication_profile }}
+                {{/ data.byline }}
+
+                {{# data.byline }}
+                    <span class="a-header__byline-item">
+                        <span class="a-header__byline-prefix">{{ translation.header_byline_prefix }}</span>
+                        <span class="a-header__byline-name">{{ &data.byline }}</span>
+                    </span>
+                {{/ data.byline }}
+
+                {{# sate.has_syndication }}
+                    <span class="a-header__byline-item a-header__byline-item--syndication">
+                        <span class="a-header__byline-prefix">{{ translation.header_syndication_prefix }} </span>
+                        {{# state.has_link }}
+                            <span class="a-header__byline-name"><a class="{{ data.link.style.cls }}" title="{{ data.link.data.title }}" href="{{ &data.link.data.url }}">{{ data.name }}</a></span>
+                        {{/ state.has_link }}
+                        {{^ state.has_link }}
+                            <span class="a-header__byline-name">{{ data.name }}</span>
+                        {{/ state.has_link }}
+                    </span>
+                {{/ sate.has_syndication }}
+
+                {{# data.byline }}
+                    </div>
+                {{/ data.byline }}
+                {{^ data.byline }}
+                    {{# data.syndication_profile }}
+                        </div>
+                    {{/ data.syndication_profile }}
+                {{/ data.byline }}
+
+                {{# data.date }}
+                    <div class="a-header__date">{{ data.relative_time }}</div>
+                {{/ data.date }}
+            </div>
+
+            {{# state.is_sponsored }}
+                <div class="a-header__sponsor">
+                    <span class='a-header__sponsor-prefix'>{{ translation.header_sponsorship_prefix }}</span>
+                    {{# data.sponsor }}
+                        {{# data.image }}
+                            <div class="a-header__sponsor-image">
+                                {{> @cnbritain/merlin-www-image }}
+                            </div>
+                        {{/ data.image }}
+
+                        {{^ data.image }}
+                            {{# data.link }}
+                                <a class='a-header__sponsor-name' href="{{ &data.url }}">{{ data.title }}</a>
+                            {{/ data.link }}
+                        {{/ data.image }}
+                    {{/ data.sponsor }}
+                </div>
+            {{/ state.is_sponsored }}
+
+            <div class="a-share">
+                {{# data.share_list }}
+                    <ul class='global__list-reset a-share__list'>
+                        {{# data.items }}
+                            <li class='a-share__list-item {{ style.cls }}'>
+                                {{# data.item }}
+                                    {{> @cnbritain/merlin-www-image }}
+                                {{/ data.item }}
+                            </li>
+                        {{/ data.items }}
+                    </ul>
+                {{/ data.share_list }}
+            </div>
+
+            {{# data.event_information }}
+                <div class='a-header__event'>
+                    <hr class='a-header__separator'>
+                    {{# data.title }}
+                        <div class='a-header__event-title'>{{ . }}</div>
+                    {{/ data.title }}
+
+                    {{# data.location }}
+                        <div class='a-header__event-location'>{{ . }}</div>
+                    {{/ data.location }}
+
+                    {{# data.date_range_html }}
+                        <div class='a-header__event-date'>
+                            {{ &. }}
+                        </div>
+                    {{/ data.date_range_html }}
+
+                    {{# data.ticket_link }}
+                        <a href="{{ &data.url }}" class='a-header__event-btn {{ style.cls }}'>{{ data.title }}</a>
+                    {{/ data.ticket_link }}
+                </div>
+            {{/ data.event_information }}
+
+        </div>
+    </div>
+</header>
