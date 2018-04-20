@@ -10,13 +10,13 @@
     },
     "state": {
         "has_multiple_profiles": true,
-        "has_syndication": false,
+        "has_syndication": true,
         "has_event_information": true,
         "is_gallery": false,
         "is_preview": false,
         "is_article": true,
         "has_hero": true,
-        "is_sponsored": false,
+        "is_sponsored": true,
         "is_recipe": false,
         "is_spa_review": false,
         "has_primary_tag": true,
@@ -26,7 +26,9 @@
         "is_long_body": true,
         "is_podcast": true,
         "is_video": false,
-        "has_photographer": true
+        "has_photographer": true,
+        "is_hero_variant_1": true,
+        "is_hero_variant_2": false
     },
     "data": {
         "syndication_profile": {
@@ -492,7 +494,48 @@
             "type": "List"
         },
         "teaser": "This is an example teaser for the article!",
-        "sponsor": null,
+        "sponsor": {
+            "data": {
+                "image": {
+                    "translation": {},
+                    "state": {
+                        "is_static": true,
+                        "is_portrait": false,
+                        "is_image": false,
+                        "is_square": false,
+                        "is_svg": false,
+                        "is_lazyload": true,
+                        "is_linked": false,
+                        "is_picture": false,
+                        "is_landscape": false
+                    },
+                    "data": {
+                        "description": "<p class=\"bb-p\">Image <strong class=\"bb-strong\">description</strong></p>",
+                        "title": "Image title",
+                        "orientation": "landscape",
+                        "look_number": null,
+                        "alt_text": "Image title",
+                        "filename": null,
+                        "credit": "Image credit",
+                        "image_url": "https://vg-images.condecdn.net/image/placeholder/crop/405/landscape",
+                        "width": null,
+                        "uid": ""
+                    },
+                    "style": {
+                        "padding_top": "66.666666667%",
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "Image"
+                },
+                "link": {
+                    "data": {
+                        "url": "#",
+                        "title": "Example sponsor"
+                    }
+                }
+            }
+        },
         "date": {
             "translation": {},
             "state": {},
@@ -544,7 +587,39 @@
         "title": "No Show On Planet Fashion Attracts The Celebrity Turnout Of Calvin Klein",
         "url": "http://localhost:3000/article/calvin-klein-aw18-show-front-row",
         "review_information": null,
-        "secondary_tag": null,
+        "secondary_tag": {
+            "translation": {},
+            "state": {
+                "has_link": true,
+                "is_sponsored": false
+            },
+            "data": {
+                "link": {
+                    "translation": {},
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "data": {
+                        "url": "http://localhost:3000/person/calvin-klein",
+                        "title": "Calvin Klein"
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "Link"
+                },
+                "sponsor": null,
+                "event_information": null,
+                "title": "Calvin Klein"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "Tag"
+        },
         "event_information": {
             "data": {
                 "title": "Event title",
