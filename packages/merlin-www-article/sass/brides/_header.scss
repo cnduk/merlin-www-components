@@ -1,10 +1,7 @@
-.a-header {
-    padding-left: $MOBILE_SIDE_GUTTER;
-    padding-right: $MOBILE_SIDE_GUTTER;
-}
+.a-header {}
 
 .a-header__wrapper {
-    padding: 36px 0;
+    padding: 36px $MOBILE_SIDE_GUTTER;
 }
 
 .a-header__content {}
@@ -166,7 +163,9 @@
     }
 }
 
-.a-header__image {}
+.a-header__image {
+    padding: 0 $MOBILE_SIDE_GUTTER;
+}
 
 .a-header__image-constrain {}
 .a-header__image-content {
@@ -184,12 +183,13 @@
 }
 
 .a-header__image-caption {
+    color: $candle-grey;
     margin: 0;
     padding: 0;
 
     .bb-p {
         @include font('SOLEIL', 12px, null, 16px);
-        color: $candle-grey;
+        color: inherit;
         letter-spacing: 0.03em;
         margin: 0 0 6px 0;
     }
@@ -226,8 +226,68 @@
     }
 }
 
+.has-hero {
+
+    .a-header__image {
+        margin-bottom: 36px;
+        padding: 0;
+        position: relative;
+    }
+    .a-header__image:after {
+        background-color: $pink-rose;
+        bottom: -16px;
+        content: '';
+        display: block;
+        left: 50%;
+        height: 32px;
+        position: absolute;
+        width: 1px;
+    }
+
+    .a-header__image-content {
+        border-left: none;
+    }
+
+    .a-header__hero-content {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 800px;
+        padding: 0 $MOBILE_SIDE_GUTTER;
+    }
+
+    .a-header__image-content {
+        margin: 0;
+        right: 4px;
+        position: absolute;
+        text-align: right;
+        top: 4px;
+    }
+
+    .a-header__image-title,
+    .a-header__image-caption {
+        display: none;
+    }
+
+    .a-header__image-caption {
+        color: $white;
+    }
+
+    .a-header__image-credit {
+        color: $white;
+    }
+    .a-header__image-credit:before {
+        display: none;
+    }
+
+    .a-header__wrapper {
+        padding-top: 0;
+    }
+
+}
+
 @include tablet-size {
-    .a-header {
+    .a-header__wrapper
+    .a-header__image {
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
@@ -238,7 +298,7 @@
 
     .a-header__sponsor {
         display: inline-block;
-        margin: 34px auto 26px auto;
+        margin: 0 auto 26px auto;
     }
     .a-header__sponsor-prefix {}
     .a-header__sponsor-name {}
@@ -247,18 +307,31 @@
         margin-left: 10px;
     }
 
+    .has-hero {
+
+        .a-header__hero-content {
+            padding-left: $TABLET_SIDE_GUTTER;
+            padding-right: $TABLET_SIDE_GUTTER;
+        }
+        .a-header__image-content {
+            right: 6px;
+            top: 6px;
+        }
+        .a-header__image-caption {
+            display: block;
+        }
+
+    }
+
 }
 
 
 @include desktop-size {
 
-    .a-header {
-        padding-left: $DESKTOP_SIDE_GUTTER;
-        padding-right: $DESKTOP_SIDE_GUTTER;
-    }
+    .a-header {}
 
     .a-header__wrapper {
-        padding: 48px 0;
+        padding: 48px $DESKTOP_SIDE_GUTTER;
     }
 
     .a-header__content {
@@ -283,13 +356,22 @@
     }
 
     .a-header__image {
-        padding: 0;
+        padding: 0 $DESKTOP_SIDE_GUTTER;
     }
 
     .a-header--gallery {
         .a-header__content {
             padding-right: 0;
         }
+    }
+
+    .has-hero {
+
+        .a-header__hero-content {
+            padding-left: $DESKTOP_SIDE_GUTTER;
+            padding-right: $DESKTOP_SIDE_GUTTER;
+        }
+
     }
 
 }
