@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.3.0"></a>
+# [3.3.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-component-demo-server@3.2.0...@cnbritain/merlin-component-demo-server@3.3.0) (2018-04-20)
+
+
+### Features
+
+* **merlin-component-demo-server:** add error message ([b2e90b5](https://github.com/cnduk/merlin-www-components/commit/b2e90b5))
+
+
+
+
 <a name="3.2.0"></a>
 # [3.2.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-component-demo-server@3.1.1...@cnbritain/merlin-component-demo-server@3.2.0) (2018-04-18)
 

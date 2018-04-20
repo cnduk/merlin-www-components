@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.28.0"></a>
+# [1.28.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.27.4...@cnbritain/merlin-www-article@1.28.0) (2018-04-20)
+
+
+### Bug Fixes
+
+* **merlin-www-article:** add traveller to merlin.json ([60291a2](https://github.com/cnduk/merlin-www-components/commit/60291a2))
+
+
+### Features
+
+* **merlin-www-article:** add article header variants ([6271a66](https://github.com/cnduk/merlin-www-components/commit/6271a66))
+
+
+
+
 <a name="1.27.4"></a>
 ## [1.27.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.27.3...@cnbritain/merlin-www-article@1.27.4) (2018-04-19)
 

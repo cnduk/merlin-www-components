@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.14.0"></a>
+# [1.14.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-assets@1.13.3...@cnbritain/merlin-www-assets@1.14.0) (2018-04-20)
+
+
+### Features
+
+* **merlin-www-assets:** add brides favicons ([06fcd0d](https://github.com/cnduk/merlin-www-components/commit/06fcd0d))
+
+
+
+
 <a name="1.13.2"></a>
 ## [1.13.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-assets@1.13.1...@cnbritain/merlin-www-assets@1.13.2) (2018-04-18)
 
