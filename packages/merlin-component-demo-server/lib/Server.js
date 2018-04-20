@@ -86,8 +86,12 @@ class Server {
             socket.on('render', async (e) => {
                 RENDER_SETTINGS = e;
                 this._currentTheme = RENDER_SETTINGS.THEME;
-                const html = await render(this.component);
-                socket.emit('render', html);
+                try {
+                    const html = await render(this.component);
+                    socket.emit('render', html);
+                } catch(err){
+                    socket.emit('renderError', JSON.stringify(err));
+                }
             });
             // TODO: only theme changes
             // socket.on('theme', e => console.log(e));
@@ -136,11 +140,19 @@ class Server {
             }
 
             if(onlyStyles){
-                const newCss = await renderStyles(this.component);
-                this._io.emit('renderStyles', newCss);
+                try {
+                    const newCss = await renderStyles(this.component);
+                    this._io.emit('renderStyles', newCss);
+                } catch(err){
+                    this._io.emit('renderError', JSON.stringify(err));
+                }
             } else {
-                const html = await render(this.component);
-                this._io.emit('render', html);
+                try {
+                    const html = await render(this.component);
+                    this._io.emit('render', html);
+                } catch(err){
+                    this._io.emit('renderError', JSON.stringify(err));
+                }
             }
 
         });

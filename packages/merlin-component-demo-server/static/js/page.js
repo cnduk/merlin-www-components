@@ -13,6 +13,7 @@
     const btnResizeMedium = document.getElementById('btnResizeMedium');
     const btnResizeLarge = document.getElementById('btnResizeLarge');
     const colBackground = document.getElementById('colBackground');
+    const elErrorMessage = document.getElementById('elErrorMessage');
 
     const SANDBOX_VALUE = [
         'allow-forms',
@@ -144,8 +145,19 @@
         onPreviewResize();
     }
 
+    function clearErrorMessage(){
+        elErrorMessage.innerHTML = 'None 👍';
+        elErrorMessage.classList.remove('has-error');
+    }
+
+    function setErrorMessage(msg){
+        elErrorMessage.innerHTML = msg;
+        elErrorMessage.classList.add('has-error');
+    }
+
     function onRender(e){
         renderToFrame(e);
+        clearErrorMessage();
     }
 
     /**
@@ -164,6 +176,13 @@
         newStyles.id = 'elStyles';
 
         styleParent.replaceChild(newStyles, elStyles);
+
+        clearErrorMessage();
+    }
+
+    function onError(e){
+        const err = JSON.parse(e);
+        setErrorMessage(err.message);
     }
 
     /**
@@ -201,6 +220,7 @@
         colBackground.addEventListener('input', setBackgroundColor);
         socket.on('render', onRender);
         socket.on('renderStyles', onRenderStyles);
+        socket.on('renderError', onError);
     }
 
 })();

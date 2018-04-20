@@ -4,7 +4,6 @@ const sass = require('node-sass');
 const sassImporter = require('@cnbritain/merlin-sass-custom-importer');
 
 const Logger = require('./logger');
-const { promiseError } = require('./utils');
 
 function compileSass(file, merlinConfig){
     return new Promise((resolve, reject) => {
@@ -16,7 +15,7 @@ function compileSass(file, merlinConfig){
             importer.SESSION.reset();
             resolve(sassContents.css.toString());
 
-        }, promiseError);
+        }, reject);
     });
 }
 

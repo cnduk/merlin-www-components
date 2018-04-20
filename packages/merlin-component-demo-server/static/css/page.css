@@ -45,6 +45,14 @@ main {
     margin: 2px 0;
     width: 100%;
 }
+.component-setting__error {
+    background: green;
+    color: white;
+}
+.component-setting__error.has-error {
+    background: red;
+    color: white;
+}
 
 .component-preview {
     flex-grow: 1;
