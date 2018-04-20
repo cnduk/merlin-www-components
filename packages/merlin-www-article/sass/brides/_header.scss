@@ -116,6 +116,34 @@
     text-transform: uppercase;
 }
 
+.a-header__event {
+    border-top: 1px solid $ballet-grey;
+    margin: 26px 0 0 0;
+    padding: 26px 0;
+    text-align: center;
+}
+.a-header__event-title,
+.a-header__event-location {
+    @include font('SOLEIL', 14px, null, 16px, 20);
+    color: $candle-grey;
+    margin: 10px 0;
+}
+.a-header__event-date {
+    @include font('SOLEIL', 10px, null, 12px, 120);
+    color: $candle-grey;
+    margin: 10px 0 16px 0;
+    text-transform: uppercase;
+}
+.a-header__event-btn {
+    @include button-single-three;
+    @include button-single-three-light;
+
+    &:hover,
+    &:focus {
+        @include button-single-three-light-hover;
+    }
+}
+
 .a-header__image {}
 
 .a-header__image-constrain {}
