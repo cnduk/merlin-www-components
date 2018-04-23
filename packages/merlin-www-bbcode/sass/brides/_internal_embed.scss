@@ -213,6 +213,15 @@
     margin-top: 6px;
 }
 
+/**
+ * Show gallery
+ */
+.bb-show-gallery {
+    .c-gallery-strip__list__item {
+        width: 25%;
+    }
+}
+
 
 
 @include card-portrait-to-landscape-size {
