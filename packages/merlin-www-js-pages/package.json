@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-js-pages",
-  "version": "1.4.16",
+  "version": "1.4.17",
   "description": "The javascript to the www app pages",
   "main": "js/index.js",
   "scripts": {
@@ -11,8 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "@cnbritain/merlin-www-ads": "^1.14.2",
-    "@cnbritain/merlin-www-article": "^1.28.3",
-    "@cnbritain/merlin-www-card-list": "^1.12.7",
+    "@cnbritain/merlin-www-article": "^1.28.4",
+    "@cnbritain/merlin-www-card-list": "^1.12.8",
     "@cnbritain/merlin-www-cookie-warning": "^1.7.5",
     "@cnbritain/merlin-www-goofs": "^1.4.1",
     "@cnbritain/merlin-www-image": "^1.9.9",
@@ -22,11 +22,11 @@
     "@cnbritain/merlin-www-js-sticky": "^1.1.1",
     "@cnbritain/merlin-www-js-store": "^1.2.1",
     "@cnbritain/merlin-www-js-utils": "^1.6.1",
-    "@cnbritain/merlin-www-main-navigation": "^1.8.11",
+    "@cnbritain/merlin-www-main-navigation": "^1.8.12",
     "@cnbritain/merlin-www-show-finder": "^1.7.9",
-    "@cnbritain/merlin-www-show-summary": "^1.5.12",
-    "@cnbritain/merlin-www-tag-header": "^1.10.2",
-    "@cnbritain/merlin-www-top-stories": "^1.9.7",
+    "@cnbritain/merlin-www-show-summary": "^1.5.13",
+    "@cnbritain/merlin-www-tag-header": "^1.10.3",
+    "@cnbritain/merlin-www-top-stories": "^1.9.8",
     "es6-promise": "^4.1.1"
   },
   "devDependencies": {
