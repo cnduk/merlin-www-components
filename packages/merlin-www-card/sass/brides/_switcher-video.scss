@@ -1,31 +1,27 @@
 // -------------------- //
-// Switcher video
+// Switcher Video
 // -------------------- //
-@mixin card-switcher-video() {
-    @include card-portrait;
-}
-@mixin card-switcher-video-small() {
-    @include card-portrait-small;
-}
-@mixin card-switcher-video-large() {
-    @include card-portrait-large;
-}
+@mixin card-switcher-video() {}
+@mixin card-switcher-video-small() {}
+@mixin card-switcher-video-large() {}
 
 .c-card--switcher-video {
-    @include card-switcher-video;
-    @include card-switcher-video-small;
-
-    @include card-portrait-to-landscape-size {
-        @include card-switcher-video-large;
-    }
+    @include card-portrait();
+    @include card-portrait-large();
 }
 
 .c-card--switcher-video-small {
-    @include card-switcher-video;
-    @include card-switcher-video-small;
+    @include card-portrait();
+    @include card-portrait-large();
+
+    @include card-switcher-video();
+    @include card-switcher-video-small();
 }
 
 .c-card--switcher-video-large {
-    @include card-switcher-video;
-    @include card-switcher-video-large;
+    @include card-portrait();
+    @include card-portrait-large();
+
+    @include card-switcher-video();
+    @include card-switcher-video-large();
 }
