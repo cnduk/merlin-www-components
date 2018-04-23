@@ -43,6 +43,14 @@
     color: $stroller-grey;
     letter-spacing: 0.03em;
     margin: 8px 0 10px 0;
+
+    .bb-p {
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+    }
 }
 
 .a-author__byline {
