@@ -207,6 +207,7 @@ li.c-gallery__image-item {
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         @include font("SOLEIL", 14px, 400, 20px, 30);
+        display: block;
         color: $ascot-grey;
         margin: 18px 0 0 0;
     }
