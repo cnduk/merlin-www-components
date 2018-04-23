@@ -13,14 +13,18 @@
     @include card-tg-article-small();
 
     @include card-portrait-to-landscape-size {
-        .c-card__images {
-            margin-bottom: 0;
-        }
-
         @include card-landscape();
         @include card-landscape-large();
 
         @include card-tg-article-large();
+
+        .c-card__images {
+            margin-bottom: 0;
+
+            &:after {
+                left: initial;
+            }
+        }
     }
 }
 
