@@ -54,6 +54,7 @@
 // Content
 .c-gallery-strip__detail {
     margin: 28px 0 0 0;
+    text-align: center;
 }
 
 .c-gallery-strip__title {
@@ -61,11 +62,17 @@
     color: $stroller-grey;
     letter-spacing: 0.01em;
     margin: 6px 0;
-    text-align: center;
     text-transform: capitalize;
 }
 
-.c-gallery-strip__subtitle {}
+.c-gallery-strip__subtitle {
+    @include font('SOLEIL', 10px, null, 16px);
+    color: $stroller-grey;
+    letter-spacing: 0.12em;
+    margin: 9px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
 
 
 
