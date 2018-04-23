@@ -1,31 +1,41 @@
 // -------------------- //
 // Tag Article
 // -------------------- //
-@mixin card-tg-article() {
-    @include card-landscape;
-}
-@mixin card-tg-article-small() {
-    @include card-landscape-small;
-}
-@mixin card-tg-article-large() {
-    @include card-landscape-large;
-}
+@mixin card-tg-article() {}
+@mixin card-tg-article-small() {}
+@mixin card-tg-article-large() {}
 
 .c-card--tg-article {
-    @include card-tg-article;
-    @include card-tg-article-small;
+    @include card-portrait();
+    @include card-portrait-small();
+
+    @include card-tg-article();
+    @include card-tg-article-small();
 
     @include card-portrait-to-landscape-size {
-        @include card-tg-article-large;
+        .c-card__images {
+            margin-bottom: 0;
+        }
+
+        @include card-landscape();
+        @include card-landscape-large();
+
+        @include card-tg-article-large();
     }
 }
 
 .c-card--tg-article-small {
-    @include card-tg-article;
-    @include card-tg-article-small;
+    @include card-portrait();
+    @include card-portrait-small();
+
+    @include card-tg-article();
+    @include card-tg-article-small();
 }
 
 .c-card--tg-article-large {
-    @include card-tg-article;
-    @include card-tg-article-large;
+    @include card-landscape();
+    @include card-landscape-large();
+
+    @include card-tg-article();
+    @include card-tg-article-large();
 }
