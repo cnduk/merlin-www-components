@@ -1,45 +1,22 @@
 .a-logo {}
 .a-logo--video {
-    // background-color: $ebony-clay;
-    // padding: 40px 0;
+    padding: 36px 0 24px 0;
 
-    // @include desktop-size {
-    //     padding: 60px 0;
-    // }
-
-    // .a-logo__wrapper {
-    //     height: 38px;
-    //     margin: 0 auto;
-    //     width: 230px;
-
-    //     @include desktop-size {
-    //         height: 45px;
-    //         width: 315px;
-    //     }
-    // }
-
-    // svg {
-    //     fill: $white;
-    // }
+    svg {
+        height: 100%;
+    }
 }
 
-.a-video {
-    // background-color: $ebony-clay;
+.a-logo__wrapper {
+    height: 42px;
+    text-align: center;
 }
+
+.a-video {}
 
 .a-video__wrapper {
     padding-left: 0;
     padding-right: 0;
-
-    @include tablet-size {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    @include desktop-size {
-        padding-left: $DESKTOP_SIDE_GUTTER;
-        padding-right: $DESKTOP_SIDE_GUTTER;
-    }
 }
 
 .a-video__player {}
@@ -69,13 +46,25 @@
 
 .a-video__content-body {}
 
-.a-video__ad {
-    // .ad__block {
-    //     margin: 40px 0;
+.a-video__ad {}
 
-    //     @include desktop-size {
-    //         margin: 0;
-    //         padding: 0;
-    //     }
-    // }
+
+@include tablet-size {
+    .a-video__wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@include desktop-size {
+    .a-logo--video {
+        padding: 48px 0;
+    }
+    .a-logo__wrapper {
+        height: 60px;
+    }
+    .a-video__wrapper {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
 }
