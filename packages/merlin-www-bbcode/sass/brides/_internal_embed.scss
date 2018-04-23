@@ -6,6 +6,7 @@
 .bb-card {
     border: 1px solid $ballet-grey;
     border-radius: 4px;
+    margin: 26px 0;
     padding: 12px;
 }
 
@@ -58,6 +59,7 @@
 .bb-gallery {
     border: 1px solid $ballet-grey;
     border-radius: 4px 4px 0 0;
+    margin: 26px 0;
     padding-top: 12px;
 }
 
@@ -130,6 +132,7 @@
 .bb-video {
     border: 1px solid $ballet-grey;
     border-radius: 4px 4px 0 0;
+    margin: 26px 0;
     padding-top: 12px;
 }
 
@@ -228,6 +231,10 @@
 
 @include card-portrait-to-landscape-size {
 
+    .bb-card {
+        margin: 30px 0;
+    }
+
     .bb-card:before {
         @include font('SOLEIL', 12px, null, 12px);
         color: $candle-grey;
@@ -256,6 +263,11 @@
 
     .bb-card__title {
         margin: 6px 0 0 0;
+    }
+
+    .bb-gallery,
+    .bb-video {
+        margin: 30px 0;
     }
 
     .bb-gallery__icon,
