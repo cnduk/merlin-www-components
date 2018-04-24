@@ -46,7 +46,9 @@
 
 .a-video__content-body {}
 
-.a-video__ad {}
+.a-video__ad {
+    margin: 40px 0;
+}
 
 
 @include tablet-size {
@@ -66,5 +68,8 @@
     .a-video__wrapper {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
+    }
+    .a-video__ad {
+        right: 80px;
     }
 }
