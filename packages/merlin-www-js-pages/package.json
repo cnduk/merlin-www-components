@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-js-pages",
-  "version": "1.4.20",
+  "version": "1.4.21",
   "description": "The javascript to the www app pages",
   "main": "js/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@cnbritain/merlin-www-ads": "^1.14.3",
-    "@cnbritain/merlin-www-article": "^1.28.7",
+    "@cnbritain/merlin-www-article": "^1.28.8",
     "@cnbritain/merlin-www-card-list": "^1.12.9",
     "@cnbritain/merlin-www-cookie-warning": "^1.7.6",
     "@cnbritain/merlin-www-goofs": "^1.4.1",
@@ -22,10 +22,10 @@
     "@cnbritain/merlin-www-js-sticky": "^1.1.1",
     "@cnbritain/merlin-www-js-store": "^1.2.1",
     "@cnbritain/merlin-www-js-utils": "^1.6.1",
-    "@cnbritain/merlin-www-main-navigation": "^1.8.13",
+    "@cnbritain/merlin-www-main-navigation": "^1.8.14",
     "@cnbritain/merlin-www-show-finder": "^1.7.10",
-    "@cnbritain/merlin-www-show-summary": "^1.5.14",
-    "@cnbritain/merlin-www-tag-header": "^1.10.4",
+    "@cnbritain/merlin-www-show-summary": "^1.5.15",
+    "@cnbritain/merlin-www-tag-header": "^1.10.5",
     "@cnbritain/merlin-www-top-stories": "^1.9.9",
     "es6-promise": "^4.1.1"
   },

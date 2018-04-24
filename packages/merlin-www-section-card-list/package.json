@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-section-card-list",
-  "version": "1.11.9",
+  "version": "1.11.10",
   "description": "",
   "main": "js/index.js",
   "scripts": {
@@ -10,13 +10,13 @@
   },
   "dependencies": {
     "@cnbritain/merlin-www-ads": "^1.14.3",
-    "@cnbritain/merlin-www-buttons": "^1.7.6",
+    "@cnbritain/merlin-www-buttons": "^1.7.7",
     "@cnbritain/merlin-www-card": "^1.15.6",
     "@cnbritain/merlin-www-card-list": "^1.12.9",
     "@cnbritain/merlin-www-common": "^1.13.5",
     "@cnbritain/merlin-www-image": "^1.9.9",
     "@cnbritain/merlin-www-js-utils": "^1.6.1",
-    "@cnbritain/merlin-www-topic-strip": "^1.10.6"
+    "@cnbritain/merlin-www-topic-strip": "^1.10.7"
   },
   "devDependencies": {
     "@cnbritain/merlin-component-demo-server": "^3.3.0",
