@@ -5,11 +5,12 @@
 
 .c-footer {
     background-color: $tux-grey;
+    color: $white;
     padding: 0 20px;
 
-     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-         padding: 0 30px;
-     }
+    @include tablet-size {
+        padding: 0 30px;
+    }
 }
 
 .c-footer__wrapper {
@@ -17,94 +18,63 @@
     max-width: 1440px;
 }
 
-.c-footer__list {}
-
-.c-footer__list--left {
-     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-         float: left;
-     }
+.c-footer__list {
+    color: $white;
 }
 
-.c-footer__list-item {
-    @include font("SOLEIL", 12px, 'NORMAL', 12px);
-    letter-spacing:0.01em;
-    color: $white;
+.c-footer__list--left {}
+.c-footer__list--right {}
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding-left: 24px;
-        border-top: none;
-        position: relative;
-    }
+li.c-footer__list-item {
+    @include font("SOLEIL", 12px, 'NORMAL', 60px, 10);
+    color: $white;
+    height: 60px;
 
     a {
+        text-decoration: none;
         color: inherit;
         border-bottom: none;
-        display: block;
-        text-decoration: none;
-    }
 
-    svg{
-        width: 156px;
-    }
-}
-
-.c-footer__list--right {
-    position: relative;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        float: right;
-        width: 84%;
-    }
-
-    &.c-footer__list-item--logo{
-        padding: 0;
+        @include min-screen(1100px) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
 
 .c-footer__list-item--links {
-    border-bottom: 1px solid $stroller-grey;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-         border-bottom: none;
-         display: inline-block;
-         text-align: center;
-         width: 89%;
-
-          & > .c-footer__list-item:last-child {
-            padding-right: 24px;
-        }
-     }
+    font-size: 0;
 
     .c-footer__list-item {
-        border-top: 1px solid $stroller-grey;
-        padding-top: 23.5px;
-        padding-bottom: 23.5px;
+        @include max-screen(1099px) {
+            border-top: 1px solid $stroller-grey;
+            box-sizing: border-box;
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            border-top: none;
-            display: inline-block;
+            &:last-child {
+                border-bottom: 1px solid $stroller-grey;
+            }
+        }
+
+        @include min-screen(1100px) {
+            margin-right: 24px;
         }
     }
 }
 
-.c-footer__list-item--logo {
-    bottom: 0px;
-    line-height: 60px;
-    padding: 0;
-    position: absolute;
-    right: 0;
-    width: 86px;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        position: relative;
-    }
+li.c-footer__list-item--logo {
+    margin-top: -60px;
 
     svg {
-        display: inline-block;
         fill: $white;
-        height: 30px;
-        width: 30px;
-        vertical-align: middle;
+        height: 60px;
+        width: 80px;
+    }
+
+    @include min-screen(1100px) {
+        clear: right;
+        padding-left: 32px;
+        margin-top: 0;
     }
 }
 
