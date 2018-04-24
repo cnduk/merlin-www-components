@@ -4,7 +4,11 @@
 @import '../wireframe/wireframe';
 
 .c-gallery-strip {
-    margin: 36px auto 0 auto;
+    margin: 32px 0;
+
+    @include desktop-size {
+        margin: 48px 0;
+    }
 }
 
 .c-gallery-strip__wrapper {
@@ -35,7 +39,7 @@
 }
 
 .c-gallery-strip__remaining {
-    @include font('SOLEIL', 24px, 'BOLD', 24px, 10);
+    @include font('SOLEIL', 24px, 400, 24px, 10);
     background-color: rgba($black, 0.25);
     color: $white;
 }
