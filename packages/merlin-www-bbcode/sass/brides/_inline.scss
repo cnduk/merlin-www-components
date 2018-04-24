@@ -28,7 +28,7 @@
 // .is-firefox .bb-dropcap {}
 .is-chrome .bb-dropcap,
 .is-safari .bb-dropcap {
-    margin-top: -0.1em;
+    margin-top: -0.13em;
 }
 
 @include text-size-large {
@@ -47,6 +47,8 @@
 .bb-button {
     @include button-single;
     @include button-single-light;
+
+    padding: 17px 22px;
 
     &:hover,
     &:focus {

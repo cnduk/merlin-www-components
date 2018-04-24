@@ -6,8 +6,14 @@
 .bb-card {
     border: 1px solid $ballet-grey;
     border-radius: 4px;
-    margin: 26px 0;
+    margin: 32px 0;
     padding: 12px;
+
+    &:hover {
+        .bb-card__title {
+            color: $pink-rose;
+        }
+    }
 }
 
 .bb-card__obj {
@@ -59,8 +65,14 @@
 .bb-gallery {
     border: 1px solid $ballet-grey;
     border-radius: 4px 4px 0 0;
-    margin: 26px 0;
+    margin: 32px 0;
     padding-top: 12px;
+
+    &:hover {
+        .bb-gallery__title {
+            color: $pink-rose;
+        }
+    }
 }
 
 .bb-gallery__icon {
@@ -120,7 +132,7 @@
     top: 0;
 }
 .bb-gallery__remaining-text {
-    @include font('SOLEIL', 24px, 'BOLD', 24px);
+    @include font('SOLEIL', 24px, 400, 24px);
     color: $white;
     letter-spacing: 0.01em;
 }
@@ -132,8 +144,14 @@
 .bb-video {
     border: 1px solid $ballet-grey;
     border-radius: 4px 4px 0 0;
-    margin: 26px 0;
+    margin: 32px 0;
     padding-top: 12px;
+
+    &:hover {
+        .bb-video__title {
+            color: $pink-rose;
+        }
+    }
 }
 
 .bb-video__icon {
@@ -196,17 +214,22 @@
 .bb-figure {
     margin: 40px 0;
 }
+
 .bb-figure__wrapper {}
 .bb-figure__content {
     border-left: 1px solid $ballet-grey;
     margin: 12px 0 0 0;
     padding: 0 0 0 12px;
 }
+
 .bb-figure__caption {
-    @include font('SOLEIL', 12px, null, 16px);
-    color: $candle-grey;
-    letter-spacing: 0.03em;
+    .bb-p {
+        @include font('SOLEIL', 12px, null, 16px);
+        color: $candle-grey;
+        letter-spacing: 0.03em;
+    }
 }
+
 .bb-figure__credit {
     @include font('SOLEIL', 9px, null, 12px);
     color: rgba($candle-grey, 0.75);
@@ -232,13 +255,13 @@
 @include card-portrait-to-landscape-size {
 
     .bb-card {
-        margin: 30px 0;
+        margin: 48px 0;
     }
 
     .bb-card:before {
         @include font('SOLEIL', 12px, null, 12px);
-        color: $candle-grey;
         bottom: 16px;
+        color: rgba($candle-grey, 0.75);
         content: "Continue Reading";
         position: absolute;
         right: 16px;
@@ -262,12 +285,14 @@
     }
 
     .bb-card__title {
+        @include font-size(16px);
+        @include line-height(20px);
         margin: 6px 0 0 0;
     }
 
     .bb-gallery,
     .bb-video {
-        margin: 30px 0;
+        margin: 48px 0;
     }
 
     .bb-gallery__icon,
