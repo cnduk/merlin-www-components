@@ -17,6 +17,12 @@
         margin-bottom: $DESKTOP_SLICE_MARGIN;
         margin-top: $DESKTOP_SLICE_MARGIN;
     }
+
+    &:hover {
+        .c-superfeature__title {
+            color: $pink-rose;
+        }
+    }
 }
 
 .c-superfeature__link {}
@@ -68,6 +74,9 @@
 }
 
 .c-superfeature__content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 840px;
     position: relative;
     text-align: center;
 
@@ -95,7 +104,7 @@
 }
 
 .c-superfeature__tag {
-    @include font("SOLEIL", 12px, 400, 16px, 18);
+    @include font("SOLEIL", 12px, 400, 16px, 180);
     color: $pink-rose;
     margin: 0 0 6px 0;
     text-transform: uppercase;
@@ -129,7 +138,7 @@
 }
 
 .c-superfeature__byline {
-    @include font('SOLEIL', 10px, 400, 16px, 12);
+    @include font('SOLEIL', 10px, 400, 16px, 120);
     color: $stroller-grey;
     margin: 18px 0 0 0;
     text-align: center;
@@ -143,14 +152,14 @@
 }
 
 ul.c-superfeature__meta {
-    @include font('SOLEIL', 10px, 400, 12px, 12);
+    @include font('SOLEIL', 10px, 400, 12px, 120);
     color: $candle-grey;
     text-transform: uppercase;
     margin: 6px 0 0 0;
 }
 
 li.c-superfeature__meta-item {
-    @include font('SOLEIL', 10px, 400, 12px, 12);
+    @include font('SOLEIL', 10px, 400, 12px, 120);
     color: $candle-grey;
     text-transform: uppercase;
 

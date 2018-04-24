@@ -23,9 +23,9 @@
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
 
-    .c-gallery__text {
-        @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-
+    &:hover {
+        .c-gallery__title {
+            color: $pink-rose;
         }
     }
 }
@@ -179,7 +179,7 @@ li.c-gallery__image-item {
 }
 
 .c-gallery__tag {
-    @include font("SOLEIL", 12px, 400, 16px, 18);
+    @include font("SOLEIL", 12px, 400, 16px, 180);
     color: $pink-rose;
     margin: 0 0 6px 0;
     text-transform: uppercase;
@@ -218,7 +218,7 @@ li.c-gallery__image-item {
 }
 
 .c-gallery__byline {
-    @include font('SOLEIL', 10px, 400, 16px, 12);
+    @include font('SOLEIL', 10px, 400, 16px, 120);
     color: $stroller-grey;
     margin: 18px 0 0 0;
     text-align: center;
@@ -232,14 +232,14 @@ li.c-gallery__image-item {
 }
 
 ul.c-gallery__meta {
-    @include font('SOLEIL', 10px, 400, 12px, 12);
+    @include font('SOLEIL', 10px, 400, 12px, 120);
     color: $candle-grey;
     text-transform: uppercase;
     margin: 6px 0 0 0;
 }
 
 li.c-gallery__meta-item {
-    @include font('SOLEIL', 10px, 400, 12px, 12);
+    @include font('SOLEIL', 10px, 400, 12px, 120);
     color: $candle-grey;
     text-transform: uppercase;
 
