@@ -5,13 +5,14 @@
 @import "../wireframe/wireframe";
 
 .c-top-stories {
-    background-color: $diamond;
-    border-bottom: 1px solid rgba($ballet-grey, 0.2);
-    border-top: 1px solid rgba($ballet-grey, 0.2);
+    background-color: $champagne;
+    border-bottom: 1px solid rgba($black, 0.2);
     display: none;
     padding: 24px 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include desktop-size {
+        background-color: $diamond;
+        border-bottom: 1px solid $ballet-grey;
         display: block;
     }
 
@@ -39,10 +40,10 @@
 
 .c-top-stories__nav {
     border-left: 1px solid $ballet-grey;
-    bottom: -24px;
+    bottom: -20px;
     position: absolute;
     right: 0;
-    top: -24px;
+    top: -20px;
     width: 60px;
     z-index: 2;
 
