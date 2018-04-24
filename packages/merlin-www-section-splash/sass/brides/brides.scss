@@ -6,30 +6,37 @@
 @import "../wireframe/wireframe";
 
 .c-splash-section {
-	margin-bottom: $MOBILE_SLICE_MARGIN;
-	margin-top: $MOBILE_SLICE_MARGIN;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+    margin-top: $MOBILE_SLICE_MARGIN;
 
-	@include tablet-size {
-	    margin-bottom: $TABLET_SLICE_MARGIN;
-	    margin-top: $TABLET_SLICE_MARGIN;
-	}
+    @include tablet-size {
+        margin-bottom: $TABLET_SLICE_MARGIN;
+        margin-top: $TABLET_SLICE_MARGIN;
+    }
 
-	@include desktop-size {
-	    margin-bottom: $DESKTOP_SLICE_MARGIN;
-	    margin-top: $DESKTOP_SLICE_MARGIN;
-	}
+    @include desktop-size {
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+        margin-top: $DESKTOP_SLICE_MARGIN;
+    }
 }
 
 .c-splash-section__wrapper {
-	margin: 0 auto;
-	max-width: $MAXIMUM_PAGE_WIDTH;
-	position: relative;
-	width: 100%;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    position: relative;
+    width: 100%;
 }
 
-.c-splash-hero {}
+.c-splash-hero {
+    &:hover {
+        .c-splash-hero__title {
+            color: $pink-rose;
+        }
+    }
+}
+
 .c-splash-hero__wrapper {
-	position: relative;
+    position: relative;
 }
 
 .c-splash-hero__images {
@@ -51,7 +58,7 @@
 .c-splash-hero__image {}
 
 .c-splash-hero__image__wrapper {
-	background-color: $diamond;
+    background-color: $diamond;
     padding-top: 90%;
 
     @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
@@ -60,6 +67,9 @@
 }
 
 .c-splash-hero__content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 840px;
     position: relative;
     text-align: center;
 
@@ -72,7 +82,7 @@
     }
 
     > :last-child {
-        margin-bottom: 44px;
+        margin-bottom: 28px;
     }
 
     @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
@@ -81,13 +91,13 @@
         }
 
         > :last-child {
-            margin-bottom: 68px;
+            margin-bottom: 52px;
         }
     }
 }
 
 .c-splash-hero__tag {
-    @include font("SOLEIL", 12px, 400, 16px, 18);
+    @include font("SOLEIL", 12px, 400, 16px, 180);
     color: $pink-rose;
     margin: 0 0 6px 0;
     text-transform: uppercase;
@@ -121,7 +131,7 @@
 }
 
 .c-splash-hero__byline {
-    @include font('SOLEIL', 10px, 400, 16px, 12);
+    @include font('SOLEIL', 10px, 400, 16px, 120);
     color: $stroller-grey;
     margin: 18px 0 0 0;
     text-align: center;
@@ -159,19 +169,19 @@ li.c-splash-hero__meta-item {
 }
 
 .c-splash-list {
-	margin: 0 $MOBILE_SIDE_GUTTER $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
-	padding-bottom: 36px;
-	border-bottom: 1px solid $ballet-grey;
+    margin: 0 $MOBILE_SIDE_GUTTER $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+    padding-bottom: 36px;
+    border-bottom: 1px solid $ballet-grey;
 
-	@include tablet-size {
-	    margin-left: $TABLET_SIDE_GUTTER;
-	    margin-right: $TABLET_SIDE_GUTTER;
-	}
+    @include tablet-size {
+        margin-left: $TABLET_SIDE_GUTTER;
+        margin-right: $TABLET_SIDE_GUTTER;
+    }
 
-	@include desktop-size {
-	    margin-left: $DESKTOP_SIDE_GUTTER;
-	    margin-right: $DESKTOP_SIDE_GUTTER;
-	}
+    @include desktop-size {
+        margin-left: $DESKTOP_SIDE_GUTTER;
+        margin-right: $DESKTOP_SIDE_GUTTER;
+    }
 }
 
 .c-splash-list__wrapper {}
