@@ -1,7 +1,7 @@
 .n-main__covers {
     display: none;
     position: absolute;
-    top: 27px;
+    top: 26px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         display: block;
@@ -32,7 +32,7 @@
     display: inline-block;
     margin-right: 12px;
     vertical-align: middle;
-    width: 90px;
+    width: 83px;
 
     img {
         width: 100%;
@@ -57,16 +57,16 @@
 
 .n-main__cover__btn,
 a.n-main__cover__btn {
-    //@include button-single();
-    //@include button-single-light();
+    @include button-single-three();
+    @include button-single-three-light();
 
     font-style: normal;
-    margin-top: 11px;
-    padding: 8px;
-    width: auto;
+    margin-top: 12px;
+    padding: 7px 12px;
+    text-transform: capitalize;
 
     &:hover {
-        //@include button-single-light-hover();
+        @include button-single-three-light-hover();
     }
 }
 
@@ -122,8 +122,9 @@ a.n-main__cover__btn {
         border-right: 4px solid $tux-grey;
         border-top: 8px solid $tux-grey;
         bottom: 0;
-        right: 25px;
+        box-shadow: 0 0 0 1px $candle-grey;
         position: absolute;
+        right: 25px;
         width: 58px;
     }
 }
@@ -141,10 +142,11 @@ a.n-menu__subscribe-btn {
     @include button-single-three();
     @include button-single-three-dark();
 
-    @include font-size(10px);
-    @include line-height(10px);
+    @include font-size(12px);
+    @include line-height(12px);
     margin-top: 14px;
     padding: 8px 11px;
+    text-transform: none;
     width: auto;
 
     &:hover {

@@ -15,7 +15,7 @@
 .n-main__wrapper {}
 
 .n-main__header {
-    height: 140px;
+    height: 132px;
     text-align: center;
 }
 
@@ -30,7 +30,7 @@
     left: 20px;
     overflow: hidden;
     position: fixed;
-    width: 110px;
+    width: 138px;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         left: 30px;
@@ -43,7 +43,7 @@
         position: absolute;
         transition: bottom 0.2s ease-in-out;
         vertical-align: middle;
-        width: 110px;
+        width: 138px;
     }
 
     svg, img {
@@ -68,14 +68,15 @@
 .n-main__nav-logo--takeover {}
 
 .n-main__nav-title {
-    @include font("FREIGHT DISPLAY PRO", 24px, 400, 60px, 10);
+    @include font("FREIGHT DISPLAY PRO", 20px, 400, 60px, 10);
     color: $stroller-grey;
+    font-style: italic;
     display: none;
-    left: 162px;
+    left: 190px;
     letter-spacing: 0px;
     overflow: hidden;
     position: fixed;
-    right: 90px;
+    right: 129px;
     text-overflow: ellipsis;
     vertical-align: middle;
     white-space: nowrap;
@@ -85,12 +86,13 @@
     }
 
     @include desktop-size {
-        left: 172px;
+        left: 200px;
+        right: 141px;
     }
 
     @include min-screen($MAXIMUM_PAGE_WIDTH + 60px) {
         position: absolute;
-        left: 142px;
+        left: 172px;
     }
 }
 
@@ -119,7 +121,7 @@
     span {
         display: inline-block;
         height: 60px;
-        line-height: 63px;
+        line-height: 60px;
     }
 
     &:hover{
@@ -135,18 +137,6 @@
 
 .n-main__sticker {
     z-index: 3;
-
-    &:before {
-        @include vendor-prefix(transform, translateX(-50%));
-        background-color: $white;
-        border-top: solid 1px $ballet-grey;
-        top: 0;
-        content: '';
-        height: 1px;
-        left: 50%;
-        position: absolute;
-        width: 100vw;
-    }
 }
 
 .n-main__sticker-child {
@@ -248,7 +238,6 @@
         display: block;
         height: 32px;
         line-height: 32px;
-        margin-top: 14px;
         width: 60px;
 
         svg {
@@ -322,7 +311,7 @@
 
             &--more {
                 border-bottom: none;
-                height: 45px;
+                height: 40px;
                 width: 50%;
 
                 .n-menu__nav-link {

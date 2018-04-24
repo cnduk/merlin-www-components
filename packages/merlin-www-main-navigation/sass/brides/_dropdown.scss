@@ -6,6 +6,7 @@
     background-color: $champagne;
     border-top: none;
     margin-top: -1px;
+    min-width: 98px;
     padding: 22px 36px;
     z-index: 1;
 
@@ -15,7 +16,7 @@
         border-right: 8px solid transparent;
         border-bottom: 10px solid $champagne;
         height: 0;
-        left: 62px;
+        left: 60px;
         position: absolute;
         top: -10px;
         width: 0;
@@ -91,7 +92,7 @@
         border-right: 8px solid transparent;
         border-bottom: 10px solid $champagne;
         height: 0;
-        right: 25px;
+        right: 24px;
         position: absolute;
         top: -10px;
         width: 0;
@@ -107,8 +108,9 @@
         height: 24px;
         line-height: 24px;
 
-        span{
-            line-height:24px;
+        span {
+            height: 24px;
+            line-height: 24px;
         }
 
         &:hover {
@@ -127,7 +129,6 @@
 
 .n-main__dropdown--follow__group {
     font-size: 0;
-    height: 40px;
     text-align: center;
 
     & + .n-main__dropdown--follow__group {

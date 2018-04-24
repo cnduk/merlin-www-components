@@ -1,6 +1,6 @@
 .n-main__header-logo {
     display: inline-block;
-    height: 100px;
+    height: 96px;
     max-width: none;
     position: relative;
     text-align: center;
@@ -10,9 +10,9 @@
     }
 
     svg, img {
-        height: 100px;
-        padding: 20px 0;
-        fill: $black;
+        height: 96px;
+        padding: 24px 0 12px 0;
+        fill: $stroller-grey;
     }
 }
 
