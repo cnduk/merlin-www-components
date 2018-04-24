@@ -6,21 +6,21 @@
 }
 
 @mixin button-single() {
-	@include button-reset;
+    @include button-reset;
     @include font("SOLEIL", 14px, 'NORMAL', 14px);
     color: $white;
-	letter-spacing: 0.18em;
+    letter-spacing: 0.18em;
     padding: 23px 22px;
     text-align: center;
     text-transform: uppercase;
 }
 
 @mixin button-single-light() {
-	background-color: $chestnut-rose;
+    background-color: $chestnut-rose;
 }
 
 @mixin button-single-light-hover() {
-	background-color: $pink-rose;
+    background-color: $pink-rose;
 }
 
 @mixin button-single-two() {
@@ -123,4 +123,31 @@
 
 @mixin button-share-dark-hover(){
     background-color: rgba($sapphire, 0.1);
+}
+
+@mixin button-top-stories() {
+    background-color: $diamond;
+    height: 50%;
+    width: 60px;
+
+    svg {
+        height: 100%;
+        width: 20px;
+    }
+
+    svg {
+        fill: $stroller-grey;
+    }
+}
+
+@mixin button-top-stories-hover() {
+    svg {
+        fill: $pink-rose;
+    }
+}
+
+@mixin button-top-stories-disabled() {
+    svg {
+        fill: $ballet-grey;
+    }
 }

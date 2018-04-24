@@ -104,3 +104,18 @@ a.btn-share--dark {
         @include button-share-dark-hover;
     }
 }
+
+.btn-top-stories,
+a.btn-top-stories {
+    @include button-top-stories();
+
+    &:hover:not(.btn-disabled):not([disabled]),
+    &:focus:not(.btn-disabled):not([disabled]) {
+        @include button-top-stories-hover();
+    }
+
+    &.btn-disabled,
+    &[disabled] {
+        @include button-top-stories-disabled();
+    }
+}
