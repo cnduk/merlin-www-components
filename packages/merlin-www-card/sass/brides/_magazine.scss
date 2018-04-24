@@ -2,7 +2,12 @@
 // Magazine
 // -------------------- //
 @mixin card-magazine() {}
-@mixin card-magazine-small() {}
+@mixin card-magazine-small() {
+    .c-card__obj__header {
+        width: 84px;
+    }
+}
+
 @mixin card-magazine-large() {}
 
 .c-card--magazine {
