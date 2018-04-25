@@ -2,7 +2,12 @@
 // Top Stories
 // -------------------- //
 @mixin card-top-stories() {}
-@mixin card-top-stories-small() {}
+@mixin card-top-stories-small() {
+    .c-card__obj__header {
+        width: 84px;
+    }
+}
+
 @mixin card-top-stories-large() {}
 
 .c-card--top-stories {
