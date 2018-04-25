@@ -37,10 +37,20 @@
     margin-top: -0.13em;
 }
 
+.bb-dropcap--word {
+    @include font("SOLEIL", 16px, 400, 16px, 30);
+    text-transform: uppercase;
+}
+
 @include text-size-large {
-    .bb-dropcap {
+    .bb-dropcap--letter {
         @include font-size(116px);
         @include line-height(116px);
+    }
+
+    .bb-dropcap--word {
+        @include font-size(18px);
+        @include line-height(18px);
     }
 }
 
