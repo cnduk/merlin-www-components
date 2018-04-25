@@ -12,7 +12,11 @@
     .c-card__link {}
 
     .c-card__header {}
-    .c-card__footer {}
+    .c-card__footer {
+        > :first-child {
+            margin-top: 18px;
+        }
+    }
 
     .c-card__obj {}
     .c-card__obj__header {}
@@ -64,7 +68,7 @@
         @include font('FREIGHT DISPLAY PRO', 24px, 'NORMAL', 28px);
         color: $stroller-grey;
         letter-spacing: 0.01em;
-        margin: 6px 0;
+        margin: 6px 0 0 0;
         text-align: center;
         text-transform: capitalize;
     }
