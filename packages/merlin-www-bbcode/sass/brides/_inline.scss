@@ -10,11 +10,17 @@
     }
 }
 
+.bb-abbr {
+    text-decoration-color: $blossom;
+    text-decoration-style: wavy;
+}
+
 .bb-mark {
     background-color: $champagne;
 }
 
-.bb-dropcap {
+.bb-dropcap {}
+.bb-dropcap--letter {
     @include font('FREIGHT DISPLAY PRO', 102px, 'BOLD', 102px);
     color: $sweet-pea;
     float: left;
@@ -26,8 +32,8 @@
 }
 // NOTE: firefox aligns up nicely already
 // .is-firefox .bb-dropcap {}
-.is-chrome .bb-dropcap,
-.is-safari .bb-dropcap {
+.is-chrome .bb-dropcap--letter,
+.is-safari .bb-dropcap--letter {
     margin-top: -0.13em;
 }
 
