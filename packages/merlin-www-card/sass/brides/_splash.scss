@@ -2,7 +2,12 @@
 // Splash
 // -------------------- //
 @mixin card-splash() {}
-@mixin card-splash-small() {}
+@mixin card-splash-small() {
+    .c-card__obj__header {
+        width: 84px;
+    }
+}
+
 @mixin card-splash-large() {}
 
 .c-card--splash {

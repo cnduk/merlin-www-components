@@ -7,16 +7,13 @@
 
 .c-splash-section {
     margin-bottom: $MOBILE_SLICE_MARGIN;
-    margin-top: $MOBILE_SLICE_MARGIN;
 
     @include tablet-size {
         margin-bottom: $TABLET_SLICE_MARGIN;
-        margin-top: $TABLET_SLICE_MARGIN;
     }
 
     @include desktop-size {
         margin-bottom: $DESKTOP_SLICE_MARGIN;
-        margin-top: $DESKTOP_SLICE_MARGIN;
     }
 }
 
