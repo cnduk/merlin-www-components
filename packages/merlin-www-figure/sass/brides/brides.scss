@@ -5,17 +5,17 @@
 
 
 .c-figure {
-    margin: 0 16px 44px 16px;
+    margin: 0 0 44px 0;
 }
 
 .c-figure__container {
     background-color: $diamond;
-    margin: 0 -16px;
 }
 
 .c-figure__title {
     @include font('FREIGHT DISPLAY PRO', 32px, 'NORMAL', 32px);
-    box-shadow: inset 0 -0.25em 0 0 $white, inset 0 -0.65em 0 0 $champagne;
+    box-shadow: inset 0 -0.25em 0 0 $white,
+                inset 0 -0.65em 0 0 $champagne;
     color: $stroller-grey;
     display: inline;
     letter-spacing: 0.01em;
