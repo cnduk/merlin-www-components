@@ -1,11 +1,13 @@
-.a-sidebar-content {}
+.a-sidebar-content {
+    margin-top: 6px;
+}
 
 .a-sidebar-content__title {
     @include font('SOLEIL', 14px, null, 16px);
-    box-shadow: inset 0 -0.5em 0 0 $azure;
+    box-shadow: inset 0 -0.5714em 0 0 $azure;
     color: $sapphire;
     display: inline-block;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.06em;
     margin: 0 0 18px 0;
 }
 

@@ -1,7 +1,8 @@
 .a-header {}
 
 .a-header__wrapper {
-    padding: 36px $MOBILE_SIDE_GUTTER;
+    margin-bottom: 36px;
+    padding: 36px $MOBILE_SIDE_GUTTER 0 $MOBILE_SIDE_GUTTER;
 }
 
 .a-header__content {}
@@ -45,6 +46,14 @@
     letter-spacing: 0.03em;
     margin: 0 0 20px 0;
     text-align: center;
+
+    .bb-p {
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        letter-spacing: inherit;
+        line-height: inherit;
+    }
 }
 
 .a-header__byline {
@@ -164,6 +173,7 @@
 }
 
 .a-header__image {
+    max-width: 1440px;
     padding: 0 $MOBILE_SIDE_GUTTER;
 }
 
@@ -186,6 +196,7 @@
     color: $candle-grey;
     margin: 0;
     padding: 0;
+    text-shadow: 0 0 4px rgba($black, 0.08);
 
     .bb-p {
         @include font('SOLEIL', 12px, null, 16px);
@@ -201,6 +212,7 @@
     letter-spacing: 0.06em;
     margin: 6px 0 0 0;
     padding: 0;
+    text-shadow: 0 0 4px rgba($black, 0.08);
     text-transform: uppercase;
 }
 
@@ -331,7 +343,8 @@
     .a-header {}
 
     .a-header__wrapper {
-        padding: 48px $DESKTOP_SIDE_GUTTER;
+        margin-bottom: 48px;
+        padding: 48px $DESKTOP_SIDE_GUTTER 0 $DESKTOP_SIDE_GUTTER;
     }
 
     .a-header__content {

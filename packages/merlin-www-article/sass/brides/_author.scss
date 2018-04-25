@@ -32,7 +32,7 @@
 }
 
 .a-author__article-date {
-    @include font('SOLEIL', 10px, null, 15px);
+    @include font('SOLEIL', 10px, null, 16px);
     color: $candle-grey;
     letter-spacing: 0.12em;
     text-transform: uppercase;
