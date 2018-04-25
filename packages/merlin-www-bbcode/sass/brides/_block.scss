@@ -147,7 +147,7 @@
     padding-left: 32px;
 
     .bb-li:before {
-        @include font('SOLEIL', 14px, 'BOLD');
+        @include font('SOLEIL', 16px, 'BOLD', 21px);
         color: $pink-rose;
         content: counters(section, ".") ". ";
         counter-increment: section;
@@ -180,6 +180,7 @@
 .bb-question__q,
 .bb-answer__a {
     @include font('SOLEIL', 14px, 'BOLD');
+    font-style: normal;
     margin-right: 32px;
     position: relative;
 }
@@ -282,7 +283,7 @@
 .bb-infobox {
     background-color: $white;
     border: 1px solid $ballet-grey;
-    margin: 40px 0;
+    margin: 32px 0;
     padding: 34px 20px;
     position: relative;
     text-align: center;
@@ -399,12 +400,6 @@
         margin: 18px 0 0 0;
     }
 
-    .bb-ol {
-        .bb-li:before {
-            @include font-size(16px);
-        }
-    }
-
     .bb-question {
         margin: 48px 0 18px 0;
     }
@@ -429,6 +424,11 @@
     }
 
     .bb-note {
+        margin: 48px 0;
+        padding: 46px 32px;
+    }
+
+    .bb-callout {
         margin: 48px 0;
         padding: 46px 32px;
     }
