@@ -111,8 +111,50 @@ li.c-topic-strip__item {
 }
 
 .c-topic-strip--article-related {
-    margin: 40px 0 0 0;
-    text-align: center;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @include tablet-size {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include desktop-size {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+
+        text-align: center;
+    }
+
+    .c-topic-strip__wrapper {
+        margin-left: -$MOBILE_SIDE_GUTTER;
+        margin-right: -$MOBILE_SIDE_GUTTER;
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
+
+        @include tablet-size {
+            margin-left: -$TABLET_SIDE_GUTTER;
+            margin-right: -$TABLET_SIDE_GUTTER;
+            padding-left: $TABLET_SIDE_GUTTER;
+            padding-right: $TABLET_SIDE_GUTTER;
+        }
+
+        @include desktop-size {
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
 
     &:after {
         display: none;
@@ -120,6 +162,7 @@ li.c-topic-strip__item {
 
     @include article-large-size {
         margin-top: 48px;
+        text-align: center;
     }
 }
 
