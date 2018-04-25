@@ -205,7 +205,7 @@ li.c-gallery__image-item {
 .c-gallery__teaser {
     display: none;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include desktop-size {
         @include font("SOLEIL", 14px, 400, 20px, 30);
         display: block;
         color: $ascot-grey;
