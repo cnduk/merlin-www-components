@@ -174,9 +174,10 @@
         svg {
             display: inline-block;
             fill: $stroller-grey;
-            height: 20px;
+            height: 16px;
             line-height: 60px;
             vertical-align: middle;
+            width: 24px;
         }
     }
 
@@ -191,9 +192,10 @@
         svg {
             display: inline-block;
             fill: $stroller-grey;
-            height: 16px;
+            height: 20px;
             line-height: 60px;
             vertical-align: middle;
+            width: 20px;
         }
     }
 }
@@ -246,6 +248,13 @@
             height: 20px;
             line-height: 60px;
             vertical-align: middle;
+        }
+    }
+
+    &:hover {
+        .n-main__nav-search__icon svg,
+        .n-main__nav-search__close-icon svg {
+            fill: $pink-rose;
         }
     }
 }

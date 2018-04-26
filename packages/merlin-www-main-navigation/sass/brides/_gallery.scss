@@ -64,6 +64,12 @@ a.n-gallery-close {
     line-height: 60px;
     width: 60px;
 
+    &:hover {
+        svg {
+            fill: $pink-rose;
+        }
+    }
+
     svg {
         height: 100%;
         fill: $stroller-grey;

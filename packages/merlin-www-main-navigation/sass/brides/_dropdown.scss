@@ -82,7 +82,7 @@
 .n-main__dropdown-list--right {
     background-color: $champagne;
     border-top: none;
-    margin-top: 16px;
+    margin-top: -1px;
     padding: 22px 24px;
     z-index: 1;
 
@@ -101,21 +101,27 @@
 
 .n-main__dropdown--follow {
     .n-main__dropdown-link {
-        @include button-single-three();
-        @include button-single-three-light();
-        margin-top: 19px;
-        padding: 0 11px;
-        height: 24px;
-        line-height: 24px;
+        @include font('SOLEIL', 12px, 'NORMAL', 12px);
+        color: $candle-grey;
+        letter-spacing: 0;
+        padding: 0 10px;
+        position: relative;
 
-        span {
+        &:before {
+            border-radius: 30px;
+            border: 1px solid $ballet-grey;
+            content: '';
+            height: 100%;
             height: 24px;
-            line-height: 24px;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
         }
 
         &:hover {
             color: $candle-grey;
-            border-bottom: solid 1px $ballet-grey;
         }
     }
 

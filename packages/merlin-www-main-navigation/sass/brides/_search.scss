@@ -27,7 +27,7 @@
     top: 0;
 
     input {
-        @include font("SOLEIL", 12px, 'NOMRAL', 12px);
+        @include font("SOLEIL", 12px, 'NOMRAL', 60px);
         background-color: $champagne;
         border: none;
         box-sizing: border-box;
