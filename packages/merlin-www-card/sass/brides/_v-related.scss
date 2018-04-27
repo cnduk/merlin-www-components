@@ -16,6 +16,8 @@
     }
 
     .c-card__title {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
         @include font('SOLEIL', 14px, 'NORMAL', 18px);
         color: $ascot-grey;
         letter-spacing: 0.01em;

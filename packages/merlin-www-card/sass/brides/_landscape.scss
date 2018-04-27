@@ -20,6 +20,8 @@
     }
 
     .c-card__tag {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
         @include font('SOLEIL');
         color: $pink-rose;
         letter-spacing: 0.18em;
@@ -37,6 +39,8 @@
     }
 
     .c-card__byline {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
         @include font('SOLEIL', 10px, null, 16px);
         color: $stroller-grey;
         letter-spacing: 0.12em;
@@ -53,6 +57,8 @@
         margin: 6px 0 0 0;
     }
     .c-card__meta-item {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
         @include font('SOLEIL', 10px, null, 12px);
         color: $candle-grey;
         letter-spacing: 0.12em;
