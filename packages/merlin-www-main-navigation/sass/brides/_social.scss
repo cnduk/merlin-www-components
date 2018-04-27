@@ -8,6 +8,8 @@
 }
 
 .n-menu__social-title {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
     @include font("SOLEIL", 12px, 'NORMAL', 12px, 180);
     color: $ascot-grey;
     text-transform: uppercase;
