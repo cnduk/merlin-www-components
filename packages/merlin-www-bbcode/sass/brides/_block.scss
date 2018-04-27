@@ -124,6 +124,11 @@
 }
 .bb-ul {
     list-style-type: none;
+    margin: 32px 0;
+
+    @include text-size-large {
+        margin: 48px 0;
+    }
 
     .bb-li {
         padding-left: 32px;
@@ -144,7 +149,12 @@
 .bb-ol {
     counter-reset: section;
     list-style-type: none;
+    margin: 32px 0;
     padding-left: 32px;
+
+    @include text-size-large {
+        margin: 48px 0;
+    }
 
     .bb-li:before {
         @include font('SOLEIL', 16px, 'BOLD', 21px);

@@ -30,8 +30,8 @@
     margin: 0 12px 15px 0;
     text-transform: uppercase;
 }
-// NOTE: firefox aligns up nicely already
-// .is-firefox .bb-dropcap {}
+
+.is-firefox .bb-dropcap--letter,
 .is-chrome .bb-dropcap--letter,
 .is-safari .bb-dropcap--letter {
     margin-top: -0.13em;
