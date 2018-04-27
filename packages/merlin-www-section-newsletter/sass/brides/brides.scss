@@ -101,6 +101,7 @@
     @include font("SOLEIL", 14px, 400, 14px, 20);
     apperance: none;
     background-color: $white;
+    border-radius: 0;
     border: 1px solid $stroller-grey;
     color: $stroller-grey;
     height: 60px;
