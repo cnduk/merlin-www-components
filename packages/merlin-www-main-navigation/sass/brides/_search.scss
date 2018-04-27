@@ -27,8 +27,6 @@
     top: 0;
 
     input {
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
         @include font("SOLEIL", 12px, 'NOMRAL', 60px);
         background-color: $champagne;
         border: none;

@@ -182,8 +182,6 @@
 }
 
 .c-feature__tag {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
     @include font("SOLEIL", 12px, 400, 16px, 180);
     color: $pink-rose;
     margin: 0 0 6px 0;
@@ -211,8 +209,6 @@
     display: none;
 
     @include desktop-size {
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
         @include font("SOLEIL", 14px, 400, 20px, 30);
         display: block;
         color: $ascot-grey;
@@ -221,8 +217,6 @@
 }
 
 .c-feature__byline {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
     @include font('SOLEIL', 10px, 400, 16px, 120);
     color: $stroller-grey;
     margin: 18px 0 0 0;
@@ -237,8 +231,6 @@
 }
 
 ul.c-feature__meta {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
     @include font('SOLEIL', 10px, 400, 12px, 120);
     color: $candle-grey;
     text-transform: uppercase;
@@ -246,8 +238,6 @@ ul.c-feature__meta {
 }
 
 li.c-feature__meta-item {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
     @include font('SOLEIL', 10px, 400, 12px, 120);
     color: $candle-grey;
     text-transform: uppercase;

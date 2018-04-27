@@ -3,8 +3,6 @@
 }
 
 .a-sidebar-content__title {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 14px, null, 16px);
     box-shadow: inset 0 -0.5714em 0 0 $azure;
     color: $sapphire;
@@ -28,8 +26,6 @@
     }
 
     .c-card__title {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
         @include font('SOLEIL', 14px, null, 18px);
         color: $ascot-grey;
         letter-spacing: 0.01em;

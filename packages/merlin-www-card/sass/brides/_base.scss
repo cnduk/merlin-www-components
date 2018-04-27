@@ -40,8 +40,6 @@ li.c-card__rating-mark--fill {
     background-color: $sweet-pea;
 }
 li.c-card__rating-label {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 12px, 'BOLD', 12px);
     color: $ascot-grey;
     display: inline-block;

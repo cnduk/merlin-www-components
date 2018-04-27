@@ -5,8 +5,6 @@
 .a-share__wrapper {}
 
 .a-share__title {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 14px, null, 16px);
     box-shadow: inset 0 -0.5714em 0 0 $azure;
     color: $sapphire;
@@ -29,8 +27,6 @@ li.a-share__list-item {
     margin: 24px 0 0 0;
 }
 .a-share__youtube__title {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 9px, null, 12px);
     color: $candle-grey;
     letter-spacing: 0.18em;

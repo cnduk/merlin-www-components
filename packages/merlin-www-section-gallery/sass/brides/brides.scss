@@ -97,8 +97,6 @@ li.c-gallery__image-item {
 }
 
 .c-gallery__image-remaining__text {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
     @include font("SOLEIL", 24px, 400, 24px);
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
@@ -181,8 +179,6 @@ li.c-gallery__image-item {
 }
 
 .c-gallery__tag {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
     @include font("SOLEIL", 12px, 400, 16px, 180);
     color: $pink-rose;
     margin: 0 0 6px 0;
@@ -210,8 +206,6 @@ li.c-gallery__image-item {
     display: none;
 
     @include desktop-size {
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
         @include font("SOLEIL", 14px, 400, 20px, 30);
         display: block;
         color: $ascot-grey;
@@ -224,8 +218,6 @@ li.c-gallery__image-item {
 }
 
 .c-gallery__byline {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
     @include font('SOLEIL', 10px, 400, 16px, 120);
     color: $stroller-grey;
     margin: 18px 0 0 0;
@@ -240,8 +232,6 @@ li.c-gallery__image-item {
 }
 
 ul.c-gallery__meta {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
     @include font('SOLEIL', 10px, 400, 12px, 120);
     color: $candle-grey;
     text-transform: uppercase;
@@ -249,8 +239,6 @@ ul.c-gallery__meta {
 }
 
 li.c-gallery__meta-item {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
     @include font('SOLEIL', 10px, 400, 12px, 120);
     color: $candle-grey;
     text-transform: uppercase;

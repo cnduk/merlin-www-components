@@ -3,8 +3,6 @@
     text-align: center;
 }
 .a-event-author__location {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 14px, null, 16px, 20);
     color: $candle-grey;
     margin: 10px 0;
@@ -13,8 +11,6 @@
     display: none;
 }
 .a-event-author__date {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 10px, null, 12px, 120);
     color: $candle-grey;
     margin: 10px 0 16px 0;
@@ -36,8 +32,6 @@
 }
 
 .a-author__article-date {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 10px, null, 16px);
     color: $candle-grey;
     letter-spacing: 0.12em;
@@ -45,8 +39,6 @@
 }
 
 .a-author__bio {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 12px, null, 16px);
     color: $stroller-grey;
     letter-spacing: 0.03em;
@@ -63,8 +55,6 @@
 }
 
 .a-author__byline {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 10px, null, 16px);
     color: $ascot-grey;
     margin: 6px 0;

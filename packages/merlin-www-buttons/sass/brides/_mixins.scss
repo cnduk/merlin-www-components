@@ -6,8 +6,6 @@
 }
 
 @mixin button-single() {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
     @include button-reset;
     @include font("SOLEIL", 14px, 'NORMAL', 14px);
     color: $white;
@@ -26,8 +24,6 @@
 }
 
 @mixin button-single-two() {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
     @include button-reset;
     @include font("SOLEIL", 12px, 'NORMAL', 12px);
     letter-spacing: 0.18em;
@@ -47,8 +43,6 @@
 }
 
 @mixin button-single-three() {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
     @include button-reset;
     @include font('SOLEIL', 12px, 'NORMAL', 12px);
     border-radius: 30px;
@@ -79,8 +73,6 @@
 }
 
 @mixin button-group() {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
     @include button-reset;
     @include font('SOLEIL', 12px, 'NORMAL', 12px);
     letter-spacing: 0.18em;

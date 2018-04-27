@@ -27,8 +27,6 @@
 }
 
 .a-review__key {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 12px, null, 16px);
     color: $candle-grey;
     letter-spacing: 0.12em;
@@ -36,8 +34,6 @@
     text-transform: uppercase;
 }
 .a-review__value {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 14px, null, 20px);
     color: $ascot-grey;
     letter-spacing: 0.03em;
@@ -65,8 +61,6 @@
 }
 
 .a-review__rating {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 12px, 'BOLD', 12px);
     color: $ascot-grey;
     display: inline-block;

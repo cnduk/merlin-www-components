@@ -15,8 +15,6 @@
 }
 
 .a-header__tag {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 12px, null, 16px);
     color: $pink-rose;
     letter-spacing: 0.18em;
@@ -43,8 +41,6 @@
 }
 
 .a-header__teaser {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 14px, null, 20px);
     color: $ascot-grey;
     letter-spacing: 0.03em;
@@ -61,8 +57,6 @@
 }
 
 .a-header__byline {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 10px, null, 16px);
     color: $stroller-grey;
     letter-spacing:0.12em;
@@ -85,8 +79,6 @@
 
 
 .a-header__sponsor {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 10px, null, 16px, 120);
     border-top: 1px solid $ballet-grey;
     color: $stroller-grey;
@@ -114,8 +106,6 @@
     text-align: center;
 }
 .a-header__meta-item {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 10px, null, 12px);
     color: $candle-grey;
     letter-spacing: 0.12em;
@@ -147,8 +137,6 @@
 }
 
 .a-header__date {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 10px, null, 12px);
     color: $candle-grey;
     letter-spacing: 0.12em;
@@ -164,15 +152,11 @@
 }
 .a-header__event-title,
 .a-header__event-location {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 14px, null, 16px, 20);
     color: $candle-grey;
     margin: 10px 0;
 }
 .a-header__event-date {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 10px, null, 12px, 120);
     color: $candle-grey;
     margin: 10px 0 16px 0;
@@ -201,8 +185,6 @@
 }
 
 .a-header__image-title {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 12px, 'BOLD', 16px);
     color: $ascot-grey;
     letter-spacing: 0.03em;
@@ -217,8 +199,6 @@
     text-shadow: 0 0 4px rgba($black, 0.08);
 
     .bb-p {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
         @include font('SOLEIL', 12px, null, 16px);
         color: inherit;
         letter-spacing: 0.03em;
@@ -227,8 +207,6 @@
 }
 
 .a-header__image-credit {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     @include font('SOLEIL', 9px, null, 12px)
     color: rgba($candle-grey, 0.75);
     letter-spacing: 0.06em;
