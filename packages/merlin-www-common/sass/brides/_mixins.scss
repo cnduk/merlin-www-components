@@ -1,1 +1,32 @@
 @import '../wireframe/_mixins';
+
+@mixin font($family, $size: null, $weight: null, $line-height: null, $tracking: null) {
+    @if ($family == 'SOLEIL') {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    @include font-family($family);
+
+    @if ($size) {
+        @include font-size($size);
+    }
+
+    @if ($weight) {
+        @include font-weight($weight);
+    }
+
+    @if ($line-height) {
+        @include line-height($line-height);
+    }
+    @else {
+        @include font-line-height($family);
+    }
+
+    @if ($tracking) {
+        letter-spacing: tracking($tracking);
+    }
+    @else {
+        @include font-tracking($family);
+    }
+}
