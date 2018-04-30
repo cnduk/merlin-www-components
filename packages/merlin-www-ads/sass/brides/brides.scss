@@ -1,6 +1,6 @@
 .ad__title {
     @include font('SOLEIL', 9px, 'NORMAL', 12px);
-    color: rgba($ascot-grey, 0.75);
+    color: rgba($candle-grey, 0.75);
     letter-spacing: 0.06em;
     margin: 0 0 5px 0;
     text-align: center;
@@ -128,6 +128,11 @@
         margin: 0;
         right: 0;
         width: 300px;
+
+        .ad__block {
+            margin: -24px 0;
+            padding: 24px 0;
+        }
     }
 
     .ad--article-rail-top,
