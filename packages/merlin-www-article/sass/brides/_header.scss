@@ -127,6 +127,7 @@
 }
 .a-header__meta-item + .a-header__meta-item:before {
     background-color: $candle-grey;
+    border-radius: 50%;
     content: '';
     display: block;
     height: 2px;
