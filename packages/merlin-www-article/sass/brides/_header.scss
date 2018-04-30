@@ -91,7 +91,10 @@
     display: inline-block;
     margin-bottom: 4px;
 }
-.a-header__sponsor-name {}
+.a-header__sponsor-name {
+    @include font-weight(700);
+    color: inherit;
+}
 .a-header__sponsor-image {
     display: block;
     margin: 0 auto;
