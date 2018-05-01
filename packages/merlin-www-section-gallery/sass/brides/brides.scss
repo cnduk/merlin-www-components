@@ -87,7 +87,9 @@ li.c-gallery__image-item {
     }
 }
 
-.c-gallery__image {}
+.c-gallery__image {
+    background-color: $diamond;
+}
 
 .c-gallery__image-remaining {
     background-color: rgba($black, 0.25);
