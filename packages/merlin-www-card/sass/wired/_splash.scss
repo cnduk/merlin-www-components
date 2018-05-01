@@ -1,0 +1,115 @@
+// -------------------- //
+// Splash
+// -------------------- //
+@mixin card-splash() {
+    .c-card__obj {
+        display: table;
+        width: 100%;
+    }
+
+    .c-card__obj__header,
+    .c-card__obj__body {
+        display: table-cell;
+        vertical-align: top;
+    }
+}
+
+@mixin card-splash-small() {
+    .c-card__obj__header {
+        max-width: 120px;
+        padding-right: 10px;
+        width: 33.33333%;
+    }
+
+    .c-card__obj__body {
+        padding-left: 0px;
+        width: 100%;
+    }
+
+    .c-card__title {
+        @include font("BRUTAL", 13px, 500, 17px);
+	    margin-bottom: 10px;
+	    margin-top: 0;
+    }
+
+    .c-card__separator {
+        margin: 10px 0;
+        width: 15px;
+    }
+
+    .c-card__byline {
+        @include font-size(11px);
+	    @include line-height(11px);
+	    margin-bottom: 5px;
+	    margin-top: 10px;
+    }
+
+    .c-card__byline-prefix {
+        @include font("EXCHANGE WEB", 11px, null, 11px);
+	    font-style: italic;
+    }
+
+    .c-card__byline-name {
+        @include font("BRUTAL", 11px, 700, 11px);
+        text-transform: uppercase;
+    }
+
+    .c-card__meta {
+        font-size: 0;
+        margin-top: 5px;
+
+        li.c-card__meta-item {
+            @include font("EXCHANGE WEB", 11px, 400, 14px);
+            padding-right: 10px;
+
+            & + li.c-card__meta-item {
+                border-left: 1px solid black;
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+@mixin card-splash-large() {
+     @include card-splash-small;
+
+    .c-card__obj {
+        display: table;
+
+    }
+
+    .c-card__obj__header,
+    .c-card__obj__body {
+        display: table-cell;
+        vertical-align: top;
+    }
+
+}
+
+.c-card--splash {
+    @include card-landscape();
+    @include card-landscape-small();
+
+    @include card-splash();
+    @include card-splash-small();
+
+    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+        @include card-splash-large();
+    }
+}
+
+.c-card--splash-small {
+    @include card-landscape();
+    @include card-landscape-small();
+
+    @include card-splash();
+    @include card-splash-small();
+}
+
+.c-card--splash-large {
+    @include card-landscape();
+    @include card-landscape-small();
+
+    @include card-splash();
+    @include card-splash-large();
+}
