@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.24"></a>
+## [1.8.24](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-main-navigation@1.8.23...@cnbritain/merlin-www-main-navigation@1.8.24) (2018-05-01)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-main-navigation
+
 <a name="1.8.11"></a>
 ## [1.8.11](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-main-navigation@1.8.10...@cnbritain/merlin-www-main-navigation@1.8.11) (2018-04-20)
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.15.0"></a>
+# [1.15.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-assets@1.14.1...@cnbritain/merlin-www-assets@1.15.0) (2018-05-01)
+
+
+### Features
+
+* **merlin-www-assets:** update favicons ([5f36635](https://github.com/cnduk/merlin-www-components/commit/5f36635))
+
+
+
+
 <a name="1.14.0"></a>
 # [1.14.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-assets@1.13.3...@cnbritain/merlin-www-assets@1.14.0) (2018-04-20)
 
