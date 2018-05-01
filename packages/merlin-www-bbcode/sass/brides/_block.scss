@@ -18,7 +18,7 @@
 }
 
 .bb-h3 {
-    @include font('FREIGHT DISPLAY PRO', 20px, null, 24px);
+    @include font('FREIGHT DISPLAY PRO', 20px, null, 28px);
     color: $ascot-grey;
     letter-spacing: 0.03em;
     margin: 40px auto 14px auto;
@@ -124,10 +124,10 @@
 }
 .bb-ul {
     list-style-type: none;
-    margin: 32px 0;
+    margin: 0 0 32px 0;
 
     @include text-size-large {
-        margin: 48px 0;
+        margin: 0 0 48px 0;
     }
 
     .bb-li {
@@ -149,11 +149,11 @@
 .bb-ol {
     counter-reset: section;
     list-style-type: none;
-    margin: 32px 0;
+    margin: 0 0 32px 0;
     padding-left: 32px;
 
     @include text-size-large {
-        margin: 48px 0;
+        margin: 0 0 48px 0;
     }
 
     .bb-li:before {

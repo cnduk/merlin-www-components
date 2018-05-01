@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.15.0"></a>
+# [1.15.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.14.15...@cnbritain/merlin-www-bbcode@1.15.0) (2018-04-30)
+
+
+### Features
+
+* **merlin-www-bbcode:** add map template ([9c3de3b](https://github.com/cnduk/merlin-www-components/commit/9c3de3b))
+
+
+
+
 <a name="1.14.4"></a>
 ## [1.14.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.14.3...@cnbritain/merlin-www-bbcode@1.14.4) (2018-04-20)
 

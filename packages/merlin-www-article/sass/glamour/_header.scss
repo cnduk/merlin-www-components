@@ -416,3 +416,45 @@ li.a-header__meta-item {
         }
     }
 }
+
+.a-header__event {
+    margin: 30px 0;
+
+    @include min-screen($ARTICLE_TOTAL) {
+        display: none;
+    }
+}
+
+.a-header__event-title {
+    @include font("GRAPHIK", 10px, 400, 12px);
+    color: $dune;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.a-header__event-location {
+    @include font("GRAPHIK", 10px, 400, 12px);
+    color: $dune;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.a-header__event-date {
+    @include font("GRAPHIK", 10px, 400, 12px);
+    color: $dune;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    margin-top: 13px;
+    text-transform: uppercase;
+}
+
+.a-header__event-btn {
+    @include button-group();
+    @include button-group-light();
+
+    &:hover {
+        @include button-group-light-hover();
+    }
+}

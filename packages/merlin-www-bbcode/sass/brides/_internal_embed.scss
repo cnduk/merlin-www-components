@@ -33,6 +33,7 @@
 }
 
 .bb-card__image {
+    background-color: $diamond;
     padding-top: 66.66%;
 }
 
@@ -123,7 +124,9 @@
 .bb-gallery__cols {
     margin-top: 12px;
 }
-.bb-gallery__col {}
+.bb-gallery__col {
+    background-color: $diamond;
+}
 
 .bb-gallery__remaining {
     background-color: rgba($black, 0.25);

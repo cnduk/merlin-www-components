@@ -150,7 +150,7 @@
 
         .c-card__images {
             &:after {
-                @include font("SOLEIL", 10px, 400, 12px, 12);
+                @include font("SOLEIL", 10px, 400, 12px, 120);
                 color: $white;
                 content: "Now Playing";
                 left: 50%;

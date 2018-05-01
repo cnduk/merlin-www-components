@@ -114,6 +114,7 @@
     }
     .c-card__meta-item + .c-card__meta-item:before {
         background-color: $candle-grey;
+        border-radius: 50%;
         content: '';
         display: block;
         height: 2px;

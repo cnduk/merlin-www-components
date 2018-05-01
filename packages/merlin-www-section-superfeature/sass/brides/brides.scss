@@ -6,7 +6,6 @@
 .c-superfeature {
     margin-bottom: $MOBILE_SLICE_MARGIN;
     margin-top: $MOBILE_SLICE_MARGIN;
-    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
 
     @include tablet-size {
         margin-bottom: $TABLET_SLICE_MARGIN;
