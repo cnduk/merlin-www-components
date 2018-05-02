@@ -1,5 +1,4 @@
-.a-author,
-.a-event-author {
+.a-author-sidebar {
     display: none;
     clear: left;
     float: left;
@@ -10,6 +9,9 @@
         display: block;
     }
 }
+
+.a-author {}
+.a-event-author {}
 
 .a-author__article-date {}
 

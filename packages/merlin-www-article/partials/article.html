@@ -4,11 +4,13 @@
     {{# state.has_body }}
         <div class="a-body stick-group">
             <div class="a-body__wrapper">
-                {{# data.event_information }}
-                    {{> @cnbritain/merlin-www-article/article-event-author }}
-                {{/ data.event_information }}
+                <aside class="a-author-sidebar">
+                    {{# data.event_information }}
+                        {{> @cnbritain/merlin-www-article/article-event-author }}
+                    {{/ data.event_information }}
 
-                {{> @cnbritain/merlin-www-article/article-author }}
+                    {{> @cnbritain/merlin-www-article/article-author }}
+                </aside>
 
                 {{# data.review_information }}
                     {{> @cnbritain/merlin-www-article/article-review }}
