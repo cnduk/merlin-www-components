@@ -6,43 +6,74 @@
 @import "../wireframe/wireframe";
 
 .c-splash-section {
-	margin-bottom: $MOBILE_SLICE_MARGIN;
-	//margin-top: $MOBILE_SLICE_MARGIN;
+	box-sizing: border-box;
+    margin: 0 auto;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-	    margin-bottom: $TABLET_SLICE_MARGIN;
-	    //margin-top: $TABLET_SLICE_MARGIN;
-	}
-
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-	    margin-bottom: $DESKTOP_SLICE_MARGIN;
-	    //margin-top: $DESKTOP_SLICE_MARGIN;
-	}
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+		padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+        margin-top: $DESKTOP_SLICE_MARGIN;
+    }
 
 }
 
-.c-splash-section__wrapper {
-	margin: 0 auto;
-	max-width: $MAXIMUM_PAGE_WIDTH;
+.c-splash__constrain {
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+}
+
+.c-splash-hero__wrapper {
+	font-size: 0;
 	position: relative;
-	width: 100%;
-}
 
-.c-splash-hero {
-	&:hover,
-   	&:focus {
-        .c-splash-hero__title span {
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        display: table;
+        padding-top: 0;
+        width: 100%;
+    }
+
+    &:hover,
+    &:focus {
+        .c-feature__title span {
             text-decoration: underline;
         }
     }
 }
 
-.c-splash-hero__wrapper {}
-.c-splash-hero__images {}
-.c-splash-hero__image {}
+.c-splash-hero__images,
+.c-splash-hero__content {
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        direction: ltr;
+        display: table-cell;
+        position: static;
+        vertical-align: middle;
+        width: 50%;
+    }
+}
+
+.c-splash__image--custom {
+    position: relative;
+
+    img {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+}
 
 .c-splash-hero__image__wrapper {
 	background-color: $black;
+}
+
+.c-feature__image--portrait {
+    display: inline-block;
+    width: 50%;
 }
 
 .c-splash-hero__content {
@@ -53,6 +84,21 @@
 
 	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
 		padding: 40px;
+	}
+}
+
+.c-splash-hero__icon {
+    display: block;
+    height: 20px;
+    margin: 0 auto 20px auto;
+    width: 20px;
+
+    svg {
+        fill: $black;
+    }
+
+	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+		margin-bottom: 30px;
 	}
 }
 
@@ -71,7 +117,12 @@
 .c-splash-hero__teaser {
     @include font("BRUTAL", 15px, null, 17px);
     color: $black;
+	display: none;
     margin: 10px auto;
+
+	@include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+        //display: block;
+    }
 }
 
 .c-splash-hero__title + *:not(.c-splash-hero__teaser),
@@ -131,37 +182,26 @@ li.c-splash-hero__meta-item {
 	padding-top: 20px;
 	border-bottom: 1px solid $black;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-	    margin-left: $TABLET_SIDE_GUTTER;
-	    margin-right: $TABLET_SIDE_GUTTER;
-	}
-
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-	    margin-left: $DESKTOP_SIDE_GUTTER;
-	    margin-right: $DESKTOP_SIDE_GUTTER;
+	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+	    margin: 0;
 	}
 
 }
 
-.c-card-list--c-splash{
-	.c-card-list__item {
-
+.c-card-list--c-splash {
+	li.c-card-list__item {
 		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-			width: 25%;
+			width: 23.33333%;
 			display: inline-block;
-			padding: 0 10px;
-			margin: 10px 0;
 		}
 
 		& + li.c-card-list__item {
 			margin-top: 25px;
 
 			@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+				margin-left: 20px;
 				margin-top: 0px;
 			}
 		}
-
 	}
 }
-
-.c-splash-list__wrapper {}
