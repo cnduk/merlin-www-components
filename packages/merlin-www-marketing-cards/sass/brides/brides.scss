@@ -34,7 +34,7 @@
 }
 
 .a-marketing-card__title {
-    @include font('FREIGHT DISPLAY PRO', 15px, 'NORMAL', 20px);
+    @include font('FREIGHT DISPLAY PRO', 16px, 'NORMAL', 20px);
     color: $ascot-grey;
     letter-spacing: 0.03em;
 }
@@ -73,6 +73,8 @@
 .a-marketing-card__link {
     @include button-single;
     @include button-single-light;
+
+    padding: 17px 22px;
 
     &:hover,
     &:focus {
