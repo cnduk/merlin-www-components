@@ -112,7 +112,8 @@
 }
 
 @mixin button-share-light-hover(){
-    border-color: $sapphire;
+    background-color: $azure;
+    border-color: $azure;
     fill: $sapphire;
 }
 
