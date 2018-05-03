@@ -33,10 +33,10 @@
 .n-gallery-counter {
     @include line-height(60px);
     font-style: italic;
-    padding: 0 14px;
+    padding: 2px 14px 0 14px;
 
     @include desktop-size {
-        padding: 0 20px;
+        padding: 2px 20px 0 20px;
     }
 }
 
@@ -48,7 +48,7 @@
 .n-gallery-counter__slash {
     @include font("FREIGHT DISPLAY PRO", 16px, 400, 16px);
     color: $candle-grey;
-    padding: 0 4px;
+    padding: 0 8px;
 }
 
 .n-gallery-counter__total {
