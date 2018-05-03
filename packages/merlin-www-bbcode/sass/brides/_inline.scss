@@ -11,7 +11,7 @@
 }
 
 .bb-abbr {
-    text-decoration-color: $blossom;
+    text-decoration-color: $sweet-pea;
     text-decoration-style: wavy;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .bb-dropcap--word {
-    @include font("SOLEIL", 16px, 400, 16px, 30);
+    @include font("SOLEIL", 16px, 700, 16px, 30);
     text-transform: uppercase;
 }
 
