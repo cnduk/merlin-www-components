@@ -5,7 +5,7 @@
 .a-share__wrapper {}
 
 .a-share__title {
-    @include font('SOLEIL', 14px, null, 16px);
+    @include font('SOLEIL', 14px, null, 20px);
     box-shadow: inset 0 -0.5714em 0 0 $azure;
     color: $sapphire;
     display: inline-block;
