@@ -1,0 +1,287 @@
+{
+    "translation": {
+        "byline_prefix": "By",
+        "sponsor_prefix": "In partnership with"
+    },
+    "state": {
+        "is_show_season": false,
+        "is_gallery": false,
+        "is_contributors": false,
+        "is_superfeature": false,
+        "is_splash": false,
+        "is_show_summary": false,
+        "is_newsletter": false,
+        "is_cardlist": false,
+        "is_magazine": false,
+        "has_sponsor": true,
+        "is_feature": true
+    },
+    "data": {
+        "primary_tag": null,
+        "byline": "Darren Person",
+        "meta_list": {
+            "translation": {},
+            "state": {},
+            "data": {
+                "items": [{
+                    "translation": {},
+                    "state": {
+                        "is_first": true,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {},
+                            "state": {
+                                "is_profile": false,
+                                "is_episode_number": false,
+                                "is_duration": false,
+                                "is_gallery": false,
+                                "is_tag": true,
+                                "has_icon": false,
+                                "is_location": false,
+                                "has_link": true,
+                                "is_event_location": false,
+                                "is_video_topic": false,
+                                "is_event_date": false,
+                                "is_date": false,
+                                "is_creative_director": false
+                            },
+                            "data": {
+                                "title": "Primary tag",
+                                "meta_type": "tag",
+                                "link": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_blank": false,
+                                        "is_nofollow": false
+                                    },
+                                    "data": {
+                                        "url": "#url",
+                                        "title": "Primary tag"
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "Link"
+                                },
+                                "icon": null
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "Meta"
+                        },
+                        "index": 0
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "ListItem"
+                }, {
+                    "translation": {},
+                    "state": {
+                        "is_first": false,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {},
+                            "state": {
+                                "is_profile": false,
+                                "is_episode_number": false,
+                                "is_duration": false,
+                                "is_gallery": false,
+                                "is_tag": false,
+                                "has_icon": false,
+                                "is_location": false,
+                                "has_link": false,
+                                "is_event_location": false,
+                                "is_video_topic": false,
+                                "is_event_date": false,
+                                "is_date": true,
+                                "is_creative_director": false
+                            },
+                            "data": {
+                                "title": "12 Jan 1900",
+                                "meta_type": "date",
+                                "link": null,
+                                "icon": null
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "Meta"
+                        },
+                        "index": 1
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "ListItem"
+                }],
+                "length": 2
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "MetaList"
+        },
+        "title": "Example title of an article",
+        "image_list": {
+            "translation": {},
+            "state": {},
+            "data": {
+                "items": [{
+                    "translation": {},
+                    "state": {
+                        "is_first": true,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {},
+                            "state": {
+                                "is_static": false,
+                                "is_portrait": false,
+                                "is_image": true,
+                                "is_square": false,
+                                "is_svg": false,
+                                "is_lazyload": true,
+                                "is_linked": false,
+                                "is_picture": false,
+                                "is_landscape": true
+                            },
+                            "data": {
+                                "description": null,
+                                "title": "",
+                                "orientation": "landscape",
+                                "look_number": null,
+                                "alt_text": "",
+                                "filename": "filename.jpg",
+                                "credit": "Image credit",
+                                "image_url": "https://vg-images.condecdn.net/image/oQ1KAJXvakW/crop/405/landscape/f/filename.jpg",
+                                "srcset": "https://vg-images.condecdn.net/image/oQ1KAJXvakW/crop/405/landscape/f/filename.jpg 405w, https://vg-images.condecdn.net/image/oQ1KAJXvakW/crop/810/landscape/f/filename.jpg 810w",
+                                "width": 1280,
+                                "uid": "oQ1KAJXvakW"
+                            },
+                            "style": {
+                                "padding_top": "66.666666667%",
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "Image"
+                        },
+                        "index": 0
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": "c-feature__image--landscape"
+                    },
+                    "type": "ListItem"
+                }],
+                "length": 1
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "List"
+        },
+        "profiles": [{
+            "translation": {},
+            "state": {
+                "has_link": true,
+                "has_image": false
+            },
+            "data": {
+                "bio": null,
+                "image": null,
+                "link": {
+                    "translation": {},
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "data": {
+                        "url": "#url",
+                        "title": "Darren Person"
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "Link"
+                },
+                "teaser": null,
+                "name": "Darren Person"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "Profile"
+        }],
+        "teaser": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "link": {
+            "translation": {},
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false
+            },
+            "data": {
+                "url": "#url",
+                "title": "Example title of an article"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "Link"
+        },
+        "sponsor": {
+            "data": {
+                "title": "Sponsor name"
+            }
+        },
+        "icon": {
+            "translation": {},
+            "state": {
+                "is_static": false,
+                "is_portrait": false,
+                "is_image": false,
+                "is_square": false,
+                "is_svg": true,
+                "is_lazyload": false,
+                "is_linked": false,
+                "is_picture": false,
+                "is_landscape": false
+            },
+            "data": {
+                "credit": null,
+                "description": null,
+                "title": null,
+                "svg_content": "<svg class=\"c-feature__icon--gallery\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
+                "look_number": null,
+                "width": null,
+                "alt_text": null
+            },
+            "style": {
+                "inline": "",
+                "cls": "c-feature__icon--gallery"
+            },
+            "type": "SVG"
+        }
+    },
+    "style": {
+        "inline": "",
+        "cls": "c-feature--right"
+    },
+    "type": "SectionFeature"
+}

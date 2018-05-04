@@ -1,0 +1,194 @@
+{
+    "translation": {
+        "byline_prefix": "By",
+        "sponsor_prefix": "In partnership with"
+    },
+    "state": {
+        "is_show_season": false,
+        "is_gallery": false,
+        "is_contributors": false,
+        "is_superfeature": false,
+        "is_splash": false,
+        "is_show_summary": false,
+        "is_newsletter": false,
+        "is_cardlist": false,
+        "is_magazine": false,
+        "has_sponsor": true,
+        "is_feature": true
+    },
+    "data": {
+        "primary_tag": {
+            "translation": {},
+            "state": {
+                "has_link": true,
+                "is_sponsored": false
+            },
+            "data": {
+                "sponsor": null,
+                "link": {
+                    "translation": {},
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "data": {
+                        "url": "#url",
+                        "title": "Primary tag"
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "Link"
+                },
+                "uid": "UID",
+                "event_information": null,
+                "title": "Primary tag"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "Tag"
+        },
+        "byline": null,
+        "meta_list": null,
+        "title": "Example title of an article",
+        "image_list": {
+            "translation": {},
+            "state": {},
+            "data": {
+                "items": [{
+                    "translation": {},
+                    "state": {
+                        "is_first": true,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {},
+                            "state": {
+                                "is_static": false,
+                                "is_portrait": true,
+                                "is_image": true,
+                                "is_square": false,
+                                "is_svg": false,
+                                "is_lazyload": true,
+                                "is_linked": false,
+                                "is_picture": false,
+                                "is_landscape": false
+                            },
+                            "data": {
+                                "description": null,
+                                "title": "",
+                                "orientation": "portrait",
+                                "look_number": null,
+                                "alt_text": "",
+                                "filename": "filename.jpg",
+                                "credit": "Image credit",
+                                "image_url": "https://vg-images.condecdn.net/image/oQ1KAJXvakW/crop/405/portrait/f/filename.jpg",
+                                "srcset": "https://vg-images.condecdn.net/image/oQ1KAJXvakW/crop/405/portrait/f/filename.jpg 405w, https://vg-images.condecdn.net/image/oQ1KAJXvakW/crop/810/portrait/f/filename.jpg 810w",
+                                "width": 1280,
+                                "uid": "oQ1KAJXvakW"
+                            },
+                            "style": {
+                                "padding_top": "150%",
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "Image"
+                        },
+                        "index": 0
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": "c-feature__image--portrait"
+                    },
+                    "type": "ListItem"
+                },{
+                    "translation": {},
+                    "state": {
+                        "is_first": false,
+                        "is_last": true
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {},
+                            "state": {
+                                "is_static": false,
+                                "is_portrait": true,
+                                "is_image": true,
+                                "is_square": false,
+                                "is_svg": false,
+                                "is_lazyload": true,
+                                "is_linked": false,
+                                "is_picture": false,
+                                "is_landscape": false
+                            },
+                            "data": {
+                                "description": null,
+                                "title": "",
+                                "orientation": "portrait",
+                                "look_number": null,
+                                "alt_text": "",
+                                "filename": "filename.jpg",
+                                "credit": "Image credit",
+                                "image_url": "https://vg-images.condecdn.net/image/oQ1KAJXvakW/crop/405/portrait/f/filename.jpg",
+                                "srcset": "https://vg-images.condecdn.net/image/oQ1KAJXvakW/crop/405/portrait/f/filename.jpg 405w, https://vg-images.condecdn.net/image/oQ1KAJXvakW/crop/810/portrait/f/filename.jpg 810w",
+                                "width": 1280,
+                                "uid": "oQ1KAJXvakW"
+                            },
+                            "style": {
+                                "padding_top": "150%",
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "Image"
+                        },
+                        "index": 1
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": "c-feature__image--portrait"
+                    },
+                    "type": "ListItem"
+                }],
+                "length": 2
+            },
+            "style": {
+                "inline": "",
+                "cls": "c-feature__images--multiple"
+            },
+            "type": "List"
+        },
+        "profiles": null,
+        "teaser": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "link": {
+            "translation": {},
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false
+            },
+            "data": {
+                "url": "#url",
+                "title": "Example title of an article"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "Link"
+        },
+        "sponsor": {
+            "data": {
+                "title": "Sponsor name"
+            }
+        },
+        "icon": null
+    },
+    "style": {
+        "inline": "",
+        "cls": "c-feature--right"
+    },
+    "type": "SectionFeature"
+}

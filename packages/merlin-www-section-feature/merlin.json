@@ -47,7 +47,25 @@
     "currentTheme": null,
     "main": "feature",
     "data": {
-        "all": "demo/data/all.json",
-        "gq": "demo/data/gq.json"
+        "all-single-image": "data/all-single-image.json",
+        "all-multi-image": "data/all-multi-image.json",
+        "vg-single-image": "data/vg-single-image.json",
+        "vg-multi-image": "data/vg-multi-image.json",
+        "gq-single-image": "data/gq-single-image.json",
+        "gq-multi-image": "data/gq-multi-image.json",
+        "wi-single-image": "data/wi-single-image.json",
+        "wi-multi-image": "data/wi-multi-image.json",
+        "gl-single-image": "data/gl-single-image.json",
+        "gl-multi-image": "data/gl-multi-image.json",
+        "ta-single-image": "data/ta-single-image.json",
+        "ta-multi-image": "data/ta-multi-image.json",
+        "bystander-single-image": "data/bystander-single-image.json",
+        "bystander-multi-image": "data/bystander-multi-image.json",
+        "tr-single-image": "data/tr-single-image.json",
+        "tr-multi-image": "data/tr-multi-image.json",
+        "hg-single-image": "data/hg-single-image.json",
+        "hg-multi-image": "data/hg-multi-image.json",
+        "br-single-image": "data/br-single-image.json",
+        "br-multi-image": "data/br-multi-image.json"
     }
 }

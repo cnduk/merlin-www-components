@@ -1,0 +1,180 @@
+{
+    "translation": {
+        "byline_prefix": "By",
+        "sponsor_prefix": "In partnership with"
+    },
+    "state": {
+        "is_show_season": false,
+        "is_gallery": false,
+        "is_contributors": false,
+        "is_superfeature": false,
+        "is_splash": false,
+        "is_show_summary": false,
+        "is_newsletter": false,
+        "is_cardlist": false,
+        "is_magazine": false,
+        "has_sponsor": true,
+        "is_feature": true
+    },
+    "data": {
+        "primary_tag": {
+            "translation": {},
+            "state": {
+                "has_link": true,
+                "is_sponsored": false
+            },
+            "data": {
+                "sponsor": null,
+                "link": {
+                    "translation": {},
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "data": {
+                        "url": "#url",
+                        "title": "Primary tag"
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "Link"
+                },
+                "uid": "UID",
+                "event_information": null,
+                "title": "Primary tag"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "Tag"
+        },
+        "byline": null,
+        "meta_list": null,
+        "title": "Example title of an article",
+        "image_list": {
+            "translation": {},
+            "state": {},
+            "data": {
+                "items": [{
+                    "translation": {},
+                    "state": {
+                        "is_first": true,
+                        "is_last": false
+                    },
+                    "data": {
+                        "item": {
+                            "translation": {},
+                            "state": {
+                                "is_static": false,
+                                "is_portrait": false,
+                                "is_image": false,
+                                "is_square": false,
+                                "is_svg": false,
+                                "is_lazyload": true,
+                                "is_linked": false,
+                                "is_picture": true,
+                                "is_landscape": false
+                            },
+                            "data": {
+                                "credit": null,
+                                "width": null,
+                                "sources": [{
+                                    "media": "(min-width: 800px)",
+                                    "srcset": "https://vg-images.condecdn.net/image/oQ1KAJXvakW/crop/405/0.4/f/filename 405w, https://vg-images.condecdn.net/image/oQ1KAJXvakW/crop/810/0.4/f/filename 810w, https://vg-images.condecdn.net/image/oQ1KAJXvakW/crop/1020/0.4/f/filename 1020w, https://vg-images.condecdn.net/image/oQ1KAJXvakW/crop/1440/0.4/f/filename 1440w, https://vg-images.condecdn.net/image/oQ1KAJXvakW/crop/1620/0.4/f/filename 1620w"
+                                }, {
+                                    "media": "(min-width: 0px)",
+                                    "srcset": "https://vg-images.condecdn.net/image/oQ1KAJXvakW/crop/405/landscape/f/filename 405w, https://vg-images.condecdn.net/image/oQ1KAJXvakW/crop/810/landscape/f/filename 810w, https://vg-images.condecdn.net/image/oQ1KAJXvakW/crop/1020/landscape/f/filename 1020w, https://vg-images.condecdn.net/image/oQ1KAJXvakW/crop/1440/landscape/f/filename 1440w, https://vg-images.condecdn.net/image/oQ1KAJXvakW/crop/1620/landscape/f/filename 1620w"
+                                }],
+                                "description": null,
+                                "title": "",
+                                "image_url": "https://vg-images.condecdn.net/image/oQ1KAJXvakW/crop/405/landscape/f/filename",
+                                "look_number": null,
+                                "id": "2851dcb5-5c28-4391-a115-12510b95564b",
+                                "alt_text": "",
+                                "uid": "oQ1KAJXvakW"
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "Picture"
+                        },
+                        "id": "cd055dde-10b5-4d22-80c7-51489c9d7771",
+                        "index": 0
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": "c-feature__image--custom"
+                    },
+                    "type": "ListItem"
+                }],
+                "length": 1,
+                "id": "2f0afa80-2929-491e-856a-323c3f573905"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "List"
+        },
+        "profiles": null,
+        "teaser": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "link": {
+            "translation": {},
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false
+            },
+            "data": {
+                "url": "#url",
+                "title": "Example title of an article"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "Link"
+        },
+        "sponsor": {
+            "data": {
+                "title": "Sponsor name"
+            }
+        },
+        "icon": {
+            "translation": {},
+            "state": {
+                "is_static": false,
+                "is_portrait": false,
+                "is_image": false,
+                "is_square": false,
+                "is_svg": true,
+                "is_lazyload": false,
+                "is_linked": false,
+                "is_picture": false,
+                "is_landscape": false
+            },
+            "data": {
+                "credit": null,
+                "description": null,
+                "title": null,
+                "svg_content": "<svg class=\"c-feature__icon--gallery\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
+                "look_number": null,
+                "width": null,
+                "alt_text": null
+            },
+            "style": {
+                "inline": "",
+                "cls": "c-feature__icon--gallery"
+            },
+            "type": "SVG"
+        }
+    },
+    "style": {
+        "inline": "",
+        "cls": "c-feature--right"
+    },
+    "type": "SectionFeature"
+}
