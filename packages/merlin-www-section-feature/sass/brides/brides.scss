@@ -133,6 +133,7 @@
 .c-feature__images--multiple {}
 
 .c-feature__content {
+    margin: 28px 0 44px 0;
     position: relative;
     text-align: center;
 
@@ -140,22 +141,8 @@
         padding: 0 20px;
     }
 
-    > :first-child {
-        margin-top: 28px;
-    }
-
-    > :last-child {
-        margin-bottom: 44px;
-    }
-
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        > :first-child {
-            margin-top: 40px;
-        }
-
-        > :last-child {
-            margin-bottom: 68px;
-        }
+        padding: 40px 0;
 
         &:before {
             border: 1px solid $ballet-grey;
