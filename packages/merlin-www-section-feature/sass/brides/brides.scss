@@ -199,7 +199,7 @@
     text-align: center;
     text-transform: capitalize;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include desktop-size {
         @include font-size(40px);
         @include line-height(40px);
     }

@@ -142,10 +142,6 @@ li.c-gallery__image-item {
     }
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        > :first-child {
-            margin-top: 40px;
-        }
-
         > :nth-child(2) {
             margin-top: inherit;
         }
@@ -197,7 +193,7 @@ li.c-gallery__image-item {
     text-align: center;
     text-transform: capitalize;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include desktop-size {
         @include font-size(40px);
         @include line-height(40px);
     }
