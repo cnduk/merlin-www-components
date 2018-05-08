@@ -4,12 +4,14 @@
 
 monkeypatchGitRawCommits();
 
+const {utimes} = require('fs');
 const gulp = require('gulp');
 const conventionalChangelog = require('gulp-conventional-changelog');
 const bump = require('gulp-bump');
 const flog = require('fancy-log');
 const git = require('gulp-git');
 const minimist = require('minimist');
+const through2 = require('through2');
 
 const utils = require('../utils');
 
@@ -18,6 +20,16 @@ module.exports = function taskReleaseExports(taskConfig, browserSync) {
 /* eslint-enable no-unused-vars */
 
     const args = minimist(process.argv.slice(2));
+
+    /**
+     * This fixes an issue where vinyl-fs doesnt update the modified time
+     * so git wont detect a change.
+     * https://github.com/gulpjs/gulp/issues/1461#issuecomment-167550941
+     */
+    const touch = through2.obj(function(file, enc, done) {
+        var now = new Date;
+        utimes(file.path, now, now, done);
+    });
 
     function validateArgs(done){
         if (!args.patch && !args.minor && !args.major) {
@@ -57,7 +69,8 @@ module.exports = function taskReleaseExports(taskConfig, browserSync) {
             .pipe(bump({
                 type: bumpType
             }).on('error', flog))
-            .pipe(gulp.dest('./'));
+            .pipe(gulp.dest('./'))
+            .pipe(touch);
     });
 
     gulp.task('commit-changes', function() {
@@ -116,7 +129,6 @@ function monkeypatchGitRawCommits(){
     const charLimit = 1000;
 
     const stream = require('stream');
-    const through2 = require('through2');
 
     /* eslint-disable no-unused-vars */
     // Require this in case its not already been loaded into require.cache
