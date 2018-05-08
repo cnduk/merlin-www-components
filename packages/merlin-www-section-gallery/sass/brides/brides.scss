@@ -111,11 +111,15 @@ li.c-gallery__image-item {
 .c-gallery__image-remaining__text-value {}
 
 .c-gallery__text {
+    margin: 28px 0 44px 0;
+    position: relative;
+    text-align: center;
+
     position: relative;
     text-align: center;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        padding-left: 12px;
+        padding: 40px 0 40px 12px;
 
         &:before {
             border: 1px solid $ballet-grey;
@@ -132,24 +136,6 @@ li.c-gallery__image-item {
 .c-gallery__text__wrapper {
     > * {
         padding: 0 20px;
-    }
-
-    > :nth-child(2) {
-        margin-top: 28px;
-    }
-
-    > :last-child {
-        margin-bottom: 44px;
-    }
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        > :nth-child(2) {
-            margin-top: inherit;
-        }
-
-        > :last-child {
-            margin-bottom: 68px;
-        }
     }
 }
 
