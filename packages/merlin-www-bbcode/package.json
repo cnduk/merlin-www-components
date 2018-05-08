@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-bbcode",
-  "version": "1.15.6",
+  "version": "1.15.7",
   "description": "Templates for rendered bbcode partials",
   "main": "js/index.js",
   "scripts": {
@@ -11,9 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-www-buttons": "^1.7.14",
-    "@cnbritain/merlin-www-common": "^1.13.10",
-    "@cnbritain/merlin-www-image": "^1.9.12",
+    "@cnbritain/merlin-www-buttons": "^1.7.15",
+    "@cnbritain/merlin-www-common": "^1.13.11",
+    "@cnbritain/merlin-www-image": "^1.9.13",
     "@cnbritain/merlin-www-js-utils": "^1.6.1"
   },
   "devDependencies": {
