@@ -37,88 +37,13 @@
     }
 }
 
-.c-topic-strip--bleed {
-    margin-left: -$MOBILE_SIDE_GUTTER;
-    margin-right: -$MOBILE_SIDE_GUTTER;
-    padding-left: $MOBILE_SIDE_GUTTER;
-    padding-right: $MOBILE_SIDE_GUTTER;
-
-    @include tablet-size {
-        margin-left: -$TABLET_SIDE_GUTTER;
-        margin-right: -$TABLET_SIDE_GUTTER;
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
-    }
-
-    @include desktop-size {
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .c-topic-strip__wrapper {
-        margin-left: -$MOBILE_SIDE_GUTTER;
-        margin-right: -$MOBILE_SIDE_GUTTER;
-        padding-left: $MOBILE_SIDE_GUTTER;
-        padding-right: $MOBILE_SIDE_GUTTER;
-
-        @include tablet-size{
-            margin-left: -$TABLET_SIDE_GUTTER;
-            margin-right: -$TABLET_SIDE_GUTTER;
-            padding-left: $TABLET_SIDE_GUTTER;
-            padding-right: $TABLET_SIDE_GUTTER;
-        }
-    }
-}
-
-.c-topic-strip--c-card-section {
-    margin-bottom: 36px;
-    margin-top: 24px;
-
-    @include desktop-size {
-        margin-bottom: 44px;
-        margin-top: 28px;
-        text-align: center;
-    }
-}
-
-.c-topic-strip__wrapper {
-    overflow-x: auto;
-    padding: 21px 0;
-    position: relative;
-}
-
-.c-topic-strip__title {
-    @include font("FREIGHT DISPLAY PRO", 16px, 400, 16px, 20);
-    color: $candle-grey;
-    font-style: italic;
-    margin-right: 32px;
-    position: relative;
-}
-
-.c-topic-strip__list {
-    font-size: 0;
-    position: relative;
-}
-
-li.c-topic-strip__item {
-    font-size: initial;
-
-    & + li.c-topic-strip__item {
-        margin-left: 32px;
-    }
-}
-
+.c-topic-strip--bleed,
 .c-topic-strip--article-related {
     margin-left: -$MOBILE_SIDE_GUTTER;
     margin-right: -$MOBILE_SIDE_GUTTER;
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
 
-    margin-top: 40px;
-    margin-bottom: 40px;
-
     @include tablet-size {
         margin-left: -$TABLET_SIDE_GUTTER;
         margin-right: -$TABLET_SIDE_GUTTER;
@@ -131,8 +56,6 @@ li.c-topic-strip__item {
         margin-right: 0;
         padding-left: 0;
         padding-right: 0;
-
-        text-align: center;
     }
 
     .c-topic-strip__wrapper {
@@ -154,6 +77,73 @@ li.c-topic-strip__item {
             padding-left: 20px;
             padding-right: 20px;
         }
+    }
+}
+
+.c-topic-strip--c-card-section {
+    margin-bottom: 36px;
+    margin-top: 24px;
+
+    @include desktop-size {
+        margin-bottom: 44px;
+        margin-top: 28px;
+        text-align: center;
+    }
+}
+
+.c-topic-strip__wrapper {
+    overflow-x: auto;
+    padding: 21px 0;
+    position: relative;
+
+    @include desktop-size {
+        margin-bottom: -16px;
+    }
+}
+
+.c-topic-strip__title {
+    @include font("FREIGHT DISPLAY PRO", 16px, 400, 16px, 20);
+    color: $candle-grey;
+    font-style: italic;
+    margin-right: 32px;
+    position: relative;
+
+    @include desktop-size {
+        margin-bottom: 16px;
+    }
+}
+
+.c-topic-strip__list {
+    font-size: 0;
+    position: relative;
+}
+
+li.c-topic-strip__item {
+    font-size: initial;
+    margin-left: 16px;
+    margin-right: 16px;
+
+    @include desktop-size {
+        margin-bottom: 16px;
+    }
+
+    @include max-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT - 1) {
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.c-topic-strip--article-related {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @include desktop-size {
+        white-space: normal;
     }
 
     &:after {
