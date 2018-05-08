@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.4.40"></a>
+## [1.4.40](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.4.39...@cnbritain/merlin-www-js-pages@1.4.40) (2018-05-08)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
 <a name="1.4.37"></a>
 ## [1.4.37](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.4.36...@cnbritain/merlin-www-js-pages@1.4.37) (2018-05-02)
 
