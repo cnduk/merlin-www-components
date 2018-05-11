@@ -2,11 +2,11 @@
 
 const path = require('path');
 const Mustache = require('mustache');
-const {COMPONENTS} = require('./constants');
-const {loadFile, loadJSON} = require('./utils');
-const {compileSass} = require('./sass-utils');
-const {compileJS} = require('./webpack-utils');
-const Logger = require('./Logger');
+const {COMPONENTS} = require('../constants');
+const {loadFile, loadJSON} = require('../utils');
+const {compileSass} = require('../sass/utils');
+const {compileJS} = require('../webpack/utils');
+const Logger = require('../Logger');
 
 class Component {
 

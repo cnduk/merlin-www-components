@@ -3,7 +3,7 @@
 const sass = require('node-sass');
 const sassImporter = require('@cnbritain/merlin-sass-custom-importer');
 
-const Logger = require('./logger');
+const Logger = require('../logger');
 
 function compileSass(file, merlinConfig){
     return new Promise((resolve, reject) => {

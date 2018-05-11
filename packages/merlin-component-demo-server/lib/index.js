@@ -2,7 +2,7 @@
 
 const Logger = require('./Logger');
 const Server = require('./Server');
-const ComponentManager = require('./ComponentManager');
+const {ComponentManager} = require('./components');
 
 module.exports = {
     Logger,

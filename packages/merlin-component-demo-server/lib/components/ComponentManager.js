@@ -1,7 +1,7 @@
 'use strict';
 
-const {COMPONENTS} = require('./constants');
-const {loadJSON} = require('./utils');
+const {COMPONENTS} = require('../constants');
+const {loadJSON} = require('../utils');
 const Component = require('./Component');
 
 class ComponentManager {

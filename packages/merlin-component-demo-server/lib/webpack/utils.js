@@ -5,8 +5,8 @@ const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 
-const {loadFile, promiseError} = require('./utils');
-const Logger = require('./Logger');
+const {loadFile, promiseError} = require('../utils');
+const Logger = require('../Logger');
 
 const DYNAMIC_CONFIG_URL = /\{\{ DYNAMIC_CONFIG_URL \}\}/;
 

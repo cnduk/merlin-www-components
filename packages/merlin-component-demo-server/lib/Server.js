@@ -10,7 +10,7 @@ const Mustache = require('mustache');
 const opn = require('opn');
 const {DEFAULT_PORT, COMPONENTS} = require('./constants');
 const Logger = require('./Logger');
-const ComponentManager = require('./ComponentManager');
+const {ComponentManager} = require('./components');
 
 const resolve = p => path.resolve(__dirname, p);
 let RENDER_SETTINGS = null;
