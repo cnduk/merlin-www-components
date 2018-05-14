@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.10.17"></a>
+## [1.10.17](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-superfeature@1.10.16...@cnbritain/merlin-www-section-superfeature@1.10.17) (2018-05-14)
+
+
+### Bug Fixes
+
+* **merlin-www-section-superfeature:** add houseandgarden theme to merlin ([2a9e4f8](https://github.com/cnduk/merlin-www-components/commit/2a9e4f8))
+
+
+
+
 <a name="1.10.13"></a>
 ## [1.10.13](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-superfeature@1.10.12...@cnbritain/merlin-www-section-superfeature@1.10.13) (2018-05-08)
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.15.10"></a>
+## [1.15.10](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.9...@cnbritain/merlin-www-bbcode@1.15.10) (2018-05-14)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** remove placekitten ([4b8f452](https://github.com/cnduk/merlin-www-components/commit/4b8f452))
+
+
+
+
 <a name="1.15.6"></a>
 ## [1.15.6](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.5...@cnbritain/merlin-www-bbcode@1.15.6) (2018-05-08)
 

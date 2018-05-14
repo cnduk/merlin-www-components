@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.7.30"></a>
+## [1.7.30](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-card-carousel@1.7.29...@cnbritain/merlin-www-show-card-carousel@1.7.30) (2018-05-14)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-card-carousel
+
 <a name="1.7.26"></a>
 ## [1.7.26](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-card-carousel@1.7.25...@cnbritain/merlin-www-show-card-carousel@1.7.26) (2018-05-08)
 
