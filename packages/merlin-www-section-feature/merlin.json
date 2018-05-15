@@ -9,7 +9,9 @@
                 "missvogue",
                 "wired",
                 "tatler",
-                "bystander"
+                "bystander",
+                "houseandgarden",
+                "traveller"
             ],
             "main": "feature",
             "data": "all"
@@ -35,7 +37,9 @@
         "bystander": "sass/bystander/bystander.scss",
         "wired": "sass/wired/wired.scss",
         "missvogue": "sass/missvogue/missvogue.scss",
-        "vogue": "sass/vogue/vogue.scss"
+        "vogue": "sass/vogue/vogue.scss",
+        "houseandgarden": "sass/houseandgarden/houseandgarden.scss",
+        "traveller": "sass/traveller/traveller.scss"
     },
     "partials": {
         "feature": "templates/section-feature.html"
