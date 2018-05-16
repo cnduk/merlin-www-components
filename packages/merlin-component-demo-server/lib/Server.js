@@ -217,8 +217,6 @@ class Server {
         this._currentTheme = null;
         this._appPort = null;
         this.component = component;
-
-        SnapshotManager.outputDir = path.dirname(this.component.filename);
     }
 
     run(port=DEFAULT_PORT){

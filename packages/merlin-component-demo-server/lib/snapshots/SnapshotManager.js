@@ -6,14 +6,20 @@ const Snapshot = require('./Snapshot');
 class SnapshotManager {
 
     constructor(){
-        this.outputDir = '';
+        this._outputDir = path.join(
+            __dirname,
+            '..',
+            '..',
+            'static',
+            'snapshots'
+        );
         this.snapshots = [];
+
+        mkdir(this._outputDir);
     }
 
     async takeSnapshot(url){
-        await mkdir(path.join(this.outputDir, '.snapshots'));
-
-        const snap = new Snapshot(this.outputDir, url);
+        const snap = new Snapshot(this._outputDir, url);
         await snap.snapshot();
         this.snapshots.push(snap);
     }

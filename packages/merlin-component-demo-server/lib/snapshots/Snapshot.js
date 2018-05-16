@@ -48,12 +48,11 @@ class Snapshot {
             const item = DEVICE_SIZES[i];
             const filename = path.join(
                 this._outputDir,
-                '.snapshots',
                 `snapshot-${now}-${item.name}.png`
             );
             try {
                 await snapshot(browser, this._url, item.device, filename);
-                this.images.set(item.name, filename);
+                this.images.set(item.name, `snapshot-${now}-${item.name}.png`);
             } catch(err){
                 console.error(`Error snapshotting ${item.name}`);
                 console.error(err);
