@@ -13,7 +13,6 @@
     const btnResizeMedium = document.getElementById('btnResizeMedium');
     const btnResizeLarge = document.getElementById('btnResizeLarge');
     const colBackground = document.getElementById('colBackground');
-    const elErrorMessage = document.getElementById('elErrorMessage');
 
     const SANDBOX_VALUE = [
         'allow-forms',
@@ -28,7 +27,6 @@
         'allow-top-navigation-by-user-activation'
     ].join(' ');
 
-    let _PREVIOUS_JS = true;
     const settings = {
         PARTIAL: cboPartial.value,
         THEME: cboThemes.value,
@@ -40,8 +38,9 @@
         MEDIUM: [800, 800],
         LARGE: [1100, 800]
     };
+    let SESSION_ID = null;
 
-    const socket = io();
+    const socket = io('/editor');
     initSettings();
     renderComponent();
 
@@ -103,7 +102,7 @@
         ifrRender = document.createElement('iframe');
         ifrRender.className = 'component-iframe';
         ifrRender.id = 'ifrRender';
-        ifrRender.src = 'about:blank';
+        ifrRender.src = `/render?id=${SESSION_ID}`;
         ifrRender.setAttribute('marginheight', 0);
         ifrRender.setAttribute('marginwidth', 0);
         ifrRender.setAttribute('frameborder', 0);
@@ -115,74 +114,9 @@
         parent.appendChild(ifrRender);
     }
 
-    function renderToFrame(html){
-
-        if(_PREVIOUS_JS !== settings.JS){
-            _PREVIOUS_JS = settings.JS;
-            rebuildIframe();
-        }
-
-        const win = getIframeWindow(ifrRender);
-
-        // We have to rewrite the page as we are inserting scripts
-        win.document.open();
-        win.document.write(`
-            <!DOCTYPE html>
-            <html>
-                <head>
-                    <title></title>
-                    <meta name="viewport" content="width=device-width, initial-scale=1">
-                </head>
-                <body>
-                    ${html}
-                </body>
-            </html>
-        `);
-        win.document.close();
-
-        // Apply listener to window
-        win.addEventListener('resize', onPreviewResize);
-        onPreviewResize();
-    }
-
-    function clearErrorMessage(){
-        elErrorMessage.innerHTML = 'None 👍';
-        elErrorMessage.classList.remove('has-error');
-    }
-
-    function setErrorMessage(msg){
-        elErrorMessage.innerHTML = msg;
-        elErrorMessage.classList.add('has-error');
-    }
-
-    function onRender(e){
-        renderToFrame(e);
-        clearErrorMessage();
-    }
-
-    /**
-     * Its quicker to create a new node and replace it instead of updating
-     * the innerText of a <style> node.
-     */
-    function onRenderStyles(e){
-        const win = getIframeWindow(ifrRender);
-        const elStyles = win.document.getElementById('elStyles');
-        const styleParent = elStyles.parentNode;
-
-        // Add news ones
-        const newStyles = document.createElement('style');
-        newStyles.type = 'text/css';
-        newStyles.appendChild(document.createTextNode(e));
-        newStyles.id = 'elStyles';
-
-        styleParent.replaceChild(newStyles, elStyles);
-
-        clearErrorMessage();
-    }
-
-    function onError(e){
-        const err = JSON.parse(e);
-        setErrorMessage(err.message);
+    function onId(id){
+        SESSION_ID = id;
+        ifrRender.setAttribute('src', `/render?id=${id}`);
     }
 
     /**
@@ -218,9 +152,7 @@
         btnResizeMedium.addEventListener('click', () => setResizePreset('MEDIUM'));
         btnResizeLarge.addEventListener('click', () => setResizePreset('LARGE'));
         colBackground.addEventListener('input', setBackgroundColor);
-        socket.on('render', onRender);
-        socket.on('renderStyles', onRenderStyles);
-        socket.on('renderError', onError);
+        socket.on('id', onId);
     }
 
 })();

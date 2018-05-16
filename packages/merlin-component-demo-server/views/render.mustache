@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        Session ID: {{ SESSION_ID }}
+        <script type="text/javascript">
+            const SESSION_ID = "{{ SESSION_ID }}";
+        </script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" async src="/editor/js/render.js"></script>
+    </body>
+</html>
