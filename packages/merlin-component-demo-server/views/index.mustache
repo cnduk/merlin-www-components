@@ -5,7 +5,7 @@
         <link rel="stylesheet" type="text/css" href="/editor/css/page.css">
     </head>
     <body>
-        <main>
+        <main class="component-container">
             <div class="component-sidebar">
                 <h1 class="component-name">{{ component.name }}</h1>
                 <div class="component-sidebar__group">
@@ -32,12 +32,7 @@
                         {{/ component.data }}
                     </select>
                 </div>
-                <div class="component-sidebar__group">
-                    <label class="component-setting__label">
-                        <input type="checkbox" id="chkJavascript" checked>
-                        Enable javascript
-                    </label>
-                </div>
+
                 <div class="component-sidebar__group">
                     <label class="component-setting__label">Preview size:</label>
                     <input class="component-setting__number" type="number" id="txtPreviewWidth" min="0" placeholder="Width" /> x <input class="component-setting__number" type="number" id="txtPreviewHeight" min="0" placeholder="Height" />
@@ -57,9 +52,30 @@
                     <label class="component-setting__label">Background colour:</label>
                     <input type="color" id="colBackground" value="#ffffff"/>
                 </div>
+                <div class="component-sidebar__group">
+                    <label class="component-setting__label">Snapshots:</label>
+                    <select class="component-setting__list" size="5">
+                        <option>Snapshot 1</option>
+                        <option>Snapshot 2</option>
+                        <option>Snapshot 3</option>
+                    </select>
+                </div>
             </div>
-            <div class="component-preview">
-                <iframe class="component-iframe" id="ifrRender" src="/render" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+            <div class="component-content">
+                <div class="component-header">
+                    <div class="component-header__group">
+                        <label class="component-setting__label">
+                            <input type="checkbox" id="chkJavascript" checked>
+                            Enable javascript
+                        </label>
+                    </div>
+                    <div class="component-header__group">
+                        <button>Take snapshot</button>
+                    </div>
+                </div>
+                <div class="component-preview">
+                    <iframe class="component-iframe" id="ifrRender" src="/render" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+                </div>
             </div>
         </main>
         <script src="/socket.io/socket.io.js"></script>
