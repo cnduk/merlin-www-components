@@ -29,12 +29,14 @@ const DEVICE_SIZES = [
         }
     }
 ];
+let SNAPSHOT_COUNT = 0;
 
 class Snapshot {
 
     constructor(outputDir, url){
         this._outputDir = outputDir;
         this._url = url;
+        this.name = `Snapshot-${++SNAPSHOT_COUNT}`;
         this.images = new Map();
     }
 

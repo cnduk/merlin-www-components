@@ -14,6 +14,7 @@
     const btnResizeLarge = document.getElementById('btnResizeLarge');
     const colBackground = document.getElementById('colBackground');
     const btnSnapshot = document.getElementById('btnSnapshot');
+    const cboSnapshots = document.getElementById('cboSnapshots');
 
     const SANDBOX_VALUE = [
         'allow-forms',
@@ -142,7 +143,15 @@
     }
 
     function takeSnapshot(){
+        this.setAttribute('disabled', true);
         socket.emit('snapshot');
+    }
+
+    function onSnapshotComplete(snapshots){
+        btnSnapshot.removeAttribute('disabled');
+        cboSnapshots.innerHTML = snapshots.map(s => {
+            return `<option>${s}</option>`;
+        });
     }
 
     function initSettings(){
@@ -158,7 +167,13 @@
         btnResizeLarge.addEventListener('click', () => setResizePreset('LARGE'));
         colBackground.addEventListener('input', setBackgroundColor);
         btnSnapshot.addEventListener('click', takeSnapshot);
+        cboSnapshots.addEventListener('dblclick', function(){
+            if(this.selectedIndex === -1) return;
+
+            window.open(`./snapshot?id=${this.selectedIndex}`)
+        });
         socket.on('id', onId);
+        socket.on('snapshot-complete', onSnapshotComplete);
     }
 
 })();
