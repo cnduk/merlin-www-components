@@ -11,6 +11,7 @@ const opn = require('opn');
 const {DEFAULT_PORT, COMPONENTS} = require('./constants');
 const Logger = require('./Logger');
 const {ComponentManager} = require('./components');
+const {SnapshotManager} = require('./snapshots');
 
 const resolve = p => path.resolve(__dirname, p);
 let RENDER_SETTINGS = null;
@@ -130,6 +131,11 @@ class Server {
                 }
             });
 
+            socket.on('snapshot', async () => {
+                await SnapshotManager.takeSnapshot(`http://localhost:${this._appPort}/render?id=${id}`);
+                console.log('finished snapshotting');
+            });
+
             socket.on('disconnect', () => {
                 this._sockets.splice(this._sockets.indexOf(socket), 1);
                 socket.removeAllListeners();
@@ -209,10 +215,14 @@ class Server {
         this._io = null;
         this._sockets = [];
         this._currentTheme = null;
+        this._appPort = null;
         this.component = component;
+
+        SnapshotManager.outputDir = path.dirname(this.component.filename);
     }
 
     run(port=DEFAULT_PORT){
+        this._appPort = port;
         this._initApp();
         this._initSocket();
         this._initWatch();

@@ -13,6 +13,7 @@
     const btnResizeMedium = document.getElementById('btnResizeMedium');
     const btnResizeLarge = document.getElementById('btnResizeLarge');
     const colBackground = document.getElementById('colBackground');
+    const btnSnapshot = document.getElementById('btnSnapshot');
 
     const SANDBOX_VALUE = [
         'allow-forms',
@@ -140,6 +141,10 @@
         document.querySelector('.component-preview').style.backgroundColor = e.target.value;
     }
 
+    function takeSnapshot(){
+        socket.emit('snapshot');
+    }
+
     function initSettings(){
         cboPartial.addEventListener('change', onSettingChange('PARTIAL'));
         cboThemes.addEventListener('change', onSettingChange('THEME'));
@@ -152,6 +157,7 @@
         btnResizeMedium.addEventListener('click', () => setResizePreset('MEDIUM'));
         btnResizeLarge.addEventListener('click', () => setResizePreset('LARGE'));
         colBackground.addEventListener('input', setBackgroundColor);
+        btnSnapshot.addEventListener('click', takeSnapshot);
         socket.on('id', onId);
     }
 
