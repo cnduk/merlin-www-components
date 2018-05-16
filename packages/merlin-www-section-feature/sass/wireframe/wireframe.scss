@@ -4,18 +4,6 @@
 .c-feature {
     box-sizing: border-box;
     margin: 0 auto;
-    //padding-left: $MOBILE_SIDE_GUTTER;
-    //padding-right: $MOBILE_SIDE_GUTTER;
-
-    //@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-    //    padding-left: $TABLET_SIDE_GUTTER;
-    //    padding-right: $TABLET_SIDE_GUTTER;
-    //}
-    //
-    //@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    //    padding-left: $TABLET_SIDE_GUTTER;
-    //    padding-right: $TABLET_SIDE_GUTTER;
-    //}
 }
 
 .c-feature--left{}
