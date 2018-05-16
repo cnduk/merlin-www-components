@@ -6,11 +6,6 @@
 
 .c-feature {
     background-color: $mint-tulip;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
-    }
 }
 .c-feature--gallery {
     background-color: $pig-pink;
