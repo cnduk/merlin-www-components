@@ -6,26 +6,39 @@
 .c-feature {
 	margin-bottom: $MOBILE_SLICE_MARGIN;
 	margin-top: $MOBILE_SLICE_MARGIN;
-	padding-left: $MOBILE_SIDE_GUTTER;
-    padding-right: $MOBILE_SIDE_GUTTER;
 
 	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
 	    margin-bottom: $TABLET_SLICE_MARGIN;
 	    margin-top: $TABLET_SLICE_MARGIN;
-		padding-left: $TABLET_SIDE_GUTTER;
-		padding-right: $TABLET_SIDE_GUTTER;
 	}
 
 	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
 	    margin-bottom: $DESKTOP_SLICE_MARGIN;
 	    margin-top: $DESKTOP_SLICE_MARGIN;
-		padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
 	}
 
 	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
 		padding-left: 0;
 		padding-right: 0;
+	}
+}
+
+.c-feature--right {
+	.c-feature__images--multiple {
+		@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+			padding-right: 12px;
+
+			& + .c-feature__content {
+				padding-right: $TABLET_SIDE_GUTTER;
+			}
+		}
+	}
+
+	.c-feature__content {
+		@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+			right: 0;
+			margin-right: $TABLET_SIDE_GUTTER;
+		}
 	}
 }
 
@@ -48,23 +61,13 @@
 	}
 }
 
-.c-feature--right {
-	.c-feature__images--multiple {
-		@include min-screen($FEATURE_LARGE_BREAKPOINT) {
-			padding-right: 12px;
+.c-feature__constrain {
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+}
 
-			& + .c-feature__content {
-				padding-right: $TABLET_SIDE_GUTTER;
-			}
-		}
-	}
+.c-feature__wrapper {
 
-	.c-feature__content {
-		@include min-screen($FEATURE_LARGE_BREAKPOINT) {
-			right: 0;
-			margin-right: $TABLET_SIDE_GUTTER;
-		}
-	}
 }
 
 .c-feature__images {
@@ -89,15 +92,6 @@
 	}
 }
 
-.c-feature__image__wrapper {
-	background-color: $CAPE-HAZE;
-	padding-top: 66.66666%;
-
-	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
-		padding-top: 40%;
-	}
-}
-
 .c-feature__content {
 	margin: 20px;
 
@@ -116,6 +110,20 @@
     :last-child {
     	margin-bottom: 0;
     }
+}
+
+.c-feature__image--portrait {
+	display: inline-block;
+	width: 50%;
+}
+
+.c-feature__image__wrapper {
+	background-color: $CAPE-HAZE;
+	padding-top: 66.66666%;
+
+	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+		padding-top: 40%;
+	}
 }
 
 .c-feature__icon {
@@ -199,6 +207,7 @@
 .c-feature__byline-prefix {
     font-style: italic;
     text-transform: lowercase;
+
 }
 
 .c-feature__byline-name {
