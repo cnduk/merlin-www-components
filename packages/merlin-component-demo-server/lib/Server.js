@@ -48,18 +48,33 @@ class Server {
         return res.render('render', {SESSION_ID: req.query.id});
     }
 
-    _onSnapshot(req, res){
-        const snapshotId = req.query.id;
-        const snapshot = SnapshotManager.snapshots[snapshotId];
+    async _onSnapshot(req, res){
+        console.log(req.query);
 
-        return res.render('snapshot', {
-            snapshots: Array.from(snapshot.images.entries()).map(i => {
+        let pageSnapshots = null;
+
+        if(req.query.hasOwnProperty('compare')){
+            const bSnapshot = SnapshotManager.snapshots[req.query.compare];
+            const c = await SnapshotManager.compareSnapshots(
+                req.query.id, req.query.compare);
+
+            pageSnapshots = Array.from(c.entries()).map(i => {
                 return {
                     name: i[0],
                     url: i[1]
                 };
-            })
-        });
+            });
+        } else {
+            const snapshot = SnapshotManager.snapshots[req.query.id];
+            pageSnapshots = Array.from(snapshot.images.entries()).map(i => {
+                return {
+                    name: i[0],
+                    url: i[1]
+                };
+            });
+        }
+
+        return res.render('snapshot', {snapshots: pageSnapshots});
     }
 
     _initApp(){
@@ -130,6 +145,10 @@ class Server {
             this._sockets.push(socket);
 
             socket.emit('id', id);
+            socket.emit(
+                'snapshot-list',
+                SnapshotManager.snapshots.map(s => s.name)
+            );
 
             // Changing settings
             socket.on('render', async (e) => {

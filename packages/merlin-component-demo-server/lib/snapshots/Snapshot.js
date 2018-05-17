@@ -2,7 +2,6 @@
 const path = require('path');
 const puppeteer = require('puppeteer');
 const devices = require('puppeteer/DeviceDescriptors');
-const {mkdir} = require('../utils');
 
 const DEVICE_SIZES = [
     {
@@ -40,6 +39,10 @@ class Snapshot {
         this.images = new Map();
     }
 
+    _getFilename(filename){
+        return path.join(this._outputDir, filename);
+    }
+
     async snapshot(){
         this.images.clear();
 
@@ -48,10 +51,8 @@ class Snapshot {
 
         for(let i = 0, len = DEVICE_SIZES.length; i < len; i++){
             const item = DEVICE_SIZES[i];
-            const filename = path.join(
-                this._outputDir,
-                `snapshot-${now}-${item.name}.png`
-            );
+            const filename = this._getFilename(
+                `snapshot-${now}-${item.name}.png`);
             try {
                 await snapshot(browser, this._url, item.device, filename);
                 this.images.set(item.name, `snapshot-${now}-${item.name}.png`);
@@ -63,8 +64,6 @@ class Snapshot {
 
         await browser.close();
     }
-
-    compare(snapshot){}
 
 }
 
