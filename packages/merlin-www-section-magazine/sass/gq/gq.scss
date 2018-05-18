@@ -83,7 +83,9 @@
 .c-magazine__btn {
 	@include button-single-two();
 	@include button-single-two-light();
-	@include vendor-prefix(transition-duration, 300ms);
+
+    transition-duration: 300ms;
+
 	&:hover {
 		@include button-single-two-light-hover();
 		background-color: $zircon;
