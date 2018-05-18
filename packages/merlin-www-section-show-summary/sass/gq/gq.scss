@@ -46,12 +46,12 @@
 
     &:after {
         @include triangle(16px, 12px, 'up', $white);
-        @include vendor-prefix(transform, translateX(-50%));
         content: '';
         height: 0;
         left: 50%;
         position: absolute;
         top: -16px;
+        transform: translateX(-50%);
         width: 0;
     }
 
