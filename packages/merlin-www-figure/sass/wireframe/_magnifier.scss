@@ -6,13 +6,13 @@
 }
 
 .c-figure__magnifier {
-    @include opacity(1);
     @include vendor-prefix(transition, opacity 0.3s ease-in-out);
     background-color: #fff;
     background-repeat: no-repeat;
     bottom: 0;
     cursor: move;
     left: 0;
+    opacity: 1;
     overflow: hidden;
     position: absolute;
     right: 0;
@@ -22,7 +22,7 @@
 .c-figure__magnifier,
 .c-figure__toolbar {
     &.is-hidden {
-        @include opacity(0);
+        opacity: 0;
         pointer-events: none;
     }
 }
