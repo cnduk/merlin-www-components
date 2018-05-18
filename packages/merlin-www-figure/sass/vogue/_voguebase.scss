@@ -20,8 +20,8 @@
 li.c-figure__toolbar-listitem {
     background-color: $white;
     height: 45px;
+    transition: background 0.1s ease-in-out;
     width: 45px;
-    @include vendor-prefix(transition, background 0.1s ease-in-out);
 
     svg {
         fill: #000;

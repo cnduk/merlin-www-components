@@ -1,12 +1,11 @@
 .has-magnifier {
     .c-figure__wrapper,
     .c-figure__toolbar {
-        @include vendor-prefix(transition, opacity 0.3s ease-in-out);
+        transition: opacity 0.3s ease-in-out;
     }
 }
 
 .c-figure__magnifier {
-    @include vendor-prefix(transition, opacity 0.3s ease-in-out);
     background-color: #fff;
     background-repeat: no-repeat;
     bottom: 0;
@@ -17,6 +16,7 @@
     position: absolute;
     right: 0;
     top: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .c-figure__magnifier,
@@ -43,7 +43,7 @@
 }
 
 .c-figure__magnifier-button {
-    @include vendor-prefix( appearance, none );
+    appearance: none;
     background-color: rgba( 0, 0, 0, 0.9 );
     border: none;
     color: #fff;
@@ -107,6 +107,6 @@
 
     img {
         display: block;
-        @include vendor-prefix( transform, translate( -50%, -50% ) );
+        transform: translate(-50%, -50%);
     }
 }
