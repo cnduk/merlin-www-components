@@ -45,9 +45,9 @@
  * Gallery
  */
 .bb-gallery {
-    @include transition(opacity 0.3s ease-in-out);
     margin: $MARGIN_LARGE 0;
     opacity: 1;
+    transition: opacity 0.3s ease-in-out;
 
     &:hover {
         opacity: 0.8;
@@ -250,9 +250,9 @@
 }
 
 .bb-card__image {
-    @include transition(all 0.3s ease);
     background: $loot-box;
     opacity: 1;
+    transition: all 0.3s ease;
 }
 
 .bb-card__tag {
@@ -263,9 +263,9 @@
 
 .bb-card__title {
     @include font('ADOBE CASLON', 17px, 700, 20px);
-    @include transition(all 0.3s ease);
     color: $cod-gray;
     margin: 0 0 6px 0;
+    transition: all 0.3s ease;
 }
 
 .bb-card__separator {
