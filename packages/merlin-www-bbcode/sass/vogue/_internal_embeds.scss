@@ -45,12 +45,12 @@
  * Gallery
  */
 .bb-gallery {
-    @include opacity(1);
     @include transition(opacity 0.3s ease-in-out);
     margin: $MARGIN_LARGE 0;
+    opacity: 1;
 
     &:hover {
-        @include opacity(0.8);
+        opacity: 0.8;
     }
 }
 
@@ -135,7 +135,7 @@
 
     &:hover {
         .bb-video__image {
-            @include opacity(0.8);
+            opacity: 0.8;
         }
     }
 }
@@ -170,7 +170,7 @@
 
 .bb-video__wrapper {}
 .bb-video__image {
-    @include opacity(1);
+    opacity: 1;
 }
 .bb-video__image-icon {
     @include vendor-prefix(transform, translate(-50%, -50%));
@@ -219,7 +219,7 @@
         }
 
         .bb-card__image {
-            @include opacity(0.8);
+            opacity: 0.8;
         }
     }
 }
@@ -250,9 +250,9 @@
 }
 
 .bb-card__image {
-    @include opacity(1);
     @include transition(all 0.3s ease);
     background: $loot-box;
+    opacity: 1;
 }
 
 .bb-card__tag {
