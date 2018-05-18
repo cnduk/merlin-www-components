@@ -1,5 +1,4 @@
 .n-gallery-nav {
-    @include transition(opacity 0.2s ease-in-out, visibility 0.2s ease-in-out);
     background-color: $black;
     bottom: 0;
     height: 60px;
@@ -8,6 +7,8 @@
     position: absolute;
     right: 0;
     top: 0;
+    transition: opacity 0.2s ease-in-out,
+                visibility 0.2s ease-in-out;
     visibility: hidden;
     width: 100%;
 

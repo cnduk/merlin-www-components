@@ -33,11 +33,11 @@
     width: 83px;
 
     a {
-        @include transition(bottom 200ms ease-in-out);
         bottom: 0;
         height: 60px;
         line-height: 60px;
         position: absolute;
+        transition: bottom 200ms ease-in-out;
         vertical-align: middle;
         width: 83px;
     }
