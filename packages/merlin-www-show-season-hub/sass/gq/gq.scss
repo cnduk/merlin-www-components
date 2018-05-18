@@ -34,13 +34,13 @@
 	}
 
 	&:before {
-		@include vendor-prefix(transform, translateX(-50%));
 		background-color: $shark;
 		content: '';
 		height: 100%;
 		left: 50%;
 		position: absolute;
 		top: 0;
+		transform: translateX(-50%);
 		width: 100vw;
 		z-index: -1;
 	}
@@ -268,10 +268,10 @@ li.sh-season-hub-viewer__list__item {
 	@include button-single();
 	@include button-single-light();
 
-	@include vendor-prefix(transform, translateX(-50%));
 	bottom: 32px;
 	left: 50%;
 	position: absolute;
+	transform: translateX(-50%);
 }
 
 .sh-season-hub-viewer__content {
