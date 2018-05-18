@@ -64,12 +64,12 @@
 
     &:after {
         @include triangle(16px, 12px, 'up', $white);
-        @include vendor-prefix(transform, translateX(-50%));
         content: '';
         height: 0;
         left: 50%;
         position: absolute;
         top: -16px;
+        transform: translateX(-50%);
         width: 0;
     }
 
@@ -77,12 +77,12 @@
         padding: 28px 48px;
         &:after {
             @include triangle(18px, 14px, 'left', $white);
-            @include vendor-prefix(transform, translateX(0%) translateY(-50%));
             content: '';
             height: 0;
             left: -18px;
             position: absolute;
             top: 50%;
+            transform: translateX(0%) translateY(-50%);
             width: 0;
         }
     }
