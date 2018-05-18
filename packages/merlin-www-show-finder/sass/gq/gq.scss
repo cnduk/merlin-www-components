@@ -87,7 +87,7 @@
 
     .cbo__input {
         @include font("GOTHAM", 12px, 500, 12px);
-        @include vendor-prefix('appearance', none);
+        appearance: none;
         background: $woodsmoke;
         border-radius: 0;
         border: 2px solid $mineshaft;
