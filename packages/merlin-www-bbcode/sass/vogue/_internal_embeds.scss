@@ -111,7 +111,6 @@
 
     .bb-gallery__col:first-child:before {
         @include font('NOBEL', 12px);
-        @include vendor-prefix(transform, translateX(-50%));
         background-color: $guardsman-red,;
         bottom: 30px;
         color: $white;
@@ -123,6 +122,7 @@
         padding: 14px 10px 14px 12px;
         position: absolute;
         text-align: center;
+        transform: translateX(-50%);
         z-index: 1;
     }
 }
@@ -173,12 +173,12 @@
     opacity: 1;
 }
 .bb-video__image-icon {
-    @include vendor-prefix(transform, translate(-50%, -50%));
     background-color: $guardsman-red;
     height: 45px;
     left: 50%;
     position: absolute;
     top: 50%;
+    transform: translate(-50%, -50%);
     width: 45px;
 
     svg {
