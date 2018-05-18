@@ -45,109 +45,167 @@
     }
 }
 
-@mixin desktop-size {
+@mixin desktop-size() {
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         @content;
     }
 }
 
-@mixin tablet-size {
+@mixin tablet-size() {
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         @content;
     }
 }
 
-@mixin common-medium-size(){
+@mixin common-medium-size() {
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         @content
     }
 }
 
-@mixin common-large-size(){
+@mixin common-large-size() {
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         @content
     }
 }
 
-@mixin article-header-large-size(){
+@mixin article-header-large-size() {
     @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT){
         @content
     }
 }
 
-@mixin article-medium-size(){
+@mixin article-medium-size() {
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         @content
     }
 }
 
-@mixin article-large-size(){
+@mixin article-large-size() {
     @include min-screen($ARTICLE_TOTAL){
         @content
     }
 }
 
-@mixin card-portrait-to-landscape-size(){
+@mixin card-portrait-to-landscape-size() {
     @include min-screen($CARD_SWITCHER_WIDTH) {
         @content
     }
 }
 
-@mixin one-column-size(){
+@mixin one-column-size() {
     @include max-screen($CARD_LIST_2_COLUMN_BREAKPOINT - 1){
         @content
     }
 }
 
-@mixin two-column-size(){
+@mixin two-column-size() {
     @include min-screen($CARD_LIST_2_COLUMN_BREAKPOINT){
         @content
     }
 }
 
-@mixin three-column-size(){
+@mixin three-column-size() {
     @include min-screen($CARD_LIST_3_COLUMN_BREAKPOINT){
         @content
     }
 }
 
-@mixin four-column-size(){
+@mixin four-column-size() {
     @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT){
         @content
     }
 }
 
-@mixin five-column-size(){
+@mixin five-column-size() {
     @include min-screen($CARD_LIST_5_COLUMN_BREAKPOINT){
         @content
     }
 }
 
-@mixin gallery-slice-at-medium(){
+@mixin gallery-slice-at-medium() {
     @include min-screen( $GALLERY_MEDIUM_BREAKPOINT ){
         @content;
     }
 }
-@mixin gallery-slice-at-large(){
+@mixin gallery-slice-at-large() {
     @include min-screen( $GALLERY_LARGE_BREAKPOINT ){
         @content;
     }
 }
 
-@mixin feature-slice-at-large(){
+@mixin feature-slice-at-large() {
     @include min-screen( $FEATURE_LARGE_BREAKPOINT ){
         @content;
     }
 }
 
-@mixin text-size-medium(){
+@mixin text-size-medium() {
     @include min-screen( $TYPE_MEDIUM_COPY_WIDTH ){
         @content;
     }
 }
 
-@mixin text-size-large(){
+@mixin text-size-large() {
     @include min-screen( $TYPE_LARGE_COPY_WIDTH ){
+        @content;
+    }
+}
+
+/**
+ * NEW Media queries sizes
+ * ============================================================================
+ */
+/// min-screen media query helper
+/// @require em
+/// @require $XSMALL_SIZE
+@mixin at-xsmall-size() {
+    @include min-screen($XSMALL_SIZE){
+        @content;
+    }
+}
+
+/// min-screen media query helper
+/// @require em
+/// @require $SMALL_SIZE
+@mixin at-small-size() {
+    @include min-screen($SMALL_SIZE){
+        @content;
+    }
+}
+
+/// min-screen media query helper
+/// @require em
+/// @require $MEDIUM_SIZE
+@mixin at-medium-size() {
+    @include min-screen($MEDIUM_SIZE){
+        @content;
+    }
+}
+
+/// min-screen media query helper
+/// @require em
+/// @require $LARGE_SIZE
+@mixin at-large-size() {
+    @include min-screen($LARGE_SIZE){
+        @content;
+    }
+}
+
+/// min-screen media query helper
+/// @require em
+/// @require $XLARGE_SIZE
+@mixin at-xlarge-size() {
+    @include min-screen($XLARGE_SIZE){
+        @content;
+    }
+}
+
+/// min-screen media query helper
+/// @require em
+/// @require $XXLARGE_SIZE
+@mixin at-xxlarge-size() {
+    @include min-screen($XXLARGE_SIZE){
         @content;
     }
 }
