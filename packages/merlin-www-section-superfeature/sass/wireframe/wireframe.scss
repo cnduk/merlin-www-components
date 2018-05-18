@@ -23,20 +23,24 @@
     }
 
     .c-superfeature__image {
-        display: inline-block;
-        width: 50%;
-
         &:nth-child(n+3) {
             display: none;
+
+            @include at-x-large-size {
+                display: block;
+            }
         }
     }
 }
 
 .c-superfeature__images-wrapper {
-    font-size: 0;
+    display: flex;
 }
 
-.c-superfeature__image {}
+.c-superfeature__image {
+    flex: 1 0 auto;
+}
+
 .c-superfeature__image-wrapper {
     padding-top: 66.66666%;
     position: relative;
