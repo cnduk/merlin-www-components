@@ -17,14 +17,3 @@
     -o-#{$name}: $args;
     #{$name}: $args;
 }
-
-/// Vendor prefixed transition method
-///
-/// @param {variable} $args - Variable args passed straight through to output
-///
-/// @require vendor-prefix
-@mixin transition($args...) {
-    @include vendor-prefix(transition, $args);
-}
-
-
