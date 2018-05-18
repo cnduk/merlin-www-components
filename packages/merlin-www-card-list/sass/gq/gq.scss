@@ -256,7 +256,6 @@
 
 	    .c-card__images {
 	        &:after {
-	            @include vendor-prefix(transition-duration, 300ms);
 	            border: 2px solid $cornflower-blue;
 	            bottom: 0;
 	            box-sizing: border-box;
@@ -267,6 +266,7 @@
 	            position: absolute;
 	            right: 0;
 	            top: 0;
+                transition-duration: 300ms;
 	            width: 100%;
 	        }
 	    }
@@ -274,7 +274,6 @@
 	    .c-card__image {
 	        &:after {
 	            @include font("GOTHAM", 10px, 700, 16px, 0);
-	            @include vendor-prefix(transition-duration, 300ms);
 	            background-color: $cornflower-blue;
 	            bottom: 0px;
 	            color: $white;
@@ -283,6 +282,7 @@
 	            opacity: 0;
 	            padding: 4px;
 	            position: absolute;
+                transition-duration: 300ms;
 	        }
 	    }
 
