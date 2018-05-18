@@ -288,10 +288,10 @@
 
 
 @mixin card-image-links-normal(){
-    @include opacity(1);
+    opacity: 1;
 }
 @mixin card-image-links-hover(){
-    @include opacity(0.8);
+    opacity: 0.8;
 }
 @mixin card-image-links($include-hover: true){
     @include card-image-links-normal();

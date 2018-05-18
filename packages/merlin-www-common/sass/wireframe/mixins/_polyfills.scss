@@ -5,32 +5,6 @@
 /// @author https://github.com/cnduk/
 ////
 
-/// Set a background svg with a raster image fallback
-///
-/// @param {url} $svg - URL of the background svg.
-/// @param {url} $png - URL of the raster fallback image.
-@mixin background-image-svg($svg, $png){
-    background-image: url($png);
-    background-image: url($svg), none;
-}
-
-/// IE8 supported method of setting an element's opacity using alpha filters
-///
-/// @param {decimal} $opacity - Opacity level (0 - 1)
-/// @param {boolean} $important [false] - Whether to force the font size with ```!important```
-@mixin opacity($opacity, $important: false) {
-    $opacity-ie: $opacity * 100;
-
-    @if ($important) {
-        opacity: $opacity !important;
-        filter: alpha(opacity=$opacity-ie) !important; //IE8
-    }
-    @else {
-        opacity: $opacity;
-        filter: alpha(opacity=$opacity-ie); //IE8
-    }
-}
-
 
 /// Vendor prefix helper
 ///
