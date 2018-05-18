@@ -403,7 +403,7 @@
 
     .c-card-list__item {
         opacity: 1;
-        @include transition(opacity 0.3s ease-out)
+        transition: opacity 0.3s ease-out;
         width: 100%;
 
         &.is-active {
