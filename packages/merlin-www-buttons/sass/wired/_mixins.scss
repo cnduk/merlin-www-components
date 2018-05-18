@@ -23,10 +23,10 @@
 @mixin button-single() {
     @include button-reset();
     @include font("BRUTAL", 12px, 400, 12px);
-    @include transition(all 0.1s ease-in-out);
     letter-spacing: 0.5px;
     padding: 10px;
     text-transform: uppercase;
+    transition: all 0.1s ease-in-out;
 }
 
 @mixin button-single-light() {
@@ -67,9 +67,9 @@
 @mixin button-group() {
     @include button-reset();
     @include font("EXCHANGE WEB", 15px, 400, 15px);
-    @include transition(all 0.1s ease-in-out);
     padding: 10px;
     text-align: center;
+    transition: all 0.1s ease-in-out;
 }
 
 @mixin button-group-light() {
@@ -95,10 +95,10 @@
 @mixin button-group2() {
     @include button-reset();
     @include font("BRUTAL", 12px, 500, 12px);
-    @include transition(all 0.1s ease-in-out);
     letter-spacing: 0.5px;
     padding: 10px 12px;
     text-align: center;
+    transition: all 0.1s ease-in-out;
 }
 
 @mixin button-group2-light() {
@@ -222,11 +222,11 @@
 
 @mixin button-gallery-navigation(){
     @include button-reset();
-    @include transition(all 0.1s ease-in-out);
     background-color: $black;
     border: 1px solid $raisin-black;
     color: $black;
     height: 35px;
+    transition: all 0.1s ease-in-out;
     width: 35px;
 
     svg, path {
