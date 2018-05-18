@@ -8,24 +8,18 @@
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size() {
         margin-bottom: $TABLET_SLICE_MARGIN;
         margin-top: $TABLET_SLICE_MARGIN;
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
-
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-xlarge-size(){
         margin-bottom: $DESKTOP_SLICE_MARGIN;
         margin-top: $DESKTOP_SLICE_MARGIN;
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
+        padding: 40px;
     }
-
-    //@include min-screen($FEATURE_LARGE_BREAKPOINT) {
-    //     //padding: 40px;
-    //}
 }
 
 .c-feature__wrapper {
@@ -58,7 +52,7 @@
         fill: $black;
     }
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-xlarge-size(){
         margin-bottom: 30px;
     }
 }
@@ -69,7 +63,7 @@
     letter-spacing: 0.3px;
     margin: 0 auto 10px auto;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-xlarge-size(){
         @include font-size(45px);
         @include line-height(45px);
     }
@@ -81,7 +75,7 @@
     display: none;
     margin: 10px auto;
 
-    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+    @include at-xlarge-size(){
         display: block;
     }
 }
@@ -96,7 +90,7 @@
         margin: 10px auto;
         width: 10px;
 
-        @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include at-xlarge-size(){
             margin: 20px auto;
             width: 30px;
         }

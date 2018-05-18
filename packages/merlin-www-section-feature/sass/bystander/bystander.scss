@@ -20,7 +20,7 @@
     color: $white;
 }
 
-@include desktop-size {
+@include at-xlarge-size(){
     .c-feature--left .c-feature__content {
         @include border-line-box(left, $bg: $black, $border: $brownish-grey);
     }

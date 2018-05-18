@@ -10,14 +10,14 @@
     padding-right: $MOBILE_SIDE_GUTTER;
     padding-top: $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size() {
         padding-bottom: $TABLET_SIDE_GUTTER;
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
         padding-top: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-xlarge-size(){
         padding-bottom: $DESKTOP_SIDE_GUTTER;
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
@@ -32,11 +32,11 @@
     & + .ad--native-large {
         margin-top: -$MOBILE_SIDE_GUTTER;
 
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include at-medium-size() {
             margin-top: -$TABLET_SIDE_GUTTER;
         }
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-xlarge-size(){
             margin-top: -$DESKTOP_SIDE_GUTTER;
         }
     }
@@ -64,7 +64,7 @@
         width: 0;
     }
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-xlarge-size(){
         padding: 28px 48px;
 
         &:after {
@@ -84,7 +84,7 @@
 .c-feature__icon {
     display: none;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-xlarge-size(){
         border: 1px solid $limed-oak;
         display: block;
         height: 40px;
@@ -110,7 +110,7 @@
     margin-top: 0;
     text-transform: capitalize;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-xlarge-size(){
         @include font-size(12px);
         @include line-height(16px);
         margin-bottom: 12px;
@@ -123,7 +123,7 @@
     margin-bottom: 14px;
     margin-top: 0px;
 
-    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+    @include at-xlarge-size() {
         @include font-size(32px);
         @include line-height(36px);
         margin-bottom: 8px;
@@ -138,7 +138,7 @@
     margin-bottom: 14px;
     margin-top: 14px;
 
-    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+    @include at-xlarge-size() {
         @include font-size(15px);
         @include line-height(20px);
         display: block;
@@ -170,9 +170,11 @@
 
 li.c-feature__meta-item {
     padding-right: 0;
+
     & + li.c-feature__meta-item {
         border-left: none;
         padding-left: 0;
+
         &:before {
             background-color: $oslo-gray;
             border-radius: 50%;

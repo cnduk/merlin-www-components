@@ -10,14 +10,14 @@
     padding-left: 0;
     padding-right: 0;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-small-size() {
         margin-bottom: $TABLET_SLICE_MARGIN;
         margin-top: $TABLET_SLICE_MARGIN;
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-xlarge-size(){
         margin-bottom: $DESKTOP_SLICE_MARGIN;
         margin-top: $DESKTOP_SLICE_MARGIN;
         padding-left: $DESKTOP_SIDE_GUTTER;
@@ -33,7 +33,7 @@
 
 .c-feature--left {
     .c-feature__images {
-        @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include at-xlarge-size(){
             padding-left: 12px;
 
             &:before {
@@ -49,7 +49,7 @@
     }
 
     .c-feature__content {
-        @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include at-xlarge-size(){
             padding-right: 12px;
 
             &:before {
@@ -61,7 +61,7 @@
 
 .c-feature--right {
     .c-feature__images {
-        @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include at-xlarge-size(){
             padding-right: 12px;
 
             &:before {
@@ -77,7 +77,7 @@
     }
 
     .c-feature__content {
-        @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include at-xlarge-size(){
             padding-left: 12px;
 
             &:before {
@@ -90,7 +90,7 @@
 .c-feature__images {
     position: relative;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-xlarge-size(){
          width: 62.5%;
 
         &:before {
@@ -116,7 +116,7 @@
         width: 1px;
         z-index: 1;
 
-        @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include at-xlarge-size(){
             bottom: 50%;
             height: 1px;
             width: 32px;
@@ -128,7 +128,7 @@
     background-color: $diamond;
     padding-top: 90%;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-xlarge-size(){
         padding-top: 66.66666%;
     }
 }
@@ -142,7 +142,7 @@
         padding: 0 20px;
     }
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-xlarge-size(){
         padding: 40px 0;
 
         &:before {
@@ -175,7 +175,7 @@
     text-align: center;
     text-transform: capitalize;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-xlarge-size(){
         @include font-size(40px);
         @include line-height(40px);
     }
@@ -184,7 +184,7 @@
 .c-feature__teaser {
     display: none;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-xlarge-size(){
         @include font("SOLEIL", 14px, 400, 20px, 30);
         display: block;
         color: $ascot-grey;

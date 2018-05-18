@@ -2,17 +2,12 @@
     background-color: $wild-sand;
     padding: $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size() {
         padding-left: $MOBILE_SIDE_GUTTER;
         padding-right: $MOBILE_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
-    }
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-xlarge-size(){
         padding: $DESKTOP_SIDE_GUTTER;
     }
 
@@ -29,12 +24,6 @@
     }
 }
 
-.c-feature__images {
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        width: 50%;
-    }
-}
-
 .c-feature__image {
     @include transition(all 0.3s ease-in-out);
     opacity: 1;
@@ -45,7 +34,7 @@
     padding: $PADDING_LARGE $PADDING_MEDIUM;
     text-align: center;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-xlarge-size(){
         padding: $PADDING_X_LARGE;
     }
 }
@@ -68,8 +57,8 @@
     margin-top: 0;
     text-transform: uppercase;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-         @include font-size(11px);
+    @include at-xlarge-size(){
+        @include font-size(11px);
         @include line-height(20px);
     }
 }
@@ -80,10 +69,10 @@
     margin-top: $MARGIN_MEDIUM;
     margin-bottom: $MARGIN_XX_SMALL;
 
-     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+     @include at-xlarge-size(){
          @include font-size(35px);
-        @include line-height(40px);
-        margin-bottom: $MARGIN_X_SMALL;
+         @include line-height(40px);
+         margin-bottom: $MARGIN_X_SMALL;
      }
 }
 
@@ -99,7 +88,7 @@
     margin-bottom: 14px;
     margin-top: $MARGIN_XX_SMALL;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-xlarge-size(){
         @include font-size(11px);
         @include line-height(15px);
         margin-bottom: $MARGIN_SMALL;
@@ -121,7 +110,7 @@
     letter-spacing: 1px;
     text-transform: uppercase;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-xlarge-size(){
         @include font-size(11px);
     }
 }
@@ -131,7 +120,7 @@
     color: $dove-gray;
     display: inline-block;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-xlarge-size(){
         @include font-size(11px);
         @include line-height(20px);
         border-top: 1px solid $loot-box;

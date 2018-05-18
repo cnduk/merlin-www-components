@@ -4,12 +4,12 @@
     max-width: none;
     padding: 0 $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size() {
         margin: 60px auto;
         padding: 0 60px;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-xlarge-size(){
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
@@ -28,7 +28,7 @@
 
 .c-feature__wrapper {
 
-     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+     @include at-xlarge-size(){
         direction: ltr;
 
         .c-feature--right & {
@@ -41,7 +41,7 @@
 .c-feature__content {
     width: 100%;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-xlarge-size(){
         direction: ltr;
         display: table-cell;
         position: static;
@@ -69,11 +69,8 @@
     padding: 28px 20px;
     text-align: center;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-xlarge-size(){
         padding: 20px 60px;
-    }
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         .c-feature--left & {
             @include border-line-box(left);
         }
@@ -95,7 +92,7 @@
     top: -20px;
     width: 40px;
 
-     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+     @include at-xlarge-size(){
          background: $wild-sand;
          left: auto;
          margin-left: auto;
@@ -134,10 +131,10 @@
     padding: 0 0 15px;
     position: relative;
 
-     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+     @include at-xlarge-size(){
          @include t-feature-title-large;
-        margin: 0 0 20px;
-        padding: 0 0 15px;
+         margin: 0 0 20px;
+         padding: 0 0 15px;
      }
 
     &:after {
@@ -162,14 +159,13 @@
     @include feature-card-byline;
     margin: 0 0 10px;
 
-     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            margin: 0 0 10px;
+     @include at-xlarge-size(){
+         margin: 0 0 10px;
      }
 }
 
 .c-feature__byline-prefix {
     @include card-byline-prefix;
-
     margin-right: 2px;
 }
 

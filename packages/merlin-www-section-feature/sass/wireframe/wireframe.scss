@@ -18,7 +18,7 @@
     font-size: 0;
     position: relative;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-xlarge-size() {
         display: table;
         direction: rtl;
         padding-top: 0;
@@ -46,7 +46,7 @@
 .c-feature__images {
     position: relative;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-xlarge-size() {
         direction: ltr;
         display: table-cell;
         position: static;
@@ -81,7 +81,7 @@
     font-size: initial;
     position: relative;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-xlarge-size() {
         direction: ltr;
         display: table-cell;
         position: static;
