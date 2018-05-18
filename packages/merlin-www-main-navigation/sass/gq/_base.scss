@@ -116,13 +116,13 @@
     background-color: $black;
 
     &:after {
-        @include vendor-prefix(transform, translateX(-50%));
         background-color: $mineshaft;
         bottom: 0;
         content: '';
         height: 1px;
         left: 50%;
         position: absolute;
+        transform: translateX(-50%);
         width: 100vw;
     }
 }
@@ -276,10 +276,10 @@
                 color: $white;
                 padding: 0 20px;
                 @include font("GOTHAM", 16px, 700, 16px, 60);
-                @include vendor-prefix(transform, translateY(-50%));
                 position: absolute;
                 text-transform: uppercase;
                 top: 50%;
+                transform: translateY(-50%);
                 word-break: break-word;
                 @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
                     padding: 0 30px;
@@ -294,10 +294,10 @@
                 .n-menu__nav-link {
                     @include font-size(12px);
                     @include line-height(12px);
-                    @include vendor-prefix(transform, none);
                     bottom: 0;
                     letter-spacing: 0.06em;
                     top: initial;
+                    transform: none;
                 }
             }
 

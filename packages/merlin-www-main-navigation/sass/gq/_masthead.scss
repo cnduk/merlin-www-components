@@ -15,13 +15,13 @@
     }
 
     &:after {
-        @include vendor-prefix(transform, translateX(-50%));
         background-color: $mineshaft;
         bottom: 0;
         content: '';
         height: 1px;
         left: 50%;
         position: absolute;
+        transform: translateX(-50%);
         width: 100vw;
     }
 }
