@@ -87,11 +87,6 @@
 
 .c-feature__image-wrapper {
 	background-color: $CAPE-HAZE;
-	padding-top: 66.66666%;
-
-	@include at-xlarge-size(){
-		padding-top: 40%;
-	}
 }
 
 .c-feature__contents {

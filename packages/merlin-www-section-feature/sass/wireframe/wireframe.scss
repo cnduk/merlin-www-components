@@ -10,13 +10,16 @@
 .c-feature--right{}
 
 .c-feature__constrain {
-    margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
+    //margin: 0 auto;
+    //max-width: $MAXIMUM_PAGE_WIDTH;
 }
 
 .c-feature__wrapper {
     font-size: 0;
     position: relative;
+
+     margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
 
     @include at-xlarge-size() {
         display: table;
@@ -54,14 +57,19 @@
         width: 50%;
     }
 }
-.c-feature__images--multiple{}
-.c-feature__image{}
-.c-feature__image--portrait {
-    display: inline-block;
-    width: 50%;
+.c-feature__images--multiple{
+    .c-feature__image{
+        display: inline-block;
+        width: 50%;
+    }
+    .c-feature__image-wrapper {
+        padding-top: 150%;
+
+    }
 }
-.c-feature__image--landscape{}
-.c-feature__image--custom {
+.c-feature__image{}
+.c-feature__image-wrapper{
+    padding-top: 66.666666667%;
     position: relative;
 
     img {
@@ -73,9 +81,8 @@
         top: 0;
         width: 100%;
     }
-}
 
-.c-feature__image-wrapper{}
+}
 
 .c-feature__contents {
     font-size: initial;

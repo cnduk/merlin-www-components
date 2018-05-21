@@ -126,11 +126,6 @@
 
 .c-feature__image-wrapper {
     background-color: $diamond;
-    padding-top: 90%;
-
-    @include at-xlarge-size(){
-        padding-top: 66.66666%;
-    }
 }
 
 .c-feature__contents {
