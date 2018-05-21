@@ -73,7 +73,7 @@
     margin-bottom: 8px;
     margin-top: 0;
 
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         @include font-size(11px);
         @include line-height(15px);
     }
@@ -84,7 +84,7 @@
     margin: 0 0 10px 0;
     transition: opacity 300ms ease-in-out;
 
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         @include font-size(41px);
         @include line-height(45px);
         margin-bottom: 20px;
@@ -101,7 +101,7 @@
     margin-bottom: 14px;
     margin-top: 10px;
 
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         @include font-size(11px);
         @include line-height(15px);
         margin-bottom: 20px;
@@ -125,7 +125,7 @@
     text-transform: uppercase;
     transition: opacity 300ms ease-in-out;
 
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         @include font-size(11px);
     }
 }
@@ -136,7 +136,7 @@
     display: inline-block;
     font-size: 0;
 
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         @include font-size(11px);
         @include line-height(20px);
         border-top: 1px solid $gallery;
