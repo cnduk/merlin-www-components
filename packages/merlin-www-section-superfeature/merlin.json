@@ -4,23 +4,16 @@
         "all": {
             "themes": [
                 "wireframe",
-                "vogue",
+                "bystander",
                 "glamour",
                 "missvogue",
-                "wired",
                 "tatler",
-                "bystander"
+                "traveller",
+                "vogue",
+                "wired"
             ],
             "main": "superfeature",
             "data": "all"
-        },
-        "gq": {
-            "themes": [
-                "gq",
-                "bystander"
-            ],
-            "main": "superfeature",
-            "data": "gq"
         }
     },
     "js": {
@@ -35,6 +28,7 @@
         "houseandgarden": "sass/houseandgarden/houseandgarden.scss",
         "missvogue": "sass/missvogue/missvogue.scss",
         "tatler": "sass/tatler/tatler.scss",
+        "traveller": "sass/traveller/traveller.scss",
         "vogue": "sass/vogue/vogue.scss",
         "wired": "sass/wired/wired.scss"
     },

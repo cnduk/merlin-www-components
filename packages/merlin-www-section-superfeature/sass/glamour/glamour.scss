@@ -6,6 +6,8 @@
 .c-superfeature {
     // 20px added to offset box shadow
     margin-bottom: $MOBILE_SLICE_MARGIN + 20px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: $MOBILE_SLICE_MARGIN;
     max-width: $XX_LARGE_SIZE;
     padding: 0;
@@ -16,7 +18,7 @@
         margin-top: $TABLET_SLICE_MARGIN;
     }
 
-    @include at-large-size {
+    @include at-x-large-size {
         // 20px added to offset box shadow
         margin-bottom: $DESKTOP_SLICE_MARGIN + 20px;
         margin-top: $DESKTOP_SLICE_MARGIN;
@@ -51,7 +53,7 @@
 .c-superfeature__contents {
     background-color: $white;
     margin: 0 auto;
-    max-width: 900px;
+    max-width: $LARGE_SIZE;
     padding: 20px;
     position: relative;
 
@@ -66,7 +68,7 @@
         z-index: -1;
     }
 
-    @include at-x-large-size {
+    @include at-medium-size {
         padding: 30px 60px;
         text-align: center;
         margin-top: -20px;
