@@ -5,7 +5,7 @@
 
 @import '../tatler/_tatler_base';
 
-.c-superfeature__content {
+.c-superfeature__contents {
     background-color: $black;
 }
 
@@ -13,8 +13,8 @@
     color: $white;
 }
 
-@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    .c-superfeature__content {
+@include at-x-large-size {
+    .c-superfeature__contents {
         @include border-line-box(top, $bg:$black, $border:$brownish-grey);
     }
 }

@@ -4,7 +4,7 @@
     margin: 30px auto;
     padding: 0;
 
-    @include tablet-size {
+    @include at-medium-size {
         padding: 0;
         margin: 60px auto;
     }
@@ -30,7 +30,7 @@
 
 .c-superfeature__images {
     margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
+    max-width: $XX_LARGE_SIZE;
 }
 .c-superfeature__images--multiple {
 
@@ -41,7 +41,7 @@
         display: none;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         .c-superfeature__image {
             width: 25%;
         }
@@ -52,25 +52,25 @@
 
 }
 
-.c-superfeature__content {
+.c-superfeature__contents {
     background: $white;
     margin: 0 20px;
-    max-width: $MAXIMUM_PAGE_WIDTH - 120px;
+    max-width: $XX_LARGE_SIZE - 120px;
     padding: 28px 20px;
     text-align: center;
 
-    @include tablet-size {
+    @include at-medium-size {
         margin: 0 60px;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         @include border-line-box(top);
 
         margin: 0 60px;
         padding: 60px 170px;
     }
 
-    @include maximum-size {
+    @include at-xx-large-size {
         margin: 0 auto;
     }
 }
@@ -99,7 +99,7 @@
         margin-left: -10px;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         @include t-super-feature-title-large;
         margin: 0 0 25px;
         padding: 0 0 25px;
@@ -137,9 +137,12 @@
 
 .c-superfeature__meta {
     @include card-meta;
+    font-size: 0;
 }
 
 li.c-superfeature__meta-item {
+    @include card-meta;
+    display: inline-block;
     padding-right: 0;
 
     &:not(:last-child) {
@@ -167,14 +170,14 @@ li.c-superfeature__meta-item {
 
 
 .c-superfeature--dark {
-    .c-superfeature__content {
+    .c-superfeature__contents {
         background: $black;
 
         .c-superfeature__icon {
             background: $white;
         }
 
-        @include desktop-size {
+        @include at-x-large-size {
             @include border-line-box(top, $bg: $black, $border: $brownish-grey);
         }
     }
