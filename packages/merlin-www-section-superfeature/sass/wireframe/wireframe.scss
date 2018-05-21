@@ -1,4 +1,5 @@
 @import "@cnbritain/merlin-www-common:wireframe";
+@import "@cnbritain/merlin-www-image:wireframe";
 
 .c-superfeature {}
 .c-superfeature-wrapper {
@@ -69,5 +70,7 @@
 .c-superfeature__byline-prefix {}
 .c-superfeature__byline-name {}
 
-.c-superfeature__meta {}
+.c-superfeature__meta {
+    list-style: none;
+}
 .c-superfeature__meta-item {}
