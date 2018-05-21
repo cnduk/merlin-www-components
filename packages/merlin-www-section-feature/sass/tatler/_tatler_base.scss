@@ -38,7 +38,7 @@
 }
 
 .c-feature__images,
-.c-feature__content {
+.c-feature__contents {
     width: 100%;
 
     @include at-xlarge-size(){
@@ -63,7 +63,7 @@
     width: 100%;
 }
 
-.c-feature__content {
+.c-feature__contents {
     background: $white;
     direction: ltr;
     padding: 28px 20px;

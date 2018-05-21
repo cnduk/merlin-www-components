@@ -30,13 +30,13 @@
 		@include at-xlarge-size(){
 			padding-left: 12px;
 
-			& + .c-feature__content {
+			& + .c-feature__contents {
 				padding-left: $TABLET_SIDE_GUTTER;
 			}
 		}
 	}
 
-	.c-feature__content {
+	.c-feature__contents {
 		@include at-xlarge-size(){
 			left: 0;
 			margin-left: $TABLET_SIDE_GUTTER;
@@ -49,13 +49,13 @@
 		@include at-xlarge-size(){
 			padding-right: 12px;
 
-			& + .c-feature__content {
+			& + .c-feature__contents {
 				padding-right: $TABLET_SIDE_GUTTER;
 			}
 		}
 	}
 
-	.c-feature__content {
+	.c-feature__contents {
 		@include at-xlarge-size(){
 			right: 0;
 			margin-right: $TABLET_SIDE_GUTTER;
@@ -75,7 +75,7 @@
 		display: table-cell;
 		width: 50%;
 
-		& + .c-feature__content {
+		& + .c-feature__contents {
 			position: static;
 			width: 50%;
 			transform: none;
@@ -94,7 +94,7 @@
 	}
 }
 
-.c-feature__content {
+.c-feature__contents {
 	margin: 20px;
 	position: initial;
 

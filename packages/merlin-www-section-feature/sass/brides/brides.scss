@@ -48,7 +48,7 @@
         }
     }
 
-    .c-feature__content {
+    .c-feature__contents {
         @include at-xlarge-size(){
             padding-right: 12px;
 
@@ -133,7 +133,7 @@
     }
 }
 
-.c-feature__content {
+.c-feature__contents {
     margin: 28px 0 44px 0;
     position: relative;
     text-align: center;
