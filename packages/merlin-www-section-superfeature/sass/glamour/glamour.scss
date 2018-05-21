@@ -7,22 +7,20 @@
     // 20px added to offset box shadow
     margin-bottom: $MOBILE_SLICE_MARGIN + 20px;
     margin-top: $MOBILE_SLICE_MARGIN;
-    max-width: $MAXIMUM_PAGE_WIDTH;
+    max-width: $XX_LARGE_SIZE;
     padding: 0;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         // 20px added to offset box shadow
         margin-bottom: $TABLET_SLICE_MARGIN + 20px;
         margin-top: $TABLET_SLICE_MARGIN;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-large-size {
         // 20px added to offset box shadow
         margin-bottom: $DESKTOP_SLICE_MARGIN + 20px;
         margin-top: $DESKTOP_SLICE_MARGIN;
-    }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         &:hover {
             .c-superfeature__title {
                 span {
@@ -33,44 +31,24 @@
     }
 }
 
+.c-superfeature-wrapper {}
 .c-superfeature__link {}
+.c-superfeature__images {}
+.c-superfeature__images--multiple {}
 
-.c-superfeature__images {
-    overflow: hidden;
-}
+.c-superfeature__images-wrapper {}
+.c-superfeature__image {}
 
-.c-superfeature__images--multiple {
-    .c-superfeature__image {
-        width: 50%;
-    }
-
-    .c-superfeature__image:nth-child(n+3) {
-        display: none;
-    }
-
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-        .c-superfeature__image {
-            width: 25%;
-        }
-        .c-superfeature__image:nth-child(n+3) {
-            display: inline-block;
-        }
-    }
-}
-.c-superfeature__image {
-
-}
-
-.c-superfeature__image__wrapper {
+.c-superfeature__image-wrapper {
     background-color: $pampas;
     padding-top: 100%;
 
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         padding-top: 46.875%;
     }
 }
 
-.c-superfeature__content {
+.c-superfeature__contents {
     background-color: $white;
     margin: 0 auto;
     max-width: 900px;
@@ -88,16 +66,18 @@
         z-index: -1;
     }
 
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+    @include at-x-large-size {
         padding: 30px 60px;
         text-align: center;
         margin-top: -20px;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin-top: -140px;
     }
 }
+
+.c-superfeature__contents-wrapper {}
 
 .c-superfeature__tag {
     @include font("GRAPHIK", 10px, 600, 10px);
@@ -111,7 +91,7 @@
     top: 0;
     transform: translateY(-100%);
 
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         background-color: transparent;
         left: initial;
         margin: 0 0 20px 0;
@@ -121,29 +101,23 @@
         transform: translateY(0);
     }
 }
-
 .c-superfeature__title {
     @include font("MILLER_DISPLAY", 23px, 600, 28px);
     color: $dune;
     margin: 0 0 10px 0;
 
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         @include font-size(40px);
         @include line-height(45px);
         margin: 0 0 20px 0;
     }
 }
-
 .c-superfeature__teaser {
     @include font("GRAPHIK", 14px, 600, 18px);
     color: $dune;
     display: block;
     letter-spacing: 0px;
     margin: 0 0 30px 0;
-}
-
-.c-superfeature__separator {
-    display: none;
 }
 
 .c-superfeature__byline {
@@ -154,16 +128,24 @@
     text-transform: uppercase;
 }
 
-ul.c-superfeature__meta {
+.c-superfeature__byline--sponsored {}
+.c-superfeature__byline-prefix {}
+.c-superfeature__byline-name {}
+
+.c-superfeature__meta {
     @include font("GRAPHIK", 10px, 400, 10px);
     color: $dune;
+    font-size: 0;
     letter-spacing: 1.5px;
     margin: 0 0 0 0;
     text-transform: uppercase;
 }
 
-li.c-superfeature__meta-item {
-    & + li.c-superfeature__meta-item {
+.c-superfeature__meta-item {
+    @include font("GRAPHIK", 10px, 400, 10px);
+    display: inline-block;
+
+    & + .c-superfeature__meta-item {
         &:before {
             background-color: $azalea;
             border-radius: 50%;
