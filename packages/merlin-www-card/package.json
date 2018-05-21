@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-card",
-  "version": "1.15.22",
+  "version": "1.15.23",
   "description": "",
   "main": "js/index.js",
   "scripts": {
@@ -9,11 +9,11 @@
     "prepublish": "npm run lint"
   },
   "dependencies": {
-    "@cnbritain/merlin-www-common": "^1.13.13",
-    "@cnbritain/merlin-www-image": "^1.9.16"
+    "@cnbritain/merlin-www-common": "^1.13.14",
+    "@cnbritain/merlin-www-image": "^1.9.17"
   },
   "devDependencies": {
-    "@cnbritain/merlin-component-demo-server": "^3.3.2",
+    "@cnbritain/merlin-component-demo-server": "^3.4.0",
     "eslint": "^4.14.0",
     "eslint-plugin-compat": "^2.2.0"
   },

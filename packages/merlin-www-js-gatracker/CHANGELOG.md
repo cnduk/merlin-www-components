@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-gatracker@1.5.1...@cnbritain/merlin-www-js-gatracker@1.6.0) (2018-05-21)
+
+
+### Features
+
+* **merlin-www-js-gatracker:** add article breaks custom dimension ([9fd2a86](https://github.com/cnduk/merlin-www-components/commit/9fd2a86))
+
+
+
+
 <a name="1.5.1"></a>
 ## [1.5.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-gatracker@1.5.0...@cnbritain/merlin-www-js-gatracker@1.5.1) (2018-04-06)
 
