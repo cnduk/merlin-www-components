@@ -241,10 +241,10 @@ li.bb-gallery__col {
 }
 
 .bb-gallery__remaining-text {
-    @include vendor-prefix('transform', translate(-50%, -50%));
     position: absolute;
     left: 50%;
     top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .bb-gallery__remaining-text--prefix {}

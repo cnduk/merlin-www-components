@@ -81,7 +81,7 @@ li.a-gallery__thumbnail {
     opacity: 0;
     position: absolute;
     top: 0;
-    @include vendor-prefix('transition', opacity 200ms ease-in-out);
+    transition: opacity 200ms ease-in-out;
     width: 100%;
 
     svg {
@@ -127,7 +127,7 @@ li.a-gallery__image-listitem--image {
 .g-image-nav {
     display: none;
     position: absolute;
-    @include vendor-prefix('transform', translateX(-100%));
+    transform: translateX(-100%);
     width: 30px;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
@@ -142,11 +142,10 @@ li.a-gallery__image-listitem--image {
 
 .g-image-nav__btns {}
 .g-image-nav__btn {
-    @include vendor-prefix('transition', all 100ms ease-in-out);
-
     cursor: pointer;
     display: block;
     height: 40px;
+    transition: all 100ms ease-in-out;
     width: 30px;
 
     svg {

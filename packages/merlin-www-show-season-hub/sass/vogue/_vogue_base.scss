@@ -7,8 +7,8 @@
 .sh-season-hub-viewer--large {}
 
 .sh-season-hub-viewer__featured {
-    @include transition(opacity 0.3s ease-in-out);
     opacity: 1;
+    transition: opacity 0.3s ease-in-out;
 
     &:hover,
     &:focus {
@@ -18,7 +18,6 @@
 
 .sh-season-hub-viewer__featured__label {
     @include font('NOBEL', 12px);
-    @include vendor-prefix(transform, translateX(-50%));
     background-color: $guardsman-red;
     bottom: 30px;
     color: $white;
@@ -28,6 +27,7 @@
     position: absolute;
     text-align: center;
     text-transform: uppercase;
+    transform: translateX(-50%);
     z-index: 1;
 }
 

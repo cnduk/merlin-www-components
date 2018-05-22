@@ -29,11 +29,11 @@
     width: 118px;
 
     a {
-        @include transition(bottom 200ms ease-in-out);
         bottom: 0;
         height: $MAIN_NAVIGATION_HEIGHT;
         line-height: $MAIN_NAVIGATION_HEIGHT;
         position: absolute;
+        transition: bottom 200ms ease-in-out;
         vertical-align: middle;
     }
 

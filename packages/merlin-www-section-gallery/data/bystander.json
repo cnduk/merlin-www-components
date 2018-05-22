@@ -1,0 +1,464 @@
+{
+    "data": {
+        "byline": "Contributor 1 and Contributor 2",
+        "icon": {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": null,
+                "svg_content": "<svg class=\"c-gallery__icon--gallery\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 16\"><title>card-image-gallery</title><path d=\"M10 6a3 3 0 1 0 3 3 3 3 0 0 0-3-3zm8-3h-2.4a.89.89 0 0 1-.79-.57L14.19.57A.89.89 0 0 0 13.4 0H6.6a.89.89 0 0 0-.79.57l-.62 1.86A.89.89 0 0 1 4.4 3H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-8 11a5 5 0 1 1 5-5 5 5 0 0 1-5 5zm7.3-7.6a.7.7 0 1 1 .7-.7.7.7 0 0 1-.7.7zm0 0\"/></svg>"
+            },
+            "state": {
+                "is_image": false,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": true,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": false,
+                "is_lazyload": false
+            },
+            "style": {
+                "cls": "c-gallery__icon--gallery",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "SVG"
+        },
+        "image_list": [{
+            "data": {
+                "alt_text": "Small image",
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": "Small image",
+                "width": 50,
+                "image_url": "https://ta-images.condecdn.net/image/placeholder/crop/200/square",
+                "filename": "smallimage.jpg",
+                "orientation": "square",
+                "srcset": "https://ta-images.condecdn.net/image/placeholder/crop/200/square 200w, https://ta-images.condecdn.net/image/placeholder/crop/300/square 300w, https://ta-images.condecdn.net/image/placeholder/crop/400/square 400w, https://ta-images.condecdn.net/image/placeholder/crop/600/square 600w, https://ta-images.condecdn.net/image/placeholder/crop/900/square 900w",
+                "uid": "gAnrOkQryVn"
+            },
+            "state": {
+                "is_image": true,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": false,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": true,
+                "is_lazyload": true
+            },
+            "style": {
+                "cls": "",
+                "inline": "",
+                "padding_top": "100%"
+            },
+            "translation": {},
+            "type": "Image"
+        }, {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": 3000,
+                "image_url": "https://ta-images.condecdn.net/image/placeholder/crop/200/square/f/placeholder",
+                "filename": "placeholder",
+                "orientation": "square",
+                "srcset": "https://ta-images.condecdn.net/image/placeholder/crop/200/square/f/placeholder 200w, https://ta-images.condecdn.net/image/placeholder/crop/300/square/f/placeholder 300w, https://ta-images.condecdn.net/image/placeholder/crop/400/square/f/placeholder 400w, https://ta-images.condecdn.net/image/placeholder/crop/600/square/f/placeholder 600w, https://ta-images.condecdn.net/image/placeholder/crop/900/square/f/placeholder 900w",
+                "uid": "placeholder"
+            },
+            "state": {
+                "is_image": true,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": false,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": true,
+                "is_lazyload": true
+            },
+            "style": {
+                "cls": "",
+                "inline": "",
+                "padding_top": "100%"
+            },
+            "translation": {},
+            "type": "Image"
+        }, {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": 3000,
+                "image_url": "https://ta-images.condecdn.net/image/placeholder/crop/200/square/f/placeholder",
+                "filename": "placeholder",
+                "orientation": "square",
+                "srcset": "https://ta-images.condecdn.net/image/placeholder/crop/200/square/f/placeholder 200w, https://ta-images.condecdn.net/image/placeholder/crop/300/square/f/placeholder 300w, https://ta-images.condecdn.net/image/placeholder/crop/400/square/f/placeholder 400w, https://ta-images.condecdn.net/image/placeholder/crop/600/square/f/placeholder 600w, https://ta-images.condecdn.net/image/placeholder/crop/900/square/f/placeholder 900w",
+                "uid": "placeholder"
+            },
+            "state": {
+                "is_image": true,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": false,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": true,
+                "is_lazyload": true
+            },
+            "style": {
+                "cls": "",
+                "inline": "",
+                "padding_top": "100%"
+            },
+            "translation": {},
+            "type": "Image"
+        }, {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": 3000,
+                "image_url": "https://ta-images.condecdn.net/image/placeholder/crop/200/square/f/placeholder",
+                "filename": "placeholder",
+                "orientation": "square",
+                "srcset": "https://ta-images.condecdn.net/image/placeholder/crop/200/square/f/placeholder 200w, https://ta-images.condecdn.net/image/placeholder/crop/300/square/f/placeholder 300w, https://ta-images.condecdn.net/image/placeholder/crop/400/square/f/placeholder 400w, https://ta-images.condecdn.net/image/placeholder/crop/600/square/f/placeholder 600w, https://ta-images.condecdn.net/image/placeholder/crop/900/square/f/placeholder 900w",
+                "uid": "placeholder"
+            },
+            "state": {
+                "is_image": true,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": false,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": true,
+                "is_lazyload": true
+            },
+            "style": {
+                "cls": "",
+                "inline": "",
+                "padding_top": "100%"
+            },
+            "translation": {},
+            "type": "Image"
+        }],
+        "image_remaining": null,
+        "link": {
+            "data": {
+                "title": "Section gallery",
+                "url": "http://localhost:3000/gallery/section-gallery"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "Link"
+        },
+        "meta_list": {
+            "data": {
+                "items": [{
+                    "data": {
+                        "item": {
+                            "data": {
+                                "icon": null,
+                                "link": null,
+                                "meta_type": "date",
+                                "title": "1 hour ago"
+                            },
+                            "state": {
+                                "has_icon": false,
+                                "has_link": false,
+                                "is_date": true,
+                                "is_duration": false,
+                                "is_tag": false,
+                                "is_event_date": false,
+                                "is_event_location": false,
+                                "is_gallery": false,
+                                "is_creative_director": false,
+                                "is_location": false,
+                                "is_profile": false,
+                                "is_episode_number": false,
+                                "is_video_topic": false
+                            },
+                            "style": {
+                                "cls": "",
+                                "inline": ""
+                            },
+                            "translation": {},
+                            "type": "Meta"
+                        },
+                        "index": 0
+                    },
+                    "state": {
+                        "is_first": true,
+                        "is_last": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "ListItem"
+                }, {
+                    "data": {
+                        "item": {
+                            "data": {
+                                "icon": {
+                                    "data": {
+                                        "alt_text": null,
+                                        "credit": null,
+                                        "description": null,
+                                        "look_number": null,
+                                        "title": null,
+                                        "width": null,
+                                        "svg_content": "<svg data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 16\"><title>card-image-gallery</title><path d=\"M10 6a3 3 0 1 0 3 3 3 3 0 0 0-3-3zm8-3h-2.4a.89.89 0 0 1-.79-.57L14.19.57A.89.89 0 0 0 13.4 0H6.6a.89.89 0 0 0-.79.57l-.62 1.86A.89.89 0 0 1 4.4 3H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-8 11a5 5 0 1 1 5-5 5 5 0 0 1-5 5zm7.3-7.6a.7.7 0 1 1 .7-.7.7.7 0 0 1-.7.7zm0 0\"/></svg>"
+                                    },
+                                    "state": {
+                                        "is_image": false,
+                                        "is_picture": false,
+                                        "is_static": false,
+                                        "is_svg": true,
+                                        "is_linked": false,
+                                        "is_landscape": false,
+                                        "is_portrait": false,
+                                        "is_square": false,
+                                        "is_lazyload": false
+                                    },
+                                    "style": {
+                                        "cls": "",
+                                        "inline": ""
+                                    },
+                                    "translation": {},
+                                    "type": "SVG"
+                                },
+                                "link": null,
+                                "meta_type": "gallery",
+                                "title": "4 items"
+                            },
+                            "state": {
+                                "has_icon": true,
+                                "has_link": false,
+                                "is_date": false,
+                                "is_duration": false,
+                                "is_tag": false,
+                                "is_event_date": false,
+                                "is_event_location": false,
+                                "is_gallery": true,
+                                "is_creative_director": false,
+                                "is_location": false,
+                                "is_profile": false,
+                                "is_episode_number": false,
+                                "is_video_topic": false
+                            },
+                            "style": {
+                                "cls": "",
+                                "inline": ""
+                            },
+                            "translation": {},
+                            "type": "Meta"
+                        },
+                        "index": 1
+                    },
+                    "state": {
+                        "is_first": false,
+                        "is_last": true
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "ListItem"
+                }],
+                "length": 2
+            },
+            "state": {},
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "MetaList"
+        },
+        "profiles": [{
+            "data": {
+                "bio": null,
+                "link": {
+                    "data": {
+                        "title": "Contributor 1",
+                        "url": "http://localhost:3000/profile/contributor-1"
+                    },
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "Link"
+                },
+                "name": "Contributor 1",
+                "teaser": null,
+                "image": null
+            },
+            "state": {
+                "has_link": true,
+                "has_image": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "Profile"
+        }, {
+            "data": {
+                "bio": null,
+                "link": {
+                    "data": {
+                        "title": "Contributor 2",
+                        "url": "http://localhost:3000/profile/contributor-2"
+                    },
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "Link"
+                },
+                "name": "Contributor 2",
+                "teaser": null,
+                "image": null
+            },
+            "state": {
+                "has_link": true,
+                "has_image": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "Profile"
+        }],
+        "sponsor": {
+            "data": {
+                "event_information": null,
+                "link": {
+                    "data": {
+                        "title": "Test Brand",
+                        "url": "http://localhost:3000/brand/test-brand"
+                    },
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "Link"
+                },
+                "title": "Test Brand",
+                "uid": "2wKVnMjRBVM",
+                "image": null
+            },
+            "state": {
+                "has_link": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "SponsorTag"
+        },
+        "primary_tag": {
+            "data": {
+                "event_information": null,
+                "link": {
+                    "data": {
+                        "title": "Superfeature Primary Tag",
+                        "url": "http://localhost:3000/topic/superfeature-primary-tag"
+                    },
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "Link"
+                },
+                "title": "Superfeature Primary Tag",
+                "uid": "20jNoW0wJ4P",
+                "sponsor": null
+            },
+            "state": {
+                "has_link": true,
+                "is_sponsored": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "Tag"
+        },
+        "teaser": "This is the short teaser of the article",
+        "title": "Section gallery"
+    },
+    "state": {
+        "is_cardlist": false,
+        "is_contributors": false,
+        "is_feature": false,
+        "is_gallery": true,
+        "is_magazine": false,
+        "is_newsletter": false,
+        "is_show_season": false,
+        "is_show_summary": false,
+        "is_superfeature": false,
+        "is_splash": false,
+        "has_sponsor": true
+    },
+    "style": {
+        "cls": "c-gallery--dark",
+        "inline": ""
+    },
+    "translation": {
+        "remaining_prefix": "+",
+        "sponsor_prefix": "In partnership with",
+        "byline_prefix": "By"
+    },
+    "type": "SectionGallery"
+}

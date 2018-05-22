@@ -57,17 +57,17 @@
 
 .n-menu__nav-link {
     @include font('NOBEL', 15px, 'BOLD', 15px);
-    @include vendor-prefix(transform, translateY(-50%));
     letter-spacing: 1px;
     position: absolute;
     text-transform: uppercase;
     top: 50%;
+    transform: translateY(-50%);
     word-break: break-word;
 
     .n-menu__nav-item--more & {
         @include font-size(12px);
         @include line-height(12px);
-        @include vendor-prefix(transform, none);
+        transform: none;
         top: initial;
         bottom: 0;
     }

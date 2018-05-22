@@ -34,7 +34,7 @@
 }
 
 .global__button-reset {
-    @include vendor-prefix( appearance, none );
+    appearance: none;
     background: transparent;
     border: none;
     border-radius: 0;
@@ -115,7 +115,7 @@
 }
 
 .global__no-transition {
-    @include transition( none );
+    transition: none;
 }
 
 .global__mb,

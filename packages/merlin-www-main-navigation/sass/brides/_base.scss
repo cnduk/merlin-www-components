@@ -143,7 +143,6 @@
     background-color: $white;
 
     &:before {
-        @include vendor-prefix(transform, translateX(-50%));
         background-color: $white;
         border-bottom: solid 1px $ballet-grey;
         bottom: 0;
@@ -152,6 +151,7 @@
         height: 1px;
         left: 50%;
         position: absolute;
+        transform: translateX(-50%);
         width: 100vw;
     }
 }
@@ -310,11 +310,11 @@
 
             .n-menu__nav-link {
                 @include font("FREIGHT DISPLAY PRO", 24px, 'NORMAL', 21px);
-                @include vendor-prefix(transform, translateY(-50%));
                 color: $stroller-grey;
                 letter-spacing: 0.03em;
                 position: absolute;
                 top: 50%;
+                transform: translateY(-50%);
                 word-break: break-word;
             }
 
@@ -326,9 +326,9 @@
                 .n-menu__nav-link {
                     @include font-size(16px);
                     @include line-height(16px);
-                    @include vendor-prefix(transform, none);
                     bottom: 0;
                     top: initial;
+                    transform: none;
                 }
             }
         }

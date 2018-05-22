@@ -140,7 +140,7 @@
 }
 
 .n-menu__search-textbox input {
-    @include vendor-prefix(appearance, none);
+    appearance: none;
 }
 
 .n-search {

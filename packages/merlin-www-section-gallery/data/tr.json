@@ -1,0 +1,565 @@
+{
+    "data": {
+        "byline": "Contributor 1 and Contributor 2",
+        "icon": {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": null,
+                "svg_content": "<svg class=\"c-gallery__icon--gallery\" id=\"card-image-gallery\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\"><path d=\"M17 20H0V3h3V0h17v1H4v2h13v13h2V1h1v16h-3v3zM1 19h15v-2.3l-4-4-3 2.5-4-4-4 3.5V19zm11-7.7l4 4V4H1v9.4l4-3.6 4 4 3-2.5zm0-1.3c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0-3c-.6 0-1 .4-1 1s.4 1 1 1 1-.4 1-1-.4-1-1-1z\"/></svg>"
+            },
+            "state": {
+                "is_image": false,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": true,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": false,
+                "is_lazyload": false
+            },
+            "style": {
+                "cls": "c-gallery__icon--gallery",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "SVG"
+        },
+        "image_list": [{
+            "data": {
+                "alt_text": "Small image",
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": "Small image",
+                "width": 50,
+                "image_url": "https://tr-images.condecdn.net/image/placeholder/crop/200/square",
+                "filename": "smallimage.jpg",
+                "orientation": "square",
+                "srcset": "https://tr-images.condecdn.net/image/placeholder/crop/200/square 200w, https://tr-images.condecdn.net/image/placeholder/crop/300/square 300w, https://tr-images.condecdn.net/image/placeholder/crop/400/square 400w, https://tr-images.condecdn.net/image/placeholder/crop/600/square 600w, https://tr-images.condecdn.net/image/placeholder/crop/900/square 900w",
+                "uid": "gAnrOkQryVn"
+            },
+            "state": {
+                "is_image": true,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": false,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": true,
+                "is_lazyload": true
+            },
+            "style": {
+                "cls": "",
+                "inline": "",
+                "padding_top": "100%"
+            },
+            "translation": {},
+            "type": "Image"
+        }, {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": 3000,
+                "image_url": "https://tr-images.condecdn.net/image/placeholder/crop/200/square/f/placeholder",
+                "filename": "placeholder",
+                "orientation": "square",
+                "srcset": "https://tr-images.condecdn.net/image/placeholder/crop/200/square/f/placeholder 200w, https://tr-images.condecdn.net/image/placeholder/crop/300/square/f/placeholder 300w, https://tr-images.condecdn.net/image/placeholder/crop/400/square/f/placeholder 400w, https://tr-images.condecdn.net/image/placeholder/crop/600/square/f/placeholder 600w, https://tr-images.condecdn.net/image/placeholder/crop/900/square/f/placeholder 900w",
+                "uid": "placeholder"
+            },
+            "state": {
+                "is_image": true,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": false,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": true,
+                "is_lazyload": true
+            },
+            "style": {
+                "cls": "",
+                "inline": "",
+                "padding_top": "100%"
+            },
+            "translation": {},
+            "type": "Image"
+        }, {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": 3000,
+                "image_url": "https://tr-images.condecdn.net/image/placeholder/crop/200/square/f/placeholder",
+                "filename": "placeholder",
+                "orientation": "square",
+                "srcset": "https://tr-images.condecdn.net/image/placeholder/crop/200/square/f/placeholder 200w, https://tr-images.condecdn.net/image/placeholder/crop/300/square/f/placeholder 300w, https://tr-images.condecdn.net/image/placeholder/crop/400/square/f/placeholder 400w, https://tr-images.condecdn.net/image/placeholder/crop/600/square/f/placeholder 600w, https://tr-images.condecdn.net/image/placeholder/crop/900/square/f/placeholder 900w",
+                "uid": "placeholder"
+            },
+            "state": {
+                "is_image": true,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": false,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": true,
+                "is_lazyload": true
+            },
+            "style": {
+                "cls": "",
+                "inline": "",
+                "padding_top": "100%"
+            },
+            "translation": {},
+            "type": "Image"
+        }, {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": 3000,
+                "image_url": "https://tr-images.condecdn.net/image/placeholder/crop/200/square/f/placeholder",
+                "filename": "placeholder",
+                "orientation": "square",
+                "srcset": "https://tr-images.condecdn.net/image/placeholder/crop/200/square/f/placeholder 200w, https://tr-images.condecdn.net/image/placeholder/crop/300/square/f/placeholder 300w, https://tr-images.condecdn.net/image/placeholder/crop/400/square/f/placeholder 400w, https://tr-images.condecdn.net/image/placeholder/crop/600/square/f/placeholder 600w, https://tr-images.condecdn.net/image/placeholder/crop/900/square/f/placeholder 900w",
+                "uid": "placeholder"
+            },
+            "state": {
+                "is_image": true,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": false,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": true,
+                "is_lazyload": true
+            },
+            "style": {
+                "cls": "",
+                "inline": "",
+                "padding_top": "100%"
+            },
+            "translation": {},
+            "type": "Image"
+        }],
+        "image_remaining": null,
+        "link": {
+            "data": {
+                "title": "Section gallery",
+                "url": "http://localhost:3000/gallery/section-gallery"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "Link"
+        },
+        "meta_list": {
+            "data": {
+                "items": [{
+                    "data": {
+                        "item": {
+                            "data": {
+                                "icon": null,
+                                "link": {
+                                    "data": {
+                                        "title": "Superfeature Primary Tag",
+                                        "url": "/topic/superfeature-primary-tag"
+                                    },
+                                    "state": {
+                                        "is_blank": false,
+                                        "is_nofollow": false
+                                    },
+                                    "style": {
+                                        "cls": "",
+                                        "inline": ""
+                                    },
+                                    "translation": {},
+                                    "type": "Link"
+                                },
+                                "meta_type": "tag",
+                                "title": "Superfeature Primary Tag"
+                            },
+                            "state": {
+                                "has_icon": false,
+                                "has_link": true,
+                                "is_date": false,
+                                "is_duration": false,
+                                "is_tag": true,
+                                "is_event_date": false,
+                                "is_event_location": false,
+                                "is_gallery": false,
+                                "is_creative_director": false,
+                                "is_location": false,
+                                "is_profile": false,
+                                "is_episode_number": false,
+                                "is_video_topic": false
+                            },
+                            "style": {
+                                "cls": "",
+                                "inline": ""
+                            },
+                            "translation": {},
+                            "type": "Meta"
+                        },
+                        "index": 0
+                    },
+                    "state": {
+                        "is_first": true,
+                        "is_last": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "ListItem"
+                }, {
+                    "data": {
+                        "item": {
+                            "data": {
+                                "icon": null,
+                                "link": null,
+                                "meta_type": "date",
+                                "title": "1 hour ago"
+                            },
+                            "state": {
+                                "has_icon": false,
+                                "has_link": false,
+                                "is_date": true,
+                                "is_duration": false,
+                                "is_tag": false,
+                                "is_event_date": false,
+                                "is_event_location": false,
+                                "is_gallery": false,
+                                "is_creative_director": false,
+                                "is_location": false,
+                                "is_profile": false,
+                                "is_episode_number": false,
+                                "is_video_topic": false
+                            },
+                            "style": {
+                                "cls": "",
+                                "inline": ""
+                            },
+                            "translation": {},
+                            "type": "Meta"
+                        },
+                        "index": 1
+                    },
+                    "state": {
+                        "is_first": false,
+                        "is_last": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "ListItem"
+                }, {
+                    "data": {
+                        "item": {
+                            "data": {
+                                "icon": {
+                                    "data": {
+                                        "alt_text": null,
+                                        "credit": null,
+                                        "description": null,
+                                        "look_number": null,
+                                        "title": null,
+                                        "width": null,
+                                        "svg_content": "<svg id=\"card-image-gallery\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\"><path d=\"M17 20H0V3h3V0h17v1H4v2h13v13h2V1h1v16h-3v3zM1 19h15v-2.3l-4-4-3 2.5-4-4-4 3.5V19zm11-7.7l4 4V4H1v9.4l4-3.6 4 4 3-2.5zm0-1.3c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0-3c-.6 0-1 .4-1 1s.4 1 1 1 1-.4 1-1-.4-1-1-1z\"/></svg>"
+                                    },
+                                    "state": {
+                                        "is_image": false,
+                                        "is_picture": false,
+                                        "is_static": false,
+                                        "is_svg": true,
+                                        "is_linked": false,
+                                        "is_landscape": false,
+                                        "is_portrait": false,
+                                        "is_square": false,
+                                        "is_lazyload": false
+                                    },
+                                    "style": {
+                                        "cls": "",
+                                        "inline": ""
+                                    },
+                                    "translation": {},
+                                    "type": "SVG"
+                                },
+                                "link": null,
+                                "meta_type": "gallery",
+                                "title": "4 items"
+                            },
+                            "state": {
+                                "has_icon": true,
+                                "has_link": false,
+                                "is_date": false,
+                                "is_duration": false,
+                                "is_tag": false,
+                                "is_event_date": false,
+                                "is_event_location": false,
+                                "is_gallery": true,
+                                "is_creative_director": false,
+                                "is_location": false,
+                                "is_profile": false,
+                                "is_episode_number": false,
+                                "is_video_topic": false
+                            },
+                            "style": {
+                                "cls": "",
+                                "inline": ""
+                            },
+                            "translation": {},
+                            "type": "Meta"
+                        },
+                        "index": 2
+                    },
+                    "state": {
+                        "is_first": false,
+                        "is_last": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "ListItem"
+                }, {
+                    "data": {
+                        "item": {
+                            "data": {
+                                "icon": null,
+                                "link": null,
+                                "meta_type": "profile",
+                                "title": "Contributor 1 and Contributor 2"
+                            },
+                            "state": {
+                                "has_icon": false,
+                                "has_link": false,
+                                "is_date": false,
+                                "is_duration": false,
+                                "is_tag": false,
+                                "is_event_date": false,
+                                "is_event_location": false,
+                                "is_gallery": false,
+                                "is_creative_director": false,
+                                "is_location": false,
+                                "is_profile": true,
+                                "is_episode_number": false,
+                                "is_video_topic": false
+                            },
+                            "style": {
+                                "cls": "",
+                                "inline": ""
+                            },
+                            "translation": {},
+                            "type": "Meta"
+                        },
+                        "index": 3
+                    },
+                    "state": {
+                        "is_first": false,
+                        "is_last": true
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "ListItem"
+                }],
+                "length": 4
+            },
+            "state": {},
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "MetaList"
+        },
+        "profiles": [{
+            "data": {
+                "bio": null,
+                "link": {
+                    "data": {
+                        "title": "Contributor 1",
+                        "url": "http://localhost:3000/profile/contributor-1"
+                    },
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "Link"
+                },
+                "name": "Contributor 1",
+                "teaser": null,
+                "image": null
+            },
+            "state": {
+                "has_link": true,
+                "has_image": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "Profile"
+        }, {
+            "data": {
+                "bio": null,
+                "link": {
+                    "data": {
+                        "title": "Contributor 2",
+                        "url": "http://localhost:3000/profile/contributor-2"
+                    },
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "Link"
+                },
+                "name": "Contributor 2",
+                "teaser": null,
+                "image": null
+            },
+            "state": {
+                "has_link": true,
+                "has_image": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "Profile"
+        }],
+        "sponsor": {
+            "data": {
+                "event_information": null,
+                "link": {
+                    "data": {
+                        "title": "Test Brand",
+                        "url": "http://localhost:3000/brand/test-brand"
+                    },
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "Link"
+                },
+                "title": "Test Brand",
+                "uid": "2wKVnMjRBVM",
+                "image": null
+            },
+            "state": {
+                "has_link": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "SponsorTag"
+        },
+        "primary_tag": {
+            "data": {
+                "event_information": null,
+                "link": {
+                    "data": {
+                        "title": "Superfeature Primary Tag",
+                        "url": "http://localhost:3000/topic/superfeature-primary-tag"
+                    },
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "Link"
+                },
+                "title": "Superfeature Primary Tag",
+                "uid": "20jNoW0wJ4P",
+                "sponsor": null
+            },
+            "state": {
+                "has_link": true,
+                "is_sponsored": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "Tag"
+        },
+        "teaser": "This is the short teaser of the article",
+        "title": "Section gallery"
+    },
+    "state": {
+        "is_cardlist": false,
+        "is_contributors": false,
+        "is_feature": false,
+        "is_gallery": true,
+        "is_magazine": false,
+        "is_newsletter": false,
+        "is_show_season": false,
+        "is_show_summary": false,
+        "is_superfeature": false,
+        "is_splash": false,
+        "has_sponsor": true
+    },
+    "style": {
+        "cls": "",
+        "inline": ""
+    },
+    "translation": {
+        "remaining_prefix": "+",
+        "sponsor_prefix": "In partnership with",
+        "byline_prefix": "By"
+    },
+    "type": "SectionGallery"
+}

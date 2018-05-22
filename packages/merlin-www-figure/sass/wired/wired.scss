@@ -17,7 +17,7 @@
 li.c-figure__toolbar-listitem {
     background-color: $black;
     border-bottom: none;
-    @include vendor-prefix(transition, background 0.1s ease-in-out);
+    transition: background 0.1s ease-in-out;
 
     svg {
         fill: $white;

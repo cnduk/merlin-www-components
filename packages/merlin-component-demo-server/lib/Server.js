@@ -14,6 +14,7 @@ const {ComponentManager} = require('./components');
 
 const resolve = p => path.resolve(__dirname, p);
 let RENDER_SETTINGS = null;
+const RENDERER_SOCKETS = new Map();
 
 class Server {
 
@@ -42,6 +43,10 @@ class Server {
         });
     }
 
+    _onRender(req, res){
+        return res.render('render', {SESSION_ID: req.query.id});
+    }
+
     _initApp(){
         const app = express();
         const server = http.Server(app);
@@ -59,6 +64,8 @@ class Server {
 
         // Routes
         app.get('/', this._onIndex.bind(this));
+        app.get('/render', this._onRender.bind(this));
+
         // Enable dynamic static for assets if assets is added
         if(COMPONENTS.has('@cnbritain/merlin-www-assets')){
             const assetComponent = COMPONENTS.get(
@@ -79,22 +86,49 @@ class Server {
         const io = socket(this._http);
         this._io = io;
 
-        io.on('connection', socket => {
+        // Renderer - we can have multiple renderer pages
+        const nsRenderer = io.of('/renderer');
+        nsRenderer.on('connection', socket => {
+            socket.once('id', async (id) => {
+                RENDERER_SOCKETS.set(socket, id);
+                Logger.log('SERVER', `Renderer socket connected ${id}`);
+
+                if(RENDER_SETTINGS !== null){
+                    try {
+                        const html = await render(this.component);
+                        socket.emit('render', html);
+                    } catch(err){
+                        socket.emit('renderError', JSON.stringify(err));
+                    }
+                }
+
+            });
+        });
+
+        // Editor
+        const nsEditor = io.of('/editor');
+        nsEditor.on('connection', socket => {
+            const id = socket.id.split('#')[1];
+            Logger.log('SERVER', `Editor socket connected ${id}`);
+
             this._sockets.push(socket);
+
+            socket.emit('id', id);
 
             // Changing settings
             socket.on('render', async (e) => {
                 RENDER_SETTINGS = e;
                 this._currentTheme = RENDER_SETTINGS.THEME;
+                const s = getSocketsWithId(RENDERER_SOCKETS, id);
                 try {
                     const html = await render(this.component);
-                    socket.emit('render', html);
+                    s.forEach((sock) => sock.emit('render', html));
                 } catch(err){
-                    socket.emit('renderError', JSON.stringify(err));
+                    s.forEach((sock) => {
+                        sock.emit('renderError', JSON.stringify(err));
+                    });
                 }
             });
-            // TODO: only theme changes
-            // socket.on('theme', e => console.log(e));
 
             socket.on('disconnect', () => {
                 this._sockets.splice(this._sockets.indexOf(socket), 1);
@@ -139,19 +173,30 @@ class Server {
 
             }
 
+            const s = Array.from(RENDERER_SOCKETS.keys());
             if(onlyStyles){
                 try {
                     const newCss = await renderStyles(this.component);
-                    this._io.emit('renderStyles', newCss);
+                    s.forEach((sock) => {
+                        sock.emit('renderStyles', newCss);
+                    });
                 } catch(err){
-                    this._io.emit('renderError', JSON.stringify(err));
+                    const jsonError = JSON.stringify(err);
+                    s.forEach((sock) => {
+                        sock.emit('renderError', jsonError);
+                    });
                 }
             } else {
                 try {
                     const html = await render(this.component);
-                    this._io.emit('render', html);
+                    s.forEach((sock) => {
+                        sock.emit('render', html);
+                    });
                 } catch(err){
-                    this._io.emit('renderError', JSON.stringify(err));
+                    const jsonError = JSON.stringify(err);
+                    s.forEach((sock) => {
+                        sock.emit('renderError', jsonError);
+                    });
                 }
             }
 
@@ -194,6 +239,14 @@ async function render(component){
         RENDER_SETTINGS.JS
     );
     return html;
+}
+
+function getSocketsWithId(socketMap, id){
+    const sockets = [];
+    for(const [sock, i] of socketMap.entries()){
+        if(i === id) sockets.push(sock);
+    }
+    return sockets;
 }
 
 module.exports = Server;
