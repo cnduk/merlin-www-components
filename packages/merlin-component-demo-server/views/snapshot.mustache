@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/css">
+
+            main {
+                margin: 0 auto;
+                max-width: 1024px;
+            }
+
+            .snapshot {
+                margin: 20px 0;
+            }
+            .snapshot__title {
+                margin: 0;
+            }
+            .snapshot__image {
+                width: 100%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <main>
+            {{# snapshots }}
+                <div class="snapshot">
+                    <h3 class="snapshot__title">{{ name }}</h3>
+                    <img class="snapshot__image" src="/editor/snapshots/{{ &url }}" />
+                </div>
+            {{/ snapshots }}
+        </main>
+    </body>
+</html>
