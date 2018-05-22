@@ -56,20 +56,6 @@
         margin-bottom: 20px;
         margin-top: 20px;
     }
-
-    &:after {
-        background-color: $black;
-        content: '';
-        display: block;
-        height: 1px;
-        margin: 10px auto 0 auto;
-        width: 10px;
-
-        @include at-x-large-size {
-            margin-top: 20px;
-            width: 30px;
-        }
-    }
 }
 
 .c-superfeature__byline {
@@ -78,6 +64,20 @@
     margin-bottom: 5px;
     margin-top: 10px;
     text-align: center;
+
+    &:before {
+        background-color: $black;
+        content: '';
+        display: block;
+        height: 1px;
+        margin: 0 auto 10px auto;
+        width: 10px;
+
+        @include at-x-large-size {
+            margin-bottom: 20px;
+            width: 30px;
+        }
+    }
 }
 
 .c-superfeature__byline--sponsored {}
