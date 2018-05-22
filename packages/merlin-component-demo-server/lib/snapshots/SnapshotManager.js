@@ -36,7 +36,7 @@ class SnapshotManager {
         const snap1 = this.snapshots[a];
         const snap2 = this.snapshots[b];
 
-        if(!this.compares.has(`${a.name}-${b.name}`)){
+        if(!this.compares.has(`${snap1.name}-${snap2.name}`)){
             const c = new Map();
 
             const deviceNames = Array.from(snap1.images.keys());
@@ -62,7 +62,7 @@ class SnapshotManager {
                         threshold: 0.1
                     }
                 );
-                const diffFilename =`compare-${a.name}-${b.name}-${name}.png`;
+                const diffFilename =`compare-${snap1.name}-${snap2.name}-${name}.png`;
                 diff.pack().pipe(
                     fs.createWriteStream(this._getFilename(diffFilename)));
 
@@ -70,10 +70,10 @@ class SnapshotManager {
 
             }
 
-            this.compares.set(`${a.name}-${b.name}`, c);
+            this.compares.set(`${snap1.name}-${snap2.name}`, c);
         }
 
-        return this.compares.get(`${a.name}-${b.name}`);
+        return this.compares.get(`${snap1.name}-${snap2.name}`);
 
     }
 
