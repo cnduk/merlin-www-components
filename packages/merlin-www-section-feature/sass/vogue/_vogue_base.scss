@@ -2,6 +2,20 @@
     background-color: $wild-sand;
     padding: $MOBILE_SIDE_GUTTER;
 
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        padding: $DESKTOP_SIDE_GUTTER;
+    }
+
     &:focus,
     &:hover {
         .c-feature__title,
@@ -15,17 +29,10 @@
     }
 }
 
-.c-feature__constrain {
-    margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
-}
-
-.c-feature__wrapper {}
-.c-feature__images {}
-.c-feature__content {
-    background: $white;
-    padding: $PADDING_LARGE $PADDING_MEDIUM;
-    text-align: center;
+.c-feature__images {
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        width: 50%;
+    }
 }
 
 .c-feature__image {
@@ -33,9 +40,14 @@
     transition: all 0.3s ease-in-out;
 }
 
-.c-feature__image--portrait {
-    display: inline-block;
-    width: 50%;
+.c-feature__content {
+    background: $white;
+    padding: $PADDING_LARGE $PADDING_MEDIUM;
+    text-align: center;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        padding: $PADDING_X_LARGE;
+    }
 }
 
 .c-feature__icon {
@@ -47,9 +59,6 @@
     padding: $PADDING_XX_SMALL;
     width: 15px;
 }
-.c-feature__icon--gallery {}
-.c-feature__icon--video {}
-.c-feature__icon--podcast {}
 
 .c-feature__tag {
     @include font('NOBEL', 10px, null, 16px);
@@ -58,6 +67,11 @@
     margin-bottom: 8px;
     margin-top: 0;
     text-transform: uppercase;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+         @include font-size(11px);
+        @include line-height(20px);
+    }
 }
 
 .c-feature__title {
@@ -65,6 +79,12 @@
     color: $cod-gray;
     margin-top: $MARGIN_MEDIUM;
     margin-bottom: $MARGIN_XX_SMALL;
+
+     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+         @include font-size(35px);
+        @include line-height(40px);
+        margin-bottom: $MARGIN_X_SMALL;
+     }
 }
 
 .c-feature__teaser,
@@ -78,7 +98,15 @@
     color: $mine-shaft-333;
     margin-bottom: 14px;
     margin-top: $MARGIN_XX_SMALL;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font-size(11px);
+        @include line-height(15px);
+        margin-bottom: $MARGIN_SMALL;
+        margin-top: $MARGIN_X_SMALL;
+    }
 }
+
 .c-feature__byline-prefix {
     @include font('ADOBE CASLON', 12px);
     color: $dove-gray;
@@ -86,17 +114,29 @@
     margin-right: 2px;
     text-transform: lowercase;
 }
+
 .c-feature__byline-name {
     @include font('NOBEL', 10px);
     color: $cod-gray;
     letter-spacing: 1px;
     text-transform: uppercase;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font-size(11px);
+    }
 }
 
 .c-feature__meta {
     @include font('NOBEL', 10px, null, 16px);
     color: $dove-gray;
     display: inline-block;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font-size(11px);
+        @include line-height(20px);
+        border-top: 1px solid $loot-box;
+        padding-top: 8px;
+    }
 }
 
 li.c-feature__meta-item {
@@ -115,39 +155,5 @@ li.c-feature__meta-item {
         color: $guardsman-red;
         letter-spacing: 1px;
         text-transform: uppercase;
-    }
-}
-
-@include feature-slice-at-large {
-
-    .c-feature {
-        padding: $DESKTOP_SIDE_GUTTER;
-    }
-    .c-feature__content {
-        padding: $PADDING_X_LARGE;
-    }
-    .c-feature__tag {
-        @include font-size(11px);
-        @include line-height(20px);
-    }
-    .c-feature__title {
-        @include font-size(35px);
-        @include line-height(40px);
-        margin-bottom: $MARGIN_X_SMALL;
-    }
-    .c-feature__byline {
-        @include font-size(11px);
-        @include line-height(15px);
-        margin-bottom: $MARGIN_SMALL;
-        margin-top: $MARGIN_X_SMALL;
-    }
-    .c-feature__byline-name {
-        @include font-size(11px);
-    }
-    .c-feature__meta {
-        @include font-size(11px);
-        @include line-height(20px);
-        border-top: 1px solid $loot-box;
-        padding-top: 8px;
     }
 }

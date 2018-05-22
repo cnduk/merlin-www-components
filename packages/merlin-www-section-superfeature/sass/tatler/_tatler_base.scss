@@ -4,7 +4,7 @@
     margin: 30px auto;
     padding: 0;
 
-    @include tablet-size {
+    @include at-medium-size {
         padding: 0;
         margin: 60px auto;
     }
@@ -23,14 +23,15 @@
     &:hover,
     &:focus {
         .c-superfeature__title {
-            @include card-title-hover;
+            color: $COLOUR_MAIN_HIGHLIGHT;
+            text-decoration: none;
         }
     }
 }
 
 .c-superfeature__images {
     margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
+    max-width: $XX_LARGE_SIZE;
 }
 .c-superfeature__images--multiple {
 
@@ -41,7 +42,7 @@
         display: none;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         .c-superfeature__image {
             width: 25%;
         }
@@ -52,25 +53,25 @@
 
 }
 
-.c-superfeature__content {
+.c-superfeature__contents {
     background: $white;
     margin: 0 20px;
-    max-width: $MAXIMUM_PAGE_WIDTH - 120px;
+    max-width: $XX_LARGE_SIZE - 120px;
     padding: 28px 20px;
     text-align: center;
 
-    @include tablet-size {
+    @include at-medium-size {
         margin: 0 60px;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         @include border-line-box(top);
 
         margin: 0 60px;
         padding: 60px 170px;
     }
 
-    @include maximum-size {
+    @include at-xx-large-size {
         margin: 0 auto;
     }
 }
@@ -81,8 +82,8 @@
 }
 
 .c-superfeature__title {
-    @include t-super-feature-title-small;
-
+    @include font('STARLING', 24px, 'NORMAL', 28px);
+    color: $COLOUR_MAIN_PRIMARY;
     margin: 0 0 15px;
     position: relative;
     padding: 0 0 15px;
@@ -99,8 +100,9 @@
         margin-left: -10px;
     }
 
-    @include desktop-size {
-        @include t-super-feature-title-large;
+    @include at-x-large-size {
+        @include font('STARLING', 37px, 'NORMAL', 42px);
+        color: $COLOUR_MAIN_PRIMARY;
         margin: 0 0 25px;
         padding: 0 0 25px;
     }
@@ -115,7 +117,7 @@
     margin: 0 0 10px;
     text-transform: uppercase;
 
-    @include card-switcher-size {
+    @include at-medium-size {
         @include font('AGENDA', 12px, 'MEDIUM', 12px);
 
         letter-spacing: 1px;
@@ -124,23 +126,45 @@
 }
 
 .c-superfeature__byline {
-    @include feature-card-byline;
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    color: $gray;
+    letter-spacing: 1px;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+
+    @include tablet-size {
+        margin: 15px 0 10px;
+    }
 }
 
 .c-superfeature__byline-name {
-    @include card-byline-name;
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .c-superfeature__byline-prefix {
-    @include card-byline-prefix;
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    font-style: italic;
+    letter-spacing: 1px;
+    text-transform: lowercase;
 }
 
 .c-superfeature__meta {
-    @include card-meta;
+    @include font('AGENDA', 10px, 'MEDIUM', 10px);
+    color: $gray;
+    font-size: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 li.c-superfeature__meta-item {
+    @include font('AGENDA', 10px, 'MEDIUM', 10px);
+    color: $gray;
+    display: inline-block;
+    letter-spacing: 1px;
     padding-right: 0;
+    text-transform: uppercase;
 
     &:not(:last-child) {
         &:after {
@@ -167,14 +191,14 @@ li.c-superfeature__meta-item {
 
 
 .c-superfeature--dark {
-    .c-superfeature__content {
+    .c-superfeature__contents {
         background: $black;
 
         .c-superfeature__icon {
             background: $white;
         }
 
-        @include desktop-size {
+        @include at-x-large-size {
             @include border-line-box(top, $bg: $black, $border: $brownish-grey);
         }
     }

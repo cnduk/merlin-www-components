@@ -5,28 +5,33 @@
 
 .c-superfeature {
     margin-bottom: $MOBILE_SLICE_MARGIN;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: $MOBILE_SLICE_MARGIN;
+    max-width: $XX_LARGE_SIZE;
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-bottom: $TABLET_SLICE_MARGIN;
         margin-top: $TABLET_SLICE_MARGIN;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin-bottom: $DESKTOP_SLICE_MARGIN;
         margin-top: $DESKTOP_SLICE_MARGIN;
-    }
 
-    &:hover {
-        .c-superfeature__title {
-            color: $pink-rose;
+        &:hover {
+            .c-superfeature__title {
+                color: $pink-rose;
+            }
         }
     }
 }
 
+.c-superfeature-wrapper {}
 .c-superfeature__link {}
-
-.c-superfeature__images {
+.c-superfeature__images {}
+.c-superfeature__images--multiple {}
+.c-superfeature__images-wrapper {
     position: relative;
 
     &:after {
@@ -41,47 +46,26 @@
         z-index: 1;
     }
 }
-
-.c-superfeature__images--multiple {
-    .c-superfeature__image {
-        width: 50%;
-    }
-
-    .c-superfeature__image:nth-child(n+3) {
-        display: none;
-    }
-
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-        .c-superfeature__image {
-            width: 25%;
-        }
-
-        .c-superfeature__image:nth-child(n+3) {
-            display: inline-block;
-        }
-    }
-}
-
 .c-superfeature__image {}
-.c-superfeature__image__wrapper {
+.c-superfeature__image-wrapper {
     background-color: $diamond;
     padding-top: 90%;
 
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         padding-top: 50%;
     }
 }
 
-.c-superfeature__content {
+.c-superfeature__contents {
     margin-left: auto;
     margin-right: auto;
-    max-width: 840px;
+    max-width: $LARGE_SIZE;
     position: relative;
     text-align: center;
+}
 
-    > * {
-        padding: 0 20px;
-    }
+.c-superfeature__contents-wrapper {
+    padding: 0 20px;
 
     > :first-child {
         margin-top: 28px;
@@ -91,7 +75,7 @@
         margin-bottom: 44px;
     }
 
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         > :first-child {
             margin-top: 40px;
         }
@@ -107,10 +91,6 @@
     color: $pink-rose;
     margin: 0 0 6px 0;
     text-transform: uppercase;
-
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-
-    }
 }
 
 .c-superfeature__title {
@@ -120,7 +100,7 @@
     text-align: center;
     text-transform: capitalize;
 
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         @include font-size(40px);
         @include line-height(40px);
     }
@@ -129,7 +109,7 @@
 .c-superfeature__teaser {
     display: none;
 
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         @include font("SOLEIL", 14px, 400, 20px, 30);
         color: $ascot-grey;
         margin: 18px 0 0 0;
@@ -144,25 +124,27 @@
     text-transform: uppercase;
 }
 
-.c-superfeature__byline--sponsorship {}
+.c-superfeature__byline--sponsored {}
 .c-superfeature__byline-prefix {}
 .c-superfeature__byline-name {
     font-weight: bold;
 }
 
-ul.c-superfeature__meta {
+.c-superfeature__meta {
     @include font('SOLEIL', 10px, 400, 12px, 120);
     color: $candle-grey;
+    font-size: 0;
     text-transform: uppercase;
     margin: 6px 0 0 0;
 }
 
-li.c-superfeature__meta-item {
+.c-superfeature__meta-item {
     @include font('SOLEIL', 10px, 400, 12px, 120);
     color: $candle-grey;
+    display: inline-block;
     text-transform: uppercase;
 
-    & + li.c-superfeature__meta-item {
+    & + .c-superfeature__meta-item {
         &:before {
             background-color: $candle-grey;
             content: "";

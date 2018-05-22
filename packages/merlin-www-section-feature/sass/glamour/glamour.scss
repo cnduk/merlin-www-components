@@ -14,6 +14,8 @@
         // 20px added to offset the box shadow
         margin-bottom: $TABLET_SLICE_MARGIN + 20px;
         margin-top: $TABLET_SLICE_MARGIN;
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
@@ -47,21 +49,13 @@
     }
 }
 
-.c-feature__constrain {
-    margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
-}
-
-.c-feature__wrapper {
-
-}
-
 .c-feature__images {
     overflow: hidden;
 }
 
-.c-feature__images--multiple {
-
+.c-feature__image__wrapper {
+    background-color: $pampas;
+    padding-top: 100%;
 }
 
 .c-feature__content {
@@ -76,16 +70,6 @@
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         padding: 30px 60px 30px 40px;
     }
-}
-
-.c-feature__image--portrait {
-    display: inline-block;
-    width: 50%;
-}
-
-.c-feature__image__wrapper {
-    background-color: $pampas;
-    padding-top: 100%;
 }
 
 .c-feature__icon {

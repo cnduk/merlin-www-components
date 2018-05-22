@@ -5,10 +5,24 @@
 
 .c-superfeature {
     background-color: $seashell;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $MOBILE_SLICE_MARGIN;
+    max-width: $XX_LARGE_SIZE;
     padding-bottom: 20px;
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+    position: relative;
+
+    @include at-medium-size {
         background-color: initial;
         padding-bottom: 0;
+        margin-bottom: $TABLET_SLICE_MARGIN;
+        margin-top: $TABLET_SLICE_MARGIN;
+    }
+
+    @include at-x-large-size {
+        margin-top: $DESKTOP_SLICE_MARGIN;
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
     }
 
     &:before {
@@ -22,51 +36,19 @@
         right: 50%;
         width: 100vw;
     }
-
-    @include max-screen($SUPERFEATURE_LARGE_BREAKPOINT - 1) {
-        & + .c-gallery,
-        & + .c-feature {
-            padding-top: 0;
-        }
-
-        & + .ad--native-large {
-            margin-top: -$MOBILE_SLICE_MARGIN;
-
-            @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-                margin-top: -$TABLET_SLICE_MARGIN;
-            }
-
-            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-                margin-top: -$DESKTOP_SLICE_MARGIN;
-            }
-        }
-    }
 }
 
-.c-superfeature__images {
-
-}
-
-.c-superfeature__image {
+.c-superfeature-wrapper {}
+.c-superfeature__link {}
+.c-superfeature__images {}
+.c-superfeature__images--multiple {}
+.c-superfeature__images-wrapper {}
+.c-superfeature__image {}
+.c-superfeature__image-wrapper {
     background-color: $bon-jour;
-    position: relative;
-
-    img {
-        bottom: 0;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 100%;
-    }
 }
 
-.c-superfeature__image__wrapper {
-    padding-top: 66.66666%;
-}
-
-.c-superfeature__content {
+.c-superfeature__contents {
     background: $white;
     border-bottom: 1px solid $bon-jour;
     margin: -69px 20px 0 20px;
@@ -83,7 +65,7 @@
         transform: translateX(-50%);
     }
 
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         bottom: 40px;
         box-sizing: border-box;
         left: 50%;
@@ -101,13 +83,15 @@
     }
 }
 
+.c-superfeature__contents-wrapper {}
 .c-superfeature__tag {
     @include font("GOTHAM", 11px, 700, 14px, -4);
     color: $limed-oak;
     margin-bottom: 8px;
     margin-top: 0;
     text-transform: capitalize;
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+
+    @include at-medium-size {
         @include font-size(12px);
         @include line-height(16px);
         margin-bottom: 12px;
@@ -119,7 +103,8 @@
     @include font("ITC_FENICE", 24px, 700, 28px, -4);
     margin-bottom: 14px;
     margin-top: 0px;
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+
+    @include at-medium-size {
         @include font-size(32px);
         @include line-height(36px);
         margin-bottom: 8px;
@@ -133,7 +118,8 @@
     display: none;
     margin-bottom: 14px;
     margin-top: 14px;
-    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+
+    @include at-x-large-size {
         @include font-size(15px);
         @include line-height(20px);
         display: block;
@@ -149,6 +135,7 @@
     text-transform: uppercase;
 }
 
+.c-superfeature__byline--sponsored {}
 .c-superfeature__byline-prefix {
     @include font-weight(400);
 }
@@ -160,14 +147,19 @@
 .c-superfeature__meta {
     @include font("GOTHAM", 9px, 500, 14px);
     color: $oslo-gray;
+    font-size: 0;
     margin-top: 6px;
 }
 
-li.c-superfeature__meta-item {
+.c-superfeature__meta-item {
+    @include font("GOTHAM", 9px, 500, 14px);
+    display: inline-block;
     padding-right: 0;
-    & + li.c-superfeature__meta-item {
+
+    & + .c-superfeature__meta-item {
         border-left: none;
         padding-left: 0;
+
         &:before {
             background-color: $oslo-gray;
             border-radius: 50%;

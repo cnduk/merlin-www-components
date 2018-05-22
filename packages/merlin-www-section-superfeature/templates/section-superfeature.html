@@ -1,60 +1,75 @@
-<section class="c-superfeature {{ style.cls }}">
-    {{# data.link }}
-        <a href="{{ &data.url }}" class="c-superfeature__link c-superfeature__link--article {{ style.cls }}">{{ data.title }}</a>
-    {{/ data.link }}
+<section class="c-superfeature">
+    <div class="c-superfeature-wrapper">
 
-    {{# data.image_list }}
+        {{# data.link }}
+        <a href="{{ &data.url }}" class="c-superfeature__link{{# style.cls }} {{ style.cls }}{{/ style.cls }}">{{ data.title }}</a>
+        {{/ data.link }}
+
+        {{# data.image_list }}
         <div class="c-superfeature__images{{# state.has_multiple_images }} c-superfeature__images--multiple{{/ state.has_multiple_images }}">
-            {{# data.items }}
-                <div class="c-superfeature__image {{ style.cls }}{{# data.item.style.padding_top }} c-superfeature__image--custom{{/ data.item.style.padding_top }}">
+            <div class="c-superfeature__images-wrapper">
+                {{# data.items }}
+                <div class="c-superfeature__image">
                     {{# data.item }}
-                        <div class="c-superfeature__image__wrapper"{{# style.padding_top }} style="padding-top: {{ style.padding_top}}"{{/ style.padding_top }}>
-                            {{> @cnbritain/merlin-www-image }}
-                        </div>
+                    <div class="c-superfeature__image-wrapper">
+                    {{> @cnbritain/merlin-www-image }}
+                    </div>
                     {{/ data.item }}
                 </div>
-            {{/ data.items }}
+                {{/ data.items }}
+            </div>
         </div>
-    {{/ data.image_list }}
+        {{/ data.image_list }}
 
-    <div class="c-superfeature__content">
-        {{# data.primary_tag }}
-            <p class="c-superfeature__tag">{{ data.title }}</p>
-        {{/ data.primary_tag }}
+        <div class="c-superfeature__contents">
+            <div class="c-superfeature__contents-wrapper">
+                {{# data.primary_tag }}
+                <p class="c-superfeature__tag">
+                    <span>{{ data.title }}</span>
+                </p>
+                {{/ data.primary_tag }}
 
-        {{# data.title }}
-            <h3 class="c-superfeature__title"><span>{{ data.title }}</span></h3>
-        {{/ data.title }}
+                {{# data.title }}
+                <h3 class="c-superfeature__title">
+                    <span>{{ data.title }}</span>
+                </h3>
+                {{/ data.title }}
 
-        {{# data.teaser }}
-            <p class="c-superfeature__teaser"><span>{{ &data.teaser }}</span></p>
-        {{/ data.teaser }}
+                {{# data.teaser }}
+                <p class="c-superfeature__teaser">
+                    <span>{{ &data.teaser }}</span>
+                </p>
+                {{/ data.teaser }}
 
-        {{# state.has_sponsor }}
-            <p class="c-superfeature__byline c-superfeature__byline--sponsorship {{ style.cls }}">
-                <span class="c-superfeature__byline-prefix">{{ translation.sponsor_prefix }} </span>
-                <span class="c-superfeature__byline-name">{{ data.sponsor.data.title }}</span>
-            </p>
-        {{/ state.has_sponsor }}
-        {{^ state.has_sponsor }}
-            {{# data.byline }}
+                {{# state.has_sponsor }}
+                <p class="c-superfeature__byline c-superfeature__byline--sponsored">
+                    <span class="c-superfeature__byline-prefix">{{ translation.sponsor_prefix }} </span>
+                    <span class="c-superfeature__byline-name">{{ data.sponsor.data.title }}</span>
+                </p>
+                {{/ state.has_sponsor }}
+                {{^ state.has_sponsor }}
+                {{# data.byline }}
                 <p class="c-superfeature__byline">
                     <span class="c-superfeature__byline-prefix">{{ translation.byline_prefix }}</span>
                     <span class="c-superfeature__byline-name">{{ data.byline }}</span>
                 </p>
-            {{/ data.byline }}
-        {{/ state.has_sponsor }}
+                {{/ data.byline }}
+                {{/ state.has_sponsor }}
 
-        {{# data.meta_list }}
-            <ul class="global__list-reset c-superfeature__meta {{ style.cls }}">
-                {{# data.items }}
-                    <li class="c-superfeature__meta-item {{ style.cls }} c-superfeature__meta-item--{{ data.item.data.meta_type  }}">
+                {{# data.meta_list }}
+                <ul class="c-superfeature__meta{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
+                    {{# data.items }}
+                    <li class="c-superfeature__meta-item">
                         {{# data.item }}
-                            <span class="{{ style.cls }}">{{ data.title }}</span>
+                        <span class="{{# style.cls }} {{ style.cls }}{{/ style.cls }}">{{ data.title }}</span>
                         {{/ data.item }}
                     </li>
-                {{/ data.items }}
-            </ul>
-        {{/ data.meta_list }}
+                    {{/ data.items }}
+                </ul>
+                {{/ data.meta_list }}
+
+            </div>
+        </div>
+
     </div>
 </section>

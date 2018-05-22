@@ -6,15 +6,21 @@
 .c-feature {
     background-color: $seashell;
     padding-bottom: $MOBILE_SIDE_GUTTER;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
     padding-top: $MOBILE_SIDE_GUTTER;
 
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding-bottom: $TABLET_SIDE_GUTTER;
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
         padding-top: $TABLET_SIDE_GUTTER;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         padding-bottom: $DESKTOP_SIDE_GUTTER;
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
         padding-top: $DESKTOP_SIDE_GUTTER;
     }
 
@@ -36,15 +42,9 @@
     }
 }
 
-.c-feature__constrain {
-    margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
+.c-feature__image__wrapper {
+    background-color: $bon-jour;
 }
-
-.c-feature__wrapper {}
-
-.c-feature__images,
-.c-feature__content {}
 
 .c-feature__content {
     background: $white;
@@ -66,6 +66,7 @@
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         padding: 28px 48px;
+
         &:after {
             @include triangle(18px, 14px, 'right', $white);
             content: '';
@@ -78,15 +79,6 @@
             width: 0;
         }
     }
-}
-
-.c-feature__image--portrait {
-    display: inline-block;
-    width: 50%;
-}
-
-.c-feature__image__wrapper {
-    background-color: $bon-jour;
 }
 
 .c-feature__icon {
@@ -117,6 +109,7 @@
     margin-bottom: 8px;
     margin-top: 0;
     text-transform: capitalize;
+
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         @include font-size(12px);
         @include line-height(16px);
@@ -129,6 +122,7 @@
     @include font("ITC_FENICE", 24px, 700, 28px, -4);
     margin-bottom: 14px;
     margin-top: 0px;
+
     @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
         @include font-size(32px);
         @include line-height(36px);
@@ -143,6 +137,7 @@
     display: none;
     margin-bottom: 14px;
     margin-top: 14px;
+
     @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
         @include font-size(15px);
         @include line-height(20px);
