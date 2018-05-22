@@ -4,7 +4,7 @@
     {{/ data.link }}
 
     {{# data.image_list }}
-        <div class="c-superfeature__images {{ style.cls }} ">
+        <div class="c-superfeature__images{{# state.has_multiple_images }} c-superfeature__images--multiple{{/ state.has_multiple_images }}">
             {{# data.items }}
                 <div class="c-superfeature__image {{ style.cls }}{{# data.item.style.padding_top }} c-superfeature__image--custom{{/ data.item.style.padding_top }}">
                     {{# data.item }}

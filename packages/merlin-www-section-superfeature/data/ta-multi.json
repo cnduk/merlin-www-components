@@ -181,7 +181,9 @@
         "title": "TestSuperfeatureSingle",
         "image_list": {
             "translation": {},
-            "state": {},
+            "state": {
+                "has_multiple_images": true
+            },
             "data": {
                 "items": [{
                     "translation": {},
@@ -376,7 +378,7 @@
             },
             "style": {
                 "inline": "",
-                "cls": "c-superfeature__images--multiple"
+                "cls": ""
             },
             "type": "List"
         },
