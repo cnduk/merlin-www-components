@@ -116,7 +116,7 @@
     margin-top: 10px;
     text-transform: uppercase;
 
-    @include at-x-large-size(){
+    @include at-medium-size(){
         margin-bottom: 7px;
         margin-top: 15px;
     }
