@@ -11,6 +11,7 @@ const opn = require('opn');
 const {DEFAULT_PORT, COMPONENTS} = require('./constants');
 const Logger = require('./Logger');
 const {ComponentManager} = require('./components');
+const {SnapshotManager} = require('./snapshots');
 
 const resolve = p => path.resolve(__dirname, p);
 let RENDER_SETTINGS = null;
@@ -47,6 +48,34 @@ class Server {
         return res.render('render', {SESSION_ID: req.query.id});
     }
 
+    async _onSnapshot(req, res){
+        console.log(req.query);
+
+        let pageSnapshots = null;
+
+        if(req.query.hasOwnProperty('compare')){
+            const c = await SnapshotManager.compareSnapshots(
+                req.query.id, req.query.compare);
+
+            pageSnapshots = Array.from(c.entries()).map(i => {
+                return {
+                    name: i[0],
+                    url: i[1]
+                };
+            });
+        } else {
+            const snapshot = SnapshotManager.snapshots[req.query.id];
+            pageSnapshots = Array.from(snapshot.images.entries()).map(i => {
+                return {
+                    name: i[0],
+                    url: i[1]
+                };
+            });
+        }
+
+        return res.render('snapshot', {snapshots: pageSnapshots});
+    }
+
     _initApp(){
         const app = express();
         const server = http.Server(app);
@@ -65,6 +94,7 @@ class Server {
         // Routes
         app.get('/', this._onIndex.bind(this));
         app.get('/render', this._onRender.bind(this));
+        app.get('/snapshot', this._onSnapshot.bind(this));
 
         // Enable dynamic static for assets if assets is added
         if(COMPONENTS.has('@cnbritain/merlin-www-assets')){
@@ -114,6 +144,10 @@ class Server {
             this._sockets.push(socket);
 
             socket.emit('id', id);
+            socket.emit(
+                'snapshot-list',
+                SnapshotManager.snapshots.map(s => s.name)
+            );
 
             // Changing settings
             socket.on('render', async (e) => {
@@ -128,6 +162,16 @@ class Server {
                         sock.emit('renderError', JSON.stringify(err));
                     });
                 }
+            });
+
+            socket.on('snapshot', async () => {
+                await SnapshotManager.takeSnapshot(
+                    `http://localhost:${this._appPort}/render?id=${id}`);
+
+                socket.emit(
+                    'snapshot-complete',
+                    SnapshotManager.snapshots.map(s => s.name)
+                );
             });
 
             socket.on('disconnect', () => {
@@ -209,10 +253,12 @@ class Server {
         this._io = null;
         this._sockets = [];
         this._currentTheme = null;
+        this._appPort = null;
         this.component = component;
     }
 
     run(port=DEFAULT_PORT){
+        this._appPort = port;
         this._initApp();
         this._initSocket();
         this._initWatch();

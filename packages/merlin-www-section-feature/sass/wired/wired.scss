@@ -15,7 +15,7 @@
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include at-xlarge-size(){
+    @include at-x-large-size(){
         margin-bottom: $DESKTOP_SLICE_MARGIN;
         margin-top: $DESKTOP_SLICE_MARGIN;
         padding: 40px;
@@ -52,7 +52,7 @@
         fill: $black;
     }
 
-    @include at-xlarge-size(){
+    @include at-x-large-size(){
         margin-bottom: 30px;
     }
 }
@@ -63,7 +63,7 @@
     letter-spacing: 0.3px;
     margin: 0 auto 10px auto;
 
-    @include at-xlarge-size(){
+    @include at-x-large-size(){
         @include font-size(45px);
         @include line-height(45px);
     }
@@ -75,7 +75,7 @@
     display: none;
     margin: 10px auto;
 
-    @include at-xlarge-size(){
+    @include at-x-large-size(){
         display: block;
     }
 }
@@ -90,7 +90,7 @@
         margin: 10px auto;
         width: 10px;
 
-        @include at-xlarge-size(){
+        @include at-x-large-size(){
             margin: 20px auto;
             width: 30px;
         }

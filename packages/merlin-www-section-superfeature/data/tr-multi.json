@@ -56,7 +56,9 @@
         "title": "TestSuperfeatureSingle",
         "image_list": {
             "translation": {},
-            "state": {},
+            "state": {
+                "has_multuple_images": true
+            },
             "data": {
                 "items": [{
                     "translation": {},
@@ -86,8 +88,8 @@
                                 "alt_text": "",
                                 "filename": "smallimage.jpg",
                                 "credit": null,
-                                "image_url": "https://vg-images.condecdn.net/image/placeholder/crop/405/portrait",
-                                "srcset": "https://vg-images.condecdn.net/image/placeholder/crop/405/portrait 405w, https://vg-images.condecdn.net/image/placeholder/crop/810/portrait 810w",
+                                "image_url": "https://tr-images.condecdn.net/image/placeholder/crop/405/portrait",
+                                "srcset": "https://tr-images.condecdn.net/image/placeholder/crop/405/portrait 405w, https://tr-images.condecdn.net/image/placeholder/crop/810/portrait 810w",
                                 "width": 50,
                                 "uid": "pnL1z8r1jZr"
                             },
@@ -133,8 +135,8 @@
                                 "alt_text": "",
                                 "filename": "smallimage.jpg",
                                 "credit": null,
-                                "image_url": "https://vg-images.condecdn.net/image/placeholder/crop/405/portrait",
-                                "srcset": "https://vg-images.condecdn.net/image/placeholder/crop/405/portrait 405w, https://vg-images.condecdn.net/image/placeholder/crop/810/portrait 810w",
+                                "image_url": "https://tr-images.condecdn.net/image/placeholder/crop/405/portrait",
+                                "srcset": "https://tr-images.condecdn.net/image/placeholder/crop/405/portrait 405w, https://tr-images.condecdn.net/image/placeholder/crop/810/portrait 810w",
                                 "width": 50,
                                 "uid": "pnL1z8r1jZr"
                             },
@@ -180,8 +182,8 @@
                                 "alt_text": "",
                                 "filename": "smallimage.jpg",
                                 "credit": null,
-                                "image_url": "https://vg-images.condecdn.net/image/placeholder/crop/405/portrait",
-                                "srcset": "https://vg-images.condecdn.net/image/placeholder/crop/405/portrait 405w, https://vg-images.condecdn.net/image/placeholder/crop/810/portrait 810w",
+                                "image_url": "https://tr-images.condecdn.net/image/placeholder/crop/405/portrait",
+                                "srcset": "https://tr-images.condecdn.net/image/placeholder/crop/405/portrait 405w, https://tr-images.condecdn.net/image/placeholder/crop/810/portrait 810w",
                                 "width": 50,
                                 "uid": "pnL1z8r1jZr"
                             },
@@ -227,8 +229,8 @@
                                 "alt_text": "",
                                 "filename": "smallimage.jpg",
                                 "credit": null,
-                                "image_url": "https://vg-images.condecdn.net/image/placeholder/crop/405/portrait",
-                                "srcset": "https://vg-images.condecdn.net/image/placeholder/crop/405/portrait 405w, https://vg-images.condecdn.net/image/placeholder/crop/810/portrait 810w",
+                                "image_url": "https://tr-images.condecdn.net/image/placeholder/crop/405/portrait",
+                                "srcset": "https://tr-images.condecdn.net/image/placeholder/crop/405/portrait 405w, https://tr-images.condecdn.net/image/placeholder/crop/810/portrait 810w",
                                 "width": 50,
                                 "uid": "pnL1z8r1jZr"
                             },
@@ -251,7 +253,7 @@
             },
             "style": {
                 "inline": "",
-                "cls": "c-superfeature__images--multiple"
+                "cls": ""
             },
             "type": "List"
         },

@@ -18,7 +18,7 @@
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include at-xlarge-size(){
+    @include at-x-large-size(){
         // 20px added to offset the box shadow
         margin-bottom: $DESKTOP_SLICE_MARGIN + 20px;
         margin-top: $DESKTOP_SLICE_MARGIN;
@@ -65,7 +65,7 @@
         padding: 30px 40px;
     }
 
-    @include at-xlarge-size(){
+    @include at-x-large-size(){
         padding: 30px 60px 30px 40px;
     }
 }
@@ -86,7 +86,7 @@
     top: 0;
     transform: translateY(-100%);
 
-    @include at-xlarge-size(){
+    @include at-x-large-size(){
         background-color: transparent;
         left: initial;
         margin: 0 0 20px 0;
@@ -107,7 +107,7 @@
         @include line-height(38px);
     }
 
-    @include at-xlarge-size(){
+    @include at-x-large-size(){
         @include font-size(40px);
         @include line-height(45px);
         margin: 0 0 20px 0;
@@ -129,7 +129,7 @@
     margin: 0 0 6px 0;
     text-transform: uppercase;
 
-    @include at-xlarge-size(){
+    @include at-x-large-size(){
         bottom: 50px;
         position: absolute;
     }
@@ -142,7 +142,7 @@ ul.c-feature__meta {
     margin: 0 0 0 0;
     text-transform: uppercase;
 
-    @include at-xlarge-size(){
+    @include at-x-large-size(){
         bottom: 40px;
         position: absolute;
     }

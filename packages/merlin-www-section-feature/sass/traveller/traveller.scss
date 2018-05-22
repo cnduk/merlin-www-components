@@ -17,7 +17,7 @@
 
 	}
 
-	@include at-xlarge-size(){
+	@include at-x-large-size(){
 	    margin-bottom: $DESKTOP_SLICE_MARGIN;
 	    margin-top: $DESKTOP_SLICE_MARGIN;
 		padding-left: 0;
@@ -27,7 +27,7 @@
 
 .c-feature--left {
 	.c-feature__images--multiple {
-		@include at-xlarge-size(){
+		@include at-x-large-size(){
 			padding-left: 12px;
 
 			& + .c-feature__contents {
@@ -37,7 +37,7 @@
 	}
 
 	.c-feature__contents {
-		@include at-xlarge-size(){
+		@include at-x-large-size(){
 			left: 0;
 			margin-left: $TABLET_SIDE_GUTTER;
 		}
@@ -46,7 +46,7 @@
 
 .c-feature--right {
 	.c-feature__images--multiple {
-		@include at-xlarge-size(){
+		@include at-x-large-size(){
 			padding-right: 12px;
 
 			& + .c-feature__contents {
@@ -56,7 +56,7 @@
 	}
 
 	.c-feature__contents {
-		@include at-xlarge-size(){
+		@include at-x-large-size(){
 			right: 0;
 			margin-right: $TABLET_SIDE_GUTTER;
 		}
@@ -64,14 +64,14 @@
 }
 
 .c-feature__images {
-	@include at-xlarge-size(){
+	@include at-x-large-size(){
 		display: block;
 		width: 100%;
 	}
 }
 
 .c-feature__images--multiple {
-	@include at-xlarge-size(){
+	@include at-x-large-size(){
 		display: table-cell;
 		width: 50%;
 
@@ -93,7 +93,7 @@
 	margin: 20px;
 	position: initial;
 
-    @include at-xlarge-size(){
+    @include at-x-large-size(){
     	background-color: $WHITE;
     	box-sizing: border-box;
     	margin: 0px;
@@ -130,7 +130,7 @@
 	    width: 20px;
 	}
 
-    @include at-xlarge-size(){
+    @include at-x-large-size(){
     	display: none;
     }
 }
@@ -144,7 +144,7 @@
 	text-align: center;
 	text-transform: uppercase;
 
-    @include at-xlarge-size(){
+    @include at-x-large-size(){
     	margin-bottom: 16px;
     	margin-top: 0;
     }
@@ -158,7 +158,7 @@
 	text-align: center;
 	text-transform: uppercase;
 
-    @include at-xlarge-size(){
+    @include at-x-large-size(){
     	@include font-size(28px);
     	@include line-height(32px);
     	letter-spacing: 2px;
@@ -170,7 +170,7 @@
 .c-feature__teaser {
 	display: none;
 
-    @include at-xlarge-size(){
+    @include at-x-large-size(){
     	@include font("PROXIMA NOVA CONDENSED", 16px, 400, 20px);
     	color: $RAVEN;
     	display: block;

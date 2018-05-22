@@ -16,7 +16,7 @@
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
 
-    @include at-xlarge-size() {
+    @include at-x-large-size() {
         display: table;
         direction: rtl;
         padding-top: 0;
@@ -44,7 +44,7 @@
 .c-feature__images {
     position: relative;
 
-    @include at-xlarge-size() {
+    @include at-x-large-size() {
         direction: ltr;
         display: table-cell;
         position: static;
@@ -83,7 +83,7 @@
     font-size: initial;
     position: relative;
 
-    @include at-xlarge-size() {
+    @include at-x-large-size() {
         direction: ltr;
         display: table-cell;
         position: static;

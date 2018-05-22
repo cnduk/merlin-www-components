@@ -4,39 +4,33 @@
         "all": {
             "themes": [
                 "wireframe",
-                "vogue",
+                "bystander",
                 "glamour",
                 "missvogue",
-                "wired",
                 "tatler",
-                "bystander"
+                "traveller",
+                "vogue",
+                "wired"
             ],
             "main": "superfeature",
             "data": "all"
-        },
-        "gq": {
-            "themes": [
-                "gq",
-                "bystander"
-            ],
-            "main": "superfeature",
-            "data": "gq"
         }
     },
     "js": {
         "demo": "demo/demo.js"
     },
     "themes": {
-        "brides": "sass/brides/brides.scss",
-        "houseandgarden": "sass/houseandgarden/houseandgarden.scss",
-        "gq": "sass/gq/gq.scss",
-        "tatler": "sass/tatler/tatler.scss",
         "wireframe": "sass/wireframe/wireframe.scss",
-        "glamour": "sass/glamour/glamour.scss",
+        "brides": "sass/brides/brides.scss",
         "bystander": "sass/bystander/bystander.scss",
-        "wired": "sass/wired/wired.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "gq": "sass/gq/gq.scss",
+        "houseandgarden": "sass/houseandgarden/houseandgarden.scss",
         "missvogue": "sass/missvogue/missvogue.scss",
-        "vogue": "sass/vogue/vogue.scss"
+        "tatler": "sass/tatler/tatler.scss",
+        "traveller": "sass/traveller/traveller.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "wired": "sass/wired/wired.scss"
     },
     "partials": {
         "superfeature": "templates/section-superfeature.html"
@@ -50,19 +44,19 @@
     "data": {
         "all-single": "data/all-single.json",
         "all-multi": "data/all-multi.json",
-        "vg-single": "data/vg-single.json",
-        "vg-multi": "data/vg-multi.json",
-        "gq-single": "data/gq-single.json",
-        "gq-multi": "data/gq-multi.json",
-        "gl-single": "data/gl-single.json",
         "gl-multi": "data/gl-multi.json",
-        "wi-single": "data/wi-single.json",
-        "wi-multi": "data/wi-multi.json",
-        "ta-single": "data/ta-single.json",
-        "ta-multi": "data/ta-multi.json",
-        "tr-single": "data/tr-single.json",
-        "tr-multi": "data/tr-multi.json",
+        "gl-single": "data/gl-single.json",
+        "gq-multi": "data/gq-multi.json",
+        "gq-single": "data/gq-single.json",
+        "hg-multi": "data/hg-multi.json",
         "hg-single": "data/hg-single.json",
-        "hg-multi": "data/hg-multi.json"
+        "ta-multi": "data/ta-multi.json",
+        "ta-single": "data/ta-single.json",
+        "tr-multi": "data/tr-multi.json",
+        "tr-single": "data/tr-single.json",
+        "vg-multi": "data/vg-multi.json",
+        "vg-single": "data/vg-single.json",
+        "wi-multi": "data/wi-multi.json",
+        "wi-single": "data/wi-single.json"
     }
 }

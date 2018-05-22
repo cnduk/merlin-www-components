@@ -17,7 +17,7 @@
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include at-xlarge-size(){
+    @include at-x-large-size(){
         margin-bottom: $DESKTOP_SLICE_MARGIN;
         margin-top: $DESKTOP_SLICE_MARGIN;
         padding-left: $DESKTOP_SIDE_GUTTER;
@@ -33,7 +33,7 @@
 
 .c-feature--left {
     .c-feature__images {
-        @include at-xlarge-size(){
+        @include at-x-large-size(){
             padding-left: 12px;
 
             &:before {
@@ -49,7 +49,7 @@
     }
 
     .c-feature__contents {
-        @include at-xlarge-size(){
+        @include at-x-large-size(){
             padding-right: 12px;
 
             &:before {
@@ -61,7 +61,7 @@
 
 .c-feature--right {
     .c-feature__images {
-        @include at-xlarge-size(){
+        @include at-x-large-size(){
             padding-right: 12px;
 
             &:before {
@@ -77,7 +77,7 @@
     }
 
     .c-feature__content {
-        @include at-xlarge-size(){
+        @include at-x-large-size(){
             padding-left: 12px;
 
             &:before {
@@ -90,7 +90,7 @@
 .c-feature__images {
     position: relative;
 
-    @include at-xlarge-size(){
+    @include at-x-large-size(){
          width: 62.5%;
 
         &:before {
@@ -116,7 +116,7 @@
         width: 1px;
         z-index: 1;
 
-        @include at-xlarge-size(){
+        @include at-x-large-size(){
             bottom: 50%;
             height: 1px;
             width: 32px;
@@ -137,7 +137,7 @@
         padding: 0 20px;
     }
 
-    @include at-xlarge-size(){
+    @include at-x-large-size(){
         padding: 40px 0;
 
         &:before {
@@ -170,7 +170,7 @@
     text-align: center;
     text-transform: capitalize;
 
-    @include at-xlarge-size(){
+    @include at-x-large-size(){
         @include font-size(40px);
         @include line-height(40px);
     }
@@ -179,7 +179,7 @@
 .c-feature__teaser {
     display: none;
 
-    @include at-xlarge-size(){
+    @include at-x-large-size(){
         @include font("SOLEIL", 14px, 400, 20px, 30);
         display: block;
         color: $ascot-grey;

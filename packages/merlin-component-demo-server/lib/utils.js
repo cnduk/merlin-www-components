@@ -37,8 +37,25 @@ function loadJSON(file){
     });
 }
 
+function mkdir(dir){
+    return new Promise((resolve, reject) => {
+        fs.mkdir(dir, (err) => {
+            if(err){
+                if(err.code === 'EEXIST'){
+                    resolve();
+                } else {
+                    reject(err);
+                }
+            } else {
+                resolve();
+            }
+        });
+    });
+}
+
 module.exports = {
     loadFile,
     loadJSON,
+    mkdir,
     promiseError
 };

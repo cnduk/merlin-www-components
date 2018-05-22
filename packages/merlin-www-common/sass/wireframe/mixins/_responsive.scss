@@ -158,9 +158,18 @@
  */
 /// min-screen media query helper
 /// @require em
-/// @require $XSMALL_SIZE
-@mixin at-xsmall-size() {
-    @include min-screen($XSMALL_SIZE){
+/// @require $XX_SMALL_SIZE
+@mixin at-xx-small-size() {
+    @include min-screen($XX_SMALL_SIZE) {
+        @content;
+    }
+}
+
+/// min-screen media query helper
+/// @require em
+/// @require $X_SMALL_SIZE
+@mixin at-x-small-size() {
+    @include min-screen($X_SMALL_SIZE) {
         @content;
     }
 }
@@ -169,7 +178,7 @@
 /// @require em
 /// @require $SMALL_SIZE
 @mixin at-small-size() {
-    @include min-screen($SMALL_SIZE){
+    @include min-screen($SMALL_SIZE) {
         @content;
     }
 }
@@ -178,7 +187,7 @@
 /// @require em
 /// @require $MEDIUM_SIZE
 @mixin at-medium-size() {
-    @include min-screen($MEDIUM_SIZE){
+    @include min-screen($MEDIUM_SIZE) {
         @content;
     }
 }
@@ -187,25 +196,25 @@
 /// @require em
 /// @require $LARGE_SIZE
 @mixin at-large-size() {
-    @include min-screen($LARGE_SIZE){
+    @include min-screen($LARGE_SIZE) {
         @content;
     }
 }
 
 /// min-screen media query helper
 /// @require em
-/// @require $XLARGE_SIZE
-@mixin at-xlarge-size() {
-    @include min-screen($XLARGE_SIZE){
+/// @require $X_LARGE_SIZE
+@mixin at-x-large-size() {
+    @include min-screen($X_LARGE_SIZE) {
         @content;
     }
 }
 
 /// min-screen media query helper
 /// @require em
-/// @require $XXLARGE_SIZE
-@mixin at-xxlarge-size() {
-    @include min-screen($XXLARGE_SIZE){
+/// @require $XX_LARGE_SIZE
+@mixin at-xx-large-size() {
+    @include min-screen($XX_LARGE_SIZE) {
         @content;
     }
 }
