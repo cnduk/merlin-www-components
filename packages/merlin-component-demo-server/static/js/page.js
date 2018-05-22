@@ -13,6 +13,14 @@
     const btnResizeMedium = document.getElementById('btnResizeMedium');
     const btnResizeLarge = document.getElementById('btnResizeLarge');
     const colBackground = document.getElementById('colBackground');
+    const elSnapshotLoader = document.getElementById('snapshotLoader');
+    const btnSnapshot = document.getElementById('btnSnapshot');
+    const cboSnapshots = document.getElementById('cboSnapshots');
+    const cboSnapshotCompareList = document.getElementById(
+        'cboSnapshotCompareList');
+    const btnViewSnapshot = document.getElementById('btnViewSnapshot');
+    const btnCompareSnapshot = document.getElementById('btnCompareSnapshot');
+
 
     const SANDBOX_VALUE = [
         'allow-forms',
@@ -140,6 +148,39 @@
         document.querySelector('.component-preview').style.backgroundColor = e.target.value;
     }
 
+    function updateSnapshotList(list){
+        const html = list.map(s => `<option>${s}</option>`);
+        cboSnapshots.innerHTML = html;
+        cboSnapshotCompareList.innerHTML = html;
+    }
+
+    function takeSnapshot(){
+        this.setAttribute('disabled', true);
+        elSnapshotLoader.classList.remove('is-hidden');
+        socket.emit('snapshot');
+    }
+
+    function onSnapshotComplete(snapshots){
+        btnSnapshot.removeAttribute('disabled');
+        elSnapshotLoader.classList.add('is-hidden');
+        updateSnapshotList(snapshots);
+    }
+
+    function onSnapshotList(snapshots){
+        updateSnapshotList(snapshots);
+    }
+
+    function openSnapshot(){
+        if(cboSnapshots.selectedIndex === -1) return;
+        window.open(`./snapshot?id=${cboSnapshots.selectedIndex}`);
+    }
+
+    function compareSnapshot(){
+        if(cboSnapshots.selectedIndex === -1) return;
+        if(cboSnapshotCompareList.selectedIndex === -1) return;
+        window.open(`./snapshot?id=${cboSnapshots.selectedIndex}&compare=${cboSnapshotCompareList.selectedIndex}`);
+    }
+
     function initSettings(){
         cboPartial.addEventListener('change', onSettingChange('PARTIAL'));
         cboThemes.addEventListener('change', onSettingChange('THEME'));
@@ -152,7 +193,14 @@
         btnResizeMedium.addEventListener('click', () => setResizePreset('MEDIUM'));
         btnResizeLarge.addEventListener('click', () => setResizePreset('LARGE'));
         colBackground.addEventListener('input', setBackgroundColor);
+
+        btnSnapshot.addEventListener('click', takeSnapshot);
+        btnViewSnapshot.addEventListener('click', openSnapshot);
+        btnCompareSnapshot.addEventListener('click', compareSnapshot);
+
         socket.on('id', onId);
+        socket.on('snapshot-list', onSnapshotList);
+        socket.on('snapshot-complete', onSnapshotComplete);
     }
 
 })();
