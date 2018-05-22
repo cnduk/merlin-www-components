@@ -17,7 +17,8 @@
     &:focus,
     &:hover {
         .c-feature__title {
-            @include card-title-hover;
+            color: $COLOUR_MAIN_HIGHLIGHT;
+            text-decoration: none;
         }
     }
 }
@@ -54,7 +55,7 @@
     overflow: hidden;
 
     img {
-        @include card-image-normal;
+        transition: transform 0.2s ease-in-out;
     }
 }
 
@@ -71,6 +72,7 @@
 
     @include at-x-large-size(){
         padding: 20px 60px;
+
         .c-feature--left & {
             @include border-line-box(left);
         }
@@ -126,13 +128,16 @@
 }
 
 .c-feature__title {
-    @include t-feature-title-small;
+    @include font('STARLING', 24px, 'NORMAL', 28px);
+    color: $COLOUR_MAIN_PRIMARY;
     margin: 0 0 20px;
     padding: 0 0 15px;
     position: relative;
 
      @include at-x-large-size(){
-         @include t-feature-title-large;
+         @include font-size(37px);
+         @include line-height(42px);
+         color: $COLOUR_MAIN_PRIMARY;
          margin: 0 0 20px;
          padding: 0 0 15px;
      }
@@ -156,8 +161,15 @@
 }
 
 .c-feature__byline {
-    @include feature-card-byline;
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    color: $gray;
+    letter-spacing: 1px;
     margin: 0 0 10px;
+    text-transform: uppercase;
+
+    @include at-medium-size() {
+        margin: 15px 0 10px;
+    }
 
      @include at-x-large-size(){
          margin: 0 0 10px;
@@ -165,19 +177,27 @@
 }
 
 .c-feature__byline-prefix {
-    @include card-byline-prefix;
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    font-style: italic;
+    letter-spacing: 1px;
     margin-right: 2px;
+    text-transform: lowercase;
 }
 
 .c-feature__byline-name {
-    @include card-byline-name;
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .c-feature__meta {
-    @include card-meta;
+    @include font('AGENDA', 10px, 'MEDIUM', 10px);
+    color: $gray;
+    letter-spacing: 1px;
     display: inline-block;
     margin-top: 0;
     padding-top: 0;
+    text-transform: uppercase;
 }
 
 li.c-feature__meta-item {
@@ -203,18 +223,5 @@ li.c-feature__meta-item {
     & + & {
         border: 0;
         padding: 0;
-    }
-}
-
-@include card-switcher-size {
-    .c-feature__tag {
-        @include font('AGENDA', 12px, 'MEDIUM', 12px);
-        letter-spacing: 1px;
-        margin: 0 0 15px;
-    }
-
-    .c-feature__meta {
-        margin-top: 0;
-        padding-top: 0;
     }
 }
