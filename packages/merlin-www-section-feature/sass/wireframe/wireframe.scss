@@ -9,16 +9,11 @@
 .c-feature--left{}
 .c-feature--right{}
 
-.c-feature__constrain {
-    //margin: 0 auto;
-    //max-width: $MAXIMUM_PAGE_WIDTH;
-}
-
 .c-feature__wrapper {
     font-size: 0;
     position: relative;
 
-     margin: 0 auto;
+    margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
 
     @include at-xlarge-size() {
