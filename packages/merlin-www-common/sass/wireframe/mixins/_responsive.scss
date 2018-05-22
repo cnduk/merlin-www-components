@@ -151,3 +151,46 @@
         @content;
     }
 }
+
+
+@mixin at-xx-small-size() {
+    @include min-screen($XX_SMALL_SIZE) {
+        @content;
+    }
+}
+
+@mixin at-x-small-size() {
+    @include min-screen($X_SMALL_SIZE) {
+        @content;
+    }
+}
+
+@mixin at-small-size() {
+    @include min-screen($SMALL_SIZE) {
+        @content;
+    }
+}
+
+@mixin at-medium-size() {
+    @include min-screen($MEDIUM_SIZE) {
+        @content;
+    }
+}
+
+@mixin at-large-size() {
+    @include min-screen($LARGE_SIZE) {
+        @content;
+    }
+}
+
+@mixin at-x-large-size() {
+    @include min-screen($X_LARGE_SIZE) {
+        @content;
+    }
+}
+
+@mixin at-xx-large-size() {
+    @include min-screen($XX_LARGE_SIZE) {
+        @content;
+    }
+}
