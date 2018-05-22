@@ -21,8 +21,8 @@
 }
 
 .c-show-summary-section__image {
-    @include transition(opacity 0.3s ease-in-out);
     opacity: 1;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .c-show-summary-section__content {
@@ -37,10 +37,10 @@
 
 .c-show-summary-section__title {
     @include font('ITC CASLON', 24px, 'NORMAL', 26px);
-    @include transition(opacity 0.3s ease-in-out);
     color: $cod-gray;
     margin: 0 0 $MARGIN_XX_SMALL 0;
     opacity: 1;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .c-show-summary-section__meta {

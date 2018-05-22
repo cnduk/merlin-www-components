@@ -162,10 +162,11 @@
 .c-magazine__btn {
     @include button-single();
     @include button-single-light();
-    @include vendor-prefix(transition-duration, 100ms);
+
     box-sizing: border-box;
     margin-top: 30px;
     text-align: center;
+    transition-duration: 100ms;
     width: 100%;
 
     &:hover {

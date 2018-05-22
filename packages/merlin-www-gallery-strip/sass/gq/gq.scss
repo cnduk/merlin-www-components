@@ -33,11 +33,11 @@
     position: relative;
     &:after {
         @include triangle(16px, 12px, 'up', $woodsmoke);
-        @include vendor-prefix(transform, translateX(-50%));
         content: '';
         left: 50%;
         position: absolute;
         top: -16px;
+        transform: translateX(-50%);
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {

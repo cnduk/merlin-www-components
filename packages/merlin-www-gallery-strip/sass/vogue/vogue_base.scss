@@ -23,8 +23,8 @@
 .c-gallery-strip__link {}
 
 .c-gallery-strip__list {
-    @include transition(opacity 0.3s ease);
     opacity: 1;
+    transition: opacity 0.3s ease;
 }
 .c-gallery-strip__list__item {}
 .c-gallery-strip__images__image {}
@@ -51,18 +51,18 @@
 
 .c-gallery-strip__title {
     @include font('ITC CASLON', 24px, 'NORMAL');
-    @include transition(opacity 0.3s ease);
     color: $cod-gray;
     margin: 0 0 15px 0;
     opacity: 1;
+    transition: opacity 0.3s ease;
 }
 .c-gallery-strip__subtitle {
     @include font('NOBEL', 10px);
-    @include transition(opacity 0.3s ease);
     color: $dove-gray;
     letter-spacing: 1px;
     opacity: 1;
     text-transform: uppercase;
+    transition: opacity 0.3s ease;
 }
 
 

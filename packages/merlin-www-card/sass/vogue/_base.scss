@@ -13,10 +13,9 @@
 }
 
 .c-card__image {
-    @include transition(all 0.3s ease);
-
     background-color: $gallery;
     opacity: 1;
+    transition: all 0.3s ease;
 }
 
 .c-card__image__icon {
@@ -49,12 +48,12 @@
 
 .c-card__title {
     @include font('ITC CASLON', 17px, 'NORMAL', 20px);
-    @include transition(all 0.3s ease);
 
     color: $COLOR_TYPE_HEADING;
     //Forces ligatures on Firefox
     font-variant-ligatures: common-ligatures;
     margin: 0 0 6px 0;
+    transition: all 0.3s ease;
 }
 
 .c-card__teaser {

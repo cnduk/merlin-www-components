@@ -28,12 +28,12 @@
     .c-card__image {}
 
     .c-card__image__icon {
-        @include vendor-prefix(transform, translate(-50%, -50%));
         background-color: rgba(0, 0, 0, 0.5);
         border-radius: 50%;
         height: 48px;
         left: 50%;
         top: 50%;
+        transform: translate(-50%, -50%);
         width: 48px;
 
         svg {
@@ -138,12 +138,12 @@
     .c-card__image {}
 
     .c-card__image__icon {
-        @include vendor-prefix(transform, translate(-50%, -50%));
         background-color: rgba(0, 0, 0, 0.5);
         border-radius: 50%;
         height: 48px;
         left: 50%;
         top: 50%;
+        transform: translate(-50%, -50%);
         width: 48px;
 
         svg {

@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-ads",
-  "version": "1.14.12",
+  "version": "1.14.13",
   "description": "",
   "main": "js/index.js",
   "scripts": {
@@ -11,8 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-www-common": "^1.13.13",
-    "@cnbritain/merlin-www-js-gatracker": "^1.5.1",
+    "@cnbritain/merlin-www-common": "^1.13.14",
+    "@cnbritain/merlin-www-js-gatracker": "^1.6.0",
     "@cnbritain/merlin-www-js-utils": "^1.6.1",
     "eventemitter2": "^4.1.0",
     "hogan.js": "^3.0.2"

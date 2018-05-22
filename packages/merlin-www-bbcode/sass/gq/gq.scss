@@ -618,13 +618,13 @@
             &:after {
                 @include button-single();
                 @include button-single-light();
-                @include vendor-prefix(transform, translateX(-50%));
                 @include font-size(10px);
                 bottom: 32px;
                 content: 'View Collection';
                 left: 50%;
                 padding: 16px 8px;
                 position: absolute;
+                transform: translateX(-50%);
                 white-space: nowrap;
                 @include min-screen($TYPE_LARGE_COPY_WIDTH) {
                     @include font-size(12px);
@@ -740,7 +740,6 @@
 }
 
 .bb-video__image-icon {
-    @include vendor-prefix(transform, translate(-50%, -50%));
     background-color: rgba(0, 0, 0, 0.38);
     border-radius: 50%;
     box-sizing: border-box;
@@ -749,6 +748,7 @@
     padding: 22px;
     position: absolute;
     top: 50%;
+    transform: translate(-50%, -50%);
     width: 60px;
 
     svg {

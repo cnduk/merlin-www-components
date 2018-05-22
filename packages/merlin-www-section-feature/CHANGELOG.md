@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.11.0"></a>
+# [1.11.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-feature@1.10.20...@cnbritain/merlin-www-section-feature@1.11.0) (2018-05-21)
+
+
+### Features
+
+* **merlin-www-section-feature:** add demo and theme for h&g and traveller ([e2e4ed2](https://github.com/cnduk/merlin-www-components/commit/e2e4ed2))
+
+
+### Reverts
+
+* **merlin-www-section-feature:** revert style changes in e2e4ed2ba14b0418a3f275e62644a4ab4eab8d67 ([9088050](https://github.com/cnduk/merlin-www-components/commit/9088050))
+
+
+
+
 <a name="1.10.20"></a>
 ## [1.10.20](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-feature@1.10.19...@cnbritain/merlin-www-section-feature@1.10.20) (2018-05-14)
 

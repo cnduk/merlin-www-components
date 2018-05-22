@@ -34,8 +34,7 @@
     width: 100%;
     height: 40px;
 
-    @include vendor-prefix('appearance', none);
-
+    appearance: none;
     text-transform: uppercase;
 
     @include min-screen ( $TABLET_SIDE_GUTTER_BREAKPOINT ) {

@@ -153,13 +153,13 @@
     z-index: 3;
 
     &:before {
-        @include vendor-prefix(transform, translateX(-50%));
         background-color: $mercury;
         top: 0;
         content: '';
         height: 1px;
         left: 50%;
         position: absolute;
+        transform: translateX(-50%);
         width: 100vw;
     }
 }
@@ -168,13 +168,13 @@
     background-color: $white;
 
     &:before {
-        @include vendor-prefix(transform, translateX(-50%));
         background-color: $mercury;
         bottom: 0;
         content: '';
         height: 1px;
         left: 50%;
         position: absolute;
+        transform: translateX(-50%);
         width: 100vw;
     }
 }
@@ -319,12 +319,12 @@
 
             .n-menu__nav-link {
                 @include font("BRANDON GROTESQUE", 16px, 700, 18px);
-                @include vendor-prefix(transform, translateY(-50%));
                 color: $mine-shaft;
                 letter-spacing: 1px;
                 position: absolute;
                 text-transform: uppercase;
                 top: 50%;
+                transform: translateY(-50%);
                 word-break: break-word;
             }
 
@@ -336,9 +336,9 @@
                 .n-menu__nav-link {
                     @include font-size(14px);
                     @include line-height(15px);
-                    @include vendor-prefix(transform, none);
                     bottom: 0;
                     top: initial;
+                    transform: none;
                 }
             }
         }

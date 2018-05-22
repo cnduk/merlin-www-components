@@ -16,7 +16,7 @@
 
 .srch-textbox {
     @include font('ITC CASLON', 35px, null, 36px);
-    @include vendor-prefix(appearance, none);
+    appearance: none;
     background-color: transparent;
     border: none;
     color: $white;

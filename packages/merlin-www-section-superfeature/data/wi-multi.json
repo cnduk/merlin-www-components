@@ -194,9 +194,11 @@
                 }],
                 "length": 4
             },
-            "state": {},
+            "state": {
+                "has_multiple_images": true
+            },
             "style": {
-                "cls": "c-superfeature__images--multiple",
+                "cls": "",
                 "inline": ""
             },
             "translation": {},

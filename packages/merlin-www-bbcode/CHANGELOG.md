@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.15.11"></a>
+## [1.15.11](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.10...@cnbritain/merlin-www-bbcode@1.15.11) (2018-05-21)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-bbcode
+
 <a name="1.15.10"></a>
 ## [1.15.10](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.9...@cnbritain/merlin-www-bbcode@1.15.10) (2018-05-14)
 

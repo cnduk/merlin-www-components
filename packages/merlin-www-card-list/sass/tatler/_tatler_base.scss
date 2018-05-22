@@ -327,7 +327,6 @@ $C_CARD_BUM_MARGIN: 0;
 
         .c-card__images {
             &:after {
-                @include vendor-prefix(transition-duration, 300ms);
                 border: 2px solid $cinnabar;
                 bottom: 0;
                 box-sizing: border-box;
@@ -338,6 +337,7 @@ $C_CARD_BUM_MARGIN: 0;
                 position: absolute;
                 right: 0;
                 top: 0;
+                transition-duration: 300ms;
                 width: 100%;
             }
         }
@@ -345,7 +345,6 @@ $C_CARD_BUM_MARGIN: 0;
         .c-card__image {
             &:after {
                 @include font("AGENDA", 12px, 500, 12px);
-                @include vendor-prefix(transition-duration, 300ms);
                 background-color: $cinnabar;
                 bottom: 0px;
                 color: $white;
@@ -356,6 +355,7 @@ $C_CARD_BUM_MARGIN: 0;
                 padding: 6px;
                 position: absolute;
                 text-transform: uppercase;
+                transition-duration: 300ms;
             }
         }
 

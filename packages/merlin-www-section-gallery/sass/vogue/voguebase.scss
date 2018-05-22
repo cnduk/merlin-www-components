@@ -24,8 +24,8 @@
 }
 
 .c-gallery__images {
-    @include transition(all 0.3s ease-in-out);
     opacity: 1;
+    transition: all 0.3s ease-in-out;
 }
 
 .c-gallery__image-remaining {
@@ -67,9 +67,9 @@
 
 .c-gallery__title {
     @include font('ITC CASLON', 24px, 'NORMAL', 26px);
-    @include transition(all 0.3s ease-in-out);
     color: $cod-gray;
     margin: 0 0 $MARGIN_XX_SMALL 0;
+    transition: all 0.3s ease-in-out;
 }
 
 .c-gallery__teaser,
@@ -86,10 +86,10 @@
 
 .c-gallery__byline-name {
     @include font('NOBEL', 10px);
-    @include transition(all 0.3s ease-in-out);
     color: $cod-gray;
     letter-spacing: 1px;
     text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
 }
 
 .c-gallery__byline-prefix {

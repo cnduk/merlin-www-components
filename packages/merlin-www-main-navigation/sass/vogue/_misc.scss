@@ -5,13 +5,13 @@
 .n-vanishing-nav {
     // This element has the white background
     .n-main__sticker-child {
-        @include vendor-prefix(transform, translate(0, 0%));
-        @include vendor-prefix(transition, transform 0.2s ease-in-out);
+        transform: translate(0, 0%);
+        transition: transform 0.2s ease-in-out;
     }
 
     &.is-hidden {
         .n-main__sticker-child {
-            @include vendor-prefix(transform, translate(0, -100%));
+            transform: translate(0, -100%);
         }
     }
 }

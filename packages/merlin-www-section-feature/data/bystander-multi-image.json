@@ -181,7 +181,9 @@
         "title": "Example title of an article",
         "image_list": {
             "translation": {},
-            "state": {},
+            "state": {
+                "has_multiple_images": true
+            },
             "data": {
                 "items": [{
                     "translation": {},
@@ -282,7 +284,7 @@
             },
             "style": {
                 "inline": "",
-                "cls": "c-feature__images--multiple"
+                "cls": ""
             },
             "type": "List"
         },

@@ -45,12 +45,12 @@
  * Gallery
  */
 .bb-gallery {
-    @include opacity(1);
-    @include transition(opacity 0.3s ease-in-out);
     margin: $MARGIN_LARGE 0;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
 
     &:hover {
-        @include opacity(0.8);
+        opacity: 0.8;
     }
 }
 
@@ -111,7 +111,6 @@
 
     .bb-gallery__col:first-child:before {
         @include font('NOBEL', 12px);
-        @include vendor-prefix(transform, translateX(-50%));
         background-color: $guardsman-red,;
         bottom: 30px;
         color: $white;
@@ -123,6 +122,7 @@
         padding: 14px 10px 14px 12px;
         position: absolute;
         text-align: center;
+        transform: translateX(-50%);
         z-index: 1;
     }
 }
@@ -135,7 +135,7 @@
 
     &:hover {
         .bb-video__image {
-            @include opacity(0.8);
+            opacity: 0.8;
         }
     }
 }
@@ -170,15 +170,15 @@
 
 .bb-video__wrapper {}
 .bb-video__image {
-    @include opacity(1);
+    opacity: 1;
 }
 .bb-video__image-icon {
-    @include vendor-prefix(transform, translate(-50%, -50%));
     background-color: $guardsman-red;
     height: 45px;
     left: 50%;
     position: absolute;
     top: 50%;
+    transform: translate(-50%, -50%);
     width: 45px;
 
     svg {
@@ -219,7 +219,7 @@
         }
 
         .bb-card__image {
-            @include opacity(0.8);
+            opacity: 0.8;
         }
     }
 }
@@ -250,9 +250,9 @@
 }
 
 .bb-card__image {
-    @include opacity(1);
-    @include transition(all 0.3s ease);
     background: $loot-box;
+    opacity: 1;
+    transition: all 0.3s ease;
 }
 
 .bb-card__tag {
@@ -263,9 +263,9 @@
 
 .bb-card__title {
     @include font('ADOBE CASLON', 17px, 700, 20px);
-    @include transition(all 0.3s ease);
     color: $cod-gray;
     margin: 0 0 6px 0;
+    transition: all 0.3s ease;
 }
 
 .bb-card__separator {

@@ -23,7 +23,7 @@
 }
 .srch-textbox {
 	@include font("GOTHAM", 30px, 700, 32px, -4);
-	@include vendor-prefix(appearance, none);
+	appearance: none;
 	background-color: transparent;
 	border: none;
 	color: $white;

@@ -7,12 +7,12 @@ $_VOGUE_BORDER_WIDTH: 2px;
 @mixin button-single(){
     @include button-reset();
     @include font('NOBEL', 12px);
-    @include transition(all 0.1s ease-in-out);
 
     color: $cerulean;
     letter-spacing: 1px;
     padding: $PADDING_X_SMALL;
     text-transform: uppercase;
+    transition: all 0.1s ease-in-out;
 }
 
 @mixin button-single-light() {
@@ -39,13 +39,13 @@ $_VOGUE_BORDER_WIDTH: 2px;
 @mixin button-group(){
     @include button-reset();
     @include font('NOBEL', 10px);
-    @include transition(all 0.1s ease-in-out);
 
     color: $cerulean;
     padding: $PADDING_XX_SMALL;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
+    transition: all 0.1s ease-in-out;
 }
 
 @mixin button-group-light(){
@@ -59,11 +59,10 @@ $_VOGUE_BORDER_WIDTH: 2px;
 }
 
 @mixin button-top-stories() {
-    @include transition(all 0.1s ease-in-out);
-
     background-color: $wild-sand;
     color: $cerulean;
     height: 50%;
+    transition: all 0.1s ease-in-out;
     width: 60px;
 
     svg {
@@ -73,7 +72,7 @@ $_VOGUE_BORDER_WIDTH: 2px;
 
     svg, path {
         fill: $COLOR_BUTTON_ACTION_ACTIVE;
-        @include transition(all 0.1s ease-in-out);
+        transition: all 0.1s ease-in-out;
     }
 }
 

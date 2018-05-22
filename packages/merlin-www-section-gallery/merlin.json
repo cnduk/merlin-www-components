@@ -47,7 +47,15 @@
     "currentTheme": null,
     "main": "gallery",
     "data": {
-        "all": "demo/data/all.json",
-        "gq": "demo/data/gq.json"
+        "all": "data/all.json",
+        "brides": "data/br.json",
+        "bystander": "data/bystander.json",
+        "glamour": "data/gl.json",
+        "gq": "data/gq.json",
+        "houseandgarden": "data/hg.json",
+        "tatler": "data/ta.json",
+        "traveller": "data/tr.json",
+        "vogue": "data/vg.json",
+        "wired": "data/wi.json"
     }
 }

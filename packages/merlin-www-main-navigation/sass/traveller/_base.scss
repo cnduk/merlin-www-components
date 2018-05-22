@@ -131,7 +131,6 @@
     z-index: 3;
 
     &:before {
-        @include vendor-prefix(transform, translateX(-50%));
         background-color: $ISABEL;
         box-shadow: 0px 2px 4px 0px rgba($BLACK, 0.04);
         top: 0;
@@ -139,6 +138,7 @@
         height: 1px;
         left: 50%;
         position: absolute;
+        transform: translateX(-50%);
         width: 100vw;
     }
 }
@@ -147,7 +147,6 @@
     background-color: $WHITE;
 
     &:before {
-        @include vendor-prefix(transform, translateX(-50%));
         background-color: $ISABEL;
         box-shadow: 0px 2px 4px 0px rgba($BLACK, 0.06);
         bottom: 0;
@@ -155,6 +154,7 @@
         height: 1px;
         left: 50%;
         position: absolute;
+        transform: translateX(-50%);
         width: 100vw;
     }
 }
@@ -311,12 +311,12 @@
 
             .n-menu__nav-link {
                 @include font("PROXIMA NOVA CONDENSED", 16px, 700, 16px);
-                @include vendor-prefix(transform, translateY(-50%));
                 color: $MUSTASAARI;
                 letter-spacing: 1px;
                 position: absolute;
                 text-transform: uppercase;
                 top: 50%;
+                transform: translateY(-50%);
                 word-break: break-word;
             }
 
@@ -328,10 +328,10 @@
                 .n-menu__nav-link {
                     @include font-size(12px);
                     @include line-height(12px);
-                    @include vendor-prefix(transform, none);
                     bottom: 0;
                     letter-spacing: 0.06em;
                     top: initial;
+                    transform: none;
                 }
             }
 
