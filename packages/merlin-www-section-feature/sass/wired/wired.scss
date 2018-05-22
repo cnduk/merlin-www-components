@@ -52,7 +52,7 @@
         fill: $black;
     }
 
-    @include at-x-large-size(){
+    @include at-medium-size(){
         margin-bottom: 30px;
     }
 }
@@ -63,7 +63,7 @@
     letter-spacing: 0.3px;
     margin: 0 auto 10px auto;
 
-    @include at-x-large-size(){
+    @include at-medium-size(){
         @include font-size(45px);
         @include line-height(45px);
     }
@@ -90,7 +90,7 @@
         margin: 10px auto;
         width: 10px;
 
-        @include at-x-large-size(){
+        @include at-medium-size(){
             margin: 20px auto;
             width: 30px;
         }
@@ -121,7 +121,7 @@
     margin-top: 5px;
 }
 
-li.c-feature__meta-item {
+.c-feature__meta-item {
     @include font("EXCHANGE WEB", 11px, 400, 17px);
     padding-right: 10px;
 

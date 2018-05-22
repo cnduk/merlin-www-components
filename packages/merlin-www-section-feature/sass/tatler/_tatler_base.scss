@@ -29,7 +29,7 @@
 
 .c-feature__wrapper {
 
-     @include at-x-large-size(){
+     @include at-medium-size(){
         direction: ltr;
 
         .c-feature--right & {
@@ -42,7 +42,7 @@
 .c-feature__contents {
     width: 100%;
 
-    @include at-x-large-size(){
+    @include at-medium-size(){
         direction: ltr;
         display: table-cell;
         position: static;
@@ -72,7 +72,8 @@
 
     @include at-x-large-size(){
         padding: 20px 60px;
-
+    }
+    @include at-medium-size(){
         .c-feature--left & {
             @include border-line-box(left);
         }
@@ -94,7 +95,7 @@
     top: -20px;
     width: 40px;
 
-     @include at-x-large-size(){
+     @include at-medium-size(){
          background: $wild-sand;
          left: auto;
          margin-left: auto;
@@ -125,6 +126,10 @@
     letter-spacing: 1px;
     margin: 0 0 10px;
     text-transform: uppercase;
+
+    @include at-small-size {
+        margin-bottom: 15px;
+    }
 }
 
 .c-feature__title {
@@ -200,7 +205,7 @@
     text-transform: uppercase;
 }
 
-li.c-feature__meta-item {
+.c-feature__meta-item {
     padding-right: 0;
 
     &:not(:last-child) {

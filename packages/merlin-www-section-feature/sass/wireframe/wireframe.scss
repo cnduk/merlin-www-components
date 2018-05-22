@@ -16,7 +16,7 @@
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
 
-    @include at-x-large-size() {
+    @include at-medium-size() {
         display: table;
         direction: rtl;
         padding-top: 0;
@@ -44,7 +44,7 @@
 .c-feature__images {
     position: relative;
 
-    @include at-x-large-size() {
+    @include at-medium-size() {
         direction: ltr;
         display: table-cell;
         position: static;
@@ -83,7 +83,7 @@
     font-size: initial;
     position: relative;
 
-    @include at-x-large-size() {
+    @include at-medium-size() {
         direction: ltr;
         display: table-cell;
         position: static;
@@ -102,7 +102,7 @@
 .c-feature__byline--sponsored{}
 .c-feature__byline-prefix {}
 .c-feature__byline-name {}
-ul.c-feature__meta {}
-li.c-feature__meta-item {
+.c-feature__meta {}
+.c-feature__meta-item {
     display: inline-block;
 }

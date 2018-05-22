@@ -86,7 +86,7 @@
     top: 0;
     transform: translateY(-100%);
 
-    @include at-x-large-size(){
+    @include at-medium-size(){
         background-color: transparent;
         left: initial;
         margin: 0 0 20px 0;
@@ -129,27 +129,27 @@
     margin: 0 0 6px 0;
     text-transform: uppercase;
 
-    @include at-x-large-size(){
+    @include at-medium-size(){
         bottom: 50px;
         position: absolute;
     }
 }
 
-ul.c-feature__meta {
+.c-feature__meta {
     @include font("GRAPHIK", 10px, 400, 10px);
     color: $dune;
     letter-spacing: 1.5px;
     margin: 0 0 0 0;
     text-transform: uppercase;
 
-    @include at-x-large-size(){
+    @include at-medium-size(){
         bottom: 40px;
         position: absolute;
     }
 }
 
-li.c-feature__meta-item {
-    & + li.c-feature__meta-item {
+.c-feature__meta-item {
+    & + .c-feature__meta-item {
         &:before {
             background-color: $azalea;
             border-radius: 50%;

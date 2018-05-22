@@ -20,7 +20,7 @@
     color: $white;
 }
 
-@include at-x-large-size(){
+@include at-medium-size(){
     .c-feature--left .c-feature__contents {
         @include border-line-box(left, $bg: $black, $border: $brownish-grey);
     }

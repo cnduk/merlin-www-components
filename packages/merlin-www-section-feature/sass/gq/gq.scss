@@ -64,7 +64,7 @@
         width: 0;
     }
 
-    @include at-x-large-size(){
+    @include at-medium-size(){
         padding: 28px 48px;
 
         &:after {
@@ -84,7 +84,7 @@
 .c-feature__icon {
     display: none;
 
-    @include at-x-large-size(){
+    @include at-medium-size(){
         border: 1px solid $limed-oak;
         display: block;
         height: 40px;
@@ -110,7 +110,7 @@
     margin-top: 0;
     text-transform: capitalize;
 
-    @include at-x-large-size(){
+    @include at-medium-size(){
         @include font-size(12px);
         @include line-height(16px);
         margin-bottom: 12px;
@@ -168,10 +168,10 @@
     margin-top: 6px;
 }
 
-li.c-feature__meta-item {
+.c-feature__meta-item {
     padding-right: 0;
 
-    & + li.c-feature__meta-item {
+    & + .c-feature__meta-item {
         border-left: none;
         padding-left: 0;
 
