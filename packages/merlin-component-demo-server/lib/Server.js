@@ -54,7 +54,6 @@ class Server {
         let pageSnapshots = null;
 
         if(req.query.hasOwnProperty('compare')){
-            const bSnapshot = SnapshotManager.snapshots[req.query.compare];
             const c = await SnapshotManager.compareSnapshots(
                 req.query.id, req.query.compare);
 
