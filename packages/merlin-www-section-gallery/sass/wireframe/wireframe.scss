@@ -7,7 +7,7 @@
     position: relative;
 }
 
-.c-gallery__wrapper {
+.c-gallery-wrapper {
     position: relative;
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
