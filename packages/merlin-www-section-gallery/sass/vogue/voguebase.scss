@@ -106,7 +106,7 @@
     display: inline-block;
 }
 
-li.c-gallery__meta-item {
+.c-gallery__meta-item {
     padding-right: 8px;
 
     &:last-child {
@@ -119,7 +119,6 @@ li.c-gallery__meta-item {
     }
 }
 
-.c-gallery__meta-item--date {}
 .c-gallery__meta-item--tag {
     color: $guardsman-red;
     letter-spacing: 1px;

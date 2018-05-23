@@ -75,6 +75,7 @@
 
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         padding: 28px 48px;
+
         &:after {
             @include triangle(18px, 14px, 'left', $white);
             content: '';
@@ -116,6 +117,7 @@
     margin-bottom: 8px;
     margin-top: 0;
     text-transform: capitalize;
+
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         @include font-size(12px);
         @include line-height(16px);
@@ -128,6 +130,7 @@
     @include font("ITC_FENICE", 24px, 700, 28px, -4);
     margin-bottom: 14px;
     margin-top: 0px;
+
     @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
         @include font-size(32px);
         @include line-height(36px);
@@ -142,6 +145,7 @@
     display: none;
     margin-bottom: 14px;
     margin-top: 14px;
+
     @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
         @include font-size(15px);
         @include line-height(20px);
@@ -176,7 +180,7 @@
     margin-top: 6px;
 }
 
-li.c-gallery__meta-item {
+.c-gallery__meta-item {
     padding-right: 0;
     & + li.c-gallery__meta-item {
         border-left: none;

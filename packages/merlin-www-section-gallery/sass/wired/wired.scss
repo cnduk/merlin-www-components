@@ -28,6 +28,10 @@
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
 
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        direction: rtl;
+    }
+
     &:hover,
     &:focus {
         .c-gallery__title span {
@@ -38,10 +42,17 @@
 
 .c-gallery__images {
     display: table-footer-group;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        display: table-cell;
+        direction: ltr;
+    }
 }
+
 .c-gallery__image {
     background-color: #000;
 }
+
 .c-gallery__image-remaining {
     background-color: rgba(0,0,0,0.5);
     bottom: 0;
@@ -49,6 +60,11 @@
     height: 100%;
     top: 0;
     white-space: nowrap;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        height: auto;
+        top: 66.66%;
+    }
 }
 
 .c-gallery__image-remaining__text-prefix {
@@ -57,18 +73,17 @@
     position: relative;
     top: -3px;
 }
+
 .c-gallery__image-remaining__text-value {
     @include font("BRUTAL", 30px, 900);
     line-height: 100%;
 }
 
-li.c-gallery__image-item {
+.c-gallery__image-item {
     &:first-child {
         width: 33.33333%;
-    }
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        &:first-child {
+        @include min-screen($FEATURE_LARGE_BREAKPOINT) {
             width: 75%;
         }
     }
@@ -79,10 +94,19 @@ li.c-gallery__image-item {
     color: $white;
     display: table-header-group;
     text-align: center;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        display: table-cell;
+        direction: ltr;
+    }
 }
 
 .c-gallery__contents-wrapper {
     padding: 30px 20px;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        padding: 40px;
+    }
 }
 
 .c-gallery__icon {
@@ -90,6 +114,10 @@ li.c-gallery__image-item {
     height: 20px;
     margin: 0 auto 20px auto;
     width: 20px;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        margin-bottom: 30px;
+    }
 
     svg {
         fill: $white;
@@ -100,6 +128,11 @@ li.c-gallery__image-item {
     @include font("NEW GROTESK SQUARE", 40px, 300, 40px);
     color: $white;
     margin: 0 auto 10px auto;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include font-size(45px);
+        @include line-height(45px);
+    }
 }
 
 .c-gallery__teaser {
@@ -117,6 +150,11 @@ li.c-gallery__image-item {
     border-color: $white;
     margin: 10px auto;
     width: 20px;
+
+    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        margin: 20px auto;
+        width: 30px;
+    }
 }
 
 
@@ -143,7 +181,8 @@ li.c-gallery__image-item {
     font-size: 0;
     margin-top: 5px;
 }
-li.c-gallery__meta-item {
+
+.c-gallery__meta-item {
     @include font("EXCHANGE WEB", 11px, 400, 17px);
     padding-right: 10px;
 
@@ -151,40 +190,4 @@ li.c-gallery__meta-item {
         border-left: 1px solid $black-olive;
         padding-left: 10px;
     }
-}
-
-@include min-screen($FEATURE_LARGE_BREAKPOINT) {
-    .c-gallery__wrapper {
-        direction: rtl;
-    }
-    .c-gallery__images {
-        display: table-cell;
-        direction: ltr;
-    }
-    li.c-gallery__image-item:first-child {
-        width: 75%;
-    }
-    .c-gallery__image-remaining {
-        height: auto;
-        top: 66.66%;
-    }
-    .c-gallery__contents {
-        display: table-cell;
-        direction: ltr;
-    }
-    .c-gallery__contents-wrapper {
-        padding: 40px;
-    }
-    .c-gallery__icon {
-        margin-bottom: 30px;
-    }
-    .c-gallery__title {
-        @include font-size(45px);
-        @include line-height(45px);
-    }
-    .c-gallery__separator {
-        margin: 20px auto;
-        width: 30px;
-    }
-
 }
