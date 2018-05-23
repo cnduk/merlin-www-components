@@ -115,7 +115,7 @@ li.c-gallery__image-item {
     display: inline-block;
 }
 
-.c-gallery__text {
+.c-gallery__contents{
     display: block;
     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
         display: table-cell;

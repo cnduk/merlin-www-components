@@ -74,14 +74,14 @@ li.c-gallery__image-item {
     }
 }
 
-.c-gallery__text {
+.c-gallery__contents {
     background-color: $black;
     color: $white;
     display: table-header-group;
     text-align: center;
 }
 
-.c-gallery__text__wrapper {
+.c-gallery__contents-wrapper {
     padding: 30px 20px;
 }
 
@@ -168,11 +168,11 @@ li.c-gallery__meta-item {
         height: auto;
         top: 66.66%;
     }
-    .c-gallery__text {
+    .c-gallery__contents {
         display: table-cell;
         direction: ltr;
     }
-    .c-gallery__text__wrapper {
+    .c-gallery__contents-wrapper {
         padding: 40px;
     }
     .c-gallery__icon {

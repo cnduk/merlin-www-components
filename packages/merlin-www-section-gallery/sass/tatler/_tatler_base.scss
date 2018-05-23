@@ -44,7 +44,7 @@ $section_gallery_icon_size: 40px;
         @include font('STARLING', 30px, 'BOLD', 30px);
     }
 }
-.c-gallery__text {
+.c-gallery__contents {
     background-color: $white;
     padding: $section_gallery_text_padding 20px;
     text-align: center;
@@ -134,11 +134,11 @@ li.c-gallery__meta-item {
         padding: 0 $TABLET_SIDE_GUTTER;
     }
 
-    .c-gallery__text {
+    .c-gallery__contents {
         @include border-line-box(left);
     }
 
-    .c-gallery__text__wrapper {
+    .c-gallery__contents-wrapper {
         margin: 0 auto;
     }
 
@@ -155,12 +155,12 @@ li.c-gallery__meta-item {
         padding: 0 $DESKTOP_SIDE_GUTTER;
     }
 
-    .c-gallery__text {
+    .c-gallery__contents {
         @include border-line-box(left);
         padding: $section_gallery_text_padding;
     }
 
-    .c-gallery__text__wrapper {
+    .c-gallery__contents-wrapper {
         margin: 0 auto;
     }
 
@@ -205,7 +205,7 @@ li.c-gallery__meta-item {
 
 .c-gallery--dark {
 
-    .c-gallery__text {
+    .c-gallery__contents {
         @include feature-large-size {
             @include border-line-box(left, $bg: $black, $border: $brownish-grey);
         }

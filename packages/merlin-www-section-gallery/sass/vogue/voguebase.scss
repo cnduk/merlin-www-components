@@ -34,11 +34,11 @@
     color: $white;
 }
 
-.c-gallery__text {
+.c-gallery__contents {
     text-align: center;
 }
 
-.c-gallery__text__wrapper {
+.c-gallery__contents-wrapper {
     background-color: $white;
     padding: $PADDING_LARGE $PADDING_MEDIUM;
 }
@@ -130,7 +130,7 @@ li.c-gallery__meta-item {
     .c-gallery {
         padding: $DESKTOP_SIDE_GUTTER;
     }
-    .c-gallery__text__wrapper {
+    .c-gallery__contents-wrapper {
         padding: $PADDING_LARGE $PADDING_X_LARGE;
     }
     .c-gallery__icon {

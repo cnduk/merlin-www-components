@@ -11,7 +11,7 @@
 .c-gallery__images {
     background-color: $COLOUR_BG;
 }
-.c-gallery__text {
+.c-gallery__contents {
     background-color: $black;
 }
 .c-gallery__icon {
@@ -31,7 +31,7 @@ li.c-gallery__meta-item {
 }
 
 @include min-screen($FEATURE_LARGE_BREAKPOINT){
-    .c-gallery__text {
+    .c-gallery__contents {
         @include border-line-box(left, $bg: $black, $border: $brownish-grey);
     }
 
