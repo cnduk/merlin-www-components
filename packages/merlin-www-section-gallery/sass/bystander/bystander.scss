@@ -30,7 +30,7 @@
     border-right-width: 2px;
 }
 
-@include min-screen($FEATURE_LARGE_BREAKPOINT){
+@include at-medium-size {
     .c-gallery__contents {
         @include border-line-box(left, $bg: $black, $border: $brownish-grey);
     }

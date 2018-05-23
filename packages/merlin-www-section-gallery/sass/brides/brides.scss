@@ -9,14 +9,14 @@
     padding-left: 0;
     padding-right: 0;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         margin-bottom: $TABLET_SLICE_MARGIN;
         margin-top: $TABLET_SLICE_MARGIN;
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size{
         margin-bottom: $DESKTOP_SLICE_MARGIN;
         margin-top: $DESKTOP_SLICE_MARGIN;
         padding-left: $DESKTOP_SIDE_GUTTER;
@@ -33,7 +33,7 @@
 .c-gallery__images {
     position: relative;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         padding-right: 12px;
         width: 62.5%;
 
@@ -61,7 +61,7 @@
         width: 1px;
         z-index: 1;
 
-        @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include at-medium-size {
             bottom: 50%;
             height: 1px;
             left: initial;
@@ -98,7 +98,7 @@
 .c-gallery__image-remaining__text {
     @include font("SOLEIL", 24px, 400, 24px);
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         @include font-size(32px);
         @include font-size(32px);
     }
@@ -111,7 +111,7 @@
     position: relative;
     text-align: center;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         padding: 40px 0 40px 12px;
 
         &:before {
@@ -135,7 +135,7 @@
 .c-gallery__icon {
     display: none;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         background-color: $blossom;
         border-radius: 50%;
         display: block;
@@ -160,10 +160,6 @@
     color: $pink-rose;
     margin: 0 0 6px 0;
     text-transform: uppercase;
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-
-    }
 }
 
 .c-gallery__title {

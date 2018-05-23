@@ -10,7 +10,7 @@
 .c-gallery-wrapper {
     position: relative;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         display: table;
         vertical-align: middle;
         width: 100%;
@@ -31,7 +31,8 @@
 .c-gallery__images {
     display: block;
     position: relative;
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+
+    @include at-medium-size {
         display: table-cell;
         vertical-align: middle;
         width: 50%;
@@ -55,7 +56,7 @@
         display: none;
     }
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         width: 25%;
         &:first-child {
             width: 75%;
@@ -88,7 +89,7 @@
     width: 33.33333%;
     height: 50%;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         width: 25%;
         height: 33.33333%;
     }
@@ -106,7 +107,8 @@
 
 .c-gallery__contents{
     display: block;
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+
+    @include at-medium-size {
         display: table-cell;
         vertical-align: middle;
         width: 50%;

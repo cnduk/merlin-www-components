@@ -7,11 +7,11 @@ $section_gallery_icon_size: 40px;
     max-width: none;
     padding: 0 $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
          padding: 0 $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size{
         margin: 60px 0;
         padding: 0 $DESKTOP_SIDE_GUTTER;
     }
@@ -51,7 +51,7 @@ $section_gallery_icon_size: 40px;
 .c-gallery__image-remaining__text-value {
     @include font('STARLING', 25px, 'BOLD', 25px);
 
-    @include min-screen($CARD_SWITCHER_WIDTH) {
+    @include at-small-size {
         @include font('STARLING', 30px, 'BOLD', 30px);
     }
 }
@@ -61,22 +61,22 @@ $section_gallery_icon_size: 40px;
     padding: $section_gallery_text_padding 20px;
     text-align: center;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
          @include border-line-box(left);
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size{
         @include border-line-box(left);
         padding: $section_gallery_text_padding;
     }
 }
 
 .c-gallery__contents-wrapper {
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         margin: 0 auto;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size{
         margin: 0 auto;
     }
 }
@@ -90,12 +90,12 @@ $section_gallery_icon_size: 40px;
     position: relative;
     width: $section_gallery_icon_size;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         background-color: $silver;
         margin: 0 auto 20px auto;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size{
         background-color: $wild-sand;
     }
 
@@ -118,7 +118,7 @@ $section_gallery_icon_size: 40px;
     letter-spacing: 1px;
     text-transform: uppercase;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size{
         @include font-size(12px);
         margin: 15px 0;
     }
@@ -129,7 +129,7 @@ $section_gallery_icon_size: 40px;
     color: $COLOUR_MAIN_PRIMARY;
     margin: 10px 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size{
         @include font-size(37px);
         @include line-height(42px);
     }
@@ -141,7 +141,7 @@ $section_gallery_icon_size: 40px;
     font-style: italic;
     margin: 10px 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size{
         @include font-size(18px);
         @include line-height(23px);
     }
@@ -155,7 +155,7 @@ $section_gallery_icon_size: 40px;
     margin: 20px auto;
     width: 20px;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size{
         margin: 15px auto 20px;
     }
 }
@@ -179,7 +179,7 @@ $section_gallery_icon_size: 40px;
     letter-spacing: 1px;
     text-transform: lowercase;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size{
         margin: 15px 0 10px;
         @include font-size(12px);
         @include line-height(12px);
@@ -193,11 +193,11 @@ $section_gallery_icon_size: 40px;
     letter-spacing: 1px;
     margin: 0 0 10px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT)  {
+    @include at-medium-size {
         margin: 15px 0 10px;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size{
         @include font-size(12px);
         @include line-height(12px);
     }
@@ -214,7 +214,7 @@ $section_gallery_icon_size: 40px;
     border-right: 1px solid $COLOUR_BORDER_SOLID;
     padding-right: 8px;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size{
         @include font-size(13px);
     }
 
@@ -232,7 +232,7 @@ $section_gallery_icon_size: 40px;
 .c-gallery--dark {
 
     .c-gallery__contents {
-        @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include at-medium-size {
             @include border-line-box(left, $bg: $black, $border: $brownish-grey);
         }
 
@@ -242,7 +242,7 @@ $section_gallery_icon_size: 40px;
     .c-gallery__icon {
         background-color: $black;
 
-        @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include at-medium-size {
             background: $cod-gray;
         }
 

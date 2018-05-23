@@ -16,7 +16,7 @@
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
 
-    @include at-medium-size() {
+    @include at-medium-size {
         display: table;
         direction: rtl;
         padding-top: 0;
