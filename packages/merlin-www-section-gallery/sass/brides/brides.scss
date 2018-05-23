@@ -186,10 +186,6 @@
     }
 }
 
-.c-gallery__separator {
-    display: none;
-}
-
 .c-gallery__byline {
     @include font('SOLEIL', 10px, 400, 16px, 120);
     color: $stroller-grey;

@@ -94,11 +94,6 @@
     }
 }
 
-.c-gallery__teaser,
-.c-gallery__separator {
-    display: none;
-}
-
 .c-gallery__byline {
     @include font-size(10px);
     @include line-height(14px);

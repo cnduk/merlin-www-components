@@ -147,10 +147,6 @@
     margin: 0;
 }
 
-.c-gallery__separator {
-    display: none;
-}
-
 .c-gallery__byline {
     @include font("GRAPHIK", 10px, 400, 10px);
     color: $dune;

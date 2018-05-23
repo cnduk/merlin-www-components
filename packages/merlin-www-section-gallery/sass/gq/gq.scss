@@ -156,10 +156,6 @@
     }
 }
 
-.c-gallery__separator {
-    display: none;
-}
-
 .c-gallery__byline {
     @include font("GOTHAM", 9px, null, 16px, 60);
     margin-bottom: 6px;

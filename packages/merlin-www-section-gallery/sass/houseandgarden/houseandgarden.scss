@@ -135,10 +135,6 @@
     }
 }
 
-.c-gallery__separator {
-    display: none;
-}
-
 .c-gallery__byline {
     @include font("BRANDON GROTESQUE", 10px, null, 10px);
     color: $mine-shaft;
