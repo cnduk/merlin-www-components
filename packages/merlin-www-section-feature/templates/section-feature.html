@@ -1,16 +1,15 @@
 <section class="c-feature {{ style.cls }}">
-    <div class="c-feature__constrain">
         <div class="c-feature__wrapper">
             {{# data.link }}
-                <a href="{{ &data.url }}" class="c-feature__link c-feature__link--article {{ style.cls }}">{{ data.title }}</a>
+                <a href="{{ &data.url }}" class="c-feature__link {{ style.cls }}">{{ data.title }}</a>
             {{/ data.link }}
 
             {{# data.image_list }}
                 <div class="c-feature__images{{# state.has_multiple_images}} c-feature__images--multiple{{/ state.has_multiple_images }}">
                     {{# data.items }}
-                        <div class="c-feature__image {{ style.cls }}{{# data.item.style.padding_top }} c-feature__image--custom{{/ data.item.style.padding_top }}">
+                        <div class="c-feature__image {{ style.cls }}">
                             {{# data.item }}
-                                <div class="c-feature__image__wrapper"{{# style.padding_top }} style="padding-top: {{ style.padding_top}}"{{/ style.padding_top }}>
+                                <div class="c-feature__image-wrapper">
                                     {{> @cnbritain/merlin-www-image }}
                                 </div>
                             {{/ data.item }}
@@ -19,7 +18,7 @@
                 </div>
             {{/ data.image_list }}
 
-            <div class="c-feature__content">
+            <div class="c-feature__contents">
                 {{# data.icon }}
                     <div class="c-feature__icon">
                         {{> @cnbritain/merlin-www-image }}
@@ -27,7 +26,7 @@
                 {{/ data.icon }}
 
                 {{# data.primary_tag }}
-                    <p class="c-feature__tag">{{ data.title }}</p>
+                    <p class="c-feature__tag"><span>{{ data.title }}</span></p>
                 {{/ data.primary_tag }}
 
                 {{# data.title }}
@@ -35,11 +34,11 @@
                 {{/ data.title }}
 
                 {{# data.teaser }}
-                    <p class="c-feature__teaser">{{ &data.teaser }}</p>
+                    <p class="c-feature__teaser"><span>{{ &data.teaser }}</span></p>
                 {{/ data.teaser }}
 
                 {{# state.has_sponsor }}
-                    <p class="c-feature__byline c-feature__byline--sponsorship {{ style.cls }}">
+                    <p class="c-feature__byline c-feature__byline--sponsored {{ style.cls }}">
                         <span class="c-feature__byline-prefix">{{ translation.sponsor_prefix }} </span>
                         <span class="c-feature__byline-name">{{ data.sponsor.data.title }}</span>
                     </p>
@@ -54,7 +53,7 @@
                 {{/ state.has_sponsor }}
 
                 {{# data.meta_list }}
-                    <ul class="global__list-reset c-feature__meta {{ style.cls }}">
+                    <ul class="c-feature__meta {{ style.cls }}">
                         {{# data.items }}
                             <li class="c-feature__meta-item {{ style.cls }} c-feature__meta-item--{{ data.item.data.meta_type  }}">
                                 {{# data.item }}
@@ -66,6 +65,5 @@
                 {{/ data.meta_list }}
             </div>
         </div>
-    </div>
 </section>
 

@@ -4,12 +4,12 @@
     max-width: none;
     padding: 0 $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size() {
         margin: 60px auto;
         padding: 0 60px;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size(){
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
@@ -17,7 +17,8 @@
     &:focus,
     &:hover {
         .c-feature__title {
-            @include card-title-hover;
+            color: $COLOUR_MAIN_HIGHLIGHT;
+            text-decoration: none;
         }
     }
 }
@@ -28,7 +29,7 @@
 
 .c-feature__wrapper {
 
-     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+     @include at-medium-size(){
         direction: ltr;
 
         .c-feature--right & {
@@ -38,10 +39,10 @@
 }
 
 .c-feature__images,
-.c-feature__content {
+.c-feature__contents {
     width: 100%;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size(){
         direction: ltr;
         display: table-cell;
         position: static;
@@ -54,26 +55,25 @@
     overflow: hidden;
 
     img {
-        @include card-image-normal;
+        transition: transform 0.2s ease-in-out;
     }
 }
 
-.c-feature__image__wrapper {
+.c-feature__image-wrapper {
     background-color: $silver;
     width: 100%;
 }
 
-.c-feature__content {
+.c-feature__contents {
     background: $white;
     direction: ltr;
     padding: 28px 20px;
     text-align: center;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size(){
         padding: 20px 60px;
     }
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size(){
         .c-feature--left & {
             @include border-line-box(left);
         }
@@ -95,7 +95,7 @@
     top: -20px;
     width: 40px;
 
-     @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+     @include at-medium-size(){
          background: $wild-sand;
          left: auto;
          margin-left: auto;
@@ -126,18 +126,25 @@
     letter-spacing: 1px;
     margin: 0 0 10px;
     text-transform: uppercase;
+
+    @include at-small-size {
+        margin-bottom: 15px;
+    }
 }
 
 .c-feature__title {
-    @include t-feature-title-small;
+    @include font('STARLING', 24px, 'NORMAL', 28px);
+    color: $COLOUR_MAIN_PRIMARY;
     margin: 0 0 20px;
     padding: 0 0 15px;
     position: relative;
 
-     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-         @include t-feature-title-large;
-        margin: 0 0 20px;
-        padding: 0 0 15px;
+     @include at-x-large-size(){
+         @include font-size(37px);
+         @include line-height(42px);
+         color: $COLOUR_MAIN_PRIMARY;
+         margin: 0 0 20px;
+         padding: 0 0 15px;
      }
 
     &:after {
@@ -159,32 +166,46 @@
 }
 
 .c-feature__byline {
-    @include feature-card-byline;
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    color: $gray;
+    letter-spacing: 1px;
     margin: 0 0 10px;
+    text-transform: uppercase;
 
-     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            margin: 0 0 10px;
+    @include at-medium-size() {
+        margin: 15px 0 10px;
+    }
+
+     @include at-x-large-size(){
+         margin: 0 0 10px;
      }
 }
 
 .c-feature__byline-prefix {
-    @include card-byline-prefix;
-
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    font-style: italic;
+    letter-spacing: 1px;
     margin-right: 2px;
+    text-transform: lowercase;
 }
 
 .c-feature__byline-name {
-    @include card-byline-name;
+    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .c-feature__meta {
-    @include card-meta;
+    @include font('AGENDA', 10px, 'MEDIUM', 10px);
+    color: $gray;
+    letter-spacing: 1px;
     display: inline-block;
     margin-top: 0;
     padding-top: 0;
+    text-transform: uppercase;
 }
 
-li.c-feature__meta-item {
+.c-feature__meta-item {
     padding-right: 0;
 
     &:not(:last-child) {
@@ -207,18 +228,5 @@ li.c-feature__meta-item {
     & + & {
         border: 0;
         padding: 0;
-    }
-}
-
-@include card-switcher-size {
-    .c-feature__tag {
-        @include font('AGENDA', 12px, 'MEDIUM', 12px);
-        letter-spacing: 1px;
-        margin: 0 0 15px;
-    }
-
-    .c-feature__meta {
-        margin-top: 0;
-        padding-top: 0;
     }
 }

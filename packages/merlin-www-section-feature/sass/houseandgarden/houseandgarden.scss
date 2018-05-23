@@ -4,113 +4,108 @@
 @import '../wireframe/wireframe';
 
 .c-feature {
-	margin-bottom: $MOBILE_SLICE_MARGIN;
-	margin-top: $MOBILE_SLICE_MARGIN;
-	max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
-	padding-left: $MOBILE_SIDE_GUTTER;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+    margin-top: $MOBILE_SLICE_MARGIN;
+    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
 
-
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-	    margin-bottom: $TABLET_SLICE_MARGIN;
-	    margin-top: $TABLET_SLICE_MARGIN;
-		padding-left: $TABLET_SIDE_GUTTER;
+    @include at-medium-size() {
+        margin-bottom: $TABLET_SLICE_MARGIN;
+        margin-top: $TABLET_SLICE_MARGIN;
+        padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
-	}
+    }
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-	    margin-bottom: $DESKTOP_SLICE_MARGIN;
-	    margin-top: $DESKTOP_SLICE_MARGIN;
-		padding-left: $TABLET_SIDE_GUTTER;
+    @include at-x-large-size(){
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+        margin-top: $DESKTOP_SLICE_MARGIN;
+        padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
-	}
+    }
 }
 
-.c-feature--left {
-	.c-feature__content {
-		@include min-screen($FEATURE_LARGE_BREAKPOINT) {
-			border-right: 0px;
-		}
-	}
-}
-
-.c-feature--right {
-	.c-feature__content {
-		@include min-screen($FEATURE_LARGE_BREAKPOINT) {
-			border-left: 0px;
-		}
-	}
+@include at-medium-size(){
+    .c-feature--left {
+        .c-feature__contents {
+            border-right: 0px;
+        }
+    }
+    .c-feature--right {
+        .c-feature__contents {
+            border-left: 0px;
+        }
+    }
 }
 
 .c-feature__wrapper {
-	&:hover {
-		.c-feature__title {
-  			span {
-  				box-shadow: inset 0 -0.4em 0 0 $careys-pink;
-  			}
-		}
-	}
+    &:hover {
+        .c-feature__title {
+            span {
+                box-shadow: inset 0 -0.4em 0 0 $careys-pink;
+            }
+        }
+    }
 }
 
-.c-feature__image__wrapper {
-	background-color: $mercury;
-	padding-top: 66.66666%;
+.c-feature__image-wrapper {
+    background-color: $mercury;
 }
 
-.c-feature__content {
-	padding: 20px 20px 0px 20px;
-	text-align: center;
+.c-feature__contents {
+    padding: 20px 20px 0px 20px;
+    text-align: center;
 
-	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
-		border: 1px solid $mine-shaft;
-		padding: 50px;
-		text-align: left;
-		vertical-align: top;
-	}
+    @include at-medium-size(){
+        border: 1px solid $mine-shaft;
+        padding: 50px;
+        text-align: left;
+        vertical-align: top;
+    }
 }
 
 .c-feature__icon {
-	display: none;
+    display: none;
 }
 
 .c-feature__tag {
-	@include font("BRANDON GROTESQUE", 10px, 700, 10px);
-	color: $mine-shaft;
-	letter-spacing: 1px;
-	margin-bottom: 7px;
-	margin-top: 0;
-	text-transform: uppercase;
+    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
+    color: $mine-shaft;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+    margin-top: 0;
+    text-transform: uppercase;
 
-	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
-		margin-bottom: 15px;
-	}
+    @include at-medium-size(){
+        margin-bottom: 15px;
+    }
 }
 
 .c-feature__title {
-	@include font("MILLER_DISPLAY", 25px, 700, 27px);
-	color: $mine-shaft;
-	letter-spacing: 0.5px;
-	margin: 7px 0 10px 0;
+    @include font("MILLER_DISPLAY", 25px, 700, 27px);
+    color: $mine-shaft;
+    letter-spacing: 0.5px;
+    margin: 7px 0 10px 0;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-    	@include font-size(35px);
-    	@include line-height(38px);
-    	letter-spacing: 0px;
-    	margin: 15px 0 10px 0;
-	}
+    @include at-medium-size(){
+        @include font-size(35px);
+        @include line-height(38px);
+        letter-spacing: 0px;
+        margin: 15px 0 10px 0;
+    }
 }
 
 .c-feature__teaser {
-	display: none;
+    display: none;
 
-	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
-		@include font("MILLER_DISPLAY", 16px, 400, 21px);
-		color: $mine-shaft;
-		display: block;
-		font-style: italic;
-		letter-spacing: 0px;
-		margin: 10px 0 15px 0;
-	}
+    @include at-medium-size(){
+        @include font("MILLER_DISPLAY", 16px, 400, 21px);
+        color: $mine-shaft;
+        display: block;
+        font-style: italic;
+        letter-spacing: 0px;
+        margin: 10px 0 15px 0;
+    }
 }
 
 .c-feature__byline {
@@ -121,31 +116,29 @@
     margin-top: 10px;
     text-transform: uppercase;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-    	margin-bottom: 7px;
-    	margin-top: 15px;
+    @include at-medium-size(){
+        margin-bottom: 7px;
+        margin-top: 15px;
     }
 }
 
-.c-feature__byline--sponsorship {}
-.c-feature__byline-prefix {}
 .c-feature__byline-name {
     @include font-weight(700);
 }
 
-ul.c-feature__meta {
+.c-feature__meta {
     @include font("BRANDON GROTESQUE", 0px, 400, 10px);
     color: $dove-gray;
     letter-spacing: 1px;
     margin-top: 5px;
     text-transform: uppercase;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-    	margin-top: 7px;
+    @include at-medium-size() {
+        margin-top: 7px;
     }
 }
 
-li.c-feature__meta-item {
+.c-feature__meta-item {
     @include font("BRANDON GROTESQUE", 10px, 400, 10px);
     color: $dove-gray;
     letter-spacing: 1px;

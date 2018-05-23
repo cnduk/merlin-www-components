@@ -10,7 +10,7 @@
     max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER*2;
     padding: 0;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size() {
         // 20px added to offset the box shadow
         margin-bottom: $TABLET_SLICE_MARGIN + 20px;
         margin-top: $TABLET_SLICE_MARGIN;
@@ -18,15 +18,13 @@
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding-left: $DESKTOP_SIDE_GUTTER;
-        padding-right: $DESKTOP_SIDE_GUTTER;
+    @include at-x-large-size(){
         // 20px added to offset the box shadow
         margin-bottom: $DESKTOP_SLICE_MARGIN + 20px;
         margin-top: $DESKTOP_SLICE_MARGIN;
-    }
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
         &:hover {
             .c-feature__title {
                 span {
@@ -37,15 +35,15 @@
     }
 }
 
-.c-feature--right {
-    .c-feature__wrapper {
-        box-shadow: 20px 20px 0px 0px $azalea;
-    }
-}
-
 .c-feature--left {
     .c-feature__wrapper {
         box-shadow: -20px 20px 0px 0px $azalea;
+    }
+}
+
+.c-feature--right {
+    .c-feature__wrapper {
+        box-shadow: 20px 20px 0px 0px $azalea;
     }
 }
 
@@ -53,21 +51,21 @@
     overflow: hidden;
 }
 
-.c-feature__image__wrapper {
+.c-feature__image-wrapper {
     background-color: $pampas;
     padding-top: 100%;
 }
 
-.c-feature__content {
+.c-feature__contents {
     background-color: $white;
     padding: 20px;
     position: relative;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size() {
         padding: 30px 40px;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size(){
         padding: 30px 60px 30px 40px;
     }
 }
@@ -88,7 +86,7 @@
     top: 0;
     transform: translateY(-100%);
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size(){
         background-color: transparent;
         left: initial;
         margin: 0 0 20px 0;
@@ -104,12 +102,12 @@
     color: $dune;
     margin: 0 0 10px 0;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size() {
         @include font-size(35px);
         @include line-height(38px);
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size(){
         @include font-size(40px);
         @include line-height(45px);
         margin: 0 0 20px 0;
@@ -131,27 +129,27 @@
     margin: 0 0 6px 0;
     text-transform: uppercase;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size(){
         bottom: 50px;
         position: absolute;
     }
 }
 
-ul.c-feature__meta {
+.c-feature__meta {
     @include font("GRAPHIK", 10px, 400, 10px);
     color: $dune;
     letter-spacing: 1.5px;
     margin: 0 0 0 0;
     text-transform: uppercase;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size(){
         bottom: 40px;
         position: absolute;
     }
 }
 
-li.c-feature__meta-item {
-    & + li.c-feature__meta-item {
+.c-feature__meta-item {
+    & + .c-feature__meta-item {
         &:before {
             background-color: $azalea;
             border-radius: 50%;

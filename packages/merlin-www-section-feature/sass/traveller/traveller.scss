@@ -9,21 +9,17 @@
 	padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	@include at-medium-size() {
 	    margin-bottom: $TABLET_SLICE_MARGIN;
 	    margin-top: $TABLET_SLICE_MARGIN;
 		padding-left: $TABLET_SIDE_GUTTER;
 		padding-right: $TABLET_SIDE_GUTTER;
+
 	}
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	@include at-x-large-size(){
 	    margin-bottom: $DESKTOP_SLICE_MARGIN;
 	    margin-top: $DESKTOP_SLICE_MARGIN;
-		padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
-	}
-
-	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -31,17 +27,17 @@
 
 .c-feature--left {
 	.c-feature__images--multiple {
-		@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+		@include at-x-large-size(){
 			padding-left: 12px;
 
-			& + .c-feature__content {
+			& + .c-feature__contents {
 				padding-left: $TABLET_SIDE_GUTTER;
 			}
 		}
 	}
 
-	.c-feature__content {
-		@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+	.c-feature__contents {
+		@include at-x-large-size(){
 			left: 0;
 			margin-left: $TABLET_SIDE_GUTTER;
 		}
@@ -50,17 +46,17 @@
 
 .c-feature--right {
 	.c-feature__images--multiple {
-		@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+		@include at-x-large-size(){
 			padding-right: 12px;
 
-			& + .c-feature__content {
+			& + .c-feature__contents {
 				padding-right: $TABLET_SIDE_GUTTER;
 			}
 		}
 	}
 
-	.c-feature__content {
-		@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+	.c-feature__contents {
+		@include at-x-large-size(){
 			right: 0;
 			margin-right: $TABLET_SIDE_GUTTER;
 		}
@@ -68,18 +64,18 @@
 }
 
 .c-feature__images {
-	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+	@include at-x-large-size(){
 		display: block;
 		width: 100%;
 	}
 }
 
 .c-feature__images--multiple {
-	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
+	@include at-x-large-size(){
 		display: table-cell;
 		width: 50%;
 
-		& + .c-feature__content {
+		& + .c-feature__contents {
 			position: static;
 			width: 50%;
 			transform: none;
@@ -89,19 +85,15 @@
 	}
 }
 
-.c-feature__image__wrapper {
+.c-feature__image-wrapper {
 	background-color: $CAPE-HAZE;
-	padding-top: 66.66666%;
-
-	@include min-screen($FEATURE_LARGE_BREAKPOINT) {
-		padding-top: 40%;
-	}
 }
 
-.c-feature__content {
+.c-feature__contents {
 	margin: 20px;
+	position: initial;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-x-large-size(){
     	background-color: $WHITE;
     	box-sizing: border-box;
     	margin: 0px;
@@ -138,7 +130,7 @@
 	    width: 20px;
 	}
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-x-large-size(){
     	display: none;
     }
 }
@@ -152,7 +144,7 @@
 	text-align: center;
 	text-transform: uppercase;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-x-large-size(){
     	margin-bottom: 16px;
     	margin-top: 0;
     }
@@ -166,7 +158,7 @@
 	text-align: center;
 	text-transform: uppercase;
 
-    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+    @include at-x-large-size(){
     	@include font-size(28px);
     	@include line-height(32px);
     	letter-spacing: 2px;
@@ -178,7 +170,7 @@
 .c-feature__teaser {
 	display: none;
 
-    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+    @include at-x-large-size(){
     	@include font("PROXIMA NOVA CONDENSED", 16px, 400, 20px);
     	color: $RAVEN;
     	display: block;
