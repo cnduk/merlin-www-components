@@ -133,6 +133,20 @@
         @include font-size(45px);
         @include line-height(45px);
     }
+
+    &:after {
+        background-color: $white;
+        content: '';
+        display: block;
+        height: 1px;
+        margin: 10px auto;
+        width: 20px;
+
+        @include at-medium-size {
+            margin: 20px auto;
+            width: 30px;
+        }
+    }
 }
 
 .c-gallery__teaser {
@@ -145,18 +159,6 @@
         display: block;
     }
 }
-
-.c-gallery__separator {
-    border-color: $white;
-    margin: 10px auto;
-    width: 20px;
-
-    @include at-medium-size {
-        margin: 20px auto;
-        width: 30px;
-    }
-}
-
 
 .c-gallery__byline {
     color: $white;

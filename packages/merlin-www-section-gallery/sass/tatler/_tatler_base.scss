@@ -129,7 +129,20 @@ $section_gallery_icon_size: 40px;
     color: $COLOUR_MAIN_PRIMARY;
     margin: 10px 0;
 
-    @include at-x-large-size{
+    &:after {
+        background-color: $cinnabar;
+        content: '';
+        display: block;
+        height: 1px;
+        margin: 10px auto;
+        width: 20px;
+
+        @include at-x-large-size {
+            margin: 15px auto 20px;
+        }
+    }
+
+    @include at-x-large-size {
         @include font-size(37px);
         @include line-height(42px);
     }
@@ -144,19 +157,6 @@ $section_gallery_icon_size: 40px;
     @include at-x-large-size{
         @include font-size(18px);
         @include line-height(23px);
-    }
-}
-
-.c-gallery__separator {
-    background-color: $cinnabar;
-    border: none;
-    display: block;
-    height: 1px;
-    margin: 20px auto;
-    width: 20px;
-
-    @include at-x-large-size{
-        margin: 15px auto 20px;
     }
 }
 
