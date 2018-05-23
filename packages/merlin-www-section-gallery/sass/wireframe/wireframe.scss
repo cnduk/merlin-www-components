@@ -45,13 +45,15 @@
 }
 
 .c-gallery__image-item {
-    position: relative;
+    display: inline-block;
     float: left;
-
+    position: relative;
     width: 33.33333%;
+
     &:first-child {
         width: 66.66666%;
     }
+
     &:nth-last-child(2) {
         display: none;
     }
