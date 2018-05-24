@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.11.4"></a>
+## [1.11.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-feature@1.11.3...@cnbritain/merlin-www-section-feature@1.11.4) (2018-05-24)
+
+
+### Bug Fixes
+
+* **merlin-www-section-feature:** typo in tr styles ([53dba71](https://github.com/cnduk/merlin-www-components/commit/53dba71))
+
+
+
+
 <a name="1.11.3"></a>
 ## [1.11.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-feature@1.11.2...@cnbritain/merlin-www-section-feature@1.11.3) (2018-05-24)
 
