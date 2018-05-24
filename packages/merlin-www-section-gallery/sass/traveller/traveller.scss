@@ -91,7 +91,7 @@
 
 .c-gallery__contents {
     margin: 20px;
-	position: relative;
+    position: initial;
 
     @include at-medium-size {
         background-color: $WHITE;
@@ -111,7 +111,28 @@
 }
 
 .c-gallery__icon {
+  background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	display: block;
+	height: 48px;
+	left: 50%;
+	position: absolute;
+	top: calc(50% - 48px);
+	transform: translate(-50%, -50%);
+	width: 48px;
+
+	svg {
+	    display: block;
+	    fill: $WHITE;
+	    height: 100%;
+	    margin: 0 auto;
+	    vertical-align: middle;
+	    width: 20px;
+	}
+
+  @include at-medium-size {
     display: none;
+  }
 }
 
 .c-gallery__tag {
