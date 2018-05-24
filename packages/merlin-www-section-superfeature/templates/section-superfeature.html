@@ -59,7 +59,7 @@
                 {{# data.meta_list }}
                 <ul class="c-superfeature__meta{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
                     {{# data.items }}
-                    <li class="c-superfeature__meta-item">
+                    <li class="c-superfeature__meta-item c-superfeature__meta-item--{{ data.item.data.meta_type  }}">
                         {{# data.item }}
                         <span class="{{# style.cls }} {{ style.cls }}{{/ style.cls }}">{{ data.title }}</span>
                         {{/ data.item }}
