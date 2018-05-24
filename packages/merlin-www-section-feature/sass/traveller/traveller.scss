@@ -163,7 +163,7 @@
     text-align: center;
     text-transform: uppercase;
 
-    @include at-x-large {
+    @include at-x-large-size {
         @include font-size(28px);
         @include line-height(32px);
         letter-spacing: 2px;
@@ -175,7 +175,7 @@
 .c-feature__teaser {
     display: none;
 
-    @include at-x-large {
+    @include at-x-large-size {
         @include font("PROXIMA NOVA CONDENSED", 16px, 400, 20px);
         color: $RAVEN;
         display: block;
