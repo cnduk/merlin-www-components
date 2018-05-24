@@ -43,7 +43,13 @@
 .c-splash-hero__image {}
 
 .c-splash-hero__image__wrapper {
-	background-color: $mercury;
+    background-color: $mercury;
+    padding-top: 66.6666%;
+    position: relative;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding-top: 41.6666%;
+    }
 }
 
 .c-splash-hero__content {
