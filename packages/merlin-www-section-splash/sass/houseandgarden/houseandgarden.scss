@@ -47,7 +47,7 @@
     padding-top: 66.6666%;
     position: relative;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         padding-top: 41.6666%;
     }
 }
