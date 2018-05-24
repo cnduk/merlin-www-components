@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.31"></a>
+## [1.8.31](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-splash@1.8.30...@cnbritain/merlin-www-section-splash@1.8.31) (2018-05-24)
+
+
+### Bug Fixes
+
+* **merlin-www-section-splash:** copy old superfeature styles over for image ([e03644f](https://github.com/cnduk/merlin-www-components/commit/e03644f))
+
+
+
+
 <a name="1.8.29"></a>
 ## [1.8.29](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-splash@1.8.28...@cnbritain/merlin-www-section-splash@1.8.29) (2018-05-21)
 
