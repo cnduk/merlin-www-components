@@ -103,6 +103,11 @@
     margin-right: -$MOBILE_SIDE_GUTTER;
     margin-top: 40px;
 
+    .ad__block {
+        background-color: $white;
+        padding: 20px 0;
+    }
+
     @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
         margin-left: -$TABLET_SIDE_GUTTER;
         margin-right: -$TABLET_SIDE_GUTTER;

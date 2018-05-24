@@ -37,6 +37,11 @@
 
 .ad--article-inline {
     margin: 45px (-$MOBILE_SIDE_GUTTER);
+
+    .ad__container {
+        background: $alabaster-f9;
+        padding: 20px 0;
+    }
 }
 
 @include tablet-size {
