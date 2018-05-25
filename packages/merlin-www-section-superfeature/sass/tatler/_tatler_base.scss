@@ -147,10 +147,9 @@
 }
 
 .c-superfeature__meta {
-    @include font('COMMUTER SANS', 10px, 'MEDIUM', 10px);
+    @include font('COMMUTER SANS', 9px, 400, 9px);
     color: $gray;
-    font-size: 0;
-    letter-spacing: 1px;
+    margin-top: 5px;
     text-transform: uppercase;
 }
 

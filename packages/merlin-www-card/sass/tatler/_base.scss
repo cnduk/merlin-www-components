@@ -152,16 +152,10 @@ svg.c-card__image__icon--video {
 }
 
 .c-card__meta {
-    @include card-meta;
-    @include line-height(15px);
-
-    display: inline-block;
+    @include font('COMMUTER SANS', 9px, 400, 9px);
+    color: $gray;
     margin-top: 5px;
-
-    @include card-switcher-size {
-        margin-top: 5px;
-    }
-
+    text-transform: uppercase;
 }
 
 li.c-card__meta-item {
