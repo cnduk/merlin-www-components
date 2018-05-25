@@ -49,7 +49,7 @@
  * BASE CARD STYLES
  */
 @mixin t-card-tag {
-    @include font('STARLING', 11px, 'MEDIUM', 13px);
+    @include font('COMMUTER SANS', 11px, 'MEDIUM', 13px);
 
     color: $COLOUR_MAIN_TERTIARY;
     letter-spacing: 1px;
