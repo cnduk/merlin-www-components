@@ -15,7 +15,7 @@
  * TOPICS
  */
 @mixin t-topic-title-small {
-    @include font('COMMUTER SANS', 20px, 'BOLD', 20px);
+    @include font('COMMUTER SANS', 20px, 400, 20px);
 
     color: $black;
     letter-spacing: 1px;
@@ -23,7 +23,7 @@
 }
 
 @mixin t-topic-title-large {
-    @include font('COMMUTER SANS', 30px, 'BOLD', 30px);
+    @include font('COMMUTER SANS', 30px, 400, 30px);
 
     color: $black;
     letter-spacing: 1px;
