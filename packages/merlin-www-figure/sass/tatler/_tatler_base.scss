@@ -16,7 +16,7 @@
 .c-figure__title,
 .c-figure__caption,
 .c-figure__caption .bb-p {
-    @include font('AGENDA', 16px, 'MEDIUM', 18px);
+    @include font('COMMUTER SANS', 16px, 'MEDIUM', 18px);
     letter-spacing: 0.5px;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .c-figure__credit {
-    @include font('AGENDA', 10px, 'MEDIUM', 10px);
+    @include font('COMMUTER SANS', 10px, 'MEDIUM', 10px);
 
     color: $COLOUR_CREDIT_TEXT;
     letter-spacing: 1px;

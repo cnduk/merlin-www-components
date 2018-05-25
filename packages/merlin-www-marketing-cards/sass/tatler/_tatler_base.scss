@@ -19,7 +19,7 @@
     margin: 0 auto 30px auto;
 }
 .a-marketing-card__brand__name {
-    @include font("AGENDA", 16px, 500);
+    @include font("COMMUTER SANS", 16px, 500);
     text-transform: uppercase;
     text-decoration: none;
 
@@ -33,7 +33,7 @@
     }
 }
 .a-marketing-card__brand__prefix {
-    @include font('AGENDA', 12px, 'MEDIUM', 16px);
+    @include font('COMMUTER SANS', 12px, 'MEDIUM', 16px);
     font-style: italic;
     letter-spacing: 1.2px;
     margin-bottom: 10px;
@@ -52,7 +52,7 @@
     margin: 0 auto 30px auto;
 }
 .a-marketing-card__desc {
-    @include font('AGENDA', 14px, 'MEDIUM', 20px);
+    @include font('COMMUTER SANS', 14px, 'MEDIUM', 20px);
     letter-spacing: 0.8px;
     margin: 15px auto 30px auto;
 

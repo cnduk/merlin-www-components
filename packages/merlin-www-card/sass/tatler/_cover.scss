@@ -33,7 +33,7 @@
     }
 
     .c-card__title {
-        @include font('AGENDA', 13px, 'MEDIUM', 13px);
+        @include font('COMMUTER SANS', 13px, 'MEDIUM', 13px);
 
         color: $gray;
         letter-spacing: .5px;
@@ -52,7 +52,7 @@
         }
 
         .c-card__title {
-            @include font('AGENDA', 17px, 'MEDIUM', 17px);
+            @include font('COMMUTER SANS', 17px, 'MEDIUM', 17px);
 
             letter-spacing: 1px;
         }
@@ -71,7 +71,7 @@
     }
 
     .c-card__title {
-        @include font('AGENDA', 17px, 'MEDIUM', 17px);
+        @include font('COMMUTER SANS', 17px, 'MEDIUM', 17px);
 
         letter-spacing: 1px;
     }

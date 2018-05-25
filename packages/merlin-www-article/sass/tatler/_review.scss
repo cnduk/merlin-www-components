@@ -21,10 +21,10 @@
 }
 
 .a-review__item {
-    @include font('AGENDA', 14px, 'MEDIUM', 17px);
+    @include font('COMMUTER SANS', 14px, 'MEDIUM', 17px);
 
     @include desktop-size {
-        @include font('AGENDA', 16px, 'MEDIUM', 20px);
+        @include font('COMMUTER SANS', 16px, 'MEDIUM', 20px);
     }
 
     & + & {
@@ -55,12 +55,12 @@
 
 
 .a-review__value {
-    @include font('AGENDA', 15px, 'MEDIUM', 19px);
+    @include font('COMMUTER SANS', 15px, 'MEDIUM', 19px);
 
     margin: 0;
 
     @include desktop-size {
-        @include font('AGENDA', 16px, 'MEDIUM', 20px);
+        @include font('COMMUTER SANS', 16px, 'MEDIUM', 20px);
     }
 }
 
@@ -81,7 +81,7 @@ li.a-review__rating-list__item--active {
 }
 
 .a-review__rating {
-    @include font('AGENDA', 16px, 'BOLD', 16px);
+    @include font('COMMUTER SANS', 16px, 'BOLD', 16px);
 
     display: inline-block;
     margin-left: 5px;

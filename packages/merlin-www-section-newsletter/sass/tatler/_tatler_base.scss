@@ -47,7 +47,7 @@
 }
 
 .c-newsletter__description {
-    @include font('AGENDA', 16px, 'MEDIUM', 20px);
+    @include font('COMMUTER SANS', 16px, 'MEDIUM', 20px);
 
     color: $gray;
     letter-spacing: .3px;
@@ -55,7 +55,7 @@
     margin-top: 10px;
 
     @include tablet-size {
-        @include font('AGENDA', 16px, 'MEDIUM', 24px);
+        @include font('COMMUTER SANS', 16px, 'MEDIUM', 24px);
 
         margin-bottom: 30px;
         margin-top: 20px;
@@ -126,7 +126,7 @@
 }
 
 .c-newsletter__legal {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    @include font('COMMUTER SANS', 12px, 'MEDIUM', 12px);
 
     color: $gray;
     margin: 0;
@@ -136,7 +136,7 @@
     }
 
     @include tablet-size {
-        @include font('AGENDA', 14px, 'MEDIUM', 14px);
+        @include font('COMMUTER SANS', 14px, 'MEDIUM', 14px);
     }
 }
 

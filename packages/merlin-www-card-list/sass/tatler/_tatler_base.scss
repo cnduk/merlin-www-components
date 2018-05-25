@@ -344,7 +344,7 @@ $C_CARD_BUM_MARGIN: 0;
 
         .c-card__image {
             &:after {
-                @include font("AGENDA", 12px, 500, 12px);
+                @include font("COMMUTER SANS", 12px, 500, 12px);
                 background-color: $cinnabar;
                 bottom: 0px;
                 color: $white;

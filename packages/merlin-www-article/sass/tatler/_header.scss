@@ -126,7 +126,7 @@
 }
 
 .a-header__image-title {
-    @include font('AGENDA', 13px, 'MEDIUM', 17px);
+    @include font('COMMUTER SANS', 13px, 'MEDIUM', 17px);
 
     letter-spacing: 1px;
     margin: 15px auto 5px auto;
@@ -140,7 +140,7 @@
 }
 
 .a-header__image-caption {
-    @include font('AGENDA', 13px, 'MEDIUM', 17px);
+    @include font('COMMUTER SANS', 13px, 'MEDIUM', 17px);
 
     letter-spacing: 1px;
     margin: 5px auto 10px auto;
@@ -153,7 +153,7 @@
 }
 
 .a-header__image-credit {
-    @include font('AGENDA', 10px, 'MEDIUM', 10px);
+    @include font('COMMUTER SANS', 10px, 'MEDIUM', 10px);
 
     color: $gray;
     letter-spacing: 1px;
@@ -178,7 +178,7 @@
 .a-header__tag,
 .a-header__tag__primary,
 .a-header__tag__secondary {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    @include font('COMMUTER SANS', 12px, 'MEDIUM', 12px);
 
     color: $gray;
     letter-spacing: 1px;
@@ -187,7 +187,7 @@
     text-decoration: none;
 
     @include desktop-size {
-        @include font('AGENDA', 16px, 'MEDIUM', 16px);
+        @include font('COMMUTER SANS', 16px, 'MEDIUM', 16px);
 
         letter-spacing: 1px;
         margin: 0 0 12px;
@@ -224,7 +224,7 @@
 
 .a-header__sponsor {
     color: $gray;
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    @include font('COMMUTER SANS', 12px, 'MEDIUM', 12px);
     letter-spacing: 1px;
     margin: $MARGIN_X_SMALL 0 0 0;
 
@@ -282,7 +282,7 @@
 
 li.a-header__meta-item {
     color: $gray;
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    @include font('COMMUTER SANS', 12px, 'MEDIUM', 12px);
     letter-spacing: 0.3px;
 
     a {
@@ -321,7 +321,7 @@ li.a-header__meta-item {
 }
 
 .a-header__event-title {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    @include font('COMMUTER SANS', 12px, 'MEDIUM', 12px);
 
     color: $gray;
     letter-spacing: 1px;
@@ -329,14 +329,14 @@ li.a-header__meta-item {
     text-transform: uppercase;
 
     @include desktop-size {
-        @include font('AGENDA', 13px, 'MEDIUM', 13px);
+        @include font('COMMUTER SANS', 13px, 'MEDIUM', 13px);
 
         margin: 15px 0 4px;
     }
 }
 
 .a-header__event-location {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    @include font('COMMUTER SANS', 12px, 'MEDIUM', 12px);
 
     text-transform: none;
     letter-spacing: .5px;
@@ -345,14 +345,14 @@ li.a-header__meta-item {
 
 
     @include desktop-size {
-        @include font('AGENDA', 13px, 'MEDIUM', 13px);
+        @include font('COMMUTER SANS', 13px, 'MEDIUM', 13px);
 
         margin: 0 0 2px;
     }
 }
 
 .a-header__event-date {
-    @include font('AGENDA', 10px, 'MEDIUM', 18px);
+    @include font('COMMUTER SANS', 10px, 'MEDIUM', 18px);
 
     color: $gray;
     letter-spacing: 1px;
@@ -365,7 +365,7 @@ li.a-header__meta-item {
 }
 
 .a-header__event-btn {
-    @include font("AGENDA", 10px, 500, 10px);
+    @include font("COMMUTER SANS", 10px, 500, 10px);
     border-bottom: 1px solid rgba(0, 0, 0, 0);
     color: $cinnabar;
     letter-spacing: 0.5px;
@@ -386,7 +386,7 @@ li.a-header__meta-item {
     }
 }
 .a-share__youtube__title {
-    @include font('AGENDA', 9px, 'NORMAL', 11px);
+    @include font('COMMUTER SANS', 9px, 'NORMAL', 11px);
     text-transform: uppercase;
 }
 

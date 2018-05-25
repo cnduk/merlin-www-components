@@ -74,7 +74,7 @@
 }
 
 .c-magazine__content__title {
-    @include font('AGENDA', 11px, 'MEDIUM', 12px);
+    @include font('COMMUTER SANS', 11px, 'MEDIUM', 12px);
 
     color: $gray;
     display: block;
@@ -84,7 +84,7 @@
     margin: 30px 0 6px;
 
     @include tablet-size {
-        @include font('AGENDA', 12px, 'MEDIUM', 13px);
+        @include font('COMMUTER SANS', 12px, 'MEDIUM', 13px);
 
         letter-spacing: 1px;
         margin: 0 0 6px;

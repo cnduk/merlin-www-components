@@ -1,5 +1,5 @@
 @mixin bb-credit($font-size) {
-    @include font('AGENDA', $font-size, 'MEDIUM', $font-size);
+    @include font('COMMUTER SANS', $font-size, 'MEDIUM', $font-size);
 
     color: $COLOUR_CREDIT_TEXT;
     text-transform: uppercase;
@@ -98,7 +98,7 @@
 .bb-small {}
 
 .bb-ul, .bb-ol {
-    @include font('AGENDA');
+    @include font('COMMUTER SANS');
     @include font-size(15px);
     @include line-height(22px);
 
@@ -157,7 +157,7 @@
         }
 
         &:before {
-            @include font('AGENDA', 16px, 'BOLD', 23px);
+            @include font('COMMUTER SANS', 16px, 'BOLD', 23px);
 
             border-radius: 50%;
             border: 1px solid $COLOUR_MAIN_HIGHLIGHT;
@@ -237,7 +237,7 @@
 
 .bb-figure__caption,
 .bb-figure__caption .bb-p {
-    @include font('AGENDA', 16px, 'MEDIUM', 18px);
+    @include font('COMMUTER SANS', 16px, 'MEDIUM', 18px);
     letter-spacing: 0.5px;
     margin: 15px 0 0 0;
 
@@ -259,7 +259,7 @@
 }
 
 .bb-figure__credit {
-    @include font('AGENDA', 10px, 'MEDIUM', 10px);
+    @include font('COMMUTER SANS', 10px, 'MEDIUM', 10px);
 
     color: $COLOUR_CREDIT_TEXT;
     letter-spacing: 1px;
@@ -288,7 +288,7 @@
  * Note
  */
 .bb-note {
-    @include font('AGENDA', 14px, 'MEDIUM', 18px);
+    @include font('COMMUTER SANS', 14px, 'MEDIUM', 18px);
 
     border-top: 1px solid $COLOUR_BORDER_SOLID;
     color: $black;
@@ -299,7 +299,7 @@
     position: relative;
 
     @include desktop-size {
-        @include font('AGENDA', 14px, 'MEDIUM', 18px);
+        @include font('COMMUTER SANS', 14px, 'MEDIUM', 18px);
 
         letter-spacing: .3px;
         padding-left: 20px;
@@ -497,7 +497,7 @@
 
 .bb-question__by,
 .bb-answer__by {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    @include font('COMMUTER SANS', 12px, 'MEDIUM', 12px);
 
     color: $gray;
     font-style: italic;
@@ -507,7 +507,7 @@
 
 .bb-question__author,
 .bb-answer__author {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    @include font('COMMUTER SANS', 12px, 'MEDIUM', 12px);
 
     color: $gray;
     letter-spacing: 1px;
@@ -551,7 +551,7 @@
 }
 
 .bb-pullquote__credit {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    @include font('COMMUTER SANS', 12px, 'MEDIUM', 12px);
 
     color: $gray;
     text-align: center;
@@ -591,7 +591,7 @@
 }
 
 .bb-blockquote__quote {
-    @include font('AGENDA', 17px, 'MEDIUM', 22px);
+    @include font('COMMUTER SANS', 17px, 'MEDIUM', 22px);
 
     margin: 0 0 15px;
     letter-spacing: .3px;
@@ -606,7 +606,7 @@
 }
 
 .bb-blockquote__credit {
-    @include font('AGENDA', 10px, 'MEDIUM', 10px);
+    @include font('COMMUTER SANS', 10px, 'MEDIUM', 10px);
 
     color: $COLOUR_CREDIT_TEXT;
     letter-spacing: 1px;
@@ -669,10 +669,10 @@
 }
 
 .bb-infobox__body {
-    @include font('AGENDA', 14px, 'MEDIUM', 17px);
+    @include font('COMMUTER SANS', 14px, 'MEDIUM', 17px);
 
     @include desktop-size {
-        @include font('AGENDA', 16px, 'MEDIUM', 20px);
+        @include font('COMMUTER SANS', 16px, 'MEDIUM', 20px);
     }
 }
 
@@ -701,13 +701,13 @@
 }
 
 .bb-infobox__item__value {
-    @include font('AGENDA', 15px, 'MEDIUM', 19px);
+    @include font('COMMUTER SANS', 15px, 'MEDIUM', 19px);
 
     letter-spacing: .3px;
     margin: 0;
 
     @include desktop-size {
-        @include font('AGENDA', 16px, 'MEDIUM', 20px);
+        @include font('COMMUTER SANS', 16px, 'MEDIUM', 20px);
 
         letter-spacing: .3px;
         margin: 0;
@@ -867,7 +867,7 @@
         padding: 20px;
 
         &:before {
-            @include font('AGENDA', 12px, 'MEDIUM', 12px);
+            @include font('COMMUTER SANS', 12px, 'MEDIUM', 12px);
 
             color: $cinnabar;
             bottom: 20px;
@@ -928,7 +928,7 @@
 }
 
 .bb-card__tag {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    @include font('COMMUTER SANS', 12px, 'MEDIUM', 12px);
 
     color: $gray;
     letter-spacing: 1px;

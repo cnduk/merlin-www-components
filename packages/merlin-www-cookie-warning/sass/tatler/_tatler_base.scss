@@ -23,7 +23,7 @@
 }
 
 .c-cookie-warning__message {
-    @include font('AGENDA', 14px, 'MEDIUM', 17px);
+    @include font('COMMUTER SANS', 14px, 'MEDIUM', 17px);
     margin: 0;
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
