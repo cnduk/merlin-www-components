@@ -19,13 +19,12 @@
 }
 
 .c-topic-strip--c-card-section {
-    padding-bottom: 15px;
-    margin-bottom: 5px;
-    text-align: left;
+    margin: 20px 0;
+    padding: 0;
+    text-align: center;
 
     @include tablet-size {
-        padding-bottom: 0;
-        margin-bottom: 0;
+        margin: 30px 0;
     }
 }
 
@@ -41,12 +40,12 @@ li.c-topic-strip__item {
 }
 
 .c-topic-strip__title {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    @include font('COMMUTER SANS', 12px, 400, 12px);
 
     color: $COLOUR_TITLE_TEXT;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .c-topic-strip__btn {
@@ -75,12 +74,12 @@ li.c-topic-strip__item {
         margin: $MARGIN_XX_SMALL $MARGIN_XX_SMALL 0 0;
     }
 
-    .c-topic-strip__btn {
-        @include button-related;
+    // .c-topic-strip__btn {
+    //     @include button-related;
 
-        &:hover {
-            @include button-related-hover;
-        }
-    }
+    //     &:hover {
+    //         @include button-related-hover;
+    //     }
+    // }
 
 }
