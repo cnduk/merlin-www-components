@@ -12,8 +12,6 @@
     @include at-medium-size() {
         margin-bottom: $TABLET_SLICE_MARGIN;
         margin-top: $TABLET_SLICE_MARGIN;
-        // padding-left: $TABLET_SIDE_GUTTER;
-        // padding-right: $TABLET_SIDE_GUTTER;
         padding-left: 0;
         padding-right: 0;
     }
