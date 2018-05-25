@@ -73,15 +73,6 @@
     @include at-x-large-size(){
         padding: 20px 60px;
     }
-    @include at-medium-size(){
-        .c-feature--left & {
-            @include border-line-box(left);
-        }
-
-        .c-feature--right & {
-            @include border-line-box(right);
-        }
-    }
 }
 
 .c-feature__icon {
