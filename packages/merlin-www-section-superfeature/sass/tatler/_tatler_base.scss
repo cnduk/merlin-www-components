@@ -110,18 +110,14 @@
 
 
 .c-superfeature__tag {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
-
+    @include font("COMMUTER SANS", 12px, 400, 12px);
     color: $gray;
     letter-spacing: 1px;
-    margin: 0 0 10px;
+    margin: 0 0 10px 0;
     text-transform: uppercase;
 
-    @include at-medium-size {
-        @include font('AGENDA', 12px, 'MEDIUM', 12px);
-
-        letter-spacing: 1px;
-        margin: 0 0 15px;
+    @include at-small-size {
+        margin-bottom: 15px;
     }
 }
 
