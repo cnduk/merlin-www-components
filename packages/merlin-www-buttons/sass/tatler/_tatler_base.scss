@@ -1,3 +1,27 @@
+@import '@cnbritain/merlin-www-common:tatler';
+
+@import './_mixins';
+@import '../wireframe/wireframe';
+
+/* ===RESET=== */
+
+a.btn-single,
+a.btn-group,
+a.btn-share,
+a.btn-related {
+    border-bottom: none;
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        border-bottom: none;
+    }
+
+}
+
+/* ===SINGLE=== */
+
 .btn-single,
 a.btn-single {
     @include button-single;
@@ -11,8 +35,11 @@ a.btn-single--light {
     &:focus {
         @include button-single-light-hover;
     }
-}
 
+    @include disabled-selectors {
+        @include button-single-light-disabled;
+    }
+}
 
 .btn-single--dark,
 a.btn-single--dark {
@@ -22,8 +49,13 @@ a.btn-single--dark {
     &:focus {
         @include button-single-dark-hover;
     }
+
+    @include disabled-selectors {
+        @include button-single-dark-disabled;
+    }
 }
 
+/* ===GROUP=== */
 
 .btn-group,
 a.btn-group {
@@ -50,51 +82,31 @@ a.btn-group--dark {
     }
 }
 
-.btn-related,
-a.btn-related {
-    @include button-related;
-
-    &:hover,
-    &:focus {
-        @include button-related-hover;
-    }
-}
+/* ===TOP STORIES=== */
 
 .btn-top-stories,
 a.btn-top-stories {
-    @include button-nav;
-    @include button-nav-light;
-
-    &:hover:not(.btn-disabled):not([disabled]),
-    &:focus:not(.btn-disabled):not([disabled]) {
-        @include button-nav-light-hover;
-    }
-
-    &.btn-disabled,
-    &[disabled] {
-        @include button-nav-light-disabled;
-    }
-}
-
-.btn--trend,
-a.btn--trend {
-    @include button-trend;
+    @include button-top-stories();
 
     &:hover,
     &:focus {
-        @include button-trend-hover;
+        @include button-top-stories-hover();
     }
+
+    @include disabled-selectors {
+        @include button-top-stories-disabled();
+    }
+
 }
+
+/* ===SHARE=== */
 
 .btn-share,
 a.btn-share {
-    @include button-share;
+    @include button-share();
 }
-
 .btn-share--monotone,
-a.btn-share--monotone {
-    @include button-share-monotone;
-}
+a.btn-share--monotone {}
 
 @each $name, $color in $COLOUR_SOCIAL {
     .btn-share--#{$name},
@@ -105,8 +117,8 @@ a.btn-share--monotone {
             @include button-share-dark($name);
         }
 
-        &:hover,
-        &:hover.btn-share--dark {
+        &:hover.btn-share--dark,
+        &:focus.btn-share--dark {
             @include button-share-dark-hover($name);
         }
 
@@ -114,9 +126,53 @@ a.btn-share--monotone {
             @include button-share-light($name);
         }
 
-        &:hover,
-        &:hover.btn-share--light {
+        &:hover.btn-share--light,
+        &:focus.btn-share--light {
             @include button-share-light-hover($name);
         }
     }
+}
+
+/* ===RELATED=== */
+
+.btn-related,
+a.btn-related {
+    @include button-related();
+}
+
+.btn-related--light,
+a.btn-related--light {
+    @include button-related-light;
+
+    &:hover,
+    &:focus {
+        @include button-related-light-hover;
+    }
+}
+
+.btn-related--dark,
+a.btn-related--dark {
+    @include button-related-dark;
+
+    &:hover,
+    &:focus {
+        @include button-related-dark-hover;
+    }
+}
+
+/* ===GALLERY NAVIGATION=== */
+
+.btn-gallery-navigation,
+a.btn-gallery-navigation {
+    @include button-gallery-navigation;
+
+    &:hover,
+    &:focus {
+        @include button-gallery-navigation-hover;
+    }
+
+    @include disabled-selectors {
+        @include button-gallery-navigation-disabled;
+    }
+
 }

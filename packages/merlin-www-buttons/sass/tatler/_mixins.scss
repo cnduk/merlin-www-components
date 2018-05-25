@@ -1,106 +1,150 @@
 @import '@cnbritain/merlin-www-common:tatler';
 
-@mixin button-reset {
-    border: 0;
-    cursor: pointer;
+@mixin disabled-selectors() {
+    &[disabled],
+    &.is-disabled,
+    &.btn-disabled {
+        @content;
+    }
+}
+
+@mixin button-reset() {
+    border-bottom: none;
     display: inline-block;
     text-decoration: none;
 
     &:hover {
-        border: 0;
+        border-bottom: none;
     }
 }
 
-@mixin button-single {
-    @include button-reset;
+/* ===SINGLE=== */
 
-    @include font('AGENDA', 15px, 'MEDIUM', 16px)
-
-    letter-spacing: 2px;
-    padding-right: 20px;
-    position: relative;
+@mixin button-single() {
+    @include button-reset();
+    @include font("COMMUTER SANS", 12px, 400, 12px);
+    letter-spacing: 0.5px;
+    padding: 10px 30px 10px 30px;
     text-transform: uppercase;
-    text-align: center;
+}
 
-    &:after {
-        content: '';
-        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 15.1" fill="%23e03b2a"><path d="M20 7.5a1 1 0 0 0-.3-.7L13 .3a1 1 0 0 0-1.4 1.4l5 5H1a1 1 0 0 0 0 1.8h15.6l-5 5a1 1 0 0 0 1.4 1.3l6.7-6.5a1 1 0 0 0 .3-.8z"/></svg>') 50% 50% no-repeat;
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 50%;
+@mixin button-single-light() {
+    border: 1px solid $black;
+    color: $black;
+}
+
+@mixin button-single-light-hover() {
+    background-color: $black;
+    border: 1px solid $black;
+    color: $white;
+}
+
+@mixin button-single-light-disabled() {
+    border: 1px solid $mercury;
+    color: $mercury;
+}
+
+@mixin button-single-dark() {
+    border: 1px solid $white;
+    color: $white;
+}
+
+@mixin button-single-dark-hover() {
+    background-color: $white;
+    border: 1px solid $white;
+    color: $black;
+}
+
+@mixin button-single-dark-disabled() {
+    border: 1px solid $gray;
+    color: $gray;
+}
+
+/* ===GROUP=== */
+
+@mixin button-group() {
+    @include button-reset();
+    @include font("COMMUTER SANS", 10px, 400, 10px);
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+@mixin button-group-light() {
+    border: 1px solid $black;
+    color: $black;
+}
+
+@mixin button-group-light-hover() {
+    background-color: $black;
+    border: 1px solid $black;
+    color: $white;
+}
+
+@mixin button-group-light-disabled() {
+    border: 1px solid $mercury;
+    color: $mercury;
+}
+
+@mixin button-group-dark() {
+    border: 1px solid $white;
+    color: $white;
+}
+
+@mixin button-group-dark-hover() {
+    background-color: $white;
+    border: 1px solid $white;
+    color: $black;
+}
+
+@mixin button-group-dark-disabled() {
+    border: 1px solid $gray;
+    color: $gray;
+}
+
+/* ===TOP STORIES=== */
+
+@mixin button-top-stories() {
+    @include button-reset();
+    background: $white;
+    height: 50%;
+    width: 60px;
+
+    svg {
+        height: 100%;
         width: 15px;
-        height: 15px;
-        transform: translateY(-50%);
+    }
+
+    path {
+        fill: $black;
     }
 }
 
-@mixin button-single-light {
-    color: $COLOUR_BUTTON_CTA_TEXT;
+@mixin button-top-stories-hover() {
+    background: $black;
+
+    svg, path {
+        fill: $white;
+    }
 }
 
-@mixin button-single-light-hover {
-    color: $COLOUR_BUTTON_CTA_TEXT_HOVER;
+@mixin button-top-stories-disabled() {
+    background: transparent
+
+    svg, path {
+        fill: $mercury;
+    }
 }
 
-@mixin button-single-dark {
-    color: $COLOUR_BUTTON_CTA_DARK_TEXT;
-}
-
-@mixin button-single-dark-hover {
-    color: $COLOUR_BUTTON_CTA_DARK_TEXT_HOVER;
-}
-
-@mixin button-group {
-    @include button-reset;
-
-    @include font('AGENDA', 15px, 'MEDIUM', 15px);
-
-    padding: 8px 10px;
-    text-align: center;
-}
-
-@mixin button-group-light {
-    background: $COLOUR_BUTTON_TOPIC_BG;
-    border: 1px solid $COLOUR_BUTTON_TOPIC_BORDER;
-    color: $COLOUR_BUTTON_TOPIC_TEXT;
-}
-
-@mixin button-group-light-hover {
-    background: $COLOUR_BUTTON_TOPIC_BG_HOVER;
-    border: 1px solid $COLOUR_BUTTON_TOPIC_BORDER_HOVER;
-    color: $COLOUR_BUTTON_TOPIC_TEXT_HOVER;
-}
-
-@mixin button-group-dark {
-    background: $COLOUR_BUTTON_TOPIC_DARK_BG;
-    border: 1px solid $COLOUR_BUTTON_TOPIC_DARK_BORDER;
-    color: $COLOUR_BUTTON_TOPIC_DARK_TEXT;
-}
-
-@mixin button-group-dark-hover {
-    background: $COLOUR_BUTTON_TOPIC_DARK_BG_HOVER;
-    border: 1px solid $COLOUR_BUTTON_TOPIC_DARK_BORDER_HOVER;
-    color: $COLOUR_BUTTON_TOPIC_DARK_TEXT_HOVER;
-}
-
-@mixin button-related {}
-@mixin button-related-hover {}
-
-@mixin button-trend {}
-@mixin button-trend-hover {}
+/* ===SHARE=== */
 
 @mixin button-share {
-    $_btn_size: 40px;
-
-    @include button-reset;
-
+    @include button-reset();
     border-radius: 50%;
-    height: $_btn_size;
-    line-height: $_btn_size;
-    padding: 0;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
-    width: $_btn_size;
+    width: 40px;
 
     svg {
         height: 100%;
@@ -109,114 +153,57 @@
 }
 
 @mixin button-share-light($name) {
-    background-color: $COLOUR_SOCIAL_ICON_BG;
+    background-color: $wild-sand;
 
-    svg, path {
-        fill: map-get($COLOUR_SOCIAL_LIGHT, $name);
+    svg {
+        fill: map-get($COLOUR_SOCIAL, $name);
     }
 }
 
 @mixin button-share-light-hover($name) {
-    background-color: map-get($COLOUR_SOCIAL_LIGHT, $name);
-
-    svg, path {
-        fill: $COLOUR_SOCIAL_ICON_BG;
-    }
-}
-
-@mixin button-share-dark($name) {
-    background-color: $COLOUR_SOCIAL_ICON_BG_DARK;
-
-    svg, path {
-        @if $name == 'email' {
-            fill: $white;
-        } @else {
-            fill: map-get($COLOUR_SOCIAL_DARK, $name);
-        }
-    }
-}
-
-@mixin button-share-dark-hover($name) {
-    background-color: map-get($COLOUR_SOCIAL_DARK, $name);
-
-    svg, path {
-        @if $name == 'email' {
-            fill: $white;
-        } @else {
-            fill: $COLOUR_SOCIAL_ICON_BG;
-        }
-    }
-}
-
-@mixin button-share-monotone {}
-
-// "Nav" button, used for top stories/gallery nav and carousel
-@mixin button-nav {
-    $_btn_size: 60px;
-
-    @include button-reset;
-
-    height: $_btn_size;
-    line-height: $_btn_size;
-    width: $_btn_size;
-    vertical-align: middle;
+    background-color: map-get($COLOUR_SOCIAL, $name);
 
     svg {
-        height: 25%;
-        width: 25%;
+        fill: $white;
     }
 }
 
-@mixin button-nav-light {
-    background: $COLOUR_BUTTON_NAV_BG;
-    border: 1px solid $COLOUR_BUTTON_NAV_BORDER;
+@mixin button-share-dark($name) {}
+@mixin button-share-dark-hover($name) {}
+
+/* ===RELATED=== */
+
+@mixin button-related() {}
+@mixin button-related-light() {}
+@mixin button-related-light-hover() {}
+@mixin button-related-dark() {}
+@mixin button-related-dark-hover() {}
+
+/* ===GALLERY NAVIGATION=== */
+
+@mixin button-gallery-navigation() {
+    @include button-reset();
+    background-color: $wild-sand;
+    height: 35px;
+    width: 35px;
 
     svg, path {
-        fill: $COLOUR_BUTTON_NAV_TEXT;
+        fill: $black;
     }
 }
 
-@mixin button-nav-light-hover {
-    background: $COLOUR_BUTTON_NAV_BG_HOVER;
-    border: 1px solid $COLOUR_BUTTON_NAV_BORDER_HOVER;
+@mixin button-gallery-navigation-hover() {
+    background-color: $black;
 
     svg, path {
-        fill: $COLOUR_BUTTON_NAV_TEXT_HOVER;
+        fill: $white;
     }
 }
 
-@mixin button-nav-light-disabled {
-    background: $COLOUR_BUTTON_NAV_BG_DISABLED;
-    border: 1px solid $COLOUR_BUTTON_NAV_BORDER_DISABLED;
+@mixin button-gallery-navigation-disabled() {
+    background-color: transparent;
 
     svg, path {
-        fill: $COLOUR_BUTTON_NAV_TEXT_DISABLED;
-    }
-}
-
-@mixin button-nav-dark {
-    background: $COLOUR_BUTTON_NAV_DARK_BG;
-    border: 1px solid $COLOUR_BUTTON_NAV_DARK_BORDER;
-
-    svg, path {
-        fill: $COLOUR_BUTTON_NAV_DARK_TEXT;
-    }
-}
-
-@mixin button-nav-dark-hover {
-    background: $COLOUR_BUTTON_NAV_DARK_BG_HOVER;
-    border: 1px solid $COLOUR_BUTTON_NAV_DARK_BORDER_HOVER;
-
-    svg, path {
-        fill: $COLOUR_BUTTON_NAV_DARK_TEXT_HOVER;
-    }
-}
-
-@mixin button-nav-dark-disabled {
-    background: $COLOUR_BUTTON_NAV_DARK_BG_DISABLED;
-    border: 1px solid $COLOUR_BUTTON_NAV_DARK_BORDER_DISABLED;
-
-    svg, path {
-        fill: $COLOUR_BUTTON_NAV_DARK_TEXT_DISABLED;
+        fill: $wild-sand;
     }
 }
