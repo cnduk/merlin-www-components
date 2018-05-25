@@ -1,0 +1,14 @@
+@import "../_fonts";
+
+/**
+ * These fonts are hosted by TypeKit
+ */
+
+// Font configs
+$_FONT: "Commuter Sans", sans-serif;
+$FONT_COMMUTER_SANS: map-merge($FONT_GROUP_DEFAULT, (
+    'FAMILY': $_FONT,
+    'LETTER SPACING': normal,
+    'LINE HEIGHT': 1.5em
+));
+$FONT_GROUPS: map-merge($FONT_GROUPS, ('COMMUTER SANS': $FONT_COMMUTER_SANS));
