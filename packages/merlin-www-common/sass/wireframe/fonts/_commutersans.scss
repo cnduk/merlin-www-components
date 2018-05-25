@@ -5,7 +5,7 @@
  */
 
 // Font configs
-$_FONT: "Commuter Sans", sans-serif;
+$_FONT: "commuters-sans", sans-serif;
 $FONT_COMMUTER_SANS: map-merge($FONT_GROUP_DEFAULT, (
     'FAMILY': $_FONT,
     'LETTER SPACING': normal,
