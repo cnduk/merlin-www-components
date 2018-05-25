@@ -30,7 +30,7 @@
 }
 
 @mixin t-topic-label-small {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    @include font('STARLING', 12px, 'MEDIUM', 12px);
 
     color: $COLOUR_MAIN_PRIMARY;
     letter-spacing: 1px;
@@ -48,7 +48,7 @@
  * BASE CARD STYLES
  */
 @mixin t-card-tag {
-    @include font('AGENDA', 11px, 'MEDIUM', 13px);
+    @include font('STARLING', 11px, 'MEDIUM', 13px);
 
     color: $COLOUR_MAIN_TERTIARY;
     letter-spacing: 1px;
@@ -62,7 +62,7 @@
 }
 
 @mixin t-card-byline-prefix {
-    @include font('AGENDA', 11px, 'MEDIUM', 13px);
+    @include font('STARLING', 11px, 'MEDIUM', 13px);
 
     color: $COLOUR_MAIN_TERTIARY;
     font-style: italic;
@@ -71,7 +71,7 @@
 }
 
 @mixin t-card-byline-author {
-    @include font('AGENDA', 11px, 'MEDIUM', 13px);
+    @include font('STARLING', 11px, 'MEDIUM', 13px);
 
     color: $COLOUR_MAIN_TERTIARY;
     letter-spacing: 1px;
@@ -189,7 +189,7 @@
 }
 
 @mixin t-feature-byline-prefix-large {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    @include font('STARLING', 12px, 'MEDIUM', 12px);
 
     color: $COLOUR_MAIN_TERTIARY;
     font-style: italic;
@@ -201,7 +201,7 @@
 }
 
 @mixin t-feature-byline-author-large {
-    @include font('AGENDA', 16px, 'MEDIUM', 12px);
+    @include font('STARLING', 16px, 'MEDIUM', 12px);
 
     color: $COLOUR_MAIN_TERTIARY;
     letter-spacing: 1px;
@@ -391,7 +391,7 @@
 }
 
 @mixin card-byline {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    @include font('STARLING', 12px, 'MEDIUM', 12px);
 
     color: $gray;
     text-transform: uppercase;
@@ -409,14 +409,14 @@
 }
 
 @mixin card-byline-name {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    @include font('STARLING', 12px, 'MEDIUM', 12px);
 
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 @mixin card-byline-prefix {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    @include font('STARLING', 12px, 'MEDIUM', 12px);
 
     font-style: italic;
     letter-spacing: 1px;
