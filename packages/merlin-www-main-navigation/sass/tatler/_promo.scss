@@ -44,10 +44,11 @@
 }
 
 .n-main__cover__offer {
-    @include font('STARLING', 14px, 'NORMAL', 19px);
+    @include font('COMMUTER SANS', 13px, 'NORMAL', 16px);
 
     color: $black;
     display: inline-block;
+    text-transform: uppercase;
     vertical-align: top;
     white-space: pre-line;
 }
@@ -111,41 +112,26 @@
 }
 
 .n-menu__subscribe-message {
-    @include font('STARLING', 18px, 'NORMAL', 22px);
+    @include font('COMMUTER SANS', 13px, 'NORMAL', 18px);
 
     color: $black;
     margin-bottom: 12px;
     max-width: 240px;
+    text-align: center;
+    text-transform: uppercase;
     white-space: pre-line;
 }
 
 .n-main__cover__btn,
 a.n-main__cover__btn {
     margin-top: 10px;
+    padding: 7px 10px;
 }
 
 
 .n-main__cover__btn,
 a.n-main__cover__btn,
 a.n-menu__subscribe-btn {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
-
-    border: 1px solid $cinnabar;
-    color: $cinnabar;
-    letter-spacing: 1px;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 4px;
-
-    &:after {
-        display: none;
-    }
-
-    &:hover,
-    &:focus {
-        background: $cinnabar;
-        border: 1px solid $cinnabar;
-        color: $white;
-        text-decoration: none;
-    }
+    margin-left: auto;
+    margin-right: auto;
 }

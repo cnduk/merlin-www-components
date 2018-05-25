@@ -8,10 +8,10 @@
 }
 
 .n-menu__social-title {
-    @include font('AGENDA', 12px, 'MEDIUM', 13px);
+    @include font('COMMUTER SANS', 10px, 'NORMAL', 10px);
 
-    color: $gray;
-    margin: 0 0 16px 0;
+    color: $boulder;
+    margin: 0 0 12px 0;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
