@@ -79,9 +79,10 @@
 }
 
 @mixin t-card-meta {
-    @include font('AGENDA', 11px, 'MEDIUM', 13px);
+    @include font('COMMUTER SANS', 9px, 400, 9px);
 
-    color: $COLOUR_MAIN_TERTIARY;
+    color: $gray;
+    text-transform: uppercase;
 }
 
 
@@ -423,10 +424,9 @@
 }
 
 @mixin card-meta {
-    @include font('AGENDA', 10px, 'MEDIUM', 10px);
+    @include font('COMMUTER SANS', 9px, 400, 9px);
 
     color: $gray;
-    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
