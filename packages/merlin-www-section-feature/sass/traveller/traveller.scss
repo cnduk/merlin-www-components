@@ -6,43 +6,27 @@
 .c-feature {
     margin-bottom: $MOBILE_SLICE_MARGIN;
     margin-top: $MOBILE_SLICE_MARGIN;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
 
-    @include at-medium-size {
+    @include at-medium-size() {
         margin-bottom: $TABLET_SLICE_MARGIN;
         margin-top: $TABLET_SLICE_MARGIN;
+        // padding-left: $TABLET_SIDE_GUTTER;
+        // padding-right: $TABLET_SIDE_GUTTER;
         padding-left: 0;
         padding-right: 0;
     }
 
-    @include at-x-large-size {
+    @include at-x-large-size() {
         margin-bottom: $DESKTOP_SLICE_MARGIN;
         margin-top: $DESKTOP_SLICE_MARGIN;
-    }
-
-}
-
-.c-feature--right {
-    .c-feature__images--multiple {
-        @include at-medium-size {
-            padding-right: 12px;
-
-            & + .c-feature__contents {
-                padding-right: $TABLET_SIDE_GUTTER;
-            }
-        }
-    }
-
-    .c-feature__contents {
-        @include at-medium-size {
-            right: 0;
-            margin-right: $TABLET_SIDE_GUTTER;
-        }
     }
 }
 
 .c-feature--left {
     .c-feature__images--multiple {
-        @include at-medium-size {
+        @include at-medium-size() {
             padding-left: 12px;
 
             & + .c-feature__contents {
@@ -52,27 +36,41 @@
     }
 
     .c-feature__contents {
-        @include at-medium-size {
+        @include at-medium-size() {
             left: 0;
             margin-left: $TABLET_SIDE_GUTTER;
         }
     }
 }
 
-.c-feature__wrapper {
-    margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
+.c-feature--right {
+    .c-feature__images--multiple {
+        @include at-medium-size() {
+            padding-right: 12px;
+
+            & + .c-feature__contents {
+                padding-right: $TABLET_SIDE_GUTTER;
+            }
+        }
+    }
+
+    .c-feature__contents {
+        @include at-medium-size() {
+            right: 0;
+            margin-right: $TABLET_SIDE_GUTTER;
+        }
+    }
 }
 
 .c-feature__images {
-    @include at-medium-size {
+    @include at-medium-size() {
         display: block;
         width: 100%;
     }
 }
 
 .c-feature__images--multiple {
-    @include at-medium-size {
+    @include at-medium-size() {
         display: table-cell;
         width: 50%;
 
@@ -86,10 +84,19 @@
     }
 }
 
-.c-feature__contents {
-    margin: 20px;
+.c-feature__image-wrapper {
+    background-color: $CAPE-HAZE;
 
     @include at-medium-size {
+        padding-top: 40%;
+    }
+}
+
+.c-feature__contents {
+    margin: 20px;
+    position: initial;
+
+    @include at-medium-size() {
         background-color: $WHITE;
         box-sizing: border-box;
         margin: 0px;
@@ -103,15 +110,6 @@
 
     :last-child {
         margin-bottom: 0;
-    }
-}
-
-.c-feature__image-wrapper {
-    background-color: $CAPE-HAZE;
-    padding-top: 66.66666%;
-
-    @include at-medium-size {
-        padding-top: 40%;
     }
 }
 
@@ -135,7 +133,7 @@
         width: 20px;
     }
 
-    @include at-medium-size {
+    @include at-medium-size() {
         display: none;
     }
 }
@@ -149,7 +147,7 @@
     text-align: center;
     text-transform: uppercase;
 
-    @include at-medium-size {
+    @include at-medium-size() {
         margin-bottom: 16px;
         margin-top: 0;
     }
@@ -163,7 +161,7 @@
     text-align: center;
     text-transform: uppercase;
 
-    @include at-x-large-size {
+    @include at-x-large-size() {
         @include font-size(28px);
         @include line-height(32px);
         letter-spacing: 2px;
@@ -175,7 +173,7 @@
 .c-feature__teaser {
     display: none;
 
-    @include at-x-large-size {
+    @include at-x-large-size() {
         @include font("PROXIMA NOVA CONDENSED", 16px, 400, 20px);
         color: $RAVEN;
         display: block;
@@ -186,7 +184,7 @@
 }
 
 .c-feature__byline {
-    @include font("PROXIMA NOVA CONDENSED", 12px, 'NORMAL', 16px);
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
     color: $MUSTASAARI;
     margin-bottom: 4px;
     margin-top: 8px;
@@ -205,18 +203,22 @@
 }
 
 .c-feature__meta {
-    @include font("PROXIMA NOVA CONDENSED", 12px, 'NORMAL', 16px);
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
     color: $MANATEE;
     margin-top: 4px;
     text-align: center;
 }
 
-.c-feature__meta-item + .c-feature__meta-item:before {
-    background-color: $MANATEE;
-    border-radius: 50%;
-    content: "";
-    display: inline-block;
-    height: 2px;
-    margin: 1px 4px;
-    width: 2px;
+.c-feature__meta-item {
+    & + .c-feature__meta-item {
+        &:before {
+            background-color: $MANATEE;
+            border-radius: 50%;
+            content: "";
+            display: inline-block;
+            height: 2px;
+            margin: 1px 4px;
+            width: 2px;
+        }
+    }
 }
