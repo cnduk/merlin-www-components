@@ -65,8 +65,6 @@
     }
 
     @include at-x-large-size {
-        @include border-line-box(top);
-
         margin: 0 60px;
         padding: 60px 170px;
     }
@@ -191,10 +189,6 @@ li.c-superfeature__meta-item {
 
         .c-superfeature__icon {
             background: $white;
-        }
-
-        @include at-x-large-size {
-            @include border-line-box(top, $bg: $black, $border: $brownish-grey);
         }
     }
 
