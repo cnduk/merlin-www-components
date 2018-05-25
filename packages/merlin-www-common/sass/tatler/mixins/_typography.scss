@@ -15,18 +15,19 @@
  * TOPICS
  */
 @mixin t-topic-title-small {
-    @include font('STARLING', 20px, 'BOLD', 20px);
+    @include font('COMMUTER SANS', 20px, 'BOLD', 20px);
 
-    color: $COLOUR_MAIN_PRIMARY;
+    color: $black;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 @mixin t-topic-title-large {
-    @include font('STARLING', 20px, 'BOLD', 20px);
+    @include font('COMMUTER SANS', 30px, 'BOLD', 30px);
 
-    color: $COLOUR_MAIN_PRIMARY;
-    letter-spacing: 2px;
+    color: $black;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 @mixin t-topic-label-small {
