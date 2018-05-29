@@ -12,10 +12,24 @@
 
 @import '../tatler/_tatler_base';
 
+.a-header {
+    margin-top: 0;
+    padding-top: 32px;
+
+    @include at-x-large-size {
+        margin-top: 0;
+        padding-top: 48px;
+    }
+}
+
+.a-header__content {
+    background-color: transparent;
+}
 
 .ad--article-gallery,
 .ad--article-gallery .ad__container {
     background-color: $black;
+    border: none;
 }
 
 .a-main--gallery {
