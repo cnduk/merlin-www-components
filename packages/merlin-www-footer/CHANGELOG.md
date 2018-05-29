@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.21"></a>
+## [1.8.21](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-footer@1.8.20...@cnbritain/merlin-www-footer@1.8.21) (2018-05-29)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-footer
+
 <a name="1.8.20"></a>
 ## [1.8.20](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-footer@1.8.19...@cnbritain/merlin-www-footer@1.8.20) (2018-05-29)
 
