@@ -9,7 +9,7 @@
 .c-card--switcher-video {
     @include card-switcher-video-small;
 
-    @include card-switcher-size {
+    @include card-portrait-to-landscape-size {
         @include card-switcher-video-large;
     }
 }

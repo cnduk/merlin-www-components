@@ -34,7 +34,7 @@
 .c-card--hero {
     @include card-hero-small;
 
-    @include card-switcher-size {
+    @include card-portrait-to-landscape-size {
         @include card-hero-large;
     }
 }
