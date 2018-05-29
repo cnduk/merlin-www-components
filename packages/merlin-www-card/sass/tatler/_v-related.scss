@@ -11,9 +11,9 @@
     }
 
     .c-card__title {
-        @include t-card-landscape-title;
-
+        @include font('STARLING', 18px, 'NORMAL', 22px);
         color: $white;
+        letter-spacing: -0.5px;
         margin: 0;
     }
 
