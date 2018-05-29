@@ -1,19 +1,11 @@
-
 .a-marketing-card {
     background: $wild-sand;
     margin: 40px 0;
-    padding: 30px 20px;
-
-    @include desktop-size {
-        margin: 60px 0;
-    }
+    padding: 20px;
 }
 
 .a-marketing-card__brand {
     margin-bottom: 20px;
-    @include desktop-size {
-        margin-bottom: 0;
-    }
 }
 .a-marketing-card__brand__img {
     margin: 0 auto 30px auto;
@@ -33,36 +25,36 @@
     }
 }
 .a-marketing-card__brand__prefix {
-    @include font('COMMUTER SANS', 12px, 'MEDIUM', 16px);
-    font-style: italic;
-    letter-spacing: 1.2px;
-    margin-bottom: 10px;
-    @include desktop-size {
-        margin-bottom: 13px;
-    }
+    @include font('COMMUTER SANS', 10px, null, 10px);
+    color: $gray;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .a-marketing-card__col {
     text-align: center;
 }
 .a-marketing-card__title {
-    @include font('STARLING', 16px, 'NORMAL', 22px);
+    @include font('STARLING', 23px, 'NORMAL', 24px);
 
     color: $black-two;
-    margin: 0 auto 30px auto;
+    letter-spacing: -0.5px;
+    margin: 0 auto 20px auto;
 }
 .a-marketing-card__desc {
-    @include font('COMMUTER SANS', 14px, 'MEDIUM', 20px);
-    letter-spacing: 0.8px;
-    margin: 15px auto 30px auto;
+    @include font('STARLING', 16px, null, 18px);
+    color: $black-two;
+    font-style: italic;
+    margin: 10px auto 20px auto;
 
     .a-marketing-card__title + & {
-        margin-top: -15px;
+        margin-top: -10px;
     }
 }
 .a-marketing-card__link {
     @include button-single;
     @include button-single-light;
+    width: 200px;
 
     &:hover,
     &:focus {
@@ -71,8 +63,9 @@
 
 }
 
+
 .a-marketing-card__magazine {
-    margin: 0 auto $MARGIN_SMALL auto;
+    margin: 0 auto 20px auto;
     width: 230px;
 }
 .a-marketing-card__magazine__cover {
@@ -108,23 +101,11 @@
 
 @include tablet-size {
     .a-marketing-card {
-        padding: 30px 40px;
+        padding: 40px;
     }
-    .a-marketing-card__brand__img {
-        margin-bottom: 0;
-        max-width: auto;
-        width: 100%;
-    }
-    .a-marketing-card__title {
-        @include font('STARLING', 21px, 'NORMAL', 26px);
-        margin: 0 auto 40px auto;
-    }
-    .a-marketing-card__desc {
-        margin-bottom: 40px;
 
-        .a-marketing-card__title + & {
-            margin-top: -30px;
-        }
+    .a-marketing-card__link {
+        width: auto;
     }
 
     .a-marketing-card__magazine {
@@ -146,13 +127,13 @@
     .a-marketing-card--event {
         .a-marketing-card__col {
             padding-left: 0;
-            padding-right: 40px;
+            padding-right: 20px;
             text-align: center;
-            width: 140px + 40px;
+            width: 160px + 20px;
         }
         .a-marketing-card__col + .a-marketing-card__col {
             border-left: 1px solid $black;
-            padding-left: 40px;
+            padding-left: 20px;
             text-align: left;
             width: auto;
         }
