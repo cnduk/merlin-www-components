@@ -433,46 +433,46 @@
 
 
 /// FANCY BORDER LINE BOX
-@mixin border-line-box($direction: top, $width: 20px, $bg: $white, $border: $silver) {
-    background: $bg;
-    border: $width solid $bg;
-    border-top-width: if($direction == top, 0, $width);
-    border-right-width: if($direction == right, 0, $width);
-    border-bottom-width: if($direction == bottom, 0, $width);
-    border-left-width: if($direction == left, 0, $width);
-    box-shadow: inset 0 0 0 1px $border;
-    position: relative;
+// @mixin border-line-box($direction: top, $width: 20px, $bg: $white, $border: $silver) {
+//     background: $bg;
+//     border: $width solid $bg;
+//     border-top-width: if($direction == top, 0, $width);
+//     border-right-width: if($direction == right, 0, $width);
+//     border-bottom-width: if($direction == bottom, 0, $width);
+//     border-left-width: if($direction == left, 0, $width);
+//     box-shadow: inset 0 0 0 1px $border;
+//     position: relative;
 
-    &:after {
-        content: '';
-        display: block;
-        background: $bg;
-        position: absolute;
+//     &:after {
+//         content: '';
+//         display: block;
+//         background: $bg;
+//         position: absolute;
 
-        @if ($direction == top or $direction == bottom) {
-            height: 1px;
-            left: 1px;
-            right: 1px;
+//         @if ($direction == top or $direction == bottom) {
+//             height: 1px;
+//             left: 1px;
+//             right: 1px;
 
-            @if ($direction == top) {
-              top: 0;
-            }
-            @else {
-              bottom: 0;
-            }
-        }
-        @else if ($direction == left or $direction == right) {
-            width: 1px;
-            top: 1px;
-            bottom: 1px;
+//             @if ($direction == top) {
+//               top: 0;
+//             }
+//             @else {
+//               bottom: 0;
+//             }
+//         }
+//         @else if ($direction == left or $direction == right) {
+//             width: 1px;
+//             top: 1px;
+//             bottom: 1px;
 
-            @if ($direction == left) {
-              left: 0;
-            }
-            @else {
-              right: 0;
-            }
-        }
-    }
-}
+//             @if ($direction == left) {
+//               left: 0;
+//             }
+//             @else {
+//               right: 0;
+//             }
+//         }
+//     }
+// }
 
