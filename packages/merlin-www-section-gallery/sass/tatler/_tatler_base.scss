@@ -9,8 +9,8 @@ $section_gallery_icon_size: 40px;
 
     &:focus,
     &:hover {
-        .c-gallery__title {
-            @include card-title-hover;
+        .c-gallery__title span {
+            border-bottom: 1px solid $black;
         }
     }
 
@@ -31,19 +31,20 @@ $section_gallery_icon_size: 40px;
     background-color: rgba(17, 17, 17, 0.6);
 }
 .c-gallery__image-remaining__text {
+    @include font('COMMUTER SANS', 12px, 'NORMAL', 12px);
     color: $white;
 }
 .c-gallery__image-remaining__text-prefix {
-    @include font('STARLING', 30px, 'BOLD', 30px);
+    @include font-size(22px);
+    @include line-height(22px);
 }
 
 .c-gallery__image-remaining__text-value {
-    @include font('STARLING', 25px, 'BOLD', 25px);
-
-    @include card-switcher-size {
-        @include font('STARLING', 30px, 'BOLD', 30px);
-    }
+    @include font-size(27px);
+    @include line-height(27px);
 }
+
+
 .c-gallery__text {
     background-color: $white;
     padding: $section_gallery_text_padding 20px;
@@ -99,13 +100,22 @@ $section_gallery_icon_size: 40px;
 }
 
 .c-gallery__byline {
-    @include feature-card-byline;
+    @include font('STARLING', 12px, null, 12px);
+
+    color: $gray;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+
+    @include tablet-size {
+        margin: 15px 0 10px;
+    }
 }
 .c-gallery__byline-prefix {
-    @include t-gallery-byline-prefix-small;
+    font-style: italic;
+    text-transform: lowercase;
 }
 .c-gallery__byline-name {
-    @include t-gallery-byline-author-small;
+    text-transform: uppercase;
 }
 
 .c-gallery__meta {
@@ -193,7 +203,7 @@ li.c-gallery__meta-item {
     }
 
     li.c-gallery__meta-item {
-        @include t-gallery-meta-large;
+        @include font-size(10px);
     }
 }
 
@@ -224,6 +234,13 @@ li.c-gallery__meta-item {
     li.c-gallery__meta-item {
         border-right-color: $mine-shaft;
         border-right-width: 2px;
+    }
+
+    &:focus,
+    &:hover {
+        .c-gallery__title span {
+            border-bottom: 1px solid $white;
+        }
     }
 
 }
