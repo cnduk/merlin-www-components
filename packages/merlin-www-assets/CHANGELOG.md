@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.16.0"></a>
+# [1.16.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-assets@1.15.3...@cnbritain/merlin-www-assets@1.16.0) (2018-05-29)
+
+
+### Features
+
+* **merlin-www-assets:** delete agenda font files ([2b31d29](https://github.com/cnduk/merlin-www-components/commit/2b31d29))
+
+
+
+
 <a name="1.15.0"></a>
 # [1.15.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-assets@1.14.1...@cnbritain/merlin-www-assets@1.15.0) (2018-05-01)
 
