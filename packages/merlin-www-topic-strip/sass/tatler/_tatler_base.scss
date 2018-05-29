@@ -60,6 +60,7 @@ li.c-topic-strip__item {
 }
 
 .c-topic-strip--article-related {
+    margin: 30px auto;
     overflow-x: visible;
     text-align: left;
     white-space: normal;
@@ -73,12 +74,17 @@ li.c-topic-strip__item {
         margin: $MARGIN_XX_SMALL $MARGIN_XX_SMALL 0 0;
     }
 
-    // .c-topic-strip__btn {
-    //     @include button-related;
+    .c-topic-strip__btn {
+        @include button-related;
+        @include button-related-light;
 
-    //     &:hover {
-    //         @include button-related-hover;
-    //     }
-    // }
+        &:hover {
+            @include button-related-light-hover;
+        }
+    }
+
+    @include desktop-size {
+        margin: 40px auto;
+    }
 
 }
