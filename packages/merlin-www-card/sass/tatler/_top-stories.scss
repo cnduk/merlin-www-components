@@ -69,9 +69,11 @@
     }
 
     .c-card__meta {
-        @include card-meta;
+        @include font('COMMUTER SANS', 9px, 400, 9px);
 
+        color: $gray;
         margin-top: 0;
+        text-transform: uppercase;
     }
 
     &:hover,

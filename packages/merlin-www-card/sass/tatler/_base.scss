@@ -80,7 +80,7 @@ li.c-card__meta-item {
         overflow: hidden;
 
         img {
-            @include card-image-normal;
+            transition: transform 0.2s ease-in-out;
         }
     }
 
@@ -92,7 +92,7 @@ li.c-card__meta-item {
 
         .c-card__image {
             img {
-                @include card-image-hover;
+                transform: scale(1.04);
             }
         }
     }

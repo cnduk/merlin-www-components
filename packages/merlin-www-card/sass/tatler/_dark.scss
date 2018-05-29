@@ -19,7 +19,8 @@
         &:hover,
         &:focus {
             .c-card__title {
-                @include card-title-hover;
+                color: $COLOUR_MAIN_HIGHLIGHT;
+                text-decoration: none;
             }
         }
 
