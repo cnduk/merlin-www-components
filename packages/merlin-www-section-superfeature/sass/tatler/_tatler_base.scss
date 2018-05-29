@@ -22,9 +22,8 @@
 
     &:hover,
     &:focus {
-        .c-superfeature__title {
-            color: $COLOUR_MAIN_HIGHLIGHT;
-            text-decoration: none;
+        .c-superfeature__title span {
+            border-bottom: 1px solid $black;
         }
     }
 }
@@ -53,6 +52,14 @@
 
 }
 
+.c-superfeature__image-wrapper {
+    padding-top: 100%;
+
+    @include at-medium-size {
+        padding-top: 47%;
+    }
+}
+
 .c-superfeature__contents {
     background: $white;
     margin: 0 20px;
@@ -61,16 +68,17 @@
     text-align: center;
 
     @include at-medium-size {
-        margin: 0 60px;
+        margin: -50px 60px 0 60px;
+        position: relative;
     }
 
     @include at-x-large-size {
-        margin: 0 60px;
+        margin: -80px 60px 0 60px;
         padding: 60px 170px;
     }
 
     @include at-xx-large-size {
-        margin: 0 auto;
+        margin: -80px auto 0 auto;
     }
 }
 
@@ -120,9 +128,8 @@
 }
 
 .c-superfeature__byline {
-    @include font('COMMUTER SANS', 12px, 'MEDIUM', 12px);
+    @include font('STARLING', 12px, null, 12px);
     color: $gray;
-    letter-spacing: 1px;
     margin: 0 0 10px;
     text-transform: uppercase;
 
@@ -132,15 +139,11 @@
 }
 
 .c-superfeature__byline-name {
-    @include font('COMMUTER SANS', 12px, 'MEDIUM', 12px);
-    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .c-superfeature__byline-prefix {
-    @include font('COMMUTER SANS', 12px, 'MEDIUM', 12px);
     font-style: italic;
-    letter-spacing: 1px;
     text-transform: lowercase;
 }
 
