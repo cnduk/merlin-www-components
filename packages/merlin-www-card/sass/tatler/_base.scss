@@ -86,8 +86,8 @@ li.c-card__meta-item {
 
     &:hover,
     &:focus {
-        .c-card__title {
-            @include card-title-hover;
+        .c-card__title span {
+            border-bottom: 1px solid $black;
         }
 
         .c-card__image {
@@ -132,9 +132,10 @@ svg.c-card__image__icon--video {
 
 .c-card__byline,
 .c-card__sponsor {
-    @include card-byline;
-
+    @include font('STARLING', 12px, null, 12px);
+    color: $gray;
     margin: 5px 0 0;
+    text-transform: uppercase;
 
     @include card-switcher-size {
         margin: 10px 0 0;
@@ -143,12 +144,13 @@ svg.c-card__image__icon--video {
 
 .c-card__byline-prefix,
 .c-card__sponsor-label {
-    @include card-byline-prefix;
+    font-style: italic;
+    text-transform: lowercase;
 }
 
 .c-card__byline-name,
 .c-card__sponsor-title {
-    @include card-byline-name;
+    text-transform: uppercase;
 }
 
 .c-card__meta {
