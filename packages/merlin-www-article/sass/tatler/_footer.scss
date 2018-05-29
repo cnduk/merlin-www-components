@@ -5,7 +5,7 @@
         margin: 30px 0 0;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         padding-bottom: 60px;
 
         .a-share {
@@ -17,7 +17,7 @@
 .a-footer--gallery {
     padding-bottom: 30px;
 
-    @include tablet-size {
+    @include at-medium-size {
         padding-bottom: 80px;
     }
 }
@@ -34,7 +34,7 @@
         padding: 0;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         padding-bottom: 60px;
     }
 }
@@ -44,7 +44,7 @@
     margin: 30px 0;
     padding: 0;
 
-    @include tablet-size {
+    @include at-medium-size {
         margin: 60px 0;
     }
 }

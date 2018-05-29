@@ -1,47 +1,21 @@
 .a-sidebar-content {
-    .a-sidebar-content__list-item {
-        margin: 10px 0 30px 0;
-    }
-
-    .c-card__image {
-        margin: 0;
-    }
-
-
-    .c-card {
-        &:hover,
-        &:focus {
-            .c-card__image {
-                img {
-                    transform: none;
-                }
-            }
-        }
-    }
-
-    .c-card__obj__body {
-        padding: 10px 0 0;
-        text-align: left;
-    }
-
-    .c-card__title {
-        @include font('STARLING', 18px, 'NORMAL', 22px);
-        margin: 0 0 10px;
-    }
-
-    .c-card__separator {
-        display: none;
-    }
-
-    .c-card__byline {
-        margin: 0;
-    }
 
 }
 
-.a-sidebar-content__title {
-    @include font('COMMUTER SANS', 15px, 'NORMAL', 15px);
+.a-sidebar-content__list {
 
-    margin: 0 0 15px 0;
+}
+
+.a-sidebar-content__list-item {
+    & + .a-sidebar-content__list-item {
+        margin-top: 20px;
+    }
+}
+
+.a-sidebar-content__title {
+    @include font("COMMUTER SANS", 15px, 400, 15px);
+    color: $black;
     text-transform: uppercase;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }

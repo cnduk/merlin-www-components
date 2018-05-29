@@ -1,112 +1,118 @@
-.a-author,
-.a-event-author {
-    color: $gray;
-    padding-right: 0;
-}
+.a-author {}
+.a-author__image {
+    height: 90px;
+    margin-bottom: 8px;
+    width: 90px;
 
-.a-event-author {
-    margin-bottom: 40px;
-}
-
-.a-author__article-date {
-    @include card-meta;
-}
-
-.a-author__bio,
-.a-author__bio p {
-    @include font('COMMUTER SANS', 13px, 'MEDIUM', 18px);
-
-    letter-spacing: 0.5px;
-    color: $gray;
-    margin-top: 0;
-    margin-bottom: 12px;
+    img {
+        height: 90px;
+        width: 90px;
+    }
 }
 
 .a-author__byline {
-    @include card-byline;
-    margin: 12px 0 5px;
+    @include font("STARLING", 13px, 400, 15px);
+    color: $gray;
+    margin-bottom: 15px;
+    text-transform: uppercase;
 
     a {
-        color: $gray;
-        text-decoration: none;
+        color: inherit;
     }
 }
 
-.a-author__byline-name {
-    @include card-byline-name;
-}
-
+.a-author__byline-name {}
 .a-author__byline-prefix,
 .a-author__byline-conjunction {
-    @include card-byline-prefix;
+    font-style: italic;
+    text-transform: lowercase;
 }
 
-.a-author__byline--syndication,
-.a-author__byline--photographer {
-    .a-author__byline-prefix {
-        @include card-byline-prefix;
+.a-author__bio {
+    margin-bottom: 15px;
+    margin-top: 10px;
 
-        @include line-height(16px);
+    .bb-p {
+        @include font("STARLING", 14px, 400, 17px);
+        color: $black;
+        margin: 0 0 15px 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    a {
+        color: inherit;
     }
 }
 
-.a-author__image,
-.a-event-author__image {
-    border: 1px solid $COLOUR_BORDER_SOLID;
-    padding: 7px;
-    width: 100px;
-
-    + .a-author__image,
-    + .a-event-author__image {
-        margin-top: 12px;
-    }
+.a-author__separator {
+    display: none;
 }
 
-.a-author__separator,
-.a-event-author__separator {
-    width: 10px;
-    border-color: $COLOUR_MAIN_HIGHLIGHT;
-    border-width: 1px 0 0 0;
-    margin: 12px 0;
-}
-
-.a-author__separator--date {}
-
-.a-event-author__title {
-    @include font("COMMUTER SANS", 12px, 500, 18px)
+.a-author__article-date {
+    @include font("COMMUTER SANS", 10px, 400, 10px);
     color: $gray;
-    letter-spacing: 1px;
-    margin: 15px 0 5px;
+    margin-top: 15px;
     text-transform: uppercase;
 }
 
-.a-event-author__location {
-    @include font("COMMUTER SANS", 13px, 500, 18px);
-    color: #8a8a8a;
-    color: $gray;
-    letter-spacing: 0.5px;
-}
+// TODO
+// .a-event-author {
+//     @include at-x-large-size {
+//         text-align: center;
+//     }
+// }
 
-.a-event-author__date {
-    @include font("COMMUTER SANS", 10px, 500, 10px);
-    color: $gray;
-    font-family: COMMUTER SANS,sans-serif;
-    letter-spacing: 1px;
-    margin: 10px 0;
-    text-transform: uppercase;
-}
+// .a-event-author__image {
+//     height: 90px;
+//     margin-bottom: 20px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     width: 90px;
+// }
 
-.a-event-author__btn {
-    @include font("COMMUTER SANS", 12px, 500, 10px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0);
-    color: $cinnabar;
-    letter-spacing: 0.5px;
-    padding-bottom: 3px;
-    text-decoration: none;
-    text-transform: none;
-    transition: border .16s ease;
+// .a-event-author__separator {
+//     display: none;
+// }
 
-    &:hover {
-        border-bottom: 1px solid rgba($cinnabar, 0.8);
-    }
-}
+// .a-event-author__title {}
+// .a-event-author__location {
+//     @include font("GRAPHIK", 10px, 400, 12px);
+//     color: $dune;
+//     letter-spacing: 1.5px;
+//     margin-bottom: 6px;
+//     text-transform: uppercase;
+// }
+
+// .a-event-author__date {
+//     @include font("GRAPHIK", 10px, 400, 12px);
+//     color: $dune;
+//     letter-spacing: 1.5px;
+//     margin-bottom: 20px;
+//     margin-top: 13px;
+//     text-transform: uppercase;
+
+//     @include at-x-large-size {
+//         margin-bottom: 13px;
+//     }
+// }
+
+// .a-event-author__btn {
+//     @include button-group();
+//     @include button-group-light();
+//     margin-bottom: 20px;
+//     margin-top: 13px;
+//     text-align: center;
+
+//     @include at-x-large-size {
+//         margin-bottom: 13px;
+//         margin-top:0;
+//         width: 100%;
+//     }
+
+//     &:hover {
+//         @include button-group-light-hover();
+//     }
+// }

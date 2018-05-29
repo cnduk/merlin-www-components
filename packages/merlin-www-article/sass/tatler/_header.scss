@@ -1,74 +1,253 @@
-.a-header {}
-.a-header--gallery {
-    max-width: $MAXIMUM_PAGE_WIDTH;
-    margin: 0 auto;
+.a-header {
+    margin: 32px 0;
+    @include at-x-large-size {
+        margin: 48px 0;
+    }
+
+    &.has-hero {
+        margin-top: 0;
+
+        .a-header__wrapper {
+            max-width: $ARTICLE_TOTAL;
+            margin: 0 auto;
+        }
+
+        @include at-x-large-size {
+            .a-header__content {
+                padding-right: 0;
+                text-align: center;
+            }
+
+            .a-header__sponsor {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .a-header__sponsor-image {
+                img {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+.a-header--gallery {}
+.a-header--video {
+    margin: 30px 0;
+    @include at-x-large-size {
+        margin: 40px 0;
+    }
 
     .a-header__content {
-        margin: 0;
-
-        @include article-total-size {
-            padding-left: 0;
-            padding-right: $ARTICLE_RIGHT_TOTAL;
+        max-width: none;
+        padding-left: 0;
+        @include at-x-large-size {
+            padding-right: 350px;
         }
     }
 
-    .a-header__about {
-        display: block;
+    .a-header__title,
+    .a-header__about,
+    .a-header__meta,
+    .a-share__list {
+        @include at-x-large-size {
+            text-align: left;
+        }
+    }
+
+    .a-share__list {
+        @include at-x-large-size {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    .a-header__sponsor {
+        @include at-x-large-size {
+            margin-left: 0;
+        }
     }
 }
 
-.a-header__wrapper {}
+.a-header__hero {
+    position: relative;
 
-.a-header__content {
-    padding: 20px 0 30px;
+    @include at-x-large-size {
+        text-align: center;
 
-    @include desktop-size {
-        padding: 60px 360px 60px 0;
+        .a-header__tag {
+            margin-bottom: 20px;
+        }
+
+        .a-header__tag__primary,
+        .a-header__tag__secondary {
+            background: transparent;
+            display: inline-block;
+            padding: 0;
+        }
+
+        .a-header__title {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.a-header__image {
+    margin: 0 auto;
+    max-width: $XX_LARGE_SIZE;
+    position: relative;
+}
+
+.a-header__image-constrain {
+    position: relative;
+    width: 100%;
+
+    img {
+        display: block;
+        width: 100%;
     }
 
-    // @include article-total-size {
-    //     padding: 60px 0;
-    // }
+    picture {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.a-header__image-constrain--landscape,
+.a-header__image-constrain--portrait,
+.a-header__image-constrain--square,
+.a-header__image-constrain--custom {
+    img {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.a-header__image-constrain--landscape {
+    padding-top: 66.6666666666%;
+}
+
+.a-header__image-constrain--portrait {
+    padding-top: 150%;
+}
+
+.a-header__image-constrain--square {
+    padding-top: 100%;
+}
+
+.a-header__image-constrain--custom {
+    padding-top: 100%;
+    @include at-medium-size {
+        padding-top: 46.875%;
+    }
+}
+
+.a-header__image-content {
+    bottom: 0;
+    margin: 10px 20px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+
+    @include at-x-large-size {
+        bottom: initial;
+        margin: 10px;
+        top: 0;
+    }
+}
+
+.a-header__image-title {
+    @include font("COMMUTER SANS", 14px, 400, 15px);
+    color: $white;
+    margin-bottom: 6px;
+}
+
+.a-header__image-caption {
+    margin-bottom: 6px;
+
+    .bb-p {
+        @include font("COMMUTER SANS", 14px, 400, 15px);
+        color: $white;
+        text-transform: uppercase;
+    }
+}
+
+.a-header__image-credit {
+    @include font("COMMUTER SANS", 10px, 400, 10px);
+    color: $white;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.a-header__hero-content {
+    background-color: $white;
+    margin: 0 auto;
+    max-width: $ARTICLE_TOTAL;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+    padding-top: 20px;
+    position: relative;
+
+    @include at-medium-size {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size {
+        bottom: 0;
+        left: 50%;
+        padding-left: 110px;
+        padding-right: 110px;
+        padding-top: 30px;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 100%;
+        z-index: 1;
+    }
+}
+
+.a-header__wrapper {
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+    width: 100%;
+
+    @include at-medium-size {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.a-header__content {
+    background-color: $white;
+    margin: 0 auto;
+    max-width: $ARTICLE_TOTAL;
+    position: relative;
+
+    @include at-x-large-size {
+        padding-right: 350px;
+    }
 }
 
 .a-header__title {
-    @include font('STARLING', 34px, 'NORMAL', 38px);
+    @include font("STARLING", 30px, 600, 34px);
+    color: $black;
+    margin: 10px 0 4px 0;
 
-    margin: 9px 0 10px;
-
-    @include desktop-size {
-        @include font('STARLING', 62px, 'NORMAL', 67px);
-
-        margin: 25px 0;
-    }
-}
-
-.a-header__teaser {
-    @include font('STARLING', 20px, 'NORMAL', 25px);
-
-    font-style: italic;
-    margin: 10px 0 15px;
-    word-break: break-word;
-
-    @include desktop-size {
-        @include font-size(23px);
-        @include line-height(28px);
-
-        margin: 25px 0 30px;
-    }
-
-    p {
-        @include font-size(20px);
-        @include line-height(25px);
-
-        margin: 0;
-
-        @include desktop-size {
-            @include font-size(23px);
-            @include line-height(28px);
-
-            margin: 0;
-        }
+    @include at-x-large-size {
+        @include font-size(56px);
+        @include line-height(60px);
+        margin: 10px 0 20px 0;
     }
 }
 
@@ -76,335 +255,198 @@
     display: none;
 }
 
-.a-header__about {}
+.a-header__teaser {
+    margin: 4px 0 20px 0;
 
-.a-header__byline {
-    @include card-byline;
-
-    margin: 15px 0 10px;
-
-    a {
-        color: inherit;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-}
-
-.a-header__byline-item {}
-
-.a-header__byline-prefix,
-.a-header__byline-conjunction {
-    @include card-byline-prefix;
-}
-
-.a-header__byline-name {
-    @include card-byline-name;
-}
-
-.a-header__date {
-    @include card-meta;
-}
-
-.a-header__image {
-    margin-bottom: 30px;
-    padding: 0;
-    max-width: $MAXIMUM_PAGE_WIDTH;
-
-    @include desktop-size {
-        margin-bottom: 60px;
-    }
-}
-
-.a-header__image-constrain {
-    margin-bottom: $MARGIN_X_SMALL;
-}
-
-.a-header__image-title,
-.a-header__image-caption,
-.a-header__image-credit {
-    padding-left: 0;
-}
-
-.a-header__image-title {
-    @include font('COMMUTER SANS', 13px, 'MEDIUM', 17px);
-
-    letter-spacing: 1px;
-    margin: 15px auto 5px auto;
-    max-width: $ARTICLE_TOTAL + $DESKTOP_SIDE_GUTTER*2;
-    padding-left: $MOBILE_SIDE_GUTTER;
-    text-transform: uppercase;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding-left: $DESKTOP_SIDE_GUTTER;
-    }
-}
-
-.a-header__image-caption {
-    @include font('COMMUTER SANS', 13px, 'MEDIUM', 17px);
-
-    letter-spacing: 1px;
-    margin: 5px auto 10px auto;
-    max-width: $ARTICLE_TOTAL + $DESKTOP_SIDE_GUTTER*2;
-    padding-left: $MOBILE_SIDE_GUTTER;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding-left: $DESKTOP_SIDE_GUTTER;
-    }
-}
-
-.a-header__image-credit {
-    @include font('COMMUTER SANS', 10px, 'MEDIUM', 10px);
-
-    color: $gray;
-    letter-spacing: 1px;
-    margin: 5px auto 30px auto;
-    max-width: $ARTICLE_TOTAL + $DESKTOP_SIDE_GUTTER*2;
-    padding-left: $MOBILE_SIDE_GUTTER;
-    text-transform: uppercase;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding-left: $DESKTOP_SIDE_GUTTER;
+    @include at-x-large-size {
+        margin: 20px 0 30px 0;
     }
 
-    &:before {
-        content: 'Credit: ';
-    }
-}
+    .bb-p {
+        font-style: italic;
+        @include font("STARLING", 20px, 400, 23px);
+        color: $black;
 
-.a-header__separator--hero {
-    display: none;
-}
-
-.a-header__tag,
-.a-header__tag__primary,
-.a-header__tag__secondary {
-    @include font('COMMUTER SANS', 12px, 'MEDIUM', 12px);
-
-    color: $gray;
-    letter-spacing: 1px;
-    margin: 0 0 12px;
-    text-transform: uppercase;
-    text-decoration: none;
-
-    @include desktop-size {
-        @include font('COMMUTER SANS', 16px, 'MEDIUM', 16px);
-
-        letter-spacing: 1px;
-        margin: 0 0 12px;
-    }
-
-    &:hover,
-    &:focus {
-        color: $COLOUR_MAIN_HIGHLIGHT;
-    }
-
-    a {
-        color: $gray;
-        margin-bottom: 0;
-        padding-right: 5px;
-        text-decoration: none;
-
-        &:hover,
-        &:focus {
-            color: $COLOUR_MAIN_HIGHLIGHT;
+        @include at-x-large-size {
+            @include font-size(23px);
+            @include line-height(28px);
         }
     }
 
-    a + a {
-        border-left: 1px solid $COLOUR_BORDER_SEPARATOR;
-        padding-left: 10px;
+    > *:first-child {
+        margin-top: 0;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
     }
 }
 
-.a-header__separator--sponsor {
-    display: none;
+.a-header__about {
+    @include min-screen($ARTICLE_TOTAL) {
+        display: none;
+    }
 }
 
-.a-main.is-legit-content {}
-
-.a-header__sponsor {
+.a-header__byline {
+    @include font("STARLING", 13px, 400, 15px);
     color: $gray;
-    @include font('COMMUTER SANS', 12px, 'MEDIUM', 12px);
-    letter-spacing: 1px;
-    margin: $MARGIN_X_SMALL 0 0 0;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
 
-    @include desktop-size {
-        margin: $MARGIN_MEDIUM 0 $MARGIN_LARGE 0;
+.a-header__byline-item {}
+.a-header__byline-name {
+    a {
+        color: $gray;
     }
 }
 
-.a-header__sponsor-prefix {
+.a-header__byline-prefix,
+.a-header__byline-conjunction {
     font-style: italic;
     text-transform: lowercase;
 }
 
-.a-header__sponsor-name {
+.a-header__date {
+    @include font("COMMUTER SANS", 10px, 400, 10px);
     color: $gray;
-    margin-left: 1px;
-    padding-bottom: 3px;
-    text-decoration: none;
+    margin-top: 15px;
     text-transform: uppercase;
-    transition: border .16s ease;
-
-    &:hover, &:focus {
-        color: $cinnabar;
-    }
-
-    @include desktop-size {
-        @include font-size(16px);
-        @include line-height(16px);
-        margin-left: 3px;
-    }
-
 }
 
-.a-header__sponsor-image {
-    margin-top: $MARGIN_XX_SMALL;
-
-    img {
-        max-width: 150px;
-    }
-
-    @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT) {
-        margin-left: $MARGIN_XXX_SMALL;
-        margin-top: -3px;
-    }
-}
-
-.a-header__meta {
-    @include card-switcher-size;
-    font-size: 0;
-
-    @include desktop-size {
-        margin-bottom: 30px;
-    }
+ul.a-header__meta {
+    @include font("COMMUTER SANS", 10px, 400, 10px);
+    color: $gray;
+    margin-top: 15px;
+    text-transform: uppercase;
 }
 
 li.a-header__meta-item {
-    color: $gray;
-    @include font('COMMUTER SANS', 12px, 'MEDIUM', 12px);
-    letter-spacing: 0.3px;
+    display: inline-block;
+
+    & + li.a-header__meta-item {
+        &:before {
+
+        }
+    }
 
     a {
         color: inherit;
-        letter-spacing: 1px;
-        text-decoration: none;
-        text-transform: uppercase;
-
-        &:hover,
-        &:focus {
-            color: $COLOUR_MAIN_HIGHLIGHT;
-        }
-    }
-
-
-    & + & {
-        border-left: 1px solid #ccc;
-        margin-left: 10px;
-        padding-left: 10px;
     }
 }
 
-@include desktop-size {
-    li.a-header__meta-item {
-        @include font-size(16px);
-        @include line-height(16px);
+.a-header__meta--date {}
+.a-header__meta--tag {}
+
+.a-header__tag {
+    @include font("COMMUTER SANS", 12px, 400, 12px);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.a-header__tag__primary,
+.a-header__tag__secondary {
+    color: $gray;
+    display: inline-block;
+}
+
+// TODO
+.a-header__sponsor {
+    // @include font("GRAPHIK", 10px, 400, 13px);
+    // border-top: 1px solid $cloud;
+    // color: $dune;
+    // display: table;
+    // letter-spacing: 1.5px;
+    // margin-bottom: 30px;
+    // margin-top: 20px;
+    // padding-top: 5px;
+    // position: relative;
+    // text-transform: uppercase;
+
+    // @include min-screen($ARTICLE_TOTAL) {
+        // border-top: none;
+        // padding: 0;
+    // }
+}
+
+.a-header__sponsor-prefix {
+    display: inline-block;
+    white-space: nowrap;
+
+    @include min-screen($ARTICLE_TOTAL) {
+        display: table-cell;
+        vertical-align: middle;
     }
 }
 
-.a-header__event {
-    margin-top: 25px;
+.a-header__sponsor-name {
+    color: $gray;
+    padding-left: 5px;
+}
 
-    @include desktop-size {
+.a-header__sponsor-image {
+    img {
+        height: auto;
+        margin: 10px auto 0 0;
+        max-height: 50px;
+        max-width: 140px;
+        width: auto;
+    }
+
+    @include min-screen($ARTICLE_TOTAL) {
+        display: table-cell;
         margin-top: 0;
-    }
-}
+        padding-left: 10px;
+        vertical-align: middle;
 
-.a-header__event-title {
-    @include font('COMMUTER SANS', 12px, 'MEDIUM', 12px);
-
-    color: $gray;
-    letter-spacing: 1px;
-    margin: 15px 0 10px;
-    text-transform: uppercase;
-
-    @include desktop-size {
-        @include font('COMMUTER SANS', 13px, 'MEDIUM', 13px);
-
-        margin: 15px 0 4px;
-    }
-}
-
-.a-header__event-location {
-    @include font('COMMUTER SANS', 12px, 'MEDIUM', 12px);
-
-    text-transform: none;
-    letter-spacing: .5px;
-    color: $gray;
-    margin: 0 0 10px;
-
-
-    @include desktop-size {
-        @include font('COMMUTER SANS', 13px, 'MEDIUM', 13px);
-
-        margin: 0 0 2px;
-    }
-}
-
-.a-header__event-date {
-    @include font('COMMUTER SANS', 10px, 'MEDIUM', 18px);
-
-    color: $gray;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin: 0 0 10px;
-
-    @include desktop-size {
-        margin: 0 0 8px;
-    }
-}
-
-.a-header__event-btn {
-    @include font("COMMUTER SANS", 10px, 500, 10px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0);
-    color: $cinnabar;
-    letter-spacing: 0.5px;
-    padding-bottom: 3px;
-    text-decoration: none;
-    text-transform: none;
-    transition: border .16s ease;
-
-    &:hover {
-        border-bottom: 1px solid rgba($cinnabar, 0.8);
-    }
-}
-
-.a-share__youtube {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
-        margin-left: 10px;
-        margin-top: 22px;
-    }
-}
-.a-share__youtube__title {
-    @include font('COMMUTER SANS', 9px, 'NORMAL', 11px);
-    text-transform: uppercase;
-}
-
-.a-header--gallery {}
-
-.a-header--video {
-    .a-header__separator {
-        display: none;
-    }
-
-    .a-header__title {
-        max-width: 800px;
-    }
-
-    @include desktop-size {
-        .a-header__content {
-            padding: 60px 360px 30px 0;
+        img {
+            max-height: 48px;
+            margin-top: 0;
         }
     }
-
 }
+
+// TODO
+// .a-header__event {
+//     margin: 30px 0;
+
+//     @include min-screen($ARTICLE_TOTAL) {
+//         display: none;
+//     }
+// }
+
+// .a-header__event-title {
+//     @include font("GRAPHIK", 10px, 400, 12px);
+//     color: $dune;
+//     letter-spacing: 1.5px;
+//     margin-bottom: 6px;
+//     text-transform: uppercase;
+// }
+
+// .a-header__event-location {
+//     @include font("GRAPHIK", 10px, 400, 12px);
+//     color: $dune;
+//     letter-spacing: 1.5px;
+//     margin-bottom: 6px;
+//     text-transform: uppercase;
+// }
+
+// .a-header__event-date {
+//     @include font("GRAPHIK", 10px, 400, 12px);
+//     color: $dune;
+//     letter-spacing: 1.5px;
+//     margin-bottom: 20px;
+//     margin-top: 13px;
+//     text-transform: uppercase;
+// }
+
+// .a-header__event-btn {
+//     @include button-group();
+//     @include button-group-light();
+
+//     &:hover {
+//         @include button-group-light-hover();
+//     }
+// }
