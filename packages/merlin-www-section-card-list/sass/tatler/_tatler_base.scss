@@ -74,13 +74,17 @@
 .c-card-section--c-curated,
 .c-card-section--c-tag {
     .c-card-section__title {
-        @include t-topic-title-small;
+        @include font('COMMUTER SANS', 20px, 'NORMAL', 20px);
+        color: $black;
+        letter-spacing: 1px;
         margin: 0 0 20px 0;
         position: relative;
         text-align: center;
+        text-transform: uppercase;
 
         @include tablet-size {
-            @include t-topic-title-large;
+            @include font-size(30px);
+            @include line-height(30px);
         }
     }
 }
@@ -201,10 +205,13 @@
     }
 
     .c-card-section__title {
-        @include t-topic-title-small;
+        @include font('COMMUTER SANS', 20px, 400, 20px);
+        color: $black;
+        letter-spacing: 1px;
         margin: 0 0 20px 0;
         position: relative;
         text-align: left;
+        text-transform: uppercase;
 
         span {
             border-left: none;
@@ -216,10 +223,13 @@
 .c-card-section--tg-articles,
 .c-card-section--v-articles {
     .c-card-section__title {
-        @include t-topic-title-small;
+        @include font('COMMUTER SANS', 20px, 400, 20px);
+        color: $black;
+        letter-spacing: 1px;
         margin: 0 0 20px 0;
         position: relative;
         text-align: left;
+        text-transform: uppercase;
 
         span {
             border-left: none;
@@ -245,10 +255,13 @@
     }
 
     .c-card-section__title {
-        @include t-topic-title-small;
+        @include font('COMMUTER SANS', 20px, 400, 20px);
+        color: $black;
+        letter-spacing: 1px;
         margin: 0 0 20px 0;
         position: relative;
         text-align: left;
+        text-transform: uppercase;
 
         span {
             border-left: none;
