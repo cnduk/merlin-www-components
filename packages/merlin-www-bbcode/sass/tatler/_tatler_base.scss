@@ -531,8 +531,8 @@
     }
 }
 
-.bb-gallery__col {
-    background-color: $silver;
+.bb-gallery__cols {
+    background-color: $alabaster;
 
     &:before {
         content: none;
@@ -561,6 +561,14 @@
 // -------------------- //
 // Video
 // -------------------- //
+.bb-video {
+    margin-bottom: 40px;
+
+    @include desktop-size {
+        margin-bottom: 60px;
+    }
+}
+
 .bb-video__title {
     @include font-size(18px);
     @include line-height(20px);
@@ -615,14 +623,18 @@
     }
 }
 
+.bb-video__wrapper{
+    background: $alabaster;
+}
+
 // -------------------- //
 // Image
 // -------------------- //
 .bb-figure {
-    margin-bottom: 25px;
+    margin-bottom: 40px;
 
     @include desktop-size {
-        margin-bottom: 30px;
+        margin-bottom: 60px;
     }
 }
 
@@ -651,7 +663,7 @@
 }
 
 .bb-figure__wrapper {
-    background-color: $mercury;
+    background-color: $alabaster;
 }
 
 .bb-figure--external {
@@ -694,7 +706,7 @@
 
 .bb-card__images {
     .bb-card__image {
-        background-color: $mercury;
+        background-color: $alabaster;
         padding-top: 100%;
     }
 
