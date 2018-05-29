@@ -50,7 +50,7 @@
         }
 
         &:hover {
-            color: $COLOUR_MAIN_HIGHLIGHT;
+            color: $gray;
         }
     }
 }
@@ -61,7 +61,7 @@
     }
 
     &:after {
-        border-top-color: $COLOUR_MAIN_HIGHLIGHT;
+        border-top-color: $black;
         border-width: 4px;
         margin-left: 8px;
         position: relative;
