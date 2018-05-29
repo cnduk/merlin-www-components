@@ -46,7 +46,7 @@
 .c-card--cover {
     @include card-cover;
 
-    @include card-switcher-size {
+    @include card-portrait-to-landscape-size {
         .c-card__obj__body {
             padding-top: 20px;
         }
