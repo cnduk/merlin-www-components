@@ -173,9 +173,21 @@
 
 /* ===RELATED=== */
 
-@mixin button-related() {}
-@mixin button-related-light() {}
-@mixin button-related-light-hover() {}
+@mixin button-related() {
+    @include button-reset();
+    @include font("COMMUTER SANS", 10px, 400, 10px);
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+@mixin button-related-light() {
+    border: 1px solid $brownish-grey;
+    color: $brownish-grey;
+}
+@mixin button-related-light-hover() {
+    background-color: $brownish-grey;
+    border: 1px solid $brownish-grey;
+    color: $white;
+}
 @mixin button-related-dark() {}
 @mixin button-related-dark-hover() {}
 
