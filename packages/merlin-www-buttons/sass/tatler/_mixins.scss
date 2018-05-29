@@ -168,8 +168,20 @@
     }
 }
 
-@mixin button-share-dark($name) {}
-@mixin button-share-dark-hover($name) {}
+@mixin button-share-dark($name) {
+    background-color: $white;
+
+    svg {
+        fill: map-get($COLOUR_SOCIAL, $name);
+    }
+}
+@mixin button-share-dark-hover($name) {
+    background-color: map-get($COLOUR_SOCIAL, $name);
+
+    svg {
+        fill: $white;
+    }
+}
 
 /* ===RELATED=== */
 

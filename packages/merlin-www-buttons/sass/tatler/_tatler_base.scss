@@ -111,8 +111,6 @@ a.btn-share--monotone {}
 @each $name, $color in $COLOUR_SOCIAL {
     .btn-share--#{$name},
     a.btn-share--#{$name} {
-        background-color: #{$color};
-
         &.btn-share--dark {
             @include button-share-dark($name);
         }
