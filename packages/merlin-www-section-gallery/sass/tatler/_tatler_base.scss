@@ -77,7 +77,11 @@ $section_gallery_icon_size: 40px;
 }
 
 .c-gallery__tag {
-    @include t-gallery-tag-small;
+    @include font('COMMUTER SANS', 11px, 'MEDIUM', 13px);
+
+    color: $COLOUR_MAIN_TERTIARY;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .c-gallery__title {
@@ -88,7 +92,10 @@ $section_gallery_icon_size: 40px;
 }
 
 .c-gallery__teaser {
-    @include t-gallery-teaser-small;
+    @include font('STARLING', 15px, 'NORMAL', 20px);
+
+    color: $COLOUR_TYPE_BODY;
+    font-style: italic;
     margin: 10px 0;
 }
 
@@ -126,10 +133,12 @@ $section_gallery_icon_size: 40px;
 }
 
 li.c-gallery__meta-item {
-    @include t-gallery-meta-small;
+    @include font('COMMUTER SANS', 9px, 400, 9px);
 
+    color: $gray;
     border-right: 1px solid $COLOUR_BORDER_SOLID;
     padding-right: 8px;
+    text-transform: uppercase;
 
     & + & {
         padding-left: 8px;
@@ -177,8 +186,12 @@ li.c-gallery__meta-item {
     }
 
     .c-gallery__tag {
-        @include t-gallery-tag-large;
+        @include font('COMMUTER SANS', 12px, 'MEDIUM', 13px);
+
+        color: $COLOUR_MAIN_TERTIARY;
+        letter-spacing: 1px;
         margin: 15px 0;
+        text-transform: uppercase;
     }
 
     .c-gallery__title {
@@ -187,7 +200,9 @@ li.c-gallery__meta-item {
     }
 
     .c-gallery__teaser {
-        @include t-gallery-teaser-large;
+        @include font('STARLING', 18px, 'NORMAL', 23px);
+        color: $COLOUR_TYPE_BODY;
+        font-style: italic;
     }
 
     .c-gallery__separator {
@@ -199,10 +214,17 @@ li.c-gallery__meta-item {
     }
 
     .c-gallery__byline-prefix {
-        @include t-gallery-byline-prefix-large;
+        @include font('STARLING', 12px, 'MEDIUM', 12px);
+
+        color: $COLOUR_MAIN_TERTIARY;
+        font-style: italic;
+        letter-spacing: 1px;
     }
     .c-gallery__byline-name {
-        @include t-gallery-byline-author-large;
+        @include font('STARLING', 12px, 'MEDIUM', 12px);
+
+        color: $COLOUR_MAIN_TERTIARY;
+        letter-spacing: 1px;
     }
 
     li.c-gallery__meta-item {
