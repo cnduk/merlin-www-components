@@ -580,6 +580,7 @@
     left: 0;
     padding: 0;
     position: absolute;
+        top: 2px;
     width: 16px;
 
     svg {
@@ -747,70 +748,45 @@
     display: none;
 }
 
+// -------------------- //
+// Callout
+// -------------------- //
+.bb-callout {
+    background: $black;
+    margin: 30px 0;
+    position: relative;
+    padding: 20px;
+    z-index: 1;
+
+    @include desktop-size {
+        margin: 30px 0;
+        padding: 30px;
+    }
+
+    > *:first-child {
+        margin-top: 0;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+
+    .bb-p{
+        color: #ffffff;
+    }
+
+    .bb-a {
+        color: #ffffff;
+        border-color: #ffffff;
+    }
+}
+
 ///**
 // * Twitter, Instagram, Vine, Facebook, Vimeo, Youtube
 // */
 //.bb-embed {
 //    margin: $MARGIN_LARGE 0;
 //}
-//
-//.bb-embed--centered {
-//    iframe {}
-//}
-//
-//.bb-embed--video {
-//    iframe {}
-//}
-//
-//.bb-embed--vine {
-//    iframe {}
-//}
-//
-//
-///**
-// * Callout
-// */
-//.bb-callout {
-//    background: transparent;
-//    border: 2px solid $COLOUR_BORDER_INFOBOX;
-//    margin: 30px 0;
-//    position: relative;
-//    padding: 25px;
-//    z-index: 1;
-//
-//    &:before {
-//        border: 1px solid $COLOUR_BORDER_INFOBOX;
-//        bottom: 5px;
-//        content: '';
-//        display: block;
-//        left: 5px;
-//        position: absolute;
-//        right: 5px;
-//        top: 5px;
-//        z-index: -1;
-//
-//        @include desktop-size {
-//            bottom: 10px;
-//            left: 10px;
-//            right: 10px;
-//            top: 10px;
-//        }
-//    }
-//
-//    > *:first-child {
-//        margin-top: 0;
-//    }
-//
-//    > *:last-child {
-//        margin-bottom: 0;
-//    }
-//
-//    @include desktop-size {
-//        margin: 40px 0;
-//        padding: 40px;
-//    }
-//}
-//
 //
 ///**
 // * Interactive
