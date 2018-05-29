@@ -40,14 +40,8 @@
 }
 
 .c-card-section__title {
-    @include t-topic-title-small;
     margin: 0 0 20px 0;
     position: relative;
-    text-align: center;
-
-    @include tablet-size {
-        @include t-topic-title-large;
-    }
 
     a {
         color: inherit;
@@ -77,6 +71,24 @@
     }
 }
 
+.c-card-section--c-curated,
+.c-card-section--c-tag {
+    .c-card-section__title {
+        @include font('COMMUTER SANS', 20px, 'NORMAL', 20px);
+        color: $black;
+        letter-spacing: 1px;
+        margin: 0 0 20px 0;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include tablet-size {
+            @include font-size(30px);
+            @include line-height(30px);
+        }
+    }
+}
+
 .c-card-section--dark {
     background: $cod-gray;
 
@@ -90,8 +102,6 @@
         }
     }
 }
-
-.c-card-section--s-results {}
 
 .c-card-section--c-video-articles {
     background-color: $COLOUR_BG_DARK;
@@ -180,44 +190,9 @@
     @include desktop-size {
         display: none;
     }
-
 }
 
-.c-card-section--mag-articles,
-.c-card-section--v-genre-articles {
-    .c-card-section__title {
-        @include font-size(18px);
-        @include line-height(18px);
-
-        margin: 0;
-        padding-bottom: 15px;
-        position: relative;
-        text-align: center;
-        text-transform: uppercase;
-
-        &:after {
-            content: '';
-            height: 1px;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 100%;
-        }
-    }
-
-    @include desktop-size {
-        .c-card-section__title {
-            padding-bottom: 0px;
-            text-align: left;
-        }
-    }
-}
-
-.c-card-section--mag-magazines,
-.c-card-section--a-recommended,
-.c-card-section--g-recommended,
-.c-card-section--sh-summary-articles,
-.c-card-section--sh-summary-shows {
+.c-card-section--a-recommended {
     padding-bottom: $PADDING_LARGE;
     padding-top: $PADDING_LARGE;
     margin-bottom: 0;
@@ -230,44 +205,42 @@
     }
 
     .c-card-section__title {
-        margin: 0;
-        padding-bottom: 10px;
+        @include font('COMMUTER SANS', 20px, 400, 20px);
+        color: $black;
+        letter-spacing: 1px;
+        margin: 0 0 20px 0;
         position: relative;
         text-align: left;
         text-transform: uppercase;
 
-        &:after {
-            content: '';
-            height: 1px;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 100%;
-        }
-    }
-
-    @include desktop-size {
-        .c-card-section__title {
-            padding-bottom: 0;
+        span {
+            border-left: none;
+            padding-left: 0;
         }
     }
 }
 
-.c-card-section--a-recommended {
-    padding-top: 30px;
-
+.c-card-section--tg-articles,
+.c-card-section--v-articles {
     .c-card-section__title {
-        @include font-size(18px);
-        @include line-height(18px);
+        @include font('COMMUTER SANS', 20px, 400, 20px);
+        color: $black;
+        letter-spacing: 1px;
+        margin: 0 0 20px 0;
+        position: relative;
+        text-align: left;
+        text-transform: uppercase;
 
-        padding-bottom: 20px;
+        span {
+            border-left: none;
+            padding-left: 0;
+        }
     }
 
-    @include tablet-size {
-        padding-top: 60px;
-
-        .c-card-section__title {
-            padding-bottom: 0;
+    @include desktop-size {
+        .c-card-list {
+            margin-right: 340px;
+            position: relative;
         }
     }
 }
@@ -281,51 +254,23 @@
         max-width: $MAXIMUM_PAGE_WIDTH;
     }
 
+    .c-card-section__title {
+        @include font('COMMUTER SANS', 20px, 400, 20px);
+        color: $black;
+        letter-spacing: 1px;
+        margin: 0 0 20px 0;
+        position: relative;
+        text-align: left;
+        text-transform: uppercase;
+
+        span {
+            border-left: none;
+            padding-left: 0;
+        }
+    }
+
     @include desktop-size {
         margin-bottom: 60px;
         margin-top: 60px;
     }
 }
-
-.c-card-section--c-magazine-articles {}
-.c-card-section--sh-shows {}
-
-.c-card-section--v-articles,
-.c-card-section--tg-articles,
-.c-card-section--sh-latest-articles {
-    .c-card-section__title {
-        @include font-size(18px);
-        @include line-height(18px);
-        margin: 0;
-        padding-bottom: 15px;
-        position: relative;
-        text-align: center;
-        text-transform: uppercase;
-
-        &:after {
-            content: '';
-            height: 1px;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 100%;
-        }
-    }
-
-    .c-card-list {
-        text-align: left;
-    }
-
-    @include desktop-size {
-        .c-card-section__title {
-            padding-bottom: 0;
-            text-align: center;
-        }
-        .c-card-list {
-            margin-right: 340px;
-            position: relative;
-        }
-    }
-}
-.c-card-section--sh-articles {}
-.c-card-section--tg-header-articles {}
