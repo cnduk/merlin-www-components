@@ -20,45 +20,28 @@
     }
 
     .c-card__obj__body {
-        padding: 15px 0 0;
+        padding: 10px 0 0;
         text-align: left;
-    }
-
-    p.c-card__tag {
-        margin: 0 0 5px;
     }
 
     .c-card__title {
         @include font('STARLING', 18px, 'NORMAL', 22px);
-
-        margin: 0 0 7px;
-        text-align: left;
+        margin: 0 0 10px;
     }
 
     .c-card__separator {
-        left: 0;
-        margin: 0;
-        width: 10px;
+        display: none;
     }
 
-    p.c-card__byline {
+    .c-card__byline {
         margin: 0;
     }
 
-    .c-card__meta {
-        display: block;
-        text-align: left;
-        margin-top: 0;
-    }
-
-    .c-card__byline + .c-card__meta {
-        margin-top: 5px;
-    }
 }
 
 .a-sidebar-content__title {
-    @include font('STARLING', 18px, 'NORMAL', 18px);
+    @include font('COMMUTER SANS', 15px, 'NORMAL', 15px);
 
-    margin: 0 0 10px 0;
+    margin: 0 0 15px 0;
     text-transform: uppercase;
 }
