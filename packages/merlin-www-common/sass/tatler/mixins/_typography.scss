@@ -14,32 +14,32 @@
  * =============================================================================
  * TOPICS
  */
-@mixin t-topic-title-small {
-    @include font('COMMUTER SANS', 20px, 400, 20px);
+// @mixin t-topic-title-small {
+//     @include font('COMMUTER SANS', 20px, 400, 20px);
 
-    color: $black;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
+//     color: $black;
+//     letter-spacing: 1px;
+//     text-transform: uppercase;
+// }
 
-@mixin t-topic-title-large {
-    @include font('COMMUTER SANS', 30px, 400, 30px);
+// @mixin t-topic-title-large {
+//     @include font('COMMUTER SANS', 30px, 400, 30px);
 
-    color: $black;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
+//     color: $black;
+//     letter-spacing: 1px;
+//     text-transform: uppercase;
+// }
 
-@mixin t-topic-label-small {
-    @include font('STARLING', 12px, 'MEDIUM', 12px);
+// @mixin t-topic-label-small {
+//     @include font('STARLING', 12px, 'MEDIUM', 12px);
 
-    color: $COLOUR_MAIN_PRIMARY;
-    letter-spacing: 1px;
-}
+//     color: $COLOUR_MAIN_PRIMARY;
+//     letter-spacing: 1px;
+// }
 
-@mixin t-topic-label-large {
-    @include topic-label-small;
-}
+// @mixin t-topic-label-large {
+//     @include topic-label-small;
+// }
 
 /**
  * TYPOGRAPHY
