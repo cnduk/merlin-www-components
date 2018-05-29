@@ -48,43 +48,43 @@
  * -----------------------------------------------------------------------------
  * BASE CARD STYLES
  */
-@mixin t-card-tag {
-    @include font('COMMUTER SANS', 11px, 'MEDIUM', 13px);
+// @mixin t-card-tag {
+//     @include font('COMMUTER SANS', 11px, 'MEDIUM', 13px);
 
-    color: $COLOUR_MAIN_TERTIARY;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
+//     color: $COLOUR_MAIN_TERTIARY;
+//     letter-spacing: 1px;
+//     text-transform: uppercase;
+// }
 
-@mixin t-card-title {
-    @include font('STARLING', 24px, 'NORMAL', 28px);
+// @mixin t-card-title {
+//     @include font('STARLING', 24px, 'NORMAL', 28px);
 
-    color: $COLOUR_MAIN_PRIMARY;
-}
+//     color: $COLOUR_MAIN_PRIMARY;
+// }
 
-@mixin t-card-byline-prefix {
-    @include font('STARLING', 11px, 'MEDIUM', 13px);
+// @mixin t-card-byline-prefix {
+//     @include font('STARLING', 11px, 'MEDIUM', 13px);
 
-    color: $COLOUR_MAIN_TERTIARY;
-    font-style: italic;
-    letter-spacing: 1px;
-    text-transform: lowercase;
-}
+//     color: $COLOUR_MAIN_TERTIARY;
+//     font-style: italic;
+//     letter-spacing: 1px;
+//     text-transform: lowercase;
+// }
 
-@mixin t-card-byline-author {
-    @include font('STARLING', 11px, 'MEDIUM', 13px);
+// @mixin t-card-byline-author {
+//     @include font('STARLING', 11px, 'MEDIUM', 13px);
 
-    color: $COLOUR_MAIN_TERTIARY;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
+//     color: $COLOUR_MAIN_TERTIARY;
+//     letter-spacing: 1px;
+//     text-transform: uppercase;
+// }
 
-@mixin t-card-meta {
-    @include font('COMMUTER SANS', 9px, 400, 9px);
+// @mixin t-card-meta {
+//     @include font('COMMUTER SANS', 9px, 400, 9px);
 
-    color: $gray;
-    text-transform: uppercase;
-}
+//     color: $gray;
+//     text-transform: uppercase;
+// }
 
 
 /**
@@ -94,25 +94,43 @@
  * -----------------------------------------------------------------------------
  * PORTRAIT CARDS
  */
-@mixin t-card-portrait-tag {
-    @include t-card-tag;
-}
+// @mixin t-card-portrait-tag {
+//     @include font('COMMUTER SANS', 11px, 'MEDIUM', 13px);
 
-@mixin t-card-portrait-title {
-    @include t-card-title;
-}
+//     color: $COLOUR_MAIN_TERTIARY;
+//     letter-spacing: 1px;
+//     text-transform: uppercase;
+// }
 
-@mixin t-card-portrait-byline-prefix {
-    @include t-card-byline-prefix;
-}
+// @mixin t-card-portrait-title {
+//     @include font('STARLING', 24px, 'NORMAL', 28px);
 
-@mixin t-card-portrait-byline-author {
-    @include t-card-byline-author;
-}
+//     color: $COLOUR_MAIN_PRIMARY;
+// }
 
-@mixin t-card-portrait-meta {
-    @include t-card-meta;
-}
+// @mixin t-card-portrait-byline-prefix {
+//     @include font('STARLING', 11px, 'MEDIUM', 13px);
+
+//     color: $COLOUR_MAIN_TERTIARY;
+//     font-style: italic;
+//     letter-spacing: 1px;
+//     text-transform: lowercase;
+// }
+
+// @mixin t-card-portrait-byline-author {
+//     @include font('STARLING', 11px, 'MEDIUM', 13px);
+
+//     color: $COLOUR_MAIN_TERTIARY;
+//     letter-spacing: 1px;
+//     text-transform: uppercase;
+// }
+
+// @mixin t-card-portrait-meta {
+//     @include font('COMMUTER SANS', 9px, 400, 9px);
+
+//     color: $gray;
+//     text-transform: uppercase;
+// }
 
 
 /**
@@ -122,27 +140,40 @@
  * -----------------------------------------------------------------------------
  * LANDSCAPE CARDS
  */
-@mixin t-card-landscape-tag {
-    @include t-card-tag;
-}
+// @mixin t-card-landscape-tag {
+//     @include font('COMMUTER SANS', 11px, 'MEDIUM', 13px);
 
-@mixin t-card-landscape-title {
-    @include font('STARLING', 18px, 'NORMAL', 22px);
+//     color: $COLOUR_MAIN_TERTIARY;
+//     letter-spacing: 1px;
+//     text-transform: uppercase;
+// }
 
-    color: $COLOUR_MAIN_PRIMARY;
-}
+// @mixin t-card-landscape-title {
+//     @include font('STARLING', 18px, 'NORMAL', 22px);
 
-@mixin t-card-landscape-byline-prefix {
-    @include t-card-byline-prefix;
-}
+//     color: $COLOUR_MAIN_PRIMARY;
+// }
 
-@mixin t-card-landscape-byline-author {
-    @include t-card-byline-author;
-}
+// @mixin t-card-landscape-byline-prefix {
+//     @include font('STARLING', 11px, 'MEDIUM', 13px);
 
-@mixin t-card-landscape-meta {
-    @include t-card-byline-meta;
-}
+//     color: $COLOUR_MAIN_TERTIARY;
+//     font-style: italic;
+//     letter-spacing: 1px;
+//     text-transform: lowercase;
+// }
+
+// @mixin t-card-landscape-byline-author {
+//     @include font('STARLING', 11px, 'MEDIUM', 13px);
+
+//     color: $COLOUR_MAIN_TERTIARY;
+//     letter-spacing: 1px;
+//     text-transform: uppercase;
+// }
+
+// @mixin t-card-landscape-meta {
+//     @include t-card-byline-meta;
+// }
 
 
 /**
@@ -152,70 +183,92 @@
  * -----------------------------------------------------------------------------
  * FEATURE SLICE
  */
-@mixin t-feature-tag-small {
-    @include t-card-tag;
-}
+// @mixin t-feature-tag-small {
+//     @include font('COMMUTER SANS', 11px, 'MEDIUM', 13px);
 
-@mixin t-feature-tag-large {
-    @include t-card-tag;
-    @include font-size(12px);
-}
+//     color: $COLOUR_MAIN_TERTIARY;
+//     letter-spacing: 1px;
+//     text-transform: uppercase;
+// }
 
-@mixin t-feature-title-small {
-    @include t-card-title;
-}
+// @mixin t-feature-tag-large {
+//     @include font('COMMUTER SANS', 12px, 'MEDIUM', 13px);
 
-@mixin t-feature-title-large {
-    @include font('STARLING', 37px, 'NORMAL', 42px);
+//     color: $COLOUR_MAIN_TERTIARY;
+//     letter-spacing: 1px;
+//     text-transform: uppercase;
+// }
 
-    color: $COLOUR_MAIN_PRIMARY;
-}
+// @mixin t-feature-title-small {
+//     @include font('STARLING', 24px, 'NORMAL', 28px);
 
-@mixin t-feature-teaser-small {
-    @include font('STARLING', 15px, 'NORMAL', 20px);
+//     color: $COLOUR_MAIN_PRIMARY;
+// }
 
-    color: $COLOUR_TYPE_BODY;
-    font-style: italic;
-}
+// @mixin t-feature-title-large {
+//     @include font('STARLING', 37px, 'NORMAL', 42px);
 
-@mixin t-feature-teaser-large {
-    color: $COLOUR_TYPE_BODY;
-    @include font('STARLING', 18px, 'NORMAL', 23px);
+//     color: $COLOUR_MAIN_PRIMARY;
+// }
 
-    font-style: italic;
-}
+// @mixin t-feature-teaser-small {
+//     @include font('STARLING', 15px, 'NORMAL', 20px);
 
-@mixin t-feature-byline-prefix-small {
-    @include t-card-byline-prefix;
-}
+//     color: $COLOUR_TYPE_BODY;
+//     font-style: italic;
+// }
 
-@mixin t-feature-byline-prefix-large {
-    @include font('STARLING', 12px, 'MEDIUM', 12px);
+// @mixin t-feature-teaser-large {
+//     @include font('STARLING', 18px, 'NORMAL', 23px);
+//     color: $COLOUR_TYPE_BODY;
+//     font-style: italic;
+// }
 
-    color: $COLOUR_MAIN_TERTIARY;
-    font-style: italic;
-    letter-spacing: 1px;
-}
+// @mixin t-feature-byline-prefix-small {
+//     @include font('STARLING', 11px, 'MEDIUM', 13px);
 
-@mixin t-feature-byline-author-small {
-    @include t-card-byline-author;
-}
+//     color: $COLOUR_MAIN_TERTIARY;
+//     font-style: italic;
+//     letter-spacing: 1px;
+//     text-transform: lowercase;
+// }
 
-@mixin t-feature-byline-author-large {
-    @include font('STARLING', 16px, 'MEDIUM', 12px);
+// @mixin t-feature-byline-prefix-large {
+//     @include font('STARLING', 12px, 'MEDIUM', 12px);
 
-    color: $COLOUR_MAIN_TERTIARY;
-    letter-spacing: 1px;
-}
+//     color: $COLOUR_MAIN_TERTIARY;
+//     font-style: italic;
+//     letter-spacing: 1px;
+// }
 
-@mixin t-feature-meta-small {
-    @include t-card-meta;
-}
+// @mixin t-feature-byline-author-small {
+//     @include font('STARLING', 11px, 'MEDIUM', 13px);
 
-@mixin t-feature-meta-large {
-    @include t-card-meta;
-    @include font-size(12px);
-}
+//     color: $COLOUR_MAIN_TERTIARY;
+//     letter-spacing: 1px;
+//     text-transform: uppercase;
+// }
+
+// @mixin t-feature-byline-author-large {
+//     @include font('STARLING', 16px, 'MEDIUM', 12px);
+
+//     color: $COLOUR_MAIN_TERTIARY;
+//     letter-spacing: 1px;
+// }
+
+// @mixin t-feature-meta-small {
+//     @include font('COMMUTER SANS', 9px, 400, 9px);
+
+//     color: $gray;
+//     text-transform: uppercase;
+// }
+
+// @mixin t-feature-meta-large {
+//     @include font('COMMUTER SANS', 12px, 400, 9px);
+
+//     color: $gray;
+//     text-transform: uppercase;
+// }
 
 
 /**
@@ -225,45 +278,79 @@
  * -----------------------------------------------------------------------------
  * SUPER FEATURE SLICE
  */
-@mixin t-super-feature-tag-small {
-    @include t-feature-tag-small;
-}
+// @mixin t-super-feature-tag-small {
+//     @include font('COMMUTER SANS', 11px, 'MEDIUM', 13px);
 
-@mixin t-super-feature-tag-large {
-    @include t-feature-tag-large;
-}
+//     color: $COLOUR_MAIN_TERTIARY;
+//     letter-spacing: 1px;
+//     text-transform: uppercase;
+// }
 
-@mixin t-super-feature-title-small {
-    @include t-feature-title-small;
-}
+// @mixin t-super-feature-tag-large {
+//     @include font('COMMUTER SANS', 12px, 'MEDIUM', 13px);
 
-@mixin t-super-feature-title-large {
-    @include t-feature-title-large;
-}
+//     color: $COLOUR_MAIN_TERTIARY;
+//     letter-spacing: 1px;
+//     text-transform: uppercase;
+// }
 
-@mixin t-super-feature-byline-prefix-small {
-    @include t-feature-byline-prefix-small;
-}
+// @mixin t-super-feature-title-small {
+//     @include font('STARLING', 24px, 'NORMAL', 28px);
 
-@mixin t-super-feature-byline-prefix-large {
-    @include t-feature-byline-prefix-large;
-}
+//     color: $COLOUR_MAIN_PRIMARY;
+// }
 
-@mixin t-super-feature-byline-author-small {
-    @include t-feature-byline-author-small;
-}
+// @mixin t-super-feature-title-large {
+//     @include font('STARLING', 37px, 'NORMAL', 42px);
 
-@mixin t-super-feature-byline-author-large {
-    @include t-feature-byline-author-large;
-}
+//     color: $COLOUR_MAIN_PRIMARY;
+// }
 
-@mixin t-super-feature-meta-small {
-    @include t-feature-meta-small;
-}
+// @mixin t-super-feature-byline-prefix-small {
+//     @include font('STARLING', 11px, 'MEDIUM', 13px);
 
-@mixin t-super-feature-meta-large {
-    @include t-feature-meta-large;
-}
+//     color: $COLOUR_MAIN_TERTIARY;
+//     font-style: italic;
+//     letter-spacing: 1px;
+//     text-transform: lowercase;
+// }
+
+// @mixin t-super-feature-byline-prefix-large {
+//     @include font('STARLING', 12px, 'MEDIUM', 12px);
+
+//     color: $COLOUR_MAIN_TERTIARY;
+//     font-style: italic;
+//     letter-spacing: 1px;
+// }
+
+// @mixin t-super-feature-byline-author-small {
+//     @include font('STARLING', 11px, 'MEDIUM', 13px);
+
+//     color: $COLOUR_MAIN_TERTIARY;
+//     letter-spacing: 1px;
+//     text-transform: uppercase;
+// }
+
+// @mixin t-super-feature-byline-author-large {
+//     @include font('STARLING', 16px, 'MEDIUM', 12px);
+
+//     color: $COLOUR_MAIN_TERTIARY;
+//     letter-spacing: 1px;
+// }
+
+// @mixin t-super-feature-meta-small {
+//     @include font('COMMUTER SANS', 9px, 400, 9px);
+
+//     color: $gray;
+//     text-transform: uppercase;
+// }
+
+// @mixin t-super-feature-meta-large {
+//     @include font('COMMUTER SANS', 12px, 400, 9px);
+
+//     color: $gray;
+//     text-transform: uppercase;
+// }
 
 
 /**
@@ -274,52 +361,90 @@
  * GALLERY SLICE
  */
 @mixin t-gallery-tag-small {
-    @include t-feature-tag-small;
+    @include font('COMMUTER SANS', 11px, 'MEDIUM', 13px);
+
+    color: $COLOUR_MAIN_TERTIARY;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 @mixin t-gallery-tag-large {
-    @include t-feature-tag-large;
+    @include font('COMMUTER SANS', 12px, 'MEDIUM', 13px);
+
+    color: $COLOUR_MAIN_TERTIARY;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 @mixin t-gallery-title-small {
-    @include t-feature-title-small;
+    @include font('STARLING', 24px, 'NORMAL', 28px);
+
+    color: $COLOUR_MAIN_PRIMARY;
 }
 
 @mixin t-gallery-title-large {
-    @include t-feature-title-large;
+    @include font('STARLING', 37px, 'NORMAL', 42px);
+
+    color: $COLOUR_MAIN_PRIMARY;
 }
 
 @mixin t-gallery-teaser-small {
-    @include t-feature-teaser-small;
+    @include font('STARLING', 15px, 'NORMAL', 20px);
+
+    color: $COLOUR_TYPE_BODY;
+    font-style: italic;
 }
 
 @mixin t-gallery-teaser-large {
-    @include t-feature-teaser-large;
+    @include font('STARLING', 18px, 'NORMAL', 23px);
+    color: $COLOUR_TYPE_BODY;
+    font-style: italic;
 }
 
 @mixin t-gallery-byline-prefix-small {
-    @include t-feature-byline-prefix-small;
+    @include font('STARLING', 11px, 'MEDIUM', 13px);
+
+    color: $COLOUR_MAIN_TERTIARY;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-transform: lowercase;
 }
 
 @mixin t-gallery-byline-prefix-large {
-    @include t-feature-byline-prefix-large;
+    @include font('STARLING', 12px, 'MEDIUM', 12px);
+
+    color: $COLOUR_MAIN_TERTIARY;
+    font-style: italic;
+    letter-spacing: 1px;
 }
 
 @mixin t-gallery-byline-author-small {
-    @include t-feature-byline-author-small;
+    @include font('STARLING', 11px, 'MEDIUM', 13px);
+
+    color: $COLOUR_MAIN_TERTIARY;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 @mixin t-gallery-byline-author-large {
-    @include t-feature-byline-author-large;
-    @include font-size(12px);
+    @include font('STARLING', 12px, 'MEDIUM', 12px);
+
+    color: $COLOUR_MAIN_TERTIARY;
+    letter-spacing: 1px;
 }
 
 @mixin t-gallery-meta-small {
-    @include t-feature-meta-small;
+    @include font('COMMUTER SANS', 9px, 400, 9px);
+
+    color: $gray;
+    text-transform: uppercase;
 }
 
 @mixin t-gallery-meta-large {
-    @include t-feature-meta-large;
+    @include font('COMMUTER SANS', 12px, 400, 9px);
+
+    color: $gray;
+    text-transform: uppercase;
 }
 
 
@@ -331,45 +456,76 @@
  * VIDEO SLICE
  */
 @mixin t-video-tag-small {
-    @include t-feature-tag-small;
+    @include font('COMMUTER SANS', 11px, 'MEDIUM', 13px);
+
+    color: $COLOUR_MAIN_TERTIARY;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 @mixin t-video-tag-large {
-    @include t-feature-tag-large;
+    @include font('COMMUTER SANS', 12px, 'MEDIUM', 13px);
+
+    color: $COLOUR_MAIN_TERTIARY;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 @mixin t-video-title-small {
-    @include t-feature-title-small;
-
+    @include font('STARLING', 24px, 'NORMAL', 28px);
     color: $COLOUR_MAIN_DARK;
 }
 
 @mixin t-video-title-large {
-    @include t-feature-title-large;
+    @include font('STARLING', 37px, 'NORMAL', 42px);
+
+    color: $COLOUR_MAIN_PRIMARY;
 }
 
 @mixin t-video-byline-prefix-small {
-    @include t-feature-byline-prefix-small;
+    @include font('STARLING', 11px, 'MEDIUM', 13px);
+
+    color: $COLOUR_MAIN_TERTIARY;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-transform: lowercase;
 }
 
 @mixin t-video-byline-prefix-large {
-    @include t-feature-byline-prefix-large;
+    @include font('STARLING', 12px, 'MEDIUM', 12px);
+
+    color: $COLOUR_MAIN_TERTIARY;
+    font-style: italic;
+    letter-spacing: 1px;
 }
 
 @mixin t-video-byline-author-small {
-    @include t-feature-byline-author-small;
+    @include font('STARLING', 11px, 'MEDIUM', 13px);
+
+    color: $COLOUR_MAIN_TERTIARY;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 @mixin t-video-byline-author-large {
-    @include t-feature-byline-author-large;
+    @include font('STARLING', 16px, 'MEDIUM', 12px);
+
+    color: $COLOUR_MAIN_TERTIARY;
+    letter-spacing: 1px;
 }
 
 @mixin t-video-meta-small {
-    @include t-feature-meta-small;
+    @include font('COMMUTER SANS', 9px, 400, 9px);
+
+    color: $gray;
+    text-transform: uppercase;
 }
 
 @mixin t-video-meta-large {
-    @include t-feature-meta-large;
+    @include font('COMMUTER SANS', 12px, 400, 9px);
+
+    color: $gray;
+    text-transform: uppercase;
 }
 
 
