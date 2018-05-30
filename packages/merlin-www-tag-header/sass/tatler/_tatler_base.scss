@@ -51,39 +51,17 @@
 .tg-header__hero-credit {}
 
 .tg-header__title {
-    @include font('COMMUTER SANS', 20px, 'NORMAL', 20px);
+    @include font('STARLING', 30px, 'NORMAL', 33px);
     color: $black;
-    letter-spacing: 1px;
+    letter-spacing: -0.3px;
     margin: 0 0 20px 0;
-    position: relative;
     text-align: center;
-    text-transform: uppercase;
 
     @include at-medium-size {
-        @include font-size(30px);
-        @include line-height(30px);
-    }
-
-    span {
-        background-color: $wild-sand;
-        padding: 0 10px;
-        position: relative;
-        border-left: 1px solid $black;
-        border-right: 1px solid $black;
-
-        @include tablet-size {
-            padding: 0 20px;
-        }
-    }
-
-    &:before {
-        background-color: $black;
-        content: '';
-        height: 1px;
-        left: 0;
-        position: absolute;
-        top: 50%;
-        width: 100%;
+        @include font-size(56px);
+        @include line-height(56px);
+        letter-spacing: -0.5px;
+        margin-bottom: 20px;
     }
 }
 
