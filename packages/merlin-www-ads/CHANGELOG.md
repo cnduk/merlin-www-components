@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.14.17"></a>
+## [1.14.17](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.14.16...@cnbritain/merlin-www-ads@1.14.17) (2018-05-30)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-ads
+
 <a name="1.14.16"></a>
 ## [1.14.16](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.14.15...@cnbritain/merlin-www-ads@1.14.16) (2018-05-29)
 

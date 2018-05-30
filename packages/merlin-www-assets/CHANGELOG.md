@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.16.2"></a>
+## [1.16.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-assets@1.16.1...@cnbritain/merlin-www-assets@1.16.2) (2018-05-30)
+
+
+### Bug Fixes
+
+* **merlin-www-assets:** alter file size of bystander logo ([4508f67](https://github.com/cnduk/merlin-www-components/commit/4508f67))
+
+
+
+
 <a name="1.16.1"></a>
 ## [1.16.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-assets@1.16.0...@cnbritain/merlin-www-assets@1.16.1) (2018-05-29)
 
