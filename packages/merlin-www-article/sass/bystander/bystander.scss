@@ -8,7 +8,13 @@
 @import '@cnbritain/merlin-www-card-list:bystander';
 @import '@cnbritain/merlin-www-topic-strip:bystander';
 
-@import '../wireframe/wireframe';
+@import "../wireframe/_author";
+@import "../wireframe/_body";
+@import "../wireframe/_footer";
+@import "../wireframe/_gallery";
+@import "../wireframe/_share";
+@import "../wireframe/_sidebar";
+@import "../wireframe/_video";
 
 @import '../tatler/_tatler_base';
 
