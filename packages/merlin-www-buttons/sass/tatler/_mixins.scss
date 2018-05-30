@@ -169,10 +169,10 @@
 }
 
 @mixin button-share-dark($name) {
-    background-color: $white;
+    background-color: $mine-shaft;
 
     svg {
-        fill: map-get($COLOUR_SOCIAL, $name);
+        fill: $white;
     }
 }
 @mixin button-share-dark-hover($name) {
