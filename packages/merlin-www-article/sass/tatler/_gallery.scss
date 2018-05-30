@@ -3,181 +3,132 @@
 }
 
 .a-gallery__wrapper {
-
+    max-width: $ARTICLE_TOTAL;
+    @include min-screen($ARTICLE_TOTAL) {
+        padding-right: $ARTICLE_RIGHT_TOTAL;
+    }
 }
 
 .a-gallery__message {
-    margin-bottom: 40px;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
 
-    @include tablet-size {
-        margin-bottom: 60px;
+    @include at-medium-size {
+        margin-bottom: $TABLET_SLICE_MARGIN;
     }
 }
 
 .a-gallery__message-btn {
-    @include button-single;
-    @include button-single-light;
+    @include button-single();
+    @include button-single-light();
 
     &:hover {
-        @include button-single-light-hover;
-    }
-}
-
-.a-gallery__thumbnail-list {
-    margin-left: 0px;
-    margin-right: 0px;
-
-    @include tablet-size {
-        margin-left: -10px;
-        margin-right: -10px;
-    }
-}
-
-li.a-gallery__thumbnail {
-    box-sizing: border-box;
-    margin: 2px 0 0 0;
-    padding: 0 1px;
-
-    &:nth-child(-n+3) {
-        margin-top: 0;
-    }
-
-    @include tablet-size {
-        margin: 20px 0 0 0;
-        padding: 0 10px;
-    }
-}
-
-.a-gallery__thumbnail-image {
-    background-color: $COLOUR_BG_ADVERT;
-}
-
-.a-gallery__thumbnail-hover {
-    background-color: rgba(0, 0, 0, 0.38);
-    left: 1px;
-    right: 1px;
-    width: auto;
-
-    svg {
-        fill: $COLOUR_ICON_FILL;
-        width: 30px;
-    }
-
-    @include tablet-size {
-        left: 10px;
-        right: 10px;
-
-        svg {
-            width: 40px;
-        }
-    }
-}
-
-li.a-gallery__image-listitem {
-    margin-bottom: $MARGIN_LARGE;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-
-    @include tablet-size {
-        margin-bottom: $MARGIN_X_LARGE;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
+        @include button-single-light-hover();
     }
 }
 
 .g-image-nav {
-    transition-duration: 300ms;
     width: $MOBILE_SIDE_GUTTER;
 
-    @include tablet-size {
-        width: 70px;
+    @include at-medium-size {
+        width: $TABLET_SIDE_GUTTER;
     }
 
-    @include desktop-size {
-        width: 70px;
-    }
-
-    &.is-fixed {
-        transform: translateX(-100%) translateY(20px);
+    @include at-x-large-size {
+        width: $DESKTOP_SIDE_GUTTER;
     }
 }
 
 .g-image-nav__btns {
-    margin: 0 auto 0 20px;
-    width: 60px;
+    margin: 0 auto;
+    width: 35px;
 }
 
 .g-image-nav__btn {
-    background: $black;
+    background-color: $wild-sand;
     border-radius: 50%;
-    border: 0;
     width: 35px;
     height: 35px;
 
+    &:hover {
+
+    }
+
     svg {
-        width: 15px;
+        fill: $black;
         height: 15px;
-    }
-
-    svg, path {
-        fill: $COLOUR_ICON_FILL;
-    }
-
-    &:hover,
-    &:focus {
-        background: $cinnabar;
-
-        svg, path {
-            fill: $COLOUR_ICON_FILL;
-        }
+        width: 15px;
     }
 }
 
-.g-image-nav__btn--previous {}
+.g-image-nav__btn--previous {
+    margin-top: 5px;
+}
 
 .g-image-nav__btn--next {
     margin-top: 5px;
 }
 
 .g-image-nav__btn[disabled] {
-    background: $wild-sand;
-    pointer: normal;
 
-    svg, path {
-        fill: $silver;
+}
+
+.a-gallery__view {
+
+    &--list {
+
     }
 }
 
-.g-image-nav--dark {
+ul.a-gallery__image-list {}
+li.a-gallery__image-listitem {
+    margin-bottom: 48px;
 
-    .g-image-nav__btn {
-        background-color: $white;
+    @include at-x-large-size {
+        margin-bottom: 60px;
+    }
+}
 
-        svg, path {
-            fill: $black;
-        }
+.a-gallery__thumbnail-list {
+    margin-left: -2px;
+    margin-right: -2px;
 
-        &:hover,
-        &:focus {
-            background: $cinnabar;
+    @include at-x-large-size {
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+}
 
-            svg, path {
-                fill: $black;
-            }
-        }
+li.a-gallery__thumbnail {
+    box-sizing: border-box;
+    margin: 4px 0 0 0;
+    padding: 0 2px;
 
+    &:nth-child(-n+3) {
+        margin-top: 0;
     }
 
-    .g-image-nav__btn[disabled] {
-        background-color: $black;
+    @include at-x-large-size {
+        margin: 24px 0 0 0;
+        padding: 0 12px;
+    }
+}
 
-        svg, path {
-            fill: $cod-gray;
-        }
+.a-gallery__thumbnail-image {
+
+}
+.a-gallery__thumbnail-hover {
+    background-color: $wild-sand;
+    left: 2px;
+    right: 2px;
+    width: auto;
+
+    svg {
+        fill: $white;
+        width: 38px;
     }
 
+    @include at-x-large-size {
+        left: 12px;
+        right: 12px;
+    }
 }

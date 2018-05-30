@@ -1,12 +1,13 @@
 .n-main__nav-title {
-    @include font('STARLING', 17px, 'NORMAL', 60px);
-
+    @include font("COMMUTER SANS", 12px, 400, 60px);
     color: $white;
     display: none;
+    left: 152px;
     overflow: hidden;
-    padding-left: 160px;
-    padding-right: 195px;
+    position: fixed;
+    right: 172px;
     text-overflow: ellipsis;
+    text-transform: uppercase;
     vertical-align: middle;
     white-space: nowrap;
 
@@ -14,6 +15,14 @@
         display: block;
     }
 
+    @include at-medium-size {
+        left: 162px;
+    }
+
+    @include min-screen($XX_LARGE_SIZE + 60px) {
+        position: absolute;
+        left: 132px;
+    }
 }
 
 .n-gallery-nav {
@@ -36,89 +45,75 @@
     }
 
     .n-main__nav-logo {
-        svg, path {
+        svg {
             fill: $white;
         }
     }
 }
 
 .n-gallery-counter {
-    color: $white;
-    line-height: 60px;
+    @include line-height(60px);
     padding: 0 20px;
-
-    @include tablet-size {
-        padding: 0 32px;
-    }
 }
 
 .n-gallery-counter__current {
-    @include font-size(25px);
+    @include font("COMMUTER SANS", 15px, 600, 15px);
+    color: $white;
 }
 
 .n-gallery-counter__slash {
-    @include font-size(15px);
-    @include font-weight(400);
-
+    @include font("COMMUTER SANS", 15px, 400, 15px);
     color: $white;
-    margin-left: 4px;
-    margin-right: 4px;
 }
 
 .n-gallery-counter__total {
-    @include font-size(15px);
-
+    @include font("COMMUTER SANS", 15px, 400, 15px);
     color: $white;
 }
 
 
 .n-gallery-toggle,
 a.n-gallery-close {
+    border-left: 1px solid $gray;
     display: inline-block;
     font-size: 0;
     height: 60px;
     line-height: 60px;
-    width: 50px;
+    width: 60px;
 
-    @include tablet-size {
-        width: 60px;
+    @include min-screen($MAXIMUM_PAGE_WIDTH + 1) {
+        border-right: 1px solid $gray;
     }
 
     &:hover {
         svg {
-            fill: $gray;
+            // TODO
         }
     }
 
     svg {
         height: 100%;
         fill: $white;
-        width: 18px;
+        width: 20px;
     }
 }
 .n-gallery-toggle--list,
 .n-gallery-toggle--grid {
-    border-left: 1px solid $brownish-grey;
-    border-right: 1px solid $brownish-grey;
     display: inline-block;
     font-size: 0;
     height: 60px;
     line-height: 60px;
-    width: 50px;
-
-    @include tablet-size {
-        width: 60px;
-    }
+    width: 60px;
 
     &:hover {
-        svg, path, circle {
-            fill: $gray;
+        svg {
+            // TODO
         }
     }
 
-    svg, path, circle {
+    svg {
         height: 100%;
         fill: $white;
-        width: 18px;
+        width: 20px;
     }
 }
