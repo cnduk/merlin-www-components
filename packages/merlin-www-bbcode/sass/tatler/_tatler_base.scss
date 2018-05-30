@@ -2,7 +2,6 @@
 // Default
 // -------------------- //
 .bb-pre {
-
     @include font('STARLING', 14px, 'NORMAL', 14px);
     background-color: $wild-sand;
     border: 1px solid $silver;
@@ -17,7 +16,6 @@
     @include font('STARLING', 18px, 'NORMAL', 25px);
     color: $black;
     margin: 0 0 25px 0;
-    text-align: left;
 
     @include desktop-size {
         @include font-size(18px);
@@ -26,13 +24,8 @@
     }
 }
 
-.bb-strong {
-    font-weight: bold;
-}
-
-.bb-em {
-    font-style: italic;
-}
+// .bb-strong {}
+// .bb-em {}
 
 .bb-abbr {
     text-decoration: underline;
@@ -44,10 +37,10 @@
 
 .bb-a {
   color: $black;
-  border-bottom: 2px solid $cinnabar;
-  padding-bottom: 2px;
+  border-bottom: 1px solid $cinnabar;
 
-  &:hover{
+  &:hover,
+  &:focus {
     color: $cinnabar;
   }
 }
@@ -78,7 +71,7 @@
 
     @include desktop-size {
         @include font-size(28px);
-        @include line-height(28px);
+        @include line-height(31px);
     }
 }
 
@@ -92,20 +85,17 @@
 }
 
 .bb-h4 {
-  @include font('STARLING', 20px, 'NORMAL', 25px);
+    @include font('STARLING', 20px, 'NORMAL', 25px);
 }
 
 .bb-h5 {
     @include font('STARLING', 18px, 'NORMAL', 20px);
+    letter-spacing: -0.3px;
 }
 
 .bb-h6 {
     @include font('STARLING', 15px, 'NORMAL', 20px);
-
-    @include desktop-size {
-        @include font-size(16px);
-        @include line-height(21px);
-    }
+    letter-spacing: -0.3px;
 }
 
 .bb-ul {
@@ -114,7 +104,7 @@
     list-style: none;
 
     .bb-li {
-        padding-left: 25px;
+        padding-left: 8px + 15px;
         padding-bottom: 15px;
         position: relative;
 
@@ -145,7 +135,7 @@
     list-style-type: none;
 
     .bb-li {
-        padding-left: 40px;
+        padding-left: 20px + 15px;
         margin-bottom: 15px;
         letter-spacing: .3px;
         position: relative;
@@ -201,7 +191,7 @@
 }
 
 .bb-blockquote__quote {
-    @include font('COMMUTER SANS', 16px, 'NORMAL', 25px);
+    @include font('COMMUTER SANS', 16px, 'NORMAL', 21px);
     color: $gray;
     margin: 0 0 20px;
 
@@ -239,7 +229,6 @@
     color: $black;
     display: block;
     text-align: center;
-    font-style: italic;
 
     @include desktop-size {
         @include font-size(28px);
@@ -322,7 +311,7 @@
 .bb-answer__answer,
 .bb-answer__answer .bb-p {
     color: $black;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .bb-question__q,
@@ -378,16 +367,6 @@
     color: $black;
     padding-top: 15px;
     position: relative;
-
-    .bb-a {
-    color: $black;
-    border-bottom: 2px solid $cinnabar;
-    padding-bottom: 2px;
-
-      &:hover{
-        color: $cinnabar;
-      }
-    }
 }
 
 // -------------------- //
@@ -421,27 +400,23 @@
 .bb-infobox__hr {
     border-color: $COLOUR_BORDER_SEPARATOR;
     border-width: 1px 0 0 0;
-    margin: 10px 0 20px;
-
-    @include desktop-size {
-        margin: 20px 0;
-    }
+    margin: 15px 0;
 }
 
 .bb-infobox__body {
   .bb-p {
-    color: #ffffff;
+    color: $white;
     margin: 0;
   }
 
   .bb-a {
-    color: #ffffff;
-    border-color: #ffffff;
+    color: $white;
+    border-color: $white;
   }
 }
 
 .bb-infobox__item {
-    margin: 0 0 20px;
+    margin: 0 0 15px;
     border-bottom: solid 1px $mine-shaft;
 
     &:last-child {
@@ -478,24 +453,24 @@
 // -------------------- //
 .bb-button {}
 .bb-button--light {
-    @include button-single();
-    @include button-single-light();
+    @include button-group();
+    @include button-group-light();
 
     &:hover,
     &:focus {
-        @include button-single-light-hover();
+        @include button-group-light-hover();
         color: $white;
     }
 
 
 }
 .bb-button--dark {
-    @include button-single();
-    @include button-single-dark();
+    @include button-group();
+    @include button-group-dark();
 
     &:hover,
     &:focus {
-        @include button-single-dark-hover();
+        @include button-group-dark-hover();
     }
 }
 
@@ -503,14 +478,15 @@
 // Gallery
 // -------------------- //
 .bb-gallery__title {
-    @include font-size(18px);
-    @include line-height(20px);
+    @include font('STARLING', 18px, 'NORMAL', 20px);
+    letter-spacing: -0.3px;
     margin: 30px 0 15px;
     padding-left: 30px;
 
     @include desktop-size {
         @include font-size(20px);
-        @include line-height(25px);
+        @include line-height(23px);
+        letter-spacing: -0.5px;
         margin: 30px 0 13px;
     }
 }
@@ -543,19 +519,12 @@
     @include font("COMMUTER SANS", 27px, "NORMAL", 27px);
 
     letter-spacing: normal;
-
-    @include desktop-size {
-      @include font-size(40px);
-      @include line-height(40px);
-    }
 }
 
 .bb-gallery__remaining-text--prefix {
+    @include font-size(22px);
+    @include line-height(22px);
     margin-right: -3px;
-
-    @include desktop-size {
-        margin-right: -5px;
-    }
 }
 
 // -------------------- //
@@ -570,14 +539,15 @@
 }
 
 .bb-video__title {
-    @include font-size(18px);
-    @include line-height(20px);
+    @include font('STARLING', 18px, 'NORMAL', 20px);
+    letter-spacing: -0.3px;
     margin: 30px 0 15px;
     padding-left: 30px;
 
     @include desktop-size {
         @include font-size(20px);
         @include line-height(25px);
+        letter-spacing: -0.5px;
         margin: 30px 0 13px;
     }
 }
@@ -631,15 +601,15 @@
 // Image
 // -------------------- //
 .bb-figure {
-    margin-bottom: 40px;
+    margin: 25px 0;
 
     @include desktop-size {
-        margin-bottom: 60px;
+        margin: 30px 0;
     }
 }
 
 .bb-figure__wrapper {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .bb-figure__caption,
@@ -649,17 +619,21 @@
 
 .bb-figure__caption,
 .bb-figure__caption .bb-p {
-    @include font('COMMUTER SANS', 13px, 'NORMAL', 17px);
+    @include font('COMMUTER SANS', 13px, null, 16px);
     color: $black;
     margin: 10px 0 0 0;
     text-transform: uppercase;
 }
 
 .bb-figure__credit {
-    @include font('STARLING', 15px, 'NORMAL', 19px);
-    color: $black;
-    margin: 5px 0 0 0;
+    @include font('COMMUTER SANS', 9px, null, 9px);
+    color: $gray;
+    margin: 10px 0 0 0;
+    text-transform: uppercase;
 
+    @include desktop-size {
+        margin-top: 15px;
+    }
 }
 
 .bb-figure__wrapper {
@@ -676,7 +650,7 @@
 // Card
 // -------------------- //
 .bb-card {
-    border: 0;
+    border: 1px solid $mercury;
     margin: 30px 0;
     padding: 15px;
 
@@ -732,7 +706,6 @@
 .bb-card__tag {
     @include font('COMMUTER SANS', 10px, 'NORMAL', 10px);
     color: $gray;
-    letter-spacing: 1px;
     margin: 0 0 6px;
     text-transform: uppercase;
 
@@ -743,12 +716,14 @@
 }
 
 .bb-card__title {
-    @include font('STARLING', 18px, 'NORMAL', 22px);
+    @include font('STARLING', 18px, 'NORMAL', 21px);
+    letter-spacing: -0.3px;
     margin: 0;
 
     @include desktop-size {
-        @include font-size(12px);
-        @include line-height(12px);
+        @include font-size(24px);
+        @include line-height(27px);
+        letter-spacing: -0.5px;
         margin: 10px 0 0;
     }
 }
@@ -770,11 +745,6 @@
     padding: 20px;
     z-index: 1;
 
-    @include desktop-size {
-        margin: 30px 0;
-        padding: 30px;
-    }
-
     > *:first-child {
         margin-top: 0;
     }
@@ -783,13 +753,18 @@
         margin-bottom: 0;
     }
 
-    .bb-p{
+    .bb-p {
         color: #ffffff;
     }
 
     .bb-a {
         color: #ffffff;
         border-color: #ffffff;
+    }
+
+    @include desktop-size {
+        margin: 30px 0;
+        padding: 30px;
     }
 }
 
