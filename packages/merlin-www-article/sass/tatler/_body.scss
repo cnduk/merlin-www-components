@@ -12,6 +12,7 @@
 }
 
 .a-body {
+    color: $black;
     margin: 30px 0;
 
     @include at-x-large-size {
