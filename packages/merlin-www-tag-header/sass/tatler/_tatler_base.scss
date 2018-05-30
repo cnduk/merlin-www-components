@@ -1,264 +1,177 @@
 .tg-header {
-    margin-bottom: $MOBILE_SLICE_MARGIN;
+    margin: 32px 0;
 
-    @include tablet-size {
-        margin-bottom: $TABLET_SLICE_MARGIN;
-    }
-
-    @include desktop-size {
-        margin-bottom: $DESKTOP_SLICE_MARGIN;
-    }
-}
-
-.tg-header--video {
-    background: $black-two;
-    margin-bottom: 0;
-
-    .tg-header__intro {
-        padding: $PADDING_LARGE 0 $PADDING_MEDIUM 0;
-
-        @include tablet-size {
-            padding: $PADDING_X_LARGE 0 $PADDING_LARGE 0;
-        }
-    }
-
-    .tg-header__intro__image {
-        width: 200px;
-        height: 50px;
-        margin: 0 auto;
-
-        svg {
-            fill: $COLOUR_ICON_FILL;
-            height: 100%;
-            width: 100%;
-        }
-
-        @include desktop-size {
-            width: 250px;
-            height: 60px;
-        }
+    @include at-x-large-size {
+        margin: 48px 0;
     }
 }
 
 .tg-header--profile {
-    .tg-header__intro {
-        text-align: center;
-    }
-
     .tg-header__intro__image {
-        border: 1px solid $COLOUR_BORDER_SOLID;
-        display: inline-block;
-        height: 76px;
-        margin: 0 0 30px;
-        overflow: hidden;
-        padding: 5px;
-        vertical-align: bottom;
-        width: 76px;
+        height: 90px;
+        margin-bottom: 15px;
+        width: 90px;
 
-        @include desktop-size {
-            display: inline-block;
+        @include at-x-large-size {
             height: 110px;
-            margin: 0;
-            padding: 10px;
+            margin-bottom: 20px;
             width: 110px;
         }
 
         img {
             height: 100%;
-            overflow: hidden;
             width: 100%;
         }
     }
-
-    .tg-header__intro__image + .tg-header__title {
-        @include desktop-size {
-            margin-left: 20px;
-            vertical-align: bottom;
-        }
-    }
-
-    .tg-header__title {
-        @include desktop-size {
-            display: inline-block;
-            margin: 0 0 25px 0;
-        }
-    }
 }
 
-.tg-header--person {
-    .c-gallery-strip__wrapper {
-        box-sizing: border-box;
-        margin: 0 auto;
-        max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
-        padding-left: $MOBILE_SIDE_GUTTER;
-        padding-right: $MOBILE_SIDE_GUTTER;
+.tg-header--brand,
+.tg-header--event,
+.tg-header--topic,
+.tg-header--video {
+    .tg-header__intro__image {
+        height: auto;
+        margin-bottom: 20px;
+        width: 220px;
 
-        @include tablet-size {
-            padding-left: $TABLET_SIDE_GUTTER;
-            padding-right: $TABLET_SIDE_GUTTER;
+        img {
+            height: auto;
+            width: 100%;
         }
 
-        @include desktop-size {
-            padding-left: $DESKTOP_SIDE_GUTTER;
-            padding-right: $DESKTOP_SIDE_GUTTER;
+        @include at-x-large-size {
+            height: 70px;
+            margin-bottom: 30px;
+            width: auto;
+
+            img {
+                width: auto;
+                height: 100%;
+            }
         }
     }
 }
 
-.tg-header__wrapper {
-    padding: 0 $MOBILE_SIDE_GUTTER;
+.tg-header__wrapper {}
+.tg-header__intro {}
 
-    @include tablet-size {
-        padding: 0 $TABLET_SIDE_GUTTER;
-    }
-
-    @include desktop-size {
-        padding: 0 $DESKTOP_SIDE_GUTTER;
-    }
+.tg-header__intro__image {
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.tg-header__intro {
-    padding: $PADDING_LARGE 0 0 0;
-
-    @include tablet-size {
-        padding: $PADDING_X_LARGE 0 0 0;
-    }
-}
-
-.tg-header__intro__image,
-.tg-header__intro svg {
-    display: block;
-    margin: 0 auto $MARGIN_SMALL auto;
-    width: 230px;
-
-    @include tablet-size {
-        margin-bottom: $MARGIN_MEDIUM;
-        width: 380px;
-    }
-
-    // &:last-child {
-    //     margin-bottom: 0;
-    // }
-}
+// TODO
+.tg-header__hero {}
+.tg-header__hero-credit {}
 
 .tg-header__title {
-    @include line-height(36px);
-
-    margin: 0 0 $MARGIN_X_SMALL 0;
+    @include font('COMMUTER SANS', 20px, 'NORMAL', 20px);
+    color: $black;
+    letter-spacing: 1px;
+    margin: 0 0 20px 0;
+    position: relative;
     text-align: center;
+    text-transform: uppercase;
 
-    @include desktop-size {
-        @include line-height(50px);
-
-        margin-bottom: $MARGIN_SMALL;
+    @include at-medium-size {
+        @include font-size(30px);
+        @include line-height(30px);
     }
 
-    // &:last-child {
-    //     margin-bottom: 0;
-    // }
+    span {
+        background-color: $wild-sand;
+        padding: 0 10px;
+        position: relative;
+        border-left: 1px solid $black;
+        border-right: 1px solid $black;
+
+        @include tablet-size {
+            padding: 0 20px;
+        }
+    }
+
+    &:before {
+        background-color: $black;
+        content: '';
+        height: 1px;
+        left: 0;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+    }
 }
+
+// TODO
+.tg-header__sponsor {}
+.tg-header__sponsor-prefix {}
+.tg-header__sponsor-image {}
+.tg-header__sponsor-name {}
 
 .tg-header__separator {
     display: none;
 }
 
 .tg-header__description {
-    margin: $MARGIN_X_SMALL auto 22px auto;
-    max-width: 680px;
-    text-align: center;
+    @include font("STARLING", 20px, 400, 23px);
     font-style: italic;
+    margin: 20px 0 15px 0;
+    padding: 0 $MOBILE_SIDE_GUTTER;
+    text-align: center;
 
-    @include desktop-size {
-        @include font-size(20px);
-        @include line-height(25px);
+    @include at-medium-size {
+        @include font-size(23px);
+        @include line-height(28px);
+        padding: 0 $TABLET_SIDE_GUTTER;
+        margin: 20px 0;
+    }
 
-        margin: $MARGIN_X_SMALL auto $MARGIN_MEDIUM auto;
+    @include at-x-large-size {
+        padding: 0 $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.tg-header__description-expand {
+    margin-top: 15px;
+
+    @include at-x-large-size {
+        margin-top: 20px;
+    }
+}
+
+.tg-header__expand-btn {
+    @include button-single();
+    @include button-single-light();
+
+    &:hover {
+        @include button-single-light-hover();
     }
 }
 
 .tg-header__topic-strip {
-    margin: 25px 0 $MARGIN_LARGE 0;
+    margin: 20px auto;
+    padding: 0 $MOBILE_SIDE_GUTTER;
 
-    @include tablet-size {
-        margin: $MARGIN_MEDIUM 0 $MARGIN_X_LARGE 0;
+    @include at-medium-size {
+        padding: 0 $TABLET_SIDE_GUTTER;
     }
-}
-.c-topic-strip__item--topic .bb-a {
-    display: inline-block;
+
+    @include at-x-large-size {
+        margin: 30px auto;
+        padding: 0 $DESKTOP_SIDE_GUTTER;
+    }
 }
 
 .tg-header__cards {
-    margin: 0 auto $MARGIN_LARGE auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
-    padding-left: $MOBILE_SIDE_GUTTER;
-    padding-right: $MOBILE_SIDE_GUTTER;
+    margin: 20px auto;
+    max-width: $XX_LARGE_SIZE;
+    padding: 0 $MOBILE_SIDE_GUTTER;
 
-    @include tablet-size {
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
+    @include at-medium-size {
+        padding: 0 $TABLET_SIDE_GUTTER;
     }
 
-    @include desktop-size {
-        padding-left: $DESKTOP_SIDE_GUTTER;
-        padding-right: $DESKTOP_SIDE_GUTTER;
-    }
-}
-
-.tg-header__shows,
-.tg-header__style-file {
-    padding: 40px $MOBILE_SIDE_GUTTER;
-
-    @include tablet-size {
-        padding: 40px $TABLET_SIDE_GUTTER;
-    }
-
-    @include desktop-size {
-        padding: 40px $DESKTOP_SIDE_GUTTER;
-    }
-
-    margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
-
-    .sh-item-carousel {
-        border-top: none;
-        margin: 0;
-        padding: 0;
-
-        .sh-item-carousel__nav {
-            top: 0;
-        }
-
-        .sh-item-carousel__list {
-            margin: 0;
-
-            .sh-item-carousel__list__item {
-                padding: 0 5px;
-            }
-
-            .sh-item-carousel__list__item:first-child {
-                padding-left: 0;
-            }
-
-            .sh-item-carousel__list__item:last-child {
-                padding-right: 0;
-            }
-        }
-    }
-}
-
-
-.tg-header__event-meta {
-    color: $gray;
-    @include font('COMMUTER SANS', 12px, 'MEDIUM', 12px);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-align: center;
-}
-.tg-header__event-meta__start-date {}
-.tg-header__event-meta__location {
-    .tg-header__event-meta__start-date + & {
-        border-left: 1px solid $silver;
-        margin-left: 8px;
-        padding-left: 9px;
+    @include at-x-large-size {
+        margin: 50px auto;
+        padding: 0 $DESKTOP_SIDE_GUTTER;
     }
 }
