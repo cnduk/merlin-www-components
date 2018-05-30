@@ -39,41 +39,25 @@
     margin-bottom: 20px;
 }
 
-.c-card-section__title {
-    margin: 0 0 20px 0;
-    position: relative;
+.c-card-section__btn {
+    @include button-single;
+    @include button-single-light;
 
-    a {
-        color: inherit;
-        text-decoration: inherit;
+    margin-top: 30px;
+
+    &:hover,
+    &:focus {
+        @include button-single-light-hover;
     }
 
-    span {
-        background-color: $wild-sand;
-        display: inline-block;
-        padding: 0 10px;
-        position: relative;
-        border-left: 1px solid $black;
-        border-right: 1px solid $black;
-
-        @include tablet-size {
-            padding: 0 20px;
-        }
-    }
-
-    &:before {
-        background-color: $black;
-        content: '';
-        height: 1px;
-        left: 0;
-        position: absolute;
-        top: 50%;
-        width: 100%;
+    @include tablet-size {
+        margin-top: 40px;
     }
 }
 
 .c-card-section--c-curated,
 .c-card-section--c-tag {
+
     .c-card-section__title {
         @include font('COMMUTER SANS', 20px, 'NORMAL', 20px);
         color: $black;
@@ -83,23 +67,40 @@
         text-align: center;
         text-transform: uppercase;
 
-        @include tablet-size {
+        a {
+            color: inherit;
+            text-decoration: inherit;
+        }
+
+        span {
+            background-color: $wild-sand;
+            display: inline-block;
+            padding: 0 10px;
+            position: relative;
+            border-left: 1px solid $black;
+            border-right: 1px solid $black;
+        }
+
+        &:before {
+            background-color: $black;
+            content: '';
+            height: 1px;
+            left: 0;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+        }
+
+    }
+
+    @include tablet-size {
+        .c-card-section__title {
             @include font-size(30px);
             @include line-height(30px);
-        }
-    }
-}
 
-.c-card-section--dark {
-    background: $cod-gray;
-
-    .c-card-section__title {
-        color: $white;
-    }
-
-    .c-card-section__logo svg {
-        path, text {
-            fill: $white;
+            span {
+                padding: 0 20px;
+            }
         }
     }
 }
@@ -109,10 +110,6 @@
     max-width: none;
     padding: 30px 20px;
 
-    @include tablet-size {
-        padding: 60px;
-    }
-
     .c-card-section__title-wrapper {
         display: none;
     }
@@ -120,8 +117,6 @@
     .c-card-section__btn {
         @include button-single;
         @include button-single-dark;
-
-        margin-top: 30px;
         width: auto;
 
         &:hover {
@@ -134,26 +129,13 @@
         width: 15px;
     }
 
-    .c-card-section__title {
-        color: $white;
-    }
-}
-
-.c-card-section__btn {
-    @include button-single;
-    @include button-single-light;
-
-    margin-top: 30px;
-
-
     @include tablet-size {
-        margin-top: 40px;
+        padding: 60px;
     }
 
-    &:hover {
-        @include button-single-light-hover;
-    }
 }
+
+
 
 .c-card-section--v-related-articles {
     background-color: $COLOUR_BG_DARK;
@@ -193,7 +175,11 @@
     }
 }
 
-.c-card-section--a-recommended {
+.c-card-section--a-recommended,
+.c-card-section--tg-articles,
+.c-card-section--v-articles,
+.c-card-section--mag-articles,
+.c-card-section--mag-magazines  {
     margin-bottom: 0;
     margin-top: 0;
     max-width: none;
@@ -208,6 +194,34 @@
         position: relative;
         text-align: center;
         text-transform: uppercase;
+
+        a {
+            color: inherit;
+            text-decoration: inherit;
+        }
+
+        span {
+            background-color: $wild-sand;
+            display: inline-block;
+            padding: 0 10px;
+            position: relative;
+            border-left: 1px solid $black;
+            border-right: 1px solid $black;
+
+            @include tablet-size {
+                padding: 0 20px;
+            }
+        }
+
+        &:before {
+            background-color: $black;
+            content: '';
+            height: 1px;
+            left: 0;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+        }
     }
 
     @include tablet-size {
@@ -215,8 +229,8 @@
         padding-top: $PADDING_X_LARGE;
 
         .c-card-section__title {
-            margin-left: -60px;
-            margin-right: -60px;
+            margin-left: -($TABLET_SIDE_GUTTER);
+            margin-right: -($TABLET_SIDE_GUTTER);
         }
     }
 
@@ -236,21 +250,6 @@
 
 .c-card-section--tg-articles,
 .c-card-section--v-articles {
-    .c-card-section__title {
-        @include font('COMMUTER SANS', 20px, 400, 20px);
-        color: $black;
-        letter-spacing: 1px;
-        margin: 0 0 20px 0;
-        position: relative;
-        text-align: left;
-        text-transform: uppercase;
-
-        span {
-            border-left: none;
-            padding-left: 0;
-        }
-    }
-
     @include desktop-size {
         .c-card-list {
             margin-right: 340px;
@@ -259,32 +258,34 @@
     }
 }
 
-.c-card-section--mag-articles,
-.c-card-section--mag-magazines {
-    margin-bottom: 30px;
-    margin-top: 30px;
-
-    .c-card-section__constrain {
-        max-width: $MAXIMUM_PAGE_WIDTH;
-    }
+.c-card-section--dark {
+    background: $cod-gray;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 30px 20px;
 
     .c-card-section__title {
-        @include font('COMMUTER SANS', 20px, 400, 20px);
-        color: $black;
-        letter-spacing: 1px;
-        margin: 0 0 20px 0;
-        position: relative;
-        text-align: left;
-        text-transform: uppercase;
+        color: $white;
+    }
 
-        span {
-            border-left: none;
-            padding-left: 0;
+    .c-card-section__logo svg {
+        path, text {
+            fill: $white;
         }
     }
 
-    @include desktop-size {
-        margin-bottom: 60px;
-        margin-top: 60px;
+    .c-card-section__btn {
+        @include button-single;
+        @include button-single-dark;
+
+        &:hover {
+            @include button-single-dark-hover;
+        }
+    }
+
+    @include tablet-size {
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 60px;
     }
 }
