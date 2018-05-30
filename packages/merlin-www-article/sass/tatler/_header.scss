@@ -76,7 +76,7 @@
         text-align: center;
 
         .a-header__tag {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .a-header__tag__primary,
@@ -163,25 +163,29 @@
 }
 
 .a-header__image-title {
-    @include font("COMMUTER SANS", 14px, 400, 15px);
+    @include font("COMMUTER SANS", 14px, 'NORMAL', 15px);
     color: $white;
     margin-bottom: 6px;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
 .a-header__image-caption {
     margin-bottom: 6px;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 
     .bb-p {
-        @include font("COMMUTER SANS", 14px, 400, 15px);
+        @include font("COMMUTER SANS", 13px, null, 14px);
         color: $white;
+        margin: 0;
         text-transform: uppercase;
     }
 }
 
 .a-header__image-credit {
-    @include font("COMMUTER SANS", 10px, 400, 10px);
+    @include font("COMMUTER SANS", 10px, null, 10px);
     color: $white;
     letter-spacing: 1.5px;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
 }
 
@@ -259,7 +263,7 @@
     margin: 4px 0 20px 0;
 
     @include at-x-large-size {
-        margin: 20px 0 30px 0;
+        margin: 30px 0;
     }
 
     .bb-p {
@@ -341,19 +345,26 @@ li.a-header__meta-item {
 .a-header__meta--tag {}
 
 .a-header__tag {
-    @include font("COMMUTER SANS", 12px, 400, 12px);
+    font-size: 0;
     margin-bottom: 10px;
     text-transform: uppercase;
+
+    @include desktop-size {
+        @include font-size(16px);
+        @include line-height(16px);
+        margin-bottom: 15px;
+    }
 }
 
 .a-header__tag__primary,
 .a-header__tag__secondary {
+    @include font("COMMUTER SANS", 12px, 400, 12px);
     color: $gray;
     display: inline-block;
 }
 
 .a-header__tag__secondary {
-    border-right: 1px solid $gray;
+    border-right: 1px solid $mercury;
     margin-right: 10px;
     padding-right: 10px;
 }
@@ -379,6 +390,7 @@ li.a-header__meta-item {
 
 .a-header__sponsor-image {
     display: inline-block;
+    padding-left: 5px;
     vertical-align: middle;
 
     img {
@@ -389,6 +401,9 @@ li.a-header__meta-item {
     }
 }
 
+
+
+
 .a-header__event {
     margin: 30px 0;
 
@@ -397,31 +412,27 @@ li.a-header__meta-item {
     }
 }
 
-.a-header__event-title {
-    @include font("STARLING", 16px, 400, 15px);
-    color: $gray;
-    margin-bottom: 6px;
-    text-transform: uppercase;
-}
-
+.a-header__event-title,
 .a-header__event-location {
     @include font("STARLING", 13px, 400, 15px);
     color: $gray;
-    margin-bottom: 6px;
+    margin: 5px 0 0 0;
     text-transform: uppercase;
 }
 
 .a-header__event-date {
-    @include font("COMMUTER SANS", 10px, 400, 10px);
+    @include font("COMMUTER SANS", 10px, null, 10px);
     color: $gray;
-    margin-bottom: 15px;
+    margin-top: 12px;
+    margin-bottom: 0;
     text-transform: uppercase;
 }
 
 .a-header__event-btn {
     @include button-group();
     @include button-group-light();
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     text-align: center;
 
     &:hover, &:focus {

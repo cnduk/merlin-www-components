@@ -1,10 +1,6 @@
 .a-share {
     margin-top: 30px;
     position: relative;
-
-    @include at-x-large-size {
-        margin-top: 40px;
-    }
 }
 
 .a-share__wrapper {

@@ -28,8 +28,12 @@
 
 .ad--article-gallery,
 .ad--article-gallery .ad__container {
-    background-color: $black;
-    border: none;
+    background-color: $cod-gray;
+    border-color: $mine-shaft;
+}
+
+.a-header__tag__secondary {
+    border-right: 1px solid $mine-shaft;
 }
 
 .a-main--gallery {
