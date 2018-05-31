@@ -1,41 +1,37 @@
-@import "@cnbritain/merlin-www-common:tatler";
-@import "@cnbritain/merlin-www-buttons:tatler";
+// TODO
+// .a-podcast {
+//     margin: $MARGIN_MEDIUM 0 $MARGIN_LARGE 0;
+// }
+// .a-podcast__wrapper {}
+// .a-podcast-content {}
+// .a-podcast-audio {}
 
-@import "../wireframe/wireframe";
+// .a-podcast__player {
+//     margin: 0 0 $MARGIN_MEDIUM 0;
+//     width: 100%;
+// }
 
-.a-podcast {
-    margin: $MARGIN_MEDIUM 0 $MARGIN_LARGE 0;
-}
-.a-podcast__wrapper {}
-.a-podcast-content {}
-.a-podcast-audio {}
+// li.a-podcast__list-item {
+//     margin: 0 0 $MARGIN_X_SMALL 0;
 
-.a-podcast__player {
-    margin: 0 0 $MARGIN_MEDIUM 0;
-    width: 100%;
-}
+//     @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT) {
+//         display: inline-block;
+//     }
+// }
 
-li.a-podcast__list-item {
-    margin: 0 0 $MARGIN_X_SMALL 0;
+// .a-podcast__btn {
+//     @include button-group();
+//     @include button-group-light();
+//     box-sizing: border-box;
+//     display: block;
+//     text-align: center;
+//     width: 100%;
 
-    @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT) {
-        display: inline-block;
-    }
-}
+//     &:hover {
+//         @include button-group-light-hover();
+//     }
 
-.a-podcast__btn {
-    @include button-group();
-    @include button-group-light();
-    box-sizing: border-box;
-    display: block;
-    text-align: center;
-    width: 100%;
-
-    &:hover {
-        @include button-group-light-hover();
-    }
-
-    @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT) {
-        width: auto;
-    }
-}
+//     @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT) {
+//         width: auto;
+//     }
+// }

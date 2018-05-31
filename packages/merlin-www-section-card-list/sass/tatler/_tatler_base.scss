@@ -19,11 +19,6 @@
     margin-bottom: 30px;
     text-align: center;
 
-    @include tablet-size {
-        height: 40px;
-        margin-bottom: 60px;
-    }
-
     svg {
         display: inline-block;
         height: 100%;
@@ -33,80 +28,87 @@
             fill: $COLOUR_ICON_FILL;
         }
     }
-}
-
-.c-card-section__title {
-    @include t-topic-title-small;
-
-    margin: 0;
-    text-align: center;
-    padding-bottom: 15px;
 
     @include tablet-size {
-        @include t-topic-title-large;
-
-        text-align: left;
-        padding-bottom: 0;
-    }
-
-    a {
-        color: inherit;
-        text-decoration: inherit;
+        height: 40px;
+        margin-bottom: 60px;
     }
 }
-
-.c-card-section--dark {
-    background: $cod-gray;
-
-    .c-card-section__title {
-        color: $white;
-    }
-
-    .c-card-section__logo svg {
-        path, text {
-            fill: $white;
-        }
-    }
-}
-
 
 .c-card-section__title-wrapper {
-    @include tablet-size {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        padding-bottom: 20px;
-    }
+    margin-bottom: 20px;
 }
 
-.c-topic-strip--c-card-section {
+.c-card-section__btn {
+    @include button-single;
+    @include button-single-light;
+
+    margin-top: 30px;
+
+    &:hover,
+    &:focus {
+        @include button-single-light-hover;
+    }
+
     @include tablet-size {
-        width: auto;
+        margin-top: 40px;
     }
 }
 
 .c-card-section--c-curated,
-.c-card-section--c-contributors,
 .c-card-section--c-tag {
-    .c-card-section__title {
-        padding: 0 0 15px;
 
-        @include tablet-size {
-            padding-bottom: 0;
+    .c-card-section__title {
+        @include font('COMMUTER SANS', 20px, 'NORMAL', 20px);
+        color: $black;
+        letter-spacing: 1px;
+        margin: 0 0 20px 0;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+
+        a {
+            color: inherit;
+            text-decoration: inherit;
+        }
+
+        span {
+            background-color: $wild-sand;
+            display: inline-block;
+            padding: 0 10px;
+            position: relative;
+            border-left: 1px solid $black;
+            border-right: 1px solid $black;
+        }
+
+        &:before {
+            background-color: $black;
+            content: '';
+            height: 1px;
+            left: 0;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+        }
+
+    }
+
+    @include tablet-size {
+        .c-card-section__title {
+            @include font-size(30px);
+            @include line-height(30px);
+
+            span {
+                padding: 0 20px;
+            }
         }
     }
 }
-
-.c-card-section--s-results {}
 
 .c-card-section--c-video-articles {
     background-color: $COLOUR_BG_DARK;
     max-width: none;
     padding: 30px 20px;
-
-    @include tablet-size {
-        padding: 60px;
-    }
 
     .c-card-section__title-wrapper {
         display: none;
@@ -115,8 +117,6 @@
     .c-card-section__btn {
         @include button-single;
         @include button-single-dark;
-
-        margin-top: 30px;
         width: auto;
 
         &:hover {
@@ -129,26 +129,13 @@
         width: 15px;
     }
 
-    .c-card-section__title {
-        color: $white;
-    }
-}
-
-.c-card-section__btn {
-    @include button-single;
-    @include button-single-light;
-
-    margin-top: 30px;
-
-
     @include tablet-size {
-        margin-top: 40px;
+        padding: 60px;
     }
 
-    &:hover {
-        @include button-single-light-hover;
-    }
 }
+
+
 
 .c-card-section--v-related-articles {
     background-color: $COLOUR_BG_DARK;
@@ -186,152 +173,119 @@
     @include desktop-size {
         display: none;
     }
-
 }
 
+.c-card-section--a-recommended,
+.c-card-section--tg-articles,
+.c-card-section--v-articles,
 .c-card-section--mag-articles,
-.c-card-section--v-genre-articles {
-    .c-card-section__title {
-        @include font-size(18px);
-        @include line-height(18px);
+.c-card-section--mag-magazines  {
+    margin-bottom: 0;
+    margin-top: 0;
+    max-width: none;
+    padding-bottom: $PADDING_LARGE;
+    padding-top: $PADDING_LARGE;
 
-        margin: 0;
-        padding-bottom: 15px;
+    .c-card-section__title {
+        @include font('COMMUTER SANS', 20px, 'NORMAL', 20px);
+        color: $black;
+        letter-spacing: 0;
+        margin: 0 -20px 20px -20px;
         position: relative;
         text-align: center;
         text-transform: uppercase;
 
-        &:after {
+        a {
+            color: inherit;
+            text-decoration: inherit;
+        }
+
+        span {
+            background-color: $wild-sand;
+            display: inline-block;
+            padding: 0 10px;
+            position: relative;
+            border-left: 1px solid $black;
+            border-right: 1px solid $black;
+
+            @include tablet-size {
+                padding: 0 20px;
+            }
+        }
+
+        &:before {
+            background-color: $black;
             content: '';
             height: 1px;
             left: 0;
             position: absolute;
-            right: 0;
-            top: 100%;
+            top: 50%;
+            width: 100%;
         }
     }
-
-    @include desktop-size {
-        .c-card-section__title {
-            padding-bottom: 0px;
-            text-align: left;
-        }
-    }
-}
-
-.c-card-section--mag-magazines,
-.c-card-section--a-recommended,
-.c-card-section--g-recommended,
-.c-card-section--sh-summary-articles,
-.c-card-section--sh-summary-shows {
-    padding-bottom: $PADDING_LARGE;
-    padding-top: $PADDING_LARGE;
-    margin-bottom: 0;
-    margin-top: 0;
-    max-width: none;
 
     @include tablet-size {
         padding-bottom: $PADDING_X_LARGE;
         padding-top: $PADDING_X_LARGE;
-    }
 
-    .c-card-section__title {
-        margin: 0;
-        padding-bottom: 10px;
-        position: relative;
-        text-align: left;
-        text-transform: uppercase;
-
-        &:after {
-            content: '';
-            height: 1px;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 100%;
+        .c-card-section__title {
+            margin-left: -($TABLET_SIDE_GUTTER);
+            margin-right: -($TABLET_SIDE_GUTTER);
         }
     }
 
     @include desktop-size {
         .c-card-section__title {
-            padding-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            text-align: left;
+
+            span {
+                border-left: none;
+                padding-left: 0;
+            }
         }
     }
 }
 
-.c-card-section--a-recommended {
-    padding-top: 30px;
-
-    .c-card-section__title {
-        @include font-size(18px);
-        @include line-height(18px);
-
-        padding-bottom: 20px;
-    }
-
-    @include tablet-size {
-        padding-top: 60px;
-
-        .c-card-section__title {
-            padding-bottom: 0;
-        }
-    }
-}
-
-.c-card-section--mag-articles,
-.c-card-section--mag-magazines {
-    margin-bottom: 30px;
-    margin-top: 30px;
-
-    .c-card-section__constrain {
-        max-width: $MAXIMUM_PAGE_WIDTH;
-    }
-
-    @include desktop-size {
-        margin-bottom: 60px;
-        margin-top: 60px;
-    }
-}
-
-.c-card-section--c-magazine-articles {}
-.c-card-section--sh-shows {}
-
-.c-card-section--v-articles,
 .c-card-section--tg-articles,
-.c-card-section--sh-latest-articles {
-    .c-card-section__title {
-        @include font-size(18px);
-        @include line-height(18px);
-        margin: 0;
-        padding-bottom: 15px;
-        position: relative;
-        text-align: center;
-        text-transform: uppercase;
-
-        &:after {
-            content: '';
-            height: 1px;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 100%;
-        }
-    }
-
-    .c-card-list {
-        text-align: left;
-    }
-
+.c-card-section--v-articles {
     @include desktop-size {
-        .c-card-section__title {
-            padding-bottom: 0;
-            text-align: center;
-        }
         .c-card-list {
             margin-right: 340px;
             position: relative;
         }
     }
 }
-.c-card-section--sh-articles {}
-.c-card-section--tg-header-articles {}
+
+.c-card-section--dark {
+    background: $cod-gray;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 30px 20px;
+
+    .c-card-section__title {
+        color: $white;
+    }
+
+    .c-card-section__logo svg {
+        path, text {
+            fill: $white;
+        }
+    }
+
+    .c-card-section__btn {
+        @include button-single;
+        @include button-single-dark;
+
+        &:hover {
+            @include button-single-dark-hover;
+        }
+    }
+
+    @include tablet-size {
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 60px;
+    }
+}

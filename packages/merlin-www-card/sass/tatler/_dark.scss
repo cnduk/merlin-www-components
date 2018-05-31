@@ -19,7 +19,8 @@
         &:hover,
         &:focus {
             .c-card__title {
-                @include card-title-hover;
+                color: $COLOUR_MAIN_HIGHLIGHT;
+                text-decoration: none;
             }
         }
 
@@ -34,7 +35,7 @@
         .c-card__obj__body {
             background: none;
 
-            @include card-switcher-size {
+            @include card-portrait-to-landscape-size {
                 background: $cod-gray;
             }
         }

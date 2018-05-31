@@ -16,8 +16,12 @@
 .c-figure__title,
 .c-figure__caption,
 .c-figure__caption .bb-p {
-    @include font('AGENDA', 16px, 'MEDIUM', 18px);
-    letter-spacing: 0.5px;
+    @include font('STARLING', 16px, 400, 24px);
+
+    @include desktop-size {
+        @include font-size(18px);
+        @include line-height(28px);
+    }
 }
 
 .c-figure__title {
@@ -27,56 +31,35 @@
 .c-figure__caption,
 .c-figure__caption .bb-p {
     margin: 0 0 10px;
-
-    .bb-a {
-        color: $cinnabar;
-        text-decoration: none;
-        border-bottom: 1px solid rgba($cinnabar, 0.8);
-        transition: border .16s ease;
-
-        @include tablet-size {
-            border-bottom: 1px solid rgba(0,0,0,0);
-
-            &:focus,
-            &:hover {
-                border-bottom: 1px solid rgba($cinnabar, 0.8);
-            }
-        }
-    }
 }
 
 .c-figure__credit {
-    @include font('AGENDA', 10px, 'MEDIUM', 10px);
+    @include font('COMMUTER SANS', 10px, 'MEDIUM', 10px);
 
     color: $COLOUR_CREDIT_TEXT;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin: 10px 0 0 0;
+    margin: 15px 0 0 0;
 
     &:before {
         content: 'Credit: ';
     }
 }
 
-
 .c-figure__toolbar {
-    border: 1px solid $white-two;
-    bottom: 10px;
-    height: 47px;
+    height: 40px;
     position: absolute;
-    right: 10px;
 }
 
 li.c-figure__toolbar-listitem {
     background-color: $white;
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
 
     svg, path {
-        width: 20px;
+        width: 17px;
     }
 }
-
 
 @each $name, $color in $COLOUR_SOCIAL_LIGHT {
     .c-figure__toolbar-listitem--#{$name} {
@@ -115,26 +98,12 @@ li.c-figure__toolbar-listitem {
     }
 }
 
-
 @include desktop-size {
-    .c-figure__container {
-        margin: 0 0 15px;
-    }
 
     .c-figure__title,
     .c-figure__caption,
     .c-figure__credit {
         max-width: 700px;
-    }
-
-    .c-figure__caption,
-    .c-figure__caption .bb-p {
-        margin: 0 0 14px;
-    }
-
-    .c-figure__toolbar {
-        bottom: 15px;
-        right: 15px;
     }
 }
 
@@ -168,5 +137,4 @@ li.c-figure__toolbar-listitem {
             background-color: $brownish-grey;
         }
     }
-
 }

@@ -5,13 +5,13 @@
 
 @import '../tatler/_tatler_base';
 
-.c-gallery-wrapper {
+.c-gallery__wrapper {
     background-color: $COLOUR_BG;
 }
 .c-gallery__images {
     background-color: $COLOUR_BG;
 }
-.c-gallery__contents {
+.c-gallery__text {
     background-color: $black;
 }
 .c-gallery__icon {
@@ -25,16 +25,12 @@
     color: $white;
 }
 
-.c-gallery__meta-item {
+li.c-gallery__meta-item {
     border-right-color: $mine-shaft;
     border-right-width: 2px;
 }
 
-@include at-medium-size {
-    .c-gallery__contents {
-        @include border-line-box(left, $bg: $black, $border: $brownish-grey);
-    }
-
+@include min-screen($FEATURE_LARGE_BREAKPOINT){
     .c-gallery__icon {
         background-color: $cod-gray;
         margin: 0 auto 30px auto;

@@ -2,7 +2,6 @@
 .n-main__dropdown--follow {
     .n-main__dropdown-link {
         letter-spacing: 0;
-        text-transform: none;
     }
 }
 
@@ -28,13 +27,9 @@
 }
 
 .n-main__dropdown-list--follow {
-    padding: 20px 16px 32px 16px;
+    padding: 11px;
     margin-right: -1px;
     white-space: nowrap;
-
-    @include tablet-size {
-        padding: 10px 20px 30px 20px;
-    }
 }
 
 .n-main__dropdown-list-item {
@@ -42,20 +37,20 @@
         box-sizing: border-box;
         color: $black;
         display: inline-block;
-        height: 35px;
-        line-height: 35px;
+        height: 29px;
+        line-height: 29px;
         white-space: nowrap;
         margin: 0;
 
         span {
             display: inline-block;
-            height: 35px;
+            height: 29px;
             line-height: 1em;
             vertical-align: top;
         }
 
         &:hover {
-            color: $COLOUR_MAIN_HIGHLIGHT;
+            color: $gray;
         }
     }
 }
@@ -66,7 +61,7 @@
     }
 
     &:after {
-        border-top-color: $COLOUR_MAIN_HIGHLIGHT;
+        border-top-color: $black;
         border-width: 4px;
         margin-left: 8px;
         position: relative;
@@ -100,6 +95,7 @@ a.n-main__dropdown__btn-share,
 .n-main__dropdown__btn {
     @include button-single;
     @include button-single-light;
+    padding: 7px 10px;
 
     &:hover {
         @include button-single-light-hover;

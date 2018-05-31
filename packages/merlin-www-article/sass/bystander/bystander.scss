@@ -8,14 +8,38 @@
 @import '@cnbritain/merlin-www-card-list:bystander';
 @import '@cnbritain/merlin-www-topic-strip:bystander';
 
-@import '../wireframe/wireframe';
+@import "../wireframe/_author";
+@import "../wireframe/_body";
+@import "../wireframe/_footer";
+@import "../wireframe/_gallery";
+@import "../wireframe/_share";
+@import "../wireframe/_sidebar";
+@import "../wireframe/_video";
 
 @import '../tatler/_tatler_base';
 
+.a-header {
+    margin-top: 0;
+    padding-top: 32px;
+
+    @include at-x-large-size {
+        margin-top: 0;
+        padding-top: 48px;
+    }
+}
+
+.a-header__content {
+    background-color: transparent;
+}
 
 .ad--article-gallery,
 .ad--article-gallery .ad__container {
-    background-color: $black;
+    background-color: $cod-gray;
+    border-color: $mine-shaft;
+}
+
+.a-header__tag__secondary {
+    border-right: 1px solid $mine-shaft;
 }
 
 .a-main--gallery {
@@ -34,7 +58,7 @@
         color: $white;
     }
     // Body
-    .a-body__content p {
+    .a-body__content {
         color: $white;
     }
     // Gallery

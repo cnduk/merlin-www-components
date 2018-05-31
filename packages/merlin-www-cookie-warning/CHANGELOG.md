@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.7.23"></a>
+## [1.7.23](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-cookie-warning@1.7.22...@cnbritain/merlin-www-cookie-warning@1.7.23) (2018-05-30)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-cookie-warning
+
+<a name="1.7.22"></a>
+## [1.7.22](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-cookie-warning@1.7.21...@cnbritain/merlin-www-cookie-warning@1.7.22) (2018-05-29)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-cookie-warning
+
+<a name="1.7.21"></a>
+## [1.7.21](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-cookie-warning@1.7.20...@cnbritain/merlin-www-cookie-warning@1.7.21) (2018-05-29)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-cookie-warning
+
 <a name="1.7.18"></a>
 ## [1.7.18](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-cookie-warning@1.7.17...@cnbritain/merlin-www-cookie-warning@1.7.18) (2018-05-21)
 

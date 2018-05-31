@@ -29,11 +29,7 @@
         margin-top: 10px;
     }
 
-    .c-card__obj__body {
-       background: $white;
-       text-align: center;
-       padding: 28px 20px;
-    }
+    .c-card__obj__body {}
 
     .c-card__teaser {
         display: none;
@@ -41,11 +37,7 @@
 
     .c-card__tag {}
 
-    .c-card__title {
-        @include t-card-portrait-title;
-
-        margin: 0 0 15px;
-    }
+    .c-card__title {}
 
     .c-card__header {
         flex: 1 0 auto;
@@ -56,7 +48,7 @@
         display: block;
         width: 20px;
         border: 0;
-        border-top: 1px solid $COLOUR_MAIN_HIGHLIGHT;
+        border-top: 1px solid $black;
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -102,6 +94,13 @@
         bottom: 10px;
         left: 10px;
     }
+
+    .c-card__title {
+        @include font('STARLING', 18px, 'NORMAL', 22px);
+        color: $black;
+        letter-spacing: -0.5px;
+        margin: 0 0 10px;
+    }
 }
 
 @mixin card-portrait-large {
@@ -110,23 +109,32 @@
         bottom: -20px;
         left: 50%;
     }
-}
 
+    .c-card__obj__body {
+       background: $white;
+       text-align: center;
+       padding: 28px 20px;
+    }
 
-.c-card--portrait {
-    @include card-portrait;
-    @include card-portrait-small;
-    @include min-screen($CARD_SWITCHER_WIDTH) {
-        @include card-portrait-large;
+    .c-card__title {
+        @include font('STARLING', 24px, 'NORMAL', 28px);
+        color: $black;
+        letter-spacing: -0.5px;
+        margin: 0 0 15px;
     }
 }
 
+.c-card--portrait {
+    @include card-portrait();
+    @include card-portrait-large();
+}
+
 .c-card--portrait-small {
-    @include card-portrait;
-    @include card-portrait-small;
+    @include card-portrait();
+    @include card-portrait-small();
 }
 
 .c-card--portrait-large {
-    @include card-portrait;
-    @include card-portrait-large;
+    @include card-portrait();
+    @include card-portrait-large();
 }

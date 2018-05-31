@@ -80,19 +80,19 @@ li.c-card__meta-item {
         overflow: hidden;
 
         img {
-            @include card-image-normal;
+            transition: transform 0.2s ease-in-out;
         }
     }
 
     &:hover,
     &:focus {
-        .c-card__title {
-            @include card-title-hover;
+        .c-card__title span {
+            border-bottom: 1px solid $black;
         }
 
         .c-card__image {
             img {
-                @include card-image-hover;
+                transform: scale(1.04);
             }
         }
     }
@@ -112,20 +112,10 @@ svg.c-card__image__icon--video {
 }
 
 .c-card__tag {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
-
+    @include font("COMMUTER SANS", 12px, 400, 12px);
     color: $gray;
-    letter-spacing: 1px;
-    margin: 0 0 5px;
+    margin: 0 0 10px 0;
     text-transform: uppercase;
-
-    @include card-switcher-size {
-        @include font('AGENDA', 12px, 'MEDIUM', 12px);
-
-        letter-spacing: 1px;
-
-        margin: 0 0 15px;
-    }
 }
 
 .c-card__title {}
@@ -142,36 +132,32 @@ svg.c-card__image__icon--video {
 
 .c-card__byline,
 .c-card__sponsor {
-    @include card-byline;
-
+    @include font('STARLING', 12px, null, 12px);
+    color: $gray;
     margin: 5px 0 0;
+    text-transform: uppercase;
 
-    @include card-switcher-size {
+    @include card-portrait-to-landscape-size {
         margin: 10px 0 0;
     }
 }
 
 .c-card__byline-prefix,
 .c-card__sponsor-label {
-    @include card-byline-prefix;
+    font-style: italic;
+    text-transform: lowercase;
 }
 
 .c-card__byline-name,
 .c-card__sponsor-title {
-    @include card-byline-name;
+    text-transform: uppercase;
 }
 
 .c-card__meta {
-    @include card-meta;
-    @include line-height(15px);
-
-    display: inline-block;
+    @include font('COMMUTER SANS', 9px, 400, 9px);
+    color: $gray;
     margin-top: 5px;
-
-    @include card-switcher-size {
-        margin-top: 5px;
-    }
-
+    text-transform: uppercase;
 }
 
 li.c-card__meta-item {
@@ -225,7 +211,7 @@ ul.c-card__rating {
     margin-bottom: 8px;
     margin-top: 5px;
 
-    @include card-switcher-size {
+    @include card-portrait-to-landscape-size {
         margin-top: 0px;
     }
 }
@@ -246,7 +232,7 @@ li.c-card__rating-label {
     margin-left: 3px;
     padding-left: 3px;
 
-    @include card-switcher-size {
+    @include card-portrait-to-landscape-size {
         padding-left: 5px;
     }
 

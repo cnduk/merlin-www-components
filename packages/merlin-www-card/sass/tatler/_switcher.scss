@@ -10,7 +10,7 @@
 .c-card--switcher {
     @include card-switcher-small;
 
-    @include card-switcher-size {
+    @include card-portrait-to-landscape-size {
         @include card-switcher-large;
     }
 }
@@ -27,7 +27,7 @@
 // HEY WIREFRAME YUBLOCK
 // Needs .c-card for more specifity cos something is pulling in the wireframe
 .c-card--switcher {
-    @include card-switcher-size {
+    @include card-portrait-to-landscape-size {
         .c-card__obj__header,
         .c-card__obj__body {
             display: flex;

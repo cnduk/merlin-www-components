@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-cookie-warning",
-  "version": "1.7.18",
+  "version": "1.7.23",
   "description": "Dat bootiful 🍪 warnin",
   "main": "js/index.js",
   "scripts": {
@@ -11,13 +11,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-www-common": "^1.13.14",
-    "@cnbritain/merlin-www-image": "^1.9.17",
+    "@cnbritain/merlin-www-common": "^1.14.2",
+    "@cnbritain/merlin-www-image": "^1.9.21",
     "@cnbritain/merlin-www-js-utils": "^1.6.1",
     "eventemitter2": "^4.1.0"
   },
   "devDependencies": {
-    "@cnbritain/merlin-component-demo-server": "^3.4.0",
+    "@cnbritain/merlin-component-demo-server": "^3.4.1",
     "eslint": "^4.14.0",
     "eslint-plugin-compat": "^2.2.0"
   }

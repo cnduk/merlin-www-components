@@ -12,9 +12,3 @@
 .c-superfeature__title {
     color: $white;
 }
-
-@include at-x-large-size {
-    .c-superfeature__contents {
-        @include border-line-box(top, $bg:$black, $border:$brownish-grey);
-    }
-}

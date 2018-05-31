@@ -86,13 +86,14 @@
 }
 
 .n-main__nav-link {
-    @include font('STARLING', 18px, 'NORMAL', 18px);
+    @include font('COMMUTER SANS', 13px, 'NORMAL', 13px);
 
     box-sizing: border-box;
-    color: $black;
+    color: $black-two;
     display: inline-block;
     height: 60px;
     margin: 0 20px;
+    text-transform: uppercase;
 
     span {
         display: inline-block;
@@ -101,7 +102,7 @@
     }
 
     &:hover {
-        color: $COLOUR_MAIN_HIGHLIGHT;
+        color: $gray;
     }
 }
 

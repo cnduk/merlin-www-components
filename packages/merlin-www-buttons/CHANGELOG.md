@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.7.23"></a>
+## [1.7.23](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-buttons@1.7.22...@cnbritain/merlin-www-buttons@1.7.23) (2018-05-30)
+
+
+### Bug Fixes
+
+* **merlin-www-buttons:** update tatler share button styles ([2a4ede0](https://github.com/cnduk/merlin-www-components/commit/2a4ede0))
+
+
+
+
+<a name="1.7.22"></a>
+## [1.7.22](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-buttons@1.7.21...@cnbritain/merlin-www-buttons@1.7.22) (2018-05-29)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-buttons
+
+<a name="1.7.21"></a>
+## [1.7.21](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-buttons@1.7.20...@cnbritain/merlin-www-buttons@1.7.21) (2018-05-29)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-buttons
+
 <a name="1.7.19"></a>
 ## [1.7.19](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-buttons@1.7.18...@cnbritain/merlin-www-buttons@1.7.19) (2018-05-21)
 

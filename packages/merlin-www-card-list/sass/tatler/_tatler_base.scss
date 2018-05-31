@@ -298,7 +298,7 @@ $C_CARD_BUM_MARGIN: 0;
         flex: none;
         margin-right: 20px;
         white-space: normal;
-        width: 275px;
+        width: 300px;
 
         &:last-child {
             width: 275px;
@@ -344,7 +344,7 @@ $C_CARD_BUM_MARGIN: 0;
 
         .c-card__image {
             &:after {
-                @include font("AGENDA", 12px, 500, 12px);
+                @include font("COMMUTER SANS", 12px, 500, 12px);
                 background-color: $cinnabar;
                 bottom: 0px;
                 color: $white;

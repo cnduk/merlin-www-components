@@ -1,21 +1,49 @@
-@mixin bb-credit($font-size) {
-    @include font('AGENDA', $font-size, 'MEDIUM', $font-size);
-
-    color: $COLOUR_CREDIT_TEXT;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+// -------------------- //
+// Default
+// -------------------- //
+.bb-pre {
+    @include font('STARLING', 14px, 'NORMAL', 14px);
+    background-color: $wild-sand;
+    border: 1px solid $silver;
+    border-radius: 4px;
+    color: $black;
+    margin: 30px 0;
+    padding: 20px 14px;
+    white-space: pre-wrap;
 }
 
-.bb-a {
-    color: $COLOUR_TYPE_LINK;
-    text-decoration: underline;
+.bb-p {
+    @include font('STARLING', 18px, 'NORMAL', 25px);
+    color: inherit;
+    margin: 0 0 25px 0;
 
-    &:hover {
-        text-decoration: none;
+    @include desktop-size {
+        @include font-size(18px);
+        @include line-height(28px);
+        margin: 0 0 30px 0;
     }
 }
 
-.bb-abbr {}
+// .bb-strong {}
+// .bb-em {}
+
+.bb-abbr {
+    text-decoration: underline;
+}
+
+.bb-mark {
+    background-color: $mercury;
+}
+
+.bb-a {
+  color: inherit;
+  border-bottom: 1px solid $cinnabar;
+
+  &:hover,
+  &:focus {
+    color: $cinnabar;
+  }
+}
 
 .bb-h1,
 .bb-h2,
@@ -23,352 +51,442 @@
 .bb-h4,
 .bb-h5,
 .bb-h6 {
-    @include font('STARLING');
-
-    color: $COLOUR_TYPE_HEADING;
-    font-variant-ligatures: common-ligatures; // let's get ligatured
-    line-height: 1.2;
-    margin: $MARGIN_MEDIUM 0 $MARGIN_SMALL 0;
+    color: inherit;
+    letter-spacing: -0.5px;
+    margin: 0 0 10px 0;
+    text-align: left;
 }
 
-@each $level, $heading in $HEADINGS {
-    %h-#{$level} {
-        @include font(
-            'STARLING',
-            map-get($heading, small),
-            map-get($heading, weight),
-            map-get($heading, small-line-height)
-        );
-
-        @media (min-width: 600px) {
-            @include font(
-                'STARLING',
-                map-get($heading, large),
-                map-get($heading, weight),
-                map-get($heading, large-line-height)
-            );
-
-            letter-spacing: map-get($heading, letter-spacing);
-        }
-    }
-
-    #{map-get($heading, h)}, .h-#{$level} {
-        @extend %h-#{$level};
-    }
-}
-
-.bb-hr {
-    border-top: 1px solid $COLOUR_BORDER_SOLID;
-    height: 0;
-    margin: 15px 0;
-}
-
-.bb-mark {
-    background: $COLOUR_BG_HIGHLIGHT;
-}
-
-.bb-p {
-    @include font('STARLING', 18px, 'NORMAL', 25px);
-
-    color: $COLOUR_TYPE_BODY;
+.bb-h1 {
+    @include font('STARLING', 30px, 'NORMAL', 33px);
 
     @include desktop-size {
-        @include font('STARLING', 18px, 'NORMAL', 28px);
+        @include font-size(56px);
+        @include line-height(60px);
     }
 }
 
-.bb-pre {
-    @include font-size(17px);
-    @include line-height(20px);
-
-    border: 1px solid $gray;
-    color: $COLOUR_PRE_TEXT;
-    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
-    letter-spacing: 1px;
-    margin: 30px 0;
-    padding: 20px;
-    white-space: pre-wrap;
+.bb-h2 {
+    @include font('STARLING', 23px, 'NORMAL', 26px);
 
     @include desktop-size {
-        padding: 40px;
+        @include font-size(28px);
+        @include line-height(31px);
     }
-
 }
 
-.bb-small {}
-
-.bb-ul, .bb-ol {
-    @include font('AGENDA');
-    @include font-size(15px);
-    @include line-height(22px);
-
-    color: $COLOUR_TYPE_BODY;
-    list-style-type: none;
-    margin: 30px 0;
-    padding: 0;
+.bb-h3 {
+    @include font('STARLING', 21px, 'NORMAL', 24px);
 
     @include desktop-size {
-        @include font-size(17px);
-        @include line-height(22px);
-
-        margin: 60px 0;
-        padding: 0 20px;
+        @include font-size(25px);
+        @include line-height(30px);
     }
+}
 
-    .bb-li {
-        position: relative;
-        margin: 1em 0;
-    }
+.bb-h4 {
+    @include font('STARLING', 20px, 'NORMAL', 25px);
+}
+
+.bb-h5 {
+    @include font('STARLING', 18px, 'NORMAL', 20px);
+    letter-spacing: -0.3px;
+}
+
+.bb-h6 {
+    @include font('STARLING', 15px, 'NORMAL', 20px);
+    letter-spacing: -0.3px;
 }
 
 .bb-ul {
+    @include font("STARLING", 18px, 'NORMAL', 20px);
+    color: inherit;
+    list-style: none;
+
     .bb-li {
-        padding-left: 20px;
-        letter-spacing: .3px;
+        padding-left: 8px + 15px;
+        padding-bottom: 15px;
+        position: relative;
 
-        @include desktop-size {
-            padding-left: 20px;
-        }
-
-        &:before {
-            background: $COLOUR_MAIN_HIGHLIGHT;
+        &:after {
+            background: currentcolor;
             border-radius: 50%;
             content: '';
             display: block;
             height: 8px;
             left: 0;
             position: absolute;
-            top: 7px;
+            top: 6px;
             width: 8px;
+
+           @include desktop-size {
+              height: 10px;
+              top: 5px;
+              width: 10px;
+           }
         }
     }
 }
 
 .bb-ol {
-    counter-reset: section;
+    @include font('STARLING', 18px, 'NORMAL', 20px);
+    color: inherit;
+    counter-reset: li;
+    list-style-type: none;
 
     .bb-li {
-        padding-left: 40px;
-        margin: 1em 0;
+        padding-left: 20px + 15px;
+        margin-bottom: 15px;
         letter-spacing: .3px;
-
-        @include desktop-size {
-            padding-left: 45px;
-        }
+        position: relative;
 
         &:before {
-            @include font('AGENDA', 16px, 'BOLD', 23px);
-
-            border-radius: 50%;
-            border: 1px solid $COLOUR_MAIN_HIGHLIGHT;
-            color: $COLOUR_MAIN_HIGHLIGHT;
-            content: counter(section);
-            counter-increment: section;
+            @include font('COMMUTER SANS', 20px, 'NORMAL', 20px);
+            color: inherit;
+            content: counter(li);
+            counter-increment: li;
             display: block;
-            height: 25px;
+            height: 20px;
             left: 0;
             padding: 0;
             position: absolute;
             text-align: center;
             top: 0;
-            width: 25px;
             vertical-align: middle;
-
-            @include desktop-size {
-                @include font-size(16px);
-
-                height: 30px;
-                line-height: 30px;
-                width: 30px;
-            }
+            width: 20px;
         }
     }
 }
 
-.bb-pre {
-    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
-}
-
-.bb-code {
-    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
-    display: inline;
-}
-
-
-/**
- * Twitter, Instagram, Vine, Facebook, Vimeo, Youtube
- */
-.bb-embed {
-    margin: $MARGIN_LARGE 0;
-}
-
-.bb-embed--centered {
-    iframe {}
-}
-
-.bb-embed--video {
-    iframe {}
-}
-
-.bb-embed--vine {
-    iframe {}
-}
-
-
-/**
- * Image
- */
-.bb-figure {
-    margin-bottom: 30px;
-
-    @include desktop-size {
-        margin-bottom: 40px;
-    }
-}
-
-.bb-figure__wrapper {
-    margin-bottom: 15px;
-}
-
-.bb-figure__caption,
-.bb-figure__credit {
-    width: 100%;
-}
-
-.bb-figure__caption,
-.bb-figure__caption .bb-p {
-    @include font('AGENDA', 16px, 'MEDIUM', 18px);
-    letter-spacing: 0.5px;
-    margin: 15px 0 0 0;
-
-    .bb-a {
-        color: $cinnabar;
-        text-decoration: none;
-        border-bottom: 1px solid rgba($cinnabar, 0.8);
-        transition: border .16s ease;
-
-        @include tablet-size {
-            border-bottom: 1px solid rgba(0,0,0,0);
-
-            &:focus,
-            &:hover {
-                border-bottom: 1px solid rgba($cinnabar, 0.8);
-            }
-        }
-    }
-}
-
-.bb-figure__credit {
-    @include font('AGENDA', 10px, 'MEDIUM', 10px);
-
-    color: $COLOUR_CREDIT_TEXT;
-    letter-spacing: 1px;
-    margin: 10px 0 0 0;
-    text-transform: uppercase;
-
-
-    &:before {
-        content: 'Credit: ';
-    }
-}
-
-.bb-figure__wrapper {
-    background-color: $wild-sand;
-}
-
-.bb-figure--external {
-    img {
-        margin: 0 auto;
-    }
-}
-
-
-
-/**
- * Note
- */
-.bb-note {
-    @include font('AGENDA', 14px, 'MEDIUM', 18px);
-
-    border-top: 1px solid $COLOUR_BORDER_SOLID;
-    color: $black;
-    letter-spacing: .3px;
-    margin: 20px 0 40px;
-    padding-top: 12px;
-    padding-left: 20px;
-    position: relative;
-
-    @include desktop-size {
-        @include font('AGENDA', 14px, 'MEDIUM', 18px);
-
-        letter-spacing: .3px;
-        padding-left: 20px;
-    }
-
-    &:before {
-        background: $COLOUR_MAIN_HIGHLIGHT;
-        border-radius: 50%;
-        content: '';
-        display: block;
-        height: 8px;
-        left: 0;
-        position: absolute;
-        top: 18px;
-        width: 8px;
-
-        @include desktop-size {
-            top: 17px;
-        }
-    }
-}
-
-
-/**
- * Dropcap
- */
-
+// -------------------- //
+// Dropcap
+// -------------------- //
 .bb-dropcap {}
 .bb-dropcap--letter {
-    @include font("STARLING", 89px, 'NORMAL', 64px);
-
+    @include font("COMMUTER SANS", 89px, 'NORMAL', 64px);
     float: left;
-    margin: 10px 10px 0 0;
+    margin: 6px 10px 0 0;
     padding: 0;
     text-transform: capitalize;
 
     @include desktop-size {
-        @include font-size(140px);
-        @include line-height(98px);
-
-        margin: 15px 15px -1px 0;
+        @include font-size(111px);
+        @include line-height(76px);
+        margin: 2px 10px 0px 0;
         padding: 0;
     }
 }
 
+// -------------------- //
+// Blockquote
+// -------------------- //
+.bb-blockquote {
+    border-left: 1px solid $gray;
+    margin: 40px 0;
+    padding: 0 0 0 20px;
+
+    @include desktop-size {
+        margin: 0 0 30px;
+    }
+}
+
+.bb-blockquote__quote {
+    @include font('COMMUTER SANS', 16px, 'NORMAL', 21px);
+    color: $gray;
+    margin: 0 0 20px;
+
+    @include desktop-size {
+        margin: 0 0 30px;
+    }
+}
+
+.bb-blockquote__separator {
+    display: none;
+}
+
+.bb-blockquote__credit {
+    @include font('COMMUTER SANS', 10px, 'NORMAL', 10px);
+    color: $gray;
+    text-transform: uppercase;
+}
+
+// -------------------- //
+// Pullquote
+// -------------------- //
+.bb-pullquote {
+    border-bottom: solid 1px currentcolor;
+    border-top: solid 1px currentcolor;
+    margin: 40px 0;
+    padding: 15px 0px;
+
+    @include desktop-size {
+        margin: 60px 30px;
+    }
+}
+
+.bb-pullquote__quote {
+    @include font('COMMUTER SANS', 23px, 'NORMAL', 27px);
+    color: inherit;
+    display: block;
+    text-align: center;
+
+    @include desktop-size {
+        @include font-size(28px);
+        @include line-height(32px);
+    }
+
+    &:before,
+    &:after {
+        content: '';
+    }
+}
+
+.bb-pullquote__separator {
+    display: none;
+}
+
+.bb-pullquote__credit {
+    @include font('COMMUTER SANS', 10px, 'NORMAL', 10px);
+    color: inherit;
+    text-align: center;
+    padding-top: 15px;
+    text-transform: uppercase;
+}
+
+// -------------------- //
+// Question & Answer
+// -------------------- //
+.bb-question,
+.bb-answer {
+    margin-bottom: 30px;
+
+    @include desktop-size {
+      margin-bottom: 35px;
+    }
+}
+
+.bb-question__question,
+.bb-answer__answer {
+    position: relative;
+    padding-left: 40px;
+}
+
+.bb-question__question,
+.bb-question__question .bb-p {
+    @include font('STARLING', 18px, 'BOLD', 24px);
+
+    @include desktop-size {
+      @include font-size(20px);
+      @include line-height(32px);
+    }
+}
+
+.bb-question__question .bb-p {
+    @include font('STARLING', 18px, 'BOLD', 24px);
+    margin-left: 10px;
+}
+
+.bb-answer__answer,
+.bb-answer__answer .bb-p {
+    @include font('STARLING', 18px, 'NORMAL', 24px);
+
+    @include desktop-size {
+       @include font-size(20px);
+       @include line-height(32px);
+    }
+}
+
+.bb-answer__answer .bb-p {
+    @include font('STARLING', 18px, 'NORMAL', 24px);
+    margin-left: 10px;
+}
+
+.bb-question__question,
+.bb-question__question .bb-p {
+    color: inherit;
+    margin-bottom: 25px;
+    margin-right: 10px;
+}
+
+.bb-answer__answer,
+.bb-answer__answer .bb-p {
+    color: inherit;
+    margin-bottom: 25px;
+}
+
+.bb-question__q,
+.bb-answer__a {
+    @include font('COMMUTER SANS', 18px, 'NORMAL', 36px);
+    border-radius: 50%;
+    color: inherit;
+    display: inline-block;
+    height: 38px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 38px;
+    top: -8px;
+}
+
+.bb-question__q { background: $black; color: $white;}
+.bb-answer__a { background: $mercury; }
+
+.bb-question__separator,
+.bb-answer__separator {
+    display: none;
+}
+
+.bb-question__by,
+.bb-answer__by {
+    @include font('COMMUTER SANS', 10px, 'NORMAL', 10px);
+    color: $black;
+    text-transform: uppercase;
+}
+
+.bb-question__author,
+.bb-answer__author {
+    @include font('COMMUTER SANS', 10px, 'NORMAL', 10px);
+    color: $black;
+    text-transform: uppercase;
+}
+
+.bb-small {
+   @include font('STARLING', 13px, 'NORMAL', 20px);
+   color: $black;
+}
+
+// -------------------- //
+// Note
+// -------------------- //
+.bb-note {
+    @include font('STARLING', 13px, 'NORMAL', 20px);
+    border-top: 1px solid $black;
+    color: inherit;
+    padding-top: 15px;
+    position: relative;
+}
+
+// -------------------- //
+// Infobox
+// -------------------- //
+.bb-infobox {
+    background: $black;
+    color: #ffffff;
+    margin: 30px 0;
+    position: relative;
+    padding: 20px;
+    z-index: 1;
+
+    @include desktop-size {
+        margin: 30px 0;
+        padding: 30px;
+    }
+}
+
+.bb-infobox__title {
+    @include font('COMMUTER SANS', 16px, 'NORMAL', 16px);
+    margin: 0;
+    text-transform: uppercase;
+
+    @include desktop-size {
+       @include font-size(19px);
+       @include line-height(23px);
+    }
+}
+
+.bb-infobox__hr {
+    border-color: $COLOUR_BORDER_SEPARATOR;
+    border-width: 1px 0 0 0;
+    margin: 15px 0;
+}
+
+.bb-infobox__body {
+  .bb-p {
+    color: $white;
+    margin: 0;
+  }
+
+  .bb-a {
+    color: $white;
+    border-color: $white;
+  }
+}
+
+.bb-infobox__item {
+    margin: 0 0 15px;
+    border-bottom: solid 1px $mine-shaft;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.bb-infobox__item__key {
+    @include font('COMMUTER SANS', 16px, 'NORMAL', 20px);
+    text-transform: uppercase;
+    margin: 0 0 5px;
+
+    @include desktop-size {
+        @include font('COMMUTER SANS', 19px, 'NORMAL', 22px);
+    }
+}
+
+.bb-infobox__item__value {
+    @include font('STARLING', 14px, 'NORMAL', 18px);
+    margin-bottom: 20px;
+
+    .bb-a{
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+
+    @include desktop-size {
+        @include font('STARLING', 16px, 'NORMAL', 20px);
+    }
+}
+
+// -------------------- //
+// Button
+// -------------------- //
+.bb-button {}
+.bb-button--light {
+    @include button-group();
+    @include button-group-light();
+
+    &:hover,
+    &:focus {
+        @include button-group-light-hover();
+        color: $white;
+    }
 
 
-/**
- * Gallery
- */
-.bb-gallery {}
+}
+.bb-button--dark {
+    @include button-group();
+    @include button-group-dark();
 
-.bb-gallery__link {}
+    &:hover,
+    &:focus {
+        @include button-group-dark-hover();
+    }
+}
 
+// -------------------- //
+// Gallery
+// -------------------- //
 .bb-gallery__title {
-    @include font-size(18px);
-    @include line-height(20px);
-
-    letter-spacing: 0;
-    margin: 30px 0 10px;
-    padding-left: 28px;
+    @include font('STARLING', 18px, 'NORMAL', 20px);
+    letter-spacing: -0.3px;
+    margin: 30px 0 15px;
+    padding-left: 30px;
 
     @include desktop-size {
         @include font-size(20px);
-        @include line-height(25px);
-
-        margin: 30px 0 15px;
-
-        padding-left: 30px;
+        @include line-height(23px);
+        letter-spacing: -0.5px;
+        margin: 30px 0 13px;
     }
 }
 
@@ -386,403 +504,50 @@
     svg {
         fill: $black;
     }
-
 }
-.bb-gallery__icon--gallery {}
 
 .bb-gallery__cols {
-    .bb-gallery__col:last-child .bb-gallery__remaining {}
-}
-.bb-gallery__col {
-    background-color: $silver;
+    background-color: $alabaster;
+
     &:before {
         content: none;
     }
 }
-.bb-gallery__image {}
-
-.bb-gallery__remaining {}
 
 .bb-gallery__remaining-text {
-    @include font("STARLING", 27px, "NORMAL", 27px);
+    @include font("COMMUTER SANS", 27px, "NORMAL", 27px);
 
     letter-spacing: normal;
-
-    @include desktop-size {
-        @include font("STARLING", 40px, "NORMAL", 40px);
-    }
 }
 
 .bb-gallery__remaining-text--prefix {
+    @include font-size(22px);
+    @include line-height(22px);
     margin-right: -3px;
+}
+
+// -------------------- //
+// Video
+// -------------------- //
+.bb-video {
+    margin-bottom: 40px;
 
     @include desktop-size {
-        margin-right: -5px;
+        margin-bottom: 60px;
     }
 }
 
-.bb-gallery__remaining-text--value {}
-
-
-
-/**
- * Question & Answer
- */
-.bb-question__question,
-.bb-answer__answer {
-    position: relative;
-    padding-left: 40px;
-}
-
-.bb-question__question,
-.bb-question__question .bb-p,
-.bb-answer__answer,
-.bb-answer__answer .bb-p {
-    @include font('STARLING', 18px, 'BOLD', 24px);
-
-    @include desktop-size {
-        @include font('STARLING', 20px, 'BOLD', 32px);
-    }
-}
-
-.bb-question__question,
-.bb-question__question .bb-p {
-    color: $mine-shaft;
-    margin-bottom: 15px;
-
-    @include desktop-size {
-        margin-bottom: 20px;
-    }
-}
-
-.bb-answer__answer,
-.bb-answer__answer .bb-p {
-    color: $COLOUR_MAIN_ACCENT;
-    margin-bottom: 15px;
-
-    @include desktop-size {
-        margin-bottom: 20px;
-    }
-}
-
-.bb-question__q,
-.bb-answer__a {
-    @include font('STARLING', 17px, 'BOLD', 30px);
-
-    border-radius: 50%;
-    color: $COLOUR_MAIN_DARK;
-    display: inline-block;
-    height: 30px;
-    left: 0;
-    position: absolute;
-    text-align: center;
-    text-transform: uppercase;
-    vertical-align: middle;
-    width: 30px;
-    top: -2px;
-
-    @include desktop-size {
-        margin: 0 10px 0 0;
-        top: 0;
-    }
-}
-
-.bb-question__q { background: $COLOUR_BG_DARK; }
-.bb-answer__a { background: $COLOUR_MAIN_ACCENT; }
-
-.bb-question__separator,
-.bb-answer__separator {
-    display: none;
-}
-
-.bb-question__by,
-.bb-answer__by {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
-
-    color: $gray;
-    font-style: italic;
-    letter-spacing: 1px;
-    text-transform: lowercase;
-}
-
-.bb-question__author,
-.bb-answer__author {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
-
-    color: $gray;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-
-
-/**
- * Pullquote
- */
-.bb-pullquote {
-    margin: 40px 0;
-
-    @include desktop-size {
-        margin: 60px 30px;
-    }
-}
-
-.bb-pullquote__quote {
-    @include font('STARLING', 25px, 'NORMAL', 30px);
-
-    color: $COLOUR_MAIN_ACCENT;
-    display: block;
-    text-align: center;
-    font-style: italic;
-
-    @include desktop-size {
-        @include font-size(30px);
-        @include line-height(38px);
-    }
-
-    &:before,
-    &:after {
-        content: '';
-    }
-}
-
-.bb-pullquote__separator {
-    display: none;
-}
-
-.bb-pullquote__credit {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
-
-    color: $gray;
-    text-align: center;
-    padding-top: 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-
-
-/**
- * Blockquote
- */
-.bb-blockquote {
-    border-left: 1px solid $COLOUR_MAIN_HIGHLIGHT;
-    margin: 40px 0;
-    padding: 0 0 0 20px;
-
-    @include desktop-size {
-        margin: 60px 30px;
-    }
-
-    &:before {
-        content: '';
-        display: block;
-        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14.12" fill="#e03b2a"><path d="M0 8.06c0-4.44 4-7 6.9-8l.32.75c-2.35 1.18-5 2.67-5 5.51 0 .48.21 1.23.8 1.23s1.2-.49 1.74-.49a3.23 3.23 0 0 1 3.37 3.37 3.91 3.91 0 0 1-3.58 3.69C2 14.12 0 11.93 0 8.06zm11.87 0c0-4.44 4-7 6.9-8l.32.75c-2.35 1.18-5 2.67-5 5.51 0 .48.21 1.23.8 1.23s1.21-.49 1.74-.49A3.23 3.23 0 0 1 20 10.43a3.91 3.91 0 0 1-3.58 3.69c-2.57 0-4.55-2.19-4.55-6.06z"/></svg>') 50% 50% no-repeat;
-        height: 25px;
-        width: 34px;
-        margin-bottom: 10px;
-
-        @include desktop-size {
-            height: 26px;
-            width: 37px;
-            margin-bottom: 15px;
-        }
-    }
-}
-
-.bb-blockquote__quote {
-    @include font('AGENDA', 17px, 'MEDIUM', 22px);
-
-    margin: 0 0 15px;
-    letter-spacing: .3px;
-
-    @include desktop-size {
-        margin: 0 0 15px;
-    }
-}
-
-.bb-blockquote__separator {
-    display: none;
-}
-
-.bb-blockquote__credit {
-    @include font('AGENDA', 10px, 'MEDIUM', 10px);
-
-    color: $COLOUR_CREDIT_TEXT;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-
-
-/**
- * Infobox
- */
-.bb-infobox {
-    background: transparent;
-    border: 2px solid $COLOUR_BORDER_INFOBOX;
-    margin: 30px 0;
-    position: relative;
-    padding: 25px;
-    z-index: 1;
-
-    &:before {
-        border: 1px solid $COLOUR_BORDER_INFOBOX;
-        bottom: 5px;
-        content: '';
-        display: block;
-        left: 5px;
-        position: absolute;
-        right: 5px;
-        top: 5px;
-        z-index: -1;
-
-        @include desktop-size {
-            bottom: 10px;
-            left: 10px;
-            right: 10px;
-            top: 10px;
-        }
-    }
-
-    @include desktop-size {
-        margin: 40px 0;
-        padding: 40px;
-    }
-}
-
-.bb-infobox__title {
-    @include font('STARLING', 16px, 'BOLD', 20px);
-
-    margin: 0;
-    text-transform: uppercase;
-}
-
-.bb-infobox__hr {
-    border-color: $COLOUR_BORDER_SEPARATOR;
-    border-width: 1px 0 0 0;
-    margin: 10px 0;
-
-    @include desktop-size {
-        margin: 15px 0;
-    }
-}
-
-.bb-infobox__body {
-    @include font('AGENDA', 14px, 'MEDIUM', 17px);
-
-    @include desktop-size {
-        @include font('AGENDA', 16px, 'MEDIUM', 20px);
-    }
-}
-
-.bb-infobox__item {
-    margin: 0 0 20px;
-
-    @include desktop-size {
-        margin: 0 0 25px;
-    }
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
-
-.bb-infobox__item__key {
-    @include font('STARLING', 15px, 'BOLD', 15px);
-
-    margin: 0 0 5px;
-
-    @include desktop-size {
-        @include font('STARLING', 16px, 'BOLD', 16px);
-
-        margin: 0 0 5px;
-    }
-}
-
-.bb-infobox__item__value {
-    @include font('AGENDA', 15px, 'MEDIUM', 19px);
-
-    letter-spacing: .3px;
-    margin: 0;
-
-    @include desktop-size {
-        @include font('AGENDA', 16px, 'MEDIUM', 20px);
-
-        letter-spacing: .3px;
-        margin: 0;
-    }
-}
-
-
-/**
- * Callout
- */
-.bb-callout {
-    background: transparent;
-    border: 2px solid $COLOUR_BORDER_INFOBOX;
-    margin: 30px 0;
-    position: relative;
-    padding: 25px;
-    z-index: 1;
-
-    &:before {
-        border: 1px solid $COLOUR_BORDER_INFOBOX;
-        bottom: 5px;
-        content: '';
-        display: block;
-        left: 5px;
-        position: absolute;
-        right: 5px;
-        top: 5px;
-        z-index: -1;
-
-        @include desktop-size {
-            bottom: 10px;
-            left: 10px;
-            right: 10px;
-            top: 10px;
-        }
-    }
-
-    > *:first-child {
-        margin-top: 0;
-    }
-
-    > *:last-child {
-        margin-bottom: 0;
-    }
-
-    @include desktop-size {
-        margin: 40px 0;
-        padding: 40px;
-    }
-}
-
-
-/**
- * Interactive
- */
-.bb-interactive {
-    margin: $MARGIN_LARGE 0;
-}
-
-
-/**
- * Video
- */
-.bb-video {}
 .bb-video__title {
-    @include font-size(18px);
-    @include line-height(20px);
-    margin-bottom: 10px;
-    margin-left: 28px;
-    margin-right: 3px;
+    @include font('STARLING', 18px, 'NORMAL', 20px);
+    letter-spacing: -0.3px;
+    margin: 30px 0 15px;
+    padding-left: 30px;
 
     @include desktop-size {
         @include font-size(20px);
         @include line-height(25px);
-        margin-right: 10px;
+        letter-spacing: -0.5px;
+        margin: 30px 0 13px;
     }
 }
 
@@ -792,6 +557,7 @@
     left: 0;
     padding: 0;
     position: absolute;
+        top: 2px;
     width: 16px;
 
     svg {
@@ -807,8 +573,6 @@
     }
 }
 
-.bb-video__wrapper {}
-.bb-video__image {}
 .bb-video__image-icon {
     background-color: rgba(17, 17, 17, 0.6);
     border-radius: 50%;
@@ -827,60 +591,72 @@
         width: 20px;
     }
 }
-.bb-video__link {}
 
-
-/**
- * Button
- */
-.bb-button {}
-.bb-button--light {
-    @include button-single();
-    @include button-single-light();
-
-    &:hover,
-    &:focus {
-        @include button-single-light-hover();
-    }
+.bb-video__wrapper{
+    background: $alabaster;
 }
-.bb-button--dark {
-    @include button-single();
-    @include button-single-dark();
 
-    &:hover,
-    &:focus {
-        @include button-single-dark-hover();
+// -------------------- //
+// Image
+// -------------------- //
+.bb-figure {
+    margin: 25px 0;
+
+    @include desktop-size {
+        margin: 30px 0;
     }
 }
 
+.bb-figure__wrapper {
+    margin-bottom: 10px;
+}
 
-/**
- * Card
- */
+.bb-figure__caption,
+.bb-figure__credit {
+    width: 100%;
+}
+
+.bb-figure__caption,
+.bb-figure__caption .bb-p {
+    @include font('COMMUTER SANS', 13px, null, 16px);
+    color: $black;
+    margin: 10px 0 0 0;
+    text-transform: uppercase;
+}
+
+.bb-figure__credit {
+    @include font('COMMUTER SANS', 9px, null, 9px);
+    color: $gray;
+    margin: 10px 0 0 0;
+    text-transform: uppercase;
+
+    @include desktop-size {
+        margin-top: 15px;
+    }
+}
+
+.bb-figure__wrapper {
+    background-color: $alabaster;
+}
+
+.bb-figure--external {
+    img {
+        margin: 0 auto;
+    }
+}
+
+// -------------------- //
+// Card
+// -------------------- //
 .bb-card {
-    background: $wild-sand;
-    border: 0;
+    border: 1px solid $mercury;
     margin: 30px 0;
     padding: 15px;
 
     @include desktop-size {
         padding: 20px;
-
-        &:before {
-            @include font('AGENDA', 12px, 'MEDIUM', 12px);
-
-            color: $cinnabar;
-            bottom: 20px;
-            content: 'Continue Reading';
-            position: absolute;
-            letter-spacing: 1px;
-            right: 20px;
-            text-transform: uppercase;
-        }
     }
 }
-
-.bb-card__link {}
 
 .bb-card__obj {
     display: flex;
@@ -901,10 +677,9 @@
     padding-left: 0;
 }
 
-
 .bb-card__images {
     .bb-card__image {
-        background-color: $silver;
+        background-color: $alabaster;
         padding-top: 100%;
     }
 
@@ -922,32 +697,32 @@
             margin: 0 auto;
             vertical-align: middle;
             width: 16px;
-            fill: $COLOUR_ICON_FILL;
+            fill: $mercury;
         }
     }
 }
 
 .bb-card__tag {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
-
+    @include font('COMMUTER SANS', 10px, 'NORMAL', 10px);
     color: $gray;
-    letter-spacing: 1px;
-    margin: 0 0 5px;
+    margin: 0 0 6px;
     text-transform: uppercase;
 
     @include desktop-size {
-        margin: 0 0 10px;
+        @include font-size(12px);
+        @include line-height(12px);
     }
 }
 
 .bb-card__title {
-    @include font('STARLING', 18px, 'NORMAL', 22px);
-
+    @include font('STARLING', 18px, 'NORMAL', 21px);
+    letter-spacing: -0.3px;
     margin: 0;
 
     @include desktop-size {
-        @include font('STARLING', 23px, 'BOLD', 28px);
-
+        @include font-size(24px);
+        @include line-height(27px);
+        letter-spacing: -0.5px;
         margin: 10px 0 0;
     }
 }
@@ -958,3 +733,53 @@
 .bb-card__meta {
     display: none;
 }
+
+// -------------------- //
+// Callout
+// -------------------- //
+.bb-callout {
+    background: $black;
+    margin: 30px 0;
+    position: relative;
+    padding: 20px;
+    z-index: 1;
+
+    > *:first-child {
+        margin-top: 0;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+
+    .bb-p {
+        color: #ffffff;
+    }
+
+    .bb-a {
+        color: #ffffff;
+        border-color: #ffffff;
+    }
+
+    @include desktop-size {
+        margin: 30px 0;
+        padding: 30px;
+    }
+}
+
+///**
+// * Twitter, Instagram, Vine, Facebook, Vimeo, Youtube
+// */
+//.bb-embed {
+//    margin: $MARGIN_LARGE 0;
+//}
+//
+///**
+// * Interactive
+// */
+//.bb-interactive {
+//    margin: $MARGIN_LARGE 0;
+//}
+
+
+

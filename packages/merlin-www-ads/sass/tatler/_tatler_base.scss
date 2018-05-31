@@ -1,5 +1,5 @@
 .ad__title {
-    @include font('AGENDA', 10px, 'MEDIUM');
+    @include font('COMMUTER SANS', 10px, 'MEDIUM');
 
     color: $COLOUR_MAIN_INACTIVE;
     margin: 0 0 5px;
@@ -16,7 +16,7 @@
     }
 
     .ad__title {
-        @include font('AGENDA', 10px, 'MEDIUM');
+        @include font('COMMUTER SANS', 10px, 'MEDIUM');
 
         color: $COLOUR_MAIN_INACTIVE;
         letter-spacing: 1px;
@@ -46,7 +46,9 @@
 
 .ad--article-header {
     .ad__container {
-        background: $COLOUR_BG_ADVERT;
+        background: $white;
+        border-bottom: 1px solid $mercury;
+        border-top: 1px solid $mercury;
         padding: 20px 0;
     }
 }
@@ -143,7 +145,7 @@
     }
 
     .ad__title {
-        @include font('AGENDA', 10px, 'MEDIUM');
+        @include font('COMMUTER SANS', 10px, 'MEDIUM');
 
         color: $COLOUR_MAIN_INACTIVE;
         margin: 0 0 5px;
@@ -235,7 +237,9 @@
     text-align: center;
 
     .ad__container {
-        background: $COLOUR_BG_ADVERT;
+        background: $white;
+        border-bottom: 1px solid $mercury;
+        border-top: 1px solid $mercury;
         padding: 20px 0;
     }
 

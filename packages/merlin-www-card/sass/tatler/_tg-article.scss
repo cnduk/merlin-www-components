@@ -44,7 +44,9 @@
     }
 
     .c-card__title {
-        @include t-card-portrait-title;
+        @include font('STARLING', 24px, 'NORMAL', 28px);
+        color: $COLOUR_MAIN_PRIMARY;
+        letter-spacing: -0.5px;
     }
 
     .c-card__teaser {

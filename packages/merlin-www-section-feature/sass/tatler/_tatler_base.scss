@@ -16,9 +16,8 @@
 
     &:focus,
     &:hover {
-        .c-feature__title {
-            color: $COLOUR_MAIN_HIGHLIGHT;
-            text-decoration: none;
+        .c-feature__title span {
+            border-bottom: 1px solid $black;
         }
     }
 }
@@ -73,15 +72,6 @@
     @include at-x-large-size(){
         padding: 20px 60px;
     }
-    @include at-medium-size(){
-        .c-feature--left & {
-            @include border-line-box(left);
-        }
-
-        .c-feature--right & {
-            @include border-line-box(right);
-        }
-    }
 }
 
 .c-feature__icon {
@@ -121,10 +111,10 @@
 }
 
 .c-feature__tag {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    @include font("COMMUTER SANS", 12px, 400, 12px);
     color: $gray;
     letter-spacing: 1px;
-    margin: 0 0 10px;
+    margin: 0 0 10px 0;
     text-transform: uppercase;
 
     @include at-small-size {
@@ -135,6 +125,7 @@
 .c-feature__title {
     @include font('STARLING', 24px, 'NORMAL', 28px);
     color: $COLOUR_MAIN_PRIMARY;
+    letter-spacing: -0.5px;
     margin: 0 0 20px;
     padding: 0 0 15px;
     position: relative;
@@ -148,7 +139,7 @@
      }
 
     &:after {
-        background: $COLOUR_MAIN_HIGHLIGHT;
+        background: $black;
         bottom: 0;
         content: '';
         display: block;
@@ -166,9 +157,8 @@
 }
 
 .c-feature__byline {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
+    @include font('STARLING', 12px, null, 12px);
     color: $gray;
-    letter-spacing: 1px;
     margin: 0 0 10px;
     text-transform: uppercase;
 
@@ -182,26 +172,19 @@
 }
 
 .c-feature__byline-prefix {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
     font-style: italic;
-    letter-spacing: 1px;
     margin-right: 2px;
     text-transform: lowercase;
 }
 
 .c-feature__byline-name {
-    @include font('AGENDA', 12px, 'MEDIUM', 12px);
-    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .c-feature__meta {
-    @include font('AGENDA', 10px, 'MEDIUM', 10px);
+    @include font('COMMUTER SANS', 9px, 400, 9px);
     color: $gray;
-    letter-spacing: 1px;
-    display: inline-block;
-    margin-top: 0;
-    padding-top: 0;
+    margin-top: 5px;
     text-transform: uppercase;
 }
 

@@ -6,7 +6,7 @@
         {{/ data.link }}
 
         {{# data.image_list }}
-        <div class="c-superfeature__images{{# state.has_multiple_images }} c-superfeature__images--multiple{{/ state.has_multiple_images }}">
+        <div class="c-superfeature__images{{# state.has_multiple_items }} c-superfeature__images--multiple{{/ state.has_multiple_items }}">
             <div class="c-superfeature__images-wrapper">
                 {{# data.items }}
                 <div class="c-superfeature__image">
@@ -59,7 +59,7 @@
                 {{# data.meta_list }}
                 <ul class="c-superfeature__meta{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
                     {{# data.items }}
-                    <li class="c-superfeature__meta-item">
+                    <li class="c-superfeature__meta-item c-superfeature__meta-item--{{ data.item.data.meta_type  }}">
                         {{# data.item }}
                         <span class="{{# style.cls }} {{ style.cls }}{{/ style.cls }}">{{ data.title }}</span>
                         {{/ data.item }}

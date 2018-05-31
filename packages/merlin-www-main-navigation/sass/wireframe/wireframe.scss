@@ -149,7 +149,7 @@
 
     #chkNavSearch:checked ~ & {
         display: block;
-        @include max-screen( $MAIN_NAVIGATION_MOBILE_BREAKPOINT ){
+        @include max-screen( $MAIN_NAVIGATION_MOBILE_BREAKPOINT - 1 ){
             display: none;
         }
     }

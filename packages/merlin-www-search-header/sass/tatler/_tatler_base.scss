@@ -47,7 +47,7 @@
 }
 
 .srch-results {
-    @include font('AGENDA', 12px, 'MEDIUM', 20px);
+    @include font('COMMUTER SANS', 12px, 'MEDIUM', 20px);
 
     color: $COLOUR_MAIN_TERTIARY;
     text-transform: uppercase;
@@ -55,7 +55,7 @@
     margin: 15px 0 0;
 
     @include tablet-size {
-        @include font('AGENDA', 14px, 'MEDIUM', 20px);
+        @include font('COMMUTER SANS', 14px, 'MEDIUM', 20px);
 
         margin: 12px auto 0 auto;
         max-width: $MAXIMUM_PAGE_WIDTH;

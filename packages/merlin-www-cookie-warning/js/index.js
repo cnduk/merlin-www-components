@@ -14,8 +14,8 @@ import {
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import * as events from './events';
 
-export var COOKIE_DIALOG_CLOSED = 'cnd_cookie_dialog_closed';
-export var COOKIE_DIALOG_COUNT = 'cnd_cookie_dialog_count';
+export var COOKIE_DIALOG_CLOSED = 'cnd_cookie_dialog_gdpr_closed';
+export var COOKIE_DIALOG_COUNT = 'cnd_cookie_dialog_gdpr_count';
 var JS_CLOSE_BUTTON = '.js-c-cookie-close-btn';
 var COUNT_LIMIT = 3;
 

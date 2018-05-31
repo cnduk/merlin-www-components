@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.14.2"></a>
+## [1.14.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-common@1.14.1...@cnbritain/merlin-www-common@1.14.2) (2018-05-30)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-common
+
+<a name="1.14.1"></a>
+## [1.14.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-common@1.14.0...@cnbritain/merlin-www-common@1.14.1) (2018-05-29)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-common
+
+<a name="1.14.0"></a>
+# [1.14.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-common@1.13.15...@cnbritain/merlin-www-common@1.14.0) (2018-05-29)
+
+
+### Bug Fixes
+
+* **merlin-www-common:** correct commuter sans css ([cb99201](https://github.com/cnduk/merlin-www-components/commit/cb99201))
+
+
+### Features
+
+* **merlin-www-common:** add commuter sans to tatler ([6632b48](https://github.com/cnduk/merlin-www-components/commit/6632b48))
+* **merlin-www-common:** delete agenda font file ([485667a](https://github.com/cnduk/merlin-www-components/commit/485667a))
+
+
+
+
 <a name="1.13.14"></a>
 ## [1.13.14](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-common@1.13.13...@cnbritain/merlin-www-common@1.13.14) (2018-05-21)
 

@@ -3,6 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.36"></a>
+## [1.8.36](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-splash@1.8.35...@cnbritain/merlin-www-section-splash@1.8.36) (2018-05-30)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-splash
+
+<a name="1.8.35"></a>
+## [1.8.35](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-splash@1.8.34...@cnbritain/merlin-www-section-splash@1.8.35) (2018-05-29)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-splash
+
+<a name="1.8.34"></a>
+## [1.8.34](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-splash@1.8.33...@cnbritain/merlin-www-section-splash@1.8.34) (2018-05-29)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-splash
+
+<a name="1.8.32"></a>
+## [1.8.32](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-splash@1.8.31...@cnbritain/merlin-www-section-splash@1.8.32) (2018-05-24)
+
+
+### Bug Fixes
+
+* **merlin-www-section-splash:** breakpoint for hg hero image changed ([19190b0](https://github.com/cnduk/merlin-www-components/commit/19190b0))
+
+
+
+
+<a name="1.8.31"></a>
+## [1.8.31](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-splash@1.8.30...@cnbritain/merlin-www-section-splash@1.8.31) (2018-05-24)
+
+
+### Bug Fixes
+
+* **merlin-www-section-splash:** copy old superfeature styles over for image ([e03644f](https://github.com/cnduk/merlin-www-components/commit/e03644f))
+
+
+
+
 <a name="1.8.29"></a>
 ## [1.8.29](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-splash@1.8.28...@cnbritain/merlin-www-section-splash@1.8.29) (2018-05-21)
 

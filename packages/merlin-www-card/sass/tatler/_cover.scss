@@ -33,7 +33,7 @@
     }
 
     .c-card__title {
-        @include font('AGENDA', 13px, 'MEDIUM', 13px);
+        @include font('COMMUTER SANS', 13px, 'MEDIUM', 13px);
 
         color: $gray;
         letter-spacing: .5px;
@@ -46,13 +46,13 @@
 .c-card--cover {
     @include card-cover;
 
-    @include card-switcher-size {
+    @include card-portrait-to-landscape-size {
         .c-card__obj__body {
             padding-top: 20px;
         }
 
         .c-card__title {
-            @include font('AGENDA', 17px, 'MEDIUM', 17px);
+            @include font('COMMUTER SANS', 17px, 'MEDIUM', 17px);
 
             letter-spacing: 1px;
         }
@@ -71,7 +71,7 @@
     }
 
     .c-card__title {
-        @include font('AGENDA', 17px, 'MEDIUM', 17px);
+        @include font('COMMUTER SANS', 17px, 'MEDIUM', 17px);
 
         letter-spacing: 1px;
     }

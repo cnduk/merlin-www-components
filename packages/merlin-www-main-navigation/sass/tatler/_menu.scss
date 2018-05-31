@@ -82,10 +82,11 @@
             width: 100%;
 
             .n-menu__nav-link {
-                @include font('STARLING', 20px, 'NORMAL', 20px);
+                @include font('COMMUTER SANS', 16px, null, 16px);
                 color: $black-two;
                 padding: 0 20px;
                 position: absolute;
+                text-transform: uppercase;
                 top: 50%;
                 transform: translateY(-50%);
                 word-break: break-word;
@@ -101,7 +102,7 @@
                 width: 50%;
 
                 .n-menu__nav-link {
-                    @include font('STARLING', 16px, 'NORMAL', 16px);
+                    @include font('COMMUTER SANS', 13px, null, 13px);
 
                     bottom: 0;
                     top: initial;
