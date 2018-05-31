@@ -2,37 +2,31 @@
 @import '@cnbritain/merlin-www-image:bystander';
 
 @import '../wireframe/wireframe';
-
 @import '../tatler/_tatler_base';
 
-.c-gallery__wrapper {
-    background-color: $COLOUR_BG;
-}
-.c-gallery__images {
-    background-color: $COLOUR_BG;
-}
-.c-gallery__text {
-    background-color: $black;
-}
-.c-gallery__icon {
-    background-color: $black;
-    svg {
-        fill: $white;
+.c-gallery {
+    &:focus,
+    &:hover {
+        .c-gallery__title span {
+            border-color: $white;
+        }
     }
 }
+
+.c-gallery__contents {
+    background: $black;
+}
+
 .c-gallery__title,
 .c-gallery__teaser {
     color: $white;
 }
 
-li.c-gallery__meta-item {
-    border-right-color: $mine-shaft;
-    border-right-width: 2px;
+.c-gallery__byline:before {
+    background: $white;
 }
 
-@include min-screen($FEATURE_LARGE_BREAKPOINT){
-    .c-gallery__icon {
-        background-color: $cod-gray;
-        margin: 0 auto 30px auto;
-    }
+.c-gallery__meta-item {
+    border-right-color: $mine-shaft;
+    border-right-width: 2px;
 }
