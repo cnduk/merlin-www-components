@@ -232,6 +232,7 @@ $C_CARD_BUM_MARGIN: 0;
 // Goes two, four
 .c-card-list--mag-magazines {
     @include cl-base;
+    @include cl-one;
 
     flex-direction: row;
     justify-content: flex-start;
@@ -241,7 +242,7 @@ $C_CARD_BUM_MARGIN: 0;
         width: 50%;
     }
 
-    @include cl-three;
+    @include cl-two;
     @include cl-four;
 }
 
