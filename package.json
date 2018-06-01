@@ -18,9 +18,12 @@
   },
   "homepage": "https://github.com/cnduk/merlin-www-components#readme",
   "devDependencies": {
-    "lerna": "2.0.0-beta.38",
+    "autoprefixer": "^8.5.2",
+    "csso": "^3.5.0",
     "eslint": "^4.14.0",
-    "eslint-plugin-compat": "^2.2.0"
+    "eslint-plugin-compat": "^2.2.0",
+    "lerna": "2.0.0-beta.38",
+    "postcss": "^6.0.22"
   },
   "dependencies": {
     "@cnbritain/merlin-sass-custom-importer": "^1.2.5",
@@ -28,7 +31,7 @@
     "node-sass": "^4.7.2"
   },
   "browserslist": [
-        "last 2 versions",
-        "ie >= 10"
-    ]
+    "last 2 versions",
+    "ie >= 10"
+  ]
 }
