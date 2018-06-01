@@ -44,17 +44,21 @@
 }
 
 .g-image-nav__btn {
-    background-color: $wild-sand;
+    background-color: $mine-shaft;
     border-radius: 50%;
     width: 35px;
     height: 35px;
 
     &:hover {
+        background-color: $wild-sand;
 
+        svg {
+            fill: $mine-shaft;
+        }
     }
 
     svg {
-        fill: $black;
+        fill: $white;
         height: 15px;
         width: 15px;
     }
@@ -69,7 +73,12 @@
 }
 
 .g-image-nav__btn[disabled] {
+    background-color: $black;
+    border: 1px solid $mine-shaft;
 
+    svg {
+        fill: $mine-shaft;
+    }
 }
 
 .a-gallery__view {
