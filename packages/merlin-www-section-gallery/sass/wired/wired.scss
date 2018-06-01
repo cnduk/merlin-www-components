@@ -27,6 +27,7 @@
     display: table;
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
+    width: 100%;
 
     @include at-medium-size {
         direction: rtl;
