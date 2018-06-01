@@ -259,13 +259,23 @@
 }
 
 .c-card-section--dark {
-    background: $cod-gray;
+    background: $black;
     margin-bottom: 0;
     margin-top: 0;
     padding: 30px 20px;
 
     .c-card-section__title {
         color: $white;
+
+        span {
+            background-color: $black;
+            border-left: 1px solid $white;
+            border-right: 1px solid $white;
+        }
+
+        &:before {
+            background-color: $white;
+        }
     }
 
     .c-card-section__logo svg {
@@ -284,8 +294,25 @@
     }
 
     @include tablet-size {
-        margin-bottom: 0;
-        margin-top: 0;
-        padding: 60px;
+        padding-bottom: $PADDING_X_LARGE;
+        padding-top: $PADDING_X_LARGE;
+
+        .c-card-section__title {
+            margin-left: -($TABLET_SIDE_GUTTER);
+            margin-right: -($TABLET_SIDE_GUTTER);
+        }
+    }
+
+    @include desktop-size {
+        .c-card-section__title {
+            margin-left: 0;
+            margin-right: 0;
+            text-align: left;
+
+            span {
+                border-left: none;
+                padding-left: 0;
+            }
+        }
     }
 }

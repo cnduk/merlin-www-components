@@ -36,7 +36,7 @@
 .c-figure__credit {
     @include font('COMMUTER SANS', 10px, 'MEDIUM', 10px);
 
-    color: $COLOUR_CREDIT_TEXT;
+    color: $gray;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin: 15px 0 0 0;
@@ -110,10 +110,11 @@ li.c-figure__toolbar-listitem {
 .c-figure--dark {
     .c-figure__wrapper {
         background: $black;
+        border: 1px solid $mine-shaft;
     }
 
     .c-figure__toolbar {
-        border: 1px solid $cod-gray;
+        border: 1px solid $mine-shaft;
     }
 
     .c-figure__toolbar-listitem {
