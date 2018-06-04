@@ -11,7 +11,7 @@
     position: relative;
     text-align: center;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size(){
         margin-bottom: $DESKTOP_SLICE_MARGIN;
         margin-left: $DESKTOP_SLICE_MARGIN;
         margin-right: $DESKTOP_SLICE_MARGIN;
@@ -19,15 +19,15 @@
     }
 
     &::after{
+        border-bottom: 20px solid transparent;
+        border-image: url("/static/img/pattern-1.jpg") 20;
+        bottom: -20px;
         content : "";
         position: absolute;
         right: 0;
-        bottom: -20px;
         width: calc(100% - 20px);
-        border-bottom: 20px solid transparent;
-        border-image: url("/static/img/pattern-1.jpg") 20;
 
-         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+         @include at-x-large-size(){
              display: none;
          }
     }
@@ -40,10 +40,10 @@
     padding: 30px $MOBILE_SIDE_GUTTER;
     position: relative;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: 40px 0;
+    @include at-x-large-size(){
         border: solid 20px transparent;
         border-image: url("/static/img/pattern-1.jpg") 20;
+        padding: 40px 0;
     }
 }
 
@@ -58,7 +58,7 @@
     margin-bottom: 20px;
     text-align: center;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size(){
         @include font-size(40px);
         @include line-height(45px);
         margin-bottom: 10px;
@@ -66,18 +66,18 @@
     }
 
     &:before{
-        content:"";
         background: url("/static/img/GL-newsletter.jpg") no-repeat;
         background-size: 100% 100%;
         border-radius: 50%;
-        position: relative;
         box-sizing: border-box;
+        content:"";
         display: block;
         height: 90px;
-        text-align: center;
-        width: 90px;
         margin: 0 auto;
         margin-bottom: 20px;
+        position: relative;
+        text-align: center;
+        width: 90px;
         z-index: 1;
     }
 }
@@ -88,13 +88,13 @@
     letter-spacing:-0.5px;
     margin: 20px 0 20px 0;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size() {
         margin: 20px auto;
         text-align: center;
         width: 570px;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size(){
         @include font-size(19px);
         @include line-height(23px);
         margin: 10px auto 20px auto;
@@ -104,7 +104,7 @@
 .c-newsletter__form {
     width: 100%;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size() {
         width: auto;
     }
 }
@@ -119,13 +119,11 @@
     margin-bottom: 10px;
     text-align: center;
 
-    @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        float: left;
-        width: 420px;
+    @include at-medium-size() {
         text-align: left;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size(){
         @include font-size(16px);
         @include line-height(16px);
     }
@@ -140,14 +138,11 @@
     @include font("GRAPHIK", 13px, 'SEMI BOLD', 13px);
     background-color: $dune;
     color: $white;
-    height: 40px;
     letter-spacing: 1px;
-    padding-top: 10px;
     margin-bottom: 15px;
+    padding-top: 10px;
 
-    @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        float: left;
-        width: 140px;
+    @include at-medium-size() {
         margin-left: 10px;
     }
 

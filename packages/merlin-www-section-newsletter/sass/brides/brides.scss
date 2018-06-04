@@ -15,7 +15,7 @@
     position: relative;
     text-align: center;
 
-    @include tablet-size {
+    @include at-medium-size() {
         background-image: url('/static/img/newsletter-large.jpg');
         padding: 144px 0;
     }
@@ -62,7 +62,7 @@
         width: 208px;
     }
 
-    @include tablet-size {
+    @include at-medium-size() {
         width: 540px;
 
         svg {
@@ -82,7 +82,7 @@
     text-align: center;
     text-shadow: 0 2px 8px rgba($black, 0.2);
 
-    @include tablet-size {
+    @include at-medium-size() {
         @include font-size(14px);
         @include line-height(20px);
         margin: 22px 0 40px 0;
@@ -108,7 +108,7 @@
     margin-bottom: 10px;
     text-align: center;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size() {
         text-align: left;
     }
 
@@ -120,11 +120,10 @@
 .c-newsletter__form__btn {
     @include button-single();
     @include button-single-light();
-
     height: auto;
     margin-bottom: 20px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size() {
         margin-left: 10px;
     }
 

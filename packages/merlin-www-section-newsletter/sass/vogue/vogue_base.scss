@@ -3,7 +3,7 @@
     padding: 60px 0 55px 0;
     text-align: center;
 
-    @include tablet-size {
+    @include at-medium-size() {
         padding: 80px 0 75px 0;
     }
 }
@@ -13,7 +13,7 @@
     max-width: 670px;
     padding: 0 20px;
 
-    @include tablet-size {
+    @include at-medium-size() {
         padding: 0 40px;
     }
 }
@@ -29,7 +29,7 @@
     margin-top: 0;
     text-transform: uppercase;
 
-    @include tablet-size {
+    @include at-medium-size() {
         @include font-size(24px);
         @include line-height(25px);
     }
@@ -40,7 +40,7 @@
     color: $dove-gray;
     margin-bottom: 20px;
 
-    @include tablet-size {
+    @include at-medium-size() {
         @include font-size(17px);
         @include line-height(21px);
         margin-bottom: 35px;
@@ -50,7 +50,7 @@
 .c-newsletter__form {
     width: 100%;
 
-    @include tablet-size {
+    @include at-medium-size() {
         width: auto;
     }
 }
@@ -75,12 +75,12 @@
     height: 45px;
     margin-bottom: 30px;
 
-    &:hover {
-        @include button-single-two-light-hover();
+    @include at-medium-size() {
+        margin-left: 10px;
     }
 
-    @include tablet-size {
-        margin-left: 10px;
+    &:hover {
+        @include button-single-two-light-hover();
     }
 }
 
