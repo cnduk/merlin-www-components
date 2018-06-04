@@ -12,11 +12,13 @@
 
 .c-newsletter__logo {
     display: none;
+    width: 66px;
 
     @include at-medium-size() {
         display: block;
-        margin: 0 auto 10px auto;
+        margin: 0 auto 20px auto;
     }
+
 }
 
 .c-newsletter__title {

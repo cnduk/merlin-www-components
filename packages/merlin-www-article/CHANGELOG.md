@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.28.43"></a>
+## [1.28.43](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.28.42...@cnbritain/merlin-www-article@1.28.43) (2018-06-04)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-article
+
+<a name="1.28.42"></a>
+## [1.28.42](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.28.41...@cnbritain/merlin-www-article@1.28.42) (2018-06-04)
+
+
+### Bug Fixes
+
+* **merlin-www-article:** tatler video amends ([6c9b50f](https://github.com/cnduk/merlin-www-components/commit/6c9b50f))
+
+
+
+
 <a name="1.28.41"></a>
 ## [1.28.41](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.28.40...@cnbritain/merlin-www-article@1.28.41) (2018-06-01)
 

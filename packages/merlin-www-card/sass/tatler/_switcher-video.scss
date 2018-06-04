@@ -1,9 +1,12 @@
+
 @mixin card-switcher-video-small {
+    @include card-landscape;
     @include card-landscape-small;
 }
 
 @mixin card-switcher-video-large {
     @include card-portrait;
+    @include card-portrait-large;
 }
 
 .c-card--switcher-video {
