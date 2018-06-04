@@ -11,7 +11,7 @@
     position: relative;
     text-align: center;
 
-    @include at-x-large-size(){
+    @include at-x-large-size {
         margin-bottom: $DESKTOP_SLICE_MARGIN;
         margin-left: $DESKTOP_SLICE_MARGIN;
         margin-right: $DESKTOP_SLICE_MARGIN;
@@ -27,7 +27,7 @@
         right: 0;
         width: calc(100% - 20px);
 
-         @include at-x-large-size(){
+         @include at-x-large-size {
              display: none;
          }
     }
@@ -40,7 +40,7 @@
     padding: 30px $MOBILE_SIDE_GUTTER;
     position: relative;
 
-    @include at-x-large-size(){
+    @include at-x-large-size {
         border: solid 20px transparent;
         border-image: url("/static/img/pattern-1.jpg") 20;
         padding: 40px 0;
@@ -58,7 +58,7 @@
     margin-bottom: 20px;
     text-align: center;
 
-    @include at-x-large-size(){
+    @include at-x-large-size {
         @include font-size(40px);
         @include line-height(45px);
         margin-bottom: 10px;
@@ -88,13 +88,13 @@
     letter-spacing:-0.5px;
     margin: 20px 0 20px 0;
 
-    @include at-medium-size() {
+    @include at-medium-size {
         margin: 20px auto;
         text-align: center;
         width: 570px;
     }
 
-    @include at-x-large-size(){
+    @include at-x-large-size {
         @include font-size(19px);
         @include line-height(23px);
         margin: 10px auto 20px auto;
@@ -112,11 +112,11 @@
     text-align: center;
     text-transform: uppercase;
 
-    @include at-medium-size() {
+    @include at-medium-size {
         text-align: left;
     }
 
-    @include at-x-large-size(){
+    @include at-x-large-size {
         @include font-size(16px);
         @include line-height(16px);
     }
@@ -135,7 +135,7 @@
     margin-bottom: 15px;
     padding-top: 10px;
 
-    @include at-medium-size() {
+    @include at-medium-size {
         margin-left: 10px;
     }
 

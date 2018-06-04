@@ -9,7 +9,7 @@
     position: relative;
     text-align: center;
 
-    @include at-medium-size() {
+    @include at-medium-size {
         padding: 80px 0;
     }
 
@@ -46,7 +46,7 @@
     margin-bottom: 14px;
     margin-top: 0;
 
-    @include at-medium-size() {
+    @include at-medium-size {
         @include font-size(32px);
         @include line-height(36px);
         margin-bottom: 24px;
@@ -59,7 +59,7 @@
     margin-bottom: 32px;
     margin-top: 14px;
 
-    @include at-medium-size() {
+    @include at-medium-size {
         @include font-size(15px);
         @include line-height(22px);
     }
@@ -91,7 +91,7 @@
     height: 60px;
     margin-bottom: 28px;
 
-    @include at-medium-size() {
+    @include at-medium-size {
         margin-left: 10px;
     }
 

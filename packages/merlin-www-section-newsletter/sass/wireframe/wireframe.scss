@@ -9,7 +9,7 @@
     display: inline-block;
     width: 100%;
 
-    @include at-medium-size() {
+    @include at-medium-size {
         width: auto;
     }
 }
@@ -22,7 +22,7 @@
     padding: 10px;
     width: 100%;
 
-    @include at-medium-size() {
+    @include at-medium-size {
         float: left;
         width: 420px;
     }
@@ -44,7 +44,7 @@
     padding: 0;
     width: 100%;
 
-    @include at-medium-size() {
+    @include at-medium-size {
         float: left;
         width: 140px;
     }
