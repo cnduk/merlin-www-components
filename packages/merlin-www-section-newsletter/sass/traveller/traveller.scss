@@ -93,7 +93,7 @@
     @include font("PROXIMA NOVA CONDENSED", 14px, 400, 14px);
 }
 
-.c-newsletter__form__text {
+.c-newsletter__form-text {
     @include font("PROXIMA NOVA CONDENSED", 14px, 400, 14px);
     background: $WHITE;
     border-radius: 0;
