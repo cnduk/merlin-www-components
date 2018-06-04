@@ -15,10 +15,6 @@
     position: relative;
     text-align: center;
 
-    @include at-medium-size {
-        padding: 80px 0;
-    }
-
     &:before {
         background-color: rgba($MUSTASAARI, 0.2);
         bottom: 0;
@@ -46,6 +42,10 @@
         position: absolute;
         right: 4px;
         text-transform: uppercase;
+    }
+
+    @include at-medium-size {
+        padding: 80px 0;
     }
 }
 
@@ -115,14 +115,14 @@
     margin-bottom: 16px;
     text-transform: uppercase;
 
-    @include at-medium-size {
-        margin-left: 10px;
-        margin-bottom: 24px;
-    }
-
     &:focus,
     &:hover {
         @include button-single-two-light-hover();
+    }
+
+    @include at-medium-size {
+        margin-left: 10px;
+        margin-bottom: 24px;
     }
 }
 

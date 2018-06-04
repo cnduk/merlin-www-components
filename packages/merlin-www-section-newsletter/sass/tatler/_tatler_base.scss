@@ -74,14 +74,14 @@
     width: 100%;
     text-transform: uppercase;
 
-    @include at-medium-size {
-        margin-left: 10px;
-        width: 130px;
-    }
-
     &:focus,
     &:hover {
         @include button-single-light-hover();
+    }
+
+    @include at-medium-size {
+        margin-left: 10px;
+        width: 130px;
     }
 }
 

@@ -104,10 +104,6 @@
     padding: 10px;
     width: 100%;
 
-    &:focus {
-        outline: 0;
-    }
-
     @include at-x-large-size {
         float: left;
         margin-bottom: 0;
@@ -125,15 +121,15 @@
     text-transform: uppercase;
     width: 100%;
 
+    &:focus,
+    &:hover {
+        @include button-single-light-hover();
+    }
+
     @include at-x-large-size {
         float: left;
         margin-left: 10px;
         width: 140px;
-    }
-
-    &:focus,
-    &:hover {
-        @include button-single-light-hover();
     }
 }
 

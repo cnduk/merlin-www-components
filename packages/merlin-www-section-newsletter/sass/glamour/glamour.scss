@@ -11,13 +11,6 @@
     position: relative;
     text-align: center;
 
-    @include at-x-large-size {
-        margin-bottom: $DESKTOP_SLICE_MARGIN;
-        margin-left: $DESKTOP_SLICE_MARGIN;
-        margin-right: $DESKTOP_SLICE_MARGIN;
-        margin-top: $DESKTOP_SLICE_MARGIN;
-    }
-
     &::after{
         border-bottom: 20px solid transparent;
         border-image: url("/static/img/pattern-1.jpg") 20;
@@ -30,6 +23,13 @@
          @include at-x-large-size {
              display: none;
          }
+    }
+
+    @include at-x-large-size {
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+        margin-left: $DESKTOP_SLICE_MARGIN;
+        margin-right: $DESKTOP_SLICE_MARGIN;
+        margin-top: $DESKTOP_SLICE_MARGIN;
     }
 }
 
@@ -58,13 +58,6 @@
     margin-bottom: 20px;
     text-align: center;
 
-    @include at-x-large-size {
-        @include font-size(40px);
-        @include line-height(45px);
-        margin-bottom: 10px;
-
-    }
-
     &:before{
         background: url("/static/img/GL-newsletter.jpg") no-repeat;
         background-size: 100% 100%;
@@ -79,6 +72,12 @@
         text-align: center;
         width: 90px;
         z-index: 1;
+    }
+
+    @include at-x-large-size {
+        @include font-size(40px);
+        @include line-height(45px);
+        margin-bottom: 10px;
     }
 }
 
@@ -112,6 +111,10 @@
     text-align: center;
     text-transform: uppercase;
 
+    &::placeholder {
+        color: rgba(55, 51, 48, 0.5);
+    }
+
     @include at-medium-size {
         text-align: left;
     }
@@ -119,10 +122,6 @@
     @include at-x-large-size {
         @include font-size(16px);
         @include line-height(16px);
-    }
-
-    &::placeholder {
-        color: rgba(55, 51, 48, 0.5);
     }
 }
 
@@ -135,15 +134,15 @@
     margin-bottom: 15px;
     padding-top: 10px;
 
-    @include at-medium-size {
-        margin-left: 10px;
-    }
-
     &:focus,
     &:hover {
         background-color: $white;
         border: solid 1px $dune;
         color: $dune;
+    }
+
+    @include at-medium-size {
+        margin-left: 10px;
     }
 }
 

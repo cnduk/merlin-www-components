@@ -22,13 +22,13 @@
     padding: 10px;
     width: 100%;
 
+    &:focus {
+        outline: 0;
+    }
+
     @include at-medium-size {
         float: left;
         width: 420px;
-    }
-
-    &:focus {
-        outline: 0;
     }
 }
 .c-newsletter__form-btn {
@@ -44,13 +44,13 @@
     padding: 0;
     width: 100%;
 
+    &:focus {
+        outline: 0;
+    }
+
     @include at-medium-size {
         float: left;
         width: 140px;
-    }
-
-    &:focus {
-        outline: 0;
     }
 }
 .c-newsletter__legal {}

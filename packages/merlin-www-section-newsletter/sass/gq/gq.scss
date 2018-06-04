@@ -9,10 +9,6 @@
     position: relative;
     text-align: center;
 
-    @include at-medium-size {
-        padding: 80px 0;
-    }
-
     &:before {
         background-image: url('../img/newsletter.png');
         background-position: center center;
@@ -26,6 +22,10 @@
         top: 0;
         transform: translateX(-50%);
         width: 100%;
+    }
+
+    @include at-medium-size {
+        padding: 80px 0;
     }
 }
 
@@ -91,13 +91,13 @@
     height: 60px;
     margin-bottom: 28px;
 
-    @include at-medium-size {
-        margin-left: 10px;
-    }
-
     &:focus,
     &:hover {
         @include button-single-light-hover();
+    }
+
+    @include at-medium-size {
+        margin-left: 10px;
     }
 }
 
