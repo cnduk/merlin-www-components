@@ -138,31 +138,27 @@
 
 
 .c-card-section--v-related-articles {
-    background-color: $COLOUR_BG_DARK;
+    background-color: $mine-shaft;
     max-width: none;
-    padding: 0 $MOBILE_SIDE_GUTTER;
+    padding: 20px $MOBILE_SIDE_GUTTER 0 $MOBILE_SIDE_GUTTER;
+
+    .c-card-section__title {
+        @include font('COMMUTER SANS', 13px, 'NORMAL', 13px);
+        color: $white;
+        margin: 0;
+        text-transform: uppercase;
+    }
 
     .c-card-section__btn {
-        margin-bottom: 30px;
-        width: auto;
-
         @include button-single;
         @include button-single-dark;
+
+        margin-bottom: 25px;
+        min-width: 250px;
 
         &:hover {
             @include button-single-dark-hover;
         }
-    }
-
-    .c-card-section__title {
-        @include font-size(18px);
-        @include line-height(18px);
-        color: $COLOUR_MAIN_PAGE;
-        margin: 0;
-        padding: 30px 0;
-        position: relative;
-        text-align: center;
-        text-transform: uppercase;
     }
 
     @include tablet-size {
@@ -179,7 +175,8 @@
 .c-card-section--tg-articles,
 .c-card-section--v-articles,
 .c-card-section--mag-articles,
-.c-card-section--mag-magazines  {
+.c-card-section--mag-magazines,
+.c-card-section--v-genre-articles  {
     margin-bottom: 0;
     margin-top: 0;
     max-width: none;
