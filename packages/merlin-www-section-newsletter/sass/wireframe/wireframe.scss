@@ -32,9 +32,16 @@
     }
 }
 .c-newsletter__form-btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
     display: block;
     height: 40px;
+    padding: 0;
     width: 100%;
 
     @include at-medium-size() {
