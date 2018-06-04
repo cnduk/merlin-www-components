@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.10.34"></a>
+## [1.10.34](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.10.33...@cnbritain/merlin-www-tag-header@1.10.34) (2018-06-04)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-tag-header
+
 <a name="1.10.33"></a>
 ## [1.10.33](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.10.32...@cnbritain/merlin-www-tag-header@1.10.33) (2018-06-01)
 
