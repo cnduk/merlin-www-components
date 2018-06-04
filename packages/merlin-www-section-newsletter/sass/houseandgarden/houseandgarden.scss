@@ -71,14 +71,6 @@
     }
 }
 
-.c-newsletter__form {
-    width: 100%;
-
-    @include at-medium-size() {
-        width: auto;
-    }
-}
-
 .c-newsletter__form__text {
     @include font("BRANDON GROTESQUE", 11px, 700, 11px);
     border-radius: 0;
@@ -106,6 +98,7 @@
     @include button-single-dark();
     height: auto;
     margin-bottom: 20px;
+    text-transform: uppercase;
 
     @include at-medium-size() {
         margin-left: 10px;

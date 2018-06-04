@@ -89,14 +89,6 @@
     }
 }
 
-.c-newsletter__form {
-    width: 100%;
-
-    @include tablet-size {
-        width: auto;
-    }
-}
-
 .c-newsletter__form__text {
     @include font("SOLEIL", 14px, 400, 14px, 20);
     apperance: none;
@@ -122,6 +114,7 @@
     @include button-single-light();
     height: auto;
     margin-bottom: 20px;
+    text-transform: uppercase;
 
     @include at-medium-size() {
         margin-left: 10px;

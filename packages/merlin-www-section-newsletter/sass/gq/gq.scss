@@ -68,11 +68,6 @@
 .c-newsletter__form {
     @include font("GOTHAM", 14px, normal, 14px);
     color: $bon-jour;
-    width: 100%;
-
-    @include at-medium-size() {
-        width: auto;
-    }
 }
 
 .c-newsletter__form__text {
@@ -83,6 +78,7 @@
     height: 60px;
     margin-bottom: 10px;
     padding: 16px;
+    text-transform: uppercase;
 
     &::placeholder {
         color: $mineshaft;

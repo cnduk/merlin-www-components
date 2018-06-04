@@ -101,14 +101,6 @@
     }
 }
 
-.c-newsletter__form {
-    width: 100%;
-
-    @include at-medium-size() {
-        width: auto;
-    }
-}
-
 .c-newsletter__form__text {
     @include font("GRAPHIK", 14px, 'NORMAL', 14px);
     background: #efefef;
@@ -118,6 +110,7 @@
     letter-spacing: 0.5px;
     margin-bottom: 10px;
     text-align: center;
+    text-transform: uppercase;
 
     @include at-medium-size() {
         text-align: left;
@@ -157,7 +150,7 @@
     @include font("GRAPHIK", 11px, 'NORMAL', 11px);
     color: $dune;
 
-    a{
+    a {
         color: $dune;
         text-decoration: underline;
     }

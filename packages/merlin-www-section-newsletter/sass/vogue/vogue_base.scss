@@ -47,14 +47,6 @@
     }
 }
 
-.c-newsletter__form {
-    width: 100%;
-
-    @include at-medium-size() {
-        width: auto;
-    }
-}
-
 .c-newsletter__form__text {
     @include font('NOBEL', 14px, null, 15px);
     border: 1px solid $alto;

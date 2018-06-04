@@ -91,11 +91,6 @@
 
 .c-newsletter__form {
     @include font("PROXIMA NOVA CONDENSED", 14px, 400, 14px);
-    width: 100%;
-
-    @include at-medium-size() {
-        width: auto;
-    }
 }
 
 .c-newsletter__form__text {
@@ -116,6 +111,7 @@
 .c-newsletter__form__btn {
     height: 60px;
     margin-bottom: 16px;
+    text-transform: uppercase;
 
     @include at-medium-size() {
         margin-left: 10px;
