@@ -1,0 +1,53 @@
+{
+    "data": {
+        "description": "This is a description for the newsletter slice. It might be quite lengthy as it describes some juicy content you will get from emails!",
+        "logo": {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": null,
+                "image_url": "https://vg-images.condecdn.net/image/placeholder/crop/810/landscape"
+            },
+            "state": {
+                "is_image": false,
+                "is_picture": false,
+                "is_static": true,
+                "is_svg": false,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": false,
+                "is_lazyload": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "StaticImage"
+        },
+        "form_url": "/newsletters",
+        "title": "Example newsletter title"
+    },
+    "state": {
+        "is_cardlist": false,
+        "is_contributors": false,
+        "is_feature": false,
+        "is_gallery": false,
+        "is_magazine": false,
+        "is_newsletter": true,
+        "is_show_season": false,
+        "is_show_summary": false,
+        "is_superfeature": false,
+        "is_splash": false
+    },
+    "style": {
+        "cls": "",
+        "inline": ""
+    },
+    "translation": {},
+    "type": "SectionNewsletter"
+}
