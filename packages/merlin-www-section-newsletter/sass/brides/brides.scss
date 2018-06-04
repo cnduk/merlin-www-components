@@ -109,7 +109,7 @@
     }
 }
 
-.c-newsletter__form__btn {
+.c-newsletter__form-btn {
     @include button-single();
     @include button-single-light();
     height: auto;

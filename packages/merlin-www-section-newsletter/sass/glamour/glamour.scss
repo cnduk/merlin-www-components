@@ -126,7 +126,7 @@
     }
 }
 
-.c-newsletter__form__btn {
+.c-newsletter__form-btn {
     @include button-single();
     @include font("GRAPHIK", 13px, 'SEMI BOLD', 13px);
     background-color: $dune;

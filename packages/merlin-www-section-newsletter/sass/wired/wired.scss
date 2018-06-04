@@ -115,7 +115,7 @@
     }
 
 }
-.c-newsletter__form__btn {
+.c-newsletter__form-btn {
     @include button-single();
     @include button-single-light();
     @include font('BRUTAL', 12px, 'BOLD', 12px);

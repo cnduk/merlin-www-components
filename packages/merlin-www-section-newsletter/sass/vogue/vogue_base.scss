@@ -61,7 +61,7 @@
     }
 }
 
-.c-newsletter__form__btn {
+.c-newsletter__form-btn {
     @include button-single-two();
     @include button-single-two-light();
     height: 45px;
