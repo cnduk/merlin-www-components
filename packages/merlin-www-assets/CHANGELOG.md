@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.16.4"></a>
+## [1.16.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-assets@1.16.3...@cnbritain/merlin-www-assets@1.16.4) (2018-06-04)
+
+
+### Bug Fixes
+
+* **merlin-www-assets:** correct tatler newsletter image ([5f05d25](https://github.com/cnduk/merlin-www-components/commit/5f05d25))
+
+
+
+
 <a name="1.16.3"></a>
 ## [1.16.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-assets@1.16.2...@cnbritain/merlin-www-assets@1.16.3) (2018-06-01)
 

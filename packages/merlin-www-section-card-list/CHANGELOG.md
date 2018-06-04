@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.11.40"></a>
+## [1.11.40](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.11.39...@cnbritain/merlin-www-section-card-list@1.11.40) (2018-06-04)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-card-list
+
+<a name="1.11.39"></a>
+## [1.11.39](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.11.38...@cnbritain/merlin-www-section-card-list@1.11.39) (2018-06-04)
+
+
+### Bug Fixes
+
+* **merlin-www-section-card-list:** tatler amends ([7003eeb](https://github.com/cnduk/merlin-www-components/commit/7003eeb))
+
+
+
+
 <a name="1.11.38"></a>
 ## [1.11.38](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.11.37...@cnbritain/merlin-www-section-card-list@1.11.38) (2018-06-01)
 
