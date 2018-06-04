@@ -4,7 +4,7 @@
 @import "../wireframe/wireframe";
 
 .c-newsletter {
-    background-color: #fff;
+    background-color: $white;
     box-sizing: border-box;
     margin: $MOBILE_SLICE_MARGIN auto;
     text-align: center;
@@ -151,6 +151,6 @@
 }
 
 .c-newsletter__privacy {
-    color: #000;
+    color: $black;
     text-decoration: underline;
 }
