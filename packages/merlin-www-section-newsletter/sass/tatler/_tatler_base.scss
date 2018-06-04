@@ -69,19 +69,19 @@
 }
 
 .c-newsletter__form-btn {
-    @include button-single;
-    @include button-single-light;
+    @include button-single();
+    @include button-single-light();
     width: 100%;
     text-transform: uppercase;
-
-    &:hover,
-    &:focus {
-        @include button-single-light-hover;
-    }
 
     @include at-medium-size() {
         margin-left: 10px;
         width: 130px;
+    }
+
+    &:focus,
+    &:hover {
+        @include button-single-light-hover();
     }
 }
 

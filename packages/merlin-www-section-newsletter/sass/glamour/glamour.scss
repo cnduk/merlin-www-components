@@ -139,6 +139,7 @@
         margin-left: 10px;
     }
 
+    &:focus,
     &:hover {
         background-color: $white;
         border: solid 1px $dune;
