@@ -1,6 +1,6 @@
 .a-logo {}
 .a-logo--video {
-    background-color: $black-two;
+    background-color: $black-one;
     padding: 30px 0;
 
     .a-logo__wrapper {
@@ -19,7 +19,7 @@
 }
 
 .a-video {
-    background-color: $cod-gray;
+    background-color: $black-one;
 
     &::before {
         content: '';
@@ -55,7 +55,7 @@
 .a-video__player__wrapper {}
 
 .a-video__sidebar {
-    background-color: $black;
+    background-color: $cod-gray;
     padding: 0 20px 20px 20px;
     width: 360px;
 }
