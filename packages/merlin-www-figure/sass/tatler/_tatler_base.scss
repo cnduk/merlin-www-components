@@ -53,8 +53,8 @@
 
 li.c-figure__toolbar-listitem {
     background-color: $white;
-    height: 38px;
-    width: 38px;
+    height: 40px;
+    width: 40px;
 
     svg, path {
         width: 17px;
@@ -119,6 +119,8 @@ li.c-figure__toolbar-listitem {
 
     .c-figure__toolbar-listitem {
         background-color: $cod-gray;
+        height: 38px;
+        width: 38px;
 
         svg, path {
             fill: $white;
