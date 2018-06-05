@@ -134,7 +134,7 @@
     text-align: center;
 
     .ad__container {
-        background: $COLOUR_BG_ADVERT;
+        background: $white;
         padding: 20px 0;
     }
 
@@ -238,8 +238,8 @@
 
     .ad__container {
         background: $white;
-        border-bottom: 1px solid $mercury;
-        border-top: 1px solid $mercury;
+        border-bottom: none;
+        border-top: none;
         padding: 20px 0;
     }
 
@@ -261,5 +261,18 @@
 .ad--dark {
     .ad__container {
         background: $cod-gray;
+    }
+
+    .ad--tag {
+        .ad__container {
+            background: $COLOUR_BG_ADVERT;
+        }
+    }
+
+    .ad--homepage {
+        .ad__container {
+            border-bottom: 1px solid $mercury;
+            border-top: 1px solid $mercury;
+        }
     }
 }
