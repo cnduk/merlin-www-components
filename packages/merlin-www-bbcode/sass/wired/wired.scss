@@ -34,16 +34,18 @@
 .bb-h4,
 .bb-h5,
 .bb-h6 {
+    @include font('NEW GROTESK SQUARE', null, 'LIGHT');
     -moz-osx-font-smoothing: auto;
     -webkit-font-smoothing: auto;
     font-variant-ligatures: common-ligatures;
-    color: #000;
+    color: $black;
     margin: 40px 0 15px 0;
 }
 
 .bb-h1 {
-    @include font("NEW GROTESK SQUARE", 50px, 300, 50px);
-    letter-spacing: 0.3px;
+    @include font-size(50px);
+    @include line-height(50px);
+    font-weight: normal;
 
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(100px);
@@ -52,42 +54,56 @@
 }
 
 .bb-h2 {
-    @include font("NEW GROTESK SQUARE", 45px, 300, 45px);
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(65px);
-        @include line-height(65px);
-    }
-}
+    @include font-size(40px);
+    @include line-height(40px);
 
-.bb-h3 {
-    @include font("NEW GROTESK SQUARE", 40px, 300, 40px);
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(45px);
         @include line-height(45px);
     }
 }
 
-.bb-h4 {
-    @include font("NEW GROTESK SQUARE", 35px, 300, 35px);
+.bb-h3 {
+    @include font-size(35px);
+    @include line-height(35px);
+    letter-spacing: 1px;
+
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
         @include font-size(40px);
         @include line-height(40px);
+        letter-spacing: 0;
+    }
+}
+
+.bb-h4 {
+    @include font-size(30px);
+    @include line-height(30px);
+    letter-spacing: 1px;
+
+    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+        @include font-size(35px);
+        @include line-height(35px);
+        letter-spacing: 0;
     }
 }
 
 .bb-h5 {
-    @include font("NEW GROTESK SQUARE", 30px, 300, 30px);
+    @include font-size(25px);
+    @include line-height(25px);
+    letter-spacing: 1px;
+
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(35px);
-        @include line-height(35px);
+        letter-spacing: 0;
     }
 }
 
 .bb-h6 {
-    @include font("NEW GROTESK SQUARE", 25px, 300, 25px);
+    @include font-size(20px);
+    @include line-height(20px);
+    letter-spacing: 1px;
+
     @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-        @include font-size(30px);
-        @include line-height(30px);
+        letter-spacing: 0;
     }
 }
 
