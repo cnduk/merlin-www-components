@@ -83,3 +83,29 @@
         @include button-single-dark-hover;
     }
 }
+
+//Dark version of gallery navigation buttons
+.g-image-nav__btn {
+    background-color: $mine-shaft;
+
+    &:hover {
+        background-color: $wild-sand;
+
+        svg {
+            fill: $mine-shaft;
+        }
+    }
+
+    svg {
+        fill: $white;
+    }
+}
+
+.g-image-nav__btn[disabled] {
+    background-color: $black;
+    border: 1px solid $mine-shaft;
+
+    svg {
+        fill: $mine-shaft;
+    }
+}
