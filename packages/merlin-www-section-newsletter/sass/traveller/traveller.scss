@@ -5,7 +5,7 @@
 
 .c-newsletter {
     background-color: $CAPE-HAZE;
-    background-image: url('../img/newsletter.jpg');
+    background-image: url('/static/img/newsletter.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 1440px auto;
@@ -14,10 +14,6 @@
     padding: 60px 0;
     position: relative;
     text-align: center;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: 80px 0;
-    }
 
     &:before {
         background-color: rgba($MUSTASAARI, 0.2);
@@ -32,7 +28,7 @@
         transform: translateX(-50%);
         width: 100%;
 
-        @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
+        @include at-medium-size {
             background-color: rgba($MUSTASAARI, 0.15);
         }
     }
@@ -47,9 +43,13 @@
         right: 4px;
         text-transform: uppercase;
     }
+
+    @include at-medium-size {
+        padding: 80px 0;
+    }
 }
 
-.c-newsletter__wrapper {
+.c-newsletter-wrapper {
     margin: 0 auto;
     max-width: 570px;
     padding: 0 $MOBILE_SIDE_GUTTER;
@@ -69,7 +69,7 @@
     text-shadow: 0 0 16px rgba($MUSTASAARI, 0.1);
     text-transform: uppercase;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         @include font-size(28px);
         @include line-height(32px);
         margin-bottom: 20px;
@@ -83,23 +83,17 @@
     margin: 16px 0 24px 0;
     text-shadow: 0 0 16px rgba($MUSTASAARI, 0.2);
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         @include font-size(16px);
-        @include line-height(20px);
         margin: 20px 0 32px 0;
     }
 }
 
 .c-newsletter__form {
     @include font("PROXIMA NOVA CONDENSED", 14px, 400, 14px);
-    width: 100%;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        width: auto;
-    }
 }
 
-.c-newsletter__form__text {
+.c-newsletter__form-text {
     @include font("PROXIMA NOVA CONDENSED", 14px, 400, 14px);
     background: $WHITE;
     border-radius: 0;
@@ -114,19 +108,21 @@
     }
 }
 
-.c-newsletter__form__btn {
-    height: 60px;
-    margin-bottom: 16px;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: 10px;
-        margin-bottom: 24px;
-    }
-
+.c-newsletter__form-btn {
     @include button-single-two();
     @include button-single-two-light();
+    height: 60px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+
+    &:focus,
     &:hover {
         @include button-single-two-light-hover();
+    }
+
+    @include at-medium-size {
+        margin-left: 10px;
+        margin-bottom: 24px;
     }
 }
 

@@ -1,0 +1,61 @@
+{
+    "data": {
+        "description": "Enter your email address to receive the latest wedding inspiration and expert planning tips in your inbox",
+        "logo": {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": null,
+                "image_url": "https://www.bridesmagazine.co.uk/static/img/newsletter-logo-small.svg",
+                "sources": [{
+                    "media": "(min-width: 700px)",
+                    "srcset": "https://www.bridesmagazine.co.uk/static/img/newsletter-logo-large.svg 540w"
+                }, {
+                    "media": "(min-width: 0px)",
+                    "srcset": "https://www.bridesmagazine.co.uk/static/img/newsletter-logo-small.svg 208w"
+                }],
+                "uid": "newsletter_image"
+            },
+            "state": {
+                "is_image": false,
+                "is_picture": true,
+                "is_static": false,
+                "is_svg": false,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": false,
+                "is_lazyload": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "Picture"
+        },
+        "form_url": "/newsletters",
+        "title": null
+    },
+    "state": {
+        "is_cardlist": false,
+        "is_contributors": false,
+        "is_feature": false,
+        "is_gallery": false,
+        "is_magazine": false,
+        "is_newsletter": true,
+        "is_show_season": false,
+        "is_show_summary": false,
+        "is_superfeature": false,
+        "is_splash": false
+    },
+    "style": {
+        "cls": "",
+        "inline": ""
+    },
+    "translation": {},
+    "type": "SectionNewsletter"
+}
