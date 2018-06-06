@@ -119,6 +119,8 @@ li.c-figure__toolbar-listitem {
 
     .c-figure__toolbar-listitem {
         background-color: $cod-gray;
+        height: 38px;
+        width: 38px;
 
         svg, path {
             fill: $white;

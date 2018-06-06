@@ -40,12 +40,12 @@ li.c-topic-strip__item {
 }
 
 .c-topic-strip__title {
-    @include font('COMMUTER SANS', 12px, 400, 12px);
+    @include font('COMMUTER SANS', 10px, 600, 12px);
 
     color: $COLOUR_TITLE_TEXT;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     text-transform: uppercase;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 .c-topic-strip__btn {

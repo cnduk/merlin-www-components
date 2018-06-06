@@ -1,5 +1,11 @@
 .c-magazine {
     background-color: $white;
+    margin: $MOBILE_SLICE_MARGIN auto;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        margin-bottom: $TABLET_SLICE_MARGIN;
+        margin-top: $TABLET_SLICE_MARGIN;
+    }
 }
 
 .c-magazine__wrapper {
