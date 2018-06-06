@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.15.21"></a>
+## [1.15.21](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.20...@cnbritain/merlin-www-bbcode@1.15.21) (2018-06-06)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** update wired heading styles ([d73a7b0](https://github.com/cnduk/merlin-www-components/commit/d73a7b0))
+
+
+
+
 <a name="1.15.20"></a>
 ## [1.15.20](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.19...@cnbritain/merlin-www-bbcode@1.15.20) (2018-06-06)
 

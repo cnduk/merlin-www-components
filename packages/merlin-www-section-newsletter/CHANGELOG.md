@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.7.39"></a>
+## [1.7.39](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-newsletter@1.7.38...@cnbritain/merlin-www-section-newsletter@1.7.39) (2018-06-06)
+
+
+### Bug Fixes
+
+* **merlin-www-section-newsletter:** add missing themes and new data locations ([e8f6549](https://github.com/cnduk/merlin-www-components/commit/e8f6549))
+* **merlin-www-section-newsletter:** correct bg image location for gq ([9a09ad1](https://github.com/cnduk/merlin-www-components/commit/9a09ad1))
+* **merlin-www-section-newsletter:** correct bg image location for traveller ([c65fc04](https://github.com/cnduk/merlin-www-components/commit/c65fc04))
+* **merlin-www-section-newsletter:** update wired breakpoints ([1c4dd77](https://github.com/cnduk/merlin-www-components/commit/1c4dd77))
+
+
+
+
 <a name="1.7.38"></a>
 ## [1.7.38](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-newsletter@1.7.37...@cnbritain/merlin-www-section-newsletter@1.7.38) (2018-06-06)
 
