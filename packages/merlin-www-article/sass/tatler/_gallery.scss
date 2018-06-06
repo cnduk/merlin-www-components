@@ -27,7 +27,7 @@
 }
 
 .g-image-nav {
-    width: $MOBILE_SIDE_GUTTER;
+    width: $TABLET_SIDE_GUTTER;
 
     @include at-medium-size {
         width: $TABLET_SIDE_GUTTER;
