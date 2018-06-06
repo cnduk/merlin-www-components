@@ -37,13 +37,13 @@
 .a-marketing-card__title {
     @include font('STARLING', 23px, 'NORMAL', 24px);
 
-    color: $black-two;
+    color: $black;
     letter-spacing: -0.5px;
     margin: 0 auto 20px auto;
 }
 .a-marketing-card__desc {
     @include font('STARLING', 16px, null, 18px);
-    color: $black-two;
+    color: $black;
     font-style: italic;
     margin: 10px auto 20px auto;
 
