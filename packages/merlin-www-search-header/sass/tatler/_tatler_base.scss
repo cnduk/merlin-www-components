@@ -10,7 +10,7 @@
     }
 
     form {
-        border-bottom: 1px solid $COLOUR_BORDER_SEPARATOR_DARK;
+        border-bottom: 1px solid $mine-shaft;
         margin: 0 auto;
         max-width: $MAXIMUM_PAGE_WIDTH;
     }
@@ -22,7 +22,7 @@
     appearance: none;
     background: transparent;
     border: 0;
-    color: $COLOUR_MAIN_DARK;
+    color: $white;
     display: block;
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
@@ -30,7 +30,7 @@
     width: 100%;
 
     &::placeholder {
-        color: $COLOUR_MAIN_TERTIARY;
+        color: $gray;
     }
 
     &:focus {
@@ -49,7 +49,7 @@
 .srch-results {
     @include font('COMMUTER SANS', 12px, 'MEDIUM', 20px);
 
-    color: $COLOUR_MAIN_TERTIARY;
+    color: $gray;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 15px 0 0;

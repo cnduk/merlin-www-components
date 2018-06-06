@@ -1,6 +1,6 @@
 .c-footer {
     background-color: $black;
-    color: $COLOUR_MAIN_DARK;
+    color: $white;
 }
 
 .c-footer__wrapper {
@@ -9,7 +9,7 @@
 }
 
 .c-footer__list {
-    color: $COLOUR_MAIN_DARK;
+    color: $white;
 }
 
 .c-footer__list--left {
@@ -46,7 +46,7 @@
             display: block;
             height: 1px;
             width: calc(100% - #{$MARGIN_SMALL});
-            background-color: $COLOUR_BORDER_SEPARATOR_DARK;
+            background-color: $mine-shaft;
 
             @include min-screen(1100px) {
                 display: none;
