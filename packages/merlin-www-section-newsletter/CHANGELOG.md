@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.7.41"></a>
+## [1.7.41](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-newsletter@1.7.40...@cnbritain/merlin-www-section-newsletter@1.7.41) (2018-06-07)
+
+
+### Bug Fixes
+
+* **merlin-www-section-newsletter:** set tatler logo to 60px wide ([0e10a90](https://github.com/cnduk/merlin-www-components/commit/0e10a90))
+
+
+
+
 <a name="1.7.40"></a>
 ## [1.7.40](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-newsletter@1.7.39...@cnbritain/merlin-www-section-newsletter@1.7.40) (2018-06-07)
 
