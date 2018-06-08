@@ -27,7 +27,14 @@
     "currentTheme": null,
     "main": "section",
     "data": {
-        "magazine-without-articles": "demo/data/magazine-without-articles.json",
-        "magazine-with-articles": "demo/data/magazine-with-articles.json"
+        "all" :"data/all.json",
+        "brides" :"data/br.json",
+        "glamour" :"data/gl.json",
+        "gq" :"data/gq.json",
+        "house and garden" :"data/hg.json",
+        "tatler" :"data/ta.json",
+        "traveller" :"data/tr.json",
+        "vogue" :"data/vg.json",
+        "wired" :"data/wi.json"
     }
 }

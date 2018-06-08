@@ -1,0 +1,90 @@
+{
+    "data": {
+        "card_list": null,
+        "link": {
+            "data": {
+                "title": "View issue",
+                "url": "/magazine/may-2018"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "Link"
+        },
+        "magazine": {
+            "data": {
+                "editor": "Hatta Byng",
+                "image": {
+                    "data": {
+                        "alt_text": null,
+                        "credit": null,
+                        "description": null,
+                        "look_number": null,
+                        "title": null,
+                        "width": 2597,
+                        "image_url": "https://hg-images.condecdn.net/image/A4LAVxr89xg/crop/405/1.3173076923076923/f/9017-copy.jpg",
+                        "filename": "9017-copy.jpg",
+                        "orientation": "104:137",
+                        "srcset": "https://hg-images.condecdn.net/image/A4LAVxr89xg/crop/405/1.3173076923076923/f/9017-copy.jpg 405w, https://hg-images.condecdn.net/image/A4LAVxr89xg/crop/810/1.3173076923076923/f/9017-copy.jpg 810w, https://hg-images.condecdn.net/image/A4LAVxr89xg/crop/1020/1.3173076923076923/f/9017-copy.jpg 1020w, https://hg-images.condecdn.net/image/A4LAVxr89xg/crop/1440/1.3173076923076923/f/9017-copy.jpg 1440w, https://hg-images.condecdn.net/image/A4LAVxr89xg/crop/1620/1.3173076923076923/f/9017-copy.jpg 1620w",
+                        "uid": "A4LAVxr89xg"
+                    },
+                    "state": {
+                        "is_image": true,
+                        "is_picture": false,
+                        "is_static": false,
+                        "is_svg": false,
+                        "is_linked": false,
+                        "is_landscape": false,
+                        "is_portrait": false,
+                        "is_square": false,
+                        "is_104:137": true,
+                        "is_lazyload": true
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "Image"
+                },
+                "issue_number": null,
+                "month": 5,
+                "month_title": "May",
+                "teaser": null,
+                "title": "May 2018",
+                "year": 2018
+            },
+            "state": {},
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "Magazine"
+        }
+    },
+    "state": {
+        "is_cardlist": false,
+        "is_contributors": false,
+        "is_feature": false,
+        "is_gallery": false,
+        "is_magazine": true,
+        "is_newsletter": false,
+        "is_show_season": false,
+        "is_show_summary": false,
+        "is_superfeature": false,
+        "is_splash": false
+    },
+    "style": {
+        "cls": "",
+        "inline": ""
+    },
+    "translation": {},
+    "type": "SectionMagazine"
+}
