@@ -1,11 +1,11 @@
 .a-review {
-    border: 2px solid $COLOUR_BORDER_INFOBOX;
+    border: 2px solid $black;
     margin: $MARGIN_LARGE 0;
     position: relative;
     padding: 30px;
 
     &:before {
-        border: 1px solid $COLOUR_BORDER_INFOBOX;
+        border: 1px solid $black;
         bottom: 8px;
         content: '';
         display: block;

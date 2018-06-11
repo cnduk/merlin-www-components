@@ -1,7 +1,7 @@
 .ad__title {
     @include font('COMMUTER SANS', 10px, 'MEDIUM');
 
-    color: $COLOUR_MAIN_INACTIVE;
+    color: $silver;
     margin: 0 0 5px;
     text-align: left;
     text-transform: uppercase;
@@ -11,14 +11,14 @@
     text-align: center;
 
     .ad__container {
-        background: $COLOUR_BG_ADVERT;
+        background: $alabaster;
         padding: 20px 0;
     }
 
     .ad__title {
         @include font('COMMUTER SANS', 10px, 'MEDIUM');
 
-        color: $COLOUR_MAIN_INACTIVE;
+        color: $silver;
         letter-spacing: 1px;
         margin: 0 0 5px;
         padding-left: $MOBILE_SIDE_GUTTER;
@@ -147,7 +147,7 @@
     .ad__title {
         @include font('COMMUTER SANS', 10px, 'MEDIUM');
 
-        color: $COLOUR_MAIN_INACTIVE;
+        color: $silver;
         margin: 0 0 5px;
         padding-left: $MOBILE_SIDE_GUTTER;
         padding-right: $MOBILE_SIDE_GUTTER;
@@ -176,7 +176,7 @@
         position: relative;
 
         &:before {
-            background: $COLOUR_BG_ADVERT;
+            background: $alabaster;
             content: '';
             height: 100%;
             width: 100vw;
@@ -265,7 +265,7 @@
 
     .ad--tag {
         .ad__container {
-            background: $COLOUR_BG_ADVERT;
+            background: $alabaster;
         }
     }
 

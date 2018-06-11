@@ -45,7 +45,7 @@
 
     .c-card__title {
         @include font('STARLING', 24px, 'NORMAL', 28px);
-        color: $COLOUR_MAIN_PRIMARY;
+        color: $black;
         letter-spacing: -0.5px;
     }
 

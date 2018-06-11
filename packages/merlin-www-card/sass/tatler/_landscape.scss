@@ -73,7 +73,7 @@
 
     .c-card__title {
         @include font('STARLING', 18px, 'NORMAL', 22px);
-        color: $COLOUR_MAIN_PRIMARY;
+        color: $black;
         letter-spacing: -0.5px;
     }
 }
@@ -97,7 +97,7 @@
 
     .c-card__title {
         @include font('STARLING', 24px, 'NORMAL', 28px);
-        color: $COLOUR_MAIN_PRIMARY;
+        color: $black;
         letter-spacing: -0.5px;
     }
 }

@@ -25,7 +25,7 @@
         width: auto;
 
         path, text {
-            fill: $COLOUR_ICON_FILL;
+            fill: $white;
         }
     }
 
@@ -106,7 +106,7 @@
 }
 
 .c-card-section--c-video-articles {
-    background-color: $COLOUR_BG_DARK;
+    background-color: $black;
     max-width: none;
     padding: 30px 20px;
 

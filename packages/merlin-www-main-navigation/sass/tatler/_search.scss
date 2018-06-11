@@ -24,7 +24,7 @@
 
         svg {
             display: inline-block;
-            fill: $black-two;
+            fill: $black;
             height: 18px;
             line-height: 60px;
             vertical-align: middle;
@@ -47,7 +47,7 @@
 
         svg {
             display: inline-block;
-            fill: $black-two;
+            fill: $black;
             height: 18px;
             line-height: 60px;
             vertical-align: middle;
@@ -55,7 +55,7 @@
 
         &:hover {
             svg {
-                fill: $COLOUR_MAIN_HIGHLIGHT;
+                fill: $cinnabar;
             }
         }
     }
@@ -63,7 +63,7 @@
 
 .n-menu__search {
     border: 0;
-    background-color: $black-two;
+    background-color: $black;
     overflow: hidden;
     position: relative;
 
@@ -90,7 +90,7 @@
         @include font('STARLING', 20px, 'NORMAL', 20px);
 
         appearance: none;
-        background-color: $black-two;
+        background-color: $black;
         border: none;
         box-sizing: border-box;
         color: $white;

@@ -23,7 +23,7 @@
 }
 
 .c-feature--gallery {
-    background-color: $COLOUR_BG_GALLERY;
+    background-color: $wild-sand;
 }
 
 .c-feature__wrapper {
@@ -124,7 +124,7 @@
 
 .c-feature__title {
     @include font('STARLING', 24px, 'NORMAL', 28px);
-    color: $COLOUR_MAIN_PRIMARY;
+    color: $black;
     letter-spacing: -0.5px;
     margin: 0 0 20px;
     padding: 0 0 15px;
@@ -133,7 +133,7 @@
      @include at-x-large-size(){
          @include font-size(37px);
          @include line-height(42px);
-         color: $COLOUR_MAIN_PRIMARY;
+         color: $black;
          margin: 0 0 20px;
          padding: 0 0 15px;
      }

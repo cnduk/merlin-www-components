@@ -5,24 +5,11 @@
  * =============================================================================
  * VARIABLES
  */
-$black: #000000;
-$black-two: #111111;
-$cod-gray: #151515;
-$mine-shaft: #333333;
 $brownish-grey: #666666;
 $boulder: #767676;
-$gray: #8a8a8a;
-$pinkish-grey: #bbbbbb;
 $silver: #cccccc;
-$white-three: #dddddd;
 $white-two: #eeeeee;
-$wild-sand: #f5f5f5;
-$alabaster: #f9f9f9;
 $white: #ffffff;
-$cinnabar: #e03b2a;
-$viking: #6cabdd;
-
-// New colors
 $black: #111111;
 $black-one: #000000;
 $cod-gray: #151515;
@@ -33,286 +20,40 @@ $wild-sand: #f5f5f5;
 $alabaster: #f9f9f9;
 $cinnabar: #e03b2a;
 
-/**
- * COLOURS
- * =============================================================================
- * MAIN
- */
-$COLOUR_MAIN_PRIMARY: $black;
-$COLOUR_MAIN_DARK: $white;
-$COLOUR_MAIN_SECONDARY: $boulder;
-$COLOUR_MAIN_TERTIARY: $gray;
-$COLOUR_MAIN_INACTIVE: $silver;
-$COLOUR_MAIN_ACCENT: $viking;
-$COLOUR_MAIN_PAGE: $white;
-$COLOUR_MAIN_HIGHLIGHT: $cinnabar;
-
-
-/**
- * COLOURS
- * =============================================================================
- * BACKGROUNDS
- */
-$COLOUR_BG: $wild-sand;
-$COLOUR_BG_ACCENT: $silver;
-$COLOUR_BG_HIGHLIGHT: $white-two;
-$COLOUR_BG_ADVERT: $alabaster;
-$COLOUR_BG_SECONDARY: $wild-sand;
-$COLOUR_BG_TOP_STORIES: $wild-sand;
-$COLOUR_BG_IMAGE: $silver;
-$COLOUR_BG_MASTHEAD: $white;
-$COLOUR_BG_PAGE: $white;
-$COLOUR_BG_FEATURE: $wild-sand;
-$COLOUR_BG_GALLERY: $wild-sand;
-$COLOUR_BG_BANNER: $cinnabar;
-
-$COLOUR_BG_DARK: $black-two;
-$COLOUR_BG_DARK_ACCENT: $cod-gray;
-
-
-/**
- * COLOURS
- * =============================================================================
- * TYPOGRAPHY
- */
-$COLOUR_TYPE_HEADING: $COLOUR_MAIN_PRIMARY;
-$COLOUR_TYPE_BODY: $COLOUR_MAIN_PRIMARY;
-$COLOUR_TYPE_META: $COLOUR_MAIN_TERTIARY;
-$COLOUR_TYPE_LINK: $COLOUR_MAIN_HIGHLIGHT;
-
-$COLOUR_TITLE_TEXT: $black;
-$COLOUR_CREDIT_TEXT: $boulder;
-$COLOUR_PRE_TEXT: $boulder;
-
-
-/**
- * COLOURS
- * =============================================================================
- * BORDERS
- */
-$COLOUR_BORDER_SOLID: $silver;
-$COLOUR_BORDER_SOLID_DARK: $silver;
-$COLOUR_BORDER_HIGHLIGHT: $cinnabar;
-$COLOUR_BORDER_SEPARATOR: $silver;
-$COLOUR_BORDER_SEPARATOR_DARK: $mine-shaft;
-$COLOUR_BORDER_INFOBOX: $black;
-
-
-/**
- * COLOURS
- * =============================================================================
- * BUTTONS
- */
-
-// CTA BUTTONS
-$COLOUR_BUTTON_CTA_TEXT: $black;
-$COLOUR_BUTTON_CTA_TEXT_HOVER: $cinnabar;
-$COLOUR_BUTTON_CTA_TEXT_DISABLED: $silver;
-
-$COLOUR_BUTTON_CTA_DARK_TEXT: $white;
-$COLOUR_BUTTON_CTA_DARK_TEXT_HOVER: $cinnabar;
-$COLOUR_BUTTON_CTA_DARK_TEXT_DISABLED: $mine-shaft;
-
-// TOPIC BUTTONS
-$COLOUR_BUTTON_TOPIC_TEXT: $gray;
-$COLOUR_BUTTON_TOPIC_TEXT_HOVER: $white;
-$COLOUR_BUTTON_TOPIC_BORDER: $silver;
-$COLOUR_BUTTON_TOPIC_BORDER_HOVER: $cinnabar;
-$COLOUR_BUTTON_TOPIC_BG: $white;
-$COLOUR_BUTTON_TOPIC_BG_HOVER: $cinnabar;
-
-$COLOUR_BUTTON_TOPIC_DARK_TEXT: $white;
-$COLOUR_BUTTON_TOPIC_DARK_TEXT_HOVER: $white;
-$COLOUR_BUTTON_TOPIC_DARK_BORDER: $boulder;
-$COLOUR_BUTTON_TOPIC_DARK_BORDER_HOVER: $cinnabar;
-$COLOUR_BUTTON_TOPIC_DARK_BG: $black;
-$COLOUR_BUTTON_TOPIC_DARK_BG_HOVER: $cinnabar;
-
-// NAV/CAROUSEL BUTTONS
-$COLOUR_BUTTON_NAV_TEXT: $cinnabar;
-$COLOUR_BUTTON_NAV_TEXT_HOVER: $white;
-$COLOUR_BUTTON_NAV_TEXT_DISABLED: $silver;
-
-$COLOUR_BUTTON_NAV_BORDER: $wild-sand;
-$COLOUR_BUTTON_NAV_BORDER_HOVER: $cinnabar;
-$COLOUR_BUTTON_NAV_BORDER_DISABLED: $wild-sand;
-
-$COLOUR_BUTTON_NAV_BG: $white;
-$COLOUR_BUTTON_NAV_BG_HOVER: $cinnabar;
-$COLOUR_BUTTON_NAV_BG_DISABLED: $white;
-
-$COLOUR_BUTTON_NAV_DARK_TEXT: $cinnabar;
-$COLOUR_BUTTON_NAV_DARK_TEXT_HOVER: $white;
-$COLOUR_BUTTON_NAV_DARK_TEXT_DISABLED: $mine-shaft;
-
-$COLOUR_BUTTON_NAV_DARK_BORDER: $mine-shaft;
-$COLOUR_BUTTON_NAV_DARK_BORDER_HOVER: $cinnabar;
-$COLOUR_BUTTON_NAV_DARK_BORDER_DISABLED: $mine-shaft;
-
-$COLOUR_BUTTON_NAV_DARK_BG: $black;
-$COLOUR_BUTTON_NAV_DARK_BG_HOVER: $cinnabar;
-$COLOUR_BUTTON_NAV_DARK_BG_DISABLED: $black;
-
-
-
-/**
- * COLOURS
- * =============================================================================
- * FORMS
- */
-$COLOUR_INPUT_LABEL: $boulder;
-$COLOUR_INPUT_LABEL_HOVER: $mine-shaft;
-$COLOUR_INPUT_LABEL_DISABLED: $silver;
-$COLOUR_INPUT_LABEL_ERROR: $cinnabar;
-
-$COLOUR_INPUT_TEXT: $boulder;
-$COLOUR_INPUT_TEXT_HOVER: $boulder;
-$COLOUR_INPUT_TEXT_ACTIVE: $mine-shaft;
-$COLOUR_INPUT_TEXT_DISABLED: $silver;
-$COLOUR_INPUT_TEXT_ERROR: $cinnabar;
-
-$COLOUR_INPUT_BG: $white;
-$COLOUR_INPUT_BG_HOVER: $white;
-$COLOUR_INPUT_BG_ACTIVE: $white;
-$COLOUR_INPUT_BG_DISABLED: $silver;
-$COLOUR_INPUT_BG_ERROR: $white;
-
-$COLOUR_INPUT_BORDER: $silver;
-$COLOUR_INPUT_BORDER_HOVER: $pinkish-grey;
-$COLOUR_INPUT_BORDER_ACTIVE: $viking;
-$COLOUR_INPUT_BORDER_DISABLED: $silver;
-$COLOUR_INPUT_BORDER_ERROR: $cinnabar;
-
-$COLOUR_FORM_ERROR_TEXT: $cinnabar;
-
-$COLOUR_CHECKBOX_FILL: $cinnabar;
-
-$COLOUR_CHECKBOX_BORDER: $silver;
-$COLOUR_CHECKBOX_BORDER_ACTIVE: $pinkish-grey;
-$COLOUR_CHECKBOX_BORDER_DISABLED: $white-three;
-
-$COLOUR_CHECKBOX_BG: $alabaster;
-$COLOUR_CHECKBOX_BG_ACTIVE: $alabaster;
-$COLOUR_CHECKBOX_BG_DISABLED: $white-two;
-
-
-/**
- * COLOURS
- * =============================================================================
- * ICONS
- */
-$COLOUR_ICON_FILL: $white;
-$COLOUR_ICON_FILL_DARK: $brownish-grey;
-$COLOUR_ICON_BG: $black;
-$COLOUR_ICON_BG_DARK: $black;
-
-$COLOUR_SOCIAL_ICON_BG: $wild-sand;
-$COLOUR_SOCIAL_ICON_BG_DARK: $black;
-
-$COLOUR_ICON_DEFAULT: $cod-gray;
-$COLOUR_ICON_TWITTER: #55acee;
-$COLOUR_ICON_FACEBOOK: #3b5998;
-$COLOUR_ICON_WHATSAPP: #52b44f;
-$COLOUR_ICON_YOUTUBE: #e52d27;
-$COLOUR_ICON_INSTAGRAM: #833ab4;
-$COLOUR_ICON_PINTEREST: #bd081c;
-$COLOUR_ICON_GOOGLE_PLUS: #dc4e41;
-$COLOUR_ICON_SNAPCHAT: #fffc00;
-
-
-/**
- * COLOURS
- * =============================================================================
- * SOCIAL COLOURS
- */
-$COLOUR_EMAIL: $COLOUR_ICON_DEFAULT;
-$COLOUR_EMAIL_DARK: $COLOUR_ICON_FILL_DARK;
-
-$COLOUR_FACEBOOK: $COLOUR_ICON_FACEBOOK;
-$COLOUR_FACEBOOK_DARK: $COLOUR_ICON_FACEBOOK;
-
-$COLOUR_INSTAGRAM: $COLOUR_ICON_INSTAGRAM;
-$COLOUR_INSTAGRAM_DARK: $COLOUR_ICON_INSTAGRAM;
-
-$COLOUR_PINTEREST: $COLOUR_ICON_PINTEREST;
-$COLOUR_PINTEREST_DARK: $COLOUR_ICON_PINTEREST;
-
-$COLOUR_TWITTER: $COLOUR_ICON_TWITTER;
-$COLOUR_TWITTER_DARK: $COLOUR_ICON_TWITTER;
-
-$COLOUR_YOUTUBE: $COLOUR_ICON_YOUTUBE;
-$COLOUR_YOUTUBE_DARK: $COLOUR_ICON_YOUTUBE;
-
-$COLOUR_WHATSAPP: $COLOUR_ICON_WHATSAPP;
-$COLOUR_WHATSAPP_DARK: $COLOUR_ICON_WHATSAPP;
-
+// ----- Social Colours -----//
 $COLOUR_SOCIAL: (
-    "email": $COLOUR_EMAIL,
-    "facebook": $COLOUR_FACEBOOK,
-    "instagram": $COLOUR_INSTAGRAM,
-    "pinterest": $COLOUR_PINTEREST,
-    "twitter": $COLOUR_TWITTER,
-    "youtube": $COLOUR_YOUTUBE,
-    "whatsapp": $COLOUR_WHATSAPP
+    "email": $cod-gray,
+    "facebook": #3b5998,
+    "instagram": #833ab4,
+    "pinterest": #bd081c,
+    "twitter": #55acee,
+    "youtube": #e52d27,
+    "whatsapp": #52b44f
 );
 
 $COLOUR_SOCIAL_LIGHT: $COLOUR_SOCIAL;
 
 $COLOUR_SOCIAL_DARK: (
-    "email": $COLOUR_EMAIL_DARK,
-    "facebook": $COLOUR_FACEBOOK_DARK,
-    "instagram": $COLOUR_INSTAGRAM_DARK,
-    "pinterest": $COLOUR_PINTEREST_DARK,
-    "twitter": $COLOUR_TWITTER_DARK,
-    "youtube": $COLOUR_YOUTUBE_DARK,
-    "whatsapp": $COLOUR_WHATSAPP_DARK
+    "email": $brownish-grey,
+    "facebook": #3b5998,
+    "instagram": #833ab4,
+    "pinterest": #bd081c,
+    "twitter": #55acee,
+    "youtube": #e52d27,
+    "whatsapp": #52b44f
 );
-
-
-/**
- * SIZES
- * =============================================================================
- * MARGINS
- */
-$MARGIN_XXX_LARGE: 120px;
-$MARGIN_XX_LARGE: 80px;
-$MARGIN_X_LARGE: 60px;
-$MARGIN_LARGE: 40px;
-$MARGIN_MEDIUM: 30px;
-$MARGIN_SMALL: 20px;
-$MARGIN_X_SMALL: 15px;
-$MARGIN_XX_SMALL: 10px;
-$MARGIN_XXX_SMALL: 5px;
-$MARGIN_NONE: 0;
-
-/**
- * SIZES
- * =============================================================================
- * PADDINGS
- */
-$PADDING_XXX_LARGE: 120px;
-$PADDING_XX_LARGE: 80px;
-$PADDING_X_LARGE: 60px;
-$PADDING_LARGE: 40px;
-$PADDING_MEDIUM: 30px;
-$PADDING_SMALL: 20px;
-$PADDING_X_SMALL: 15px;
-$PADDING_XX_SMALL: 10px;
-$PADDING_XXX_SMALL: 5px;
-$PADDING_NONE: 0;
-
 
 /**
  * SIZES
  * =============================================================================
  * GUTTERS
  */
-$DESKTOP_SIDE_GUTTER: $MARGIN_X_LARGE;
-$TABLET_SIDE_GUTTER: $MARGIN_X_LARGE;
-$MOBILE_SIDE_GUTTER: $MARGIN_SMALL;
-$DESKTOP_SLICE_MARGIN: $MARGIN_X_LARGE;
-$TABLET_SLICE_MARGIN: $MARGIN_X_LARGE;
-$MOBILE_SLICE_MARGIN: $MARGIN_LARGE;
+$DESKTOP_SIDE_GUTTER: 60px;
+$TABLET_SIDE_GUTTER: 60px;
+$MOBILE_SIDE_GUTTER: 20px;
+$DESKTOP_SLICE_MARGIN: 60px;
+$TABLET_SLICE_MARGIN: 60px;
+$MOBILE_SLICE_MARGIN: 40px;
 
 
 /**
