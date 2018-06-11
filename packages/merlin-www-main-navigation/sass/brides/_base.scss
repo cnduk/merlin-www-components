@@ -293,8 +293,8 @@
     margin-top: 14px;
 
     .n-menu__nav__wrapper {
+        font-size: 0;
         margin: 0 20px;
-        overflow: hidden;
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
             margin: 0 30px;
@@ -303,7 +303,7 @@
 
     a {
         .n-menu__nav-item {
-            float: left;
+            display: inline-block;
             height: 48px;
             position: relative;
             width: 100%;
