@@ -1,0 +1,26 @@
+@mixin card-splash {
+    @include card-portrait;
+}
+
+@mixin card-splash-small {
+    @include card-portrait-small;
+}
+
+@mixin card-splash-large {
+    @include card-portrait-large;
+}
+
+.c-card--splash {
+    @include card-splash;
+    @include card-splash-large;
+}
+
+.c-card--splash-small {
+    @include card-splash;
+    @include card-splash-small;
+}
+
+.c-card--splash-large {
+    @include card-splash;
+    @include card-splash-large;
+}
