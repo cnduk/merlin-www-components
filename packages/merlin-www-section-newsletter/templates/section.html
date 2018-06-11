@@ -1,5 +1,5 @@
 <section class='c-newsletter {{ style.cls }}'>
-    <div class='c-newsletter__wrapper'>
+    <div class='c-newsletter-wrapper'>
         {{# data.logo }}
             <div class='c-newsletter__logo'>
                 {{> @cnbritain/merlin-www-image }}
@@ -8,8 +8,8 @@
         {{# data.title }}<h3 class='c-newsletter__title'>{{ data.title }}</h3>{{/ data.title }}
         {{# data.description }}<p class='c-newsletter__description'>{{ data.description }}</p>{{/ data.description }}
         <form method='GET' action='{{ data.form_url }}' class='c-newsletter__form'>
-            <input type='email' name='email' class='c-newsletter__form__text' placeholder="Type email"></input>
-            <input type='submit' value='Continue' class='global__button-reset c-newsletter__form__btn'></input>
+            <input type='email' name='email' class='c-newsletter__form-text' placeholder="Type email"></input>
+            <input type='submit' value='Continue' class='c-newsletter__form-btn'></input>
         </form>
         <p class='c-newsletter__legal'>Will be used in accordance with our <a href="http://www.condenast.co.uk/privacy/"><span class='c-newsletter__privacy'>Privacy Policy</span></a></p>
     </div>

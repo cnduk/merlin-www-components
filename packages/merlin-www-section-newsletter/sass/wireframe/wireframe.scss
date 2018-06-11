@@ -1,49 +1,56 @@
 @import "@cnbritain/merlin-www-common:wireframe";
 
 .c-newsletter {}
-.c-newsletter__wrapper {}
+.c-newsletter-wrapper {}
 .c-newsletter__logo {}
 .c-newsletter__title {}
 .c-newsletter__description {}
 .c-newsletter__form {
     display: inline-block;
-}
-.c-newsletter__form__text {
-    border: none;
-
-    display: block;
-
     width: 100%;
-    height: 40px;
 
-    padding: 10px;
+    @include at-medium-size {
+        width: auto;
+    }
+}
+
+.c-newsletter__form-text {
+    border: none;
     box-sizing: border-box;
+    display: block;
+    height: 40px;
+    padding: 10px;
+    width: 100%;
 
-    @include min-screen ( $TABLET_SIDE_GUTTER_BREAKPOINT ) {
+    &:focus {
+        outline: 0;
+    }
+
+    @include at-medium-size {
         float: left;
         width: 420px;
     }
+}
+.c-newsletter__form-btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    padding: 0;
+    width: 100%;
 
     &:focus {
         outline: 0;
     }
-}
-.c-newsletter__form__btn {
-    display: block;
 
-    width: 100%;
-    height: 40px;
-
-    appearance: none;
-    text-transform: uppercase;
-
-    @include min-screen ( $TABLET_SIDE_GUTTER_BREAKPOINT ) {
+    @include at-medium-size {
         float: left;
         width: 140px;
-    }
-
-    &:focus {
-        outline: 0;
     }
 }
 .c-newsletter__legal {}

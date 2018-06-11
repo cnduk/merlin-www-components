@@ -2,7 +2,6 @@
     .c-card__obj {
         display: flex;
         flex-direction: column;
-        margin-bottom: 30px;
         width: 100%;
     }
 
@@ -19,10 +18,6 @@
         padding-top: 131.730769231%;
     }
 
-    .c-card__obj__body {
-        padding-top: 10px;
-    }
-
     .c-card__teaser,
     .c-card__separator {
         display: none;
@@ -33,13 +28,29 @@
     }
 
     .c-card__title {
-        @include font('COMMUTER SANS', 13px, 'MEDIUM', 13px);
+        @include font('COMMUTER SANS', 10px, 'MEDIUM', 40px);
 
         color: $gray;
-        letter-spacing: .5px;
+        height: 40px;
+        letter-spacing: 0;
         margin: 0;
         text-align: center;
         text-transform: uppercase;
+    }
+
+    &:hover,
+    &:focus {
+        .c-card__obj__body {
+            background-color: $black;
+        }
+
+        .c-card__title {
+            color: $white;
+
+            span {
+                border: none;
+            }
+        }
     }
 }
 
@@ -47,14 +58,8 @@
     @include card-cover;
 
     @include card-portrait-to-landscape-size {
-        .c-card__obj__body {
-            padding-top: 20px;
-        }
-
         .c-card__title {
-            @include font('COMMUTER SANS', 17px, 'MEDIUM', 17px);
-
-            letter-spacing: 1px;
+            @include font('COMMUTER SANS', 15px, 'MEDIUM', 40px);
         }
     }
 }
@@ -66,13 +71,7 @@
 .c-card--cover-large {
     @include card-cover;
 
-    .c-card__obj__body {
-        padding-top: 20px;
-    }
-
     .c-card__title {
-        @include font('COMMUTER SANS', 17px, 'MEDIUM', 17px);
-
-        letter-spacing: 1px;
+        @include font('COMMUTER SANS', 15px, 'MEDIUM', 40px);
     }
 }

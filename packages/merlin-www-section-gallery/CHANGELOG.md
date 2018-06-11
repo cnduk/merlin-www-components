@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.36"></a>
+## [1.8.36](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.8.35...@cnbritain/merlin-www-section-gallery@1.8.36) (2018-06-07)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-gallery
+
+<a name="1.8.35"></a>
+## [1.8.35](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.8.34...@cnbritain/merlin-www-section-gallery@1.8.35) (2018-06-06)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-gallery
+
+<a name="1.8.33"></a>
+## [1.8.33](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.8.32...@cnbritain/merlin-www-section-gallery@1.8.33) (2018-06-04)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-gallery
+
+<a name="1.8.32"></a>
+## [1.8.32](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.8.31...@cnbritain/merlin-www-section-gallery@1.8.32) (2018-06-01)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-gallery
+
 <a name="1.8.31"></a>
 ## [1.8.31](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.8.30...@cnbritain/merlin-www-section-gallery@1.8.31) (2018-05-30)
 

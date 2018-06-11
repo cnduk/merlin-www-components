@@ -27,7 +27,7 @@
 }
 
 .g-image-nav {
-    width: $MOBILE_SIDE_GUTTER;
+    width: $TABLET_SIDE_GUTTER;
 
     @include at-medium-size {
         width: $TABLET_SIDE_GUTTER;
@@ -50,7 +50,11 @@
     height: 35px;
 
     &:hover {
+        background-color: $black;
 
+        svg {
+            fill: $white;
+        }
     }
 
     svg {
@@ -69,13 +73,11 @@
 }
 
 .g-image-nav__btn[disabled] {
+    background-color: $white;
+    border: 1px solid $wild-sand;
 
-}
-
-.a-gallery__view {
-
-    &--list {
-
+    svg {
+        fill: $wild-sand;
     }
 }
 
@@ -113,11 +115,8 @@ li.a-gallery__thumbnail {
     }
 }
 
-.a-gallery__thumbnail-image {
-
-}
 .a-gallery__thumbnail-hover {
-    background-color: $wild-sand;
+    background-color: rgba(17, 17, 17, 0.6);
     left: 2px;
     right: 2px;
     width: auto;

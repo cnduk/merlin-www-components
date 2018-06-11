@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-show-card-carousel",
-  "version": "1.7.35",
+  "version": "1.7.42",
   "description": null,
   "main": "js/index.js",
   "scripts": {
@@ -11,15 +11,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-www-buttons": "^1.7.23",
-    "@cnbritain/merlin-www-card": "^1.15.27",
-    "@cnbritain/merlin-www-common": "^1.14.2",
-    "@cnbritain/merlin-www-image": "^1.9.21",
-    "@cnbritain/merlin-www-js-elementscroll": "^1.2.10",
-    "@cnbritain/merlin-www-js-utils": "^1.6.1"
+    "@cnbritain/merlin-www-buttons": "^1.7.29",
+    "@cnbritain/merlin-www-card": "^1.15.34",
+    "@cnbritain/merlin-www-common": "^1.14.7",
+    "@cnbritain/merlin-www-image": "^1.9.26",
+    "@cnbritain/merlin-www-js-elementscroll": "^1.2.11",
+    "@cnbritain/merlin-www-js-utils": "^1.6.2"
   },
   "devDependencies": {
-    "@cnbritain/merlin-component-demo-server": "^3.4.1",
+    "@cnbritain/merlin-component-demo-server": "^3.4.2",
     "eslint": "^4.14.0",
     "eslint-plugin-compat": "^2.2.0"
   }

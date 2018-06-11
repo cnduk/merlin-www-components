@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.15.34"></a>
+## [1.15.34](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card@1.15.33...@cnbritain/merlin-www-card@1.15.34) (2018-06-07)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-card
+
+<a name="1.15.33"></a>
+## [1.15.33](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card@1.15.32...@cnbritain/merlin-www-card@1.15.33) (2018-06-06)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-card
+
+<a name="1.15.31"></a>
+## [1.15.31](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card@1.15.30...@cnbritain/merlin-www-card@1.15.31) (2018-06-04)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-card
+
+<a name="1.15.30"></a>
+## [1.15.30](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card@1.15.29...@cnbritain/merlin-www-card@1.15.30) (2018-06-04)
+
+
+### Bug Fixes
+
+* **merlin-www-card:** change tatler video related ([1c1286a](https://github.com/cnduk/merlin-www-components/commit/1c1286a))
+* **merlin-www-card:** correct tatler video switch card ([e87fa2a](https://github.com/cnduk/merlin-www-components/commit/e87fa2a))
+
+
+
+
+<a name="1.15.29"></a>
+## [1.15.29](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card@1.15.28...@cnbritain/merlin-www-card@1.15.29) (2018-06-01)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-card
+
 <a name="1.15.27"></a>
 ## [1.15.27](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card@1.15.26...@cnbritain/merlin-www-card@1.15.27) (2018-05-30)
 

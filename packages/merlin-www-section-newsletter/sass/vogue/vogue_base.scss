@@ -3,17 +3,17 @@
     padding: 60px 0 55px 0;
     text-align: center;
 
-    @include tablet-size {
+    @include at-medium-size {
         padding: 80px 0 75px 0;
     }
 }
 
-.c-newsletter__wrapper {
+.c-newsletter-wrapper {
     margin: 0 auto;
     max-width: 670px;
     padding: 0 20px;
 
-    @include tablet-size {
+    @include at-medium-size {
         padding: 0 40px;
     }
 }
@@ -29,7 +29,7 @@
     margin-top: 0;
     text-transform: uppercase;
 
-    @include tablet-size {
+    @include at-medium-size {
         @include font-size(24px);
         @include line-height(25px);
     }
@@ -40,22 +40,14 @@
     color: $dove-gray;
     margin-bottom: 20px;
 
-    @include tablet-size {
+    @include at-medium-size {
         @include font-size(17px);
         @include line-height(21px);
         margin-bottom: 35px;
     }
 }
 
-.c-newsletter__form {
-    width: 100%;
-
-    @include tablet-size {
-        width: auto;
-    }
-}
-
-.c-newsletter__form__text {
+.c-newsletter__form-text {
     @include font('NOBEL', 14px, null, 15px);
     border: 1px solid $alto;
     color: $dove-gray;
@@ -69,17 +61,18 @@
     }
 }
 
-.c-newsletter__form__btn {
+.c-newsletter__form-btn {
     @include button-single-two();
     @include button-single-two-light();
     height: 45px;
     margin-bottom: 30px;
 
+    &:focus,
     &:hover {
         @include button-single-two-light-hover();
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-left: 10px;
     }
 }

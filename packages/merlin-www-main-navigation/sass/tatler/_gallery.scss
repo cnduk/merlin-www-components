@@ -49,6 +49,17 @@
             fill: $white;
         }
     }
+
+    &:before {
+        background-color: $mine-shaft;
+        bottom: 0;
+        content: '';
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 100vw;
+    }
 }
 
 .n-gallery-counter {
@@ -74,7 +85,7 @@
 
 .n-gallery-toggle,
 a.n-gallery-close {
-    border-left: 1px solid $gray;
+    border-left: 1px solid $mine-shaft;
     display: inline-block;
     font-size: 0;
     height: 60px;
@@ -82,7 +93,7 @@ a.n-gallery-close {
     width: 60px;
 
     @include min-screen($MAXIMUM_PAGE_WIDTH + 1) {
-        border-right: 1px solid $gray;
+        border-right: 1px solid $mine-shaft;
     }
 
     &:hover {

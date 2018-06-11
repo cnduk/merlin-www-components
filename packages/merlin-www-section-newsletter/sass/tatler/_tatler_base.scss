@@ -3,7 +3,7 @@
     text-align: center;
 }
 
-.c-newsletter__wrapper {
+.c-newsletter-wrapper {
     box-sizing: border-box;
     margin: 0 auto;
     max-width: 560px;
@@ -12,52 +12,78 @@
 
 .c-newsletter__logo {
     display: none;
-    margin: 0 auto 10px auto;
+    width: 60px;
+
+    @include at-medium-size {
+        display: block;
+        margin: 0 auto 20px;
+    }
+
 }
 
 .c-newsletter__title {
     @include font('STARLING', 24px, 'BOLD', 26px);
-
     color: $black;
     letter-spacing: -0.3px;
     margin: 0 0 10px 0;
     text-transform: uppercase;
+
+    @include at-medium-size {
+        @include font-size(37px);
+        @include line-height(38px);
+    }
 }
 
 .c-newsletter__description {
     @include font('STARLING', 15px, 'MEDIUM', 18px);
-
     color: $black;
     font-style: italic;
     letter-spacing: -0.3px;
     margin: 10px 0 20px 0;
+
+    @include at-medium-size {
+        @include font-size(16px);
+        margin-bottom: 30px;
+    }
 }
 
 .c-newsletter__form {
     display: block;
     margin: 20px 0 10px 0;
-    width: 100%;
+
+    @include at-medium-size {
+        margin: 30px 0 20px 0;
+    }
 }
 
-.c-newsletter__form__text {
+.c-newsletter__form-text {
     @include font('COMMUTER SANS', 14px);
-
     appearance: none;
     background: $white;
     color: $boulder;
     margin: 0 0 10px 0;
     text-align: center;
+
+    @include at-medium-size {
+        text-align: left;
+        width: calc(100% - 10px - 130px);
+    }
 }
 
-.c-newsletter__form__btn {
-    @include button-single;
-    @include button-single-light;
-
+.c-newsletter__form-btn {
+    @include button-single();
+    @include button-single-light();
     width: 100%;
+    text-transform: uppercase;
 
-    &:hover,
-    &:focus {
-        @include button-single-light-hover;
+    &:focus,
+    &:hover {
+        @include button-single-light-hover();
+    }
+
+    @include at-medium-size {
+        margin-left: 10px;
+        width: 130px;
     }
 }
 
@@ -71,37 +97,4 @@
         color: inherit;
         text-decoration: underline;
     }
-}
-
-@include tablet-size {
-
-    .c-newsletter__logo {
-        display: block;
-    }
-
-    .c-newsletter__title {
-        @include font-size(37px);
-        @include line-height(38px);
-    }
-
-    .c-newsletter__description {
-        @include font-size(16px);
-        @include line-height(18px);
-        margin-bottom: 30px;
-    }
-
-    .c-newsletter__form {
-        margin: 30px 0 20px 0;
-    }
-
-    .c-newsletter__form__text {
-        text-align: left;
-        width: calc(100% - 10px - 130px);
-    }
-
-    .c-newsletter__form__btn {
-        margin-left: 10px;
-        width: 130px;
-    }
-
 }

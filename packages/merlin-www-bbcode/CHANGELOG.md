@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.15.22"></a>
+## [1.15.22](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.21...@cnbritain/merlin-www-bbcode@1.15.22) (2018-06-07)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-bbcode
+
+<a name="1.15.21"></a>
+## [1.15.21](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.20...@cnbritain/merlin-www-bbcode@1.15.21) (2018-06-06)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** update wired heading styles ([d73a7b0](https://github.com/cnduk/merlin-www-components/commit/d73a7b0))
+
+
+
+
+<a name="1.15.20"></a>
+## [1.15.20](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.19...@cnbritain/merlin-www-bbcode@1.15.20) (2018-06-06)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-bbcode
+
+<a name="1.15.18"></a>
+## [1.15.18](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.17...@cnbritain/merlin-www-bbcode@1.15.18) (2018-06-04)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-bbcode
+
+<a name="1.15.17"></a>
+## [1.15.17](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.16...@cnbritain/merlin-www-bbcode@1.15.17) (2018-06-01)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-bbcode
+
 <a name="1.15.15"></a>
 ## [1.15.15](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.14...@cnbritain/merlin-www-bbcode@1.15.15) (2018-05-30)
 

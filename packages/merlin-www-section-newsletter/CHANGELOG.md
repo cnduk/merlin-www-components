@@ -3,6 +3,79 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.7.41"></a>
+## [1.7.41](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-newsletter@1.7.40...@cnbritain/merlin-www-section-newsletter@1.7.41) (2018-06-07)
+
+
+### Bug Fixes
+
+* **merlin-www-section-newsletter:** set tatler logo to 60px wide ([0e10a90](https://github.com/cnduk/merlin-www-components/commit/0e10a90))
+
+
+
+
+<a name="1.7.40"></a>
+## [1.7.40](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-newsletter@1.7.39...@cnbritain/merlin-www-section-newsletter@1.7.40) (2018-06-07)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-newsletter
+
+<a name="1.7.39"></a>
+## [1.7.39](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-newsletter@1.7.38...@cnbritain/merlin-www-section-newsletter@1.7.39) (2018-06-06)
+
+
+### Bug Fixes
+
+* **merlin-www-section-newsletter:** add missing themes and new data locations ([e8f6549](https://github.com/cnduk/merlin-www-components/commit/e8f6549))
+* **merlin-www-section-newsletter:** correct bg image location for gq ([9a09ad1](https://github.com/cnduk/merlin-www-components/commit/9a09ad1))
+* **merlin-www-section-newsletter:** correct bg image location for traveller ([c65fc04](https://github.com/cnduk/merlin-www-components/commit/c65fc04))
+* **merlin-www-section-newsletter:** update wired breakpoints ([1c4dd77](https://github.com/cnduk/merlin-www-components/commit/1c4dd77))
+
+
+
+
+<a name="1.7.38"></a>
+## [1.7.38](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-newsletter@1.7.37...@cnbritain/merlin-www-section-newsletter@1.7.38) (2018-06-06)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-newsletter
+
+<a name="1.7.36"></a>
+## [1.7.36](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-newsletter@1.7.35...@cnbritain/merlin-www-section-newsletter@1.7.36) (2018-06-04)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-newsletter
+
+<a name="1.7.35"></a>
+## [1.7.35](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-newsletter@1.7.34...@cnbritain/merlin-www-section-newsletter@1.7.35) (2018-06-04)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-newsletter
+
+<a name="1.7.34"></a>
+## [1.7.34](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-newsletter@1.7.33...@cnbritain/merlin-www-section-newsletter@1.7.34) (2018-06-04)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-newsletter
+
+<a name="1.7.33"></a>
+## [1.7.33](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-newsletter@1.7.32...@cnbritain/merlin-www-section-newsletter@1.7.33) (2018-06-01)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-newsletter
+
 <a name="1.7.31"></a>
 ## [1.7.31](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-newsletter@1.7.30...@cnbritain/merlin-www-section-newsletter@1.7.31) (2018-05-31)
 
