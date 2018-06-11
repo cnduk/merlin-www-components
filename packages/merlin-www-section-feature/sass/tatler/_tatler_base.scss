@@ -213,3 +213,26 @@
         padding: 0;
     }
 }
+
+.c-feature--dark {
+    .c-feature__contents {
+        background: $black;
+    }
+    .c-feature__icon {
+        background: $black;
+
+        path {
+            fill: $white;
+        }
+    }
+
+    .c-feature__title {
+        color: $white;
+    }
+
+    @include at-medium-size(){
+        .c-feature__icon {
+            background: $cod-gray;
+        }
+    }
+}
