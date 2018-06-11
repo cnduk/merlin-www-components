@@ -1,31 +1,35 @@
 {
     "name": "@cnbritain/merlin-www-section-splash",
     "description": null,
-    "main": "section-splash",
+    "main": "section",
     "currentTheme": null,
     "data": {
+        "all": "data/all.json",
         "brides": "data/brides.json",
+        "glamour": "data/gl.json",
         "gq": "data/gq.json"
     },
     "themes": {
-        "brides": "sass/brides/brides.scss",
         "wireframe": "sass/wireframe/wireframe.scss",
-        "gq": "sass/gq/gq.scss",
-        "traveller": "sass/traveller/traveller.scss",
+        "brides": "sass/brides/brides.scss",
         "glamour": "sass/glamour/glamour.scss",
+        "gq": "sass/gq/gq.scss",
+        "house": "sass/houseandgarden/houseandgarden.scss",
+        "tatler": "sass/tatler/tatler.scss",
+        "traveller": "sass/traveller/traveller.scss",
+        "vogue": "sass/vogue/vogue.scss",
         "wired": "sass/wired/wired.scss"
     },
     "partials": {
-        "section-splash": "partials/index.html"
+        "section": "partials/index.html",
+        "hero": "partials/splash_hero.html"
     },
     "js": {
         "demo": "demo/demo.js"
     },
     "demo": null,
     "dependencies": [
-        "@cnbritain/merlin-www-buttons",
         "@cnbritain/merlin-www-card",
-        "@cnbritain/merlin-www-card-list",
         "@cnbritain/merlin-www-common",
         "@cnbritain/merlin-www-image"
     ]
