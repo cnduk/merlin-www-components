@@ -89,7 +89,7 @@
 
 .c-superfeature__title {
     @include font('STARLING', 24px, 'NORMAL', 28px);
-    color: $COLOUR_MAIN_PRIMARY;
+    color: $black;
     letter-spacing: -0.5px;
     margin: 0 0 15px;
     position: relative;
@@ -109,7 +109,7 @@
 
     @include at-x-large-size {
         @include font('STARLING', 37px, 'NORMAL', 42px);
-        color: $COLOUR_MAIN_PRIMARY;
+        color: $black;
         margin: 0 0 25px;
         padding: 0 0 25px;
     }
