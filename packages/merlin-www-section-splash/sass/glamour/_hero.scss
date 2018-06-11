@@ -30,8 +30,13 @@
 
 @include at-medium-size {
     .c-splash-hero-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: table;
+    }
+    .c-splash-hero__images,
+    .c-splash-hero__contents {
+        display: table-cell;
+        vertical-align: middle;
+        width: 50%;
     }
 }
 
@@ -41,7 +46,12 @@
 }
 .c-splash-hero__images--multiple {
     @include at-medium-size {
-        grid-template-columns: 1fr 1fr;
+        font-size: 0;
+
+        .c-splash-hero__image {
+            display: inline-block;
+            width: 50%;
+        }
 
         :nth-child(n + 3){
             display: none;
