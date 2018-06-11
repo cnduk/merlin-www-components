@@ -9,14 +9,14 @@
     padding-left: 0;
     padding-right: 0;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         margin-bottom: $TABLET_SLICE_MARGIN;
         margin-top: $TABLET_SLICE_MARGIN;
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size{
         margin-bottom: $DESKTOP_SLICE_MARGIN;
         margin-top: $DESKTOP_SLICE_MARGIN;
         padding-left: $DESKTOP_SIDE_GUTTER;
@@ -30,12 +30,10 @@
     }
 }
 
-.c-gallery__wrapper {}
-
 .c-gallery__images {
     position: relative;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         padding-right: 12px;
         width: 62.5%;
 
@@ -63,7 +61,7 @@
         width: 1px;
         z-index: 1;
 
-        @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+        @include at-medium-size {
             bottom: 50%;
             height: 1px;
             left: initial;
@@ -74,8 +72,7 @@
     }
 }
 
-ul.c-gallery__image-list {}
-li.c-gallery__image-item {
+.c-gallery__image-item {
     width: 33.33333%;
 
     &:first-child {
@@ -101,24 +98,20 @@ li.c-gallery__image-item {
 .c-gallery__image-remaining__text {
     @include font("SOLEIL", 24px, 400, 24px);
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         @include font-size(32px);
         @include font-size(32px);
     }
 }
 
-.c-gallery__image-remaining__text-prefix {}
-.c-gallery__image-remaining__text-value {}
-
-.c-gallery__text {
+.c-gallery__contents {
     margin: 28px 0 44px 0;
     position: relative;
     text-align: center;
-
     position: relative;
     text-align: center;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         padding: 40px 0 40px 12px;
 
         &:before {
@@ -133,7 +126,7 @@ li.c-gallery__image-item {
     }
 }
 
-.c-gallery__text__wrapper {
+.c-gallery__contents-wrapper {
     > * {
         padding: 0 20px;
     }
@@ -142,7 +135,7 @@ li.c-gallery__image-item {
 .c-gallery__icon {
     display: none;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         background-color: $blossom;
         border-radius: 50%;
         display: block;
@@ -167,10 +160,6 @@ li.c-gallery__image-item {
     color: $pink-rose;
     margin: 0 0 6px 0;
     text-transform: uppercase;
-
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-
-    }
 }
 
 .c-gallery__title {
@@ -197,10 +186,6 @@ li.c-gallery__image-item {
     }
 }
 
-.c-gallery__separator {
-    display: none;
-}
-
 .c-gallery__byline {
     @include font('SOLEIL', 10px, 400, 16px, 120);
     color: $stroller-grey;
@@ -209,25 +194,23 @@ li.c-gallery__image-item {
     text-transform: uppercase;
 }
 
-.c-gallery__byline--sponsorship {}
-.c-gallery__byline-prefix {}
 .c-gallery__byline-name {
     font-weight: bold;
 }
 
-ul.c-gallery__meta {
+.c-gallery__meta {
     @include font('SOLEIL', 10px, 400, 12px, 120);
     color: $candle-grey;
     text-transform: uppercase;
     margin: 6px 0 0 0;
 }
 
-li.c-gallery__meta-item {
+.c-gallery__meta-item {
     @include font('SOLEIL', 10px, 400, 12px, 120);
     color: $candle-grey;
     text-transform: uppercase;
 
-    & + li.c-gallery__meta-item {
+    & + .c-gallery__meta-item {
         &:before {
             background-color: $candle-grey;
             content: "";

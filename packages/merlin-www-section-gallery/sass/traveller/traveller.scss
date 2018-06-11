@@ -1,0 +1,217 @@
+@import '@cnbritain/merlin-www-common:traveller';
+@import '@cnbritain/merlin-www-image:traveller';
+
+@import '../wireframe/wireframe';
+
+.c-gallery {
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+	margin-top: $MOBILE_SLICE_MARGIN;
+	padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+
+    @include at-medium-size {
+        margin-bottom: $TABLET_SLICE_MARGIN;
+	    margin-top: $TABLET_SLICE_MARGIN;
+		padding-left: $TABLET_SIDE_GUTTER;
+		padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size{
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+	    margin-top: $DESKTOP_SLICE_MARGIN;
+		padding-left: 0;
+		padding-right: 0;
+    }
+}
+
+.c-gallery-wrapper {
+    font-size: 0;
+    position: relative;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+
+    @include at-medium-size {
+        display: table;
+        direction: rtl;
+        padding-top: 0;
+        width: 100%;
+    }
+}
+
+.c-gallery__images {
+    position: relative;
+
+	@include at-medium-size{
+		direction: ltr;
+        display: block;
+        position: static;
+        vertical-align: middle;
+        width: 100%;
+	}
+
+}
+
+.c-gallery__image-list {
+    position: relative;
+    overflow: hidden;
+}
+
+.c-gallery__image-item {
+    display: inline-block;
+    float: left;
+    position: relative;
+    width: 100%;
+
+    &:first-child {
+        width: 100%;
+    }
+
+    &:nth-child(n+2) {
+        display: none;
+    }
+}
+
+.c-gallery__image-remaining {
+    display: none
+}
+
+.c-gallery__image-remaining__text {
+    display: none;
+}
+
+.c-gallery__image-remaining__text-prefix {
+    display: none;
+}
+
+.c-gallery__image-remaining__text-value {
+    display: none;
+}
+
+.c-gallery__contents {
+    margin: 20px;
+    position: initial;
+
+    @include at-medium-size {
+        background-color: $WHITE;
+        box-sizing: border-box;
+        direction: ltr;
+        display: table-cell;
+        margin-right: 60px;
+        padding: 32px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+    	transform: translateY(-50%);
+        vertical-align: middle;
+        width: calc(50% - (#{$TABLET_SIDE_GUTTER} + 12px));
+
+    }
+}
+
+.c-gallery__icon {
+  background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	display: block;
+	height: 48px;
+	left: 50%;
+	position: absolute;
+	top: calc(50% - 48px);
+	transform: translate(-50%, -50%);
+	width: 48px;
+
+	svg {
+	    display: block;
+	    fill: $WHITE;
+	    height: 100%;
+	    margin: 0 auto;
+	    vertical-align: middle;
+	    width: 20px;
+	}
+
+  @include at-medium-size {
+    display: none;
+  }
+}
+
+.c-gallery__tag {
+   @include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
+	color: $SHERPA-BLUE;
+	letter-spacing: 2px;
+	margin-bottom: 8px;
+	margin-top: 24px;
+	text-align: center;
+	text-transform: uppercase;
+
+    @include at-x-large-size {
+    	margin-bottom: 16px;
+    	margin-top: 0;
+    }
+}
+
+.c-gallery__title {
+    @include font("PROXIMA NOVA CONDENSED", 24px, 600, 28px)
+    color: $MUSTASAARI;
+	letter-spacing: 1px;
+	margin: 6px 0;
+	text-align: center;
+	text-transform: uppercase;
+
+    @include at-x-large-size {
+    	@include font-size(28px);
+    	@include line-height(32px);
+    	letter-spacing: 2px;
+    	margin-bottom: 12px;
+    	margin-top: 0;
+    }
+}
+
+.c-gallery__teaser {
+    display: none;
+
+    @include at-x-large-size {
+    	@include font("PROXIMA NOVA CONDENSED", 16px, 400, 20px);
+    	color: $RAVEN;
+    	display: block;
+    	margin: 12px 0 16px 0;
+    	letter-spacing: 1px;
+    	text-align: center;
+    }
+}
+
+.c-gallery__byline {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    color: $MUSTASAARI;
+    margin-bottom: 4px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.c-gallery__byline-name {
+    letter-spacing: 1px;
+    margin-left: 2px;
+    text-transform: uppercase;
+}
+
+.c-gallery__meta {
+   @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    color: $MANATEE;
+    margin-top: 4px;
+    text-align: center;
+}
+
+.c-gallery__meta-item {
+    display: inline-block;
+    & + .c-feature__meta-item {
+        &:before {
+            background-color: $MANATEE;
+            border-radius: 50%;
+            content: "";
+            display: inline-block;
+            height: 2px;
+            margin: 1px 4px;
+            width: 2px;
+        }
+    }
+}

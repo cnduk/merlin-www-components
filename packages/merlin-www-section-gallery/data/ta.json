@@ -1,34 +1,7 @@
 {
     "data": {
         "byline": "Contributor 1 and Contributor 2",
-        "icon": {
-            "data": {
-                "alt_text": null,
-                "credit": null,
-                "description": null,
-                "look_number": null,
-                "title": null,
-                "width": null,
-                "svg_content": "<svg class=\"c-gallery__icon--gallery\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 16\"><title>card-image-gallery</title><path d=\"M10 6a3 3 0 1 0 3 3 3 3 0 0 0-3-3zm8-3h-2.4a.89.89 0 0 1-.79-.57L14.19.57A.89.89 0 0 0 13.4 0H6.6a.89.89 0 0 0-.79.57l-.62 1.86A.89.89 0 0 1 4.4 3H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-8 11a5 5 0 1 1 5-5 5 5 0 0 1-5 5zm7.3-7.6a.7.7 0 1 1 .7-.7.7.7 0 0 1-.7.7zm0 0\"/></svg>"
-            },
-            "state": {
-                "is_image": false,
-                "is_picture": false,
-                "is_static": false,
-                "is_svg": true,
-                "is_linked": false,
-                "is_landscape": false,
-                "is_portrait": false,
-                "is_square": false,
-                "is_lazyload": false
-            },
-            "style": {
-                "cls": "c-gallery__icon--gallery",
-                "inline": ""
-            },
-            "translation": {},
-            "type": "SVG"
-        },
+        "icon": null,
         "image_list": [{
             "data": {
                 "alt_text": "Small image",
@@ -158,7 +131,7 @@
             "translation": {},
             "type": "Image"
         }],
-        "image_remaining": null,
+        "image_remaining": 10,
         "link": {
             "data": {
                 "title": "Section gallery",

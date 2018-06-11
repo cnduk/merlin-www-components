@@ -9,7 +9,8 @@
                 "missvogue",
                 "wired",
                 "tatler",
-                "bystander"
+                "bystander",
+                "traveller"
             ],
             "main": "gallery",
             "data": "all"
@@ -35,7 +36,8 @@
         "bystander": "sass/bystander/bystander.scss",
         "wired": "sass/wired/wired.scss",
         "missvogue": "sass/missvogue/missvogue.scss",
-        "vogue": "sass/vogue/vogue.scss"
+        "vogue": "sass/vogue/vogue.scss",
+        "traveller": "sass/traveller/traveller.scss"
     },
     "partials": {
         "gallery": "templates/section-gallery.html"

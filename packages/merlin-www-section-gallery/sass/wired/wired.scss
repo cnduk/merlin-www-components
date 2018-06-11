@@ -8,14 +8,14 @@
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         margin-bottom: $TABLET_SLICE_MARGIN;
         margin-top: $TABLET_SLICE_MARGIN;
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size{
         margin-bottom: $DESKTOP_SLICE_MARGIN;
         margin-top: $DESKTOP_SLICE_MARGIN;
         padding-left: $TABLET_SIDE_GUTTER;
@@ -23,10 +23,15 @@
     }
 }
 
-.c-gallery__wrapper {
+.c-gallery-wrapper {
     display: table;
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
+    width: 100%;
+
+    @include at-medium-size {
+        direction: rtl;
+    }
 
     &:hover,
     &:focus {
@@ -38,10 +43,17 @@
 
 .c-gallery__images {
     display: table-footer-group;
+
+    @include at-medium-size {
+        display: table-cell;
+        direction: ltr;
+    }
 }
+
 .c-gallery__image {
     background-color: #000;
 }
+
 .c-gallery__image-remaining {
     background-color: rgba(0,0,0,0.5);
     bottom: 0;
@@ -49,6 +61,11 @@
     height: 100%;
     top: 0;
     white-space: nowrap;
+
+    @include at-medium-size {
+        height: auto;
+        top: 66.66%;
+    }
 }
 
 .c-gallery__image-remaining__text-prefix {
@@ -57,32 +74,40 @@
     position: relative;
     top: -3px;
 }
+
 .c-gallery__image-remaining__text-value {
     @include font("BRUTAL", 30px, 900);
     line-height: 100%;
 }
 
-li.c-gallery__image-item {
+.c-gallery__image-item {
     &:first-child {
         width: 33.33333%;
-    }
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
-        &:first-child {
+        @include at-medium-size {
             width: 75%;
         }
     }
 }
 
-.c-gallery__text {
+.c-gallery__contents {
     background-color: $black;
     color: $white;
     display: table-header-group;
     text-align: center;
+
+    @include at-medium-size {
+        display: table-cell;
+        direction: ltr;
+    }
 }
 
-.c-gallery__text__wrapper {
+.c-gallery__contents-wrapper {
     padding: 30px 20px;
+
+    @include at-medium-size {
+        padding: 40px;
+    }
 }
 
 .c-gallery__icon {
@@ -90,6 +115,10 @@ li.c-gallery__image-item {
     height: 20px;
     margin: 0 auto 20px auto;
     width: 20px;
+
+    @include at-medium-size {
+        margin-bottom: 30px;
+    }
 
     svg {
         fill: $white;
@@ -100,6 +129,25 @@ li.c-gallery__image-item {
     @include font("NEW GROTESK SQUARE", 40px, 300, 40px);
     color: $white;
     margin: 0 auto 10px auto;
+
+    @include at-medium-size {
+        @include font-size(45px);
+        @include line-height(45px);
+    }
+
+    &:after {
+        background-color: $white;
+        content: '';
+        display: block;
+        height: 1px;
+        margin: 10px auto;
+        width: 20px;
+
+        @include at-medium-size {
+            margin: 20px auto;
+            width: 30px;
+        }
+    }
 }
 
 .c-gallery__teaser {
@@ -108,17 +156,10 @@ li.c-gallery__image-item {
     display: none;
     margin: 10px auto;
 
-    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+    @include at-x-large-size {
         display: block;
     }
 }
-
-.c-gallery__separator {
-    border-color: $white;
-    margin: 10px auto;
-    width: 20px;
-}
-
 
 .c-gallery__byline {
     color: $white;
@@ -143,7 +184,8 @@ li.c-gallery__image-item {
     font-size: 0;
     margin-top: 5px;
 }
-li.c-gallery__meta-item {
+
+.c-gallery__meta-item {
     @include font("EXCHANGE WEB", 11px, 400, 17px);
     padding-right: 10px;
 
@@ -151,40 +193,4 @@ li.c-gallery__meta-item {
         border-left: 1px solid $black-olive;
         padding-left: 10px;
     }
-}
-
-@include min-screen($FEATURE_LARGE_BREAKPOINT) {
-    .c-gallery__wrapper {
-        direction: rtl;
-    }
-    .c-gallery__images {
-        display: table-cell;
-        direction: ltr;
-    }
-    li.c-gallery__image-item:first-child {
-        width: 75%;
-    }
-    .c-gallery__image-remaining {
-        height: auto;
-        top: 66.66%;
-    }
-    .c-gallery__text {
-        display: table-cell;
-        direction: ltr;
-    }
-    .c-gallery__text__wrapper {
-        padding: 40px;
-    }
-    .c-gallery__icon {
-        margin-bottom: 30px;
-    }
-    .c-gallery__title {
-        @include font-size(45px);
-        @include line-height(45px);
-    }
-    .c-gallery__separator {
-        margin: 20px auto;
-        width: 30px;
-    }
-
 }

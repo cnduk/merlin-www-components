@@ -10,14 +10,14 @@
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         margin-bottom: $TABLET_SLICE_MARGIN;
         margin-top: $TABLET_SLICE_MARGIN;
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size{
         margin-bottom: $DESKTOP_SLICE_MARGIN;
         margin-top: $DESKTOP_SLICE_MARGIN;
         padding-left: $DESKTOP_SIDE_GUTTER;
@@ -25,7 +25,7 @@
     }
 }
 
-.c-gallery__wrapper {
+.c-gallery-wrapper {
     &:hover {
         .c-gallery__title {
             span {
@@ -55,7 +55,7 @@
     letter-spacing: 0px;
     vertical-align: middle;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         @include font-size(25px);
         @include line-height(25px);
     }
@@ -67,17 +67,17 @@
     letter-spacing: 0px;
     vertical-align: middle;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         @include font-size(35px);
         @include line-height(35px);
     }
 }
 
-.c-gallery__text {
+.c-gallery__contents {
     padding: 20px 20px 0px 20px;
     text-align: center;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         border-top: 1px solid $mine-shaft;
         border-right: 1px solid $mine-shaft;
         border-bottom: 1px solid $mine-shaft;
@@ -86,7 +86,7 @@
         vertical-align: top;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size{
         text-align: left;
     }
 }
@@ -103,7 +103,7 @@
     margin-top: 0;
     text-transform: uppercase;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         margin-bottom: 15px;
     }
 }
@@ -114,7 +114,7 @@
     letter-spacing: 0.5px;
     margin: 7px 0 10px 0;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         @include font-size(35px);
         @include line-height(38px);
         letter-spacing: 0px;
@@ -125,7 +125,7 @@
 .c-gallery__teaser {
     display: none;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         @include font("MILLER_DISPLAY", 16px, 400, 21px);
         color: $mine-shaft;
         display: block;
@@ -133,10 +133,6 @@
         letter-spacing: 0px;
         margin: 10px 0 15px 0;
     }
-}
-
-.c-gallery__separator {
-    display: none;
 }
 
 .c-gallery__byline {
@@ -147,31 +143,29 @@
     margin-top: 10px;
     text-transform: uppercase;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         margin-bottom: 7px;
         margin-top: 15px;
     }
 }
 
-.c-gallery__byline--sponsorship {}
-.c-gallery__byline-prefix {}
 .c-gallery__byline-name {
     @include font-weight(700);
 }
 
-ul.c-gallery__meta {
+.c-gallery__meta {
     @include font("BRANDON GROTESQUE", 0px, 400, 10px);
     color: $dove-gray;
     letter-spacing: 1px;
     margin-top: 5px;
     text-transform: uppercase;
 
-    @include min-screen($FEATURE_LARGE_BREAKPOINT) {
+    @include at-medium-size {
         margin-top: 7px;
     }
 }
 
-li.c-gallery__meta-item {
+.c-gallery__meta-item {
     @include font("BRANDON GROTESQUE", 10px, 400, 10px);
     color: $dove-gray;
     letter-spacing: 1px;
