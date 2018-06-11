@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.44"></a>
+## [1.8.44](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-splash@1.8.43...@cnbritain/merlin-www-section-splash@1.8.44) (2018-06-11)
+
+
+### Bug Fixes
+
+* **merlin-www-section-splash:** add a new partial and tidy merlin ([e7d5b10](https://github.com/cnduk/merlin-www-components/commit/e7d5b10))
+* **merlin-www-section-splash:** add missing data ([8005e01](https://github.com/cnduk/merlin-www-components/commit/8005e01))
+* **merlin-www-section-splash:** add styles for tatler and vogue and tidy ([f805532](https://github.com/cnduk/merlin-www-components/commit/f805532))
+* **merlin-www-section-splash:** remove buttons and card list dependency from package ([e272c8a](https://github.com/cnduk/merlin-www-components/commit/e272c8a))
+* **merlin-www-section-splash:** udpate js ([3c2dda1](https://github.com/cnduk/merlin-www-components/commit/3c2dda1))
+
+
+
+
 <a name="1.8.43"></a>
 ## [1.8.43](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-splash@1.8.42...@cnbritain/merlin-www-section-splash@1.8.43) (2018-06-07)
 

@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.9.0"></a>
+# [1.9.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.8.36...@cnbritain/merlin-www-section-gallery@1.9.0) (2018-06-11)
+
+
+### Bug Fixes
+
+* **merlin-www-section-gallery:** add text to anchor ([4aeb9c5](https://github.com/cnduk/merlin-www-components/commit/4aeb9c5))
+* **merlin-www-section-gallery:** apply 100% on wired ([cc5115a](https://github.com/cnduk/merlin-www-components/commit/cc5115a))
+* **merlin-www-section-gallery:** gallery list display fix ([a01a9b4](https://github.com/cnduk/merlin-www-components/commit/a01a9b4))
+* **merlin-www-section-gallery:** update wireframe styles ([ea1d294](https://github.com/cnduk/merlin-www-components/commit/ea1d294))
+
+
+### Features
+
+* **merlin-www-section-gallery:** add gallery style similar to features for traveller ([af5b890](https://github.com/cnduk/merlin-www-components/commit/af5b890))
+* **merlin-www-section-gallery:** add image import ([746b00e](https://github.com/cnduk/merlin-www-components/commit/746b00e))
+
+
+
+
 <a name="1.8.36"></a>
 ## [1.8.36](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.8.35...@cnbritain/merlin-www-section-gallery@1.8.36) (2018-06-07)
 

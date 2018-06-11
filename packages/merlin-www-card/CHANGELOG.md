@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.15.35"></a>
+## [1.15.35](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card@1.15.34...@cnbritain/merlin-www-card@1.15.35) (2018-06-11)
+
+
+### Bug Fixes
+
+* **merlin-www-card:** add splash to vogue and tatler ([1020a4e](https://github.com/cnduk/merlin-www-components/commit/1020a4e))
+
+
+
+
 <a name="1.15.34"></a>
 ## [1.15.34](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card@1.15.33...@cnbritain/merlin-www-card@1.15.34) (2018-06-07)
 

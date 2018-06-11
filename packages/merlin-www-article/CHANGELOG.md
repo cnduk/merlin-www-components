@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.28.48"></a>
+## [1.28.48](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.28.47...@cnbritain/merlin-www-article@1.28.48) (2018-06-11)
+
+
+### Bug Fixes
+
+* **merlin-www-article:** outline for  gallery buttons ([bd36f72](https://github.com/cnduk/merlin-www-components/commit/bd36f72))
+* **merlin-www-article:** removed outline because of accessibility ([0bcc085](https://github.com/cnduk/merlin-www-components/commit/0bcc085))
+
+
+
+
 <a name="1.28.47"></a>
 ## [1.28.47](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.28.46...@cnbritain/merlin-www-article@1.28.47) (2018-06-07)
 
