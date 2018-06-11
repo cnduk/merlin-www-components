@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.11.15"></a>
+## [1.11.15](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-feature@1.11.14...@cnbritain/merlin-www-section-feature@1.11.15) (2018-06-11)
+
+
+### Bug Fixes
+
+* **merlin-www-section-feature:** add dark styles for tatler ([c8a14aa](https://github.com/cnduk/merlin-www-components/commit/c8a14aa))
+
+
+
+
 <a name="1.11.14"></a>
 ## [1.11.14](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-feature@1.11.13...@cnbritain/merlin-www-section-feature@1.11.14) (2018-06-11)
 
