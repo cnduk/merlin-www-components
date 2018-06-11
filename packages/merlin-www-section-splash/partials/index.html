@@ -1,73 +1,25 @@
-<section class="c-splash-section {{ style.cls }}">
-    <div class="c-splash-section__wrapper">
+<section class="c-splash {{ style.cls }}">
+    <div class="c-splash-wrapper">
+
 	    {{# data.splash_hero }}
-	        <div class="c-splash-hero">
-	        	<div class="c-splash-hero__wrapper">
-	        	    {{# data.link }}
-	        	        <a href="{{ &data.url }}" class="c-splash-hero__link c-splash-hero__link--article {{ style.cls }}">{{ data.title }}</a>
-	        	    {{/ data.link }}
-
-					{{# data.image_list }}
-			            <div class="c-splash-hero__images {{ style.cls }} ">
-			                {{# data.items }}
-			                    <div class="c-splash-hero__image {{ style.cls }}{{# data.item.style.padding_top }} c-splash-hero__image--custom{{/ data.item.style.padding_top }}">
-			                        {{# data.item }}
-			                            <div class="c-splash-hero__image__wrapper"{{# style.padding_top }} style="padding-top: {{ style.padding_top}}"{{/ style.padding_top }}>
-			                                {{> @cnbritain/merlin-www-image }}
-			                            </div>
-			                        {{/ data.item }}
-			                    </div>
-			                {{/ data.items }}
-			            </div>
-			        {{/ data.image_list }}
-
-	        	    <div class="c-splash-hero__content">
-	        	        {{# data.primary_tag }}
-	        	            <p class="c-splash-hero__tag">{{ data.title }}</p>
-	        	        {{/ data.primary_tag }}
-
-	        	        {{# data.title }}
-	        	            <h3 class="c-splash-hero__title"><span>{{ data.title }}</span></h3>
-	        	        {{/ data.title }}
-
-	        	        {{# state.has_sponsor }}
-	        	            <p class="c-splash-hero__byline c-splash-hero__byline--sponsorship {{ style.cls }}">
-	        	                <span class="c-splash-hero__byline-prefix">{{ translation.sponsor_prefix }} </span>
-	        	                <span class="c-splash-hero__byline-name">{{ data.sponsor.data.title }}</span>
-	        	            </p>
-	        	        {{/ state.has_sponsor }}
-	        	        {{^ state.has_sponsor }}
-	        	            {{# data.byline }}
-	        	                <p class="c-splash-hero__byline">
-	        	                    <span class="c-splash-hero__byline-prefix">{{ translation.byline_prefix }}</span>
-	        	                    <span class="c-splash-hero__byline-name">{{ data.byline }}</span>
-	        	                </p>
-	        	            {{/ data.byline }}
-	        	        {{/ state.has_sponsor }}
-
-	        	        {{# data.meta_list }}
-	        	            <ul class="global__list-reset c-splash-hero__meta {{ style.cls }}">
-	        	                {{# data.items }}
-	        	                    <li class="c-splash-hero__meta-item {{ style.cls }} c-splash-hero__meta-item--{{ data.item.data.meta_type  }}">
-	        	                        {{# data.item }}
-	        	                            <span class="{{ style.cls }}">{{ data.title }}</span>
-	        	                        {{/ data.item }}
-	        	                    </li>
-	        	                {{/ data.items }}
-	        	            </ul>
-	        	        {{/ data.meta_list }}
-	        	    </div>
-
-	        	</div>
-	        </div>
+	        {{> @cnbritain/merlin-www-section-splash/hero }}
     	{{/ data.splash_hero }}
 
 		{{# data.splash_list }}
-			<div class="c-splash-list">
-				<div class="c-splash-list__wrapper">
-					{{> @cnbritain/merlin-www-card-list }}
+			<div class="c-splash__cards">
+				<div class="c-splash__cards-wrapper">
+                    <ul class="c-splash__cards-list {{ style.cls }}">
+                        {{# data.items }}
+                            <li class="c-splash__cards-listitem {{ style.cls }}">
+                                {{# data.item }}
+                                    {{> @cnbritain/merlin-www-card }}
+                                {{/ data.item }}
+                            </li>
+                        {{/ data.items }}
+                    </ul>
 				</div>
 			</div>
 		{{/ data.splash_list }}
+
     </div>
 </section>

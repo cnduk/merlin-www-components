@@ -1,26 +1,29 @@
 @import "@cnbritain/merlin-www-common:wireframe";
-@import "@cnbritain/merlin-www-buttons:wireframe";
-@import "@cnbritain/merlin-www-card-list:wireframe";
+@import "@cnbritain/merlin-www-image:wireframe";
 @import "@cnbritain/merlin-www-card:wireframe";
 
-.c-splash-section {
+.c-splash {
     position: relative;
 }
+.c-splash-wrapper {}
 
-.c-splash-section__wrapper {
-
+.c-splash-hero {}
+.c-splash-hero-wrapper {
+    position: relative;
 }
-
-.c-splash-hero {
-
+.c-splash-hero__link {
+    bottom: 0;
+    font-size: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
 }
-
-.c-splash-hero__byline {}
-.c-splash-hero__byline-name {}
-.c-splash-hero__byline-prefix {}
-.c-splash-hero__content {}
-.c-splash-hero__teaser {}
-.c-splash-hero__image {
+.c-splash-hero__images {}
+.c-splash-hero__image-wrapper {
+    padding-top: 66.67%;
     position: relative;
 
     img {
@@ -33,28 +36,56 @@
         width: 100%;
     }
 }
+.c-splash-hero__images--multiple {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-.c-splash-hero__link {}
-.c-splash-hero__link--article {
-    bottom: 0;
-    font-size: 0;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 1;
+    .c-splash-hero__image-wrapper {
+        padding-top: 150%;
+    }
+
+    :nth-child(n + 3){
+        display: none;
+    }
+
+    @include at-medium-size {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        :nth-child(n + 3){
+            display: block;
+        }
+    }
 }
-.c-splash-hero__meta {}
+
+.c-splash-hero__contents {}
+.c-splash-hero__tag {}
+.c-splash-hero__title {}
+.c-splash-hero__byline {}
+.c-splash-hero__byline-name {}
+.c-splash-hero__byline-prefix {}
+.c-splash-hero__byline--sponsored {}
+
+
+.c-splash-hero__meta {
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 .c-splash-hero__meta-item {
     display: inline-block;
+    font-size: initial;
 }
-
 .c-splash-hero__meta-item--date {}
 .c-splash-hero__meta-item--tag {}
 
-.c-splash-hero__tag {}
-.c-splash-hero__title {}
+.c-splash__cards {}
+.c-splash__cards-wrapper {}
+.c-splash__cards-list {
+    display: grid;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.c-splash__cards-listitem {}
 
-.c-splash-list {}
-.c-splash-list__wrapper {}

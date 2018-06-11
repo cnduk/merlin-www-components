@@ -1,0 +1,57 @@
+<div class="c-splash-hero">
+    <div class="c-splash-hero-wrapper">
+
+        <a href="{{ &data.link.data.url }}" class="c-splash-hero__link {{ data.link.style.cls }}">{{ data.link.data.title }}</a>
+
+        {{# data.image_list }}
+            <div class="c-splash-hero__images {{# state.has_multiple_items}}c-splash-hero__images--multiple{{/ state.has_multiple_items }} {{ style.cls }}">
+                {{# data.items }}
+                    <div class="c-splash-hero__image {{ style.cls }}">
+                        {{# data.item }}
+                            <div class="c-splash-hero__image-wrapper">
+                                {{> @cnbritain/merlin-www-image }}
+                            </div>
+                        {{/ data.item }}
+                    </div>
+                {{/ data.items }}
+            </div>
+        {{/ data.image_list }}
+
+        <div class="c-splash-hero__contents">
+
+            {{# data.primary_tag }}
+                <p class="c-splash-hero__tag"><span>{{ data.title }}</span></p>
+            {{/ data.primary_tag }}
+
+            <h3 class="c-splash-hero__title"><span>{{ data.title }}</span></h3>
+
+            {{# state.has_sponsor }}
+                <p class="c-splash-hero__byline c-splash-hero__byline--sponsored {{ style.cls }}">
+                    <span class="c-splash-hero__byline-prefix">{{ translation.sponsor_prefix }} </span>
+                    <span class="c-splash-hero__byline-name">{{ data.sponsor.data.title }}</span>
+                </p>
+            {{/ state.has_sponsor }}
+            {{^ state.has_sponsor }}
+                {{# data.byline }}
+                    <p class="c-splash-hero__byline">
+                        <span class="c-splash-hero__byline-prefix">{{ translation.byline_prefix }}</span>
+                        <span class="c-splash-hero__byline-name">{{ data.byline }}</span>
+                    </p>
+                {{/ data.byline }}
+            {{/ state.has_sponsor }}
+
+            {{# data.meta_list }}
+                <ul class="c-splash-hero__meta {{ style.cls }}">
+                    {{# data.items }}
+                        <li class="c-splash-hero__meta-item {{ style.cls }} c-splash-hero__meta-item--{{ data.item.data.meta_type  }}">
+                            {{# data.item }}
+                                <span class="{{ style.cls }}">{{ data.title }}</span>
+                            {{/ data.item }}
+                        </li>
+                    {{/ data.items }}
+                </ul>
+            {{/ data.meta_list }}
+        </div>
+
+    </div>
+</div>

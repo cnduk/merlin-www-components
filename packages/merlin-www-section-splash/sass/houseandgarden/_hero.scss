@@ -1,0 +1,110 @@
+.c-splash-hero {
+    &:hover {
+        .c-splash-hero__title span {
+            box-shadow: inset 0 -0.4em 0 0 $careys-pink;
+        }
+    }
+    .c-splash-hero__link:focus ~ * .c-splash-hero__title span {
+        box-shadow: inset 0 -0.4em 0 0 $careys-pink;
+    }
+}
+.c-splash-hero-wrapper {}
+
+.c-splash-hero__images {}
+.c-splash-hero__images--multiple {
+    .c-splash-hero__image-wrapper {
+        padding-top: 150%;
+    }
+}
+.c-splash-hero__image {}
+
+.c-splash-hero__image-wrapper {
+    background-color: $mercury;
+    padding-top: 66.6666%;
+
+    @include at-medium-size {
+        padding-top: 41.6666%;
+    }
+}
+
+.c-splash-hero__contents {
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 20px 20px 20px 20px;
+    text-align: center;
+
+    @include at-medium-size {
+        padding: 40px;
+    }
+}
+
+.c-splash-hero__tag {
+    @include font("BRANDON GROTESQUE", 10px, 'BOLD', 10px);
+    color: $mine-shaft;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+    margin-top: 0;
+    text-transform: uppercase;
+
+    @include at-medium-size {
+        margin-bottom: 15px;
+    }
+}
+
+.c-splash-hero__title {
+    @include font("MILLER_DISPLAY", 25px, null, 27px);
+    color: $mine-shaft;
+    letter-spacing: 0.5px;
+    margin: 7px 0 10px 0;
+
+    @include at-medium-size {
+        @include font-size(50px);
+        @include line-height(55px);
+        letter-spacing: 0px;
+        margin: 15px 0 20px 0;
+    }
+}
+
+.c-splash-hero__teaser {}
+
+.c-splash-hero__byline {
+    @include font("BRANDON GROTESQUE", 10px, null, 10px);
+    color: $mine-shaft;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    text-transform: uppercase;
+
+    @include at-medium-size {
+        margin-bottom: 7px;
+        margin-top: 15px;
+    }
+}
+
+.c-splash-hero__byline--sponsorship {}
+.c-splash-hero__byline-prefix {}
+.c-splash-hero__byline-name {
+    font-weight: bold;
+}
+
+.c-splash-hero__meta {
+    margin-top: 5px;
+
+    @include at-medium-size {
+        margin-top: 7px;
+    }
+}
+
+.c-splash-hero__meta-item {
+    @include font("BRANDON GROTESQUE", 10px, null, 10px);
+    color: $dove-gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    + .c-splash-hero__meta-item {
+        border-left: 1px solid $silver;
+        margin-left: 7px;
+        padding-left: 7px;
+    }
+
+}

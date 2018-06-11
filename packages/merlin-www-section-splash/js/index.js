@@ -1,7 +1,7 @@
-import img from '@cnbritain/merlin-www-image';
+import card from '@cnbritain/merlin-www-card';
 
 export default {
     "init": function(){
-        img.init();
+        card.init();
     }
 };

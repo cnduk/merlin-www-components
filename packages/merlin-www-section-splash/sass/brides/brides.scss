@@ -1,184 +1,56 @@
 @import "@cnbritain/merlin-www-common:brides";
-@import "@cnbritain/merlin-www-buttons:brides";
-@import "@cnbritain/merlin-www-card-list:brides";
+@import "@cnbritain/merlin-www-image:brides";
 @import "@cnbritain/merlin-www-card:brides";
 
 @import "../wireframe/wireframe";
+@import "./_hero";
 
-.c-splash-section {
+.c-splash {
     margin-bottom: $MOBILE_SLICE_MARGIN;
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-bottom: $TABLET_SLICE_MARGIN;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin-bottom: $DESKTOP_SLICE_MARGIN;
     }
 }
 
-.c-splash-section__wrapper {
+.c-splash-wrapper {
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
     position: relative;
     width: 100%;
 }
 
-.c-splash-hero {
-    &:hover {
-        .c-splash-hero__title {
-            color: $pink-rose;
-        }
-    }
-}
-
-.c-splash-hero__wrapper {
-    position: relative;
-}
-
-.c-splash-hero__images {
-    position: relative;
-
-    &:after {
-        background-color: $pink-rose;
-        bottom: 0;
-        content: '';
-        height: 32px;
-        left: 50%;
-        position: absolute;
-        transform: translateY(50%);
-        width: 1px;
-        z-index: 1;
-    }
-}
-
-.c-splash-hero__image {}
-
-.c-splash-hero__image__wrapper {
-    background-color: $diamond;
-    padding-top: 90%;
-
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-        padding-top: 50%;
-    }
-}
-
-.c-splash-hero__content {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 840px;
-    position: relative;
-    text-align: center;
-
-    > * {
-        padding: 0 20px;
-    }
-
-    > :first-child {
-        margin-top: 28px;
-    }
-
-    > :last-child {
-        margin-bottom: 28px;
-    }
-
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-        > :first-child {
-            margin-top: 40px;
-        }
-
-        > :last-child {
-            margin-bottom: 52px;
-        }
-    }
-}
-
-.c-splash-hero__tag {
-    @include font("SOLEIL", 12px, 400, 16px, 180);
-    color: $pink-rose;
-    margin: 0 0 6px 0;
-    text-transform: uppercase;
-
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-
-    }
-}
-
-.c-splash-hero__title {
-    @include font("FREIGHT DISPLAY PRO", 32px, 400, 32px, 10);
-    color: $stroller-grey;
-    margin: 6px 0 0 0;
-    text-align: center;
-    text-transform: capitalize;
-
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-        @include font-size(40px);
-        @include line-height(40px);
-    }
-}
-
-.c-splash-hero__teaser {
-    display: none;
-
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-        @include font("SOLEIL", 14px, 400, 20px, 30);
-        color: $ascot-grey;
-        margin: 18px 0 0 0;
-    }
-}
-
-.c-splash-hero__byline {
-    @include font('SOLEIL', 10px, 400, 16px, 120);
-    color: $stroller-grey;
-    margin: 18px 0 0 0;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.c-splash-hero__byline--sponsorship {}
-.c-splash-hero__byline-prefix {}
-.c-splash-hero__byline-name {
-    font-weight: bold;
-}
-
-ul.c-splash-hero__meta {
-    @include font('SOLEIL', 10px, 400, 12px, 12);
-    color: $candle-grey;
-    text-transform: uppercase;
-    margin: 6px 0 0 0;
-}
-
-li.c-splash-hero__meta-item {
-    @include font('SOLEIL', 10px, 400, 12px, 12);
-    color: $candle-grey;
-    text-transform: uppercase;
-
-    & + li.c-splash-hero__meta-item {
-        &:before {
-            background-color: $candle-grey;
-            content: "";
-            display: inline-block;
-            height: 2px;
-            margin: 2px 8px;
-            width: 2px;
-        }
-    }
-}
-
-.c-splash-list {
+.c-splash__cards {
+    border-bottom: 1px solid $ballet-grey;
     margin: 0 $MOBILE_SIDE_GUTTER $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
     padding-bottom: 36px;
-    border-bottom: 1px solid $ballet-grey;
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-left: $TABLET_SIDE_GUTTER;
         margin-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin-left: $DESKTOP_SIDE_GUTTER;
         margin-right: $DESKTOP_SIDE_GUTTER;
     }
 }
 
-.c-splash-list__wrapper {}
+.c-splash__cards-wrapper {}
+.c-splash__cards-list {
+    grid-gap: 24px;
+    grid-template-columns: 1fr;
+
+    @include at-small-size {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include at-x-large-size {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+.c-splash__cards-listitem {}
