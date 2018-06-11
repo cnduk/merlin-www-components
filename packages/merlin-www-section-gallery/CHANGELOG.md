@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.9.1"></a>
+## [1.9.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.9.0...@cnbritain/merlin-www-section-gallery@1.9.1) (2018-06-11)
+
+
+### Bug Fixes
+
+* **merlin-www-section-gallery:** correct styles for glamour meta ([af825b3](https://github.com/cnduk/merlin-www-components/commit/af825b3))
+
+
+
+
 <a name="1.9.0"></a>
 # [1.9.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.8.36...@cnbritain/merlin-www-section-gallery@1.9.0) (2018-06-11)
 
