@@ -1,16 +1,19 @@
 <section class="c-gallery {{ style.cls }}">
-    <div class="c-gallery__wrapper">
+    <div class="c-gallery-wrapper">
     	{{# data.link }}
-    		<a href="{{ &data.url }}" class="c-gallery__link c-gallery__link--article {{ style.cls }}"></a>
+    		<a href="{{ &data.url }}" class="c-gallery__link" title="{{ data.title }}">{{ data.title }}</a>
     	{{/ data.link }}
 
         <div class="c-gallery__images">
-        	<ul class="global__list-reset c-gallery__image-list">
+        	<ul class="c-gallery__image-list">
 	        	{{# data.image_list }}
 	        		<li class="c-gallery__image-item">
-	        			<div class="c-gallery__image">{{> @cnbritain/merlin-www-image }}</div>
+	        			<div class="c-gallery__image">
+							{{> @cnbritain/merlin-www-image }}
+						</div>
         			</li>
 	        	{{/ data.image_list }}
+
 				{{# data.image_remaining }}
 					<div class="c-gallery__image-remaining">
 	    				<div class="c-gallery__image-remaining__text">
@@ -22,8 +25,8 @@
         	</ul>
         </div>
 
-        <div class="c-gallery__text">
-            <div class='c-gallery__text__wrapper'>
+        <div class="c-gallery__contents">
+            <div class='c-gallery__contents-wrapper'>
 	            {{# data.icon }}
 	                <div class="c-gallery__icon">
 	                    {{> @cnbritain/merlin-www-image }}
@@ -31,7 +34,7 @@
 	            {{/ data.icon }}
 
 		        {{# data.primary_tag }}
-		            <p class="c-gallery__tag">{{ data.title }}</p>
+		            <p class="c-gallery__tag"><span>{{ data.title }}</span></p>
 		        {{/ data.primary_tag }}
 
 	            {{# data.title }}
@@ -39,13 +42,11 @@
 	            {{/ data.title }}
 
 	            {{# data.teaser }}
-	                <p class="c-gallery__teaser">{{ data.teaser }}</p>
+	                <p class="c-gallery__teaser"><span>{{ data.teaser }}</span></p>
 	            {{/ data.teaser }}
 
-	            <hr class="c-gallery__separator" />
-
 	            {{# state.has_sponsor }}
-                    <p class="c-gallery__byline c-gallery__byline--sponsorship {{ style.cls }}">
+                    <p class="c-gallery__byline c-gallery__byline--sponsored {{ style.cls }}">
                         <span class="c-gallery__byline-prefix">{{ translation.sponsor_prefix }} </span>
                         <span class="c-gallery__byline-name">{{ data.sponsor.data.title }}</span>
                     </p>
@@ -60,7 +61,7 @@
 	            {{/ state.has_sponsor }}
 
 				{{# data.meta_list }}
-				    <ul class="global__list-reset c-gallery__meta {{ style.cls }}">
+				    <ul class="c-gallery__meta {{ style.cls }}">
 				        {{# data.items }}
 				            <li class="c-gallery__meta-item {{ style.cls }} c-gallery__meta-item--{{ data.item.data.meta_type  }}">
 				                {{# data.item }}

@@ -5,6 +5,10 @@
     max-width: none;
     padding: $MOBILE_SIDE_GUTTER;
 
+    @include at-x-large-size {
+         padding: $DESKTOP_SIDE_GUTTER;
+    }
+
     &:hover,
     &:focus {
         .c-gallery__title,
@@ -17,7 +21,7 @@
     }
 }
 
-.c-gallery__wrapper {
+.c-gallery-wrapper {
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
     width: 100%;
@@ -34,13 +38,17 @@
     color: $white;
 }
 
-.c-gallery__text {
+.c-gallery__contents {
     text-align: center;
 }
 
-.c-gallery__text__wrapper {
+.c-gallery__contents-wrapper {
     background-color: $white;
     padding: $PADDING_LARGE $PADDING_MEDIUM;
+
+    @include at-x-large-size {
+        padding: $PADDING_LARGE $PADDING_X_LARGE;
+    }
 }
 
 .c-gallery__icon {
@@ -50,6 +58,10 @@
     margin: 0 auto $MARGIN_MEDIUM auto;
     padding: 15px;
     width: 15px;
+
+    @include at-x-large-size {
+          display: block;
+    }
 
     svg {
         fill: $dove-gray;
@@ -63,6 +75,11 @@
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 8px;
+
+    @include at-x-large-size {
+        @include font-size(11px);
+        @include line-height(15px);
+    }
 }
 
 .c-gallery__title {
@@ -70,11 +87,11 @@
     color: $cod-gray;
     margin: 0 0 $MARGIN_XX_SMALL 0;
     transition: all 0.3s ease-in-out;
-}
 
-.c-gallery__teaser,
-.c-gallery__separator {
-    display: none;
+    @include at-x-large-size {
+        @include font-size(11px);
+        @include line-height(15px);
+    }
 }
 
 .c-gallery__byline {
@@ -82,6 +99,13 @@
     @include line-height(14px);
     margin-bottom: 14px;
     margin-top: $MARGIN_XX_SMALL;
+
+    @include at-x-large-size {
+        @include font-size(11px);
+        @include line-height(15px);
+        margin-bottom: $MARGIN_SMALL;
+        margin-top: $MARGIN_X_SMALL;
+    }
 }
 
 .c-gallery__byline-name {
@@ -90,6 +114,10 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;
+
+    @include at-x-large-size {
+        @include font-size(11px);
+    }
 }
 
 .c-gallery__byline-prefix {
@@ -104,9 +132,14 @@
     @include font('NOBEL', 10px, null, 16px);
     color: $dove-gray;
     display: inline-block;
+
+    @include at-x-large-size {
+        @include font-size(11px);
+        @include line-height(20px);
+    }
 }
 
-li.c-gallery__meta-item {
+.c-gallery__meta-item {
     padding-right: 8px;
 
     &:last-child {
@@ -119,18 +152,18 @@ li.c-gallery__meta-item {
     }
 }
 
-.c-gallery__meta-item--date {}
 .c-gallery__meta-item--tag {
     color: $guardsman-red;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
-@include gallery-slice-at-large {
+@include at-x-large-size{
+
     .c-gallery {
         padding: $DESKTOP_SIDE_GUTTER;
     }
-    .c-gallery__text__wrapper {
+    .c-gallery__contents-wrapper {
         padding: $PADDING_LARGE $PADDING_X_LARGE;
     }
     .c-gallery__icon {
