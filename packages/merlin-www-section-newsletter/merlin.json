@@ -4,14 +4,17 @@
         "demo": "demo/demo.js"
     },
     "themes": {
-        "brides": "sass/brides/brides.scss",
-        "tatler": "sass/tatler/tatler.scss",
         "wireframe": "sass/wireframe/wireframe.scss",
-        "glamour": "sass/glamour/glamour.scss",
+        "brides": "sass/brides/brides.scss",
         "bystander": "sass/bystander/bystander.scss",
-        "wired": "sass/wired/wired.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "gq": "sass/gq/gq.scss",
+        "houseandgarden": "sass/houseandgarden/houseandgarden.scss",
         "missvogue": "sass/missvogue/missvogue.scss",
-        "vogue": "sass/vogue/vogue.scss"
+        "tatler": "sass/tatler/tatler.scss",
+        "traveller": "sass/traveller/traveller.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "wired": "sass/wired/wired.scss"
     },
     "partials": {
         "section": "templates/section.html"
@@ -24,10 +27,14 @@
     "currentTheme": null,
     "main": "section",
     "data": {
-        "brides": "demo/data/brides.json",
-        "newsletter-no-description": "demo/data/newsletter-no-description.json",
-        "newsletter-nothing": "demo/data/newsletter-nothing.json",
-        "newsletter": "demo/data/newsletter.json",
-        "newsletter-no-title": "demo/data/newsletter-no-title.json"
+        "all": "data/all.json",
+        "brides": "data/br.json",
+        "glamour": "data/gl.json",
+        "gq": "data/gq.json",
+        "houseandgarden": "data/hg.json",
+        "tatler": "data/ta.json",
+        "traveller": "data/tr.json",
+        "vogue": "data/vg.json",
+        "wired": "data/wi.json"
     }
 }

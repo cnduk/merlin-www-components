@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.48"></a>
+## [1.8.48](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-main-navigation@1.8.47...@cnbritain/merlin-www-main-navigation@1.8.48) (2018-06-07)
+
+
+### Bug Fixes
+
+* **merlin-www-main-navigation:** correct enabled variable in vanishing nav ([540227e](https://github.com/cnduk/merlin-www-components/commit/540227e))
+
+
+
+
+<a name="1.8.47"></a>
+## [1.8.47](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-main-navigation@1.8.46...@cnbritain/merlin-www-main-navigation@1.8.47) (2018-06-07)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-main-navigation
+
 <a name="1.8.46"></a>
 ## [1.8.46](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-main-navigation@1.8.45...@cnbritain/merlin-www-main-navigation@1.8.46) (2018-06-06)
 

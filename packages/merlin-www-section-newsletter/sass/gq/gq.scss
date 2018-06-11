@@ -9,12 +9,8 @@
     position: relative;
     text-align: center;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: 80px 0;
-    }
-
     &:before {
-        background-image: url('../img/newsletter.png');
+        background-image: url('/static/img/newsletter.png');
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -27,17 +23,17 @@
         transform: translateX(-50%);
         width: 100%;
     }
+
+    @include at-medium-size {
+        padding: 80px 0;
+    }
 }
 
-.c-newsletter__wrapper {
+.c-newsletter-wrapper {
     margin: 0 auto;
     max-width: 570px;
     padding: 0 20px;
     position: relative;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-
-    }
 }
 
 .c-newsletter__logo {
@@ -50,7 +46,7 @@
     margin-bottom: 14px;
     margin-top: 0;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         @include font-size(32px);
         @include line-height(36px);
         margin-bottom: 24px;
@@ -63,7 +59,7 @@
     margin-bottom: 32px;
     margin-top: 14px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         @include font-size(15px);
         @include line-height(22px);
     }
@@ -72,14 +68,9 @@
 .c-newsletter__form {
     @include font("GOTHAM", 14px, normal, 14px);
     color: $bon-jour;
-    width: 100%;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        width: auto;
-    }
 }
 
-.c-newsletter__form__text {
+.c-newsletter__form-text {
     @include font("GOTHAM", 14px, 500, 14px);
     border-radius: 0;
     box-sizing: border-box;
@@ -87,28 +78,26 @@
     height: 60px;
     margin-bottom: 10px;
     padding: 16px;
+    text-transform: uppercase;
 
     &::placeholder {
         color: $mineshaft;
     }
-
-    &:focus {
-
-    }
 }
 
-.c-newsletter__form__btn {
+.c-newsletter__form-btn {
+    @include button-single();
+    @include button-single-light();
     height: 60px;
     margin-bottom: 28px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: 10px;
-    }
-
-    @include button-single();
-    @include button-single-light();
+    &:focus,
     &:hover {
         @include button-single-light-hover();
+    }
+
+    @include at-medium-size {
+        margin-left: 10px;
     }
 }
 

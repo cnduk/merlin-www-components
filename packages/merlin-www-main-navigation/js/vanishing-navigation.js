@@ -54,8 +54,8 @@ VanishingNavigation.prototype = inherit(EventEmitter.prototype, {
     },
 
     enable: function enable() {
-        if (this.isEnabled) return;
-        this.isEnabled = true;
+        if (this._isEnabled) return;
+        this._isEnabled = true;
 
         addClass(this.el, CLS_VANISH);
         this._hooks.scroll = throttle(this.update, THROTTLE_MS, this);

@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.5.0"></a>
+# [1.5.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.4.61...@cnbritain/merlin-www-js-pages@1.5.0) (2018-06-07)
+
+
+### Features
+
+* **merlin-www-js-pages:** expose MainNavigation in global object ([0ecb35b](https://github.com/cnduk/merlin-www-components/commit/0ecb35b))
+
+
+
+
+<a name="1.4.61"></a>
+## [1.4.61](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.4.60...@cnbritain/merlin-www-js-pages@1.4.61) (2018-06-07)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
+<a name="1.4.60"></a>
+## [1.4.60](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.4.59...@cnbritain/merlin-www-js-pages@1.4.60) (2018-06-06)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
 <a name="1.4.59"></a>
 ## [1.4.59](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.4.58...@cnbritain/merlin-www-js-pages@1.4.59) (2018-06-06)
 

@@ -90,6 +90,7 @@ export default function init(config) {
         'AdDebugger': AdDebugger,
         'AdManager': AdManager,
         'GATracker': GATracker,
+        'MainNavigation': MainNavigation,
         'Store': store
     });
 
