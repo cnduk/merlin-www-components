@@ -1,0 +1,130 @@
+.c-splash-hero {
+    background-color: $white;
+}
+
+.c-splash-hero-wrapper {
+
+    &:hover {
+        .c-splash-hero__title span {
+            text-decoration: underline;
+        }
+    }
+
+    .c-splash-hero__link:focus ~ * .c-splash-hero__title span {
+        text-decoration: underline;
+    }
+
+    @include at-medium-size {
+        display: table;
+        padding-top: 0;
+        width: 100%;
+    }
+}
+
+.c-splash-hero__images,
+.c-splash-hero__contents {
+    @include at-medium-size {
+        display: table-cell;
+        vertical-align: middle;
+        width: 50%;
+    }
+}
+
+.c-splash-hero__image-wrapper {
+    background-color: $black;
+}
+
+.c-splash-hero__images--multiple {
+    @include at-medium-size {
+        font-size: 0;
+
+        .c-splash-hero__image {
+            display: inline-block;
+            width: 50%;
+        }
+
+        :nth-child(n + 3){
+            display: none;
+        }
+    }
+}
+
+.c-splash-hero__contents {
+    padding: 30px 20px;
+    position: relative;
+    text-align: center;
+
+
+    @include at-medium-size {
+        padding: 40px;
+    }
+}
+
+.c-splash-hero__title {
+    @include font("NEW GROTESK SQUARE", 40px, 'LIGHT', 40px);
+    color: $black;
+    letter-spacing: 0.3px;
+    margin: 0 auto 10px auto;
+
+    @include at-medium-size {
+        @include font-size(45px);
+        @include line-height(45px);
+    }
+}
+
+.c-splash-hero__teaser {
+    @include font("BRUTAL", 15px, null, 17px);
+    color: $black;
+    display: none;
+    margin: 10px auto;
+}
+
+.c-splash-hero__title + *:not(.c-splash-hero__teaser),
+.c-splash-hero__teaser + * {
+    &:before {
+        background-color: $black;
+        content: '';
+        display: block;
+        height: 1px;
+        margin: 10px auto;
+        width: 10px;
+
+        @include at-medium-size {
+            margin: 20px auto;
+            width: 30px;
+        }
+    }
+}
+
+.c-splash-hero__byline {
+    color: $black;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.c-splash-hero__byline-prefix {
+    @include font("EXCHANGE WEB", 11px);
+    font-style: italic;
+    margin-right: 3px;
+}
+
+.c-splash-hero__byline-name {
+    @include font("BRUTAL", 11px, 'BOLD');
+    text-transform: uppercase;
+}
+
+.c-splash-hero__meta {
+    color: $black;
+    font-size: 0;
+    margin-top: 5px;
+}
+
+.c-splash-hero__meta-item {
+    @include font("EXCHANGE WEB", 11px, 'NORMAL', 17px);
+
+    & + .c-splash-hero__meta-item {
+        border-left: 1px solid $isabelline;
+        padding-left: 10px;
+        margin-left: 10px;
+    }
+}

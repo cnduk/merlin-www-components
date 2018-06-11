@@ -1,168 +1,34 @@
 @import "@cnbritain/merlin-www-common:gq";
-@import "@cnbritain/merlin-www-buttons:gq";
-@import "@cnbritain/merlin-www-card-list:gq";
+@import "@cnbritain/merlin-www-image:gq";
 @import "@cnbritain/merlin-www-card:gq";
 
 @import "../wireframe/wireframe";
+@import "./_hero";
 
-.c-splash-section {}
-.c-splash-section__wrapper {
+.c-splash {}
+.c-splash-wrapper {
 	background-color: $seashell;
 	margin: 0 auto;
 	max-width: $MAXIMUM_PAGE_WIDTH;
 	position: relative;
 	width: 100%;
-}
 
-.c-splash-hero {
-	display: block;
-	position: relative;
-	width: 100%;
-    background-color: $seashell;
-
-	@include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
-        background-color: $black;
-		width: 62.5%;
-	}
-}
-
-.c-splash-hero__byline {
-	@include font("GOTHAM", 9px, null, 16px, 60);
-	margin-bottom: 6px;
-	margin-top: 14px;
-	text-transform: uppercase;
-}
-
-.c-splash-hero__byline-prefix {
-	@include font-weight(400);
-}
-
-.c-splash-hero__byline-name {
-	@include font-weight(700);
-}
-
-.c-splash-hero__content {
-	background: $white;
-	border-bottom: 1px solid $bon-jour;
-	margin: -69px 20px 0 20px;
-	padding: 28px 20px;
-	position: relative;
-	text-align: center;
-
-	&:after {
-	    @include triangle(16px, 12px, 'up', $white);
-	    content: '';
-	    left: 50%;
-	    position: absolute;
-	    top: -16px;
-	    transform: translateX(-50%);
-	}
-
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-		margin-left: $TABLET_SIDE_GUTTER;
-		margin-right: $TABLET_SIDE_GUTTER;
-		margin-top: -80px;
-	}
-
-	@include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
-	    bottom: 60px;
-	    box-sizing: border-box;
-	    padding: 36px 24px;
-	    margin-top: -64px;
-
-	    &:after {
-	        @include triangle(18px, 14px, 'up', $white);
-	        content: '';
-	        top: -18px;
-	    }
-	}
-}
-
-.c-splash-hero__images {
-
-}
-
-.c-splash-hero__image {
-	img {
-	    bottom: 0;
-	    height: 100%;
-	    left: 0;
-	    position: absolute;
-	    right: 0;
-	    top: 0;
-	    width: 100%;
-	}
-}
-
-.c-splash-hero__image__wrapper {
-	padding-top: 66.66666%;
-}
-
-.c-splash-hero__link {}
-.c-splash-hero__link--article {}
-
-.c-splash-hero__meta {
-    @include font("GOTHAM", 9px, 500, 14px);
-    color: $oslo-gray;
-    margin-top: 6px;
-}
-
-li.c-splash-hero__meta-item {
-    padding-right: 0;
-    & + li.c-splash-hero__meta-item {
-        border-left: none;
-        padding-left: 0;
-        &:before {
-            background-color: $oslo-gray;
-            border-radius: 50%;
-            content: "";
-            display: inline-block;
-            height: 2px;
-            margin: 1px 4px;
-            width: 2px;
-        }
+    @include at-x-large-size {
+        display: grid;
+        grid-template-columns: auto 37.5%;
     }
 }
 
-.c-splash-hero__meta-item--date {}
-.c-splash-hero__meta-item--tag {}
-
-.c-splash-hero__tag {
-	@include font("GOTHAM", 11px, 700, 14px, -4);
-	color: $limed-oak;
-	margin-bottom: 8px;
-	margin-top: 0;
-	text-transform: capitalize;
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-	    @include font-size(12px);
-	    @include line-height(16px);
-	    margin-bottom: 12px;
-	}
-}
-
-.c-splash-hero__title {
-	color: $woodsmoke;
-	@include font("ITC_FENICE", 24px, 700, 28px, -4);
-	margin-bottom: 14px;
-	margin-top: 0px;
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-	    @include font-size(32px);
-	    @include line-height(36px);
-	    margin-bottom: 8px;
-	    margin-top: 0px;
-	}
-}
-
-.c-splash-list {
+.c-splash__cards {
 	box-sizing: border-box;
 	padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	@include at-medium-size {
 		padding-left: $TABLET_SIDE_GUTTER;
 		padding-right: $TABLET_SIDE_GUTTER;
 	}
 
-	@include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+	@include at-x-large-size {
 		height: 100%;
 		padding: 32px;
 		position: absolute;
@@ -172,7 +38,55 @@ li.c-splash-hero__meta-item {
 	}
 }
 
-.c-splash-list__wrapper {
+.c-splash__cards-wrapper {
 	height: 100%;
 	overflow: auto;
 }
+.c-splash__cards-list {
+    grid-gap: 20px 0;
+    grid-template-columns: 1fr;
+
+    .c-splash__cards-listitem:nth-child(n + 2) {
+        .c-card {
+            border-top: 1px solid $bon-jour;
+            padding-top: 20px;
+        }
+        .c-card--dark {
+            border-top-color: $mineshaft;
+        }
+    }
+
+    @include at-small-size {
+        grid-template-columns: 1fr 1fr;
+
+        .c-splash__cards-listitem:nth-child(2) .c-card {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .c-splash__cards-listitem:nth-child(odd) .c-card {
+            padding-right: 10px;
+        }
+
+        .c-splash__cards-listitem:nth-child(even) .c-card {
+            padding-left: 10px;
+        }
+    }
+
+    @include at-x-large-size {
+        grid-template-columns: 1fr;
+        grid-gap: 24px 0;
+
+        .c-splash__cards-listitem:nth-child(2) .c-card {
+            border-top: 1px solid $bon-jour;
+            padding-top: 24px;
+        }
+
+        .c-splash__cards-listitem:nth-child(odd) .c-card,
+        .c-splash__cards-listitem:nth-child(even) .c-card {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+.c-splash__cards-listitem {}

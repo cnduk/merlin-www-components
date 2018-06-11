@@ -1,0 +1,114 @@
+.c-splash-hero {
+    &:hover {
+        .c-splash-hero__title {
+            color: $pink-rose;
+        }
+    }
+
+    .c-splash-hero__link:focus ~ * .c-splash-hero__title {
+        color: $pink-rose;
+    }
+}
+.c-splash-hero-wrapper {}
+
+.c-splash-hero__images {
+    position: relative;
+}
+.c-splash-hero__images:after {
+    background-color: $pink-rose;
+    bottom: 0;
+    content: '';
+    height: 32px;
+    left: 50%;
+    position: absolute;
+    transform: translateY(50%);
+    width: 1px;
+    z-index: 1;
+}
+
+.c-splash-hero__image {}
+.c-splash-hero__image-wrapper {
+    background-color: $diamond;
+    padding-top: 90%;
+
+    @include at-medium-size {
+        padding-top: 50%;
+    }
+}
+
+.c-splash-hero__contents {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 840px;
+    padding: 28px 20px;
+    text-align: center;
+
+    @include at-medium-size {
+        padding-bottom: 52px;
+        padding-top: 40px;
+    }
+}
+
+.c-splash-hero__tag {
+    @include font("SOLEIL", 12px, null, 16px, 180);
+    color: $pink-rose;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+}
+
+.c-splash-hero__title {
+    @include font("FREIGHT DISPLAY PRO", 32px, 'NORMAL', 32px, 10);
+    color: $stroller-grey;
+    margin: 6px 0 0 0;
+    text-align: center;
+    text-transform: capitalize;
+
+    @include at-medium-size {
+        @include font-size(40px);
+        @include line-height(40px);
+    }
+}
+
+.c-splash-hero__teaser {
+    @include font("SOLEIL", 14px, null, 20px, 30);
+    color: $ascot-grey;
+    display: none;
+    margin: 18px 0 0 0;
+}
+
+.c-splash-hero__byline {
+    @include font('SOLEIL', 10px, null, 16px, 120);
+    color: $stroller-grey;
+    margin: 18px 0 0 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.c-splash-hero__byline--sponsorship {}
+.c-splash-hero__byline-prefix {}
+.c-splash-hero__byline-name {
+    font-weight: bold;
+}
+
+.c-splash-hero__meta {
+    @include font('SOLEIL', 10px, null, 12px, 12);
+    color: $candle-grey;
+    text-transform: uppercase;
+    margin: 6px 0 0 0;
+}
+
+.c-splash-hero__meta-item {
+    @include font('SOLEIL', 10px, null, 12px, 12);
+    color: $candle-grey;
+    text-transform: uppercase;
+
+    & + .c-splash-hero__meta-item:before {
+        background-color: $candle-grey;
+        content: "";
+        display: inline-block;
+        height: 2px;
+        margin: 2px 8px;
+        width: 2px;
+    }
+}

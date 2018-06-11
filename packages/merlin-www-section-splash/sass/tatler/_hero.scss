@@ -1,0 +1,124 @@
+.c-splash-hero {
+    margin: 30px auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    padding: 0 $MOBILE_SIDE_GUTTER;
+
+    &:hover {
+        .c-splash-hero__title span {
+            border-bottom: 1px solid $black;
+        }
+    }
+
+    .c-splash-hero__link:focus ~ * .c-splash-hero__title span {
+        border-bottom: 1px solid $black;
+    }
+
+    @include at-medium-size() {
+        margin: 60px auto;
+        padding: 0;
+    }
+}
+
+.c-splash-hero-wrapper {
+    display: table;
+    width: 100%;
+}
+
+.c-splash-hero__images,
+.c-splash-hero__contents {
+    width: 100%;
+
+    @include at-x-large-size(){
+        display: table-cell;
+        position: static;
+        vertical-align: middle;
+        width: 50%;
+    }
+}
+
+.c-splash-hero__image-wrapper {
+    background-color: $silver;
+    width: 100%;
+}
+
+.c-splash-hero__contents {
+    background: $white;
+    direction: ltr;
+    padding: 28px 20px;
+    text-align: center;
+
+    @include at-x-large-size(){
+        padding: 20px 60px;
+    }
+}
+
+.c-splash-hero__tag {
+    @include font("COMMUTER SANS", 12px, null, 12px);
+    color: $gray;
+    letter-spacing: 1px;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+
+    @include at-small-size {
+        margin-bottom: 15px;
+    }
+}
+
+.c-splash-hero__title {
+    @include font('STARLING', 24px, 'NORMAL', 28px);
+    color: $black;
+    letter-spacing: -0.5px;
+    margin: 0 0 20px;
+    padding: 0 0 15px;
+    position: relative;
+
+    &:after {
+        background: $black;
+        bottom: 0;
+        content: '';
+        display: block;
+        height: 1px;
+        left: 50%;
+        margin-left: -10px;
+        position: absolute;
+        width: 20px;
+    }
+
+    @include at-x-large-size(){
+        @include font-size(37px);
+        @include line-height(42px);
+    }
+}
+
+.c-splash-hero__byline {
+    @include font('STARLING', 12px, null, 12px);
+    color: $gray;
+    margin: 0 0 10px;
+}
+
+.c-splash-hero__byline-prefix {
+    font-style: italic;
+    margin-right: 2px;
+    text-transform: lowercase;
+}
+
+.c-splash-hero__byline-name {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.c-splash-hero__meta {
+    margin-top: 5px;
+}
+
+.c-splash-hero__meta-item {
+    @include font('COMMUTER SANS', 9px, null, 9px);
+    color: $gray;
+    text-transform: uppercase;
+
+    & + .c-splash-hero__meta-item {
+        border-left: 1px solid $silver;
+        padding-left: 10px;
+        margin-left: 10px;
+    }
+}

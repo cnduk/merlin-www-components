@@ -1,0 +1,141 @@
+.c-splash-hero {
+    background-color: $wild-sand;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+
+    &:hover,
+    .c-splash-hero__link:focus ~ * {
+        .c-splash-hero__title,
+        .c-splash-hero__byline-name {
+            opacity: 0.7;
+            text-decoration: none;
+        }
+        .c-splash-hero__image {
+            opacity: 0.8;
+        }
+    }
+}
+
+.c-splash-hero-wrapper {
+    display: table;
+    width: 100%;
+}
+
+.c-splash-hero__images,
+.c-splash-hero__contents {
+    width: 100%;
+
+    @include at-x-large-size(){
+        display: table-cell;
+        position: static;
+        vertical-align: middle;
+        width: 50%;
+    }
+}
+
+.c-splash-hero__image {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.c-splash-hero__contents {
+    background: $white;
+    box-sizing: border-box;
+    padding: $PADDING_LARGE $PADDING_MEDIUM;
+    text-align: center;
+
+    @include at-x-large-size(){
+        padding: $PADDING_X_LARGE;
+    }
+}
+
+.c-splash-hero__tag {
+    @include font('NOBEL', 10px, null, 16px);
+    color: $guardsman-red;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    margin-top: 0;
+    text-transform: uppercase;
+
+    @include at-x-large-size(){
+        @include font-size(11px);
+        @include line-height(20px);
+    }
+}
+
+.c-splash-hero__title {
+    @include font('ITC CASLON', 24px, 'NORMAL', 26px);
+    color: $cod-gray;
+    margin-top: 0;
+    margin-bottom: $MARGIN_XX_SMALL;
+
+     @include at-x-large-size(){
+         @include font-size(35px);
+         @include line-height(40px);
+         margin-bottom: $MARGIN_X_SMALL;
+     }
+}
+
+.c-splash-hero__byline {
+    @include font-size(10px);
+    @include line-height(14px);
+    color: $mine-shaft-333;
+    margin-bottom: 14px;
+    margin-top: $MARGIN_XX_SMALL;
+
+    @include at-x-large-size(){
+        @include font-size(11px);
+        @include line-height(15px);
+        margin-bottom: $MARGIN_SMALL;
+        margin-top: $MARGIN_X_SMALL;
+    }
+}
+
+.c-splash-hero__byline-prefix {
+    @include font('ADOBE CASLON', 12px);
+    color: $dove-gray;
+    font-style: italic;
+    margin-right: 2px;
+    text-transform: lowercase;
+}
+
+.c-splash-hero__byline-name {
+    @include font('NOBEL', 10px);
+    color: $cod-gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    @include at-x-large-size(){
+        @include font-size(11px);
+    }
+}
+
+.c-splash-hero__meta {
+    @include at-medium-size(){
+        border-top: 1px solid $loot-box;
+        display: inline-block;
+        padding-top: 8px;
+    }
+}
+
+.c-splash-hero__meta-item {
+    @include font('NOBEL', 10px, null, 16px);
+    color: $dove-gray;
+
+    &.c-splash-hero__meta-item--tag {
+        color: $guardsman-red;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    & + .c-splash-hero__meta-item {
+        border-left: 1px solid $loot-box;
+        margin-left: $PADDING_XX_SMALL;
+        padding-left: $PADDING_XX_SMALL;
+    }
+
+    @include at-medium-size(){
+        @include font-size(11px);
+        @include line-height(20px);
+    }
+}

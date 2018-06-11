@@ -1,6 +1,6 @@
-@import "@cnbritain/merlin-www-common:glamour";
-@import "@cnbritain/merlin-www-image:glamour";
-@import "@cnbritain/merlin-www-card:glamour";
+@import "@cnbritain/merlin-www-common:vogue";
+@import "@cnbritain/merlin-www-image:vogue";
+@import "@cnbritain/merlin-www-card:vogue";
 
 @import "../wireframe/wireframe";
 @import "./_hero";
@@ -9,10 +9,10 @@
 .c-splash-wrapper {}
 
 .c-splash__cards {
+    background-color: $white;
     margin: 0 auto 40px auto;
     max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER*2;
-    padding-left: $MOBILE_SIDE_GUTTER;
-    padding-right: $MOBILE_SIDE_GUTTER;
+    padding: 20px $MOBILE_SIDE_GUTTER;
 
     @include at-medium-size {
         margin-bottom: $TABLET_SLICE_MARGIN;

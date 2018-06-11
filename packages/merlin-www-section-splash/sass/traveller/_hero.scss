@@ -1,0 +1,136 @@
+.c-splash-hero {}
+.c-splash-hero-wrapper {}
+
+.c-splash-hero__images {}
+.c-splash-hero__image {
+    &:after {
+        background-color: rgba($MUSTASAARI, 0.15);
+        bottom: 0;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.c-splash-hero__image-wrapper {
+    background-color: $CAPE-HAZE;
+    padding-top: 100%;
+
+    @include at-medium-size {
+        padding-top: 52%;
+    }
+}
+
+.c-splash-hero__contents {
+    box-sizing: border-box;
+    left: 50%;
+    max-width: 1024px + $DESKTOP_SIDE_GUTTER*2;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    :last-child {
+        margin-bottom: 0;
+    }
+
+    @include at-medium-size {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.c-splash-hero__tag {
+    @include font("PROXIMA NOVA CONDENSED", 14px, 'SEMI BOLD', 16px);
+    border-bottom: 1px solid $WHITE;
+    color: $WHITE;
+    display: inline-block;
+    letter-spacing: 2px;
+    margin: 0 auto 14px auto;
+    padding-bottom: 4px;
+    text-shadow: 0 0 16px rgba($MUSTASAARI, 0.2);
+    text-transform: uppercase;
+
+    @include at-medium-size {
+        margin-bottom: 26px;
+    }
+}
+
+.c-splash-hero__title {
+    @include font("LULO ONE", 24px, null, 32px, -35);
+    color: $WHITE;
+    text-align: center;
+    text-shadow: 0 0 16px rgba($MUSTASAARI, 0.2);
+    text-transform: uppercase;
+
+    @include at-medium-size {
+        @include font-size(40px);
+        @include line-height(48px);
+    }
+
+    @include at-x-large-size {
+        @include font-size(46px);
+        @include line-height(54px);
+    }
+}
+
+.c-splash-hero__teaser {
+    @include font("PROXIMA NOVA CONDENSED", 16px, null, 20px);
+    color: $WHITE;
+    display: none;
+    letter-spacing: 1px;
+    margin: 16px 0;
+
+    @include at-x-large-size {
+        display: block;
+    }
+}
+
+.c-splash-hero__byline {
+    @include font("PROXIMA NOVA CONDENSED", 12px, null, 16px);
+    color: $WHITE;
+    margin-bottom: 4px;
+    margin-top: 8px;
+}
+
+.c-splash-hero__byline-prefix {
+    font-style: italic;
+    text-transform: lowercase;
+}
+
+.c-splash-hero__byline-name {
+    margin-left: 2px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.c-splash-hero__meta {
+    margin-top: 4px;
+}
+
+.c-splash-hero__meta-item {
+    @include font("PROXIMA NOVA CONDENSED", 12px, null, 16px);
+    color: $WHITE;
+
+    & + .c-splash-hero__meta-item:before {
+        background-color: $WHITE;
+        border-radius: 50%;
+        content: "";
+        display: inline-block;
+        height: 2px;
+        margin: 0 4px 3px 4px;
+        width: 2px;
+    }
+}

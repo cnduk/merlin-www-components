@@ -1,0 +1,119 @@
+.c-splash-hero {
+    background-color: $seashell;
+
+    @include at-x-large-size {
+        background-color: $black;
+    }
+}
+.c-splash-hero-wrapper {}
+
+.c-splash-hero__link {}
+
+.c-splash-hero__images {}
+
+.c-splash-hero__image {}
+.c-splash-hero__image-wrapper {
+    padding-top: 66.66666%;
+}
+
+.c-splash-hero__images--multiple {
+    grid-template-columns: 1fr 1fr;
+
+    :nth-child(n + 3){
+        display: none;
+    }
+}
+
+.c-splash-hero__contents {
+    background: $white;
+    border-bottom: 1px solid $bon-jour;
+    margin: -69px 20px 0 20px;
+    padding: 28px 20px;
+    position: relative;
+    text-align: center;
+
+    &:after {
+        @include triangle(16px, 12px, 'up', $white);
+        content: '';
+        left: 50%;
+        position: absolute;
+        top: -16px;
+        transform: translateX(-50%);
+    }
+
+    @include at-medium-size {
+        margin-left: $TABLET_SIDE_GUTTER;
+        margin-right: $TABLET_SIDE_GUTTER;
+        margin-top: -80px;
+    }
+
+    @include at-x-large-size {
+        bottom: 60px;
+        box-sizing: border-box;
+        padding: 36px 24px;
+        margin-top: -64px;
+    }
+}
+
+.c-splash-hero__tag {
+    @include font("GOTHAM", 11px, 'BOLD', 14px, -4);
+    color: $limed-oak;
+    margin-bottom: 8px;
+    margin-top: 0;
+    text-transform: capitalize;
+
+    @include at-medium-size {
+        @include font-size(12px);
+        @include line-height(16px);
+        margin-bottom: 12px;
+    }
+}
+
+.c-splash-hero__title {
+    @include font("ITC_FENICE", 24px, NULL, 28px, -4);
+    color: $woodsmoke;
+    margin-bottom: 14px;
+    margin-top: 0px;
+
+    @include at-medium-size {
+        @include font-size(32px);
+        @include line-height(36px);
+        margin-bottom: 8px;
+        margin-top: 0px;
+    }
+}
+
+.c-splash-hero__byline {
+    @include font("GOTHAM", 9px, 'BOLD', 16px, 60);
+    margin-bottom: 6px;
+    margin-top: 14px;
+    text-transform: uppercase;
+}
+
+.c-splash-hero__meta {
+    margin-top: 6px;
+}
+
+.c-splash-hero__meta-item {
+    @include font("GOTHAM", 9px, 500, 14px);
+    color: $oslo-gray;
+    padding-right: 0;
+
+    & + .c-splash-hero__meta-item {
+        padding-left: 0;
+
+        &:before {
+            background-color: $oslo-gray;
+            border-radius: 50%;
+            content: "";
+            display: inline-block;
+            height: 2px;
+            margin: 0 4px 2px 4px;
+            width: 2px;
+        }
+
+    }
+}
+.c-splash-hero__meta-item--date {}
+.c-splash-hero__meta-item--tag {}
+

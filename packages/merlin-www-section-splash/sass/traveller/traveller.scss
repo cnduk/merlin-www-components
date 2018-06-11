@@ -1,180 +1,44 @@
 @import "@cnbritain/merlin-www-common:traveller";
-@import "@cnbritain/merlin-www-buttons:traveller";
-@import "@cnbritain/merlin-www-card-list:traveller";
+@import "@cnbritain/merlin-www-image:traveller";
 @import "@cnbritain/merlin-www-card:traveller";
 
 @import "../wireframe/wireframe";
+@import "./_hero";
 
-.c-splash-section {}
-.c-splash-section__wrapper {
+.c-splash {}
+.c-splash-wrapper {
 	margin: 0 auto;
 	max-width: $MAXIMUM_PAGE_WIDTH;
-	position: relative;
 	width: 100%;
 }
 
-.c-splash-hero {}
-.c-splash-hero__wrapper {
-	position: relative;
-}
-
-.c-splash-hero__images {}
-.c-splash-hero__image {
-	&:after {
-		background-color: rgba($MUSTASAARI, 0.2);
-		bottom: 0;
-		content: '';
-		height: 100%;
-		left: 0;
-		position: absolute;
-		right: 0;
-		top: 0;
-		width: 100%;
-
-		@include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-			background-color: rgba($MUSTASAARI, 0.15);
-		}
-	}
-}
-
-.c-splash-hero__image__wrapper {
-	background-color: $CAPE-HAZE;
-	padding-top: 100%;
-
-	@include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-		padding-top: 52%;
-	}
-}
-
-.c-splash-hero__content {
-	box-sizing: border-box;
-	left: 50%;
-	max-width: 1024px + $DESKTOP_SIDE_GUTTER*2;
-	padding-left: $MOBILE_SIDE_GUTTER;
-	padding-right: $MOBILE_SIDE_GUTTER;
-	position: absolute;
-	text-align: center;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	width: 100%;
-
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-	    padding-left: $TABLET_SIDE_GUTTER;
-	    padding-right: $TABLET_SIDE_GUTTER;
-	}
-
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-	    padding-left: $DESKTOP_SIDE_GUTTER;
-	    padding-right: $DESKTOP_SIDE_GUTTER;
-	}
-
-	:last-child {
-		margin-bottom: 0;
-	}
-}
-
-.c-splash-hero__tag {
-	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
-	border-bottom: 1px solid $WHITE;
-	color: $WHITE;
-	display: inline-block;
-	letter-spacing: 2px;
-	margin: 0 auto 14px auto;
-	padding-bottom: 4px;
-	text-align: center;
-	text-shadow: 0 0 16px rgba($MUSTASAARI, 0.2);
-	text-transform: uppercase;
-
-	@include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-		margin-bottom: 26px;
-	}
-}
-
-.c-splash-hero__title {
-	@include font("LULO ONE", 24px, 700, 32px, -35);
-	color: $WHITE;
-	text-align: center;
-	text-shadow: 0 0 16px rgba($MUSTASAARI, 0.2);
-	text-transform: uppercase;
-
-    @include min-screen($SUPERFEATURE_LARGE_BREAKPOINT) {
-    	@include font-size(40px);
-    	@include line-height(48px);
-	}
-
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    	@include font-size(46px);
-    	@include line-height(54px);
-	}
-}
-
-.c-splash-hero__teaser {
-	display: none;
-
-    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
-    	@include font("PROXIMA NOVA CONDENSED", 16px, 400, 20px);
-    	color: $WHITE;
-    	display: block;
-    	letter-spacing: 1px;
-    	margin: 16px 0;
-    	text-align: center;
-    }
-}
-
-.c-splash-hero__byline {
-    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
-    color: $WHITE;
-    margin-bottom: 4px;
-    margin-top: 8px;
-    text-align: center;
-}
-
-.c-splash-hero__byline-prefix {
-    font-style: italic;
-    text-transform: lowercase;
-}
-
-.c-splash-hero__byline-name {
-	margin-left: 2px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-ul.c-splash-hero__meta {
-    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
-    color: $WHITE;
-    margin-top: 4px;
-    text-align: center;
-}
-
-li.c-splash-hero__meta-item {
-    & + li.c-splash-hero__meta-item {
-        &:before {
-            background-color: $WHITE;
-            border-radius: 50%;
-            content: "";
-            display: inline-block;
-            height: 2px;
-            margin: 1px 4px;
-            width: 2px;
-        }
-    }
-}
-
-.c-splash-list {
-	margin: 24px $MOBILE_SIDE_GUTTER $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
-	padding-bottom: 32px;
+.c-splash__cards {
 	border-bottom: 1px solid $ISABEL;
+    margin: 24px $MOBILE_SIDE_GUTTER $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+    padding-bottom: 32px;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	@include at-medium-size {
 	    margin-left: $TABLET_SIDE_GUTTER;
 	    margin-right: $TABLET_SIDE_GUTTER;
 	}
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	@include at-x-large-size {
 	    margin-left: $DESKTOP_SIDE_GUTTER;
 	    margin-right: $DESKTOP_SIDE_GUTTER;
 	}
 }
 
-.c-splash-list__wrapper {}
+.c-splash__cards-wrapper {}
+.c-splash__cards-list {
+    grid-gap: 24px;
+    grid-template-columns: 1fr;
+
+    @include at-small-size {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include at-x-large-size {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+.c-splash__cards-listitem {}
