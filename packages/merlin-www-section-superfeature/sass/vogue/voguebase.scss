@@ -131,14 +131,9 @@
 }
 
 .c-superfeature__meta {
-    @include font('NOBEL', 10px, 400, 16px);
-    color: $dove-gray;
     display: inline-block;
-    font-size: 0;
 
     @include at-medium-size {
-        @include font-size(11px);
-        @include line-height(20px);
         border-top: 1px solid $gallery;
         padding-top: 8px;
     }
@@ -146,6 +141,7 @@
 
 .c-superfeature__meta-item {
     @include font('NOBEL', 10px, 400, 16px);
+    color: $dove-gray;
     display: inline-block;
 
     & + .c-superfeature__meta-item {
@@ -164,5 +160,10 @@
         color: $guardsman-red;
         letter-spacing: 1px;
         text-transform: uppercase;
+    }
+
+    @include at-medium-size {
+        @include font-size(11px);
+        @include line-height(20px);
     }
 }

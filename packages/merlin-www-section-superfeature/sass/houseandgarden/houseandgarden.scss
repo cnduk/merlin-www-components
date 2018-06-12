@@ -105,16 +105,11 @@
 .c-superfeature__byline--sponsored {}
 .c-superfeature__byline-prefix {}
 .c-superfeature__byline-name {
-    @include font-weight(700);
+    font-weight: bold;
 }
 
-.c-superfeature__meta {
-    @include font("BRANDON GROTESQUE", 0px, 400, 10px);
-    color: $dove-gray;
-    font-size: 0;
-    letter-spacing: 1px;
+.c-superfeature__meta {;
     margin-top: 5px;
-    text-transform: uppercase;
 
     @include at-medium-size {
         margin-top: 7px;

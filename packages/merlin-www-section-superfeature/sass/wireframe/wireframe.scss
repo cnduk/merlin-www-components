@@ -71,6 +71,12 @@
 .c-superfeature__byline-name {}
 
 .c-superfeature__meta {
+    font-size: 0;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
-.c-superfeature__meta-item {}
+.c-superfeature__meta-item {
+    display: inline-block;
+    font-size: initial;
+}

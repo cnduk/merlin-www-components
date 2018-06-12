@@ -134,18 +134,12 @@
 .c-superfeature__byline-prefix {}
 .c-superfeature__byline-name {}
 
-.c-superfeature__meta {
-    @include font("GRAPHIK", 10px, 400, 10px);
-    color: $dune;
-    font-size: 0;
-    letter-spacing: 1.5px;
-    margin: 0 0 0 0;
-    text-transform: uppercase;
-}
+.c-superfeature__meta {}
 
 .c-superfeature__meta-item {
     @include font("GRAPHIK", 10px, 400, 10px);
-    display: inline-block;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 
     & + .c-superfeature__meta-item {
         &:before {

@@ -153,15 +153,13 @@
 }
 
 .c-superfeature__meta {
-    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
-    color: $WHITE;
-    font-size: 0;
     margin-top: 4px;
     text-align: center;
 }
 
 .c-superfeature__meta-item {
     @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    color: $WHITE;
     display: inline-block;
 
     & + .c-superfeature__meta-item {

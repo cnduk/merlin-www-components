@@ -145,15 +145,12 @@
 }
 
 .c-superfeature__meta {
-    @include font("GOTHAM", 9px, 500, 14px);
-    color: $oslo-gray;
-    font-size: 0;
     margin-top: 6px;
 }
 
 .c-superfeature__meta-item {
     @include font("GOTHAM", 9px, 500, 14px);
-    display: inline-block;
+    color: $oslo-gray;
     padding-right: 0;
 
     & + .c-superfeature__meta-item {
