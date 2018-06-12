@@ -201,13 +201,14 @@
 }
 
 .c-feature__meta {
-    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
-    color: $MANATEE;
     margin-top: 4px;
     text-align: center;
 }
 
 .c-feature__meta-item {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    color: $MANATEE;
+
     & + .c-feature__meta-item {
         &:before {
             background-color: $MANATEE;

@@ -136,11 +136,7 @@
 }
 
 .c-feature__meta {
-    @include font("GRAPHIK", 10px, 400, 10px);
-    color: $dune;
-    letter-spacing: 1.5px;
     margin: 0 0 0 0;
-    text-transform: uppercase;
 
     @include at-medium-size(){
         bottom: 40px;
@@ -149,6 +145,11 @@
 }
 
 .c-feature__meta-item {
+    @include font("GRAPHIK", 10px, 400, 10px);
+    color: $dune;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
     & + .c-feature__meta-item {
         &:before {
             background-color: $azalea;

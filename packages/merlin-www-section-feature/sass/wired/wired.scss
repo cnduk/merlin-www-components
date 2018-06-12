@@ -116,13 +116,12 @@
 }
 
 .c-feature__meta {
-    color: $black;
-    font-size: 0;
     margin-top: 5px;
 }
 
 .c-feature__meta-item {
     @include font("EXCHANGE WEB", 11px, 400, 17px);
+    color: $black;
     padding-right: 10px;
 
     & + .c-feature__meta-item {

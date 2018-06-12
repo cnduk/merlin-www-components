@@ -182,14 +182,15 @@
 }
 
 .c-feature__meta {
-    @include font('COMMUTER SANS', 9px, 400, 9px);
-    color: $gray;
     margin-top: 5px;
-    text-transform: uppercase;
 }
 
 .c-feature__meta-item {
+    @include font('COMMUTER SANS', 9px, 400, 9px);
+    color: $gray;
+    margin-top: 5px;
     padding-right: 0;
+    text-transform: uppercase;
 
     &:not(:last-child) {
         &:after {

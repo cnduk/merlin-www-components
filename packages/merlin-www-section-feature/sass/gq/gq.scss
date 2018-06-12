@@ -163,12 +163,12 @@
 }
 
 .c-feature__meta {
-    @include font("GOTHAM", 9px, 500, 14px);
-    color: $oslo-gray;
     margin-top: 6px;
 }
 
 .c-feature__meta-item {
+    @include font("GOTHAM", 9px, 500, 14px);
+    color: $oslo-gray;
     padding-right: 0;
 
     & + .c-feature__meta-item {

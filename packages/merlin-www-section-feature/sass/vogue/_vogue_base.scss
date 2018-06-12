@@ -116,19 +116,18 @@
 }
 
 .c-feature__meta {
-    @include font('NOBEL', 10px, null, 16px);
-    color: $dove-gray;
+
     display: inline-block;
 
     @include at-medium-size(){
-        @include font-size(11px);
-        @include line-height(20px);
         border-top: 1px solid $loot-box;
         padding-top: 8px;
     }
 }
 
 .c-feature__meta-item {
+    @include font('NOBEL', 10px, null, 16px);
+    color: $dove-gray;
     padding-right: $PADDING_XX_SMALL;
 
     & + .c-feature__meta-item {
@@ -144,5 +143,10 @@
         color: $guardsman-red;
         letter-spacing: 1px;
         text-transform: uppercase;
+    }
+
+    @include at-medium-size(){
+        @include font-size(11px);
+        @include line-height(20px);
     }
 }
