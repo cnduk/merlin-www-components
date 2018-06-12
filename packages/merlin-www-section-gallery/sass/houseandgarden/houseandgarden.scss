@@ -154,11 +154,7 @@
 }
 
 .c-gallery__meta {
-    @include font("BRANDON GROTESQUE", 0px, 400, 10px);
-    color: $dove-gray;
-    letter-spacing: 1px;
     margin-top: 5px;
-    text-transform: uppercase;
 
     @include at-medium-size {
         margin-top: 7px;

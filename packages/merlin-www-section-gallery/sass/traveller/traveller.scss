@@ -195,14 +195,15 @@
 }
 
 .c-gallery__meta {
-   @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
-    color: $MANATEE;
     margin-top: 4px;
     text-align: center;
 }
 
 .c-gallery__meta-item {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    color: $MANATEE;
     display: inline-block;
+
     & + .c-feature__meta-item {
         &:before {
             background-color: $MANATEE;

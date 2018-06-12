@@ -172,13 +172,14 @@
 }
 
 .c-gallery__meta {
-    @include font("GOTHAM", 9px, 500, 14px);
-    color: $oslo-gray;
     margin-top: 6px;
 }
 
 .c-gallery__meta-item {
+    @include font("GOTHAM", 9px, 500, 14px);
+    color: $oslo-gray;
     padding-right: 0;
+
     & + li.c-gallery__meta-item {
         border-left: none;
         padding-left: 0;
