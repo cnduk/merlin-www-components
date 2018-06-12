@@ -180,7 +180,7 @@
     color: $oslo-gray;
     padding-right: 0;
 
-    & + li.c-gallery__meta-item {
+    & + .c-gallery__meta-item {
         border-left: none;
         padding-left: 0;
         &:before {
