@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.9.2"></a>
+## [1.9.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.9.1...@cnbritain/merlin-www-section-gallery@1.9.2) (2018-06-12)
+
+
+### Bug Fixes
+
+* **merlin-www-section-gallery:** correct styles for meta ([0a52e87](https://github.com/cnduk/merlin-www-components/commit/0a52e87))
+* **merlin-www-section-gallery:** move font styles from meta to metaitem ([d5315e5](https://github.com/cnduk/merlin-www-components/commit/d5315e5))
+* **merlin-www-section-gallery:** remove specificity from gq meta item ([5efe343](https://github.com/cnduk/merlin-www-components/commit/5efe343))
+
+
+
+
 <a name="1.9.1"></a>
 ## [1.9.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-gallery@1.9.0...@cnbritain/merlin-www-section-gallery@1.9.1) (2018-06-11)
 

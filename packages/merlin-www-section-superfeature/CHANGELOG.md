@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.10.30"></a>
+## [1.10.30](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-superfeature@1.10.29...@cnbritain/merlin-www-section-superfeature@1.10.30) (2018-06-12)
+
+
+### Bug Fixes
+
+* **merlin-www-section-superfeature:** update meta item styles ([6fee2cb](https://github.com/cnduk/merlin-www-components/commit/6fee2cb))
+
+
+
+
 <a name="1.10.29"></a>
 ## [1.10.29](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-superfeature@1.10.28...@cnbritain/merlin-www-section-superfeature@1.10.29) (2018-06-11)
 
