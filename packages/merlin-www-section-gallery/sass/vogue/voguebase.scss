@@ -129,17 +129,12 @@
 }
 
 .c-gallery__meta {
-    @include font('NOBEL', 10px, null, 16px);
-    color: $dove-gray;
     display: inline-block;
-
-    @include at-x-large-size {
-        @include font-size(11px);
-        @include line-height(20px);
-    }
 }
 
 .c-gallery__meta-item {
+    @include font('NOBEL', 10px, null, 16px);
+    color: $dove-gray;
     padding-right: 8px;
 
     &:last-child {
@@ -149,6 +144,11 @@
     & + .c-gallery__meta-item {
         border-left: 1px solid $loot-box;
         padding-left: 8px;
+    }
+
+    @include at-x-large-size {
+        @include font-size(11px);
+        @include line-height(20px);
     }
 }
 

@@ -204,7 +204,7 @@
     color: $MANATEE;
     display: inline-block;
 
-    & + .c-feature__meta-item {
+    & + .c-gallery__meta-item {
         &:before {
             background-color: $MANATEE;
             border-radius: 50%;
