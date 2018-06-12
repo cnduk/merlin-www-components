@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.15.24"></a>
+## [1.15.24](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.23...@cnbritain/merlin-www-bbcode@1.15.24) (2018-06-12)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** Fix bbcode notes styling on Tatler [ch3269] ([6614ddb](https://github.com/cnduk/merlin-www-components/commit/6614ddb))
+* **merlin-www-bbcode:** Fix colour variables name ([93187f7](https://github.com/cnduk/merlin-www-components/commit/93187f7))
+
+
+
+
 <a name="1.15.23"></a>
 ## [1.15.23](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.22...@cnbritain/merlin-www-bbcode@1.15.23) (2018-06-11)
 
