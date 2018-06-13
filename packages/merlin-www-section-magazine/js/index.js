@@ -1,7 +1,7 @@
-import cardList from '@cnbritain/merlin-www-card-list';
+import card from '@cnbritain/merlin-www-card';
 
 export default {
     "init": function(){
-        cardList.init();
+        card.init();
     }
 }

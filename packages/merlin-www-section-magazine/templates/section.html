@@ -27,10 +27,21 @@
                     <div class="c-magazine__content__date">{{ data.title }}</div>
                 {{/ data.magazine }}
 
-                {{# data.card_list }}
-                    {{> @cnbritain/merlin-www-card-list }}
-                {{/ data.card_list }}
-
+                {{# data.magazine_list }}
+                    <div class="c-magazine__cards">
+                        <div class="c-magazine__cards-wrapper">
+                            <ul class="c-magazine__cards-list {{ style.cls }}">
+                                {{# data.items }}
+                                    <li class="c-magazine__cards-listitem {{ style.cls }}">
+                                        {{# data.item }}
+                                            {{> @cnbritain/merlin-www-card }}
+                                        {{/ data.item }}
+                                    </li>
+                                {{/ data.items }}
+                            </ul>
+                        </div>
+                    </div>
+                {{/ data.magazine_list }}
                 {{# data.link }}
                     <div class="c-magazine__content__btn">
                         <a href="{{ &data.url }}" class="global__button-reset c-magazine__btn {{ style.cls }}">{{ data.title }}</a>
