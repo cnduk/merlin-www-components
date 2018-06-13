@@ -2,7 +2,7 @@
     background-color: $white;
     margin: $MOBILE_SLICE_MARGIN auto;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         margin-bottom: $TABLET_SLICE_MARGIN;
         margin-top: $TABLET_SLICE_MARGIN;
     }
@@ -15,7 +15,7 @@
     padding: 40px 20px;
     position: relative;
 
-    @include tablet-size {
+    @include at-medium-size {
         padding: 60px 60px;
     }
 
@@ -25,26 +25,14 @@
     }
 }
 
-.c-magazine__covers,
-.c-magazine__content {
-}
-
-.c-magazine__covers {
-
-}
-
 .c-magazine__title {
     display: none;
 }
 
 .c-magazine__covers__wrapper {
-    @include tablet-size {
+    @include at-medium-size {
         padding-right: 20px;
     }
-}
-
-.c-magazine__cover--print {
-
 }
 
 .c-magazine__cover--tablet {
@@ -52,48 +40,45 @@
         border-radius: 8px;
         padding: 20px 8px;
         right: 20px;
+
         @include desktop-size {
             border-radius: 12px;
             padding: 30px 10px;
-            width: 38%;
             right: 40px;
+            width: 38%;
         }
-    }
-}
-
-.c-magazine__content__date {
-    @include font('STARLING', 20px, 'BOLD', 20px);
-
-    color: $black;
-    letter-spacing: 1px;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-
-    @include tablet-size {
-        @include font('STARLING', 27px, 'BOLD', 31px);
-
-        letter-spacing: 2px;
-        margin-bottom: 30px;
-        text-align: left;
     }
 }
 
 .c-magazine__content__title {
     @include font('COMMUTER SANS', 11px, 'MEDIUM', 12px);
-
     color: $gray;
     display: block;
     letter-spacing: 1px;
+    margin: 30px 0 6px;
     text-align: center;
     text-transform: uppercase;
-    margin: 30px 0 6px;
 
-    @include tablet-size {
+    @include at-medium-size {
         @include font('COMMUTER SANS', 12px, 'MEDIUM', 13px);
-
         letter-spacing: 1px;
         margin: 0 0 6px;
+        text-align: left;
+    }
+}
+
+.c-magazine__content__date {
+    @include font('STARLING', 20px, 'BOLD', 20px);
+    color: $black;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include at-medium-size {
+        @include font('STARLING', 27px, 'BOLD', 31px);
+        letter-spacing: 2px;
+        margin-bottom: 30px;
         text-align: left;
     }
 }
@@ -101,10 +86,9 @@
 .c-magazine__btn {
     @include button-single;
     @include button-single-light;
-
     margin-top: 30px;
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-top: 40px;
     }
 

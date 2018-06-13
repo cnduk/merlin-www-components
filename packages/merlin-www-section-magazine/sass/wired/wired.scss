@@ -11,13 +11,13 @@
     margin-bottom: $MOBILE_SLICE_MARGIN;
     max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER_BREAKPOINT + $DESKTOP_SIDE_GUTTER_BREAKPOINT;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         margin-top: $TABLET_SLICE_MARGIN;
         margin-bottom: $TABLET_SLICE_MARGIN;
         padding: 0 $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin-top: $DESKTOP_SLICE_MARGIN;
         margin-bottom: $DESKTOP_SLICE_MARGIN;
         padding: 0 $DESKTOP_SIDE_GUTTER;
@@ -27,39 +27,20 @@
 .c-magazine__wrapper {
     background-color: #fff;
     box-sizing: border-box;
-    position: relative;
     margin-left: auto;
     margin-right: auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
     padding: 30px 20px;
+    position: relative;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         padding: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding: $DESKTOP_SIDE_GUTTER;
     }
 
-}
-
-.c-magazine__wrapper > .c-magazine__link {
-    border-bottom: none;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-
-    @include tablet-size {
-        width: 50%;
-        height: 100%;
-    }
-
-    &:hover {
-        border-bottom: none;
-    }
 }
 
 .c-magazine__title {
@@ -67,7 +48,8 @@
     margin-bottom: 30px;
     text-transform: uppercase;
     text-align: center;
-    @include tablet-size {
+
+    @include at-medium-size {
         display: none;
     }
 }
@@ -75,14 +57,14 @@
 .c-magazine__covers {
     position: relative;
 
-    @include tablet-size {
+    @include at-medium-size {
         display: table-cell;
-        width: 50%;
         vertical-align: middle;
+        width: 50%;
     }
 }
 .c-magazine__covers__wrapper {
-    @include tablet-size {
+    @include at-medium-size {
         padding-right: 70px;
     }
 }
@@ -92,10 +74,10 @@
 }
 .c-magazine__cover--print {
     img {
-        width: 60%;
         margin-left: $MOBILE_SIDE_GUTTER;
+        width: 60%;
 
-        @include tablet-size {
+        @include at-medium-size {
             margin-left: 0;
         }
     }
@@ -104,13 +86,13 @@
     img {
         background-color: #000;
         border-radius: 7px;
+        bottom: 0;
         padding: 15px 8px;
-        width: 40%;
         position: absolute;
         right: $MOBILE_SIDE_GUTTER;
-        bottom: 0;
+        width: 40%;
 
-        @include desktop-size {
+        @include at-x-large-size {
             border-radius: 15px;
             padding: 30px 20px;
             width: 45%;
@@ -118,20 +100,15 @@
     }
 }
 
-.c-magazine__cover__image {}
-
 .c-magazine__content {
     position: relative;
     z-index: 1;
 
-    @include tablet-size {
+    @include at-medium-size {
         display: table-cell;
-        width: 50%;
         vertical-align: middle;
+        width: 50%;
     }
-}
-.c-magazine__content__wrapper {
-
 }
 
 .c-magazine__content__date {
@@ -140,7 +117,7 @@
     text-align: center;
     text-transform: uppercase;
 
-    @include tablet-size {
+    @include at-medium-size {
         @include font-size(35px);
         @include line-height(38px);
         margin: 20px 0;
@@ -152,17 +129,16 @@
     display: none;
     margin-bottom: 30px;
     text-transform: uppercase;
-    @include tablet-size {
+
+    @include at-medium-size {
         display: block;
         margin-bottom: 20px;
     }
 }
-.c-magazine__content__subtitle {}
 
 .c-magazine__btn {
-    @include button-single();
-    @include button-single-light();
-
+    @include button-single;
+    @include button-single-light;
     box-sizing: border-box;
     margin-top: 30px;
     text-align: center;
@@ -170,10 +146,10 @@
     width: 100%;
 
     &:hover {
-        @include button-single-light-hover();
+        @include button-single-light-hover;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         width: auto;
     }
 }

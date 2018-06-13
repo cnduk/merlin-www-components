@@ -16,27 +16,31 @@
     padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
     position: relative;
 
-    @include tablet-size {
+    @include at-medium-size {
         padding: $TABLET_SLICE_MARGIN $TABLET_SIDE_GUTTER;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
+}
+
+.c-magazine__title {
+    display: none;
 }
 
 .c-magazine__covers {
     border-bottom: 1px solid $ballet-grey;
     margin: 0 0 28px 0;
 
-    @include tablet-size {
+    @include at-medium-size {
         border-top: 1px solid $ballet-grey;
     }
 }
 
 .c-magazine__covers__wrapper {
-    @include tablet-size {
+    @include at-medium-size {
         padding: 48px;
     }
 }
@@ -57,12 +61,8 @@
     }
 }
 
-.c-magazine__title {
-    display: none;
-}
-
 .c-magazine__content {
-    @include tablet-size {
+    @include at-medium-size {
         border-bottom: 1px solid $ballet-grey;
         border-left: 1px solid $ballet-grey;
         border-top: 1px solid $ballet-grey;
@@ -70,7 +70,7 @@
 }
 
 .c-magazine__content__wrapper {
-    @include tablet-size {
+    @include at-medium-size {
         padding: 48px;
     }
 }
@@ -92,23 +92,23 @@
     text-align: center;
     text-transform: capitalize;
 
-    @include tablet-size {
+    @include at-medium-size {
         @include font-size(40px);
         @include line-height(40px);
         margin-bottom: 42px;
     }
 }
 
-.c-magazine__btn-wrapper {
+.c-magazine__content__btn {
     margin-top: 32px;
     text-align: center;
 }
 
 .c-magazine__btn {
-    @include button-single-two();
-    @include button-single-two-light();
+    @include button-single-two;
+    @include button-single-two-light;
 
     &:hover {
-        @include button-single-two-light-hover();
+        @include button-single-two-light-hover;
     }
 }

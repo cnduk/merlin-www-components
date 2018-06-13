@@ -17,36 +17,13 @@
 	padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
 	position: relative;
 
-	@include tablet-size {
+	@include at-medium-size {
 	    padding: $TABLET_SLICE_MARGIN $TABLET_SIDE_GUTTER;
 	}
 
-	@include desktop-size {
+	@include at-x-large-size {
 	    padding-left: $DESKTOP_SIDE_GUTTER;
 	    padding-right: $DESKTOP_SIDE_GUTTER;
-	}
-}
-
-.c-magazine__covers__wrapper {}
-.c-magazine__cover--print {
-	img {
-		box-shadow: 0 0 32px 0 rgba($MUSTASAARI, 0.16);
-	}
-}
-
-.c-magazine__cover--tablet {
-	img {
-		background-color: $MUSTASAARI;
-		border-radius: 8px;
-		bottom: 1px;
-		box-shadow: 0px 0px 0px 1px $ABBEY;
-		padding: 16px 12px;
-
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-			border-radius: 15px;
-			padding: 30px 20px;
-			width: 40%;
-		}
 	}
 }
 
@@ -58,13 +35,35 @@
 	margin-top: 0;
 	text-align: center;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	@include at-medium-size {
 		margin-bottom: 12px;
 	}
 }
 
+.c-magazine__cover--print {
+	img {
+		box-shadow: 0 0 32px 0 rgba($MUSTASAARI, 0.16);
+	}
+}
+
+.c-magazine__cover--tablet {
+	img {
+		background-color: $MUSTASAARI;
+		border-radius: 8px;
+		bottom: 1px;
+		box-shadow: 0 0 0 1px $ABBEY;
+		padding: 16px 12px;
+
+		@include at-x-large-size {
+			border-radius: 15px;
+			padding: 30px 20px;
+			width: 40%;
+		}
+	}
+}
+
 .c-magazine__content {
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	@include at-medium-size {
 		padding-left: 12px;
 	}
 }
@@ -86,7 +85,7 @@
 	text-align: center;
 	text-transform: uppercase;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	@include at-medium-size {
 		@include font-size(28px);
 		@include line-height(32px);
 		letter-spacing: 2px;
@@ -97,15 +96,15 @@
 }
 
 .c-magazine__btn {
-	@include button-single();
-	@include button-single-light();
+	@include button-single;
+	@include button-single-light;
 	margin-top: 24px;
 
 	&:hover {
-		@include button-single-light-hover();
+		@include button-single-light-hover;
 	}
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	@include at-medium-size {
 		margin-top: 40px;
 	}
 }

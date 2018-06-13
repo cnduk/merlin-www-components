@@ -10,7 +10,7 @@
 }
 
 .c-magazine__content__title {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         color: $cerulean
     }
 }
