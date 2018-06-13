@@ -1,14 +1,5 @@
 {
     "name": "@cnbritain/merlin-www-main-navigation",
-    "demo": {
-        "all": {
-            "themes": [
-                "wireframe"
-            ],
-            "main": "main-navigation",
-            "data": "all"
-        }
-    },
     "js": {
         "demo": "demo/demo.js"
     },
@@ -26,6 +17,7 @@
     "currentTheme": null,
     "main": "main-navigation",
     "data": {
-        "all": "data/all.json"
+        "all": "data/all.json",
+        "gallery": "data/gallery.json",
     }
 }

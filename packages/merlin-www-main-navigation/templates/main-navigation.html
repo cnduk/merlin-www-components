@@ -129,6 +129,20 @@
                     <div class="c-nav__gallery-current js-c-nav__gallery-current">0</div>
                     <div class="c-nav__gallery-total js-c-nav__gallery-total">0</div>
                 </div>
+
+                <input id="c-nav__gallery-checkbox" class="c-nav__gallery-checkbox js-c-nav__gallery-checkbox" type=checkbox>
+                <label for="c-nav__gallery-checkbox" class="c-nav__gallery-icon js-c-nav__gallery-icon">
+                    <div class="js-c-nav__list-icon c-nav__list-icon">
+                      {{# data.icon_gallery_list }}
+                      {{> @cnbritain/merlin-www-image }}
+                      {{/ data.icon_gallery_list }}
+                    </div>
+                    <div class="js-c-nav__grid-icon c-nav__grid-icon is-hidden">
+                      {{# data.icon_gallery_grid }}
+                      {{> @cnbritain/merlin-www-image }}
+                      {{/ data.icon_gallery_grid }}
+                    </div>
+                </label>
             </div>
         </div>
     </div>
