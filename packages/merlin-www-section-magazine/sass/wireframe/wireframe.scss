@@ -87,7 +87,15 @@
 
 .c-magazine__content__date {}
 
-//card list
+.c-magazine__cards {}
+.c-magazine__cards-wrapper {}
+.c-magazine__cards-list {
+    display: grid;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.c-magazine__cards-listitem {}
 
 .c-magazine__content__btn {
     text-align: center;
