@@ -122,6 +122,12 @@
     }
 }
 
+.c-magazine__cards-list {
+    .c-magazine__cards-listitem + .c-magazine__cards-listitem {
+        margin-top: 20px;
+    }
+}
+
 .c-magazine__btn {
     @include button-single-two;
     @include button-single-two-light;
