@@ -192,7 +192,7 @@
     background-color: #fff;
     height: 60px;
     margin: 0 auto;
-    max-width: 1440px;
+    max-width: $XX_LARGE_SIZE;
     position: relative;
     width: 100%;
 
@@ -214,9 +214,10 @@
 
 .c-nav__content {
     background-color: #fff;
+    box-sizing: border-box;
     height: 60px;
     margin: 0 auto;
-    max-width: 1440px;
+    max-width: $XX_LARGE_SIZE;
     overflow: hidden;
     padding-top: 60px;
     position: relative;

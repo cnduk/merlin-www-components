@@ -1,3 +1,7 @@
+var IS_HIDDEN_CLS = 'is-hidden';
+var IS_FIXED_CLS = 'is-fixed';
+var IS_OPEN_CLS = 'is-open';
+
 function Nav(el) {
     this.el = el;
     this.state = {
@@ -62,14 +66,14 @@ function Nav(el) {
 }
 
 Nav.prototype.fix = function() {
-    this.el.classList.add('is-fixed');
-    this.logoEl.classList.remove('is-hidden');
+    this.el.classList.add(IS_FIXED_CLS);
+    this.logoEl.classList.remove(IS_HIDDEN_CLS);
     this.state.isFixed = true;
 };
 
 Nav.prototype.unfix = function() {
-    this.el.classList.remove('is-fixed');
-    this.logoEl.classList.add('is-hidden');
+    this.el.classList.remove(IS_FIXED_CLS);
+    this.logoEl.classList.add(IS_HIDDEN_CLS);
     this.state.isFixed = false;
 };
 
@@ -92,20 +96,20 @@ Nav.prototype.togglefix = function() {
 
 Nav.prototype.open = function() {
     document.body.style.overflow = 'hidden';
-    this.el.classList.add('is-open');
+    this.el.classList.add(IS_OPEN_CLS);
 
-    this.toggleOpenIconEl.classList.add('is-hidden');
-    this.toggleCloseIconEl.classList.remove('is-hidden');
+    this.toggleOpenIconEl.classList.add(IS_HIDDEN_CLS);
+    this.toggleCloseIconEl.classList.remove(IS_HIDDEN_CLS);
 
     this.state.isOpen = true;
 };
 
 Nav.prototype.close = function() {
     document.body.style.overflow = '';
-    this.el.classList.remove('is-open');
+    this.el.classList.remove(IS_OPEN_CLS);
 
-    this.toggleOpenIconEl.classList.remove('is-hidden');
-    this.toggleCloseIconEl.classList.add('is-hidden');
+    this.toggleOpenIconEl.classList.remove(IS_HIDDEN_CLS);
+    this.toggleCloseIconEl.classList.add(IS_HIDDEN_CLS);
 
     this.state.isOpen = false;
 };
@@ -121,12 +125,12 @@ Nav.prototype.toggleOpen = function() {
 };
 
 Nav.prototype.show = function() {
-    this.el.classList.remove('is-hidden');
+    this.el.classList.remove(IS_HIDDEN_CLS);
     this.state.isHidden = false;
 };
 
 Nav.prototype.hide = function() {
-    this.el.classList.add('is-hidden');
+    this.el.classList.add(IS_HIDDEN_CLS);
     this.state.isHidden = true;
 };
 
@@ -152,19 +156,19 @@ Nav.prototype.toggleShow = function() {
 };
 
 Nav.prototype.openSearch = function() {
-    this.searchEl.classList.remove('is-hidden');
+    this.searchEl.classList.remove(IS_HIDDEN_CLS);
 
-    this.searchOpenIconEl.classList.add('is-hidden');
-    this.searchCloseIconEl.classList.remove('is-hidden');
+    this.searchOpenIconEl.classList.add(IS_HIDDEN_CLS);
+    this.searchCloseIconEl.classList.remove(IS_HIDDEN_CLS);
 
     this.state.isSearchOpen = true;
 };
 
 Nav.prototype.closeSearch = function() {
-    this.searchEl.classList.add('is-hidden');
+    this.searchEl.classList.add(IS_HIDDEN_CLS);
 
-    this.searchOpenIconEl.classList.remove('is-hidden');
-    this.searchCloseIconEl.classList.add('is-hidden');
+    this.searchOpenIconEl.classList.remove(IS_HIDDEN_CLS);
+    this.searchCloseIconEl.classList.add(IS_HIDDEN_CLS);
 
     this.state.isSearchOpen = false;
 };
@@ -180,13 +184,13 @@ Nav.prototype.toggleSearch = function() {
 };
 
 Nav.prototype.showGallery = function() {
-    this.galleryEl.classList.remove('is-hidden');
+    this.galleryEl.classList.remove(IS_HIDDEN_CLS);
 
     this.state.isGalleryHidden = false;
 };
 
 Nav.prototype.hideGallery = function() {
-    this.galleryEl.classList.add('is-hidden');
+    this.galleryEl.classList.add(IS_HIDDEN_CLS);
 
     this.state.isGalleryHidden = false;
 };
