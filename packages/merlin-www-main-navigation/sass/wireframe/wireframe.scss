@@ -330,6 +330,8 @@
 .c-nav__main {}
 .c-nav__main-list {
     font-size: 0;
+    padding: 0;
+    margin: 0;
 
     @include at-medium-size {
         text-align: center;
@@ -370,10 +372,13 @@
 }
 
 .c-nav__alt-list {
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+
     @include at-medium-size {
         background-color: #fff;
         display: none;
-        font-size: 0;
         left: 0;
         position: absolute;
         top: 100%;
@@ -465,6 +470,8 @@
 
 .c-nav__social-list {
     font-size: 0;
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
 
@@ -498,10 +505,13 @@
 }
 
 .c-nav__share-list {
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+
     @include at-medium-size {
         background-color: #fff;
         display: none;
-        font-size: 0;
         right: 0;
         position: absolute;
         top: 100%;
