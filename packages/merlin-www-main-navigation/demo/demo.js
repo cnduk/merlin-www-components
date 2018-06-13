@@ -1,2 +1,2 @@
-import MAIN_NAVIGATION from '../js/main-navigation';
+import NAV from '../js/main-navigation';
 
