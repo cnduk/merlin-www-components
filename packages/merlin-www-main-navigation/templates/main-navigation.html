@@ -15,27 +15,27 @@
         <input id="c-nav__search-checkbox" class="c-nav__search-checkbox js-c-nav__search-checkbox" type="checkbox">
         <label for="c-nav__search-checkbox" class="c-nav__search-icon js-c-nav__search-icon">
             <div class="js-c-nav__open-icon c-nav__open-icon">
-                {{# data.nav_search_open_icon }}
+                {{# data.search_open_icon }}
                 {{> @cnbritain/merlin-www-image }}
-                {{/ data.nav_search_open_icon }}
+                {{/ data.search_open_icon }}
             </div>
             <div class="js-c-nav__close-icon c-nav__close-icon is-hidden">
-                {{# data.nav_menu_close_icon }}
+                {{# data.search_close_icon }}
                 {{> @cnbritain/merlin-www-image }}
-                {{/ data.nav_menu_close_icon }}
+                {{/ data.search_close_icon }}
             </div>
         </label>
         <input id="c-nav__toggle-checkbox" class="c-nav__toggle-checkbox js-c-nav__toggle-checkbox" type="checkbox">
         <label for="c-nav__toggle-checkbox" class="c-nav__toggle-icon js-c-nav__toggle-icon">
             <div class="js-c-nav__open-icon c-nav__open-icon">
-                {{# data.share_menu_icon }}
+                {{# data.menu_open_icon }}
                 {{> @cnbritain/merlin-www-image }}
-                {{/ data.share_menu_icon }}
+                {{/ data.menu_open_icon }}
             </div>
             <div class="js-c-nav__close-icon c-nav__close-icon is-hidden">
-                {{# data.nav_menu_close_icon }}
+                {{# data.menu_close_icon }}
                 {{> @cnbritain/merlin-www-image }}
-                {{/ data.nav_menu_close_icon }}
+                {{/ data.menu_close_icon }}
             </div>
         </label>
         <div class="c-nav__content">
@@ -114,6 +114,7 @@
                 </div>
             </aside>
             {{/ data.mobile_promo }}
+            {{/ state.has_promo }}
 
             {{# state.has_social }}
             <div class="c-nav__social">
