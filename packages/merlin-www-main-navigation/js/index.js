@@ -2,6 +2,76 @@ var IS_HIDDEN_CLS = 'is-hidden';
 var IS_FIXED_CLS = 'is-fixed';
 var IS_OPEN_CLS = 'is-open';
 
+function GalleryNav(el) {
+    this.el = el;
+    this.state = {
+        isListView: true,
+        isGridView: false
+    };
+
+    this.galleryTitleEl = el.querySelector('.js-c-nav__gallery-title');
+
+    this.galleryCountEl = el.querySelector('.js-c-nav__gallery-current');
+    this.galleryTotalEl = el.querySelector('.js-c-nav__gallery-total');
+
+    this.galleryIconEl = el.querySelector('.js-c-nav__gallery-icon');
+    this.galleryListIconEl = this.galleryIconEl.querySelector('.js-c-nav__list-icon');
+    this.galleryGridIconEl = this.galleryIconEl.querySelector('.js-c-nav__grid-icon');
+
+    this.setTitle = this.setTitle.bind(this);
+    this.setCount = this.setCount.bind(this);
+    this.setTotal = this.setTotal.bind(this);
+
+    this.showListView = this.showListView.bind(this);
+    this.hideListView = this.hideListView.bind(this);
+    this.toggleListView = this.toggleListView.bind(this);
+
+    this.galleryIconEl.addEventListener('click', this.toggleListView);
+}
+
+GalleryNav.prototype.setTitle = function(value) {
+    this.galleryTitleEl.innerHTML = value;
+};
+
+GalleryNav.prototype.setCount = function(value) {
+    this.galleryCountEl.innerHTML = value;
+};
+
+GalleryNav.prototype.setTotal = function(value) {
+    this.galleryTotalEl.innerHTML = value;
+};
+
+GalleryNav.prototype.toggleListView = function() {
+    if (this.state.isListView) {
+        this.hideListView();
+    }
+
+    else {
+        this.showListView();
+    }
+};
+
+GalleryNav.prototype.showListView = function() {
+    if (this.state.isListView) return;
+
+    this.galleryListIconEl.classList.remove(IS_HIDDEN_CLS);
+    this.galleryGridIconEl.classList.add(IS_HIDDEN_CLS);
+
+    this.state.isListView = true;
+    this.state.isGridView = false;
+};
+
+GalleryNav.prototype.hideListView = function() {
+    if (this.state.isGridView) return;
+
+    this.galleryListIconEl.classList.add(IS_HIDDEN_CLS);
+    this.galleryGridIconEl.classList.remove(IS_HIDDEN_CLS);
+
+    this.state.isListView = false;
+    this.state.isGridView = true;
+};
+
+
 function Nav(el) {
     this.el = el;
     this.state = {
@@ -32,6 +102,10 @@ function Nav(el) {
     this.toggleCloseIconEl = this.toggleIconEl.querySelector('.js-c-nav__close-icon');
 
     this.galleryEl = el.querySelector('.js-c-nav__gallery');
+
+    if (this.galleryEl) {
+        this.galleryNav = new GalleryNav(this.galleryEl);
+    }
 
     this.logoEl = el.querySelector('.js-c-nav__logo');
 
@@ -66,12 +140,16 @@ function Nav(el) {
 }
 
 Nav.prototype.fix = function() {
+    if (this.state.isFixed) return;
+
     this.el.classList.add(IS_FIXED_CLS);
     this.logoEl.classList.remove(IS_HIDDEN_CLS);
     this.state.isFixed = true;
 };
 
 Nav.prototype.unfix = function() {
+    if (!this.state.isFixed) return;
+
     this.el.classList.remove(IS_FIXED_CLS);
     this.logoEl.classList.add(IS_HIDDEN_CLS);
     this.state.isFixed = false;
@@ -95,6 +173,8 @@ Nav.prototype.togglefix = function() {
 };
 
 Nav.prototype.open = function() {
+    if (this.state.isOpen) return;
+
     document.body.style.overflow = 'hidden';
     this.el.classList.add(IS_OPEN_CLS);
 
@@ -105,6 +185,8 @@ Nav.prototype.open = function() {
 };
 
 Nav.prototype.close = function() {
+    if (!this.state.isOpen) return;
+
     document.body.style.overflow = '';
     this.el.classList.remove(IS_OPEN_CLS);
 
@@ -125,11 +207,15 @@ Nav.prototype.toggleOpen = function() {
 };
 
 Nav.prototype.show = function() {
+    if (!this.state.isHidden) return;
+
     this.el.classList.remove(IS_HIDDEN_CLS);
     this.state.isHidden = false;
 };
 
 Nav.prototype.hide = function() {
+    if (this.state.isHidden) return;
+
     this.el.classList.add(IS_HIDDEN_CLS);
     this.state.isHidden = true;
 };
@@ -156,6 +242,8 @@ Nav.prototype.toggleShow = function() {
 };
 
 Nav.prototype.openSearch = function() {
+    if (this.state.isSearchOpen) return;
+
     this.searchEl.classList.remove(IS_HIDDEN_CLS);
 
     this.searchOpenIconEl.classList.add(IS_HIDDEN_CLS);
@@ -165,6 +253,8 @@ Nav.prototype.openSearch = function() {
 };
 
 Nav.prototype.closeSearch = function() {
+    if (!this.state.isSearchOpen) return;
+
     this.searchEl.classList.add(IS_HIDDEN_CLS);
 
     this.searchOpenIconEl.classList.remove(IS_HIDDEN_CLS);
@@ -184,12 +274,16 @@ Nav.prototype.toggleSearch = function() {
 };
 
 Nav.prototype.showGallery = function() {
+    if (!this.state.isGalleryHidden) return;
+
     this.galleryEl.classList.remove(IS_HIDDEN_CLS);
 
     this.state.isGalleryHidden = false;
 };
 
 Nav.prototype.hideGallery = function() {
+    if (this.state.isGalleryHidden) return;
+
     this.galleryEl.classList.add(IS_HIDDEN_CLS);
 
     this.state.isGalleryHidden = false;
