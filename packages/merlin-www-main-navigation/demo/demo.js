@@ -1,5 +1,8 @@
 import NAV from '../js';
 
+if (NAV.galleryEl) {
+    NAV.showGallery();
+}
 
 for (var i = 0; i < 10; i++) {
     var bodyCopy = document.createElement('p');
