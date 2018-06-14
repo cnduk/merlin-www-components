@@ -86,9 +86,9 @@
 }
 
 .c-magazine__content__date {}
-
 .c-magazine__cards {}
 .c-magazine__cards-wrapper {}
+
 .c-magazine__cards-list {
     list-style: none;
     margin: 0;
@@ -99,6 +99,7 @@
 
 .c-magazine__cards-listitem {
     box-sizing: border-box;
+    display: flex;
     font-size: initial;
     vertical-align: top;
     width: 100%;
@@ -111,7 +112,5 @@
         text-align: left;
     }
 }
-
-.global__button-reset{}
 
 .c-magazine__btn {}
