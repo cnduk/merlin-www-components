@@ -1,6 +1,6 @@
 {
     "data": {
-        "link_list": [{
+        "links": [{
             "data": {
                 "title": "News",
                 "url": "/topic/news"
@@ -257,7 +257,7 @@
             "translation": {},
             "type": "LinkedImage"
         },
-        "social_link_list": [{
+        "social_links": [{
             "data": {
                 "image": {
                     "data": {
@@ -550,7 +550,7 @@
             "translation": {},
             "type": "NavigationMasthead"
         },
-        "share_menu_icon": {
+        "menu_open_icon": {
             "data": {
                 "alt_text": null,
                 "credit": null,
@@ -578,7 +578,7 @@
             "translation": {},
             "type": "SVG"
         },
-        "nav_menu_close_icon": {
+        "menu_close_icon": {
             "data": {
                 "alt_text": null,
                 "credit": null,
@@ -606,7 +606,7 @@
             "translation": {},
             "type": "SVG"
         },
-        "nav_search_open_icon": {
+        "search_open_icon": {
             "data": {
                 "alt_text": null,
                 "credit": null,
@@ -634,7 +634,7 @@
             "translation": {},
             "type": "SVG"
         },
-        "nav_search_close_icon": {
+        "search_close_icon": {
             "data": {
                 "alt_text": null,
                 "credit": null,
@@ -662,6 +662,8 @@
             "translation": {},
             "type": "SVG"
         },
+        "gallery_list_icon": null,
+        "gallery_grid_icon": null,
         "social_title": "Follow Vogue",
         "newsletter_link": {
             "data": {
@@ -7801,7 +7803,6 @@
             "translation": {},
             "type": "ModelTopStories"
         },
-        "signpost": null,
         "mobile_promo": {
             "data": {
                 "offer": null,
@@ -7968,34 +7969,17 @@
             "translation": {},
             "type": "ModelPromotion"
         },
-        "gallery_navigation": null,
-        "search_overlay": {
-            "data": {
-                "form_url": "/search",
-                "input_placeholder": "Search",
-                "input_value": "",
-                "results_total": 0,
-                "results_label": "results"
-            },
-            "state": {
-                "has_results_label": false
-            },
-            "style": {
-                "cls": "",
-                "inline": ""
-            },
-            "translation": {},
-            "type": "SearchHeader"
-        }
+        "search_form_url": "/search",
+        "search_placeholder": "Search"
     },
     "state": {
-        "has_desktop_promo": true,
-        "has_mobile_promo": true,
-        "has_follow_menu": true,
+        "has_promo": true,
         "has_masthead": true,
-        "has_newsletter_link": true,
+        "has_newsletter": true,
+        "has_social": true,
         "has_search": true,
-        "has_social_list": true
+        "has_top_stories": true,
+        "has_gallery_nav": false
     },
     "style": {
         "cls": "",
