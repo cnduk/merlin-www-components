@@ -172,12 +172,7 @@
 }
 
 .c-nav__promo-wrapper {}
-.c-nav__promo-images {
-    @include at-x-large-size {
-        width: auto;
-    }
-}
-
+.c-nav__promo-images {}
 .c-nav__promo-covers {
     padding-right: 10px;
     text-align: right;
@@ -196,7 +191,6 @@
     text-align: left;
 
     @include at-x-large-size {
-        width: auto;
         vertical-align: top;
     }
 }

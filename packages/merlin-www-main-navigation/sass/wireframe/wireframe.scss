@@ -423,6 +423,10 @@
     display: table-cell;
     width: 50%;
     vertical-align: middle;
+
+    @include at-x-large-size {
+        width: auto;
+    }
 }
 
 .c-nav__promo-covers {
@@ -453,6 +457,10 @@
     display: table-cell;
     width: 50%;
     vertical-align: middle;
+
+    @include at-x-large-size {
+        width: auto;
+    }
 }
 
 .c-nav__promo-message {
