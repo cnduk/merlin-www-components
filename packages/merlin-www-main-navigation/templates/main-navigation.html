@@ -75,7 +75,10 @@
                     {{/ state.is_more }}{{/ state.is_desktop }}
                     {{/ data.links }}
                     <li class="c-nav__main-list-item c-nav__main-list-item--more">
-                        <a class="c-nav__main-link c-nav__main-link--more">More</a>
+                        <a class="c-nav__main-link c-nav__main-link--more">
+                            More
+                            <span class="c-nav__down-arrow"></span>
+                        </a>
                         <ul class="c-nav__alt-list">
                             {{# data.links }}
                             {{! Both states are on the same model }}
@@ -120,7 +123,13 @@
             <div class="c-nav__social">
                 <ul class="c-nav__social-list">
                     <li class="c-nav__social-list-item c-nav__social-list-item--follow">
-                        <a class="c-nav__social-link c-nav__social-link--follow">{{ data.social_title }}</a>
+                        <a class="c-nav__social-link c-nav__social-link--follow">
+                            Follow
+                            {{# data.social_brand }}
+                            <span class="c-nav__social-brand">{{ data.social_brand }}</span>
+                            {{/ data.social_brand }}
+                            <span class="c-nav__down-arrow"></span>
+                        </a>
                         <ul class="c-nav__share-list">
                             {{# data.social_links }}
                             <li class="c-nav__share-list-item">
