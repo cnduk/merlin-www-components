@@ -52,7 +52,7 @@
 .c-nav__wrapper {
     &:after {
         background-color: $isabelline;
-        content: '';
+        content: "";
         height: 1px;
         left: 50%;
         position: absolute;
@@ -75,12 +75,65 @@
 }
 
 .c-nav__search {
-    border-top: 1px solid $isabelline;
+    @include at-x-large-size {
+        top: 61px;
+
+        &:before {
+            background-color: rgba($black, 0.5);
+            content: "";
+            height: 100vh;
+            position: absolute;
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+    }
 }
 
-.c-nav__search-form {}
-.c-nav__search-input {}
-.c-nav__search-button {}
+.c-nav__search-form {
+    background-color: $black;
+
+    @include at-x-large-size {
+        padding: 30px 0;
+
+        &:before {
+            background-color: $black;
+            content: "";
+            height: 100%;
+            left: 50%;
+            position: absolute;
+            top: 0;
+            transform: translateX(-50%);
+            width: 100vw;
+            z-index: -1;
+        }
+    }
+}
+
+.c-nav__search-input {
+    @include font("EXCHANGE WEB", 14px, 400, 60px);
+    background-color: $black;
+    color: $white;
+    padding: 0 20px;
+
+    @include at-x-large-size {
+        @include font-size(40px);
+        @include line-height(40px);
+        text-align: center;
+        padding: 0 60px;
+    }
+}
+
+.c-nav__search-button {
+    background-color: $black;
+    border-left: 1px solid $white;
+    box-sizing: border-box;
+
+    svg {
+        fill: $white;
+    }
+}
 
 .c-nav__main {}
 .c-nav__main-list {
@@ -196,7 +249,7 @@
 }
 
 .c-nav__promo-message {
-    @include font('BRUTAL', 13px, 400, 15px);
+    @include font("BRUTAL", 13px, 400, 15px);
     color: $black;
     margin-bottom: 10px;
     white-space: pre-line;
@@ -259,30 +312,30 @@
 }
 
 .c-nav__share-link--youtube {
-    @include button-share-light('youtube');
+    @include button-share-light(""youtube"");
     &:hover {
-        @include button-share-light-hover('youtube');
+        @include button-share-light-hover(""youtube"");
     }
 }
 
 .c-nav__share-link--twitter {
-    @include button-share-light('twitter');
+    @include button-share-light(""twitter"");
     &:hover {
-        @include button-share-light-hover('twitter');
+        @include button-share-light-hover(""twitter"");
     }
 }
 
 .c-nav__share-link--instagram {
-    @include button-share-light('instagram');
+    @include button-share-light(""instagram"");
     &:hover {
-        @include button-share-light-hover('instagram');
+        @include button-share-light-hover(""instagram"");
     }
 }
 
 .c-nav__share-link--facebook {
-    @include button-share-light('facebook');
+    @include button-share-light(""facebook"");
     &:hover {
-        @include button-share-light-hover('facebook');
+        @include button-share-light-hover(""facebook"");
     }
 }
 

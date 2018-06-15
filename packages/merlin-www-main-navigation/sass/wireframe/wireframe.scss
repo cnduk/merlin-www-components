@@ -280,6 +280,7 @@
 
     @include at-x-large-size {
         display: none;
+        height: auto;
         position: absolute;
         top: 60px;
         width: 100%;
