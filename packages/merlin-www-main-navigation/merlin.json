@@ -4,7 +4,8 @@
         "demo": "demo/demo.js"
     },
     "themes": {
-        "wireframe": "sass/wireframe/wireframe.scss"
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "wired": "sass/wired/wired.scss"
     },
     "partials": {
         "main-navigation": "templates/main-navigation.html"
@@ -18,6 +19,7 @@
     "main": "main-navigation",
     "data": {
         "all": "data/all.json",
+        "wi-all": "data/wi-all.json",
         "gallery": "data/gallery.json",
         "masthead_takeover": "data/masthead_takeover.json"
     }

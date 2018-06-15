@@ -5,7 +5,7 @@
 .c-masthead {
     display: none;
 
-    @include at-medium-size {
+    @include at-x-large-size {
         display: block;
     }
 }
@@ -39,7 +39,7 @@
             top: 0;
             width: 100%;
 
-            @include at-medium-size {
+            @include at-x-large-size {
                 height: 60px;
                 overflow: initial;
                 position: relative;
@@ -57,7 +57,7 @@
     }
 
     &.is-hidden {
-        @include max-screen($MEDIUM_SIZE - 1px) {
+        @include max-screen($X_LARGE_SIZE - 1px) {
             .c-nav__wrapper {
                 top: -60px;
             }
@@ -109,7 +109,7 @@
         width: 15px;
     }
 
-    @include at-medium-size {
+    @include at-x-large-size {
         display: block;
     }
 }
@@ -124,7 +124,7 @@
             top: 0;
             width: 100%;
 
-            @include at-medium-size {
+            @include at-x-large-size {
                 height: 60px;
                 position: relative;
             }
@@ -165,7 +165,7 @@
         width: 15px;
     }
 
-    @include at-medium-size {
+    @include at-x-large-size {
         display: none;
     }
 }
@@ -196,7 +196,7 @@
     position: relative;
     width: 100%;
 
-    @include max-screen($MEDIUM_SIZE - 1px) {
+    @include max-screen($X_LARGE_SIZE - 1px) {
         transition: top 300ms;
         will-change: top;
     }
@@ -223,7 +223,7 @@
     position: relative;
     width: 100%;
 
-    @include max-screen($MEDIUM_SIZE - 1px) {
+    @include max-screen($X_LARGE_SIZE - 1px) {
         &:before {
             background-color: #fff;
             content: '';
@@ -235,7 +235,7 @@
         }
     }
 
-    @include at-medium-size {
+    @include at-x-large-size {
         overflow: initial;
         padding-top: 0;
     }
@@ -258,7 +258,7 @@
     z-index: 1;
 
     &.is-hidden {
-        @include at-medium-size {
+        @include at-x-large-size {
             svg,
             img {
                 transform: translateY(100%);
@@ -278,7 +278,7 @@
     height: 60px;
     position: relative;
 
-    @include at-medium-size {
+    @include at-x-large-size {
         display: none;
         position: absolute;
         top: 60px;
@@ -301,7 +301,7 @@
     outline: none;
     width: calc(100% - 60px);
 
-    @include at-medium-size {
+    @include at-x-large-size {
         width: 100%;
     }
 }
@@ -323,7 +323,7 @@
         width: 15px;
     }
 
-    @include at-medium-size {
+    @include at-x-large-size {
         display: none;
     }
 }
@@ -334,7 +334,7 @@
     padding: 0;
     margin: 0;
 
-    @include at-medium-size {
+    @include at-x-large-size {
         text-align: center;
     }
 }
@@ -342,13 +342,13 @@
 .c-nav__main-list-item {
     position: relative;
 
-    @include at-medium-size {
+    @include at-x-large-size {
         display: inline-block;
     }
 }
 
 .c-nav__main-list-item--more {
-    @include at-medium-size {
+    @include at-x-large-size {
         &:hover {
             .c-nav__alt-list {
                 display: block;
@@ -367,7 +367,7 @@
 .c-nav__main-link--more {
     display: none;
 
-    @include at-medium-size {
+    @include at-x-large-size {
         display: block;
     }
 }
@@ -377,7 +377,7 @@
     margin: 0;
     padding: 0;
 
-    @include at-medium-size {
+    @include at-x-large-size {
         background-color: #fff;
         display: none;
         left: 0;
@@ -393,7 +393,7 @@
     position: relative;
     width: 50%;
 
-    @include at-medium-size {
+    @include at-x-large-size {
         display: block;
         width: 100%;
     }
@@ -407,7 +407,7 @@
 }
 
 .c-nav__promo {
-    @include at-medium-size {
+    @include at-x-large-size {
         bottom: 60px;
         padding-left: 30px;
         position: absolute;
@@ -462,7 +462,7 @@
 .c-nav__promo-button {}
 
 .c-nav__social {
-    @include at-medium-size {
+    @include at-x-large-size {
         position: absolute;
         right: 60px;
         top: 0;
@@ -482,7 +482,7 @@
 }
 
 .c-nav__social-list-item--follow {
-    @include at-medium-size {
+    @include at-x-large-size {
         &:hover {
             .c-nav__share-list {
                 display: block;
@@ -495,7 +495,7 @@
     display: block;
     font-size: initial;
 
-    @include at-medium-size {
+    @include at-x-large-size {
         height: 60px;
         line-height: 60px;
     }
@@ -510,7 +510,7 @@
     margin: 0;
     padding: 0;
 
-    @include at-medium-size {
+    @include at-x-large-size {
         background-color: #fff;
         display: none;
         right: 0;

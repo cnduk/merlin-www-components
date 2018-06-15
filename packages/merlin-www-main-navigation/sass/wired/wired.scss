@@ -1,26 +1,282 @@
-@import "@cnbritain/merlin-www-common:wired";
 @import "@cnbritain/merlin-www-buttons:wired";
-@import "@cnbritain/merlin-www-search-header:wired";
+@import "@cnbritain/merlin-www-common:wired";
+@import "@cnbritain/merlin-www-image:wired";
 
 @import "../wireframe/wireframe";
 
-@import "_base";
-@import "_promo";
-@import "_masthead";
-@import "_dropdown";
-@import "_social";
-@import "_search";
-@import "_gallery";
+.c-masthead {
+    background-color: $white;
+}
 
-.n-vanishing-nav {
-    .n-main__sticker-child {
-        transform: translate(0%, 0%);
-        transition: transform 0.2s ease-in-out;
+.c-masthead__wrapper {}
+.c-masthead__logo {
+    height: 70px;
+    padding: 32px 0;
+    width: auto;
+}
+
+.c-nav {
+    border-top: 1px solid $isabelline;
+    box-sizing: border-box;
+}
+
+.c-nav__search-icon {
+    border-left: 1px solid $isabelline;
+    box-sizing: border-box;
+
+    @include min-screen($XX_LARGE_SIZE + -1px) {
+        border-right: 1px solid $isabelline;
+    }
+}
+
+.c-nav__toggle-icon {
+    border-left: 1px solid $isabelline;
+    box-sizing: border-box;
+
+    @include min-screen($XX_LARGE_SIZE + -1px) {
+        border-right: 1px solid $isabelline;
     }
 
-    &.is-hidden {
-        .n-main__sticker-child {
-            transform: translate(0, -100%);
+    svg {
+        width: 18px;
+    }
+}
+
+.c-nav__open-icon {}
+.c-nav__close-icon {}
+
+.c-nav__wrapper {
+    &:after {
+        background-color: $isabelline;
+        content: '';
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        top: 60px;
+        transform: translateX(-50%);
+        width: 100vw;
+
+        @include at-x-large-size {
+            z-index: -1;
         }
+    }
+}
+
+.c-nav__content {}
+
+.c-nav__top-stories {}
+
+.c-nav__logo {
+    width: 100px;
+}
+
+.c-nav__search {}
+.c-nav__search-form {}
+.c-nav__search-input {}
+.c-nav__search-button {}
+
+.c-nav__main {}
+.c-nav__main-list {
+    padding: 0 20px 20px 20px;
+
+    @include at-x-large-size {
+        padding: 0;
+    }
+}
+
+.c-nav__main-list-item {
+    @include at-x-large-size {
+        & + .c-nav__main-list-item {
+            &:before {
+                background-color: $isabelline;
+                content: "";
+                display: block;
+                height: 20px;
+                margin-top: -10px;
+                position: absolute;
+                top: 50%;
+                width: 1px;
+            }
+        }
+    }
+}
+
+.c-nav__main-list-item--more {}
+.c-nav__main-link {
+    @include font("EXCHANGE WEB", 15px, 400, 60px);
+    border-bottom: 1px solid $isabelline;
+    box-sizing: border-box;
+    color: $black;
+
+    @include at-x-large-size {
+        box-sizing: content-box;
+        margin: 0 20px;
+        &:hover {
+            border-bottom: 1px solid $black;
+        }
+    }
+}
+
+.c-nav__main-link--more {
+    border-bottom: none;
+
+    @include at-x-large-size {
+        box-sizing: border-box;
+        &:hover {
+            border-bottom: none;
+        }
+    }
+}
+
+.c-nav__alt-list {
+    padding: 15px 0 0 0;
+
+    @include at-x-large-size {
+        border-bottom: 1px solid $isabelline;
+        border-left: 1px solid $isabelline;
+        border-right: 1px solid $isabelline;
+        padding: 0 20px 0 20px;
+    }
+}
+
+.c-nav__alt-list-item {}
+.c-nav__alt-link {
+    @include font("EXCHANGE WEB", 15px, 400, 40px);
+    border-bottom: 1px solid $white;
+    color: $black;
+    height: 40px;
+
+    @include at-x-large-size {
+        &:hover {
+            border-bottom: 1px solid $black;
+        }
+    }
+}
+
+.c-nav__promo {
+    background-color: $white-smoke;
+    padding: 20px;
+
+    @include at-x-large-size {
+        background-color: transparent;
+        bottom: 50px;
+        padding: 0 0 0 60px;
+    }
+}
+
+.c-nav__promo-wrapper {}
+.c-nav__promo-images {}
+.c-nav__promo-covers {
+    padding-right: 10px;
+    text-align: right;
+}
+
+.c-nav__promo-cover {
+    @include at-x-large-size {
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+}
+
+.c-nav__promo-content {
+    padding-left: 10px;
+    text-align: left;
+
+    @include at-x-large-size {
+        vertical-align: top;
+    }
+}
+
+.c-nav__promo-message {}
+.c-nav__promo-button {
+    @include button-single();
+    @include button-single-light();
+    padding: 4px 7px;
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
+
+.c-nav__social {
+    margin: 20px 16px 32px 16px;
+
+    @include at-x-large-size {
+        margin: 0;
+    }
+}
+
+.c-nav__social-list {}
+.c-nav__social-list-item {}
+.c-nav__social-list-item--follow {}
+
+.c-nav__social-link {}
+.c-nav__social-link--follow {
+    @include font("BRUTAL", 13px, 500, 13px);
+    margin: 0 0 20px 0;
+
+    @include at-x-large-size {
+        @include font("EXCHANGE WEB", 15px, 400, 60px);
+        margin: 0 20px;
+    }
+}
+
+.c-nav__share-list {
+    @include at-x-large-size {
+        border-bottom: 1px solid $isabelline;
+        border-left: 1px solid $isabelline;
+        border-right: 1px solid $isabelline;
+        padding: 15px 10px;
+    }
+}
+
+.c-nav__share-list-item {
+    margin: 0 5px;
+}
+
+.c-nav__share-list-item--newsletter {
+
+}
+
+.c-nav__share-link {
+    @include button-share();
+}
+
+.c-nav__share-link--youtube {
+    @include button-share-light('youtube');
+    &:hover {
+        @include button-share-light-hover('youtube');
+    }
+}
+
+.c-nav__share-link--twitter {
+    @include button-share-light('twitter');
+    &:hover {
+        @include button-share-light-hover('twitter');
+    }
+}
+
+.c-nav__share-link--instagram {
+    @include button-share-light('instagram');
+    &:hover {
+        @include button-share-light-hover('instagram');
+    }
+}
+
+.c-nav__share-link--facebook {
+    @include button-share-light('facebook');
+    &:hover {
+        @include button-share-light-hover('facebook');
+    }
+}
+
+.c-nav__share-button {
+    @include button-single();
+    @include button-single-light();
+    margin-top: 30px;
+
+    &:hover {
+        @include button-single-light-hover();
     }
 }
