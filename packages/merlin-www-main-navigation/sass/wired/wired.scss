@@ -27,6 +27,10 @@
     @include min-screen($XX_LARGE_SIZE + -1px) {
         border-right: 1px solid $isabelline;
     }
+
+    svg {
+        width: 18px;
+    }
 }
 
 .c-nav__toggle-icon {
@@ -70,7 +74,10 @@
     width: 100px;
 }
 
-.c-nav__search {}
+.c-nav__search {
+    border-top: 1px solid $isabelline;
+}
+
 .c-nav__search-form {}
 .c-nav__search-input {}
 .c-nav__search-button {}
@@ -165,7 +172,12 @@
 }
 
 .c-nav__promo-wrapper {}
-.c-nav__promo-images {}
+.c-nav__promo-images {
+    @include at-x-large-size {
+        width: auto;
+    }
+}
+
 .c-nav__promo-covers {
     padding-right: 10px;
     text-align: right;
@@ -184,11 +196,18 @@
     text-align: left;
 
     @include at-x-large-size {
+        width: auto;
         vertical-align: top;
     }
 }
 
-.c-nav__promo-message {}
+.c-nav__promo-message {
+    @include font('BRUTAL', 13px, 400, 15px);
+    color: $black;
+    margin-bottom: 10px;
+    white-space: pre-line;
+}
+
 .c-nav__promo-button {
     @include button-single();
     @include button-single-light();
@@ -221,6 +240,8 @@
         margin: 0 20px;
     }
 }
+
+.c-nav__social-brand {}
 
 .c-nav__share-list {
     @include at-x-large-size {
@@ -279,4 +300,36 @@
     &:hover {
         @include button-single-light-hover();
     }
+}
+
+.c-nav__gallery {
+
+}
+
+.c-nav__gallery-title {
+
+}
+
+.c-nav__gallery-count {
+
+}
+
+.c-nav__gallery-current {
+
+}
+
+.c-nav__gallery-total {
+
+}
+
+.c-nav__gallery-icon {
+
+}
+
+.c-nav__list-icon {
+
+}
+
+.c-nav__grid-icon {
+
 }

@@ -505,6 +505,12 @@
     display: block;
 }
 
+.c-nav__social-brand {
+    @include at-x-large-size {
+        display: none;
+    }
+}
+
 .c-nav__share-list {
     font-size: 0;
     margin: 0;
@@ -657,5 +663,22 @@
 
     &.is-hidden {
         display: none;
+    }
+}
+
+.c-nav__down-arrow {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #000;
+    content: "";
+    display: none;
+    height: 0;
+    position: relative;
+    width: 0;
+    top: -2px;
+    margin-left: 10px;
+
+    @include at-x-large-size {
+        display: inline-block;
     }
 }
