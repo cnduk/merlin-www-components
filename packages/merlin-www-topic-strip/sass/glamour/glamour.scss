@@ -3,28 +3,38 @@
 
 @import "../wireframe/wireframe";
 
-.c-topic-strip {
+.c-topic-strip {}
+
+.c-topic-strip-wrapper {
     margin-bottom: -10px;
 }
 
 .c-topic-strip__title {
     @include font('GRAPHIK', 13px, 'SEMI BOLD');
+    display: inline-block;
     margin-bottom: 10px;
     margin-right: 10px;
 }
 
-.c-topic-strip__list {}
+.c-topic-strip__list {
+    display: inline-block;
+}
 
 .c-topic-strip__listitem {
     margin-bottom: 10px;
     margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .c-topic-strip__link {
     @include button-group();
     @include button-group-light();
 
-    &:hover {
+    &:hover,
+    &:focus {
         @include button-group-light-hover();
     }
 }
@@ -52,23 +62,53 @@
         display: none;
     }
 
-    .c-topic-strip__listitem:last-child {
-        margin-right: 0;
-    }
-
     @include desktop-size {
         display: inline-block;
     }
 }
 
 .c-topic-strip--tg-header {
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    overflow-x: auto;
     text-align: center;
+    white-space: nowrap;
 
-    .c-topic-strip__title {
-        display: inline-block;
+    .c-topic-strip-wrapper {
+        padding-left: $MOBILE_SIDE_GUTTER;
     }
 
-    .c-topic-strip__list {
-        display: inline-block;
+    .c-topic-strip__listitem:last-child {
+        padding-right: $MOBILE_SIDE_GUTTER;
     }
+
+
+    @include tablet-size {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+
+        .c-topic-strip-wrapper {
+            padding-left: $TABLET_SIDE_GUTTER;
+        }
+
+        .c-topic-strip__listitem:last-child {
+            padding-right: $TABLET_SIDE_GUTTER;
+        }
+
+    }
+
+    @include desktop-size {
+        margin-left: -$DESKTOP_SIDE_GUTTER;
+        margin-right: -$DESKTOP_SIDE_GUTTER;
+        white-space: normal;
+
+        .c-topic-strip-wrapper {
+            padding-left: 0;
+        }
+
+        .c-topic-strip__listitem:last-child {
+            padding-right: 0;
+        }
+    }
+
 }
