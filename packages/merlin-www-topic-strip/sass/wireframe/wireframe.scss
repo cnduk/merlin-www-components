@@ -3,20 +3,20 @@
 
 
 // DEBUG
-body {
-    padding-left: $MOBILE_SIDE_GUTTER;
-    padding-right: $MOBILE_SIDE_GUTTER;
+// body {
+//     padding-left: $MOBILE_SIDE_GUTTER;
+//     padding-right: $MOBILE_SIDE_GUTTER;
 
-    @include tablet-size {
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
-    }
+//     @include tablet-size {
+//         padding-left: $TABLET_SIDE_GUTTER;
+//         padding-right: $TABLET_SIDE_GUTTER;
+//     }
 
-    @include desktop-size {
-        padding-left: $DESKTOP_SIDE_GUTTER;
-        padding-right: $DESKTOP_SIDE_GUTTER;
-    }
-}
+//     @include desktop-size {
+//         padding-left: $DESKTOP_SIDE_GUTTER;
+//         padding-right: $DESKTOP_SIDE_GUTTER;
+//     }
+// }
 
 
 .c-topic-strip {}
