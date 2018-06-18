@@ -4,62 +4,71 @@
 @import "../wireframe/wireframe";
 
 .c-topic-strip {
-    text-align: left;
-}
-
-.c-topic-strip--bleed {}
-.c-topic-strip--c-card-section {
-    display: none;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        display: inline-block;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: auto
-    }
+    margin-bottom: -10px;
 }
 
 .c-topic-strip__title {
-    display: none;
+    @include font('GRAPHIK', 13px, 'SEMI BOLD');
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
-.c-topic-strip__list {
-    font-size: 0;
+.c-topic-strip__list {}
+
+.c-topic-strip__listitem {
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
-li.c-topic-strip__item {
-    font-size: initial;
-
-    & + li.c-topic-strip__item {
-        margin-left: 10px;
-    }
-}
-
-.c-topic-strip--article-related {
-    margin-bottom: -10px;
-    text-align: center;
-    white-space: normal;
-
-    .c-topic-strip__item {
-        margin-bottom: 10px;
-        margin-right: 10px;
-
-        & + .c-topic-strip__item {
-            margin-left: 0;
-        }
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        text-align: left;
-    }
-}
-
-.c-topic-strip__btn {
+.c-topic-strip__link {
     @include button-group();
     @include button-group-light();
 
     &:hover {
         @include button-group-light-hover();
+    }
+}
+
+.c-topic-strip--a-related,
+.c-topic-strip--sh-trends {
+    text-align: center;
+
+    .c-topic-strip__title {
+        display: none;
+    }
+
+    @include desktop-size {
+        text-align: left;
+    }
+}
+
+.c-topic-strip--c-card-section {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .c-topic-strip__title {
+        display: none;
+    }
+
+    .c-topic-strip__listitem:last-child {
+        margin-right: 0;
+    }
+
+    @include desktop-size {
+        display: inline-block;
+    }
+}
+
+.c-topic-strip--tg-header {
+    text-align: center;
+
+    .c-topic-strip__title {
+        display: inline-block;
+    }
+
+    .c-topic-strip__list {
+        display: inline-block;
     }
 }

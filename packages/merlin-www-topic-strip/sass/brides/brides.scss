@@ -6,12 +6,23 @@
 .c-topic-strip {
     border-bottom: 1px solid $ballet-grey;
     border-top: 1px solid $ballet-grey;
-    overflow-x: initial;
+    box-sizing: border-box;
     position: relative;
     text-align: left;
+    white-space: nowrap;
+
+    &:after {
+        background-color: $ballet-grey;
+        content: '';
+        height: 32px;
+        left: 50%;
+        position: absolute;
+        top: 0;
+        transform: translateY(-50%);
+        width: 1px;
+    }
 
     @include desktop-size {
-        box-sizing: border-box;
         border: 1px solid $ballet-grey;
 
         &:before {
@@ -24,94 +35,12 @@
             top: 16px;
         }
     }
-
-    &:after {
-        background-color: $ballet-grey;
-        content: '';
-        height: 32px;
-        left: 50%;
-        position: absolute;
-        top: 0;
-        transform: translateY(-50%);
-        width: 1px;
-    }
 }
 
-.c-topic-strip--article-related {
-    margin-top: 40px;
-    margin-bottom: 40px;
-
-    @include desktop-size {
-        white-space: normal;
-        text-align: center;
-    }
-
-    &:after {
-        display: none;
-    }
-
-    @include article-large-size {
-        margin-top: 48px;
-    }
-}
-
-.c-topic-strip--bleed,
-.c-topic-strip--article-related {
-    margin-left: -$MOBILE_SIDE_GUTTER;
-    margin-right: -$MOBILE_SIDE_GUTTER;
-    padding-left: $MOBILE_SIDE_GUTTER;
-    padding-right: $MOBILE_SIDE_GUTTER;
-
-    @include tablet-size {
-        margin-left: -$TABLET_SIDE_GUTTER;
-        margin-right: -$TABLET_SIDE_GUTTER;
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
-    }
-
-    @include desktop-size {
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .c-topic-strip__wrapper {
-        margin-left: -$MOBILE_SIDE_GUTTER;
-        margin-right: -$MOBILE_SIDE_GUTTER;
-        padding-left: $MOBILE_SIDE_GUTTER;
-        padding-right: $MOBILE_SIDE_GUTTER;
-
-        @include tablet-size {
-            margin-left: -$TABLET_SIDE_GUTTER;
-            margin-right: -$TABLET_SIDE_GUTTER;
-            padding-left: $TABLET_SIDE_GUTTER;
-            padding-right: $TABLET_SIDE_GUTTER;
-        }
-
-        @include desktop-size {
-            margin-left: 0;
-            margin-right: 0;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-    }
-}
-
-.c-topic-strip--c-card-section {
-    margin-bottom: 36px;
-    margin-top: 24px;
-
-    @include desktop-size {
-        margin-bottom: 44px;
-        margin-top: 28px;
-        text-align: center;
-    }
-}
-
-.c-topic-strip__wrapper {
+.c-topic-strip-wrapper {
     overflow-x: auto;
     padding: 21px 0;
+    // Needed for the :before strip on desktop in .c-topic-strip
     position: relative;
 
     @include desktop-size {
@@ -120,8 +49,9 @@
 }
 
 .c-topic-strip__title {
-    @include font("FREIGHT DISPLAY PRO", 16px, 400, 16px, 20);
+    @include font("FREIGHT DISPLAY PRO", 16px, null, 16px, 20);
     color: $candle-grey;
+    display: inline-block;
     font-style: italic;
     margin-right: 32px;
     position: relative;
@@ -133,37 +63,122 @@
 }
 
 .c-topic-strip__list {
-    font-size: 0;
-    position: relative;
+    display: inline-block;
 }
 
-li.c-topic-strip__item {
-    font-size: initial;
-    margin-left: 16px;
-    margin-right: 16px;
+.c-topic-strip__listitem {
+    & + .c-topic-strip__listitem {
+        margin-left: 32px;
+    }
 
     @include desktop-size {
         margin-bottom: 16px;
     }
-
-    @include max-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT - 1) {
-        &:first-child {
-            margin-left: 0;
-        }
-
-        &:last-child {
-            margin-right: 0;
-        }
-    }
 }
 
-.c-topic-strip__btn {
+.c-topic-strip__link {
     @include button-group();
     @include button-group-light();
 
-    &:hover {
+    &:hover,
+    &:focus {
         @include button-group-light-hover();
     }
 }
 
-.c-topic-strip__btn--related {}
+
+.c-topic-strip--a-related,
+.c-topic-strip--sh-trends {
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    &:after {
+        display: none;
+    }
+
+    .c-topic-strip-wrapper {
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
+    }
+
+    @include tablet-size {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+
+        .c-topic-strip-wrapper {
+            padding-left: $TABLET_SIDE_GUTTER;
+            padding-right: $TABLET_SIDE_GUTTER;
+        }
+    }
+
+    @include desktop-size {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+
+        .c-topic-strip-wrapper {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+
+.c-topic-strip--c-card-section {
+    margin: 24px (-$MOBILE_SIDE_GUTTER) 36px (-$MOBILE_SIDE_GUTTER);
+
+    .c-topic-strip-wrapper {
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
+    }
+
+    @include tablet-size {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+
+        .c-topic-strip-wrapper {
+            padding-left: $TABLET_SIDE_GUTTER;
+            padding-right: $TABLET_SIDE_GUTTER;
+        }
+    }
+
+    @include desktop-size {
+        margin: 28px 0 44px 0;
+        text-align: center;
+
+        .c-topic-strip-wrapper {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+
+.c-topic-strip--tg-header {
+    margin: 0 (-$MOBILE_SIDE_GUTTER);
+
+    .c-topic-strip-wrapper {
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
+    }
+
+    @include tablet-size {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+
+        .c-topic-strip-wrapper {
+            padding-left: $TABLET_SIDE_GUTTER;
+            padding-right: $TABLET_SIDE_GUTTER;
+        }
+    }
+
+    @include desktop-size {
+        margin: 0;
+        text-align: center;
+
+        .c-topic-strip-wrapper {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}

@@ -1,20 +1,67 @@
-.c-topic-strip {}
+.c-topic-strip {
+    overflow-x: auto;
+    white-space: nowrap;
+}
 
-.c-topic-strip--bleed {
-    box-sizing: content-box;
+.c-topic-strip-wrapper {}
 
-    @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: (-$MOBILE_SIDE_GUTTER);
-        margin-right: (-$MOBILE_SIDE_GUTTER);
+.c-topic-strip__title {
+    @include font('COMMUTER SANS', 12px, null, 12px);
+    color: $black;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin-right: 15px;
+    text-transform: uppercase;
+}
+
+.c-topic-strip__list {
+    display: inline-block;
+}
+
+.c-topic-strip__listitem {
+    margin-bottom: $MARGIN_XX_SMALL;
+    margin-right: $MARGIN_XX_SMALL;
+}
+
+.c-topic-strip__link {
+    @include button-group;
+    @include button-group-light;
+
+    &:hover,
+    &:focus {
+        @include button-group-light-hover;
+    }
+}
+
+.c-topic-strip--a-related,
+.c-topic-strip--sh-trends {
+    margin: 30px auto;
+    overflow-x: visible;
+    white-space: normal;
+
+    .c-topic-strip__link {
+        @include button-related;
+        @include button-related-light;
+
+        &:hover,
+        &:focus {
+            @include button-related-light-hover;
+        }
+    }
+
+    @include desktop-size {
+        margin: 40px auto;
+    }
+}
+
+.c-topic-strip--tg-header {
+    margin-left: (-$MOBILE_SIDE_GUTTER);
+    margin-right: (-$MOBILE_SIDE_GUTTER);
+    text-align: center;
+
+    .c-topic-strip-wrapper {
         padding-left: $MOBILE_SIDE_GUTTER;
         padding-right: $MOBILE_SIDE_GUTTER;
-
-        .c-topic-strip__list {
-            margin-left: (-$MOBILE_SIDE_GUTTER);
-            margin-right: (-$MOBILE_SIDE_GUTTER);
-            padding-left: $MOBILE_SIDE_GUTTER;
-            padding-right: $MOBILE_SIDE_GUTTER;
-        }
     }
 }
 
@@ -25,66 +72,6 @@
 
     @include tablet-size {
         margin: 30px 0;
-    }
-}
-
-//li added due to specificity of .global__list-reset li setting margin to 0
-li.c-topic-strip__item {
-    & + & {
-        margin-left: 5px;
-
-        @include tablet-size {
-            margin-left: 10px;
-        }
-    }
-}
-
-.c-topic-strip__title {
-    @include font('COMMUTER SANS', 12px, 400, 12px);
-
-    color: $black;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-right: 15px;
-}
-
-.c-topic-strip__btn {
-    @include button-group;
-    @include button-group-light;
-
-    background: none;
-
-    &:hover {
-        @include button-group-light-hover;
-    }
-}
-
-.c-topic-strip--article-related {
-    margin: 30px auto;
-    overflow-x: visible;
-    text-align: left;
-    white-space: normal;
-
-    .c-topic-strip__list {
-        margin-top: -$MARGIN_XX_SMALL;
-    }
-
-    li.c-topic-strip__item,
-    li.c-topic-strip__item + .c-topic-strip__item {
-        margin: $MARGIN_XX_SMALL $MARGIN_XX_SMALL 0 0;
-    }
-
-    .c-topic-strip__btn {
-        @include button-related;
-        @include button-related-light;
-
-        &:hover {
-            @include button-related-light-hover;
-        }
-    }
-
-    @include desktop-size {
-        margin: 40px auto;
     }
 
 }

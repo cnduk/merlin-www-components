@@ -4,92 +4,101 @@
 @import "../wireframe/wireframe";
 
 .c-topic-strip {
-    text-align: left;
+    white-space: nowrap;
 }
 
-.c-topic-strip--bleed {
-    margin-left: -$MOBILE_SIDE_GUTTER;
-    margin-right: -$MOBILE_SIDE_GUTTER;
-    padding-left: $MOBILE_SIDE_GUTTER;
-    padding-right: $MOBILE_SIDE_GUTTER;
+.c-topic-strip-wrapper {
+    overflow-x: auto;
+}
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: -$TABLET_SIDE_GUTTER;
-        margin-right: -$TABLET_SIDE_GUTTER;
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
+.c-topic-strip__title {
+    @include font("GOTHAM", 11px, 'BOLD', 12px, -4);
+    display: inline-block;
+    margin-right: 16px;
+}
+
+.c-topic-strip__list {
+    display: inline-block;
+}
+
+.c-topic-strip__listitem {
+    margin-bottom: 8px;
+
+    & + .c-topic-strip__listitem {
+        margin-left: 8px;
+    }
+}
+
+.c-topic-strip__link {
+    @include button-group();
+    @include button-group-light();
+
+    &:hover,
+    &:focus {
+        @include button-group-light-hover();
+    }
+
+    @include desktop-size {
+        @include font-size(12px);
+    }
+}
+
+.c-topic-strip--a-related,
+.c-topic-strip--sh-trends {
+    margin: 0 (-$MOBILE_SIDE_GUTTER) -8px (-$MOBILE_SIDE_GUTTER);
+
+    .c-topic-strip-wrapper {
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
+    }
+
+    @include tablet-size {
+        margin: 0 0 -8px 0;
     }
 }
 
 .c-topic-strip--c-card-section {
-    margin-bottom: 24px;
-    margin-top: 24px;
+    margin: 24px (-$MOBILE_SIDE_GUTTER);
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        display: inline-block;
+    .c-topic-strip-wrapper {
+        padding: 0 $MOBILE_SIDE_GUTTER;
+    }
+
+    @include tablet-size {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+
+        .c-topic-strip-wrapper {
+            padding-left: $TABLET_SIDE_GUTTER;
+            padding-right: $TABLET_SIDE_GUTTER;
+        }
+    }
+
+    @include desktop-size {
         margin: 0;
         padding: 0;
         position: absolute;
         right: 0;
         top: 0;
-        width: auto;
     }
 }
 
-.c-topic-strip__title {
-    @include font("GOTHAM", 11px, 700, 12px, -4);
-    margin-right: 16px;
-    text-transform: capitalize;
-}
-
-.c-topic-strip__list {
-    font-size: 0;
-}
-
-li.c-topic-strip__item {
-    font-size: initial;
-
-    & + & {
-        margin-left: 8px;
-    }
-}
-
-.c-topic-strip--article-related {
+.c-topic-strip--tg-header {
     margin-left: -$MOBILE_SIDE_GUTTER;
     margin-right: -$MOBILE_SIDE_GUTTER;
-    padding-left: $MOBILE_SIDE_GUTTER;
-    padding-right: $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: -8px;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
-        white-space: normal;
+    .c-topic-strip-wrapper {
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
+    }
 
-        .c-topic-strip__item {
-            margin-bottom: 8px;
-            margin-right: 8px;
+    @include tablet-size {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
 
-            & + .c-topic-strip__item {
-                @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-                    margin-left: 0;
-                }
-            }
+        .c-topic-strip-wrapper {
+            padding-left: $TABLET_SIDE_GUTTER;
+            padding-right: $TABLET_SIDE_GUTTER;
         }
-    }
-}
-
-.c-topic-strip__btn {
-    @include button-group();
-    @include button-group-light();
-
-    &:hover {
-        @include button-group-light-hover();
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(12px);
     }
 }
