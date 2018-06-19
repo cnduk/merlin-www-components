@@ -257,6 +257,10 @@
     width: 110px;
     z-index: 1;
 
+    @include at-x-large-size {
+        position: absolute;
+    }
+
     &.is-hidden {
         @include at-x-large-size {
             svg,
@@ -269,7 +273,7 @@
     svg,
     img {
         height: 100%;
-        transition-duration: 300ms;
+        transition: transform 300ms linear;
         width: 100%;
     }
 }
