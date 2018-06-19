@@ -1,32 +1,20 @@
 .c-cookie-warning {
     background-color: $white;
     border-top: 1px solid $black;
-    padding: 20px;
+    padding: 20px 65px 20px 20px;
     z-index: 10;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         border-left: 1px solid $black;
         border-right: 1px solid $black;
-        max-width: 630px;
-        padding: 20px 30px;
-        width: 30%;
-    }
-}
-
-.c-cookie-warning__table-cell--cta {
-    vertical-align: top;
-    width: 50px;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
-        width: 60px;
+        padding: 20px 85px 20px 30px;
     }
 }
 
 .c-cookie-warning__message {
     @include font('COMMUTER SANS', 14px, 'MEDIUM', 17px);
-    margin: 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
+    @include at-medium-size {
         @include line-height(20px);
     }
 
@@ -40,8 +28,14 @@
 .c-cookie-warning__button {
     border: 1px solid $black;
     border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 20px;
     height: 25px;
     width: 25px;
+
+    @include at-medium-size {
+        margin-right: 30px;
+    }
 
     svg {
         display: block;

@@ -1,12 +1,8 @@
 <div class="c-cookie-warning is-hidden {{ style.cls }}" id="domCookieWarning">
-    <div class="c-cookie-warning__table">
-        <div class="c-cookie-warning__table-cell c-cookie-warning__table-cell--message">
-            <p class="c-cookie-warning__message">{{ &data.message }}</p>
-        </div>
-        <div class="c-cookie-warning__table-cell c-cookie-warning__table-cell--cta">
-            {{# data.icon_close }}
-                <button class="global__button-reset c-cookie-warning__button js-c-cookie-close-btn">{{> @cnbritain/merlin-www-image }}</button>
-            {{/ data.icon_close }}
-        </div>
+    <div class="c-cookie-warning-wrapper">
+        <p class="c-cookie-warning__message">{{ &data.message }}</p>
+        {{# data.icon_close }}
+        <button class="c-cookie-warning__button js-c-cookie-close-btn">{{> @cnbritain/merlin-www-image }}</button>
+        {{/ data.icon_close }}
     </div>
 </div>
