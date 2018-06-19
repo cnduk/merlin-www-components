@@ -313,3 +313,35 @@
         }
     }
 }
+
+.c-card-section--tg-related-tags {
+    margin-bottom: 0;
+    margin-top: 0;
+    max-width: none;
+    padding-bottom: $PADDING_LARGE;
+    padding-top: $PADDING_LARGE;
+
+    .c-card-list {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .c-card-list__item {
+        display: flex;
+    }
+
+    @include at-medium-size {
+        .c-card-list {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @include at-x-large-size {
+        .c-card-list {
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-right: 340px;
+        }
+    }
+
+}
