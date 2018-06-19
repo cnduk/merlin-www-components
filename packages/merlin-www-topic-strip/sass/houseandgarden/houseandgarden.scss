@@ -5,6 +5,7 @@
 
 .c-topic-strip {
     overflow-x: auto;
+    text-align: center;
     white-space: nowrap;
 }
 
@@ -21,29 +22,23 @@
     display: inline-block;
 }
 
-
-.c-topic-strip__listitem {
+.c-topic-strip__list-item {
     border-right: 1px solid $silver;
+    margin-bottom: 10px;
     margin-right: 10px;
     padding-right: 10px;
 
     &:last-child {
         border-right: none;
         margin-right: 0;
-        padding-right: 0;
-    }
-
-    @include tablet-size {
-        margin-bottom: 10px;
     }
 }
-
 
 .c-topic-strip__link {
     @include button-group();
     @include button-group-light();
 
-    @include font("BRANDON GROTESQUE", 12px, 700, 12px);
+    @include font("BRANDON GROTESQUE", 12px, 'BOLD', 12px);
     letter-spacing: 1px;
 
     &:hover,
@@ -57,13 +52,14 @@
 .c-topic-strip--sh-trends {
     margin-left: -$MOBILE_SIDE_GUTTER;
     margin-right: -$MOBILE_SIDE_GUTTER;
+    text-align: left;
 
     .c-topic-strip-wrapper {
         padding-left: $MOBILE_SIDE_GUTTER;
         padding-right: $MOBILE_SIDE_GUTTER;
     }
 
-    .c-topic-strip__listitem {
+    .c-topic-strip__list-item {
         border-right: none;
         padding-right: 0;
     }
@@ -93,7 +89,6 @@
 
 .c-topic-strip--c-card-section {
     margin: 20px (-$MOBILE_SIDE_GUTTER) 25px (-$MOBILE_SIDE_GUTTER);
-    text-align: center;
 
     .c-topic-strip-wrapper {
         padding-left: $MOBILE_SIDE_GUTTER;
@@ -115,7 +110,6 @@
 .c-topic-strip--tg-header {
     margin-left: -$MOBILE_SIDE_GUTTER;
     margin-right: -$MOBILE_SIDE_GUTTER;
-    text-align: center;
 
     .c-topic-strip-wrapper {
         padding-left: $MOBILE_SIDE_GUTTER;
