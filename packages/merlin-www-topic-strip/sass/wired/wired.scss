@@ -5,10 +5,7 @@
 
 .c-topic-strip {}
 
-.c-topic-strip-wrapper {
-    overflow-x: auto;
-    white-space: nowrap;
-}
+.c-topic-strip-wrapper {}
 
 .c-topic-strip__title {
     @include font('BRUTAL', 12px, 'BOLD', 12px);
@@ -21,7 +18,7 @@
     display: inline-block;
 }
 
-.c-topic-strip__listitem {
+.c-topic-strip__list-item {
     margin-right: 10px;
 
     &:last-child {
@@ -29,27 +26,20 @@
     }
 }
 
-.c-topic-strip__link {
-    @include button-group;
-    @include button-group-light;
-
-    &:hover,
-    &:focus {
-        @include button-group-light-hover;
-    }
-}
+.c-topic-strip__link {}
 
 
 .c-topic-strip--a-related,
 .c-topic-strip--sh-trends {
     margin-left: -$MOBILE_SIDE_GUTTER;
     margin-right: -$MOBILE_SIDE_GUTTER;
+    white-space: nowrap;
 
     .c-topic-strip-wrapper {
         padding-left: $MOBILE_SIDE_GUTTER;
     }
 
-    .c-topic-strip__listitem:last-child {
+    .c-topic-strip__list-item:last-child {
         padding-right: $MOBILE_SIDE_GUTTER;
     }
 
@@ -68,7 +58,11 @@
         margin-right: 0;
         white-space: normal;
 
-        .c-topic-strip__listitem {
+        .c-topic-strip-wrapper {
+            padding: 0;
+        }
+
+        .c-topic-strip__list-item {
             padding-right: 0;
         }
     }
@@ -89,12 +83,13 @@
     margin-left: -$MOBILE_SIDE_GUTTER;
     margin-right: -$MOBILE_SIDE_GUTTER;
     text-align: center;
+    white-space: nowrap;
 
     .c-topic-strip-wrapper {
         padding-left: $MOBILE_SIDE_GUTTER;
     }
 
-    .c-topic-strip__listitem:last-child {
+    .c-topic-strip__list-item:last-child {
         padding-right: $MOBILE_SIDE_GUTTER;
     }
 
@@ -116,7 +111,7 @@
             padding-left: $TABLET_SIDE_GUTTER;
         }
 
-        .c-topic-strip__listitem:last-child {
+        .c-topic-strip__list-item:last-child {
             padding-right: $TABLET_SIDE_GUTTER;
         }
     }
@@ -124,14 +119,24 @@
 
 .c-topic-strip--c-card-section {
     margin: 20px (-$MOBILE_SIDE_GUTTER);
-    text-align: center;
+    white-space: nowrap;
 
     .c-topic-strip-wrapper {
         padding-left: $MOBILE_SIDE_GUTTER;
     }
 
-    .c-topic-strip__listitem:last-child {
+    .c-topic-strip__list-item:last-child {
         padding-right: $MOBILE_SIDE_GUTTER;
+    }
+
+    .c-topic-strip__link {
+        @include button-group;
+        @include button-group-light;
+
+        &:hover,
+        &:focus {
+            @include button-group-light-hover;
+        }
     }
 
     @include tablet-size {
@@ -142,7 +147,7 @@
             padding-left: $TABLET_SIDE_GUTTER;
         }
 
-        .c-topic-strip__listitem:last-child {
+        .c-topic-strip__list-item:last-child {
             padding-right: $TABLET_SIDE_GUTTER;
         }
     }
@@ -155,5 +160,9 @@
         right: 0;
         top: -17px;
         width: auto;
+
+        .c-topic-strip__list-item:last-child {
+            padding-right: 0;
+        }
     }
 }
