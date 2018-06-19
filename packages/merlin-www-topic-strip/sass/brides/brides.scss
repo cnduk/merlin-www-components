@@ -40,7 +40,6 @@
 .c-topic-strip-wrapper {
     // Negate margin on bottom of items
     margin-bottom: -16px;
-    overflow-x: auto;
     padding: 21px 0;
     // Needed for the :before strip on desktop in .c-topic-strip
     position: relative;
@@ -60,7 +59,7 @@
     display: inline-block;
 }
 
-.c-topic-strip__listitem {
+.c-topic-strip__list-item {
     margin-bottom: 16px;
     margin-right: 32px;
 
@@ -92,7 +91,7 @@
         padding-left: $MOBILE_SIDE_GUTTER;
     }
 
-    .c-topic-strip__listitem:last-child {
+    .c-topic-strip__list-item:last-child {
         padding-right: $MOBILE_SIDE_GUTTER;
     }
 
@@ -104,7 +103,7 @@
             padding-left: $MOBILE_SIDE_GUTTER;
         }
 
-        .c-topic-strip__listitem:last-child {
+        .c-topic-strip__list-item:last-child {
             padding-right: $TABLET_SIDE_GUTTER;
         }
     }
@@ -118,7 +117,7 @@
             padding-right: 20px;
         }
 
-        .c-topic-strip__listitem:last-child {
+        .c-topic-strip__list-item:last-child {
             padding-right: 0;
         }
     }
@@ -131,7 +130,7 @@
         padding-left: $MOBILE_SIDE_GUTTER;
     }
 
-    .c-topic-strip__listitem:last-child {
+    .c-topic-strip__list-item:last-child {
         padding-right: $MOBILE_SIDE_GUTTER;
     }
 
@@ -143,7 +142,7 @@
             padding-left: $TABLET_SIDE_GUTTER;
         }
 
-        .c-topic-strip__listitem:last-child {
+        .c-topic-strip__list-item:last-child {
             padding-right: $TABLET_SIDE_GUTTER;
         }
     }
@@ -156,7 +155,7 @@
             padding-right: 20px;
         }
 
-        .c-topic-strip__listitem:last-child {
+        .c-topic-strip__list-item:last-child {
             padding-right: 0;
         }
     }
@@ -169,7 +168,7 @@
         padding-left: $MOBILE_SIDE_GUTTER;
     }
 
-    .c-topic-strip__listitem:last-child {
+    .c-topic-strip__list-item:last-child {
         padding-right: $MOBILE_SIDE_GUTTER;
     }
 
@@ -181,7 +180,7 @@
             padding-left: $MOBILE_SIDE_GUTTER;
         }
 
-        .c-topic-strip__listitem:last-child {
+        .c-topic-strip__list-item:last-child {
             padding-right: $MOBILE_SIDE_GUTTER;
         }
     }
@@ -194,7 +193,7 @@
             padding-right: 20px;
         }
 
-        .c-topic-strip__listitem:last-child {
+        .c-topic-strip__list-item:last-child {
             padding-right: 0;
         }
     }
