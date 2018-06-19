@@ -11,8 +11,7 @@
                 "bystander",
                 "wired"
             ],
-            "main": "index",
-            "data": "vogue"
+            "main": "index"
         }
     },
     "js": {
@@ -39,7 +38,14 @@
     "currentTheme": null,
     "main": "index",
     "data": {
-        "vogue": "data/vogue.json"
+        "brides" :"data/br.json",
+        "glamour" :"data/gl.json",
+        "gq" :"data/gq.json",
+        "house and garden" :"data/hg.json",
+        "tatler" :"data/ta.json",
+        "traveller" :"data/tr.json",
+        "vogue" :"data/vg.json",
+        "wired" :"data/wi.json"
     },
     "description": "Dat bootiful \ud83c\udf6a warnin."
 }
