@@ -16,12 +16,9 @@
 }
 
 .c-cookie-warning__message {
+	@include font('Gotham', 12px, '400', 16px);
 	color: $shuttle-gray;
-	font-family: “Gotham”, sans-serif;
-	font-size: 12px;
-	font-weight: 400;
 	letter-spacing: 0;
-	line-height: 16px;
 	margin: 0;
 
 	a {
