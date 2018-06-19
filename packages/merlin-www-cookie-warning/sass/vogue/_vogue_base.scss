@@ -5,9 +5,7 @@
     box-shadow: 0px 2px 6px 2px rgba(102, 102, 102, 0.06);
     padding: 16px $MOBILE_SIDE_GUTTER;
 }
-.c-cookie-warning__table-cell--cta {
-    width: 30px;
-}
+
 .c-cookie-warning__message {
     @include font('NOBEL', 12px, null, 16px);
     color: $dove-gray;
@@ -19,6 +17,11 @@
         text-decoration: underline;
     }
 }
+
+.c-cookie-warning__table-cell--button {
+    width: 30px;
+}
+
 .c-cookie-warning__button {
     background-color: transparent;
     border: 1px solid $dove-gray;

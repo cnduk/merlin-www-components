@@ -1,19 +1,14 @@
 @import '@cnbritain/merlin-www-common:houseandgarden';
-
 @import '../wireframe/wireframe';
 
 .c-cookie-warning {
 	background-color: $ebony-clay;
 	padding: 20px 20px 40px 20px;
-}
 
-.c-cookie-warning__table {}
-.c-cookie-warning__table-cell {}
-.c-cookie-warning__table-cell--message {}
-.c-cookie-warning__table-cell--cta {
-	padding-left: 20px;
-	vertical-align: top;
-	width: 30px;
+	@include at-x-large-size {
+		padding: 20px 20px 30px 20px;
+		width: 450px;
+	}
 }
 
 .c-cookie-warning__message {
@@ -27,6 +22,12 @@
 	}
 }
 
+.c-cookie-warning__table-cell--button {
+	padding-left: 20px;
+	vertical-align: top;
+	width: 30px;
+}
+
 .c-cookie-warning__button {
 	height: 30px;
 	width: 30px;
@@ -35,12 +36,5 @@
 		height: 30px;
 		fill: $silver-chalice;
 		width: 30px;
-	}
-}
-
-@include desktop-size {
-	.c-cookie-warning {
-		padding: 20px 20px 30px 20px;
-		width: 450px;
 	}
 }

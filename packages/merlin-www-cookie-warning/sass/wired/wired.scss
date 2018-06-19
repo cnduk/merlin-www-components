@@ -1,20 +1,20 @@
 @import '@cnbritain/merlin-www-common:wired';
-
 @import '../wireframe/wireframe';
 
 .c-cookie-warning {
-    background-color: #000;
+    background-color: $black;
     padding: 20px;
-}
 
-.c-cookie-warning__table-cell--cta {
-    vertical-align: top;
-    width: 30px;
+    @include at-x-large-size {
+        max-width: 630px;
+        padding: 20px 30px;
+        width: 40%;
+    }
 }
 
 .c-cookie-warning__message {
     @include font('BRUTAL', 14px, 700, 18px);
-    color: #fff;
+    color: $white;
     margin-bottom: 0;
     margin-top: 0;
     padding-right: 30px;
@@ -28,12 +28,21 @@
             border-bottom: none;
         }
     }
+
+    @include at-x-large-size {
+        padding-right: 65px;
+    }
+}
+
+.c-cookie-warning__table-cell--button {
+    vertical-align: top;
+    width: 30px;
 }
 
 .c-cookie-warning__button {
     background-color: transparent;
     border-radius: 50%;
-    border: 1px solid #fff;
+    border: 1px solid $white;
     height: 20px;
     padding: 0;
     width: 20px;
@@ -48,19 +57,7 @@
     }
 
     path {
-        stroke: #fff;
+        stroke: $white;
         stroke-width: 2px;
-    }
-}
-
-@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    .c-cookie-warning {
-        max-width: 630px;
-        padding: 20px 30px;
-        width: 40%;
-    }
-
-    .c-cookie-warning__message {
-        padding-right: 65px;
     }
 }

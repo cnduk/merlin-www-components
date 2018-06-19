@@ -1,5 +1,4 @@
 @import '@cnbritain/merlin-www-common:glamour';
-
 @import '../wireframe/wireframe';
 
 .c-cookie-warning {
@@ -11,22 +10,6 @@
     z-index: 10;
 }
 
-.c-cookie-warning__table {
-
-}
-
-.c-cookie-warning__table-cell {
-
-}
-
-.c-cookie-warning__table-cell--message {
-
-}
-
-.c-cookie-warning__table-cell--cta {
-    width: 0;
-}
-
 .c-cookie-warning__message {
     @include font("GRAPHIK", 12px, 600, 16px);
     color: $white;
@@ -36,6 +19,10 @@
         border-bottom: 1px solid $white;
         color: inherit;
     }
+}
+
+.c-cookie-warning__table-cell--button {
+    width: 0;
 }
 
 .c-cookie-warning__button {
