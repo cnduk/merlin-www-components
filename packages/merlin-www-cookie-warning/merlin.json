@@ -9,7 +9,12 @@
                 "gq",
                 "tatler",
                 "bystander",
-                "wired"
+                "wired",
+                "glamour",
+                "brides",
+                "house and garden",
+                "traveller"
+
             ],
             "main": "index"
         }
@@ -18,14 +23,17 @@
         "demo": "demo/demo.js"
     },
     "themes": {
-        "bystander": "sass/bystander/bystander.scss",
         "wireframe": "sass/wireframe/wireframe.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
         "gq": "sass/gq/gq.scss",
         "tatler": "sass/tatler/tatler.scss",
-        "missvogue": "sass/missvogue/missvogue.scss",
-        "vogue": "sass/vogue/vogue.scss",
+        "bystander": "sass/bystander/bystander.scss",
         "wired": "sass/wired/wired.scss",
-        "brides": "sass/brides/brides.scss"
+        "glamour": "sass/glamour/glamour.scss",
+        "brides": "sass/brides/brides.scss",
+        "house and garden": "sass/houseandgarden/houseandgarden.scss",
+        "traveller": "sass/traveller/traveller.scss"
     },
     "partials": {
         "index": "partials/index.html"
@@ -38,14 +46,14 @@
     "currentTheme": null,
     "main": "index",
     "data": {
-        "brides" :"data/br.json",
-        "glamour" :"data/gl.json",
-        "gq" :"data/gq.json",
-        "house and garden" :"data/hg.json",
-        "tatler" :"data/ta.json",
-        "traveller" :"data/tr.json",
         "vogue" :"data/vg.json",
-        "wired" :"data/wi.json"
+        "gq" :"data/gq.json",
+        "tatler" :"data/ta.json",
+        "wired" :"data/wi.json",
+        "glamour" :"data/gl.json",
+        "brides" :"data/br.json",
+        "house and garden" :"data/hg.json",
+        "traveller" :"data/tr.json"
     },
     "description": "Dat bootiful \ud83c\udf6a warnin."
 }
