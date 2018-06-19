@@ -21,6 +21,10 @@
 
 .c-topic-strip {}
 
+.c-topic-strip-wrapper {
+    overflow-x: auto;
+}
+
 .c-topic-strip__title {}
 
 .c-topic-strip__list {
@@ -30,7 +34,7 @@
     padding: 0;
 }
 
-.c-topic-strip__listitem {
+.c-topic-strip__list-item {
     display: inline-block;
     font-size: initial;
 }
