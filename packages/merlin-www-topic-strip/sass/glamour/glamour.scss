@@ -20,7 +20,7 @@
     display: inline-block;
 }
 
-.c-topic-strip__listitem {
+.c-topic-strip__list-item {
     margin-bottom: 10px;
     margin-right: 10px;
 
@@ -70,7 +70,6 @@
 .c-topic-strip--tg-header {
     margin-left: -$MOBILE_SIDE_GUTTER;
     margin-right: -$MOBILE_SIDE_GUTTER;
-    overflow-x: auto;
     text-align: center;
     white-space: nowrap;
 
@@ -78,7 +77,7 @@
         padding-left: $MOBILE_SIDE_GUTTER;
     }
 
-    .c-topic-strip__listitem:last-child {
+    .c-topic-strip__list-item:last-child {
         padding-right: $MOBILE_SIDE_GUTTER;
     }
 
@@ -91,7 +90,7 @@
             padding-left: $TABLET_SIDE_GUTTER;
         }
 
-        .c-topic-strip__listitem:last-child {
+        .c-topic-strip__list-item:last-child {
             padding-right: $TABLET_SIDE_GUTTER;
         }
 
@@ -106,7 +105,7 @@
             padding-left: 0;
         }
 
-        .c-topic-strip__listitem:last-child {
+        .c-topic-strip__list-item:last-child {
             padding-right: 0;
         }
     }
