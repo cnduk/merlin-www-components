@@ -18,26 +18,13 @@
     }
 }
 
-.c-cookie-warning__table {
-    display: table;
-    table-layout: fixed;
+.c-cookie-warning-wrapper {
     width: 100%;
 }
-
-.c-cookie-warning__table-cell {
-    display: table-cell;
-}
-
-.c-cookie-warning__table-cell--message {}
 
 .c-cookie-warning__message {
     display: inline-block;
     vertical-align: middle;
-}
-
-.c-cookie-warning__table-cell--button {
-    text-align: right;
-    width: 20px;
 }
 
 .c-cookie-warning__button {
@@ -47,8 +34,9 @@
     border-radius: 0;
     cursor: pointer;
     display: inline-block;
-    height: 20px;
     padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
     vertical-align: middle;
-    width: 20px;
 }

@@ -3,11 +3,11 @@
 
 .c-cookie-warning {
     background-color: $black;
-    padding: 20px;
+    padding: 20px 70px 20px 20px;
 
     @include at-x-large-size {
         max-width: 630px;
-        padding: 20px 30px;
+        padding: 20px 90px 20px 30px;
         width: 40%;
     }
 }
@@ -15,9 +15,6 @@
 .c-cookie-warning__message {
     @include font('BRUTAL', 14px, 700, 18px);
     color: $white;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding-right: 30px;
 
     a {
         border-bottom: none;
@@ -28,24 +25,19 @@
             border-bottom: none;
         }
     }
-
-    @include at-x-large-size {
-        padding-right: 65px;
-    }
-}
-
-.c-cookie-warning__table-cell--button {
-    vertical-align: top;
-    width: 30px;
 }
 
 .c-cookie-warning__button {
-    background-color: transparent;
     border-radius: 50%;
     border: 1px solid $white;
-    height: 20px;
-    padding: 0;
-    width: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    height: 30px;
+    width: 30px;
+
+    @include at-x-large-size {
+        margin-right: 30px;
+    }
 
     svg {
         display: inline-block;
@@ -60,4 +52,5 @@
         stroke: $white;
         stroke-width: 2px;
     }
+
 }

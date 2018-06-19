@@ -3,10 +3,10 @@
 
 .c-cookie-warning {
 	background-color: $ebony-clay;
-	padding: 20px 20px 40px 20px;
+	padding: 20px 70px 40px 20px;
 
 	@include at-x-large-size {
-		padding: 20px 20px 30px 20px;
+		padding: 20px 70px 30px 20px;
 		width: 450px;
 	}
 }
@@ -14,7 +14,6 @@
 .c-cookie-warning__message {
 	@include font('MILLER_DISPLAY', 17px, 'BOLD', 19px);
 	color: $white;
-	margin: 0;
 
 	a {
 		color: inherit;
@@ -22,14 +21,10 @@
 	}
 }
 
-.c-cookie-warning__table-cell--button {
-	padding-left: 20px;
-	vertical-align: top;
-	width: 30px;
-}
-
 .c-cookie-warning__button {
 	height: 30px;
+	margin-right: 20px;
+    margin-top: 20px;
 	width: 30px;
 
 	svg {

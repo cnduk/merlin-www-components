@@ -9,17 +9,13 @@
 	border-top-right-radius: 4px;
 	border-top: 1px solid $bon-jour;
 	padding: 16px;
-}
-
-.c-cookie-warning__table-cell--message {
-	padding-right: 20px;
+	padding-right: 56px;
 }
 
 .c-cookie-warning__message {
 	@include font('Gotham', 12px, '400', 16px);
 	color: $shuttle-gray;
 	letter-spacing: 0;
-	margin: 0;
 
 	a {
 		@include font-weight(400);
@@ -34,6 +30,9 @@
 	border: 1px solid $shuttle-gray;
 	fill: $shuttle-gray;
 	height: 24px;
+	right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
 	width: 24px;
 
 	svg {

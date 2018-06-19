@@ -3,14 +3,12 @@
     border: 2px solid $loot-box;
     border-radius: 4px 4px 0 0;
     box-shadow: 0px 2px 6px 2px rgba(102, 102, 102, 0.06);
-    padding: 16px $MOBILE_SIDE_GUTTER;
+    padding: 16px 62px 16px 20px;
 }
 
 .c-cookie-warning__message {
     @include font('NOBEL', 12px, null, 16px);
     color: $dove-gray;
-    margin-bottom: 0;
-    margin-top: 0;
 
     a {
         color: inherit;
@@ -18,22 +16,18 @@
     }
 }
 
-.c-cookie-warning__table-cell--button {
-    width: 30px;
-}
-
 .c-cookie-warning__button {
-    background-color: transparent;
     border: 1px solid $dove-gray;
     border-radius: 50%;
     height: 22px;
-    padding: 0;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 22px;
 
     svg {
-        display: inline-block;
         height: 10px;
-        margin: 0 auto;
         width: 8px;
     }
+
 }

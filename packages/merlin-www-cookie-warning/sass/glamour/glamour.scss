@@ -13,7 +13,6 @@
 .c-cookie-warning__message {
     @include font("GRAPHIK", 12px, 600, 16px);
     color: $white;
-    margin: 0;
 
     a {
         border-bottom: 1px solid $white;
@@ -21,15 +20,8 @@
     }
 }
 
-.c-cookie-warning__table-cell--button {
-    width: 0;
-}
-
 .c-cookie-warning__button {
     height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
     width: 60px;
 
     svg {
@@ -44,4 +36,5 @@
         transform: translate(-50%, -50%);
         width: 20px;
     }
+
 }
