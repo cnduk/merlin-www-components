@@ -1,21 +1,11 @@
 @import '@cnbritain/merlin-www-common:brides';
-
 @import '../wireframe/wireframe';
 
 .c-cookie-warning {
 	background-color: $azure;
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
-	padding: 12px 20px;
-}
-
-.c-cookie-warning__table {}
-.c-cookie-warning__table-cell {}
-.c-cookie-warning__table-cell--message {}
-.c-cookie-warning__table-cell--cta {
-	padding-left: 16px;
-	vertical-align: middle;
-	width: 20px;
+	padding: 12px 56px 12px 20px;
 }
 
 .c-cookie-warning__message {
@@ -31,20 +21,17 @@
 }
 
 .c-cookie-warning__button {
-	border-radius: 50%;
-	height: 20px;
-	width: 20px;
+	height: 16px;
+	right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+	width: 16px;
 
 	svg {
-		height: 16px;
 		fill: $sapphire;
+		height: 16px;
 		width: 16px;
 	}
-}
 
-.c-cookie-warning {
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		width: 360px;
-	}
 }
 
