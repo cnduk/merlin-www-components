@@ -3,11 +3,7 @@
 
 @import "../wireframe/wireframe";
 
-.c-topic-strip {
-    overflow-x: auto;
-    text-align: center;
-    white-space: nowrap;
-}
+.c-topic-strip {}
 
 .c-topic-strip__title {
     @include font("FREIGHT TEXT", 14px, null, 16px);
@@ -21,9 +17,11 @@
     display: inline-block;
 }
 
-.c-topic-strip__listitem {
-    + .c-topic-strip__listitem {
-        margin-left: 24px;
+.c-topic-strip__list-item {
+    margin-right: 24px;
+
+    &:last-child {
+        margin-right: 0;
     }
 }
 
@@ -40,9 +38,14 @@
 .c-topic-strip--tg-header {
     margin-left: -$MOBILE_SIDE_GUTTER;
     margin-right: -$MOBILE_SIDE_GUTTER;
+    text-align: center;
+    white-space: nowrap;
 
     .c-topic-strip-wrapper {
         padding-left: $MOBILE_SIDE_GUTTER;
+    }
+
+    .c-topic-strip__list-item:last-child {
         padding-right: $MOBILE_SIDE_GUTTER;
     }
 
@@ -52,6 +55,9 @@
 
         .c-topic-strip-wrapper {
             padding-left: $TABLET_SIDE_GUTTER;
+        }
+
+        .c-topic-strip__list-item:last-child {
             padding-right: $TABLET_SIDE_GUTTER;
         }
     }
@@ -81,9 +87,14 @@
 
 .c-topic-strip--c-card-section {
     margin: 12px (-$MOBILE_SIDE_GUTTER);
+    text-align: center;
+    white-space: nowrap;
 
     .c-topic-strip-wrapper {
         padding-left: $MOBILE_SIDE_GUTTER;
+    }
+
+    .c-topic-strip__list-item:last-child {
         padding-right: $MOBILE_SIDE_GUTTER;
     }
 
@@ -93,6 +104,9 @@
 
         .c-topic-strip-wrapper {
             padding-left: $TABLET_SIDE_GUTTER;
+        }
+
+        .c-topic-strip__list-item:last-child {
             padding-right: $TABLET_SIDE_GUTTER;
         }
     }
