@@ -4,19 +4,17 @@
     padding: 20px 65px 20px 20px;
     z-index: 10;
 
-    @include at-x-large-size {
+    @include at-medium-size {
         border-left: 1px solid $black;
         border-right: 1px solid $black;
-        max-width: 630px;
         padding: 20px 85px 20px 30px;
-        width: 30%;
     }
 }
 
 .c-cookie-warning__message {
     @include font('COMMUTER SANS', 14px, 'MEDIUM', 17px);
 
-    @include at-x-large-size {
+    @include at-medium-size {
         @include line-height(20px);
     }
 
@@ -35,7 +33,7 @@
     height: 25px;
     width: 25px;
 
-    @include at-x-large-size {
+    @include at-medium-size {
         margin-right: 30px;
     }
 

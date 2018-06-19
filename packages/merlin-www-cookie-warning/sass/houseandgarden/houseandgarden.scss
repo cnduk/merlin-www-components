@@ -5,9 +5,8 @@
 	background-color: $ebony-clay;
 	padding: 20px 70px 40px 20px;
 
-	@include at-x-large-size {
+	@include at-medium-size {
 		padding: 20px 70px 30px 20px;
-		width: 450px;
 	}
 }
 
