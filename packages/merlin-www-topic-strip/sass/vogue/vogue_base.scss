@@ -4,7 +4,7 @@
 
 .c-topic-strip__title {
     @include font('NOBEL', 12px, 'BOLD', 12px);
-    color: $COLOR_MAIN_PRIMARY;
+    color: $cod-gray;
     display: inline-block;
     margin-right: 20px;
     text-transform: uppercase;
@@ -108,7 +108,7 @@
 }
 
 .c-topic-strip--c-card-section {
-    margin-bottom: $MARGIN_SMALL;
+    margin-bottom: 20px;
     margin-left: -$MOBILE_SIDE_GUTTER;
     margin-right: -$MOBILE_SIDE_GUTTER;
     overflow-x: auto;
