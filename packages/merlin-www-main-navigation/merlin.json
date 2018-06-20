@@ -5,6 +5,7 @@
     },
     "themes": {
         "wireframe": "sass/wireframe/wireframe.scss",
+        "traveller": "sass/traveller/traveller.scss",
         "vogue": "sass/vogue/vogue.scss",
         "wired": "sass/wired/wired.scss"
     },
@@ -20,8 +21,9 @@
     "main": "main-navigation",
     "data": {
         "all": "data/all.json",
-        "wi-all": "data/wi-all.json",
+        "tr-all": "data/tr-all.json",
         "vg-all": "data/vg-all.json",
+        "wi-all": "data/wi-all.json",
         "gallery": "data/gallery.json",
         "masthead_takeover": "data/masthead_takeover.json"
     }
