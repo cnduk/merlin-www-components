@@ -37,7 +37,7 @@
     }
 }
 
-.c-magazine__wrapper {
+.c-magazine-wrapper {
     background-color: $white;
     box-sizing: border-box;
     margin: 0 auto;
@@ -61,13 +61,9 @@
 
     @include at-medium-size {
         display: table-cell;
+        padding-right: 60px;
         vertical-align: middle;
         width: 50%;
-    }
-}
-.c-magazine__covers__wrapper {
-    @include at-medium-size {
-        padding-right: 60px;
     }
 }
 
@@ -105,7 +101,7 @@
     }
 }
 
-.c-magazine__content {
+.c-magazine__contents {
     position: relative;
     z-index: 1;
 
@@ -116,7 +112,7 @@
     }
 }
 
-.c-magazine__content__title {
+.c-magazine__contents-title {
     @include font('GRAPHIK', 10px, 'SEMI BOLD', 11px);
     color: $astronaut;
     display: block;
@@ -133,7 +129,7 @@
     }
 }
 
-.c-magazine__content__date {
+.c-magazine__contents-date {
     @include font('MILLER_DISPLAY', 30px, 600, 34px);
     color: $dune;
     letter-spacing: 0;
@@ -160,17 +156,13 @@
     }
 }
 
-.c-magazine__btn {
+.c-magazine__contents-btn {
     @include button-single;
     @include button-single-light;
-    display: inline-block;
-    margin: 30px 0 0;
+    display: table;
+    margin-top: 30px;
 
     &:hover {
         @include button-single-light-hover;
-    }
-
-    @include at-medium-size {
-        margin-top: 30px;
     }
 }

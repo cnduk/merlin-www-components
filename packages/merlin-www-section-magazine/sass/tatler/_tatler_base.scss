@@ -8,7 +8,7 @@
     }
 }
 
-.c-magazine__wrapper {
+.c-magazine-wrapper {
     box-sizing: border-box;
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
@@ -29,7 +29,7 @@
     display: none;
 }
 
-.c-magazine__covers__wrapper {
+.c-magazine__covers {
     @include at-medium-size {
         padding-right: 20px;
     }
@@ -50,7 +50,7 @@
     }
 }
 
-.c-magazine__content__title {
+.c-magazine__contents-title {
     @include font('COMMUTER SANS', 11px, 'MEDIUM', 12px);
     color: $gray;
     display: block;
@@ -67,7 +67,7 @@
     }
 }
 
-.c-magazine__content__date {
+.c-magazine__contents-date {
     @include font('STARLING', 20px, 'BOLD', 20px);
     color: $black;
     letter-spacing: 1px;
@@ -96,9 +96,10 @@
     }
 }
 
-.c-magazine__btn {
+.c-magazine__contents-btn {
     @include button-single;
     @include button-single-light;
+    display: table;
     margin-top: 30px;
 
     @include at-medium-size {

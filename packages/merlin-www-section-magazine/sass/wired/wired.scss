@@ -24,7 +24,7 @@
     }
 }
 
-.c-magazine__wrapper {
+.c-magazine-wrapper {
     background-color: #fff;
     box-sizing: border-box;
     margin-left: auto;
@@ -100,7 +100,7 @@
     }
 }
 
-.c-magazine__content {
+.c-magazine__contents {
     position: relative;
     z-index: 1;
 
@@ -111,7 +111,7 @@
     }
 }
 
-.c-magazine__content__date {
+.c-magazine__contents-date {
     @include font('NEW GROTESK SQUARE', 30px, 600, 30px);
     margin: 30px 0;
     text-align: center;
@@ -125,7 +125,7 @@
     }
 }
 
-.c-magazine__content__title {
+.c-magazine__contents-title {
     @include font("BRUTAL", 15px, 600, 17px);
     display: none;
     margin-bottom: 30px;
@@ -153,20 +153,21 @@
     }
 }
 
-.c-magazine__btn {
+.c-magazine__contents-btn {
     @include button-single;
     @include button-single-light;
     box-sizing: border-box;
+    display: table;
     margin-top: 30px;
     text-align: center;
     transition-duration: 100ms;
     width: 100%;
 
-    &:hover {
-        @include button-single-light-hover;
+    @include at-medium-size {
+        width: auto;
     }
 
-    @include at-x-large-size {
-        width: auto;
+    &:hover {
+        @include button-single-light-hover;
     }
 }

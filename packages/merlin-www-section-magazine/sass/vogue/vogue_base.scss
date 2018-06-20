@@ -9,7 +9,7 @@
 
 }
 
-.c-magazine__wrapper {
+.c-magazine-wrapper {
     box-sizing: border-box;
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
@@ -48,12 +48,6 @@
     }
 }
 
-.c-magazine__covers__wrapper {
-    @include at-medium-size {
-        padding-right: 70px;
-    }
-}
-
 .c-magazine__cover {
     position: relative;
 }
@@ -87,7 +81,7 @@
     }
 }
 
-.c-magazine__content {
+.c-magazine__contents {
     @include at-medium-size {
         display: table-cell;
         vertical-align: middle;
@@ -95,7 +89,7 @@
     }
 }
 
-.c-magazine__content__title {
+.c-magazine__contents-title {
    display: none;
 
     @include at-medium-size {
@@ -108,7 +102,7 @@
     }
 }
 
-.c-magazine__content__date {
+.c-magazine__contents-date {
     @include font('ITC CASLON', 29px, null, 32px);
     margin: 30px 0;
     text-align: center;
@@ -128,11 +122,11 @@
     }
 }
 
-.c-magazine__btn {
+.c-magazine__contents-btn {
     @include button-single-two;
     @include button-single-two-light;
+    display: table;
     margin-top: 40px;
-    width: auto;
 
     &:hover {
         @include button-single-two-light-hover;

@@ -8,7 +8,7 @@
 	background-color: $albaster;
 }
 
-.c-magazine__wrapper {
+.c-magazine-wrapper {
     box-sizing: border-box;
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
@@ -32,8 +32,8 @@
 	text-align: center;
 }
 
-.c-magazine__covers__wrapper {
-    @include at-medium-size {
+.c-magazine__covers {
+	@include at-medium-size {
         padding-right: 20px;
     }
 }
@@ -61,7 +61,7 @@
 	}
 }
 
-.c-magazine__content__date {
+.c-magazine__contents-date {
 	@include font("ITC_FENICE", 24px, 700, 28px, -4);
 	margin: 28px 0;
 	text-align: center;
@@ -74,7 +74,7 @@
 	}
 }
 
-.c-magazine__content__title {
+.c-magazine__contents-title {
 	@include font("GOTHAM", 12px, 700, 16px, -4);
 	color: $limed-oak;
 	margin-bottom: 12px;
@@ -105,9 +105,10 @@
 	}
 }
 
-.c-magazine__btn {
+.c-magazine__contents-btn {
 	@include button-single-two;
 	@include button-single-two-light;
+	display: table;
 	margin-top: 24px;
     transition-duration: 300ms;
 

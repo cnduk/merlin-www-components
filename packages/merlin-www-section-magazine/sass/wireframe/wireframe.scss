@@ -1,9 +1,8 @@
 @import "@cnbritain/merlin-www-common:wireframe";
 
-
 .c-magazine {}
 
-.c-magazine__wrapper {
+.c-magazine-wrapper {
     @include at-medium-size {
         display: table;
         width: 100%;
@@ -23,11 +22,7 @@
         display: table-cell;
         width: 50%;
         vertical-align: middle;
-    }
-}
 
-.c-magazine__covers__wrapper {
-    @include at-medium-size {
         padding-right: 70px;
     }
 }
@@ -65,9 +60,9 @@
     }
 }
 
-.c-magazine__cover__image {}
+.c-magazine__cover-img {}
 
-.c-magazine__content {
+.c-magazine__contents {
     @include at-medium-size {
         display: table-cell;
         width: 50%;
@@ -75,9 +70,7 @@
     }
 }
 
-.c-magazine__content__wrapper {}
-
-.c-magazine__content__title {
+.c-magazine__contents-title {
     display: none;
 
     @include at-medium-size {
@@ -85,9 +78,8 @@
     }
 }
 
-.c-magazine__content__date {}
+.c-magazine__contents-date {}
 .c-magazine__cards {}
-.c-magazine__cards-wrapper {}
 
 .c-magazine__cards-list {
     list-style: none;
@@ -105,12 +97,28 @@
     width: 100%;
 }
 
-.c-magazine__content__btn {
-    text-align: center;
+//.c-magazine__content__btn {
+//    text-align: center;
+//
+//    @include at-medium-size {
+//        text-align: left;
+//    }
+//}
+
+.c-magazine__contents-btn {
+    appearance: none;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
 
     @include at-medium-size {
-        text-align: left;
+        margin-left: initial;
+        margin-right: initial;
     }
-}
 
-.c-magazine__btn {}
+}

@@ -8,7 +8,7 @@
 	background-color: $CAPE-HAZE;
 }
 
-.c-magazine__wrapper {
+.c-magazine-wrapper {
 	box-sizing: border-box;
 	margin: 0 auto;
 	max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
@@ -61,13 +61,13 @@
 	}
 }
 
-.c-magazine__content {
+.c-magazine__contents {
 	@include at-medium-size {
 		padding-left: 12px;
 	}
 }
 
-.c-magazine__content__title {
+.c-magazine__contents-title {
 	@include font("FREIGHT TEXT", 20px, null, 20px);
 	color: $MUSTASAARI;
 	font-style: italic;
@@ -75,7 +75,7 @@
 	margin-bottom: 16px;
 }
 
-.c-magazine__content__date {
+.c-magazine__contents-date {
 	@include font("PROXIMA NOVA CONDENSED", 24px, 600, 28px);
 	color: $MUSTASAARI;
 	letter-spacing: 1px;
@@ -105,16 +105,17 @@
     }
 }
 
-.c-magazine__btn {
+.c-magazine__contents-btn {
 	@include button-single;
 	@include button-single-light;
+	display: table;
 	margin-top: 24px;
-
-	&:hover {
-		@include button-single-light-hover;
-	}
 
 	@include at-medium-size {
 		margin-top: 40px;
+	}
+
+	&:hover {
+		@include button-single-light-hover;
 	}
 }

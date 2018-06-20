@@ -22,7 +22,7 @@
     }
 }
 
-.c-magazine__wrapper {
+.c-magazine-wrapper {
     box-sizing: border-box;
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
@@ -44,9 +44,9 @@
     display: none;
 }
 
-.c-magazine__covers__wrapper {
+.c-magazine__covers {
     @include at-medium-size {
-        padding-right: 60px;
+        padding-right: 20px;
     }
 }
 
@@ -73,13 +73,13 @@
     }
 }
 
-.c-magazine__cover__image {
+.c-magazine__cover-img {
     img {
         background-color: $black;
     }
 }
 
-.c-magazine__content__title {
+.c-magazine__contents-title {
     @include font("BRANDON GROTESQUE", 10px, 700, 10px);
     color: $mine-shaft;
     display: block;
@@ -95,7 +95,7 @@
     }
 }
 
-.c-magazine__content__date {
+.c-magazine__contents-date {
     @include font("MILLER_DISPLAY", 25px, 700, 27px);
     color: $mine-shaft;
     letter-spacing: 0;
@@ -122,9 +122,10 @@
     }
 }
 
-.c-magazine__btn {
+.c-magazine__contents-btn {
     @include button-single;
     @include button-single-light;
+    display: table;
     margin-top: 30px;
     width: 200px;
 
