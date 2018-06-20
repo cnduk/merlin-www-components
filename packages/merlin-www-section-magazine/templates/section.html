@@ -22,7 +22,7 @@
             {{# data.magazine }}
             <div class="c-magazine__contents-date">{{ data.title }}</div>
             {{/ data.magazine }}
-            {{# data.magazine_list }}
+            {{# data.card_list }}
             <div class="c-magazine__cards">
                 <ul class="c-magazine__cards-list">
                     {{# data.items }}
@@ -34,7 +34,7 @@
                     {{/ data.items }}
                 </ul>
             </div>
-            {{/ data.magazine_list }}
+            {{/ data.card_list }}
             {{# data.link }}
             <a href="{{ &data.url }}" class="c-magazine__contents-btn {{ style.cls }}">{{ data.title }}</a>
             {{/ data.link }}
