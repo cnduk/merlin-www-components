@@ -1,11 +1,11 @@
 .c-top-stories {
-    background-color: $wild-sand;
-    border-bottom: 1px solid $gallery;
     display: none;
-    padding: 20px 0;
 
-    @include desktop-size {
+    @include at-x-large-size {
+        background-color: $wild-sand;
+        border-bottom: 1px solid $gallery;
         display: block;
+        padding: 20px 0;
     }
 
     &.has-navigation {
@@ -44,20 +44,8 @@
     }
 }
 
-.c-top-stories__nav-btn {
-    position: absolute;
-}
 .c-top-stories__nav-btn--left {
     border-top: 1px solid $gallery;
-    top: 50%;
-}
-
-.c-top-stories__nav-btn--right {
-    top: 0;
-}
-
-.c-top-stories__title {
-    display: none;
 }
 
 .c-top-stories__overflow {
@@ -77,7 +65,4 @@
         padding-left: 0;
     }
 
-    .has-no-scroll & {
-        overflow-x: hidden;
-    }
 }

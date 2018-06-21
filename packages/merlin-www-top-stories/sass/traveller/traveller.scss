@@ -1,16 +1,16 @@
 @import "@cnbritain/merlin-www-common:traveller";
 @import "@cnbritain/merlin-www-card-list:traveller";
 @import "@cnbritain/merlin-www-card:traveller";
+@import '@cnbritain/merlin-www-buttons:traveller';
 
 @import "../wireframe/wireframe";
 
 .c-top-stories {
-    background-color: $CAPE-HAZE;
-    border-bottom: 1px solid $ISABEL;
     display: none;
-    padding: 20px 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
+        background-color: $CAPE-HAZE;
+        border-bottom: 1px solid $ISABEL;
         display: block;
         padding: 24px 0;
     }
@@ -51,20 +51,8 @@
     }
 }
 
-.c-top-stories__nav-btn {
-    position: absolute;
-}
 .c-top-stories__nav-btn--left {
     border-top: 1px solid $ISABEL;
-    top: 50%;
-}
-
-.c-top-stories__nav-btn--right {
-    top: 0;
-}
-
-.c-top-stories__title {
-    display: none;
 }
 
 .c-top-stories__overflow {
@@ -82,9 +70,5 @@
     @include min-screen(1500px) {
         margin-left: 0;
         padding-left: 0;
-    }
-
-    .has-no-scroll & {
-        overflow-x: hidden;
     }
 }

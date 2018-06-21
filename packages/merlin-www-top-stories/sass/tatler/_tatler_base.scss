@@ -1,10 +1,10 @@
 .c-top-stories {
-    background: $wild-sand;
     display: none;
-    padding: 0;
 
-    @include desktop-size {
+    @include at-x-large-size {
+        background: $wild-sand;
         display: block;
+        padding: 0;
     }
 
 }
@@ -16,10 +16,6 @@
     padding: 16px 0 10px 16px;
 }
 
-.c-top-stories__title {
-    display: none;
-}
-
 .c-top-stories__nav {
     position: absolute;
     z-index: 6;
@@ -29,21 +25,8 @@
     width: 60px;
 }
 
-.c-top-stories__nav-btn {
-    height: auto;
-    position: absolute;
-    width: 60px;
-}
-
-.c-top-stories__nav-btn--left {
-    top: 50%;
-    bottom: 0;
-}
-
 .c-top-stories__nav-btn--right {
     border-bottom: none;
-    bottom: 50%;
-    top: 0;
 }
 
 .c-top-stories__overflow {
@@ -52,13 +35,9 @@
     padding-left: 20px;
     padding-bottom: 10px;
 
-    @include desktop-size {
+    @include at-x-large-size {
         padding-left: 0;
         margin-left: 0;
         padding-bottom: 0;
-    }
-
-    .has-no-scroll & {
-        overflow-x: hidden;
     }
 }

@@ -8,12 +8,12 @@
     padding-right: $MOBILE_SIDE_GUTTER;
     width: 100%;
 
-    @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ){
+    @include at-medium-size {
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen( $DESKTOP_SIDE_GUTTER_BREAKPOINT ){
+    @include at-x-large-size {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
@@ -24,15 +24,42 @@
     max-width: $MAXIMUM_PAGE_WIDTH;
 }
 
-.c-top-stories__title {}
+.c-top-stories__title {
+    display: none;
+}
 
 .c-top-stories__nav {
     display: none;
 }
 
+.global__button-reset{}
+
+.c-top-stories__nav-btn{
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+}
+
+.c-top-stories__nav-btn--left{
+    top: 50%;
+}
+
+.c-top-stories__nav-btn--right{
+    top: 0;
+}
+
+.btn-top-stories{}
+
 .c-top-stories__overflow {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+
+    .has-no-scroll & {
+        overflow-x: hidden;
+    }
+
 }
 
 .has-navigation {
