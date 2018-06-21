@@ -21,21 +21,7 @@
     }
 }
 
-.c-int-redirect__list {
-    display: none;
-    text-align: center;
-
-    #chkIntRedirectList:checked ~ & {
-        display: block;
-    }
-}
-li.c-int-redirect__list__item {
-    display: inline-block;
-}
-
 .c-int-redirect__msg {
-    text-align: center;
-
     label {
         cursor: pointer;
     }
@@ -44,3 +30,16 @@ li.c-int-redirect__list__item {
         display: none;
     }
 }
+
+.c-int-redirect__list {
+    display: none;
+
+    #chkIntRedirectList:checked ~ & {
+        display: block;
+    }
+}
+
+.c-int-redirect__list__item {
+    display: inline-block;
+}
+

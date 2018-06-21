@@ -32,16 +32,21 @@ $_BUTTON_SIZE: 20px;
     width: $_BUTTON_SIZE;
 }
 
-li.c-int-redirect__list__item {
-    @include font('ADOBE CASLON', 16px);
-    margin: 0 3px;
-}
-
 .c-int-redirect__msg {
     @include font('ADOBE CASLON', 16px);
     color: $dove-gray;
+    text-align: center;
 
     label {
         text-decoration: underline;
     }
+}
+
+.c-int-redirect__list {
+    text-align: center;
+}
+
+.c-int-redirect__list__item {
+    @include font('ADOBE CASLON', 16px);
+    margin: 0 3px;
 }

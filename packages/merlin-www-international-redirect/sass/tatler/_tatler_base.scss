@@ -7,7 +7,7 @@ $_BUTTON_SIZE: 20px;
         color: $white;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         background-color: rgba(0, 0, 0, .9);
     }
 }
@@ -40,10 +40,6 @@ $_BUTTON_SIZE: 20px;
     }
 }
 
-li.c-int-redirect__list__item {
-    margin: 0 3px;
-}
-
 .c-int-redirect__msg {
     @include font('COMMUTER SANS', 13px, 'MEDIUM', 16px);
     color: $white;
@@ -51,15 +47,23 @@ li.c-int-redirect__list__item {
     padding-right: 10px;
     text-align: left;
 
-    label {
-        text-decoration: underline;
-        white-space: nowrap;
-    }
-
-    @include desktop-size {
+    @include at-x-large-size {
         @include font-size(15px);
         @include line-height(18px);
         padding-right: 0;
         text-align: center;
     }
+
+    label {
+        text-decoration: underline;
+        white-space: nowrap;
+    }
+}
+
+.c-int-redirect__list {
+    text-align: center;
+}
+
+.c-int-redirect__list__item {
+    margin: 0 3px;
 }

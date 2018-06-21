@@ -8,7 +8,6 @@
 
 .c-int-redirect__wrapper {
 	max-width: $MAXIMUM_PAGE_WIDTH;
-	margin: 0 auto;
 }
 
 .c-int-redirect__btn {
@@ -36,9 +35,10 @@
 	@include font("GOTHAM", 12px, 'BOOK', 18px, -4);
 	color: $oslo-gray;
 	padding: 20px 60px 20px 20px;
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		padding-top: 24px;
-		padding-bottom: 24px;
+	text-align: center;
+
+	@include at-x-large-size {
+		padding: 24px 60px 24px 20px;
 	}
 
 	label {
@@ -52,14 +52,15 @@
 	font-size: 0;
 	padding: 20px 60px 20px 20px;
 	text-align: center;
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		padding-top: 24px;
-		padding-bottom: 16px;
+
+	@include at-x-large-size {
+		padding: 24px 60px 16px 20px;
 	}
 }
 
-li.c-int-redirect__list__item {
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+.c-int-redirect__list__item {
+
+	@include at-x-large-size {
 		padding-bottom: 8px;
 	}
 
@@ -67,7 +68,8 @@ li.c-int-redirect__list__item {
 		@include font("GOTHAM", 12px, 'BOOK', 24px, -4);
 		color: inherit;
 		padding: 0 5px;
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+
+		@include at-x-large-size {
 			padding: 0 16px;
 		}
 	}
