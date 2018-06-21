@@ -1,0 +1,646 @@
+{
+  "data": {
+    "brand_name": "British GQ",
+    "close_button": {
+      "data": {
+        "alt_text": null,
+        "credit": null,
+        "description": null,
+        "look_number": null,
+        "title": null,
+        "width": null,
+        "svg_content": "<svg id=\"btn-close\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\"><title>btn-close</title><path d=\"M16.58,18L9,10.41,1.42,18,0,16.58,7.59,9,0,1.42,1.42,0,9,7.59,16.58,0,18,1.42,10.41,9,18,16.58Z\"/></svg>"
+      },
+      "state": {
+        "is_image": false,
+        "is_picture": false,
+        "is_static": false,
+        "is_svg": true,
+        "is_linked": false,
+        "is_landscape": false,
+        "is_portrait": false,
+        "is_square": false,
+        "is_lazyload": false
+      },
+      "style": {
+        "cls": "",
+        "inline": ""
+      },
+      "translation": {},
+      "type": "SVG"
+    },
+    "site_links": {
+      "data": {
+        "items": [
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Australia",
+                  "url": "http://www.gq.com.au/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 0
+            },
+            "state": {
+              "is_first": true,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Brazil",
+                  "url": "http://www.gq.globo.com/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 1
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "China",
+                  "url": "http://www.gq.com.cn/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 2
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "France",
+                  "url": "http://en.gq.fr/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 3
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Germany",
+                  "url": "http://www.gq.de/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 4
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "India",
+                  "url": "http://www.gq.in/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 5
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Italy",
+                  "url": "http://www.gq.it/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 6
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Japan",
+                  "url": "http://www.gq.co.jp/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 7
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Korea",
+                  "url": "http://www.gq.co.kr/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 8
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Mexico & Latin America",
+                  "url": "http://www.gq.mx/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 9
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Netherlands",
+                  "url": "http://www.gq.nl/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 10
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Portugal",
+                  "url": "http://www.gq.pt/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 11
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Russia",
+                  "url": "http://www.gq.ru/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 12
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Spain",
+                  "url": "http://www.gq.es/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 13
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Taiwan",
+                  "url": "http://www.gq.com.tw/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 14
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Thailand",
+                  "url": "http://www.gq.co.th/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 15
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Turkey",
+                  "url": "http://www.gq.com.tr/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 16
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Ukraine",
+                  "url": "http://www.gq.ua/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 17
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "US",
+                  "url": "http://www.gq.com/?us_site=y"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 18
+            },
+            "state": {
+              "is_first": false,
+              "is_last": true
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          }
+        ],
+        "length": 19
+      },
+      "state": {
+        "has_multiple_items": true
+      },
+      "style": {
+        "cls": "",
+        "inline": ""
+      },
+      "translation": {},
+      "type": "List"
+    },
+    "short_name": "GQ"
+  },
+  "state": {},
+  "style": {
+    "cls": "",
+    "inline": ""
+  },
+  "translation": {},
+  "type": "InternationalRedirect"
+}
