@@ -4,13 +4,17 @@
         "demo": "demo/demo.js"
     },
     "themes": {
-        "bystander": "sass/bystander/bystander.scss",
-        "tatler": "sass/tatler/tatler.scss",
         "wireframe": "sass/wireframe/wireframe.scss",
+        "bystander": "sass/bystander/bystander.scss",
+        "brides": "sass/brides/brides.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "gq": "sass/gq/gq.scss",
+        "houseandgarden": "sass/houseandgarden/houseandgarden.scss",
+        "tatler": "sass/tatler/tatler.scss",
+        "traveller": "sass/traveller/traveller.scss",
         "missvogue": "sass/missvogue/missvogue.scss",
         "vogue": "sass/vogue/vogue.scss",
-        "glamour": "sass/glamour/glamour.scss",
-        "brides": "sass/brides/brides.scss"
+        "wired": "sass/wired/wired.scss"
     },
     "partials": {
         "top-stories": "templates/top-stories.html"
@@ -25,6 +29,14 @@
     "currentTheme": null,
     "main": "top-stories",
     "data": {
-        "without-nav": "data/without-nav.json"
+        "without-nav": "data/without-nav.json",
+        "brides": "data/br.json",
+        "glamour": "data/gl.json",
+        "gq": "data/gq.json",
+        "houseandgarden": "data/hg.json",
+        "tatler": "data/ta.json",
+        "traveller": "data/tr.json",
+        "vogue": "data/vg.json",
+        "wired": "data/wi.json"
     }
 }
