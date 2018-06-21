@@ -6,6 +6,7 @@
     "themes": {
         "wireframe": "sass/wireframe/wireframe.scss",
         "glamour": "sass/glamour/glamour.scss",
+        "houseandgarden": "sass/houseandgarden/houseandgarden.scss",
         "traveller": "sass/traveller/traveller.scss",
         "vogue": "sass/vogue/vogue.scss",
         "wired": "sass/wired/wired.scss"
@@ -23,6 +24,7 @@
     "data": {
         "all": "data/all.json",
         "gl-all": "data/gl-all.json",
+        "hg-all": "data/hg-all.json",
         "tr-all": "data/tr-all.json",
         "vg-all": "data/vg-all.json",
         "wi-all": "data/wi-all.json",
