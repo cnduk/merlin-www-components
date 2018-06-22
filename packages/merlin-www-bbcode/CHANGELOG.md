@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.15.27"></a>
+## [1.15.27](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.26...@cnbritain/merlin-www-bbcode@1.15.27) (2018-06-22)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** correct spacing for gq ol elements ([026acf6](https://github.com/cnduk/merlin-www-components/commit/026acf6))
+
+
+
+
 <a name="1.15.26"></a>
 ## [1.15.26](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.25...@cnbritain/merlin-www-bbcode@1.15.26) (2018-06-22)
 
