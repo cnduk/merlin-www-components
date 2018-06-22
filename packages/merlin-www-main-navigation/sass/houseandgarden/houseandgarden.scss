@@ -252,7 +252,7 @@
 }
 
 .c-nav__promo-message {
-    @include font("MILLER DISPLAY", 17px, 700, 21px);
+    @include font("MILLER_DISPLAY", 17px, 700, 21px);
     color: $mine-shaft;
     margin-bottom: 10px;
     white-space: pre-line;
@@ -282,7 +282,7 @@
 
 .c-nav__social-link {}
 .c-nav__social-link--follow {
-    @include font("MILLER DISPLAY", 15px, 400, 15px);
+    @include font("MILLER_DISPLAY", 15px, 400, 15px);
     color: $mine-shaft;
     font-style: italic;
     margin: 0 0 20px 0;
@@ -355,45 +355,48 @@
     }
 }
 
-// .c-nav__gallery {
-//     left: 165px;
-// }
+.c-nav__gallery {
+    left: 170px;
+}
 
-// .c-nav__gallery-title {
-//     @include font("BRUTAL", 15px, 400, 60px);
-// }
+.c-nav__gallery-title {
+    @include font("MILLER_DISPLAY", 18px, 600, 60px);
+    color: $mine-shaft;
+}
 
-// .c-nav__gallery-count {
-//     font-size: 0;
-//     padding: 0 35px;
-// }
+.c-nav__gallery-count {
+    font-size: 0;
+    padding: 0 20px;
+}
 
-// .c-nav__gallery-slash {
-//     @include font("BRUTAL", 15px, 300, 60px);
-//     margin-left: 4px;
-//     margin-right: 4px;
-// }
+.c-nav__gallery-slash {
+    @include font("BRANDON GROTESQUE", 15px, 400, 60px);
+    color: $mine-shaft;
+    margin: 0 3px;
+}
 
-// .c-nav__gallery-current {
-//     @include font("BRUTAL", 15px, 300, 60px);
-// }
+.c-nav__gallery-current {
+    @include font("BRANDON GROTESQUE", 15px, 700, 60px);
+    color: $mine-shaft;
+}
 
-// .c-nav__gallery-total {
-//     @include font("BRUTAL", 15px, 700, 60px);
-// }
+.c-nav__gallery-total {
+    @include font("BRANDON GROTESQUE", 15px, 400, 60px);
+    color: $mine-shaft;
+}
 
-// .c-nav__gallery-icon {
-//     border-left: 1px solid $isabelline;
-//     box-sizing: border-box;
+.c-nav__gallery-icon {
+    border-left: 1px solid $mercury;
+    box-sizing: border-box;
 
-//     @include min-screen($XX_LARGE_SIZE + -1px) {
-//         border-right: 1px solid $isabelline;
-//     }
+    @include min-screen($XX_LARGE_SIZE + -1px) {
+        border-right: 1px solid $mercury;
+    }
 
-//     svg {
-//         width: 18px;
-//     }
-// }
+    svg {
+        width: 18px;
+    }
+}
 
 .c-nav__list-icon {}
 .c-nav__grid-icon {}
