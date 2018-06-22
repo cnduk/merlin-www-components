@@ -145,6 +145,8 @@
 
     .bb-li {
         counter-increment: section;
+        margin: 15px 0;
+        line-height: 25px;
     }
 
     .bb-li:before {
