@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.15.26"></a>
+## [1.15.26](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.25...@cnbritain/merlin-www-bbcode@1.15.26) (2018-06-22)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** widen ol numbers for glamour ([e5127ef](https://github.com/cnduk/merlin-www-components/commit/e5127ef))
+
+
+
+
 <a name="1.15.25"></a>
 ## [1.15.25](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.24...@cnbritain/merlin-www-bbcode@1.15.25) (2018-06-22)
 
