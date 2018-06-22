@@ -8,6 +8,7 @@
         "brides": "sass/brides/brides.scss",
         "glamour": "sass/glamour/glamour.scss",
         "houseandgarden": "sass/houseandgarden/houseandgarden.scss",
+        "tatler": "sass/tatler/tatler.scss",
         "traveller": "sass/traveller/traveller.scss",
         "vogue": "sass/vogue/vogue.scss",
         "wired": "sass/wired/wired.scss"
@@ -24,14 +25,15 @@
     "main": "main-navigation",
     "data": {
         "all": "data/all.json",
+        "gallery": "data/gallery.json",
         "br-all": "data/br-all.json",
+        "br-gallery": "data/br-gallery.json",
         "gl-all": "data/gl-all.json",
         "hg-all": "data/hg-all.json",
+        "ta-gallery": "data/ta-gallery.json",
         "tr-all": "data/tr-all.json",
         "vg-all": "data/vg-all.json",
         "wi-all": "data/wi-all.json",
-        "br-gallery": "data/br-gallery.json",
-        "gallery": "data/gallery.json",
         "masthead_takeover": "data/masthead_takeover.json"
     }
 }
