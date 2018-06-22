@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.10.34"></a>
+## [1.10.34](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-topic-strip@1.10.33...@cnbritain/merlin-www-topic-strip@1.10.34) (2018-06-22)
+
+
+### Bug Fixes
+
+* **merlin-www-topic-strip:** rename some html classes ([b8fcc02](https://github.com/cnduk/merlin-www-components/commit/b8fcc02))
+* **merlin-www-topic-strip:** tidy up css ([3fb22e5](https://github.com/cnduk/merlin-www-components/commit/3fb22e5))
+* **merlin-www-topic-strip:** turn off debug styles in wireframe ([8fc6886](https://github.com/cnduk/merlin-www-components/commit/8fc6886))
+
+
+
+
 <a name="1.10.33"></a>
 ## [1.10.33](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-topic-strip@1.10.32...@cnbritain/merlin-www-topic-strip@1.10.33) (2018-06-11)
 

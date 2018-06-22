@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.28.50"></a>
+## [1.28.50](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.28.49...@cnbritain/merlin-www-article@1.28.50) (2018-06-22)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-article
+
 <a name="1.28.49"></a>
 ## [1.28.49](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.28.48...@cnbritain/merlin-www-article@1.28.49) (2018-06-12)
 

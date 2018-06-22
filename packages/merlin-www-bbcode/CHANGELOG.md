@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.15.25"></a>
+## [1.15.25](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.24...@cnbritain/merlin-www-bbcode@1.15.25) (2018-06-22)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** Check styles for ordered lists on GLAMOUR [ch3426] ([0e585a6](https://github.com/cnduk/merlin-www-components/commit/0e585a6))
+* **merlin-www-bbcode:** Check styles for ordered lists on GQ[ch3426] ([e181919](https://github.com/cnduk/merlin-www-components/commit/e181919))
+* **merlin-www-bbcode:** Check styles for ordered lists on TATLER [ch3426] ([8594090](https://github.com/cnduk/merlin-www-components/commit/8594090))
+
+
+
+
 <a name="1.15.24"></a>
 ## [1.15.24](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.23...@cnbritain/merlin-www-bbcode@1.15.24) (2018-06-12)
 
