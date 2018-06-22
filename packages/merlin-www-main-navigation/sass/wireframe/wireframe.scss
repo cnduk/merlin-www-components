@@ -197,7 +197,7 @@
     width: 100%;
 
     @include max-screen($X_LARGE_SIZE - 1px) {
-        transition: top 300ms;
+        transition: top 300ms ease-in-out;
         will-change: top;
     }
 
@@ -273,7 +273,7 @@
     svg,
     img {
         height: 100%;
-        transition: transform 300ms linear;
+        transition: transform 300ms ease-in-out;
         width: 100%;
     }
 }

@@ -422,7 +422,74 @@
             "translation": {},
             "type": "ModelPromotion"
         },
-        "masthead": null,
+        "masthead": {
+            "data": {
+                "image": {
+                    "data": {
+                        "image": {
+                            "data": {
+                                "alt_text": null,
+                                "credit": null,
+                                "description": null,
+                                "look_number": null,
+                                "title": null,
+                                "width": null,
+                                "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 614.05 167.94\"><title>tatler-logo</title><path d=\"M606.78 165.16l-30.48-105c9.34-3 18.66-8.66 23.48-16.33 5.7-9.06 6.61-22.58-3.51-31.11-9.42-7.94-25.53-7.61-32.7-7.61h-36.66v2.77H534v157.28h-7v2.78h36.65v-2.78h-7V7.88h6.92c20.89.08 28 26.46 17.72 40.66C572.73 60.37 557 62.88 557 62.88l27.37 102.28H577v2.78h37v-2.78zM472.35 5.08H422.9v2.78h7.01v157.29h-7.01v2.79h54.7v-34.16h-2.79v31.37h-22.23V66.39h12.67v19.73h2.79v-42.2h-2.79V63.6h-12.67V7.86h22.23v31.37h2.79V5.08h-5.25zm-152.49 0v2.78h6.98v157.29h-6.99v2.79h54.7v-34.16h-2.78v31.37h-22.26V7.86h7V5.08h-36.65zm-114.28 0v34.15h2.78V7.97h15.73v157.18h-6.99v2.79h36.65v-2.79h-6.99V7.97h15.74v31.26h2.78V5.08h-59.7zm-84.16 60.25l6.86 41.29h-14.16zm-20.37 99.82H94v2.79h17.17v-2.78h-7.34l9.75-55.74h15.16l9.26 55.73h-7.6v2.79h36.65v-2.79h-6.41L131.18 0h-1.34zM0 5.08v34.15h2.78V7.97h15.74v157.18h-7v2.79h36.65v-2.79h-6.99V7.97h15.74v31.26h2.78V5.08H0z\"/></svg>"
+                            },
+                            "state": {
+                                "is_image": false,
+                                "is_picture": false,
+                                "is_static": false,
+                                "is_svg": true,
+                                "is_linked": false,
+                                "is_landscape": false,
+                                "is_portrait": false,
+                                "is_square": false,
+                                "is_lazyload": false
+                            },
+                            "style": {
+                                "cls": "",
+                                "inline": ""
+                            },
+                            "translation": {},
+                            "type": "SVG"
+                        },
+                        "link": {
+                            "data": {
+                                "title": "Tatler",
+                                "url": "/"
+                            },
+                            "state": {
+                                "is_blank": false,
+                                "is_nofollow": false
+                            },
+                            "style": {
+                                "cls": "",
+                                "inline": ""
+                            },
+                            "translation": {},
+                            "type": "Link"
+                        }
+                    },
+                    "state": {
+                        "is_linked": true
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "LinkedImage"
+                }
+            },
+            "state": {},
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavigationMasthead"
+        },
         "newsletter_link": {
             "data": {
                 "title": "Newsletter Sign Up",
@@ -1243,6 +1310,52 @@
                             "data": {
                                 "item": {
                                     "data": {
+                                        "group": null,
+                                        "key_values": "{\"pos\": [\"promotionbutton\"], \"doctype\": \"splash\"}",
+                                        "native_style": null,
+                                        "order": null,
+                                        "placement": "NATIVE_SMALL",
+                                        "position": "promotion-small",
+                                        "sizemap": "null",
+                                        "sizes": "[[1, 1]]",
+                                        "target": "null",
+                                        "title": null,
+                                        "unit": "homepage",
+                                        "zone": "/5574/uk.n5574.tatler"
+                                    },
+                                    "state": {
+                                        "is_ad": true,
+                                        "is_lazyload": true,
+                                        "is_sticky_block": false,
+                                        "is_sticky_element": false,
+                                        "has_bidding": false
+                                    },
+                                    "style": {
+                                        "cls": "ad--native-small",
+                                        "inline": ""
+                                    },
+                                    "translation": {},
+                                    "type": "Ad"
+                                },
+                                "remaining_count": null,
+                                "index": 3
+                            },
+                            "state": {
+                                "is_first": false,
+                                "is_last": false
+                            },
+                            "style": {
+                                "cls": "c-card-list__item--ad is-hidden js-c-card-list__ad",
+                                "inline": ""
+                            },
+                            "translation": {
+                                "remaining_prefix": "+"
+                            },
+                            "type": "ImageListItem"
+                        }, {
+                            "data": {
+                                "item": {
+                                    "data": {
                                         "byline": null,
                                         "icon": null,
                                         "image_list": {
@@ -1416,7 +1529,7 @@
                                     },
                                     "type": "TopStoriesCard"
                                 },
-                                "index": 3
+                                "index": 4
                             },
                             "state": {
                                 "is_first": false,
@@ -1605,7 +1718,7 @@
                                     },
                                     "type": "TopStoriesCard"
                                 },
-                                "index": 4
+                                "index": 5
                             },
                             "state": {
                                 "is_first": false,
@@ -1794,7 +1907,7 @@
                                     },
                                     "type": "TopStoriesCard"
                                 },
-                                "index": 5
+                                "index": 6
                             },
                             "state": {
                                 "is_first": false,
@@ -1983,7 +2096,7 @@
                                     },
                                     "type": "TopStoriesCard"
                                 },
-                                "index": 6
+                                "index": 7
                             },
                             "state": {
                                 "is_first": false,
@@ -2172,7 +2285,7 @@
                                     },
                                     "type": "TopStoriesCard"
                                 },
-                                "index": 7
+                                "index": 8
                             },
                             "state": {
                                 "is_first": false,
@@ -2361,7 +2474,7 @@
                                     },
                                     "type": "TopStoriesCard"
                                 },
-                                "index": 8
+                                "index": 9
                             },
                             "state": {
                                 "is_first": false,
@@ -2550,7 +2663,7 @@
                                     },
                                     "type": "TopStoriesCard"
                                 },
-                                "index": 9
+                                "index": 10
                             },
                             "state": {
                                 "is_first": false,
@@ -2739,7 +2852,7 @@
                                     },
                                     "type": "TopStoriesCard"
                                 },
-                                "index": 10
+                                "index": 11
                             },
                             "state": {
                                 "is_first": false,
@@ -2928,7 +3041,7 @@
                                     },
                                     "type": "TopStoriesCard"
                                 },
-                                "index": 11
+                                "index": 12
                             },
                             "state": {
                                 "is_first": false,
@@ -3117,7 +3230,7 @@
                                     },
                                     "type": "TopStoriesCard"
                                 },
-                                "index": 12
+                                "index": 13
                             },
                             "state": {
                                 "is_first": false,
@@ -3306,7 +3419,7 @@
                                     },
                                     "type": "TopStoriesCard"
                                 },
-                                "index": 13
+                                "index": 14
                             },
                             "state": {
                                 "is_first": false,
@@ -3495,7 +3608,7 @@
                                     },
                                     "type": "TopStoriesCard"
                                 },
-                                "index": 14
+                                "index": 15
                             },
                             "state": {
                                 "is_first": false,
@@ -3684,7 +3797,7 @@
                                     },
                                     "type": "TopStoriesCard"
                                 },
-                                "index": 15
+                                "index": 16
                             },
                             "state": {
                                 "is_first": false,
@@ -3873,7 +3986,7 @@
                                     },
                                     "type": "TopStoriesCard"
                                 },
-                                "index": 16
+                                "index": 17
                             },
                             "state": {
                                 "is_first": false,
@@ -4062,7 +4175,7 @@
                                     },
                                     "type": "TopStoriesCard"
                                 },
-                                "index": 17
+                                "index": 18
                             },
                             "state": {
                                 "is_first": false,
@@ -4251,7 +4364,7 @@
                                     },
                                     "type": "TopStoriesCard"
                                 },
-                                "index": 18
+                                "index": 19
                             },
                             "state": {
                                 "is_first": false,
@@ -4440,7 +4553,7 @@
                                     },
                                     "type": "TopStoriesCard"
                                 },
-                                "index": 19
+                                "index": 20
                             },
                             "state": {
                                 "is_first": false,
@@ -4629,7 +4742,7 @@
                                     },
                                     "type": "TopStoriesCard"
                                 },
-                                "index": 20
+                                "index": 21
                             },
                             "state": {
                                 "is_first": false,
@@ -4818,7 +4931,7 @@
                                     },
                                     "type": "TopStoriesCard"
                                 },
-                                "index": 21
+                                "index": 22
                             },
                             "state": {
                                 "is_first": false,
@@ -5007,7 +5120,7 @@
                                     },
                                     "type": "TopStoriesCard"
                                 },
-                                "index": 22
+                                "index": 23
                             },
                             "state": {
                                 "is_first": false,
@@ -5196,7 +5309,7 @@
                                     },
                                     "type": "TopStoriesCard"
                                 },
-                                "index": 23
+                                "index": 24
                             },
                             "state": {
                                 "is_first": false,
@@ -5209,7 +5322,7 @@
                             "translation": {},
                             "type": "ListItem"
                         }],
-                        "length": 24
+                        "length": 25
                     },
                     "state": {
                         "has_multiple_items": true
@@ -5403,7 +5516,7 @@
     },
     "state": {
         "has_promo": true,
-        "has_masthead": false,
+        "has_masthead": true,
         "has_newsletter": true,
         "has_social": true,
         "has_search": true,
