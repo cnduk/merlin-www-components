@@ -76,8 +76,10 @@
     img {
         margin-left: $MOBILE_SIDE_GUTTER;
         width: 60%;
+    }
 
-        @include at-medium-size {
+    @include at-medium-size {
+        img {
             margin-left: 0;
         }
     }
@@ -91,8 +93,10 @@
         position: absolute;
         right: $MOBILE_SIDE_GUTTER;
         width: 40%;
+    }
 
-        @include at-x-large-size {
+    @include at-x-large-size {
+        img {
             border-radius: 15px;
             padding: 30px 20px;
             width: 45%;

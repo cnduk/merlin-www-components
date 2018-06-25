@@ -52,8 +52,10 @@
 		bottom: 1px;
 		box-shadow: 0 0 0 1px $ABBEY;
 		padding: 16px 12px;
+	}
 
-		@include at-x-large-size {
+	@include at-x-large-size {
+		img {
 			border-radius: 15px;
 			padding: 30px 20px;
 			width: 40%;

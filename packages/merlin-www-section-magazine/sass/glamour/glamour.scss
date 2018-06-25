@@ -10,6 +10,16 @@
     margin-top: $MOBILE_SLICE_MARGIN;
     position: relative;
 
+    &::after {
+        content: "";
+        border-bottom: 20px solid transparent;
+        border-image: url("/static/img/pattern-2.jpg") 20;
+        bottom: -20px;
+        position: absolute;
+        right: 0;
+        width: calc(100% - 20px);
+    }
+
     @include at-medium-size {
         margin-top: $TABLET_SLICE_MARGIN;
         margin-bottom: $TABLET_SLICE_MARGIN + 20px;
@@ -22,16 +32,8 @@
         margin-top: $DESKTOP_SLICE_MARGIN;
     }
 
-    &::after {
-        content: "";
-        border-bottom: 20px solid transparent;
-        border-image: url("/static/img/pattern-2.jpg") 20;
-        bottom: -20px;
-        position: absolute;
-        right: 0;
-        width: calc(100% - 20px);
-
-        @include at-x-large-size {
+    @include at-x-large-size {
+        &::after {
             display: none;
         }
     }
@@ -75,8 +77,10 @@
     img {
         width: 67%;
         margin-left: 0;
+    }
 
-        @include at-medium-size {
+    @include at-medium-size {
+        img {
             margin-left: 0;
             width: 65%;
         }
@@ -92,8 +96,10 @@
         position: absolute;
         right: 0;
         width: 47%;
+    }
 
-        @include at-x-large-size {
+    @include at-x-large-size {
+        img {
             border-radius: 15px;
             padding: 30px 20px;
             width: 52%;

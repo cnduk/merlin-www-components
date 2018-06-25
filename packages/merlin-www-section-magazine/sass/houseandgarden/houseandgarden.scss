@@ -51,8 +51,8 @@
 }
 
 .c-magazine__cover--print {
-     img {
-         @include at-x-large-size {
+    @include at-x-large-size {
+        img{
              width: 65%;
          }
      }
@@ -62,13 +62,14 @@
     img {
         border-radius: 8px;
         padding: 16px 12px;
+    }
 
-        @include at-x-large-size {
+    @include at-x-large-size {
+        img {
             border-radius: 15px;
             padding: 30px 20px;
             right: 0;
             width: 40%;
-
         }
     }
 }
