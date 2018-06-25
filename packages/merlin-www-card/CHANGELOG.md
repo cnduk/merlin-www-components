@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.16.0"></a>
+# [1.16.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card@1.15.35...@cnbritain/merlin-www-card@1.16.0) (2018-06-25)
+
+
+### Features
+
+* **merlin-www-card:** add tg-related-tag styles ([a762694](https://github.com/cnduk/merlin-www-components/commit/a762694))
+
+
+
+
 <a name="1.15.35"></a>
 ## [1.15.35](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card@1.15.34...@cnbritain/merlin-www-card@1.15.35) (2018-06-11)
 

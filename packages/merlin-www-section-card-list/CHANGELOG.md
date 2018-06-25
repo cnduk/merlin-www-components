@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.12.0"></a>
+# [1.12.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.11.46...@cnbritain/merlin-www-section-card-list@1.12.0) (2018-06-25)
+
+
+### Bug Fixes
+
+* **merlin-www-section-card-list:** correct tg related in tatler ([a4cf9b2](https://github.com/cnduk/merlin-www-components/commit/a4cf9b2))
+
+
+### Features
+
+* **merlin-www-section-card-list:** add tg-related-tags ([3dd425b](https://github.com/cnduk/merlin-www-components/commit/3dd425b))
+
+
+
+
 <a name="1.11.46"></a>
 ## [1.11.46](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.11.45...@cnbritain/merlin-www-section-card-list@1.11.46) (2018-06-22)
 
