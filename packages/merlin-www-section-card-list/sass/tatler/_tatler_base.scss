@@ -322,26 +322,33 @@
     padding-top: $PADDING_LARGE;
 
     .c-card-list {
-        display: grid;
-        grid-gap: 20px;
-        grid-template-columns: 1fr;
+        display: block;
+        flex-wrap: nowrap;
+        font-size: 0;
+        margin: -10px;
     }
 
     .c-card-list__item {
-        display: flex;
+        box-sizing: border-box;
+        display: inline-block;
+        font-size: initial;
+        margin: 10px 0;
+        padding: 0 10px;
+        width: 100%;
     }
 
     @include at-medium-size {
-        .c-card-list {
-            grid-template-columns: 1fr 1fr;
+        .c-card-list__item {
+            width: 50%;
         }
     }
 
     @include at-x-large-size {
         .c-card-list {
-            grid-template-columns: 1fr 1fr 1fr;
             margin-right: 340px;
         }
+        .c-card-list__item {
+            width: 33.33%;
+        }
     }
-
 }
