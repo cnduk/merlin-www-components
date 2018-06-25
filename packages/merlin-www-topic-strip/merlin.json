@@ -2,14 +2,17 @@
     "name": "@cnbritain/merlin-www-topic-strip",
     "js": {},
     "themes": {
-        "gq": "sass/gq/gq.scss",
-        "tatler": "sass/tatler/tatler.scss",
         "wireframe": "sass/wireframe/wireframe.scss",
-        "glamour": "sass/glamour/glamour.scss",
+        "brides": "sass/brides/brides.scss",
         "bystander": "sass/bystander/bystander.scss",
-        "wired": "sass/wired/wired.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "gq": "sass/gq/gq.scss",
+        "houseandgarden": "sass/houseandgarden/houseandgarden.scss",
         "missvogue": "sass/missvogue/missvogue.scss",
-        "vogue": "sass/vogue/vogue.scss"
+        "tatler": "sass/tatler/tatler.scss",
+        "traveller": "sass/traveller/traveller.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "wired": "sass/wired/wired.scss"
     },
     "partials": {
         "topic": "templates/topic-strip.html"
@@ -21,7 +24,10 @@
     "currentTheme": null,
     "main": "topic",
     "data": {
-        "topic": "demo/data/topic.json",
-        "topic-with-title": "demo/data/topic-with-title.json"
+        "default": "data/default.json",
+        "a-related": "data/a-related.json",
+        "c-card-section": "data/c-card-section.json",
+        "sh-trends": "data/sh-trends.json",
+        "tg-header": "data/tg-header.json"
     }
 }

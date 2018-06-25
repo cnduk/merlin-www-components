@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.11.1"></a>
+## [1.11.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.0...@cnbritain/merlin-www-tag-header@1.11.1) (2018-06-22)
+
+
+### Bug Fixes
+
+* **merlin-www-tag-header:** add shadow to tatler title for hero ([5f0bf35](https://github.com/cnduk/merlin-www-components/commit/5f0bf35))
+
+
+
+
+<a name="1.11.0"></a>
+# [1.11.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.10.40...@cnbritain/merlin-www-tag-header@1.11.0) (2018-06-22)
+
+
+### Features
+
+* **merlin-www-tag-header:** Update components for hero images on Tatler [ch3319] ([9934389](https://github.com/cnduk/merlin-www-components/commit/9934389))
+
+
+
+
+<a name="1.10.40"></a>
+## [1.10.40](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.10.39...@cnbritain/merlin-www-tag-header@1.10.40) (2018-06-22)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-tag-header
+
 <a name="1.10.39"></a>
 ## [1.10.39](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.10.38...@cnbritain/merlin-www-tag-header@1.10.39) (2018-06-11)
 

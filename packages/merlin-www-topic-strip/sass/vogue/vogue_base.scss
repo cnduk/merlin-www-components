@@ -1,35 +1,36 @@
 .c-topic-strip {}
 
-.c-topic-strip__title {
-    @include font('NOBEL', 12px, 700, 12px);
+.c-topic-strip-wrapper {}
 
-    color: $COLOR_MAIN_PRIMARY;
-    padding-right: 20px;
+.c-topic-strip__title {
+    @include font('NOBEL', 12px, 'BOLD', 12px);
+    color: $cod-gray;
+    display: inline-block;
+    margin-right: 20px;
     text-transform: uppercase;
 }
 
-.c-topic-strip__btn {
-    @include button-group();
-    @include button-group-light();
-    @include font-size(11px);
+.c-topic-strip__list {
+    display: inline-block;
+}
 
-    &:hover {
-        @include button-group-light-hover();
+.c-topic-strip__list-item {
+    margin-bottom: 10px;
+    margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0;
     }
 }
 
-.c-topic-strip__item {
+.c-topic-strip__link {
+    @include button-group;
+    @include button-group-light;
+    @include font-size(11px);
 
-    &:before {
-        display: none;
-    }
-
-    & + & {
-        margin-left: $MARGIN_XX_SMALL;
-
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-            margin-left: 10px;
-        }
+    &:hover,
+    &:focus {
+        @include button-group-light-hover;
     }
 }
 
@@ -38,119 +39,119 @@
  * ============================================================================
  */
 
-.c-topic-strip--bleed {
-    @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: -$MOBILE_SIDE_GUTTER;
-        margin-right: -$MOBILE_SIDE_GUTTER;
-        padding-left: $MOBILE_SIDE_GUTTER;
-        padding-right: $MOBILE_SIDE_GUTTER;
+.c-topic-strip--a-related {
+    .c-topic-strip__link {
+        @include button-related;
 
-        .c-topic-strip__list {
-            display: inline-block;
-            margin-left: -$MOBILE_SIDE_GUTTER;
-            margin-right: -$MOBILE_SIDE_GUTTER;
+        &:hover,
+        &:focus {
+            @include button-related-hover;
+        }
+    }
+}
+
+.c-topic-strip--sh-trends {
+    margin: 20px 0;
+
+    .c-topic-strip__title {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .c-topic-strip__list {
+        display: block;
+        width: 100%;
+    }
+
+    .c-topic-strip__link {
+        @include button-related();
+
+        &:hover {
+            @include button-related-hover();
+        }
+    }
+
+}
+
+.c-topic-strip--tg-header {
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+
+    .c-topic-strip-wrapper {
+        padding-left: $MOBILE_SIDE_GUTTER;
+    }
+
+    .c-topic-strip__list-item:last-child {
+        padding-right: $MOBILE_SIDE_GUTTER;
+    }
+
+    @include tablet-size {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+
+        .c-topic-strip-wrapper {
             padding-left: $MOBILE_SIDE_GUTTER;
+        }
+
+        .c-topic-strip__list-item:last-child {
             padding-right: $MOBILE_SIDE_GUTTER;
         }
+    }
+
+    @include desktop-size {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
 .c-topic-strip--c-card-section {
-    @include font-size(10px);
-    padding-bottom: $PADDING_SMALL;
-    text-align: left;
+    margin-bottom: 20px;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
 
-    .c-topic-strip__btn {
+    .c-topic-strip-wrapper {
+        padding-left: $MOBILE_SIDE_GUTTER;
+    }
+
+    .c-topic-strip__list-item:last-child {
+        padding-right: $MOBILE_SIDE_GUTTER;
+    }
+
+    .c-topic-strip__link,
+    .c-topic-strip__title {
         @include font-size(10px);
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(11px);
-        padding-bottom: $PADDING_MEDIUM;
+    @include tablet-size {
+        margin-bottom: $MARGIN_MEDIUM;
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
         text-align: center;
 
-        .c-topic-strip__btn {
+        .c-topic-strip-wrapper {
+            padding-left: $MOBILE_SIDE_GUTTER;
+        }
+
+        .c-topic-strip__list-item:last-child {
+            padding-right: $MOBILE_SIDE_GUTTER;
+        }
+
+        .c-topic-strip__link,
+        .c-topic-strip__title {
             @include font-size(11px);
         }
-    }
-}
-
-.c-topic-strip--article-related {
-    text-align: left;
-
-    .c-topic-strip__item + .c-topic-strip__item {
-        margin-left: $MARGIN_XX_SMALL;
-    }
-
-    .c-topic-strip__btn {
-        @include button-related();
-
-        &:hover {
-            @include button-related-hover();
-        }
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        white-space: normal;
-        margin-bottom: -$MARGIN_XX_SMALL;
-
-        .c-topic-strip__item {
-            margin-bottom: $MARGIN_XX_SMALL;
-            margin-right: $MARGIN_XX_SMALL;
-        }
-
-        .c-topic-strip__item + .c-topic-strip__item {
-            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-                margin-left: 0;
-            }
-        }
 
     }
 
-}
-
-.c-topic-strip--show-trends {
-    font-size: 0;
-    margin: $MARGIN_MEDIUM 0;
-    text-align: left;
-
-    .c-topic-strip__title {
-        padding-right: 15px;
-    }
-
-    .c-topic-strip__btn {
-        @include button-related();
-
-        &:hover {
-            @include button-related-hover();
-        }
-    }
-
-    @include min-screen($ARTICLE_TOTAL){
-        white-space: normal;
-
-        .c-topic-strip__title {
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        .c-topic-strip__list {
-            display: block;
-        }
-
-        .c-topic-strip__item {
-            margin-bottom: 10px;
-            margin-right: 10px;
-        }
-
-        .c-topic-strip__item + .c-topic-strip__item {
-            margin-left: 0;
-        }
-
-        .c-topic-strip__btn {
-            display: block;
-        }
-
+    @include desktop-size {
+        margin-left: 0;
+        margin-right: 0;
     }
 
 }

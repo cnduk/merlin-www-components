@@ -38,31 +38,86 @@
     }
 }
 
-.tg-header__wrapper {}
-.tg-header__intro {}
+.tg-header__wrapper {
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    margin: 0 auto;
+}
+.tg-header__intro {
+    background-color: $black;
+    padding: 30px 20px;
+    position: relative;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 60px $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 60px 60px;
+    }
+
+    &:before {
+        background-color: $black;
+        content: '';
+        height: 100%;
+        left: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        position: absolute;
+        right: 50%;
+        top: 0;
+        width: 100vw;
+    }
+}
+
+.tg-header__hero {
+    height: 100%;
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+    position: absolute;
+    right: 50%;
+    top: 0;
+    width: 100vw;
+
+    img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+    }
+}
+.tg-header__hero-credit {
+    @include font("COMMUTER SANS", 10px, 'NORMAL', 10px);
+    bottom: 10px;
+    color: $white;
+    letter-spacing: 0;
+    position: absolute;
+    right: 10px;
+    text-transform: uppercase;
+}
 
 .tg-header__intro__image {
     margin-left: auto;
     margin-right: auto;
 }
 
-// TODO
-.tg-header__hero {}
-.tg-header__hero-credit {}
-
 .tg-header__title {
-    @include font('STARLING', 30px, 'NORMAL', 33px);
-    color: $black;
+    @include font('STARLING', 30px, 'NORMAL', 30px);
+    color: $white;
     letter-spacing: -0.3px;
-    margin: 0 0 20px 0;
+    position: relative;
     text-align: center;
+    z-index: 1;
 
     @include at-medium-size {
         @include font-size(56px);
         @include line-height(56px);
         letter-spacing: -0.5px;
-        margin-bottom: 20px;
     }
+}
+.has-hero .tg-header__title {
+    text-shadow: rgba(55, 51, 48, 0.8) 0px 0 27px;
 }
 
 // TODO
