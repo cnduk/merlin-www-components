@@ -133,6 +133,7 @@
         width: initial;
     }
 
+    &:focus,
     &:hover {
         @include button-single-light-hover;
     }

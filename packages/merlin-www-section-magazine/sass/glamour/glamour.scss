@@ -162,6 +162,7 @@
     display: table;
     margin-top: 30px;
 
+    &:focus,
     &:hover {
         @include button-single-light-hover;
     }

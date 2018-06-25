@@ -110,6 +110,7 @@
         margin-right: auto;
     }
 
+    &:focus,
     &:hover {
         @include button-single-two-light-hover;
     }

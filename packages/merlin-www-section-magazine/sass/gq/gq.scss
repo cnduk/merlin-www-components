@@ -112,6 +112,7 @@
 	margin-top: 24px;
     transition-duration: 300ms;
 
+	&:focus,
 	&:hover {
 		@include button-single-two-light-hover;
 		background-color: $zircon;

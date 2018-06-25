@@ -115,6 +115,7 @@
 		margin-top: 40px;
 	}
 
+	&:focus,
 	&:hover {
 		@include button-single-light-hover;
 	}
