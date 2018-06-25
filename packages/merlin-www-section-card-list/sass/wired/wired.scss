@@ -102,7 +102,7 @@
  * Mixins
  */
 
-@mixin columns-1($right-margin: false) {
+@mixin columns-base {
 
     .c-card-section__card-list {
         margin: -15px -10px;
@@ -112,6 +112,15 @@
         display: inline-block;
         padding: 0 10px;
         margin: 15px 0;
+    }
+
+}
+
+@mixin columns-1($right-margin: false) {
+
+    @include columns-base;
+
+    .c-card-section__card-listitem {
         width: 100%;
     }
 
@@ -127,14 +136,9 @@
 
 @mixin columns-1-2-4($right-margin: false) {
 
-    .c-card-section__card-list {
-        margin: -15px -10px;
-    }
+    @include columns-base;
 
     .c-card-section__card-listitem {
-        display: inline-block;
-        padding: 0 10px;
-        margin: 15px 0;
         width: 100%;
     }
 
@@ -159,15 +163,13 @@
 
 @mixin columns-1-3($right-margin: false) {
 
+    @include columns-base;
+
     .c-card-section__card-list {
-        margin: -15px -10px;
         text-align: center;
     }
 
     .c-card-section__card-listitem {
-        display: inline-block;
-        padding: 0 10px;
-        margin: 15px 0;
         text-align: left;
         width: 100%;
     }
@@ -190,14 +192,9 @@
 
 @mixin columns-1-2-43($right-margin: false) {
 
-    .c-card-section__card-list {
-        margin: -15px -10px;
-    }
+    @include columns-base;
 
     .c-card-section__card-listitem {
-        display: inline-block;
-        padding: 0 10px;
-        margin: 15px 0;
         width: 100%;
     }
 
@@ -222,14 +219,9 @@
 
 @mixin columns-2-4($right-margin: false) {
 
-    .c-card-section__card-list {
-        margin: -15px -10px;
-    }
+    @include columns-base;
 
     .c-card-section__card-listitem {
-        display: inline-block;
-        padding: 0 10px;
-        margin: 15px 0;
         width: 50%;
     }
 
