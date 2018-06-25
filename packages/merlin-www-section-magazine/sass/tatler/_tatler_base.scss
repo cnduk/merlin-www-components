@@ -88,14 +88,14 @@
 .c-magazine__cards-list {
     display: flex;
     flex-wrap: wrap;
+}
 
-    .c-magazine__cards-listitem {
-        max-width: 450px;
-    }
+.c-magazine__cards-listitem {
+    max-width: 450px;
+}
 
-    .c-magazine__cards-listitem + .c-magazine__cards-listitem {
-        margin-top: 20px;
-    }
+.c-magazine__cards-listitem + .c-magazine__cards-listitem {
+    margin-top: 20px;
 }
 
 .c-magazine__contents-btn {
