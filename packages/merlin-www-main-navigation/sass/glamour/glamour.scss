@@ -57,6 +57,7 @@
 .c-nav__top-stories {}
 
 .c-nav__logo {
+    background-color: $azalea;
     width: 130px;
 }
 
@@ -289,7 +290,8 @@
 
 .c-nav__gallery {
     background-color: $azalea;
-    left: 192px;
+    left: 160px;
+    padding-left: 32px;
 }
 
 .c-nav__gallery-title {

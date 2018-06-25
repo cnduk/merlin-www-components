@@ -72,6 +72,7 @@
 .c-nav__top-stories {}
 
 .c-nav__logo {
+    background-color: $white;
     width: 110px;
 }
 
@@ -356,7 +357,8 @@
 }
 
 .c-nav__gallery {
-    left: 170px;
+    left: 140px;
+    padding-left: 40px;
 }
 
 .c-nav__gallery-title {

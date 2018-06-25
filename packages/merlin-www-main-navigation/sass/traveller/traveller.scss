@@ -89,6 +89,7 @@
 .c-nav__top-stories {}
 
 .c-nav__logo {
+    background-color: $WHITE;
     width: 100px;
 
     svg {
@@ -380,7 +381,8 @@
 }
 
 .c-nav__gallery {
-    left: 162px;
+    left: 130px;
+    padding-left: 32px;
 }
 
 .c-nav__gallery-title {
