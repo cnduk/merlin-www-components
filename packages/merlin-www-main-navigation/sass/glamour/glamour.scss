@@ -127,10 +127,10 @@
 .c-nav__main {}
 .c-nav__main-list {
     background-color: $azalea;
-    padding: 0 20px 20px 20px;
+    margin: 0 20px 20px 20px;
 
     @include at-x-large-size {
-        padding: 0;
+        margin: 0;
     }
 }
 
@@ -165,10 +165,12 @@
 
 .c-nav__alt-list {
     background-color: $azalea;
-    padding: 15px 0 0 0;
+    border-bottom: 1px solid $dune;
+    padding: 15px 0 15px 0;
 
     @include at-x-large-size {
-        padding: 0 20px 0 20px;
+        border-bottom: none;
+        padding: 10px 20px 10px 20px;
     }
 }
 
@@ -208,7 +210,7 @@
 .c-nav__promo-button {}
 
 .c-nav__social {
-    margin: 20px 16px 32px 16px;
+    margin: 30px 20px;
 
     @include at-x-large-size {
         margin: 0;
@@ -238,7 +240,7 @@
 .c-nav__share-list {
     @include at-x-large-size {
         background-color: $azalea;
-        padding: 15px 10px;
+        padding: 10px;
     }
 }
 
@@ -289,6 +291,10 @@
 
     &:hover {
         @include button-group-light-hover();
+    }
+
+    @include at-x-large-size {
+        margin-top: 15px;
     }
 }
 
