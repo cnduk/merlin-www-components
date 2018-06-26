@@ -29,7 +29,53 @@
       "translation": {},
       "type": "SVG"
     },
-    "site_links": null,
+    "site_links": {
+      "data": {
+        "items": [
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "South Africa",
+                  "url": "https://www.houseandgarden.co.za/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 0
+            },
+            "state": {
+              "is_first": true,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          }
+        ],
+        "length": 1
+      },
+      "state": {
+        "has_multiple_items": false
+      },
+      "style": {
+        "cls": "",
+        "inline": ""
+      },
+      "translation": {},
+      "type": "List"
+    },
     "short_name": "House & Garden"
   },
   "state": {},
