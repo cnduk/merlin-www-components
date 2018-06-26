@@ -176,7 +176,7 @@
 .c-nav__main {}
 .c-nav__main-list {
     background-color: $black;
-    padding: 0 0 20px 0;
+    padding: 0 0 15px 0;
 
     @include at-x-large-size {
         padding: 0;
@@ -218,7 +218,7 @@
 
 .c-nav__alt-list {
     background-color: $black;
-    padding: 16px 20px 0 20px;
+    padding: 15px 20px 0 20px;
 
     @include at-x-large-size {
         border-bottom: 1px solid $mineshaft;
