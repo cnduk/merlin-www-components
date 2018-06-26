@@ -4,110 +4,124 @@
 @import "../wireframe/wireframe";
 
 .c-footer {
-    background-color: $dune;
-    color: $white;
-}
-
-.c-footer__wrapper {
-    margin: 0 auto;
-    max-width: 1440px;
-}
-
-.c-footer__list {
-    color: $white;
-}
-
-.c-footer__list--left {
-    @include min-screen(1100px) {
-        & .c-footer__list-item:first-child {
-            padding-left: 30px;
-        }
-    }
-}
-.c-footer__list--right {
-    @include min-screen(1100px) {
-        & > .c-footer__list-item:last-child {
-            padding-right: 15px;
-        }
-    }
-}
-
-.c-footer__list-item--links {
-    font-size: 0;
-
-     .c-footer__list-item:first-child{
-         &:before {
-            content: '';
-            display: block;
-            height: 1px;
-            width: calc(100% - 20px);
-            background-color: rgba(147,140,134, 0.4);
-
-            @include min-screen(1100px) {
-                content: none;
-            }
-        }
-     }
-    .c-footer__list-item {
-        @include max-screen(1099px) {
-            &:last-child:after {
-                content: none;
-            }
-        }
-    }
-}
-
-li.c-footer__list-item {
-    @include font('GRAPHIK', 12px, 'SEMI BOLD', 60px, 20);
-    height: 60px;
-    margin: 0;
-    padding-left: 20px;
-
-    @include min-screen(1100px) {
-        padding-left: 25px;
-    }
-
     a {
-        text-decoration: none;
-        color: inherit;
-        border-bottom: none;
-
-        @include min-screen(1100px) {
-            &:hover {
-                text-decoration: underline;
-            }
-        }
+        text-decoration: underline;
     }
 }
 
-li.c-footer__list-item{
-    &:before {
-        content: '';
-        display: block;
-        height: 1px;
-        width: calc(100% - 20px);
-        background-color: rgba(147,140,134, 0.4);
-    }
-}
-
-li.c-footer__list-item--logo {
-    margin-top: -60px;
-    margin-right: 20px;
-
+.c-footer__list-item--brand-logo {
     svg {
         fill: $white;
         height: 60px;
         width: 30px;
     }
-
-    @include min-screen( 1100px ) {
-        clear: right;
-        padding-left: 25px;
-        margin-right: 0;
-        margin-top: 0;
-    }
-
-    &:before {
-        display: none;
-    }
 }
+
+// .c-footer {
+//     background-color: $dune;
+//     color: $white;
+// }
+
+// .c-footer__wrapper {
+//     margin: 0 auto;
+//     max-width: 1440px;
+// }
+
+// .c-footer__list {
+//     color: $white;
+// }
+
+// .c-footer__list--left {
+//     @include min-screen(1100px) {
+//         & .c-footer__list-item:first-child {
+//             padding-left: 30px;
+//         }
+//     }
+// }
+// .c-footer__list--right {
+//     @include min-screen(1100px) {
+//         & > .c-footer__list-item:last-child {
+//             padding-right: 15px;
+//         }
+//     }
+// }
+
+// .c-footer__list-item--links {
+//     font-size: 0;
+
+//      .c-footer__list-item:first-child{
+//          &:before {
+//             content: '';
+//             display: block;
+//             height: 1px;
+//             width: calc(100% - 20px);
+//             background-color: rgba(147,140,134, 0.4);
+
+//             @include min-screen(1100px) {
+//                 content: none;
+//             }
+//         }
+//      }
+//     .c-footer__list-item {
+//         @include max-screen(1099px) {
+//             &:last-child:after {
+//                 content: none;
+//             }
+//         }
+//     }
+// }
+
+// li.c-footer__list-item {
+//     @include font('GRAPHIK', 12px, 'SEMI BOLD', 60px, 20);
+//     height: 60px;
+//     margin: 0;
+//     padding-left: 20px;
+
+//     @include min-screen(1100px) {
+//         padding-left: 25px;
+//     }
+
+//     a {
+//         text-decoration: none;
+//         color: inherit;
+//         border-bottom: none;
+
+//         @include min-screen(1100px) {
+//             &:hover {
+//                 text-decoration: underline;
+//             }
+//         }
+//     }
+// }
+
+// li.c-footer__list-item{
+//     &:before {
+//         content: '';
+//         display: block;
+//         height: 1px;
+//         width: calc(100% - 20px);
+//         background-color: rgba(147,140,134, 0.4);
+//     }
+// }
+
+// li.c-footer__list-item--logo {
+//     margin-top: -60px;
+//     margin-right: 20px;
+
+//     svg {
+//         fill: $white;
+//         height: 60px;
+//         width: 30px;
+//     }
+
+//     @include min-screen( 1100px ) {
+//         clear: right;
+//         padding-left: 25px;
+//         margin-right: 0;
+//         margin-top: 0;
+//     }
+
+//     &:before {
+//         display: none;
+//     }
+// }

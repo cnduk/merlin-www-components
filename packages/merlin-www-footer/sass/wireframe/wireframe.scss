@@ -1,40 +1,69 @@
 @import "@cnbritain/merlin-www-common:wireframe";
+@import "@cnbritain/merlin-www-image:wireframe";
 
 .c-footer {
-	overflow: hidden;
+    background-color: #000;
+    padding: 0 20px;
 
-	@include min-screen( 1100px ) {
-		height: 60px;
+    a {
+        color: inherit;
+        text-decoration: underline;
     }
 }
 
-.c-footer__wrapper {}
+.c-footer-wrapper {}
 
-.c-footer__list-item--links {
-    @include min-screen( 1100px ) {
-        display: inline-block;
+.c-footer__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.c-footer__list-item {
+    @include font-size(13px);
+    color: #fff;
+    font-family: arial;
+    padding: 20px 0;
+}
+
+.c-footer__list-item + .c-footer__list-item {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.c-footer__list-item--conde-logo {
+    padding: 0;
+}
+
+.c-footer__list-item--copyright {}
+
+.c-footer__list-item--brand-logo {
+    svg, img {
+        width: 80px;
     }
 }
 
-li.c-footer__list-item,
-li.c-footer__list-break {
-    @include min-screen( 1100px ) {
-        display: inline-block;
-    }
-}
 
-li.c-footer__list-item--logo {
-    float: right;
-}
+@include at-large-size {
 
-.c-footer__list--left {
-	@include min-screen( 1100px ) {
-		float: left;
+    .c-footer__list {
+        align-items: center;
+        display: flex;
     }
-}
 
-.c-footer__list--right {
-	@include min-screen( 1100px ) {
-		float: right;
+    .c-footer__list-item {
+        padding: 0 12px;
     }
+
+    .c-footer__list-item + .c-footer__list-item {
+        border-top: none;
+    }
+
+    .c-footer__list-item--conde-logo {
+        flex-grow: 1;
+        padding-left: 0;
+    }
+
+    .c-footer__list-item--brand-logo {
+        padding-right: 0;
+    }
+
 }
