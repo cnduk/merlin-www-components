@@ -63,6 +63,8 @@
 
 .c-nav__search {
     @include at-x-large-size {
+        box-sizing: border-box;
+        padding: 60px;
         top: 60px;
 
         &:before {
@@ -82,7 +84,9 @@
     background-color: $dune;
 
     @include at-x-large-size {
-        padding: 30px 0;
+        border-bottom: 1px solid $natural-gray;
+        box-sizing: content-box;
+        padding-bottom: 20px;
 
         &:before {
             background-color: $dune;
@@ -105,10 +109,10 @@
     padding: 0 20px;
 
     @include at-x-large-size {
-        @include font-size(40px);
-        @include line-height(40px);
+        @include font("GRAPHIK", 45px, 600, 45px);
+        padding: 0;
         text-align: center;
-        padding: 0 60px;
+        text-transform: initial;
     }
 }
 
