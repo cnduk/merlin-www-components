@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.11.3"></a>
+## [1.11.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.2...@cnbritain/merlin-www-tag-header@1.11.3) (2018-06-26)
+
+
+### Bug Fixes
+
+* **merlin-www-tag-header:** correct styles sponsor in all brands ([0a1f534](https://github.com/cnduk/merlin-www-components/commit/0a1f534))
+
+
+
+
 <a name="1.11.2"></a>
 ## [1.11.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.1...@cnbritain/merlin-www-tag-header@1.11.2) (2018-06-25)
 
