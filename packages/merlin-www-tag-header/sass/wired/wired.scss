@@ -119,6 +119,22 @@
     }
 }
 
+.tg-header__sponsor {
+    @include font('BRUTAL', 16px);
+    margin: 10px auto;
+}
+.tg-header__sponsor-prefix {
+    @include font-size(12px);
+    text-transform: uppercase;
+}
+.tg-header__sponsor-name {
+    color: inherit;
+
+    &:hover, &:focus {
+        text-decoration: underline;
+    }
+}
+
 
 .tg-header--event {
     background-color: $white-smoke;
