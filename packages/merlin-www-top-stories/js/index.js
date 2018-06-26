@@ -210,7 +210,7 @@ TopStoriesNavigation.prototype = {
 function disableButton(el) {
     if (el.hasAttribute('disabled')) return;
     el.setAttribute('disabled', true);
-    addClass(el, 'btn-disabled');
+    addClass(el, 'is-disabled');
 }
 
 /**
@@ -220,7 +220,7 @@ function disableButton(el) {
 function enableButton(el) {
     if (!el.hasAttribute('disabled')) return;
     el.removeAttribute('disabled');
-    removeClass(el, 'btn-disabled');
+    removeClass(el, 'is-disabled');
 }
 
 /**
