@@ -3,6 +3,7 @@ import GalleryNav from './gallery-nav';
 var IS_HIDDEN_CLS = 'is-hidden';
 var IS_FIXED_CLS = 'is-fixed';
 var IS_OPEN_CLS = 'is-open';
+var IS_GALLERY_ACTIVE_CLS = 'is-gallery-active';
 
 function Nav(el) {
     this.el = el;
@@ -208,6 +209,7 @@ Nav.prototype.toggleSearch = function() {
 Nav.prototype.showGallery = function() {
     if (!this.state.isGalleryHidden) return;
 
+    this.el.classList.add(IS_GALLERY_ACTIVE_CLS);
     this.galleryEl.classList.remove(IS_HIDDEN_CLS);
 
     this.state.isGalleryHidden = false;
@@ -216,6 +218,7 @@ Nav.prototype.showGallery = function() {
 Nav.prototype.hideGallery = function() {
     if (this.state.isGalleryHidden) return;
 
+    this.el.classList.remove(IS_GALLERY_ACTIVE_CLS);
     this.galleryEl.classList.add(IS_HIDDEN_CLS);
 
     this.state.isGalleryHidden = false;

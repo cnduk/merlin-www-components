@@ -113,6 +113,7 @@
 
 .c-nav__logo {
     background-color: $white;
+    transition: background-color 300ms ease-in-out;
     width: 100px;
 
     svg {
