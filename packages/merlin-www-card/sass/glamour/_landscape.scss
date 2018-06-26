@@ -106,7 +106,7 @@
 }
 
 @mixin card-landscape-large() {
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         &:hover {
             .c-card__image {
                 transform: scale(1.04);
@@ -156,7 +156,7 @@
         color: $dune;
         margin: 0 0 20px;
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             margin: 0 0 10px;
         }
     }
@@ -209,9 +209,7 @@
     }
 }
 
-.c-card--landscape {
-
-}
+.c-card--landscape {}
 
 .c-card--landscape-small {
     @include card-landscape();
