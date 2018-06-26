@@ -98,7 +98,12 @@
 }
 
 .c-nav__search {
+    margin: 0 20px;
+
     @include at-x-large-size {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 60px;
         top: 61px;
 
         &:before {
@@ -116,9 +121,10 @@
 
 .c-nav__search-form {
     background-color: $WHITE;
+    border-bottom: 1px solid $ISABEL;
 
     @include at-x-large-size {
-        padding: 30px 0;
+        padding-bottom: 8px;
 
         &:before {
             background-color: $WHITE;
@@ -138,13 +144,12 @@
     @include font("PROXIMA NOVA CONDENSED", 16px, 400, 60px);
     background-color: $WHITE;
     color: $MUSTASAARI;
-    padding: 0 20px;
 
     @include at-x-large-size {
-        @include font-size(40px);
-        @include line-height(40px);
+        @include font-size(46px);
+        @include line-height(46px);
         text-align: center;
-        padding: 0 60px;
+        text-transform: initial;
     }
 }
 
