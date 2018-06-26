@@ -33,6 +33,11 @@
 
 .c-int-redirect__list {
     display: none;
+    font-weight: normal;
+    line-height: normal;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
     #chkIntRedirectList:checked ~ & {
         display: block;
@@ -41,5 +46,6 @@
 
 li.c-int-redirect__listitem {
     display: inline-block;
+    margin: 0;
+    padding: 0;
 }
-
