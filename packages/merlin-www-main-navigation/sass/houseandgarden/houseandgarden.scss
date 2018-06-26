@@ -196,13 +196,13 @@
 }
 
 .c-nav__alt-list {
-    padding: 15px 0 0 0;
+    padding: 15px 0 15px 0;
 
     @include at-x-large-size {
         border-bottom: 1px solid $mercury;
         border-left: 1px solid $mercury;
         border-right: 1px solid $mercury;
-        padding: 0 16px 0 16px;
+        padding: 5px 48px 5px 16px;
     }
 }
 
@@ -304,7 +304,7 @@
         border-bottom: 1px solid $mercury;
         border-left: 1px solid $mercury;
         border-right: 1px solid $mercury;
-        padding: 15px 10px;
+        padding: 10px 20px 20px 20px;
         right: -1px;
     }
 }
@@ -314,7 +314,7 @@
 }
 
 .c-nav__share-list-item--newsletter {
-
+    margin: 0;
 }
 
 .c-nav__share-link {
