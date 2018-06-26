@@ -37,14 +37,14 @@
     padding: 10px 60px 12px 20px;
     text-align: left;
 
-    @include at-x-large-size {
-        padding: 20px 60px 24px 20px;
-        text-align: center;
-    }
-
     label {
         border-bottom: 1px solid $white;
         color: $white;
+    }
+
+    @include at-x-large-size {
+        padding: 20px 60px 24px 20px;
+        text-align: center;
     }
 }
 

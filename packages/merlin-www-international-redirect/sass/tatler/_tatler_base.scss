@@ -47,16 +47,16 @@ $_BUTTON_SIZE: 20px;
     padding-right: 10px;
     text-align: left;
 
+    label {
+        text-decoration: underline;
+        white-space: nowrap;
+    }
+
     @include at-x-large-size {
         @include font-size(15px);
         @include line-height(18px);
         padding-right: 0;
         text-align: center;
-    }
-
-    label {
-        text-decoration: underline;
-        white-space: nowrap;
     }
 }
 

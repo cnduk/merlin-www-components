@@ -37,13 +37,13 @@
 	padding: 16px 60px 16px 20px;
 	text-align: center;
 
-	@include at-x-large-size {
-		padding: 24px 60px 24px 20px;
-	}
-
 	label {
 		border-bottom: 1px solid $WHITE;
 		color: $WHITE;
+	}
+
+	@include at-x-large-size {
+		padding: 24px 60px 24px 20px;
 	}
 }
 
@@ -61,13 +61,13 @@
 li.c-int-redirect__listitem {
 	padding: 0 12px;
 
-	@include at-x-large-size {
-		padding: 0 16px 8px 16px;
-	}
-
 	a {
 		@include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
 		border-bottom: 1px solid $WHITE;
 		color: inherit;
+	}
+
+	@include at-x-large-size {
+		padding: 0 16px 8px 16px;
 	}
 }

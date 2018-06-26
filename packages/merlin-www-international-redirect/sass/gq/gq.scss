@@ -37,13 +37,13 @@
 	padding: 20px 60px 20px 20px;
 	text-align: center;
 
-	@include at-x-large-size {
-		padding: 24px 60px 24px 20px;
-	}
-
 	label {
 		border-bottom: 1px solid $white;
 		color: $white;
+	}
+
+	@include at-x-large-size {
+		padding: 24px 60px 24px 20px;
 	}
 }
 
@@ -60,16 +60,16 @@
 
 li.c-int-redirect__listitem {
 
-	@include at-x-large-size {
-		padding-bottom: 8px;
-	}
-
 	a {
 		@include font("GOTHAM", 12px, 'BOOK', 24px, -4);
 		color: inherit;
 		padding: 0 5px;
+	}
 
-		@include at-x-large-size {
+	@include at-x-large-size {
+		padding-bottom: 8px;
+
+		a {
 			padding: 0 16px;
 		}
 	}

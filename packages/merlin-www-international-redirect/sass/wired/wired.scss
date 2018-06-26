@@ -38,14 +38,14 @@
 	padding: 20px 80px 20px 20px;
 	text-align: left;
 
-	@include at-x-large-size {
-		padding: 24px 80px 24px 80px;
-		text-align: center;
-	}
-
 	label {
 		border-bottom: 1px solid $white;
 		color: $white;
+	}
+
+	@include at-x-large-size {
+		padding: 24px 80px 24px 80px;
+		text-align: center;
 	}
 }
 
