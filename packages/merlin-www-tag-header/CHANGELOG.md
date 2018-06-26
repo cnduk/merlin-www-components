@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.11.5"></a>
+## [1.11.5](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.4...@cnbritain/merlin-www-tag-header@1.11.5) (2018-06-26)
+
+
+### Bug Fixes
+
+* **merlin-www-tag-header:** i missed margin on wired sponsor ([15e8d4a](https://github.com/cnduk/merlin-www-components/commit/15e8d4a))
+
+
+
+
 <a name="1.11.4"></a>
 ## [1.11.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.3...@cnbritain/merlin-www-tag-header@1.11.4) (2018-06-26)
 
