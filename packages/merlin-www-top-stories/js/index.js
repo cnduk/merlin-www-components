@@ -67,7 +67,7 @@ function TopStoriesNavigation(el, options) {
      * @private
      * @type {HTMLElement}
      */
-    this._elScroll = el.querySelector('.c-top-stories__overflow');
+    this._elScroll = el.querySelector('.c-top-stories__cards');
 
     /**
      * The scroll animater
