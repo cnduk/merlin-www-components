@@ -78,6 +78,8 @@
 
 .c-nav__search {
     @include at-x-large-size {
+        box-sizing: border-box;
+        padding: 60px;
         top: 61px;
 
         &:before {
@@ -97,7 +99,8 @@
     background-color: $ebony-clay;
 
     @include at-x-large-size {
-        padding: 30px 0;
+        border-bottom: 1px solid $silver-chalice;
+        padding-bottom: 20px;
 
         &:before {
             background-color: $ebony-clay;
@@ -121,10 +124,10 @@
     text-transform: uppercase;
 
     @include at-x-large-size {
-        @include font-size(40px);
-        @include line-height(40px);
+        @include font("MILLER_DISPLAY", 60px, 700, 60px);
+        padding: 0;
         text-align: center;
-        padding: 0 60px;
+        text-transform: initial;
     }
 }
 
