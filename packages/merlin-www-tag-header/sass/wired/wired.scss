@@ -125,6 +125,7 @@
 }
 .tg-header__sponsor-prefix {
     @include font-size(12px);
+    margin-right: 0;
     text-transform: uppercase;
 }
 .tg-header__sponsor-name {
@@ -132,6 +133,14 @@
 
     &:hover, &:focus {
         text-decoration: underline;
+    }
+}
+.tg-header__sponsor-image {
+    display: block;
+    margin: 10px auto 0 auto;
+
+    img, svg {
+        margin: 0 auto;
     }
 }
 
