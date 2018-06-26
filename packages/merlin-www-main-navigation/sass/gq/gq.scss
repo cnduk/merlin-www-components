@@ -114,6 +114,8 @@
 
 .c-nav__search {
     @include at-x-large-size {
+        box-sizing: border-box;
+        padding: 60px;
         top: 61px;
 
         &:before {
@@ -134,7 +136,7 @@
     border-bottom: solid 1px $mineshaft;
 
     @include at-x-large-size {
-        padding: 30px 0;
+        border-bottom: none;
 
         &:before {
             background-color: $black;
@@ -157,10 +159,9 @@
     padding: 0 20px;
 
     @include at-x-large-size {
-        @include font-size(40px);
-        @include line-height(40px);
+        @include font("GOTHAM", 50px, 700, 50px);
+        padding: 0;
         text-align: center;
-        padding: 0 60px;
     }
 }
 
