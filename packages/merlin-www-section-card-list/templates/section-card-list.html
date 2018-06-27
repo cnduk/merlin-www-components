@@ -34,18 +34,20 @@
             <ul class="c-card-section__card-list">
                 {{# data.items }}
                 {{^ state.is_ad }}
-                    {{# data.item }}
-                    {{^ state.is_ad }}
-                    <li class="c-card-section__card-listitem js-c-card-list__item {{ style.cls }}">
-                        {{> @cnbritain/merlin-www-card }}
-                    </li>
-                    {{/ state.is_ad }}
-                    {{# state.is_ad }}
+                    {{# data.item.state.is_ad }}
                     <li class="c-card-section__card-listitem c-card-section__card-listitem--ad js-c-card-list__item {{ style.cls }}">
+                        {{# data.item }}
                         {{> @cnbritain/merlin-www-ads }}
+                        {{/ data.item }}
                     </li>
-                    {{/ state.is_ad }}
-                    {{/ data.item }}
+                    {{/ data.item.state.is_ad }}
+                    {{^ data.item.state.is_ad }}
+                    <li class="c-card-section__card-listitem js-c-card-list__item {{ style.cls }}">
+                        {{# data.item }}
+                        {{> @cnbritain/merlin-www-card }}
+                        {{/ data.item }}
+                    </li>
+                    {{/ data.item.state.is_ad }}
                 {{/ state.is_ad }}
                 {{# state.is_ad }}
                     {{> @cnbritain/merlin-www-ads }}
