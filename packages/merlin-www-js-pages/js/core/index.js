@@ -63,9 +63,6 @@ export default function init(config) {
     // Polyfill promises for basically IE
     es6Promise.polyfill();
 
-    // Small natives can be on every single page (top stories)
-    AdManager.on('register', onAdRegister);
-
     AdUtils.setAdUrls({
         OPEN_X_URL: _config['OPEN_X_URL'],
         RUBICON_URL: _config['RUBICON_URL'],
@@ -97,25 +94,6 @@ export default function init(config) {
     // Goofs
     setupFartscroll();
     raptor();
-}
-
-export function onAdRegister(e) {
-    if (isAdNative(e.ad, 'promotion-small')) {
-        e.ad.once('render', onNativeAdRender);
-        e.ad.once('stop', onNativeAdStop);
-    }
-}
-
-export function onNativeAdRender(e) {
-    e.target.off('stop', onNativeAdStop);
-
-    // Remove is-hidden from list item
-    var listItem = getParent(e.target.el, '.c-card-list__item--ad');
-    removeClass(listItem, CLS_STATE_IS_HIDDEN);
-}
-
-export function onNativeAdStop(e) {
-    e.target.off('render', onNativeAdRender);
 }
 
 export function initInternationalRedirect() {
