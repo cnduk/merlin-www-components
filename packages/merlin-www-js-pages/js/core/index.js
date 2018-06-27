@@ -6,8 +6,6 @@ import {
     addClass,
     addEvent,
     assign,
-    getParent,
-    removeClass,
     removeEvent
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import {
@@ -32,13 +30,8 @@ import {
     raptor
 } from '@cnbritain/merlin-www-goofs';
 import InternationalRedirect from '@cnbritain/merlin-www-international-redirect';
-
-import {
-    CLS_STATE_IS_HIDDEN
-} from '../constants';
 import {
     displayHiringMessage,
-    isAdNative,
     setGlobalNamespace
 } from '../utils';
 import initLinkTracking from './analytics';
