@@ -25,23 +25,26 @@
                 {{# data.card_list }}
                 <ul class="c-top-stories__cards-list">
                     {{# data.items }}
-                        {{^ state.is_ad }}
+                    {{^ state.is_ad }}
+                        {{# data.item.state.is_ad }}
+                        <li class="c-top-stories__cards-listitem c-top-stories__cards-listitem--ad is-hidden {{ style.cls }}">
                             {{# data.item }}
-                                {{^ state.is_ad }}
-                                <li class="c-top-stories__cards-listitem {{ style.cls }}">
-                                    {{> @cnbritain/merlin-www-card }}
-                                </li>
-                                {{/ state.is_ad }}
-                                {{# state.is_ad }}
-                                <li class="c-top-stories__cards-listitem c-top-stories__cards-listitem--ad is-hidden {{ style.cls }}">
-                                    {{> @cnbritain/merlin-www-ads }}
-                                </li>
-                                {{/ state.is_ad }}
-                            {{/ data.item }}
-                        {{/ state.is_ad }}
-                        {{# state.is_ad }}
                             {{> @cnbritain/merlin-www-ads }}
-                        {{/ state.is_ad }}
+                            {{/ data.item }}
+                        </li>
+                        {{/ data.item.state.is_ad }}
+
+                        {{^ data.item.state.is_ad }}
+                        <li class="c-top-stories__cards-listitem {{ style.cls }}">
+                            {{# data.item }}
+                            {{> @cnbritain/merlin-www-card }}
+                            {{/ data.item }}
+                        </li>
+                        {{/ data.item.state.is_ad }}
+                    {{/ state.is_ad }}
+                    {{# state.is_ad }}
+                        {{> @cnbritain/merlin-www-ads }}
+                    {{/ state.is_ad }}
                     {{/ data.items }}
                 </ul>
                 {{/ data.card_list }}
