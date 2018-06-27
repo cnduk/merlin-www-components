@@ -4,6 +4,7 @@
         "demo": "demo/demo.js"
     },
     "themes": {
+        "wired": "sass/wired/wired.scss",
         "brides": "sass/brides/brides.scss",
         "bystander": "sass/bystander/bystander.scss",
         "glamour": "sass/glamour/glamour.scss",
@@ -12,7 +13,6 @@
         "tatler": "sass/tatler/tatler.scss",
         "traveller": "sass/traveller/traveller.scss",
         "vogue": "sass/vogue/vogue.scss",
-        "wired": "sass/wired/wired.scss",
         "wireframe": "sass/wireframe/wireframe.scss"
     },
     "partials": {
@@ -21,7 +21,6 @@
     "dependencies": [
         "@cnbritain/merlin-www-image",
         "@cnbritain/merlin-www-common",
-        "@cnbritain/merlin-www-card-list",
         "@cnbritain/merlin-www-card",
         "@cnbritain/merlin-www-topic-strip",
         "@cnbritain/merlin-www-buttons",
