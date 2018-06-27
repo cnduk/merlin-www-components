@@ -51,6 +51,17 @@ export default function init(config) {
         _config = assign({}, DEFAULT_INIT_CONFIG, config);
     }
 
+    // Global namespace stuffs
+    // Don't just use the abbreviation in case something else in the page
+    // overwrites it
+    setGlobalNamespace({
+        'AdDebugger': AdDebugger,
+        'AdManager': AdManager,
+        'GATracker': GATracker,
+        'MainNavigation': MainNavigation,
+        'Store': store
+    });
+
     setupHtmlClasses();
 
     // Polyfill promises for basically IE
@@ -72,17 +83,6 @@ export default function init(config) {
     initInternationalRedirect();
     displayHiringMessage();
     initLinkTracking();
-
-    // Global namespace stuffs
-    // Don't just use the abbreviation in case something else in the page
-    // overwrites it
-    setGlobalNamespace({
-        'AdDebugger': AdDebugger,
-        'AdManager': AdManager,
-        'GATracker': GATracker,
-        'MainNavigation': MainNavigation,
-        'Store': store
-    });
 
     // Goofs
     setupFartscroll();
