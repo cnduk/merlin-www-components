@@ -52,6 +52,17 @@
     vertical-align: top;
     width: 100%;
 }
+.c-card-section__card-listitem--ad {
+    &.is-hidden {
+        height: 0;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        visibility: hidden;
+        width: 0;
+    }
+}
 
 .c-card-section__btn {}
 
@@ -74,23 +85,3 @@
 .c-card-section--v-articles {}
 .c-card-section--v-genre-articles {}
 .c-card-section--v-related-articles {}
-
-
-// .c-card-list--cols {
-//     .c-card-list__item {
-//         display: inline-block;
-//     }
-// }
-
-
-//Li specificty required to overwrite padding
-// li.c-card-list__item--ad {
-//     &.is-hidden {
-//         height: 0;
-//         overflow: hidden;
-//         padding: 0;
-//         position: relative;
-//         visibility: hidden;
-//         width: 0;
-//     }
-// }
