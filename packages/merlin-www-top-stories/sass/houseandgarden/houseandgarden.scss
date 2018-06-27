@@ -1,5 +1,4 @@
 @import "@cnbritain/merlin-www-common:houseandgarden";
-@import "@cnbritain/merlin-www-card-list:houseandgarden";
 @import "@cnbritain/merlin-www-card:houseandgarden";
 @import '@cnbritain/merlin-www-buttons:houseandgarden';
 
@@ -70,5 +69,27 @@
     @include min-screen(1500px) {
         margin-left: 0;
         padding-left: 0;
+    }
+}
+
+.c-top-stories__cards-listitem {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    width: 280px;
+
+    & + .c-top-stories__cards-listitem {
+        margin-left: 20px;
+    }
+
+    &.is-hidden {
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        width: 0;
+    }
+
+    &:last-child {
+        margin-right: 20px;
     }
 }

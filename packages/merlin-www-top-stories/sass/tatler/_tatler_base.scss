@@ -41,3 +41,28 @@
         padding-bottom: 0;
     }
 }
+
+.c-top-stories__cards-list {
+    display: flex;
+}
+
+.c-top-stories__cards-listitem {
+    display: flex;
+    flex: none;
+    margin-right: 20px;
+    white-space: normal;
+    width: 300px;
+
+    &:last-child {
+        width: 275px;
+    }
+
+    &.is-hidden {
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        width: 0;
+    }
+}
+
+

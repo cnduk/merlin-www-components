@@ -16,10 +16,25 @@
                 </button>
             {{/ data.right_arrow }}
         </div>
-        <div class="c-top-stories__cards">
-            {{# data.card_list }}
-                {{> @cnbritain/merlin-www-card-list }}
-            {{/ data.card_list }}
-        </div>
+        <!--<div class="c-top-stories__cards">-->
+            <!--{{# data.card_list }}-->
+                <!--{{> @cnbritain/merlin-www-card-list }}-->
+            <!--{{/ data.card_list }}-->
+
+            <div class="c-top-stories__cards">
+                {{# data.card_list }}
+                <ul class="c-top-stories__cards-list">
+                    {{# data.items }}
+                    <li class="c-top-stories__cards-listitem {{ style.cls }}">
+                        {{# data.item }}
+                        {{> @cnbritain/merlin-www-card }}
+                        {{/ data.item }}
+                    </li>
+                    {{/ data.items }}
+                </ul>
+                {{/ data.card_list }}
+            </div>
+
+        <!--</div>-->
     </div>
 </aside>

@@ -64,5 +64,22 @@
         margin-left: 0;
         padding-left: 0;
     }
+}
 
+.c-top-stories__cards-listitem {
+    display: inline-block;
+    margin-right: 30px;
+    width: 280px;
+    white-space: normal;
+
+    &:last-child {
+        width: 280px;
+    }
+
+    &.is-hidden {
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        width: 0;
+    }
 }
