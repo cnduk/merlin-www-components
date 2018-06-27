@@ -34,7 +34,8 @@
 
 .global__button-reset{}
 
-.c-top-stories__nav-btn{
+.c-top-stories__nav-btn {
+    @extend .btn-top-stories;
     border: none;
     border-radius: 0;
     cursor: pointer;
@@ -49,8 +50,6 @@
 .c-top-stories__nav-btn--right{
     top: 0;
 }
-
-.btn-top-stories{}
 
 .c-top-stories__cards {
     overflow-x: auto;
