@@ -933,10 +933,11 @@ export function isAdNative(adModel, nativeSize) {
     if (nativeSize !== undefined && _NATIVE_SIZES.indexOf(nativeSize) === -1) {
         throw new Error('Unknown native ad size: ' + nativeSize);
     }
+    var positionRe = null;
     if (nativeSize !== undefined) {
-        var positionRe = new RegExp('^' + nativeSize, 'i');
+        positionRe = new RegExp('^' + nativeSize, 'i');
     } else {
-        var positionRe = new RegExp('^promotion-', 'i');
+        positionRe = new RegExp('^promotion-', 'i');
     }
 
     var adType = null;
