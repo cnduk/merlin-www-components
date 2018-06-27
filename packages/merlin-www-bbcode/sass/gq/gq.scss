@@ -145,12 +145,14 @@
 
     .bb-li {
         counter-increment: section;
+        margin: 15px 0;
+        line-height: 25px;
     }
 
     .bb-li:before {
         content: counter(section) '.';
         position: absolute;
-        left: -28px;
+        left: -31px;
     }
 }
 

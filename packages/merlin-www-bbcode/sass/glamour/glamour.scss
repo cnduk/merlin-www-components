@@ -161,12 +161,8 @@
 
     .bb-li {
         padding-bottom: 15px;
-        padding-left: 32px;
+        padding-left: 50px + 10px;
         position: relative;
-
-        @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-            padding-left: 37px;
-        }
 
         &:before {
             @include font("MILLER_DISPLAY", 25px, 'SEMI BOLD', 25px);
@@ -178,7 +174,7 @@
             left: 0;
             position: absolute;
             text-align: center;
-            width: 23px;
+            width: 50px;
         }
     }
 }
