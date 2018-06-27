@@ -89,6 +89,7 @@
 .c-top-stories__cards-listitem--ad {
     &.is-hidden {
         height: 0;
+        margin: 0;
         overflow: hidden;
         padding: 0;
         position: relative;
