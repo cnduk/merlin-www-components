@@ -26,6 +26,7 @@
 	&:focus {
     	background: $cornflower-blue;
     	border-color: $cornflower-blue;
+		border-bottom: 1px solid $cornflower-blue;
     	color: $white;
     }
 }
