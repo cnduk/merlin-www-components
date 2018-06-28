@@ -13,9 +13,23 @@
 .tg-header__hero-credit {}
 .tg-header__title {}
 
-.tg-header__sponsor {}
-.tg-header__sponsor-prefix {}
-.tg-header__sponsor-image {}
+.tg-header__sponsor {
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+}
+.tg-header__sponsor-prefix {
+    margin-right: 5px;
+}
+.tg-header__sponsor-image {
+    display: inline-block;
+    vertical-align: middle;
+
+    img {
+        max-height: 50px;
+        max-width: 140px;
+    }
+}
 .tg-header__sponsor-name {}
 
 .tg-header__separator {}
