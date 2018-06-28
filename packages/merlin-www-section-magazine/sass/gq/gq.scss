@@ -51,8 +51,10 @@
 		box-shadow: 2px 0 32px 0 rgba(0, 0, 0, 0.16);
 	    padding: 20px 8px;
 	    right: 20px;
+	}
 
-		@include at-x-large-size {
+	@include at-x-large-size {
+		img {
 			border-radius: 12px;
 			padding: 30px 10px;
 			right: 40px;
@@ -81,26 +83,18 @@
 	text-align: left;
 }
 
-.c-magazine__cards-list {
-	.c-magazine__cards-listitem {
+.c-magazine__cards-listitem {
+	& + .c-magazine__cards-listitem {
+		border-top: 1px solid $bon-jour;
+        margin-top: 20px;
+		padding-top: 20px;
+	}
+
+	@include at-medium-size {
 		& + .c-magazine__cards-listitem {
-		    margin-top: 20px;
-
-		    .c-card {
-		        border-top: 1px solid $bon-jour;
-		        padding-top: 20px;
-		    }
-		}
-
-		@include at-medium-size {
-			& + .c-magazine__cards-listitem {
-			    margin-top: 24px;
-
-			    .c-card {
-			        border-top: none;
-			        padding-top: 0px;
-			    }
-			}
+			border-top: none;
+            margin-top: 24px;
+			padding-top: 0px;
 		}
 	}
 }
@@ -112,6 +106,7 @@
 	margin-top: 24px;
     transition-duration: 300ms;
 
+	&:focus,
 	&:hover {
 		@include button-single-two-light-hover;
 		background-color: $zircon;

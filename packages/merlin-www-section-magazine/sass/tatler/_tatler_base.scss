@@ -40,14 +40,16 @@
         border-radius: 8px;
         padding: 20px 8px;
         right: 20px;
-
-        @include desktop-size {
-            border-radius: 12px;
-            padding: 30px 10px;
-            right: 40px;
-            width: 38%;
-        }
     }
+
+     @include desktop-size {
+         img {
+             border-radius: 12px;
+             padding: 30px 10px;
+             right: 40px;
+             width: 38%;
+         }
+     }
 }
 
 .c-magazine__contents-title {
@@ -86,14 +88,16 @@
 .c-magazine__cards-list {
     display: flex;
     flex-wrap: wrap;
+}
 
-    .c-magazine__cards-listitem {
+.c-magazine__cards-listitem {
+    @include at-medium-size {
         max-width: 450px;
     }
+}
 
-    .c-magazine__cards-listitem + .c-magazine__cards-listitem {
-        margin-top: 20px;
-    }
+.c-magazine__cards-listitem + .c-magazine__cards-listitem {
+    margin-top: 20px;
 }
 
 .c-magazine__contents-btn {
@@ -106,6 +110,7 @@
         margin-top: 40px;
     }
 
+    &:focus,
     &:hover {
         @include button-single-light-hover;
     }

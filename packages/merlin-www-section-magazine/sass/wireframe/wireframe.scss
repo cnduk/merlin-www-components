@@ -35,8 +35,10 @@
     img {
         width: 60%;
         margin-left: $MOBILE_SIDE_GUTTER;
+    }
 
-        @include at-medium-size {
+    @include at-medium-size {
+        img {
             margin-left: 0;
         }
     }
@@ -51,8 +53,10 @@
         position: absolute;
         right: $MOBILE_SIDE_GUTTER;
         bottom: 0;
+    }
 
-        @include at-x-large-size {
+    @include at-x-large-size {
+        img {
             border-radius: 15px;
             padding: 30px 20px;
             width: 45%;
@@ -91,19 +95,10 @@
 
 .c-magazine__cards-listitem {
     box-sizing: border-box;
-    display: flex;
     font-size: initial;
     vertical-align: top;
     width: 100%;
 }
-
-//.c-magazine__content__btn {
-//    text-align: center;
-//
-//    @include at-medium-size {
-//        text-align: left;
-//    }
-//}
 
 .c-magazine__contents-btn {
     appearance: none;

@@ -50,7 +50,8 @@
 .c-card--magazine {
     @include card-magazine();
     @include card-magazine-small();
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+
+    @include at-medium-size {
         @include card-magazine-large();
     }
 }
