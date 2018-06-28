@@ -28,7 +28,7 @@
     .c-card__title {
         margin-top: 0;
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             @include font-size(21px);
             @include line-height(24px);
         }
@@ -42,7 +42,7 @@
     @include card-magazine();
     @include card-magazine-small();
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         @include card-magazine-large();
     }
 
