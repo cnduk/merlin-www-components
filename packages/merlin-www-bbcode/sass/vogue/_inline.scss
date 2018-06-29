@@ -54,7 +54,7 @@
     text-align: left;
 
     .is-windows & {
-        margin-top: .18em;
+        padding-top: .18em;
     }
 
     @include text-size-large {
@@ -69,7 +69,7 @@
         }
 
         .is-windows & {
-            margin-top: .15em;
+            padding-top: .15em;
         }
     }
 }
