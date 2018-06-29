@@ -45,12 +45,6 @@
                 {{/ data.logo }}
             </div>
 
-            {{# state.has_top_stories }}
-            <aside class="c-nav__top-stories is-hidden">
-                <!-- TODO: Top Stories -->
-            </aside>
-            {{/ state.has_top_stories }}
-
             {{# state.has_search }}
             <div class="c-nav__search js-c-nav__search is-hidden">
                 <form class="c-nav__search-form" method="GET" action="{{ &data.search_form_url }}">
