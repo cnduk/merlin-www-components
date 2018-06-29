@@ -4,12 +4,16 @@
         "all": {
             "themes": [
                 "wireframe",
-                "vogue",
+                "brides",
                 "glamour",
-                "missvogue",
-                "wired",
+                "gq",
+                "house&garden",
                 "tatler",
-                "bystander"
+                "bystander",
+                "traveller",
+                "vogue",
+                "missvogue",
+                "wired"
             ],
             "main": "index",
             "data": "all"
@@ -17,12 +21,16 @@
         "navigation_list": {
             "themes": [
                 "wireframe",
-                "vogue",
+                "brides",
                 "glamour",
-                "missvogue",
-                "wired",
+                "gq",
+                "house&garden",
                 "tatler",
-                "bystander"
+                "bystander",
+                "traveller",
+                "vogue",
+                "missvogue",
+                "wired"
             ],
             "main": "index",
             "data": "navigation_list"
@@ -30,11 +38,16 @@
         "hair_file": {
             "themes": [
                 "wireframe",
-                "vogue",
+                "brides",
                 "glamour",
-                "missvogue",
+                "gq",
+                "house&garden",
                 "tatler",
-                "bystander"
+                "bystander",
+                "traveller",
+                "vogue",
+                "missvogue",
+                "wired"
             ],
             "main": "index",
             "data": "hair_file"
@@ -42,34 +55,50 @@
         "style_file": {
             "themes": [
                 "wireframe",
-                "vogue",
+                "brides",
                 "glamour",
-                "missvogue",
+                "gq",
+                "house&garden",
                 "tatler",
-                "bystander"
+                "bystander",
+                "traveller",
+                "vogue",
+                "missvogue",
+                "wired"
             ],
             "main": "index",
             "data": "style_file"
         },
         "card_list": {
             "themes": [
-                "wireframe",
-                "vogue",
+               "wireframe",
+                "brides",
                 "glamour",
-                "missvogue",
-                "wired",
+                "gq",
+                "house&garden",
                 "tatler",
-                "bystander"
+                "bystander",
+                "traveller",
+                "vogue",
+                "missvogue",
+                "wired"
             ],
             "main": "index",
             "data": "card_list"
         },
         "show_list": {
             "themes": [
+                "wireframe",
+                "brides",
+                "glamour",
+                "gq",
+                "house&garden",
+                "tatler",
+                "bystander",
+                "traveller",
                 "vogue",
                 "missvogue",
-                "tatler",
-                "bystander"
+                "wired"
             ],
             "main": "index",
             "data": "show_list"
@@ -77,12 +106,16 @@
         "event_information": {
             "themes": [
                 "wireframe",
-                "vogue",
+                "brides",
                 "glamour",
-                "missvogue",
-                "wired",
+                "gq",
+                "house&garden",
                 "tatler",
-                "bystander"
+                "bystander",
+                "traveller",
+                "vogue",
+                "missvogue",
+                "wired"
             ],
             "main": "index",
             "data": "event_information"
@@ -90,12 +123,16 @@
         "image": {
             "themes": [
                 "wireframe",
-                "vogue",
+                "brides",
                 "glamour",
-                "missvogue",
-                "wired",
+                "gq",
+                "house&garden",
                 "tatler",
-                "bystander"
+                "bystander",
+                "traveller",
+                "vogue",
+                "missvogue",
+                "wired"
             ],
             "main": "index",
             "data": "image"
@@ -105,14 +142,17 @@
         "demo": "demo/demo.js"
     },
     "themes": {
-        "brides": "sass/brides/brides.scss",
-        "tatler": "sass/tatler/tatler.scss",
         "wireframe": "sass/wireframe/wireframe.scss",
+        "brides": "sass/brides/brides.scss",
         "glamour": "sass/glamour/glamour.scss",
-        "bystander": "sass/bystander/bystander.scss",
-        "wired": "sass/wired/wired.scss",
-        "missvogue": "sass/missvogue/missvogue.scss",
-        "vogue": "sass/vogue/vogue.scss"
+        "gq": "sass/gq/gq.scss",
+        "house": "sass/houseandgarden/houseandgarden.scss",
+        "tatler": "sass/tatler/tatler.scss",
+        "bystander": "sass/tatler/bystander.scss",
+        "traveller": "sass/traveller/traveller.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "missvogue": "sass/vogue/missvogue.scss",
+        "wired": "sass/wired/wired.scss"
     },
     "partials": {
         "event-information": "partials/event-information.html",
