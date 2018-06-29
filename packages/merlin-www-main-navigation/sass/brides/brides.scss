@@ -47,6 +47,12 @@
         fill: $stroller-grey;
         width: 20px;
     }
+
+    &:hover {
+        svg {
+            fill: $pink-rose;
+        }
+    }
 }
 
 .c-nav__toggle-icon {
@@ -66,7 +72,12 @@
     }
 }
 
-.c-nav__open-icon {}
+.c-nav__open-icon {
+    svg {
+        width: 24px;
+    }
+}
+
 .c-nav__close-icon {}
 
 .c-nav__wrapper {
@@ -500,6 +511,12 @@
     svg {
         fill: $stroller-grey;
         width: 20px;
+    }
+
+    &:hover {
+        svg {
+            fill: $pink-rose;
+        }
     }
 }
 

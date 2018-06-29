@@ -47,7 +47,14 @@
     }
 }
 
-.c-nav__open-icon {}
+.c-nav__open-icon {
+    @include max-screen($X_LARGE_SIZE + -1px) {
+        svg {
+            width: 24px;
+        }
+    }
+}
+
 .c-nav__close-icon {}
 
 .c-nav__wrapper {
@@ -133,6 +140,7 @@
 
     svg {
         fill: $white;
+        width: 20px;
     }
 }
 
@@ -396,7 +404,7 @@
     }
 
     svg {
-        width: 18px;
+        width: 20px;
     }
 }
 
