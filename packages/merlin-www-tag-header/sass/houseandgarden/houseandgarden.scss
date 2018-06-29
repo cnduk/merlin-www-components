@@ -20,6 +20,155 @@
     }
 }
 
+.tg-header__wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/**
+ * Intro
+ * Hero, logo and title
+ */
+.tg-header__title {
+    @include font("MILLER_DISPLAY", 40px, 'NORMAL', 41px);
+    color: $mine-shaft;
+    letter-spacing: 0;
+    margin: 0 0 10px 0;
+    text-align: center;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include font-size(60px);
+        @include line-height(65px);
+        margin-bottom: 20px;
+    }
+}
+
+/**
+ * Description + expand
+ */
+.tg-header__description {
+    color: $mine-shaft;
+    margin: 10px auto 30px auto;
+    text-align: center;
+
+    a {
+        border-bottom: 2px solid $careys-pink;
+        color: $mine-shaft;
+        padding-bottom: 2px;
+    }
+
+    p {
+        @include font("MILLER_DISPLAY", 18px, 400, 22px);
+        color: $mine-shaft;
+        font-style: italic;
+        letter-spacing: 0;
+    }
+
+    > *:first-child {
+        margin-top: 0;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 20px auto 40px auto;
+
+        p {
+            @include font-size(23px);
+            @include line-height(28px);
+        }
+    }
+}
+
+.tg-header__expand-btn {
+	color: $silver-chalice;
+    @include font("BRANDON GROTESQUE", 15px, 700, 15px);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &:hover,
+    &:focus {
+        color: $silver;
+    }
+}
+
+/**
+ * Sponsor
+ */
+.tg-header__sponsor {
+    @include font('BRANDON GROTESQUE');
+    border-top: 1px solid $silver;
+    max-width: 200px;
+    padding: 10px 0 0 0;
+
+    @include tablet-size {
+        border-top: none;
+        margin: 30px auto;
+        max-width: none;
+    }
+}
+
+.tg-header__sponsor-prefix {
+    @include font-size(10px);
+    color: $mine-shaft;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+
+.tg-header__sponsor-name {
+    color: inherit;
+    font-weight: bold;
+}
+
+.tg-header__separator {
+    display: none;
+}
+
+/**
+ * Navigation list
+ */
+.tg-header__topic-strip {
+    margin: 20px auto;
+
+    .c-topic-strip {
+        text-align: center;
+    }
+
+    .c-topic-strip__btn {
+        @include button-group();
+        @include button-group-light();
+
+        @include font-size(12px);
+        @include line-height(12px);
+
+        &:hover,
+        &:focus {
+            @include button-group-light-hover();
+        }
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 30px auto;
+    }
+}
+
+/**
+ * Featured cards
+ */
+.tg-header__cards {
+    margin: 25px auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 60px auto;
+    }
+}
+
+/**
+ * Header variants
+ */
 .tg-header--video {
     .tg-header__intro__image {
         height: 38px;
@@ -45,16 +194,16 @@
         overflow: hidden;
         width: 85px;
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            width: 130px;
-            height: 130px;
-        }
-
         img {
             border-radius: 50%;
             height: 100%;
             overflow: hidden;
             width: 100%;
+        }
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            width: 130px;
+            height: 130px;
         }
     }
 }
@@ -76,137 +225,5 @@
             margin-bottom: 30px;
             width: 250px;
         }
-    }
-}
-
-.tg-header__wrapper {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.tg-header__intro {}
-.tg-header__intro__image {}
-
-.tg-header__title {
-    @include font("MILLER_DISPLAY", 40px, 'NORMAL', 41px);
-    color: $mine-shaft;
-    letter-spacing: 0;
-    margin: 0 0 10px 0;
-    text-align: center;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        @include font-size(60px);
-        @include line-height(65px);
-        margin-bottom: 20px;
-    }
-}
-
-.tg-header__separator {
-    display: none;
-}
-
-.tg-header__description {
-    color: $mine-shaft;
-    margin: 10px auto 30px auto;
-    text-align: center;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin: 20px auto 40px auto;
-    }
-
-    a {
-        border-bottom: 2px solid $careys-pink;
-        color: $mine-shaft;
-        padding-bottom: 2px;
-    }
-
-    p {
-        @include font("MILLER_DISPLAY", 18px, 400, 22px);
-        color: $mine-shaft;
-        font-style: italic;
-        letter-spacing: 0;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            @include font-size(23px);
-            @include line-height(28px);
-        }
-    }
-
-    > *:first-child {
-        margin-top: 0;
-    }
-
-    > *:last-child {
-        margin-bottom: 0;
-    }
-}
-
-.tg-header__sponsor {
-    @include font('BRANDON GROTESQUE');
-    border-top: 1px solid #ccc;
-    max-width: 200px;
-    padding: 10px 0 0 0;
-}
-.tg-header__sponsor-prefix {
-    @include font-size(10px);
-    color: #262626;
-    margin-right: 10px;
-    text-transform: uppercase;
-}
-.tg-header__sponsor-image {}
-.tg-header__sponsor-name {
-    color: inherit;
-    font-weight: bold;
-}
-
-@include tablet-size {
-    .tg-header__sponsor {
-        border-top: none;
-        margin: 30px auto;
-        max-width: none;
-    }
-}
-
-.tg-header__topic-strip {
-    margin: 20px auto;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin: 30px auto;
-    }
-
-    .c-topic-strip {
-        text-align: center;
-    }
-
-    .c-topic-strip__btn {
-        @include button-group();
-        @include button-group-light();
-
-        @include font-size(12px);
-        @include line-height(12px);
-
-        &:hover {
-            @include button-group-light-hover();
-        }
-    }
-}
-
-.tg-header__cards {
-    margin: 25px auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin: 60px auto;
-    }
-}
-
-.tg-header__expand-btn {
-	color: $silver-chalice;
-    @include font("BRANDON GROTESQUE", 15px, 700, 15px);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-
-    &:hover {
-        color: $silver;
     }
 }

@@ -7,12 +7,42 @@
 
 .tg-header {}
 .tg-header__wrapper {}
+
+/**
+ * Intro
+ * Hero, logo and title
+ */
 .tg-header__intro {}
-.tg-header__intro__image {}
 .tg-header__hero {}
 .tg-header__hero-credit {}
+.tg-header__intro__image {}
 .tg-header__title {}
 
+/**
+ * Description + expand
+ */
+.tg-header__description {
+    &.is-closed {
+        > :nth-child(n+3):nth-last-child(n+2) {
+            display: none;
+        }
+
+        .tg-header__description-expand {
+            display: block;
+        }
+    }
+}
+
+.tg-header__description-expand {
+    display: none;
+}
+
+.global__button-reset{}
+.tg-header__expand-btn {}
+
+/**
+ * Sponsor
+ */
 .tg-header__sponsor {
     margin: 0 auto;
     text-align: center;
@@ -30,23 +60,41 @@
         max-width: 140px;
     }
 }
+
 .tg-header__sponsor-name {}
-
 .tg-header__separator {}
-.tg-header__description {
-    &.is-closed {
-        > :nth-child(n+3):nth-last-child(n+2) {
-            display: none;
-        }
 
-        .tg-header__description-expand {
-            display: block;
-        }
-    }
-}
-.tg-header__description-expand {
-    display: none;
-}
-.tg-header__expand-btn {}
+/**
+ * Navigation list
+ */
 .tg-header__topic-strip {}
+
+/**
+ * Featured cards
+ */
 .tg-header__cards {}
+
+/**
+ * Show card carousel
+ */
+.tg-header__shows{}
+
+/**
+ * Event information
+ */
+.tg-header__event-meta{}
+.tg-header__event-meta__start-date{}
+.tg-header__event-meta__location{}
+
+/**
+ * Header variants
+ */
+.tg-header--video{}
+.tg-header--profile {}
+.tg-header--brand {}
+.tg-header--event {}
+.tg-header--topic {}
+.tg-header__shows {}
+.tg-header__style-file {}
+.tg-header--miss-vogue {}
+.tg-header--person {}

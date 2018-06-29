@@ -9,16 +9,15 @@
 
 @import "../wireframe/wireframe";
 
-
 .tg-header {
     margin: 30px 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin: 60px 0;
-    }
-
     &.has-hero {
         margin-top: 0;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 60px 0;
     }
 }
 
@@ -27,18 +26,14 @@
     margin: 0 auto;
 }
 
+/**
+ * Intro
+ * Hero, logo and title
+ */
 .tg-header__intro {
     background-color: #fbddde;
     padding: 30px 20px;
     position: relative;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: 60px $TABLET_SIDE_GUTTER;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: 60px 60px;
-    }
 
     &:before {
         background-color: #fbddde;
@@ -51,6 +46,14 @@
         right: 50%;
         top: 0;
         width: 100vw;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 60px $TABLET_SIDE_GUTTER;
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        padding: 60px 60px;
     }
 }
 
@@ -71,14 +74,6 @@
         transform: translateY(-50%);
         width: 100%;
     }
-
-    // &:after {
-    //     background-color: rgba($dune, 0.25);
-    //     content: '';
-    //     height: 100%;
-    //     position: absolute;
-    //     width: 100%;
-    // }
 }
 
 .tg-header__hero-credit {
@@ -114,21 +109,54 @@
     }
 }
 
-.tg-header__description,
-.tg-header__sponsor,
-.tg-header__event-meta,
-.tg-header__topic-strip {
-    padding: 0 $MOBILE_SIDE_GUTTER;
+/**
+ * Description + expand
+ */
+.tg-header__description {
+    color: $dune;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: 0 $TABLET_SIDE_GUTTER;
+    .bb-a {
+        color: inherit;
+    }
+
+    .bb-p {
+        @include font-weight(600);
+        color: inherit;
+    }
+
+    > *:first-child {
+        margin-top: 0;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: 0 $DESKTOP_SIDE_GUTTER;
+        margin-bottom: 30px;
     }
 }
 
+.tg-header__description-expand {
+    margin-top: 20px;
+}
+
+.tg-header__expand-btn {
+    @include button-single();
+    @include button-single-light();
+
+    &:hover,
+    &:focus {
+        @include button-single-light-hover();
+    }
+}
+
+/**
+ * Sponsor
+ */
 .tg-header__sponsor {
     @include font("GRAPHIK", 10px, 400, 13px);
     color: $dune;
@@ -156,11 +184,6 @@
     }
 }
 
-.tg-header__sponsor-name {
-    color: $dune;
-    padding-left: 5px;
-}
-
 .tg-header__sponsor-image {
     img {
         height: auto;
@@ -183,56 +206,28 @@
     }
 }
 
-.tg-header__separator {
-    display: none;
+.tg-header__sponsor-name {
+    color: $dune;
+    padding-left: 5px;
 }
 
-.tg-header__description {
-    color: $dune;
-    margin: 20px auto;
-    max-width: 800px;
-    text-align: center;
+/**
+ * Navigation list
+ */
+.tg-header__topic-strip {
+    padding: 0 $MOBILE_SIDE_GUTTER;
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        padding: 0 $TABLET_SIDE_GUTTER;
+    }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: 30px;
-    }
-
-    .bb-a {
-        color: inherit;
-    }
-
-    .bb-p {
-        @include font-weight(600);
-        color: inherit;
-    }
-
-    > *:first-child {
-        margin-top: 0;
-    }
-
-    > *:last-child {
-        margin-bottom: 0;
-    }
-}
-
-.tg-header__description-expand {
-    margin-top: 20px;
-}
-
-.tg-header__expand-btn {
-    @include button-single();
-    @include button-single-light();
-    &:hover {
-        @include button-single-light-hover();
+        padding: 0 $DESKTOP_SIDE_GUTTER;
     }
 }
 
 .tg-header__topic-strip {
     margin: 12px (-$MOBILE_SIDE_GUTTER);
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin: 24px auto;
-    }
 
     .c-topic-strip {
         padding: 0 $MOBILE_SIDE_GUTTER;
@@ -243,24 +238,24 @@
         @include button-group();
         @include button-group-light();
 
-        &:hover {
+        &:hover,
+        &:focus {
             @include button-group-light-hover();
         }
     }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin: 24px auto;
+    }
 }
 
-.tg-header__event-meta {
-    @include font("GRAPHIK", 10px, 400, 10px);
-    color: $dune;
-    margin-top: 6px;
-    letter-spacing: 1.5px;
-    text-align: center;
-    text-transform: uppercase;
+.tg-header__separator {
+    display: none;
 }
 
-.tg-header__event-meta__start-date {}
-.tg-header__event-meta__location {}
-
+/**
+ * Featured cards
+ */
 .tg-header__cards {
     margin: 40px auto;
     max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER*2;
@@ -276,7 +271,21 @@
     }
 }
 
+/**
+ * Event information
+ */
+.tg-header__event-meta {
+    @include font("GRAPHIK", 10px, 400, 10px);
+    color: $dune;
+    margin-top: 6px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-transform: uppercase;
+}
 
+/**
+ * Header variants
+ */
 .tg-header--video {
     margin-top: 0;
 
@@ -290,8 +299,9 @@
             width: 100%;
         }
 
-        .svg-logo-block { fill: #ffffff; }
-        .svg-logo{ fill: #373330; }
+        .svg-logo-block { fill: $white; }
+
+        .svg-logo{ fill: $white; }
 
         @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
             width: 300px;
@@ -304,7 +314,6 @@
 }
 
 .tg-header--profile {
-
     .tg-header__intro__image {
         border-radius: 50%;
         height: 90px;
@@ -313,13 +322,6 @@
         padding: 5px;
         position: relative;
         width: 90px;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            height: 130px;
-            margin-bottom: 20px;
-            padding: 10px;
-            width: 130px;
-        }
 
         &:before {
             background-image: url('/static/img/pattern-1.jpg');
@@ -334,13 +336,6 @@
             right: -5px;
             top: -5px;
             z-index: -1;
-
-            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-                bottom: -10px;
-                left: -10px;
-                right: -10px;
-                top: -10px;
-            }
         }
 
         img {
@@ -348,8 +343,22 @@
             height: 80px;
             overflow: hidden;
             width: 80px;
+        }
 
-            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            height: 130px;
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 130px;
+
+            &:before {
+                bottom: -10px;
+                left: -10px;
+                right: -10px;
+                top: -10px;
+            }
+
+            img {
                 width: 110px;
                 height: 110px;
             }
@@ -359,7 +368,6 @@
     .tg-header__title {
         @include font-size(30px);
         @include line-height(35px);
-
         margin: 15px 0 10px 0;
 
         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
@@ -396,15 +404,15 @@
         margin: 0 auto 0 auto;
         width: 200px;
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            margin: 0 auto 0 auto;
-            width: 250px;
-        }
-
         img {
             display: inline-block;
             height: 100%;
             width: 100%;
+        }
+
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            margin: 0 auto 0 auto;
+            width: 250px;
         }
     }
 }

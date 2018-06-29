@@ -10,6 +10,240 @@
     }
 }
 
+.tg-header__wrapper {
+    padding: 0 $MOBILE_SIDE_GUTTER;
+
+    @include tablet-size {
+        padding: 0 $TABLET_SIDE_GUTTER;
+    }
+
+    @include desktop-size {
+        padding: 0 $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+/**
+ * Intro
+ * Hero, logo and title
+ */
+.tg-header__intro {
+    padding: 40px 0 0 0;
+
+    @include tablet-size {
+        padding: 60px 0 0 0;
+    }
+}
+
+.tg-header__intro__image,
+.tg-header__intro svg {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 160px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include tablet-size {
+        margin-bottom: 30px;
+        width: 250px;
+    }
+
+    @include desktop-size {
+        width: 250px;
+    }
+}
+
+.tg-header__title {
+    @include font('ITC CASLON', 36px, 400, 36px);
+    color: $cod-gray;
+    margin: 0 0 15px 0;
+    text-align: center;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include desktop-size{
+        @include font-size(50px);
+        @include line-height(50px);
+        margin-bottom: 20px;
+    }
+}
+
+/**
+ * Description + expand
+ */
+.tg-header__description {
+    color: $dove-gray;
+    @include font('ADOBE CASLON', 16px, null, 20px);
+    margin: 15px auto 22px auto;
+    max-width: 680px;
+    text-align: center;
+
+    @include desktop-size {
+        @include font-size(20px);
+        @include line-height(25px);
+        margin: 15px auto 30px auto;
+    }
+}
+
+/**
+ * Sponsor
+ */
+.tg-header__sponsor {
+    @include font-size(11px);
+    margin: 20px auto;
+}
+
+.tg-header__sponsor-prefix {
+    @include font('ADOBE CASLON');
+    color: $dove-gray;
+    font-style: italic;
+    text-transform: lowercase;
+}
+
+.tg-header__sponsor-name {
+    @include font('NOBEL');
+    color: $cod-gray;
+    text-transform: uppercase;
+}
+
+.tg-header__separator {
+    display: none;
+}
+
+/**
+ * Navigation list
+ */
+.tg-header__topic-strip {
+    margin: 25px 0 40px 0;
+
+    @include tablet-size {
+        margin: 30px 0 60px 0;
+    }
+}
+
+.c-topic-strip__item--topic a {
+    display: inline-block;
+}
+
+/**
+ * Featured cards
+ */
+.tg-header__cards {
+    margin: 0 auto 40px auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+
+    @include tablet-size {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include desktop-size {
+        padding-left: $DESKTOP_SIDE_GUTTER;
+        padding-right: $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+/**
+ * Event information
+ */
+.tg-header__event-meta {
+    @include font('ADOBE CASLON', 0px, null, 20px);
+    color: $dove-gray;
+    margin: 40px 0;
+    max-width: 680px;
+    text-align: center;
+}
+
+.tg-header__event-meta__start-date {
+    @include font-size(16px);
+    display: block;
+}
+
+.tg-header__event-meta__location {
+    @include font-size(16px);
+    display: block;
+}
+
+@include tablet-size {
+    .tg-header__event-meta {
+        margin: 15px auto 30px auto;
+    }
+
+    .tg-header__event-meta__start-date {
+        display: inline-block;
+
+        + .tg-header__event-meta__location {
+            margin-left: 8px;
+            padding-left: 8px;
+            position: relative;
+
+            &:before {
+                background: $gallery;
+                content: '';
+                display: block;
+                left: 0;
+                height: 20px;
+                position: absolute;
+                top: -2px;
+                width: 1px;
+            }
+        }
+    }
+
+    .tg-header__event-meta__location {
+        display: inline-block;
+    }
+}
+
+/**
+ * Header variants
+ */
+.tg-header__shows,
+.tg-header__style-file {
+    padding: 40px $MOBILE_SIDE_GUTTER;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+
+    .sh-item-carousel {
+        border-top: none;
+        margin: 0;
+        padding: 0;
+
+        .sh-item-carousel__nav {
+            top: 0;
+        }
+
+        .sh-item-carousel__list {
+            margin: 0;
+
+            .sh-item-carousel__list__item {
+                padding: 0 5px;
+            }
+
+            .sh-item-carousel__list__item:first-child {
+                padding-left: 0;
+            }
+
+            .sh-item-carousel__list__item:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+
+    @include tablet-size {
+        padding: 40px $TABLET_SIDE_GUTTER;
+    }
+
+    @include desktop-size {
+        padding: 40px $DESKTOP_SIDE_GUTTER;
+    }
+}
+
 .tg-header--video {
     margin-bottom: 0;
 
@@ -23,7 +257,6 @@
 }
 
 .tg-header--miss-vogue  {
-
     .tg-header__intro__image,
     .tg-header__intro svg {
         margin-bottom: 30px;
@@ -53,223 +286,5 @@
             padding-left: $DESKTOP_SIDE_GUTTER;
             padding-right: $DESKTOP_SIDE_GUTTER;
         }
-    }
-}
-
-// .tg-header + [class*="-ad"] .ad-block:not(.is-hidden) {
-//     padding: 40px 0 0 0;
-
-//     @include tablet-size {
-//         padding: 60px 0 0 0;
-//     }
-// }
-
-.tg-header__wrapper {
-    padding: 0 $MOBILE_SIDE_GUTTER;
-
-    @include tablet-size {
-        padding: 0 $TABLET_SIDE_GUTTER;
-    }
-
-    @include desktop-size {
-        padding: 0 $DESKTOP_SIDE_GUTTER;
-    }
-}
-
-.tg-header__intro {
-    padding: 40px 0 0 0;
-
-    @include tablet-size {
-        padding: 60px 0 0 0;
-    }
-}
-
-.tg-header__intro__image,
-.tg-header__intro svg {
-    display: block;
-    margin: 0 auto 20px auto;
-    width: 160px;
-
-    @include tablet-size {
-        margin-bottom: 30px;
-        width: 250px;
-    }
-
-    @include desktop-size {
-        width: 250px;
-    }
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
-
-.tg-header__title {
-    @include font('ITC CASLON', 36px, 400, 36px);
-    color: $cod-gray;
-    margin: 0 0 15px 0;
-    text-align: center;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-
-    @include desktop-size{
-        @include font-size(50px);
-        @include line-height(50px);
-        margin-bottom: 20px;
-    }
-}
-
-.tg-header__separator {
-    display: none;
-}
-
-.tg-header__description {
-    color: $dove-gray;
-    @include font('ADOBE CASLON', 16px, null, 20px);
-    margin: 15px auto 22px auto;
-    max-width: 680px;
-    text-align: center;
-
-    @include desktop-size {
-        @include font-size(20px);
-        @include line-height(25px);
-        margin: 15px auto 30px auto;
-    }
-}
-
-.tg-header__sponsor {
-    @include font-size(11px);
-    margin: 20px auto;
-}
-.tg-header__sponsor-prefix {
-    @include font('ADOBE CASLON');
-    color: #666;
-    font-style: italic;
-    text-transform: lowercase;
-}
-.tg-header__sponsor-image {}
-.tg-header__sponsor-name {
-    @include font('NOBEL');
-    color: #111;
-    text-transform: uppercase;
-}
-
-.tg-header__topic-strip {
-    margin: 25px 0 40px 0;
-
-    @include tablet-size {
-        margin: 30px 0 60px 0;
-    }
-}
-.c-topic-strip__item--topic a {
-    display: inline-block;
-}
-
-.tg-header__cards {
-    margin: 0 auto 40px auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
-    padding-left: $MOBILE_SIDE_GUTTER;
-    padding-right: $MOBILE_SIDE_GUTTER;
-
-    @include tablet-size {
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
-    }
-
-    @include desktop-size {
-        padding-left: $DESKTOP_SIDE_GUTTER;
-        padding-right: $DESKTOP_SIDE_GUTTER;
-    }
-}
-
-.tg-header__shows,
-.tg-header__style-file {
-    padding: 40px $MOBILE_SIDE_GUTTER;
-
-    @include tablet-size {
-        padding: 40px $TABLET_SIDE_GUTTER;
-    }
-
-    @include desktop-size {
-        padding: 40px $DESKTOP_SIDE_GUTTER;
-    }
-
-    margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
-
-    .sh-item-carousel {
-        border-top: none;
-        margin: 0;
-        padding: 0;
-
-        .sh-item-carousel__nav {
-            top: 0;
-        }
-
-        .sh-item-carousel__list {
-            margin: 0;
-
-            .sh-item-carousel__list__item {
-                padding: 0 5px;
-            }
-
-            .sh-item-carousel__list__item:first-child {
-                padding-left: 0;
-            }
-
-            .sh-item-carousel__list__item:last-child {
-                padding-right: 0;
-            }
-        }
-    }
-}
-
-.tg-header__event-meta {
-    @include font('ADOBE CASLON', 0px, null, 20px);
-    color: $dove-gray;
-    margin: 40px 0;
-    max-width: 680px;
-    text-align: center;
-}
-.tg-header__event-meta__start-date {
-    @include font-size(16px);
-    display: block;
-}
-.tg-header__event-meta__separator {}
-.tg-header__event-meta__location {
-    @include font-size(16px);
-    display: block;
-}
-
-@include tablet-size {
-    .tg-header__event-meta {
-        margin: 15px auto 30px auto;
-    }
-    .tg-header__event-meta__start-date {
-        display: inline-block;
-
-
-        + .tg-header__event-meta__location {
-            margin-left: 8px;
-            padding-left: 8px;
-            position: relative;
-
-            &:before {
-                background: $gallery;
-                content: '';
-                display: block;
-                left: 0;
-                height: 20px;
-                position: absolute;
-                top: -2px;
-                width: 1px;
-            }
-        }
-    }
-    .tg-header__event-meta__separator {}
-    .tg-header__event-meta__location {
-        display: inline-block;
     }
 }
