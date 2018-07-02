@@ -168,7 +168,7 @@
  * Header variants
  */
 .tg-header--video {
-	.tg-header__intro__image {
+	.tg-header__intro-image {
 		width: 190px;
 		height: 50px;
 		margin: 0 auto;
@@ -187,7 +187,7 @@
 }
 
 .tg-header--profile {
-	.tg-header__intro__image {
+	.tg-header__intro-image {
 		background-color: $bon-jour;
 		border-radius: 50%;
 		display: block;
@@ -214,7 +214,7 @@
 .tg-header--brand,
 .tg-header--event,
 .tg-header--topic {
-	.tg-header__intro__image {
+	.tg-header__intro-image {
 		margin-bottom: 24px;
 		margin-left: auto;
 		margin-right: auto;

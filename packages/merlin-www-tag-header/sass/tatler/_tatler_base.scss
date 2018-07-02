@@ -71,10 +71,13 @@
     text-transform: uppercase;
 }
 
-.tg-header__intro__image {
+.tg-header__intro-image {
     height: auto;
     margin-bottom: 20px;
     max-width: 220px;
+
+    margin-left: auto;
+    margin-right: auto;
 
     img, svg {
         width: 100%;
@@ -84,11 +87,6 @@
         margin-bottom: 30px;
         max-width: 400px;
     }
-}
-
-.tg-header__intro__image {
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .tg-header__title {
@@ -204,7 +202,7 @@
  * Header variants
  */
 .tg-header--profile {
-    .tg-header__intro__image {
+    .tg-header__intro-image {
         margin-bottom: 15px;
         max-width: 90px;
 

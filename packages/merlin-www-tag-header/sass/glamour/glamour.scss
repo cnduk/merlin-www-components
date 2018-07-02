@@ -86,7 +86,7 @@
     text-transform: uppercase;
 }
 
-.tg-header__intro__image {
+.tg-header__intro-image {
     position: relative;
     z-index: 1;
 }
@@ -289,7 +289,7 @@
 .tg-header--video {
     margin-top: 0;
 
-    .tg-header__intro__image {
+    .tg-header__intro-image {
         margin: 0 auto;
         width: 160px;
 
@@ -314,7 +314,7 @@
 }
 
 .tg-header--profile {
-    .tg-header__intro__image {
+    .tg-header__intro-image {
         border-radius: 50%;
         height: 90px;
         margin: 0 auto 15px auto;
@@ -400,7 +400,7 @@
 .tg-header--topic {
     margin-top: 0;
 
-    .tg-header__intro__image {
+    .tg-header__intro-image {
         margin: 0 auto 0 auto;
         width: 200px;
 

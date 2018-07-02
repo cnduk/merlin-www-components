@@ -46,7 +46,7 @@
  * Intro
  * Hero, logo and title
  */
-.tg-header__intro__image {
+.tg-header__intro-image {
     display: block;
     margin: 0 auto 20px auto;
     width: 200px;
@@ -216,13 +216,13 @@
 .tg-header--event {
     background-color: $white-smoke;
 
-    .tg-header__intro__image + .tg-header__description:before,
+    .tg-header__intro-image + .tg-header__description:before,
     .tg-header__title + .tg-header__description:before,
     .tg-header__topic-strip:before {
         background-color: $black;
     }
 
-    .tg-header__intro__image,
+    .tg-header__intro-image,
     .tg-header__title {
         color: $black;
         & + .tg-header__description {
@@ -251,7 +251,7 @@
 }
 
 .tg-header--profile {
-    .tg-header__intro__image {
+    .tg-header__intro-image {
         margin: 0 auto 20px auto;
 
         @include at-x-large-size {
