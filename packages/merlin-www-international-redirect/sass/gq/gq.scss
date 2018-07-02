@@ -58,19 +58,12 @@
 	}
 }
 
-li.c-int-redirect__listitem {
+.c-int-redirect__listitem {
+	padding-bottom: 8px;
 
 	a {
 		@include font("GOTHAM", 12px, 'BOOK', 24px, -4);
 		color: inherit;
 		padding: 0 5px;
-	}
-
-	@include at-x-large-size {
-		padding-bottom: 8px;
-
-		a {
-			padding: 0 16px;
-		}
 	}
 }
