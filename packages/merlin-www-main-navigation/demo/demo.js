@@ -6,6 +6,9 @@ if (NAV.galleryEl) {
 
 for (var i = 0; i < 10; i++) {
     var bodyCopy = document.createElement('p');
+    bodyCopy.style.maxWidth = '1440px';
+    bodyCopy.style.margin = '0 auto';
+
     bodyCopy.innerHTML = `
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt condimentum ex, non mattis ex accumsan vel. Sed egestas varius augue et elementum. Curabitur at feugiat elit, quis efficitur nisl. Sed quis felis varius, congue felis vel, sagittis nunc. Sed id dictum neque. Praesent eget nisi molestie, convallis sem ac, porttitor lectus. Morbi bibendum arcu ut ante accumsan, nec sagittis orci eleifend. Mauris ultricies risus quis urna venenatis condimentum.
 

@@ -254,6 +254,14 @@
         position: absolute;
     }
 
+    @include screen($XX_LARGE_SIZE, 1500px) {
+        left: calc(30px - (100vw - #{$XX_LARGE_SIZE})/2);
+    }
+
+    @include min-screen(1500px) {
+        left: 0;
+    }
+
     &.is-hidden {
         @include at-x-large-size {
             svg,
