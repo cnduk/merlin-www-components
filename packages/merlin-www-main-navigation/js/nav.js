@@ -1,3 +1,5 @@
+'use strict';
+
 import GalleryNav from './gallery-nav';
 
 var IS_HIDDEN_CLS = 'is-hidden';
