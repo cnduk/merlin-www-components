@@ -4,7 +4,7 @@
 @import '../wireframe/wireframe';
 
 .c-pagination__btn {
-    @include button-group-light();
+    @include button-group();
     @include button-group-light();
 
     &:hover,
