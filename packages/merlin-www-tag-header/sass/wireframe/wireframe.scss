@@ -38,7 +38,14 @@
 }
 
 .global__button-reset{}
-.tg-header__expand-btn {}
+.tg-header__expand-btn {
+    @include vendor-prefix( appearance, none );
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    padding: 0;
+}
 
 /**
  * Sponsor
