@@ -1,33 +1,31 @@
 @import "@cnbritain/merlin-www-common:traveller";
-@import "@cnbritain/merlin-www-card:traveller";
 @import '@cnbritain/merlin-www-buttons:traveller';
+@import '@cnbritain/merlin-www-image:traveller';
+@import '@cnbritain/merlin-www-ads:traveller';
+@import "@cnbritain/merlin-www-card:traveller";
 
 @import "../wireframe/wireframe";
 
 .c-top-stories {
-    display: none;
-
-    @include at-x-large-size {
-        background-color: $CAPE-HAZE;
-        border-bottom: 1px solid $ISABEL;
-        display: block;
-        padding: 24px 0;
-    }
+    background-color: $CAPE-HAZE;
+    border-bottom: 1px solid $ISABEL;
+    padding: 24px 0;
 
     &.has-navigation {
-        .c-card-list__item:last-child {
-            margin-right: 60px + 20px;
+        .c-top-stories__cards-listitem:last-child {
+            margin-right: 80px;
         }
     }
 }
 
 .c-top-stories-wrapper {
     box-sizing: border-box;
+    max-width: $MAXIMUM_PAGE_WIDTH;
     position: relative;
     padding-left: 30px;
     transform: translateZ(0);
 
-    @media (min-width: 1440px) and (max-width: 1500px) {
+    @include screen(1440px, 1500px){
         padding-left: calc(30px - (100vw - 1440px)/2 );
     }
 
@@ -45,8 +43,20 @@
     width: 60px;
     z-index: 2;
 
-    @include min-screen($MAXIMUM_PAGE_WIDTH + 1) {
+    @include min-screen($MAXIMUM_PAGE_WIDTH + 1px){
         border-right: 1px solid $ISABEL;
+    }
+}
+
+.c-top-stories__nav-btn {
+    @include button-top-stories;
+
+    &:hover, &:focus {
+        @include button-top-stories-hover;
+    }
+
+    &:disabled {
+        @include button-top-stories-disabled;
     }
 }
 
@@ -56,12 +66,11 @@
 
 .c-top-stories__cards {
     margin-left: -30px;
-    max-width: $MAXIMUM_PAGE_WIDTH;
     overflow-y: hidden;
     padding-left: 30px;
     transform: translateZ(0);
 
-    @media (min-width: 1440px) and (max-width: 1500px) {
+    @include screen(1440px, 1500px){
         padding-left: calc(30px - (100vw - 1440px)/2 );
         margin-left: calc(-30px + (100vw - 1440px)/2 );
     }
@@ -73,25 +82,9 @@
 }
 
 .c-top-stories__cards-listitem {
-    display: inline-block;
     vertical-align: middle;
-    white-space: normal;
-    width: 280px;
 
     & + .c-top-stories__cards-listitem {
         margin-left: 24px;
-    }
-
-    &.is-hidden {
-        height: 0;
-        margin: 0;
-        overflow: hidden;
-        padding: 0;
-        visibility: hidden;
-        width: 0;
-    }
-
-    &:last-child {
-        margin-right: 24px;
     }
 }

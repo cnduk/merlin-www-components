@@ -1,27 +1,33 @@
 @import "@cnbritain/merlin-www-common:wireframe";
-@import "@cnbritain/merlin-www-card:wireframe";
 @import '@cnbritain/merlin-www-buttons:wireframe';
+@import '@cnbritain/merlin-www-image:wireframe';
+@import '@cnbritain/merlin-www-ads:wireframe';
+@import "@cnbritain/merlin-www-card:wireframe";
 
 .c-top-stories {
     box-sizing: border-box;
-    padding-left: $MOBILE_SIDE_GUTTER;
-    padding-right: $MOBILE_SIDE_GUTTER;
+    display: none;
     width: 100%;
 
-    @include at-medium-size {
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
+    &.has-navigation {
+        .c-top-stories__nav {
+            display: block;
+        }
+    }
+
+    &.has-no-scroll {
+        .c-top-stories__cards {
+            overflow-x: hidden;
+        }
     }
 
     @include at-x-large-size {
-        padding-left: $DESKTOP_SIDE_GUTTER;
-        padding-right: $DESKTOP_SIDE_GUTTER;
+        display: block;
     }
 }
 
 .c-top-stories-wrapper {
     margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
 }
 
 .c-top-stories__title {
@@ -32,10 +38,7 @@
     display: none;
 }
 
-.global__button-reset{}
-
 .c-top-stories__nav-btn {
-    @extend .btn-top-stories;
     border: none;
     border-radius: 0;
     cursor: pointer;
@@ -43,49 +46,36 @@
     position: absolute;
 }
 
-.c-top-stories__nav-btn--left{
+.c-top-stories__nav-btn--left {
     top: 50%;
 }
 
-.c-top-stories__nav-btn--right{
+.c-top-stories__nav-btn--right {
     top: 0;
 }
 
 .c-top-stories__cards {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-
-    .has-no-scroll & {
-        overflow-x: hidden;
-    }
-
-}
-
-.has-navigation {
-    .c-top-stories__nav {
-        display: block;
-    }
-}
-
-.c-card-list--top-stories {
-    font-size: 0;
-    position: relative;
 }
 
 .c-top-stories__cards-list {
-    flex-direction: row;
-    flex-wrap: nowrap;
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
     white-space: nowrap;
 }
 
 .c-top-stories__cards-listitem {
     box-sizing: border-box;
+    display: inline-block;
     font-size: initial;
     vertical-align: top;
-    width: 100%;
-}
+    white-space: normal;
+    width: 280px;
 
-.c-top-stories__cards-listitem--ad {
     &.is-hidden {
         height: 0;
         margin: 0;

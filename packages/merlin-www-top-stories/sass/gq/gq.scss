@@ -1,36 +1,31 @@
 @import "@cnbritain/merlin-www-common:gq";
-@import "@cnbritain/merlin-www-card:gq";
 @import '@cnbritain/merlin-www-buttons:gq';
+@import '@cnbritain/merlin-www-image:gq';
+@import '@cnbritain/merlin-www-ads:gq';
+@import "@cnbritain/merlin-www-card:gq";
 
 @import "../wireframe/wireframe";
 
 .c-top-stories {
-    display: none;
-
-    @include at-x-large-size {
-        background-color: $woodsmoke;
-        display: block;
-        padding: 24px 0;
-    }
+    background-color: $woodsmoke;
+    padding: 24px 0;
 
     &.has-navigation {
-        .c-card-list__item:last-child {
-            margin-right: 60px + 20px;
+        .c-top-stories__cards-listitem:last-child {
+            margin-right: 80px;
         }
     }
 }
 
 .c-top-stories-wrapper {
     box-sizing: border-box;
+    max-width: $MAXIMUM_PAGE_WIDTH;
     position: relative;
     padding-left: 30px;
+    transform: translateZ(0);
 
     @media (min-width: 1440px) and (max-width: 1500px) {
-        @for $i from 0 through 60 {
-            @media (min-width: 1440px + $i) {
-                padding-left: #{(30 - $i/2)}px;
-            }
-        }
+        padding-left: calc(30px - (100vw - 1440px)/2 );
     }
 
     @include min-screen(1500px) {
@@ -52,23 +47,31 @@
     }
 }
 
+.c-top-stories__nav-btn {
+    @include button-top-stories;
+
+    &:hover, &:focus {
+        @include button-top-stories-hover;
+    }
+
+    &:disabled {
+        @include button-top-stories-disabled;
+    }
+}
+
 .c-top-stories__nav-btn--left {
     border-top: 1px solid $mineshaft;
 }
 
 .c-top-stories__cards {
     margin-left: -30px;
-    max-width: $MAXIMUM_PAGE_WIDTH;
     overflow-y: hidden;
     padding-left: 30px;
+    transform: translateZ(0);
 
     @media (min-width: 1440px) and (max-width: 1500px) {
-        @for $i from 0 through 60 {
-            @media (min-width: 1440px + $i) {
-                padding-left: #{(30 - $i/2)}px;
-                margin-left: -#{(30 - $i/2)}px;
-            }
-        }
+        padding-left: calc(30px - (100vw - 1440px)/2 );
+        margin-left: calc(-30px + (100vw - 1440px)/2 );
     }
 
     @include min-screen(1500px) {
@@ -78,23 +81,8 @@
 }
 
 .c-top-stories__cards-listitem {
-    display: inline-block;
-    width: 280px;
-    white-space: normal;
-
     & + .c-top-stories__cards-listitem {
         margin-left: 20px;
-    }
-
-    &.is-hidden {
-        height: 0;
-        overflow: hidden;
-        visibility: hidden;
-        width: 0;
-    }
-
-    &:last-child {
-        margin-right: 20px;
     }
 }
 

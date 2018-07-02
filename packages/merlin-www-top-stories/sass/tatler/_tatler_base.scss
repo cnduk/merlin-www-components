@@ -1,28 +1,49 @@
 .c-top-stories {
-    display: none;
+    background: $wild-sand;
+    padding: 16px 0;
 
-    @include at-x-large-size {
-        background: $wild-sand;
-        display: block;
-        padding: 0;
+    &.has-navigation {
+        .c-top-stories__cards-listitem:last-child {
+            margin-right: 60px;
+        }
     }
-
 }
 
 .c-top-stories-wrapper {
     box-sizing: border-box;
-    min-height: 120px;
+    max-width: $MAXIMUM_PAGE_WIDTH;
     position: relative;
-    padding: 16px 0 10px 16px;
+    padding-left: 20px;
+    transform: translateZ(0);
+
+    @include screen(1440px, 1500px){
+        padding-left: calc(20px - (100vw - 1440px)/2 );
+    }
+
+    @include min-screen(1500px) {
+        padding-left: 0;
+    }
 }
 
 .c-top-stories__nav {
+    bottom: -16px;
     position: absolute;
-    z-index: 6;
-    bottom: 0;
     right: 0;
-    top: 0;
+    top: -16px;
     width: 60px;
+    z-index: 2;
+}
+
+.c-top-stories__nav-btn {
+    @include button-top-stories;
+
+    &:hover, &:focus {
+        @include button-top-stories-hover;
+    }
+
+    &:disabled {
+        @include button-top-stories-disabled;
+    }
 }
 
 .c-top-stories__nav-btn--right {
@@ -31,38 +52,23 @@
 
 .c-top-stories__cards {
     margin-left: -20px;
-    max-width: $MAXIMUM_PAGE_WIDTH;
+    overflow-y: hidden;
     padding-left: 20px;
-    padding-bottom: 10px;
+    transform: translateZ(0);
 
-    @include at-x-large-size {
-        padding-left: 0;
-        margin-left: 0;
-        padding-bottom: 0;
+    @include screen(1440px, 1500px){
+        padding-left: calc(20px - (100vw - 1440px)/2 );
+        margin-left: calc(-20px + (100vw - 1440px)/2 );
     }
-}
 
-.c-top-stories__cards-list {
-    display: flex;
+    @include min-screen(1500px) {
+        margin-left: 0;
+        padding-left: 0;
+    }
 }
 
 .c-top-stories__cards-listitem {
-    display: flex;
-    flex: none;
-    margin-right: 20px;
-    white-space: normal;
-    width: 300px;
-
-    &:last-child {
-        width: 275px;
-    }
-
-    &.is-hidden {
-        height: 0;
-        overflow: hidden;
-        visibility: hidden;
-        width: 0;
+    & + .c-top-stories__cards-listitem {
+        margin-left: 20px;
     }
 }
-
-

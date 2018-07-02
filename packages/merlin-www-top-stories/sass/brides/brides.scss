@@ -1,29 +1,26 @@
 @import "@cnbritain/merlin-www-common:brides";
-@import "@cnbritain/merlin-www-card:brides";
 @import '@cnbritain/merlin-www-buttons:brides';
-
+@import '@cnbritain/merlin-www-image:brides';
+@import '@cnbritain/merlin-www-ads:brides';
+@import "@cnbritain/merlin-www-card:brides";
 
 @import "../wireframe/wireframe";
 
 .c-top-stories {
-    display: none;
-
-    @include at-x-large-size {
-        background-color: $diamond;
-        border-bottom: 1px solid $ballet-grey;
-        display: block;
-        padding: 20px 0;
-    }
+    background-color: $diamond;
+    border-bottom: 1px solid $ballet-grey;
+    padding: 20px 0;
 
     &.has-navigation {
-        .c-card-list__item:last-child {
-            margin-right: 60px + 24px;
+        .c-top-stories__cards-listitem:last-child {
+            margin-right: 84px;
         }
     }
 }
 
 .c-top-stories-wrapper {
     box-sizing: border-box;
+    max-width: $MAXIMUM_PAGE_WIDTH;
     position: relative;
     padding-left: 24px;
     transform: translateZ(0);
@@ -51,13 +48,24 @@
     }
 }
 
+.c-top-stories__nav-btn {
+    @include button-top-stories;
+
+    &:hover, &:focus {
+        @include button-top-stories-hover;
+    }
+
+    &:disabled {
+        @include button-top-stories-disabled;
+    }
+}
+
 .c-top-stories__nav-btn--left {
     border-top: 1px solid $ballet-grey;
 }
 
 .c-top-stories__cards {
     margin-left: -24px;
-    max-width: $MAXIMUM_PAGE_WIDTH;
     overflow-y: hidden;
     padding-left: 24px;
     transform: translateZ(0);
@@ -71,29 +79,10 @@
         margin-left: 0;
         padding-left: 0;
     }
-
 }
 
 .c-top-stories__cards-listitem {
-    display: inline-block;
-    vertical-align: middle;
-    white-space: normal;
-    width: 280px;
-
     & + .c-top-stories__cards-listitem {
         margin-left: 24px;
-    }
-
-    &.is-hidden {
-        height: 0;
-        margin: 0;
-        overflow: hidden;
-        padding: 0;
-        visibility: hidden;
-        width: 0;
-    }
-
-    &:last-child {
-        margin-right: 24px;
     }
 }
