@@ -37,9 +37,10 @@
     display: none;
 }
 
-.global__button-reset{}
 .tg-header__expand-btn {
-    @include vendor-prefix( appearance, none );
+    -webkit-appearance: none;
+     -moz-appearance: none;
+    appearance: none;
     background: transparent;
     border: none;
     border-radius: 0;
