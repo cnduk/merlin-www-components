@@ -139,6 +139,23 @@
     }
 }
 
+.tg-header__sponsor {
+    @include font-size(11px);
+    margin: 20px auto;
+}
+.tg-header__sponsor-prefix {
+    @include font('ADOBE CASLON');
+    color: #666;
+    font-style: italic;
+    text-transform: lowercase;
+}
+.tg-header__sponsor-image {}
+.tg-header__sponsor-name {
+    @include font('NOBEL');
+    color: #111;
+    text-transform: uppercase;
+}
+
 .tg-header__topic-strip {
     margin: 25px 0 40px 0;
 

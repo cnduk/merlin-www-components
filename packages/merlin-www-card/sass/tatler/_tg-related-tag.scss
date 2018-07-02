@@ -1,0 +1,45 @@
+// -------------------- //
+// Tag Related Tag
+// -------------------- //
+
+@mixin card-tg-related-tag {
+    @include card-portrait;
+
+    .c-card__separator {
+        display: none;
+    }
+}
+
+@mixin card-tg-related-tag-small {
+    @include card-portrait-large;
+
+    .c-card__title {
+        margin-bottom: 0;
+    }
+}
+
+@mixin card-tg-related-tag-large {
+    @include card-portrait-large;
+
+    .c-card__title {
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+.c-card--tg-related-tag {
+    @include card-tg-related-tag();
+    @include card-tg-related-tag-large();
+}
+
+.c-card--tg-related-tag-small {
+    @include card-tg-related-tag();
+    @include card-tg-related-tag-small();
+}
+
+.c-card--tg-related-tag-large {
+    @include card-tg-related-tag();
+    @include card-tg-related-tag-large();
+}

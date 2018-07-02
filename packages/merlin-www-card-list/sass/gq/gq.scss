@@ -12,88 +12,63 @@
 .c-card-list--c-splash {
 	.c-card-list__item {
 		display: inline-block;
-	    width: 100%;
+		width: 100%;
 
 		@include one-column-size() {
-	        margin-top: 20px;
+			margin-top: 20px;
 
 			& + .c-card-list__item {
 				.c-card {
-				    border-top: 1px solid $bon-jour;
-				    padding-top: 20px;
+					border-top: 1px solid $bon-jour;
+					padding-top: 20px;
 				}
 			}
 
-	        @include first(1) {
-	            margin-top: 0;
-	        }
-    	}
+			@include first(1) {
+				margin-top: 0;
+			}
+		}
 
-    	@include screen($CARD_LIST_2_COLUMN_BREAKPOINT, $CARD_LIST_4_COLUMN_BREAKPOINT - 1) {
-		    width: 50%;
+		@include screen($CARD_LIST_2_COLUMN_BREAKPOINT, $CARD_LIST_4_COLUMN_BREAKPOINT - 1) {
+			width: 50%;
 
-		    &:nth-child(odd) {
-		    	.c-card {
-			    	padding-right: 10px;
-		    	}
-		    }
+			&:nth-child(odd) {
+				.c-card {
+					padding-right: 10px;
+				}
+			}
 
-		    &:nth-child(even) {
-		    	.c-card {
-			    	padding-left: 10px;
-		    	}
-		    }
+			&:nth-child(even) {
+				.c-card {
+					padding-left: 10px;
+				}
+			}
 
-		    &:nth-child(n+3) {
-        		margin-top: 20px;
+			&:nth-child(n+3) {
+				margin-top: 20px;
 
-		    	.c-card {
-		    	    border-top: 1px solid $bon-jour;
-		    	    padding-top: 20px;
-		    	}
-		    }
-    	}
+				.c-card {
+					border-top: 1px solid $bon-jour;
+					padding-top: 20px;
+				}
+			}
+		}
 
-    	@include four-column-size() {
-	        margin-top: 24px;
+		@include four-column-size() {
+			margin-top: 24px;
 
 			& + .c-card-list__item {
 				.c-card {
-				    border-top: 1px solid $bon-jour;
-				    padding-top: 24px;
+					border-top: 1px solid $bon-jour;
+					padding-top: 24px;
 				}
 			}
 
-	        @include first(1) {
-	            margin-top: 0;
-	        }
-    	}
+			@include first(1) {
+				margin-top: 0;
+			}
+		}
 	}
-}
-
-.c-card-list--top-stories {
-    white-space: nowrap;
-
-    .c-card-list__item {
-        display: inline-block;
-        width: 280px;
-        white-space: normal;
-
-        & + .c-card-list__item {
-	        margin-left: 20px;
-        }
-
-        &.is-hidden {
-            height: 0;
-            overflow: hidden;
-            visibility: hidden;
-            width: 0;
-        }
-
-        &:last-child {
-        	margin-right: 20px;
-        }
-    }
 }
 
 .c-card-list--a-recommended,

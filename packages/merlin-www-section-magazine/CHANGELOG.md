@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.50"></a>
+## [1.8.50](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-magazine@1.8.49...@cnbritain/merlin-www-section-magazine@1.8.50) (2018-06-25)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-magazine
+
+<a name="1.8.49"></a>
+## [1.8.49](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-magazine@1.8.48...@cnbritain/merlin-www-section-magazine@1.8.49) (2018-06-22)
+
+
+### Bug Fixes
+
+* **merlin-www-section-magazine:** fix card dependencie ([c9a1791](https://github.com/cnduk/merlin-www-components/commit/c9a1791))
+
+
+
+
 <a name="1.8.48"></a>
 ## [1.8.48](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-magazine@1.8.47...@cnbritain/merlin-www-section-magazine@1.8.48) (2018-06-11)
 
