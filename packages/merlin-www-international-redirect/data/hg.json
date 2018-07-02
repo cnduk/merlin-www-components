@@ -1,0 +1,88 @@
+{
+  "data": {
+    "brand_name": "House & Garden",
+    "close_button": {
+      "data": {
+        "alt_text": null,
+        "credit": null,
+        "description": null,
+        "look_number": null,
+        "title": null,
+        "width": null,
+        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\"><title>cta-close</title><path d=\"M10 0a10 10 0 1 0 10 10A10 10 0 0 0 10 0zm4 13.11l-.92.92-3-3L7 14l-.92-.92L9.13 10l-3-3L7 6.09l3.05 3.05 3.05-3.05.9.91-3 3.06z\"/></svg>"
+      },
+      "state": {
+        "is_image": false,
+        "is_picture": false,
+        "is_static": false,
+        "is_svg": true,
+        "is_linked": false,
+        "is_landscape": false,
+        "is_portrait": false,
+        "is_square": false,
+        "is_lazyload": false
+      },
+      "style": {
+        "cls": "",
+        "inline": ""
+      },
+      "translation": {},
+      "type": "SVG"
+    },
+    "site_links": {
+      "data": {
+        "items": [
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "South Africa",
+                  "url": "https://www.houseandgarden.co.za/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 0
+            },
+            "state": {
+              "is_first": true,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          }
+        ],
+        "length": 1
+      },
+      "state": {
+        "has_multiple_items": false
+      },
+      "style": {
+        "cls": "",
+        "inline": ""
+      },
+      "translation": {},
+      "type": "List"
+    },
+    "short_name": "House & Garden"
+  },
+  "state": {},
+  "style": {
+    "cls": "",
+    "inline": ""
+  },
+  "translation": {},
+  "type": "InternationalRedirect"
+}
