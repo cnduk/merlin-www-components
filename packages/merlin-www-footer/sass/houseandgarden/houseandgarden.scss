@@ -4,6 +4,8 @@
 @import "../wireframe/wireframe";
 
 .c-footer__list-item--brand-logo {
+    bottom: 5px;
+
     svg {
         fill: $white;
         width: 80px;
