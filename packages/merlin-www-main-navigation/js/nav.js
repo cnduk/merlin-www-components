@@ -162,6 +162,8 @@ Nav.prototype = inherit(EventEmitter.prototype, {
     },
 
     toggleShow: function() {
+        if (this.state.isPaused) return;
+
         if (this.scrollDirection == 'down') {
             if (this.scrollDownCount >= 60) {
                 if (!this.state.isHidden) {
@@ -244,6 +246,7 @@ Nav.prototype = inherit(EventEmitter.prototype, {
 
     pause: function() {
         if (this.state.isPaused) return;
+
         this.state.isPaused = true;
 
         this.emit('pause', events.pause(this));
@@ -251,6 +254,7 @@ Nav.prototype = inherit(EventEmitter.prototype, {
 
     unpause: function() {
         if (!this.state.isPaused) return;
+
         this.state.isPaused = false;
 
         this.emit('unpause', events.unpause(this));
