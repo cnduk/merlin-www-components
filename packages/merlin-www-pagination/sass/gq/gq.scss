@@ -17,7 +17,6 @@
 }
 
 .c-pagination__btn {
-	@include button-reset();
 	@include button-single();
 	@include button-single-two-light();
 	border: 1px solid $bon-jour;
