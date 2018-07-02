@@ -152,6 +152,8 @@ Nav.prototype = inherit(EventEmitter.prototype, {
 
         this.el.classList.remove(IS_HIDDEN_CLS);
         this.state.isHidden = false;
+
+        this.emit('visibilitychange', events.visibilitychange(this, 'visible'));
     },
 
     hide: function() {
@@ -159,6 +161,8 @@ Nav.prototype = inherit(EventEmitter.prototype, {
 
         this.el.classList.add(IS_HIDDEN_CLS);
         this.state.isHidden = true;
+
+        this.emit('visibilitychange', events.visibilitychange(this, 'hidden'));
     },
 
     toggleShow: function() {
