@@ -1,5 +1,9 @@
 'use strict';
 
+import EventEmitter from 'eventemitter2';
+import {inherit} from '@cnbritain/merlin-www-js-utils/js/functions';
+import * as events from './events';
+
 import GalleryNav from './gallery-nav';
 
 var IS_HIDDEN_CLS = 'is-hidden';
@@ -14,7 +18,8 @@ function Nav(el) {
         isOpen: false,
         isHidden: false,
         isSearchOpen: false,
-        isGalleryHidden: true
+        isGalleryHidden: true,
+        isPaused: false,
     };
 
     this.currentY = 0;
@@ -74,205 +79,221 @@ function Nav(el) {
     this.searchIconEl.addEventListener('click', this.toggleSearch);
 }
 
-Nav.prototype.fix = function() {
-    if (this.state.isFixed) return;
+Nav.prototype = inherit(EventEmitter.prototype, {
+    fix: function() {
+        if (this.state.isFixed) return;
 
-    this.el.classList.add(IS_FIXED_CLS);
-    this.logoEl.classList.remove(IS_HIDDEN_CLS);
-    this.state.isFixed = true;
-};
+        this.el.classList.add(IS_FIXED_CLS);
+        this.logoEl.classList.remove(IS_HIDDEN_CLS);
+        this.state.isFixed = true;
+    },
 
-Nav.prototype.unfix = function() {
-    if (!this.state.isFixed) return;
+    unfix: function() {
+        if (!this.state.isFixed) return;
 
-    this.el.classList.remove(IS_FIXED_CLS);
-    this.logoEl.classList.add(IS_HIDDEN_CLS);
-    this.state.isFixed = false;
-};
+        this.el.classList.remove(IS_FIXED_CLS);
+        this.logoEl.classList.add(IS_HIDDEN_CLS);
+        this.state.isFixed = false;
+    },
 
-Nav.prototype.togglefix = function() {
-    if (window.scrollY >= this.elOffsetTop) {
-        if (!this.state.isFixed) {
-            this.fix();
+    togglefix: function() {
+        if (window.scrollY >= this.elOffsetTop) {
+            if (!this.state.isFixed) {
+                this.fix();
+            }
         }
-    }
 
-    else {
-        if (this.state.isFixed) {
+        else {
+            if (this.state.isFixed) {
+                this.unfix();
+            }
+        }
+
+        this.isScrolling = false;
+        this.isResizing = false;
+    },
+
+    open: function() {
+        if (this.state.isOpen) return;
+
+        document.body.style.overflow = 'hidden';
+        this.el.classList.add(IS_OPEN_CLS);
+
+        this.toggleOpenIconEl.classList.add(IS_HIDDEN_CLS);
+        this.toggleCloseIconEl.classList.remove(IS_HIDDEN_CLS);
+
+        this.state.isOpen = true;
+    },
+
+    close: function() {
+        if (!this.state.isOpen) return;
+
+        document.body.style.overflow = '';
+        this.el.classList.remove(IS_OPEN_CLS);
+
+        this.toggleOpenIconEl.classList.remove(IS_HIDDEN_CLS);
+        this.toggleCloseIconEl.classList.add(IS_HIDDEN_CLS);
+
+        this.state.isOpen = false;
+    },
+
+    toggleOpen: function() {
+        if (!this.state.isOpen) {
+            this.open();
+        }
+
+        else {
+            this.close();
+        }
+    },
+
+    show: function() {
+        if (!this.state.isHidden) return;
+
+        this.el.classList.remove(IS_HIDDEN_CLS);
+        this.state.isHidden = false;
+    },
+
+    hide: function() {
+        if (this.state.isHidden) return;
+
+        this.el.classList.add(IS_HIDDEN_CLS);
+        this.state.isHidden = true;
+    },
+
+    toggleShow: function() {
+        if (this.scrollDirection == 'down') {
+            if (this.scrollDownCount >= 60) {
+                if (!this.state.isHidden) {
+                    this.hide();
+                }
+            }
+        }
+
+        if (this.scrollDirection == 'up') {
+            if (this.scrollUpCount >= 1) {
+                if (this.state.isHidden) {
+                    this.show();
+                }
+            }
+        }
+
+        this.isScrolling = false;
+        this.isResizing = false;
+    },
+
+    openSearch: function() {
+        if (this.state.isSearchOpen) return;
+
+        this.searchEl.classList.remove(IS_HIDDEN_CLS);
+
+        this.searchOpenIconEl.classList.add(IS_HIDDEN_CLS);
+        this.searchCloseIconEl.classList.remove(IS_HIDDEN_CLS);
+
+        this.state.isSearchOpen = true;
+    },
+
+    closeSearch: function() {
+        if (!this.state.isSearchOpen) return;
+
+        this.searchEl.classList.add(IS_HIDDEN_CLS);
+
+        this.searchOpenIconEl.classList.remove(IS_HIDDEN_CLS);
+        this.searchCloseIconEl.classList.add(IS_HIDDEN_CLS);
+
+        this.state.isSearchOpen = false;
+    },
+
+    toggleSearch: function() {
+        if (!this.state.isSearchOpen) {
+            this.openSearch();
+        }
+
+        else {
+            this.closeSearch();
+        }
+    },
+
+    showGallery: function() {
+        if (!this.state.isGalleryHidden) return;
+
+        this.el.classList.add(IS_GALLERY_ACTIVE_CLS);
+        this.galleryEl.classList.remove(IS_HIDDEN_CLS);
+
+        this.state.isGalleryHidden = false;
+    },
+
+    hideGallery: function() {
+        if (this.state.isGalleryHidden) return;
+
+        this.el.classList.remove(IS_GALLERY_ACTIVE_CLS);
+        this.galleryEl.classList.add(IS_HIDDEN_CLS);
+
+        this.state.isGalleryHidden = false;
+    },
+
+    toggleGallery: function() {
+        if (this.state.isGalleryHidden) {
+            this.showGallery();
+        }
+
+        else {
+            this.hideGallery();
+        }
+    },
+
+    pause: function() {
+        if (this.state.isPaused) return;
+        this.state.isPaused = true;
+
+        this.emit('pause', events.pause(this));
+    },
+
+    unpause: function() {
+        if (!this.state.isPaused) return;
+        this.state.isPaused = false;
+
+        this.emit('unpause', events.unpause(this));
+    },
+
+    onScroll: function() {
+        if (!this.isScrolling) {
+            this.isScrolling = true;
+
+            this.previousY = this.currentY;
+            this.currentY = window.scrollY;
+
+            if (this.currentY > this.previousY) {
+                this.scrollDirection = 'down';
+                this.scrollUpCount = 0;
+                this.scrollDownCount += 1;
+            }
+
+            else if (this.currentY < this.previousY) {
+                this.scrollDirection = 'up';
+                this.scrollUpCount += 1;
+                this.scrollDownCount = 0;
+            }
+
+            requestAnimationFrame(this.togglefix);
+            requestAnimationFrame(this.toggleShow);
+        }
+    },
+
+    onResize: function() {
+        if (!this.isResizing) {
+            this.isResizing = true;
+
+            // Need to reset to get new offset value
             this.unfix();
+            this.elOffsetTop = this.el.offsetTop;
+
+            this.show();
+
+            requestAnimationFrame(this.togglefix);
+            requestAnimationFrame(this.toggleShow);
         }
-    }
+    },
+});
 
-    this.isScrolling = false;
-    this.isResizing = false;
-};
-
-Nav.prototype.open = function() {
-    if (this.state.isOpen) return;
-
-    document.body.style.overflow = 'hidden';
-    this.el.classList.add(IS_OPEN_CLS);
-
-    this.toggleOpenIconEl.classList.add(IS_HIDDEN_CLS);
-    this.toggleCloseIconEl.classList.remove(IS_HIDDEN_CLS);
-
-    this.state.isOpen = true;
-};
-
-Nav.prototype.close = function() {
-    if (!this.state.isOpen) return;
-
-    document.body.style.overflow = '';
-    this.el.classList.remove(IS_OPEN_CLS);
-
-    this.toggleOpenIconEl.classList.remove(IS_HIDDEN_CLS);
-    this.toggleCloseIconEl.classList.add(IS_HIDDEN_CLS);
-
-    this.state.isOpen = false;
-};
-
-Nav.prototype.toggleOpen = function() {
-    if (!this.state.isOpen) {
-        this.open();
-    }
-
-    else {
-        this.close();
-    }
-};
-
-Nav.prototype.show = function() {
-    if (!this.state.isHidden) return;
-
-    this.el.classList.remove(IS_HIDDEN_CLS);
-    this.state.isHidden = false;
-};
-
-Nav.prototype.hide = function() {
-    if (this.state.isHidden) return;
-
-    this.el.classList.add(IS_HIDDEN_CLS);
-    this.state.isHidden = true;
-};
-
-Nav.prototype.toggleShow = function() {
-    if (this.scrollDirection == 'down') {
-        if (this.scrollDownCount >= 60) {
-            if (!this.state.isHidden) {
-                this.hide();
-            }
-        }
-    }
-
-    if (this.scrollDirection == 'up') {
-        if (this.scrollUpCount >= 1) {
-            if (this.state.isHidden) {
-                this.show();
-            }
-        }
-    }
-
-    this.isScrolling = false;
-    this.isResizing = false;
-};
-
-Nav.prototype.openSearch = function() {
-    if (this.state.isSearchOpen) return;
-
-    this.searchEl.classList.remove(IS_HIDDEN_CLS);
-
-    this.searchOpenIconEl.classList.add(IS_HIDDEN_CLS);
-    this.searchCloseIconEl.classList.remove(IS_HIDDEN_CLS);
-
-    this.state.isSearchOpen = true;
-};
-
-Nav.prototype.closeSearch = function() {
-    if (!this.state.isSearchOpen) return;
-
-    this.searchEl.classList.add(IS_HIDDEN_CLS);
-
-    this.searchOpenIconEl.classList.remove(IS_HIDDEN_CLS);
-    this.searchCloseIconEl.classList.add(IS_HIDDEN_CLS);
-
-    this.state.isSearchOpen = false;
-};
-
-Nav.prototype.toggleSearch = function() {
-    if (!this.state.isSearchOpen) {
-        this.openSearch();
-    }
-
-    else {
-        this.closeSearch();
-    }
-};
-
-Nav.prototype.showGallery = function() {
-    if (!this.state.isGalleryHidden) return;
-
-    this.el.classList.add(IS_GALLERY_ACTIVE_CLS);
-    this.galleryEl.classList.remove(IS_HIDDEN_CLS);
-
-    this.state.isGalleryHidden = false;
-};
-
-Nav.prototype.hideGallery = function() {
-    if (this.state.isGalleryHidden) return;
-
-    this.el.classList.remove(IS_GALLERY_ACTIVE_CLS);
-    this.galleryEl.classList.add(IS_HIDDEN_CLS);
-
-    this.state.isGalleryHidden = false;
-};
-
-Nav.prototype.toggleGallery = function() {
-    if (this.state.isGalleryHidden) {
-        this.showGallery();
-    }
-
-    else {
-        this.hideGallery();
-    }
-};
-
-Nav.prototype.onScroll = function() {
-    if (!this.isScrolling) {
-        this.isScrolling = true;
-
-        this.previousY = this.currentY;
-        this.currentY = window.scrollY;
-
-        if (this.currentY > this.previousY) {
-            this.scrollDirection = 'down';
-            this.scrollUpCount = 0;
-            this.scrollDownCount += 1;
-        }
-
-        else if (this.currentY < this.previousY) {
-            this.scrollDirection = 'up';
-            this.scrollUpCount += 1;
-            this.scrollDownCount = 0;
-        }
-
-        requestAnimationFrame(this.togglefix);
-        requestAnimationFrame(this.toggleShow);
-    }
-};
-
-Nav.prototype.onResize = function() {
-    if (!this.isResizing) {
-        this.isResizing = true;
-
-        // Need to reset to get new offset value
-        this.unfix();
-        this.elOffsetTop = this.el.offsetTop;
-
-        this.show();
-
-        requestAnimationFrame(this.togglefix);
-        requestAnimationFrame(this.toggleShow);
-    }
-};
-
-export default Nav
+export default Nav;

@@ -5,8 +5,6 @@ import {inherit} from '@cnbritain/merlin-www-js-utils/js/functions';
 import * as events from './events';
 
 var IS_HIDDEN_CLS = 'is-hidden';
-var IS_FIXED_CLS = 'is-fixed';
-var IS_OPEN_CLS = 'is-open';
 
 function GalleryNav(el) {
     EventEmitter.call(this, {
@@ -88,4 +86,4 @@ GalleryNav.prototype = inherit(EventEmitter.prototype, {
     },
 });
 
-export default GalleryNav
+export default GalleryNav;
