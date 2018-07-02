@@ -6,6 +6,7 @@ import {
     clamp,
     getBoundingClientRect,
     getParent,
+    hasClass,
     removeClass,
     throttle
 } from '@cnbritain/merlin-www-js-utils/js/functions';
@@ -27,6 +28,8 @@ var SCROLL_DURATION = 1000;
 var SCROLL_THROTTLE = 300;
 
 var CLS_ITEM_AD = '.c-top-stories__cards-listitem--ad';
+var CLS_HAS_NAVIGATION = 'has-navigation';
+var CLS_HAS_NO_SCROLL = 'has-no-scroll';
 
 /**
  * @class TopStoriesNavigation
@@ -71,16 +74,12 @@ function TopStoriesNavigation(el, options) {
      */
     this._scrollOffset = options.scrollOffset || 0;
 
-    //Only desktop nav
-    if (!getParent(el, '.n-menu__top-stories')) {
-        addClass(el, 'has-no-scroll');
-        addClass(el, 'has-navigation');
-    }
-
     // Scroll listener
     addEvent(
-        this._elScroll, 'scroll', throttle(onScroll.bind(this),
-            SCROLL_THROTTLE));
+        this._elScroll,
+        'scroll',
+        throttle(onScroll.bind(this), SCROLL_THROTTLE)
+    );
 
     // Arrow buttons
     if (this._btns.length > 0) {
@@ -127,7 +126,11 @@ TopStoriesNavigation.prototype = {
         }
         if (offscreenIndex === -1) return;
 
-        this.scrollTo(storyRects[offscreenIndex].left + (window.innerWidth > scrollRect.width ? 0 : -this._scrollOffset));
+        var offset = 0;
+        if(window.innerWidth <= scrollRect.width){
+            offset = -this._scrollOffset;
+        }
+        this.scrollTo(storyRects[offscreenIndex].left + offset);
     },
 
     /**
@@ -155,7 +158,12 @@ TopStoriesNavigation.prototype = {
         }
         if (offscreenIndex === -1) return;
 
-        this.scrollTo(-scrollRect.width + storyRects[offscreenIndex].right + (window.innerWidth > scrollRect.width ? 0 : this._scrollOffset));
+        var offset = 0;
+        if(window.innerWidth <= scrollRect.width){
+            offset = this._scrollOffset;
+        }
+        this.scrollTo(
+            -scrollRect.width + storyRects[offscreenIndex].right + offset);
     },
 
     /**
@@ -185,6 +193,42 @@ TopStoriesNavigation.prototype = {
         }, SCROLL_DURATION, {
             'stopOnUserInput': false
         });
+    },
+
+    /**
+     * Show the navigation buttons
+     */
+    showNavigation: function(){
+        if(!hasClass(this.el, CLS_HAS_NAVIGATION)){
+            addClass(this.el, CLS_HAS_NAVIGATION);
+        }
+    },
+
+    /**
+     * Hide the navigation buttons
+     */
+    hideNavigation: function(){
+        if(hasClass(this.el, CLS_HAS_NAVIGATION)){
+            removeClass(this.el, CLS_HAS_NAVIGATION);
+        }
+    },
+
+    /**
+     * Disable scrolling on the card list
+     */
+    disableScroll: function(){
+        if(!hasClass(this.el, CLS_HAS_NO_SCROLL)){
+            addClass(this.el, CLS_HAS_NO_SCROLL);
+        }
+    },
+
+    /**
+     * Enable scrolling on the card list
+     */
+    enableScroll: function(){
+        if(hasClass(this.el, CLS_HAS_NO_SCROLL)){
+            removeClass(this.el, CLS_HAS_NO_SCROLL);
+        }
     }
 
 };
@@ -270,9 +314,7 @@ function normaliseToElement(elRect) {
  * Callback for scroll event
  */
 function onScroll() {
-    if (window.innerWidth > 1024) {
-        updateButtonStates(this._elScroll, this._btns);
-    }
+    updateButtonStates(this._elScroll, this._btns);
 }
 
 /**
