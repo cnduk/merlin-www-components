@@ -1,36 +1,31 @@
 @import "@cnbritain/merlin-www-common:wired";
-@import "@cnbritain/merlin-www-card-list:wired";
+@import '@cnbritain/merlin-www-buttons:wired';
+@import '@cnbritain/merlin-www-image:wired';
+@import '@cnbritain/merlin-www-ads:wired';
 @import "@cnbritain/merlin-www-card:wired";
 
 @import "../wireframe/wireframe";
 
 .c-top-stories {
     border-bottom: 1px solid #ececec;
-    display: none;
     padding: 24px 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        display: block;
-    }
-
     &.has-navigation {
-        .c-card-list__item:last-child {
-            margin-right: 60px + 20px;
+        .c-top-stories__cards-listitem:last-child {
+            margin-right: 60px;
         }
     }
 }
 
-.c-top-stories__wrapper {
+.c-top-stories-wrapper {
     box-sizing: border-box;
+    max-width: $MAXIMUM_PAGE_WIDTH;
     position: relative;
-    padding-left: 30px;
+    padding-left: 20px;
+    transform: translateZ(0);
 
-    @include screen(1440px, 1500px) {
-        @for $i from 0 through 60 {
-            @media (min-width: 1440px + $i) and (max-width: 1440px + $i + 0.5) {
-                padding-left: #{(30 - $i/2)}px;
-            }
-        }
+    @include screen(1440px, 1500px){
+        padding-left: calc(20px - (100vw - 1440px)/2 );
     }
 
     @include min-screen(1500px) {
@@ -39,56 +34,49 @@
 }
 
 .c-top-stories__nav {
-    border-left: 1px solid #f5f5f5;
+    border-left: 1px solid $white-smoke;
     bottom: -24px;
     position: absolute;
     right: 0;
     top: -24px;
     width: 60px;
     z-index: 2;
-
-    @include min-screen($MAXIMUM_PAGE_WIDTH + 1) {
-        border-right: 1px solid #f5f5f5;
-    }
 }
 
 .c-top-stories__nav-btn {
-    position: absolute;
+    @include button-top-stories;
+
+    &:hover, &:focus {
+        @include button-top-stories-hover;
+    }
+
+    &:disabled {
+        @include button-top-stories-disabled;
+    }
 }
 
-.c-top-stories__nav-btn--left {
-    top: 50%;
-}
-
-.c-top-stories__nav-btn--right {
-    top: 0;
-}
-
-.c-top-stories__title {
-    display: none;
-}
-
-.c-top-stories__overflow {
-    margin-left: -30px;
-    max-width: $MAXIMUM_PAGE_WIDTH;
+.c-top-stories__cards {
+    margin-left: -20px;
     overflow-y: hidden;
-    padding-left: 30px;
+    padding-left: 20px;
+    position: relative;
+    transform: translateZ(0);
 
-    @media (min-width: 1440px) and (max-width: 1500px) {
-        @for $i from 0 through 60 {
-            @media (min-width: 1440px + $i) {
-                padding-left: #{(30 - $i/2)}px;
-                margin-left: -#{(30 - $i/2)}px;
-            }
-        }
+    @include screen(1440px, 1500px){
+        padding-left: calc(20px - (100vw - 1440px)/2 );
+        margin-left: calc(-20px + (100vw - 1440px)/2 );
     }
 
     @include min-screen(1500px) {
         margin-left: 0;
         padding-left: 0;
     }
+}
 
-    .has-no-scroll & {
-        overflow-x: hidden;
+.c-top-stories__cards-list {}
+
+.c-top-stories__cards-listitem {
+    & + .c-top-stories__cards-listitem {
+        margin-left: 20px;
     }
 }
