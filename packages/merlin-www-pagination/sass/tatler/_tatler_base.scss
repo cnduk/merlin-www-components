@@ -1,4 +1,5 @@
 .c-pagination__btn {
+    @include button-single;
     @include button-single-light();
 
     &:hover,
