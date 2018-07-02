@@ -7,33 +7,25 @@
 	font-size: 0;
 	margin: $MOBILE_SLICE_MARGIN 0;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	@include at-medium-size {
 		margin: $TABLET_SLICE_MARGIN 0;
 	}
+}
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		margin: $DESKTOP_SLICE_MARGIN 0;
-	}
+.c-pagination__item + .c-pagination__item {
+	margin-left: 12px;
 }
-.c-pagination__item {
-	& + .c-pagination__item {
-		margin-left: 12px;
-	}
-}
-.c-pagination__item--active {}
+
 .c-pagination__btn {
-	@include button-reset();
-	@include font("GOTHAM", 12px, 700, 12px, 60);
-	background: transparent;
+	@include button-single();
+	@include button-single-two-light();
 	border: 1px solid $bon-jour;
-	color: $cornflower-blue;
-	fill: $cornflower-blue;
-	padding: 16px 16px;
-	text-transform: uppercase;
 
-    &:hover, &:focus {
+    &:hover,
+	&:focus {
     	background: $cornflower-blue;
     	border-color: $cornflower-blue;
+		border-bottom: 1px solid $cornflower-blue;
     	color: $white;
     }
 }
