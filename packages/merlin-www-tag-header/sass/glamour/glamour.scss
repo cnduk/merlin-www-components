@@ -410,7 +410,7 @@
             width: 100%;
         }
 
-        @@include at-x-large-size {
+        @include at-x-large-size {
             margin: 0 auto 0 auto;
             width: 250px;
         }
