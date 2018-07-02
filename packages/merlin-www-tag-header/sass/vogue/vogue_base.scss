@@ -1,11 +1,11 @@
 .tg-header {
     margin-bottom: $MOBILE_SLICE_MARGIN;
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-bottom: $TABLET_SLICE_MARGIN;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin-bottom: $DESKTOP_SLICE_MARGIN;
     }
 }
@@ -13,11 +13,11 @@
 .tg-header__wrapper {
     padding: 0 $MOBILE_SIDE_GUTTER;
 
-    @include tablet-size {
+    @include at-medium-size {
         padding: 0 $TABLET_SIDE_GUTTER;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         padding: 0 $DESKTOP_SIDE_GUTTER;
     }
 }
@@ -29,7 +29,7 @@
 .tg-header__intro {
     padding: 40px 0 0 0;
 
-    @include tablet-size {
+    @include at-medium-size {
         padding: 60px 0 0 0;
     }
 }
@@ -44,12 +44,12 @@
         margin-bottom: 0;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-bottom: 30px;
         width: 250px;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         width: 250px;
     }
 }
@@ -64,7 +64,7 @@
         margin-bottom: 0;
     }
 
-    @include desktop-size{
+    @include at-x-large-size {
         @include font-size(50px);
         @include line-height(50px);
         margin-bottom: 20px;
@@ -81,7 +81,7 @@
     max-width: 680px;
     text-align: center;
 
-    @include desktop-size {
+    @include at-x-large-size {
         @include font-size(20px);
         @include line-height(25px);
         margin: 15px auto 30px auto;
@@ -119,7 +119,7 @@
 .tg-header__topic-strip {
     margin: 25px 0 40px 0;
 
-    @include tablet-size {
+    @include at-medium-size {
         margin: 30px 0 60px 0;
     }
 }
@@ -137,12 +137,12 @@
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
 
-    @include tablet-size {
+    @include at-medium-size {
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
@@ -235,11 +235,11 @@
         }
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         padding: 40px $TABLET_SIDE_GUTTER;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         padding: 40px $DESKTOP_SIDE_GUTTER;
     }
 }
@@ -250,7 +250,7 @@
     .tg-header__intro {
         padding: 40px 0 30px 0;
 
-        @include tablet-size {
+        @include at-medium-size {
             padding: 60px 0 40px 0;
         }
     }
@@ -262,7 +262,7 @@
         margin-bottom: 30px;
         width: 213px;
 
-        @include tablet-size {
+        @include at-medium-size {
             margin-bottom: 40px;
             width: 320px;
         }
@@ -277,12 +277,12 @@
         padding-left: $MOBILE_SIDE_GUTTER;
         padding-right: $MOBILE_SIDE_GUTTER;
 
-        @include tablet-size {
+        @include at-medium-size {
             padding-left: $TABLET_SIDE_GUTTER;
             padding-right: $TABLET_SIDE_GUTTER;
         }
 
-        @include desktop-size {
+        @include at-x-large-size {
             padding-left: $DESKTOP_SIDE_GUTTER;
             padding-right: $DESKTOP_SIDE_GUTTER;
         }

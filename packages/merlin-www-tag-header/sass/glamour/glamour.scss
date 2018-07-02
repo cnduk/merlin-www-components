@@ -16,7 +16,7 @@
         margin-top: 0;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin: 60px 0;
     }
 }
@@ -48,11 +48,11 @@
         width: 100vw;
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         padding: 60px $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding: 60px 60px;
     }
 }
@@ -103,7 +103,7 @@
         text-shadow: rgba(55, 51, 48, .28) 0px 0 30px;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         @include font-size(75px);
         @include line-height(75px);
     }
@@ -135,7 +135,7 @@
         margin-bottom: 0;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin-bottom: 30px;
     }
 }
@@ -167,7 +167,7 @@
     text-align: center;
     text-transform: uppercase;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         border-top: none;
         margin: 30px auto 40px;
         padding: 0;
@@ -178,7 +178,7 @@
     display: inline-block;
     white-space: nowrap;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         display: table-cell;
         vertical-align: middle;
     }
@@ -193,7 +193,7 @@
         width: auto;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         display: table-cell;
         margin-top: 0;
         padding-left: 10px;
@@ -217,11 +217,11 @@
 .tg-header__topic-strip {
     padding: 0 $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         padding: 0 $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding: 0 $DESKTOP_SIDE_GUTTER;
     }
 }
@@ -244,7 +244,7 @@
         }
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin: 24px auto;
     }
 }
@@ -261,11 +261,11 @@
     max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER*2;
     padding: 0 $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         padding: 0 $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin: 60px auto;
         padding: 0 $DESKTOP_SIDE_GUTTER;
     }
@@ -303,11 +303,11 @@
 
         .svg-logo{ fill: $white; }
 
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include at-medium-size {
             width: 300px;
         }
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             width: 430px;
         }
     }
@@ -345,7 +345,7 @@
             width: 80px;
         }
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             height: 130px;
             margin-bottom: 20px;
             padding: 10px;
@@ -370,7 +370,7 @@
         @include line-height(35px);
         margin: 15px 0 10px 0;
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             @include font-size(40px);
             @include line-height(45px);
             margin: 20px 0 10px 0;
@@ -389,7 +389,7 @@
     .tg-header__description {
         margin: 10px auto;
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             margin-top: 10px;
         }
     }
@@ -410,7 +410,7 @@
             width: 100%;
         }
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @@include at-x-large-size {
             margin: 0 auto 0 auto;
             width: 250px;
         }

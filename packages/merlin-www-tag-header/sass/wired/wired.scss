@@ -28,11 +28,11 @@
     color: $white;
     padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         padding: $TABLET_SLICE_MARGIN $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding: $DESKTOP_SLICE_MARGIN $DESKTOP_SIDE_GUTTER;
     }
 }
@@ -56,7 +56,7 @@
         margin-top: 0;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin-bottom: 30px;
         width: 250px;
 
@@ -82,7 +82,7 @@
         margin-bottom: 10px;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         @include font-size(65px);
         @include line-height(65px);
 
@@ -110,7 +110,7 @@
         color: $white;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin-top: 40px;
 
         .bb-p {
@@ -128,7 +128,7 @@
         text-align: center;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         @include separator-line-large;
         margin-top: 10px;
     }
@@ -177,11 +177,11 @@
     margin: $MOBILE_SLICE_MARGIN auto 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         margin-top: $TABLET_SLICE_MARGIN;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin-top: $DESKTOP_SLICE_MARGIN;
     }
 }
@@ -195,7 +195,7 @@
     text-align: center;
     text-transform: uppercase;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         @include font-size(13px);
         @include line-height(13px);
         margin: 40px auto;
@@ -254,7 +254,7 @@
     .tg-header__intro__image {
         margin: 0 auto 20px auto;
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             margin-bottom: 40px;
         }
 

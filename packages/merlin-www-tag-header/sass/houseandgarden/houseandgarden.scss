@@ -9,12 +9,12 @@
     margin: $MOBILE_SLICE_MARGIN 0;
     padding: 0 $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         margin: $TABLET_SLICE_MARGIN 0;
         padding: 0 $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin: $DESKTOP_SLICE_MARGIN 0;
         padding: 0 $DESKTOP_SIDE_GUTTER;
     }
@@ -36,7 +36,7 @@
     margin: 0 0 10px 0;
     text-align: center;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         @include font-size(60px);
         @include line-height(65px);
         margin-bottom: 20px;
@@ -72,7 +72,7 @@
         margin-bottom: 0;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin: 20px auto 40px auto;
 
         p {
@@ -103,7 +103,7 @@
     max-width: 200px;
     padding: 10px 0 0 0;
 
-    @include tablet-size {
+    @include at-medium-size {
         border-top: none;
         margin: 30px auto;
         max-width: none;
@@ -149,7 +149,7 @@
         }
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin: 30px auto;
     }
 }
@@ -161,7 +161,7 @@
     margin: 25px auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin: 60px auto;
     }
 }
@@ -179,7 +179,7 @@
             fill: $mine-shaft;
         }
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             height: 45px;
             width: 315px;
         }
@@ -201,7 +201,7 @@
             width: 100%;
         }
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             width: 130px;
             height: 130px;
         }
@@ -221,7 +221,7 @@
             width: 100%;
         }
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             margin-bottom: 30px;
             width: 250px;
         }

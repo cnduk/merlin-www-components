@@ -27,7 +27,7 @@
     	}
     }
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	@include at-x-large-size {
         margin: 48px 0;
     }
 }
@@ -69,7 +69,7 @@
         width: 100%;
     }
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	@include at-x-large-size {
 		padding-top: 30%;
 
 		&:after {
@@ -88,7 +88,7 @@
 	text-transform: uppercase;
 	transform: translateX(50%);
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	@include at-x-large-size {
 		bottom: 4px;
 		right: 4px;
 		transform: none;
@@ -99,11 +99,11 @@
 	padding: 0 $MOBILE_SIDE_GUTTER;
 	position: relative;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	@include at-medium-size {
 		padding: 0 $TABLET_SIDE_GUTTER;
 	}
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding: 0 $DESKTOP_SIDE_GUTTER;
     }
 }
@@ -115,7 +115,7 @@
 	text-align: center;
 	text-transform: uppercase;
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	@include at-x-large-size {
 		@include font-size(46px);
 		@include line-height(54px);
 		margin-bottom: 16px;
@@ -148,11 +148,11 @@
 		margin-bottom: 0;
 	}
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	@include at-medium-size {
 		padding: 0 $TABLET_SIDE_GUTTER;
 	}
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
 		margin-top: 16px;
         padding: 0 $DESKTOP_SIDE_GUTTER;
     }
@@ -196,7 +196,7 @@
 		width: 120px;
 	}
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	@include at-x-large-size {
 		margin-bottom: 32px;
 
 		&:before {
@@ -212,7 +212,7 @@
 	text-transform: lowercase;
 	white-space: nowrap;
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	@include at-x-large-size {
 		display: table-cell;
 		padding: 0;
 		vertical-align: middle;
@@ -235,7 +235,7 @@
 	    width: auto;
 	}
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	@include at-x-large-size {
 		display: table-cell;
 		margin-top: 0;
 		padding-left: 16px;
@@ -272,11 +272,11 @@
 	    }
 	}
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	@include at-medium-size {
 		padding: 0 $TABLET_SIDE_GUTTER;
 	}
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
 		margin: 24px auto;
         padding: 0 $DESKTOP_SIDE_GUTTER;
     }
@@ -290,11 +290,11 @@
 	max-width: $MAXIMUM_PAGE_WIDTH;
 	padding: 0 $MOBILE_SIDE_GUTTER;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	@include at-medium-size {
 		padding: 0 $TABLET_SIDE_GUTTER;
 	}
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	@include at-x-large-size {
 	    margin: 48px auto;
         padding: 0 $DESKTOP_SIDE_GUTTER;
 	}
@@ -319,7 +319,7 @@
     	    }
     	}
 
-    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    	@include at-x-large-size {
     		height: 52px;
 			margin: 0 auto;
     		width: 331px;
@@ -362,7 +362,7 @@
 		    width: 100%;
 		}
 
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		@include at-x-large-size {
 			margin-bottom: 24px;
 			width: 108px;
 			height: 108px;
@@ -388,7 +388,7 @@
 			width: 100%;
 		}
 
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		@include at-x-large-size {
 			margin-bottom: 32px;
 			width: 320px;
 		}

@@ -12,7 +12,7 @@
     text-align: center;
 }
 
-@include tablet-size {
+@include at-medium-size {
     padding-top: 48px;
 }
 
@@ -50,7 +50,7 @@
         margin: 0 auto;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         max-width: 240px;
     }
 }
@@ -68,7 +68,7 @@
                     inset 0 -0.65em 0 0 rgba($champagne, 1);
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         @include font-size(60px);
         @include line-height(60px);
     }
@@ -81,7 +81,7 @@
         padding-top: 66.875%;
         position: relative;
 
-        @include tablet-size {
+        @include at-medium-size {
             padding-top: 30%;
         }
     }
@@ -137,7 +137,7 @@
         color: inherit;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         display: inline-block;
         margin-top: 34px;
     }
@@ -149,7 +149,7 @@
     max-width: 120px;
     vertical-align: middle;
 
-    @include tablet-size {
+    @include at-medium-size {
         display: inline-block;
         margin-left: 10px;
     }
@@ -176,13 +176,13 @@
         text-align: center;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-bottom: 44px;
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
@@ -196,7 +196,7 @@
     padding: 0 $MOBILE_SIDE_GUTTER;
     max-width: $MAXIMUM_PAGE_WIDTH;
 
-    @include tablet-size {
+    @include at-medium-size {
         padding: 0 $TABLET_SIDE_GUTTER;
     }
 }
@@ -221,7 +221,7 @@
         overflow: hidden;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         .tg-header__intro__image {
             max-width: 96px;
         }
