@@ -79,6 +79,11 @@ export default function init(config) {
     TopStories.init({
         scrollOffset: 30
     });
+    var ts = TopStories.get();
+    if(ts.length > 1){
+        ts[1].showNavigation();
+        ts[1].disableScroll();
+    }
     CardList.init();
     initInternationalRedirect();
     displayHiringMessage();
