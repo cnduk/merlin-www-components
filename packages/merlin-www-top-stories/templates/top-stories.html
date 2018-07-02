@@ -13,40 +13,33 @@
                 </button>
             {{/ data.right_arrow }}
         </div>
-        <!--<div class="c-top-stories__cards">-->
-            <!--{{# data.card_list }}-->
-                <!--{{> @cnbritain/merlin-www-card-list }}-->
-            <!--{{/ data.card_list }}-->
-
-            <div class="c-top-stories__cards">
-                {{# data.card_list }}
-                <ul class="c-top-stories__cards-list">
-                    {{# data.items }}
-                    {{^ state.is_ad }}
-                        {{# data.item.state.is_ad }}
-                        <li class="c-top-stories__cards-listitem c-top-stories__cards-listitem--ad is-hidden {{ style.cls }}">
-                            {{# data.item }}
-                            {{> @cnbritain/merlin-www-ads }}
-                            {{/ data.item }}
-                        </li>
-                        {{/ data.item.state.is_ad }}
-
-                        {{^ data.item.state.is_ad }}
-                        <li class="c-top-stories__cards-listitem {{ style.cls }}">
-                            {{# data.item }}
-                            {{> @cnbritain/merlin-www-card }}
-                            {{/ data.item }}
-                        </li>
-                        {{/ data.item.state.is_ad }}
-                    {{/ state.is_ad }}
-                    {{# state.is_ad }}
+        <div class="c-top-stories__cards">
+            {{# data.card_list }}
+            <ul class="c-top-stories__cards-list">
+                {{# data.items }}
+                {{^ state.is_ad }}
+                    {{# data.item.state.is_ad }}
+                    <li class="c-top-stories__cards-listitem c-top-stories__cards-listitem--ad is-hidden {{ style.cls }}">
+                        {{# data.item }}
                         {{> @cnbritain/merlin-www-ads }}
-                    {{/ state.is_ad }}
-                    {{/ data.items }}
-                </ul>
-                {{/ data.card_list }}
-            </div>
+                        {{/ data.item }}
+                    </li>
+                    {{/ data.item.state.is_ad }}
 
-        <!--</div>-->
+                    {{^ data.item.state.is_ad }}
+                    <li class="c-top-stories__cards-listitem {{ style.cls }}">
+                        {{# data.item }}
+                        {{> @cnbritain/merlin-www-card }}
+                        {{/ data.item }}
+                    </li>
+                    {{/ data.item.state.is_ad }}
+                {{/ state.is_ad }}
+                {{# state.is_ad }}
+                    {{> @cnbritain/merlin-www-ads }}
+                {{/ state.is_ad }}
+                {{/ data.items }}
+            </ul>
+            {{/ data.card_list }}
+        </div>
     </div>
 </aside>
