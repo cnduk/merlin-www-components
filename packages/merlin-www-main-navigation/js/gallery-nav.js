@@ -83,7 +83,6 @@ GalleryNav.prototype = inherit(EventEmitter.prototype, {
         this.galleryGridIconEl.classList.remove(IS_HIDDEN_CLS);
 
         this.galleryCountEl.classList.add(IS_HIDDEN_CLS);
-        console.log(1);
 
         this.state.isListView = false;
         this.state.isGridView = true;
