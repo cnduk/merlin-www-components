@@ -387,6 +387,12 @@
     svg {
         width: 18px;
     }
+
+    &:hover {
+        svg {
+            fill: $guardsman-red;
+        }
+    }
 }
 
 .c-nav__list-icon {}
