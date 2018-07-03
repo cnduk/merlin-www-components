@@ -235,7 +235,7 @@ Nav.prototype = inherit(EventEmitter.prototype, {
         this.el.classList.remove(IS_GALLERY_ACTIVE_CLS);
         this.galleryEl.classList.add(IS_HIDDEN_CLS);
 
-        this.state.isGalleryHidden = false;
+        this.state.isGalleryHidden = true;
     },
 
     toggleGallery: function() {

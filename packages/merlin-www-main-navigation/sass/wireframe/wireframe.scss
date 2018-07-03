@@ -63,6 +63,14 @@
             }
         }
     }
+
+    &.is-gallery-active {
+        @include max-screen($X_LARGE_SIZE - 1px) {
+            .c-nav__wrapper {
+                top: 0px;
+            }
+        }
+    }
 }
 
 .c-nav__search-checkbox {
@@ -615,6 +623,10 @@
         position: absolute;
         right: 0;
         top: 0;
+    }
+
+    &.is-hidden {
+        display: none;
     }
 }
 

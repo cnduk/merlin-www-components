@@ -19,7 +19,8 @@ function GalleryNav(el) {
 
     this.galleryTitleEl = el.querySelector('.js-c-nav__gallery-title');
 
-    this.galleryCountEl = el.querySelector('.js-c-nav__gallery-current');
+    this.galleryCountEl = el.querySelector('.js-c-nav__gallery-count');
+    this.galleryCurrentEl = el.querySelector('.js-c-nav__gallery-current');
     this.galleryTotalEl = el.querySelector('.js-c-nav__gallery-total');
 
     this.galleryIconEl = el.querySelector('.js-c-nav__gallery-icon');
@@ -27,7 +28,7 @@ function GalleryNav(el) {
     this.galleryGridIconEl = this.galleryIconEl.querySelector('.js-c-nav__grid-icon');
 
     this.setTitle = this.setTitle.bind(this);
-    this.setCount = this.setCount.bind(this);
+    this.setCurrent = this.setCurrent.bind(this);
     this.setTotal = this.setTotal.bind(this);
 
     this.showListView = this.showListView.bind(this);
@@ -43,8 +44,8 @@ GalleryNav.prototype = inherit(EventEmitter.prototype, {
         this.galleryTitleEl.setAttribute('title', value);
     },
 
-    setCount: function(value) {
-        this.galleryCountEl.innerHTML = value;
+    setCurrent: function(value) {
+        this.galleryCurrentEl.innerHTML = value;
     },
 
     setTotal: function(value) {
@@ -67,6 +68,8 @@ GalleryNav.prototype = inherit(EventEmitter.prototype, {
         this.galleryListIconEl.classList.remove(IS_HIDDEN_CLS);
         this.galleryGridIconEl.classList.add(IS_HIDDEN_CLS);
 
+        this.galleryCountEl.classList.remove(IS_HIDDEN_CLS);
+
         this.state.isListView = true;
         this.state.isGridView = false;
 
@@ -78,6 +81,9 @@ GalleryNav.prototype = inherit(EventEmitter.prototype, {
 
         this.galleryListIconEl.classList.add(IS_HIDDEN_CLS);
         this.galleryGridIconEl.classList.remove(IS_HIDDEN_CLS);
+
+        this.galleryCountEl.classList.add(IS_HIDDEN_CLS);
+        console.log(1);
 
         this.state.isListView = false;
         this.state.isGridView = true;
