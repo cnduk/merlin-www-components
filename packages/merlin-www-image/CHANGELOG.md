@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.10.0"></a>
+# [1.10.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-image@1.9.26...@cnbritain/merlin-www-image@1.10.0) (2018-07-03)
+
+
+### Features
+
+* **merlin-www-image:** rename image classes, remove global__image and update js ([d32c01d](https://github.com/cnduk/merlin-www-components/commit/d32c01d))
+* **merlin-www-image:** update image classes ([1072474](https://github.com/cnduk/merlin-www-components/commit/1072474))
+
+
+
+
 <a name="1.9.26"></a>
 ## [1.9.26](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-image@1.9.25...@cnbritain/merlin-www-image@1.9.26) (2018-06-07)
 

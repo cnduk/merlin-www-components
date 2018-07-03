@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-card-list",
-  "version": "1.12.42",
+  "version": "1.12.43",
   "description": "",
   "main": "js/index.js",
   "scripts": {
@@ -9,8 +9,8 @@
     "prepublish": "npm run lint"
   },
   "dependencies": {
-    "@cnbritain/merlin-www-ads": "^1.14.24",
-    "@cnbritain/merlin-www-card": "^1.16.1",
+    "@cnbritain/merlin-www-ads": "^1.15.0",
+    "@cnbritain/merlin-www-card": "^1.16.2",
     "@cnbritain/merlin-www-common": "^1.14.9"
   },
   "devDependencies": {

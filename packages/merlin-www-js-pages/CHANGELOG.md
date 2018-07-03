@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.5.13"></a>
+## [1.5.13](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.5.12...@cnbritain/merlin-www-js-pages@1.5.13) (2018-07-03)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** display nav buttons on top stories for articles ([568bec3](https://github.com/cnduk/merlin-www-components/commit/568bec3))
+* **merlin-www-js-pages:** eslint ([26edd74](https://github.com/cnduk/merlin-www-components/commit/26edd74))
+* **merlin-www-js-pages:** move global namespace definition ([66dfe21](https://github.com/cnduk/merlin-www-components/commit/66dfe21))
+* **merlin-www-js-pages:** remove top stories rendering from core ([dbd1f93](https://github.com/cnduk/merlin-www-components/commit/dbd1f93))
+
+
+
+
 <a name="1.5.10"></a>
 ## [1.5.10](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.5.9...@cnbritain/merlin-www-js-pages@1.5.10) (2018-06-26)
 
