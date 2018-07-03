@@ -92,7 +92,7 @@ function TopStoriesNavigation(el, options) {
     if(adElements.length > 0){
         AdManager.init();
         AdManager.on('register', onAdRegister);
-        AdManager.lazy(this.el);
+        AdManager.lazy();
     }
 
 }
