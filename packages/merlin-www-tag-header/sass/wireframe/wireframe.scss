@@ -82,6 +82,36 @@
  */
 .tg-header__cards {}
 
+.tg-header__cards-list {
+    font-size: 0;
+    position: relative;
+    font-weight: normal;
+    line-height: normal;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tg-header__cards-listitem {
+    box-sizing: border-box;
+    font-size: initial;
+    vertical-align: top;
+    width: 100%;
+}
+
+
+//Li specificty required to overwrite padding ///REVIEW
+li.c-card-list__item--ad {
+    &.is-hidden {
+        height: 0;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        visibility: hidden;
+        width: 0;
+    }
+}
+
 /**
  * Show card carousel
  */
@@ -106,3 +136,7 @@
 .tg-header__style-file {}
 .tg-header--miss-vogue {}
 .tg-header--person {}
+
+
+
+

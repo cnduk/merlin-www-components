@@ -198,6 +198,74 @@
     }
 }
 
+//REVIEW
+@mixin cl-base {
+    flex-direction: column;
+    margin: 0 (-$C_CARD_GUTTER);
+    text-align: center;
+
+    .tg-header__cards-listitem {
+        display: flex;
+        padding: 0 $C_CARD_GUTTER;
+        text-align: left;
+        width: 100%;
+    }
+}
+
+@mixin cl-one {
+    @include one-column-size {
+        margin-bottom: -$C_CARD_GUTTER;
+        margin-top: -$C_CARD_GUTTER;
+
+        .tg-header__cards-listitem {
+            margin-bottom: $C_CARD_GUTTER;
+            margin-top: $C_CARD_GUTTER;
+        }
+    }
+}
+
+@mixin cl-two {
+    @include two-column-size {
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: -$C_CARD_GUTTER;
+        margin-top: -$C_CARD_GUTTER;
+
+        .tg-header__cards-listitem {
+            margin-bottom: $C_CARD_GUTTER;
+            margin-top: $C_CARD_GUTTER;
+            width: 50%;
+        }
+    }
+}
+
+@mixin cl-three {
+    @include three-column-size {
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: -$C_CARD_GUTTER;
+        margin-top: -$C_CARD_GUTTER;
+
+        .tg-header__cards-listitem {
+            margin-bottom: $C_CARD_GUTTER;
+            margin-top: $C_CARD_GUTTER;
+            width: 33.33%;
+        }
+    }
+}
+
+// Ttag header articles
+// Contains three columns
+// Goes one, two, three
+.c-card-list--tg-header-articles {
+        @mixin cl-one-two-three {
+        @include cl-base;
+        @include cl-one;
+        @include cl-two;
+        @include cl-three;
+    }
+}
+
 /**
  * Header variants
  */

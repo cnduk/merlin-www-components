@@ -186,6 +186,36 @@
     }
 }
 
+.tg-header__cards-list {
+    margin: -10px;
+    text-align: center;
+
+    .tg-header__cards-listitem {
+        display: inline-block;
+        padding: 0 10px;
+        margin: 10px 0;
+        text-align: left;
+        width: 100%;
+
+        .c-card {
+            border-top: 1px solid $white;
+            padding-top: 20px;
+        }
+
+        .c-card--dark {
+            border-top-color: $white;
+        }
+
+        @include two-column-size() {
+            width: 50%;
+        }
+
+        @include four-column-size() {
+            width: 33.33333%;
+        }
+    }
+}
+
 /**
  * Event information
  */

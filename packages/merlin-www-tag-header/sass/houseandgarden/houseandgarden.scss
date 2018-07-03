@@ -166,6 +166,25 @@
     }
 }
 
+.tg-header__cards-list {
+    margin: -10px -10px;
+
+    .tg-header__cards-listitem {
+        display: inline-block;
+        padding: 0 10px;
+        margin: 10px 0;
+        width: 100%;
+
+        @include two-column-size() {
+            width: 50%;
+        }
+
+        @include four-column-size() {
+            width: 33.33333%;
+        }
+    }
+}
+
 /**
  * Header variants
  */

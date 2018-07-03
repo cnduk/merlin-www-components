@@ -72,7 +72,15 @@
     {{# data.card_list }}
         <hr class="tg-header__separator" />
         <div class="tg-header__cards">
-            {{> @cnbritain/merlin-www-card-list }}
+            <ul class="tg-header__cards-list {{ style.cls }} js-c-card-list">
+                {{# data.items }}
+                <li class="tg-header__cards-listitem js-c-card-list__item">
+                    {{# data.item }}
+                        {{> @cnbritain/merlin-www-card }}
+                    {{/ data.item }}
+                </li>
+                {{/ data.items }}
+            </ul>
         </div>
     {{/ data.card_list }}
 

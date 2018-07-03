@@ -1,4 +1,4 @@
-@import "@cnbritain/merlin-www-buttons:traveller";
+//@import "@cnbritain/merlin-www-buttons:traveller";
 @import "@cnbritain/merlin-www-common:traveller";
 @import "@cnbritain/merlin-www-card-list:traveller";
 @import "@cnbritain/merlin-www-image:traveller";
@@ -298,6 +298,25 @@
 	    margin: 48px auto;
         padding: 0 $DESKTOP_SIDE_GUTTER;
 	}
+}
+
+.tg-header__cards-list {
+    margin: -16px -12px;
+
+    .tg-header__cards-listitem {
+        display: inline-block;
+        padding: 0 12px;
+        margin: 16px 0;
+        width: 100%;
+
+        @include two-column-size() {
+            width: 50%;
+        }
+
+        @include four-column-size() {
+            width: 33.33333%;
+        }
+    }
 }
 
 /**

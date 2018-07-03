@@ -271,6 +271,32 @@
     }
 }
 
+.tg-header__cards-list {
+    display: flex;
+    flex-direction: column;
+    margin: -10px;
+
+    .tg-header__cards-listitem {
+        padding: 0 10px;
+        margin: 10px 0;
+    }
+
+    @include two-column-size() {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .tg-header__cards-listitem {
+            width: 50%;
+        }
+    }
+
+    @include four-column-size() {
+        .tg-header__cards-listitem {
+            width: 33.33333%;
+        }
+    }
+}
+
 /**
  * Event information
  */
