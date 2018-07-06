@@ -17,7 +17,6 @@
     position: relative;
 }
 
-// Image
 .c-gallery-strip__images {
     position: relative;
 }
@@ -42,20 +41,13 @@
     @include font('SOLEIL', 24px, 400, 24px, 10);
     background-color: rgba($black, 0.25);
     color: $white;
-}
-.c-gallery-strip__remaining__label {}
 
-@include desktop-size {
-    .c-gallery-strip__remaining {
+    @include desktop-size {
         @include font-size(32px);
         @include line-height(32px);
     }
 }
 
-
-
-
-// Content
 .c-gallery-strip__detail {
     margin: 28px 0 0 0;
     text-align: center;
@@ -78,9 +70,6 @@
     text-transform: uppercase;
 }
 
-
-
-// Variants
 .c-gallery-strip--tag {
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
@@ -118,8 +107,6 @@
                 display: block;
             }
         }
-
-        .c-gallery-strip__detail {}
     }
 
     @include desktop-size {

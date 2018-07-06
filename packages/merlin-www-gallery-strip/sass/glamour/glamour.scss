@@ -25,12 +25,7 @@
     }
 }
 
-.c-gallery-strip__link {}
-ul.c-gallery-strip__list {
-
-}
-
-li.c-gallery-strip__list__item {
+.c-gallery-strip__list__item {
     &:before {
         background-color: $pampas;
         display: block;
@@ -51,19 +46,15 @@ li.c-gallery-strip__list__item {
     }
 }
 
-.c-gallery-strip__detail {
-    position: relative;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-
-    }
-}
-
 .c-gallery-strip__remaining {
     @include font("GRAPHIK", 30px, 400, 30px);
     background-color: rgba($astronaut, 0.6);
     color: $azalea;
     z-index: 1;
+}
+
+.c-gallery-strip__detail {
+    position: relative;
 }
 
 .c-gallery-strip__title {
@@ -77,13 +68,6 @@ li.c-gallery-strip__list__item {
         @include line-height(45px);
         margin: 32px 0 0 0;
         text-align: center;
-    }
-}
-
-.c-gallery-strip__subtitle {
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-
     }
 }
 
@@ -129,10 +113,6 @@ li.c-gallery-strip__list__item {
             display: inline-block;
             width: 16.66%;
         }
-
-        .c-gallery-strip__detail {
-
-        }
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
@@ -154,22 +134,6 @@ li.c-gallery-strip__list__item {
 
         .c-gallery-strip__list__item {
             width: 12.5%;
-        }
-    }
-}
-
-.c-gallery-strip--gutters {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        .c-gallery-strip__list {
-
-        }
-
-        .c-gallery-strip__list__item {
-
-        }
-
-        .c-gallery-strip__remaining {
-
         }
     }
 }

@@ -12,11 +12,11 @@
     position: relative;
 }
 
-.c-gallery-strip__link {}
-ul.c-gallery-strip__list {
+.c-gallery-strip__list {
     margin: 0 -6px;
 }
-li.c-gallery-strip__list__item {
+
+.c-gallery-strip__list__item {
     padding: 0 6px;
 
     &:before {
@@ -39,14 +39,6 @@ li.c-gallery-strip__list__item {
     }
 }
 
-.c-gallery-strip__detail {
-    position: relative;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-
-    }
-}
-
 .c-gallery-strip__remaining {
     @include font("PROXIMA NOVA CONDENSED", 24px, 600, 24px);
     background-color: rgba($BLACK, 0.33);
@@ -54,6 +46,10 @@ li.c-gallery-strip__list__item {
     left: 6px;
     right: 6px;
     z-index: 1;
+}
+
+.c-gallery-strip__detail {
+    position: relative;
 }
 
 .c-gallery-strip__title {
@@ -77,10 +73,6 @@ li.c-gallery-strip__list__item {
     color: $MANATEE;
     margin: 4px 0 0 0;
     text-align: center;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-
-    }
 }
 
 .c-gallery-strip--tag {
@@ -125,10 +117,6 @@ li.c-gallery-strip__list__item {
             display: inline-block;
             width: 16.66%;
         }
-
-        .c-gallery-strip__detail {
-
-        }
     }
 
     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
@@ -150,22 +138,6 @@ li.c-gallery-strip__list__item {
 
         .c-gallery-strip__list__item {
             width: 12.5%;
-        }
-    }
-}
-
-.c-gallery-strip--gutters {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        .c-gallery-strip__list {
-
-        }
-
-        .c-gallery-strip__list__item {
-
-        }
-
-        .c-gallery-strip__remaining {
-
         }
     }
 }
