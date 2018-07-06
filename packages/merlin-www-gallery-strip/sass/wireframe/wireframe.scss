@@ -22,7 +22,7 @@
     font-size: 0;
 }
 
-.c-gallery-strip__list__item {
+.c-gallery-strip__listitem {
     box-sizing: border-box;
     display: inline-block;
     font-size: initial;
@@ -40,7 +40,7 @@
     text-align: center;
     top: 0;
 
-    .c-gallery-strip__list__item:last-child & {
+    .c-gallery-strip__listitem:last-child & {
         display: block;
     }
 }

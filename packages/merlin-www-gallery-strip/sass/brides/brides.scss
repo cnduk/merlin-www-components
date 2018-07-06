@@ -32,7 +32,7 @@
     width: 1px;
 }
 
-.c-gallery-strip__list__item {
+.c-gallery-strip__listitem {
     img {
         width: 100%;
     }
@@ -75,13 +75,13 @@
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
 
-    .c-gallery-strip__list__item:nth-child(3) {
+    .c-gallery-strip__listitem:nth-child(3) {
         .c-gallery-strip__remaining {
             display: block;
         }
     }
 
-    .c-gallery-strip__list__item:nth-child(n+4) {
+    .c-gallery-strip__listitem:nth-child(n+4) {
         display: none;
     }
 
@@ -89,21 +89,21 @@
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
 
-        .c-gallery-strip__list__item {
+        .c-gallery-strip__listitem {
             width: 16.66%;
         }
 
-        .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+6) {
+        .c-gallery-strip__listitem:nth-child(n+4):nth-child(-n+6) {
             display: inline-block;
         }
 
-        .c-gallery-strip__list__item:nth-child(3) {
+        .c-gallery-strip__listitem:nth-child(3) {
             .c-gallery-strip__remaining {
                 display: none;
             }
         }
 
-        .c-gallery-strip__list__item:nth-child(6) {
+        .c-gallery-strip__listitem:nth-child(6) {
             .c-gallery-strip__remaining {
                 display: block;
             }
@@ -112,20 +112,20 @@
 
     @include at-x-large-size {
 
-        .c-gallery-strip__list__item {
+        .c-gallery-strip__listitem {
             width: 12.5%;
         }
 
-        .c-gallery-strip__list__item:nth-child(-n+8) {
+        .c-gallery-strip__listitem:nth-child(-n+8) {
             display: inline-block;
         }
 
-        .c-gallery-strip__list__item:nth-child(6) {
+        .c-gallery-strip__listitem:nth-child(6) {
             .c-gallery-strip__remaining {
                 display: none;
             }
         }
-        .c-gallery-strip__list__item:nth-child(8) {
+        .c-gallery-strip__listitem:nth-child(8) {
             .c-gallery-strip__remaining {
                 display: block;
             }

@@ -16,7 +16,7 @@
     margin: 0 -6px;
 }
 
-.c-gallery-strip__list__item {
+.c-gallery-strip__listitem {
     padding: 0 6px;
 
     &:before {
@@ -86,57 +86,57 @@
         text-align: center;
     }
 
-    .c-gallery-strip__list__item:nth-child(n+4) {
+    .c-gallery-strip__listitem:nth-child(n+4) {
         display: none;
     }
 
-    .c-gallery-strip__list__item:nth-child(3) {
+    .c-gallery-strip__listitem:nth-child(3) {
         .c-gallery-strip__remaining {
             display: block;
         }
     }
 
     @include at-medium-size {
-        .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+6) {
+        .c-gallery-strip__listitem:nth-child(n+4):nth-child(-n+6) {
             display: inline-block;
         }
 
-        .c-gallery-strip__list__item:nth-child(3) {
+        .c-gallery-strip__listitem:nth-child(3) {
             .c-gallery-strip__remaining {
                 display: none;
             }
         }
 
-        .c-gallery-strip__list__item:nth-child(6) {
+        .c-gallery-strip__listitem:nth-child(6) {
             .c-gallery-strip__remaining {
                 display: block;
             }
         }
 
-        .c-gallery-strip__list__item {
+        .c-gallery-strip__listitem {
             display: inline-block;
             width: 16.66%;
         }
     }
 
     @include at-x-large-size {
-        .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+8) {
+        .c-gallery-strip__listitem:nth-child(n+4):nth-child(-n+8) {
             display: inline-block;
         }
 
-        .c-gallery-strip__list__item:nth-child(6) {
+        .c-gallery-strip__listitem:nth-child(6) {
             .c-gallery-strip__remaining {
                 display: none;
             }
         }
-        .c-gallery-strip__list__item:nth-child(8) {
+        .c-gallery-strip__listitem:nth-child(8) {
 
             .c-gallery-strip__remaining {
                 display: block;
             }
         }
 
-        .c-gallery-strip__list__item {
+        .c-gallery-strip__listitem {
             width: 12.5%;
         }
     }
