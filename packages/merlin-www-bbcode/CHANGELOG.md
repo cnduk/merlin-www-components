@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.15.30"></a>
+## [1.15.30](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.29...@cnbritain/merlin-www-bbcode@1.15.30) (2018-07-03)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-bbcode
+
+<a name="1.15.27"></a>
+## [1.15.27](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.26...@cnbritain/merlin-www-bbcode@1.15.27) (2018-06-22)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** correct spacing for gq ol elements ([026acf6](https://github.com/cnduk/merlin-www-components/commit/026acf6))
+
+
+
+
+<a name="1.15.26"></a>
+## [1.15.26](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.25...@cnbritain/merlin-www-bbcode@1.15.26) (2018-06-22)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** widen ol numbers for glamour ([e5127ef](https://github.com/cnduk/merlin-www-components/commit/e5127ef))
+
+
+
+
+<a name="1.15.25"></a>
+## [1.15.25](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.24...@cnbritain/merlin-www-bbcode@1.15.25) (2018-06-22)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** Check styles for ordered lists on GLAMOUR [ch3426] ([0e585a6](https://github.com/cnduk/merlin-www-components/commit/0e585a6))
+* **merlin-www-bbcode:** Check styles for ordered lists on GQ[ch3426] ([e181919](https://github.com/cnduk/merlin-www-components/commit/e181919))
+* **merlin-www-bbcode:** Check styles for ordered lists on TATLER [ch3426] ([8594090](https://github.com/cnduk/merlin-www-components/commit/8594090))
+
+
+
+
 <a name="1.15.24"></a>
 ## [1.15.24](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.23...@cnbritain/merlin-www-bbcode@1.15.24) (2018-06-12)
 

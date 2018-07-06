@@ -1,5 +1,4 @@
 @import '@cnbritain/merlin-www-common:traveller';
-
 @import '../wireframe/wireframe';
 
 .c-cookie-warning {
@@ -9,30 +8,13 @@
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
 	border-top: 1px solid $ISABEL;
-	padding: 16px;
+	padding: 16px 56px 16px 16px;
 	z-index: 10;
-}
-
-.c-cookie-warning__table {
-
-}
-
-.c-cookie-warning__table-cell {
-
-}
-
-.c-cookie-warning__table-cell--message {
-	padding-right: 16px;
-}
-
-.c-cookie-warning__table-cell--cta {
-
 }
 
 .c-cookie-warning__message {
 	@include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
 	color: $MUSTASAARI;
-	margin: 0;
 
 	a {
 		border-bottom: 1px solid $MUSTASAARI;
@@ -45,6 +27,8 @@
 	border-radius: 50%;
 	border: 1px solid $MUSTASAARI;
 	height: 20px;
+	margin-top: 16px;
+	margin-right: 16px;
 	width: 20px;
 
 	svg {

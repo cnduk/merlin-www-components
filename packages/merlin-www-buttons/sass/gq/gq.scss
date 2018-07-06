@@ -91,12 +91,12 @@ a.btn-group--dark {
 a.btn-top-stories {
     @include button-top-stories();
 
-    &:hover:not(.btn-disabled):not([disabled]),
-    &:focus:not(.btn-disabled):not([disabled]) {
+    &:hover:not(.is-disabled):not([disabled]),
+    &:focus:not(.is-disabled):not([disabled]) {
         @include button-top-stories-hover();
     }
 
-    &.btn-disabled,
+    &.is-disabled,
     &[disabled] {
         @include button-top-stories-disabled();
     }

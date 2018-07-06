@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.2"></a>
+## [1.8.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-cookie-warning@1.8.1...@cnbritain/merlin-www-cookie-warning@1.8.2) (2018-07-03)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-cookie-warning
+
+<a name="1.8.0"></a>
+# [1.8.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-cookie-warning@1.7.29...@cnbritain/merlin-www-cookie-warning@1.8.0) (2018-06-22)
+
+
+### Features
+
+* **merlin-www-cookie-warning:** add new data json files for merlin www cookie warning [ch3303] ([a948aed](https://github.com/cnduk/merlin-www-components/commit/a948aed))
+* **merlin-www-cookie-warning:** added data for merlin www cookie warning [ch3303] ([e5b4858](https://github.com/cnduk/merlin-www-components/commit/e5b4858))
+* **merlin-www-cookie-warning:** define new data files ([d07aa45](https://github.com/cnduk/merlin-www-components/commit/d07aa45))
+
+
+
+
 <a name="1.7.29"></a>
 ## [1.7.29](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-cookie-warning@1.7.28...@cnbritain/merlin-www-cookie-warning@1.7.29) (2018-06-11)
 

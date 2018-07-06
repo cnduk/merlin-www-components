@@ -313,3 +313,42 @@
         }
     }
 }
+
+.c-card-section--tg-related-tags {
+    margin-bottom: 0;
+    margin-top: 0;
+    max-width: none;
+    padding-bottom: $PADDING_LARGE;
+    padding-top: $PADDING_LARGE;
+
+    .c-card-list {
+        display: block;
+        flex-wrap: nowrap;
+        font-size: 0;
+        margin: -10px;
+    }
+
+    .c-card-list__item {
+        box-sizing: border-box;
+        display: inline-block;
+        font-size: initial;
+        margin: 10px 0;
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    @include at-medium-size {
+        .c-card-list__item {
+            width: 50%;
+        }
+    }
+
+    @include at-x-large-size {
+        .c-card-list {
+            margin-right: 340px;
+        }
+        .c-card-list__item {
+            width: 33.33%;
+        }
+    }
+}

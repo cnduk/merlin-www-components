@@ -1,90 +1,112 @@
 .c-topic-strip {}
 
-.c-topic-strip--bleed {
-    box-sizing: content-box;
-
-    @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-left: (-$MOBILE_SIDE_GUTTER);
-        margin-right: (-$MOBILE_SIDE_GUTTER);
-        padding-left: $MOBILE_SIDE_GUTTER;
-        padding-right: $MOBILE_SIDE_GUTTER;
-
-        .c-topic-strip__list {
-            margin-left: (-$MOBILE_SIDE_GUTTER);
-            margin-right: (-$MOBILE_SIDE_GUTTER);
-            padding-left: $MOBILE_SIDE_GUTTER;
-            padding-right: $MOBILE_SIDE_GUTTER;
-        }
-    }
-}
-
-.c-topic-strip--c-card-section {
-    margin: 20px 0;
-    padding: 0;
-    text-align: center;
-
-    @include tablet-size {
-        margin: 30px 0;
-    }
-}
-
-//li added due to specificity of .global__list-reset li setting margin to 0
-li.c-topic-strip__item {
-    & + & {
-        margin-left: 5px;
-
-        @include tablet-size {
-            margin-left: 10px;
-        }
-    }
-}
+.c-topic-strip-wrapper {}
 
 .c-topic-strip__title {
-    @include font('COMMUTER SANS', 12px, 400, 12px);
-
+    @include font('COMMUTER SANS', 12px, null, 12px);
     color: $black;
+    display: inline-block;
     letter-spacing: 1px;
-    text-transform: uppercase;
     margin-right: 15px;
+    text-transform: uppercase;
 }
 
-.c-topic-strip__btn {
+.c-topic-strip__list {
+    display: inline-block;
+}
+
+.c-topic-strip__list-item {
+    margin-bottom: 10px;
+    margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.c-topic-strip__link {
     @include button-group;
     @include button-group-light;
 
-    background: none;
-
-    &:hover {
+    &:hover,
+    &:focus {
         @include button-group-light-hover;
     }
 }
 
-.c-topic-strip--article-related {
+.c-topic-strip--a-related,
+.c-topic-strip--sh-trends {
     margin: 30px auto;
-    overflow-x: visible;
     text-align: left;
     white-space: normal;
 
-    .c-topic-strip__list {
-        margin-top: -$MARGIN_XX_SMALL;
-    }
-
-    li.c-topic-strip__item,
-    li.c-topic-strip__item + .c-topic-strip__item {
-        margin: $MARGIN_XX_SMALL $MARGIN_XX_SMALL 0 0;
-    }
-
-    .c-topic-strip__btn {
+    .c-topic-strip__link {
         @include button-related;
         @include button-related-light;
 
-        &:hover {
+        &:hover,
+        &:focus {
             @include button-related-light-hover;
         }
     }
 
     @include desktop-size {
         margin: 40px auto;
+    }
+}
+
+.c-topic-strip--tg-header {
+    margin-left: (-$MOBILE_SIDE_GUTTER);
+    margin-right: (-$MOBILE_SIDE_GUTTER);
+    text-align: center;
+    white-space: nowrap;
+
+    .c-topic-strip-wrapper {
+        padding-left: $MOBILE_SIDE_GUTTER;
+    }
+
+    .c-topic-strip__list-item:last-child {
+        padding-right: $MOBILE_SIDE_GUTTER;
+    }
+
+    @include tablet-size {
+        margin-left: (-$TABLET_SIDE_GUTTER);
+        margin-right: (-$TABLET_SIDE_GUTTER);
+
+        .c-topic-strip-wrapper {
+            padding-left: $TABLET_SIDE_GUTTER;
+        }
+
+        .c-topic-strip__list-item:last-child {
+            padding-right: $TABLET_SIDE_GUTTER;
+        }
+    }
+
+}
+
+.c-topic-strip--c-card-section {
+    margin: 20px (-$MOBILE_SIDE_GUTTER);
+    text-align: center;
+    white-space: nowrap;
+
+    .c-topic-strip-wrapper {
+        padding-left: $MOBILE_SIDE_GUTTER;
+    }
+
+    .c-topic-strip__list-item:last-child {
+        padding-right: $MOBILE_SIDE_GUTTER;
+    }
+
+    @include tablet-size {
+        margin: 30px (-$TABLET_SIDE_GUTTER);
+
+        .c-topic-strip-wrapper {
+            padding-left: $TABLET_SIDE_GUTTER;
+        }
+
+        .c-topic-strip__list-item:last-child {
+            padding-right: $TABLET_SIDE_GUTTER;
+        }
     }
 
 }

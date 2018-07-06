@@ -2,30 +2,29 @@
     background-color: $wild-sand;
     margin: $MOBILE_SLICE_MARGIN auto;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         margin-bottom: $TABLET_SLICE_MARGIN;
         margin-top: $TABLET_SLICE_MARGIN;
     }
 
 }
 
-.c-magazine__wrapper {
+.c-magazine-wrapper {
     box-sizing: border-box;
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
     padding: 40px 20px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding: 80px 60px;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
 }
 
-.c-magazine__link {}
 .c-magazine__title {
     @include font('NOBEL', 11px, 'BOOK', 12px);
     color: $guardsman-red;
@@ -34,7 +33,7 @@
     text-transform: uppercase;
     text-align: center;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         display: none;
     }
 }
@@ -42,16 +41,10 @@
 .c-magazine__covers {
     position: relative;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         display: table-cell;
-        width: 50%;
         vertical-align: middle;
-    }
-}
-
-.c-magazine__covers__wrapper {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding-right: 70px;
+        width: 50%;
     }
 }
 
@@ -61,10 +54,12 @@
 
 .c-magazine__cover--print {
     img {
-        width: 60%;
         margin-left: $MOBILE_SIDE_GUTTER;
+        width: 60%;
+    }
 
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
+        img {
             margin-left: 0;
         }
     }
@@ -74,36 +69,50 @@
     img {
         background-color: $mine-shaft-222;
         border-radius: 7px;
+        bottom: 0;
         padding: 15px 8px;
-        width: 40%;
         position: absolute;
         right: $MOBILE_SIDE_GUTTER;
-        bottom: 0;
+        width: 40%;
+    }
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
+        img {
             border-radius: 15px;
             padding: 30px 20px;
             width: 45%;
         }
     }
 }
-.c-magazine__cover__image {}
-.c-magazine__content {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+
+.c-magazine__contents {
+    @include at-medium-size {
         display: table-cell;
-        width: 50%;
         vertical-align: middle;
+        width: 50%;
     }
 }
 
-.c-magazine__content__wrapper {}
-.c-magazine__content__date {
+.c-magazine__contents-title {
+   display: none;
+
+    @include at-medium-size {
+        @include font('NOBEL', 12px, 'BOOK', 12px);
+        color: $guardsman-red;
+        display: block;
+        letter-spacing: 1px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+}
+
+.c-magazine__contents-date {
     @include font('ITC CASLON', 29px, null, 32px);
     margin: 30px 0;
     text-align: center;
     text-transform: capitalize;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         @include font-size(41px);
         @include line-height(45px);
         margin: 10px 0 30px 0;
@@ -111,28 +120,18 @@
     }
 }
 
-.c-magazine__content__title {
-   display: none;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        color: $guardsman-red;
-        @include font('NOBEL', 12px, 'BOOK', 12px);
-        display: block;
-        letter-spacing: 1px;
-        margin-bottom: 0px;
-        text-transform: uppercase;
-    }
+.c-magazine__cards-listitem + .c-magazine__cards-listitem {
+    margin-top: 20px;
 }
 
-.c-magazine__content__subtitle {}
-.c-magazine__btn {
-    display: inline-block;
+.c-magazine__contents-btn {
+    @include button-single-two;
+    @include button-single-two-light;
+    display: table;
     margin-top: 40px;
-    width: auto;
 
-    @include button-single-two();
-    @include button-single-two-light();
-        &:hover {
-            @include button-single-two-light-hover();
-        }
+    &:focus,
+    &:hover {
+        @include button-single-two-light-hover;
+    }
 }

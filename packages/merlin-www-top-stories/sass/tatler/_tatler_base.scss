@@ -1,64 +1,74 @@
 .c-top-stories {
     background: $wild-sand;
-    display: none;
-    padding: 0;
+    padding: 16px 0;
 
-    @include desktop-size {
-        display: block;
+    &.has-navigation {
+        .c-top-stories__cards-listitem:last-child {
+            margin-right: 60px;
+        }
+    }
+}
+
+.c-top-stories-wrapper {
+    box-sizing: border-box;
+    max-width: $MAXIMUM_PAGE_WIDTH;
+    position: relative;
+    padding-left: 20px;
+    transform: translateZ(0);
+
+    @include screen(1440px, 1500px){
+        padding-left: calc(20px - (100vw - 1440px)/2 );
     }
 
-}
-
-.c-top-stories__wrapper {
-    box-sizing: border-box;
-    min-height: 120px;
-    position: relative;
-    padding: 16px 0 10px 16px;
-}
-
-.c-top-stories__title {
-    display: none;
+    @include min-screen(1500px) {
+        padding-left: 0;
+    }
 }
 
 .c-top-stories__nav {
+    bottom: -16px;
     position: absolute;
-    z-index: 6;
-    bottom: 0;
     right: 0;
-    top: 0;
+    top: -16px;
     width: 60px;
+    z-index: 2;
 }
 
 .c-top-stories__nav-btn {
-    height: auto;
-    position: absolute;
-    width: 60px;
-}
+    @include button-top-stories;
 
-.c-top-stories__nav-btn--left {
-    top: 50%;
-    bottom: 0;
+    &:hover, &:focus {
+        @include button-top-stories-hover;
+    }
+
+    &:disabled {
+        @include button-top-stories-disabled;
+    }
 }
 
 .c-top-stories__nav-btn--right {
     border-bottom: none;
-    bottom: 50%;
-    top: 0;
 }
 
-.c-top-stories__overflow {
+.c-top-stories__cards {
     margin-left: -20px;
-    max-width: $MAXIMUM_PAGE_WIDTH;
+    overflow-y: hidden;
     padding-left: 20px;
-    padding-bottom: 10px;
+    transform: translateZ(0);
 
-    @include desktop-size {
-        padding-left: 0;
-        margin-left: 0;
-        padding-bottom: 0;
+    @include screen(1440px, 1500px){
+        padding-left: calc(20px - (100vw - 1440px)/2 );
+        margin-left: calc(-20px + (100vw - 1440px)/2 );
     }
 
-    .has-no-scroll & {
-        overflow-x: hidden;
+    @include min-screen(1500px) {
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+
+.c-top-stories__cards-listitem {
+    & + .c-top-stories__cards-listitem {
+        margin-left: 20px;
     }
 }

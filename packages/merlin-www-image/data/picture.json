@@ -1,0 +1,32 @@
+{
+    "data": {
+        "alt_text": "Alt text",
+        "credit": "Image credit",
+        "description": "Image description",
+        "image_url": "https://vg-images.condecdn.net/image/XPgqRVXNmWX/crop/405/landscape/f/example.jpg",
+        "filename": "example.jpg",
+        "look_number": 1,
+        "sources": [{
+            "media": "(min-width: 800px)",
+            "srcset": "https://vg-images.condecdn.net/image/XPgqRVXNmWX/crop/405/0.5625/f/example.jpg 405w, https://vg-images.condecdn.net/image/XPgqRVXNmWX/crop/810/0.5625/f/example.jpg 810w, https://vg-images.condecdn.net/image/XPgqRVXNmWX/crop/1020/0.5625/f/example.jpg 1020w, https://vg-images.condecdn.net/image/XPgqRVXNmWX/crop/1440/0.5625/f/example.jpg 1440w, https://vg-images.condecdn.net/image/XPgqRVXNmWX/crop/1620/0.5625/f/example.jpg 1620w"
+        }, {
+            "media": "(min-width: 0px)",
+            "srcset": "https://vg-images.condecdn.net/image/XPgqRVXNmWX/crop/405/landscape/f/example.jpg 405w, https://vg-images.condecdn.net/image/XPgqRVXNmWX/crop/810/landscape/f/example.jpg 810w, https://vg-images.condecdn.net/image/XPgqRVXNmWX/crop/1020/landscape/f/example.jpg 1020w, https://vg-images.condecdn.net/image/XPgqRVXNmWX/crop/1440/landscape/f/example.jpg 1440w, https://vg-images.condecdn.net/image/XPgqRVXNmWX/crop/1620/landscape/f/example.jpg 1620w"
+        }],
+        "title": "Image title",
+        "uid": "XPgqRVXNmWX",
+        "width": null
+    },
+    "state": {
+        "is_image": false,
+        "is_picture": true,
+        "is_static": false,
+        "is_svg": false,
+        "is_linked": false,
+        "is_lazyload": true
+    },
+    "style": {
+        "cls": ""
+    },
+    "type": "Picture"
+}

@@ -3,6 +3,92 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.5.14"></a>
+## [1.5.14](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.5.13...@cnbritain/merlin-www-js-pages@1.5.14) (2018-07-03)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
+<a name="1.5.13"></a>
+## [1.5.13](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.5.12...@cnbritain/merlin-www-js-pages@1.5.13) (2018-07-03)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** display nav buttons on top stories for articles ([568bec3](https://github.com/cnduk/merlin-www-components/commit/568bec3))
+* **merlin-www-js-pages:** eslint ([26edd74](https://github.com/cnduk/merlin-www-components/commit/26edd74))
+* **merlin-www-js-pages:** move global namespace definition ([66dfe21](https://github.com/cnduk/merlin-www-components/commit/66dfe21))
+* **merlin-www-js-pages:** remove top stories rendering from core ([dbd1f93](https://github.com/cnduk/merlin-www-components/commit/dbd1f93))
+
+
+
+
+<a name="1.5.10"></a>
+## [1.5.10](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.5.9...@cnbritain/merlin-www-js-pages@1.5.10) (2018-06-26)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
+<a name="1.5.9"></a>
+## [1.5.9](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.5.8...@cnbritain/merlin-www-js-pages@1.5.9) (2018-06-26)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
+<a name="1.5.8"></a>
+## [1.5.8](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.5.7...@cnbritain/merlin-www-js-pages@1.5.8) (2018-06-26)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
+<a name="1.5.7"></a>
+## [1.5.7](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.5.6...@cnbritain/merlin-www-js-pages@1.5.7) (2018-06-25)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
+<a name="1.5.6"></a>
+## [1.5.6](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.5.5...@cnbritain/merlin-www-js-pages@1.5.6) (2018-06-22)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
+<a name="1.5.5"></a>
+## [1.5.5](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.5.4...@cnbritain/merlin-www-js-pages@1.5.5) (2018-06-22)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
+<a name="1.5.4"></a>
+## [1.5.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.5.3...@cnbritain/merlin-www-js-pages@1.5.4) (2018-06-22)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
+<a name="1.5.3"></a>
+## [1.5.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.5.2...@cnbritain/merlin-www-js-pages@1.5.3) (2018-06-22)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
 <a name="1.5.2"></a>
 ## [1.5.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.5.1...@cnbritain/merlin-www-js-pages@1.5.2) (2018-06-12)
 

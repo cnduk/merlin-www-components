@@ -918,3 +918,37 @@ export function createPageImpressionElement(unit, zone, values){
     }
     return div;
 }
+
+var _NATIVE_SIZES = ['promotion-small', 'promotion-medium', 'promotion-large'];
+/**
+ * Check if an advert is of native type
+ * @param  {Ad}  adModel
+ * @param  {string}  nativeSize
+ * @return {boolean}
+ */
+export function isAdNative(adModel, nativeSize) {
+    var adSizes = adModel.get('sizes');
+    var len = adSizes.length;
+
+    if (nativeSize !== undefined && _NATIVE_SIZES.indexOf(nativeSize) === -1) {
+        throw new Error('Unknown native ad size: ' + nativeSize);
+    }
+    var positionRe = null;
+    if (nativeSize !== undefined) {
+        positionRe = new RegExp('^' + nativeSize, 'i');
+    } else {
+        positionRe = new RegExp('^promotion-', 'i');
+    }
+
+    var adType = null;
+    while (len--) {
+        adType = getAdTypeBySize(adSizes[len][0], adSizes[len][1]);
+
+        if (adType !== AD_SIZES.NATIVE) continue;
+        if (!positionRe.test(adModel.get('position'))) continue;
+
+        return true;
+    }
+
+    return false;
+}

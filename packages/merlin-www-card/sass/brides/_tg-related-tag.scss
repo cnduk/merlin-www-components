@@ -1,0 +1,29 @@
+@mixin card-tg-related-tag {
+    @include card-portrait;
+}
+
+@mixin card-tg-related-tag-small {
+    @include card-portrait-large;
+}
+
+@mixin card-tg-related-tag-large {
+    @include card-portrait-large;
+}
+
+
+
+
+.c-card--tg-related-tag {
+    @include card-tg-related-tag();
+    @include card-tg-related-tag-large();
+}
+
+.c-card--tg-related-tag-small {
+    @include card-tg-related-tag();
+    @include card-tg-related-tag-small();
+}
+
+.c-card--tg-related-tag-large {
+    @include card-tg-related-tag();
+    @include card-tg-related-tag-large();
+}

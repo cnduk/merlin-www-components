@@ -107,37 +107,52 @@
 }
 
 .tg-header__description {
-	color: $oslo-gray;
-	margin-top: 24px;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 800px;
-	text-align: center;
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		margin-top: 32px;
-	}
+    color: $oslo-gray;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    text-align: center;
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        margin-top: 32px;
+    }
 
-	.bb-a {
-		border-bottom: 1px solid;
-		color: inherit;
-	}
+    .bb-a {
+        border-bottom: 1px solid;
+        color: inherit;
+    }
 
-	.bb-p {
-		@include font("GOTHAM", 14px, null, 20px, -2);
-		color: inherit;
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-			@include font-size(15px);
-			@include line-height(24px);
-		}
-	}
+    .bb-p {
+        @include font("GOTHAM", 14px, null, 20px, -2);
+        color: inherit;
+        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            @include font-size(15px);
+            @include line-height(24px);
+        }
+    }
 
-	> *:first-child {
-		margin-top: 0;
-	}
+    > *:first-child {
+        margin-top: 0;
+    }
 
-	> *:last-child {
-		margin-bottom: 0;
-	}
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.tg-header__sponsor {
+    @include font('GOTHAM', 16px);
+    color: $white;
+    font-weight: bold;
+    margin: 15px auto;
+}
+.tg-header__sponsor-prefix {
+    @include font-size(12px);
+
+}
+.tg-header__sponsor-image {}
+.tg-header__sponsor-name {
+    color: inherit;
 }
 
 .tg-header__topic-strip {

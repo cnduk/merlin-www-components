@@ -6,9 +6,8 @@
 	background-color: $black;
 }
 
-.c-int-redirect__wrapper {
+.c-int-redirect-wrapper {
 	max-width: $MAXIMUM_PAGE_WIDTH;
-	margin: 0 auto;
 }
 
 .c-int-redirect__btn {
@@ -38,16 +37,15 @@
 	color: $white;
 	padding: 20px 80px 20px 20px;
 	text-align: left;
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		padding-top: 24px;
-		padding-bottom: 24px;
-		padding-left: 80px;
-		text-align: center;
-	}
 
 	label {
 		border-bottom: 1px solid $white;
 		color: $white;
+	}
+
+	@include at-x-large-size {
+		padding: 24px 80px 24px 80px;
+		text-align: center;
 	}
 }
 
@@ -56,13 +54,14 @@
 	font-size: 0;
 	padding: 20px 80px 12px 20px;
 	text-align: left;
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+
+	@include at-x-large-size {
 		padding-left: 80px;
 		text-align: center;
 	}
 }
 
-li.c-int-redirect__list__item {
+.c-int-redirect__listitem {
 	padding-bottom: 8px;
 
 	a {

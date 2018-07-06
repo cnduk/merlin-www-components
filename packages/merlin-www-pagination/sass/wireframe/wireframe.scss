@@ -1,13 +1,22 @@
 @import '@cnbritain/merlin-www-common:wireframe';
 
 .c-pagination {
+    font-weight: normal;
+    line-height: normal;
+    list-style: none;
+    padding: 0;
     margin: 20px 0;
     text-align: center;
 }
+
 .c-pagination__item {
     display: inline-block;
     margin: 0 5px;
 }
+
 .c-pagination__item--active {}
+
+
 .c-pagination__btn {}
+
 .c-pagination__btn--active {}

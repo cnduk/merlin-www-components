@@ -1,35 +1,30 @@
 <footer class="c-footer {{ style.cls }}">
-    <div class="c-footer__wrapper">
-        <ul class="global__list-reset c-footer__list c-footer__list--left">
-            <li class="c-footer__list-item">
-                {{# data.left_logo }}
-                    {{> @cnbritain/merlin-www-image }}
-                {{/ data.left_logo }}
+    <div class="c-footer-wrapper">
+        <ul class="c-footer__list">
+            {{# data.conde_logo }}
+            <li class="c-footer__list-item c-footer__list-item--conde-logo">
+                {{> @cnbritain/merlin-www-image }}
             </li>
-        </ul>
-
-        <ul class="global__list-reset c-footer__list c-footer__list--right">
+            {{/ data.conde_logo }}
             {{# data.link_list }}
-                <div class="c-footer__list-item--links {{ style.cls }}">
-                    {{# data.items }}
-                        <li class="c-footer__list-item {{ style.cls }}">
-                            {{# data.item }}
-                                <a href="{{ &data.url }}" class="{{ style.cls }}">{{ data.title }}</a>
-                            {{/ data.item }}
-                        </li>
-                    {{/ data.items }}
-                </div>
+                {{# data.items }}
+                    <li class="c-footer__list-item {{ style.cls }}">
+                        {{# data.item }}
+                            <a href="{{ &data.url }}" class="{{ style.cls }}">{{ data.title }}</a>
+                        {{/ data.item }}
+                    </li>
+                {{/ data.items }}
             {{/ data.link_list }}
 
             {{# data.copyright }}
-                <li class='c-footer__list-item'>{{ &. }}</li>
+                <li class='c-footer__list-item c-footer__list-item--copyright'>{{ &. }}</li>
             {{/ data.copyright }}
 
-            <li class='c-footer__list-item c-footer__list-item--logo'>
-                {{# data.right_logo }}
-                    {{> @cnbritain/merlin-www-image }}
-                {{/ data.right_logo }}
+            {{# data.brand_logo }}
+            <li class='c-footer__list-item c-footer__list-item--brand-logo'>
+                {{> @cnbritain/merlin-www-image }}
             </li>
+            {{/ data.brand_logo }}
         </ul>
     </div>
 </footer>

@@ -1,18 +1,18 @@
 <aside class="c-topic-strip {{ style.cls }}">
-    <div class="c-topic-strip__wrapper">
+    <div class="c-topic-strip-wrapper">
 
     {{# data.title }}
-        <div class="c-topic-strip__title">{{ data.title }}</div>
+        <div class="c-topic-strip__title"><span>{{ data.title }}</span></div>
     {{/ data.title }}
 
     {{# data.topic_list }}
         <ul class="c-topic-strip__list {{ style.cls }}">
             {{# data.items }}
-                <li class="c-topic-strip__item {{ style.cls }}">
-                    {{# data.item }}
-                        <a href="{{ &data.url }}" class="c-topic-strip__btn {{ style.cls }}">{{ data.title }}</a>
-                    {{/ data.item }}
-                </li>
+            <li class="c-topic-strip__list-item {{ style.cls }}">
+                {{# data.item }}
+                <a href="{{ &data.url }}" class="c-topic-strip__link {{ style.cls }}" title="{{ data.title }}">{{ data.title }}</a>
+                {{/ data.item }}
+            </li>
             {{/ data.items }}
         </ul>
     {{/ data.topic_list }}

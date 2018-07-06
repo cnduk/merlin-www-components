@@ -1,6 +1,7 @@
 @import "@cnbritain/merlin-www-common:glamour";
 @import "@cnbritain/merlin-www-buttons:glamour";
 @import "@cnbritain/merlin-www-card-list:glamour";
+@import "@cnbritain/merlin-www-card:glamour";
 
 @import '../wireframe/wireframe';
 
@@ -9,34 +10,36 @@
     margin-top: $MOBILE_SLICE_MARGIN;
     position: relative;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    &::after {
+        content: "";
+        border-bottom: 20px solid transparent;
+        border-image: url("/static/img/pattern-2.jpg") 20;
+        bottom: -20px;
+        position: absolute;
+        right: 0;
+        width: calc(100% - 20px);
+    }
+
+    @include at-medium-size {
         margin-top: $TABLET_SLICE_MARGIN;
         margin-bottom: $TABLET_SLICE_MARGIN + 20px;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin-bottom: $DESKTOP_SLICE_MARGIN + 20px;
         margin-left: $DESKTOP_SIDE_GUTTER;
         margin-right: $DESKTOP_SIDE_GUTTER;
         margin-top: $DESKTOP_SLICE_MARGIN;
     }
 
-    &::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: -20px;
-        width: calc(100% - 20px);
-        border-bottom: 20px solid transparent;
-        border-image: url("/static/img/pattern-2.jpg") 20;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
+        &::after {
             display: none;
         }
     }
 }
 
-.c-magazine__wrapper {
+.c-magazine-wrapper {
     background-color: $white;
     box-sizing: border-box;
     margin: 0 auto;
@@ -44,24 +47,10 @@
     padding: 20px 20px 30px;
     position: relative;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: 60px;
+    @include at-x-large-size {
         border: solid 20px transparent;
         border-image: url("/static/img/pattern-2.jpg") 20;
-    }
-}
-
-.c-magazine__wrapper > .c-magazine__link {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-
-    @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        width: 50%;
-        height: 100%;
+        padding: 60px;
     }
 }
 
@@ -72,16 +61,11 @@
 .c-magazine__covers {
     position: relative;
 
-    @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         display: table-cell;
-        width: 50%;
-        vertical-align: middle;
-    }
-}
-.c-magazine__covers__wrapper {
-
-    @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
         padding-right: 60px;
+        vertical-align: middle;
+        width: 50%;
     }
 }
 
@@ -93,24 +77,29 @@
     img {
         width: 67%;
         margin-left: 0;
+    }
 
-        @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
+        img {
             margin-left: 0;
             width: 65%;
         }
     }
 }
+
 .c-magazine__cover--tablet {
     img {
         background-color: #000;
         border-radius: 7px;
+        bottom: 0;
         padding: 15px 8px;
-        width: 47%;
         position: absolute;
         right: 0;
-        bottom: 0;
+        width: 47%;
+    }
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
+        img {
             border-radius: 15px;
             padding: 30px 20px;
             width: 52%;
@@ -118,18 +107,18 @@
     }
 }
 
-.c-magazine__content {
+.c-magazine__contents {
     position: relative;
     z-index: 1;
 
-    @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         display: table-cell;
-        width: 50%;
         vertical-align: middle;
+        width: 50%;
     }
 }
 
-.c-magazine__content__title {
+.c-magazine__contents-title {
     @include font('GRAPHIK', 10px, 'SEMI BOLD', 11px);
     color: $astronaut;
     display: block;
@@ -139,14 +128,14 @@
     text-align: center;
     text-transform: uppercase;
 
-    @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         display: block;
         margin-top: 0;
         text-align: left;
     }
 }
 
-.c-magazine__content__date {
+.c-magazine__contents-date {
     @include font('MILLER_DISPLAY', 30px, 600, 34px);
     color: $dune;
     letter-spacing: 0;
@@ -154,7 +143,7 @@
     text-align: center;
     text-transform: capitalize;
 
-    @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         @include font-size(40px);
         @include line-height(45px);
         margin: 10px 0 40px;
@@ -162,17 +151,25 @@
     }
 }
 
-.c-magazine__btn {
+.c-magazine__cards-list {
+    display: flex;
+    flex-direction: column;
+    margin: -10px;
+}
+
+.c-magazine__cards-listitem {
+    padding: 0 10px;
+    margin: 10px 0;
+}
+
+.c-magazine__contents-btn {
     @include button-single;
     @include button-single-light;
-    display: inline-block;
-    margin: 30px 0 0;
+    display: table;
+    margin-top: 30px;
 
+    &:focus,
     &:hover {
         @include button-single-light-hover;
-    }
-
-    @include min-screen ($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: 30px;
     }
 }

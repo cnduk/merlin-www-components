@@ -11,7 +11,7 @@ import {
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 
 var CLS_INTERNATIONAL_REDIRECT = 'c-int-redirect';
-var CLS_INTERNATIONAL_LINK = 'c-int-redirect__list__item a';
+var CLS_INTERNATIONAL_LINK = 'c-int-redirect__listitem a';
 var ID_DISPLAY = 'chkIntRedirectDisplay';
 
 function InternationalRedirect(){
