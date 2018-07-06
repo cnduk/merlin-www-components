@@ -20,6 +20,7 @@
 .c-gallery-strip__images {
     position: relative;
 }
+
 .c-gallery-strip__images:after {
     background-color: $pink-rose;
     bottom: -16px;
@@ -42,7 +43,7 @@
     background-color: rgba($black, 0.25);
     color: $white;
 
-    @include desktop-size {
+    @include at-x-large-size {
         @include font-size(32px);
         @include line-height(32px);
     }
@@ -84,7 +85,7 @@
         display: none;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
 
@@ -109,7 +110,7 @@
         }
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
 
         .c-gallery-strip__list__item {
             width: 12.5%;

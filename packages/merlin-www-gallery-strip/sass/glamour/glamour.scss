@@ -5,7 +5,7 @@
 .c-gallery-strip {
     margin: 20px 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin: 40px 0;
     }
 }
@@ -16,11 +16,11 @@
     padding: 0 $MOBILE_SIDE_GUTTER;
     position: relative;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         padding: 0 $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding: 0 $DESKTOP_SIDE_GUTTER;
     }
 }
@@ -74,7 +74,7 @@
 .c-gallery-strip--tag {
     margin: 20px 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin: 40px 0;
     }
 
@@ -92,7 +92,7 @@
         }
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+6) {
             display: inline-block;
         }
@@ -115,7 +115,7 @@
         }
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+8) {
             display: inline-block;
         }

@@ -5,7 +5,7 @@
 .c-gallery-strip {
     margin: 30px 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin: 40px 0;
     }
 }
@@ -47,7 +47,7 @@
     @include font("BRANDON GROTESQUE", 20px, 700, 25px);
     vertical-align: middle;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         @include font-size(25px);
         @include line-height(30px);
     }
@@ -57,7 +57,7 @@
     @include font("BRANDON GROTESQUE", 25px, 700, 25px);
     vertical-align: middle;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         @include font-size(30px);
         @include line-height(30px);
     }
@@ -97,7 +97,7 @@
 .c-gallery-strip--tag {
     margin: 25px 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin: 60px 0;
     }
 
@@ -115,7 +115,7 @@
         }
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+6) {
             display: inline-block;
         }
@@ -138,7 +138,7 @@
         }
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+8) {
             display: inline-block;
         }

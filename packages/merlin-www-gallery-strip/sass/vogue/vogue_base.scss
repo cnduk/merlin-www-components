@@ -74,7 +74,7 @@
     }
 }
 
-@include tablet-size {
+@include at-medium-size {
     .c-gallery-strip__detail {
         margin-left: $MARGIN_LARGE;
         margin-right: $MARGIN_LARGE;
@@ -117,7 +117,7 @@
     }
 }
 
-@include desktop-size {
+@include at-x-large-size {
     .c-gallery-strip--tag {
         .c-gallery-strip__list__item {
             width: 12.5%;
