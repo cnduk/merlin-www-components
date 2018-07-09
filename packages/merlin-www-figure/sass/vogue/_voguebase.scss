@@ -2,7 +2,7 @@
     margin-bottom: 20px;
     position: relative;
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin-bottom: 30px;
     }
 }
@@ -120,7 +120,7 @@
     color: $cod-gray;
     margin-bottom: 10px;
 
-    @include desktop-size {
+    @include at-x-large-size {
         @include line-height(30px);
         padding-right: 160px;
     }
@@ -135,7 +135,7 @@
         @include font('ADOBE CASLON', 16px);
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         padding-right: 160px;
     }
 }
@@ -154,7 +154,7 @@
         font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         padding-right: 160px;
     }
 }

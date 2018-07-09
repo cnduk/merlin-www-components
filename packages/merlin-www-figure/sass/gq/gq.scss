@@ -4,7 +4,8 @@
 
 .c-figure__container {
     margin-bottom: 24px;
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+
+    @include at-x-large-size {
     	margin-bottom: 28px;
     }
 }
@@ -36,7 +37,8 @@
 	@include font("GOTHAM", 20px, 700, 24px, -4);
 	color: $woodsmoke;
 	margin-bottom: 12px;
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+
+	@include at-x-large-size {
 		margin-bottom: 16px;
 	}
 }
@@ -45,7 +47,8 @@
 	.bb-p {
 		margin-bottom: 12px;
 		margin-top: 12px;
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+
+		@include at-x-large-size {
 			margin-bottom: 16px;
 			margin-top: 16px;
 		}

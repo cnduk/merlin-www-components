@@ -6,7 +6,7 @@
 .c-figure {
     margin: 0 0 44px 0;
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin-bottom: 68px;
     }
 }
@@ -15,11 +15,10 @@
     background-color: $diamond;
     margin-bottom: 22px;
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin-bottom: 34px;
     }
 }
-
 
 .c-figure__toolbar-list {
     font-size: 0;
@@ -57,7 +56,7 @@
 .c-figure__title + .c-figure__caption {
     margin-top: 10px;
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin-top: 16px;
     }
 }

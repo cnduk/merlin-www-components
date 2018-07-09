@@ -64,7 +64,7 @@
 .c-figure__credit {
     width: 100%;
 
-    @include desktop-size {
+    @include at-x-large-size {
         max-width: 700px;
     }
 }
@@ -74,7 +74,7 @@
 .c-figure__caption .bb-p {
     @include font('STARLING', 16px, 400, 24px);
 
-    @include desktop-size {
+    @include at-x-large-size {
         @include font-size(18px);
         @include line-height(28px);
     }

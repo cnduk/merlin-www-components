@@ -95,7 +95,8 @@
         display: none;
     }
     .c-figure__toolbar-listitem--whatsapp {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+
+        @include at-x-large-size {
             display: none;
         }
     }

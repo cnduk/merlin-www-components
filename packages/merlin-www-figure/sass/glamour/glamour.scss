@@ -8,7 +8,7 @@
     background-color: $concrete;
     margin-bottom: 15px;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         border: 1px solid $concrete;
     }
 }
@@ -72,7 +72,7 @@
     color: $dune;
     margin: 0 0 4px 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         @include font("GRAPHIK", 18px, 'SEMI BOLD', 28px);
     }
 }
