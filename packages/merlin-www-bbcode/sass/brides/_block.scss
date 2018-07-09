@@ -126,7 +126,7 @@
     list-style-type: none;
     margin: 0 0 32px 0;
 
-    @include text-size-large {
+    @include at-x-large-size {
         margin: 0 0 48px 0;
     }
 
@@ -152,7 +152,7 @@
     margin: 0 0 32px 0;
     padding-left: 32px;
 
-    @include text-size-large {
+    @include at-x-large-size {
         margin: 0 0 48px 0;
     }
 
@@ -368,7 +368,7 @@
 }
 
 
-@include text-size-large {
+@include at-x-large-size {
 
     .bb-h1 {
         @include font-size(48px);
