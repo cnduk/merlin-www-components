@@ -1,26 +1,529 @@
-@import "@cnbritain/merlin-www-common:brides";
 @import "@cnbritain/merlin-www-buttons:brides";
-@import "@cnbritain/merlin-www-search-header:brides";
+@import "@cnbritain/merlin-www-common:brides";
+@import "@cnbritain/merlin-www-image:brides";
 
 @import "../wireframe/wireframe";
 
-@import "_base";
-@import "_promo";
-@import "_masthead";
-@import "_dropdown";
-@import "_social";
-@import "_search";
-@import "_gallery";
+.c-masthead {
+    background-color: $white;
+}
 
-.n-vanishing-nav {
-    .n-main__sticker-child {
-        transform: translate(0, 0%);
-        transition: transform 0.2s ease-in-out;
+.c-masthead__wrapper {}
+.c-masthead__logo {
+    height: 96px;
+    padding: 24px 0 12px 0;
+    width: 415px;
+
+    svg {
+        fill: $stroller-grey;
+    }
+}
+
+.c-nav {}
+.c-nav__search-icon {
+    &:before {
+        background-color: $ballet-grey;
+        content: "";
+        height: 32px;
+        left: 0;
+        position: absolute;
+        top: 14px;
+        width: 1px;
     }
 
-    &.is-hidden {
-        .n-main__sticker-child {
-            transform: translate(0, -100%);
+    @include min-screen($XX_LARGE_SIZE + -1px) {
+        &:after {
+            background-color: $ballet-grey;
+            content: "";
+            height: 32px;
+            right: 0;
+            position: absolute;
+            top: 14px;
+            width: 1px;
         }
     }
+
+    svg {
+        fill: $stroller-grey;
+        width: 20px;
+    }
+
+    &:hover {
+        svg {
+            fill: $pink-rose;
+        }
+    }
+}
+
+.c-nav__toggle-icon {
+    &:before {
+        background-color: $ballet-grey;
+        content: "";
+        height: 32px;
+        left: 0;
+        position: absolute;
+        top: 14px;
+        width: 1px;
+    }
+
+    svg {
+        fill: $stroller-grey;
+        width: 20px;
+    }
+}
+
+.c-nav__open-icon {
+    svg {
+        width: 24px;
+    }
+}
+
+.c-nav__close-icon {}
+
+.c-nav__wrapper {
+    box-shadow: 0px 2px 4px 0px rgba($black, 0.04);
+
+    &:after {
+        background-color: $ballet-grey;
+        content: "";
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        top: 60px;
+        transform: translateX(-50%);
+        width: 100vw;
+
+        @include at-x-large-size {
+            z-index: -1;
+        }
+    }
+}
+
+.c-nav__content {
+    background-color: $champagne;
+
+    @include at-x-large-size {
+        background-color: $white;
+
+        &:before {
+            background-color: $white;
+        }
+    }
+}
+
+.c-nav__logo {
+    background-color: $white;
+    width: 138px;
+}
+
+.c-nav__search {
+    @include at-x-large-size {
+        box-sizing: border-box;
+        padding: 60px;
+        top: 61px;
+
+        &:before {
+            background-color: rgba($champagne, 0.75);
+            content: "";
+            height: 100vh;
+            position: absolute;
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+    }
+}
+
+.c-nav__search-form {
+    background-color: $champagne;
+    border-bottom: solid 1px rgba($stroller-grey, 0.2);
+
+    @include at-x-large-size {
+        padding-bottom: 7px;
+
+        &:before {
+            background-color: $champagne;
+            content: "";
+            height: 100%;
+            left: 50%;
+            position: absolute;
+            top: 0;
+            transform: translateX(-50%);
+            width: 100vw;
+            z-index: -1;
+        }
+    }
+}
+
+.c-nav__search-input {
+    @include font("SOLEIL", 12px, 400, 60px, 180);
+    background-color: $champagne;
+    color: $ascot-grey;
+    padding: 0 20px;
+    text-transform: uppercase;
+
+    @include at-x-large-size {
+        @include font("FREIGHT DISPLAY PRO", 40px, 400, 40px);
+        font-style: italic;
+        padding: 0;
+        text-align: center;
+        text-transform: initial;
+    }
+}
+
+.c-nav__search-button {
+    background-color: $champagne;
+
+    svg {
+        fill: $stroller-grey;
+        width: 20px;
+    }
+}
+
+.c-nav__main {}
+.c-nav__main-list {
+    padding: 0 20px 20px 20px;
+
+    @include at-x-large-size {
+        padding: 0;
+    }
+}
+
+.c-nav__main-list-item {}
+
+.c-nav__main-list-item--more {}
+.c-nav__main-link {
+    @include font("FREIGHT DISPLAY PRO", 24px, 400, 60px, 30);
+    box-sizing: border-box;
+    color: $stroller-grey;
+
+    @include at-x-large-size {
+        @include font-size(18px);
+        border-bottom: 1px solid transparent;
+        box-sizing: content-box;
+        margin: 0 16px;
+
+        &:hover {
+            border-bottom: 1px solid $pink-rose;
+            color: $pink-rose;
+        }
+    }
+}
+
+.c-nav__main-link--more {
+    border-bottom: none;
+
+    @include at-x-large-size {
+        box-sizing: border-box;
+
+        &:hover {
+            border-bottom: none;
+            color: $stroller-grey;
+        }
+    }
+}
+
+.c-nav__alt-list {
+    padding: 16px 0 0 0;
+
+    @include at-x-large-size {
+        background-color: $champagne;
+        padding: 22px 36px 22px 36px;
+        margin: 0 -20px;
+
+        &:before {
+            content: "";
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 10px solid $champagne;
+            height: 0;
+            left: 85px;
+            position: absolute;
+            top: -10px;
+            width: 0;
+        }
+    }
+}
+
+.c-nav__alt-list-item {}
+.c-nav__alt-link {
+    @include font("FREIGHT DISPLAY PRO", 16px, 400, 40px, 30);
+    box-sizing: border-box;
+    color: $stroller-grey;
+    height: 40px;
+
+    @include at-x-large-size {
+        @include font-size(18px);
+
+        &:hover {
+            color: $pink-rose;
+
+            // &:before {
+            //     background-color: $pink-rose;
+            //     content: "";
+            //     height: 100%;
+            //     left: -36px;
+            //     position: absolute;
+            //     top: 0;
+            //     width: 1px;
+            // }
+        }
+    }
+}
+
+.c-nav__promo {
+    border-bottom: solid 1px rgba($stroller-grey, 0.2);
+    border-top: solid 1px rgba($stroller-grey, 0.2);
+    padding: 24px 20px;
+
+    @include at-x-large-size {
+        border: none;
+        bottom: 50px;
+        padding: 0 0 0 60px;
+    }
+}
+
+.c-nav__promo-wrapper {}
+.c-nav__promo-images {}
+.c-nav__promo-covers {
+    padding-right: 10px;
+    text-align: right;
+}
+
+.c-nav__promo-cover {
+    @include at-x-large-size {
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+}
+
+.c-nav__promo-content {
+    padding-left: 10px;
+    text-align: left;
+
+    @include at-x-large-size {
+        vertical-align: top;
+    }
+}
+
+.c-nav__promo-message {
+    @include font("FREIGHT DISPLAY PRO", 16px, 400, 16px, 30);
+    color: $stroller-grey;
+    font-style: italic;
+    margin-bottom: 14px;
+    white-space: pre-line;
+}
+
+.c-nav__promo-button {
+    @include button-single-three();
+    @include button-single-three-dark();
+    padding: 8px 11px;
+    text-transform: uppercase;
+
+    &:hover {
+        @include button-single-three-dark-hover();
+    }
+
+    @include at-x-large-size {
+        @include button-single-three();
+        @include button-single-three-light();
+        padding: 8px 11px;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: transparent;
+            @include button-single-three-light-hover();
+        }
+    }
+}
+
+.c-nav__social {
+    margin: 30px 20px;
+
+    @include at-x-large-size {
+        margin: 0;
+    }
+}
+
+.c-nav__social-list {}
+.c-nav__social-list-item {}
+.c-nav__social-list-item--follow {}
+
+.c-nav__social-link {}
+.c-nav__social-link--follow {
+    @include font("SOLEIL", 12px, 400, 12px, 180);
+    color: $ascot-grey;
+    margin: 0 0 26px 0;
+    text-transform: uppercase;
+
+    @include at-x-large-size {
+        @include font("SOLEIL", 12px, 400, 60px);
+        letter-spacing: 0;
+        margin: 0 16px;
+        padding: 0 10px;
+        position: relative;
+        text-transform: initial;
+
+        &:before {
+            border-radius: 30px;
+            border: 1px solid $ballet-grey;
+            content: '';
+            height: 100%;
+            height: 24px;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+    }
+}
+
+.c-nav__social-brand {}
+
+.c-nav__share-list {
+    @include at-x-large-size {
+        background-color: $champagne;
+        padding: 22px 24px;
+
+        &:before {
+            content: "";
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 10px solid $champagne;
+            height: 0;
+            right: 23px;
+            position: absolute;
+            top: -10px;
+            width: 0;
+        }
+    }
+}
+
+.c-nav__share-list-item {
+    margin: 0 6px;
+}
+
+.c-nav__share-list-item--newsletter {
+    margin: 0;
+}
+
+.c-nav__share-link {
+    @include button-share();
+}
+
+.c-nav__share-link--youtube {
+    @include button-share-dark();
+    &:hover {
+        @include button-share-dark-hover();
+    }
+}
+
+.c-nav__share-link--twitter {
+    @include button-share-dark();
+    &:hover {
+        @include button-share-dark-hover();
+    }
+}
+
+.c-nav__share-link--instagram {
+    @include button-share-dark();
+    &:hover {
+        @include button-share-dark-hover();
+    }
+}
+
+.c-nav__share-link--facebook {
+    @include button-share-dark();
+    &:hover {
+        @include button-share-dark-hover();
+    }
+}
+
+.c-nav__share-button {
+    @include button-single-three();
+    @include button-single-three-dark();
+    margin-top: 20px;
+
+    &:hover {
+        @include button-single-three-dark-hover();
+    }
+}
+
+.c-nav__gallery {
+    left: 168px;
+    padding-left: 32px;
+}
+
+.c-nav__gallery-title {
+    @include font("FREIGHT DISPLAY PRO", 20px, 400, 60px, 10);
+    color: $stroller-grey;
+    font-style: italic;
+}
+
+.c-nav__gallery-count {
+    font-size: 0;
+    padding: 0 20px;
+}
+
+.c-nav__gallery-slash {
+    @include font("FREIGHT DISPLAY PRO", 16px, 400, 60px);
+    color: $candle-grey;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.c-nav__gallery-current {
+    @include font("FREIGHT DISPLAY PRO", 24px, 400, 60px, 10);
+    color: $stroller-grey;
+}
+
+.c-nav__gallery-total {
+    @include font("FREIGHT DISPLAY PRO", 16px, 400, 60px);
+    color: $candle-grey;
+}
+
+.c-nav__gallery-icon {
+    &:before {
+        background-color: $ballet-grey;
+        content: "";
+        height: 32px;
+        left: 0;
+        position: absolute;
+        top: 14px;
+        width: 1px;
+    }
+
+    @include min-screen($XX_LARGE_SIZE + -1px) {
+        &:after {
+            background-color: $ballet-grey;
+            content: "";
+            height: 32px;
+            right: 0;
+            position: absolute;
+            top: 14px;
+            width: 1px;
+        }
+    }
+
+    svg {
+        fill: $stroller-grey;
+        width: 20px;
+    }
+
+    &:hover {
+        svg {
+            fill: $pink-rose;
+        }
+    }
+}
+
+.c-nav__list-icon {}
+.c-nav__grid-icon {}
+
+.c-nav__down-arrow {
+    border-top-color: $ballet-grey;
+    margin-left: 8px;
 }

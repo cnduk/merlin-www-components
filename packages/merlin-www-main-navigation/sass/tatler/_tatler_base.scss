@@ -1,21 +1,448 @@
-@import '_base';
-@import '_dropdown';
-@import '_gallery';
-@import '_masthead';
-@import '_menu';
-@import '_promo';
-@import '_search';
-@import '_social';
+.c-masthead {
+    background-color: $white;
+}
 
-.n-vanishing-nav {
-    .n-main__sticker-child {
-        transform: translate(0);
-        transition: transform 0.2s ease-in-out;
+.c-masthead__wrapper {}
+.c-masthead__logo {
+    height: 140px;
+    padding: 20px 0;
+    width: 365px;
+
+    svg {
+        fill: $black;
     }
+}
 
-    &.is-hidden {
-        .n-main__sticker-child {
-            transform: translate(0, -100%);
+.c-nav {
+    border-top: 1px solid $white-two;
+    box-sizing: border-box;
+
+    &.is-gallery-active {
+        .c-nav__logo {
+            background-color: $black;
+
+            svg {
+                fill: $white;
+            }
+        }
+
+        .c-nav__wrapper,
+        .c-nav__content {
+            background-color: $black;
+
+            &:before {
+                background-color: $black;
+            }
         }
     }
+}
+
+.c-nav__search-icon {
+    border-left: 1px solid $white-two;
+    box-sizing: border-box;
+
+    @include min-screen($XX_LARGE_SIZE + -1px) {
+        border-right: 1px solid $white-two;
+    }
+
+    svg {
+        width: 18px;
+    }
+
+    &:hover {
+        svg {
+            fill: $cinnabar;
+        }
+    }
+}
+
+.c-nav__toggle-icon {
+    border-left: 1px solid $white-two;
+    box-sizing: border-box;
+
+    @include min-screen($XX_LARGE_SIZE + -1px) {
+        border-right: 1px solid $white-two;
+    }
+
+    svg {
+        width: 18px;
+    }
+
+    &:hover {
+        svg {
+            fill: $cinnabar;
+        }
+    }
+}
+
+.c-nav__open-icon {}
+.c-nav__close-icon {}
+
+.c-nav__wrapper {
+    box-shadow: 0px 2px 4px 0px rgba($black, 0.01);
+
+    &:before {
+        transition: background 300ms ease-in-out;
+    }
+
+    &:after {
+        background-color: $white-two;
+        content: "";
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        top: 60px;
+        transform: translateX(-50%);
+        width: 100vw;
+
+        @include at-x-large-size {
+            z-index: -1;
+        }
+    }
+}
+
+.c-nav__content {
+    transition: background 300ms ease-in-out;
+
+    &:before {
+        transition: background 300ms ease-in-out;
+    }
+}
+
+.c-nav__logo {
+    background-color: $white;
+    transition: background-color 300ms ease-in-out;
+    width: 100px;
+
+    svg {
+        fill: $black;
+        transition: fill 300ms ease-in-out;
+    }
+}
+
+.c-nav__search {
+    @include at-x-large-size {
+        box-sizing: border-box;
+        padding: 50px 60px 30px 60px;
+        top: 61px;
+
+        &:before {
+            background-color: rgba($black, 0.9);
+            content: "";
+            height: 100vh;
+            position: absolute;
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+    }
+}
+
+.c-nav__search-form {
+    background-color: $black;
+    box-sizing: content-box;
+
+    @include at-x-large-size {
+        border-bottom: 1px solid $mine-shaft;
+        padding-bottom: 10px;
+
+        &:before {
+            background-color: $black;
+            content: "";
+            height: 100%;
+            left: 50%;
+            position: absolute;
+            top: 0;
+            transform: translateX(-50%);
+            width: 100vw;
+            z-index: -1;
+        }
+    }
+}
+
+.c-nav__search-input {
+    @include font("STARLING", 20px, 400, 60px);
+    background-color: $black;
+    color: $white;
+    padding: 0 20px;
+
+    @include at-x-large-size {
+        @include font-size(65px);
+        @include line-height(65px);
+        padding: 0;
+    }
+}
+
+.c-nav__search-button {
+    background-color: $black;
+
+    svg {
+        fill: $white;
+        width: 18px;
+    }
+}
+
+.c-nav__main {}
+.c-nav__main-list {
+    padding: 0 0 15px 0;
+
+    @include at-x-large-size {
+        padding: 0;
+    }
+}
+
+.c-nav__main-list-item {}
+.c-nav__main-list-item--more {}
+.c-nav__main-link {
+    @include font("COMMUTER SANS", 16px, 400, 60px);
+    border-bottom: 1px solid $white-two;
+    box-sizing: border-box;
+    color: $black;
+    padding: 0 20px;
+    text-transform: uppercase;
+
+    @include at-x-large-size {
+        @include font-size(13px);
+        box-sizing: content-box;
+        margin: 0 20px;
+        padding: 0;
+
+        &:hover {
+            color: $gray;
+        }
+    }
+}
+
+.c-nav__main-link--more {
+    border-bottom: none;
+
+    @include at-x-large-size {
+        box-sizing: border-box;
+
+        &:hover {
+            color: $black;
+        }
+    }
+}
+
+.c-nav__alt-list {
+    padding: 15px 20px 0 20px;
+
+    @include at-x-large-size {
+        border-bottom: 1px solid $white-two;
+        border-left: 1px solid $white-two;
+        border-right: 1px solid $white-two;
+        padding: 10px 20px 10px 20px;
+    }
+}
+
+.c-nav__alt-list-item {}
+.c-nav__alt-link {
+    @include font("COMMUTER SANS", 13px, 400, 40px);
+    color: $black;
+    height: 40px;
+    text-transform: uppercase;
+
+    @include at-x-large-size {
+        &:hover {
+            color: $gray;
+        }
+    }
+}
+
+.c-nav__promo {
+    background-color: $wild-sand;
+    padding: 32px 20px;
+
+    @include at-x-large-size {
+        background-color: transparent;
+        border: none;
+        bottom: 50px;
+        padding: 0 0 0 60px;
+    }
+}
+
+.c-nav__promo-wrapper {}
+.c-nav__promo-images {}
+.c-nav__promo-covers {
+    padding-right: 10px;
+    text-align: right;
+}
+
+.c-nav__promo-cover {
+    @include at-x-large-size {
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+}
+
+.c-nav__promo-content {
+    padding-left: 10px;
+    text-align: left;
+
+    @include at-x-large-size {
+        vertical-align: top;
+    }
+}
+
+.c-nav__promo-message {
+    @include font("COMMUTER SANS", 13px, 400, 18px);
+    color: $black;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    white-space: pre-line;
+}
+
+.c-nav__promo-button {
+    @include button-single();
+    @include button-single-light();
+    padding: 10px;
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
+
+.c-nav__social {
+    margin: 30px 20px 40px 20px;
+
+    @include at-x-large-size {
+        margin: 0;
+    }
+}
+
+.c-nav__social-list {}
+.c-nav__social-list-item {}
+.c-nav__social-list-item--follow {}
+
+.c-nav__social-link {}
+.c-nav__social-link--follow {
+    @include font("COMMUTER SANS", 10px, 400, 10px);
+    color: $boulder;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+
+    @include at-x-large-size {
+        @include font("COMMUTER SANS", 13px, 400, 60px);
+        color: $black;
+        margin: 0 20px;
+    }
+}
+
+.c-nav__social-brand {}
+
+.c-nav__share-list {
+    @include at-x-large-size {
+        border-bottom: 1px solid $white-two;
+        border-left: 1px solid $white-two;
+        border-right: 1px solid $white-two;
+        padding: 10px;
+        right: -1px;
+    }
+}
+
+.c-nav__share-list-item {
+    margin: 0 5px;
+}
+
+.c-nav__share-list-item--newsletter {
+    margin: 0;
+}
+
+.c-nav__share-link {
+    @include button-share();
+}
+
+.c-nav__share-link--youtube {
+    @include button-share-light("youtube");
+    &:hover {
+        @include button-share-light-hover("youtube");
+    }
+}
+
+.c-nav__share-link--twitter {
+    @include button-share-light("twitter");
+    &:hover {
+        @include button-share-light-hover("twitter");
+    }
+}
+
+.c-nav__share-link--instagram {
+    @include button-share-light("instagram");
+    &:hover {
+        @include button-share-light-hover("instagram");
+    }
+}
+
+.c-nav__share-link--facebook {
+    @include button-share-light("facebook");
+    &:hover {
+        @include button-share-light-hover("facebook");
+    }
+}
+
+.c-nav__share-button {
+    @include button-single();
+    @include button-single-light();
+    margin-top: 24px;
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
+
+.c-nav__gallery {
+    background-color: transparent;
+    left: 130px;
+    padding-left: 42px;
+}
+
+.c-nav__gallery-title {
+    @include font("COMMUTER SANS", 12px, 400, 60px);
+    color: $white;
+    text-transform: uppercase;
+}
+
+.c-nav__gallery-count {
+    font-size: 0;
+    padding: 0 20px;
+}
+
+.c-nav__gallery-slash {
+    @include font("COMMUTER SANS", 15px, 400, 60px);
+    color: $white;
+}
+
+.c-nav__gallery-current {
+    @include font("COMMUTER SANS", 15px, 600, 60px);
+    color: $white;
+}
+
+.c-nav__gallery-total {
+    @include font("COMMUTER SANS", 15px, 400, 60px);
+    color: $white;
+}
+
+.c-nav__gallery-icon {
+    border-left: 1px solid $mine-shaft;
+    box-sizing: border-box;
+
+    @include min-screen($XX_LARGE_SIZE + -1px) {
+        border-right: 1px solid $mine-shaft;
+    }
+
+    svg {
+        fill: $white;
+        width: 20px;
+    }
+}
+
+.c-nav__list-icon {}
+.c-nav__grid-icon {}
+
+.c-nav__down-arrow {
+    border-top-color: $black;
+    margin-left: 8px;
 }

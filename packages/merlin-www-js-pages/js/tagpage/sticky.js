@@ -16,7 +16,7 @@ import {
     Scroll,
     Stick
 } from '@cnbritain/merlin-www-js-sticky';
-import MainNavigation from '@cnbritain/merlin-www-main-navigation/js/main-navigation';
+import MainNavigation from '@cnbritain/merlin-www-main-navigation';
 import {
     toArray
 } from '../utils';

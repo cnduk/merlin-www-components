@@ -1,18 +1,399 @@
-$GALLERY_NAV_ICONS_BREAKPOINT: 410px;
-$MASTHEAD_HEIGHT: 90px;
+.c-masthead {
+    background-color: $white;
+}
 
-@mixin navigation-large-size {
-    @include min-screen($MAIN_NAVIGATION_MOBILE_BREAKPOINT){
-        @content
+.c-masthead__wrapper {}
+.c-masthead__logo {
+    height: 90px;
+    padding: 30px 0 20px 0;
+    width: 350px;
+}
+
+.c-nav {
+    border-top: 1px solid $loot-box;
+    box-sizing: border-box;
+}
+
+.c-nav__search-icon {
+    border-left: 1px solid $loot-box;
+    box-sizing: border-box;
+
+    @include min-screen($XX_LARGE_SIZE + -1px) {
+        border-right: 1px solid $loot-box;
+    }
+
+    svg {
+        width: 18px;
+    }
+
+    &:hover {
+        svg {
+            fill: $guardsman-red;
+        }
     }
 }
 
-@import "_base";
-@import "_promo";
-@import "_masthead";
-@import "_dropdown";
-@import "_social";
-@import "_search";
-@import "_gallery";
-@import "_menu";
-@import "_misc";
+.c-nav__toggle-icon {
+    border-left: 1px solid $loot-box;
+    box-sizing: border-box;
+
+    @include min-screen($XX_LARGE_SIZE + -1px) {
+        border-right: 1px solid $loot-box;
+    }
+
+    svg {
+        width: 18px;
+    }
+
+    &:hover {
+        svg {
+            fill: $guardsman-red;
+        }
+    }
+}
+
+.c-nav__open-icon {}
+.c-nav__close-icon {}
+
+.c-nav__wrapper {
+    box-shadow: 0px 2px 5px 0px rgba($dove-gray, 0.06);
+
+    &:after {
+        background-color: $loot-box;
+        content: "";
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        top: 60px;
+        transform: translateX(-50%);
+        width: 100vw;
+
+        @include at-x-large-size {
+            z-index: -1;
+        }
+    }
+}
+
+.c-nav__content {}
+.c-nav__logo {
+    background-color: $white;
+    width: 118px;
+}
+
+.c-nav__search {
+    @include at-x-large-size {
+        box-sizing: border-box;
+        padding: 60px;
+        top: 61px;
+
+        &:before {
+            background-color: rgba($cod-gray, 0.5);
+            content: "";
+            height: 100vh;
+            position: absolute;
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+    }
+}
+
+.c-nav__search-form {
+    background-color: $cod-gray;
+
+    @include at-x-large-size {
+        background-color: $mine-shaft-222;
+        border-bottom: 1px solid $mine-shaft-333;
+        padding-bottom: 10px;
+
+        &:before {
+            background-color: $mine-shaft-222;
+            content: "";
+            height: 100%;
+            left: 50%;
+            position: absolute;
+            top: 0;
+            transform: translateX(-50%);
+            width: 100vw;
+            z-index: -1;
+        }
+    }
+}
+
+.c-nav__search-input {
+    @include font("ITC CASLON", 14px, 400, 60px);
+    background-color: $cod-gray;
+    color: $white;
+    padding: 0 20px;
+
+    @include at-x-large-size {
+        @include font-size(50px);
+        @include line-height(50px);
+        background-color: $mine-shaft-222;
+        padding: 0;
+        text-align: center;
+        text-transform: initial;
+    }
+}
+
+.c-nav__search-button {
+    background-color: $cod-gray;
+    border-left: 1px solid $cod-gray;
+    box-sizing: border-box;
+
+    svg {
+        fill: $white;
+        width: 18px;
+    }
+}
+
+.c-nav__main {}
+.c-nav__main-list {
+    padding: 0 20px 15px 20px;
+
+    @include at-x-large-size {
+        padding: 0;
+    }
+}
+
+.c-nav__main-list-item {}
+.c-nav__main-list-item--more {}
+.c-nav__main-link {
+    @include font("NOBEL", 15px, 700, 60px);
+    border-bottom: 1px solid $loot-box;
+    box-sizing: border-box;
+    color: $cod-gray;
+    text-transform: uppercase;
+
+    @include at-x-large-size {
+        @include font-size(12px);
+        box-sizing: content-box;
+        margin: 0 15px;
+        &:hover {
+            color: $guardsman-red;
+        }
+    }
+}
+
+.c-nav__main-link--more {
+    border-bottom: none;
+
+    @include at-x-large-size {
+        box-sizing: border-box;
+        &:hover {
+            border-bottom: none;
+        }
+    }
+}
+
+.c-nav__alt-list {
+    padding: 15px 0 0 0;
+
+    @include at-x-large-size {
+        border-bottom: 1px solid $loot-box;
+        border-left: 1px solid $loot-box;
+        border-right: 1px solid $loot-box;
+        padding: 10px 15px 10px 15px;
+    }
+}
+
+.c-nav__alt-list-item {}
+.c-nav__alt-link {
+    @include font("NOBEL", 12px, 700, 40px);
+    color: $cod-gray;
+    height: 40px;
+    text-transform: uppercase;
+
+    @include at-x-large-size {
+        &:hover {
+            color: $guardsman-red;
+        }
+    }
+}
+
+.c-nav__promo {
+    background-color: $loot-box;
+    padding: 20px;
+
+    @include at-x-large-size {
+        background-color: transparent;
+        bottom: 50px;
+        padding: 0 0 0 60px;
+    }
+}
+
+.c-nav__promo-wrapper {}
+.c-nav__promo-images {}
+.c-nav__promo-covers {
+    padding-right: 10px;
+    text-align: right;
+}
+
+.c-nav__promo-cover {
+    @include at-x-large-size {
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+}
+
+.c-nav__promo-content {
+    padding-left: 10px;
+    text-align: left;
+
+    @include at-x-large-size {
+        vertical-align: top;
+    }
+}
+
+.c-nav__promo-message {
+    @include font('ADOBE CASLON', 14px, 400, 18px);
+    color: $dove-gray;
+    margin-bottom: 10px;
+    white-space: pre-line;
+}
+
+.c-nav__promo-button {
+    @include button-single();
+    @include button-single-light();
+    padding: 4px 7px;
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
+
+.c-nav__social {
+    margin: 30px 20px;
+
+    @include at-x-large-size {
+        margin: 0;
+    }
+}
+
+.c-nav__social-list {}
+.c-nav__social-list-item {}
+.c-nav__social-list-item--follow {}
+
+.c-nav__social-link {}
+.c-nav__social-link--follow {
+    @include font("ADOBE CASLON", 14px, 400, 14px);
+    color: $dove-gray;
+    font-style: italic;
+    margin: 0 0 10px 0;
+
+    @include at-x-large-size {
+        @include line-height(60px);
+        margin: 0 15px;
+    }
+}
+
+.c-nav__social-brand {}
+.c-nav__share-list {
+    @include at-x-large-size {
+        border-bottom: 1px solid $loot-box;
+        border-left: 1px solid $loot-box;
+        border-right: 1px solid $loot-box;
+        padding: 10px 10px 20px 10px;
+        right: -1px;
+    }
+}
+
+.c-nav__share-list-item {}
+.c-nav__share-list-item--newsletter {}
+.c-nav__share-link {
+    @include button-share();
+}
+
+.c-nav__share-link--youtube {
+    @include button-share-light("youtube");
+    &:hover {
+        @include button-share-light-hover("youtube");
+    }
+}
+
+.c-nav__share-link--twitter {
+    @include button-share-light("twitter");
+    &:hover {
+        @include button-share-light-hover("twitter");
+    }
+}
+
+.c-nav__share-link--instagram {
+    @include button-share-light("instagram");
+    &:hover {
+        @include button-share-light-hover("instagram");
+    }
+}
+
+.c-nav__share-link--facebook {
+    @include button-share-light("facebook");
+    &:hover {
+        @include button-share-light-hover("facebook");
+    }
+}
+
+.c-nav__share-button {
+    @include button-single();
+    @include button-single-light();
+    margin-top: 30px;
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+
+    @include at-x-large-size {
+        margin-top: 20px;
+    }
+}
+
+.c-nav__gallery {
+    left: 148px;
+    padding-left: 30px;
+}
+
+.c-nav__gallery-title {
+    @include font('ITC CASLON', 15px, 400, 60px);
+}
+
+.c-nav__gallery-count {
+    font-size: 0;
+    padding: 0 30px;
+}
+
+.c-nav__gallery-slash {
+    @include font('ITC CASLON', 15px, 400, 60px);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.c-nav__gallery-current {
+    @include font('ITC CASLON', 18px, 400, 60px);
+}
+
+.c-nav__gallery-total {
+    @include font('ITC CASLON', 15px, 400, 60px);
+}
+
+.c-nav__gallery-icon {
+    border-left: 1px solid $loot-box;
+    box-sizing: border-box;
+
+    @include min-screen($XX_LARGE_SIZE + -1px) {
+        border-right: 1px solid $loot-box;
+    }
+
+    svg {
+        width: 18px;
+    }
+
+    &:hover {
+        svg {
+            fill: $guardsman-red;
+        }
+    }
+}
+
+.c-nav__list-icon {}
+.c-nav__grid-icon {}

@@ -1,26 +1,452 @@
-@import "@cnbritain/merlin-www-common:traveller";
 @import "@cnbritain/merlin-www-buttons:traveller";
-@import "@cnbritain/merlin-www-search-header:traveller";
+@import "@cnbritain/merlin-www-common:traveller";
+@import "@cnbritain/merlin-www-image:traveller";
 
 @import "../wireframe/wireframe";
 
-@import "_base";
-@import "_promo";
-@import "_masthead";
-@import "_dropdown";
-@import "_social";
-@import "_search";
-@import "_gallery";
+.c-masthead {
+    background-color: $WHITE;
+}
 
-.n-vanishing-nav {
-    .n-main__sticker-child {
-        transform: translate(0, 0%);
-        transition: transform 0.2s ease-in-out;
+.c-masthead__wrapper {}
+.c-masthead__logo {
+    height: 92px;
+    padding: 24px 0;
+    width: 260px;
+
+    svg {
+        fill: $SHERPA-BLUE;
+    }
+}
+
+.c-nav {
+    border-top: 1px solid $ISABEL;
+    box-sizing: border-box;
+}
+
+.c-nav__search-icon {
+    border-left: 1px solid $ISABEL;
+    box-sizing: border-box;
+
+    @include min-screen($XX_LARGE_SIZE + -1px) {
+        border-right: 1px solid $ISABEL;
     }
 
-    &.is-hidden {
-        .n-main__sticker-child {
-            transform: translate(0, -100%);
+    svg {
+        width: 20px;
+    }
+
+    &:hover {
+        svg {
+            fill: $SHERPA-BLUE;
         }
     }
+}
+
+.c-nav__toggle-icon {
+    border-left: 1px solid $ISABEL;
+    box-sizing: border-box;
+
+    @include min-screen($XX_LARGE_SIZE + -1px) {
+        border-right: 1px solid $ISABEL;
+    }
+
+    svg {
+        width: 20px;
+    }
+
+    &:hover {
+        svg {
+            fill: $SHERPA-BLUE;
+        }
+    }
+}
+
+.c-nav__open-icon {
+    @include max-screen($X_LARGE_SIZE + -1px) {
+        svg {
+            width: 24px;
+        }
+    }
+}
+
+.c-nav__close-icon {}
+
+.c-nav__wrapper {
+    box-shadow: 0px 2px 4px 0px rgba($BLACK, 0.04);
+
+    &:after {
+        background-color: $ISABEL;
+        content: "";
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        top: 60px;
+        transform: translateX(-50%);
+        width: 100vw;
+
+        @include at-x-large-size {
+            z-index: -1;
+        }
+    }
+}
+
+.c-nav__content {}
+.c-nav__logo {
+    background-color: $WHITE;
+    width: 100px;
+
+    svg {
+        fill: $SHERPA-BLUE;
+    }
+}
+
+.c-nav__search {
+    margin: 0 20px;
+
+    @include at-x-large-size {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 60px;
+        top: 61px;
+
+        &:before {
+            background-color: rgba($WHITE, 0.9);
+            content: "";
+            height: 100vh;
+            position: absolute;
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+    }
+}
+
+.c-nav__search-form {
+    background-color: $WHITE;
+    border-bottom: 1px solid $ISABEL;
+
+    @include at-x-large-size {
+        padding-bottom: 8px;
+
+        &:before {
+            background-color: $WHITE;
+            content: "";
+            height: 100%;
+            left: 50%;
+            position: absolute;
+            top: 0;
+            transform: translateX(-50%);
+            width: 100vw;
+            z-index: -1;
+        }
+    }
+}
+
+.c-nav__search-input {
+    @include font("PROXIMA NOVA CONDENSED", 16px, 400, 60px);
+    background-color: $WHITE;
+    color: $MUSTASAARI;
+
+    @include at-x-large-size {
+        @include font-size(46px);
+        @include line-height(46px);
+        text-align: center;
+        text-transform: initial;
+    }
+}
+
+.c-nav__search-button {
+    background-color: $WHITE;
+
+    svg {
+        fill: $MUSTASAARI;
+        width: 20px;
+    }
+}
+
+.c-nav__main {}
+.c-nav__main-list {
+    padding: 0 20px 20px 20px;
+
+    @include at-x-large-size {
+        padding: 0;
+    }
+}
+
+.c-nav__main-list-item {}
+.c-nav__main-list-item--more {}
+.c-nav__main-link {
+    @include font("PROXIMA NOVA CONDENSED", 16px, 700, 60px);
+    border-bottom: 1px solid $ISABEL;
+    box-sizing: border-box;
+    color: $MUSTASAARI;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    @include at-x-large-size {
+        @include font-size(14px);
+        @include font-weight(600);
+        box-sizing: content-box;
+        margin: 0 16px;
+        &:hover {
+            border-bottom: 1px solid $SHERPA-BLUE;
+            color: $SHERPA-BLUE;
+        }
+    }
+}
+
+.c-nav__main-link--more {
+    border-bottom: none;
+
+    @include at-x-large-size {
+        box-sizing: border-box;
+        &:hover {
+            border-bottom: none;
+        }
+    }
+}
+
+.c-nav__alt-list {
+    padding: 15px 0 0 0;
+
+    @include at-x-large-size {
+        border-bottom: 1px solid $ISABEL;
+        border-left: 1px solid $ISABEL;
+        border-right: 1px solid $ISABEL;
+        padding: 15px 32px 15px 32px;
+        margin-left: -16px;
+    }
+}
+
+.c-nav__alt-list-item {}
+.c-nav__alt-link {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 700, 40px);
+    color: $MUSTASAARI;
+    height: 40px;
+    text-transform: uppercase;
+
+    @include at-x-large-size {
+        @include font-size(14px);
+        @include font-weight(600);
+        letter-spacing: 1px;
+
+        &:hover {
+            color: $SHERPA-BLUE;
+
+            &:before {
+                background-color: $SHERPA-BLUE;
+                content: "";
+                height: 100%;
+                left: -17px;
+                position: absolute;
+                top: 0;
+                width: 1px;
+            }
+        }
+    }
+}
+
+.c-nav__promo {
+    background-color: $CAPE-HAZE;
+    border-bottom: 1px solid $ISABEL;
+    border-top: 1px solid $ISABEL;
+    padding: 20px;
+
+    @include at-x-large-size {
+        background-color: transparent;
+        border: none;
+        bottom: 50px;
+        padding: 0 0 0 60px;
+    }
+}
+
+.c-nav__promo-wrapper {}
+.c-nav__promo-images {}
+.c-nav__promo-covers {
+    padding-right: 10px;
+    text-align: right;
+}
+
+.c-nav__promo-cover {
+    @include at-x-large-size {
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+}
+
+.c-nav__promo-content {
+    padding-left: 10px;
+    text-align: left;
+
+    @include at-x-large-size {
+        vertical-align: top;
+    }
+}
+
+.c-nav__promo-message {
+    @include font("FREIGHT TEXT", 14px, 400, 18px);
+    color: $MUSTASAARI;
+    font-style: italic;
+    margin-bottom: 12px;
+    white-space: pre-line;
+}
+
+.c-nav__promo-button {
+    @include button-single-two();
+    @include button-single-two-light();
+    padding: 10px;
+
+    &:hover {
+        @include button-single-two-light-hover();
+    }
+}
+
+.c-nav__social {
+    margin: 30px 20px 40px 20px;
+
+    @include at-x-large-size {
+        margin: 0;
+    }
+}
+
+.c-nav__social-list {}
+.c-nav__social-list-item {}
+.c-nav__social-list-item--follow {}
+
+.c-nav__social-link {}
+.c-nav__social-link--follow {
+    @include font("FREIGHT TEXT", 14px, 400, 14px);
+    color: $MUSTASAARI;
+    font-style: italic;
+    margin: 0 0 24px 0;
+
+    @include at-x-large-size {
+        @include font("FREIGHT TEXT", 14px, 400, 60px);
+        margin: 0 16px;
+    }
+}
+
+.c-nav__social-brand {}
+
+.c-nav__share-list {
+    @include at-x-large-size {
+        border-bottom: 1px solid $ISABEL;
+        border-left: 1px solid $ISABEL;
+        border-right: 1px solid $ISABEL;
+        padding: 24px 32px 32px 32px;
+        right: -1px;
+    }
+}
+
+.c-nav__share-list-item {
+    margin: 0 6px;
+}
+
+.c-nav__share-list-item--newsletter {
+    margin: 0;
+}
+
+.c-nav__share-link {
+    @include button-share();
+}
+
+.c-nav__share-link--youtube {
+    @include button-share-light("youtube");
+    &:hover {
+        @include button-share-light-hover("youtube");
+    }
+}
+
+.c-nav__share-link--twitter {
+    @include button-share-light("twitter");
+    &:hover {
+        @include button-share-light-hover("twitter");
+    }
+}
+
+.c-nav__share-link--instagram {
+    @include button-share-light("instagram");
+    &:hover {
+        @include button-share-light-hover("instagram");
+    }
+}
+
+.c-nav__share-link--facebook {
+    @include button-share-light("facebook");
+    &:hover {
+        @include button-share-light-hover("facebook");
+    }
+}
+
+.c-nav__share-button {
+    @include button-single-two();
+    @include button-single-two-light();
+    margin-top: 24px;
+
+    &:hover {
+        @include button-single-two-light-hover();
+    }
+}
+
+.c-nav__gallery {
+    left: 130px;
+    padding-left: 32px;
+}
+
+.c-nav__gallery-title {
+    @include font("PROXIMA NOVA CONDENSED", 20px, 600, 60px);
+    color: $MUSTASAARI;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.c-nav__gallery-count {
+    font-size: 0;
+    padding: 0 24px;
+}
+
+.c-nav__gallery-slash {
+    @include font("PROXIMA NOVA CONDENSED", 14px, 400, 60px);
+    color: $MUSTASAARI;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.c-nav__gallery-current {
+    @include font("PROXIMA NOVA CONDENSED", 20px, 400, 60px);
+    color: $SHERPA-BLUE;
+}
+
+.c-nav__gallery-total {
+    @include font("PROXIMA NOVA CONDENSED", 14px, 400, 60px);
+    color: $MUSTASAARI;
+}
+
+.c-nav__gallery-icon {
+    border-left: 1px solid $ISABEL;
+    box-sizing: border-box;
+
+    @include min-screen($XX_LARGE_SIZE + -1px) {
+        border-right: 1px solid $ISABEL;
+    }
+
+    svg {
+        width: 20px;
+    }
+
+    &:hover {
+        svg {
+            fill: $SHERPA-BLUE;
+        }
+    }
+}
+
+.c-nav__list-icon {}
+.c-nav__grid-icon {}
+
+.c-nav__down-arrow {
+    border-top-color: rgba($RAVEN, 0.4);
 }

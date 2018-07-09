@@ -1,26 +1,339 @@
-@import "@cnbritain/merlin-www-common:glamour";
 @import "@cnbritain/merlin-www-buttons:glamour";
-@import "@cnbritain/merlin-www-search-header:glamour";
+@import "@cnbritain/merlin-www-common:glamour";
+@import "@cnbritain/merlin-www-image:glamour";
 
 @import "../wireframe/wireframe";
 
-@import "_base";
-// @import "_promo";
-@import "_masthead";
-@import "_dropdown";
-@import "_social";
-@import "_search";
-@import "_gallery";
+.c-masthead {
+    background-color: $azalea;
+}
 
-.n-vanishing-nav {
-    .n-main__sticker-child {
-        transform: translate(0, 0%);
-        transition: transform 0.2s ease-in-out;
+.c-masthead__wrapper {}
+.c-masthead__logo {
+    height: 115px;
+    padding: 35px 0 15px 0;
+    width: 280px;
+}
+
+.c-nav {
+    background-color: $azalea;
+}
+
+.c-nav__search-icon {
+    svg {
+        fill: $dune;
+        width: 20px;
     }
+}
 
-    &.is-hidden {
-        .n-main__sticker-child {
-            transform: translate(0, -100%);
+.c-nav__toggle-icon {
+    svg {
+        fill: $dune;
+        width: 20px;
+    }
+}
+
+.c-nav__open-icon {}
+.c-nav__close-icon {}
+
+.c-nav__wrapper {
+    background-color: $azalea;
+
+    &:before {
+        background-color: $azalea;
+    }
+}
+
+.c-nav__content {
+    background-color: $azalea;
+
+    @include max-screen($X_LARGE_SIZE - 1px) {
+        &:before {
+            background-color: $azalea;
         }
     }
 }
+
+.c-nav__logo {
+    background-color: $azalea;
+    width: 130px;
+}
+
+.c-nav__search {
+    @include at-x-large-size {
+        box-sizing: border-box;
+        padding: 60px;
+        top: 60px;
+
+        &:before {
+            background-color: $dune;
+            content: "";
+            height: 100vh;
+            position: absolute;
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+    }
+}
+
+.c-nav__search-form {
+    background-color: $dune;
+
+    @include at-x-large-size {
+        border-bottom: 1px solid $natural-gray;
+        box-sizing: content-box;
+        padding-bottom: 20px;
+
+        &:before {
+            background-color: $dune;
+            content: "";
+            height: 100%;
+            left: 50%;
+            position: absolute;
+            top: 0;
+            transform: translateX(-50%);
+            width: 100vw;
+            z-index: -1;
+        }
+    }
+}
+
+.c-nav__search-input {
+    @include font("GRAPHIK", 16px, 600, 60px);
+    background-color: $dune;
+    color: $white;
+    padding: 0 20px;
+
+    @include at-x-large-size {
+        @include font("GRAPHIK", 45px, 600, 45px);
+        padding: 0;
+        text-align: center;
+        text-transform: initial;
+    }
+}
+
+.c-nav__search-button {
+    background-color: $dune;
+
+    svg {
+        fill: $white;
+        width: 20px;
+    }
+}
+
+.c-nav__main {}
+.c-nav__main-list {
+    background-color: $azalea;
+    margin: 0 20px 20px 20px;
+
+    @include at-x-large-size {
+        margin: 0;
+    }
+}
+
+.c-nav__main-list-item {}
+
+.c-nav__main-list-item--more {}
+.c-nav__main-link {
+    @include font("GRAPHIK", 15px, 600, 60px);
+    border-bottom: 1px solid $dune;
+    box-sizing: border-box;
+    color: $dune;
+
+    @include at-x-large-size {
+        border-bottom: 2px solid $azalea;
+        margin: 0 20px;
+        &:hover {
+            border-bottom: 2px solid $dune;
+        }
+    }
+}
+
+.c-nav__main-link--more {
+    border-bottom: none;
+
+    @include at-x-large-size {
+        box-sizing: border-box;
+        &:hover {
+            border-bottom: none;
+        }
+    }
+}
+
+.c-nav__alt-list {
+    background-color: $azalea;
+    border-bottom: 1px solid $dune;
+    padding: 15px 0 15px 0;
+
+    @include at-x-large-size {
+        border-bottom: none;
+        padding: 10px 20px 10px 20px;
+    }
+}
+
+.c-nav__alt-list-item {}
+.c-nav__alt-link {
+    @include font("GRAPHIK", 15px, 600, 40px);
+    border-bottom: 1px solid $azalea;
+    box-sizing: border-box;
+    color: $dune;
+    height: 40px;
+
+    @include at-x-large-size {
+        &:hover {
+            &:before {
+                background-color: $dune;
+                content: "";
+                height: 100%;
+                left: -20px;
+                position: absolute;
+                top: 0;
+                width: 2px;
+            }
+        }
+    }
+}
+
+.c-nav__promo {
+    display: none;
+}
+
+.c-nav__promo-wrapper {}
+.c-nav__promo-images {}
+.c-nav__promo-covers {}
+.c-nav__promo-cover {}
+.c-nav__promo-content {}
+.c-nav__promo-message {}
+.c-nav__promo-button {}
+
+.c-nav__social {
+    margin: 30px 20px;
+
+    @include at-x-large-size {
+        margin: 0;
+    }
+}
+
+.c-nav__social-list {}
+.c-nav__social-list-item {}
+.c-nav__social-list-item--follow {}
+
+.c-nav__social-link {}
+.c-nav__social-link--follow {
+    @include font("GRAPHIK", 10px, 600, 10px);
+    color: $dune;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+
+    @include at-x-large-size {
+        @include font("GRAPHIK", 16px, 600, 60px);
+        margin: 0 20px;
+        text-transform: initial;
+    }
+}
+
+.c-nav__social-brand {}
+
+.c-nav__share-list {
+    @include at-x-large-size {
+        background-color: $azalea;
+        padding: 10px;
+    }
+}
+
+.c-nav__share-list-item {
+    margin: 0 5px;
+}
+
+.c-nav__share-list-item--newsletter {
+    margin: 0;
+}
+
+.c-nav__share-link {
+    @include button-share();
+}
+
+.c-nav__share-link--youtube {
+    @include button-share-light("youtube");
+    &:hover {
+        @include button-share-light-hover("youtube");
+    }
+}
+
+.c-nav__share-link--twitter {
+    @include button-share-light("twitter");
+    &:hover {
+        @include button-share-light-hover("twitter");
+    }
+}
+
+.c-nav__share-link--instagram {
+    @include button-share-light("instagram");
+    &:hover {
+        @include button-share-light-hover("instagram");
+    }
+}
+
+.c-nav__share-link--facebook {
+    @include button-share-light("facebook");
+    &:hover {
+        @include button-share-light-hover("facebook");
+    }
+}
+
+.c-nav__share-button {
+    @include button-group();
+    @include button-group-light();
+    margin-top: 30px;
+
+    &:hover {
+        @include button-group-light-hover();
+    }
+
+    @include at-x-large-size {
+        margin-top: 15px;
+    }
+}
+
+.c-nav__gallery {
+    background-color: $azalea;
+    left: 160px;
+    padding-left: 32px;
+}
+
+.c-nav__gallery-title {
+    @include font("GRAPHIK", 16px, 600, 60px);
+    color: $dune;
+}
+
+.c-nav__gallery-count {
+    font-size: 0;
+    padding: 0 10px;
+}
+
+.c-nav__gallery-slash {
+    @include font("GRAPHIK", 16px, 600, 60px);
+    color: $dune;
+}
+
+.c-nav__gallery-current {
+    @include font("GRAPHIK", 18px, 600, 60px);
+    color: $dune;
+}
+
+.c-nav__gallery-total {
+    @include font("GRAPHIK", 16px, 600, 60px);
+    color: $dune;
+}
+
+.c-nav__gallery-icon {
+    svg {
+        fill: $dune;
+        width: 20px;
+    }
+}
+
+.c-nav__list-icon {}
+.c-nav__grid-icon {}
