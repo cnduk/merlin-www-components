@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.9.0"></a>
+# [1.9.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-main-navigation@1.8.53...@cnbritain/merlin-www-main-navigation@1.9.0) (2018-07-09)
+
+
+### Bug Fixes
+
+* **merlin-www-main-navigation:** add masthead inline styles ([3a3b0ca](https://github.com/cnduk/merlin-www-components/commit/3a3b0ca))
+* **merlin-www-main-navigation:** add max width demo body copy default logic to flush logo to left] ([9e20a65](https://github.com/cnduk/merlin-www-components/commit/9e20a65))
+* **merlin-www-main-navigation:** remove console log ([c9845a7](https://github.com/cnduk/merlin-www-components/commit/c9845a7))
+* **merlin-www-main-navigation:** set logo position to absolute at large size to avoid jumping from h ([31dfaaf](https://github.com/cnduk/merlin-www-components/commit/31dfaaf))
+* **merlin-www-main-navigation:** update mustache variables ([3e68eac](https://github.com/cnduk/merlin-www-components/commit/3e68eac))
+* **merlin-www-main-navigation:** update some data values ([791d9e8](https://github.com/cnduk/merlin-www-components/commit/791d9e8))
+
+
+### Features
+
+* **data:** vg-all data file added ([ba5b648](https://github.com/cnduk/merlin-www-components/commit/ba5b648))
+* **demo:** show gallery if on gallery data file ([c527339](https://github.com/cnduk/merlin-www-components/commit/c527339))
+* **js:** add gallery nav functionality, requires eventemitter hooks ([4aef5e9](https://github.com/cnduk/merlin-www-components/commit/4aef5e9))
+* **merlin-www-main-navigation:** add default behaviour of vanishing gallery to wireframe ([dffa16f](https://github.com/cnduk/merlin-www-components/commit/dffa16f))
+* **merlin-www-main-navigation:** add is-gallery-active class to nav when showing gallery ([768d7cb](https://github.com/cnduk/merlin-www-components/commit/768d7cb))
+* **merlin-www-main-navigation:** add missing data files for gallery ([19cceb6](https://github.com/cnduk/merlin-www-components/commit/19cceb6))
+* **merlin-www-main-navigation:** add offer to promo for wired data file ([62645a7](https://github.com/cnduk/merlin-www-components/commit/62645a7))
+* **merlin-www-main-navigation:** adjust layout of gallery ([1a6db97](https://github.com/cnduk/merlin-www-components/commit/1a6db97))
+* **merlin-www-main-navigation:** create div for down arrow for --more and --follow ([b88583b](https://github.com/cnduk/merlin-www-components/commit/b88583b))
+* **merlin-www-main-navigation:** emit visibility event changes for show/hide ([da8d3ba](https://github.com/cnduk/merlin-www-components/commit/da8d3ba))
+* **merlin-www-main-navigation:** gallery data file added ([065add7](https://github.com/cnduk/merlin-www-components/commit/065add7))
+* **merlin-www-main-navigation:** logic, styles for gallery nav ([340ad56](https://github.com/cnduk/merlin-www-components/commit/340ad56))
+* **merlin-www-main-navigation:** minor fixes and optimization tweaks ([a5507ee](https://github.com/cnduk/merlin-www-components/commit/a5507ee))
+* **merlin-www-main-navigation:** refactor of wireframe started ([797a3bd](https://github.com/cnduk/merlin-www-components/commit/797a3bd))
+* **merlin-www-main-navigation:** remove old templates ([78d31f3](https://github.com/cnduk/merlin-www-components/commit/78d31f3))
+* **merlin-www-main-navigation:** remove top stories from data and styles ([2e64c66](https://github.com/cnduk/merlin-www-components/commit/2e64c66))
+* **merlin-www-main-navigation:** remove top stories from template ([19051a1](https://github.com/cnduk/merlin-www-components/commit/19051a1))
+* **merlin-www-main-navigation:** scope gallery nav to data.gallery_navigation ([f1f969f](https://github.com/cnduk/merlin-www-components/commit/f1f969f))
+* **merlin-www-main-navigation:** tatler data files added ([bb56d89](https://github.com/cnduk/merlin-www-components/commit/bb56d89))
+* **merlin-www-main-navigation:** tatler styles added ([af9dabd](https://github.com/cnduk/merlin-www-components/commit/af9dabd))
+* **merlin-www-main-navigation:** update nav to inherit eventemitter ([8da021f](https://github.com/cnduk/merlin-www-components/commit/8da021f))
+* **merlin-www-main-navigation:** update paused/unpause functions ([69e1c53](https://github.com/cnduk/merlin-www-components/commit/69e1c53))
+* **merlin-www-main-navigation:** wired styles started ([c50c9c7](https://github.com/cnduk/merlin-www-components/commit/c50c9c7))
+
+
+
+
 <a name="1.8.53"></a>
 ## [1.8.53](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-main-navigation@1.8.52...@cnbritain/merlin-www-main-navigation@1.8.53) (2018-07-03)
 

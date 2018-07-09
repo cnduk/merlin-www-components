@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.5.14...@cnbritain/merlin-www-js-pages@1.6.0) (2018-07-09)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** correct main navigation import ([44d6e2e](https://github.com/cnduk/merlin-www-components/commit/44d6e2e))
+
+
+### Features
+
+* **merlin-www-js-pages:** update article to use new Nav functionality ([5137cef](https://github.com/cnduk/merlin-www-components/commit/5137cef))
+
+
+
+
 <a name="1.5.14"></a>
 ## [1.5.14](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.5.13...@cnbritain/merlin-www-js-pages@1.5.14) (2018-07-03)
 
