@@ -24,8 +24,8 @@
 .c-gallery-strip__images:after {
     background-color: $pink-rose;
     bottom: -16px;
-    display: block;
     content: '';
+    display: block;
     height: 32px;
     left: 50%;
     position: absolute;
@@ -130,6 +130,5 @@
                 display: block;
             }
         }
-
     }
 }

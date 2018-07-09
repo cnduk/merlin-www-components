@@ -74,10 +74,6 @@
 .c-gallery-strip--tag {
     margin: 20px 0;
 
-    @include at-x-large-size {
-        margin: 40px 0;
-    }
-
     .c-gallery-strip__list {
         text-align: center;
     }
@@ -116,6 +112,8 @@
     }
 
     @include at-x-large-size {
+        margin: 40px 0;
+
         .c-gallery-strip__listitem:nth-child(n+4):nth-child(-n+8) {
             display: inline-block;
         }
