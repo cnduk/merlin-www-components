@@ -1,8 +1,0 @@
-<div class="srch-main">
-    <form method="GET" action="{{ data.form_url }}">
-        <input type="search" class="srch-textbox" placeholder="{{ data.input_placeholder }}" name="q" value="{{ data.input_value }}" autocomplete="off" />
-    </form>
-    {{# state.has_results_label }}
-        <div class="srch-results"><span>{{ data.results_total }}</span> {{ data.results_label }}</div>
-    {{/ state.has_results_label }}
-</div>
