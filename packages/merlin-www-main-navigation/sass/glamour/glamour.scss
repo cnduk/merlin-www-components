@@ -301,6 +301,14 @@
     background-color: $azalea;
     left: 160px;
     padding-left: 32px;
+
+    @include screen($XX_LARGE_SIZE, 1500px) {
+        left: calc(130px + (30px - (100vw - #{$XX_LARGE_SIZE})/2))
+    }
+
+    @include min-screen(1500px) {
+        left: 130px;
+    }
 }
 
 .c-nav__gallery-title {

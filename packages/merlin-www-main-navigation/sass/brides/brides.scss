@@ -455,6 +455,14 @@
 .c-nav__gallery {
     left: 168px;
     padding-left: 32px;
+
+    @include screen($XX_LARGE_SIZE, 1500px) {
+        left: calc(138px + (30px - (100vw - #{$XX_LARGE_SIZE})/2))
+    }
+
+    @include min-screen(1500px) {
+        left: 138px;
+    }
 }
 
 .c-nav__gallery-title {
