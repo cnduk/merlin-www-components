@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.10.1"></a>
+## [1.10.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-top-stories@1.10.0...@cnbritain/merlin-www-top-stories@1.10.1) (2018-07-03)
+
+
+### Bug Fixes
+
+* **merlin-www-top-stories:** remove specifying element in ad lazyload ([ddcbe12](https://github.com/cnduk/merlin-www-components/commit/ddcbe12))
+
+
+
+
+<a name="1.10.0"></a>
+# [1.10.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-top-stories@1.9.43...@cnbritain/merlin-www-top-stories@1.10.0) (2018-07-03)
+
+
+### Bug Fixes
+
+* **merlin-www-top-stories:** add ad rendering ([8aaa09f](https://github.com/cnduk/merlin-www-components/commit/8aaa09f))
+* **merlin-www-top-stories:** correct markup for native ads ([4571997](https://github.com/cnduk/merlin-www-components/commit/4571997))
+* **merlin-www-top-stories:** remove margin from hidden ad ([272452d](https://github.com/cnduk/merlin-www-components/commit/272452d))
+* **merlin-www-top-stories:** remove title from partial ([abcfcf4](https://github.com/cnduk/merlin-www-components/commit/abcfcf4))
+
+
+### Features
+
+* **merlin-www-top-stories:** add ad rendering in js ([3f56e22](https://github.com/cnduk/merlin-www-components/commit/3f56e22))
+* **merlin-www-top-stories:** add native ad registering ([e6ea1e7](https://github.com/cnduk/merlin-www-components/commit/e6ea1e7))
+* **merlin-www-top-stories:** added  new data files ([6c631dd](https://github.com/cnduk/merlin-www-components/commit/6c631dd))
+
+
+
+
+<a name="1.9.42"></a>
+## [1.9.42](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-top-stories@1.9.41...@cnbritain/merlin-www-top-stories@1.9.42) (2018-06-25)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-top-stories
+
 <a name="1.9.41"></a>
 ## [1.9.41](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-top-stories@1.9.40...@cnbritain/merlin-www-top-stories@1.9.41) (2018-06-11)
 

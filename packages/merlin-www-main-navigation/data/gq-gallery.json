@@ -1,0 +1,798 @@
+{
+    "data": {
+        "links": [{
+            "data": {
+                "title": "Fashion",
+                "url": "/topic/fashion"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Watches",
+                "url": "/topic/watches"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Culture",
+                "url": "/topic/culture"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Grooming",
+                "url": "/topic/grooming"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Lifestyle",
+                "url": "/topic/lifestyle"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Women",
+                "url": "/topic/girls"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "GQ Video",
+                "url": "/video"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Fitness",
+                "url": "/topic/fitness"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Politics",
+                "url": "/topic/politics"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Cars",
+                "url": "/topic/cars"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Sport",
+                "url": "/topic/sport"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Food & Drink",
+                "url": "/topic/food-drink"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Catwalk",
+                "url": "/shows"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "GQ Shops",
+                "url": "/topic/gq-shops"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "GQ Style",
+                "url": "/topic/gq-style-magazine"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Magazine",
+                "url": "/magazine"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Subscribe",
+                "url": "/subscribe"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": false,
+                "is_more": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }],
+        "logo": {
+            "data": {
+                "image": {
+                    "data": {
+                        "alt_text": null,
+                        "credit": null,
+                        "description": null,
+                        "look_number": null,
+                        "title": null,
+                        "width": null,
+                        "svg_content": "<svg id=\"nav-menu-logo\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 82.7 40\"><path d=\"M69.2 21.2l-12.2.4 4.8 6.9c-5.3 1-10.3-3.4-10.2-8.5.1-5.3 4.3-9.2 9.4-9.2 6.6 0 11.1 6 9.3 11.8l-1.1-1.4zm-28.5 1.1c1.2 9 9 17.6 20.1 17.6 4.8 0 8.2-2.1 8.8-2.4l1.3 1.7 11.8-.6-5-7s3.7-4.8 3.7-11.1C81.5 8.1 72.9 0 60.8 0 49.9 0 41.6 8.2 40.6 17.9l-.2-1H21.7v9.4h5.1c0 .2-2.6 2.8-6.5 2.8-4.3 0-9.2-3.4-9.3-8.8-.1-5.6 4.8-9.3 9.3-9.2 3.7.1 5 1.2 7.1 3.2h12.2C38.6 10.3 33 .2 20.2.2 8.4 0 0 9.7 0 19.8 0 31.5 9.1 40 20.6 40c12.3 0 19.3-10.2 20.1-17.7z\"/></svg>"
+                    },
+                    "state": {
+                        "is_image": false,
+                        "is_picture": false,
+                        "is_static": false,
+                        "is_svg": true,
+                        "is_linked": false,
+                        "is_landscape": false,
+                        "is_portrait": false,
+                        "is_square": false,
+                        "is_lazyload": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "SVG"
+                },
+                "link": {
+                    "data": {
+                        "title": "GQ",
+                        "url": "/"
+                    },
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "Link"
+                }
+            },
+            "state": {
+                "is_linked": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "LinkedImage"
+        },
+        "desktop_promo": null,
+        "mobile_promo": null,
+        "masthead": null,
+        "newsletter_link": {
+            "data": {
+                "title": "Newsletter Sign Up",
+                "url": "/newsletters"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "Link"
+        },
+        "social_brand": "GQ",
+        "social_links": [{
+            "data": {
+                "image": {
+                    "data": {
+                        "alt_text": null,
+                        "credit": null,
+                        "description": null,
+                        "look_number": null,
+                        "title": null,
+                        "width": null,
+                        "svg_content": "<svg id=\"share-twitter\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><title>share-twitter</title><path d=\"M14.4,4.7V5.1a9.26,9.26,0,0,1-9.3,9.3,8.45,8.45,0,0,1-5-1.5H0.9A6.56,6.56,0,0,0,5,11.5,3.44,3.44,0,0,1,1.9,9.2c0.2,0,.4.1,0.6,0.1a2.77,2.77,0,0,0,.9-0.1A3.13,3.13,0,0,1,.6,6.1h0a3.31,3.31,0,0,0,1.5.4A3.24,3.24,0,0,1,.7,3.7,4.71,4.71,0,0,1,1.1,2,9,9,0,0,0,7.9,5.4a1.08,1.08,0,0,1-.1-0.6,3.33,3.33,0,0,1,3.3-3.3,3.49,3.49,0,0,1,2.4,1,5.39,5.39,0,0,0,2.1-.8,3.19,3.19,0,0,1-1.4,1.8A4.07,4.07,0,0,0,16,3,5.23,5.23,0,0,1,14.4,4.7Z\"/></svg>"
+                    },
+                    "state": {
+                        "is_image": false,
+                        "is_picture": false,
+                        "is_static": false,
+                        "is_svg": true,
+                        "is_linked": false,
+                        "is_landscape": false,
+                        "is_portrait": false,
+                        "is_square": false,
+                        "is_lazyload": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "SVG"
+                },
+                "link": {
+                    "data": {
+                        "title": "Twitter",
+                        "url": "http://www.twitter.com/BritishGQ"
+                    },
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "style": {
+                        "cls": "c-nav__share-link c-nav__share-link--twitter",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "Link"
+                }
+            },
+            "state": {
+                "is_linked": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "LinkedImage"
+        }, {
+            "data": {
+                "image": {
+                    "data": {
+                        "alt_text": null,
+                        "credit": null,
+                        "description": null,
+                        "look_number": null,
+                        "title": null,
+                        "width": null,
+                        "svg_content": "<svg id=\"share-youtube\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><title>share-youtube</title><path d=\"M6.3,10.1V5.6l4.3,2.3Zm9.5-5.3a4.59,4.59,0,0,0-.6-1.6,3,3,0,0,0-1.6-.7C11.4,2.4,8,2.4,8,2.4H8s-3.4,0-5.6.2a2,2,0,0,0-1.6.7A2.64,2.64,0,0,0,.2,4.8,19.6,19.6,0,0,0,0,7.4V8.6a19.6,19.6,0,0,0,.2,2.6,4.59,4.59,0,0,0,.6,1.6,3.17,3.17,0,0,0,1.8.7c1.2,0.1,5.4.1,5.4,0.1s3.4,0,5.6-.2a2,2,0,0,0,1.6-.7,3.13,3.13,0,0,0,.6-1.6A17.21,17.21,0,0,0,16,8.6V7.4a19.6,19.6,0,0,0-.2-2.6\"/></svg>"
+                    },
+                    "state": {
+                        "is_image": false,
+                        "is_picture": false,
+                        "is_static": false,
+                        "is_svg": true,
+                        "is_linked": false,
+                        "is_landscape": false,
+                        "is_portrait": false,
+                        "is_square": false,
+                        "is_lazyload": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "SVG"
+                },
+                "link": {
+                    "data": {
+                        "title": "Youtube",
+                        "url": "https://www.youtube.com/user/gqrecommends"
+                    },
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "style": {
+                        "cls": "c-nav__share-link c-nav__share-link--youtube",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "Link"
+                }
+            },
+            "state": {
+                "is_linked": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "LinkedImage"
+        }, {
+            "data": {
+                "image": {
+                    "data": {
+                        "alt_text": null,
+                        "credit": null,
+                        "description": null,
+                        "look_number": null,
+                        "title": null,
+                        "width": null,
+                        "svg_content": "<svg id=\"share-instagram\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><title>share-instagram</title><path d=\"M8,1.44h3.23a4.43,4.43,0,0,1,1.49.28,2.48,2.48,0,0,1,.92.6,2.48,2.48,0,0,1,.6.92,4.43,4.43,0,0,1,.28,1.49v6.46a4.43,4.43,0,0,1-.28,1.49,2.65,2.65,0,0,1-1.52,1.52,4.43,4.43,0,0,1-1.49.28H4.77a4.43,4.43,0,0,1-1.49-.28,2.48,2.48,0,0,1-.92-0.6,2.48,2.48,0,0,1-.6-0.92,4.43,4.43,0,0,1-.28-1.49V4.73a4.43,4.43,0,0,1,.28-1.49,2.48,2.48,0,0,1,.6-0.92,2.48,2.48,0,0,1,.92-0.6,4.43,4.43,0,0,1,1.49-.28H8M8,0H4.7A5.87,5.87,0,0,0,2.76.42,4,4,0,0,0,.42,2.76,5.87,5.87,0,0,0,0,4.7v6.6a5.87,5.87,0,0,0,.37,1.94,4,4,0,0,0,2.34,2.34,5.87,5.87,0,0,0,2,.42h6.6a5.87,5.87,0,0,0,1.94-.37,4.09,4.09,0,0,0,2.34-2.34,5.87,5.87,0,0,0,.42-2V4.7a5.87,5.87,0,0,0-.37-1.94A4,4,0,0,0,13.24.42,5.87,5.87,0,0,0,11.3,0H8ZM8,3.89A4.11,4.11,0,1,0,12.11,8h0A4.11,4.11,0,0,0,8,3.89Zm0,6.77A2.67,2.67,0,1,1,10.67,8h0A2.67,2.67,0,0,1,8,10.67H8Zm4.27-7.9a1,1,0,1,0,1,1,1,1,0,0,0-1-1h0Z\"/></svg>"
+                    },
+                    "state": {
+                        "is_image": false,
+                        "is_picture": false,
+                        "is_static": false,
+                        "is_svg": true,
+                        "is_linked": false,
+                        "is_landscape": false,
+                        "is_portrait": false,
+                        "is_square": false,
+                        "is_lazyload": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "SVG"
+                },
+                "link": {
+                    "data": {
+                        "title": "Instagram",
+                        "url": "https://www.instagram.com/britishgq/"
+                    },
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "style": {
+                        "cls": "c-nav__share-link c-nav__share-link--instagram",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "Link"
+                }
+            },
+            "state": {
+                "is_linked": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "LinkedImage"
+        }, {
+            "data": {
+                "image": {
+                    "data": {
+                        "alt_text": null,
+                        "credit": null,
+                        "description": null,
+                        "look_number": null,
+                        "title": null,
+                        "width": null,
+                        "svg_content": "<svg id=\"share-facebook\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><title>share-facebook</title><path d=\"M5.9,3.1V5.3H4.3V8H5.9v8H9.2V8h2.2s0.2-1.3.3-2.7H9.2V3.4a0.75,0.75,0,0,1,.7-0.6h1.8V0H9.3C5.8,0,5.9,2.7,5.9,3.1h0Z\"/></svg>"
+                    },
+                    "state": {
+                        "is_image": false,
+                        "is_picture": false,
+                        "is_static": false,
+                        "is_svg": true,
+                        "is_linked": false,
+                        "is_landscape": false,
+                        "is_portrait": false,
+                        "is_square": false,
+                        "is_lazyload": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "SVG"
+                },
+                "link": {
+                    "data": {
+                        "title": "Facebook",
+                        "url": "https://www.facebook.com/BritishGQ/"
+                    },
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "style": {
+                        "cls": "c-nav__share-link c-nav__share-link--facebook",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "Link"
+                }
+            },
+            "state": {
+                "is_linked": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "LinkedImage"
+        }],
+        "search_form_url": "/search",
+        "search_placeholder": "Search",
+        "menu_open_icon": {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": null,
+                "svg_content": "<svg id=\"btn-menu\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\"><title>btn-menu</title><path d=\"M32,17H0V15H32v2Zm0,5H0v2H32V22ZM32,8H0v2H32V8Z\"/></svg>"
+            },
+            "state": {
+                "is_image": false,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": true,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": false,
+                "is_lazyload": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "SVG"
+        },
+        "menu_close_icon": {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": null,
+                "svg_content": "<svg id=\"btn-close\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\"><title>btn-close</title><path d=\"M16.58,18L9,10.41,1.42,18,0,16.58,7.59,9,0,1.42,1.42,0,9,7.59,16.58,0,18,1.42,10.41,9,18,16.58Z\"/></svg>"
+            },
+            "state": {
+                "is_image": false,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": true,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": false,
+                "is_lazyload": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "SVG"
+        },
+        "search_open_icon": {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": null,
+                "svg_content": "<svg id=\"btn-search\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\"><title>btn-search</title><path d=\"M12.64,11.14a7,7,0,1,0-1.5,1.5L16.49,18,18,16.5ZM7,12a5,5,0,1,1,5-5A5,5,0,0,1,7,12Z\"/></svg>"
+            },
+            "state": {
+                "is_image": false,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": true,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": false,
+                "is_lazyload": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "SVG"
+        },
+        "search_close_icon": {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": null,
+                "svg_content": "<svg id=\"btn-close\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\"><title>btn-close</title><path d=\"M16.58,18L9,10.41,1.42,18,0,16.58,7.59,9,0,1.42,1.42,0,9,7.59,16.58,0,18,1.42,10.41,9,18,16.58Z\"/></svg>"
+            },
+            "state": {
+                "is_image": false,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": true,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": false,
+                "is_lazyload": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "SVG"
+        },
+        "gallery_list_icon": {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": null,
+                "svg_content": "<svg id=\"gallery-list\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\"><title>gallery-list</title><path d=\"M2,2H0V0H2V2ZM2,8H0v2H2V8Zm0,8H0v2H2V16ZM18,0H6V2H18V0Zm0,8H6v2H18V8Zm0,8H6v2H18V16Z\"/></svg>"
+            },
+            "state": {
+                "is_image": false,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": true,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": false,
+                "is_lazyload": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "SVG"
+        },
+        "gallery_grid_icon": {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": null,
+                "svg_content": "<svg id=\"gallery-grid\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\"><title>gallery-grid</title><path d=\"M2.5,2.5H0V0H2.5V2.5ZM10.25,0H7.75V2.5h2.5V0ZM18,0H15.5V2.5H18V0ZM2.5,7.75H0v2.5H2.5V7.75Zm7.75,0H7.75v2.5h2.5V7.75Zm7.75,0H15.5v2.5H18V7.75ZM2.5,15.5H0V18H2.5V15.5Zm7.75,0H7.75V18h2.5V15.5Zm7.75,0H15.5V18H18V15.5Z\"/></svg>"
+            },
+            "state": {
+                "is_image": false,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": true,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": false,
+                "is_lazyload": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "SVG"
+        }
+    },
+    "state": {
+        "has_promo": true,
+        "has_masthead": true,
+        "has_newsletter": true,
+        "has_social": true,
+        "has_search": true,
+        "has_top_stories": true,
+        "has_gallery_nav": true
+    },
+    "style": {
+        "cls": "",
+        "inline": ""
+    },
+    "translation": {},
+    "type": "MainNavigation"
+}

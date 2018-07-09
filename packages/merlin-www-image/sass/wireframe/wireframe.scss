@@ -1,8 +1,13 @@
-.img-lazyload,
-.img-lazyload--loading {
+.c-image {
+    display: block;
+    max-width: 100%;
+}
+
+.c-image--lazyload,
+.c-image--lazyload-loading {
     opacity: 0;
 }
-.img-lazyload--loaded {
+.c-image--lazyload-loaded {
     opacity: 1;
     transition: opacity 300ms;
 }

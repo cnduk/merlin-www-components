@@ -1,45 +1,48 @@
 {
     "name": "@cnbritain/merlin-www-main-navigation",
-    "demo": {
-        "data": {
-            "main-navigation-promotion-desktop": "demo/data/main-navigation-promotion-desktop.json",
-            "main-navigation": "demo/data/main-navigation.json",
-            "main-navigation-masthead": "demo/data/main-navigation-masthead.json",
-            "main-navigation-promotion-mobile": "demo/data/main-navigation-promotion-mobile.json",
-            "main-navigation-gallery": "demo/data/main-navigation-gallery.json"
-        }
-    },
     "js": {
         "demo": "demo/demo.js"
     },
     "themes": {
-        "brides": "sass/brides/brides.scss",
-        "gq": "sass/gq/gq.scss",
-        "tatler": "sass/tatler/tatler.scss",
         "wireframe": "sass/wireframe/wireframe.scss",
-        "bystander": "sass/bystander/bystander.scss",
-        "missvogue": "sass/missvogue/missvogue.scss",
-        "vogue": "sass/vogue/vogue.scss"
+        "brides": "sass/brides/brides.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "gq": "sass/gq/gq.scss",
+        "houseandgarden": "sass/houseandgarden/houseandgarden.scss",
+        "tatler": "sass/tatler/tatler.scss",
+        "traveller": "sass/traveller/traveller.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "wired": "sass/wired/wired.scss"
     },
     "partials": {
-        "main-navigation-promotion-desktop": "templates/main-navigation-promotion-desktop.html",
-        "main-navigation": "templates/main-navigation.html",
-        "main-navigation-promotion-mobile": "templates/main-navigation-promotion-mobile.html",
-        "gallery-navigation": "templates/gallery-navigation.html"
+        "main-navigation": "templates/main-navigation.html"
     },
     "dependencies": [
-        "@cnbritain/merlin-www-common",
         "@cnbritain/merlin-www-buttons",
-        "@cnbritain/merlin-www-image",
-        "@cnbritain/merlin-www-search-header"
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-image"
     ],
     "currentTheme": null,
     "main": "main-navigation",
     "data": {
-        "main-navigation-promotion-desktop": "demo/data/main-navigation-promotion-desktop.json",
-        "main-navigation": "demo/data/main-navigation.json",
-        "main-navigation-masthead": "demo/data/main-navigation-masthead.json",
-        "main-navigation-promotion-mobile": "demo/data/main-navigation-promotion-mobile.json",
-        "main-navigation-gallery": "demo/data/main-navigation-gallery.json"
+        "all": "data/all.json",
+        "gallery": "data/gallery.json",
+        "br-all": "data/br-all.json",
+        "br-gallery": "data/br-gallery.json",
+        "gl-all": "data/gl-all.json",
+        "gl-gallery": "data/gl-gallery.json",
+        "gq-all": "data/gq-all.json",
+        "gq-gallery": "data/gq-gallery.json",
+        "hg-all": "data/hg-all.json",
+        "hg-gallery": "data/hg-gallery.json",
+        "ta-all": "data/ta-all.json",
+        "ta-gallery": "data/ta-gallery.json",
+        "tr-all": "data/tr-all.json",
+        "tr-gallery": "data/tr-gallery.json",
+        "vg-all": "data/vg-all.json",
+        "vg-gallery": "data/vg-gallery.json",
+        "wi-all": "data/wi-all.json",
+        "wi-gallery": "data/wi-gallery.json",
+        "masthead_takeover": "data/masthead_takeover.json"
     }
 }

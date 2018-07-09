@@ -7,25 +7,21 @@
 	font-size: 0;
 	margin: $MOBILE_SLICE_MARGIN 0;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	@include at-medium-size {
 		margin: $TABLET_SLICE_MARGIN 0;
 	}
+}
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		margin: $DESKTOP_SLICE_MARGIN 0;
-	}
+.c-pagination__item + .c-pagination__item {
+	margin-left: 12px;
 }
-.c-pagination__item {
-	& + .c-pagination__item {
-		margin-left: 12px;
-	}
-}
-.c-pagination__item--active {}
+
 .c-pagination__btn {
     @include button-single();
     @include button-single-light();
 
-    &:hover, &:focus {
+    &:hover,
+	&:focus {
         @include button-single-light-hover();
     }
 }

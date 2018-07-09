@@ -1,6 +1,6 @@
 @import '@cnbritain/merlin-www-common:missvogue';
 @import '@cnbritain/merlin-www-buttons:missvogue';
-@import '@cnbritain/merlin-www-card-list:missvogue';
+@import '@cnbritain/merlin-www-card:missvogue';
 
 @import '../wireframe/wireframe';
 @import '../vogue/vogue_base';
@@ -9,8 +9,8 @@
     color: $cerulean;
 }
 
-.c-magazine__content__title {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+.c-magazine__contents-title {
+    @include at-medium-size {
         color: $cerulean
     }
 }

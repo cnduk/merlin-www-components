@@ -1,7 +1,6 @@
 @import '@cnbritain/merlin-www-common:brides';
-@import '@cnbritain/merlin-www-card-list:brides';
-@import '@cnbritain/merlin-www-card:brides';
 @import '@cnbritain/merlin-www-buttons:brides';
+@import '@cnbritain/merlin-www-card:brides';
 
 @import '../wireframe/wireframe';
 
@@ -9,34 +8,33 @@
     background-color: $diamond;
 }
 
-.c-magazine__wrapper {
+.c-magazine-wrapper {
     box-sizing: border-box;
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
     padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
     position: relative;
 
-    @include tablet-size {
+    @include at-medium-size {
         padding: $TABLET_SLICE_MARGIN $TABLET_SIDE_GUTTER;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
+}
+
+.c-magazine__title {
+    display: none;
 }
 
 .c-magazine__covers {
     border-bottom: 1px solid $ballet-grey;
     margin: 0 0 28px 0;
 
-    @include tablet-size {
+    @include at-medium-size {
         border-top: 1px solid $ballet-grey;
-    }
-}
-
-.c-magazine__covers__wrapper {
-    @include tablet-size {
         padding: 48px;
     }
 }
@@ -57,25 +55,16 @@
     }
 }
 
-.c-magazine__title {
-    display: none;
-}
-
-.c-magazine__content {
-    @include tablet-size {
+.c-magazine__contents {
+    @include at-medium-size {
         border-bottom: 1px solid $ballet-grey;
         border-left: 1px solid $ballet-grey;
         border-top: 1px solid $ballet-grey;
-    }
-}
-
-.c-magazine__content__wrapper {
-    @include tablet-size {
         padding: 48px;
     }
 }
 
-.c-magazine__content__title {
+.c-magazine__contents-title {
     @include font('SOLEIL', 12px, 400, 16px, 180);
     color: $pink-rose;
     display: block;
@@ -84,7 +73,7 @@
     text-transform: uppercase;
 }
 
-.c-magazine__content__date {
+.c-magazine__contents-date {
     @include font('FREIGHT DISPLAY PRO', 34px, 400, 36px, 10);
     color: $stroller-grey;
     font-style: italic;
@@ -92,23 +81,37 @@
     text-align: center;
     text-transform: capitalize;
 
-    @include tablet-size {
+    @include at-medium-size {
         @include font-size(40px);
         @include line-height(40px);
         margin-bottom: 42px;
     }
 }
 
-.c-magazine__btn-wrapper {
-    margin-top: 32px;
-    text-align: center;
+.c-magazine__cards-list {
+    margin: -12px -12px;
 }
 
-.c-magazine__btn {
-    @include button-single-two();
-    @include button-single-two-light();
+.c-magazine__cards-listitem {
+    display: inline-block;
+    padding: 0 12px;
+    margin: 12px 0;
+    width: 100%;
+}
 
+.c-magazine__contents-btn {
+    @include button-single-two;
+    @include button-single-two-light;
+    display: table;
+    margin-top: 32px;
+
+    @include at-medium-size {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &:focus,
     &:hover {
-        @include button-single-two-light-hover();
+        @include button-single-two-light-hover;
     }
 }

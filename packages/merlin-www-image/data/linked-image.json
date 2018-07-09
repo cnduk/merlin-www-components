@@ -1,0 +1,55 @@
+{
+    "data": {
+        "image": {
+            "data": {
+                "alt_text": "Alt text",
+                "credit": "Image credit",
+                "description": "Image description",
+                "filename": "example.jpg",
+                "image_url": "https://vg-images.condecdn.net/image/XgAwQz7EyV5/crop/405/landscape/f/example.jpg",
+                "look_number": 1,
+                "orientation": "landscape",
+                "srcset": "https://vg-images.condecdn.net/image/XgAwQz7EyV5/crop/405/landscape/f/example.jpg 405w, https://vg-images.condecdn.net/image/XgAwQz7EyV5/crop/810/landscape/f/example.jpg 810w",
+                "title": "Image title",
+                "uid": "XgAwQz7EyV5",
+                "width": 405
+            },
+            "state": {
+                "is_image": true,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": false,
+                "is_linked": false,
+                "is_lazyload": true
+            },
+            "style": {
+                "cls": "",
+                "padding_top": "66.667%"
+            },
+            "type": "Image"
+        },
+        "link": {
+            "data": {
+                "title": "Vogue",
+                "url": "http://www.vogue.co.uk"
+            },
+            "state": {},
+            "style": {
+                "cls": ""
+            },
+            "type": "Link"
+        }
+    },
+    "state": {
+        "is_image": false,
+        "is_picture": false,
+        "is_static": false,
+        "is_svg": false,
+        "is_linked": true,
+        "is_lazyload": true
+    },
+    "style": {
+        "cls": ""
+    },
+    "type": "LinkedImage"
+}

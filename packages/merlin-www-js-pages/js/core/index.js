@@ -6,8 +6,6 @@ import {
     addClass,
     addEvent,
     assign,
-    getParent,
-    removeClass,
     removeEvent
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import {
@@ -32,13 +30,8 @@ import {
     raptor
 } from '@cnbritain/merlin-www-goofs';
 import InternationalRedirect from '@cnbritain/merlin-www-international-redirect';
-
-import {
-    CLS_STATE_IS_HIDDEN
-} from '../constants';
 import {
     displayHiringMessage,
-    isAdNative,
     setGlobalNamespace
 } from '../utils';
 import initLinkTracking from './analytics';
@@ -58,13 +51,21 @@ export default function init(config) {
         _config = assign({}, DEFAULT_INIT_CONFIG, config);
     }
 
+    // Global namespace stuffs
+    // Don't just use the abbreviation in case something else in the page
+    // overwrites it
+    setGlobalNamespace({
+        'AdDebugger': AdDebugger,
+        'AdManager': AdManager,
+        'GATracker': GATracker,
+        'MainNavigation': MainNavigation,
+        'Store': store
+    });
+
     setupHtmlClasses();
 
     // Polyfill promises for basically IE
     es6Promise.polyfill();
-
-    // Small natives can be on every single page (top stories)
-    AdManager.on('register', onAdRegister);
 
     AdUtils.setAdUrls({
         OPEN_X_URL: _config['OPEN_X_URL'],
@@ -78,44 +79,19 @@ export default function init(config) {
     TopStories.init({
         scrollOffset: 30
     });
+    var ts = TopStories.get();
+    if(ts.length > 1){
+        ts[1].showNavigation();
+        ts[1].disableScroll();
+    }
     CardList.init();
     initInternationalRedirect();
     displayHiringMessage();
     initLinkTracking();
 
-    // Global namespace stuffs
-    // Don't just use the abbreviation in case something else in the page
-    // overwrites it
-    setGlobalNamespace({
-        'AdDebugger': AdDebugger,
-        'AdManager': AdManager,
-        'GATracker': GATracker,
-        'MainNavigation': MainNavigation,
-        'Store': store
-    });
-
     // Goofs
     setupFartscroll();
     raptor();
-}
-
-export function onAdRegister(e) {
-    if (isAdNative(e.ad, 'promotion-small')) {
-        e.ad.once('render', onNativeAdRender);
-        e.ad.once('stop', onNativeAdStop);
-    }
-}
-
-export function onNativeAdRender(e) {
-    e.target.off('stop', onNativeAdStop);
-
-    // Remove is-hidden from list item
-    var listItem = getParent(e.target.el, '.c-card-list__item--ad');
-    removeClass(listItem, CLS_STATE_IS_HIDDEN);
-}
-
-export function onNativeAdStop(e) {
-    e.target.off('render', onNativeAdRender);
 }
 
 export function initInternationalRedirect() {

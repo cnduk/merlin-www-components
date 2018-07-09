@@ -3,6 +3,55 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.11.7"></a>
+## [1.11.7](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.6...@cnbritain/merlin-www-tag-header@1.11.7) (2018-07-03)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-tag-header
+
+<a name="1.11.5"></a>
+## [1.11.5](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.4...@cnbritain/merlin-www-tag-header@1.11.5) (2018-06-26)
+
+
+### Bug Fixes
+
+* **merlin-www-tag-header:** i missed margin on wired sponsor ([15e8d4a](https://github.com/cnduk/merlin-www-components/commit/15e8d4a))
+
+
+
+
+<a name="1.11.4"></a>
+## [1.11.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.3...@cnbritain/merlin-www-tag-header@1.11.4) (2018-06-26)
+
+
+### Bug Fixes
+
+* **merlin-www-tag-header:** amend wired sponsor logo ([82ccfa3](https://github.com/cnduk/merlin-www-components/commit/82ccfa3))
+
+
+
+
+<a name="1.11.3"></a>
+## [1.11.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.2...@cnbritain/merlin-www-tag-header@1.11.3) (2018-06-26)
+
+
+### Bug Fixes
+
+* **merlin-www-tag-header:** correct styles sponsor in all brands ([0a1f534](https://github.com/cnduk/merlin-www-components/commit/0a1f534))
+
+
+
+
+<a name="1.11.2"></a>
+## [1.11.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.1...@cnbritain/merlin-www-tag-header@1.11.2) (2018-06-25)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-tag-header
+
 <a name="1.11.1"></a>
 ## [1.11.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.0...@cnbritain/merlin-www-tag-header@1.11.1) (2018-06-22)
 

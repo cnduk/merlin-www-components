@@ -141,6 +141,32 @@
     }
 }
 
+.tg-header__sponsor {
+    @include font('BRANDON GROTESQUE');
+    border-top: 1px solid #ccc;
+    max-width: 200px;
+    padding: 10px 0 0 0;
+}
+.tg-header__sponsor-prefix {
+    @include font-size(10px);
+    color: #262626;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+.tg-header__sponsor-image {}
+.tg-header__sponsor-name {
+    color: inherit;
+    font-weight: bold;
+}
+
+@include tablet-size {
+    .tg-header__sponsor {
+        border-top: none;
+        margin: 30px auto;
+        max-width: none;
+    }
+}
+
 .tg-header__topic-strip {
     margin: 20px auto;
 

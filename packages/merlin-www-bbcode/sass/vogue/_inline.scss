@@ -53,6 +53,10 @@
     padding-top: 0.28em;
     text-align: left;
 
+    .is-windows & {
+        padding-top: .18em;
+    }
+
     @include text-size-large {
         font-size: 5.45em;
         margin-right: 0.14em;
@@ -62,6 +66,10 @@
         .gt-ie8 &,
         .is-ie10 & {
             margin-top: -0.05em;
+        }
+
+        .is-windows & {
+            padding-top: .15em;
         }
     }
 }

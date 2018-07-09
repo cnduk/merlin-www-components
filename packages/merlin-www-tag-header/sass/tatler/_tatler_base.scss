@@ -120,9 +120,14 @@
     text-shadow: rgba(55, 51, 48, 0.8) 0px 0 27px;
 }
 
-// TODO
-.tg-header__sponsor {}
-.tg-header__sponsor-prefix {}
+.tg-header__sponsor {
+    @include font('COMMUTER SANS', 14px);
+    margin: 20px auto;
+}
+.tg-header__sponsor-prefix {
+    @include font-size(12px);
+    text-transform: uppercase;
+}
 .tg-header__sponsor-image {}
 .tg-header__sponsor-name {}
 

@@ -4,21 +4,26 @@
         "demo": "demo/demo.js"
     },
     "themes": {
-        "tatler": "sass/tatler/tatler.scss",
         "wireframe": "sass/wireframe/wireframe.scss",
-        "glamour": "sass/glamour/glamour.scss",
+        "brides": "sass/brides/brides.scss",
         "bystander": "sass/bystander/bystander.scss",
-        "wired": "sass/wired/wired.scss",
-        "vogue": "sass/vogue/vogue.scss"
+        "glamour": "sass/glamour/glamour.scss",
+        "gq": "sass/gq/gq.scss",
+        "house & garden": "sass/houseandgarden/houseandgarden.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
+        "tatler": "sass/tatler/tatler.scss",
+        "traveller": "sass/traveller/traveller.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "wired": "sass/wired/wired.scss"
     },
     "partials": {
-        "image-svg": "templates/partials/image-svg.html",
-        "image-image": "templates/partials/image-image.html",
         "image": "templates/image.html",
-        "image-picture": "templates/partials/image-picture.html",
-        "image-linked": "templates/partials/image-linked.html",
         "image-base": "templates/partials/image-base.html",
-        "image-static": "templates/partials/image-static.html"
+        "image-image": "templates/partials/image-image.html",
+        "image-linked": "templates/partials/image-linked.html",
+        "image-picture": "templates/partials/image-picture.html",
+        "image-static": "templates/partials/image-static.html",
+        "image-svg": "templates/partials/image-svg.html"
     },
     "dependencies": [
         "@cnbritain/merlin-www-assets"
@@ -26,14 +31,10 @@
     "currentTheme": null,
     "main": "image",
     "data": {
-        "picture": "demo/data/picture.json",
-        "static-image-lazyload": "demo/data/image-static-lazyload.json",
-        "picture-lazyload": "demo/data/picture-lazyload.json",
-        "svg": "demo/data/svg.json",
-        "image": "demo/data/image.json",
-        "static-image": "demo/data/image-static.json",
-        "image-lazyload": "demo/data/image-lazyload.json",
-        "linked-image": "demo/data/linked-image.json",
-        "linked-image-lazyload": "demo/data/linked-image-lazyload.json"
+        "image": "data/image.json",
+        "linked-image": "data/linked-image.json",
+        "picture": "data/picture.json",
+        "static image": "data/static-image.json",
+        "svg": "data/svg.json"
     }
 }

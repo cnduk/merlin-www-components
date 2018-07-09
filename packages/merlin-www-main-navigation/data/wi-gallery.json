@@ -1,0 +1,744 @@
+{
+    "data": {
+        "links": [{
+            "data": {
+                "title": "Technology",
+                "url": "/topic/technology"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Science",
+                "url": "/topic/science"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Culture",
+                "url": "/topic/culture"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Gear",
+                "url": "/topic/gear"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Business",
+                "url": "/topic/business"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Politics",
+                "url": "/topic/politics"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Security",
+                "url": "/topic/security"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Transport",
+                "url": "/topic/transport"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Events",
+                "url": "/event/wired-events"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Consulting",
+                "url": "/consulting/home"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Video",
+                "url": "/video"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Podcasts",
+                "url": "/podcasts"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Magazine",
+                "url": "/magazine"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": true,
+                "is_more": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }, {
+            "data": {
+                "title": "Subscribe",
+                "url": "/subscribe"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false,
+                "is_desktop": true,
+                "is_mobile": false,
+                "is_more": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "NavLink"
+        }],
+        "logo": {
+            "data": {
+                "image": {
+                    "data": {
+                        "alt_text": null,
+                        "credit": null,
+                        "description": null,
+                        "look_number": null,
+                        "title": null,
+                        "width": null,
+                        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 365 73\"><title>Untitled-1</title><polygon points=\"126.9 53.3 126.9 61.7 92.1 61.7 92.1 53.3 104.6 53.3 104.6 19.7 92.1 19.7 92.1 11.3 126.9 11.3 126.9 19.7 114.4 19.7 114.4 53.3 126.9 53.3\" fill=\"#030304\"/><path d=\"M67.8,11.3H58.2L51.3,51.2H51.2l-8-37c-0.5-2.5-1.3-3.1-3.7-3.1H34.2c-2.3,0-3.2.6-3.7,3.1l-8,37H22.3L15.5,11.3H5.2l9.9,47.9c0.4,2.1,1.2,2.6,3.5,2.6h6.8c2.3,0,3.1-.5,3.5-2.7l7.5-34.7h0.2l7.5,34.7c0.5,2.2,1.2,2.7,3.5,2.7h6.7c2.4,0,3.1-.5,3.5-2.6ZM73,73H0V0H73V73Z\" fill=\"#030304\"/><path d=\"M193.4,48.8a105.8,105.8,0,0,0,.9,12.9h10c-0.3-2.7-.6-7.2-0.8-13.6s-2.6-8.6-7.8-9.6V38.3c5.8-.9,8.3-3.7,8.3-12.6,0-7.4-1.2-10.1-3.2-12.1s-4.1-2.2-8-2.2H162.1V61.7h10.4V42.1h14.4c3,0,4.2.2,5,1s1.4,1.7,1.5,5.7M172.5,33.9v-14H189c2.3,0,3,.2,3.4.6s1.4,1.8,1.4,6.2-0.7,5.8-1.5,6.5-1.1.7-3.4,0.7H172.5ZM219,73H146V0h73V73Z\" fill=\"#030304\"/><path d=\"M308.1,11.3V61.7h24.8c7.1,0,11-1,14.1-3.7s5.3-9,5.3-21.4-1.7-18.3-5.3-21.4-6.9-3.7-14.1-3.7H308.1ZM342,36.5c0,10.8-.9,13.6-2.8,15.1s-3.3,1.5-7,1.5H318.5V19.9h13.7c3.8,0,5.4.2,7,1.5s2.8,4.3,2.8,15.2M365,73H292V0h73V73Z\" fill=\"#030304\"/><polygon points=\"232.4 19.7 232.4 11.3 275.3 11.3 275.3 27.5 266.3 27.5 266.3 19.7 248.9 19.7 248.9 31.7 262.7 31.7 262.7 39.8 248.9 39.8 248.9 53.3 266.7 53.3 266.7 44.5 275.8 44.5 275.8 61.7 232.4 61.7 232.4 53.3 239.2 53.3 239.2 19.7 232.4 19.7\" fill=\"#030304\"/></svg>"
+                    },
+                    "state": {
+                        "is_image": false,
+                        "is_picture": false,
+                        "is_static": false,
+                        "is_svg": true,
+                        "is_linked": false,
+                        "is_landscape": false,
+                        "is_portrait": false,
+                        "is_square": false,
+                        "is_lazyload": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "SVG"
+                },
+                "link": {
+                    "data": {
+                        "title": "WIRED",
+                        "url": "/"
+                    },
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "Link"
+                }
+            },
+            "state": {
+                "is_linked": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "LinkedImage"
+        },
+        "desktop_promo": null,
+        "mobile_promo": null,
+        "masthead": null,
+        "newsletter_link": {
+            "data": {
+                "title": "Newsletter Sign Up",
+                "url": "/newsletters"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "Link"
+        },
+        "social_brand": "WIRED",
+        "social_links": [{
+            "data": {
+                "image": {
+                    "data": {
+                        "alt_text": null,
+                        "credit": null,
+                        "description": null,
+                        "look_number": null,
+                        "title": null,
+                        "width": null,
+                        "svg_content": "<svg viewBox=\"0 0 20 20\"><path d=\"M20 3.8a8.2 8.2 0 0 1-2.36.65 4.12 4.12 0 0 0 1.8-2.27 8.22 8.22 0 0 1-2.61 1 4.11 4.11 0 0 0-7 3.74 11.65 11.65 0 0 1-8.44-4.3A4.11 4.11 0 0 0 2.66 8.1 4.09 4.09 0 0 1 .8 7.59v.05a4.11 4.11 0 0 0 3.29 4 4.11 4.11 0 0 1-1.85.07 4.11 4.11 0 0 0 3.83 2.85A8.23 8.23 0 0 1 1 16.34a8.35 8.35 0 0 1-1-.06 11.61 11.61 0 0 0 6.29 1.84A11.59 11.59 0 0 0 18 6.45v-.53a8.34 8.34 0 0 0 2-2.12z\"/></svg>"
+                    },
+                    "state": {
+                        "is_image": false,
+                        "is_picture": false,
+                        "is_static": false,
+                        "is_svg": true,
+                        "is_linked": false,
+                        "is_landscape": false,
+                        "is_portrait": false,
+                        "is_square": false,
+                        "is_lazyload": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "SVG"
+                },
+                "link": {
+                    "data": {
+                        "title": "Twitter",
+                        "url": "http://www.twitter.com/WiredUK"
+                    },
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "style": {
+                        "cls": "c-nav__share-link c-nav__share-link--twitter",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "Link"
+                }
+            },
+            "state": {
+                "is_linked": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "LinkedImage"
+        }, {
+            "data": {
+                "image": {
+                    "data": {
+                        "alt_text": null,
+                        "credit": null,
+                        "description": null,
+                        "look_number": null,
+                        "title": null,
+                        "width": null,
+                        "svg_content": "<svg viewBox=\"0 0 20 20\"><path d=\"M17.73 5.27a.89.89 0 0 1-.9.9h-2.26a.89.89 0 0 1-.9-.9V3.13a.87.87 0 0 1 .26-.63.85.85 0 0 1 .64-.27h2.27a.85.85 0 0 1 .64.27.87.87 0 0 1 .26.63zm0 11.63a.76.76 0 0 1-.23.57.77.77 0 0 1-.56.23H3a.78.78 0 0 1-.79-.8V8.46h1.85a5.58 5.58 0 0 0-.26 1.7 5.72 5.72 0 0 0 1.82 4.27A6.08 6.08 0 0 0 10 16.2a6.26 6.26 0 0 0 3.13-.81 6.07 6.07 0 0 0 2.27-2.19 5.77 5.77 0 0 0 .83-3A5.64 5.64 0 0 0 16 8.46h1.76zM7.18 7.21A3.93 3.93 0 0 1 10 6.07a3.94 3.94 0 0 1 2.84 1.14A3.69 3.69 0 0 1 14 10a3.69 3.69 0 0 1-1.18 2.75 3.94 3.94 0 0 1-2.82 1.1 3.94 3.94 0 0 1-2.83-1.14 3.81 3.81 0 0 1 0-5.51M19.25.76A2.47 2.47 0 0 0 17.43 0H2.57A2.46 2.46 0 0 0 .76.76 2.46 2.46 0 0 0 0 2.57v14.86a2.47 2.47 0 0 0 .76 1.81 2.46 2.46 0 0 0 1.81.76h14.86A2.58 2.58 0 0 0 20 17.43V2.57a2.47 2.47 0 0 0-.75-1.81\"/></svg>"
+                    },
+                    "state": {
+                        "is_image": false,
+                        "is_picture": false,
+                        "is_static": false,
+                        "is_svg": true,
+                        "is_linked": false,
+                        "is_landscape": false,
+                        "is_portrait": false,
+                        "is_square": false,
+                        "is_lazyload": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "SVG"
+                },
+                "link": {
+                    "data": {
+                        "title": "Instagram",
+                        "url": "https://www.instagram.com/wireduk/"
+                    },
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "style": {
+                        "cls": "c-nav__share-link c-nav__share-link--instagram",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "Link"
+                }
+            },
+            "state": {
+                "is_linked": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "LinkedImage"
+        }, {
+            "data": {
+                "image": {
+                    "data": {
+                        "alt_text": null,
+                        "credit": null,
+                        "description": null,
+                        "look_number": null,
+                        "title": null,
+                        "width": null,
+                        "svg_content": "<svg viewBox=\"0 0 20 20\"><path d=\"M7.94 12.59V7l5.4 2.82zM19.8 6a4.32 4.32 0 0 0-.8-2 2.86 2.86 0 0 0-2-.85C14.2 3 10 3 10 3s-4.2 0-7 .2A2.86 2.86 0 0 0 1 4a4.33 4.33 0 0 0-.8 2A30.26 30.26 0 0 0 0 9.24v1.52A30.26 30.26 0 0 0 .2 14a4.34 4.34 0 0 0 .8 2 3.4 3.4 0 0 0 2.21.85C4.8 17 10 17 10 17s4.2 0 7-.21a2.86 2.86 0 0 0 2-.79 4.33 4.33 0 0 0 .8-2 30.26 30.26 0 0 0 .2-3.24V9.24A30.26 30.26 0 0 0 19.8 6\"/></svg>"
+                    },
+                    "state": {
+                        "is_image": false,
+                        "is_picture": false,
+                        "is_static": false,
+                        "is_svg": true,
+                        "is_linked": false,
+                        "is_landscape": false,
+                        "is_portrait": false,
+                        "is_square": false,
+                        "is_lazyload": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "SVG"
+                },
+                "link": {
+                    "data": {
+                        "title": "Youtube",
+                        "url": "https://www.youtube.com/user/WiredVideoUK"
+                    },
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "style": {
+                        "cls": "c-nav__share-link c-nav__share-link--youtube",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "Link"
+                }
+            },
+            "state": {
+                "is_linked": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "LinkedImage"
+        }, {
+            "data": {
+                "image": {
+                    "data": {
+                        "alt_text": null,
+                        "credit": null,
+                        "description": null,
+                        "look_number": null,
+                        "title": null,
+                        "width": null,
+                        "svg_content": "<svg viewBox=\"0 0 20 20\"><path d=\"M7.35 3.87v2.76h-2V10h2v10h4.14V10h2.78s.26-1.61.39-3.38h-3.15V4.31a1 1 0 0 1 .9-.81h2.26V0H11.6C7.25 0 7.35 3.37 7.35 3.87zm0 0\"/></svg>"
+                    },
+                    "state": {
+                        "is_image": false,
+                        "is_picture": false,
+                        "is_static": false,
+                        "is_svg": true,
+                        "is_linked": false,
+                        "is_landscape": false,
+                        "is_portrait": false,
+                        "is_square": false,
+                        "is_lazyload": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "SVG"
+                },
+                "link": {
+                    "data": {
+                        "title": "Facebook",
+                        "url": "https://www.facebook.com/WiredUK/"
+                    },
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "style": {
+                        "cls": "c-nav__share-link c-nav__share-link--facebook",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "Link"
+                }
+            },
+            "state": {
+                "is_linked": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "LinkedImage"
+        }],
+        "search_form_url": "/search",
+        "search_placeholder": "Search",
+        "menu_open_icon": {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": null,
+                "svg_content": "<svg viewBox=\"0 0 20 20\"><path d=\"M18.5 1.25h-17A.65.65 0 1 1 1.5 0h17a.65.65 0 1 1 0 1.3zm0 18.8h-17a.65.65 0 0 1 0-1.3h17a.65.65 0 0 1 0 1.3zm0-9.4h-17a.65.65 0 1 1 0-1.3h17a.65.65 0 1 1 0 1.3z\"/></svg>"
+            },
+            "state": {
+                "is_image": false,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": true,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": false,
+                "is_lazyload": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "SVG"
+        },
+        "menu_close_icon": {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": null,
+                "svg_content": "<svg viewBox=\"0 0 20 20\"><path d=\"M10.92 10l8.94-8.94a.65.65 0 0 0-.92-.92L10 9.08 1.06.14a.65.65 0 0 0-.92.92L9.08 10 .14 18.94a.65.65 0 1 0 .92.92L10 10.92l8.94 8.94a.65.65 0 0 0 .92-.92z\"/></svg>"
+            },
+            "state": {
+                "is_image": false,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": true,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": false,
+                "is_lazyload": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "SVG"
+        },
+        "search_open_icon": {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": null,
+                "svg_content": "<svg viewBox=\"0 0 20 20\"><path d=\"M19.8 18.94l-7.7-7.7a6.87 6.87 0 1 0-.93.91l7.71 7.71a.65.65 0 0 0 .92-.92zM1.31 6.81a5.56 5.56 0 1 1 5.56 5.56 5.57 5.57 0 0 1-5.56-5.56z\"/></svg>"
+            },
+            "state": {
+                "is_image": false,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": true,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": false,
+                "is_lazyload": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "SVG"
+        },
+        "search_close_icon": {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": null,
+                "svg_content": "<svg viewBox=\"0 0 20 20\"><path d=\"M10.92 10l8.94-8.94a.65.65 0 0 0-.92-.92L10 9.08 1.06.14a.65.65 0 0 0-.92.92L9.08 10 .14 18.94a.65.65 0 1 0 .92.92L10 10.92l8.94 8.94a.65.65 0 0 0 .92-.92z\"/></svg>"
+            },
+            "state": {
+                "is_image": false,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": true,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": false,
+                "is_lazyload": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "SVG"
+        },
+        "gallery_list_icon": {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": null,
+                "svg_content": "<svg viewBox=\"0 0 20 20\"><path d=\"M19.41 3.38H6.32a.65.65 0 0 1 0-1.3h13.09a.65.65 0 1 1 0 1.3zM0 1.21h3.04v3.04H0zm19.41 16.71H6.32a.65.65 0 0 1 0-1.3h13.09a.65.65 0 1 1 0 1.3zm0-7.27H6.32a.65.65 0 1 1 0-1.3h13.09a.65.65 0 1 1 0 1.3zM0 8.48h3.04v3.04H0zm0 7.27h3.04v3.04H0z\"/></svg>"
+            },
+            "state": {
+                "is_image": false,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": true,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": false,
+                "is_lazyload": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "SVG"
+        },
+        "gallery_grid_icon": {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": null,
+                "svg_content": "<svg viewBox=\"0 0 20 20\"><path d=\"M0 0h4.14v4.14H0zm0 7.93h4.14v4.14H0zm0 7.93h4.14V20H0zM7.93 0h4.14v4.14H7.93zm0 7.93h4.14v4.14H7.93zm0 7.93h4.14V20H7.93zM15.86 0H20v4.14h-4.14zm0 7.93H20v4.14h-4.14zm0 7.93H20V20h-4.14z\"/></svg>"
+            },
+            "state": {
+                "is_image": false,
+                "is_picture": false,
+                "is_static": false,
+                "is_svg": true,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": false,
+                "is_lazyload": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "SVG"
+        }
+    },
+    "state": {
+        "has_promo": true,
+        "has_masthead": false,
+        "has_newsletter": true,
+        "has_social": true,
+        "has_search": true,
+        "has_top_stories": true,
+        "has_gallery_nav": true
+    },
+    "style": {
+        "cls": "",
+        "inline": ""
+    },
+    "translation": {},
+    "type": "MainNavigation"
+}

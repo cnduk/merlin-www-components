@@ -1,42 +1,88 @@
 @import "@cnbritain/merlin-www-common:wireframe";
-@import "@cnbritain/merlin-www-card-list:wireframe";
+@import '@cnbritain/merlin-www-buttons:wireframe';
+@import '@cnbritain/merlin-www-image:wireframe';
+@import '@cnbritain/merlin-www-ads:wireframe';
 @import "@cnbritain/merlin-www-card:wireframe";
 
 .c-top-stories {
     box-sizing: border-box;
-    padding-left: $MOBILE_SIDE_GUTTER;
-    padding-right: $MOBILE_SIDE_GUTTER;
+    display: none;
     width: 100%;
 
-    @include min-screen( $TABLET_SIDE_GUTTER_BREAKPOINT ){
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
+    &.has-navigation {
+        .c-top-stories__nav {
+            display: block;
+        }
     }
 
-    @include min-screen( $DESKTOP_SIDE_GUTTER_BREAKPOINT ){
-        padding-left: $DESKTOP_SIDE_GUTTER;
-        padding-right: $DESKTOP_SIDE_GUTTER;
+    &.has-no-scroll {
+        .c-top-stories__cards {
+            overflow-x: hidden;
+        }
+    }
+
+    @include at-x-large-size {
+        display: block;
     }
 }
 
-.c-top-stories__wrapper {
+.c-top-stories-wrapper {
     margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
 }
 
-.c-top-stories__title {}
+.c-top-stories__title {
+    display: none;
+}
 
 .c-top-stories__nav {
     display: none;
 }
 
-.c-top-stories__overflow {
+.c-top-stories__nav-btn {
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+}
+
+.c-top-stories__nav-btn--left {
+    top: 50%;
+}
+
+.c-top-stories__nav-btn--right {
+    top: 0;
+}
+
+.c-top-stories__cards {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
 
-.has-navigation {
-    .c-top-stories__nav {
-        display: block;
+.c-top-stories__cards-list {
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    white-space: nowrap;
+}
+
+.c-top-stories__cards-listitem {
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: initial;
+    vertical-align: top;
+    white-space: normal;
+    width: 280px;
+
+    &.is-hidden {
+        height: 0;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        visibility: hidden;
+        width: 0;
     }
 }

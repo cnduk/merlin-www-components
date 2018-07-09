@@ -1,0 +1,88 @@
+{
+  "data": {
+    "brand_name": "Brides Magazine",
+    "close_button": {
+      "data": {
+        "alt_text": null,
+        "credit": null,
+        "description": null,
+        "look_number": null,
+        "title": null,
+        "width": null,
+        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\"><title>close</title>\n  <path d=\"M10,9.29289322 L19.1464466,0.146446609 L19.8535534,0.853553391 L10.7071068,10 L19.8535534,19.1464466 L19.1464466,19.8535534 L10,10.7071068 L0.853553391,19.8535534 L0.146446609,19.1464466 L9.29289322,10 L0.146446609,0.853553391 L0.853553391,0.146446609 L10,9.29289322 Z\"/>\n</svg>\n"
+      },
+      "state": {
+        "is_image": false,
+        "is_picture": false,
+        "is_static": false,
+        "is_svg": true,
+        "is_linked": false,
+        "is_landscape": false,
+        "is_portrait": false,
+        "is_square": false,
+        "is_lazyload": false
+      },
+      "style": {
+        "cls": "",
+        "inline": ""
+      },
+      "translation": {},
+      "type": "SVG"
+    },
+    "site_links": {
+      "data": {
+        "items": [
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "US",
+                  "url": "https://www.brides.com/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 0
+            },
+            "state": {
+              "is_first": true,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          }
+        ],
+        "length": 1
+      },
+      "state": {
+        "has_multiple_items": false
+      },
+      "style": {
+        "cls": "",
+        "inline": ""
+      },
+      "translation": {},
+      "type": "List"
+    },
+    "short_name": "Brides Magazine"
+  },
+  "state": {},
+  "style": {
+    "cls": "",
+    "inline": ""
+  },
+  "translation": {},
+  "type": "InternationalRedirect"
+}
