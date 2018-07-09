@@ -21,7 +21,7 @@
     height: 40px;
 }
 
-li.c-figure__toolbar-listitem {
+.c-figure__toolbar-listitem {
     background-color: $azalea;
     height: 40px;
     width: 40px;
@@ -37,7 +37,7 @@ li.c-figure__toolbar-listitem {
 }
 
 @each $name, $colour in $COLOUR_SOCIAL {
-    li.c-figure__toolbar-listitem--#{$name} {
+    .c-figure__toolbar-listitem--#{$name} {
 
         path {
             fill: $colour;
@@ -53,7 +53,7 @@ li.c-figure__toolbar-listitem {
     }
 }
 
-li.c-figure__toolbar-listitem--zoom {
+.c-figure__toolbar-listitem--zoom {
     path {
         fill: $astronaut;
     }

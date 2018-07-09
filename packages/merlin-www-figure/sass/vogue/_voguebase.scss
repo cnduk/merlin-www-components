@@ -18,7 +18,7 @@
     right: 15px;
 }
 
-li.c-figure__toolbar-listitem {
+.c-figure__toolbar-listitem {
     background-color: $white;
     height: 45px;
     transition: background 0.1s ease-in-out;
@@ -30,13 +30,13 @@ li.c-figure__toolbar-listitem {
     }
 }
 
-li.c-figure__toolbar-listitem--more {
+.c-figure__toolbar-listitem--more {
     svg {
         fill: $dove-gray;
     }
 }
 
-li.c-figure__toolbar-listitem--facebook {
+.c-figure__toolbar-listitem--facebook {
     svg {
         fill: map-get($COLOUR_SOCIAL, 'facebook');
     }
@@ -50,7 +50,7 @@ li.c-figure__toolbar-listitem--facebook {
     }
 }
 
-li.c-figure__toolbar-listitem--twitter {
+.c-figure__toolbar-listitem--twitter {
     svg {
         fill: map-get($COLOUR_SOCIAL, 'twitter');
     }
@@ -64,7 +64,7 @@ li.c-figure__toolbar-listitem--twitter {
     }
 }
 
-li.c-figure__toolbar-listitem--pinterest {
+.c-figure__toolbar-listitem--pinterest {
     svg {
         fill: map-get($COLOUR_SOCIAL, 'pinterest');
     }
@@ -78,7 +78,7 @@ li.c-figure__toolbar-listitem--pinterest {
     }
 }
 
-li.c-figure__toolbar-listitem--email {
+.c-figure__toolbar-listitem--email {
     svg {
         fill: map-get($COLOUR_SOCIAL, 'email');
     }
@@ -92,7 +92,7 @@ li.c-figure__toolbar-listitem--email {
     }
 }
 
-li.c-figure__toolbar-listitem--whatsapp {
+.c-figure__toolbar-listitem--whatsapp {
     svg {
         fill: map-get($COLOUR_SOCIAL, 'whatsapp');
     }
@@ -106,7 +106,7 @@ li.c-figure__toolbar-listitem--whatsapp {
     }
 }
 
-li.c-figure__toolbar-listitem--zoom {
+.c-figure__toolbar-listitem--zoom {
     &:hover {
         background-color: $guardsman-red;
         svg {

@@ -10,7 +10,7 @@
     background-color: $raisin-black;
 }
 
-li.c-figure__toolbar-listitem {
+.c-figure__toolbar-listitem {
     background-color: $black;
     border-bottom: none;
     transition: background 0.1s ease-in-out;
@@ -27,35 +27,35 @@ li.c-figure__toolbar-listitem {
 
 }
 
-li.c-figure__toolbar-listitem--facebook {
+.c-figure__toolbar-listitem--facebook {
     &:hover {
         background-color: map-get($COLOUR_SOCIAL, 'facebook');
     }
 }
 
-li.c-figure__toolbar-listitem--twitter {
+.c-figure__toolbar-listitem--twitter {
     &:hover {
         background-color: map-get($COLOUR_SOCIAL, 'twitter');
     }
 }
 
-li.c-figure__toolbar-listitem--pinterest {
+.c-figure__toolbar-listitem--pinterest {
     display: none !important;
 }
 
-li.c-figure__toolbar-listitem--email {
+.c-figure__toolbar-listitem--email {
     &:hover {
         background-color: #161616;
     }
 }
 
-li.c-figure__toolbar-listitem--whatsapp {
+.c-figure__toolbar-listitem--whatsapp {
     &:hover {
         background-color: map-get($COLOUR_SOCIAL, 'whatsapp');
     }
 }
 
-li.c-figure__toolbar-listitem--zoom {
+.c-figure__toolbar-listitem--zoom {
     &:hover {
         background-color: $white;
         svg {

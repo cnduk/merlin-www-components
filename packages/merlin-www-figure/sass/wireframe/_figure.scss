@@ -51,9 +51,15 @@
     height: 60px;
 }
 
-.c-figure__toolbar-list{}
+.c-figure__toolbar-list {
+    font-weight: normal;
+    line-height: normal;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-li.c-figure__toolbar-listitem {
+.c-figure__toolbar-listitem {
     float: left;
     height: 60px;
     padding-bottom: 0;
