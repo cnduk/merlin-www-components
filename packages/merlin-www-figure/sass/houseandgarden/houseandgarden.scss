@@ -2,13 +2,10 @@
 
 @import '../wireframe/wireframe';
 
-.c-figure {}
-
 .c-figure__container {
     background-color: $advert-light;
     margin-bottom: 10px;
 }
-.c-figure__wrapper {}
 
 .c-figure__toolbar {
     bottom: 0;
@@ -16,6 +13,7 @@
     position: absolute;
     right: 0;
 }
+
 .c-figure__toolbar-listitem {
     background-color: $white;
     height: 60px;
@@ -94,6 +92,7 @@ li .c-figure__toolbar-listitem--more {
         }
     }
 }
+
 .c-figure__caption {
     @include font('MILLER_DISPLAY', 17px, null, 23px);
     color: $mine-shaft;
@@ -117,6 +116,7 @@ li .c-figure__toolbar-listitem--more {
         }
     }
 }
+
 .c-figure__credit {
     @include font('BRANDON GROTESQUE', 10px, 400);
     color: $dove-gray;
@@ -125,7 +125,6 @@ li .c-figure__toolbar-listitem--more {
     text-transform: uppercase;
 }
 
-.c-figure__magnifier {}
 .c-figure__magnifier--full-screen {
     background-color: $advert-light;
 }
@@ -139,23 +138,19 @@ li .c-figure__toolbar-listitem--more {
         width: 20px;
     }
 }
+
 .c-figure__magnifier-button--close {
     svg {
-        border: 1px solid #fff;
-        fill: #fff;
-        stroke: #fff;
+        border: 1px solid $white;
+        fill: $white;
+        stroke: $white;
     }
 }
 
 .c-figure__magnifier-button--zoom-in,
 .c-figure__magnifier-button--zoom-out {
     svg {
-        fill: #000;
-        stroke: #000;
+        fill: $black;
+        stroke: $black;
     }
 }
-
-.c-figure__magnifier-toolbar {}
-.c-figure__magnifier-toolbar-item {}
-.c-figure__magnifier-image {}
-.c-figure__magnifier-image-center {}

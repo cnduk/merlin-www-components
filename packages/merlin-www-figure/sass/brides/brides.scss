@@ -3,14 +3,39 @@
 
 @import '../wireframe/wireframe';
 
-
 .c-figure {
     margin: 0 0 44px 0;
+
+    @include desktop-size {
+        margin-bottom: 68px;
+    }
 }
 
 .c-figure__container {
     background-color: $diamond;
     margin-bottom: 22px;
+
+    @include desktop-size {
+        margin-bottom: 34px;
+    }
+}
+
+
+.c-figure__toolbar-list {
+    font-size: 0;
+}
+
+li.c-figure__toolbar-listitem {
+    background-color: rgba($black, 0.75);
+    border-radius: 50%;
+    height: 44px;
+    margin-left: 8px;
+    width: 44px;
+
+    svg {
+        fill: $white;
+        width: 16px;
+    }
 }
 
 .c-figure__title {
@@ -31,6 +56,10 @@
 
 .c-figure__title + .c-figure__caption {
     margin-top: 10px;
+
+    @include desktop-size {
+        margin-top: 16px;
+    }
 }
 
 .c-figure__credit {
@@ -46,36 +75,8 @@
     margin-top: 16px;
 }
 
-.c-figure__toolbar {
-    bottom: 16px;
-
-    height: 44px;
-    right: 16px;
-}
-.c-figure__toolbar-list {
-    font-size: 0;
-}
-li.c-figure__toolbar-listitem {
-    background-color: rgba($black, 0.75);
-    border-radius: 50%;
-    height: 44px;
-    margin-left: 8px;
-    width: 44px;
-
-    svg {
-        fill: $white;
-        width: 16px;
-    }
-}
-
-// .c-figure__magnifier {}
 .c-figure__magnifier--full-screen {
     background-color: $diamond;
-}
-
-.c-figure__magnifier-toolbar {
-    right: 16px;
-    top: 16px;
 }
 
 .c-figure__magnifier-button {
@@ -95,18 +96,7 @@ li.c-figure__toolbar-listitem {
     }
 }
 
-@include desktop-size {
-
-    .c-figure {
-        margin-bottom: 68px;
-    }
-
-    .c-figure__container {
-        margin-bottom: 34px;
-    }
-
-    .c-figure__title + .c-figure__caption {
-        margin-top: 16px;
-    }
-
+.c-figure__magnifier-toolbar {
+    right: 16px;
+    top: 16px;
 }

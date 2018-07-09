@@ -13,13 +13,14 @@
     }
 }
 
-
 .c-figure__toolbar {
     height: 40px;
 }
+
 .c-figure__toolbar-list {
     height: 40px;
 }
+
 li.c-figure__toolbar-listitem {
     background-color: $azalea;
     height: 40px;
@@ -97,8 +98,6 @@ li.c-figure__toolbar-listitem--zoom {
     }
 }
 
-
-.c-figure__magnifier-button {}
 .c-figure__magnifier--full-screen {
     background-color: $concrete;
     z-index: 15;

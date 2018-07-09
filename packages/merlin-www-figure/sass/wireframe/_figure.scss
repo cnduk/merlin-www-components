@@ -30,6 +30,7 @@
     top: 0;
     width: 100%;
 }
+
 .c-figure img {
     bottom: 0;
     display: block;
@@ -49,6 +50,8 @@
     z-index: 1;
     height: 60px;
 }
+
+.c-figure__toolbar-list{}
 
 li.c-figure__toolbar-listitem {
     float: left;
