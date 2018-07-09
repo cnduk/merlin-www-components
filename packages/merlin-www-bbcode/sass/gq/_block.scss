@@ -1,0 +1,404 @@
+// -------------------- //
+// Answer
+// -------------------- //
+.bb-answer {}
+.bb-answer__answer {}
+.bb-answer__a {
+    @include font-weight(700);
+    color: $oslo-gray;
+}
+
+.bb-question__separator {
+    display: none;
+}
+
+.bb-answer__author {
+    @include font("GOTHAM", 9px, 700, 12px, 60);
+    color: $mineshaft;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.bb-answer__by {
+    display: none;
+}
+
+// -------------------- //
+// Blockquote
+// -------------------- //
+.bb-blockquote {
+    @include font("GOTHAM", 16px, 400, 22px)
+    border-left: 20px solid $woodsmoke;
+    color: $mineshaft;
+    margin: 40px 0;
+    padding-left: 24px;
+
+    @include at-x-large-size {
+        @include font-size(17px);
+        @include line-height(24px);
+    }
+}
+
+.bb-blockquote__quote {
+    @include font("GOTHAM", 16px, 400, 22px);
+    color: $mineshaft;
+    font-style: italic;
+
+    @include at-x-large-size {
+        @include font-size(17px);
+        @include line-height(24px);
+    }
+}
+
+.bb-blockquote__separator {
+    display: none;
+}
+
+.bb-blockquote__credit {
+    @include font("GOTHAM", 9px, 700, 12px, 60);
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+// -------------------- //
+// Callout
+// -------------------- //
+.bb-callout {
+    border-top: 1px solid $bon-jour;
+    border-bottom: 1px solid $bon-jour;
+    border-left: 1px solid $bon-jour;
+    border-right: 1px solid $bon-jour;
+    margin: 40px 0;
+    padding: 32px 20px;
+
+    > *:first-child {
+        margin-top:0;
+    }
+
+    > *:last-child {
+        margin-bottom:0;
+    }
+
+    @include at-x-large-size {
+        padding: 40px;
+    }
+}
+
+// -------------------- //
+// Headings
+// -------------------- //
+.bb-h1,
+.bb-h2,
+.bb-h3,
+.bb-h4,
+.bb-h5,
+.bb-h6 {
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: auto;
+    color: $woodsmoke;
+    margin: 28px 0;
+}
+
+.bb-h1 {
+    @include font("ITC_FENICE", 30px, 700, 32px, -4);
+    @include at-x-large-size {
+        @include font-size(50px);
+        @include line-height(54px);
+    }
+}
+
+.bb-h2 {
+    @include font("GOTHAM", 24px, 700, 28px, -4);
+}
+
+.bb-h3 {
+    @include font("GOTHAM", 20px, 700, 24px, -4);
+}
+
+.bb-h4 {
+    @include font("GOTHAM", 17px, 700, 22px, -4);
+}
+
+.bb-h5 {
+    @include font("GOTHAM", 14px, 700, 20px, -4);
+}
+
+.bb-h6 {
+    @include font("GOTHAM", 12px, 700, 16px, -4);
+}
+
+.bb-hr {
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 4px double $bon-jour;
+    height: 0;
+    margin: 40px 0;
+}
+
+// -------------------- //
+// Infobox
+// -------------------- //
+.bb-infobox {
+    border-top: 1px solid $bon-jour;
+    border-bottom: 1px solid $bon-jour;
+    border-left: 1px solid $bon-jour;
+    border-right: 1px solid $bon-jour;
+    margin: 40px 0;
+    padding: 32px 20px;
+
+    @include at-x-large-size {
+        padding: 40px;
+    }
+}
+
+.bb-infobox__title {
+    @include font("ITC_FENICE", 24px, 400, 30px);
+    color: $mineshaft;
+    margin-bottom: 12px;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.bb-infobox__hr {
+    margin-bottom: 36px;
+    margin-top: 0;
+}
+
+.bb-infobox__item {
+    margin: 0;
+
+    & + .bb-infobox__item {
+        margin-top: 28px;
+    }
+}
+
+.bb-infobox__item__key {
+    @include font("GOTHAM", 14px, 700, 20px, 60);
+    color: $dodger-blue;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.bb-infobox__item__value {
+    @include font("GOTHAM", 14px, 400, 20px, -20);
+    color: $mineshaft;
+    margin: 0;
+}
+
+// -------------------- //
+// List
+// -------------------- //
+.bb-ul,
+.bb-ol {
+    @include font("GOTHAM", 16px, 400, 26px, -20);
+    color: $mineshaft;
+    list-style-type: none;
+    padding-left: 32px;
+    margin: 28px 0;
+
+    @include at-x-large-size {
+        @include font-size(17px);
+        @include line-height(28px);
+    }
+}
+
+.bb-li {
+    position: relative;
+}
+
+.bb-ul {
+    .bb-li:before {
+        background-color: #1da8ff;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: 8px;
+        left: -28px;
+        position: absolute;
+        top: 8px;
+        width: 8px;
+    }
+}
+
+.bb-ol {
+    counter-reset: section;
+
+    .bb-li {
+        counter-increment: section;
+        margin: 15px 0;
+        line-height: 25px;
+    }
+
+    .bb-li:before {
+        content: counter(section) '.';
+        position: absolute;
+        left: -31px;
+    }
+}
+
+// -------------------- //
+// Note
+// -------------------- //
+.bb-note {
+    @include font("GOTHAM", 12px, 400, 16px);
+    border-top: 1px solid $bon-jour;
+    margin: 28px 0 40px 0;
+    padding-top: 12px;
+    position: relative;
+    text-indent: 20px;
+
+    &:before {
+        background-color: $dodger-blue;
+        border-radius: 50%;
+        content: '';
+        height: 8px;
+        left: 0;
+        position: absolute;
+        top: 15px;
+        width: 8px;
+    }
+}
+
+// -------------------- //
+// Paragraph
+// -------------------- //
+.bb-p {
+    @include font("GOTHAM", 16px, 400, 26px, -2);
+    color: $mineshaft;
+    margin: 28px 0;
+
+    @include at-x-large-size {
+        @include font-size(17px);
+        @include line-height(28px);
+    }
+}
+
+.bb-pre {
+    @include font-size(14px);
+    @include line-height(21px);
+    background-color: $albaster;
+    border-radius: 4px;
+    border: 1px solid $bon-jour;
+    color: $shuttle-gray;
+    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    line-height: 20px;
+    margin: 28px 0;
+    padding: 20px;
+    white-space: pre-wrap;
+}
+
+// -------------------- //
+// Question
+// -------------------- //
+.bb-question {}
+.bb-question__question,
+.bb-question__question p {
+    @include font-weight(700);
+}
+.bb-question__q {
+}
+
+.bb-question__separator {
+    display: none;
+}
+
+.bb-question__author {
+    @include font("GOTHAM", 9px, 700, 12px, 60);
+    color: $mineshaft;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.bb-question__by {
+    display: none;
+}
+
+// -------------------- //
+// Pullquote
+// -------------------- //
+.bb-pullquote {
+    border-top: 20px solid $woodsmoke;
+    border-bottom: 20px solid $woodsmoke;
+    margin: 40px 0;
+    padding: 32px 0;
+    text-align: center;
+
+    @include at-x-large-size {
+        padding: 40px 16px;
+    }
+}
+.bb-pullquote__quote {
+    @include font("ITC_FENICE", 26px, 400, 30px, 0);
+    color: $mineshaft;
+
+    @include at-x-large-size {
+        @include font-size(32px);
+        @include line-height(36px);
+    }
+
+    &:before,
+    &:after {
+        content: '';
+    }
+}
+
+.bb-pullquote__separator {
+    display: none;
+}
+
+.bb-pullquote__credit {
+    @include font("GOTHAM", 9px, 700, 12px, 60)
+    color: $mineshaft;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+// -------------------- //
+// Show Gallery
+// -------------------- //
+.bb-show-gallery {
+    margin: 40px 0;
+
+    .c-gallery-strip__detail {
+        border-color: $bon-jour;
+
+        &:after {
+            border-bottom-color: $white;
+        }
+    }
+
+    .c-gallery-strip__title {
+        color: $woodsmoke;
+    }
+
+    .c-gallery-strip__subtitle {
+        color: $oslo-gray;
+    }
+
+    .c-gallery-strip__list__item {
+        &:nth-child(3) {
+            .c-gallery-strip__remaining {
+                display: block;
+            }
+        }
+
+        &:nth-child(4) {
+            display: none;
+        }
+
+        @include at-x-large-size {
+            &:nth-child(3) {
+                .c-gallery-strip__remaining {
+                    display: none;
+                }
+            }
+
+            &:nth-child(4) {
+                display: inline-block;
+            }
+
+            width: 25%;
+        }
+    }
+}

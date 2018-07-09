@@ -1,0 +1,61 @@
+.bb-a {
+    border-bottom: 1px solid $cornflower-blue;
+    color: $cornflower-blue;
+}
+
+.bb-abbr {
+    text-decoration: underline;
+}
+
+.bb-mark {
+    background-color: $solitude;
+    color: $mineshaft;
+    padding: 4px 0;
+}
+
+.bb-small {
+    @include font("GOTHAM", 12px, 400, 20px);
+    color: $oslo-gray;
+}
+
+// -------------------- //
+// Button
+// -------------------- //
+.bb-button {
+    @include button-single();
+    @include button-single-light();
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
+
+// -------------------- //
+// Dropcap
+// -------------------- //
+.bb-dropcap {}
+.bb-dropcap--letter {
+    @include font("ITC_FENICE", 40px, 700, 72px)
+    border: 1px solid $mineshaft;
+    box-sizing: border-box;
+    color: $mineshaft;
+    float: left;
+    height: 64px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    margin-top: 8px;
+    padding: 0 20px;
+    text-transform: capitalize;
+
+    .is-windows & {
+        @include line-height(64px);
+        @include at-x-large-size {
+            @include line-height(70px);
+        }
+    }
+
+    @include at-x-large-size {
+        @include font-size(44px);
+        @include line-height(78px);
+        height: 70px;
+    }
+}
