@@ -1,0 +1,53 @@
+.bb-a {
+    border-bottom: 1px solid $SHERPA-BLUE;
+    color: $SHERPA-BLUE;
+}
+
+.bb-abbr {
+    text-decoration: underline;
+}
+
+.bb-mark {
+    background-color: $MISTY-ROSE;
+}
+
+.bb-small {
+    @include font("FREIGHT TEXT", 14px, null, 20px);
+    color: $RAVEN;
+}
+
+// -------------------- //
+// Button
+// -------------------- //
+.bb-button {
+    @include button-single-two();
+    @include button-single-two-light();
+
+    &:hover {
+        @include button-single-two-light-hover();
+    }
+}
+
+// -------------------- //
+// Dropcap
+// -------------------- //
+.bb-dropcap {}
+.bb-dropcap--letter {
+    @include font("LULO ONE", 87px, 700, 87px);
+    box-sizing: border-box;
+    color: $SHERPA-BLUE;
+    float: left;
+    height: 84px;
+    text-transform: capitalize;
+
+    .is-macos &,
+    .is-linux & {
+        padding-top: 8px;
+    }
+
+    @include at-x-large-size {
+        @include font-size(100px);
+        @include line-height(100px);
+        height: 96px;
+    }
+}

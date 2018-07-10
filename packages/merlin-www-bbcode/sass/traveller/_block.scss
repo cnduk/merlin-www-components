@@ -1,0 +1,426 @@
+// -------------------- //
+// Blockquote
+// -------------------- //
+.bb-blockquote {
+    border-left: 2px solid $BALI-HAI;
+    margin: 0 0 16px 0;
+    padding-left: 30px;
+}
+
+.bb-blockquote__quote {
+    @include font("PROXIMA NOVA CONDENSED", 18px, 400, 24px);
+    color: $BALI-HAI;
+    font-style: italic;
+
+    @include at-x-large-size {
+        @include font-size(20px);
+        @include line-height(28px);
+    }
+}
+
+.bb-blockquote__separator {
+    display: none;
+}
+
+.bb-blockquote__credit {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    color: $BALI-HAI;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 16px;
+}
+
+// -------------------- //
+// Callout
+// -------------------- //
+.bb-callout {
+    border: 2px solid $SHERPA-BLUE;
+    margin: 40px 0;
+    padding: 32px 20px;
+
+    > *:first-child {
+        margin-top: 0;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+
+    @include at-x-large-size {
+        padding: 32px;
+    }
+}
+
+// -------------------- //
+// Headings
+// -------------------- //
+.bb-h1,
+.bb-h2,
+.bb-h3,
+.bb-h4,
+.bb-h5,
+.bb-h6 {
+    margin-bottom: 8px;
+
+    .bb-a {
+        color: inherit;
+        border-bottom-color: inherit;
+    }
+}
+
+.bb-h2 + .bb-h3 {
+    margin-top: -4px;
+}
+
+.bb-h1 {
+    @include font("PROXIMA NOVA", 28px, 600, 32px);
+    color: $MUSTASAARI;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include at-x-large-size {
+        @include font-size(46px);
+        @include line-height(54px);
+        letter-spacing: 0.06em;
+    }
+}
+
+.bb-h2 {
+    @include font("PROXIMA NOVA CONDENSED", 28px, 600, 28px);
+    color: $MUSTASAARI;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    @include at-x-large-size {
+        @include font-size(34px);
+        @include line-height(36px);
+    }
+}
+
+.bb-h3 {
+    @include font("PROXIMA NOVA CONDENSED", 24px, 400, 28px);
+    color: $MANATEE;
+    letter-spacing: 1px;
+
+    @include at-x-large-size {
+        @include font-size(28px);
+        @include line-height(32px);
+    }
+}
+
+.bb-h4 {
+    @include font("PROXIMA NOVA CONDENSED", 20px, 400, 24px);
+    color: $MANATEE;
+    letter-spacing: 1px;
+
+    @include at-x-large-size {
+        @include font-size(24px);
+        @include line-height(28px);
+    }
+}
+
+.bb-h5 {
+    @include font("PROXIMA NOVA CONDENSED", 16px, 400, 20px);
+    color: $MANATEE;
+    letter-spacing: 1px;
+
+    @include at-x-large-size {
+        @include font-size(20px);
+        @include line-height(24px);
+    }
+}
+
+.bb-h6 {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 600, 16px);
+    color: $MANATEE;
+    letter-spacing: 1px;
+
+    @include at-x-large-size {
+        @include font-size(16px);
+        @include line-height(20px);
+    }
+}
+
+.bb-hr {
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 1px solid $PORCELAIN;
+    height: 0;
+    margin: 24px 0;
+}
+
+// -------------------- //
+// Infobox
+// -------------------- //
+.bb-infobox {
+    border: 2px solid $SHERPA-BLUE;
+    margin: 40px 0;
+    padding: 32px 20px;
+
+    @include at-x-large-size {
+        padding: 32px;
+    }
+}
+
+.bb-infobox__title {
+    @include font("PROXIMA NOVA", 20px, 600, 24px);
+    color: $SHERPA-BLUE;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    margin-top: 0;
+    text-transform: uppercase;
+
+    @include at-x-large-size {
+        letter-spacing: 2px;
+    }
+}
+
+.bb-infobox__hr {
+    border-color: $SHERPA-BLUE;
+    margin-bottom: 24px;
+    margin-top: 4px;
+}
+
+.bb-infobox__item {
+    margin: 0;
+
+    & + .bb-infobox__item {
+        margin-top: 24px;
+    }
+}
+
+.bb-infobox__item__key {
+    @include font("PROXIMA NOVA CONDENSED", 16px, 600, 20px);
+    color: $SHERPA-BLUE;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.bb-infobox__item__value {
+    @include font("PROXIMA NOVA CONDENSED", 16px, 400, 20px);
+    color: $MUSTASAARI;
+    margin: 0;
+}
+
+// -------------------- //
+// List
+// -------------------- //
+.bb-ul,
+.bb-ol {
+    @include font("FREIGHT TEXT", 18px, null, 28px);
+    color: $MUSTASAARI;
+    list-style-type: none;
+    margin: 40px 0;
+    padding-left: 32px;
+
+    @include at-x-large-size {
+        @include font-size(20px);
+        @include line-height(32px);
+    }
+}
+
+.bb-li {
+    position: relative;
+}
+
+.bb-ul {
+    .bb-li:before {
+        background-color: $BALI-HAI;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: 8px;
+        left: -28px;
+        position: absolute;
+        top: 10px;
+        width: 8px;
+
+        @include at-x-large-size {
+            top: 12px;
+        }
+    }
+}
+
+.bb-ol {
+    counter-reset: section;
+
+    .bb-li {
+        counter-increment: section;
+    }
+
+    .bb-li:before {
+        @include font("PROXIMA NOVA CONDENSED", 18px, 600, 32px);
+        content: counter(section) '.';
+        position: absolute;
+        left: -28px;
+
+        @include at-x-large-size {
+            @include line-height(36px);
+        }
+    }
+}
+
+// -------------------- //
+// Note
+// -------------------- //
+.bb-note {
+    @include font("FREIGHT TEXT", 14px, null, 20px);
+    border-top: 1px solid $ISABEL;
+    color: $MUSTASAARI;
+    margin: 28px 0 40px 0;
+    padding-top: 12px;
+    position: relative;
+
+    &:before {
+        color: $SHERPA-BLUE;
+        content: "\2605";
+        margin-right: 4px;
+    }
+}
+
+// -------------------- //
+// Paragraph
+// -------------------- //
+.bb-p {
+    @include font("FREIGHT TEXT", 18px, 400, 28px);
+    color: $MUSTASAARI;
+    margin: 0 0 28px 0;
+    @include at-x-large-size {
+        @include font-size(20px);
+        @include line-height(32px);
+        margin: 0 0 32px 0;
+    }
+}
+
+.bb-pre {
+    @include font-size(14px);
+    @include line-height(20px);
+    background-color: $ADVERT-LIGHT;
+    border-radius: 4px;
+    border: 1px solid $PORCELAIN;
+    color: $RAVEN;
+    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    margin: 28px 0;
+    padding: 20px;
+    white-space: pre-wrap;
+}
+
+// -------------------- //
+// Pullquote
+// -------------------- //
+.bb-pullquote {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.bb-pullquote__quote {
+    @include font("LULO ONE", 20px, 700, 24px);
+    color: $SHERPA-BLUE;
+    text-transform: uppercase;
+
+    @include at-x-large-size {
+        @include font-size(24px);
+        @include line-height(32px);
+    }
+}
+
+.bb-pullquote__separator {
+    display: none;
+}
+
+.bb-pullquote__credit {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    color: $BALI-HAI;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 16px;
+}
+
+// -------------------- //
+// Question
+// -------------------- //
+.bb-question {
+    margin: 40px 0;
+    position: relative;
+}
+
+.bb-question__question {
+    p {
+        margin-bottom: 16px;
+        text-indent: 32px;
+    }
+}
+
+.bb-question__q {
+    @include font("PROXIMA NOVA CONDENSED", 18px, 600, 32px);
+    color: $MUSTASAARI;
+    left: 0;
+    position: absolute;
+    text-indent: 0;
+
+    @include at-x-large-size {
+        @include font-size(20px);
+        @include line-height(36px);
+    }
+}
+
+.bb-question__separator {
+    display: none;
+}
+
+.bb-question__author {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    color: $BALI-HAI;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.bb-question__by {
+    display: none;
+}
+
+// -------------------- //
+// Answer
+// -------------------- //
+.bb-answer {
+    margin: 40px 0;
+    position: relative;
+}
+
+.bb-answer__answer {
+    p {
+        margin-bottom: 16px;
+        text-indent: 32px;
+    }
+}
+
+.bb-answer__a {
+    @include font("PROXIMA NOVA CONDENSED", 18px, 600, 32px);
+    color: $BALI-HAI;
+    left: 0;
+    position: absolute;
+    text-indent: 0;
+
+    @include at-x-large-size {
+        @include font-size(20px);
+        @include line-height(36px);
+    }
+}
+
+.bb-question__separator {
+    display: none;
+}
+
+.bb-answer__author {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    color: $BALI-HAI;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.bb-answer__by {
+    display: none;
+}
