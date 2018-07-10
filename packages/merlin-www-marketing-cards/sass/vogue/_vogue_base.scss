@@ -4,9 +4,7 @@
     margin: $MARGIN_SMALL 0;
     padding: $PADDING_MEDIUM $PADDING_SMALL;
 }
-.a-marketing-card--brand {}
-.a-marketing-card--event {}
-.a-marketing-card--topic {}
+
 .a-marketing-card--magazine {
     .a-marketing-card__col {
         text-align: center;
@@ -16,7 +14,7 @@
 .a-marketing-card__brand {
     margin: 0 0 $MARGIN_SMALL 0;
 }
-.a-marketing-card__brand__img {}
+
 .a-marketing-card__brand__name {
     @include font('NOBEL', 11px);
     letter-spacing: 1px;
@@ -31,6 +29,7 @@
         }
     }
 }
+
 .a-marketing-card__brand__prefix {
     @include font('ADOBE CASLON', 12px);
     color: $dove-gray;
@@ -41,8 +40,6 @@
     }
 }
 
-.a-marketing-card__col {}
-
 .a-marketing-card__desc {
     @include font('ADOBE CASLON', 15px);
     color: $dove-gray;
@@ -52,16 +49,13 @@
 .a-marketing-card__magazine {
     margin: 0 auto $MARGIN_SMALL auto;
 }
-.a-marketing-card__magazine__cover {}
-.a-marketing-card__magazine__cover--desktop {}
-.a-marketing-card__magazine__cover--tablet {}
-.a-marketing-card__magazine__cover--mobile {}
 
 .a-marketing-card__link {
     @include button-single();
     @include button-single-light();
 
-    &:hover {
+    &:hover,
+    &:focus {
         @include button-single-light-hover();
     }
 }
@@ -72,19 +66,21 @@
     margin: 0 0 $MARGIN_XX_SMALL 0;
 }
 
-
-@include marketing-card-medium-size(){
+@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
     .a-marketing-card {
         padding: 0;
     }
+
     .a-marketing-card--magazine {
         .a-marketing-card__col {
             text-align: left;
         }
     }
+
     .a-marketing-card__col {
         padding: 40px;
     }
+
     .a-marketing-card--brand .a-marketing-card__col,
     .a-marketing-card--topic .a-marketing-card__col,
     .a-marketing-card--event .a-marketing-card__col {
@@ -92,9 +88,11 @@
             border-left: 1px solid $loot-box;
         }
     }
+
     .a-marketing-card__magazine {
         margin-bottom: 0;
     }
+
     .a-marketing-card__title {
         @include font-size(20px);
     }

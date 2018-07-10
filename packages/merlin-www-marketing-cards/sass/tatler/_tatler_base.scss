@@ -7,9 +7,11 @@
 .a-marketing-card__brand {
     margin-bottom: 20px;
 }
+
 .a-marketing-card__brand__img {
     margin: 0 auto 30px auto;
 }
+
 .a-marketing-card__brand__name {
     @include font("COMMUTER SANS", 16px, 500);
     text-transform: uppercase;
@@ -24,6 +26,7 @@
         }
     }
 }
+
 .a-marketing-card__brand__prefix {
     @include font('COMMUTER SANS', 10px, null, 10px);
     color: $gray;
@@ -34,13 +37,14 @@
 .a-marketing-card__col {
     text-align: center;
 }
+
 .a-marketing-card__title {
     @include font('STARLING', 23px, 'NORMAL', 24px);
-
     color: $black;
     letter-spacing: -0.5px;
     margin: 0 auto 20px auto;
 }
+
 .a-marketing-card__desc {
     @include font('STARLING', 16px, null, 18px);
     color: $black;
@@ -51,6 +55,7 @@
         margin-top: -10px;
     }
 }
+
 .a-marketing-card__link {
     @include button-single;
     @include button-single-light;
@@ -60,21 +65,21 @@
     &:focus {
         @include button-single-light-hover;
     }
-
 }
-
 
 .a-marketing-card__magazine {
     margin: 0 auto 20px auto;
     width: 230px;
 }
+
 .a-marketing-card__magazine__cover {
     display: inline-block;
 }
+
 .a-marketing-card__magazine__cover--print {
     width: 110px;
 }
-.a-marketing-card__magazine__cover--desktop {}
+
 .a-marketing-card__magazine__cover--tablet {
     background-color: $black;
     background-image: none;
@@ -85,19 +90,16 @@
     position: static;
     width: 85px;
 }
+
 .a-marketing-card__magazine__cover--mobile {
     display: none;
 }
 
-.a-marketing-card--brand {}
-.a-marketing-card--event {}
-.a-marketing-card--topic {}
 .a-marketing-card--magazine {
     .a-marketing-card__col {
         text-align: center;
     }
 }
-
 
 @include tablet-size {
     .a-marketing-card {
@@ -149,5 +151,4 @@
             width: auto;
         }
     }
-
 }

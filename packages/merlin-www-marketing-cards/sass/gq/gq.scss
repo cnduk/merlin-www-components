@@ -15,13 +15,9 @@
     }
 }
 
-.a-marketing-card--brand {}
-.a-marketing-card--event {}
-.a-marketing-card--topic {}
-
 .a-marketing-card--magazine {
     .a-marketing-card__col {
-        @include marketing-card-medium-size() {
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
             &:nth-child(1) {
                 padding-right: 20px;
             }
@@ -36,7 +32,7 @@
 .a-marketing-card__brand {
     margin-bottom: 24px;
     text-transform: uppercase;
-    @include marketing-card-medium-size() {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
         margin-bottom: 0;
     }
 }
@@ -61,7 +57,7 @@
 .a-marketing-card__col {
     text-align: center;
 
-    @include marketing-card-medium-size() {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
         padding: 40px;
 
         &:nth-child(2) {
@@ -73,7 +69,7 @@
 .a-marketing-card--brand .a-marketing-card__col,
 .a-marketing-card--topic .a-marketing-card__col,
 .a-marketing-card--event .a-marketing-card__col {
-    @include marketing-card-medium-size() {
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
         width: 38%;
 
         & + .a-marketing-card__col {
@@ -90,11 +86,11 @@
 .a-marketing-card__magazine {
     margin: 0 auto 24px auto;
 
-    @include marketing-card-medium-size() {
+   @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
         margin-bottom: 0;
     }
 }
-.a-marketing-card__magazine__cover {}
+
 .a-marketing-card__magazine__cover--print {
     width: 72%;
 }
@@ -110,7 +106,7 @@
     right: 0;
     width: 44%;
 
-    @include marketing-card-medium-size() {
+   @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
         padding: 14px 5px;
     }
 }
@@ -124,7 +120,8 @@
     @include button-single();
     @include button-single-light();
 
-    &:hover {
+    &:hover,
+    &:focus{
         @include button-single-light-hover();
     }
 }

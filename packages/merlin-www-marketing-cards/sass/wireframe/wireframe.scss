@@ -1,23 +1,18 @@
 @import '@cnbritain/merlin-www-common:wireframe';
-
-@mixin marketing-card-medium-size() {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
-        @content;
-    }
-}
-
 .a-marketing-card {
     box-sizing: border-box;
     display: table;
     table-layout: fixed;
     width: 100%;
 }
+
 .a-marketing-card--brand {}
 .a-marketing-card--event {}
 .a-marketing-card--topic {}
+
 .a-marketing-card--magazine {
     .a-marketing-card__col {
-        @include marketing-card-medium-size(){
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
             vertical-align: middle;
             width: 50%;
         }
@@ -25,10 +20,12 @@
 }
 
 .a-marketing-card__brand {}
+
 .a-marketing-card__brand__img {
     display: block;
     max-width: 120px;
 }
+
 .a-marketing-card__brand__name {}
 .a-marketing-card__brand__prefix {
     display: block;
@@ -39,16 +36,15 @@
     vertical-align: top;
     width: 100%;
 
-    @include marketing-card-medium-size(){
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
         display: table-cell;
     }
 }
 
-
 .a-marketing-card--brand .a-marketing-card__col,
 .a-marketing-card--event .a-marketing-card__col,
 .a-marketing-card--topic .a-marketing-card__col {
-    @include marketing-card-medium-size(){
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
         width: 120px;
 
         & + .a-marketing-card__col {
@@ -57,20 +53,21 @@
     }
 }
 
-
-
-
 .a-marketing-card__desc {}
 
 .a-marketing-card__magazine {
     position: relative;
     width: 180px;
 }
+
 .a-marketing-card__magazine__cover {}
+
 .a-marketing-card__magazine__cover--print {
     width: 100%;
 }
+
 .a-marketing-card__magazine__cover--desktop {}
+
 .a-marketing-card__magazine__cover--tablet {
     background: url("/static/img/template_ipad.png") 0 0 no-repeat;
     background-size: auto 160px;
@@ -81,6 +78,7 @@
     right: 0;
     width: 100px;
 }
+
 .a-marketing-card__magazine__cover--mobile {
     background: url("/static/img/template_iphone.png") 0 0 no-repeat;
     background-size: 55px auto;

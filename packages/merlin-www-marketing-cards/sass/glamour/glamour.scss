@@ -12,8 +12,6 @@
     text-align: center;
 }
 
-.a-marketing-card__col + .a-marketing-card__col {}
-
 .a-marketing-card__title {
     @include font('MILLER_DISPLAY', 18px, 'SEMI BOLD', 21px);
     color: $dune;
@@ -78,7 +76,6 @@
     width: 200px;
 }
 
-.a-marketing-card__magazine__cover {}
 .a-marketing-card__magazine__cover--print {
     width: 137px;
 }
@@ -91,20 +88,7 @@
     display: none;
 }
 
-.a-marketing-card--brand {}
-.a-marketing-card--event {}
-.a-marketing-card--topic {}
-.a-marketing-card--magazine {}
-
-.a-marketing-card--brand .a-marketing-card__col,
-.a-marketing-card--topic .a-marketing-card__col,
-.a-marketing-card--event .a-marketing-card__col {}
-
-
-@include marketing-card-medium-size(){
-
-    .a-marketing-card {}
-
+@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
     .a-marketing-card__col {
         text-align: left;
     }
@@ -114,15 +98,15 @@
         @include line-height(28px);
     }
 
-    .a-marketing-card__desc {}
-
     .a-marketing-card__magazine {
         margin-bottom: 0;
         width: 230px;
     }
+
     .a-marketing-card__magazine__cover--print {
         width: 160px;
     }
+
     .a-marketing-card__magazine__cover--tablet {
         background: #000;
         width: 118px;

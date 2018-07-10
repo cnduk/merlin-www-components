@@ -1,5 +1,3 @@
-// @include marketing-card-medium-size(){
-
 @import '@cnbritain/merlin-www-common:houseandgarden';
 @import '@cnbritain/merlin-www-buttons:houseandgarden';
 
@@ -13,21 +11,20 @@
 .a-marketing-card__col {
     text-align: center;
 }
-.a-marketing-card__col + .a-marketing-card__col {}
 
 .a-marketing-card__title {
     @include font('MILLER_DISPLAY', 18px, 'BOLD', 22px);
-
     color: $mine-shaft;
     margin: 0 0 10px 0;
 }
+
 .a-marketing-card__desc {
     @include font('MILLER_DISPLAY', 14px, 'NORMAL', 19px);
-
     color: $mine-shaft;
     font-style: italic;
     margin: 0;
 }
+
 .a-marketing-card__link {
     @include button-single;
     @include button-single-light;
@@ -44,23 +41,22 @@
     }
 }
 
-.a-marketing-card__brand {}
 .a-marketing-card__brand__img {
     margin: 0 auto 20px auto;
     max-width: 140px;
 }
+
 .a-marketing-card__brand__prefix {
     @include font('BRANDON GROTESQUE', 10px, 'NORMAL', 10px);
-
     color: $mine-shaft;
     display: block;
     letter-spacing: 1px;
     margin: 0 0 20px 0;
     text-transform: uppercase;
 }
+
 .a-marketing-card__brand__name {
     @include font('BRANDON GROTESQUE', 20px, 'BOLD', 20px);
-
     color: $mine-shaft;
     display: block;
     margin: 0 0 20px 0;
@@ -75,31 +71,20 @@
     margin: 0 auto 20px auto;
     width: 150px;
 }
-.a-marketing-card__magazine__cover {}
+
 .a-marketing-card__magazine__cover--print {
     width: 95px;
 }
+
 .a-marketing-card__magazine__cover--tablet {
     width: 58px;
 }
+
 .a-marketing-card__magazine__cover--mobile {
     display: none;
 }
 
-.a-marketing-card--brand {}
-.a-marketing-card--event {}
-.a-marketing-card--topic {}
-.a-marketing-card--magazine {}
-
-.a-marketing-card--brand .a-marketing-card__col,
-.a-marketing-card--topic .a-marketing-card__col,
-.a-marketing-card--event .a-marketing-card__col {}
-
-
-
-
-@include marketing-card-medium-size(){
-
+@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
     .a-marketing-card {
         padding: 40px;
     }
@@ -112,6 +97,7 @@
         @include font-size(21px);
         @include line-height(26px);
     }
+
     .a-marketing-card__desc {
         @include font-size(18px);
         @include line-height(22px);
@@ -121,9 +107,11 @@
         margin-bottom: 0;
         width: 250px;
     }
+
     .a-marketing-card__magazine__cover--print {
         width: 160px;
     }
+
     .a-marketing-card__magazine__cover--tablet {
         width: 100px;
     }
