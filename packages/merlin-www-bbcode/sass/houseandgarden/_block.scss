@@ -1,0 +1,464 @@
+// -------------------- //
+// Blockquote
+// -------------------- //
+.bb-blockquote {
+    border-left: 1px solid $silver-chalice;
+    margin: 0 0 16px 0;
+    padding-left: 20px;
+}
+
+.bb-blockquote__quote {
+    @include font("MILLER_DISPLAY", 17px, 400, 23px);
+    color: $dove-gray;
+    margin: 0;
+
+    @include at-x-large-size {
+        @include font-size(19px);
+        @include line-height(25px);
+    }
+}
+
+.bb-blockquote__separator {
+    display: none;
+}
+
+.bb-blockquote__credit {
+    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
+    color: $silver-chalice;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+// -------------------- //
+// Callout
+// -------------------- //
+.bb-callout {
+    border: 1px solid $mine-shaft;
+    margin: 30px 0;
+    padding: 20px 20px 30px;
+
+    > *:first-child {
+        margin-top: 0;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+
+    @include at-x-large-size {
+        margin: 40px 0;
+        padding: 30px 30px 40px;
+    }
+}
+
+// -------------------- //
+// Headings
+// -------------------- //
+.bb-h1,
+.bb-h2,
+.bb-h3,
+.bb-h4,
+.bb-h5,
+.bb-h6 {
+    color: $mine-shaft;
+    letter-spacing: 0px;
+    margin: 0 0 10px 0;
+}
+
+.bb-h1 {
+    @include font("MILLER_DISPLAY", 35px, 700, 38px);
+    @include at-x-large-size {
+        @include font-size(65px);
+        @include line-height(68px);
+    }
+}
+
+.bb-h2 {
+    @include font("MILLER_DISPLAY", 25px, 700, 28px);
+    margin-top: 20px;
+    @include at-x-large-size {
+        @include font-size(27px);
+        @include line-height(30px);
+        margin-top: 30px;
+    }
+}
+
+.bb-h3 {
+    @include font("MILLER_DISPLAY", 22px, 700, 25px);
+    @include at-x-large-size {
+        @include font-size(24px);
+        @include line-height(27px);
+    }
+}
+
+.bb-h4 {
+    @include font("MILLER_DISPLAY", 20px, 700, 23px);
+    @include at-x-large-size {
+        @include font-size(22px);
+        @include line-height(25px);
+    }
+}
+
+.bb-h5 {
+    @include font("MILLER_DISPLAY", 16px, 700, 19px);
+    @include at-x-large-size {
+        @include font-size(20px);
+        @include line-height(23px);
+    }
+}
+
+.bb-h6 {
+    @include font("MILLER_DISPLAY", 12px, 700, 15px);
+    @include at-x-large-size {
+        @include font-size(16px);
+        @include line-height(19px);
+    }
+}
+
+.bb-hr {
+
+}
+
+// -------------------- //
+// Infobox
+// -------------------- //
+.bb-infobox {
+    border: 1px solid $mine-shaft;
+    margin: 30px 0;
+    overflow: visible;
+    // 11px is the negative top on the title
+    padding: (20px + 11px) 20px 30px 20px;
+    position: relative;
+    text-align: center;
+
+    @include at-x-large-size {
+        margin: 40px 0;
+        padding: (30px + 11px) 30px 40px 30px;
+    }
+}
+
+.bb-infobox__title {
+    @include font("MILLER_DISPLAY", 21px, 700, 23px);
+
+    background: $white;
+    box-sizing: border-box;
+    color: $mine-shaft;
+    display: inline-block;
+    letter-spacing: 1px;
+    left: 50%;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    position: absolute;
+    top: -11px;
+    text-transform: uppercase;
+    transform: translateX(-50%);
+
+    @include at-x-large-size {
+        margin-bottom: 30px;
+    }
+
+    &:before,
+    &:after {
+        background-color: $black;
+        bottom: 0;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 1px;
+    }
+
+    &:before {
+        left: 0;
+    }
+    &:after {
+        right: 0;
+    }
+
+}
+
+.bb-infobox__hr {
+    display: none;
+}
+
+.bb-infobox__body{}
+.bb-infobox__item {
+    margin: 0;
+
+    & + .bb-infobox__item {
+        margin-top: 10px;
+    }
+}
+
+.bb-infobox__item__key {
+    @include font("BRANDON GROTESQUE", 15px, 800, 15px);
+    border-bottom: 1px solid $mine-shaft;
+    color: $mine-shaft;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    padding-bottom: 2px;
+    text-transform: uppercase;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.bb-infobox__item__value {
+    @include font("MILLER_DISPLAY", 16px, 400, 20px);
+
+    color: $mine-shaft;
+    margin: 10px 0;
+}
+
+// -------------------- //
+// List
+// -------------------- //
+.bb-ul {
+    @include font("MILLER_DISPLAY", 17px, 400, 21px);
+    color: $mine-shaft;
+    letter-spacing: 0;
+    list-style: none;
+    margin: 30px 0;
+    padding: 0;
+
+    @include at-x-large-size {
+        @include font("MILLER_DISPLAY", 19px, 400, 23px);
+        margin: 40px 0;
+    }
+
+    .bb-li {
+        margin-bottom: 8px;
+        padding-left: 26px;
+        position: relative;
+
+        @include at-x-large-size {
+            margin-bottom: 8px;
+        }
+
+        &:after {
+            background: $black;
+            content: "";
+            display: block;
+            height: 6.4px;
+            left: 0;
+            position: absolute;
+            top: 8px;
+            transform: rotate(45deg);
+            width: 6.4px;
+        }
+    }
+}
+
+.bb-ol {
+    @include font("MILLER_DISPLAY", 17px, 400, 23px);
+    color: $mine-shaft;
+    counter-reset: li;
+    letter-spacing: 0;
+    list-style-type: none;
+    margin: 30px 0;
+    padding-left: 0px;
+
+    @include at-x-large-size {
+        @include font("MILLER_DISPLAY", 19px, 400, 23px);
+        margin: 40px 0;
+    }
+
+    .bb-li {
+        padding-bottom: 15px;
+        padding-left: 40px;
+        position: relative;
+
+        @include at-x-large-size {
+            padding-left: 43px;
+        }
+
+        &:before {
+            @include font("MILLER_DISPLAY", 16px, 700, 24px);
+            color: $white;
+            content: counter(li);
+            counter-increment: li;
+            background: $black;
+            border: 1px solid $black;
+            border-radius: 50%;
+            height: 23px;
+            left: 0;
+            margin-top: -2px;
+            position: absolute;
+            text-align: center;
+            width: 23px;
+
+            @include at-x-large-size {
+                @include font("MILLER_DISPLAY", 19px, 700, 30px);
+                height: 28px;
+                width: 28px;
+            }
+        }
+    }
+}
+
+// -------------------- //
+// Note
+// -------------------- //
+.bb-note {
+    @include font("MILLER_DISPLAY", 16px, 400, 21px);
+    color: $mine-shaft;
+    font-style: italic;
+    letter-spacing: 0;
+    margin: 30px 0;
+
+    @include at-x-large-size {
+        margin: 40px 0;
+    }
+
+    &:before {
+        background: $mine-shaft;
+        content:"";
+        display: block;
+        height: 4px;
+        margin-bottom: 12px;
+        width: 25px;
+    }
+}
+
+// -------------------- //
+// Paragraph
+// -------------------- //
+.bb-p {
+    @include font("MILLER_DISPLAY", 17px, 400, 23px);
+    color: $mine-shaft;
+    margin: 0 0 20px 0;
+
+    @include at-x-large-size {
+        @include font-size(19px);
+        @include line-height(25px);
+        margin: 0 0 30px 0;
+    }
+}
+
+.bb-pre {
+    @include font-size(17px);
+    @include line-height(17px);
+    background-color: $advert-light;
+    border-radius: 4px;
+    border: 1px solid $silver;
+    color: $dove-gray;
+    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    margin: 30px 0;
+    padding: 20px;
+    white-space: pre-wrap;
+
+    @include at-x-large-size {
+        margin: 40px 0;
+    }
+}
+
+// -------------------- //
+// Question/Answer
+// -------------------- //
+.bb-question,
+.bb-answer {
+    margin: 30px 0;
+    position: relative;
+
+    @include at-x-large-size {
+        margin: 40px 0;
+    }
+}
+.bb-question + .bb-answer {
+    margin-top: -20px;
+}
+
+.bb-question__question,
+.bb-answer__answer {
+    p {
+        @include font("MILLER_DISPLAY", 17px, 400, 23px);
+        color: $mine-shaft;
+        letter-spacing: 0;
+        margin-bottom: 10px;
+        text-indent: 30px;
+
+        @include at-x-large-size {
+            @include font-size(19px);
+            @include line-height(25px);
+            text-indent: 35px;
+        }
+    }
+}
+
+.bb-question__q,
+.bb-answer__a {
+    @include font("BRANDON GROTESQUE", 19px, 700, 20px);
+    color: $mine-shaft;
+    letter-spacing: 0;
+    left: 0;
+    position: absolute;
+    text-indent: 0;
+
+    @include at-x-large-size {
+        @include font-size(21px);
+        @include line-height(24px);
+    }
+}
+
+.bb-answer__a {
+    color: $careys-pink;
+}
+
+.bb-question__separator,
+.bb-answer__separator {
+    display: none;
+}
+
+.bb-question__author,
+.bb-answer__author {
+    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
+    color: $mine-shaft;
+    letter-spacing: 0;
+    text-indent: 0;
+    text-transform: uppercase;
+}
+
+.bb-question__by,
+.bb-answer__by {
+    display: none;
+}
+
+// -------------------- //
+// Pullquote
+// -------------------- //
+.bb-pullquote {
+    margin: 30px 0;
+    text-align: center;
+
+    @include at-x-large-size {
+        margin: 40px 0;
+    }
+}
+
+.bb-pullquote__quote {
+    @include font("MILLER_DISPLAY", 20px, 400, 30px);
+    color: $mine-shaft;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    @include at-x-large-size {
+        @include font-size(25px);
+        @include line-height(35px);
+    }
+}
+
+.bb-pullquote__separator {
+    display: none;
+}
+
+.bb-pullquote__credit {
+    @include font("BRANDON GROTESQUE", 10px, 700, 10px);
+    color: $mine-shaft;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
