@@ -85,6 +85,23 @@
 }
 
 // -------------------- //
+// Code
+// -------------------- //
+.bb-pre {
+    @include font-size(14px);
+    @include line-height(21px);
+    background-color: $albaster;
+    border-radius: 4px;
+    border: 1px solid $bon-jour;
+    color: $shuttle-gray;
+    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    line-height: 20px;
+    margin: 28px 0;
+    padding: 20px;
+    white-space: pre-wrap;
+}
+
+// -------------------- //
 // Headings
 // -------------------- //
 .bb-h1,
@@ -274,46 +291,6 @@
     }
 }
 
-.bb-pre {
-    @include font-size(14px);
-    @include line-height(21px);
-    background-color: $albaster;
-    border-radius: 4px;
-    border: 1px solid $bon-jour;
-    color: $shuttle-gray;
-    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
-    line-height: 20px;
-    margin: 28px 0;
-    padding: 20px;
-    white-space: pre-wrap;
-}
-
-// -------------------- //
-// Question
-// -------------------- //
-.bb-question {}
-.bb-question__question,
-.bb-question__question p {
-    @include font-weight(700);
-}
-.bb-question__q {
-}
-
-.bb-question__separator {
-    display: none;
-}
-
-.bb-question__author {
-    @include font("GOTHAM", 9px, 700, 12px, 60);
-    color: $mineshaft;
-    margin-top: 20px;
-    text-transform: uppercase;
-}
-
-.bb-question__by {
-    display: none;
-}
-
 // -------------------- //
 // Pullquote
 // -------------------- //
@@ -352,6 +329,32 @@
     color: $mineshaft;
     margin-top: 20px;
     text-transform: uppercase;
+}
+
+// -------------------- //
+// Question
+// -------------------- //
+.bb-question {}
+.bb-question__question,
+.bb-question__question p {
+    @include font-weight(700);
+}
+.bb-question__q {
+}
+
+.bb-question__separator {
+    display: none;
+}
+
+.bb-question__author {
+    @include font("GOTHAM", 9px, 700, 12px, 60);
+    color: $mineshaft;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.bb-question__by {
+    display: none;
 }
 
 // -------------------- //

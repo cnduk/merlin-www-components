@@ -60,6 +60,26 @@
 }
 
 // -------------------- //
+// Code
+// -------------------- //
+.bb-pre {
+    @include font-size(17px);
+    @include line-height(17px);
+    background: $concrete;
+    border-radius: 4px;
+    border: 1px solid $concrete;
+    color: $dune;
+    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    margin: 30px 0;
+    padding: 20px;
+    white-space: pre-wrap;
+
+    @include at-x-large-size {
+        margin: 40px 0;
+    }
+}
+
+// -------------------- //
 // Headings
 // -------------------- //
 .bb-h1,
@@ -291,21 +311,41 @@
     }
 }
 
-.bb-pre {
-    @include font-size(17px);
-    @include line-height(17px);
-    background: $concrete;
-    border-radius: 4px;
-    border: 1px solid $concrete;
-    color: $dune;
-    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+// -------------------- //
+// Pullquote
+// -------------------- //
+.bb-pullquote {
+    background: $azalea;
     margin: 30px 0;
-    padding: 20px;
-    white-space: pre-wrap;
+    padding: 30px 20px;
+    text-align: center;
 
     @include at-x-large-size {
-        margin: 40px 0;
+        margin: 30px 40px;
     }
+}
+
+.bb-pullquote__quote {
+    @include font("MILLER_DISPLAY", 22px, 'SEMI BOLD', 25px);
+    color: $astronaut;
+    letter-spacing: 0px;
+
+    @include at-x-large-size {
+        @include font-size(28px);
+        @include line-height(32px);
+    }
+}
+
+.bb-pullquote__separator {
+    display: none;
+}
+
+.bb-pullquote__credit {
+    @include font("GRAPHIK", 10px, 'NORMAL', 10px);
+    color: $astronaut;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 20px;
 }
 
 // -------------------- //
@@ -407,41 +447,4 @@
 .bb-question__by,
 .bb-answer__by {
     display: none;
-}
-
-// -------------------- //
-// Pullquote
-// -------------------- //
-.bb-pullquote {
-    background: $azalea;
-    margin: 30px 0;
-    padding: 30px 20px;
-    text-align: center;
-
-    @include at-x-large-size {
-        margin: 30px 40px;
-    }
-}
-
-.bb-pullquote__quote {
-    @include font("MILLER_DISPLAY", 22px, 'SEMI BOLD', 25px);
-    color: $astronaut;
-    letter-spacing: 0px;
-
-    @include at-x-large-size {
-        @include font-size(28px);
-        @include line-height(32px);
-    }
-}
-
-.bb-pullquote__separator {
-    display: none;
-}
-
-.bb-pullquote__credit {
-    @include font("GRAPHIK", 10px, 'NORMAL', 10px);
-    color: $astronaut;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-top: 20px;
 }

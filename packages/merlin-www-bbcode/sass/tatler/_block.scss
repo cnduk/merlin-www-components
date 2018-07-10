@@ -65,6 +65,20 @@
 }
 
 // -------------------- //
+// Code
+// -------------------- //
+.bb-pre {
+    @include font('STARLING', 14px, 'NORMAL', 14px);
+    background-color: $wild-sand;
+    border: 1px solid $silver;
+    border-radius: 4px;
+    color: $black;
+    margin: 30px 0;
+    padding: 20px 14px;
+    white-space: pre-wrap;
+}
+
+// -------------------- //
 // Headings
 // -------------------- //
 .bb-h1,
@@ -289,15 +303,47 @@
     }
 }
 
-.bb-pre {
-    @include font('STARLING', 14px, 'NORMAL', 14px);
-    background-color: $wild-sand;
-    border: 1px solid $silver;
-    border-radius: 4px;
-    color: $black;
-    margin: 30px 0;
-    padding: 20px 14px;
-    white-space: pre-wrap;
+// -------------------- //
+// Pullquote
+// -------------------- //
+.bb-pullquote {
+    border-bottom: solid 1px currentcolor;
+    border-top: solid 1px currentcolor;
+    margin: 40px 0;
+    padding: 15px 0px;
+
+    @include at-x-large-size {
+        margin: 60px 30px;
+    }
+}
+
+.bb-pullquote__quote {
+    @include font('COMMUTER SANS', 23px, 'NORMAL', 27px);
+    color: inherit;
+    display: block;
+    text-align: center;
+
+    @include at-x-large-size {
+        @include font-size(28px);
+        @include line-height(32px);
+    }
+
+    &:before,
+    &:after {
+        content: '';
+    }
+}
+
+.bb-pullquote__separator {
+    display: none;
+}
+
+.bb-pullquote__credit {
+    @include font('COMMUTER SANS', 10px, 'NORMAL', 10px);
+    color: inherit;
+    text-align: center;
+    padding-top: 15px;
+    text-transform: uppercase;
 }
 
 // -------------------- //
@@ -396,48 +442,5 @@
 .bb-answer__author {
     @include font('COMMUTER SANS', 10px, 'NORMAL', 10px);
     color: $black;
-    text-transform: uppercase;
-}
-
-// -------------------- //
-// Pullquote
-// -------------------- //
-.bb-pullquote {
-    border-bottom: solid 1px currentcolor;
-    border-top: solid 1px currentcolor;
-    margin: 40px 0;
-    padding: 15px 0px;
-
-    @include at-x-large-size {
-        margin: 60px 30px;
-    }
-}
-
-.bb-pullquote__quote {
-    @include font('COMMUTER SANS', 23px, 'NORMAL', 27px);
-    color: inherit;
-    display: block;
-    text-align: center;
-
-    @include at-x-large-size {
-        @include font-size(28px);
-        @include line-height(32px);
-    }
-
-    &:before,
-    &:after {
-        content: '';
-    }
-}
-
-.bb-pullquote__separator {
-    display: none;
-}
-
-.bb-pullquote__credit {
-    @include font('COMMUTER SANS', 10px, 'NORMAL', 10px);
-    color: inherit;
-    text-align: center;
-    padding-top: 15px;
     text-transform: uppercase;
 }

@@ -1,4 +1,47 @@
 // -------------------- //
+// Answer
+// -------------------- //
+.bb-answer {
+    margin: 40px 0;
+    position: relative;
+}
+
+.bb-answer__answer {
+    p {
+        margin-bottom: 16px;
+        text-indent: 32px;
+    }
+}
+
+.bb-answer__a {
+    @include font("PROXIMA NOVA CONDENSED", 18px, 600, 32px);
+    color: $BALI-HAI;
+    left: 0;
+    position: absolute;
+    text-indent: 0;
+
+    @include at-x-large-size {
+        @include font-size(20px);
+        @include line-height(36px);
+    }
+}
+
+.bb-question__separator {
+    display: none;
+}
+
+.bb-answer__author {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    color: $BALI-HAI;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.bb-answer__by {
+    display: none;
+}
+
+// -------------------- //
 // Blockquote
 // -------------------- //
 .bb-blockquote {
@@ -28,6 +71,22 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-top: 16px;
+}
+
+// -------------------- //
+// Code
+// -------------------- //
+.bb-pre {
+    @include font-size(14px);
+    @include line-height(20px);
+    background-color: $ADVERT-LIGHT;
+    border-radius: 4px;
+    border: 1px solid $PORCELAIN;
+    color: $RAVEN;
+    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    margin: 28px 0;
+    padding: 20px;
+    white-space: pre-wrap;
 }
 
 // -------------------- //
@@ -295,19 +354,6 @@
     }
 }
 
-.bb-pre {
-    @include font-size(14px);
-    @include line-height(20px);
-    background-color: $ADVERT-LIGHT;
-    border-radius: 4px;
-    border: 1px solid $PORCELAIN;
-    color: $RAVEN;
-    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
-    margin: 28px 0;
-    padding: 20px;
-    white-space: pre-wrap;
-}
-
 // -------------------- //
 // Pullquote
 // -------------------- //
@@ -379,48 +425,5 @@
 }
 
 .bb-question__by {
-    display: none;
-}
-
-// -------------------- //
-// Answer
-// -------------------- //
-.bb-answer {
-    margin: 40px 0;
-    position: relative;
-}
-
-.bb-answer__answer {
-    p {
-        margin-bottom: 16px;
-        text-indent: 32px;
-    }
-}
-
-.bb-answer__a {
-    @include font("PROXIMA NOVA CONDENSED", 18px, 600, 32px);
-    color: $BALI-HAI;
-    left: 0;
-    position: absolute;
-    text-indent: 0;
-
-    @include at-x-large-size {
-        @include font-size(20px);
-        @include line-height(36px);
-    }
-}
-
-.bb-question__separator {
-    display: none;
-}
-
-.bb-answer__author {
-    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
-    color: $BALI-HAI;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.bb-answer__by {
     display: none;
 }
