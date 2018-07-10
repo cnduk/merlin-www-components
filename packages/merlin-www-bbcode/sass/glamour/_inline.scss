@@ -1,3 +1,13 @@
+// -------------------- //
+// Abbreviation
+// -------------------- //
+.bb-abbr {
+    text-decoration: underline;
+}
+
+// -------------------- //
+// Anchor
+// -------------------- //
 .bb-a {
     color: $dune;
     border-bottom: 2px solid rgba(44, 55, 129, .25);
@@ -10,16 +20,35 @@
     }
 }
 
-.bb-abbr {
-    text-decoration: underline;
-}
-
-.bb-mark {
-    background: $azalea;
-}
-
+// -------------------- //
+// Bold
+// -------------------- //
 .bb-strong {
     font-weight: 600;
+}
+
+// -------------------- //
+// Button
+// -------------------- //
+.bb-button {}
+.bb-button--light {
+    @include button-group();
+    @include button-group-light();
+
+    &:hover,
+    &:focus {
+        @include button-group-light-hover();
+    }
+}
+
+.bb-button--dark {
+    @include button-group();
+    @include button-group-dark();
+
+    &:hover,
+    &:focus {
+        @include button-group-dark-hover();
+    }
 }
 
 // -------------------- //
@@ -44,24 +73,8 @@
 }
 
 // -------------------- //
-// Button
+// Mark
 // -------------------- //
-.bb-button {}
-.bb-button--light {
-    @include button-group();
-    @include button-group-light();
-
-    &:hover,
-    &:focus {
-        @include button-group-light-hover();
-    }
-}
-.bb-button--dark {
-    @include button-group();
-    @include button-group-dark();
-
-    &:hover,
-    &:focus {
-        @include button-group-dark-hover();
-    }
+.bb-mark {
+    background: $azalea;
 }

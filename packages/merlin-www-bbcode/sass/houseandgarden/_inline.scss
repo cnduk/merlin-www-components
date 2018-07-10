@@ -1,11 +1,13 @@
+// -------------------- //
+// Abbreviation
+// -------------------- //
 .bb-abbr {
     text-decoration: underline;
 }
 
-.bb-mark {
-    background-color: $vanilla-ice;
-}
-
+// -------------------- //
+// Anchor
+// -------------------- //
 .bb-a {
     color: $mine-shaft;
     border-bottom: 2px solid $careys-pink;
@@ -58,4 +60,11 @@
         @include font-size(90px);
         @include line-height(90px);
     }
+}
+
+// -------------------- //
+// Mark
+// -------------------- //
+.bb-mark {
+    background-color: $vanilla-ice;
 }
