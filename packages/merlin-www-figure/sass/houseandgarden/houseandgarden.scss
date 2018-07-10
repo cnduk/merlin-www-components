@@ -24,24 +24,6 @@
     }
 }
 
-@each $name, $color in $COLOUR_SOCIAL_LIGHT {
-    .c-figure__toolbar-listitem--#{$name} {
-
-        svg, path {
-            fill: map-get($COLOUR_SOCIAL_LIGHT, $name);
-        }
-
-        &:hover,
-        &:focus {
-            background-color: map-get($COLOUR_SOCIAL_LIGHT, $name);
-
-            svg, path {
-                fill: $white;
-            }
-        }
-    }
-}
-
 .c-figure__toolbar-listitem--more {
     svg, path {
         fill: $mine-shaft;
@@ -59,6 +41,24 @@
 
         svg, path {
             fill: $white;
+        }
+    }
+}
+
+@each $name, $color in $COLOUR_SOCIAL_LIGHT {
+    .c-figure__toolbar-listitem--#{$name} {
+
+        svg, path {
+            fill: map-get($COLOUR_SOCIAL_LIGHT, $name);
+        }
+
+        &:hover,
+        &:focus {
+            background-color: map-get($COLOUR_SOCIAL_LIGHT, $name);
+
+            svg, path {
+                fill: $white;
+            }
         }
     }
 }

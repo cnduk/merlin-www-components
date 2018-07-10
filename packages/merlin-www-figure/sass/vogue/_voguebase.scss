@@ -36,13 +36,24 @@
     }
 }
 
-.c-figure__toolbar-listitem--facebook {
+.c-figure__toolbar-listitem--zoom {
+    &:hover,
+    &:focus {
+        background-color: $guardsman-red;
+        svg {
+            fill: #fff;
+        }
+    }
+}
+
+.c-figure__toolbar-listitem--email {
     svg {
-        fill: map-get($COLOUR_SOCIAL, 'facebook');
+        fill: map-get($COLOUR_SOCIAL, 'email');
     }
 
-    &:hover {
-        background-color: map-get($COLOUR_SOCIAL, 'facebook');
+    &:hover,
+    &:focus {
+        background-color: map-get($COLOUR_SOCIAL, 'email');
 
         svg {
             fill: #fff;
@@ -55,7 +66,8 @@
         fill: map-get($COLOUR_SOCIAL, 'twitter');
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: map-get($COLOUR_SOCIAL, 'twitter');
 
         svg {
@@ -64,27 +76,14 @@
     }
 }
 
-.c-figure__toolbar-listitem--pinterest {
+.c-figure__toolbar-listitem--facebook {
     svg {
-        fill: map-get($COLOUR_SOCIAL, 'pinterest');
+        fill: map-get($COLOUR_SOCIAL, 'facebook');
     }
 
-    &:hover {
-        background-color: map-get($COLOUR_SOCIAL, 'pinterest');
-
-        svg {
-            fill: #fff;
-        }
-    }
-}
-
-.c-figure__toolbar-listitem--email {
-    svg {
-        fill: map-get($COLOUR_SOCIAL, 'email');
-    }
-
-    &:hover {
-        background-color: map-get($COLOUR_SOCIAL, 'email');
+    &:hover,
+    &:focus {
+        background-color: map-get($COLOUR_SOCIAL, 'facebook');
 
         svg {
             fill: #fff;
@@ -97,7 +96,8 @@
         fill: map-get($COLOUR_SOCIAL, 'whatsapp');
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: map-get($COLOUR_SOCIAL, 'whatsapp');
 
         svg {
@@ -106,9 +106,15 @@
     }
 }
 
-.c-figure__toolbar-listitem--zoom {
-    &:hover {
-        background-color: $guardsman-red;
+.c-figure__toolbar-listitem--pinterest {
+    svg {
+        fill: map-get($COLOUR_SOCIAL, 'pinterest');
+    }
+
+    &:hover,
+    &:focus {
+        background-color: map-get($COLOUR_SOCIAL, 'pinterest');
+
         svg {
             fill: #fff;
         }
@@ -146,8 +152,8 @@
 }
 
 .c-figure__credit {
-    color: $silver;
     @include font('NOBEL', 9px);
+    color: $silver;
     text-transform: uppercase;
 
     strong {

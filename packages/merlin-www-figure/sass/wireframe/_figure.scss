@@ -9,7 +9,7 @@
 }
 
 .c-figure__helper--landscape,
-.c-figure__helper--square,  {
+.c-figure__helper--square  {
     padding-top: 66.6666667%;
 }
 
@@ -75,10 +75,18 @@
 .c-figure__toolbar-listitem--share {
     display: none;
 }
+
+.c-figure__toolbar-listitem--more {}
+
 .c-figure__toolbar-listitem--zoom {
     display: none;
 }
-.c-figure__toolbar-listitem--more {}
+
+.c-figure__toolbar-listitem--email {}
+.c-figure__toolbar-listitem--twitter {}
+.c-figure__toolbar-listitem--facebook {}
+.c-figure__toolbar-listitem--whatsapp {}
+.c-figure__toolbar-listitem--pinterest {}
 
 .c-figure__title {}
 .c-figure__caption {}
@@ -101,3 +109,5 @@
         }
     }
 }
+
+.c-figure--dark {}

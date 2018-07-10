@@ -22,23 +22,6 @@
     }
 }
 
-@each $name, $color in $COLOUR_SOCIAL_LIGHT {
-    .c-figure__toolbar-listitem--#{$name} {
-
-        svg, path {
-            fill: map-get($COLOUR_SOCIAL_LIGHT, $name);
-        }
-
-        &:hover {
-            background-color: map-get($COLOUR_SOCIAL_LIGHT, $name);
-
-            svg, path {
-                fill: $white;
-            }
-        }
-    }
-}
-
 .c-figure__toolbar-listitem--more {
     svg, path {
         fill: $black;
@@ -50,11 +33,30 @@
         fill: $black;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: $cod-gray;
 
         svg, path {
             fill: $white;
+        }
+    }
+}
+
+@each $name, $color in $COLOUR_SOCIAL_LIGHT {
+    .c-figure__toolbar-listitem--#{$name} {
+
+        svg, path {
+            fill: map-get($COLOUR_SOCIAL_LIGHT, $name);
+        }
+
+        &:hover,
+        &:focus {
+            background-color: map-get($COLOUR_SOCIAL_LIGHT, $name);
+
+            svg, path {
+                fill: $white;
+            }
         }
     }
 }
@@ -101,7 +103,6 @@
     }
 }
 
-
 .c-figure--dark {
     .c-figure__wrapper {
         background: $black;
@@ -124,14 +125,16 @@
 
     @each $name, $color in $COLOUR_SOCIAL_DARK {
         .c-figure__toolbar-listitem--#{$name} {
-            &:hover {
+            &:hover,
+            &:focus {
                 background-color: map-get($COLOUR_SOCIAL_DARK, $name);
             }
         }
     }
 
     .c-figure__toolbar-listitem--zoom {
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: $brownish-grey;
         }
     }

@@ -30,15 +30,6 @@
     }
 }
 
-@each $name, $color in $COLOUR_SOCIAL_LIGHT {
-    .c-figure__toolbar-listitem--#{$name} {
-
-        svg, path {
-            fill: map-get($COLOUR_SOCIAL_LIGHT, $name);
-        }
-    }
-}
-
 .c-figure__toolbar-listitem--more {
     svg, path {
         fill: $MUSTASAARI;
@@ -48,6 +39,15 @@
 .c-figure__toolbar-listitem--zoom {
     svg, path {
         fill: $MUSTASAARI;
+    }
+}
+
+@each $name, $color in $COLOUR_SOCIAL_LIGHT {
+    .c-figure__toolbar-listitem--#{$name} {
+
+        svg, path {
+            fill: map-get($COLOUR_SOCIAL_LIGHT, $name);
+        }
     }
 }
 
