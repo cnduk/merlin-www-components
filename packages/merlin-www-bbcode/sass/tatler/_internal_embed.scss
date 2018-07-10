@@ -1,0 +1,260 @@
+// -------------------- //
+// Card
+// -------------------- //
+.bb-card {
+    border: 1px solid $mercury;
+    margin: 30px 0;
+    padding: 15px;
+
+    @include desktop-size {
+        padding: 20px;
+    }
+}
+
+.bb-card__obj {
+    display: flex;
+}
+
+.bb-card__obj__header {
+    flex: 0 0 112px;
+    padding-right: 13px;
+
+    @include desktop-size {
+        flex: 0 0 185px;
+        padding-right: 20px;
+    }
+}
+
+.bb-card__obj__body {
+    flex: 1 1 auto;
+    padding-left: 0;
+}
+
+.bb-card__images {
+    .bb-card__image {
+        background-color: $alabaster;
+        padding-top: 100%;
+    }
+
+    .bb-card__image__icon {
+        display: none;
+        bottom: 0;
+        background-color: $black;
+        height: 40px;
+        left: 0;
+        width: 40px;
+
+        svg {
+            display: block;
+            height: 100%;
+            margin: 0 auto;
+            vertical-align: middle;
+            width: 16px;
+            fill: $mercury;
+        }
+    }
+}
+
+.bb-card__tag {
+    @include font('COMMUTER SANS', 10px, 'NORMAL', 10px);
+    color: $gray;
+    margin: 0 0 6px;
+    text-transform: uppercase;
+
+    @include desktop-size {
+        @include font-size(12px);
+        @include line-height(12px);
+    }
+}
+
+.bb-card__title {
+    @include font('STARLING', 18px, 'NORMAL', 21px);
+    letter-spacing: -0.3px;
+    margin: 0;
+
+    @include desktop-size {
+        @include font-size(24px);
+        @include line-height(27px);
+        letter-spacing: -0.5px;
+        margin: 10px 0 0;
+    }
+}
+
+.bb-card__teaser,
+.bb-card__separator,
+.bb-card__byline,
+.bb-card__meta {
+    display: none;
+}
+
+// -------------------- //
+// Figure
+// -------------------- //
+.bb-figure {
+    margin: 25px 0;
+
+    @include desktop-size {
+        margin: 30px 0;
+    }
+}
+
+.bb-figure__wrapper {
+    margin-bottom: 10px;
+}
+
+.bb-figure__caption,
+.bb-figure__credit {
+    width: 100%;
+}
+
+.bb-figure__caption,
+.bb-figure__caption .bb-p {
+    @include font('COMMUTER SANS', 13px, null, 16px);
+    color: $black;
+    margin: 10px 0 0 0;
+    text-transform: uppercase;
+}
+
+.bb-figure__credit {
+    @include font('COMMUTER SANS', 9px, null, 9px);
+    color: $gray;
+    margin: 10px 0 0 0;
+    text-transform: uppercase;
+
+    @include desktop-size {
+        margin-top: 15px;
+    }
+}
+
+.bb-figure__wrapper {
+    background-color: $alabaster;
+}
+
+.bb-figure--external {
+    img {
+        margin: 0 auto;
+    }
+}
+
+// -------------------- //
+// Gallery
+// -------------------- //
+.bb-gallery__title {
+    @include font('STARLING', 18px, 'NORMAL', 20px);
+    letter-spacing: -0.3px;
+    margin: 30px 0 15px;
+    padding-left: 30px;
+
+    @include desktop-size {
+        @include font-size(20px);
+        @include line-height(23px);
+        letter-spacing: -0.5px;
+        margin: 30px 0 13px;
+    }
+}
+
+.bb-gallery__icon {
+    width: 20px;
+    height: 20px;
+    top: 30px;
+    position: absolute;
+    left: 0;
+
+    @include desktop-size {
+        top: 32px;
+    }
+
+    svg {
+        fill: $black;
+    }
+}
+
+.bb-gallery__cols {
+    background-color: $alabaster;
+
+    &:before {
+        content: none;
+    }
+}
+
+.bb-gallery__remaining-text {
+    @include font("COMMUTER SANS", 27px, "NORMAL", 27px);
+
+    letter-spacing: normal;
+}
+
+.bb-gallery__remaining-text--prefix {
+    @include font-size(22px);
+    @include line-height(22px);
+    margin-right: -3px;
+}
+
+// -------------------- //
+// Video
+// -------------------- //
+.bb-video {
+    margin-bottom: 40px;
+
+    @include desktop-size {
+        margin-bottom: 60px;
+    }
+}
+
+.bb-video__title {
+    @include font('STARLING', 18px, 'NORMAL', 20px);
+    letter-spacing: -0.3px;
+    margin: 30px 0 15px;
+    padding-left: 30px;
+
+    @include desktop-size {
+        @include font-size(20px);
+        @include line-height(25px);
+        letter-spacing: -0.5px;
+        margin: 30px 0 13px;
+    }
+}
+
+.bb-video__icon {
+    display: inline-block;
+    height: 16px;
+    left: 0;
+    padding: 0;
+    position: absolute;
+        top: 2px;
+    width: 16px;
+
+    svg {
+        display: block;
+        height: 100%;
+        margin: 0 auto;
+        vertical-align: middle;
+        width: auto;
+    }
+
+    svg, path {
+        fill: $black;
+    }
+}
+
+.bb-video__image-icon {
+    background-color: rgba(17, 17, 17, 0.6);
+    border-radius: 50%;
+    height: 60px;
+    left: 50%;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+
+    svg, path {
+        fill: $white;
+        height: 20px;
+        margin-left: 3px;
+        width: 20px;
+    }
+}
+
+.bb-video__wrapper {
+    background: $alabaster;
+}
