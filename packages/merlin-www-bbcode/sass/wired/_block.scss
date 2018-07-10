@@ -1,0 +1,368 @@
+// -------------------- //
+// Blockquote
+// -------------------- //
+.bb-blockquote {
+    border-left: 1px solid $trolley-grey;
+    color: $trolley-grey;
+    margin: 40px 0;
+    padding: 0 0 0 20px;
+
+    @include at-x-large-size {
+        margin: 60px 0;
+    }
+}
+
+.bb-blockquote__quote {
+    @include font("BRUTAL", 16px, 700, 21px);
+    color: $trolley-grey;
+
+    @include at-x-large-size {
+        @include font-size(17px);
+    }
+}
+
+.bb-blockquote__separator {
+    border: none;
+    border-bottom: 1px solid $trolley-grey;
+    margin: 15px 0;
+    width: 10px;
+}
+
+.bb-blockquote__credit {
+    @include font("BRUTAL", 14px, 300);
+}
+
+// -------------------- //
+// Callout
+// -------------------- //
+.bb-callout {
+    border: 7px solid $black;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+
+    > *:first-child {
+        margin-top: 0;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+
+    @include at-x-large-size {
+        padding: 30px;
+    }
+}
+
+// -------------------- //
+// Code
+// -------------------- //
+.bb-pre {
+    font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    white-space: pre-wrap;
+}
+
+// -------------------- //
+// Headings
+// -------------------- //
+.bb-h1,
+.bb-h2,
+.bb-h3,
+.bb-h4,
+.bb-h5,
+.bb-h6 {
+    @include font('NEW GROTESK SQUARE', null, 'LIGHT');
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: auto;
+    font-variant-ligatures: common-ligatures;
+    color: $black;
+    margin: 40px 0 15px 0;
+}
+
+.bb-h1 {
+    @include font-size(50px);
+    @include line-height(50px);
+    font-weight: normal;
+
+    @include at-x-large-size {
+        @include font-size(100px);
+        @include line-height(100px);
+    }
+}
+
+.bb-h2 {
+    @include font-size(40px);
+    @include line-height(40px);
+
+    @include at-x-large-size {
+        @include font-size(45px);
+        @include line-height(45px);
+    }
+}
+
+.bb-h3 {
+    @include font-size(35px);
+    @include line-height(35px);
+    letter-spacing: 1px;
+
+    @include at-x-large-size {
+        @include font-size(40px);
+        @include line-height(40px);
+        letter-spacing: 0;
+    }
+}
+
+.bb-h4 {
+    @include font-size(30px);
+    @include line-height(30px);
+    letter-spacing: 1px;
+
+    @include at-x-large-size {
+        @include font-size(35px);
+        @include line-height(35px);
+        letter-spacing: 0;
+    }
+}
+
+.bb-h5 {
+    @include font-size(25px);
+    @include line-height(25px);
+    letter-spacing: 1px;
+
+    @include at-x-large-size {
+        letter-spacing: 0;
+    }
+}
+
+.bb-h6 {
+    @include font-size(20px);
+    @include line-height(20px);
+    letter-spacing: 1px;
+
+    @include at-x-large-size {
+        letter-spacing: 0;
+    }
+}
+
+.bb-hr {
+    border: none;
+    border-top: 1px solid #000;
+    height: 0;
+    margin: 10px 0;
+}
+
+// -------------------- //
+// Infobox
+// -------------------- //
+.bb-infobox {
+    border: 7px solid $black;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+
+    @include at-x-large-size {
+        padding: 30px;
+    }
+}
+
+.bb-infobox__title {
+    @include font("BRUTAL", 15px, 'BOLD');
+    border-bottom: 2px solid $black;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.bb-infobox__hr {
+    display: none;
+}
+
+.bb-infobox__item {
+    margin: 20px auto;
+
+    &:last-child {
+        margin-bottom: 0;
+
+        .bb-infobox__item__value {
+            margin: 0;
+        }
+    }
+}
+
+.bb-infobox__item__key {
+    @include font("BRUTAL", 15px, 'BOLD');
+    border-bottom: 1px solid $black;
+    margin: 10px 0;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.bb-infobox__item__value {
+    @include font("BRUTAL", 17px, 300, 23px);
+    margin: 10px 0;
+
+    @include at-x-large-size {
+        @include font-size(17px);
+        @include line-height(22px);
+    }
+}
+
+// -------------------- //
+// List
+// -------------------- //
+.bb-ul,
+.bb-ol {
+    @include font("BRUTAL", 17px, 300, 23px);
+    list-style-type: none;
+    margin: 30px 0;
+    padding-left: 30px;
+
+    @include at-x-large-size {
+        margin: 40px 0;
+    }
+}
+
+.bb-li {
+    position: relative;
+}
+
+.bb-ul {
+    .bb-li:before {
+        background: #000;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: 10px;
+        left: -30px;
+        position: absolute;
+        top: 7px;
+        width: 10px;
+    }
+}
+
+.bb-ol {
+    counter-reset: section;
+
+    .bb-li {
+        counter-increment: section;
+    }
+
+    .bb-li:before {
+        content: counters(section,".")".";
+        font-weight: bold;
+        left: -30px;
+        position: absolute;
+    }
+}
+
+// -------------------- //
+// Note
+// -------------------- //
+.bb-note {
+    @include font("BRUTAL", 13px, 300);
+    border-top: 1px solid $black;
+    margin: 40px 0;
+    padding-top: 15px;
+}
+
+// -------------------- //
+// Paragraph
+// -------------------- //
+.bb-p {
+    @include font("EXCHANGE WEB", 17px, 300, 23px);
+    color: #000;
+    margin: 10px 0;
+
+    @include at-x-large-size {
+        @include font-size(19px);
+        @include line-height(27px);
+    }
+}
+
+// -------------------- //
+// Pullquote
+// -------------------- //
+.bb-pullquote {
+    margin: 30px 0;
+
+    @include at-x-large-size {
+        margin: 60px 0;
+    }
+}
+
+.bb-pullquote__quote {
+    @include font("NEW GROTESK SQUARE", 48px, 300, 48px);
+    display: block;
+    text-align: center;
+
+    &:before,
+    &:after {
+        content: '';
+    }
+
+    @include at-x-large-size{
+        @include font-size(48px);
+        @include line-height(48px);
+    }
+}
+
+.bb-pullquote__separator {
+    border: none;
+    border-top: 1px solid $black;
+    margin: 10px auto 15px auto;
+    width: 40px;
+
+    @include at-x-large-size {
+        margin: 15px auto 20px auto;
+    }
+}
+
+.bb-pullquote__credit {
+    @include font("BRUTAL", 13px, 300, 13px);
+    text-align: center;
+}
+
+// -------------------- //
+// Question/Answer
+// -------------------- //
+.bb-question,
+.bb-answer {}
+
+.bb-question__question,
+.bb-answer__answer {
+    @include font("BRUTAL", 17px, null, 23px);
+    margin-left: 30px;
+
+    p {
+        @include font("BRUTAL", 17px, null, 23px);
+    }
+}
+
+.bb-question__q,
+.bb-answer__a {
+    @include font-weight(700);
+    display: inline-block;
+    margin-left: -30px;
+    width: 30px;
+}
+
+.bb-question__separator,
+.bb-answer__separator {
+    border: none;
+    border-bottom: 1px solid $trolley-grey;
+    margin: 10px 0 10px 30px;
+    width: 15px;
+}
+
+.bb-question__author,
+.bb-answer__author {
+    @include font("BRUTAL", 13px, 400, 27px);
+}
+
+.bb-question__by,
+.bb-answer__by {
+    @include font("EXCHANGE WEB");
+    @include font-weight(400);
+    font-style: italic;
+    margin-left: 30px;
+}

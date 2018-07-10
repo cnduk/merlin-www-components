@@ -1,0 +1,339 @@
+// -------------------- //
+// Card
+// -------------------- //
+.bb-card {
+    border: 1px solid $isabelline;
+    margin: 40px 0;
+    padding: 15px;
+
+    &:hover,
+    &:focus {
+        .bb-card__title span {
+            text-decoration: underline;
+        }
+    }
+
+    @include at-x-large-size {
+        padding: 20px;
+        position: relative;
+
+        &:before {
+            @include font('BRUTAL', 12px, 500);
+            bottom: 20px;
+            content: 'Continue reading';
+            position: absolute;
+            right: 20px;
+            text-transform: uppercase;
+            z-index: 1;
+        }
+    }
+}
+
+.bb-card__obj {
+    display: table;
+    width: 100%;
+}
+
+.bb-card__obj__header,
+.bb-card__obj__body {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.bb-card__obj__header {
+    width: 40%;
+    padding-right: 13px;
+
+    @include at-x-large-size {
+        padding-right: 20px;
+        width: 185px;
+    }
+}
+
+.bb-card__image {
+    padding-top: 100%;
+}
+
+.bb-card__obj__body {
+    padding-left: 10px;
+    width: auto;
+}
+
+.bb-card__tag {
+    @include font("EXCHANGE WEB", 11px, 500, 14px, -4);
+    color: $black;
+    margin: 0 0 10px 0;
+
+    @include at-x-large-size {
+        @include font-size(14px);
+        @include line-height(14px);
+        margin: 0 0 15px 0;
+    }
+}
+
+.bb-card__title {
+    @include font("NEW GROTESK SQUARE", 25px, 300, 25px);
+    margin: 10px 0 0 0;
+
+    @include at-x-large-size {
+        @include font-size(30px);
+        @include line-height(28px);
+        margin: 15px 0 0 0;
+    }
+}
+
+.bb-card__separator {
+    display: none;
+}
+
+.bb-card__byline {
+    line-height: 1em;
+    margin: 8px auto 5px auto;
+}
+
+.bb-card__byline-prefix {
+    @include font("EXCHANGE WEB", 11px, null, 11px);
+    font-style: italic;
+}
+
+.bb-card__byline-name {
+    @include font("BRUTAL", 11px, 700, 11px);
+    text-transform: uppercase;
+}
+
+.bb-card__meta {
+    font-size: 0;
+    margin-top: -5px;
+
+    li.bb-card__meta-item {
+        @include font("EXCHANGE WEB", 11px, 400, 12px);
+        margin-top: 5px;
+        padding-right: 10px;
+
+        & + .bb-card__meta-item {
+            border-left: 1px solid $isabelline;
+            padding-left: 10px;
+        }
+    }
+}
+
+// -------------------- //
+// Figure
+// -------------------- //
+.bb-figure {
+    box-sizing: border-box;
+    margin: 45px 0;
+}
+
+.bb-figure--external {
+    .bb-figure__wrapper {
+        background-color: transparent;
+    }
+}
+
+.bb-figure__wrapper {
+    background-color: $white-smoke;
+
+    & + * {
+        margin-top: 10px;
+    }
+}
+
+.bb-figure__caption {
+    p {
+        @include font("BRUTAL", 15px, 500, 17px);
+
+        & + p {
+            margin-top: 10px;
+        }
+    }
+}
+
+.bb-figure__credit {
+    @include font("BRUTAL", 12px, 700, 12px);
+    margin: 10px 0 0 0;
+
+    &:before {
+        content: 'Credit ';
+        @include font-weight(300);
+    }
+}
+
+// -------------------- //
+// Gallery
+// -------------------- //
+.bb-gallery {
+    margin: 30px 0;
+
+    &:hover {
+        .bb-gallery__title span + span {
+            text-decoration: underline;
+        }
+    }
+
+    @include at-x-large-size {
+        margin: 60px 0;
+    }
+
+}
+
+.bb-gallery__icon {
+    display: inline-block;
+    height: auto;
+    left: 0px;
+    position: absolute;
+    width: 20px;
+
+    svg {
+        width: 20px;
+    }
+
+    @include at-x-large-size {
+        width: 30px;
+
+        svg {
+            width: 30px;
+        }
+    }
+}
+
+.bb-gallery__title {
+    @include font("BRUTAL", 17px, 700, 20px);
+    color: $black;
+    display: block;
+    margin: 0 0 10px 30px;
+    width: auto;
+
+    @include at-x-large-size {
+        margin: 0 0 12px 40px;
+    }
+}
+
+.bb-gallery__cols {}
+.bb-gallery__col {}
+.bb-gallery__col--2-2 {}
+.bb-gallery__col--1-1 {}
+.bb-gallery__image {}
+.bb-gallery__remaining {
+    background-color: rgba(0,0,0,0.5);
+    bottom: 0;
+    color: $white;
+    height: 100%;
+    top: 0;
+    white-space: nowrap;
+}
+
+.bb-gallery__remaining-text {
+    @include font("BRUTAL");
+    @include font-weight(700);
+}
+
+.bb-gallery__remaining-text--prefix {
+    @include font("BRUTAL", 20px, 900);
+    line-height: 100%;
+    position: relative;
+    top: -2px;
+
+    @include at-x-large-size {
+        @include font-size(30px);
+        top: -4px;
+    }
+}
+
+.bb-gallery__remaining-text--value {
+    @include font("BRUTAL", 25px, 900);
+    line-height: 100%;
+
+    @include at-x-large-size {
+        @include font-size(40px);
+    }
+}
+
+// -------------------- //
+// Video
+// -------------------- //
+.bb-video {
+    margin: 30px 0;
+
+    &:hover {
+        .bb-video__title span + span {
+            text-decoration: underline;
+        }
+    }
+
+    @include at-x-large-size {
+        margin: 60px 0;
+    }
+
+}
+
+.bb-video__icon {
+    display: inline-block;
+    height: auto;
+    left: 0px;
+    position: absolute;
+    top: -2px;
+    width: 20px;
+
+    svg {
+        width: 20px;
+    }
+
+    @include at-x-large-size {
+        left: 0;
+        top: -6px;
+        width: 30px;
+
+        svg {
+            width: 30px;
+        }
+    }
+}
+
+.bb-video__title {
+    @include font("BRUTAL", 17px, 700, 20px);
+    color: $black;
+    display: block;
+    margin: 0 0 10px 30px;
+    position: relative;
+
+    @include at-x-large-size {
+        margin: 0 0 12px 40px;
+    }
+}
+
+.bb-video__wrapper {}
+
+.bb-video__image-icon {
+    background-color: $black;
+    height: 50px;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 50px;
+
+    svg {
+        display: block;
+        height: 20px;
+        margin: 15px auto 0 auto;
+        width: 20px;
+    }
+
+    svg, path {
+        fill: $white;
+    }
+
+    @include at-x-large-size {
+        height: 70px;
+        margin: -35px 0 0 -35px;
+        width: 70px;
+
+        svg {
+            height: 30px;
+            margin-top: 20px;
+            width: 30px;
+        }
+    }
+}
