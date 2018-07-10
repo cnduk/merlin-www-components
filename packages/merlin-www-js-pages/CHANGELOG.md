@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.6.2"></a>
+## [1.6.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.6.1...@cnbritain/merlin-www-js-pages@1.6.2) (2018-07-10)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** update top stories with scrolling ([170eb9b](https://github.com/cnduk/merlin-www-components/commit/170eb9b))
+
+
+
+
 <a name="1.6.1"></a>
 ## [1.6.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.6.0...@cnbritain/merlin-www-js-pages@1.6.1) (2018-07-09)
 
