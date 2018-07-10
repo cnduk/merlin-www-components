@@ -3,6 +3,10 @@
     background-color: $alabaster-f9;
     margin: $MARGIN_SMALL 0;
     padding: $PADDING_MEDIUM $PADDING_SMALL;
+
+    @include at-medium-size {
+        padding: 0;
+    }
 }
 
 .a-marketing-card--magazine {
@@ -48,6 +52,15 @@
 
 .a-marketing-card__magazine {
     margin: 0 auto $MARGIN_SMALL auto;
+
+    @include at-medium-size {
+        margin-bottom: 0;
+
+        .a-marketing-card__col {
+            text-align: left;
+        }
+
+    }
 }
 
 .a-marketing-card__link {
@@ -64,18 +77,18 @@
     @include font('ADOBE CASLON', 17px, 'SEMI BOLD', 25px);
     color: $mine-shaft-333;
     margin: 0 0 $MARGIN_XX_SMALL 0;
+
+     @include at-medium-size {
+        @include font-size(20px);
+    }
 }
 
-@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
-    .a-marketing-card {
-        padding: 0;
-    }
-
-    .a-marketing-card--magazine {
-        .a-marketing-card__col {
-            text-align: left;
-        }
-    }
+@include at-medium-size {
+    //.a-marketing-card--magazine {
+    //    .a-marketing-card__col {
+    //        text-align: left;
+    //    }
+    //}
 
     .a-marketing-card__col {
         padding: 40px;
@@ -87,13 +100,5 @@
         & + .a-marketing-card__col {
             border-left: 1px solid $loot-box;
         }
-    }
-
-    .a-marketing-card__magazine {
-        margin-bottom: 0;
-    }
-
-    .a-marketing-card__title {
-        @include font-size(20px);
     }
 }

@@ -2,6 +2,10 @@
     background: $wild-sand;
     margin: 40px 0;
     padding: 20px;
+
+    @include at-medium-size {
+        padding: 40px;
+    }
 }
 
 .a-marketing-card__brand {
@@ -65,11 +69,21 @@
     &:focus {
         @include button-single-light-hover;
     }
+
+    @include at-medium-size {
+        width: auto;
+    }
 }
 
 .a-marketing-card__magazine {
     margin: 0 auto 20px auto;
     width: 230px;
+
+    @include at-medium-size {
+        margin-left: 0;
+        margin-bottom: 0;
+        width: auto;
+    }
 }
 
 .a-marketing-card__magazine__cover {
@@ -78,6 +92,10 @@
 
 .a-marketing-card__magazine__cover--print {
     width: 110px;
+
+    @include at-medium-size {
+        width: 160px;
+    }
 }
 
 .a-marketing-card__magazine__cover--tablet {
@@ -89,6 +107,12 @@
     padding: 12px 6px;
     position: static;
     width: 85px;
+
+    @include at-medium-size {
+        margin-left: -50px;
+        padding: 12px 6px;
+        width: 110px;
+    }
 }
 
 .a-marketing-card__magazine__cover--mobile {
@@ -98,31 +122,22 @@
 .a-marketing-card--magazine {
     .a-marketing-card__col {
         text-align: center;
+
+        @include at-medium-size {
+            text-align: left;
+            width: 230px;
+        }
+    }
+
+    .a-marketing-card__col + .a-marketing-card__col {
+        @include at-medium-size {
+            padding-left: 40px;
+            width: auto;
+        }
     }
 }
 
-@include tablet-size {
-    .a-marketing-card {
-        padding: 40px;
-    }
-
-    .a-marketing-card__link {
-        width: auto;
-    }
-
-    .a-marketing-card__magazine {
-        margin-left: 0;
-        margin-bottom: 0;
-        width: auto;
-    }
-    .a-marketing-card__magazine__cover--print {
-        width: 160px;
-    }
-    .a-marketing-card__magazine__cover--tablet {
-        margin-left: -50px;
-        padding: 12px 6px;
-        width: 110px;
-    }
+@include at-medium-size {
 
     .a-marketing-card--topic,
     .a-marketing-card--brand,
@@ -137,17 +152,6 @@
             border-left: 1px solid $black;
             padding-left: 20px;
             text-align: left;
-            width: auto;
-        }
-    }
-
-    .a-marketing-card--magazine {
-        .a-marketing-card__col {
-            text-align: left;
-            width: 230px;
-        }
-        .a-marketing-card__col + .a-marketing-card__col {
-            padding-left: 40px;
             width: auto;
         }
     }

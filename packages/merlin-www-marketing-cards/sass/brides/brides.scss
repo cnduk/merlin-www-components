@@ -6,6 +6,10 @@
 .a-marketing-card {
     background-color: $diamond;
     padding: 0 20px;
+
+    @include at-medium-size {
+        padding: 24px 32px;
+    }
 }
 
 .a-marketing-card__brand__prefix {
@@ -20,6 +24,10 @@
 .a-marketing-card__brand__img {
     margin: 0 auto;
     max-width: 180px;
+
+    @include at-medium-size {
+        max-width: 175px;
+    }
 }
 
 .a-marketing-card__col {
@@ -100,14 +108,7 @@
     }
 }
 
-@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
-    .a-marketing-card {
-        padding: 24px 32px;
-    }
-
-    .a-marketing-card__brand__img {
-        max-width: 175px;
-    }
+@include at-medium-size {
 
     .a-marketing-card--brand,
     .a-marketing-card--topic,

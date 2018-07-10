@@ -1,4 +1,5 @@
 @import '@cnbritain/merlin-www-common:wireframe';
+
 .a-marketing-card {
     box-sizing: border-box;
     display: table;
@@ -6,20 +7,27 @@
     width: 100%;
 }
 
-.a-marketing-card--brand {}
-.a-marketing-card--event {}
-.a-marketing-card--topic {}
+
 
 .a-marketing-card--magazine {
     .a-marketing-card__col {
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+
+        @include at-medium-size {
             vertical-align: middle;
             width: 50%;
         }
     }
 }
 
+//brand
 .a-marketing-card__brand {}
+.a-marketing-card__brand {
+    .a-marketing-card__col {}
+}
+
+.a-marketing-card__brand__prefix {
+    display: block;
+}
 
 .a-marketing-card__brand__img {
     display: block;
@@ -27,24 +35,20 @@
 }
 
 .a-marketing-card__brand__name {}
-.a-marketing-card__brand__prefix {
-    display: block;
-}
 
-.a-marketing-card__col {
-    display: block;
-    vertical-align: top;
-    width: 100%;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
-        display: table-cell;
-    }
-}
+//event
+.a-marketing-card--event {}
+
+//topic
+.a-marketing-card--topic {}
+
 
 .a-marketing-card--brand .a-marketing-card__col,
 .a-marketing-card--event .a-marketing-card__col,
 .a-marketing-card--topic .a-marketing-card__col {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+
+    @include at-medium-size {
         width: 120px;
 
         & + .a-marketing-card__col {
@@ -53,8 +57,7 @@
     }
 }
 
-.a-marketing-card__desc {}
-
+//magazine
 .a-marketing-card__magazine {
     position: relative;
     width: 180px;
@@ -90,8 +93,22 @@
     width: 45px;
 }
 
+
+//marketing
+.a-marketing-card__col {
+    display: block;
+    vertical-align: top;
+    width: 100%;
+
+    @include at-medium-size {
+        display: table-cell;
+    }
+}
+
+.a-marketing-card__title {}
+.a-marketing-card__desc {}
+
 .a-marketing-card__link {
     display: inline-block;
 }
 
-.a-marketing-card__title {}

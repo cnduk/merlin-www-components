@@ -10,14 +10,15 @@
     margin: 40px 0;
     padding: 40px 20px;
 
-    @include marketing-card-medium-size() {
+    @include at-medium-size {
         padding: 0px;
     }
 }
 
 .a-marketing-card--magazine {
     .a-marketing-card__col {
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+
+        @include at-medium-size {
             &:nth-child(1) {
                 padding-right: 20px;
             }
@@ -32,7 +33,8 @@
 .a-marketing-card__brand {
     margin-bottom: 24px;
     text-transform: uppercase;
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+
+    @include at-medium-size {
         margin-bottom: 0;
     }
 }
@@ -57,7 +59,7 @@
 .a-marketing-card__col {
     text-align: center;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+    @include at-medium-size {
         padding: 40px;
 
         &:nth-child(2) {
@@ -69,7 +71,8 @@
 .a-marketing-card--brand .a-marketing-card__col,
 .a-marketing-card--topic .a-marketing-card__col,
 .a-marketing-card--event .a-marketing-card__col {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+
+    @include at-medium-size {
         width: 38%;
 
         & + .a-marketing-card__col {
@@ -86,7 +89,7 @@
 .a-marketing-card__magazine {
     margin: 0 auto 24px auto;
 
-   @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+   @include at-medium-size {
         margin-bottom: 0;
     }
 }
@@ -106,7 +109,7 @@
     right: 0;
     width: 44%;
 
-   @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+   @include at-medium-size {
         padding: 14px 5px;
     }
 }

@@ -6,16 +6,29 @@
 .a-marketing-card {
     background-color: $vanilla-ice;
     padding: 40px 0;
+
+    @include at-medium-size {
+        padding: 40px;
+    }
 }
 
 .a-marketing-card__col {
     text-align: center;
+
+    @include at-medium-size {
+        text-align: left;
+    }
 }
 
 .a-marketing-card__title {
     @include font('MILLER_DISPLAY', 18px, 'BOLD', 22px);
     color: $mine-shaft;
     margin: 0 0 10px 0;
+
+    @include at-medium-size {
+        @include font-size(21px);
+        @include line-height(26px);
+    }
 }
 
 .a-marketing-card__desc {
@@ -23,6 +36,11 @@
     color: $mine-shaft;
     font-style: italic;
     margin: 0;
+
+    @include at-medium-size {
+        @include font-size(18px);
+        @include line-height(22px);
+    }
 }
 
 .a-marketing-card__link {
@@ -31,7 +49,7 @@
     margin: 20px 0 0 0;
     width: 200px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         width: initial;
     }
 
@@ -70,51 +88,34 @@
 .a-marketing-card__magazine {
     margin: 0 auto 20px auto;
     width: 150px;
+
+    @include at-medium-size {
+        margin-bottom: 0;
+        width: 250px;
+    }
 }
 
 .a-marketing-card__magazine__cover--print {
     width: 95px;
+
+    @include at-medium-size {
+        width: 160px;
+    }
 }
 
 .a-marketing-card__magazine__cover--tablet {
     width: 58px;
+
+    @include at-medium-size {
+        width: 100px;
+    }
 }
 
 .a-marketing-card__magazine__cover--mobile {
     display: none;
 }
 
-@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
-    .a-marketing-card {
-        padding: 40px;
-    }
-
-    .a-marketing-card__col {
-        text-align: left;
-    }
-
-    .a-marketing-card__title {
-        @include font-size(21px);
-        @include line-height(26px);
-    }
-
-    .a-marketing-card__desc {
-        @include font-size(18px);
-        @include line-height(22px);
-    }
-
-    .a-marketing-card__magazine {
-        margin-bottom: 0;
-        width: 250px;
-    }
-
-    .a-marketing-card__magazine__cover--print {
-        width: 160px;
-    }
-
-    .a-marketing-card__magazine__cover--tablet {
-        width: 100px;
-    }
+@include at-medium-size {
 
     .a-marketing-card--event .a-marketing-card__col {
         padding-right: 40px;

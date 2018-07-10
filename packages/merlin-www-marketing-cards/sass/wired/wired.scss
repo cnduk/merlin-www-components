@@ -5,6 +5,11 @@
 .a-marketing-card {
     background-color: $white-smoke;
     padding: 20px;
+
+    @include at-medium-size {
+        padding: 40px 0;
+        text-align: left;
+    }
 }
 
 .a-marketing-card__brand {
@@ -20,22 +25,52 @@
         letter-spacing: 0.02em;
     }
 
+    @include at-medium-size {
+        margin-bottom: 0;
+        text-align: left;
+    }
+
 }
 
 .a-marketing-card__brand__img {
     margin: 10px 0 30px 0;
     max-width: 120px;
+
+    @include at-medium-size {
+        margin: 10px auto 0 auto;
+    }
 }
 
 .a-marketing-card__magazine {
     margin: 0 auto 30px auto;
     text-align: center;
     width: 150px;
+
+    @include at-medium-size {
+        margin: 0;
+        width: 210px;
+
+        .a-marketing-card__col {
+            padding-left: 40px;
+            padding-right: 40px;
+            vertical-align: top;
+            width: 230px;
+        }
+
+        .a-marketing-card__col + .a-marketing-card__col {
+            width: auto;
+        }
+    }
+
 }
 
 .a-marketing-card__magazine__cover--print {
     margin-left: -48px;
     width: 70%;
+
+    @include at-medium-size {
+        margin-left: 0;
+    }
 }
 
 .a-marketing-card__magazine__cover--tablet {
@@ -43,6 +78,11 @@
     background-color: $black;
     padding: 11px 8px;
     width: 72px;
+
+    @include at-medium-size {
+        padding: 15px 10px;
+        width: 100px;
+    }
 }
 
 .a-marketing-card__magazine__cover--mobile {
@@ -53,12 +93,24 @@
     margin-left: -35px;
     padding: 13px 4px;
     width: 40px;
+
+    @include at-medium-size {
+        margin-left: -37px;
+        padding: 17px 5px;
+        width: 46px;
+    }
 }
 
 .a-marketing-card__title {
     @include font('EXCHANGE WEB', 17px, 'SEMI BOLD', 22px);
     margin: 20px 0;
     text-align: left;
+
+    @include at-medium-size {
+        @include font-size(19px);
+        @include line-height(27px);
+        margin-top: 0;
+    }
 }
 
 .a-marketing-card__desc {
@@ -73,6 +125,11 @@
         height: 1px;
         margin: 20px 0;
         width: 20px;
+    }
+
+    @include at-medium-size {
+        @include font-size(17px);
+        @include line-height(23px);
     }
 }
 
@@ -92,58 +149,14 @@ a.a-marketing-card__link {
     &:focus {
         @include button-single-light-hover();
     }
-}
 
-@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
-    .a-marketing-card {
-        padding: 40px 0;
-        text-align: left;
-    }
-
-    .a-marketing-card__brand {
-        margin-bottom: 0;
-        text-align: left;
-    }
-
-    .a-marketing-card__brand__img {
-        margin: 10px auto 0 auto;
-    }
-
-    .a-marketing-card__magazine {
-        margin: 0;
-        width: 210px;
-    }
-
-    .a-marketing-card__title {
-        @include font-size(19px);
-        @include line-height(27px);
-        margin-top: 0;
-    }
-
-    .a-marketing-card__desc {
-        @include font-size(17px);
-        @include line-height(23px);
-    }
-
-    a.a-marketing-card__link {
+    @include at-medium-size {
         text-align: center;
         width: auto;
     }
+}
 
-    .a-marketing-card__magazine__cover--print {
-        margin-left: 0;
-    }
-
-    .a-marketing-card__magazine__cover--tablet {
-        padding: 15px 10px;
-        width: 100px;
-    }
-
-    .a-marketing-card__magazine__cover--mobile {
-        margin-left: -37px;
-        padding: 17px 5px;
-        width: 46px;
-    }
+@include at-medium-size {
 
     .a-marketing-card--brand,
     .a-marketing-card--topic,
@@ -154,18 +167,6 @@ a.a-marketing-card__link {
         }
         .a-marketing-card__col + .a-marketing-card__col {
             border-left: 1px solid #eaeaea;
-        }
-    }
-
-    .a-marketing-card--magazine {
-        .a-marketing-card__col {
-            padding-left: 40px;
-            padding-right: 40px;
-            vertical-align: top;
-            width: 230px;
-        }
-        .a-marketing-card__col + .a-marketing-card__col {
-            width: auto;
         }
     }
 }

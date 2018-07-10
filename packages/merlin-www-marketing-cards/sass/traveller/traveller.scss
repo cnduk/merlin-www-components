@@ -9,14 +9,15 @@
     margin: 40px 0;
     padding: 32px 20px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+   @include at-medium-size {
         padding: 32px;
     }
 }
 
 .a-marketing-card--brand {
     .a-marketing-card__col {
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+
+        @include at-medium-size {
             &:nth-child(1) {
                 padding-right: 32px;
             }
@@ -30,7 +31,8 @@
 
 .a-marketing-card--magazine {
     .a-marketing-card__col {
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+
+        @include at-medium-size {
             &:nth-child(1) {
                 padding-right: 16px;
             }
@@ -44,7 +46,8 @@
 
 .a-marketing-card__brand {
     margin-bottom: 24px;
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+
+    @include at-medium-size {
         margin-bottom: 0;
     }
 }
@@ -53,7 +56,8 @@
     margin: 0 auto;
     max-width: 222px;
     width: 100%;
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+
+    @include at-medium-size {
         max-width: none;
     }
 }
@@ -79,7 +83,7 @@
 .a-marketing-card__col {
     text-align: center;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+    @include at-medium-size {
         &:nth-child(2) {
             text-align: left;
         }
@@ -89,7 +93,8 @@
 .a-marketing-card--brand .a-marketing-card__col,
 .a-marketing-card--topic .a-marketing-card__col,
 .a-marketing-card--event .a-marketing-card__col {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+
+    @include at-medium-size {
         width: 38%;
 
         & + .a-marketing-card__col {
@@ -108,7 +113,7 @@
 .a-marketing-card__magazine {
     margin: 0 auto 20px auto;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+    @include at-medium-size {
         margin-bottom: 0;
     }
 }
