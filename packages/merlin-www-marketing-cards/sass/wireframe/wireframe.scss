@@ -7,9 +7,37 @@
     width: 100%;
 }
 
+//
+.a-marketing-card__header,
+.a-marketing-card__body {
+    display: block;
+    vertical-align: top;
+    width: 100%;
 
+    @include at-medium-size {
+        display: table-cell;
+    }
+}
+
+.a-marketing-card--brand .a-marketing-card__header,
+.a-marketing-card--brand .a-marketing-card__body,
+.a-marketing-card--event .a-marketing-card__header,
+.a-marketing-card--event .a-marketing-card__body,
+.a-marketing-card--topic .a-marketing-card__header,
+.a-marketing-card--topic .a-marketing-card__body {
+
+    @include at-medium-size {
+        width: 120px;
+
+        & + .a-marketing-card__header,
+        & + .a-marketing-card__body {
+            width: auto;
+        }
+    }
+}
 
 .a-marketing-card--magazine {
+    .a-marketing-card__header,
     .a-marketing-card__col {
 
         @include at-medium-size {
@@ -20,11 +48,8 @@
 }
 
 //brand
+.a-marketing-card--brand {}
 .a-marketing-card__brand {}
-.a-marketing-card__brand {
-    .a-marketing-card__col {}
-}
-
 .a-marketing-card__brand__prefix {
     display: block;
 }
@@ -36,41 +61,28 @@
 
 .a-marketing-card__brand__name {}
 
-
 //event
 .a-marketing-card--event {}
+.a-marketing-card__event {}
+.a-marketing-card__event__name {}
 
 //topic
 .a-marketing-card--topic {}
-
-
-.a-marketing-card--brand .a-marketing-card__col,
-.a-marketing-card--event .a-marketing-card__col,
-.a-marketing-card--topic .a-marketing-card__col {
-
-    @include at-medium-size {
-        width: 120px;
-
-        & + .a-marketing-card__col {
-            width: auto;
-        }
-    }
-}
+.a-marketing-card--topic {}
+.a-marketing-card__topic__name {}
 
 //magazine
+.a-marketing-card--magazine {}
 .a-marketing-card__magazine {
     position: relative;
     width: 180px;
 }
 
 .a-marketing-card__magazine__cover {}
-
 .a-marketing-card__magazine__cover--print {
     width: 100%;
 }
-
 .a-marketing-card__magazine__cover--desktop {}
-
 .a-marketing-card__magazine__cover--tablet {
     background: url("/static/img/template_ipad.png") 0 0 no-repeat;
     background-size: auto 160px;
@@ -81,7 +93,6 @@
     right: 0;
     width: 100px;
 }
-
 .a-marketing-card__magazine__cover--mobile {
     background: url("/static/img/template_iphone.png") 0 0 no-repeat;
     background-size: 55px auto;
@@ -95,19 +106,9 @@
 
 
 //marketing
-.a-marketing-card__col {
-    display: block;
-    vertical-align: top;
-    width: 100%;
-
-    @include at-medium-size {
-        display: table-cell;
-    }
-}
-
+.a-marketing-card__body{}
 .a-marketing-card__title {}
 .a-marketing-card__desc {}
-
 .a-marketing-card__link {
     display: inline-block;
 }

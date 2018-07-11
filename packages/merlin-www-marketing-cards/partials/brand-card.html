@@ -1,5 +1,5 @@
 <aside class="a-marketing-card a-marketing-card--brand">
-    <div class="a-marketing-card__col">
+    <div class="a-marketing-card__header">
         <div class="a-marketing-card__brand">
             <span class="a-marketing-card__brand__prefix">{{ translation.title_prefix }}</span>
             {{# state.has_logo }}
@@ -26,7 +26,7 @@
             {{/ state.has_logo }}
         </div>
     </div>
-    <div class="a-marketing-card__col">
+    <div class="a-marketing-card__body">
         {{# data.title }}
             <h4 class="a-marketing-card__title">{{ . }}</h4>
         {{/ data.title }}
