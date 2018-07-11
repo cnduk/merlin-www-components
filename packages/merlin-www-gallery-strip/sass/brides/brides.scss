@@ -5,16 +5,23 @@
 
 .c-gallery-strip {
     margin: 32px 0;
+    padding: 0 $MOBILE_SIDE_GUTTER;
 
-    @include desktop-size {
+    @include at-medium-size {
+        padding: 0 $TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size {
         margin: 48px 0;
+        padding: 0 $DESKTOP_SIDE_GUTTER;
     }
 }
 
-.c-gallery-strip-wrapper {
-    margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
-    position: relative;
+.c-gallery-strip-wrapper {}
+
+.c-gallery-strip-wrapper:hover .c-gallery-strip__title,
+.c-gallery-strip__link:focus ~ * .c-gallery-strip__title {
+    color: $pink-rose;
 }
 
 .c-gallery-strip__images {
@@ -32,11 +39,7 @@
     width: 1px;
 }
 
-.c-gallery-strip__listitem {
-    img {
-        width: 100%;
-    }
-}
+.c-gallery-strip__listitem {}
 
 .c-gallery-strip__remaining {
     @include font('SOLEIL', 24px, 400, 24px, 10);

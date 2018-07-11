@@ -1,9 +1,8 @@
-@import '@cnbritain/merlin-www-common:gq';
 
+@import '@cnbritain/merlin-www-common:gq';
 @import '../wireframe/wireframe';
 
 .c-gallery-strip {
-    position: relative;
     margin-top: 40px;
 
     @include at-x-large-size {
@@ -11,31 +10,25 @@
     }
 }
 
-.c-gallery-strip-wrapper {
-    margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
-    position: relative;
-}
+.c-gallery-strip-wrapper {}
 
-.c-gallery-strip__listitem {
-    img {
-        width: 100%;
-    }
-}
+.c-gallery-strip__listitem {}
 
 .c-gallery-strip__remaining {
+    @include font("GOTHAM", 20px, 'BOLD', 24px);
     background-color: rgba(0, 0, 0, 0.38);
-    @include font("GOTHAM", 20px, 700, 24px);
     color: $white;
 }
 
 .c-gallery-strip__detail {
-    border-bottom: 1px solid $oslo-gray;
-    border-left: 1px solid $oslo-gray;
-    border-right: 1px solid $oslo-gray;
+    background-color: $woodsmoke;
+    border-bottom: 1px solid $mineshaft;
+    border-left: 1px solid $mineshaft;
+    border-right: 1px solid $mineshaft;
     box-sizing: border-box;
     padding: 20px;
     position: relative;
+    text-align: center;
 
     &:after {
         @include triangle(16px, 12px, 'up', $woodsmoke);
@@ -58,23 +51,21 @@
 }
 
 .c-gallery-strip__title {
-    @include font("GOTHAM", 20px, 700, 24px, -4);
+    @include font("GOTHAM", 20px, 'BOLD', 24px, -4);
     color: $white;
     margin: 0;
-    text-align: center;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    @include at-medium-size {
         @include font-size(18px);
     }
 }
 
 .c-gallery-strip__subtitle {
-    @include font("GOTHAM", 10px, 500, 12px, -40)
+    @include font("GOTHAM", 10px, 500, 12px, -40);
     color: $white;
     margin-top: 12px;
-    text-align: center;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    @include at-medium-size {
         @include font-size(12px);
         @include line-height(16px);
     }

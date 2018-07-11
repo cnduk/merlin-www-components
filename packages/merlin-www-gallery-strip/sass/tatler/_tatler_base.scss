@@ -12,31 +12,16 @@
     }
 }
 
-.c-gallery-strip-wrapper {
-    margin: 0 auto;
-    max-width: $XX_LARGE_SIZE;
-    position: relative;
-}
+.c-gallery-strip-wrapper {}
 
-.c-gallery-strip__listitem {
-
-    &:before {
-        display: block;
-        content: "";
-        padding-top: 150%;
-        position: relative;
-    }
-
-    img {
-        bottom: 0;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 100%;
+.c-gallery-strip-wrapper:hover .c-gallery-strip__title,
+.c-gallery-strip__link:focus ~ * .c-gallery-strip__title {
+    span {
+        border-bottom: 1px solid $black;
     }
 }
+
+.c-gallery-strip__listitem {}
 
 .c-gallery-strip__remaining {
     @include font("COMMUTER SANS", 27px, 400, 27px);
@@ -58,7 +43,7 @@
     margin: 20px 0 0 0;
     text-align: center;
 
-    @include at-x-large-size {
+    @include at-medium-size {
         @include font-size(37px);
         @include line-height(40px);
         margin: 32px 0 0 0;
@@ -66,8 +51,12 @@
 }
 
 .c-gallery-strip__subtitle {
+    @include font('STARLING', 11px, 'BOLD', 13px);
+    margin: 10px 0 0 0;
     text-align: center;
-}
+    text-transform: uppercase;
 
-// TODO
-.c-gallery-strip__subtitle {}
+    @include at-medium-size {
+        margin: 20px 0 0 0;
+    }
+}

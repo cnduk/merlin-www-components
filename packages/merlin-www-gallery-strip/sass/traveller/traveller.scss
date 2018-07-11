@@ -1,42 +1,28 @@
-@import '@cnbritain/merlin-www-common:traveller';
 
+@import '@cnbritain/merlin-www-common:traveller';
 @import '../wireframe/wireframe';
 
 .c-gallery-strip {
     margin: 40px 0;
+    padding: 0 $MOBILE_SIDE_GUTTER;
+
+    @include at-medium-size {
+        padding: 0 $TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size {
+        padding: 0 $DESKTOP_SIDE_GUTTER;
+    }
 }
 
-.c-gallery-strip-wrapper {
-    margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
-    position: relative;
-}
+.c-gallery-strip-wrapper {}
 
 .c-gallery-strip__list {
     margin: 0 -6px;
 }
 
 .c-gallery-strip__listitem {
-    padding: 0 6px;
-
-    &:before {
-        background-color: $CAPE-HAZE;
-        display: block;
-        content: "";
-        padding-top: 150%;
-        position: relative;
-        z-index: -1;
-    }
-
-    img {
-        bottom: 0;
-        height: 100%;
-        left: 6px;
-        position: absolute;
-        right: 6px;
-        top: 0;
-        width: calc(100% - 12px);
-    }
+    background-color: $CAPE-HAZE;
 }
 
 .c-gallery-strip__remaining {
@@ -60,7 +46,7 @@
     text-align: center;
     text-transform: uppercase;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    @include at-medium-size {
         @include font-size(34px);
         @include line-height(36px);
         letter-spacing: 2px;
