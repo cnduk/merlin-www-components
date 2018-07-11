@@ -1,0 +1,10 @@
+{{# data }}
+    {{# state.is_inline }}
+        {{# data }}
+            <p class="bb-p">{{ &. }}</p>
+        {{/ data }}
+    {{/ state.is_inline }}
+    {{^ state.is_inline }}
+        {{> @cnbritain/merlin-www-bbcode }}
+    {{/ state.is_inline }}
+{{/ data }}
