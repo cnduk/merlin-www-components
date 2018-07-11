@@ -1,10 +1,13 @@
-{{# data }}
-    {{# state.is_inline }}
-        {{# data }}
-            <p class="bb-p">{{ &. }}</p>
-        {{/ data }}
-    {{/ state.is_inline }}
-    {{^ state.is_inline }}
-        {{> @cnbritain/merlin-www-bbcode }}
-    {{/ state.is_inline }}
-{{/ data }}
+{{# is_inline }}
+    {{# data }}
+        <p class="bb-p">{{ &. }}</p>
+    {{/ data }}
+{{/ is_inline }}
+{{# is_raw }}
+    {{# data }}
+        {{ &. }}
+    {{/ data }}
+{{/ is_raw }}
+{{# is_block }}
+    {{> @cnbritain/merlin-www-bbcode }}
+{{/ is_block }}
