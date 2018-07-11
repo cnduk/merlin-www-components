@@ -1,0 +1,157 @@
+{
+    "is_inline": [
+        { "data": "<strong class=\"bb-strong\">Bold</strong>" },
+        { "data": "<em class=\"bb-em\">Italic</em>" },
+        { "data": "<u class=\"bb-u\">Underline</u>" },
+        { "data": "<span style=\"text-decoration:line-through;\" class=\"bb-span\">Strikethrough</span>" },
+        { "data": "<sup class=\"bb-sup\">Superscript</sup>" },
+        { "data": "<sub class=\"bb-sub\">Subscript</sub>" },
+        { "data": "<small class=\"bb-small\">Small</small>" },
+        { "data": "<mark class=\"bb-mark\">Mark</mark>" },
+        { "data": "<span class=\"bb-dropcap bb-dropcap--letter\">D</span>ropcap. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor ullamcorper velit eget placerat. Curabitur sed rhoncus ipsum. Praesent sagittis porta eleifend. Ut finibus, arcu id pharetra ornare, metus dolor elementum augue, malesuada blandit nunc arcu id tellus. Etiam at magna pulvinar, commodo odio id, lacinia felis. Duis posuere velit a eleifend feugiat. Nunc eget nulla purus. Donec sapien orci, commodo at neque at, molestie lobortis turpis. Cras rutrum neque est, et molestie sapien aliquam eget. Pellentesque aliquet orci ac commodo tincidunt." },
+        { "data": "<abbr class=\"bb-abbr\">Abbreviation</abbr>" },
+        { "data": "<a class=\"bb-button\" href=\"#\">Button</a>" },
+        { "data": "<a href=\"mailto:#\" class=\"bb-a\">Email</a>" },
+        { "data": "<a class=\"bb-a\" href=\"#\">Link</a>"} ],
+    "is_raw": [
+        { "data": "<h1 class=\"bb-h1\">Heading 1</h1>" },
+        { "data": "<h1 class=\"bb-h2\">Heading 2</h2>" },
+        { "data": "<h1 class=\"bb-h3\">Heading 3</h3>" },
+        { "data": "<h1 class=\"bb-h4\">Heading 4</h4>" },
+        { "data": "<h1 class=\"bb-h5\">Heading 5</h5>" },
+        { "data": "<h1 class=\"bb-h6\">Heading 6</h6>" },
+        { "data": "<p class=\"bb-p\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor ullamcorper velit eget placerat. Curabitur sed rhoncus ipsum. Praesent sagittis porta eleifend. Ut finibus, arcu id pharetra ornare, metus dolor elementum augue, malesuada blandit nunc arcu id tellus. Etiam at magna pulvinar, commodo odio id, lacinia felis. Duis posuere velit a eleifend feugiat. Nunc eget nulla purus. Donec sapien orci, commodo at neque at, molestie lobortis turpis. Cras rutrum neque est, et molestie sapien aliquam eget. Pellentesque aliquet orci ac commodo tincidunt.</p>" },
+        { "data": "<pre class=\"bb-pre\"><code>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor ullamcorper velit eget placerat. Curabitur sed rhoncus ipsum. Praesent sagittis porta eleifend. Ut finibus, arcu id pharetra ornare, metus dolor elementum augue, malesuada blandit nunc arcu id tellus. Etiam at magna pulvinar, commodo odio id, lacinia felis. Duis posuere velit a eleifend feugiat. Nunc eget nulla purus. Donec sapien orci, commodo at neque at, molestie lobortis turpis. Cras rutrum neque est, et molestie sapien aliquam eget. Pellentesque aliquet orci ac commodo tincidunt.</code></pre>" }
+    ],
+    "is_block": [
+        {
+            "type": "BBCodeBlockquote",
+            "state": {
+                "is_blockquote": true
+            },
+            "data": {
+                "quote_source": "This blockquote has a source",
+                "quote_text": "This is a blockquote"
+            },
+            "style": {
+                "cls": ""
+            }
+        },
+        {
+            "type": "BBCodeInfobox",
+            "state": {
+                "is_infobox": true
+            },
+            "data": {
+                "items": [{
+                    "is_title": true,
+                    "value": "Infobox"
+                }, {
+                    "is_body": true,
+                    "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor ullamcorper velit eget placerat. Curabitur sed rhoncus ipsum. Praesent sagittis porta eleifend. Ut finibus, arcu id pharetra ornare, metus dolor elementum augue, malesuada blandit nunc arcu id tellus. Etiam at magna pulvinar, commodo odio id, lacinia felis. Duis posuere velit a eleifend feugiat. Nunc eget nulla purus. Donec sapien orci, commodo at neque at, molestie lobortis turpis. Cras rutrum neque est, et molestie sapien aliquam eget. Pellentesque aliquet orci ac commodo tincidunt."
+                },
+                {
+                    "is_item": true,
+                    "value": "Value 1",
+                    "key": "Key 1"
+                },
+                {
+                    "is_item": true,
+                    "value": "Value 2",
+                    "key": "Key 2"
+                }]
+            },
+            "style": {
+                "cls": ""
+            }
+        },
+        {
+            "type": "BBCodeList",
+            "state": {
+                "is_list": true,
+                "is_list_ordered": false,
+                "is_list_unordered": true
+            },
+            "data": {
+                "items": ["4 tablespoons mayonnaise", "1 tablespoon smoked paprika", "Glug of chilli sauce or Tabasco sauce"]
+            },
+            "style": {
+                "cls": ""
+            }
+        },
+        {
+            "type": "BBCodeList",
+            "state": {
+                "is_list": true,
+                "is_list_ordered": true,
+                "is_list_unordered": false
+            },
+            "data": {
+                "items": ["4 tablespoons mayonnaise", "1 tablespoon smoked paprika", "Glug of chilli sauce or Tabasco sauce"]
+            },
+            "style": {
+                "cls": ""
+            }
+        },
+        {
+            "type": "BBCodeNote",
+            "state": {
+                "is_note": true
+            },
+            "data": {
+                "text": "This is a note, which supports nested inline styling for things like <strong>bold</strong> text or <a href=\"http://www.google.com\">links</a>."
+            },
+            "style": {
+                "cls": ""
+            }
+        },
+        {
+            "type": "BBCodePullquote",
+            "state": {
+                "is_pullquote": true
+            },
+            "data": {
+                "quote_source": "This pullquote has a source",
+                "quote_text": "This is a pullquote"
+            },
+            "style": {
+                "cls": ""
+            }
+        },
+        {
+            "type": "BBCodeQuestion",
+            "state": {
+                "is_question": true
+            },
+            "data": {
+                "question_author": "Mr. Question",
+                "question_text": "What is bbcode?"
+            },
+            "style": {
+                "cls": ""
+            },
+            "translation": {
+                "question_title_prefix": "Q.",
+                "question_byline_prefix": ""
+            }
+        },
+        {
+            "type": "BBCodeAnswer",
+            "state": {
+                "is_answer": true
+            },
+            "data": {
+                "answer_text": "It's a simple markup language that we've added our own spin to",
+                "answer_author": "Conde Nast Digital"
+            },
+            "style": {
+                "cls": ""
+            },
+            "translation": {
+                "answer_title_prefix": "A.",
+                "answer_byline_prefix": ""
+            }
+        }
+    ]
+}
+
