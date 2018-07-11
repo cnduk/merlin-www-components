@@ -59,9 +59,11 @@
     "currentTheme": null,
     "main": "index",
     "data": {
-        "magazine": "data/magazine.json",
         "brand-without-logo": "data/brand-without-logo.json",
-        "brand-with-logo": "data/brand-with-logo.json"
+        "brand-with-logo": "data/brand-with-logo.json",
+        "event": "data/event.json",
+        "magazine": "data/magazine.json",
+        "topic": "data/topic.json"
     },
     "description": "Brand, event and magazine marketing cards for articles"
 }

@@ -30,13 +30,12 @@
 .a-marketing-card--magazine {
     text-align: center;
 
-    .a-marketing-card__col:first-child {
+    .a-marketing-card__header {
         padding-bottom: 0;
     }
 }
 
 @include at-medium-size {
-
     .a-marketing-card--brand,
     .a-marketing-card--topic,
     .a-marketing-card--event,
@@ -48,14 +47,17 @@
             width: 50%;
         }
 
-        .a-marketing-card__header + .a-marketing-card__body {
+        .a-marketing-card__header,
+        .a-marketing-card__body {
             border-bottom: 1px solid $ballet-grey;
             border-left: 1px solid $ballet-grey;
         }
     }
 
-    .a-marketing-card--magazine .a-marketing-card__col:first-child {
-        padding-bottom: 32px;
+    .a-marketing-card--magazine {
+        .a-marketing-card__header {
+            padding-bottom: 32px;
+        }
     }
 }
 
