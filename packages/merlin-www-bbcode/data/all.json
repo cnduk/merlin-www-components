@@ -152,6 +152,869 @@
                 "answer_byline_prefix": ""
             }
         }
+    ],
+    "is_internal_embeds": [
+        {
+            "translation": {
+                "answer_title_prefix": "A.",
+                "question_byline_prefix": "By",
+                "question_title_prefix": "Q.",
+                "answer_byline_prefix": "By"
+            },
+            "state": {
+                "is_article": true
+            },
+            "data": {
+                "primary_tag": {
+                    "data": {
+                        "title": "primary tag"
+                    }
+                },
+                "byline": "Dan Palmer",
+                "meta_list": {
+                    "translation": {},
+                    "state": {},
+                    "data": {
+                        "items": [{
+                            "translation": {},
+                            "state": {
+                                "is_first": true,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_profile": false,
+                                        "is_episode_number": false,
+                                        "is_duration": false,
+                                        "is_gallery": false,
+                                        "is_tag": false,
+                                        "has_icon": false,
+                                        "is_location": false,
+                                        "has_link": false,
+                                        "is_event_location": false,
+                                        "is_video_topic": false,
+                                        "is_event_date": false,
+                                        "is_date": true,
+                                        "is_creative_director": false
+                                    },
+                                    "data": {
+                                        "title": "03 Apr 2018",
+                                        "meta_type": "date",
+                                        "link": null,
+                                        "icon": null
+                                    },
+                                    "style": {
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "Meta"
+                                },
+                                "index": 0
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "ListItem"
+                        }],
+                        "length": 1
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "MetaList"
+                },
+                "title": "butts",
+                "image_list": {
+                    "translation": {},
+                    "state": {},
+                    "data": {
+                        "items": [{
+                            "translation": {},
+                            "state": {
+                                "is_first": true,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_static": false,
+                                        "is_portrait": false,
+                                        "is_image": true,
+                                        "is_square": true,
+                                        "is_svg": false,
+                                        "is_lazyload": true,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_landscape": false
+                                    },
+                                    "data": {
+                                        "description": null,
+                                        "title": null,
+                                        "orientation": "square",
+                                        "look_number": null,
+                                        "alt_text": null,
+                                        "filename": null,
+                                        "credit": null,
+                                        "image_url": "https://vg-staging-images.condecdn.net/image/placeholder/crop/200/square/f/placeholder",
+                                        "srcset": "https://vg-staging-images.condecdn.net/image/placeholder/crop/200/square/f/placeholder 200w, https://vg-staging-images.condecdn.net/image/placeholder/crop/300/square/f/placeholder 300w, https://vg-staging-images.condecdn.net/image/placeholder/crop/400/square/f/placeholder 400w, https://vg-staging-images.condecdn.net/image/placeholder/crop/600/square/f/placeholder 600w",
+                                        "width": null,
+                                        "uid": "placeholder"
+                                    },
+                                    "style": {
+                                        "padding_top": "100%",
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "Image"
+                                },
+                                "index": 0
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "ListItem"
+                        }],
+                        "length": 1
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "List"
+                },
+                "profiles": null,
+                "link": {
+                    "translation": {},
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "data": {
+                        "url": "/article/butts",
+                        "title": "butts"
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "Link"
+                },
+                "sponsor": {
+                    "data": {
+                        "title": "Sponsor title"
+                    }
+                }
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "BBCode"
+        },
+        {
+            "translation": {
+                "answer_title_prefix": "A.",
+                "question_byline_prefix": "By",
+                "question_title_prefix": "Q.",
+                "answer_byline_prefix": "By"
+            },
+            "state": {
+                "is_layout_3": false,
+                "is_gallery": true,
+                "has_icon": true,
+                "has_title": true,
+                "is_layout_6": true,
+                "is_layout_5": false,
+                "is_layout_4": false
+            },
+            "data": {
+                "image_list": {
+                    "translation": {},
+                    "state": {},
+                    "data": {
+                        "items": [{
+                            "translation": {
+                                "remaining_prefix": "+"
+                            },
+                            "state": {
+                                "is_first": true,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_static": false,
+                                        "is_portrait": false,
+                                        "is_image": true,
+                                        "is_square": true,
+                                        "is_svg": false,
+                                        "is_lazyload": true,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_landscape": false
+                                    },
+                                    "data": {
+                                        "description": "<p class=\"bb-p\">At Coach's New York Fashion Week show, Selena debuted a choppy fringe and new waist-length shiny brunette hair.</p>",
+                                        "title": "Selena Gomez",
+                                        "orientation": "square",
+                                        "look_number": null,
+                                        "alt_text": "Selena Gomez",
+                                        "filename": null,
+                                        "credit": "Getty Images",
+                                        "image_url": "https://vg-staging-images.condecdn.net/image/RYypKeK5epZ/crop/200/square",
+                                        "srcset": "https://vg-staging-images.condecdn.net/image/RYypKeK5epZ/crop/200/square 200w, https://vg-staging-images.condecdn.net/image/RYypKeK5epZ/crop/300/square 300w, https://vg-staging-images.condecdn.net/image/RYypKeK5epZ/crop/400/square 400w, https://vg-staging-images.condecdn.net/image/RYypKeK5epZ/crop/600/square 600w",
+                                        "width": null,
+                                        "uid": "RYypKeK5epZ"
+                                    },
+                                    "style": {
+                                        "padding_top": "100%",
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "Image"
+                                },
+                                "index": 0,
+                                "remaining_count": 42
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "ImageListItem"
+                        }, {
+                            "translation": {
+                                "remaining_prefix": "+"
+                            },
+                            "state": {
+                                "is_first": false,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_static": false,
+                                        "is_portrait": false,
+                                        "is_image": true,
+                                        "is_square": true,
+                                        "is_svg": false,
+                                        "is_lazyload": true,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_landscape": false
+                                    },
+                                    "data": {
+                                        "description": "<p class=\"bb-p\">Another fringe debut that happened on the red carpet, we love the way Emma's matches a neat bob and dangling earrings.</p>",
+                                        "title": "Emma Roberts",
+                                        "orientation": "square",
+                                        "look_number": null,
+                                        "alt_text": "Emma Roberts",
+                                        "filename": null,
+                                        "credit": "Getty Images",
+                                        "image_url": "https://vg-staging-images.condecdn.net/image/ebk5999YjOb/crop/200/square",
+                                        "srcset": "https://vg-staging-images.condecdn.net/image/ebk5999YjOb/crop/200/square 200w, https://vg-staging-images.condecdn.net/image/ebk5999YjOb/crop/300/square 300w, https://vg-staging-images.condecdn.net/image/ebk5999YjOb/crop/400/square 400w, https://vg-staging-images.condecdn.net/image/ebk5999YjOb/crop/600/square 600w",
+                                        "width": null,
+                                        "uid": "ebk5999YjOb"
+                                    },
+                                    "style": {
+                                        "padding_top": "100%",
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "Image"
+                                },
+                                "index": 1,
+                                "remaining_count": 41
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "ImageListItem"
+                        }, {
+                            "translation": {
+                                "remaining_prefix": "+"
+                            },
+                            "state": {
+                                "is_first": false,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_static": false,
+                                        "is_portrait": false,
+                                        "is_image": true,
+                                        "is_square": true,
+                                        "is_svg": false,
+                                        "is_lazyload": true,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_landscape": false
+                                    },
+                                    "data": {
+                                        "description": "<p class=\"bb-p\">A style that frames the face. Zendaya sported a new well-groomed bob with thick blunt fringe.</p>",
+                                        "title": "Zendaya",
+                                        "orientation": "square",
+                                        "look_number": null,
+                                        "alt_text": "Zendaya",
+                                        "filename": null,
+                                        "credit": "Getty Images",
+                                        "image_url": "https://vg-staging-images.condecdn.net/image/A13jeNoqoV8/crop/200/square",
+                                        "srcset": "https://vg-staging-images.condecdn.net/image/A13jeNoqoV8/crop/200/square 200w, https://vg-staging-images.condecdn.net/image/A13jeNoqoV8/crop/300/square 300w, https://vg-staging-images.condecdn.net/image/A13jeNoqoV8/crop/400/square 400w, https://vg-staging-images.condecdn.net/image/A13jeNoqoV8/crop/600/square 600w",
+                                        "width": null,
+                                        "uid": "A13jeNoqoV8"
+                                    },
+                                    "style": {
+                                        "padding_top": "100%",
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "Image"
+                                },
+                                "index": 2,
+                                "remaining_count": 40
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "ImageListItem"
+                        }, {
+                            "translation": {
+                                "remaining_prefix": "+"
+                            },
+                            "state": {
+                                "is_first": false,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_static": false,
+                                        "is_portrait": false,
+                                        "is_image": true,
+                                        "is_square": true,
+                                        "is_svg": false,
+                                        "is_lazyload": true,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_landscape": false
+                                    },
+                                    "data": {
+                                        "description": "<p class=\"bb-p\">This is the stuff of fringe dreams. Elle's perfectly platinum hair has a gentle wave to it which makes for perfect bangs hair.</p>",
+                                        "title": "Elle Fanning",
+                                        "orientation": "square",
+                                        "look_number": null,
+                                        "alt_text": "Elle Fanning",
+                                        "filename": null,
+                                        "credit": "getty images",
+                                        "image_url": "https://vg-staging-images.condecdn.net/image/AAY9XLnJz0r/crop/200/square",
+                                        "srcset": "https://vg-staging-images.condecdn.net/image/AAY9XLnJz0r/crop/200/square 200w, https://vg-staging-images.condecdn.net/image/AAY9XLnJz0r/crop/300/square 300w, https://vg-staging-images.condecdn.net/image/AAY9XLnJz0r/crop/400/square 400w, https://vg-staging-images.condecdn.net/image/AAY9XLnJz0r/crop/600/square 600w",
+                                        "width": null,
+                                        "uid": "AAY9XLnJz0r"
+                                    },
+                                    "style": {
+                                        "padding_top": "100%",
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "Image"
+                                },
+                                "index": 3,
+                                "remaining_count": 39
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "ImageListItem"
+                        }, {
+                            "translation": {
+                                "remaining_prefix": "+"
+                            },
+                            "state": {
+                                "is_first": false,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_static": false,
+                                        "is_portrait": false,
+                                        "is_image": true,
+                                        "is_square": true,
+                                        "is_svg": false,
+                                        "is_lazyload": true,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_landscape": false
+                                    },
+                                    "data": {
+                                        "description": "<p class=\"bb-p\">At the London premiere of <em class=\"bb-em\">Valerian</em>, Cara proved that short hair can be equally creative. Adding in a fringe and fixing with a black ribbon, she donned the ultimate pixie crop.</p>",
+                                        "title": "Cara Delevingne",
+                                        "orientation": "square",
+                                        "look_number": null,
+                                        "alt_text": "Cara Delevingne",
+                                        "filename": null,
+                                        "credit": "Getty",
+                                        "image_url": "https://vg-staging-images.condecdn.net/image/VGvVORak62W/crop/200/square",
+                                        "srcset": "https://vg-staging-images.condecdn.net/image/VGvVORak62W/crop/200/square 200w, https://vg-staging-images.condecdn.net/image/VGvVORak62W/crop/300/square 300w, https://vg-staging-images.condecdn.net/image/VGvVORak62W/crop/400/square 400w, https://vg-staging-images.condecdn.net/image/VGvVORak62W/crop/600/square 600w",
+                                        "width": null,
+                                        "uid": "VGvVORak62W"
+                                    },
+                                    "style": {
+                                        "padding_top": "100%",
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "Image"
+                                },
+                                "index": 4,
+                                "remaining_count": 38
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "ImageListItem"
+                        }, {
+                            "translation": {
+                                "remaining_prefix": "+"
+                            },
+                            "state": {
+                                "is_first": false,
+                                "is_last": true
+                            },
+                            "data": {
+                                "item": {
+                                    "translation": {},
+                                    "state": {
+                                        "is_static": false,
+                                        "is_portrait": false,
+                                        "is_image": true,
+                                        "is_square": true,
+                                        "is_svg": false,
+                                        "is_lazyload": true,
+                                        "is_linked": false,
+                                        "is_picture": false,
+                                        "is_landscape": false
+                                    },
+                                    "data": {
+                                        "description": "<p class=\"bb-p\">Texan-born Vanessa looked the picture of old-Hollywood glamour when she teamed a full fringe with a chic chignon when in the south of France.</p>",
+                                        "title": "Vanessa Moody",
+                                        "orientation": "square",
+                                        "look_number": null,
+                                        "alt_text": "Vanessa Moody",
+                                        "filename": null,
+                                        "credit": "Getty Images",
+                                        "image_url": "https://vg-staging-images.condecdn.net/image/KEjQWlEMjbq/crop/200/square",
+                                        "srcset": "https://vg-staging-images.condecdn.net/image/KEjQWlEMjbq/crop/200/square 200w, https://vg-staging-images.condecdn.net/image/KEjQWlEMjbq/crop/300/square 300w, https://vg-staging-images.condecdn.net/image/KEjQWlEMjbq/crop/400/square 400w, https://vg-staging-images.condecdn.net/image/KEjQWlEMjbq/crop/600/square 600w",
+                                        "width": null,
+                                        "uid": "KEjQWlEMjbq"
+                                    },
+                                    "style": {
+                                        "padding_top": "100%",
+                                        "inline": "",
+                                        "cls": ""
+                                    },
+                                    "type": "Image"
+                                },
+                                "index": 5,
+                                "remaining_count": 37
+                            },
+                            "style": {
+                                "inline": "",
+                                "cls": ""
+                            },
+                            "type": "ImageListItem"
+                        }],
+                        "length": 6
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "ImageList"
+                },
+                "icon": {
+                    "translation": {},
+                    "state": {
+                        "is_static": false,
+                        "is_portrait": false,
+                        "is_image": false,
+                        "is_square": false,
+                        "is_svg": true,
+                        "is_lazyload": false,
+                        "is_linked": false,
+                        "is_picture": false,
+                        "is_landscape": false
+                    },
+                    "data": {
+                        "credit": null,
+                        "description": null,
+                        "title": null,
+                        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 13\"><title>type-gallery</title><path d=\"M16 13H3V3h13v10zM4 12h11V4H4v8zm-3-2H0V0h13v1H1v9z\"/></svg>",
+                        "look_number": null,
+                        "width": null,
+                        "alt_text": null
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "SVG"
+                },
+                "link": {
+                    "translation": {},
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "data": {
+                        "url": "/gallery/fringe-hairstyles",
+                        "title": "The Fringe Hairstyles Directory"
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "Link"
+                },
+                "title": "The Fringe Hairstyles Directory"
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "BBCode"
+        },
+        {
+            "type": "BBCodeShowGallery",
+            "state": {
+                "is_show_gallery": true
+            },
+            "data": {
+                "subtitle": "Spring/Summer 2017",
+                "link": {
+                    "type": "Link",
+                    "state": {},
+                    "data": {
+                        "url": "/shows/spring-summer-2017-ready-to-wear/eric-schlosberg/collection/",
+                        "title": "Eric Schlosberg New York Spring/Summer 2017 Ready-To-Wear"
+                    },
+                    "style": {
+                        "cls": ""
+                    }
+                },
+                "image_list": {
+                    "type": "ImageList",
+                    "state": {},
+                    "data": {
+                        "items": [{
+                            "type": "ImageListItem",
+                            "state": {
+                                "is_first": true,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "Image",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_image": true,
+                                        "is_picture": false,
+                                        "is_linked": false,
+                                        "is_svg": false
+                                    },
+                                    "data": {
+                                        "credit": null,
+                                        "image_url": "https://vg-images.condecdn.net/image/rvVodLKBWZ2/crop/405/portrait",
+                                        "description": "",
+                                        "lazyload": true,
+                                        "title": "",
+                                        "srcset": "https://vg-images.condecdn.net/image/rvVodLKBWZ2/crop/405/portrait 405w",
+                                        "look_number": null,
+                                        "width": null,
+                                        "alt_text": null,
+                                        "orientation": "portrait"
+                                    },
+                                    "style": {
+                                        "cls": "img-lazyload "
+                                    }
+                                },
+                                "remaining_count": 14
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }, {
+                            "type": "ImageListItem",
+                            "state": {
+                                "is_first": false,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "Image",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_image": true,
+                                        "is_picture": false,
+                                        "is_linked": false,
+                                        "is_svg": false
+                                    },
+                                    "data": {
+                                        "credit": null,
+                                        "image_url": "https://vg-images.condecdn.net/image/Y1GXKW4gBG2/crop/405/portrait",
+                                        "description": "",
+                                        "lazyload": true,
+                                        "title": "",
+                                        "srcset": "https://vg-images.condecdn.net/image/Y1GXKW4gBG2/crop/405/portrait 405w",
+                                        "look_number": null,
+                                        "width": null,
+                                        "alt_text": null,
+                                        "orientation": "portrait"
+                                    },
+                                    "style": {
+                                        "cls": "img-lazyload "
+                                    }
+                                },
+                                "remaining_count": 13
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }, {
+                            "type": "ImageListItem",
+                            "state": {
+                                "is_first": false,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "Image",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_image": true,
+                                        "is_picture": false,
+                                        "is_linked": false,
+                                        "is_svg": false
+                                    },
+                                    "data": {
+                                        "credit": null,
+                                        "image_url": "https://vg-images.condecdn.net/image/Gdye0z8e7Yl/crop/405/portrait",
+                                        "description": "",
+                                        "lazyload": true,
+                                        "title": "",
+                                        "srcset": "https://vg-images.condecdn.net/image/Gdye0z8e7Yl/crop/405/portrait 405w",
+                                        "look_number": null,
+                                        "width": null,
+                                        "alt_text": null,
+                                        "orientation": "portrait"
+                                    },
+                                    "style": {
+                                        "cls": "img-lazyload "
+                                    }
+                                },
+                                "remaining_count": 12
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }, {
+                            "type": "ImageListItem",
+                            "state": {
+                                "is_first": false,
+                                "is_last": true
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "Image",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_image": true,
+                                        "is_picture": false,
+                                        "is_linked": false,
+                                        "is_svg": false
+                                    },
+                                    "data": {
+                                        "credit": null,
+                                        "image_url": "https://vg-images.condecdn.net/image/VkqJD0eLnMW/crop/405/portrait",
+                                        "description": "",
+                                        "lazyload": true,
+                                        "title": "",
+                                        "srcset": "https://vg-images.condecdn.net/image/VkqJD0eLnMW/crop/405/portrait 405w",
+                                        "look_number": null,
+                                        "width": null,
+                                        "alt_text": null,
+                                        "orientation": "portrait"
+                                    },
+                                    "style": {
+                                        "cls": "img-lazyload "
+                                    }
+                                },
+                                "remaining_count": 11
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }],
+                        "length": 4
+                    },
+                    "style": {
+                        "cls": ""
+                    }
+                },
+                "title": "Eric Schlosberg New York Spring/Summer 2017 Ready-To-Wear"
+            },
+            "style": {
+                "cls": "bb-show-gallery"
+            }
+        },
+        {
+            "translation": {
+                "answer_title_prefix": "A.",
+                "question_byline_prefix": "By",
+                "question_title_prefix": "Q.",
+                "answer_byline_prefix": "By"
+            },
+            "state": {
+                "has_icon": true,
+                "is_video": true
+            },
+            "data": {
+                "image": {
+                    "translation": {},
+                    "state": {
+                        "is_static": false,
+                        "is_portrait": false,
+                        "is_image": true,
+                        "is_square": false,
+                        "is_svg": false,
+                        "is_lazyload": true,
+                        "is_linked": false,
+                        "is_picture": false,
+                        "is_landscape": true
+                    },
+                    "data": {
+                        "description": null,
+                        "title": null,
+                        "orientation": "landscape",
+                        "look_number": null,
+                        "alt_text": null,
+                        "filename": null,
+                        "credit": null,
+                        "image_url": "https://vg-staging-images.condecdn.net/image/4WGb0J0gmXw/crop/405/landscape/f/golden-ticket-cms-thumbnail.png",
+                        "srcset": "https://vg-staging-images.condecdn.net/image/4WGb0J0gmXw/crop/405/landscape/f/golden-ticket-cms-thumbnail.png 405w",
+                        "width": null,
+                        "uid": "4WGb0J0gmXw"
+                    },
+                    "style": {
+                        "padding_top": "66.666666667%",
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "Image"
+                },
+                "title": "Win A Ticket To Versace\u2019s AW18 Show With British Vogue",
+                "link": {
+                    "translation": {},
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "data": {
+                        "url": "/video/win-a-ticket-to-versaces-aw18-show-with-british-vogue",
+                        "title": "Win A Ticket To Versace\u2019s AW18 Show With British Vogue"
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "Link"
+                },
+                "icon": {
+                    "translation": {},
+                    "state": {
+                        "is_static": false,
+                        "is_portrait": false,
+                        "is_image": false,
+                        "is_square": false,
+                        "is_svg": true,
+                        "is_lazyload": false,
+                        "is_linked": false,
+                        "is_picture": false,
+                        "is_landscape": false
+                    },
+                    "data": {
+                        "credit": null,
+                        "description": null,
+                        "title": null,
+                        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 14.73 16\"><title>type-video</title><path d=\"M0 16V0l14.73 8zM1 1.68v12.64L12.63 8z\"/></svg>",
+                        "look_number": null,
+                        "width": null,
+                        "alt_text": null
+                    },
+                    "style": {
+                        "inline": "",
+                        "cls": ""
+                    },
+                    "type": "SVG"
+                }
+            },
+            "style": {
+                "inline": "",
+                "cls": ""
+            },
+            "type": "BBCode"
+        },
+        {
+            "type": "BBCodeImage",
+            "state": {
+                "is_image": true
+            },
+            "data": {
+                "image": {
+                    "type": "Image",
+                    "state": {
+                        "is_static": false,
+                        "is_image": true,
+                        "is_picture": false,
+                        "is_linked": false,
+                        "is_svg": false
+                    },
+                    "data": {
+                        "credit": "Lorem ipsum",
+                        "image_url": "https://vg-images.condecdn.net/image/jQaKQLmz3Yl/crop/405/landscape",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor ullamcorper velit eget placerat. Curabitur sed rhoncus ipsum. Praesent sagittis porta eleifend. Ut finibus, arcu id pharetra ornare, metus dolor elementum augue, malesuada blandit nunc arcu id tellus. Etiam at magna pulvinar, commodo odio id, lacinia felis. Duis posuere velit a eleifend feugiat. Nunc eget nulla purus. Donec sapien orci, commodo at neque at, molestie lobortis turpis. Cras rutrum neque est, et molestie sapien aliquam eget. Pellentesque aliquet orci ac commodo tincidunt.",
+                        "lazyload": true,
+                        "title": "Photograph of some guy",
+                        "srcset": "https://vg-images.condecdn.net/image/jQaKQLmz3Yl/crop/405/landscape 405w, https://vg-images.condecdn.net/image/jQaKQLmz3Yl/crop/810/landscape 810w, https://vg-images.condecdn.net/image/jQaKQLmz3Yl/crop/1020/landscape 1020w, https://vg-images.condecdn.net/image/jQaKQLmz3Yl/crop/1440/landscape 1440w, https://vg-images.condecdn.net/image/jQaKQLmz3Yl/crop/1620/landscape 1620w",
+                        "look_number": null,
+                        "width": null,
+                        "alt_text": null,
+                        "orientation": "landscape"
+                    },
+                    "style": {
+                        "cls": "img-lazyload "
+                    }
+                }
+            },
+            "style": {
+                "cls": ""
+            }
+        }
     ]
 }
 
