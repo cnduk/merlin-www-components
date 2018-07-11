@@ -108,9 +108,6 @@
 }
 
 .c-topic-strip--c-card-section {
-    margin-bottom: 20px;
-    margin-left: -$MOBILE_SIDE_GUTTER;
-    margin-right: -$MOBILE_SIDE_GUTTER;
     overflow-x: auto;
     text-align: center;
     white-space: nowrap;
@@ -129,17 +126,14 @@
     }
 
     @include tablet-size {
-        margin-bottom: $MARGIN_MEDIUM;
-        margin-left: -$TABLET_SIDE_GUTTER;
-        margin-right: -$TABLET_SIDE_GUTTER;
         text-align: center;
 
         .c-topic-strip-wrapper {
-            padding-left: $MOBILE_SIDE_GUTTER;
+            padding-left: $TABLET_SIDE_GUTTER;
         }
 
         .c-topic-strip__list-item:last-child {
-            padding-right: $MOBILE_SIDE_GUTTER;
+            padding-right: $TABLET_SIDE_GUTTER;
         }
 
         .c-topic-strip__link,
@@ -147,11 +141,6 @@
             @include font-size(11px);
         }
 
-    }
-
-    @include desktop-size {
-        margin-left: 0;
-        margin-right: 0;
     }
 
 }
