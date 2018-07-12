@@ -57,10 +57,6 @@
     }
 }
 
-.bb-blockquote__separator {
-    display: none;
-}
-
 .bb-blockquote__credit {
     @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
     color: $BALI-HAI;

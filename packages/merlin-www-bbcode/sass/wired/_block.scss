@@ -21,15 +21,17 @@
     }
 }
 
-.bb-blockquote__separator {
-    border: none;
-    border-bottom: 1px solid $trolley-grey;
-    margin: 15px 0;
-    width: 10px;
-}
-
 .bb-blockquote__credit {
     @include font("BRUTAL", 14px, 300);
+
+    &:before {
+        background-color: $trolley-grey;
+        content: "";
+        display: block;
+        height: 1px;
+        margin: 15px 0;
+        width: 15px;
+    }
 }
 
 // -------------------- //

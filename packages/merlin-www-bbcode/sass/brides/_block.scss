@@ -74,9 +74,6 @@
     font-style: italic;
     letter-spacing: 0.03em;
 }
-.bb-blockquote__separator {
-    display: none;
-}
 .bb-blockquote__credit {
     @include font('SOLEIL', 12px, null, 16px);
     letter-spacing: 0.12em;

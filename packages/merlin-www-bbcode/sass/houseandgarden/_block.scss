@@ -18,10 +18,6 @@
     }
 }
 
-.bb-blockquote__separator {
-    display: none;
-}
-
 .bb-blockquote__credit {
     @include font("BRANDON GROTESQUE", 10px, 700, 10px);
     color: $silver-chalice;

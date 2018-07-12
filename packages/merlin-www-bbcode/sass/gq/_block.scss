@@ -46,10 +46,6 @@
     }
 }
 
-.bb-blockquote__separator {
-    display: none;
-}
-
 .bb-blockquote__credit {
     @include font("GOTHAM", 9px, 700, 12px, 60);
     margin-top: 20px;

@@ -22,10 +22,6 @@
     }
 }
 
-.bb-blockquote__separator {
-    display: none;
-}
-
 .bb-blockquote__credit {
     @include font("GRAPHIK", 10px, 'NORMAL', 10px);
     color: $astronaut;

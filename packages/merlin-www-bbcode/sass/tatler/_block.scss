@@ -21,10 +21,6 @@
     }
 }
 
-.bb-blockquote__separator {
-    display: none;
-}
-
 .bb-blockquote__credit {
     @include font('COMMUTER SANS', 10px, 'NORMAL', 10px);
     color: $gray;

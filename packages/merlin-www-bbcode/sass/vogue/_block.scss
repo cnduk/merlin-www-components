@@ -210,10 +210,6 @@ h1, h2, h3, h4, h5, h5 {
     }
 }
 
-.bb-blockquote__separator {
-    display: none;
-}
-
 .bb-blockquote__credit {
     @include font("NOBEL", 12px)
     color: $dove-gray;
