@@ -102,10 +102,6 @@
     display: none;
 }
 
-.bb-card__separator {
-    display: none;
-}
-
 .bb-card__byline {
     @include font("GOTHAM", 9px, null, 12px, 60);
     margin-bottom: 6px;

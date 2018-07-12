@@ -268,10 +268,6 @@
     transition: all 0.3s ease;
 }
 
-.bb-card__separator {
-    display: none;
-}
-
 .bb-card__byline,
 .bb-card__sponsor {
     @include font-size(10px);
