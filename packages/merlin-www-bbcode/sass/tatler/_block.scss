@@ -426,11 +426,6 @@
 .bb-question__q { background: $black; color: $white;}
 .bb-answer__a { background: $mercury; }
 
-.bb-question__separator,
-.bb-answer__separator {
-    display: none;
-}
-
 .bb-question__by,
 .bb-answer__by {
     @include font('COMMUTER SANS', 10px, 'NORMAL', 10px);

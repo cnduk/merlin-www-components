@@ -26,10 +26,6 @@
     }
 }
 
-.bb-question__separator {
-    display: none;
-}
-
 .bb-answer__author {
     @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
     color: $BALI-HAI;
@@ -411,10 +407,6 @@
         @include font-size(20px);
         @include line-height(36px);
     }
-}
-
-.bb-question__separator {
-    display: none;
 }
 
 .bb-question__author {

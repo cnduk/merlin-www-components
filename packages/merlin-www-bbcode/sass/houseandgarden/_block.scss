@@ -447,11 +447,6 @@
     color: $careys-pink;
 }
 
-.bb-question__separator,
-.bb-answer__separator {
-    display: none;
-}
-
 .bb-question__author,
 .bb-answer__author {
     @include font("BRANDON GROTESQUE", 10px, 700, 10px);

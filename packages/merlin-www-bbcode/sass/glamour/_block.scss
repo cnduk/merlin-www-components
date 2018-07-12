@@ -421,11 +421,6 @@
     }
 }
 
-.bb-question__separator,
-.bb-answer__separator {
-    display: none;
-}
-
 .bb-question__author {
     @include font("GRAPHIK", 10px, 'SEMI BOLD', 10px);
     color: $astronaut;

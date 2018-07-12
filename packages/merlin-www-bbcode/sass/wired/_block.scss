@@ -346,17 +346,18 @@
     width: 30px;
 }
 
-.bb-question__separator,
-.bb-answer__separator {
-    border: none;
-    border-bottom: 1px solid $trolley-grey;
-    margin: 10px 0 10px 30px;
-    width: 15px;
-}
-
 .bb-question__author,
 .bb-answer__author {
     @include font("BRUTAL", 13px, 400, 27px);
+
+    &:before {
+        background-color: $trolley-grey;
+        content: "";
+        display: block;
+        height: 1px;
+        margin: 10px 0 10px 30px;
+        width: 15px;
+    }
 }
 
 .bb-question__by,

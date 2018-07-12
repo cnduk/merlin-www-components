@@ -349,11 +349,6 @@ h1, h2, h3, h4, h5, h5 {
     @include font('NOBEL', 18px, 'BOLD');
 }
 
-.bb-question__separator,
-.bb-answer__separator {
-    display: none;
-}
-
 .bb-question__author,
 .bb-answer__author {
     @include font('NOBEL', 11px, null, 11px);

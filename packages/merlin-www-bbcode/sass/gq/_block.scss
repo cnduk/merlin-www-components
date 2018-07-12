@@ -8,10 +8,6 @@
     color: $oslo-gray;
 }
 
-.bb-question__separator {
-    display: none;
-}
-
 .bb-answer__author {
     @include font("GOTHAM", 9px, 700, 12px, 60);
     color: $mineshaft;
@@ -340,10 +336,6 @@
     @include font-weight(700);
 }
 .bb-question__q {
-}
-
-.bb-question__separator {
-    display: none;
 }
 
 .bb-question__author {
