@@ -6,36 +6,61 @@
 .a-marketing-card {
     background-color: $white;
     border: 1px solid $bon-jour;
-    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.06);
     margin: 40px 0;
     padding: 40px 20px;
 
     @include at-medium-size {
-        padding: 0px;
+        padding: 0;
     }
 }
 
-.a-marketing-card--magazine {
-    .a-marketing-card__col {
+.a-marketing-card__header {
+    text-align: center;
 
-        @include at-medium-size {
-            &:nth-child(1) {
-                padding-right: 20px;
-            }
-
-            &:nth-child(2) {
-                padding-left: 20px;
-            }
-        }
+    @include at-medium-size {
+        padding: 40px;
+        vertical-align: top;
     }
 }
 
+.a-marketing-card__body {
+    text-align: center;
+
+    @include at-medium-size {
+        padding: 40px;
+        text-align: left;
+    }
+}
+
+//brand
 .a-marketing-card__brand {
     margin-bottom: 24px;
     text-transform: uppercase;
 
     @include at-medium-size {
         margin-bottom: 0;
+    }
+}
+
+.a-marketing-card--brand .a-marketing-card__header {
+    @include at-medium-size {
+        width: 38%;
+    }
+}
+
+.a-marketing-card--brand .a-marketing-card__body {
+    @include at-medium-size {
+        border-left: 1px solid $bon-jour;
+    }
+}
+
+.a-marketing-card__brand__prefix {
+    @include font("GOTHAM", 9px, 400, 16px, 60);
+    margin-bottom: 16px;
+
+    @include at-medium-size {
+       margin-bottom: 0;
     }
 }
 
@@ -51,41 +76,35 @@
     }
 }
 
-.a-marketing-card__brand__prefix {
-    @include font("GOTHAM", 9px, 400, 16px, 60);
-    margin-bottom: 16px;
-}
-
-.a-marketing-card__col {
-    text-align: center;
-
-    @include at-medium-size {
-        padding: 40px;
-
-        &:nth-child(2) {
-            text-align: left;
-        }
-    }
-}
-
-.a-marketing-card--brand .a-marketing-card__col,
-.a-marketing-card--topic .a-marketing-card__col,
-.a-marketing-card--event .a-marketing-card__col {
+//event
+.a-marketing-card--event .a-marketing-card__header {
+    margin-bottom: 24px;
 
     @include at-medium-size {
         width: 38%;
-
-        & + .a-marketing-card__col {
-            border-left: 1px solid $bon-jour;
-        }
     }
 }
 
-.a-marketing-card__desc {
-    @include font("GOTHAM", 14px, 400, 20px, -10);
-    margin-bottom: 28px;
+.a-marketing-card--event .a-marketing-card__body {
+    @include at-medium-size {
+        border-left: 1px solid $bon-jour;
+    }
 }
 
+//topic
+.a-marketing-card--topic .a-marketing-card__header {
+    @include at-medium-size {
+        width: 38%;
+    }
+}
+
+.a-marketing-card--topic .a-marketing-card__body {
+    @include at-medium-size {
+        border-left: 1px solid $bon-jour;
+    }
+}
+
+//magazine
 .a-marketing-card__magazine {
     margin: 0 auto 24px auto;
 
@@ -94,8 +113,21 @@
     }
 }
 
-.a-marketing-card__magazine__cover--print {
-    width: 72%;
+.a-marketing-card--magazine .a-marketing-card__header {
+    @include at-medium-size {
+        padding-right: 20px;
+    }
+}
+
+.a-marketing-card--magazine .a-marketing-card__header {
+    @include at-medium-size {
+        padding-left: 20px;
+    }
+}
+
+.a-marketing-card__magazine__cover--mobile {
+    background-image: none;
+    display: none;
 }
 
 .a-marketing-card__magazine__cover--tablet {
@@ -114,9 +146,20 @@
     }
 }
 
-.a-marketing-card__magazine__cover--mobile {
-    background-image: none;
-    display: none;
+.a-marketing-card__magazine__cover--print {
+    width: 72%;
+}
+
+//marketing
+.a-marketing-card__title {
+    @include font("GOTHAM", 14px, 500, 20px, -4);
+    color: $woodsmoke;
+    margin: 0 0 24px 0;
+}
+
+.a-marketing-card__desc {
+    @include font("GOTHAM", 14px, 400, 20px, -10);
+    margin-bottom: 28px;
 }
 
 .a-marketing-card__link {
@@ -129,8 +172,3 @@
     }
 }
 
-.a-marketing-card__title {
-    @include font("GOTHAM", 14px, 500, 20px, -4);
-    color: $woodsmoke;
-    margin: 0 0 24px 0;
-}

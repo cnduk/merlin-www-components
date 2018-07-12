@@ -14,36 +14,22 @@
     }
 }
 
-.a-marketing-card--brand {
-    .a-marketing-card__col {
+.a-marketing-card__header,
+.a-marketing-card__body {
+    text-align: center;
 
-        @include at-medium-size {
-            &:nth-child(1) {
-                padding-right: 32px;
-            }
-
-            &:nth-child(2) {
-                padding-left: 32px;
-            }
-        }
+    @include at-medium-size {
+        vertical-align: top;
     }
 }
 
-.a-marketing-card--magazine {
-    .a-marketing-card__col {
-
-        @include at-medium-size {
-            &:nth-child(1) {
-                padding-right: 16px;
-            }
-
-            &:nth-child(2) {
-                padding-left: 16px;
-            }
-        }
+.a-marketing-card__body {
+    @include at-medium-size {
+        text-align: left;
     }
 }
 
+//brand
 .a-marketing-card__brand {
     margin-bottom: 24px;
 
@@ -52,14 +38,25 @@
     }
 }
 
-.a-marketing-card__brand__img {
-    margin: 0 auto;
-    max-width: 222px;
-    width: 100%;
-
+.a-marketing-card--brand .a-marketing-card__header {
     @include at-medium-size {
-        max-width: none;
+        padding-right: 32px;
+        width: 38%;
     }
+}
+
+.a-marketing-card--brand .a-marketing-card__body {
+    @include at-medium-size {
+        padding-left: 32px;
+        border-left: 1px solid $PORCELAIN;
+    }
+}
+
+.a-marketing-card__brand__prefix {
+    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
+    font-style: italic;
+    margin-bottom: 12px;
+    text-transform: lowercase;
 }
 
 .a-marketing-card__brand__name {
@@ -73,43 +70,46 @@
     }
 }
 
-.a-marketing-card__brand__prefix {
-    @include font("PROXIMA NOVA CONDENSED", 12px, 400, 16px);
-    font-style: italic;
-    margin-bottom: 12px;
-    text-transform: lowercase;
-}
-
-.a-marketing-card__col {
-    text-align: center;
+.a-marketing-card__brand__img {
+    margin: 0 auto;
+    max-width: 222px;
+    width: 100%;
 
     @include at-medium-size {
-        &:nth-child(2) {
-            text-align: left;
-        }
+        max-width: none;
     }
 }
 
-.a-marketing-card--brand .a-marketing-card__col,
-.a-marketing-card--topic .a-marketing-card__col,
-.a-marketing-card--event .a-marketing-card__col {
+//event
+.a-marketing-card--event .a-marketing-card__header {
+    margin-bottom: 24px;
 
     @include at-medium-size {
         width: 38%;
-
-        & + .a-marketing-card__col {
-            border-left: 1px solid $PORCELAIN;
-        }
     }
 }
 
-.a-marketing-card__desc {
-    @include font("PROXIMA NOVA CONDENSED", 14px, 400, 20px);
-    color: $MUSTASAARI;
-    margin-bottom: 12px;
-    margin-top: 12px;
+.a-marketing-card--event .a-marketing-card__body {
+    @include at-medium-size {
+        border-left: 1px solid $PORCELAIN;
+        padding-left: 24px;
+    }
 }
 
+//topic
+.a-marketing-card--topic .a-marketing-card__header {
+    @include at-medium-size {
+        width: 38%;
+    }
+}
+
+.a-marketing-card--topic .a-marketing-card__body {
+    @include at-medium-size {
+        border-left: 1px solid $PORCELAIN;
+    }
+}
+
+//magazine
 .a-marketing-card__magazine {
     margin: 0 auto 20px auto;
 
@@ -117,6 +117,18 @@
         margin-bottom: 0;
     }
 }
+
+.a-marketing-card--magazine .a-marketing-card__header {
+    @include at-medium-size {
+        padding-right: 16px;
+    }
+}
+.a-marketing-card--magazine .a-marketing-card__header {
+    @include at-medium-size {
+        padding-left: 16px;
+    }
+}
+
 
 .a-marketing-card__magazine__cover--print {
     width: 72%;
@@ -139,6 +151,21 @@
     display: none;
 }
 
+//marketing
+.a-marketing-card__desc {
+    @include font("PROXIMA NOVA CONDENSED", 14px, 400, 20px);
+    color: $MUSTASAARI;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+.a-marketing-card__title {
+    @include font("FREIGHT TEXT", 16px, 400, 24px);
+    color: $MUSTASAARI;
+    font-style: italic;
+    margin: 0 0 12px 0;
+}
+
 .a-marketing-card__link {
     @include button-single-two();
     @include button-single-two-light();
@@ -149,9 +176,3 @@
     }
 }
 
-.a-marketing-card__title {
-    @include font("FREIGHT TEXT", 16px, 400, 24px);
-    color: $MUSTASAARI;
-    font-style: italic;
-    margin: 0 0 12px 0;
-}

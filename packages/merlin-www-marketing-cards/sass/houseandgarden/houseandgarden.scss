@@ -12,7 +12,8 @@
     }
 }
 
-.a-marketing-card__col {
+.a-marketing-card__header,
+.a-marketing-card__body {
     text-align: center;
 
     @include at-medium-size {
@@ -20,6 +21,139 @@
     }
 }
 
+.a-marketing-card__header {
+    @include at-medium-size {
+        vertical-align: top;
+    }
+}
+
+//brand
+ .a-marketing-card--brand .a-marketing-card__header {
+     @include at-medium-size {
+         padding-right: 40px;
+         text-align: center;
+
+         width: 180px;
+     }
+ }
+
+.a-marketing-card--brand .a-marketing-card__body {
+    @include at-medium-size {
+        border-left: 1px solid $black;
+        padding-left: 40px;
+        padding-right: 0;
+        text-align: left;
+        width: auto;
+    }
+}
+
+.a-marketing-card__brand__prefix {
+    @include font('BRANDON GROTESQUE', 10px, 'NORMAL', 10px);
+    color: $mine-shaft;
+    display: block;
+    letter-spacing: 1px;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+}
+
+.a-marketing-card__brand__img {
+    margin: 0 auto 20px auto;
+    max-width: 140px;
+}
+
+.a-marketing-card__brand__name {
+    @include font('BRANDON GROTESQUE', 20px, 'BOLD', 20px);
+    color: $mine-shaft;
+    display: block;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+
+    a {
+        color: inherit;
+    }
+}
+
+//event
+ .a-marketing-card--event .a-marketing-card__header {
+     @include at-medium-size {
+         padding-right: 40px;
+         width: 140px;
+     }
+ }
+
+.a-marketing-card--event .a-marketing-card__body {
+    @include at-medium-size {
+        border-left: 1px solid $black;
+        padding-left: 40px;
+        padding-right: 0;
+        width: auto;
+    }
+}
+
+//topic
+ .a-marketing-card--topic .a-marketing-card__header {
+     @include at-medium-size {
+         padding-right: 40px;
+         text-align: center;
+         width: 180px;
+     }
+ }
+
+.a-marketing-card--topic .a-marketing-card__body {
+    @include at-medium-size {
+        border-left: 1px solid $black;
+        padding-left: 40px;
+        padding-right: 0;
+        text-align: left;
+        width: auto;
+    }
+}
+
+//magazine
+.a-marketing-card__magazine {
+    margin: 0 auto 20px auto;
+    width: 150px;
+
+    @include at-medium-size {
+        margin-bottom: 0;
+        width: 250px;
+    }
+}
+
+ .a-marketing-card--magazine .a-marketing-card__header {
+     @include at-medium-size {
+         padding-right: 40px;
+         width: 250px;
+     }
+ }
+
+  .a-marketing-card--magazine .a-marketing-card__body {
+      @include at-medium-size {
+          width: auto;
+      }
+  }
+
+.a-marketing-card__magazine__cover--print {
+    width: 95px;
+
+    @include at-medium-size {
+        width: 160px;
+    }
+}
+
+.a-marketing-card__magazine__cover--tablet {
+    width: 58px;
+
+    @include at-medium-size {
+        width: 100px;
+    }
+}
+
+.a-marketing-card__magazine__cover--mobile {
+    display: none;
+}
+
+//marketing
 .a-marketing-card__title {
     @include font('MILLER_DISPLAY', 18px, 'BOLD', 22px);
     color: $mine-shaft;
@@ -58,101 +192,4 @@
         @include button-single-light-hover;
     }
 }
-
-.a-marketing-card__brand__img {
-    margin: 0 auto 20px auto;
-    max-width: 140px;
-}
-
-.a-marketing-card__brand__prefix {
-    @include font('BRANDON GROTESQUE', 10px, 'NORMAL', 10px);
-    color: $mine-shaft;
-    display: block;
-    letter-spacing: 1px;
-    margin: 0 0 20px 0;
-    text-transform: uppercase;
-}
-
-.a-marketing-card__brand__name {
-    @include font('BRANDON GROTESQUE', 20px, 'BOLD', 20px);
-    color: $mine-shaft;
-    display: block;
-    margin: 0 0 20px 0;
-    text-transform: uppercase;
-
-    a {
-        color: inherit;
-    }
-}
-
-.a-marketing-card__magazine {
-    margin: 0 auto 20px auto;
-    width: 150px;
-
-    @include at-medium-size {
-        margin-bottom: 0;
-        width: 250px;
-    }
-}
-
-.a-marketing-card__magazine__cover--print {
-    width: 95px;
-
-    @include at-medium-size {
-        width: 160px;
-    }
-}
-
-.a-marketing-card__magazine__cover--tablet {
-    width: 58px;
-
-    @include at-medium-size {
-        width: 100px;
-    }
-}
-
-.a-marketing-card__magazine__cover--mobile {
-    display: none;
-}
-
-@include at-medium-size {
-
-    .a-marketing-card--event .a-marketing-card__col {
-        padding-right: 40px;
-        width: 140px;
-
-        + .a-marketing-card__col {
-            border-left: 1px solid $black;
-            padding-left: 40px;
-            padding-right: 0;
-            width: auto;
-        }
-    }
-
-    .a-marketing-card--topic .a-marketing-card__col,
-    .a-marketing-card--brand .a-marketing-card__col {
-        padding-right: 40px;
-        text-align: center;
-        width: 180px;
-
-        + .a-marketing-card__col {
-            border-left: 1px solid $black;
-            padding-left: 40px;
-            padding-right: 0;
-            text-align: left;
-            width: auto;
-        }
-    }
-
-    .a-marketing-card--magazine .a-marketing-card__col {
-        padding-right: 40px;
-        width: 250px;
-
-        + .a-marketing-card__col {
-            width: auto;
-        }
-    }
-
-}
-
 
