@@ -242,10 +242,6 @@ h1, h2, h3, h4, h5, h5 {
     }
 }
 
-.bb-pullquote__separator {
-    display: none;
-}
-
 .bb-pullquote__credit {
     @include font("NOBEL", 12px);
     color: $cod-gray;

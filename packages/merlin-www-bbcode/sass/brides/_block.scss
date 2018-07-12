@@ -99,9 +99,6 @@
     @include font('FREIGHT DISPLAY PRO', 24px, 'BOLD', 28px);
     letter-spacing: 0.02em;
 }
-.bb-pullquote__separator {
-    display: none;
-}
 .bb-pullquote__credit {
     @include font('SOLEIL', 12px, null, 16px);
     letter-spacing: 0.12em;

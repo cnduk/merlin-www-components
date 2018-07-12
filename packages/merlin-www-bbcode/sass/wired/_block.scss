@@ -308,20 +308,22 @@
     }
 }
 
-.bb-pullquote__separator {
-    border: none;
-    border-top: 1px solid $black;
-    margin: 10px auto 15px auto;
-    width: 40px;
-
-    @include at-x-large-size {
-        margin: 15px auto 20px auto;
-    }
-}
-
 .bb-pullquote__credit {
     @include font("BRUTAL", 13px, 300, 13px);
     text-align: center;
+
+    &:before {
+        background-color: $black;
+        content: "";
+        display: block;
+        height: 1px;
+        margin: 10px auto 15px auto;
+        width: 40px;
+
+        @include at-x-large-size {
+            margin: 15px auto 20px auto;
+        }
+    }
 }
 
 // -------------------- //

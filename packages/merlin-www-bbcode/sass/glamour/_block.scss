@@ -332,10 +332,6 @@
     }
 }
 
-.bb-pullquote__separator {
-    display: none;
-}
-
 .bb-pullquote__credit {
     @include font("GRAPHIK", 10px, 'NORMAL', 10px);
     color: $astronaut;

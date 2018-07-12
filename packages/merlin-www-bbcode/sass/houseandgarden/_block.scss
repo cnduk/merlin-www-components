@@ -379,10 +379,6 @@
     }
 }
 
-.bb-pullquote__separator {
-    display: none;
-}
-
 .bb-pullquote__credit {
     @include font("BRANDON GROTESQUE", 10px, 700, 10px);
     color: $mine-shaft;
