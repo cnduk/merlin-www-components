@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.7.0"></a>
+# [1.7.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.6.2...@cnbritain/merlin-www-js-pages@1.7.0) (2018-07-12)
+
+
+### Features
+
+* **merlin-www-js-pages:** add event tracking to article recommended and read next ([d0eb3e8](https://github.com/cnduk/merlin-www-components/commit/d0eb3e8))
+
+
+
+
 <a name="1.6.2"></a>
 ## [1.6.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.6.1...@cnbritain/merlin-www-js-pages@1.6.2) (2018-07-10)
 
