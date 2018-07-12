@@ -19,19 +19,21 @@
     @include at-medium-size {
         border-bottom: 1px solid $ballet-grey;
         border-top: 1px solid $ballet-grey;
-        padding: 34px 24px;
+        padding: 32px 24px;
+        vertical-align: top;
         width: 50%;
     }
 }
 
 .a-marketing-card__body {
     border-top: 1px solid $ballet-grey;
-    padding: 34px 0;
+    padding: 20px 0 34px;
 
     @include at-medium-size {
         border-bottom: 1px solid $ballet-grey;
         border-left: 1px solid $ballet-grey;
-        padding: 34px 24px;
+        padding: 32px 24px;
+        vertical-align: top;
         width: 50%;
     }
 }
@@ -53,6 +55,20 @@
     @include at-medium-size {
         max-width: 175px;
     }
+}
+
+.a-marketing-card__brand__name {
+    a {
+        @include font('SOLEIL', 20px, "BOLD", 24px);
+        color: $ascot-grey;
+        display: block;
+        text-transform: uppercase;
+    }
+}
+
+//event
+.a-marketing-card--event .a-marketing-card__header {
+    padding-bottom: 0;
 }
 
 //magazine

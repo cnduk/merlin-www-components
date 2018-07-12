@@ -14,13 +14,14 @@
 
     @include at-medium-size {
         text-align: left;
+        vertical-align: top;
     }
 }
 
 //brand
 .a-marketing-card__brand {
      @include at-medium-size {
-         padding-right: 20px;
+         padding-right: 15px;
      }
 }
 
@@ -34,7 +35,7 @@
 .a-marketing-card--brand .a-marketing-card__body {
     @include at-medium-size {
         border-left: 1px solid $mandy;
-            padding-left: 20px;
+            padding-left: 15px;
             padding-right: 0;
             text-align: left;
             width: auto;
@@ -48,6 +49,10 @@
     letter-spacing: 1.5px;
     margin: 0 0 10px 0;
     text-transform: uppercase;
+
+    @include at-medium-size {
+       margin: 0 0 13px 0;
+    }
 }
 
 .a-marketing-card__brand__img {
@@ -57,7 +62,7 @@
 }
 
 .a-marketing-card__brand__name {
-    @include font('GRAPHIK', 10px, 'NORMAL', 10px);
+    @include font('GRAPHIK', 18px, 'SEMI BOLD', 24px);
     color: $dune;
     display: block;
     letter-spacing: 1.5px;
@@ -76,14 +81,14 @@
 
     @include at-medium-size {
         margin-bottom: 0;
-        width: 230px;
+        width: 240px;
     }
 }
 
  .a-marketing-card--magazine .a-marketing-card__header {
      @include at-medium-size {
          padding-right: 20px;
-         width: 250px;
+         width: 260px;
      }
  }
 
@@ -156,7 +161,6 @@
     @include font('MILLER_DISPLAY', 18px, 'SEMI BOLD', 21px);
     color: $dune;
     margin: 0;
-    padding-bottom: 10px;
 
     @include at-medium-size {
         @include font-size(23px);
@@ -169,10 +173,19 @@
     color: $dune;
 }
 
+.a-marketing-card__title + .a-marketing-card__desc {
+    margin-top: 10px;
+}
+
+.a-marketing-card__desc + .a-marketing-card__link,
+.a-marketing-card__title + .a-marketing-card__link{
+    margin-top: 30px;
+}
+
 .a-marketing-card__link {
     @include button-group;
     @include button-group-light;
-    margin: 20px 0 0 0;
+    margin: 30px 0 0 0;
     border-color: $mandy;
     color: $mandy;
 
