@@ -58,10 +58,6 @@
 .a-marketing-card__brand__prefix {
     @include font("GOTHAM", 9px, 400, 16px, 60);
     margin-bottom: 16px;
-
-    @include at-medium-size {
-       margin-bottom: 0;
-    }
 }
 
 .a-marketing-card__brand__img {
@@ -77,7 +73,9 @@
 }
 
 //event
-.a-marketing-card--event .a-marketing-card__header {
+//topic
+.a-marketing-card--event .a-marketing-card__header,
+.a-marketing-card--topic .a-marketing-card__header {
     margin-bottom: 24px;
 
     @include at-medium-size {
@@ -85,19 +83,7 @@
     }
 }
 
-.a-marketing-card--event .a-marketing-card__body {
-    @include at-medium-size {
-        border-left: 1px solid $bon-jour;
-    }
-}
-
-//topic
-.a-marketing-card--topic .a-marketing-card__header {
-    @include at-medium-size {
-        width: 38%;
-    }
-}
-
+.a-marketing-card--event .a-marketing-card__body,
 .a-marketing-card--topic .a-marketing-card__body {
     @include at-medium-size {
         border-left: 1px solid $bon-jour;
@@ -109,19 +95,20 @@
     margin: 0 auto 24px auto;
 
    @include at-medium-size {
-        margin-bottom: 0;
+        margin: 0 auto;
     }
 }
 
 .a-marketing-card--magazine .a-marketing-card__header {
     @include at-medium-size {
-        padding-right: 20px;
+        text-align: initial;
+        width: 25%;
     }
 }
 
-.a-marketing-card--magazine .a-marketing-card__header {
+.a-marketing-card--magazine .a-marketing-card__body {
     @include at-medium-size {
-        padding-left: 20px;
+        border-left: 1px solid $bon-jour;
     }
 }
 
@@ -152,7 +139,7 @@
 
 //marketing
 .a-marketing-card__title {
-    @include font("GOTHAM", 14px, 500, 20px, -4);
+    @include font("GOTHAM", 14px, 600, 20px, -4);
     color: $woodsmoke;
     margin: 0 0 24px 0;
 }

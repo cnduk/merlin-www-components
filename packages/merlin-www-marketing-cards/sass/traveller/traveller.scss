@@ -14,8 +14,7 @@
     }
 }
 
-.a-marketing-card__header,
-.a-marketing-card__body {
+.a-marketing-card__header {
     text-align: center;
 
     @include at-medium-size {
@@ -24,8 +23,11 @@
 }
 
 .a-marketing-card__body {
+    text-align: center;
+
     @include at-medium-size {
         text-align: left;
+        vertical-align: top;
     }
 }
 
@@ -81,31 +83,23 @@
 }
 
 //event
-.a-marketing-card--event .a-marketing-card__header {
+//topic
+.a-marketing-card--event .a-marketing-card__header,
+.a-marketing-card--topic .a-marketing-card__header {
     margin-bottom: 24px;
 
+
     @include at-medium-size {
+        padding-right: 24px;
         width: 38%;
     }
 }
 
-.a-marketing-card--event .a-marketing-card__body {
-    @include at-medium-size {
-        border-left: 1px solid $PORCELAIN;
-        padding-left: 24px;
-    }
-}
-
-//topic
-.a-marketing-card--topic .a-marketing-card__header {
-    @include at-medium-size {
-        width: 38%;
-    }
-}
-
+.a-marketing-card--event .a-marketing-card__body,
 .a-marketing-card--topic .a-marketing-card__body {
     @include at-medium-size {
         border-left: 1px solid $PORCELAIN;
+        padding-left: 24px;
     }
 }
 
@@ -123,12 +117,11 @@
         padding-right: 16px;
     }
 }
-.a-marketing-card--magazine .a-marketing-card__header {
+.a-marketing-card--magazine .a-marketing-card__body {
     @include at-medium-size {
         padding-left: 16px;
     }
 }
-
 
 .a-marketing-card__magazine__cover--print {
     width: 72%;
@@ -155,7 +148,7 @@
 .a-marketing-card__desc {
     @include font("PROXIMA NOVA CONDENSED", 14px, 400, 20px);
     color: $MUSTASAARI;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     margin-top: 12px;
 }
 

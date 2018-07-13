@@ -1,7 +1,7 @@
 .a-marketing-card {
     background: $wild-sand;
     margin: 40px 0;
-    padding: 20px;
+    padding: 30px;
 
     @include at-medium-size {
         padding: 40px;
@@ -45,6 +45,7 @@
 
 .a-marketing-card__brand__img {
     margin: 0 auto 30px auto;
+    max-width: 160px;
 }
 
 .a-marketing-card__brand__name {
@@ -63,25 +64,8 @@
 }
 
 //event
-.a-marketing-card--event .a-marketing-card__header {
-    @include at-medium-size {
-        padding-left: 0;
-        padding-right: 20px;
-        text-align: center;
-        width: 160px + 20px;
-    }
-}
-
-.a-marketing-card--event .a-marketing-card__body {
-    @include at-medium-size {
-        border-left: 1px solid $black;
-        padding-left: 20px;
-        text-align: left;
-        width: auto;
-    }
-}
-
 //topic
+.a-marketing-card--event .a-marketing-card__header,
 .a-marketing-card--topic .a-marketing-card__header {
     @include at-medium-size {
         padding-left: 0;
@@ -91,6 +75,7 @@
     }
 }
 
+.a-marketing-card--event .a-marketing-card__body,
 .a-marketing-card--topic .a-marketing-card__body {
     @include at-medium-size {
         border-left: 1px solid $black;

@@ -120,7 +120,9 @@
 }
 
 //event
-.a-marketing-card--event .a-marketing-card__header {
+//topic
+.a-marketing-card--event .a-marketing-card__header,
+.a-marketing-card--topic .a-marketing-card__header {
     @include at-medium-size {
         padding-right: 20px;
         vertical-align: top;
@@ -128,7 +130,8 @@
     }
 }
 
-.a-marketing-card--event .a-marketing-card__body {
+.a-marketing-card--event .a-marketing-card__body,
+.a-marketing-card--topic .a-marketing-card__body {
      @include at-medium-size {
          border-left: 1px solid $mandy;
          padding-left: 20px;
@@ -136,24 +139,6 @@
          vertical-align: top;
          width: auto;
      }
-}
-
-//topic
-.a-marketing-card--topic .a-marketing-card__header {
-    @include at-medium-size {
-        text-align: center;
-        width: 180px;
-    }
-}
-
-.a-marketing-card--topic .a-marketing-card__body {
-    @include at-medium-size {
-        border-left: 1px solid $mandy;
-        padding-left: 20px;
-        padding-right: 0;
-        text-align: left;
-        width: auto;
-    }
 }
 
 //marketing

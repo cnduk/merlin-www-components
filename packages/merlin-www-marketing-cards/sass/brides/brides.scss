@@ -58,28 +58,31 @@
 }
 
 .a-marketing-card__brand__name {
+    @include font('SOLEIL', 20px, "BOLD", 24px);
+    display: block;
+    text-transform: uppercase;
+
     a {
-        @include font('SOLEIL', 20px, "BOLD", 24px);
         color: $ascot-grey;
-        display: block;
-        text-transform: uppercase;
     }
 }
 
 //event
-.a-marketing-card--event .a-marketing-card__header {
+//topic
+.a-marketing-card--event .a-marketing-card__header,
+.a-marketing-card--topic .a-marketing-card__header{
     padding-bottom: 0;
 }
 
 //magazine
 .a-marketing-card__magazine {
     margin: 0 auto;
-    width: 180px;
 }
 
 .a-marketing-card__magazine__cover--mobile {
     display: none;
 }
+
 
 .a-marketing-card__magazine__cover--tablet {
     background-image: none;

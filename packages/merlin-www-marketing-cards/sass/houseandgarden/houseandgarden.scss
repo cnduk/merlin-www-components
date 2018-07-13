@@ -5,14 +5,22 @@
 
 .a-marketing-card {
     background-color: $vanilla-ice;
-    padding: 40px 0;
+    padding: 40px 20px;
 
     @include at-medium-size {
         padding: 40px;
     }
 }
 
-.a-marketing-card__header,
+.a-marketing-card__header {
+    text-align: center;
+
+    @include at-medium-size {
+        text-align: left;
+        vertical-align: top;
+    }
+}
+
 .a-marketing-card__body {
     text-align: center;
 
@@ -21,18 +29,11 @@
     }
 }
 
-.a-marketing-card__header {
-    @include at-medium-size {
-        vertical-align: top;
-    }
-}
-
 //brand
  .a-marketing-card--brand .a-marketing-card__header {
      @include at-medium-size {
          padding-right: 40px;
          text-align: center;
-
          width: 180px;
      }
  }
@@ -74,37 +75,21 @@
 }
 
 //event
- .a-marketing-card--event .a-marketing-card__header {
+//topic
+ .a-marketing-card--event .a-marketing-card__header,
+ .a-marketing-card--topic .a-marketing-card__header {
      @include at-medium-size {
          padding-right: 40px;
          width: 140px;
      }
  }
 
-.a-marketing-card--event .a-marketing-card__body {
-    @include at-medium-size {
-        border-left: 1px solid $black;
-        padding-left: 40px;
-        padding-right: 0;
-        width: auto;
-    }
-}
-
-//topic
- .a-marketing-card--topic .a-marketing-card__header {
-     @include at-medium-size {
-         padding-right: 40px;
-         text-align: center;
-         width: 180px;
-     }
- }
-
+.a-marketing-card--event .a-marketing-card__body,
 .a-marketing-card--topic .a-marketing-card__body {
     @include at-medium-size {
         border-left: 1px solid $black;
         padding-left: 40px;
         padding-right: 0;
-        text-align: left;
         width: auto;
     }
 }
@@ -142,9 +127,13 @@
 }
 
 .a-marketing-card__magazine__cover--tablet {
+    background: none;
+    background-color: $black;
+    padding: 11px 8px;
     width: 58px;
 
     @include at-medium-size {
+        padding: 15px 10px 15px 10px;
         width: 100px;
     }
 }
