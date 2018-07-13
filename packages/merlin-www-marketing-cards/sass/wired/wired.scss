@@ -56,11 +56,11 @@
     }
 }
 
-.a-marketing-card__brand__prefix {
+.a-marketing-card__brand-prefix {
     margin-bottom: 10px;
 }
 
-.a-marketing-card__brand__name a {
+.a-marketing-card__brand-name a {
     @include font-size(13px);
     @include font-weight('SEMI BOLD');
     color: $black;

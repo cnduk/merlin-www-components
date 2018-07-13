@@ -42,7 +42,7 @@
     }
 }
 
-.a-marketing-card__brand__prefix {
+.a-marketing-card__brand-prefix {
     @include font('GRAPHIK', 10px, 'NORMAL', 10px);
     color: $dune;
     display: block;
@@ -61,7 +61,7 @@
     max-width: 160px;
 }
 
-.a-marketing-card__brand__name {
+.a-marketing-card__brand-name {
     @include font('GRAPHIK', 18px, 'SEMI BOLD', 24px);
     color: $dune;
     display: block;

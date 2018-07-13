@@ -41,7 +41,7 @@
     }
 }
 
-.a-marketing-card__brand__prefix {
+.a-marketing-card__brand-prefix {
     @include font('ADOBE CASLON', 12px);
     color: $dove-gray;
     font-style: italic;
@@ -52,7 +52,7 @@
      margin: 0 auto;
  }
 
-.a-marketing-card__brand__name {
+.a-marketing-card__brand-name {
     @include font('NOBEL', 20px);
     letter-spacing: 1px;
     text-transform: uppercase;

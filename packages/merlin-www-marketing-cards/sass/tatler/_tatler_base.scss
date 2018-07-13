@@ -36,7 +36,7 @@
     }
 }
 
-.a-marketing-card__brand__prefix {
+.a-marketing-card__brand-prefix {
     @include font('COMMUTER SANS', 10px, null, 10px);
     color: $gray;
     margin-bottom: 20px;
@@ -48,7 +48,7 @@
     max-width: 160px;
 }
 
-.a-marketing-card__brand__name {
+.a-marketing-card__brand-name {
     @include font("COMMUTER SANS", 16px, 500);
     text-transform: uppercase;
     text-decoration: none;

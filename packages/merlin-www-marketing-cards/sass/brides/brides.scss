@@ -39,7 +39,7 @@
 }
 
 //brand
-.a-marketing-card__brand__prefix {
+.a-marketing-card__brand-prefix {
     @include font('SOLEIL', 10px, null, 16px);
     color: $ascot-grey;
     display: inline-block;
@@ -57,7 +57,7 @@
     }
 }
 
-.a-marketing-card__brand__name {
+.a-marketing-card__brand-name {
     @include font('SOLEIL', 20px, "BOLD", 24px);
     display: block;
     text-transform: uppercase;

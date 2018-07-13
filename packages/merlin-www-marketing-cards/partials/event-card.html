@@ -17,10 +17,10 @@
             {{/ state.has_logo }}
             {{^ state.has_logo }}
                 {{# state.has_button }}
-                    <span class="a-marketing-card__event__name"><a href="{{ &data.button.data.url }}">{{ data.tag.data.title }}</a></span>
+                    <span class="a-marketing-card__event-name"><a href="{{ &data.button.data.url }}">{{ data.tag.data.title }}</a></span>
                 {{/ state.has_button }}
                 {{^ state.has_button }}
-                    <span class="a-marketing-card__event__name">{{ data.tag.data.title }}</span>
+                    <span class="a-marketing-card__event-name">{{ data.tag.data.title }}</span>
                 {{/ state.has_button }}
             {{/ state.has_logo }}
         </div>

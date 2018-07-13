@@ -48,7 +48,7 @@
     }
 }
 
-.a-marketing-card__brand__prefix {
+.a-marketing-card__brand-prefix {
     @include font('BRANDON GROTESQUE', 10px, 'NORMAL', 10px);
     color: $mine-shaft;
     display: block;
@@ -62,7 +62,7 @@
     max-width: 140px;
 }
 
-.a-marketing-card__brand__name {
+.a-marketing-card__brand-name {
     @include font('BRANDON GROTESQUE', 20px, 'BOLD', 20px);
     color: $mine-shaft;
     display: block;
