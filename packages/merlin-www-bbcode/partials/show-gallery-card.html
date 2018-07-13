@@ -9,6 +9,9 @@
                 <ul class="bb-show-gallery__image-list">
                     {{# data.items }}
                         <li class="bb-show-gallery__image-listitem">
+                            {{# data.item }}
+                                {{> @cnbritain/merlin-www-image }}
+                            {{/ data.item }}
                             {{# data.remaining_count }}
                                 <div class='bb-show-gallery__remaining'>
                                     <div class='bb-show-gallery__remaining-text'>
@@ -17,9 +20,6 @@
                                     </div>
                                 </div>
                             {{/ data.remaining_count }}
-                            {{# data.item }}
-                                {{> @cnbritain/merlin-www-image }}
-                            {{/ data.item }}
                         </li>
                     {{/ data.items }}
                 </ul>
