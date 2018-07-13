@@ -327,9 +327,8 @@
 .bb-question__question p {
     @include font-weight(700);
 }
-.bb-question__q {
-}
 
+.bb-question__q {}
 .bb-question__author {
     @include font("GOTHAM", 9px, 700, 12px, 60);
     color: $mineshaft;
@@ -339,53 +338,4 @@
 
 .bb-question__by {
     display: none;
-}
-
-// -------------------- //
-// Show Gallery
-// -------------------- //
-.bb-show-gallery {
-    margin: 40px 0;
-
-    .c-gallery-strip__detail {
-        border-color: $bon-jour;
-
-        &:after {
-            border-bottom-color: $white;
-        }
-    }
-
-    .c-gallery-strip__title {
-        color: $woodsmoke;
-    }
-
-    .c-gallery-strip__subtitle {
-        color: $oslo-gray;
-    }
-
-    .c-gallery-strip__list__item {
-        &:nth-child(3) {
-            .c-gallery-strip__remaining {
-                display: block;
-            }
-        }
-
-        &:nth-child(4) {
-            display: none;
-        }
-
-        @include at-x-large-size {
-            &:nth-child(3) {
-                .c-gallery-strip__remaining {
-                    display: none;
-                }
-            }
-
-            &:nth-child(4) {
-                display: inline-block;
-            }
-
-            width: 25%;
-        }
-    }
 }
