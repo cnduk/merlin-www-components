@@ -110,7 +110,7 @@
     margin: 0 0 $MARGIN_SMALL 0;
 }
 
-.a-marketing-card__link {
+.a-marketing-card__cta {
     @include button-single();
     @include button-single-light();
 

@@ -195,7 +195,7 @@
     }
 }
 
-.a-marketing-card__link {
+.a-marketing-card__cta {
     @include button-single();
     @include button-single-light();
     @include font-size(12px);

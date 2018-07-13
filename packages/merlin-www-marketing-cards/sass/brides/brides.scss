@@ -115,12 +115,12 @@
     margin-top: 8px;
 }
 
-.a-marketing-card__desc + .a-marketing-card__link,
-.a-marketing-card__title + .a-marketing-card__link{
+.a-marketing-card__desc + .a-marketing-card__cta
+.a-marketing-card__title + .a-marketing-card__cta
     margin-top: 20px;
 }
 
-.a-marketing-card__link {
+.a-marketing-card__cta {
     @include button-single;
     @include button-single-light;
     padding: 17px 22px;

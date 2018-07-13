@@ -18,7 +18,7 @@
             <p class="a-marketing-card__desc">{{ . }}</p>
         {{/ data.desc }}
         {{# state.has_button }}
-            <a href="{{ &data.button.data.url }}" class="a-marketing-card__link {{ data.button.style.cls }}" {{# state.is_blank }}target="_blank"{{/ state.is_blank }}>{{ data.button.data.title }}</a>
+            <a href="{{ &data.button.data.url }}" class="a-marketing-card__cta {{ data.button.style.cls }}" {{# state.is_blank }}target="_blank"{{/ state.is_blank }}>{{ data.button.data.title }}</a>
         {{/ state.has_button }}
     </div>
 </aside>
