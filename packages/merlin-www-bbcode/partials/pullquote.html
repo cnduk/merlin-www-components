@@ -1,4 +1,4 @@
-<aside class='bb-pullquote {{ style.cls }}'>
+<aside class='bb-pullquote{{# style.cls }} {{ style.cls }}{{/ style.cls }}'>
     <q class='bb-pullquote__quote'>{{ &data.quote_text }}</q>
     {{# data.quote_source }}
         <footer class="bb-pullquote__credit">{{ &data.quote_source }}</footer>

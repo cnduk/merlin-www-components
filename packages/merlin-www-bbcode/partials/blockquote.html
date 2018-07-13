@@ -1,4 +1,4 @@
-<blockquote class='bb-blockquote {{ style.cls }}'>
+<blockquote class='bb-blockquote{{# style.cls }} {{ style.cls }}{{/ style.cls }}'>
     <p class='bb-blockquote__quote'>{{ &data.quote_text }}</p>
     {{# data.quote_source }}
         <footer class="bb-blockquote__credit">{{ &data.quote_source }}</footer>

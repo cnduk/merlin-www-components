@@ -1,4 +1,4 @@
-<div class='bb-answer {{ style.cls }}'>
+<div class='bb-answer{{# style.cls }} {{ style.cls }}{{/ style.cls }}'>
     <div class='bb-answer__answer'><p class="bb-p"><span class='bb-answer__a'>{{ translation.answer_title_prefix }} </span>{{ &data.answer_text }}</p></div>
     {{# data.answer_author }}
         <div class='bb-answer__author'><span class='bb-answer__by'>{{ translation.answer_byline_prefix }} </span>{{ &data.answer_author }}</div>

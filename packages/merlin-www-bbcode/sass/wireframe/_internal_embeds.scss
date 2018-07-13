@@ -50,6 +50,37 @@
 .bb-card__meta-item {}
 .bb-card__meta-item--date {}
 
+.bb-figure {}
+.bb-figure--custom {
+    .bb-figure__wrapper {
+        padding-top: 66.66666%;
+
+        .c-image {
+            bottom: 0;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+        }
+    }
+}
+
+.bb-figure__wrapper {
+    font-size: 0;
+
+    .c-image {
+        width: 100%;
+    }
+}
+
+.bb-figure__content {}
+
+.bb-figure__caption {}
+
+.bb-figure__credit {}
+
 .bb-gallery {
     position: relative;
 }
@@ -264,35 +295,3 @@
     transform: translate(-50%, -50%);
     width: 18px;
 }
-
-.bb-figure {}
-.bb-figure--custom {
-    .bb-figure__wrapper {
-        padding-top: 66.66666%;
-
-        .c-image {
-            bottom: 0;
-            height: 100%;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 100%;
-        }
-    }
-}
-
-.bb-figure__wrapper {
-    font-size: 0;
-
-    .c-image {
-        width: 100%;
-    }
-}
-
-.bb-figure__content {}
-
-.bb-figure__caption {}
-
-.bb-figure__credit {}
-
