@@ -1,1 +1,42 @@
-{{> @cnbritain/merlin-www-gallery-strip }}
+<section class="bb-show-gallery">
+    <div class="bb-show-gallery-wrapper">
+        {{# data.link }}
+            <a class="bb-show-gallery__link{{# style.cls }} {{ style.cls }}{{/ style.cls }}" href="{{ data.url }}" title="{{ data.title }}">{{ data.title }}</a>
+        {{/ data.link }}
+
+        {{# data.image_list }}
+            <div class="bb-show-gallery__images">
+                <ul class="bb-show-gallery__image-list">
+                    {{# data.items }}
+                        <li class="bb-show-gallery__image-listitem">
+                            {{# data.remaining_count }}
+                                <div class='bb-show-gallery__remaining'>
+                                    <div class='bb-show-gallery__remaining-text'>
+                                        <span class='bb-show-gallery__remaining-text--prefix'>{{ translation.remaining_prefix }}</span>
+                                        <span class='bb-show-gallery__remaining-text--value'>{{ data.remaining_count }}</span>
+                                    </div>
+                                </div>
+                            {{/ data.remaining_count }}
+                            {{# data.item }}
+                                {{> @cnbritain/merlin-www-image }}
+                            {{/ data.item }}
+                        </li>
+                    {{/ data.items }}
+                </ul>
+            </div>
+        {{/ data.image_list }}
+
+        <div class="bb-show-gallery__contents">
+            {{# data.title }}
+                <h3 class="bb-show-gallery__title">
+                    <span>{{ data.title }}</span>
+                </h3>
+            {{/ data.title }}
+            {{# data.subtitle }}
+                <div class="bb-show-gallery__subtitle">
+                    <span>{{ data.subtitle }}</span>
+                </div>
+            {{/ data.subtitle }}
+        </div>
+    </div>
+</section>

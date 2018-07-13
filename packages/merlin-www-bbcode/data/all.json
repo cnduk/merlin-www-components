@@ -1014,6 +1014,189 @@
             "style": {
                 "cls": ""
             }
+        },
+        {
+            "type": "BBCodeShowGallery",
+            "state": {
+                "is_show_gallery": true
+            },
+            "data": {
+                "subtitle": "Spring/Summer 2017",
+                "link": {
+                    "type": "Link",
+                    "state": {},
+                    "data": {
+                        "url": "/shows/spring-summer-2017-ready-to-wear/eric-schlosberg/collection/",
+                        "title": "Eric Schlosberg New York Spring/Summer 2017 Ready-To-Wear"
+                    },
+                    "style": {
+                        "cls": ""
+                    }
+                },
+                "image_list": {
+                    "type": "ImageList",
+                    "state": {},
+                    "data": {
+                        "items": [{
+                            "type": "ImageListItem",
+                            "state": {
+                                "is_first": true,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "Image",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_image": true,
+                                        "is_picture": false,
+                                        "is_linked": false,
+                                        "is_svg": false
+                                    },
+                                    "data": {
+                                        "credit": null,
+                                        "image_url": "https://vg-images.condecdn.net/image/rvVodLKBWZ2/crop/405/portrait",
+                                        "description": "",
+                                        "lazyload": true,
+                                        "title": "",
+                                        "srcset": "https://vg-images.condecdn.net/image/rvVodLKBWZ2/crop/405/portrait 405w",
+                                        "look_number": null,
+                                        "width": null,
+                                        "alt_text": null,
+                                        "orientation": "portrait"
+                                    },
+                                    "style": {
+                                        "cls": "img-lazyload "
+                                    }
+                                },
+                                "remaining_count": 14
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }, {
+                            "type": "ImageListItem",
+                            "state": {
+                                "is_first": false,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "Image",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_image": true,
+                                        "is_picture": false,
+                                        "is_linked": false,
+                                        "is_svg": false
+                                    },
+                                    "data": {
+                                        "credit": null,
+                                        "image_url": "https://vg-images.condecdn.net/image/Y1GXKW4gBG2/crop/405/portrait",
+                                        "description": "",
+                                        "lazyload": true,
+                                        "title": "",
+                                        "srcset": "https://vg-images.condecdn.net/image/Y1GXKW4gBG2/crop/405/portrait 405w",
+                                        "look_number": null,
+                                        "width": null,
+                                        "alt_text": null,
+                                        "orientation": "portrait"
+                                    },
+                                    "style": {
+                                        "cls": "img-lazyload "
+                                    }
+                                },
+                                "remaining_count": 13
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }, {
+                            "type": "ImageListItem",
+                            "state": {
+                                "is_first": false,
+                                "is_last": false
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "Image",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_image": true,
+                                        "is_picture": false,
+                                        "is_linked": false,
+                                        "is_svg": false
+                                    },
+                                    "data": {
+                                        "credit": null,
+                                        "image_url": "https://vg-images.condecdn.net/image/Gdye0z8e7Yl/crop/405/portrait",
+                                        "description": "",
+                                        "lazyload": true,
+                                        "title": "",
+                                        "srcset": "https://vg-images.condecdn.net/image/Gdye0z8e7Yl/crop/405/portrait 405w",
+                                        "look_number": null,
+                                        "width": null,
+                                        "alt_text": null,
+                                        "orientation": "portrait"
+                                    },
+                                    "style": {
+                                        "cls": "img-lazyload "
+                                    }
+                                },
+                                "remaining_count": 12
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }, {
+                            "type": "ImageListItem",
+                            "state": {
+                                "is_first": false,
+                                "is_last": true
+                            },
+                            "data": {
+                                "item": {
+                                    "type": "Image",
+                                    "state": {
+                                        "is_static": false,
+                                        "is_image": true,
+                                        "is_picture": false,
+                                        "is_linked": false,
+                                        "is_svg": false
+                                    },
+                                    "data": {
+                                        "credit": null,
+                                        "image_url": "https://vg-images.condecdn.net/image/VkqJD0eLnMW/crop/405/portrait",
+                                        "description": "",
+                                        "lazyload": true,
+                                        "title": "",
+                                        "srcset": "https://vg-images.condecdn.net/image/VkqJD0eLnMW/crop/405/portrait 405w",
+                                        "look_number": null,
+                                        "width": null,
+                                        "alt_text": null,
+                                        "orientation": "portrait"
+                                    },
+                                    "style": {
+                                        "cls": "img-lazyload "
+                                    }
+                                },
+                                "remaining_count": 11
+                            },
+                            "style": {
+                                "cls": ""
+                            }
+                        }],
+                        "length": 4
+                    },
+                    "style": {
+                        "cls": ""
+                    }
+                },
+                "title": "Eric Schlosberg New York Spring/Summer 2017 Ready-To-Wear"
+            },
+            "style": {
+                "cls": "bb-show-gallery"
+            }
         }
     ],
     "is_external_embeds": [
