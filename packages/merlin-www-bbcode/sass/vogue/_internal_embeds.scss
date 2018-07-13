@@ -318,56 +318,76 @@
 // Show Gallery
 // -------------------- //
 .bb-show-gallery {
-    .c-gallery-strip__detail {
-        margin: -37px $MARGIN_SMALL 0 $MARGIN_SMALL;
-    }
+    margin: 40px 0;
 
-    .c-gallery-strip__title {
-        @include font('ADOBE CASLON', 20px, 700, 24px);
-        margin: 0 0 $MARGIN_XX_SMALL 0;
-    }
-
-    .c-gallery-strip__list__item {
-        img {
-            width: 100%;
+    &:hover,
+    &:focus {
+        .bb-show-gallery__title,
+        .bb-show-gallery__subtitle {
+            opacity: 0.7;
         }
 
-        &:nth-child(3) {
-            .c-gallery-strip__remaining {
-                display: block;
-            }
-        }
-
-        &:nth-child(4) {
-            display: none;
-        }
-
-    }
-
-    @include tablet-size {
-        .c-gallery-strip__list__item {
-            &:nth-child(3) {
-                .c-gallery-strip__remaining {
-                    display: none;
-                }
-            }
-
-            &:nth-child(4) {
-                display: inline-block;
-            }
-
-            width: 25%;
+        .bb-show-gallery__images {
+            opacity: 0.8;
         }
     }
+}
 
-    @include desktop-size {
-        .c-gallery-strip__detail {
-            margin: -40px $MARGIN_SMALL 0 $MARGIN_SMALL;
-        }
-        .c-gallery-strip__title {
-            @include font-size(24px);
-            @include line-height(28px);
-        }
+.bb-show-gallery-wrapper {}
+.bb-show-gallery__link {}
+
+.bb-show-gallery__images {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.bb-show-gallery__image-list {}
+.bb-show-gallery__image-listitem {}
+
+.bb-show-gallery__remaining {
+    background-color: rgba($black, 0.3);
+}
+
+.bb-show-gallery__remaining-text {
+    @include font('NOBEL', 24px);
+    color: $white;
+}
+
+.bb-show-gallery__remaining-text--prefix {}
+.bb-show-gallery__remaining-text--value {}
+
+.bb-show-gallery__contents {
+    background: $white;
+    padding: 20px 20px 0 20px;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+
+    margin: -37px 20px 0 20px;
+
+    @include at-x-large-size {
+        margin: -40px 20px 0 20px;
     }
+}
 
+.bb-show-gallery__title {
+    @include font('ITC CASLON', 24px, 'NORMAL');
+    color: $cod-gray;
+    margin: 0 0 10px 0;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+
+    @include at-x-large-size {
+        @include font-size(24px);
+        @include line-height(28px);
+    }
+}
+
+.bb-show-gallery__subtitle {
+    @include font('NOBEL', 10px);
+    color: $dove-gray;
+    letter-spacing: 1px;
+    opacity: 1;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
 }
