@@ -115,8 +115,8 @@
     margin-top: 8px;
 }
 
-.a-marketing-card__desc + .a-marketing-card__cta
-.a-marketing-card__title + .a-marketing-card__cta
+.a-marketing-card__desc + .a-marketing-card__cta,
+.a-marketing-card__title + .a-marketing-card__cta {
     margin-top: 20px;
 }
 
