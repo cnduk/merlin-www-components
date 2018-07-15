@@ -1,5 +1,5 @@
 <section class="c-gallery-strip {{ style.cls }}">
-    <div class="c-gallery-strip__wrapper">
+    <div class="c-gallery-strip-wrapper">
 
         {{# data.link }}
             <a class="c-gallery-strip__link {{ style.cls }}" href="{{ data.url }}" title="{{ data.title }}">{{ data.title }}</a>
@@ -7,13 +7,14 @@
 
         {{# data.image_list }}
             <div class="c-gallery-strip__images">
-                <ul class="global__list-reset c-gallery-strip__list {{ style.cls }}">
+                <ul class="c-gallery-strip__list {{ style.cls }}">
                     {{# data.items }}
-                        <li class="c-gallery-strip__list__item {{ style.cls }}">
+                        <li class="c-gallery-strip__listitem {{ style.cls }}">
                             {{# data.remaining_count }}
                                 <div class="c-gallery-strip__remaining">
-                                    <div class="c-gallery-strip__remaining__label">
-                                        <span class="c-gallery-strip__remaining__prefix">{{ translation.remaining_prefix }}</span><span class="c-gallery-strip__remaining__value">{{ data.remaining_count }}</span>
+                                    <div class="c-gallery-strip__remaining-label">
+                                        <span class="c-gallery-strip__remaining-prefix">{{ translation.remaining_prefix }}</span>
+                                        <span class="c-gallery-strip__remaining-value">{{ data.remaining_count }}</span>
                                     </div>
                                 </div>
                             {{/ data.remaining_count }}
@@ -29,7 +30,7 @@
         <div class="c-gallery-strip__detail">
             <h3 class="c-gallery-strip__title"><span>{{ data.title }}</span></h3>
             {{# data.subtitle }}
-                <div class="c-gallery-strip__subtitle">{{ data.subtitle }}</div>
+                <div class="c-gallery-strip__subtitle"><span>{{ data.subtitle }}</span></div>
             {{/ data.subtitle }}
         </div>
 

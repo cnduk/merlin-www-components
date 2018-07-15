@@ -4,7 +4,9 @@ import {
     ArticleManager
 } from '@cnbritain/merlin-www-article';
 import {
-    debounce
+    addEvent,
+    debounce,
+    delegate
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
 
@@ -14,6 +16,9 @@ export default function init() {
     ArticleManager.on('imagefocus', debounce(onArticleImageFocus, 300));
     ArticleManager.on('focus', onArticleFocus);
     ArticleManager.on('expand', onArticleExpand);
+
+    initRecommendationTracking();
+    initReadNextTracking();
 }
 
 
@@ -83,4 +88,54 @@ export function sendPageview(article) {
     GATracker.ResetCustomDimensions();
     GATracker.SetAll(article.analytics);
     GATracker.SendAll(GATracker.SEND_HITTYPES.PAGEVIEW);
+}
+
+/**
+ * Recommended event tracking
+ */
+
+function onRecommendedArticleClick(e){
+    var link = e.delegateTarget;
+    var eventLabel = link.href + ' | ' + link.innerText;
+    sendCustomEvent({
+        eventCategory: 'Recommended',
+        eventAction: 'Bottom Click',
+        eventLabel: eventLabel
+    });
+}
+
+export function initRecommendationTracking(){
+    var recommendedTest = document.querySelector(
+        '.c-card-section--a-recommended .c-card__link');
+    if(recommendedTest === null) return;
+
+    var recommendedSlice = document.querySelector(
+        '.c-card-section--a-recommended');
+    addEvent(recommendedSlice, 'click', delegate(
+        '.c-card__link', onRecommendedArticleClick));
+}
+
+/**
+ * Read next event tracking
+ */
+
+function onReadNextClick(e){
+    var link = e.delegateTarget;
+    var eventLabel = link.href + ' | ' + link.innerText;
+    sendCustomEvent({
+        eventCategory: 'Recommended',
+        eventAction: 'Read Next Click',
+        eventLabel: eventLabel
+    });
+}
+
+export function initReadNextTracking(){
+    var readnextTest = document.querySelector(
+        '.a-sidebar-content .c-card__link');
+    if(readnextTest === null) return;
+
+    var readNextContent = document.querySelector(
+        '.a-body__content');
+    addEvent(readNextContent, 'click', delegate(
+        '.a-sidebar-content .c-card__link', onReadNextClick));
 }
