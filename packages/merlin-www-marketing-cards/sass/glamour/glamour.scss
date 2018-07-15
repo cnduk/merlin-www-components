@@ -4,6 +4,7 @@
 @import '../wireframe/wireframe';
 
 .a-marketing-card {
+    background: $white;
     border: solid 4px $mandy;
     padding: 30px 20px;
 }
@@ -177,7 +178,7 @@
     &:hover,
     &:focus {
         @include button-group-light-hover;
-          background: $mandy;;
+          background: $mandy;
           border-color: $mandy;
     }
 }
