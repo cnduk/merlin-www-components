@@ -63,6 +63,7 @@
 
     @include at-medium-size {
         @include font-size(15px);
+        @include line-height(18px);
         margin: 20px 0 0 0;
         text-align: center;
     }
