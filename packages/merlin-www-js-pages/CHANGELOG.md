@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.0"></a>
+# [1.8.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.7.1...@cnbritain/merlin-www-js-pages@1.8.0) (2018-07-17)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** always apply recommended and read next tracking listeners ([dc6ee1b](https://github.com/cnduk/merlin-www-components/commit/dc6ee1b))
+
+
+### Features
+
+* **merlin-www-js-pages:** add event tracking for inline article cards ([84652c7](https://github.com/cnduk/merlin-www-components/commit/84652c7))
+
+
+
+
 <a name="1.7.1"></a>
 ## [1.7.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.7.0...@cnbritain/merlin-www-js-pages@1.7.1) (2018-07-12)
 
