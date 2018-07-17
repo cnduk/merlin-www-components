@@ -1,27 +1,31 @@
 <div class='bb-video{{# style.cls }} {{ style.cls }}{{/ style.cls }}'>
-    {{# data.link }}
-        <a href="{{ &data.url }}" title="{{ data.title }}" class='bb-video__link'>{{ data.title }}</a>
-    {{/ data.link }}
-    {{# state.has_icon }}
-        {{# data.icon }}<div class='bb-video__icon'>{{> @cnbritain/merlin-www-image }}</div>{{/ data.icon }}
-        <h4 class='bb-video__title'>{{ data.title }}</h4>
-        <div class="bb-video__wrapper">
+    <div class="bb-video-wrapper">
+        {{# data.link }}
+            <a class="bb-video__link{{# style.cls }} {{ style.cls }}{{/ style.cls }}" href="{{ data.url }}" title="{{ data.title }}">{{ data.title }}</a>
+        {{/ data.link }}
+
+        {{# state.has_icon }}
+            {{# data.icon }}
+                <div class='bb-video__icon'>
+                    {{> @cnbritain/merlin-www-image }}
+                </div>
+            {{/ data.icon }}
+            <h4 class='bb-video__title'>{{ data.title }}</h4>
+        {{/ state.has_icon }}
+        {{^ state.has_icon }}
+            <h4 class='bb-video__title'>{{ data.title }}</h4>
+        {{/ state.has_icon }}
+
+        <div class="bb-video__image">
             {{# data.image }}
                 {{> @cnbritain/merlin-www-image }}
             {{/ data.image }}
+
             {{# data.icon }}
                 <div class='bb-video__image-icon'>
                     {{> @cnbritain/merlin-www-image }}
                 </div>
             {{/ data.icon }}
         </div>
-    {{/ state.has_icon }}
-    {{^ state.has_icon }}
-        <h4 class='bb-video__title'>{{ data.title }}</h4>
-        <div class="bb-video__wrapper">
-            {{# data.image }}
-                {{> @cnbritain/merlin-www-image }}
-            {{/ data.image }}
-        </div>
-    {{/ state.has_icon }}
+    </div>
 </div>

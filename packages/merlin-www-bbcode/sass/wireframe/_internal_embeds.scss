@@ -280,10 +280,23 @@
     display: inline-block;
 }
 
-.bb-video__wrapper {
+.bb-video__image {
     font-size: 0;
+    position: relative;
+
+    &:before {
+        content: "";
+        padding-top: 66.66666%;
+        display: block;
+    }
 
     .c-image {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
         width: 100%;
     }
 }
@@ -316,6 +329,7 @@
 .bb-show-gallery__images {}
 .bb-show-gallery__image-list {
     font-size: 0;
+    padding: 0;
 }
 
 .bb-show-gallery__image-listitem {
