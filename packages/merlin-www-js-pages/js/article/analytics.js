@@ -105,14 +105,14 @@ function onRecommendedArticleClick(e){
 }
 
 export function initRecommendationTracking(){
-    var recommendedTest = document.querySelector(
-        '.c-card-section--a-recommended .c-card__link');
-    if(recommendedTest === null) return;
-
-    var recommendedSlice = document.querySelector(
-        '.c-card-section--a-recommended');
-    addEvent(recommendedSlice, 'click', delegate(
-        '.c-card__link', onRecommendedArticleClick));
+    addEvent(
+        document,
+        'click',
+        delegate(
+            '.c-card-section--a-recommended .c-card__link',
+            onRecommendedArticleClick
+        )
+    );
 }
 
 /**
@@ -130,12 +130,6 @@ function onReadNextClick(e){
 }
 
 export function initReadNextTracking(){
-    var readnextTest = document.querySelector(
-        '.a-sidebar-content .c-card__link');
-    if(readnextTest === null) return;
-
-    var readNextContent = document.querySelector(
-        '.a-body__content');
-    addEvent(readNextContent, 'click', delegate(
+    addEvent(document, 'click', delegate(
         '.a-sidebar-content .c-card__link', onReadNextClick));
 }
