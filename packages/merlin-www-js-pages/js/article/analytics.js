@@ -6,7 +6,8 @@ import {
 import {
     addEvent,
     debounce,
-    delegate
+    delegate,
+    hasClass
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
 
@@ -19,6 +20,7 @@ export default function init() {
 
     initRecommendationTracking();
     initReadNextTracking();
+    initInlineEmbedTracking();
 }
 
 
@@ -132,4 +134,47 @@ function onReadNextClick(e){
 export function initReadNextTracking(){
     addEvent(document, 'click', delegate(
         '.a-sidebar-content .c-card__link', onReadNextClick));
+}
+
+
+/**
+ * Embed card tracking
+ */
+
+function onEmbedClick(e){
+    var eventAction = null;
+    var eventLabel = null;
+
+    // Article
+    if(hasClass(e.delegateTarget, 'bb-card')){
+        eventAction = 'Internal Embed Click - Article';
+
+    // Gallery
+    } else if(hasClass(e.delegateTarget, 'bb-gallery')){
+        var imageColumns = e.delegateTarget.querySelectorAll('.bb-gallery__col');
+        eventAction = 'Internal Embed Click - Gallery:Thumbs ' + imageColumns.length;
+
+    // Show
+    } else if(hasClass(e.delegateTarget, 'bb-show-gallery')){
+        eventAction = 'Internal Embed Click - Show';
+
+    // Video
+    } else if(hasClass(e.delegateTarget, 'bb-video')){
+        eventAction = 'Internal Embed Click - Video';
+    }
+
+    var link = e.delegateTarget.querySelector('a');
+    eventLabel = link.href + ' | ' + link.innerText;
+
+    sendCustomEvent({
+        eventCategory: 'Internal Embed',
+        eventAction: eventAction,
+        eventLabel: eventLabel
+    });
+}
+
+export function initInlineEmbedTracking(){
+    // Article, gallery, video, show
+    addEvent(document, 'click', delegate(
+        '.bb-card, .bb-gallery, .bb-show-gallery, .bb-video', onEmbedClick));
 }
