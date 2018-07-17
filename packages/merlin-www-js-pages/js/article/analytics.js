@@ -7,9 +7,11 @@ import {
     addEvent,
     debounce,
     delegate,
+    getParent,
     hasClass
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
+import {toArray} from '../utils';
 
 var allowAllFocus = false;
 
@@ -21,6 +23,7 @@ export default function init() {
     initRecommendationTracking();
     initReadNextTracking();
     initInlineEmbedTracking();
+    initTopStoriesTracking();
 }
 
 
@@ -177,4 +180,43 @@ export function initInlineEmbedTracking(){
     // Article, gallery, video, show
     addEvent(document, 'click', delegate(
         '.bb-card, .bb-gallery, .bb-show-gallery, .bb-video', onEmbedClick));
+}
+
+
+/**
+ * Top stories tracking
+ */
+
+function onTopStoriesClick(e){
+    var listItem = getParent(
+        e.delegateTarget, '.c-top-stories__cards-listitem');
+    var eventAction = null;
+
+    // Check if native ad
+    if(hasClass(listItem, 'c-top-stories__cards-listitem--ad')){
+        eventAction = 'Top Stories Bar Click Pos: Native';
+    } else {
+        var list = getParent(e.delegateTarget, '.c-top-stories__cards-list');
+        var items = toArray(
+            list.querySelectorAll('.c-top-stories__cards-listitem'));
+        items = items.filter(function(item){
+            return !hasClass(item, 'c-top-stories__cards-listitem--ad');
+        });
+        var index = items.indexOf(listItem);
+        eventAction = 'Top Stories Bar Click Pos: ' + (index + 1);
+    }
+
+    var link = e.delegateTarget;
+    var eventLabel = link.href + ' | ' + link.innerText;
+
+    sendCustomEvent({
+        eventCategory: 'Top Stories Bar',
+        eventAction: eventAction,
+        eventLabel: eventLabel
+    });
+}
+
+export function initTopStoriesTracking(){
+    addEvent(document, 'click', delegate(
+        '.c-top-stories .c-card__link', onTopStoriesClick));
 }
