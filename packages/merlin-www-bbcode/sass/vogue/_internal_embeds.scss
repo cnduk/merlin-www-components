@@ -64,7 +64,7 @@
         width: 18px;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         padding-right: 10px;
     }
 }
@@ -75,7 +75,7 @@
     display: table-cell;
     padding-bottom: 10px;
 
-    @include tablet-size {
+    @include at-medium-size {
         @include font-size(24px);
         @include line-height(30px);
     }
@@ -97,7 +97,8 @@
 
 .bb-gallery__remaining-text {
     @include font('NOBEL', 24px, 'NORMAL');
-    @include tablet-size {
+    color: $white;
+    @include at-medium-size {
         @include font-size(35px);
     }
 }
@@ -150,7 +151,7 @@
         width: 14px;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         padding-right: 10px;
     }
 }
@@ -161,7 +162,7 @@
     display: table-cell;
     padding-bottom: 10px;
 
-    @include tablet-size {
+    @include at-medium-size {
         @include font-size(24px);
         @include line-height(27px);
     }

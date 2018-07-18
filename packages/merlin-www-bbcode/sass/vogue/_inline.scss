@@ -78,10 +78,9 @@
 // -------------------- //
 // Button
 // -------------------- //
-.bb-button {
-    @include button-single();
-}
+.bb-button,
 .bb-button--light {
+    @include button-single();
     @include button-single-light();
 
     &:hover,

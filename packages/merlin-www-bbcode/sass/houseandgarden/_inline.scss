@@ -21,7 +21,7 @@
 // -------------------- //
 // Button
 // -------------------- //
-.bb-button {}
+.bb-button,
 .bb-button--light {
     @include button-single();
     @include button-single-light();
