@@ -1,0 +1,72 @@
+.bb-answer {}
+.bb-answer__answer {}
+.bb-answer__author {}
+.bb-answer__by {}
+
+.bb-blockquote {}
+.bb-blockquote__credit {}
+.bb-blockquote__quote {}
+
+.bb-callout {}
+
+.bb-h1 {}
+.bb-h2 {}
+.bb-h3 {}
+.bb-h4 {}
+.bb-h5 {}
+.bb-h6 {}
+
+.bb-infobox {}
+.bb-infobox__body {}
+.bb-infobox__item {}
+.bb-infobox__item__key {}
+.bb-infobox__item__value {}
+.bb-infobox__title {}
+
+.bb-li {}
+
+.bb-note {}
+
+.bb-ol {
+    .bb-li {}
+}
+
+.bb-p {}
+
+.bb-pre {}
+
+.bb-pullquote {}
+.bb-pullquote__credit {}
+.bb-pullquote__quote {}
+
+.bb-question {}
+.bb-question__author {}
+.bb-question__by {}
+.bb-question__question {}
+
+.bb-timed-content {}
+.bb-timed-content--pending,
+.bb-timed-content--expired {
+    display: none;
+}
+
+.bb-timed-content--preview {
+    box-shadow: inset 0 0 0 1px #ff7f7f;
+    display: block;
+    position: relative;
+
+    &:hover:before {
+        background: #ff7f7f;
+        bottom: 100%;
+        color: #fff;
+        content: '[timed-content from: 'attr(data-active-from) ' to: ' attr(data-active-to) ']';
+        font-family: monospace;
+        font-size: 11px;
+        left: -1px;
+        position: absolute;
+    }
+}
+
+.bb-ul {
+    .bb-li {}
+}

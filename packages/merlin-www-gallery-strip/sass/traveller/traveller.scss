@@ -1,50 +1,28 @@
-@import '@cnbritain/merlin-www-common:traveller';
 
+@import '@cnbritain/merlin-www-common:traveller';
 @import '../wireframe/wireframe';
 
 .c-gallery-strip {
     margin: 40px 0;
+    padding: 0 $MOBILE_SIDE_GUTTER;
+
+    @include at-medium-size {
+        padding: 0 $TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size {
+        padding: 0 $DESKTOP_SIDE_GUTTER;
+    }
 }
 
-.c-gallery-strip__wrapper {
-    margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
-    position: relative;
-}
+.c-gallery-strip-wrapper {}
 
-.c-gallery-strip__link {}
-ul.c-gallery-strip__list {
+.c-gallery-strip__list {
     margin: 0 -6px;
 }
-li.c-gallery-strip__list__item {
-    padding: 0 6px;
 
-    &:before {
-        background-color: $CAPE-HAZE;
-        display: block;
-        content: "";
-        padding-top: 150%;
-        position: relative;
-        z-index: -1;
-    }
-
-    img {
-        bottom: 0;
-        height: 100%;
-        left: 6px;
-        position: absolute;
-        right: 6px;
-        top: 0;
-        width: calc(100% - 12px);
-    }
-}
-
-.c-gallery-strip__detail {
-    position: relative;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-
-    }
+.c-gallery-strip__listitem {
+    background-color: $CAPE-HAZE;
 }
 
 .c-gallery-strip__remaining {
@@ -56,6 +34,10 @@ li.c-gallery-strip__list__item {
     z-index: 1;
 }
 
+.c-gallery-strip__detail {
+    position: relative;
+}
+
 .c-gallery-strip__title {
     @include font("PROXIMA NOVA CONDENSED", 24px, 600, 28px);
     color: $MUSTASAARI;
@@ -64,7 +46,7 @@ li.c-gallery-strip__list__item {
     text-align: center;
     text-transform: uppercase;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    @include at-medium-size {
         @include font-size(34px);
         @include line-height(36px);
         letter-spacing: 2px;
@@ -77,95 +59,12 @@ li.c-gallery-strip__list__item {
     color: $MANATEE;
     margin: 4px 0 0 0;
     text-align: center;
-
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
-
-    }
 }
 
 .c-gallery-strip--tag {
     margin: 24px auto;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin: 32px auto;
-    }
-
-    .c-gallery-strip__list {
-        text-align: center;
-    }
-
-    .c-gallery-strip__list__item:nth-child(n+4) {
-        display: none;
-    }
-
-    .c-gallery-strip__list__item:nth-child(3) {
-        .c-gallery-strip__remaining {
-            display: block;
-        }
-    }
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+6) {
-            display: inline-block;
-        }
-
-        .c-gallery-strip__list__item:nth-child(3) {
-            .c-gallery-strip__remaining {
-                display: none;
-            }
-        }
-
-        .c-gallery-strip__list__item:nth-child(6) {
-            .c-gallery-strip__remaining {
-                display: block;
-            }
-        }
-
-        .c-gallery-strip__list__item {
-            display: inline-block;
-            width: 16.66%;
-        }
-
-        .c-gallery-strip__detail {
-
-        }
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+8) {
-            display: inline-block;
-        }
-
-        .c-gallery-strip__list__item:nth-child(6) {
-            .c-gallery-strip__remaining {
-                display: none;
-            }
-        }
-        .c-gallery-strip__list__item:nth-child(8) {
-
-            .c-gallery-strip__remaining {
-                display: block;
-            }
-        }
-
-        .c-gallery-strip__list__item {
-            width: 12.5%;
-        }
-    }
-}
-
-.c-gallery-strip--gutters {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        .c-gallery-strip__list {
-
-        }
-
-        .c-gallery-strip__list__item {
-
-        }
-
-        .c-gallery-strip__remaining {
-
-        }
     }
 }

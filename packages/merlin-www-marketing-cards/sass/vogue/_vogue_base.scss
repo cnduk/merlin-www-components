@@ -3,45 +3,106 @@
     background-color: $alabaster-f9;
     margin: $MARGIN_SMALL 0;
     padding: $PADDING_MEDIUM $PADDING_SMALL;
-}
-.a-marketing-card--brand {}
-.a-marketing-card--event {}
-.a-marketing-card--topic {}
-.a-marketing-card--magazine {
-    .a-marketing-card__col {
-        text-align: center;
+
+    @include at-medium-size {
+        padding: 0;
     }
 }
 
+.a-marketing-card__header {
+    text-align: center;
+
+    @include at-medium-size {
+        padding: 40px;
+        vertical-align: top;
+        width: 120px;
+    }
+}
+
+.a-marketing-card__body {
+    text-align: center;
+
+    @include at-medium-size {
+        padding: 40px;
+        text-align: left;
+        vertical-align: top;
+        width: auto;
+    }
+}
+
+//brand
 .a-marketing-card__brand {
     margin: 0 0 $MARGIN_SMALL 0;
 }
-.a-marketing-card__brand__img {}
-.a-marketing-card__brand__name {
-    @include font('NOBEL', 11px);
+
+.a-marketing-card--brand .a-marketing-card__body {
+    @include at-medium-size {
+        border-left: 1px solid $loot-box;
+    }
+}
+
+.a-marketing-card__brand-prefix {
+    @include font('ADOBE CASLON', 12px);
+    color: $dove-gray;
+    font-style: italic;
+    margin-bottom: $MARGIN_XX_SMALL;
+}
+
+ .a-marketing-card__brand-img {
+     margin: 0 auto;
+ }
+
+.a-marketing-card__brand-name {
+    @include font('NOBEL', 20px);
     letter-spacing: 1px;
     text-transform: uppercase;
 
     a {
         color: $guardsman-red;
 
-        &:hover,
-        &:focus {
+        &:hover {
             border-bottom: 1px solid;
         }
     }
 }
-.a-marketing-card__brand__prefix {
-    @include font('ADOBE CASLON', 12px);
-    color: $dove-gray;
-    text-transform: italic;
 
-    & + .a-marketing-card__brand__img {
-        margin-top: $MARGIN_XX_SMALL;
+//event
+//topic
+.a-marketing-card--event .a-marketing-card__header,
+.a-marketing-card--topic .a-marketing-card__header {
+    margin-bottom: 24px;
+}
+
+.a-marketing-card--event .a-marketing-card__body,
+.a-marketing-card--topic .a-marketing-card__body {
+    @include at-medium-size {
+        border-left: 1px solid $loot-box;
     }
 }
 
-.a-marketing-card__col {}
+//magazine
+.a-marketing-card__magazine {
+    margin: 0 auto $MARGIN_SMALL auto;
+
+    @include at-medium-size {
+        margin-bottom: 0;
+    }
+}
+
+.a-marketing-card--magazine .a-marketing-card__title {
+    margin-bottom: 20px;
+}
+
+//marketing
+.a-marketing-card__title {
+    @include font('ADOBE CASLON', 17px, 'SEMI BOLD', 25px);
+    color: $mine-shaft-333;
+    margin: 0 0 $MARGIN_XX_SMALL 0;
+
+     @include at-medium-size {
+        @include font-size(20px);
+    }
+}
 
 .a-marketing-card__desc {
     @include font('ADOBE CASLON', 15px);
@@ -49,53 +110,12 @@
     margin: 0 0 $MARGIN_SMALL 0;
 }
 
-.a-marketing-card__magazine {
-    margin: 0 auto $MARGIN_SMALL auto;
-}
-.a-marketing-card__magazine__cover {}
-.a-marketing-card__magazine__cover--desktop {}
-.a-marketing-card__magazine__cover--tablet {}
-.a-marketing-card__magazine__cover--mobile {}
-
-.a-marketing-card__link {
+.a-marketing-card__cta {
     @include button-single();
     @include button-single-light();
 
-    &:hover {
+    &:hover,
+    &:focus {
         @include button-single-light-hover();
-    }
-}
-
-.a-marketing-card__title {
-    @include font('ADOBE CASLON', 17px, 'SEMI BOLD', 25px);
-    color: $mine-shaft-333;
-    margin: 0 0 $MARGIN_XX_SMALL 0;
-}
-
-
-@include marketing-card-medium-size(){
-    .a-marketing-card {
-        padding: 0;
-    }
-    .a-marketing-card--magazine {
-        .a-marketing-card__col {
-            text-align: left;
-        }
-    }
-    .a-marketing-card__col {
-        padding: 40px;
-    }
-    .a-marketing-card--brand .a-marketing-card__col,
-    .a-marketing-card--topic .a-marketing-card__col,
-    .a-marketing-card--event .a-marketing-card__col {
-        & + .a-marketing-card__col {
-            border-left: 1px solid $loot-box;
-        }
-    }
-    .a-marketing-card__magazine {
-        margin-bottom: 0;
-    }
-    .a-marketing-card__title {
-        @include font-size(20px);
     }
 }

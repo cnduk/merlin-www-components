@@ -1,0 +1,411 @@
+// -------------------- //
+// Card
+// -------------------- //
+.bb-card {
+    border-radius: 4px;
+    border: 1px solid $bon-jour;
+    box-sizing: border-box;
+    margin: 40px 0;
+    padding: 16px;
+
+    @include at-x-large-size {
+        &:before {
+            @include font("GOTHAM", 9px, 700, 16px, 60);
+            bottom: 16px;
+            color: $royal-blue;
+            content: '\2192';
+            content: 'Continue Reading ';
+            position: absolute;
+            right: 16px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.bb-card__link {
+
+}
+
+.bb-card__obj {
+    display: table;
+    width: 100%;
+}
+
+.bb-card__obj__header,
+.bb-card__obj__body {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.bb-card__obj__header {
+    width: 33.33333%;
+    @include at-x-large-size {
+        width: 112px;
+    }
+}
+
+.bb-card__obj__body {
+    width: auto;
+}
+
+.bb-card__obj__header {
+    padding-right: 8px;
+}
+.bb-card__images {
+    .bb-card__image {
+        background-color: $bon-jour;
+        padding-top: 100%;
+    }
+
+    .bb-card__image__icon {
+        bottom: 0;
+        background-color: $limed-oak;
+        height: 40px;
+        left: 0;
+        width: 40px;
+
+        svg {
+            display: block;
+            height: 100%;
+            margin: 0 auto;
+            vertical-align: middle;
+            width: 16px;
+            fill: $white;
+        }
+    }
+}
+
+.bb-card__obj__body {
+    padding-left: 8px;
+}
+
+.bb-card__tag {
+    @include font("GOTHAM", 11px, 700, 14px, -4);
+    color: $limed-oak;
+    margin-bottom: 6px;
+    margin-top: 0;
+}
+
+.bb-card__title {
+    @include font("GOTHAM", 14px, 700, 18px, -4);
+    color: $woodsmoke;
+    margin-bottom: 12px;
+    margin-top: 6px;
+
+    @include at-x-large-size {
+        @include font-size(17px);
+        @include line-height(22px);
+    }
+}
+
+.bb-card__teaser {
+    display: none;
+}
+
+.bb-card__byline {
+    @include font("GOTHAM", 9px, null, 12px, 60);
+    margin-bottom: 6px;
+    margin-top: 12px;
+    text-transform: uppercase;
+
+    .bb-card__byline-prefix {
+        @include font-weight(400);
+    }
+
+    .bb-card__byline-name {
+        @include font-weight(700);
+    }
+}
+
+.bb-card__meta {
+    @include font("GOTHAM", 9px, 500, 14px);
+    color: $oslo-gray;
+    margin-top: 6px;
+    padding-right: 0;
+
+    li.bb-card__meta-item {
+        & + li.bb-card__meta-item {
+            border-left: none;
+            padding-left: 0;
+            &:before {
+                background-color: $oslo-gray;
+                border-radius: 50%;
+                content: "";
+                display: inline-block;
+                height: 2px;
+                margin: 1px 4px;
+                width: 2px;
+            }
+        }
+    }
+}
+
+// -------------------- //
+// Figure
+// -------------------- //
+.bb-figure {
+    margin: 40px 0;
+}
+
+.bb-figure__wrapper {
+    background-color: $bon-jour;
+}
+
+.bb-figure__caption,
+.bb-figure__credit {
+
+}
+
+.bb-figure__caption {
+    .bb-p {
+        @include font("GOTHAM", 12px, 500, 16px, -2);
+        color: $woodsmoke;
+        margin-top: 16px;
+        margin-bottom: 0;
+    }
+}
+
+.bb-figure__credit {
+    @include font("GOTHAM", 9px, 400, 12px, 60);
+    color: $oslo-gray;
+    margin-top: 8px;
+    text-transform: uppercase;
+
+    &:before {
+        content: 'credit: '
+    }
+}
+
+// -------------------- //
+// Gallery
+// -------------------- //
+.bb-gallery {
+    margin: 40px 0;
+}
+
+.bb-gallery--show-summary {
+    .bb-gallery__col {
+        &:first-child {
+            &:after {
+                @include button-single();
+                @include button-single-light();
+                @include font-size(10px);
+                bottom: 32px;
+                content: 'View Collection';
+                left: 50%;
+                padding: 16px 8px;
+                position: absolute;
+                transform: translateX(-50%);
+                white-space: nowrap;
+                @include at-x-large-size {
+                    @include font-size(12px);
+                    padding: 16px;
+                }
+            }
+        }
+    }
+}
+
+.bb-gallery__icon {
+    border-right: 1px solid $bon-jour;
+    display: table-cell;
+    padding-right: 16px;
+    width: 16px;
+    vertical-align: middle;
+
+    svg {
+        fill: $limed-oak;
+    }
+}
+
+.bb-gallery__title {
+    @include font("GOTHAM", 16px, 700, 20px, -4);
+    color: $woodsmoke;
+    display: table-cell;
+    padding: 8px 0 8px 16px;
+
+    @include at-x-large-size {
+        @include font-size(20px);
+        @include line-height(24px);
+    }
+
+    & + .bb-gallery__cols {
+        margin-top: 20px;
+    }
+}
+
+.bb-gallery__icon--gallery {}
+
+.bb-gallery__link {
+    &:hover {
+        & + .bb-gallery__cols {
+            .bb-gallery__col {
+                &:first-child {
+                    &:after {
+                        @include button-single-light-hover();
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bb-gallery__cols {}
+.bb-gallery__col {
+    background-color: $bon-jour;
+}
+
+.bb-gallery__remaining {
+    background-color: rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+}
+
+.bb-gallery__remaining-text {
+    @include font("GOTHAM", 20px, 700, 20px);
+    color: $white;
+
+    @include at-x-large-size {
+        @include font-size(24px);
+        @include line-height(24px);
+    }
+}
+
+// -------------------- //
+// Show Gallery
+// -------------------- //
+.bb-show-gallery {
+    margin: 40px 0;
+}
+
+.bb-show-gallery-wrapper {
+    margin: 0 auto;
+    max-width: $XX_LARGE_SIZE;
+    position: relative;
+}
+
+.bb-show-gallery__link {}
+.bb-show-gallery__images {}
+.bb-show-gallery__image-list {}
+.bb-show-gallery__image-listitem {}
+
+.bb-show-gallery__contents {
+    border-bottom: 1px solid $oslo-gray;
+    border-left: 1px solid $oslo-gray;
+    border-right: 1px solid $oslo-gray;
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative;
+
+    &:after {
+        @include triangle(16px, 12px, 'up', $white);
+        content: '';
+        left: 50%;
+        position: absolute;
+        top: -16px;
+        transform: translateX(-50%);
+    }
+
+    @include at-x-large-size {
+        padding: 28px 20px;
+
+        &:after {
+            @include triangle(18px, 14px, 'up', $white);
+            content: '';
+            top: -18px;
+        }
+    }
+}
+
+.bb-show-gallery__remaining {
+    background-color: rgba(0, 0, 0, 0.38);
+    @include font("GOTHAM", 20px, 700, 24px);
+    color: $white;
+}
+
+.bb-show-gallery__title {
+    @include font("GOTHAM", 20px, 700, 24px, -4);
+    color: $woodsmoke;
+    margin: 0;
+    text-align: center;
+    @include at-x-large-size {
+        @include font-size(18px);
+    }
+}
+
+.bb-show-gallery__subtitle {
+    @include font("GOTHAM", 10px, 500, 12px, -40)
+    color: $oslo-gray;
+    margin-top: 12px;
+    text-align: center;
+    @include at-x-large-size {
+        @include font-size(12px);
+        @include line-height(16px);
+    }
+}
+
+// -------------------- //
+// Video
+// -------------------- //
+.bb-video {
+    margin: 40px 0;
+}
+
+.bb-video__icon {
+    border-right: 1px solid $bon-jour;
+    display: table-cell;
+    padding-right: 16px;
+    vertical-align: middle;
+    width: 16px;
+
+    svg {
+        fill: $limed-oak;
+        padding-top: 4px;
+    }
+}
+
+.bb-video__title {
+    @include font("GOTHAM", 16px, 700, 20px, -4);
+    color: $woodsmoke;
+    display: table-cell;
+    padding: 8px 0 8px 16px;
+    vertical-align: middle;
+
+    @include at-x-large-size {
+        @include font-size(20px);
+        @include line-height(24px);
+    }
+}
+
+.bb-video__image {
+    margin-top: 20px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.bb-video__image-icon {
+    background-color: rgba(0, 0, 0, 0.38);
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 60px;
+    left: 50%;
+    padding: 22px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+
+    svg {
+        fill: $white;
+    }
+}
+
+.bb-video__link {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+}

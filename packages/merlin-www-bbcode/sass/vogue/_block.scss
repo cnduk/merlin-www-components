@@ -210,10 +210,6 @@ h1, h2, h3, h4, h5, h5 {
     }
 }
 
-.bb-blockquote__separator {
-    display: none;
-}
-
 .bb-blockquote__credit {
     @include font("NOBEL", 12px)
     color: $dove-gray;
@@ -244,10 +240,6 @@ h1, h2, h3, h4, h5, h5 {
         @include font-size(29px);
         @include line-height(35px);
     }
-}
-
-.bb-pullquote__separator {
-    display: none;
 }
 
 .bb-pullquote__credit {
@@ -321,7 +313,7 @@ h1, h2, h3, h4, h5, h5 {
         margin-bottom: 0;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         padding: $PADDING_LARGE;
     }
 }
@@ -347,11 +339,6 @@ h1, h2, h3, h4, h5, h5 {
 .bb-answer__a {
     color: $mine-shaft-333;
     @include font('NOBEL', 18px, 'BOLD');
-}
-
-.bb-question__separator,
-.bb-answer__separator {
-    display: none;
 }
 
 .bb-question__author,

@@ -1,155 +1,189 @@
 {
-    "type": "MagazineMarketingCard",
-    "state": {
-        "has_button": true,
-        "is_topic": false,
-        "is_magazine": true,
-        "is_brand": false,
-        "is_event": false
+  "data": {
+    "button": {
+      "data": {
+        "title": "View issue",
+        "url": "http://localhost:3000/magazine/august-2018"
+      },
+      "state": {
+        "is_blank": false,
+        "is_nofollow": false
+      },
+      "style": {
+        "cls": "",
+        "inline": ""
+      },
+      "translation": {},
+      "type": "Link"
     },
-    "data": {
-        "button": {
-            "type": "Link",
+    "desc": null,
+    "title": "This article was first published in the August 2018 issue of Vogue magazine",
+    "image_list": {
+      "data": {
+        "items": [
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "alt_text": null,
+                  "credit": null,
+                  "description": null,
+                  "look_number": null,
+                  "title": null,
+                  "width": null,
+                  "image_url": "https://vg-images.condecdn.net/image/4v9lQE44NZ9/crop/405/1.3173076923076923/middle/f/08-18-cover2_b.jpg"
+                },
+                "state": {
+                  "is_image": false,
+                  "is_picture": false,
+                  "is_static": true,
+                  "is_svg": false,
+                  "is_linked": false,
+                  "is_landscape": false,
+                  "is_portrait": false,
+                  "is_square": false,
+                  "is_lazyload": true
+                },
+                "style": {
+                  "cls": "a-marketing-card__magazine__cover a-marketing-card__magazine__cover--print",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "StaticImage"
+              },
+              "remaining_count": null,
+              "index": 0
+            },
             "state": {
-                "is_blank": false
-            },
-            "data": {
-                "url": "http://localhost:3000/magazine/April-2017/",
-                "title": "View issue"
+              "is_first": true,
+              "is_last": false
             },
             "style": {
-                "cls": ""
-            }
-        },
-        "title": "This article was first published in the April 2017 issue of Vogue magazine",
-        "image_list": {
-            "type": "ImageList",
-            "state": {},
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {
+              "remaining_prefix": "+"
+            },
+            "type": "ImageListItem"
+          },
+          {
             "data": {
-                "items": [{
-                    "type": "ImageListItem",
-                    "state": {
-                        "is_first": true,
-                        "is_last": false
-                    },
-                    "data": {
-                        "item": {
-                            "type": "StaticImage",
-                            "state": {
-                                "is_static": true,
-                                "is_portrait": false,
-                                "is_image": false,
-                                "is_square": false,
-                                "is_svg": false,
-                                "is_linked": false,
-                                "is_picture": false,
-                                "is_landscape": false
-                            },
-                            "data": {
-                                "credit": null,
-                                "image_url": "https://wi-images.condecdn.net/image/PKoNkVyrN9a/crop/405/1.31730769231/middle",
-                                "description": null,
-                                "lazyload": true,
-                                "title": null,
-                                "look_number": null,
-                                "width": null,
-                                "alt_text": null
-                            },
-                            "style": {
-                                "cls": "img-lazyload a-marketing-card__magazine__cover a-marketing-card__magazine__cover--print"
-                            }
-                        },
-                        "remaining_count": null
-                    },
-                    "style": {
-                        "cls": ""
-                    }
-                }, {
-                    "type": "ImageListItem",
-                    "state": {
-                        "is_first": false,
-                        "is_last": false
-                    },
-                    "data": {
-                        "item": {
-                            "type": "StaticImage",
-                            "state": {
-                                "is_static": true,
-                                "is_portrait": false,
-                                "is_image": false,
-                                "is_square": false,
-                                "is_svg": false,
-                                "is_linked": false,
-                                "is_picture": false,
-                                "is_landscape": false
-                            },
-                            "data": {
-                                "credit": null,
-                                "image_url": "https://wi-images.condecdn.net/image/PKoNkVyrN9a/crop/405/1.31730769231/middle",
-                                "description": null,
-                                "lazyload": true,
-                                "title": null,
-                                "look_number": null,
-                                "width": null,
-                                "alt_text": null
-                            },
-                            "style": {
-                                "cls": "img-lazyload a-marketing-card__magazine__cover a-marketing-card__magazine__cover--tablet"
-                            }
-                        },
-                        "remaining_count": null
-                    },
-                    "style": {
-                        "cls": ""
-                    }
-                }, {
-                    "type": "ImageListItem",
-                    "state": {
-                        "is_first": false,
-                        "is_last": true
-                    },
-                    "data": {
-                        "item": {
-                            "type": "StaticImage",
-                            "state": {
-                                "is_static": true,
-                                "is_portrait": false,
-                                "is_image": false,
-                                "is_square": false,
-                                "is_svg": false,
-                                "is_linked": false,
-                                "is_picture": false,
-                                "is_landscape": false
-                            },
-                            "data": {
-                                "credit": null,
-                                "image_url": "https://wi-images.condecdn.net/image/PKoNkVyrN9a/crop/405/1.31730769231/middle",
-                                "description": null,
-                                "lazyload": true,
-                                "title": null,
-                                "look_number": null,
-                                "width": null,
-                                "alt_text": null
-                            },
-                            "style": {
-                                "cls": "img-lazyload a-marketing-card__magazine__cover a-marketing-card__magazine__cover--mobile"
-                            }
-                        },
-                        "remaining_count": null
-                    },
-                    "style": {
-                        "cls": ""
-                    }
-                }],
-                "length": 3
+              "item": {
+                "data": {
+                  "alt_text": null,
+                  "credit": null,
+                  "description": null,
+                  "look_number": null,
+                  "title": null,
+                  "width": null,
+                  "image_url": "https://vg-images.condecdn.net/image/4v9lQE44NZ9/crop/405/1.3173076923076923/middle/f/08-18-cover2_b.jpg"
+                },
+                "state": {
+                  "is_image": false,
+                  "is_picture": false,
+                  "is_static": true,
+                  "is_svg": false,
+                  "is_linked": false,
+                  "is_landscape": false,
+                  "is_portrait": false,
+                  "is_square": false,
+                  "is_lazyload": true
+                },
+                "style": {
+                  "cls": "a-marketing-card__magazine__cover a-marketing-card__magazine__cover--tablet",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "StaticImage"
+              },
+              "remaining_count": null,
+              "index": 1
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
             },
             "style": {
-                "cls": ""
-            }
-        },
-        "desc": null
-    },
-    "style": {
-        "cls": "a-marketing-card--magazine"
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {
+              "remaining_prefix": "+"
+            },
+            "type": "ImageListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "alt_text": null,
+                  "credit": null,
+                  "description": null,
+                  "look_number": null,
+                  "title": null,
+                  "width": null,
+                  "image_url": "https://vg-images.condecdn.net/image/4v9lQE44NZ9/crop/405/1.3173076923076923/middle/f/08-18-cover2_b.jpg"
+                },
+                "state": {
+                  "is_image": false,
+                  "is_picture": false,
+                  "is_static": true,
+                  "is_svg": false,
+                  "is_linked": false,
+                  "is_landscape": false,
+                  "is_portrait": false,
+                  "is_square": false,
+                  "is_lazyload": true
+                },
+                "style": {
+                  "cls": "a-marketing-card__magazine__cover a-marketing-card__magazine__cover--mobile",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "StaticImage"
+              },
+              "remaining_count": null,
+              "index": 2
+            },
+            "state": {
+              "is_first": false,
+              "is_last": true
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {
+              "remaining_prefix": "+"
+            },
+            "type": "ImageListItem"
+          }
+        ],
+        "length": 3
+      },
+      "state": {
+        "has_multiple_items": true
+      },
+      "style": {
+        "cls": "",
+        "inline": ""
+      },
+      "translation": {},
+      "type": "ImageList"
     }
+  },
+  "state": {
+    "is_brand": false,
+    "is_event": false,
+    "is_magazine": true,
+    "is_topic": false,
+    "has_button": true
+  },
+  "style": {
+    "cls": "a-marketing-card--magazine",
+    "inline": ""
+  },
+  "translation": {},
+  "type": "MagazineMarketingCard"
 }

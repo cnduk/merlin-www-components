@@ -4,9 +4,14 @@ import {
     ArticleManager
 } from '@cnbritain/merlin-www-article';
 import {
-    debounce
+    addEvent,
+    debounce,
+    delegate,
+    getParent,
+    hasClass
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
+import {toArray} from '../utils';
 
 var allowAllFocus = false;
 
@@ -14,6 +19,11 @@ export default function init() {
     ArticleManager.on('imagefocus', debounce(onArticleImageFocus, 300));
     ArticleManager.on('focus', onArticleFocus);
     ArticleManager.on('expand', onArticleExpand);
+
+    initRecommendationTracking();
+    initReadNextTracking();
+    initInlineEmbedTracking();
+    initTopStoriesTracking();
 }
 
 
@@ -83,4 +93,130 @@ export function sendPageview(article) {
     GATracker.ResetCustomDimensions();
     GATracker.SetAll(article.analytics);
     GATracker.SendAll(GATracker.SEND_HITTYPES.PAGEVIEW);
+}
+
+/**
+ * Recommended event tracking
+ */
+
+function onRecommendedArticleClick(e){
+    var link = e.delegateTarget;
+    var eventLabel = link.href + ' | ' + link.innerText;
+    sendCustomEvent({
+        eventCategory: 'Recommended',
+        eventAction: 'Bottom Click',
+        eventLabel: eventLabel
+    });
+}
+
+export function initRecommendationTracking(){
+    addEvent(
+        document,
+        'click',
+        delegate(
+            '.c-card-section--a-recommended .c-card__link',
+            onRecommendedArticleClick
+        )
+    );
+}
+
+/**
+ * Read next event tracking
+ */
+
+function onReadNextClick(e){
+    var link = e.delegateTarget;
+    var eventLabel = link.href + ' | ' + link.innerText;
+    sendCustomEvent({
+        eventCategory: 'Recommended',
+        eventAction: 'Read Next Click',
+        eventLabel: eventLabel
+    });
+}
+
+export function initReadNextTracking(){
+    addEvent(document, 'click', delegate(
+        '.a-sidebar-content .c-card__link', onReadNextClick));
+}
+
+
+/**
+ * Embed card tracking
+ */
+
+function onEmbedClick(e){
+    var eventAction = null;
+    var eventLabel = null;
+
+    // Article
+    if(hasClass(e.delegateTarget, 'bb-card')){
+        eventAction = 'Internal Embed Click - Article';
+
+    // Gallery
+    } else if(hasClass(e.delegateTarget, 'bb-gallery')){
+        var imageColumns = e.delegateTarget.querySelectorAll('.bb-gallery__col');
+        eventAction = 'Internal Embed Click - Gallery:Thumbs ' + imageColumns.length;
+
+    // Show
+    } else if(hasClass(e.delegateTarget, 'bb-show-gallery')){
+        eventAction = 'Internal Embed Click - Show';
+
+    // Video
+    } else if(hasClass(e.delegateTarget, 'bb-video')){
+        eventAction = 'Internal Embed Click - Video';
+    }
+
+    var link = e.delegateTarget.querySelector('a');
+    eventLabel = link.href + ' | ' + link.innerText;
+
+    sendCustomEvent({
+        eventCategory: 'Internal Embed',
+        eventAction: eventAction,
+        eventLabel: eventLabel
+    });
+}
+
+export function initInlineEmbedTracking(){
+    // Article, gallery, video, show
+    addEvent(document, 'click', delegate(
+        '.bb-card, .bb-gallery, .bb-show-gallery, .bb-video', onEmbedClick));
+}
+
+
+/**
+ * Top stories tracking
+ */
+
+function onTopStoriesClick(e){
+    var listItem = getParent(
+        e.delegateTarget, '.c-top-stories__cards-listitem');
+    var eventAction = null;
+
+    // Check if native ad
+    if(hasClass(listItem, 'c-top-stories__cards-listitem--ad')){
+        eventAction = 'Top Stories Bar Click Pos: Native';
+    } else {
+        var list = getParent(e.delegateTarget, '.c-top-stories__cards-list');
+        var items = toArray(
+            list.querySelectorAll('.c-top-stories__cards-listitem'));
+        items = items.filter(function(item){
+            return !hasClass(item, 'c-top-stories__cards-listitem--ad');
+        });
+        var index = items.indexOf(listItem);
+        eventAction = 'Top Stories Bar Click Pos: ' + (index + 1);
+    }
+
+    var link = e.delegateTarget;
+    var eventLabel = link.href + ' | ' + link.innerText;
+
+    sendCustomEvent({
+        eventCategory: 'Top Stories Bar',
+        eventAction: eventAction,
+        eventLabel: eventLabel
+    });
+}
+
+export function initTopStoriesTracking(){
+    addEvent(document, 'click', delegate(
+        '.c-top-stories .c-card__link', onTopStoriesClick));
 }

@@ -12,41 +12,16 @@
     }
 }
 
-.c-gallery-strip__wrapper {
-    margin: 0 auto;
-    max-width: $XX_LARGE_SIZE;
-    position: relative;
-}
+.c-gallery-strip-wrapper {}
 
-.c-gallery-strip__link {}
-ul.c-gallery-strip__list {}
-li.c-gallery-strip__list__item {
-
-    &:before {
-        display: block;
-        content: "";
-        padding-top: 150%;
-        position: relative;
-    }
-
-    img {
-        bottom: 0;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 100%;
+.c-gallery-strip-wrapper:hover .c-gallery-strip__title,
+.c-gallery-strip__link:focus ~ * .c-gallery-strip__title {
+    span {
+        border-bottom: 1px solid $black;
     }
 }
 
-.c-gallery-strip__detail {
-    position: relative;
-
-    @include at-x-large-size {
-
-    }
-}
+.c-gallery-strip__listitem {}
 
 .c-gallery-strip__remaining {
     @include font("COMMUTER SANS", 27px, 400, 27px);
@@ -57,8 +32,9 @@ li.c-gallery-strip__list__item {
     z-index: 1;
 }
 
-.c-gallery-strip__remaining__prefix {}
-.c-gallery-strip__remaining__value {}
+.c-gallery-strip__detail {
+    position: relative;
+}
 
 .c-gallery-strip__title {
     @include font("STARLING", 24px, 400, 27px);
@@ -67,93 +43,20 @@ li.c-gallery-strip__list__item {
     margin: 20px 0 0 0;
     text-align: center;
 
-    @include at-x-large-size {
+    @include at-medium-size {
         @include font-size(37px);
         @include line-height(40px);
         margin: 32px 0 0 0;
     }
 }
 
-// TODO
-.c-gallery-strip__subtitle {}
-
-.c-gallery-strip--tag {
-    .c-gallery-strip__list {
-        text-align: center;
-    }
-
-    .c-gallery-strip__list__item:nth-child(n+4) {
-        display: none;
-    }
-
-    .c-gallery-strip__list__item:nth-child(3) {
-        .c-gallery-strip__remaining {
-            display: block;
-        }
-    }
+.c-gallery-strip__subtitle {
+    @include font('STARLING', 11px, 'BOLD', 13px);
+    margin: 10px 0 0 0;
+    text-align: center;
+    text-transform: uppercase;
 
     @include at-medium-size {
-        .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+6) {
-            display: inline-block;
-        }
-
-        .c-gallery-strip__list__item:nth-child(3) {
-            .c-gallery-strip__remaining {
-                display: none;
-            }
-        }
-
-        .c-gallery-strip__list__item:nth-child(6) {
-            .c-gallery-strip__remaining {
-                display: block;
-            }
-        }
-
-        .c-gallery-strip__list__item {
-            display: inline-block;
-            width: 16.66%;
-        }
-
-        .c-gallery-strip__detail {
-
-        }
-    }
-
-    @include at-x-large-size {
-        .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+8) {
-            display: inline-block;
-        }
-
-        .c-gallery-strip__list__item:nth-child(6) {
-            .c-gallery-strip__remaining {
-                display: none;
-            }
-        }
-        .c-gallery-strip__list__item:nth-child(8) {
-
-            .c-gallery-strip__remaining {
-                display: block;
-            }
-        }
-
-        .c-gallery-strip__list__item {
-            width: 12.5%;
-        }
-    }
-}
-
-.c-gallery-strip--gutters {
-    @include at-medium-size {
-        .c-gallery-strip__list {
-
-        }
-
-        .c-gallery-strip__list__item {
-
-        }
-
-        .c-gallery-strip__remaining {
-
-        }
+        margin: 20px 0 0 0;
     }
 }
