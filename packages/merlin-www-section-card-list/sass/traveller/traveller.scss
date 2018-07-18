@@ -8,176 +8,531 @@
 
 @import "../wireframe/wireframe";
 
+
+
+/**
+ * Mixins
+ */
+
+@mixin lulo-title {
+    .c-card-section__title {
+        @include font("LULO ONE", 24px, null, 28px, -35);
+        color: $SHERPA-BLUE;
+        margin-bottom: 12px;
+        margin-top: 0;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    @include at-x-large-size {
+        .c-card-section__title {
+            @include font-size(28px);
+            @include line-height(32px);
+            margin-bottom: 16px;
+        }
+    }
+}
+
+@mixin proxima-title {
+    .c-card-section__title {
+        @include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
+        letter-spacing: 1px;
+        margin-bottom: 16px;
+        margin-top: 0;
+        text-transform: uppercase;
+    }
+
+    @include at-x-large-size {
+        .c-card-section__title {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+@mixin light-button {
+    .c-card-section__btn {
+        @include button-single;
+        @include button-single-light;
+        margin-top: 24px;
+
+        &:hover,
+        &:focus {
+            @include button-single-light-hover;
+        }
+    }
+}
+
+@mixin dark-button {
+    .c-card-section__btn {
+        @include button-single;
+        @include button-single-dark;
+        margin-top: 24px;
+
+        &:hover,
+        &:focus {
+            @include button-single-dark-hover;
+        }
+    }
+}
+
+@mixin add-card-separators {
+    .c-card-section__card-listitem + .c-card-section__card-listitem {
+        .c-card {
+            border-top: 1px solid $ISABEL;
+            padding-top: 12px;
+        }
+        .c-card--dark {
+            border-top-color: rgba($PORCELAIN, 0.12);
+        }
+    }
+
+    @include at-small-size {
+        .c-card-section__card-listitem + .c-card-section__card-listitem {
+            .c-card {
+                padding-top: 40px;
+            }
+        }
+    }
+}
+
+@mixin remove-card-separators {
+    .c-card-section__card-listitem + .c-card-section__card-listitem {
+        .c-card {
+            border-top: none;
+            padding-top: inherit;
+        }
+    }
+    @include at-small-size {
+        .c-card-section__card-listitem + .c-card-section__card-listitem {
+            .c-card {
+                padding-top: inherit;
+            }
+        }
+    }
+}
+
+@mixin section-background {
+    background-color: $JUNGLE;
+    margin: 0;
+    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+
+    .c-card-section__title {
+        color: $WHITE;
+    }
+
+    @include at-medium-size {
+        padding: $TABLET_SLICE_MARGIN;
+    }
+
+    @include at-x-large-size {
+        padding: $DESKTOP_SLICE_MARGIN;
+    }
+}
+
+@mixin column-base {}
+
+@mixin column-1 {
+    @include column-base;
+    @include add-card-separators;
+
+    .c-card-section__card-list {
+        margin: -6px -12px;
+    }
+
+    .c-card-section__card-listitem {
+        padding: 0 12px;
+        margin: 6px 0;
+        width: 100%;
+    }
+
+    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        .c-card-section__card-listitem {
+            margin: 20px 0;
+        }
+    }
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        .c-card-section__card-list {
+            margin: -20px -12px;
+        }
+        .c-card-section__card-listitem {}
+    }
+}
+
+@mixin column-1-3 {
+    @include column-base;
+    @include add-card-separators;
+
+    .c-card-section__body {
+        margin: 0 auto;
+        max-width: 300px * 3;
+    }
+
+    .c-card-section__card-list {
+        margin: -10px -12px;
+        text-align: center;
+    }
+    .c-card-section__card-listitem {
+        margin: 10px 0;
+        padding: 0 12px;
+        width: 100%;
+    }
+
+    @include at-small-size {
+        @include remove-card-separators;
+
+        .c-card-section__card-listitem {
+            max-width: 275px;
+            width: 33.33%;
+        }
+    }
+}
+
+@mixin column-2-4 {
+    @include column-base;
+
+    .c-card-section__card-list {
+        margin: -12px -12px;
+    }
+
+    .c-card-section__card-listitem {
+        padding: 0 12px;
+        margin: 12px 0;
+        width: 50%;
+    }
+
+    @include at-x-large-size {
+        .c-card-section__card-list {
+            margin: -24px -12px;
+        }
+
+        .c-card-section__card-listitem {
+            margin: 24px 0;
+            width: 25%;
+        }
+    }
+
+
+}
+
+@mixin column-1-2-4 {
+    @include column-base;
+    @include add-card-separators;
+
+    .c-card-section__card-list {
+        margin: -6px -12px;
+    }
+    .c-card-section__card-listitem {
+        margin: 6px 0;
+        padding: 0 12px;
+        width: 100%;
+    }
+
+    @include at-small-size {
+        @include remove-card-separators;
+        .c-card-section__card-list {
+            margin: -16px -12px;
+        }
+
+        .c-card-section__card-listitem {
+            margin: 16px 0;
+            width: 50%;
+        }
+    }
+
+    @include at-x-large-size {
+        .c-card-section__card-list {
+            margin: -24px -12px;
+        }
+
+        .c-card-section__card-listitem {
+            margin: 24px 0;
+            width: 25%;
+        }
+    }
+
+}
+
+@mixin column-1-2-43 {
+    @include column-base;
+    @include add-card-separators;
+
+    .c-card-section__card-list {
+        margin: -6px -12px;
+    }
+
+    .c-card-section__card-listitem {
+        padding: 0 12px;
+        margin: 6px 0;
+        width: 100%;
+    }
+
+    @include at-small-size {
+        @include remove-card-separators;
+
+        .c-card-section__card-list {
+            margin: -16px -12px;
+        }
+        .c-card-section__card-listitem {
+            margin: 16px 0;
+            width: 50%;
+        }
+    }
+
+    @include at-x-large-size {
+        .c-card-section__card-list {
+            margin: -24px -12px;
+        }
+        .c-card-section__card-listitem {
+            margin: 24px 0;
+            width: 33.33333%;
+        }
+    }
+}
+
+
+/**
+ * Defaults
+ */
 .c-card-section {
 	margin-top: $MOBILE_SLICE_MARGIN;
 	margin-bottom: $MOBILE_SLICE_MARGIN;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	@include at-medium-size {
 	    margin-top: $TABLET_SLICE_MARGIN;
 	    margin-bottom: $TABLET_SLICE_MARGIN;
 	}
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	@include at-x-large-size {
 	    margin-top: $DESKTOP_SLICE_MARGIN;
 	    margin-bottom: $DESKTOP_SLICE_MARGIN;
 	}
 }
 
-.c-card-section--c-curated,
-.c-card-section--c-tag,
+.c-card-section-wrapper {}
+
+.c-card-section__header {}
+.c-card-section__body {}
+.c-card-section__footer {
+    text-align: center;
+}
+
+.c-card-section__logo {
+    margin: 0 auto 26px auto;
+    max-width: 268px;
+    text-align: center;
+
+    svg, img {
+        width: 100%;
+
+        path {
+            fill: $WHITE;
+        }
+    }
+
+    @include at-x-large-size {
+        margin-bottom: 32px;
+    }
+}
+.c-card-section__title {
+    a {
+        color: inherit;
+    }
+}
+.c-card-section__nav-strip {
+    margin: 12px (-$MOBILE_SIDE_GUTTER);
+
+    @include at-medium-size {
+        margin: 12px (-$TABLET_SIDE_GUTTER);
+    }
+
+    @include at-x-large-size {
+        margin: 16px (-$DESKTOP_SIDE_GUTTER);
+    }
+}
+
+.c-card-section__card-list {}
+.c-card-section__card-listitem {
+    display: inline-block;
+}
+.c-card-section__card-listitem--ad {}
+
+.c-card-section__btn {}
+
+
+/**
+ * Modifiers
+ */
+
+.c-card-section--a-recommended {
+    @include proxima-title;
+    @include column-1-2-4;
+    @include light-button;
+}
+
 .c-card-section--c-contributors {
-	.c-card-section__title {
-		@include font("LULO ONE", 24px, 700, 28px, -35);
-		color: $SHERPA-BLUE;
-		margin-bottom: 12px;
-		margin-top: 0;
-		text-align: center;
-		text-transform: uppercase;
-
-		a {
-			color: inherit;
-		}
-
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-			@include font-size(28px);
-			@include line-height(32px);
-			margin-bottom: 16px;
-		}
-	}
-
-	.c-card-section__btn {
-		@include button-single();
-		@include button-single-light();
-		&:hover {
-			@include button-single-light-hover();
-		}
-
-		margin-top: 24px;
-	}
+    @include lulo-title;
+    @include column-1-3;
+    @include light-button;
 }
 
-.c-card-section--a-recommended,
-.c-card-section--mag-magazines,
-.c-card-section--v-genre-articles {
-    .c-card-section__title {
-    	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
-    	letter-spacing: 1px;
-    	margin-bottom: 16px;
-    	margin-top: 0;
-    	text-transform: uppercase;
+.c-card-section--c-curated,
+.c-card-section--c-tag {
+    @include lulo-title;
+    @include column-1-2-4;
+    @include light-button;
 
-    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    		margin-bottom: 24px;
-    	}
+    .c-card-section__card-list {
+        margin-top: 6px;
+    }
+
+    @include at-small-size {
+        .c-card-section__card-list {
+            margin-top: 12px;
+        }
+    }
+
+    @include at-x-large-size {
+        .c-card-section__card-list {
+            margin-top: 24px;
+        }
     }
 }
+.c-card-section--c-video-articles {
+    @include section-background;
+    @include proxima-title;
+    @include column-1-2-4;
+    @include dark-button;
 
-.c-card-section--c-video-articles,
-.c-card-section--v-related-articles {
-	background-color: $JUNGLE;
-	margin: 0;
-    max-width: none;
-    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: $TABLET_SLICE_MARGIN;
+    .c-card-section__card-list {
+        margin-top: 6px;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: $DESKTOP_SLICE_MARGIN;
+    @include at-small-size {
+        .c-card-section__card-list {
+            margin-top: 12px;
+        }
     }
 
-    .c-card-section__title {
-    	@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
-    	color: $WHITE;
-    	letter-spacing: 1px;
-    	margin-bottom: 16px;
-    	margin-top: 0;
-    	text-transform: uppercase;
-
-    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    		margin-bottom: 24px;
-    	}
+    @include at-x-large-size {
+        .c-card-section__card-list {
+            margin-top: 24px;
+        }
     }
-
-    .c-card-section__logo {
-    	height: 42px;
-		margin: 0 auto 26px auto;
-		width: 268px;
-
-    	svg {
-    	    display: inline-block;
-    	    height: 100%;
-    	    width: 100%;
-
-    	    path {
-    	        fill: $WHITE;
-    	    }
-    	}
-
-    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    		height: 52px;
-			margin: 0 auto 32px auto;
-    		width: 331px;
-    	}
-    }
-
-	.c-card-section__btn {
-		@include button-single();
-		@include button-single-dark();
-		&:hover {
-			@include button-single-dark-hover();
-		}
-
-		margin-top: 24px;
-	}
 }
-
-.c-card-section--v-related-articles {
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		display: none;
-	}
-}
-
-.c-card-section--tg-articles,
-.c-card-section--tg-articles-grid,
-.c-card-section--v-articles {
-	.c-card-section__title {
-		@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
-		letter-spacing: 1px;
-		margin-bottom: 16px;
-		margin-top: 0;
-		text-transform: uppercase;
-
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-			margin-bottom: 24px;
-		}
-	}
-
-	.c-card-list {
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		    margin-right: 340px;
-		}
-	}
-}
-
+// .c-card-section--dark {}
 .c-card-section--mag-articles {
-	.c-card-section__title {
-		@include font("PROXIMA NOVA CONDENSED", 14px, 600, 16px);
-		letter-spacing: 1px;
-		margin-bottom: 16px;
-		margin-top: 0;
-		text-transform: uppercase;
+    @include proxima-title;
+    @include column-1-2-4;
+    @include light-button;
+}
+.c-card-section--mag-magazines {
+    @include proxima-title;
+    @include column-2-4;
+    @include light-button;
+}
+.c-card-section--s-results {
+    @include proxima-title;
+    @include column-1-2-4;
+    @include light-button;
+}
+// .c-card-section--sh-latest-articles {}
+// .c-card-section--sh-shows {}
+// .c-card-section--sh-summary-articles {}
+// .c-card-section--sh-summary-shows {}
+.c-card-section--tg-articles {
+    @include proxima-title;
+    @include column-1;
+    @include light-button;
 
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-			margin-bottom: 24px;
-		}
-	}
+    @include at-x-large-size {
+        .c-card-section__card-list {
+            margin-right: 340px;
+        }
+    }
+}
+.c-card-section--tg-articles-grid {
+    @include proxima-title;
+    @include column-1-2-43;
+    @include light-button;
+
+    @include at-x-large-size {
+        .c-card-section__card-list {
+            margin-right: 340px;
+        }
+    }
+}
+.c-card-section--v-articles {
+    @include proxima-title;
+    @include column-1-2-43;
+    @include light-button;
+
+    @include at-x-large-size {
+        .c-card-section__card-list {
+            margin-right: 340px;
+        }
+    }
+}
+.c-card-section--v-genre-articles {
+    @include proxima-title;
+    @include column-1-2-4;
+    @include light-button;
+}
+.c-card-section--v-related-articles {
+    @include section-background
+    @include proxima-title;
+    @include add-card-separators;
+    @include dark-button;
+
+    .c-card-section__card-list {
+        margin: -6px -12px;
+    }
+    .c-card-section__card-listitem {
+        padding: 0 12px;
+        margin: 6px 0;
+        width: 100%;
+    }
+
+    .c-card__images:after {
+        @include font("PROXIMA NOVA CONDENSED", 10px, 600, 10px);
+        color: $WHITE;
+        content: "Now Playing";
+        left: 50%;
+        letter-spacing: 1px;
+        opacity: 0;
+        position: absolute;
+        text-transform: uppercase;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition-duration: 300ms;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .c-card__image:after {
+        background-color: rgba($BLACK, 0.5);
+        bottom: 0;
+        content: "";
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition-duration: 300ms;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .is-active {
+        .c-card__images:after,
+        .c-card__image:after {
+            opacity: 1;
+        }
+    }
+
+    @include at-x-large-size {
+        display: none;
+    }
 }
 
-.c-card-section__constrain {}
-.c-card-section__logo {}
-.c-card-section__title {}
-.c-card-section__btn {
-
-}
