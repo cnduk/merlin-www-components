@@ -9,7 +9,7 @@
 }
 
 .c-figure__helper--landscape,
-.c-figure__helper--square,  {
+.c-figure__helper--square  {
     padding-top: 66.6666667%;
 }
 
@@ -30,6 +30,7 @@
     top: 0;
     width: 100%;
 }
+
 .c-figure img {
     bottom: 0;
     display: block;
@@ -50,7 +51,15 @@
     height: 60px;
 }
 
-li.c-figure__toolbar-listitem {
+.c-figure__toolbar-list {
+    font-weight: normal;
+    line-height: normal;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.c-figure__toolbar-listitem {
     float: left;
     height: 60px;
     padding-bottom: 0;
@@ -66,10 +75,18 @@ li.c-figure__toolbar-listitem {
 .c-figure__toolbar-listitem--share {
     display: none;
 }
+
+.c-figure__toolbar-listitem--more {}
+
 .c-figure__toolbar-listitem--zoom {
     display: none;
 }
-.c-figure__toolbar-listitem--more {}
+
+.c-figure__toolbar-listitem--email {}
+.c-figure__toolbar-listitem--twitter {}
+.c-figure__toolbar-listitem--facebook {}
+.c-figure__toolbar-listitem--whatsapp {}
+.c-figure__toolbar-listitem--pinterest {}
 
 .c-figure__title {}
 .c-figure__caption {}
@@ -86,8 +103,11 @@ li.c-figure__toolbar-listitem {
         display: none;
     }
     .c-figure__toolbar-listitem--whatsapp {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+
+        @include at-x-large-size {
             display: none;
         }
     }
 }
+
+.c-figure--dark {}

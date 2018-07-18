@@ -8,19 +8,20 @@
     background-color: $concrete;
     margin-bottom: 15px;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         border: 1px solid $concrete;
     }
 }
 
-
 .c-figure__toolbar {
     height: 40px;
 }
+
 .c-figure__toolbar-list {
     height: 40px;
 }
-li.c-figure__toolbar-listitem {
+
+.c-figure__toolbar-listitem {
     background-color: $azalea;
     height: 40px;
     width: 40px;
@@ -35,14 +36,30 @@ li.c-figure__toolbar-listitem {
 
 }
 
+.c-figure__toolbar-listitem--zoom {
+    path {
+        fill: $astronaut;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $astronaut;
+
+        path {
+            fill: $white;
+        }
+    }
+}
+
 @each $name, $colour in $COLOUR_SOCIAL {
-    li.c-figure__toolbar-listitem--#{$name} {
+    .c-figure__toolbar-listitem--#{$name} {
 
         path {
             fill: $colour;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: map-get($COLOUR_SOCIAL_HOVER, $name);
 
             path {
@@ -52,31 +69,16 @@ li.c-figure__toolbar-listitem {
     }
 }
 
-li.c-figure__toolbar-listitem--zoom {
-    path {
-        fill: $astronaut;
-    }
-
-    &:hover {
-        background-color: $astronaut;
-
-        path {
-            fill: $white;
-        }
-    }
-}
-
 .c-figure__title {
     @include font("GRAPHIK", 16px, 'SEMI BOLD', 24px);
     color: $dune;
     margin: 0 0 4px 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         @include font("GRAPHIK", 18px, 'SEMI BOLD', 28px);
     }
 }
 
-// Contains bbcode so will be inherited from that stylesheet
 .c-figure__caption {
     margin-bottom: 20px;
 
@@ -97,8 +99,6 @@ li.c-figure__toolbar-listitem--zoom {
     }
 }
 
-
-.c-figure__magnifier-button {}
 .c-figure__magnifier--full-screen {
     background-color: $concrete;
     z-index: 15;

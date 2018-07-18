@@ -4,12 +4,15 @@
         "figure-without-toolbar": {
             "themes": [
                 "wireframe",
-                "vogue",
-                "missvogue",
+                "brides",
+                "bystander",
                 "glamour",
-                "wired",
+                "gq",
+                "houseandgarden",
+                "missvogue",
                 "tatler",
-                "bystander"
+                "vogue",
+                "wired"
             ],
             "main": "figure",
             "data": "figure-without-toolbar"
@@ -17,12 +20,15 @@
         "figure-with-toolbar": {
             "themes": [
                 "wireframe",
-                "vogue",
-                "missvogue",
+                "brides",
+                "bystander",
                 "glamour",
-                "wired",
+                "gq",
+                "houseandgarden",
+                "missvogue",
                 "tatler",
-                "bystander"
+                "vogue",
+                "wired"
             ],
             "main": "figure",
             "data": "figure-with-toolbar"
@@ -33,13 +39,16 @@
     },
     "themes": {
         "brides": "sass/brides/brides.scss",
-        "tatler": "sass/tatler/tatler.scss",
-        "wireframe": "sass/wireframe/wireframe.scss",
-        "glamour": "sass/glamour/glamour.scss",
         "bystander": "sass/bystander/bystander.scss",
-        "wired": "sass/wired/wired.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "gq": "sass/gq/gq.scss",
+        "houseandgarden": "sass/houseandgarden/houseandgarden.scss",
         "missvogue": "sass/missvogue/missvogue.scss",
-        "vogue": "sass/vogue/vogue.scss"
+        "tatler": "sass/tatler/tatler.scss",
+        "traveller": "sass/traveller/traveller.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "wired": "sass/wired/wired.scss",
+        "wireframe": "sass/wireframe/wireframe.scss"
     },
     "partials": {
         "figure": "templates/figure.html"

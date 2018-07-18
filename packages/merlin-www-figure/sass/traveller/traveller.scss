@@ -2,14 +2,8 @@
 
 @import '../wireframe/wireframe';
 
-.c-figure {}
-
 .c-figure__container {
 	margin-bottom: 20px;
-}
-
-.c-figure__wrapper {
-
 }
 
 .c-figure__toolbar {
@@ -20,7 +14,7 @@
 	right: 18px;
 }
 
-li.c-figure__toolbar-listitem {
+.c-figure__toolbar-listitem {
 	background-color: $WHITE;
     height: 40px;
     width: 40px;
@@ -36,15 +30,6 @@ li.c-figure__toolbar-listitem {
     }
 }
 
-@each $name, $color in $COLOUR_SOCIAL_LIGHT {
-    .c-figure__toolbar-listitem--#{$name} {
-
-        svg, path {
-            fill: map-get($COLOUR_SOCIAL_LIGHT, $name);
-        }
-    }
-}
-
 .c-figure__toolbar-listitem--more {
     svg, path {
         fill: $MUSTASAARI;
@@ -54,6 +39,15 @@ li.c-figure__toolbar-listitem {
 .c-figure__toolbar-listitem--zoom {
     svg, path {
         fill: $MUSTASAARI;
+    }
+}
+
+@each $name, $color in $COLOUR_SOCIAL_LIGHT {
+    .c-figure__toolbar-listitem--#{$name} {
+
+        svg, path {
+            fill: map-get($COLOUR_SOCIAL_LIGHT, $name);
+        }
     }
 }
 
@@ -98,14 +92,10 @@ li.c-figure__toolbar-listitem {
         content: 'Credit: ';
     }
 
-
     @include min-screen($ARTICLE_TOTAL) {
     	padding-left: 220px;
     }
 }
-
-.c-figure__magnifier {}
-.c-figure__toolbar {}
 
 .c-figure__magnifier--full-screen {
     background-color: $MUSTASAARI;
@@ -124,20 +114,21 @@ li.c-figure__toolbar-listitem {
 	    width: 16px;
 	}
 }
+
 .c-figure__magnifier-button--close {
     svg {
-    	border: 1px solid #fff;
-        fill: #fff;
-        stroke: #fff;
+    	border: 1px solid $WHITE;
+        fill: $WHITE;
+        stroke: $WHITE;
     }
 }
 
 .c-figure__magnifier-button--zoom-in,
 .c-figure__magnifier-button--zoom-out {
     svg {
-    	border: 1px solid #000;
-        fill: #000;
-        stroke: #000;
+    	border: 1px solid $BLACK;
+        fill: $BLACK;
+        stroke: $BLACK;
     }
 }
 
@@ -148,7 +139,3 @@ li.c-figure__toolbar-listitem {
 		}
 	}
 }
-
-.c-figure__magnifier-toolbar-item {}
-.c-figure__magnifier-image {}
-.c-figure__magnifier-image-center {}
