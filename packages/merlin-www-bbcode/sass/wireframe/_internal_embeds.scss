@@ -46,7 +46,10 @@
 .bb-card__byline {}
 .bb-card__byline--sponsorship {}
 
-.bb-card__meta {}
+.bb-card__meta {
+    list-style: none;
+}
+
 .bb-card__meta-item {}
 .bb-card__meta-item--date {}
 
