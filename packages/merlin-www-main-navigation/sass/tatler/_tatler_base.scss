@@ -14,8 +14,17 @@
 }
 
 .c-nav {
-    border-top: 1px solid $white-two;
     box-sizing: border-box;
+
+    &:before {
+        background-color: $white-two;
+        content: "";
+        height: 1px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
 
     &.is-gallery-active {
         .c-nav__logo {

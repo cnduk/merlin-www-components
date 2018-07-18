@@ -21,8 +21,17 @@
 
 .c-nav {
     background-color: $black;
-    border-top: 1px solid $mineshaft;
     box-sizing: border-box;
+
+    &:before {
+        background-color: $mineshaft;
+        content: "";
+        height: 1px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
 }
 
 .c-nav__search-icon {

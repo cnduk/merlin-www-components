@@ -16,8 +16,17 @@
 }
 
 .c-nav {
-    border-top: 1px solid $mercury;
     box-sizing: border-box;
+
+    &:before {
+        background-color: $mercury;
+        content: "";
+        height: 1px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
 }
 
 .c-nav__search-icon {
