@@ -1,0 +1,19 @@
+{{# is_inline }}
+    {{# data }}
+        <p class="bb-p">{{ &. }}</p>
+    {{/ data }}
+{{/ is_inline }}
+{{# is_raw }}
+    {{# data }}
+        {{ &. }}
+    {{/ data }}
+{{/ is_raw }}
+{{# is_block }}
+    {{> @cnbritain/merlin-www-bbcode }}
+{{/ is_block }}
+{{# is_internal_embeds }}
+    {{> @cnbritain/merlin-www-bbcode }}
+{{/ is_internal_embeds }}
+{{# is_external_embeds }}
+    {{> @cnbritain/merlin-www-bbcode }}
+{{/ is_external_embeds }}

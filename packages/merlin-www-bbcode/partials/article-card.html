@@ -1,6 +1,6 @@
-<article class="bb-card {{ style.cls }}">
+<article class="bb-card{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
 	{{# data.link }}
-		<a href="{{ &data.url }}" class="bb-card__link bb-card__link--article {{ style.cls }}">{{ data.title }}</a>
+		<a href="{{ &data.url }}" class="bb-card__link bb-card__link--article{{# style.cls }} {{ style.cls }}{{/ style.cls }}">{{ data.title }}</a>
 	{{/ data.link }}
 
 	<div class="bb-card__obj">
@@ -8,7 +8,7 @@
 			<div class="bb-card__images">
 				{{# data.image_list }}
 					{{# data.items }}
-						<div class="bb-card__image {{ style.cls }} ">
+						<div class="bb-card__image{{# style.cls }} {{ style.cls }}{{/ style.cls }} ">
 							{{# data.item }}
 								{{> @cnbritain/merlin-www-image }}
 							{{/ data.item }}
@@ -29,13 +29,11 @@
 					    <span>{{ data.title }}</span>
 					</h3>
 				{{/ data.title }}
-
-				<hr class="bb-card__separator" />
 			</div>
 
 			<div class="bb-card__footer">
 				{{# data.sponsor }}
-				    <p class="bb-card__byline bb-card__byline--sponsorship {{ style.cls }}">
+				    <p class="bb-card__byline bb-card__byline--sponsorship{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
 				        <span class="bb-card__byline-prefix">{{ translation.sponsor_prefix }} </span>
 				        <span class="bb-card__byline-name">{{ data.title }}</span>
 				    </p>
@@ -50,9 +48,9 @@
 				{{/ data.sponsor }}
 
 				{{# data.meta_list }}
-				    <ul class="global__list-reset bb-card__meta {{ style.cls }}">
+				    <ul class="global__list-reset bb-card__meta{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
 				        {{# data.items }}
-				            <li class="bb-card__meta-item {{ style.cls }} bb-card__meta-item--{{ data.item.data.meta_type  }}">
+				            <li class="bb-card__meta-item{{# style.cls }} {{ style.cls }}{{/ style.cls }} bb-card__meta-item--{{ data.item.data.meta_type  }}">
 				                {{# data.item }}
 				                    <span class="{{ style.cls }}">{{ data.title }}</span>
 				                {{/ data.item }}

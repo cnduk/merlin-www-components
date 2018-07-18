@@ -1,0 +1,321 @@
+// -------------------- //
+// Card
+// -------------------- //
+.bb-card {
+    background-color: $white;
+    border: 4px solid $azalea;
+    margin: 25px 0;
+    padding: 10px;
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        padding: 20px;
+
+        &:before {
+            @include font("GRAPHIK", 10px, 600, 10px);
+            bottom: 0;
+            content: "Continue Reading";
+            letter-spacing: 1.5px;
+            padding: 20px;
+            position: absolute;
+            right: 0;
+            text-transform: uppercase;
+        }
+
+        &:hover{
+            &:before {
+
+            }
+        }
+    }
+}
+
+.bb-card__link {}
+
+.bb-card__obj {
+    display: table;
+    width: 100%;
+}
+
+.bb-card__obj__header {
+    display: table-cell;
+    padding-right: 10px;
+    vertical-align: top;
+    width: 110px;
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        padding-right: 20px;
+        width: 150px;
+    }
+}
+
+.bb-card__images {}
+.bb-card__image {
+    padding-top: 100%;
+}
+
+.bb-card__image__icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    height: 48px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+
+    svg {
+        display: block;
+        height: 100%;
+        margin: 0 auto;
+        vertical-align: middle;
+        width: 20px;
+        fill: $white;
+    }
+}
+
+.bb-card__obj__body {
+    display: table-cell;
+    vertical-align: top;
+    width: auto;
+}
+
+.bb-card__header {}
+
+p.bb-card__tag {
+    @include font("GRAPHIK", 10px, 'SEMI BOLD', 10px);
+    color: $astronaut;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+h3.bb-card__title {
+    @include font("MILLER_DISPLAY", 16px, 'SEMI BOLD', 19px);
+    color: $dune;
+    letter-spacing: 0;
+
+    @include min-screen($CARD_SWITCHER_WIDTH) {
+        @include font-size(23px);
+        @include line-height(28px);
+    }
+}
+
+.bb-card__teaser {
+    display: none;
+}
+
+.bb-card__footer {}
+
+.bb-card__byline {
+    display: none;
+}
+
+.bb-card__byline--sponsorship {}
+
+.bb-card__byline-prefix {}
+
+.bb-card__byline-name {
+    display:none;
+}
+
+ul.bb-card__meta {
+    display: none;
+}
+
+// -------------------- //
+// Figure
+// -------------------- //
+.bb-figure {
+    margin: 25px 0;
+
+    @include at-x-large-size {
+        margin: 30px 0;
+    }
+}
+
+.bb-figure__wrapper {
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+
+.bb-figure__caption {
+
+    .bb-p {
+        margin: 0;
+        @include font("GRAPHIK", 14px, 'NORMAL', 19px);
+    }
+}
+
+.bb-figure__credit {
+    @include font("GRAPHIK", 8px, 'NORMAL', 8px);
+    color: $natural-gray;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+// -------------------- //
+// Gallery
+// -------------------- //
+.bb-gallery {
+    background: $astronaut;
+    margin: 25px 0;
+
+    @include at-x-large-size {
+        margin: 30px 0;
+    }
+}
+
+.bb-gallery__icon {
+    display:table-cell;
+    padding-left: 10px;
+    vertical-align: middle;
+    width: 56px;
+
+    @include at-x-large-size {
+        padding-left: 20px;
+    }
+
+    &:before {
+        content:"";
+        background: $azalea;
+        border-radius: 50%;
+        display: inline-block;
+        height: 35px;
+        margin-top: -8px;
+        position:absolute;
+        vertical-align: middle;
+        width: 35px;
+    }
+
+    svg {
+        display: inline-block;
+        fill: $astronaut;
+        margin: 0 auto;
+        margin-left: 10px;
+        margin-top: 2px;
+        position: relative;
+        width: 16px;
+    }
+}
+
+.bb-gallery__title {
+    @include font("GRAPHIK", 16px, 'NORMAL', 18px);
+    color: $azalea;
+    display:table-cell;
+    padding: 20px 10px 20px 10px;
+    min-height: 66px;
+
+    @include at-x-large-size {
+        @include font-size(18px);
+        @include line-height(18px);
+    }
+}
+
+.bb-gallery__link {}
+.bb-gallery__cols {}
+ul li.bb-gallery__col {
+    background-color: $astronaut;
+    margin: 0;
+    padding: 0;
+
+    &:after{
+        display: none;
+    }
+}
+
+.bb-gallery__remaining {
+    background-color: rgba(44, 55, 129, 0.6);
+    white-space: nowrap;
+}
+
+
+.bb-gallery__remaining-text--prefix {
+    @include font("GRAPHIK", 18px, 400, 18px);
+    bottom: 3px;
+    color: $azalea;
+    position: relative;
+
+    @include at-x-large-size {
+        @include font-size(25px);
+        @include line-height(25px);
+    }
+
+}
+
+.bb-gallery__remaining-text--value{
+    @include font("GRAPHIK", 30px, 400, 30px);
+    color: $azalea;
+
+    @include at-x-large-size {
+        @include font-size(40px);
+        @include line-height(40px);
+    }
+}
+
+// -------------------- //
+// Video
+// -------------------- //
+.bb-video {
+    background: $astronaut;
+    margin: 25px 0;
+
+    @include at-x-large-size {
+        margin: 30px 0;
+    }
+}
+
+.bb-video__icon {
+    display: table-cell;
+    height: auto;
+    padding-left: 10px;
+    vertical-align: middle;
+    width: 56px;
+
+    @include at-x-large-size {
+        padding-left: 20px;
+    }
+
+    &:before {
+        content:"";
+        background: $azalea;
+        border-radius: 50%;
+        display: inline-block;
+        height: 35px;
+        margin-top: -8px;
+        position:absolute;
+        vertical-align: middle;
+        width: 35px;
+    }
+
+    svg {
+        display: inline-block;
+        fill: $astronaut;
+        margin: 0 auto;
+        margin-left: 12px;
+        margin-top: 2px;
+        position: relative;
+        width: 16px;
+    }
+}
+
+.bb-video__title {
+    @include font("GRAPHIK", 16px, 'NORMAL', 18px);
+    color: $azalea;
+    display: table-cell;
+    padding: 20px 10px 20px 10px;
+    min-height: 66px;
+
+    @include at-x-large-size {
+        @include font-size(18px);
+        @include line-height(18px);
+    }
+}
+
+.bb-video__image {}
+.bb-video__image-icon {
+    display: none;
+}
+
+.bb-video__link {}

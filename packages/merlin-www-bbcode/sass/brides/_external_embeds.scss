@@ -1,7 +1,7 @@
 .bb-embed {
     margin: 32px 0;
 
-    @include text-size-large {
+    @include at-x-large-size {
         margin: 48px 0;
     }
 }
