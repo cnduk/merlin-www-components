@@ -48,7 +48,7 @@
     text-transform: uppercase;
 }
 
-.a-marketing-card__brand__img {
+.a-marketing-card__brand-img {
     margin: 0 auto;
     max-width: 180px;
 
@@ -79,12 +79,12 @@
     margin: 0 auto;
 }
 
-.a-marketing-card__magazine__cover--mobile {
+.a-marketing-card__magazine-cover--mobile {
     display: none;
 }
 
 
-.a-marketing-card__magazine__cover--tablet {
+.a-marketing-card__magazine-cover--tablet {
     background-image: none;
     border: 4px solid $black;
     border-radius: 3px;
@@ -94,7 +94,7 @@
     width: 75px;
 }
 
-.a-marketing-card__magazine__cover--print {
+.a-marketing-card__magazine-cover--print {
     width: 120px;
 }
 

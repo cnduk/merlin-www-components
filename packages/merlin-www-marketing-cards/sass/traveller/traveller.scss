@@ -72,7 +72,7 @@
     }
 }
 
-.a-marketing-card__brand__img {
+.a-marketing-card__brand-img {
     margin: 0 auto;
     max-width: 222px;
     width: 100%;
@@ -123,11 +123,11 @@
     }
 }
 
-.a-marketing-card__magazine__cover--print {
+.a-marketing-card__magazine-cover--print {
     width: 72%;
 }
 
-.a-marketing-card__magazine__cover--tablet {
+.a-marketing-card__magazine-cover--tablet {
     background-color: $MUSTASAARI;
     background-image: none;
     border-radius: 4px;
@@ -139,7 +139,7 @@
     width: 44%;
 }
 
-.a-marketing-card__magazine__cover--mobile {
+.a-marketing-card__magazine-cover--mobile {
     background-image: none;
     display: none;
 }

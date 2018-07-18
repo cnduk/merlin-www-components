@@ -67,7 +67,7 @@
     letter-spacing: 0.02em;
 }
 
-.a-marketing-card__brand__img {
+.a-marketing-card__brand-img {
     margin: 10px auto 30px auto;
 
     @include at-medium-size {
@@ -123,7 +123,7 @@
     }
 }
 
-.a-marketing-card__magazine__cover--print {
+.a-marketing-card__magazine-cover--print {
     margin-left: -48px;
     width: 70%;
 
@@ -132,7 +132,7 @@
     }
 }
 
-.a-marketing-card__magazine__cover--tablet {
+.a-marketing-card__magazine-cover--tablet {
     background: none;
     background-color: $black;
     padding: 11px 8px;
@@ -144,7 +144,7 @@
     }
 }
 
-.a-marketing-card__magazine__cover--mobile {
+.a-marketing-card__magazine-cover--mobile {
     background: none;
     background-color: $black;
     border-radius: 4px;

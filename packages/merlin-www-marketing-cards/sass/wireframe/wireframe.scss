@@ -33,7 +33,7 @@
     display: block;
 }
 
-.a-marketing-card__brand__img {
+.a-marketing-card__brand-img {
     display: block;
     max-width: 120px;
 }
@@ -57,12 +57,12 @@
     width: 180px;
 }
 
-.a-marketing-card__magazine__cover {}
-.a-marketing-card__magazine__cover--print {
+.a-marketing-card__magazine-cover {}
+.a-marketing-card__magazine-cover--print {
     width: 100%;
 }
-.a-marketing-card__magazine__cover--desktop {}
-.a-marketing-card__magazine__cover--tablet {
+.a-marketing-card__magazine-cover--desktop {}
+.a-marketing-card__magazine-cover--tablet {
     background: url("/static/img/template_ipad.png") 0 0 no-repeat;
     background-size: auto 160px;
     border-radius: 5px;
@@ -72,7 +72,7 @@
     right: 0;
     width: 100px;
 }
-.a-marketing-card__magazine__cover--mobile {
+.a-marketing-card__magazine-cover--mobile {
     background: url("/static/img/template_iphone.png") 0 0 no-repeat;
     background-size: 55px auto;
     bottom: 0;
