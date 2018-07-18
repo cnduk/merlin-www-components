@@ -1,35 +1,7 @@
 {
     "name": "@cnbritain/merlin-www-marketing-cards",
-    "demo": {
-        "magazine": {
-            "themes": [
-                "wireframe",
-                "vogue",
-                "glamour",
-                "missvogue",
-                "wired",
-                "gq",
-                "tatler",
-                "bystander"
-            ],
-            "main": "index",
-            "data": "magazine"
-        },
-        "brand-with-logo": {
-            "themes": [
-                "wireframe",
-                "vogue",
-                "glamour",
-                "missvogue",
-                "wired",
-                "gq",
-                "tatler",
-                "bystander"
-            ],
-            "main": "index",
-            "data": "brand-with-logo"
-        }
-    },
+    "description": "Brand, event and magazine marketing cards for articles",
+    "demo": {},
     "js": {
         "demo": "demo/demo.js"
     },
@@ -61,11 +33,9 @@
     "currentTheme": null,
     "main": "index",
     "data": {
-        "brand-without-logo": "data/brand-without-logo.json",
-        "brand-with-logo": "data/brand-with-logo.json",
+        "brand": "data/brand.json",
         "event": "data/event.json",
         "magazine": "data/magazine.json",
         "topic": "data/topic.json"
-    },
-    "description": "Brand, event and magazine marketing cards for articles"
+    }
 }

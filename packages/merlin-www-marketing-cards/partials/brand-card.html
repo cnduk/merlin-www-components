@@ -1,7 +1,7 @@
 <aside class="a-marketing-card a-marketing-card--brand">
-    <div class="a-marketing-card__col">
+    <div class="a-marketing-card__header">
         <div class="a-marketing-card__brand">
-            <span class="a-marketing-card__brand__prefix">{{ translation.title_prefix }}</span>
+            <span class="a-marketing-card__brand-prefix">{{ translation.title_prefix }}</span>
             {{# state.has_logo }}
                 {{# state.has_button }}
                     <a href="{{ &data.button.data.url }}" {{# data.button.state.has_nofollow }}rel="nofollow"{{/ data.button.state.has_nofollow }}>
@@ -18,15 +18,15 @@
             {{/ state.has_logo }}
             {{^ state.has_logo }}
                 {{# state.has_button }}
-                    <span class="a-marketing-card__brand__name"><a href="{{ &data.button.data.url }}" {{# data.button.state.is_nofollow }}rel="nofollow"{{/ data.button.state.is_nofollow }}>{{ data.tag.data.title }}</a></span>
+                    <span class="a-marketing-card__brand-name"><a href="{{ &data.button.data.url }}" {{# data.button.state.is_nofollow }}rel="nofollow"{{/ data.button.state.is_nofollow }}>{{ data.tag.data.title }}</a></span>
                 {{/ state.has_button }}
                 {{^ state.has_button }}
-                    <span class="a-marketing-card__brand__name">{{ data.tag.data.title }}</span>
+                    <span class="a-marketing-card__brand-name">{{ data.tag.data.title }}</span>
                 {{/ state.has_button }}
             {{/ state.has_logo }}
         </div>
     </div>
-    <div class="a-marketing-card__col">
+    <div class="a-marketing-card__body">
         {{# data.title }}
             <h4 class="a-marketing-card__title">{{ . }}</h4>
         {{/ data.title }}
@@ -34,7 +34,7 @@
             <p class="a-marketing-card__desc">{{ . }}</p>
         {{/ data.desc }}
         {{# state.has_button }}
-            <a href="{{ &data.button.data.url }}" class="a-marketing-card__link {{ data.button.style.cls }}" {{# state.is_blank }}target="_blank"{{/ state.is_blank }} {{# data.button.state.is_nofollow }}rel="nofollow"{{/ data.button.state.is_nofollow }}>{{ data.button.data.title }}</a>
+            <a href="{{ &data.button.data.url }}" class="a-marketing-card__cta {{ data.button.style.cls }}" {{# state.is_blank }}target="_blank"{{/ state.is_blank }} {{# data.button.state.is_nofollow }}rel="nofollow"{{/ data.button.state.is_nofollow }}>{{ data.button.data.title }}</a>
         {{/ state.has_button }}
     </div>
 </aside>
