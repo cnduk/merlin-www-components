@@ -86,34 +86,16 @@
 }
 
 .c-topic-strip--c-card-section {
-    margin: 12px (-$MOBILE_SIDE_GUTTER);
+    padding: 0 $MOBILE_SIDE_GUTTER;
     text-align: center;
     white-space: nowrap;
 
-    .c-topic-strip-wrapper {
-        padding-left: $MOBILE_SIDE_GUTTER;
-    }
-
-    .c-topic-strip__list-item:last-child {
-        padding-right: $MOBILE_SIDE_GUTTER;
-    }
-
     @include tablet-size {
-        margin-left: -$TABLET_SIDE_GUTTER;
-        margin-right: -$TABLET_SIDE_GUTTER;
-
-        .c-topic-strip-wrapper {
-            padding-left: $TABLET_SIDE_GUTTER;
-        }
-
-        .c-topic-strip__list-item:last-child {
-            padding-right: $TABLET_SIDE_GUTTER;
-        }
+        padding: 0 $TABLET_SIDE_GUTTER;
     }
 
     @include desktop-size {
-        margin-bottom: 16px;
-        margin-top: 16px;
+        padding: 0 $DESKTOP_SIDE_GUTTER;
     }
 }
 
