@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.10.0"></a>
+# [1.10.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-marketing-cards@1.9.30...@cnbritain/merlin-www-marketing-cards@1.10.0) (2018-07-12)
+
+
+### Features
+
+* **merlin-www-marketing-cards:** new data test ([343314f](https://github.com/cnduk/merlin-www-components/commit/343314f))
+
+
+
+
 <a name="1.9.30"></a>
 ## [1.9.30](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-marketing-cards@1.9.29...@cnbritain/merlin-www-marketing-cards@1.9.30) (2018-07-03)
 

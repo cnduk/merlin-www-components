@@ -1,77 +1,68 @@
 @import '@cnbritain/merlin-www-common:wireframe';
 
-@mixin marketing-card-medium-size() {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
-        @content;
-    }
-}
-
 .a-marketing-card {
     box-sizing: border-box;
     display: table;
     table-layout: fixed;
     width: 100%;
 }
-.a-marketing-card--brand {}
-.a-marketing-card--event {}
-.a-marketing-card--topic {}
-.a-marketing-card--magazine {
-    .a-marketing-card__col {
-        @include marketing-card-medium-size(){
-            vertical-align: middle;
-            width: 50%;
-        }
-    }
-}
 
-.a-marketing-card__brand {}
-.a-marketing-card__brand__img {
+.a-marketing-card__header,
+.a-marketing-card__body {
     display: block;
-    max-width: 120px;
-}
-.a-marketing-card__brand__name {}
-.a-marketing-card__brand__prefix {
-    display: block;
-}
-
-.a-marketing-card__col {
-    display: block;
-    vertical-align: top;
+    vertical-align: middle;
     width: 100%;
 
-    @include marketing-card-medium-size(){
+    @include at-medium-size {
         display: table-cell;
     }
 }
 
-
-.a-marketing-card--brand .a-marketing-card__col,
-.a-marketing-card--event .a-marketing-card__col,
-.a-marketing-card--topic .a-marketing-card__col {
-    @include marketing-card-medium-size(){
-        width: 120px;
-
-        & + .a-marketing-card__col {
-            width: auto;
-        }
+.a-marketing-card--magazine .a-marketing-card__header,
+.a-marketing-card--magazine .a-marketing-card__body {
+    @include at-medium-size {
+        vertical-align: middle;
+        width: 50%;
     }
 }
 
+//brand
+.a-marketing-card--brand {}
+.a-marketing-card__brand {}
+.a-marketing-card__brand-prefix {
+    display: block;
+}
 
+.a-marketing-card__brand-img {
+    display: block;
+    max-width: 120px;
+}
 
+.a-marketing-card__brand-name {}
 
-.a-marketing-card__desc {}
+//event
+.a-marketing-card--event {}
+.a-marketing-card__event {}
+.a-marketing-card__event-name {}
 
+//topic
+.a-marketing-card--topic {}
+.a-marketing-card--topic {}
+.a-marketing-card__topic-name {}
+
+//magazine
+.a-marketing-card--magazine {}
 .a-marketing-card__magazine {
     position: relative;
     width: 180px;
 }
-.a-marketing-card__magazine__cover {}
-.a-marketing-card__magazine__cover--print {
+
+.a-marketing-card__magazine-cover {}
+.a-marketing-card__magazine-cover--print {
     width: 100%;
 }
-.a-marketing-card__magazine__cover--desktop {}
-.a-marketing-card__magazine__cover--tablet {
+.a-marketing-card__magazine-cover--desktop {}
+.a-marketing-card__magazine-cover--tablet {
     background: url("/static/img/template_ipad.png") 0 0 no-repeat;
     background-size: auto 160px;
     border-radius: 5px;
@@ -81,7 +72,7 @@
     right: 0;
     width: 100px;
 }
-.a-marketing-card__magazine__cover--mobile {
+.a-marketing-card__magazine-cover--mobile {
     background: url("/static/img/template_iphone.png") 0 0 no-repeat;
     background-size: 55px auto;
     bottom: 0;
@@ -92,8 +83,11 @@
     width: 45px;
 }
 
-.a-marketing-card__link {
+//marketing
+.a-marketing-card__body{}
+.a-marketing-card__title {}
+.a-marketing-card__desc {}
+.a-marketing-card__cta {
     display: inline-block;
 }
 
-.a-marketing-card__title {}

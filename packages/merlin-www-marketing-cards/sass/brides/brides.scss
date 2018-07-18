@@ -1,4 +1,3 @@
-
 @import '@cnbritain/merlin-www-common:brides';
 @import '@cnbritain/merlin-www-buttons:brides';
 
@@ -7,32 +6,99 @@
 .a-marketing-card {
     background-color: $diamond;
     padding: 0 20px;
+    text-align: center;
+
+    @include at-medium-size {
+        padding: 24px 32px;
+    }
 }
 
-.a-marketing-card__brand {}
-.a-marketing-card__brand__prefix {
+.a-marketing-card__header {
+    padding: 34px 0;
+
+    @include at-medium-size {
+        border-bottom: 1px solid $ballet-grey;
+        border-top: 1px solid $ballet-grey;
+        padding: 32px 24px;
+        vertical-align: top;
+        width: 50%;
+    }
+}
+
+.a-marketing-card__body {
+    border-top: 1px solid $ballet-grey;
+    padding: 20px 0 34px;
+
+    @include at-medium-size {
+        border-bottom: 1px solid $ballet-grey;
+        border-left: 1px solid $ballet-grey;
+        padding: 32px 24px;
+        vertical-align: top;
+        width: 50%;
+    }
+}
+
+//brand
+.a-marketing-card__brand-prefix {
     @include font('SOLEIL', 10px, null, 16px);
     color: $ascot-grey;
     display: inline-block;
-    margin: 6px 0;
     letter-spacing: 0.12em;
     margin: 0 0 12px 0;
     text-transform: uppercase;
 }
-.a-marketing-card__brand__img {
+
+.a-marketing-card__brand-img {
     margin: 0 auto;
     max-width: 180px;
-}
-.a-marketing-card__brand__name {}
 
-.a-marketing-card__col {
-    padding: 34px 0;
-}
-.a-marketing-card__col + .a-marketing-card__col {
-    border-top: 1px solid $ballet-grey;
-    padding: 20px 0 34px 0;
+    @include at-medium-size {
+        max-width: 175px;
+    }
 }
 
+.a-marketing-card__brand-name {
+    @include font('SOLEIL', 20px, "BOLD", 24px);
+    display: block;
+    text-transform: uppercase;
+
+    a {
+        color: $ascot-grey;
+    }
+}
+
+//event
+//topic
+.a-marketing-card--event .a-marketing-card__header,
+.a-marketing-card--topic .a-marketing-card__header{
+    padding-bottom: 0;
+}
+
+//magazine
+.a-marketing-card__magazine {
+    margin: 0 auto;
+}
+
+.a-marketing-card__magazine-cover--mobile {
+    display: none;
+}
+
+
+.a-marketing-card__magazine-cover--tablet {
+    background-image: none;
+    border: 4px solid $black;
+    border-radius: 3px;
+    border-width: 8px 4px;
+    box-shadow: 0 0 0 1px #303030;
+    padding: 0;
+    width: 75px;
+}
+
+.a-marketing-card__magazine-cover--print {
+    width: 120px;
+}
+
+//marketing
 .a-marketing-card__title {
     @include font('FREIGHT DISPLAY PRO', 16px, 'NORMAL', 20px);
     color: $ascot-grey;
@@ -49,31 +115,14 @@
     margin-top: 8px;
 }
 
-.a-marketing-card__magazine {
-    margin: 0 auto;
-    width: 180px;
-}
-.a-marketing-card__magazine__cover {}
-.a-marketing-card__magazine__cover--mobile {
-    display: none;
-}
-.a-marketing-card__magazine__cover--tablet {
-    background-image: none;
-    border: 4px solid #000;
-    border-radius: 3px;
-    border-width: 8px 4px;
-    box-shadow: 0 0 0 1px #303030;
-    padding: 0;
-    width: 75px;
-}
-.a-marketing-card__magazine__cover--print {
-    width: 120px;
+.a-marketing-card__desc + .a-marketing-card__cta,
+.a-marketing-card__title + .a-marketing-card__cta {
+    margin-top: 20px;
 }
 
-.a-marketing-card__link {
+.a-marketing-card__cta {
     @include button-single;
     @include button-single-light;
-
     padding: 17px 22px;
 
     &:hover,
@@ -81,56 +130,7 @@
         @include button-single-light-hover;
     }
 }
-.a-marketing-card__title + .a-marketing-card__link,
-.a-marketing-card__desc + .a-marketing-card__link {
-    margin-top: 20px;
-}
 
-.a-marketing-card--brand,
-.a-marketing-card--topic {
-    text-align: center;
-}
-.a-marketing-card--event,
-.a-marketing-card--magazine {
-    text-align: center;
 
-    .a-marketing-card__col:first-child {
-        padding-bottom: 0;
-    }
-}
 
-@include marketing-card-medium-size(){
-    .a-marketing-card {
-        padding: 24px 32px;
-    }
 
-    .a-marketing-card__col {}
-
-    .a-marketing-card__brand__img {
-        max-width: 175px;
-    }
-
-    .a-marketing-card--brand,
-    .a-marketing-card--topic,
-    .a-marketing-card--event,
-    .a-marketing-card--magazine {
-
-        .a-marketing-card__col {
-            border-bottom: 1px solid $ballet-grey;
-            border-top: 1px solid $ballet-grey;
-            padding: 32px 24px;
-            width: 50%;
-        }
-
-        .a-marketing-card__col + .a-marketing-card__col {
-            border-bottom: 1px solid $ballet-grey;
-            border-left: 1px solid $ballet-grey;
-        }
-
-    }
-
-    .a-marketing-card--magazine .a-marketing-card__col:first-child {
-        padding-bottom: 32px;
-    }
-
-}

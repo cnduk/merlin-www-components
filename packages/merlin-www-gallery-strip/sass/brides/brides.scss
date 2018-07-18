@@ -5,57 +5,53 @@
 
 .c-gallery-strip {
     margin: 32px 0;
+    padding: 0 $MOBILE_SIDE_GUTTER;
 
-    @include desktop-size {
+    @include at-medium-size {
+        padding: 0 $TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size {
         margin: 48px 0;
+        padding: 0 $DESKTOP_SIDE_GUTTER;
     }
 }
 
-.c-gallery-strip__wrapper {
-    margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
-    position: relative;
+.c-gallery-strip-wrapper {}
+
+.c-gallery-strip-wrapper:hover .c-gallery-strip__title,
+.c-gallery-strip__link:focus ~ * .c-gallery-strip__title {
+    color: $pink-rose;
 }
 
-// Image
 .c-gallery-strip__images {
     position: relative;
 }
+
 .c-gallery-strip__images:after {
     background-color: $pink-rose;
     bottom: -16px;
-    display: block;
     content: '';
+    display: block;
     height: 32px;
     left: 50%;
     position: absolute;
     width: 1px;
 }
 
-.c-gallery-strip__list__item {
-    img {
-        width: 100%;
-    }
-}
+.c-gallery-strip__listitem {}
 
 .c-gallery-strip__remaining {
     @include font('SOLEIL', 24px, 400, 24px, 10);
     background-color: rgba($black, 0.25);
     color: $white;
-}
-.c-gallery-strip__remaining__label {}
 
-@include desktop-size {
-    .c-gallery-strip__remaining {
+    @include at-x-large-size {
         @include font-size(32px);
         @include line-height(32px);
     }
 }
 
-
-
-
-// Content
 .c-gallery-strip__detail {
     margin: 28px 0 0 0;
     text-align: center;
@@ -78,70 +74,12 @@
     text-transform: uppercase;
 }
 
-
-
-// Variants
 .c-gallery-strip--tag {
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
 
-    .c-gallery-strip__list__item:nth-child(3) {
-        .c-gallery-strip__remaining {
-            display: block;
-        }
-    }
-
-    .c-gallery-strip__list__item:nth-child(n+4) {
-        display: none;
-    }
-
-    @include tablet-size {
+    @include at-medium-size {
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
-
-        .c-gallery-strip__list__item {
-            width: 16.66%;
-        }
-
-        .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+6) {
-            display: inline-block;
-        }
-
-        .c-gallery-strip__list__item:nth-child(3) {
-            .c-gallery-strip__remaining {
-                display: none;
-            }
-        }
-
-        .c-gallery-strip__list__item:nth-child(6) {
-            .c-gallery-strip__remaining {
-                display: block;
-            }
-        }
-
-        .c-gallery-strip__detail {}
-    }
-
-    @include desktop-size {
-
-        .c-gallery-strip__list__item {
-            width: 12.5%;
-        }
-
-        .c-gallery-strip__list__item:nth-child(-n+8) {
-            display: inline-block;
-        }
-
-        .c-gallery-strip__list__item:nth-child(6) {
-            .c-gallery-strip__remaining {
-                display: none;
-            }
-        }
-        .c-gallery-strip__list__item:nth-child(8) {
-            .c-gallery-strip__remaining {
-                display: block;
-            }
-        }
-
     }
 }

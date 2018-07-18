@@ -3,6 +3,63 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.9.0"></a>
+# [1.9.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.8.0...@cnbritain/merlin-www-js-pages@1.9.0) (2018-07-17)
+
+
+### Features
+
+* **merlin-www-js-pages:** add top stories event tracking in articles ([2de0c8b](https://github.com/cnduk/merlin-www-components/commit/2de0c8b))
+
+
+
+
+<a name="1.8.0"></a>
+# [1.8.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.7.1...@cnbritain/merlin-www-js-pages@1.8.0) (2018-07-17)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** always apply recommended and read next tracking listeners ([dc6ee1b](https://github.com/cnduk/merlin-www-components/commit/dc6ee1b))
+
+
+### Features
+
+* **merlin-www-js-pages:** add event tracking for inline article cards ([84652c7](https://github.com/cnduk/merlin-www-components/commit/84652c7))
+
+
+
+
+<a name="1.7.1"></a>
+## [1.7.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.7.0...@cnbritain/merlin-www-js-pages@1.7.1) (2018-07-12)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
+<a name="1.7.0"></a>
+# [1.7.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.6.2...@cnbritain/merlin-www-js-pages@1.7.0) (2018-07-12)
+
+
+### Features
+
+* **merlin-www-js-pages:** add event tracking to article recommended and read next ([d0eb3e8](https://github.com/cnduk/merlin-www-components/commit/d0eb3e8))
+
+
+
+
+<a name="1.6.2"></a>
+## [1.6.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.6.1...@cnbritain/merlin-www-js-pages@1.6.2) (2018-07-10)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** update top stories with scrolling ([170eb9b](https://github.com/cnduk/merlin-www-components/commit/170eb9b))
+
+
+
+
 <a name="1.6.1"></a>
 ## [1.6.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.6.0...@cnbritain/merlin-www-js-pages@1.6.1) (2018-07-09)
 

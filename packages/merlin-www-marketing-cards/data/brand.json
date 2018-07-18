@@ -1,0 +1,145 @@
+{
+    "data": {
+        "button": {
+            "data": {
+                "title": "Discover More",
+                "url": "https://www.uniqlo.com/uk/en/pages/underwear/?utm_campaign=2018-03_Wireless_bra&utm_content=&utm_medium=partnership&utm_source=Glamour"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "Link"
+        },
+        "desc": "This contains a fairly big description for the marketing card. It goes over so much stuff.",
+        "title": "Example title for card",
+        "link": {
+            "data": {
+                "title": "Uniqlo",
+                "url": "https://www.uniqlo.com/uk/en/pages/underwear/?utm_campaign=2018-03_Wireless_bra&utm_content=&utm_medium=partnership&utm_source=Glamour"
+            },
+            "state": {
+                "is_blank": false,
+                "is_nofollow": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "Link"
+        },
+        "logo": {
+            "data": {
+                "image": {
+                    "data": {
+                        "alt_text": null,
+                        "credit": null,
+                        "description": null,
+                        "look_number": null,
+                        "title": null,
+                        "width": null,
+                        "image_url": "https://gl-images.condecdn.net/image/qBj13dnpmY0/crop/150/f/uniqlo_logo.png"
+                    },
+                    "state": {
+                        "is_image": false,
+                        "is_picture": false,
+                        "is_static": true,
+                        "is_svg": false,
+                        "is_linked": false,
+                        "is_landscape": false,
+                        "is_portrait": false,
+                        "is_square": false,
+                        "is_lazyload": true
+                    },
+                    "style": {
+                        "cls": "a-marketing-card__brand__img",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "StaticImage"
+                },
+                "link": {
+                    "data": {
+                        "title": "Uniqlo",
+                        "url": "https://www.uniqlo.com/uk/en/pages/underwear/?utm_campaign=2018-03_Wireless_bra&utm_content=&utm_medium=partnership&utm_source=Glamour"
+                    },
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": true
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "Link"
+                }
+            },
+            "state": {
+                "is_linked": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "LinkedImage"
+        },
+        "tag": {
+            "data": {
+                "event_information": null,
+                "link": {
+                    "data": {
+                        "title": "Uniqlo",
+                        "url": "http://localhost:3000/brand/uniqlo"
+                    },
+                    "state": {
+                        "is_blank": false,
+                        "is_nofollow": false
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "Link"
+                },
+                "title": "Uniqlo",
+                "uid": "Eed69bvopDp",
+                "sponsor": null
+            },
+            "state": {
+                "has_link": true,
+                "is_sponsored": false
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "Tag"
+        }
+    },
+    "state": {
+        "is_brand": true,
+        "is_event": false,
+        "is_magazine": false,
+        "is_topic": false,
+        "has_button": true,
+        "has_logo": true
+    },
+    "style": {
+        "cls": "a-marketing-card--brand",
+        "inline": ""
+    },
+    "translation": {
+        "title_prefix": "In partnership with"
+    },
+    "type": "BrandMarketingCard"
+}

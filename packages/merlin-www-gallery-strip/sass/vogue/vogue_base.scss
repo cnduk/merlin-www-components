@@ -1,34 +1,56 @@
 
 .c-gallery-strip {
-    margin-bottom: $MARGIN_LARGE;
-    margin-top: $MARGIN_LARGE;
-}
+    margin: $MARGIN_LARGE auto;
+    padding: 0 $MOBILE_SIDE_GUTTER;
 
-.c-gallery-strip__wrapper {
-    position: relative;
+    @include at-medium-size {
+        padding: 0 $TABLET_SIDE_GUTTER;
+    }
 
-    &:hover,
-    &:focus {
-        .c-gallery-strip__title,
-        .c-gallery-strip__subtitle {
-            opacity: 0.7;
-        }
-
-        .c-gallery-strip__list {
-            opacity: 0.8;
-        }
+    @include at-x-large-size {
+        padding: 0 $DESKTOP_SIDE_GUTTER;
     }
 }
 
-.c-gallery-strip__link {}
+.c-gallery-strip-wrapper {}
+
+.c-gallery-strip-wrapper:hover .c-gallery-strip__title,
+.c-gallery-strip-wrapper:hover .c-gallery-strip__subtitle,
+.c-gallery-strip-wrapper:hover .c-gallery-strip__list,
+.c-gallery-strip__link:focus ~ * .c-gallery-strip__title,
+.c-gallery-strip__link:focus ~ * .c-gallery-strip__subtitle,
+.c-gallery-strip__link:focus ~ * .c-gallery-strip__list {
+    opacity: 0.7;
+}
 
 .c-gallery-strip__list {
     opacity: 1;
     transition: opacity 0.3s ease;
-}
-.c-gallery-strip__list__item {}
-.c-gallery-strip__images__image {}
 
+    @include at-medium-size {
+        margin: 0 -3px;
+    }
+}
+
+.c-gallery-strip__listitem {
+    @include at-medium-size {
+        padding: 0 3px;
+    }
+}
+
+.c-gallery-strip__remaining {
+    background-color: rgba(0,0,0,0.3);
+
+    @include at-medium-size {
+        left: 3px;
+        right: 3px;
+    }
+}
+
+.c-gallery-strip__remaining-label {
+    @include font('NOBEL', 24px);
+    color: $white;
+}
 
 .c-gallery-strip__detail {
     background: $white;
@@ -37,17 +59,13 @@
     position: relative;
     text-align: center;
     z-index: 1;
-}
 
-.c-gallery-strip__remaining {
-    background-color: rgba(0,0,0,0.3);
+    @include at-medium-size {
+        margin-left: auto;
+        margin-right: auto;
+        width: 320px;
+    }
 }
-.c-gallery-strip__remaining__label {
-    @include font('NOBEL', 24px);
-    color: $white;
-}
-.c-gallery-strip__remaining__prefix {}
-.c-gallery-strip__remaining__value {}
 
 .c-gallery-strip__title {
     @include font('ITC CASLON', 24px, 'NORMAL');
@@ -56,6 +74,7 @@
     opacity: 1;
     transition: opacity 0.3s ease;
 }
+
 .c-gallery-strip__subtitle {
     @include font('NOBEL', 10px);
     color: $dove-gray;
@@ -63,85 +82,4 @@
     opacity: 1;
     text-transform: uppercase;
     transition: opacity 0.3s ease;
-}
-
-
-.c-gallery-strip--tag {
-    .c-gallery-strip__list {
-        text-align: center;
-    }
-    .c-gallery-strip__list__item:nth-child(n+4){
-        display: none;
-    }
-    .c-gallery-strip__list__item:nth-child(3){
-        .c-gallery-strip__remaining {
-            display: block;
-        }
-    }
-}
-
-.c-gallery-strip--gutters {}
-
-@include tablet-size {
-    .c-gallery-strip__detail {
-        margin-left: $MARGIN_LARGE;
-        margin-right: $MARGIN_LARGE;
-    }
-    .c-gallery-strip--tag {
-        .c-gallery-strip__list__item {
-            display: inline-block;
-            width: 16.66%;
-        }
-        .c-gallery-strip__detail {
-            margin-left: auto;
-            margin-right: auto;
-            width: 320px;
-        }
-        .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+6){
-            display: inline-block;
-        }
-        .c-gallery-strip__list__item:nth-child(3){
-            .c-gallery-strip__remaining {
-                display: none;
-            }
-        }
-        .c-gallery-strip__list__item:nth-child(6){
-            .c-gallery-strip__remaining {
-                display: block;
-            }
-        }
-    }
-    .c-gallery-strip--gutters {
-        .c-gallery-strip__list {
-            margin: 0 -3px;
-        }
-        .c-gallery-strip__list__item {
-            padding: 0 3px;
-        }
-        .c-gallery-strip__remaining {
-            left: 3px;
-            right: 3px;
-        }
-    }
-}
-
-@include desktop-size {
-    .c-gallery-strip--tag {
-        .c-gallery-strip__list__item {
-            width: 12.5%;
-        }
-        .c-gallery-strip__list__item:nth-child(n+4):nth-child(-n+8){
-            display: inline-block;
-        }
-        .c-gallery-strip__list__item:nth-child(6){
-            .c-gallery-strip__remaining {
-                display: none;
-            }
-        }
-        .c-gallery-strip__list__item:nth-child(8){
-            .c-gallery-strip__remaining {
-                display: block;
-            }
-        }
-    }
 }

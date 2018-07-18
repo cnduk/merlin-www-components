@@ -10,8 +10,17 @@
 }
 
 .c-nav {
-    border-top: 1px solid $loot-box;
     box-sizing: border-box;
+
+    &:before {
+        background-color: $loot-box;
+        content: "";
+        height: 1px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
 }
 
 .c-nav__search-icon {

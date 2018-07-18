@@ -2,11 +2,10 @@
 
 @import '../wireframe/wireframe';
 
-.c-figure {}
-
 .c-figure__container {
     margin-bottom: 24px;
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+
+    @include at-x-large-size {
     	margin-bottom: 28px;
     }
 }
@@ -23,7 +22,7 @@
 	right: 16px;
 }
 
-li.c-figure__toolbar-listitem {
+.c-figure__toolbar-listitem {
     background-color: $woodsmoke;
     height: 44px;
     width: 44px;
@@ -38,7 +37,8 @@ li.c-figure__toolbar-listitem {
 	@include font("GOTHAM", 20px, 700, 24px, -4);
 	color: $woodsmoke;
 	margin-bottom: 12px;
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+
+	@include at-x-large-size {
 		margin-bottom: 16px;
 	}
 }
@@ -47,7 +47,8 @@ li.c-figure__toolbar-listitem {
 	.bb-p {
 		margin-bottom: 12px;
 		margin-top: 12px;
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+
+		@include at-x-large-size {
 			margin-bottom: 16px;
 			margin-top: 16px;
 		}

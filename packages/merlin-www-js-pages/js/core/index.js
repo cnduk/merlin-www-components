@@ -80,9 +80,9 @@ export default function init(config) {
         scrollOffset: 30
     });
     var ts = TopStories.get();
-    if(ts.length > 1){
-        ts[1].showNavigation();
-        ts[1].disableScroll();
+    if(ts.length > 0){
+        ts[0].showNavigation();
+        ts[0].disableScroll();
     }
     CardList.init();
     initInternationalRedirect();

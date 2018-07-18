@@ -20,8 +20,17 @@
 }
 
 .c-nav {
-    border-top: 1px solid $ISABEL;
     box-sizing: border-box;
+
+    &:before {
+        background-color: $ISABEL;
+        content: "";
+        height: 1px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
 }
 
 .c-nav__search-icon {
@@ -188,7 +197,6 @@
     @include at-x-large-size {
         @include font-size(14px);
         @include font-weight(600);
-        box-sizing: content-box;
         margin: 0 16px;
         &:hover {
             border-bottom: 1px solid $SHERPA-BLUE;
@@ -239,7 +247,7 @@
                 background-color: $SHERPA-BLUE;
                 content: "";
                 height: 100%;
-                left: -17px;
+                left: -32px;
                 position: absolute;
                 top: 0;
                 width: 1px;

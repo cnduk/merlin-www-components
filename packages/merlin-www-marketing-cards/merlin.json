@@ -1,48 +1,22 @@
 {
     "name": "@cnbritain/merlin-www-marketing-cards",
-    "demo": {
-        "magazine": {
-            "themes": [
-                "wireframe",
-                "vogue",
-                "glamour",
-                "missvogue",
-                "wired",
-                "gq",
-                "tatler",
-                "bystander"
-            ],
-            "main": "index",
-            "data": "magazine"
-        },
-        "brand-with-logo": {
-            "themes": [
-                "wireframe",
-                "vogue",
-                "glamour",
-                "missvogue",
-                "wired",
-                "gq",
-                "tatler",
-                "bystander"
-            ],
-            "main": "index",
-            "data": "brand-with-logo"
-        }
-    },
+    "description": "Brand, event and magazine marketing cards for articles",
+    "demo": {},
     "js": {
         "demo": "demo/demo.js"
     },
     "themes": {
         "brides": "sass/brides/brides.scss",
-        "gq": "sass/gq/gq.scss",
-        "tatler": "sass/tatler/tatler.scss",
-        "wireframe": "sass/wireframe/wireframe.scss",
-        "glamour": "sass/glamour/glamour.scss",
         "bystander": "sass/bystander/bystander.scss",
-        "wired": "sass/wired/wired.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "gq": "sass/gq/gq.scss",
+        "houseandgarden": "sass/houseandgarden/houseandgarden.scss",
         "missvogue": "sass/missvogue/missvogue.scss",
-        "vogue": "sass/vogue/vogue.scss"
+        "tatler": "sass/tatler/tatler.scss",
+        "traveller": "sass/traveller/traveller.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "wired": "sass/wired/wired.scss",
+        "wireframe": "sass/wireframe/wireframe.scss"
     },
     "partials": {
         "topic": "partials/topic-card.html",
@@ -59,9 +33,9 @@
     "currentTheme": null,
     "main": "index",
     "data": {
+        "brand": "data/brand.json",
+        "event": "data/event.json",
         "magazine": "data/magazine.json",
-        "brand-without-logo": "data/brand-without-logo.json",
-        "brand-with-logo": "data/brand-with-logo.json"
-    },
-    "description": "Brand, event and magazine marketing cards for articles"
+        "topic": "data/topic.json"
+    }
 }

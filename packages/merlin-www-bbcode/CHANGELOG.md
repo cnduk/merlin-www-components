@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.15.31"></a>
+## [1.15.31](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.30...@cnbritain/merlin-www-bbcode@1.15.31) (2018-07-12)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** correct vogue show embed after gallery strip changes ([29cb86d](https://github.com/cnduk/merlin-www-components/commit/29cb86d))
+
+
+
+
 <a name="1.15.30"></a>
 ## [1.15.30](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.29...@cnbritain/merlin-www-bbcode@1.15.30) (2018-07-03)
 
