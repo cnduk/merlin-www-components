@@ -4,7 +4,6 @@
     margin-bottom: $MOBILE_SLICE_MARGIN;
     margin-top: $MOBILE_SLICE_MARGIN;
     padding: 0 $MOBILE_SIDE_GUTTER;
-    position: relative;
 
     @include at-medium-size {
         margin-top: $TABLET_SLICE_MARGIN;
@@ -69,7 +68,6 @@
 }
 
 .c-show-season__meta-item {
-    display: inline-block;
     letter-spacing: 1px;
     text-transform: uppercase;
 
