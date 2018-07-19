@@ -8,25 +8,39 @@
 
 @import "../wireframe/wireframe";
 
-.c-card-section {
-    margin-top: $MOBILE_SLICE_MARGIN;
-    margin-bottom: $MOBILE_SLICE_MARGIN;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: $TABLET_SLICE_MARGIN;
-        margin-bottom: $TABLET_SLICE_MARGIN;
+
+
+
+
+/**
+ * Mixins
+ */
+@mixin section-background($background-color) {
+    background-color: $background-color;
+    margin: 0 auto;
+    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+
+    @if $background-color == $vanilla-ice {
+        .c-card__image__icon {
+            background-color: $vanilla-ice;
+
+            svg {
+                fill: $mine-shaft;
+            }
+        }
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: $DESKTOP_SLICE_MARGIN;
-        margin-bottom: $DESKTOP_SLICE_MARGIN;
+    @include at-medium-size {
+        padding: $TABLET_SLICE_MARGIN;
+    }
+
+    @include at-x-large-size {
+        padding: $DESKTOP_SLICE_MARGIN;
     }
 }
 
-.c-card-section--c-tag,
-.c-card-section--c-curated,
-.c-card-section--c-contributors,
-.c-card-section--mag-articles {
+@mixin slice-title {
     .c-card-section__title {
         @include font("MILLER_DISPLAY", 20px, 400, 20px);
         color: $mine-shaft;
@@ -35,63 +49,20 @@
         margin-top: 0;
         text-align: center;
         text-transform: uppercase;
+    }
 
-        a {
-            color: inherit;
-        }
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
+        .c-card-section__title {
             @include font-size(26px);
             @include line-height(26px);
-            border-bottom: none;
+            border-bottom: 1px solid $mine-shaft;
             letter-spacing: 6px;
             padding-bottom: 20px;
         }
     }
-
-    .c-card-section__btn {
-        @include button-single();
-        @include button-single-light();
-        width: 200px;
-
-         @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-             width: initial;
-         }
-
-        &:hover {
-            @include button-single-light-hover();
-        }
-
-        margin-top: 30px;
-    }
 }
 
-.c-card-section--c-tag,
-.c-card-section--mag-articles {
-    .c-card-section__title {
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            border-bottom: 1px solid $mine-shaft;
-        }
-    }
-}
-
-.c-card-section--a-recommended,
-.c-card-section--mag-magazines,
-.c-card-section--v-genre-articles {
-    background-color: $vanilla-ice;
-    margin: 0;
-    max-width: none;
-    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: $TABLET_SLICE_MARGIN;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: $DESKTOP_SLICE_MARGIN;
-    }
-
+@mixin common-title {
     .c-card-section__title {
         @include font("MILLER_DISPLAY", 16px, 400, 16px);
         color: $mine-shaft;
@@ -99,189 +70,310 @@
         margin-bottom: 15px;
         margin-top: 0;
         text-transform: uppercase;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    }
+    @include at-x-large-size {
+        .c-card-section__title {
             @include font-size(20px);
             @include line-height(20px);
         }
+    }
+}
+
+@mixin light-button {
+    .c-card-section__btn {
+        @include button-single;
+        @include button-single-light;
+
+        &:hover,
+        &:focus {
+            @include button-single-light-hover;
+        }
+    }
+}
+
+@mixin dark-button {
+    .c-card-section__btn {
+        @include button-single;
+        @include button-single-dark;
+
+        &:hover,
+        &:focus {
+            @include button-single-dark-hover;
+        }
+    }
+}
+
+@mixin column-base {
+    .c-card-section__card-list {
+        margin: -10px -10px;
+    }
+    .c-card-section__card-listitem {
+        padding: 0 10px;
+        margin: 10px 0;
+    }
+
+    @include at-small-size {
+        .c-card-section__card-list {
+            margin: -15px -10px;
+        }
+
+        .c-card-section__card-listitem {
+            margin: 15px 0;
+        }
+    }
+}
+
+@mixin column-1 {
+    @include column-base;
+
+    .c-card-section__card-listitem {
+        width: 100%;
+    }
+}
+
+@mixin column-2-4 {
+    @include column-base;
+
+    .c-card-section__card-listitem {
+        width: 50%;
+    }
+
+    @include at-x-large-size {
+        .c-card-section__card-listitem {
+            width: 25%;
+        }
+    }
+}
+
+@mixin column-1-2-3 {
+    @include column-base;
+
+    text-align: center;
+
+    .c-card-section__card-list {
+        margin: 0 auto;
+        max-width: 300px*3;
+    }
+
+    .c-card-section__card-listitem {
+        width: 100%;
+    }
+
+    @include at-small-size {
+        .c-card-section__card-listitem {
+            width: 50%;
+        }
+    }
+
+    @include at-large-size {
+        .c-card-section__card-listitem {
+            width: 33.33%;
+        }
+    }
+}
+
+@mixin column-1-2-4 {
+    @include column-base;
+
+    .c-card-section__card-listitem {
+        width: 100%;
+    }
+
+    @include at-small-size {
+        .c-card-section__card-listitem {
+            width: 50%;
+        }
+    }
+
+    @include at-x-large-size {
+        .c-card-section__card-listitem {
+            width: 25%;
+        }
+    }
+}
+
+@mixin column-1-2-43 {
+    @include column-base;
+
+    .c-card-section__card-listitem {
+        width: 100%;
+    }
+
+    @include at-small-size {
+        .c-card-section__card-listitem {
+            width: 50%;
+        }
+    }
+
+    @include at-x-large-size {
+        .c-card-section__card-listitem {
+            width: 33.33%;
+        }
+    }
+}
+
+/**
+ * Defaults
+ */
+.c-card-section {
+    margin-top: $MOBILE_SLICE_MARGIN;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+
+    @include at-medium-size {
+        margin-top: $TABLET_SLICE_MARGIN;
+        margin-bottom: $TABLET_SLICE_MARGIN;
+    }
+
+    @include at-x-large-size {
+        margin-top: $DESKTOP_SLICE_MARGIN;
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+    }
+}
+
+.c-card-section-wrapper {}
+
+.c-card-section__header {}
+.c-card-section__body {}
+.c-card-section__footer {
+    text-align: center;
+}
+
+.c-card-section__logo {
+    margin: 0 auto 30px auto;
+    width: 268px;
+
+    svg, img {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+
+        path {
+            fill: $white;
+        }
+    }
+
+    @include at-x-large-size {
+        width: 331px;
+    }
+}
+.c-card-section__title {
+    a {
+        color: inherit;
+    }
+}
+.c-card-section__nav-strip {
+    margin: 20px (-$MOBILE_SIDE_GUTTER) 25px (-$MOBILE_SIDE_GUTTER);
+
+    @include at-medium-size {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+        margin-top: 15px;
+    }
+}
+
+.c-card-section__card-list {}
+.c-card-section__card-listitem {
+    display: inline-block;
+}
+.c-card-section__card-listitem--ad {}
+
+.c-card-section__btn {
+    margin-top: 30px;
+    width: 200px;
+
+    @include at-x-large-size {
+        width: initial;
+    }
+}
+
+
+/**
+ * Modifiers
+ */
+// .c-card-section--dark {}
+// .c-card-section--sh-latest-articles {}
+// .c-card-section--sh-shows {}
+// .c-card-section--sh-summary-articles {}
+// .c-card-section--sh-summary-shows {}
+// .c-card-section--tg-related-tags {}
+.c-card-section--a-recommended,
+.c-card-section--v-genre-articles {
+    @include section-background($vanilla-ice);
+    @include common-title;
+    @include column-1-2-4;
+    @include light-button;
+}
+.c-card-section--c-contributors {
+    @include slice-title;
+    @include column-1-2-3;
+    @include light-button;
+}
+.c-card-section--c-curated,
+.c-card-section--c-tag {
+    @include slice-title;
+    @include column-1-2-4;
+    @include light-button;
+}
+.c-card-section--c-video-articles {
+    @include section-background($ebony-clay);
+    @include slice-title;
+    @include column-1-2-4;
+    @include dark-button;
+}
+.c-card-section--mag-articles,
+.c-card-section--s-results {
+    @include common-title;
+    @include column-1-2-4;
+    @include light-button;
+}
+.c-card-section--mag-magazines {
+    @include section-background($vanilla-ice);
+    @include common-title;
+    @include column-2-4;
+    @include light-button;
+}
+.c-card-section--tg-articles {
+    @include section-background($vanilla-ice);
+    @include common-title;
+    @include column-1;
+    @include light-button;
+
+    @include at-x-large-size {
+        .c-card-section__card-list {
+            margin-right: 340px;
+        }
+    }
+}
+.c-card-section--tg-articles-grid,
+.c-card-section--v-articles {
+    @include section-background($vanilla-ice);
+    @include common-title;
+    @include column-1-2-43;
+    @include light-button;
+
+    @include at-x-large-size {
+        .c-card-section__card-list {
+            margin-right: 340px;
+        }
+    }
+}
+.c-card-section--v-related-articles {
+    @include section-background($ebony-clay);
+    @include common-title;
+    @include column-1;
+    @include dark-button;
+
+    margin: 0;
+
+    .c-card-section__title {
+        color: $white;
+    }
+
+    @include at-x-large-size {
+        display: none;
     }
 }
 
 .c-card-section--v-genre-articles + .c-card-section--v-articles {
     padding-top: 0;
-}
-
-.c-card-section--v-related-articles {
-    background-color: $ebony-clay;
-    margin: 0;
-    max-width: none;
-    padding: 20px 20px 40px 20px;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: $TABLET_SLICE_MARGIN;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: 0 20px 20px 20px;
-    }
-
-    .c-card-section__title {
-        @include font("BRANDON GROTESQUE", 13px, 700, 13px);
-        color: $white;
-        letter-spacing: 1px;
-        margin-bottom: 20px;
-        margin-top: 0;
-        text-transform: uppercase;
-    }
-
-    .c-card-section__logo {
-        height: 42px;
-        margin: 0 auto 30px auto;
-        width: 268px;
-
-        svg {
-            display: inline-block;
-            height: 100%;
-            width: 100%;
-
-            path {
-                fill: $white;
-            }
-        }
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            height: 52px;
-            width: 331px;
-        }
-    }
-
-    .c-card-section__btn {
-        @include button-single();
-        @include button-single-dark();
-        margin-top: 30px;
-        width: 200px;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-             width: initial;
-        }
-
-        &:hover {
-            @include button-single-dark-hover();
-        }
-
-
-    }
-}
-
-.c-card-section--c-video-articles{
-    background-color: $ebony-clay;
-    margin: 40px 0 0 0;
-    max-width: none;
-    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: $TABLET_SLICE_MARGIN;
-        margin-bottom: 60px;
-        margin-top: 60px;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: $DESKTOP_SLICE_MARGIN;
-    }
-
-    .c-card-section__title {
-        @include font("BRANDON GROTESQUE", 13px, 700, 13px);
-        color: $white;
-        letter-spacing: 1px;
-        margin-bottom: 20px;
-        margin-top: 0;
-        text-transform: uppercase;
-    }
-
-    .c-card-section__logo {
-        height: 42px;
-        margin: 0 auto 30px auto;
-        width: 268px;
-
-        svg {
-            display: inline-block;
-            height: 100%;
-            width: 100%;
-
-            path {
-                fill: $white;
-            }
-        }
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            height: 52px;
-            width: 331px;
-        }
-    }
-
-    .c-card-section__btn {
-        @include button-single();
-        @include button-single-dark();
-        margin-top: 30px;
-        width: 200px;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-             width: initial;
-        }
-
-        &:hover {
-            @include button-single-dark-hover();
-        }
-
-
-    }
-}
-
-.c-card-section--v-related-articles {
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        display: none;
-    }
-}
-
-.c-card-section--tg-articles,
-.c-card-section--v-articles {
-    background-color: $vanilla-ice;
-    margin: 0;
-    max-width: none;
-    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: $TABLET_SLICE_MARGIN;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: $DESKTOP_SLICE_MARGIN;
-    }
-
-    .c-card-section__title {
-        @include font("MILLER_DISPLAY", 16px, 400, 16px);
-        color: $mine-shaft;
-        letter-spacing: 2px;
-        margin-bottom: 20px;
-        margin-top: 0;
-        text-transform: uppercase;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            @include font-size(20px);
-            @include line-height(20px);
-        }
-    }
-
-    .c-card-list {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            margin-right: 340px;
-        }
-    }
-}
-
-.c-card-section__constrain {}
-.c-card-section__logo {}
-.c-card-section__title {}
-.c-card-section__btn {
-
 }
