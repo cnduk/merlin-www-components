@@ -43,6 +43,64 @@
     padding: 20px;
 }
 
+.a-video__playlist {
+    display: flex;
+    flex-direction: column;
+    margin: -10px;
+}
+
+.a-video__playlist-item {
+    padding: 0 10px;
+    margin: 13px 0;
+
+    .c-card__images {
+        &:after {
+            @include font("GRAPHIK", 10px, 600, 10px);
+            color: $white;
+            content: "Now Playing";
+            left: 50%;
+            letter-spacing: 1px;
+            opacity: 0;
+            position: absolute;
+            text-transform: uppercase;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition-duration: 300ms;
+            white-space: nowrap;
+        }
+    }
+
+    .c-card__image {
+        &:after {
+            background-color: rgba($dune, 0.8);
+            bottom: 0;
+            content: "";
+            height: 100%;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition-duration: 300ms;
+            width: 100%;
+        }
+    }
+
+    &.is-active {
+        .c-card__images {
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        .c-card__image {
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
 .a-video__sidebar__wrapper {}
 
 .a-video__sidebar__title {

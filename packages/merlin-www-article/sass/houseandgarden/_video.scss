@@ -50,6 +50,48 @@
     padding: 0 20px 20px 20px;
 }
 
+.a-video__playlist {
+    margin: -10px -10px;
+}
+
+.a-video__playlist-item {
+    display: inline-block;
+    padding: 0 10px;
+    margin: 10px 0;
+    width: 100%;
+
+    .c-card__images {
+        &:after {
+            @include font("BRANDON GROTESQUE", 10px, 700, 10px);
+            background-color: $ebony-clay;
+            bottom: 0;
+            color: $white;
+            content: "Now Playing";
+            left: 0;
+            letter-spacing: 1px;
+            opacity: 0;
+            padding: 10px;
+            position: absolute;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+    }
+
+    &.is-active {
+        .c-card__images {
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        .c-card__image {
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
 .a-video__sidebar__wrapper {}
 
 .a-video__sidebar__title {
