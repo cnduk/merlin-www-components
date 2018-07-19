@@ -3,7 +3,7 @@
     background-color: #000;
     padding: $MOBILE_SIDE_GUTTER 0 10px 0;
 
-    @include at-x-medium-size {
+    @include at-medium-size {
         padding: $TABLET_SIDE_GUTTER 0 10px 0;
     }
 
