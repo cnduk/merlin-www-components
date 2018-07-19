@@ -363,8 +363,16 @@
 /**
  * Modifiers
  */
+// .c-card-section--dark {}
+// .c-card-section--sh-latest-articles {}
+// .c-card-section--sh-shows {}
+// .c-card-section--sh-summary-articles {}
+// .c-card-section--sh-summary-shows {}
 
-.c-card-section--a-recommended {
+.c-card-section--a-recommended,
+.c-card-section--mag-articles,
+.c-card-section--s-results,
+.c-card-section--v-genre-articles {
     @include proxima-title;
     @include column-1-2-4;
     @include light-button;
@@ -420,26 +428,13 @@
         }
     }
 }
-// .c-card-section--dark {}
-.c-card-section--mag-articles {
-    @include proxima-title;
-    @include column-1-2-4;
-    @include light-button;
-}
+
 .c-card-section--mag-magazines {
     @include proxima-title;
     @include column-2-4;
     @include light-button;
 }
-.c-card-section--s-results {
-    @include proxima-title;
-    @include column-1-2-4;
-    @include light-button;
-}
-// .c-card-section--sh-latest-articles {}
-// .c-card-section--sh-shows {}
-// .c-card-section--sh-summary-articles {}
-// .c-card-section--sh-summary-shows {}
+
 .c-card-section--tg-articles {
     @include proxima-title;
     @include column-1;
@@ -451,17 +446,7 @@
         }
     }
 }
-.c-card-section--tg-articles-grid {
-    @include proxima-title;
-    @include column-1-2-43;
-    @include light-button;
-
-    @include at-x-large-size {
-        .c-card-section__card-list {
-            margin-right: 340px;
-        }
-    }
-}
+.c-card-section--tg-articles-grid,
 .c-card-section--v-articles {
     @include proxima-title;
     @include column-1-2-43;
@@ -473,11 +458,7 @@
         }
     }
 }
-.c-card-section--v-genre-articles {
-    @include proxima-title;
-    @include column-1-2-4;
-    @include light-button;
-}
+
 .c-card-section--v-related-articles {
     @include section-background
     @include proxima-title;
