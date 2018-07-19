@@ -15,7 +15,25 @@
                         </h3>
                     {{/ data.title }}
                     <div class="a-video__sidebar__list">
-                        {{> @cnbritain/merlin-www-card-list }}
+                        <ul class="a-video__playlist js-a-video__playlist{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
+                            {{# data.items }}
+                                {{^ state.is_ad }}
+                                    <li class="a-video__playlist-item js-a-video__playlist-item{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
+                                        {{# data.item }}
+                                            {{^ state.is_ad }}
+                                                {{> @cnbritain/merlin-www-card }}
+                                            {{/ state.is_ad }}
+                                            {{# state.is_ad }}
+                                                {{> @cnbritain/merlin-www-ads }}
+                                            {{/ state.is_ad }}
+                                        {{/ data.item }}
+                                    </li>
+                                {{/ state.is_ad }}
+                                {{# state.is_ad }}
+                                    {{> @cnbritain/merlin-www-ads }}
+                                {{/ state.is_ad }}
+                            {{/ data.items }}
+                        </ul>
                     </div>
                 </div>
             </aside>

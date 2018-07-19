@@ -79,6 +79,16 @@
     top: 55px;
 }
 
+.a-video__playlist {
+    font-size: 0;
+    position: relative;
+}
+
+.a-video__playlist-item {
+    display: inline-block;
+    font-size: initial;
+}
+
 .a-video__content-body {
     margin: 0 auto;
     max-width: $XX_LARGE_SIZE + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
