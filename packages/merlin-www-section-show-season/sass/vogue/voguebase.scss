@@ -5,6 +5,18 @@
     margin-top: $MOBILE_SLICE_MARGIN;
     padding: 0 $MOBILE_SIDE_GUTTER;
     position: relative;
+
+    @include tablet-size {
+        margin-top: $TABLET_SLICE_MARGIN;
+        margin-bottom: $TABLET_SLICE_MARGIN;
+        padding: 0 $TABLET_SIDE_GUTTER;
+    }
+
+    @include desktop-size {
+        margin-top: $DESKTOP_SLICE_MARGIN;
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+        padding: 0 $DESKTOP_SIDE_GUTTER;
+    }
 }
 
 .c-show-season-section__wrapper {
@@ -19,6 +31,28 @@
     margin-bottom: $MARGIN_XX_SMALL;
     text-transform: uppercase;
     text-align: center;
+
+    @include tablet-size {
+        @include font-size(25px);
+        position: relative;
+
+        span {
+            background-color: $white;
+            padding: 0 50px;
+            position: relative;
+        }
+
+        &:before {
+            @include dotted-line($dove-gray, 1px, 3px);
+            content: '';
+            height: 1px;
+            left: 0;
+            margin-top: -4px;
+            position: absolute;
+            right: 0;
+            top: 100%;
+        }
+    }
 }
 
 .c-show-season-section__meta {
@@ -110,43 +144,6 @@
         &:nth-child(-n+2){
             margin-bottom: 0;
         }
-    }
-}
-
-@include tablet-size {
-    .c-show-season-section {
-        margin-top: $TABLET_SLICE_MARGIN;
-        margin-bottom: $TABLET_SLICE_MARGIN;
-        padding: 0 $TABLET_SIDE_GUTTER;
-    }
-    .c-show-season-section__title {
-        @include font-size(25px);
-        position: relative;
-
-        span {
-            background-color: $white;
-            padding: 0 50px;
-            position: relative;
-        }
-
-        &:before {
-            @include dotted-line($dove-gray, 1px, 3px);
-            content: '';
-            height: 1px;
-            left: 0;
-            margin-top: -4px;
-            position: absolute;
-            right: 0;
-            top: 100%;
-        }
-    }
-}
-
-@include desktop-size {
-    .c-show-season-section {
-        margin-top: $DESKTOP_SLICE_MARGIN;
-        margin-bottom: $DESKTOP_SLICE_MARGIN;
-        padding: 0 $DESKTOP_SIDE_GUTTER;
     }
 }
 
