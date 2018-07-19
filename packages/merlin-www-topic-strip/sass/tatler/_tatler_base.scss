@@ -85,28 +85,6 @@
 }
 
 .c-topic-strip--c-card-section {
-    margin: 20px (-$MOBILE_SIDE_GUTTER);
     text-align: center;
     white-space: nowrap;
-
-    .c-topic-strip-wrapper {
-        padding-left: $MOBILE_SIDE_GUTTER;
-    }
-
-    .c-topic-strip__list-item:last-child {
-        padding-right: $MOBILE_SIDE_GUTTER;
-    }
-
-    @include tablet-size {
-        margin: 30px (-$TABLET_SIDE_GUTTER);
-
-        .c-topic-strip-wrapper {
-            padding-left: $TABLET_SIDE_GUTTER;
-        }
-
-        .c-topic-strip__list-item:last-child {
-            padding-right: $TABLET_SIDE_GUTTER;
-        }
-    }
-
 }
