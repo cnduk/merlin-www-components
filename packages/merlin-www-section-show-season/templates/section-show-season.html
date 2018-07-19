@@ -1,19 +1,19 @@
-<section class="c-show-season-section {{ style.cls }}">
-    <div class="c-show-season-section__wrapper">
+<section class="c-show-season {{ style.cls }}">
+    <div class="c-show-season-wrapper">
 
         {{# data.title }}
-            <h3 class="c-show-season-section__title"><span>{{ data.title }}</span></h3>
+            <h3 class="c-show-season__title"><span>{{ data.title }}</span></h3>
         {{/ data.title }}
 
-        <ul class="c-show-season-section__meta">
+        <ul class="c-show-season__meta">
             {{# data.season_tag }}
-                <li class="c-show-season-section__meta-item c-show-season-section__meta-item--season {{ style.cls }}">
+                <li class="c-show-season__meta-item c-show-season__meta-item--season {{ style.cls }}">
                     <span>{{ data.title }}</span>
                 </li>
             {{/ data.season_tag }}
 
             {{# data.show_type_tag }}
-                <li class="c-show-season-section__meta-item c-show-season-section__meta-item--show-type {{ style.cls }}">
+                <li class="c-show-season__meta-item c-show-season__meta-item--show-type {{ style.cls }}">
                     <span>{{ data.title }}</span>
                 </li>
             {{/ data.show_type_tag }}
@@ -24,8 +24,8 @@
         {{/ data.card_list }}
 
         {{# data.link }}
-            <div class='c-show-season-section__btn-wrapper'>
-                <a href="{{ data.url }}" class="c-show-season-section__btn {{ style.cls }}">{{ data.title }}</a>
+            <div class='c-show-season__btn-wrapper'>
+                <a href="{{ data.url }}" class="c-show-season__btn {{ style.cls }}">{{ data.title }}</a>
             </div>
         {{/ data.link }}
     </div>

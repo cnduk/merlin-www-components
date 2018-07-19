@@ -1,38 +1,38 @@
 @import "../wireframe/wireframe";
 
-.c-show-season-section {
+.c-show-season {
     margin-bottom: $MOBILE_SLICE_MARGIN;
     margin-top: $MOBILE_SLICE_MARGIN;
     padding: 0 $MOBILE_SIDE_GUTTER;
     position: relative;
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-top: $TABLET_SLICE_MARGIN;
         margin-bottom: $TABLET_SLICE_MARGIN;
         padding: 0 $TABLET_SIDE_GUTTER;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin-top: $DESKTOP_SLICE_MARGIN;
         margin-bottom: $DESKTOP_SLICE_MARGIN;
         padding: 0 $DESKTOP_SIDE_GUTTER;
     }
 }
 
-.c-show-season-section__wrapper {
+.c-show-season-wrapper {
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
     text-align: center;
 }
 
-.c-show-season-section__title {
+.c-show-season__title {
     @include font('NOBEL', 20px, 'BOLD');
     color: $cod-gray;
     margin-bottom: $MARGIN_XX_SMALL;
     text-transform: uppercase;
     text-align: center;
 
-    @include tablet-size {
+    @include at-medium-size {
         @include font-size(25px);
         position: relative;
 
@@ -55,13 +55,20 @@
     }
 }
 
-.c-show-season-section__meta {
+.c-show-season__meta {
     @include font('NOBEL', 10px, null, 16px);
     color: $COLOR_TYPE_META;
     display: inline-block;
+
+    @include card-portrait-to-landscape-size {
+        @include font-size(11px);
+        @include line-height(20px);
+        border-top: none;
+        padding-top: 8px;
+    }
 }
 
-.c-show-season-section__meta-item {
+.c-show-season__meta-item {
     display: inline-block;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -78,32 +85,13 @@
         padding-right: $PADDING_XX_SMALL;
     }
 
-    & + .c-show-season-section__meta-item {
+    & + .c-show-season__meta-item {
         border-left: 1px solid $wild-sand;
         padding-left: $PADDING_XX_SMALL;
     }
 }
 
-
-.c-show-season-section__card-list {
-    margin: $MARGIN_MEDIUM -10px 0 -10px;
-}
-
-.c-show-season-section__card-list-item {
-    box-sizing: border-box;
-    padding: 0 10px;
-    width: 50%;
-
-    &:nth-child(-n+2){
-        margin-bottom: 30px;
-    }
-}
-
-.c-show-season-section__btn__wrapper {
-    text-align: center;
-}
-
-.c-show-season-section__btn {
+.c-show-season__btn {
     @include button-single();
     @include button-single-light();
     margin-top: 35px;
@@ -114,36 +102,5 @@
     }
 }
 
-@include card-portrait-to-landscape-size {
-    .c-show-season-section__meta {
-        @include font-size(11px);
-        @include line-height(20px);
-        border-top: none;
-        padding-top: 8px;
-    }
-    .c-show-season-section__card-list-item {
-        &:nth-child(odd) {
-            padding-right: 20px;
-        }
 
-        &:nth-child(even) {
-            padding-left: 20px;
-        }
-    }
-}
-
-@include three-column-size {
-    .c-show-season-section__card-list-item {
-        width: 25%;
-
-        &:nth-child(odd),
-        &:nth-child(even) {
-            padding: 0 10px;
-        }
-
-        &:nth-child(-n+2){
-            margin-bottom: 0;
-        }
-    }
-}
 
