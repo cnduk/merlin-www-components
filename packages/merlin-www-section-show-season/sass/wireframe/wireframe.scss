@@ -19,6 +19,18 @@
 .c-show-season__meta-item--season {}
 .c-show-season__meta-item--show-type {}
 
+.c-show-season__cards-list {
+    font-weight: normal;
+    line-height: normal;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.c-show-season__cards-listitem {
+    margin: 0;
+    padding: 0;
+}
+
 .c-show-season__btn-wrapper {
         text-align: center;
 }

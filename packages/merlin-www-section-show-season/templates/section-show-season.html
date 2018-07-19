@@ -19,8 +19,16 @@
             {{/ data.show_type_tag }}
         </ul>
 
-        {{# data.card_list }}
-            {{> @cnbritain/merlin-www-card-list }}
+         {{# data.card_list }}
+            <ul class="c-show-season__cards-list">
+                {{# data.items }}
+                    <li class="c-show-season__cards-listitem {{ style.cls }}">
+                        {{# data.item }}
+                        {{> @cnbritain/merlin-www-card }}
+                        {{/ data.item }}
+                    </li>
+                {{/ data.items }}
+            </ul>
         {{/ data.card_list }}
 
         {{# data.link }}
