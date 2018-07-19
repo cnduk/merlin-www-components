@@ -6,7 +6,7 @@
     position: relative;
     text-align: center;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    @include at-x-large-size {
         padding: 30px 30px 40px 30px;
     }
 }
@@ -46,7 +46,7 @@
 .a-review__item--rating {
     margin: 30px 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
       margin: 40px 0;
     }
 }
@@ -56,7 +56,7 @@
     display: inline-block;
     margin: 10px 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
       display: inline-block;
         overflow: inherit;
     }
@@ -71,7 +71,7 @@ li.a-review__rating-list__item {
     width: 13px;
     border-radius: 50px;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin-right: 5px;
     }
 }
@@ -86,7 +86,7 @@ li.a-review__rating-list__item--active {
     display: inline-block;
     margin-bottom: 10px;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
       vertical-align: text-top;
     }
 }

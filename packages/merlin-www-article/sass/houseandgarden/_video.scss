@@ -3,7 +3,7 @@
     background-color: $ebony-clay;
     padding: 40px 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding: 60px 0;
     }
 
@@ -12,7 +12,7 @@
         margin: 0 auto;
         width: 230px;
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             height: 45px;
             width: 315px;
         }
@@ -31,12 +31,12 @@
     padding-left: 0;
     padding-right: 0;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         padding-left: 0;
         padding-right: 0;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
@@ -74,7 +74,7 @@
     .ad__block {
         margin: 40px 0;
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             margin: 0;
             padding: 0;
         }

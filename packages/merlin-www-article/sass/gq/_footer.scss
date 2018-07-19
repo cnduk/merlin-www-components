@@ -16,7 +16,7 @@
 
 .a-related-tags {
     margin: 28px 0 40px 0;
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
     	margin: 40px 0;
     }
 }

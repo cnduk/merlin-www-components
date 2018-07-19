@@ -3,7 +3,7 @@
     margin: 28px 0;
     padding: 32px 20px;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding: 40px;
     }
 }

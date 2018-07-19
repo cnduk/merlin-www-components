@@ -16,7 +16,7 @@
 }
 
 .a-podcast__list-item {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+    @include at-medium-size{
         float: left;
 
         &:not(:last-child) {
@@ -44,7 +44,7 @@
         @include button-group-light-hover();
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT){
+    @include at-medium-size{
         width: auto;
     }
 }

@@ -1,7 +1,7 @@
 .a-header {
     margin: 40px 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin: 60px 0;
     }
 }
@@ -11,7 +11,7 @@
     .a-header__content {
         max-width: none;
         padding-left: 0;
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             padding-right: 360px;
         }
     }
@@ -20,13 +20,13 @@
     .a-header__about,
     .a-header__meta,
     .a-share__list {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             text-align: left;
         }
     }
 
     .a-header__sponsor {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             margin-left: 0;
         }
     }
@@ -34,11 +34,11 @@
 
 .a-header__image {
     margin-top: 40px;
-    max-width: $MAXIMUM_PAGE_WIDTH;
+    max-width: $XX_LARGE_SIZE;
     padding: 0;
     position: relative;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin-top: 60px;
     }
 }
@@ -98,7 +98,7 @@
     max-width: $ARTICLE_TOTAL;
     text-transform: uppercase;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         @include font-size(19px);
         @include line-height(25px);
     }
@@ -114,7 +114,7 @@
         top: 2px;
         width: 14px;
 
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include at-medium-size {
             height: 16px;
             margin: 0 10px 0 0;
             width: 15px;
@@ -141,7 +141,7 @@
         color: $mine-shaft;
         margin: 5px auto 10px auto;
 
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include at-medium-size {
             @include font-size(19px);
             @include line-height(25px);
         }
@@ -168,12 +168,12 @@
     padding-right: $MOBILE_SIDE_GUTTER;
     width: 100%;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
@@ -185,7 +185,7 @@
     max-width: 800px;
     width: 100%;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding: 0 350px 0px 0;
         max-width: 1190px;
     }
@@ -194,7 +194,7 @@
         .a-share__list {
             text-align: center;
 
-            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            @include at-x-large-size {
                 text-align: left;
             }
         }
@@ -209,7 +209,7 @@
     margin-top: 0;
     text-align: center;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         @include font-size(65px);
         @include line-height(68px);
         margin-bottom: 10px;
@@ -220,7 +220,7 @@
 .a-header__separator {
     display: none;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         display: none;
     }
 }
@@ -229,7 +229,7 @@
     margin-top: 10px;
     margin-bottom: 20px;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin-top: 10px;
         margin-bottom: 30px;
     }
@@ -240,7 +240,7 @@
         font-style: italic;
         text-align: center;
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             @include font-size(21px);
             @include line-height(28px);
             text-align: left;
@@ -273,7 +273,7 @@
     text-align: center;
     text-transform: uppercase;
 
-     @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+     @include at-x-large-size {
          text-align: left;
      }
 }
@@ -304,7 +304,7 @@
     text-align: center;
     text-transform: uppercase;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         text-align: left;
     }
 }
@@ -338,7 +338,7 @@ li.a-header__meta-item {
        color: inherit;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         @include font-size(12px);
         @include line-height(12px);
     }
@@ -353,7 +353,7 @@ li.a-header__meta-item {
     margin-top: 10px;
     text-align: center;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin-bottom: 13px;
         margin-top: 0px;
         text-align: left;
@@ -368,7 +368,7 @@ li.a-header__meta-item {
     letter-spacing: 1px;
     text-transform: uppercase;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         @include font-size(13px);
         @include line-height(13px);
     }
@@ -383,7 +383,7 @@ li.a-header__meta-item {
     text-align: center;
     position: relative;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin-left: 0;
         margin-right: 0;
         margin-top: 25px;
@@ -399,7 +399,7 @@ li.a-header__meta-item {
         transform: translateX(-50%);
         width: 100%;
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             display: none;
         }
     }
@@ -414,12 +414,12 @@ li.a-header__meta-item {
     white-space: nowrap;
     text-transform: uppercase;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         display: table-cell;
         padding: 0;
         vertical-align: middle;
     }
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
     @include font-size(13px);
     @include line-height(13px);
   }
@@ -431,7 +431,7 @@ li.a-header__meta-item {
     padding-left: 6px;
     text-transform: uppercase;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
     @include font-size(17px);
     @include line-height(17px);
   }
@@ -439,7 +439,7 @@ li.a-header__meta-item {
 
 .a-header__sponsor-image {
 
-    @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT){
+    @include at-small-size {
         display: block;
     }
 
@@ -451,7 +451,7 @@ li.a-header__meta-item {
         width: auto;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT)  {
+    @include at-x-large-size  {
         display: block;
         margin-top: 0;
         padding-left: 10px;

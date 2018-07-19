@@ -27,7 +27,7 @@ li.a-gallery__thumbnail {
     margin: 2px 0 0 0;
     padding: 0 1px;
 
-    &:nth-child(-n+3){
+    &:nth-child(-n+3) {
         margin-top: 0;
     }
 }
@@ -85,7 +85,7 @@ li.a-gallery__image-listitem {
 }
 
 
-@include tablet-size {
+@include at-medium-size {
     .a-gallery {
         margin-top: 40px;
         margin-bottom: 60px;
@@ -118,7 +118,7 @@ li.a-gallery__image-listitem {
     }
 }
 
-@include desktop-size {
+@include at-x-large-size {
     .c-figure__container {
         margin-bottom: 30px;
     }

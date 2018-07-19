@@ -7,7 +7,7 @@
     position: relative;
     text-align: left;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    @include at-x-large-size {
         margin: 35px 0;
         padding: 30px;
     }
@@ -44,7 +44,7 @@
     text-transform: uppercase;
     width: 100%;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    @include at-x-large-size {
         @include font-size(18px);
         @include line-height(30px);
     }
@@ -58,7 +58,7 @@
     margin-bottom: 5px;
     margin-top: 20px;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    @include at-x-large-size {
         @include font-size(18px);
         @include line-height(22px);
     }
@@ -73,7 +73,7 @@
     color: $dune;
     letter-spacing: 0px;
 
-    @include min-screen($TYPE_LARGE_COPY_WIDTH) {
+    @include at-x-large-size {
         @include font-size(18px);
         @include line-height(22px);
     }
@@ -89,7 +89,7 @@
     display: inline-block;
     margin: 15px 0 10px;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         display: inline-block;
         margin: 20px 0 10px;
         overflow: inherit;
@@ -114,7 +114,7 @@ li.a-review__rating-list__item--active {
     @include font("GRAPHIK", 16px, 'NORMAL', 20px);
     color: $mandy;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
       vertical-align: text-top;
     }
 }

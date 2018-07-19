@@ -3,7 +3,7 @@
         margin: 40px 0;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
+    @include at-x-large-size {
         .a-share {
             margin: 60px 0 40px 0;
         }
@@ -19,7 +19,7 @@
         margin: 40px 0 0 0;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
+    @include at-x-large-size {
         .a-share {
             margin-top: 60px;
         }

@@ -3,11 +3,11 @@
     background-color: #000;
     padding: $MOBILE_SIDE_GUTTER 0 10px 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-medium-size {
         padding: $TABLET_SIDE_GUTTER 0 10px 0;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding: $DESKTOP_SIDE_GUTTER 0 50px 0;
     }
 
@@ -16,7 +16,7 @@
         margin: 0 auto;
         width: 160px;
 
-        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+        @include at-medium-size {
             width: 250px;
         }
     }
@@ -59,7 +59,7 @@
 
 .a-video__ad {
     .ad__block {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             padding: 0;
         }
     }

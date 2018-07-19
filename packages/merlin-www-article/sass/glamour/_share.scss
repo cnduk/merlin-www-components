@@ -2,7 +2,7 @@
     margin-top: 30px;
     position: relative;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin-top: 40px;
     }
 }
@@ -37,7 +37,7 @@
 }
 
 .a-share__list-item--mobile {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         display: none;
     }
 }
@@ -47,7 +47,7 @@
     margin: 20px auto 0 auto;
     text-align: left;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         display: inline-block;
         margin-left: 5px;
         margin-top: 4px;

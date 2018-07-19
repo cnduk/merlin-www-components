@@ -1,7 +1,7 @@
 .a-footer {
     .a-share {
         margin: 40px 0 40px 0;
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             margin-bottom: 60px;
         }
     }
@@ -15,13 +15,13 @@
     }
 
     .c-topic-strip--article-related {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             text-align: left;
         }
     }
 
     .a-related-tags {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             margin-top: 48px;
         }
     }
@@ -31,7 +31,7 @@
 
 .a-related-tags {
     margin: 40px 0 40px 0;
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin-top: 60px;
     }
 }

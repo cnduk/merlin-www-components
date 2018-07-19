@@ -12,7 +12,7 @@
         width: 100%;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         padding: 60px 0 40px 0;
     }
 
@@ -29,13 +29,13 @@
         top: (-$MOBILE_SIDE_GUTTER);
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         &:before {
             top: (-$TABLET_SIDE_GUTTER);
         }
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         &:before {
             top: (-$DESKTOP_SIDE_GUTTER);
         }
@@ -79,7 +79,7 @@
 .a-video__ad {
     margin-bottom: 40px;
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin-bottom: 0;
         top: $PADDING_X_LARGE;
     }

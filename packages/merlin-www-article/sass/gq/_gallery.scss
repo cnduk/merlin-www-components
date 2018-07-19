@@ -1,7 +1,7 @@
 .a-gallery {
 	margin: 0 auto;
 
-	@include desktop-size {
+	@include at-x-large-size {
 
 	}
 }
@@ -11,7 +11,7 @@
 .a-gallery__message {
     margin-bottom: 40px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         margin-bottom: 60px;
     }
 }
@@ -29,11 +29,11 @@
     transition-duration: 300ms;
 	width: $MOBILE_SIDE_GUTTER;
 
-	@include tablet-size {
+	@include at-medium-size {
 		width: $TABLET_SIDE_GUTTER;
 	}
 
-	@include desktop-size {
+	@include at-x-large-size {
 		width: $DESKTOP_SIDE_GUTTER;
 	}
 
@@ -86,7 +86,7 @@ ul.a-gallery__image-list {}
 li.a-gallery__image-listitem {
 	margin-bottom: 40px;
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	@include at-x-large-size {
 		margin-bottom: 60px;
 	}
 
@@ -99,7 +99,7 @@ li.a-gallery__image-listitem {
     margin-left: -2px;
     margin-right: -2px;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin-left: -10px;
         margin-right: -10px;
     }
@@ -114,7 +114,7 @@ li.a-gallery__thumbnail {
         margin-top: 0;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin: 20px 0 0 0;
         padding: 0 10px;
     }
@@ -134,7 +134,7 @@ li.a-gallery__thumbnail {
         width: 40px;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         left: 10px;
         right: 10px;
     }

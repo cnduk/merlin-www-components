@@ -9,14 +9,14 @@
 
 .a-body {
     margin: 32px 0 40px 0;
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin: 48px 0 60px 0;
     }
 
 }
 .a-body--gallery {}
 .a-body--video {
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin-bottom: 48px;
     }
 }

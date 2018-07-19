@@ -7,7 +7,7 @@
 
 
     &.has-sidebar {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             .a-video__player {
                 margin-right: 350px;
             }
@@ -19,17 +19,17 @@
     box-sizing: border-box;
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
-    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    max-width: $XX_LARGE_SIZE + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
     margin: 0 auto;
     position: relative;
     width: 100%;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
@@ -61,7 +61,7 @@
     top: 0;
     width: 350px;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         display: block;
     }
 }
@@ -81,7 +81,7 @@
 
 .a-video__content-body {
     margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    max-width: $XX_LARGE_SIZE + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
     position: relative;
 }
 
@@ -89,7 +89,7 @@
     margin: 0 auto;
     text-align: center;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT){
+    @include at-x-large-size{
         position: absolute;
         right: $DESKTOP_SIDE_GUTTER;
         top: 0;

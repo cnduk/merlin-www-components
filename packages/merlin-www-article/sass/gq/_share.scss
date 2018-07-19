@@ -25,7 +25,7 @@
 }
 
 .a-share__list-item--mobile {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         display: none;
     }
 }

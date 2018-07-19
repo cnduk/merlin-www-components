@@ -3,7 +3,7 @@
     background-color: $dune;
     padding: 32px 0 32px 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding: 40px 0 60px 0;
     }
 
@@ -12,7 +12,7 @@
         margin: 0 auto;
         width: 220px;
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             height: auto;
             margin: 0 auto;
             width: 406px;
@@ -70,7 +70,7 @@
 .a-video__ad {
     .ad__block {
         .ad__container {
-            @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+            @include at-x-large-size {
                 padding: 0;
             }
         }
