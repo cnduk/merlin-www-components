@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.16.1"></a>
+## [1.16.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.16.0...@cnbritain/merlin-www-bbcode@1.16.1) (2018-07-19)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** add position: relative to wireframe figure image ([58c6a53](https://github.com/cnduk/merlin-www-components/commit/58c6a53))
+
+
+
+
 <a name="1.16.0"></a>
 # [1.16.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.31...@cnbritain/merlin-www-bbcode@1.16.0) (2018-07-19)
 
