@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.16.0"></a>
+# [1.16.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.31...@cnbritain/merlin-www-bbcode@1.16.0) (2018-07-19)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** rename embed files to embeds ([f6828b6](https://github.com/cnduk/merlin-www-components/commit/f6828b6))
+
+
+### Features
+
+* **data:** internal embeds added ([b6067fd](https://github.com/cnduk/merlin-www-components/commit/b6067fd))
+* **merlin-www-bbcode:** basic show-gallery-card template and wireframe styles ([acb3111](https://github.com/cnduk/merlin-www-components/commit/acb3111))
+* **merlin-www-bbcode:** demo data and template started ([a1eabbb](https://github.com/cnduk/merlin-www-components/commit/a1eabbb))
+* **merlin-www-bbcode:** external embeds added ([6180ee1](https://github.com/cnduk/merlin-www-components/commit/6180ee1))
+* **merlin-www-bbcode:** pre/code added to data json ([7238b2b](https://github.com/cnduk/merlin-www-components/commit/7238b2b))
+* **merlin-www-bbcode:** updates to data files ([5155135](https://github.com/cnduk/merlin-www-components/commit/5155135))
+
+
+
+
 <a name="1.15.31"></a>
 ## [1.15.31](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.30...@cnbritain/merlin-www-bbcode@1.15.31) (2018-07-12)
 
