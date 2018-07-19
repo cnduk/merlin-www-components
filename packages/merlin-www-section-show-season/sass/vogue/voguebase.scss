@@ -89,6 +89,43 @@
     }
 }
 
+.c-show-season__cards-list {
+    margin: $MARGIN_MEDIUM -10px 0 -10px;
+}
+
+.c-show-season__cards-listitem {
+    box-sizing: border-box;
+    padding: 0 10px;
+    width: 50%;
+
+    &:nth-child(-n+2){
+        margin-bottom: 30px;
+    }
+
+    @include card-portrait-to-landscape-size {
+        &:nth-child(odd) {
+            padding-right: 20px;
+        }
+
+        &:nth-child(even) {
+            padding-left: 20px;
+        }
+    }
+
+    @include three-column-size {
+        width: 25%;
+
+        &:nth-child(odd),
+        &:nth-child(even) {
+            padding: 0 10px;
+        }
+
+        &:nth-child(-n+2){
+            margin-bottom: 0;
+        }
+    }
+}
+
 .c-show-season__btn {
     @include button-single();
     @include button-single-light();

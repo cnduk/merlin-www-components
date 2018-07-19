@@ -20,15 +20,22 @@
 .c-show-season__meta-item--show-type {}
 
 .c-show-season__cards-list {
-    font-weight: normal;
-    line-height: normal;
-    list-style: none;
-    margin: 0;
     padding: 0;
+    font-size: 0;
+    margin: 0 -10px;
 }
 .c-show-season__cards-listitem {
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: initial;
+    vertical-align: top;
     margin: 0;
-    padding: 0;
+    padding: 0 10px;
+    width: 50%;
+
+    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        width: 25%;
+    }
 }
 
 .c-show-season__btn-wrapper {

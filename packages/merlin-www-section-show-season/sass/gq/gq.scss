@@ -70,6 +70,18 @@
 	}
 }
 
+.c-show-season__cards-listitem {
+	margin-top: 20px;
+
+    @include first(2) {
+    	margin-top: 0;
+    }
+
+	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+		margin: 0;
+	}
+}
+
 .c-show-season__btn {
 	@include button-single-two();
 	@include button-single-two-dark();
