@@ -9,6 +9,7 @@
         "prepublish": "npm run lint"
     },
     "dependencies": {
+        "@cnbritain/merlin-www-buttons": "^1.7.33",
         "@cnbritain/merlin-www-common": "^1.14.10"
     },
     "devDependencies": {
