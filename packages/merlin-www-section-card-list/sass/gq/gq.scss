@@ -8,279 +8,399 @@
 
 @import "../wireframe/wireframe";
 
-.c-card-section {
-	margin-top: $MOBILE_SLICE_MARGIN;
-	margin-bottom: $MOBILE_SLICE_MARGIN;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-	    margin-top: $TABLET_SLICE_MARGIN;
-	    margin-bottom: $TABLET_SLICE_MARGIN;
-	}
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-	    margin-top: $DESKTOP_SLICE_MARGIN;
-	    margin-bottom: $DESKTOP_SLICE_MARGIN;
-	}
-}
-
-.c-card-section--a-recommended,
-.c-card-section--mag-articles,
-.c-card-section--mag-magazines,
-.c-card-section--sh-summary-articles,
-.c-card-section--sh-summary-shows,
-.c-card-section--v-articles,
-.c-card-section--v-genre-articles {
-	.c-card-section__title {
-		@include font("GOTHAM", 12px, 700, 12px, 60);
-		color: $woodsmoke;
-		text-transform: uppercase;
-		margin-bottom: 20px;
-		margin-top: 0;
-
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-			padding-bottom: 20px;
-			border-bottom: 1px solid $bon-jour;
-		}
-	}
-}
-
-.c-card-section--s-results {}
-.c-card-section--sh-latest-articles {}
-
-.c-card-section--c-video-articles {
-	background-color: $woodsmoke;
-	margin: 0;
-    max-width: none;
-    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: $TABLET_SLICE_MARGIN;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: $DESKTOP_SLICE_MARGIN;
-    }
-
-    .c-card-section__logo {
-    	height: 50px;
-    	margin: 0 auto 40px auto;
-    	width: 190px;
-
-    	svg {
-    	    display: inline-block;
-    	    height: 100%;
-    	    width: 100%;
-
-    	    path {
-    	        fill: $white;
-    	    }
-    	}
-
-    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    		height: 60px;
-    		width: 228px;
-    	}
-    }
-
+/**
+ * Mixins
+ */
+@mixin light-button {
     .c-card-section__btn {
-		@include button-single-two();
-		@include button-single-two-dark();
+        @include button-single-two;
+        @include button-single-two-light;
 
-        transition-duration: 300ms;
+        &:after {
+            background-image: url("data:image/svg+xml,%3Csvg fill='%234681f5' width='12px' height='12px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8.48'%3E%3Ctitle%3Ebtn-arrownext%3C/title%3E%3Cpath d='M8,12.24l-0.53-.8,4.44-3H2v-1h9.93l-4.44-3L8,3.76,13.79,7.6a0.48,0.48,0,0,1,0,.8Z' transform='translate%28-2 -3.76%29'/%3E%3C/svg%3E");
+        }
 
-		&:hover {
-			@include button-single-two-dark-hover();
-			background: $shark;
-		}
-
-		&:after {
-			background-image: url("data:image/svg+xml,%3Csvg fill='%2385878b' width='12px' height='12px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8.48'%3E%3Ctitle%3Ebtn-arrownext%3C/title%3E%3Cpath d='M8,12.24l-0.53-.8,4.44-3H2v-1h9.93l-4.44-3L8,3.76,13.79,7.6a0.48,0.48,0,0,1,0,.8Z' transform='translate%28-2 -3.76%29'/%3E%3C/svg%3E");
-			background-repeat: no-repeat;
-			content: '';
-			display: inline-block;
-			height: 10px;
-			margin-left: 8px;
-			width: 12px;
-		}
+        &:hover,
+        &:focus {
+            @include button-single-two-light-hover;
+            background-color: $zircon;
+        }
     }
 }
 
-.c-card-section--v-related-articles {
-	background-color: $shark;
-	margin: 0;
-    max-width: none;
-    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+@mixin dark-button {
+    .c-card-section__btn {
+        @include button-single-two;
+        @include button-single-two-dark;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: $TABLET_SLICE_MARGIN;
+        &:after {
+            background-image: url("data:image/svg+xml,%3Csvg fill='%2385878b' width='12px' height='12px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8.48'%3E%3Ctitle%3Ebtn-arrownext%3C/title%3E%3Cpath d='M8,12.24l-0.53-.8,4.44-3H2v-1h9.93l-4.44-3L8,3.76,13.79,7.6a0.48,0.48,0,0,1,0,.8Z' transform='translate%28-2 -3.76%29'/%3E%3C/svg%3E");
+        }
+
+        &:hover,
+        &:focus {
+            @include button-single-two-dark-hover;
+            background-color: $shark;
+        }
     }
+}
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        display: none;
-        padding: $DESKTOP_SLICE_MARGIN;
-    }
-
-    .c-card-section__logo {
-    	height: 50px;
-    	margin: 0 auto 40px auto;
-    	width: 190px;
-
-    	svg {
-    	    display: inline-block;
-    	    height: 100%;
-    	    width: 100%;
-
-    	    path {
-    	        fill: $white;
-    	    }
-    	}
-
-    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    		height: 60px;
-    		width: 228px;
-    	}
-    }
-
+@mixin common-title {
     .c-card-section__title {
-    	@include font("GOTHAM", 12px, 700, 12px, 60);
-    	color: $white;
-    	text-transform: uppercase;
-    	margin-bottom: 20px;
-    	margin-top: 0;
+        @include font("GOTHAM", 12px, 700, 12px, 60);
+        color: $woodsmoke;
+        margin-bottom: 20px;
+        margin-top: 0;
+        text-transform: uppercase;
     }
-
-    .c-card-section__btn {
-		@include button-single-two();
-		@include button-single-two-dark();
-
-        transition-duration: 300ms;
-
-		&:hover {
-			@include button-single-two-dark-hover();
-			background: $shark;
-		}
-
-		&:after {
-			background-image: url("data:image/svg+xml,%3Csvg fill='%2385878b' width='12px' height='12px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8.48'%3E%3Ctitle%3Ebtn-arrownext%3C/title%3E%3Cpath d='M8,12.24l-0.53-.8,4.44-3H2v-1h9.93l-4.44-3L8,3.76,13.79,7.6a0.48,0.48,0,0,1,0,.8Z' transform='translate%28-2 -3.76%29'/%3E%3C/svg%3E");
-			background-repeat: no-repeat;
-			content: '';
-			display: inline-block;
-			height: 10px;
-			margin-left: 8px;
-			width: 12px;
-		}
+    @include at-x-large-size {
+        .c-card-section__title {
+            border-bottom: 1px solid $bon-jour;
+            padding-bottom: 20px;
+        }
     }
 }
 
-.c-card-section--c-contributors,
-.c-card-section--c-curated,
-.c-card-section--c-tag {
-	.c-card-section__title {
-		@include font("GOTHAM", 14px, 700, 16px, 60)
-		color: $woodsmoke;
-		display: table;
-		height: 40px;
-		margin-bottom: 24px;
-		margin-top: 0;
-		text-align: left;
-		text-transform: uppercase;
-		width: 100%;
+@mixin slice-title($border-color: $limed-oak) {
+    .c-card-section__title {
+        @include font("GOTHAM", 14px, 700, 16px, 60)
+        color: $woodsmoke;
+        display: table;
+        height: 40px;
+        margin-bottom: 24px;
+        margin-top: 0;
+        text-align: left;
+        text-transform: uppercase;
+        width: 100%;
 
-		span {
-			display: table-cell;
-			padding-left: 12px;
-			vertical-align: middle;
+        span {
+            display: table-cell;
+            padding-left: 12px;
+            vertical-align: middle;
+        }
 
-			a {
-				color: inherit;
-			}
-		}
+        &:before {
+            background-color: $border-color;
+            content: '';
+            display: table-cell;
+            height: 40px;
+            width: 20px;
+        }
+    }
 
-		&:before {
-			background-color: $limed-oak;
-			content: '';
-			display: table-cell;
-			height: 40px;
-			width: 20px;
-		}
-
-    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    		padding-bottom: 20px;
-    		border-bottom: 1px solid $bon-jour;
-    		margin-bottom: 20px;
-    	}
-	}
-}
-.c-card-section--c-magazine-articles {}
-.c-card-section--sh-shows {}
-
-.c-card-section--sh-latest-articles,
-.c-card-section--tg-articles {
-	.c-card-section__title {
-		@include font("GOTHAM", 14px, 700, 16px, 60)
-		color: $woodsmoke;
-		display: table;
-		height: 40px;
-		margin-bottom: 24px;
-		margin-top: 0;
-		text-align: left;
-		text-transform: uppercase;
-		width: 100%;
-
-		span {
-			display: table-cell;
-			padding-left: 12px;
-			vertical-align: middle;
-		}
-
-		&:before {
-			background-color: $mineshaft;
-			content: '';
-			display: table-cell;
-			height: 40px;
-			width: 20px;
-		}
-
-    	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-    		padding-bottom: 20px;
-    		border-bottom: 1px solid $bon-jour;
-    		margin-bottom: 20px;
-    	}
-	}
-
-	.c-card-list {
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		    margin-right: 340px;
-		}
-	}
+    @include at-x-large-size {
+        .c-card-section__title {
+            border-bottom: 1px solid $bon-jour;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+    }
 }
 
-.c-card-section--sh-articles {}
-.c-card-section--tg-header-articles {}
+@mixin section-background($background-color) {
+    background-color: $background-color;
+    margin: 0 auto;
+    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
 
-.c-card-section__constrain {}
-.c-card-section__logo {}
-.c-card-section__title {}
+    @include at-medium-size {
+        padding: $TABLET_SLICE_MARGIN;
+    }
+
+    @include at-x-large-size {
+        padding: $DESKTOP_SLICE_MARGIN;
+    }
+}
+
+@mixin add-card-separators {
+    .c-card-section__card-listitem + .c-card-section__card-listitem {
+        .c-card {
+            border-top: 1px solid $bon-jour;
+            padding-top: 20px;
+        }
+        .c-card--dark {
+            border-top-color: $mineshaft;
+        }
+    }
+}
+
+@mixin remove-card-separators {
+    .c-card-section__card-listitem + .c-card-section__card-listitem {
+        .c-card {
+            border-top: none;
+            padding-top: inherit;
+        }
+    }
+}
+
+@mixin column-base {
+    .c-card-section__card-list {
+        margin: -10px;
+    }
+    .c-card-section__card-listitem {
+        display: inline-block;
+        padding: 0 10px;
+        margin: 10px 0;
+    }
+}
+
+@mixin column-1 {
+    @include column-base;
+    @include add-card-separators;
+
+    .c-card-section__card-listitem {
+        width: 100%;
+    }
+}
+
+@mixin column-1-3 {
+    @include column-base;
+    @include add-card-separators;
+
+    .c-card-section__card-list {}
+    .c-card-section__card-listitem {
+        width: 100%;
+    }
+
+    @include at-small-size {
+        @include remove-card-separators;
+
+        .c-card-section__card-list {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 300px * 3;
+        }
+
+        .c-card-section__card-listitem {
+            width: 33.33%;
+        }
+    }
+}
+
+@mixin column-2-4 {
+    .c-card-section__card-list {
+        margin: -14px -10px;
+    }
+
+    .c-card-section__card-listitem {
+        display: inline-block;
+        padding: 0 10px;
+        margin: 14px 0;
+        width: 50%;
+    }
+
+    @include at-x-large-size() {
+        .c-card-section__card-listitem {
+            width: 25%;
+        }
+    }
+}
+
+@mixin column-1-2-4 {
+    @include column-base;
+    @include add-card-separators;
+
+    .c-card-section__card-list {}
+    .c-card-section__card-listitem {
+        width: 100%;
+    }
+
+    @include at-small-size {
+        @include remove-card-separators;
+
+        .c-card-section__card-listitem {
+            width: 50%;
+        }
+    }
+
+    @include at-x-large-size {
+        .c-card-section__card-listitem {
+            width: 25%;
+        }
+    }
+}
+
+@mixin column-1-2-43 {
+    @include column-base;
+    @include add-card-separators;
+
+    .c-card-section__card-list {}
+    .c-card-section__card-listitem {
+        width: 100%;
+    }
+
+    @include at-small-size {
+        @include remove-card-separators;
+
+        .c-card-section__card-listitem {
+            width: 50%;
+        }
+    }
+
+    @include at-x-large-size {
+        .c-card-section__card-listitem {
+            width: 33.33%;
+        }
+    }
+}
+
+
+/**
+ * Defaults
+ */
+.c-card-section {
+    margin-top: $MOBILE_SLICE_MARGIN;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+
+    @include at-medium-size {
+        margin-top: $TABLET_SLICE_MARGIN;
+        margin-bottom: $TABLET_SLICE_MARGIN;
+    }
+
+    @include at-x-large-size {
+        margin-top: $DESKTOP_SLICE_MARGIN;
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+    }
+}
+
+.c-card-section-wrapper {}
+
+.c-card-section__header {
+    position: relative;
+}
+.c-card-section__body {}
+.c-card-section__footer {
+    text-align: center;
+}
+
+.c-card-section__logo {
+    margin: 0 auto 40px auto;
+    width: 190px;
+
+    svg,
+    img {
+        display: inline-block;
+        width: 100%;
+
+        path {
+            fill: $white;
+        }
+    }
+
+    @include at-x-large-size {
+        width: 228px;
+    }
+}
+.c-card-section__title {
+    a {
+        color: inherit;
+    }
+}
+.c-card-section__nav-strip {
+    margin: 24px (-$MOBILE_SIDE_GUTTER);
+
+    @include at-medium-size {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size {
+        bottom: -10px;
+        position: absolute;
+        right: $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.c-card-section__card-list {}
+.c-card-section__card-listitem { }
+.c-card-section__card-listitem--ad {}
+
 .c-card-section__btn {
-	@include button-single-two();
-	@include button-single-two-light();
-
+    margin-bottom: -16px;
+    margin-top: 24px;
     transition-duration: 300ms;
 
-	&:hover {
-		@include button-single-two-light-hover();
-		background-color: $zircon;
-	}
+    &:after {
+        background-repeat: no-repeat;
+        content: '';
+        display: inline-block;
+        height: 10px;
+        margin-left: 8px;
+        width: 12px;
+    }
+}
 
-	margin-bottom: -16px;
-	margin-top: 24px;
-	&:after {
-		background-image: url("data:image/svg+xml,%3Csvg fill='%234681f5' width='12px' height='12px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8.48'%3E%3Ctitle%3Ebtn-arrownext%3C/title%3E%3Cpath d='M8,12.24l-0.53-.8,4.44-3H2v-1h9.93l-4.44-3L8,3.76,13.79,7.6a0.48,0.48,0,0,1,0,.8Z' transform='translate%28-2 -3.76%29'/%3E%3C/svg%3E");
-		background-repeat: no-repeat;
-		content: '';
-		display: inline-block;
-		height: 10px;
-		margin-left: 8px;
-		width: 12px;
-	}
+
+
+/**
+ * Modifiers
+ */
+// .c-card-section--dark {}
+// .c-card-section--sh-shows {}
+// .c-card-section--tg-articles-grid {}
+// .c-card-section--tg-related-tags {}
+.c-card-section--a-recommended,
+.c-card-section--mag-articles,
+.c-card-section--s-results,
+.c-card-section--sh-summary-articles,
+.c-card-section--v-genre-articles {
+    @include common-title;
+    @include column-1-2-4;
+    @include light-button;
+}
+.c-card-section--c-contributors {
+    @include slice-title;
+    @include column-1-3;
+    @include light-button;
+}
+.c-card-section--c-curated,
+.c-card-section--c-tag {
+    @include slice-title;
+    @include column-1-2-4;
+    @include light-button;
+}
+.c-card-section--c-video-articles {
+    @include section-background($background-color: $woodsmoke);
+    @include slice-title;
+    @include column-1-2-4;
+    @include dark-button;
+}
+.c-card-section--mag-magazines,
+.c-card-section--sh-summary-shows {
+    @include common-title;
+    @include column-2-4;
+    @include light-button;
+}
+.c-card-section--sh-latest-articles,
+.c-card-section--tg-articles {
+    @include slice-title($border-color: $mineshaft);
+    @include column-1;
+    @include light-button;
+
+    @include at-x-large-size {
+        .c-card-section__card-list {
+            margin-right: 340px;
+        }
+    }
+}
+.c-card-section--v-articles {
+    @include common-title;
+    @include column-1-2-43;
+    @include light-button;
+
+    @include at-x-large-size {
+        .c-card-section__card-list {
+            margin-right: 340px;
+        }
+    }
+}
+.c-card-section--v-related-articles {
+    @include section-background($shark);
+    @include column-1;
+    @include dark-button;
+
+    @include at-x-large-size {
+        display: none;
+    }
 }
