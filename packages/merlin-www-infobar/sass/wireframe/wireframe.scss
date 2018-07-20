@@ -3,6 +3,7 @@
 
 .c-infobar {
     @include at-x-large-size {
+        box-sizing: border-box;
         display: flex;
         justify-content: center;
         height: 60px;

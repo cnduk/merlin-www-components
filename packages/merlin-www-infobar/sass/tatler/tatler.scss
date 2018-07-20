@@ -1,18 +1,5 @@
-.c-infobar {
-    background-color: $black;
-}
+@import "@cnbritain/merlin-www-buttons:tatler";
+@import "@cnbritain/merlin-www-common:tatler";
 
-.c-infobar-wrapper {}
-.c-infobar__message {
-    @include font("COMMUTER SANS", 13px, 400, 16px);
-    color: $white;
-    text-transform: uppercase;
-}
-
-.c-infobar__btn {
-    @include button-single();
-    @include button-single-light();
-    &:hover {
-        @include button-single-light-hover();
-    }
-}
+@import "../wireframe/wireframe";
+@import "./tatlerbase";
