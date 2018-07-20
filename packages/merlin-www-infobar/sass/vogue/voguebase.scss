@@ -12,7 +12,7 @@
 }
 
 .c-infobar__message {
-    @include font("ADOBE CASLON PRO", 17px, 400, 17px);
+    @include font("ADOBE CASLON", 17px, 400, 17px);
     color: $dove-gray;
     text-align: center;
 }
