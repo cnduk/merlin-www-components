@@ -1,0 +1,20 @@
+{
+    "name": "@cnbritain/merlin-www-infobar",
+    "js": {
+        "demo": "demo/demo.js"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss"
+    },
+    "partials": {
+        "infobar": "templates/infobar.html"
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-common"
+    ],
+    "currentTheme": null,
+    "main": "infobar",
+    "data": {
+        "all": "demo/data/all.json"
+    }
+}
