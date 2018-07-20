@@ -1,0 +1,10 @@
+<div class="js-c-infobar c-infobar{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
+    <div class="c-infobar-wrapper">
+        {{# data.message }}
+            <p class="c-infobar__message">{{ . }}</p>
+        {{/ data.message }}
+        {{# data.link}}
+            <a href="{{ &data.url }}" class="c-infobar__btn">{{ data.title }}</a>
+        {{/ data.link }}
+    </div>
+</div>
