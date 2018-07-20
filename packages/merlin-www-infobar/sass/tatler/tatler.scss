@@ -1,12 +1,12 @@
 .c-infobar {
-    background-color: $wild-sand;
+    background-color: $black;
 }
 
 .c-infobar-wrapper {}
-
 .c-infobar__message {
-    @include font("ADOBE CASLON PRO", 17px, 400, 17px);
-    color: $dove-gray;
+    @include font("COMMUTER SANS", 13px, 400, 16px);
+    color: $white;
+    text-transform: uppercase;
 }
 
 .c-infobar__btn {

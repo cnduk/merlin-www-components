@@ -1,0 +1,23 @@
+@import "@cnbritain/merlin-www-buttons:houseandgarden";
+@import "@cnbritain/merlin-www-common:houseandgarden";
+
+@import "../wireframe/wireframe";
+
+.c-infobar {
+    background-color: $trout;
+}
+
+.c-infobar-wrapper {}
+
+.c-infobar__message {
+    @include font("MILLER_DISPLAY", 17px, 600, 17px);
+    color: $white;
+}
+
+.c-infobar__btn {
+    @include button-single();
+    @include button-single-dark();
+    &:hover {
+        @include button-single-dark-hover();
+    }
+}

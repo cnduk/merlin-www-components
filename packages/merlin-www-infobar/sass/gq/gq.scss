@@ -1,0 +1,23 @@
+@import "@cnbritain/merlin-www-buttons:gq";
+@import "@cnbritain/merlin-www-common:gq";
+
+@import "../wireframe/wireframe";
+
+.c-infobar {
+    background-color: $woodsmoke;
+}
+
+.c-infobar-wrapper {}
+
+.c-infobar__message {
+    @include font("GOTHAM", 15px, 700, 16px);
+    color: $white;
+}
+
+.c-infobar__btn {
+    @include button-single();
+    @include button-single-light();
+    &:hover {
+        @include button-single-light-hover();
+    }
+}

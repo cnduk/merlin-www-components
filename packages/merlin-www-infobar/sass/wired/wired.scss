@@ -1,0 +1,23 @@
+@import "@cnbritain/merlin-www-buttons:wired";
+@import "@cnbritain/merlin-www-common:wired";
+
+@import "../wireframe/wireframe";
+
+.c-infobar {
+    background-color: $black;
+}
+
+.c-infobar-wrapper {}
+
+.c-infobar__message {
+    @include font("BRUTAL", 15px, 700, 17px);
+    color: $white;
+}
+
+.c-infobar__btn {
+    @include button-single();
+    @include button-single-dark();
+    &:hover {
+        @include button-single-dark-hover();
+    }
+}

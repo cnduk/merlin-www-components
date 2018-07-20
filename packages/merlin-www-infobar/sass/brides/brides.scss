@@ -1,0 +1,24 @@
+@import "@cnbritain/merlin-www-buttons:brides";
+@import "@cnbritain/merlin-www-common:brides";
+
+@import "../wireframe/wireframe";
+
+.c-infobar {
+    background-color: $azure;
+}
+
+.c-infobar-wrapper {}
+
+.c-infobar__message {
+    @include font("SOLEIL", 14px, 400, 15px);
+    color: $sapphire;
+    text-transform: uppercase;
+}
+
+.c-infobar__btn {
+    @include button-single-three();
+    @include button-single-three-dark();
+    &:hover {
+        @include button-single-three-dark-hover();
+    }
+}

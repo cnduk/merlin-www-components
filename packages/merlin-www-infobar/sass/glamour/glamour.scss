@@ -1,0 +1,23 @@
+@import "@cnbritain/merlin-www-buttons:glamour";
+@import "@cnbritain/merlin-www-common:glamour";
+
+@import "../wireframe/wireframe";
+
+.c-infobar {
+    background-color: $astronaut;
+}
+
+.c-infobar-wrapper {}
+
+.c-infobar__message {
+    @include font("GRAPHIK", 15px, 600, 17px);
+    color: $white;
+}
+
+.c-infobar__btn {
+    @include button-group();
+    @include button-group-dark();
+    &:hover {
+        @include button-group-dark-hover();
+    }
+}
