@@ -8,128 +8,277 @@
 
 @import "../wireframe/wireframe";
 
-.c-card-section {
-    margin-bottom: $MOBILE_SLICE_MARGIN;
-    margin-top: $MOBILE_SLICE_MARGIN;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        margin-bottom: $TABLET_SLICE_MARGIN;
-        margin-top: $TABLET_SLICE_MARGIN;
-    }
-}
-
-.c-card-section--c-curated,
-.c-card-section--c-tag,
-.c-card-section--c-video-articles {
-    .c-card-section__title {
-        @include font("MILLER_DISPLAY", 25px, 600, 30px);
-        color: $dune;
-        margin: 0 0 15px 0;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            @include font-size(35px);
-            @include line-height(35px);
-        }
-
-        a {
-            color: inherit;
-        }
-    }
-
+/**
+ * Mixins
+ */
+@mixin light-button {
     .c-card-section__btn {
-        @include button-single();
-        @include button-single-light();
-        &:hover {
-            @include button-single-light-hover();
-        }
+        @include button-single;
+        @include button-single-light;
 
-        margin-top: 30px;
+        &:hover,
+        &:focus {
+            @include button-single-light-hover;
+        }
     }
 }
 
-.c-card-section--a-recommended,
-.c-card-section--tg-articles,
-.c-card-section--mag-articles,
-.c-card-section--mag-magazines,
-.c-card-section--v-articles,
-.c-card-section--v-genre-articles {
+@mixin dark-button {
+    .c-card-section__btn {
+        @include button-single;
+        @include button-single-dark;
+
+        &:hover,
+        &:focus {
+            @include button-single-dark-hover;
+        }
+    }
+}
+
+@mixin section-padding {
     padding-bottom: 40px;
     padding-top: 30px;
 
-    .c-card-section__title {
-        @include font("MILLER_DISPLAY", 25px, 600, 25px);
-        color: $dune;
-        margin: 0 0 15px 0;
-
-        a {
-            color: inherit;
-        }
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding-bottom: 60px;
         padding-top: 40px;
     }
 }
 
-.c-card-section--tg-articles,
-.c-card-section--v-articles {
-    margin-top: 30px;
-    padding-top: 0;
+@mixin column-base {
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: 40px;
-        padding-top: 0;
+    .c-card-section__card-list {
+        display: flex;
+        flex-direction: column;
+        margin: -10px;
+    }
+
+    .c-card-section__card-listitem {
+        margin: 10px 0;
+        padding: 0 10px;
+    }
+
+}
+
+@mixin column-2-4 {
+    @include column-base;
+
+    .c-card-section__card-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .c-card-section__card-listitem {
+        width: 50%;
+    }
+
+    @include at-x-large-size {
+        .c-card-section__card-listitem {
+            width: 25%;
+        }
+    }
+}
+
+@mixin column-1-2-4 {
+    @include column-base;
+
+    @include at-small-size {
+        .c-card-section__card-list {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .c-card-section__card-listitem {
+            width: 50%;
+        }
+    }
+
+    @include at-x-large-size {
+        .c-card-section__card-listitem {
+            width: 25%;
+        }
+    }
+}
+
+@mixin column-1-2-43 {
+    @include column-base;
+
+    @include at-small-size {
+        .c-card-section__card-list {
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 300px*3;
+        }
+
+        .c-card-section__card-listitem {
+            width: 50%;
+        }
+    }
+
+    @include at-x-large-size {
+        .c-card-section__card-listitem {
+            width: 33.33333%;
+        }
     }
 }
 
 
+/**
+ * Defaults
+ */
+.c-card-section {
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+    margin-top: $MOBILE_SLICE_MARGIN;
+
+    @include at-medium-size {
+        margin-bottom: $TABLET_SLICE_MARGIN;
+        margin-top: $TABLET_SLICE_MARGIN;
+    }
+}
+
+.c-card-section-wrapper {}
+
+.c-card-section__header {
+    position: relative;
+}
+.c-card-section__body {}
+.c-card-section__footer {
+    text-align: center;
+}
+
+.c-card-section__logo {
+    margin: 0 0 15px 0;
+    width: 210px;
+
+    svg, img {
+        display: block;
+        width: 100%;
+    }
+
+    @include at-medium-size {
+        width: 300px;
+    }
+}
+.c-card-section__title {
+    @include font("MILLER_DISPLAY", 25px, 600, 30px);
+    color: $dune;
+    margin: 0 0 15px 0;
+
+    a {
+        color: inherit;
+    }
+
+    @include at-x-large-size {
+        @include font-size(35px);
+        @include line-height(35px);
+    }
+}
+.c-card-section__nav-strip {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @include at-x-large-size {
+        display: block;
+    }
+}
+
+.c-card-section__card-list {}
+.c-card-section__card-listitem {}
+.c-card-section__card-listitem--ad {}
+
+.c-card-section__btn {
+    margin-top: 30px;
+}
+
+/**
+ * Modifiers
+ */
+// .c-card-section--dark {}
+// .c-card-section--sh-latest-articles {}
+// .c-card-section--sh-shows {}
+// .c-card-section--sh-summary-articles {}
+// .c-card-section--sh-summary-shows {}
+// .c-card-section--tg-articles-grid {}
+// .c-card-section--tg-related-tags {}
+.c-card-section--a-recommended,
+.c-card-section--mag-articles,
+.c-card-section--s-results,
+.c-card-section--v-genre-articles {
+    @include section-padding;
+    @include column-1-2-4;
+    @include light-button;
+}
+.c-card-section--a-recommended {
+    background-color: $concrete;
+}
+.c-card-section--c-contributors {
+    @include column-1-2-43;
+    @include light-button;
+}
+.c-card-section--c-curated,
+.c-card-section--c-tag {
+    @include column-1-2-4;
+    @include light-button;
+}
 .c-card-section--c-video-articles {
     .c-card-section__logo {
-        height: auto;
-        margin-bottom: 15px;
-        width: 220px;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            width: 300px;
-        }
-
         .svg-logo-block { fill: #f6d3d5; }
         .svg-logo { fill: #373330; }
     }
 }
+.c-card-section--mag-magazines {
+    @include section-padding;
+    @include column-2-4;
+    @include light-button;
+}
+.c-card-section--tg-articles {
+    margin-top: 30px;
 
-// Section card list with right columns for rail ad
-.c-card-section--tg-articles,
-.c-card-section--v-articles {
-    .c-card-list {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    .c-card-section__card-list {
+        display: block;
+        margin: -10px;
+    }
+    .c-card-section__card-listitem {
+        display: inline-block;
+        padding: 0 10px;
+        margin: 10px 0;
+    }
+
+    @include at-x-large-size {
+        margin-top: 40px;
+
+        .c-card-section__card-list {
             margin-right: 340px;
         }
     }
 }
 
-.c-card-section--a-recommended {
-    background-color: $concrete;
-    margin: 0;
-    max-width: none;
-}
+.c-card-section--v-articles {
+    @include column-1-2-43;
+    @include light-button;
 
+    margin-top: 30px;
+
+    @include at-x-large-size {
+        margin-top: 40px;
+
+        .c-card-section__card-list {
+            margin-right: 340px;
+        }
+    }
+}
 .c-card-section--v-related-articles {
+    @include dark-button;
+
     background-color: $dune;
     margin: 0;
-    max-width: none;
     padding-bottom: $MOBILE_SLICE_MARGIN;
     padding-top: $MOBILE_SLICE_MARGIN;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding-top: $TABLET_SLICE_MARGIN;
-        padding-bottom: $TABLET_SLICE_MARGIN;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        display: none;
-    }
 
     .c-card-section__title {
         @include font("GRAPHIK", 14px, 400, 14px);
@@ -139,14 +288,23 @@
         text-transform: uppercase;
     }
 
-    .c-card-section__btn {
-        @include button-single();
-        @include button-single-dark();
-        &:hover {
-            @include button-single-dark-hover();
-        }
-
-        margin-top: 30px;
+    .c-card-section__card-list {
+        flex-direction: column;
+        margin: -10px;
     }
-}
 
+    .c-card-section__card-listitem {
+        padding: 0 10px;
+        margin: 13px 0;
+    }
+
+    @include at-medium-size {
+        padding-top: $TABLET_SLICE_MARGIN;
+        padding-bottom: $TABLET_SLICE_MARGIN;
+    }
+
+    @include at-x-large-size {
+        display: none;
+    }
+
+}
