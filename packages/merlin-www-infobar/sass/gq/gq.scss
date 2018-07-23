@@ -1,0 +1,38 @@
+@import "@cnbritain/merlin-www-buttons:gq";
+@import "@cnbritain/merlin-www-common:gq";
+
+@import "../wireframe/wireframe";
+
+.c-infobar {
+    background-color: $woodsmoke;
+    padding: 12px 0;
+
+    @include at-x-large-size {
+        padding: 0;
+    }
+}
+
+.c-infobar-wrapper {
+    padding: 0 20px;
+}
+
+.c-infobar__message {
+    @include font("GOTHAM", 15px, 700, 16px);
+    color: $white;
+    text-align: center;
+}
+
+.c-infobar__btn {
+    @include button-single();
+    @include button-single-light();
+    &:hover {
+        @include button-single-light-hover();
+    }
+
+    margin: 12px 0 0 0;
+    padding: 13px 8px;
+
+    @include at-x-large-size {
+        margin: 0 0 0 20px;
+    }
+}
