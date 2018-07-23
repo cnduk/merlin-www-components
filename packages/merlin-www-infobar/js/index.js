@@ -2,6 +2,10 @@
 
 import Infobar from './infobar';
 
-var INFOBAR = new Infobar(document.querySelector('.js-c-infobar'));
+var INFOBAR;
+
+if (document.querySelector('.js-c-infobar')) {
+    INFOBAR = new Infobar(document.querySelector('.js-c-infobar'));
+}
 
 export default INFOBAR;
