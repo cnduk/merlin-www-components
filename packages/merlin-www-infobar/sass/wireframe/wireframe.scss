@@ -8,6 +8,10 @@
         justify-content: center;
         height: 60px;
     }
+
+    &.is-hidden {
+        display: none;
+    }
 }
 
 .c-infobar-wrapper {
