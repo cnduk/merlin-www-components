@@ -5,7 +5,7 @@ import {
     getCookie,
     inherit,
     setCookie
-} from "@cnbritain/merlin-www-js-utils/js/functions";
+} from '@cnbritain/merlin-www-js-utils/js/functions';
 import * as events from './events';
 
 var IS_HIDDEN_CLS = 'is-hidden';
