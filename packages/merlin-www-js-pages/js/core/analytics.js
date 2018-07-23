@@ -7,6 +7,7 @@ import {
     removeEvent
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
+import Infobar from "@cnbritain/merlin-www-infobar";
 
 
 var hasBeacon = !!navigator.sendBeacon;
@@ -157,9 +158,34 @@ export function unbindEvents() {
     }
 }
 
+export function initInfobarTracking() {
+    Infobar.addListener('linkClick', function(e) {
+        var category = 'Info Bar';
+        var action = null;
+        var label = null;
+
+        if (e.linkType == 'message') {
+            action = 'Message Click';
+            label = e.target.href + ' | ' + e.target.innerText;
+        }
+
+        if (e.linkType == 'button') {
+            action = 'Button Click';
+            label = e.target.href + ' | ' + e.target.innerText;
+        }
+
+        GATracker.SendAll(GATracker.SEND_HITTYPES.EVENT, {
+            eventCategory: category,
+            eventAction: action,
+            eventLabel: label
+        });
+    })
+}
+
 /**
  * Initialise link tracking
  */
 export default function initLinkTracking() {
     bindEvents();
+    initInfobarTracking();
 }
