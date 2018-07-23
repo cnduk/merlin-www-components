@@ -53,17 +53,8 @@
 }
 
 .c-topic-strip--c-card-section {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 0;
-
     .c-topic-strip__title {
         display: none;
-    }
-
-    @include desktop-size {
-        display: inline-block;
     }
 }
 
