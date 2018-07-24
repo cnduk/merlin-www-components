@@ -30,12 +30,13 @@ function Infobar(el) {
     this.buttonEl = el.querySelector('.js-c-infobar__btn');
 
     this.configEl = el.querySelector('.js-c-infobar-config');
-    this.config = this.configEl.innerHTML;
-    this.config = JSON.parse(this.config);
 
-    if (!this.config) {
+    if (!this.configEl) {
         throw new Error('Infobar Config Not Found.');
     }
+
+    this.config = this.configEl.innerHTML;
+    this.config = JSON.parse(this.config);
 
     this.pageviewLimit = this.config['pageview_limit'];
 
