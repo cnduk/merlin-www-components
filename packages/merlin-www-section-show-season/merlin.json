@@ -3,7 +3,7 @@
     "main": "show-season",
     "currentTheme": null,
     "data": {
-        "show-season": "demo/data/show-season.json"
+        "show-season": "data/show-season.json"
     },
     "js": {
         "demo": "demo/demo.js"
@@ -11,6 +11,7 @@
     "themes": {
         "wireframe": "sass/wireframe/wireframe.scss",
         "gq": "sass/gq/gq.scss",
+        "missvogue": "sass/missvogue/missvogue.scss",
         "vogue": "sass/vogue/vogue.scss"
     },
     "partials": {
