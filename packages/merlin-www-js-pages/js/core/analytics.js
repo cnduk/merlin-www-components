@@ -159,6 +159,8 @@ export function unbindEvents() {
 }
 
 export function initInfobarTracking() {
+    if (!Infobar) return;
+
     Infobar.addListener('linkClick', function(e) {
         var category = 'Info Bar';
         var action = null;
