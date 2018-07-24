@@ -20,6 +20,11 @@
         }
     }
 
+    .c-card__image img {
+        position: absolute;
+        top: 0;
+    }
+
     .c-card__image-label {
         display: none;
     }

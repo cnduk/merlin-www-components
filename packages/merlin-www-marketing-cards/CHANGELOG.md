@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.11.0"></a>
+# [1.11.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-marketing-cards@1.10.0...@cnbritain/merlin-www-marketing-cards@1.11.0) (2018-07-19)
+
+
+### Bug Fixes
+
+* **merlin-www-marketing-cards:** fixed missing parenthesis ([f3f99e7](https://github.com/cnduk/merlin-www-components/commit/f3f99e7))
+
+
+### Features
+
+* **/merlin-www-marketing-cards:** new themes added to data test ([6bfa35a](https://github.com/cnduk/merlin-www-components/commit/6bfa35a))
+* **merlin-www-marketing-cards:** new data content for test ([62df76d](https://github.com/cnduk/merlin-www-components/commit/62df76d))
+
+
+
+
 <a name="1.10.0"></a>
 # [1.10.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-marketing-cards@1.9.30...@cnbritain/merlin-www-marketing-cards@1.10.0) (2018-07-12)
 

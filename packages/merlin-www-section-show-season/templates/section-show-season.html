@@ -1,32 +1,45 @@
-<section class="c-show-season-section {{ style.cls }}">
-    <div class="c-show-season-section__wrapper">
+<section class="c-show-season {{ style.cls }}">
+    <div class="c-show-season-wrapper">
 
-        {{# data.title }}
-            <h3 class="c-show-season-section__title"><span>{{ data.title }}</span></h3>
-        {{/ data.title }}
+        <header class="c-show-season__header">
+            {{# data.title }}
+            <h3 class="c-show-season__title"><span>{{ data.title }}</span></h3>
+            {{/ data.title }}
 
-        <ul class="global__list-reset c-show-season-section__meta">
-            {{# data.season_tag }}
-                <li class="c-show-season-section__meta-item c-show-season-section__meta-item--season {{ style.cls }}">
+            <ul class="c-show-season__meta">
+                {{# data.season_tag }}
+                <li class="c-show-season__meta-item c-show-season__meta-item--season {{ style.cls }}">
                     <span>{{ data.title }}</span>
                 </li>
-            {{/ data.season_tag }}
+                {{/ data.season_tag }}
 
-            {{# data.show_type_tag }}
-                <li class="c-show-season-section__meta-item c-show-season-section__meta-item--show-type {{ style.cls }}">
+                {{# data.show_type_tag }}
+                <li class="c-show-season__meta-item c-show-season__meta-item--show-type {{ style.cls }}">
                     <span>{{ data.title }}</span>
                 </li>
-            {{/ data.show_type_tag }}
-        </ul>
+                {{/ data.show_type_tag }}
+            </ul>
+        </header>
 
-        {{# data.card_list }}
-            {{> @cnbritain/merlin-www-card-list }}
-        {{/ data.card_list }}
+        <div class="c-show-season__body">
+            {{# data.card_list }}
+            <ul class="c-show-season__cards-list">
+                {{# data.items }}
+                <li class="c-show-season__cards-listitem {{ style.cls }}">
+                    {{# data.item }}
+                    {{> @cnbritain/merlin-www-card }}
+                    {{/ data.item }}
+                </li>
+                {{/ data.items }}
+            </ul>
+            {{/ data.card_list }}
+        </div>
 
         {{# data.link }}
-            <div class='global__a--center'>
-                <a href="{{ data.url }}" class="c-show-season-section__btn {{ style.cls }}">{{ data.title }}</a>
-            </div>
+        <footer class="c-show-season__footer">
+            <a href="{{ &data.url }}" class="c-show-season__btn {{ style.cls }}">{{ data.title }}</a>
+        </footer>
         {{/ data.link }}
+
     </div>
 </section>

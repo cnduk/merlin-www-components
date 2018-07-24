@@ -1,0 +1,38 @@
+@import "@cnbritain/merlin-www-buttons:glamour";
+@import "@cnbritain/merlin-www-common:glamour";
+
+@import "../wireframe/wireframe";
+
+.c-infobar {
+    background-color: $astronaut;
+    padding: 12px 0;
+
+    @include at-x-large-size {
+        padding: 0;
+    }
+}
+
+.c-infobar-wrapper {
+    padding: 0 20px;
+}
+
+.c-infobar__message {
+    @include font("GRAPHIK", 15px, 600, 17px);
+    color: $white;
+    text-align: center;
+}
+
+.c-infobar__btn {
+    @include button-group();
+    @include button-group-dark();
+    &:hover {
+        @include button-group-dark-hover();
+    }
+
+    margin: 12px 0 0 0;
+    padding: 10px 12px;
+
+    @include at-x-large-size {
+        margin: 0 0 0 20px;
+    }
+}

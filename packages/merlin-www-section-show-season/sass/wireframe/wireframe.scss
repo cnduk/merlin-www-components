@@ -3,57 +3,49 @@
 @import '@cnbritain/merlin-www-buttons:wireframe';
 @import '@cnbritain/merlin-www-card:wireframe';
 
-.c-show-season-section {
+.c-show-season {
     position: relative;
 }
-.c-show-season-section__wrapper {}
-.c-show-season-section__title {}
-.c-show-season-section__link {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 1;
-}
-.c-show-season-section__meta {}
-.c-show-season-section__meta-item {
-    display: inline-block;
+
+.c-show-season-wrapper {}
+
+.c-show-season__header {}
+.c-show-season__body {}
+.c-show-season__footer {
+    text-align: center;
 }
 
-.c-show-season-section__card-list {
+.c-show-season__title {}
+.c-show-season__meta {
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.c-show-season__meta-item {
+    display: inline-block;
+    font-size: inherit;
+}
+.c-show-season__meta-item--season {}
+.c-show-season__meta-item--show-type {}
+
+.c-show-season__cards-list {
+    padding: 0;
     font-size: 0;
     margin: 0 -10px;
 }
-li.c-show-season-section__card-list-item {
+.c-show-season__cards-listitem {
     box-sizing: border-box;
     display: inline-block;
     font-size: initial;
     vertical-align: top;
+    margin: 0;
     padding: 0 10px;
     width: 50%;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         width: 25%;
     }
 }
 
-.c-show-season-section__card {}
-.c-show-season-section__card__image {
-    position: relative;
-    padding-top: 150%;
-
-    img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-    }
-}
-
-.c-show-season-section__card__label {}
-.c-show-season-section__card__title {}
-
-.c-show-season-section__btn__wrapper {}
-.c-show-season-section__btn {}
+.c-show-season__btn {}

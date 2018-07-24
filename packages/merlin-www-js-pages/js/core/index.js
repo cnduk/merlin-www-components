@@ -15,6 +15,7 @@ import {
 // Need to import MainNavigation and CookieWarning to initialise bits
 import MainNavigation from '@cnbritain/merlin-www-main-navigation'; // eslint-disable-line no-unused-vars
 import CookieWarning from '@cnbritain/merlin-www-cookie-warning'; // eslint-disable-line no-unused-vars
+import Infobar from '@cnbritain/merlin-www-infobar'; // eslint-disable-line no-unused-vars
 import CommonImage from '@cnbritain/merlin-www-image';
 import store from '@cnbritain/merlin-www-js-store';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
