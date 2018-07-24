@@ -10,5 +10,7 @@
         {{/ data.link }}
     </div>
 
-    <script type="application/json" class="js-c-infobar-config">{{ &data.json }}</script>
+    {{# data.json }}
+        <script type="application/json" class="js-c-infobar-config">{{ &. }}</script>
+    {{/ data.json }}
 </div>
