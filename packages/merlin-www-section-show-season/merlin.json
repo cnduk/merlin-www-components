@@ -3,17 +3,16 @@
     "main": "show-season",
     "currentTheme": null,
     "data": {
-        "show-season": "demo/data/show-season.json"
+        "show-season": "data/show-season.json"
     },
     "js": {
         "demo": "demo/demo.js"
     },
     "themes": {
         "wireframe": "sass/wireframe/wireframe.scss",
-        "vogue": "sass/vogue/vogue.scss",
+        "gq": "sass/gq/gq.scss",
         "missvogue": "sass/missvogue/missvogue.scss",
-        "glamour": "sass/glamour/glamour.scss",
-        "tatler": "sass/tatler/tatler.scss"
+        "vogue": "sass/vogue/vogue.scss"
     },
     "partials": {
         "show-season": "templates/section-show-season.html"
@@ -22,7 +21,6 @@
         "@cnbritain/merlin-www-common",
         "@cnbritain/merlin-www-buttons",
         "@cnbritain/merlin-www-image",
-        "@cnbritain/merlin-www-card",
-        "@cnbritain/merlin-www-card-list"
+        "@cnbritain/merlin-www-card"
     ]
 }
