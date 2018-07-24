@@ -28,12 +28,12 @@
     @include font('NOBEL', 20px, 'BOLD');
     color: $cod-gray;
     margin-bottom: $MARGIN_XX_SMALL;
+    position: relative;
     text-transform: uppercase;
     text-align: center;
 
     @include at-medium-size {
         @include font-size(25px);
-        position: relative;
 
         span {
             background-color: $white;
@@ -59,34 +59,28 @@
     color: $COLOR_TYPE_META;
     display: inline-block;
 
-    @include card-portrait-to-landscape-size {
+    @include at-medium-size {
         @include font-size(11px);
         @include line-height(20px);
-        border-top: none;
-        padding-top: 8px;
     }
 }
 
 .c-show-season__meta-item {
     letter-spacing: 1px;
+    padding-right: $PADDING_XX_SMALL;
     text-transform: uppercase;
-
-    &--season {
-        color: $guardsman-red;
-    }
-
-    &--show-type {
-        color: $dove-gray;
-    }
-
-    &:not(:last-child) {
-        padding-right: $PADDING_XX_SMALL;
-    }
 
     & + .c-show-season__meta-item {
         border-left: 1px solid $wild-sand;
         padding-left: $PADDING_XX_SMALL;
+        padding-right: 0;
     }
+}
+.c-show-season__meta-item--season {
+    color: $guardsman-red;
+}
+.c-show-season__meta-item--show-type {
+    color: $dove-gray;
 }
 
 .c-show-season__cards-list {
@@ -102,7 +96,7 @@
         margin-bottom: 30px;
     }
 
-    @include card-portrait-to-landscape-size {
+    @include at-small-size {
         &:nth-child(odd) {
             padding-right: 20px;
         }
@@ -112,7 +106,7 @@
         }
     }
 
-    @include three-column-size {
+    @include at-large-size {
         width: 25%;
 
         &:nth-child(odd),
@@ -127,15 +121,12 @@
 }
 
 .c-show-season__btn {
-    @include button-single();
-    @include button-single-light();
+    @include button-single;
+    @include button-single-light;
     margin-top: 35px;
 
     &:hover,
     &:focus {
-        @include button-single-light-hover();
+        @include button-single-light-hover;
     }
 }
-
-
-

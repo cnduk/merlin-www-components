@@ -8,14 +8,24 @@
 }
 
 .c-show-season-wrapper {}
-.c-show-season__title {}
 
-.c-show-season__meta {}
-
-.c-show-season__meta-item {
-    display: inline-block;
+.c-show-season__header {}
+.c-show-season__body {}
+.c-show-season__footer {
+    text-align: center;
 }
 
+.c-show-season__title {}
+.c-show-season__meta {
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.c-show-season__meta-item {
+    display: inline-block;
+    font-size: inherit;
+}
 .c-show-season__meta-item--season {}
 .c-show-season__meta-item--show-type {}
 
@@ -33,13 +43,9 @@
     padding: 0 10px;
     width: 50%;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         width: 25%;
     }
-}
-
-.c-show-season__btn-wrapper {
-        text-align: center;
 }
 
 .c-show-season__btn {}

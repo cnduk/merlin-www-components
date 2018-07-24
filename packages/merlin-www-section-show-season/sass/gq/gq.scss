@@ -1,3 +1,4 @@
+
 @import "@cnbritain/merlin-www-common:gq";
 @import "@cnbritain/merlin-www-image:gq";
 @import "@cnbritain/merlin-www-buttons:gq";
@@ -77,23 +78,17 @@
     	margin-top: 0;
     }
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	@include at-x-large-size {
 		margin: 0;
 	}
 }
 
 .c-show-season__btn {
-	@include button-single-two();
-	@include button-single-two-dark();
+	@include button-single-two;
+	@include button-single-two-dark;
 	margin-bottom: -16px;
 	margin-top: 24px;
 	transition-duration: 300ms;
-
-	&:hover,
-	&focus {
-		@include button-single-two-dark-hover();
-		background: $shark;
-	}
 
 	&:after {
 		background-image: url("data:image/svg+xml,%3Csvg fill='%2385878b' width='12px' height='12px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8.48'%3E%3Ctitle%3Ebtn-arrownext%3C/title%3E%3Cpath d='M8,12.24l-0.53-.8,4.44-3H2v-1h9.93l-4.44-3L8,3.76,13.79,7.6a0.48,0.48,0,0,1,0,.8Z' transform='translate%28-2 -3.76%29'/%3E%3C/svg%3E");
@@ -103,5 +98,11 @@
 		height: 10px;
 		margin-left: 8px;
 		width: 12px;
+	}
+
+	&:hover,
+	&focus {
+		@include button-single-two-dark-hover;
+		background: $shark;
 	}
 }
