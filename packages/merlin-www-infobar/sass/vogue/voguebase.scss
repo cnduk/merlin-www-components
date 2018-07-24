@@ -1,0 +1,33 @@
+.c-infobar {
+    background-color: $white;
+    padding: 12px 0;
+
+    @include at-x-large-size {
+        padding: 0;
+    }
+}
+
+.c-infobar-wrapper {
+    padding: 0 20px;
+}
+
+.c-infobar__message {
+    @include font("ADOBE CASLON", 17px, 400, 17px);
+    color: $dove-gray;
+    text-align: center;
+}
+
+.c-infobar__btn {
+    @include button-single();
+    @include button-single-light();
+    &:hover {
+        @include button-single-light-hover();
+    }
+
+    margin: 12px 0 0 0;
+    padding: 15px;
+
+    @include at-x-large-size {
+        margin: 0 0 0 20px;
+    }
+}

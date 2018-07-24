@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.16.8"></a>
+## [1.16.8](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-assets@1.16.7...@cnbritain/merlin-www-assets@1.16.8) (2018-07-19)
+
+
+### Bug Fixes
+
+* **merlin-www-assets:** update gq font folder name for https switch ([9e75f5e](https://github.com/cnduk/merlin-www-components/commit/9e75f5e))
+
+
+
+
 <a name="1.16.7"></a>
 ## [1.16.7](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-assets@1.16.6...@cnbritain/merlin-www-assets@1.16.7) (2018-06-07)
 

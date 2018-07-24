@@ -1,0 +1,39 @@
+@import "@cnbritain/merlin-www-buttons:traveller";
+@import "@cnbritain/merlin-www-common:traveller";
+
+@import "../wireframe/wireframe";
+
+.c-infobar {
+    background-color: $CASPER;
+    padding: 12px 0;
+
+    @include at-x-large-size {
+        padding: 0;
+    }
+}
+
+.c-infobar-wrapper {
+    padding: 0 20px;
+}
+
+.c-infobar__message {
+    @include font("PROXIMA NOVA CONDENSED", 17px, 600, 17px);
+    color: $WHITE;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.c-infobar__btn {
+    @include button-single-two();
+    @include button-single-two-light();
+    &:hover {
+        @include button-single-two-light-hover();
+    }
+
+    margin: 10px 0 0 0;
+    padding: 13px 11px;
+
+    @include at-x-large-size {
+        margin: 0 0 0 20px;
+    }
+}

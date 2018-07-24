@@ -1,6 +1,6 @@
 {
     "name": "@cnbritain/merlin-www-main-navigation",
-    "version": "1.9.3",
+    "version": "1.10.0",
     "description": "",
     "main": "js/index.js",
     "scripts": {
@@ -9,9 +9,9 @@
         "prepublish": "npm run lint"
     },
     "dependencies": {
-        "@cnbritain/merlin-www-buttons": "^1.7.32",
-        "@cnbritain/merlin-www-common": "^1.14.9",
-        "@cnbritain/merlin-www-image": "^1.10.0",
+        "@cnbritain/merlin-www-buttons": "^1.7.33",
+        "@cnbritain/merlin-www-common": "^1.14.10",
+        "@cnbritain/merlin-www-image": "^1.10.1",
         "@cnbritain/merlin-www-js-utils": "^1.6.2",
         "eventemitter2": "^4.1.0"
     },

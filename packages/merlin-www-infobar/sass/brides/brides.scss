@@ -1,0 +1,39 @@
+@import "@cnbritain/merlin-www-buttons:brides";
+@import "@cnbritain/merlin-www-common:brides";
+
+@import "../wireframe/wireframe";
+
+.c-infobar {
+    background-color: $azure;
+    padding: 12px 0;
+
+    @include at-x-large-size {
+        padding: 0;
+    }
+}
+
+.c-infobar-wrapper {
+    padding: 0 20px;
+}
+
+.c-infobar__message {
+    @include font("SOLEIL", 14px, 400, 15px);
+    color: $sapphire;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.c-infobar__btn {
+    @include button-single-three();
+    @include button-single-three-dark();
+    &:hover {
+        @include button-single-three-dark-hover();
+    }
+
+    margin: 10px 0 0 0;
+    padding: 14px 20px 14px 20px;
+
+    @include at-x-large-size {
+        margin: 0 0 0 20px;
+    }
+}

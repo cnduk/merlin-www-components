@@ -1,0 +1,30 @@
+@import '@cnbritain/merlin-www-buttons:wireframe';
+@import '@cnbritain/merlin-www-common:wireframe';
+
+.c-infobar {
+    @include at-x-large-size {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        height: 60px;
+    }
+
+    &.is-hidden {
+        display: none;
+    }
+}
+
+.c-infobar-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    @include at-x-large-size {
+        flex-direction: row;
+    }
+}
+
+.c-infobar__message {}
+.c-infobar__btn {
+    flex: 1 0 auto;
+}
