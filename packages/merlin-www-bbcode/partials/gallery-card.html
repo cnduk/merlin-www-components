@@ -10,10 +10,14 @@
                 {{> @cnbritain/merlin-www-image }}
             </div>
         {{/ data.icon }}
-        <h4 class='bb-gallery__title'>{{ data.title }}</h4>
+        {{# data.title }}
+        <h4 class='bb-gallery__title'>{{ . }}</h4>
+        {{/ data.title }}
     {{/ state.has_icon }}
     {{^ state.has_icon }}
-        <h4 class='bb-gallery__title'>{{ data.title }}</h4>
+    {{# data.title }}
+    <h4 class='bb-gallery__title'>{{ . }}</h4>
+    {{/ data.title }}
     {{/ state.has_icon }}
 
     {{# state.is_layout_3 }}
