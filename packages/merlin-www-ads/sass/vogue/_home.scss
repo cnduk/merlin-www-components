@@ -14,7 +14,7 @@
 }
 
 
-@include tablet-size {
+@include at-medium-size {
     .ad--homepage {
         .ad__title {
             padding-left: $TABLET_SIDE_GUTTER;
