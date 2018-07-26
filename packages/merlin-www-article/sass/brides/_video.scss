@@ -44,6 +44,63 @@
     top: 32px;
 }
 
+.a-video__playlist {
+    margin: -8px -12px;
+}
+
+.a-video__playlist-item {
+    display: inline-block;
+    padding: 0 12px;
+    margin: 8px 0;
+    width: 100%;
+
+    .c-card__images {
+        &:after {
+            @include font("SOLEIL", 10px, 400, 12px, 120);
+            color: $white;
+            content: "Now Playing";
+            left: 50%;
+            opacity: 0;
+            position: absolute;
+            text-transform: uppercase;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition-duration: 300ms;
+            white-space: nowrap;
+        }
+    }
+
+    .c-card__image {
+        &:after {
+            background-color: rgba($black, 0.25);
+            bottom: 0;
+            content: "";
+            height: 100%;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition-duration: 300ms;
+            width: 100%;
+        }
+    }
+
+    &.is-active {
+        .c-card__images {
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        .c-card__image {
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
 .a-video__content-body {}
 
 .a-video__ad {
@@ -51,14 +108,14 @@
 }
 
 
-@include tablet-size {
+@include at-medium-size {
     .a-video__wrapper {
         padding-left: 0;
         padding-right: 0;
     }
 }
 
-@include desktop-size {
+@include at-x-large-size {
     .a-logo--video {
         padding: 48px 0;
     }

@@ -27,7 +27,7 @@
 		margin-top: 10px;
 	}
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	@include at-medium-size {
 		display: inline-block;
 
 		& + .a-podcast__list-item {
@@ -51,7 +51,7 @@
 		color: $white;
 	}
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	@include at-medium-size {
 	    width: auto;
 	}
 }

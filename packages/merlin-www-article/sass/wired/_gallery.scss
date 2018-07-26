@@ -13,11 +13,11 @@
         margin-top: 15px;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         width: $TABLET_SIDE_GUTTER;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         width: $DESKTOP_SIDE_GUTTER;
     }
 }
@@ -44,7 +44,7 @@
         }
     }
 
-    @include disabled-selectors(){
+    @include disabled-selectors() {
         @include button-gallery-navigation-disabled;
 
         svg {
@@ -59,7 +59,7 @@
     &:hover {
         border-bottom: none;
     }
-    @include disabled-selectors(){
+    @include disabled-selectors() {
         border-bottom: none;
     }
 }
@@ -70,7 +70,7 @@ ul.a-gallery__image-list {}
 li.a-gallery__image-listitem {
     margin-bottom: 40px;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin-bottom: 60px;
     }
 }
@@ -84,7 +84,7 @@ li.a-gallery__thumbnail {}
 .a-gallery__message {
     margin-bottom: 40px;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin-bottom: 60px;
     }
 }

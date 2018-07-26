@@ -318,7 +318,7 @@ li.a-header__meta-item {
     margin-bottom: 10px;
     text-transform: uppercase;
 
-    @include desktop-size {
+    @include at-x-large-size {
         @include font-size(16px);
         @include line-height(16px);
         margin-bottom: 15px;
@@ -431,12 +431,12 @@ li.a-header__meta-item {
         max-width: 700px;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
 
         .a-header__wrapper {
             padding-right: 360px;
