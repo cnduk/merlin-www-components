@@ -2,7 +2,7 @@
     .c-card-list {
         text-align: left;
 
-        @include desktop-size {
+        @include at-x-large-size {
             margin-right: 340px;
             position: relative;
         }
@@ -13,12 +13,12 @@
     margin-top: $MOBILE_SLICE_MARGIN;
     margin-bottom: $MOBILE_SLICE_MARGIN;
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-top: $TABLET_SLICE_MARGIN;
         margin-bottom: $TABLET_SLICE_MARGIN;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin-top: $DESKTOP_SLICE_MARGIN;
         margin-bottom: $DESKTOP_SLICE_MARGIN;
     }
@@ -48,7 +48,7 @@
         }
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         height: 40px;
         margin-bottom: 60px;
     }
@@ -73,7 +73,7 @@
         text-align: center;
         text-transform: uppercase;
 
-        @include tablet-size {
+        @include at-medium-size {
             @include font-size(25px);
             @include line-height(25px);
             position: relative;
@@ -128,11 +128,11 @@
         }
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         padding: 80px $TABLET_SIDE_GUTTER;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         padding: 80px $DESKTOP_SIDE_GUTTER;
     }
 }
@@ -164,12 +164,12 @@
         }
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         display: none;
     }
 
@@ -251,7 +251,7 @@
         border-top: 1px solid $alto;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         padding-bottom: 60px;
         padding-top: 60px;
     }

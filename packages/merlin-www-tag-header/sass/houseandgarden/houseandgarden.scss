@@ -159,7 +159,7 @@
     font-weight: bold;
 }
 
-@include tablet-size {
+@include at-medium-size {
     .tg-header__sponsor {
         border-top: none;
         margin: 30px auto;

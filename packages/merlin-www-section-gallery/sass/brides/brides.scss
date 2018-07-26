@@ -169,7 +169,7 @@
     text-align: center;
     text-transform: capitalize;
 
-    @include desktop-size {
+    @include at-x-large-size {
         @include font-size(40px);
         @include line-height(40px);
     }
@@ -178,7 +178,7 @@
 .c-gallery__teaser {
     display: none;
 
-    @include desktop-size {
+    @include at-x-large-size {
         @include font("SOLEIL", 14px, 400, 20px, 30);
         display: block;
         color: $ascot-grey;

@@ -17,7 +17,7 @@
     display: none;
 }
 
-@include tablet-size {
+@include at-medium-size {
     padding-top: 48px;
 }
 
@@ -57,7 +57,7 @@
         margin: 0 auto;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         max-width: 240px;
     }
 
@@ -76,7 +76,7 @@
                     inset 0 -0.65em 0 0 rgba($champagne, 1);
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         @include font-size(60px);
         @include line-height(60px);
     }
@@ -89,7 +89,7 @@
         padding-top: 66.875%;
         position: relative;
 
-        @include tablet-size {
+        @include at-medium-size {
             padding-top: 30%;
         }
     }
@@ -163,7 +163,7 @@
     font-weight: bold;
 }
 
-@include tablet-size {
+@include at-medium-size {
     .tg-header__sponsor {
         display: inline-block;
         margin-top: 34px;
@@ -201,12 +201,12 @@
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
 
-    @include tablet-size {
+    @include at-medium-size {
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
@@ -216,7 +216,7 @@
     }
 }
 
-@include tablet-size {
+@include at-medium-size {
     .tg-header__topic-strip {
         margin-bottom: 44px;
     }
@@ -235,7 +235,7 @@
     max-width: $MAXIMUM_PAGE_WIDTH;
 }
 
-@include tablet-size {
+@include at-medium-size {
     .tg-header__cards {
         padding: 0 $TABLET_SIDE_GUTTER;
     }
@@ -272,7 +272,7 @@
     }
 }
 
-@include tablet-size {
+@include at-medium-size {
     .tg-header--profile {
         .tg-header__intro__image {
             max-width: 96px;

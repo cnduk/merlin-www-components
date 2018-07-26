@@ -10,12 +10,12 @@
     margin-top: $MOBILE_SLICE_MARGIN;
     margin-bottom: $MOBILE_SLICE_MARGIN;
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-top: $TABLET_SLICE_MARGIN;
         margin-bottom: $TABLET_SLICE_MARGIN;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin-top: $DESKTOP_SLICE_MARGIN;
         margin-bottom: $DESKTOP_SLICE_MARGIN;
     }
@@ -27,7 +27,7 @@
     .c-card-section__title-wrapper {
         margin-bottom: 36px;
 
-        @include desktop-size {
+        @include at-x-large-size {
             margin-bottom: 44px;
         }
     }
@@ -39,7 +39,7 @@
         margin: 0 0 24px 0;
         text-align: center;
 
-        @include desktop-size {
+        @include at-x-large-size {
             @include font-size(48px);
             @include line-height(48px);
             margin: 0 0 28px 0;
@@ -59,7 +59,7 @@
         @include button-single-two-light();
         margin-top: 42px;
 
-        @include desktop-size {
+        @include at-x-large-size {
             margin-top: 50px;
         }
 
@@ -83,7 +83,7 @@
     }
 
     .c-card-list {
-        @include desktop-size {
+        @include at-x-large-size {
             margin-right: 340px;
         }
     }
@@ -98,7 +98,7 @@
             height: 42px;
         }
 
-        @include desktop-size {
+        @include at-x-large-size {
             height: 60px;
 
             svg {
@@ -126,7 +126,7 @@
 }
 
 .c-card-section--v-related-articles {
-    @include desktop-size {
+    @include at-x-large-size {
         display: none;
     }
 }
