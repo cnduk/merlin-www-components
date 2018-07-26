@@ -47,7 +47,7 @@
         display: none;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         text-align: left;
     }
 }
@@ -62,7 +62,7 @@
         display: none;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         display: inline-block;
     }
 }
@@ -82,7 +82,7 @@
     }
 
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-left: -$TABLET_SIDE_GUTTER;
         margin-right: -$TABLET_SIDE_GUTTER;
 
@@ -96,7 +96,7 @@
 
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin-left: -$DESKTOP_SIDE_GUTTER;
         margin-right: -$DESKTOP_SIDE_GUTTER;
         white-space: normal;

@@ -53,7 +53,7 @@
         padding-right: $MOBILE_SIDE_GUTTER;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         margin: 0 0 -8px 0;
         white-space: normal;
 
@@ -79,7 +79,7 @@
         padding-right: $MOBILE_SIDE_GUTTER;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-left: -$TABLET_SIDE_GUTTER;
         margin-right: -$TABLET_SIDE_GUTTER;
 
@@ -93,7 +93,7 @@
         }
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin: 0;
         padding: 0;
         position: absolute;
@@ -135,7 +135,7 @@
         }
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-left: -$TABLET_SIDE_GUTTER;
         margin-right: -$TABLET_SIDE_GUTTER;
 

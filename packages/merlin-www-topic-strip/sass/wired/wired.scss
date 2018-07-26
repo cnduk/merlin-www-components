@@ -52,7 +52,7 @@
         }
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-bottom: -10px;
         margin-left: 0;
         margin-right: 0;
@@ -103,7 +103,7 @@
     }
 
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-left: -$TABLET_SIDE_GUTTER;
         margin-right: -$TABLET_SIDE_GUTTER;
 
@@ -139,7 +139,7 @@
         }
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-left: -$TABLET_SIDE_GUTTER;
         margin-right: -$TABLET_SIDE_GUTTER;
 
@@ -152,7 +152,7 @@
         }
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         display: inline-block;
         margin: 0;
         padding: 0;

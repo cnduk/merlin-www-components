@@ -88,7 +88,7 @@
         padding-right: $MOBILE_SIDE_GUTTER;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-left: -$TABLET_SIDE_GUTTER;
         margin-right: -$TABLET_SIDE_GUTTER;
 
@@ -101,7 +101,7 @@
         }
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin-left: 0;
         margin-right: 0;
     }
@@ -128,7 +128,7 @@
         @include font-size(10px);
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-bottom: $MARGIN_MEDIUM;
         margin-left: -$TABLET_SIDE_GUTTER;
         margin-right: -$TABLET_SIDE_GUTTER;
@@ -149,7 +149,7 @@
 
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin-left: 0;
         margin-right: 0;
     }
