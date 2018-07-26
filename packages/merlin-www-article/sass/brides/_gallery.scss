@@ -106,7 +106,7 @@ li.a-gallery__thumbnail {
 }
 
 
-@include article-large-size {
+@include min-screen($ARTICLE_TOTAL) {
 
     .a-gallery__wrapper {
         padding-right: $ARTICLE_RIGHT_TOTAL;

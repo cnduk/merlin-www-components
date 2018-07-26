@@ -18,7 +18,7 @@
 }
 .a-footer--video {}
 
-@include article-large-size {
+@include min-screen($ARTICLE_TOTAL) {
     .a-footer {
         .a-share {
             margin: 48px 0 68px 0;
