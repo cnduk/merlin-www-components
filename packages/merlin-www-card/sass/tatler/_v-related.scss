@@ -104,7 +104,7 @@
 .c-card--v-related {
     @include card-v-related-small;
 
-    @include desktop-size {
+    @include at-x-large-size {
         @include card-v-related-large;
     }
 }

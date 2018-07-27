@@ -134,7 +134,7 @@
     margin: 0 0 10px;
     text-transform: uppercase;
 
-    @include tablet-size {
+    @include at-medium-size {
         margin: 15px 0 10px;
     }
 }

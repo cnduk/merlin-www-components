@@ -26,7 +26,7 @@
         background: transparent;
     }
 
-    @include card-portrait-to-landscape-size {
+    @include min-screen($CARD_SWITCHER_WIDTH) {
         .c-card__obj__header,
         .c-card__obj__body {
             display: flex;
@@ -69,7 +69,7 @@
 .c-card--contributor {
     @include card-contributor-small;
 
-    @include card-portrait-to-landscape-size {
+    @include min-screen($CARD_SWITCHER_WIDTH) {
         @include card-contributor-large;
     }
 }

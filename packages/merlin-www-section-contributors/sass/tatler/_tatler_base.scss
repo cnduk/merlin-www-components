@@ -4,7 +4,7 @@
         margin: 0;
         padding: 0 0 20px;
 
-        @include card-portrait-to-landscape-size {
+        @include min-screen($CARD_SWITCHER_WIDTH) {
             margin: 0 0 30px;
             padding: 0;
         }
@@ -13,7 +13,7 @@
     .c-card__obj__body {
         padding-top: 0;
 
-        @include card-portrait-to-landscape-size {
+        @include min-screen($CARD_SWITCHER_WIDTH) {
             padding: 15px 0 0;
         }
     }
@@ -21,7 +21,7 @@
     .c-card__separator {
         display: none;
 
-        @include card-portrait-to-landscape-size {
+        @include min-screen($CARD_SWITCHER_WIDTH) {
             display: block;
         }
     }

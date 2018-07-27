@@ -72,7 +72,7 @@
 .c-card--tg-article {
     @include card-tg-article-small;
 
-    @include desktop-size {
+    @include at-x-large-size {
         @include card-tg-article-large;
     }
 }
