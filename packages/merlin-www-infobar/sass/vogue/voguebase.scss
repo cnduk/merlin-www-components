@@ -1,5 +1,6 @@
 .c-infobar {
-    background-color: $loot-box;
+    background-color: $white;
+    border-bottom: 1px solid $loot-box;
     padding: 12px 0;
 
     @include at-x-large-size {
