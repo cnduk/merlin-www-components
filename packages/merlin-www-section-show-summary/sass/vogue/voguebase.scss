@@ -3,7 +3,7 @@
 .c-show-summary-section {
     margin-top: $MOBILE_SLICE_MARGIN;
     margin-bottom: $MOBILE_SLICE_MARGIN;
-	position: relative;
+    position: relative;
 
     &:focus,
     &:hover {
@@ -16,8 +16,8 @@
     }
 }
 .c-show-summary-section__wrapper {
-	margin: 0 auto;
-	max-width: $MAXIMUM_PAGE_WIDTH;
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH;
 }
 
 .c-show-summary-section__image {
@@ -46,21 +46,21 @@
 .c-show-summary-section__meta {
     @include font('NOBEL', 10px, null, 16px);
     color: $dove-gray;
-	display: inline-block;
+    display: inline-block;
 }
 
 .c-show-summary-section__meta-item {
-	letter-spacing: 1px;
+    letter-spacing: 1px;
     padding-right: $PADDING_XX_SMALL;
-	text-transform: uppercase;
+    text-transform: uppercase;
 
-	&--season {
-		color: $guardsman-red;
-	}
+    &--season {
+        color: $guardsman-red;
+    }
 
-	&--show-type {
-		color: $dove-gray;
-	}
+    &--show-type {
+        color: $dove-gray;
+    }
 
     &:last-child {
         padding-right: 0;
@@ -72,7 +72,7 @@
     }
 }
 
-@include card-portrait-to-landscape-size {
+@include min-screen($CARD_SWITCHER_WIDTH) {
     .c-show-summary-section__meta {
         @include font-size(11px);
         @include line-height(20px);
@@ -81,7 +81,7 @@
     }
 }
 
-@include feature-slice-at-large {
+@include at-medium-size {
     .c-show-summary-section__content {
         margin-top: -72px;
         max-width: 760px;
@@ -94,7 +94,7 @@
     }
 }
 
-@include tablet-size {
+@include at-medium-size {
     .c-show-summary-section {
         margin-top: $TABLET_SLICE_MARGIN;
         margin-bottom: $TABLET_SLICE_MARGIN;
@@ -105,7 +105,7 @@
     }
 }
 
-@include desktop-size {
+@include at-x-large-size {
     .c-show-summary-section {
         margin-top: $DESKTOP_SLICE_MARGIN;
         margin-bottom: $DESKTOP_SLICE_MARGIN;
