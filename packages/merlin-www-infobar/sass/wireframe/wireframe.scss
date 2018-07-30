@@ -2,29 +2,46 @@
 @import '@cnbritain/merlin-www-common:wireframe';
 
 .c-infobar {
-    @include at-x-large-size {
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        height: 60px;
-    }
-
     &.is-hidden {
         display: none;
+    }
+
+    &.is-fixed {
+        .c-infobar-wrapper {
+            box-sizing: border-box;
+            left: 50%;
+            position: fixed;
+            top: 0;
+            transform: translateX(-50%);
+        }
     }
 }
 
 .c-infobar-wrapper {
+    width: 100%;
+
+    @include at-x-large-size {
+        box-sizing: border-box;
+        height: 60px;
+    }
+}
+
+.c-infobar__content {
     align-items: center;
     display: flex;
     flex-direction: column;
 
     @include at-x-large-size {
+        box-sizing: border-box;
+        height: 60px;
+        justify-content: center;
         flex-direction: row;
     }
 }
 
 .c-infobar__message {}
-.c-infobar__btn {
-    flex: 1 0 auto;
+.c-infobar__button {}
+
+.c-infobar__close-button {
+    display: none;
 }

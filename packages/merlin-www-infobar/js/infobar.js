@@ -9,6 +9,7 @@ import {
 import * as events from './events';
 
 var IS_HIDDEN_CLS = 'is-hidden';
+var IS_FIXED_CLS = 'is-fixed';
 
 var COOKIE_PAGE_VIEW_COUNT = 'cnd_infobar_pageview_count';
 var COOKIE_HASH = 'cnd_infobar_hash';
@@ -23,11 +24,12 @@ function Infobar(el) {
     }
 
     this.state = {
-        isHidden: true
+        isHidden: true,
+        isFixed: false
     };
 
     this.messageEl = el.querySelector('.js-c-infobar__message');
-    this.buttonEl = el.querySelector('.js-c-infobar__btn');
+    this.buttonEl = el.querySelector('.js-c-infobar__button');
 
     this.configEl = el.querySelector('.js-c-infobar-config');
 
@@ -64,6 +66,9 @@ function Infobar(el) {
     this.show = this.show.bind(this);
     this.hide = this.hide.bind(this);
 
+    this.fix = this.fix.bind(this);
+    this.unfix = this.unfix.bind(this);
+
     this.onClick = this.onClick.bind(this);
 
     this.el.addEventListener('click', this.onClick);
@@ -82,6 +87,24 @@ Infobar.prototype = inherit(EventEmitter.prototype, {
 
         this.el.classList.add(IS_HIDDEN_CLS);
         this.state.isHidden = true;
+    },
+
+    fix: function() {
+        if (this.state.isFixed) return;
+
+        this.el.classList.add(IS_FIXED_CLS);
+        this.state.isFixed = true;
+    },
+
+    unfix: function() {
+        if (!this.state.isFixed) return;
+
+        this.el.classList.remove(IS_FIXED_CLS);
+        this.state.isFixed = false;
+    },
+
+    togglefix: function() {
+
     },
 
     onClick: function(e) {
