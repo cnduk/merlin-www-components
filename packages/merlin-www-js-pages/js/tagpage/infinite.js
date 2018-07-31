@@ -9,7 +9,7 @@ import {
     updateQueryString
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import InfiniteScroll from '@cnbritain/merlin-www-js-infinitescroll';
-import CardList from '@cnbritain/merlin-www-card-list';
+import SectionCardList from '@cnbritain/merlin-www-section-card-list';
 import {
     AdManager
 } from '@cnbritain/merlin-www-ads';
@@ -128,7 +128,7 @@ export function onInfiniteLoadComplete(e) {
     resize();
 
     // Update new card lists with new native ads
-    CardList.init();
+    SectionCardList.init();
 
     // Trigger some more lazy ads
     AdManager.lazy();
