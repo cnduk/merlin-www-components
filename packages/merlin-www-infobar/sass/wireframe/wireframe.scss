@@ -2,23 +2,41 @@
 @import '@cnbritain/merlin-www-common:wireframe';
 
 .c-infobar {
-    &.is-hidden {
-        display: none;
-    }
+    height: 60px;
+    position: relative;
+    width: 100%;
+    z-index: 5;
 
     &.is-fixed {
         .c-infobar-wrapper {
             box-sizing: border-box;
             left: 50%;
             position: fixed;
-            top: 0;
+            top: 60px;
             transform: translateX(-50%);
         }
+    }
+
+    &.is-hidden {
+        @include max-screen($X_LARGE_SIZE - 1px) {
+            .c-infobar-wrapper {
+                top: 0px;
+            }
+        }
+    }
+
+    &.is-disabled {
+        display: none;
     }
 }
 
 .c-infobar-wrapper {
     width: 100%;
+
+    @include max-screen($X_LARGE_SIZE - 1px) {
+        transition: top 300ms ease-in-out;
+        will-change: top;
+    }
 
     @include at-x-large-size {
         box-sizing: border-box;
@@ -30,6 +48,9 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    max-width: $XX_LARGE_SIZE;
+    position: relative;
 
     @include at-x-large-size {
         box-sizing: border-box;
@@ -43,5 +64,19 @@
 .c-infobar__button {}
 
 .c-infobar__close-button {
-    display: none;
+    appearance: none;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+
+    svg {
+        width: 100%;
+    }
 }

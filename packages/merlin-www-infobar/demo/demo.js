@@ -1,7 +1,6 @@
 import INFOBAR from '../js';
 
-INFOBAR.show();
-INFOBAR.fix();
+INFOBAR.enable();
 
 for (var i = 0; i < 10; i++) {
     var bodyCopy = document.createElement('p');

@@ -6,10 +6,12 @@ import {
     inherit,
     setCookie
 } from '@cnbritain/merlin-www-js-utils/js/functions';
+import NAV from '@cnbritain/merlin-www-main-navigation';
 import * as events from './events';
 
 var IS_HIDDEN_CLS = 'is-hidden';
 var IS_FIXED_CLS = 'is-fixed';
+var IS_DISABLED_CLS = 'is-disabled';
 
 var COOKIE_PAGE_VIEW_COUNT = 'cnd_infobar_pageview_count';
 var COOKIE_HASH = 'cnd_infobar_hash';
@@ -24,12 +26,14 @@ function Infobar(el) {
     }
 
     this.state = {
-        isHidden: true,
-        isFixed: false
+        isHidden: false,
+        isFixed: false,
+        isEnabled: false
     };
 
     this.messageEl = el.querySelector('.js-c-infobar__message');
     this.buttonEl = el.querySelector('.js-c-infobar__button');
+    this.closeButtonEl = el.querySelector('.js-c-infobar__close-button');
 
     this.configEl = el.querySelector('.js-c-infobar-config');
 
@@ -60,7 +64,7 @@ function Infobar(el) {
         this.pageviewCount += 1;
         setCookie(COOKIE_PAGE_VIEW_COUNT, this.pageviewCount);
 
-        this.show();
+        this.enable();
     }
 
     this.show = this.show.bind(this);
@@ -69,9 +73,34 @@ function Infobar(el) {
     this.fix = this.fix.bind(this);
     this.unfix = this.unfix.bind(this);
 
+    this.enable = this.enable.bind(this);
+    this.disable = this.disable.bind(this);
+
     this.onClick = this.onClick.bind(this);
 
     this.el.addEventListener('click', this.onClick);
+
+    this.closeButtonEl.addEventListener('click', function() {
+        this.disable();
+    }.bind(this));
+
+    if (NAV) {
+        NAV.on('show', function() {
+            this.show();
+        }.bind(this));
+
+        NAV.on('hide', function() {
+            this.hide();
+        }.bind(this));
+
+        NAV.on('fix', function() {
+            this.fix();
+        }.bind(this));
+
+        NAV.on('unfix', function() {
+            this.unfix();
+        }.bind(this));
+    }
 }
 
 Infobar.prototype = inherit(EventEmitter.prototype, {
@@ -103,8 +132,18 @@ Infobar.prototype = inherit(EventEmitter.prototype, {
         this.state.isFixed = false;
     },
 
-    togglefix: function() {
+    enable: function() {
+        if (this.state.isEnabled) return;
 
+        this.el.classList.remove(IS_DISABLED_CLS);
+        this.state.isEnabled = true;
+    },
+
+    disable: function() {
+        if (!this.state.isEnabled) return;
+
+        this.el.classList.add(IS_DISABLED_CLS);
+        this.state.isEnabled = false;
     },
 
     onClick: function(e) {

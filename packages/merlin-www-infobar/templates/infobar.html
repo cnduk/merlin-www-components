@@ -1,4 +1,4 @@
-<div class="c-infobar js-c-infobar is-hidden{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
+<div class="c-infobar js-c-infobar is-disabled{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
     <div class="c-infobar-wrapper">
         <div class="c-infobar__content">
             <a href="{{# data.link}}{{ &data.url }}{{/ data.link}}" class="c-infobar__message js-c-infobar__message">
@@ -9,7 +9,11 @@
                     <a href="{{ &data.url }}" class="c-infobar__button js-c-infobar__button">{{ . }}</a>
                 {{/ data.title }}
             {{/ data.link }}
-            <button class="js-c-infobar__close-button c-infobar__close-button"></button>
+            {{# data.icon_close }}
+                <button class="c-infobar__close-button js-c-infobar__close-button ">
+                    {{> @cnbritain/merlin-www-image }}
+                </button>
+            {{/ data.icon_close }}
         </div>
     </div>
 
