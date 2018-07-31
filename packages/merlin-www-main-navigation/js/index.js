@@ -1,5 +1,9 @@
 import Nav from './nav';
 
-const NAV = new Nav(document.querySelector('.js-c-nav'));
+var NAV;
+
+if (document.querySelector('.js-c-nav')) {
+    NAV = new Infobar(document.querySelector('.js-c-nav'));
+}
 
 export default NAV;
