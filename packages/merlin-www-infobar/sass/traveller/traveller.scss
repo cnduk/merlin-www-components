@@ -33,3 +33,13 @@
         margin: 0 0 0 20px;
     }
 }
+
+.c-infobar__close-button {
+    border-radius: 50%;
+    border: 1px solid $WHITE;
+    padding: 6px;
+
+    svg {
+        fill: $WHITE;
+    }
+}
