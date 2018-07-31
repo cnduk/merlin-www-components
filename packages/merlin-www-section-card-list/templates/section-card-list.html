@@ -2,6 +2,7 @@
 
     <div class="c-card-section-wrapper">
 
+        {{# state.has_header }}
         <header class="c-card-section__header">
 
             {{# data.logo }}
@@ -16,9 +17,11 @@
             </h3>
             {{/ state.is_linked_title }}
             {{^ state.is_linked_title }}
+            {{# data.title }}
             <h3 class="c-card-section__title">
-                <span>{{ data.title }}</span>
+                <span>{{ . }}</span>
             </h3>
+            {{/ data.title }}
             {{/ state.is_linked_title }}
 
             {{# data.navigation_strip }}
@@ -28,6 +31,7 @@
             {{/ data.navigation_strip }}
 
         </header>
+        {{/ state.has_header }}
 
         {{# data.card_list }}
         <div class="c-card-section__body">
