@@ -1,6 +1,9 @@
 import INFOBAR from '../js';
 
 INFOBAR.enable();
+INFOBAR.fix();
+
+INFOBAR.el.querySelector('.c-infobar-wrapper').style.top = '0';
 
 for (var i = 0; i < 10; i++) {
     var bodyCopy = document.createElement('p');
