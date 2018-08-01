@@ -1,16 +1,7 @@
 'use strict';
 
-import {
-    isAdNative
-} from '../utils';
-import {
-    getParent,
-    removeClass,
-    removeElement
-} from '@cnbritain/merlin-www-js-utils/js/functions';
 import {AdManager} from '@cnbritain/merlin-www-ads';
-
-var CLS_STATE_HIDDEN = 'is-hidden';
+import {isAdNative} from '../utils';
 
 export var nativeAdsShift = 0;
 export var nativeAdsWaiting = 0;
@@ -31,7 +22,7 @@ export function onAdRenderStop(e) {
     nativeAdsWaiting--;
 }
 
-export function onNativeAdRender(e) {
+export function onNativeAdRender() {
     nativeAdsShift++;
 }
 
