@@ -16,7 +16,7 @@ import SectionCardList from '@cnbritain/merlin-www-section-card-list';
 
 import {
     nativeAdShift,
-    nativeAdsWaiting
+    nativeAdWaiting
 } from './ads';
 import {
     createStickGroup
@@ -58,7 +58,7 @@ export function resize() {
 
 export function onInfiniteTrigger(scrollY) {
     return (
-        nativeAdsWaiting === 0 &&
+        nativeAdWaiting === 0 &&
         scrollY >= (infiniteBodyScrollHeight - INFINITE_BOTTOM_THRESHOLD)
     );
 }
