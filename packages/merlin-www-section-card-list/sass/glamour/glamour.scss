@@ -221,7 +221,8 @@
     @include light-button;
 }
 .c-card-section--c-curated,
-.c-card-section--c-tag {
+.c-card-section--c-tag,
+.c-card-section--c-video-articles {
     @include column-1-2-4;
     @include light-button;
 }
