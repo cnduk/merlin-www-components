@@ -373,7 +373,6 @@
  */
 
 // Unused modifiers
-// .c-card-section--c-contributors {}
 // .c-card-section--dark {}
 // .c-card-section--sh-shows {}
 // .c-card-section--tg-articles-grid {}
@@ -407,6 +406,13 @@
     }
 }
 
+.c-card-section--c-contributors {
+    @include column-1-2-3;
+
+    .c-card-section__btn {
+        @include button-light;
+    }
+}
 
 .c-card-section--a-recommended,
 .c-card-section--c-curated,
