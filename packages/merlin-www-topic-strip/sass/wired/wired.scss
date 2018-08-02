@@ -118,7 +118,6 @@
 }
 
 .c-topic-strip--c-card-section {
-    margin: 20px (-$MOBILE_SIDE_GUTTER);
     white-space: nowrap;
 
     .c-topic-strip-wrapper {
@@ -139,10 +138,7 @@
         }
     }
 
-    @include at-medium-size {
-        margin-left: -$TABLET_SIDE_GUTTER;
-        margin-right: -$TABLET_SIDE_GUTTER;
-
+    @include tablet-size {
         .c-topic-strip-wrapper {
             padding-left: $TABLET_SIDE_GUTTER;
         }
@@ -152,15 +148,7 @@
         }
     }
 
-    @include at-x-large-size {
-        display: inline-block;
-        margin: 0;
-        padding: 0;
-        position: absolute;
-        right: 0;
-        top: -17px;
-        width: auto;
-
+    @include desktop-size {
         .c-topic-strip__list-item:last-child {
             padding-right: 0;
         }

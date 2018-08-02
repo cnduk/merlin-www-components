@@ -1,82 +1,19 @@
-@mixin section-right-sidebar(){
-    .c-card-list {
-        text-align: left;
 
-        @include at-x-large-size {
-            margin-right: 340px;
-            position: relative;
-        }
-    }
-}
+/**
+ * Mixins
+ */
 
-.c-card-section {
-    margin-top: $MOBILE_SLICE_MARGIN;
-    margin-bottom: $MOBILE_SLICE_MARGIN;
-
-    @include at-medium-size {
-        margin-top: $TABLET_SLICE_MARGIN;
-        margin-bottom: $TABLET_SLICE_MARGIN;
-    }
-
-    @include at-x-large-size {
-        margin-top: $DESKTOP_SLICE_MARGIN;
-        margin-bottom: $DESKTOP_SLICE_MARGIN;
-    }
-}
-
-.c-card-section__title {
-    color: $cod-gray;
-    font-weight: bold;
-
-    a {
-        color: inherit;
-    }
-}
-
-.c-card-section__logo {
-    height: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-
-    svg {
-        display: inline-block;
-        height: 100%;
-        width: auto;
-
-        path {
-            fill: $white;
-        }
-    }
-
-    @include at-medium-size {
-        height: 40px;
-        margin-bottom: 60px;
-    }
-}
-
-.c-card-section__btn {
-    @include button-single();
-    @include button-single-light();
-    margin-top: 35px;
-
-    &:hover,
-    &:focus {
-        @include button-single-light-hover();
-    }
-}
-
-.c-card-section--c-curated,
-.c-card-section--c-tag {
+@mixin bordered-title-1 {
     .c-card-section__title {
-        @include font('NOBEL', 20px, null, 20px);
-        margin-bottom: 30px;
+        @include font-size(20px);
+        @include line-height(20px);
         text-align: center;
-        text-transform: uppercase;
+    }
 
-        @include at-medium-size {
+    @include at-medium-size {
+        .c-card-section__title {
             @include font-size(25px);
             @include line-height(25px);
-            position: relative;
 
             span {
                 background-color: $white;
@@ -94,39 +31,31 @@
                 right: 0;
                 top: 100%;
             }
-
         }
     }
 }
 
-.c-card-section--s-results {}
-
-.c-card-section--c-video-articles {
-    background-color: $mine-shaft-222;
-    max-width: none;
-    padding: 40px $MOBILE_SIDE_GUTTER;
-
+@mixin bordered-title-2 {
     .c-card-section__title {
-        @include font('NOBEL', 15px, null, 15px);
-        color: $white;
-        margin-bottom: 30px;
-        margin-top: 0;
+        @include font-size(15px);
+        @include line-height(15px);
         padding-bottom: 10px;
-        position: relative;
-        text-align: left;
-        text-transform: uppercase;
-    }
 
-    .c-card-section__btn {
-        @include button-single();
-        @include button-single-dark();
-        width: auto;
-
-        &:hover,
-        &:focus {
-            @include button-single-dark-hover();
+        &:after {
+            @include dotted-line($COLOR_BORDER_DOTTED, 1px, 3px);
+            content: '';
+            height: 1px;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 100%;
         }
     }
+}
+
+@mixin section-background($background-color){
+    background-color: $background-color;
+    padding: 40px $MOBILE_SIDE_GUTTER;
 
     @include at-medium-size {
         padding: 80px $TABLET_SIDE_GUTTER;
@@ -137,111 +66,332 @@
     }
 }
 
-.c-card-section--v-related-articles {
-    background-color: $mine-shaft-222;
-    max-width: none;
-    padding: 0 $MOBILE_SIDE_GUTTER;
-
-    .c-card-section__title {
-        @include font("NOBEL", 15px, null, 16px);
-        color: $white;
-        margin: 0;
-        padding: 20px 0;
+@mixin section-sidebar {
+    .c-card-section__card-list {
         position: relative;
         text-align: left;
-        text-transform: uppercase;
-    }
-
-    .c-card-section__btn {
-        @include button-single();
-        @include button-single-dark();
-        margin-bottom: 20px;
-        width: auto;
-
-        &:hover,
-        &:focus {
-            @include button-single-dark-hover();
-        }
-    }
-
-    @include at-medium-size {
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
     }
 
     @include at-x-large-size {
-        display: none;
-    }
-
-}
-
-.c-card-section--mag-magazines,
-.c-card-section--mag-articles {
-    .c-card-section__title {
-        @include font("NOBEL", 14px, null, 16px, 25);
-        color: $cod-gray;
-        margin-bottom: 20px;
-        margin-top: 0;
-        text-transform: uppercase;
-    }
-}
-
-.c-card-section--v-genre-articles {
-    .c-card-section__title {
-        @include font('NOBEL', 15px, null, 15px);
-        margin-bottom: 30px;
-        margin-top: 0;
-        padding-bottom: 10px;
-        position: relative;
-        text-align: left;
-        text-transform: uppercase;
-
-        &:after {
-            @include dotted-line($COLOR_BORDER_DOTTED, 1px, 3px);
-            content: '';
-            height: 1px;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 100%;
+        .c-card-section__card-list {
+            margin-right: 340px;
         }
     }
 }
 
+@mixin button-light {
+    @include button-single;
+    @include button-single-light;
+    margin-top: 35px;
+    width: auto;
+
+    &:hover,
+    &:focus {
+        @include button-single-light-hover;
+    }
+}
+
+@mixin button-dark {
+    @include button-single;
+    @include button-single-dark;
+    margin-top: 35px;
+    width: auto;
+
+    &:hover,
+    &:focus {
+        @include button-single-dark-hover;
+    }
+}
+
+@mixin column-base {
+    .c-card-section__card-list {
+        margin: -15px -20px;
+    }
+    .c-card-section__card-listitem {
+        margin: 15px 0;
+        padding: 0 20px;
+    }
+}
+
+@mixin column-1 {
+    @include column-base;
+    @include add-card-separators;
+
+    .c-card-section__card-list {}
+    .c-card-section__card-listitem {
+        width: 100%;
+    }
+}
+
+@mixin column-2 {
+    @include column-base;
+
+    .c-card-section__card-list {}
+    .c-card-section__card-listitem {
+        width: 50%;
+    }
+}
+
+@mixin column-2-4 {
+    @include column-base;
+
+    .c-card-section__card-list {}
+    .c-card-section__card-listitem {
+        width: 50%;
+    }
+
+    @include at-x-large-size {
+        .c-card-section__card-listitem {
+            width: 25%;
+        }
+    }
+}
+
+@mixin column-1-2-3 {
+    @include column-base;
+    @include add-card-separators;
+
+    .c-card-section__card-list {}
+    .c-card-section__card-listitem {
+        width: 100%;
+    }
+
+    @include at-small-size {
+        @include remove-card-separators;
+
+        .c-card-section__card-listitem {
+            width: 50%;
+        }
+    }
+
+    @include at-large-size {
+        .c-card-section__card-listitem {
+            width: 33.33%;
+        }
+    }
+}
+
+@mixin column-1-2-4 {
+    @include column-base;
+    @include add-card-separators;
+
+    .c-card-section__card-list {}
+    .c-card-section__card-listitem {
+        width: 100%;
+    }
+
+    @include at-small-size {
+        @include remove-card-separators;
+
+        .c-card-section__card-listitem {
+            width: 50%;
+        }
+    }
+
+    @include at-x-large-size {
+        .c-card-section__card-listitem {
+            width: 25%;
+        }
+    }
+}
+
+@mixin column-1-2-43 {
+    @include column-base;
+    @include add-card-separators;
+
+    .c-card-section__card-list {}
+    .c-card-section__card-listitem {
+        width: 100%;
+    }
+
+    @include at-small-size {
+        @include remove-card-separators;
+
+        .c-card-section__card-listitem {
+            width: 50%;
+        }
+    }
+
+    @include at-x-large-size {
+        .c-card-section__card-listitem {
+            width: 33.33%;
+        }
+    }
+}
+
+@mixin column-1-2-3-5 {
+    @include column-base;
+    @include add-card-separators;
+
+    .c-card-section__card-list {
+        text-align: center;
+    }
+    .c-card-section__card-listitem {
+        text-align: left;
+        width: 100%;
+    }
+
+    @include at-small-size {
+        @include remove-card-separators;
+
+        .c-card-section__card-listitem {
+            width: 50%;
+        }
+    }
+
+    @include at-large-size {
+        .c-card-section__card-listitem {
+            width: 33.33%;
+        }
+    }
+
+    @include at-x-large-size {
+        .c-card-section__card-listitem {
+            width: 20%;
+        }
+    }
+}
+
+@mixin add-card-separators {
+    .c-card-section__card-listitem + .c-card-section__card-listitem {
+        .c-card {
+            border-top: 1px solid $alto;
+            padding-top: 20px;
+        }
+        .c-card--dark {
+            border-top-color: $mine-shaft-333;
+        }
+    }
+}
+
+@mixin remove-card-separators {
+    .c-card-section__card-listitem + .c-card-section__card-listitem {
+        .c-card {
+            border-top: none;
+            padding-top: inherit;
+        }
+        .c-card--dark {
+            border-top-color: $mine-shaft-333;
+        }
+    }
+}
+
+
+/**
+ * Defaults
+ */
+.c-card-section {
+    margin-top: $MOBILE_SLICE_MARGIN;
+    margin-bottom: $MOBILE_SLICE_MARGIN;
+
+    @include at-medium-size {
+        margin-top: $TABLET_SLICE_MARGIN;
+        margin-bottom: $TABLET_SLICE_MARGIN;
+    }
+
+    @include at-x-large-size {
+        margin-top: $DESKTOP_SLICE_MARGIN;
+        margin-bottom: $DESKTOP_SLICE_MARGIN;
+    }
+}
+
+.c-card-section-wrapper {
+    margin: 0 auto;
+    max-width: $ARTICLE_TOTAL;
+}
+
+.c-card-section__header {}
+.c-card-section__body {}
+.c-card-section__footer {
+    text-align: center;
+}
+
+.c-card-section__logo {
+    height: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+
+    svg, img {
+        display: inline-block;
+        height: 100%;
+        width: auto;
+    }
+
+    path {
+        fill: $white;
+    }
+
+    @include at-medium-size {
+        height: 40px;
+        margin-bottom: 60px;
+    }
+}
+
+.c-card-section__title {
+    @include font('NOBEL');
+    color: $cod-gray;
+    position: relative;
+    margin-bottom: 30px;
+    margin-top: 0;
+    text-align: left;
+    text-transform: uppercase;
+
+    a {
+        color: inherit;
+    }
+}
+
+.c-card-section__nav-strip {
+    margin: 20px (-$MOBILE_SIDE_GUTTER);
+
+    @include at-medium-size {
+        margin-bottom: $MARGIN_MEDIUM;
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.c-card-section__card-list {
+    font-size: 0;
+}
+.c-card-section__card-listitem {
+    display: inline-block;
+    font-size: initial;
+}
+
+.c-card-section__btn {
+    @include button-light;
+}
+
+/**
+ * Modifiers
+ */
+
+// Unused modifiers
+// .c-card-section--c-contributors {}
+// .c-card-section--dark {}
+// .c-card-section--sh-shows {}
+// .c-card-section--tg-articles-grid {}
+
 .c-card-section--a-recommended,
-.c-card-section--g-recommended,
+.c-card-section--s-results,
+.c-card-section--sh-latest-articles,
+.c-card-section--sh-summary-shows,
 .c-card-section--sh-summary-articles,
-.c-card-section--sh-summary-shows {
+.c-card-section--tg-articles,
+.c-card-section--v-articles,
+.c-card-section--v-genre-articles {
+    @include bordered-title-2;
     background-color: $wild-sand;
     padding-bottom: 40px;
     padding-top: 40px;
     margin-bottom: 0;
     margin-top: 0;
-    max-width: none;
-
-    .c-card-section__constrain {
-        max-width: $ARTICLE_TOTAL;
-    }
-
-    .c-card-section__title {
-        @include font('NOBEL', 15px, null, 15px);
-        margin-bottom: 30px;
-        margin-top: 0;
-        padding-bottom: 10px;
-        position: relative;
-        text-align: left;
-        text-transform: uppercase;
-
-        &:after {
-            @include dotted-line($COLOR_BORDER_DOTTED, 1px, 3px);
-            content: '';
-            height: 1px;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 100%;
-        }
-    }
 
     .c-card__image__icon {
         background-color: $wild-sand;
@@ -257,38 +407,112 @@
     }
 }
 
-.c-card-section--mag-magazines {
-    .c-card-section__constrain {
-        max-width: $MAXIMUM_PAGE_WIDTH;
-    }
+
+.c-card-section--a-recommended,
+.c-card-section--c-curated,
+.c-card-section--c-video-articles,
+.c-card-section--mag-articles,
+.c-card-section--s-results,
+.c-card-section--sh-summary-articles,
+.c-card-section--v-genre-articles {
+    @include column-1-2-4;
 }
 
-.c-card-section--c-magazine-articles {}
-.c-card-section--sh-shows {}
+.c-card-section--c-tag {
+    @include column-1-2-3-5;
+}
 
-.c-card-section--v-articles,
+.c-card-section--mag-magazines,
+.c-card-section--sh-summary-shows {
+    @include column-2-4;
+}
+
+.c-card-section--sh-latest-articles,
+.c-card-section--tg-articles {
+    @include column-1;
+}
+
+.c-card-section--v-articles {
+    @include column-1-2-43;
+}
+
+.c-card-section--sh-latest-articles,
 .c-card-section--tg-articles,
-.c-card-section--sh-latest-articles {
-    @include section-right-sidebar();
+.c-card-section--v-articles {
+    @include section-sidebar;
+}
+
+
+.c-card-section--c-curated,
+.c-card-section--c-tag,
+.c-card-section--c-video-articles {
+    @include bordered-title-1;
+}
+
+
+.c-card-section--c-video-articles {
+    @include section-background($mine-shaft-333);
 
     .c-card-section__title {
-        @include font('NOBEL', 15px, null, 15px);
-        margin-bottom: 30px;
-        padding-bottom: 10px;
-        position: relative;
-        text-align: left;
-        text-transform: uppercase;
+        color: $white;
 
-        &:after {
-            @include dotted-line($COLOR_BORDER_DOTTED, 1px, 3px);
-            content: '';
-            height: 1px;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 100%;
+        span {
+            background-color: $mine-shaft-333;
         }
     }
+
+    .c-card-section__btn {
+        @include button-dark;
+    }
 }
-.c-card-section--sh-articles {}
-.c-card-section--tg-header-articles {}
+
+.c-card-section--mag-articles,
+.c-card-section--mag-magazines {
+    .c-card-section__title {
+        @include font-size(14px);
+        @include line-height(16px);
+        margin-bottom: 20px;
+    }
+}
+
+.c-card-section--v-related-articles {
+    background-color: $mine-shaft-222;
+    padding: 0 $MOBILE_SIDE_GUTTER;
+
+    .c-card-section__title {
+        @include font-size(15px);
+        @include line-height(16px);
+        color: $white;
+        margin: 0;
+        padding: 20px 0;
+    }
+
+    .c-card-section__card-listitem {
+        opacity: 1;
+        transition: opacity 0.3s ease-out;
+        width: 100%;
+
+        &.is-active {
+            opacity: 0.3;
+        }
+    }
+
+    .c-card-section__card-listitem + .c-card-section__card-listitem {
+        border-top: 1px solid $mine-shaft-333;
+        margin-top: 12px;
+        padding-top: 12px;
+    }
+
+    .c-card-section__btn {
+        @include button-dark;
+    }
+
+    @include at-medium-size {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size {
+        display: none;
+    }
+}

@@ -1,0 +1,29 @@
+
+.ad__container {}
+
+.ad__title {
+    @include font("BRUTAL", 9px, 700, 12px);
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 0;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+    text-align: left;
+    text-transform: uppercase;
+
+    @include at-medium-size {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size {
+        display: none;
+    }
+}
+
+.ad__block {
+    padding: 20px 0;
+    text-align: center;
+
+    &.is-sticky-element {}
+}

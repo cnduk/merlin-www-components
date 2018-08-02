@@ -31,7 +31,6 @@ export function onAdRegister(e) {
 
 export function onAdRender() {
     nativeAdShift++;
-    // TODO: check if we need to delete articles and show them?
 }
 
 export function onAdRenderStop(e) {

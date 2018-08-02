@@ -88,18 +88,12 @@
 }
 
 .c-topic-strip--c-card-section {
-    margin: 20px (-$MOBILE_SIDE_GUTTER) 25px (-$MOBILE_SIDE_GUTTER);
-
     .c-topic-strip-wrapper {
         padding-left: $MOBILE_SIDE_GUTTER;
         padding-right: $MOBILE_SIDE_GUTTER;
     }
 
     @include at-medium-size {
-        margin-left: -$TABLET_SIDE_GUTTER;
-        margin-right: -$TABLET_SIDE_GUTTER;
-        margin-top: 15px;
-
         .c-topic-strip-wrapper {
             padding-left: $TABLET_SIDE_GUTTER;
             padding-right: $TABLET_SIDE_GUTTER;

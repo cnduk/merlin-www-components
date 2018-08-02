@@ -12,9 +12,11 @@ import {
     AdManager
 } from '@cnbritain/merlin-www-ads';
 import InfiniteScroll from '@cnbritain/merlin-www-js-infinitescroll';
+import SectionCardList from '@cnbritain/merlin-www-section-card-list';
 
 import {
-    nativeAdShift
+    nativeAdShift,
+    nativeAdsWaiting
 } from './ads';
 import {
     createStickGroup
@@ -55,7 +57,10 @@ export function resize() {
 }
 
 export function onInfiniteTrigger(scrollY) {
-    return scrollY >= (infiniteBodyScrollHeight - INFINITE_BOTTOM_THRESHOLD);
+    return (
+        nativeAdsWaiting === 0 &&
+        scrollY >= (infiniteBodyScrollHeight - INFINITE_BOTTOM_THRESHOLD)
+    );
 }
 
 export function getNextPageUrl(pageUrl, pageNumber, itemShift) {
@@ -121,6 +126,8 @@ export function onInfiniteLoadComplete(e) {
 
     // Check if we need to stop
     if (responseJSON.data.stop) destroyInfiniteScroller();
+
+    SectionCardList.init();
 
     AdManager.lazy();
 
