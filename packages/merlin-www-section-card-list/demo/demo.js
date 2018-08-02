@@ -1,3 +1,3 @@
-import img from '../js/index';
+import section from '../js/index';
 
-img.init();
+section.init();

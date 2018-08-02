@@ -116,8 +116,10 @@
 
 .c-card__meta {
     @include font('NOBEL', 10px, null, 16px);
+    border-top: 1px solid $alto;
     color: $dove-gray;
     display: inline-block;
+    padding-top: 8px;
 }
 
 // Need to be specific to overwrite global__list-reset
@@ -127,7 +129,7 @@ li.c-card__meta-item {
     }
 
     & + li.c-card__meta-item {
-        border-left: 1px solid $gallery;
+        border-left: 1px solid $alto;
         padding-left: 8px;
     }
 }
@@ -204,7 +206,5 @@ li.c-card__meta-item {
     .c-card__meta {
         @include font-size(11px);
         @include line-height(20px);
-        border-top: 1px solid $gallery;
-        padding-top: 8px;
     }
 }

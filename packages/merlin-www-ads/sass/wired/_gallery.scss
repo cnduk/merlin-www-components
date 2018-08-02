@@ -1,0 +1,42 @@
+.ad--gallery {}
+
+.ad--gallery-inline {
+    margin-bottom: 40px;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    margin-top: 40px;
+
+    @include at-medium-size {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.ad--gallery-side {
+    display: none;
+    margin: 0 auto $DESKTOP_SLICE_MARGIN auto;
+    width: 300px;
+
+    .ad__block {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    @include at-x-large-size {
+        display: block;
+        margin-bottom: 0;
+        position: absolute;
+        right: 0;
+    }
+}
+
+.ad--gallery__interstitial-image,
+.ad--gallery__interstitial-video {
+    cursor: pointer;
+    max-width: 100%;
+}

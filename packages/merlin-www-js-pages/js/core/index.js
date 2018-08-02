@@ -20,7 +20,7 @@ import CommonImage from '@cnbritain/merlin-www-image';
 import store from '@cnbritain/merlin-www-js-store';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
 import TopStories from '@cnbritain/merlin-www-top-stories';
-import CardList from '@cnbritain/merlin-www-card-list';
+import SectionCardList from '@cnbritain/merlin-www-section-card-list';
 import {
     AdManager,
     AdDebugger,
@@ -85,7 +85,7 @@ export default function init(config) {
         ts[0].showNavigation();
         ts[0].disableScroll();
     }
-    CardList.init();
+    SectionCardList.init();
     initInternationalRedirect();
     displayHiringMessage();
     initLinkTracking();

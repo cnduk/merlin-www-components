@@ -4,32 +4,30 @@
  * @module CardList
  */
 
+import {removeClass} from '@cnbritain/merlin-www-js-utils/js/functions';
 import Card from '@cnbritain/merlin-www-card';
-import { AdManager } from '@cnbritain/merlin-www-ads';
-import {
-    removeClass
-} from '@cnbritain/merlin-www-js-utils/js/functions';
+import {AdManager} from '@cnbritain/merlin-www-ads';
 
 /**
  * Card list css class
  * @constant
  * @type {String}
  */
-var CLS_LIST = '.js-c-card-list';
+var CLS_LIST = '.js-c-card-section__card-list';
 
 /**
  * Card list item css class
  * @constant
  * @type {String}
  */
-var CLS_ITEM = '.js-c-card-list__item';
+var CLS_ITEM = '.js-c-card-section__card-listitem';
 
 /**
  * Card list ad css class
  * @constant
  * @type {String}
  */
-var CLS_AD = '.js-c-card-list__ad';
+var CLS_AD = '.js-c-card-section__card-listitem-ad';
 
 /**
  * AdManager register listener boolean
@@ -200,7 +198,8 @@ function hasAdSlot(el){
 function isInitialised(el){
     return (
         el.hasAttribute('data-card-list-initialised') &&
-        el.getAttribute('data-card-list-initialised') === 'true');
+        el.getAttribute('data-card-list-initialised') === 'true'
+    );
 }
 
 /**

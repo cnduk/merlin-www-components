@@ -1,43 +1,74 @@
 <section class="c-card-section {{ style.cls }}">
-    <div class="c-card-section__constrain">
-        {{# data.logo }}
+
+    <div class="c-card-section-wrapper">
+
+        {{# state.has_header }}
+        <header class="c-card-section__header">
+
+            {{# data.logo }}
             <div class="c-card-section__logo">
                 {{> @cnbritain/merlin-www-image }}
             </div>
-        {{/ data.logo }}
+            {{/ data.logo }}
 
-        <div class="c-card-section__title-wrapper">
             {{# state.is_linked_title }}
-                {{# data.title }}
-                    <h3 class="c-card-section__title">
-                        <span>
-                            <a href="{{ &data.url }}">{{ data.title }}</a>
-                        </span>
-                    </h3>
-                {{/ data.title }}
+            <h3 class="c-card-section__title">
+                <span><a href="{{ &data.title.data.url }}" title="{{ data.title.data.title }}">{{ data.title.data.title }}</a></span>
+            </h3>
             {{/ state.is_linked_title }}
-
             {{^ state.is_linked_title }}
-                {{# data.title }}
-                    <h3 class="c-card-section__title">
-                        <span>{{ data.title }}</span>
-                    </h3>
-                {{/ data.title }}
+            {{# data.title }}
+            <h3 class="c-card-section__title">
+                <span>{{ . }}</span>
+            </h3>
+            {{/ data.title }}
             {{/ state.is_linked_title }}
 
             {{# data.navigation_strip }}
+            <div class="c-card-section__nav-strip">
                 {{> @cnbritain/merlin-www-topic-strip }}
+            </div>
             {{/ data.navigation_strip }}
-        </div>
+
+        </header>
+        {{/ state.has_header }}
 
         {{# data.card_list }}
-            {{> @cnbritain/merlin-www-card-list }}
+        <div class="c-card-section__body">
+            <ul class="c-card-section__card-list js-c-card-section__card-list">
+                {{# data.items }}
+                {{^ state.is_ad }}
+                    {{# data.item.state.is_ad }}
+                    <li class="c-card-section__card-listitem c-card-section__card-listitem--ad js-c-card-section__card-listitem-ad {{ style.cls }}">
+                        {{# data.item }}
+                        {{> @cnbritain/merlin-www-ads }}
+                        {{/ data.item }}
+                    </li>
+                    {{/ data.item.state.is_ad }}
+                    {{^ data.item.state.is_ad }}
+                    <li class="c-card-section__card-listitem js-c-card-section__card-listitem {{ style.cls }}">
+                        {{# data.item }}
+                        {{> @cnbritain/merlin-www-card }}
+                        {{/ data.item }}
+                    </li>
+                    {{/ data.item.state.is_ad }}
+                {{/ state.is_ad }}
+                {{# state.is_ad }}
+                    {{> @cnbritain/merlin-www-ads }}
+                {{/ state.is_ad }}
+                {{/ data.items }}
+            </ul>
+        </div>
         {{/ data.card_list }}
 
         {{# data.link }}
-            <div class='global__a--center'>
-                <a href="{{ &data.url }}" class="c-card-section__btn {{ style.cls }}">{{ data.title }}</a>
-            </div>
+        <footer class="c-card-section__footer">
+            <a title="{{ data.title }}" href="{{ &data.url }}" class="c-card-section__btn {{ style.cls }}">
+                {{ data.title }}
+            </a>
+        </footer>
         {{/ data.link }}
+
     </div>
+
 </section>

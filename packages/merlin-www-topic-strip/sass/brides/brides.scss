@@ -124,8 +124,6 @@
 }
 
 .c-topic-strip--c-card-section {
-    margin: 24px (-$MOBILE_SIDE_GUTTER) 36px (-$MOBILE_SIDE_GUTTER);
-
     .c-topic-strip-wrapper {
         padding-left: $MOBILE_SIDE_GUTTER;
     }
@@ -135,9 +133,6 @@
     }
 
     @include at-medium-size {
-        margin-left: -$TABLET_SIDE_GUTTER;
-        margin-right: -$TABLET_SIDE_GUTTER;
-
         .c-topic-strip-wrapper {
             padding-left: $TABLET_SIDE_GUTTER;
         }
@@ -148,8 +143,6 @@
     }
 
     @include at-x-large-size {
-        margin: 28px 0 44px 0;
-
         .c-topic-strip-wrapper {
             padding-left: 20px;
             padding-right: 20px;

@@ -14,11 +14,20 @@
     .c-card__separator {
         display: none;
     }
+
+    &:hover {
+        .c-card__title {
+            span {
+                border-bottom: 2px solid $careys-pink;
+                box-shadow: none;
+            }
+        }
+    }
 }
 
 @mixin card-cover-small() {
     .c-card__title {
-        @include font("BRANDON GROTESQUE", 11px, 700, 11px);
+        @include font("BRANDON GROTESQUE", 12px, 700, 11px);
         color: $mine-shaft;
         letter-spacing: 1px;
         margin: 10px 0 0 0;
@@ -27,7 +36,7 @@
 
 @mixin card-cover-large() {
     .c-card__title {
-        @include font-size(17px);
+        @include font-size(15px);
         @include line-height(17px);
         margin-top: 15px;
     }
@@ -37,7 +46,7 @@
     @include card-cover();
     @include card-cover-small();
 
-    @include min-screen($CARD_LIST_4_COLUMN_BREAKPOINT) {
+    @include at-x-large-size {
         @include card-cover-large();
     }
 }
