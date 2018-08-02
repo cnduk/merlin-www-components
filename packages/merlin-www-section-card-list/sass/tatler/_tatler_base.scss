@@ -26,21 +26,37 @@
     }
 }
 
-@mixin section-background($background-color){
+@mixin section-background-margin($background-color){
     background-color: $background-color;
     margin: 30px auto;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
 
     @include at-small-size {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
     @include at-x-large-size {
         margin: 60px auto;
         padding-top: 0;
         padding-bottom: 0;
+    }
+}
+
+@mixin section-background-padding($background-color){
+    background-color: $background-color;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include at-small-size {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include at-x-large-size {
+        margin: 0 auto;
     }
 }
 
@@ -150,16 +166,16 @@
 }
 
 @mixin column-1 {
-    @include column-base;
-
     .c-card-section__card-list {
-        margin-bottom: -10px;
-        margin-top: -10px;
+        margin: -10px;
+        text-align: center;
     }
-
     .c-card-section__card-listitem {
+        display: block;
         margin-bottom: 10px;
         margin-top: 10px;
+        padding: 0 10px;
+        text-align: left;
         width: 100%;
     }
 }
@@ -400,26 +416,26 @@
 .c-card-section--mag-articles,
 .c-card-section--s-results,
 .c-card-section--v-genre-articles {
-    @include section-background($background-color: $wild-sand);
+    @include section-background-padding($background-color: $wild-sand);
     @include common-title;
     @include column-1-2-4;
     @include light-button;
 }
 .c-card-section--c-contributors {
-    @include section-background($background-color: $wild-sand);
+    @include section-background-margin($background-color: $wild-sand);
     @include slice-title;
     @include column-1-23;
     @include light-button;
 }
 .c-card-section--c-curated,
 .c-card-section--c-tag {
-    @include section-background($background-color: $wild-sand);
+    @include section-background-margin($background-color: $wild-sand);
     @include slice-title;
     @include column-1-2-4;
     @include light-button;
 }
 .c-card-section--c-video-articles {
-    @include section-background($background-color: $black);
+    @include section-background-margin($background-color: $black);
     @include slice-title;
     @include column-1-2-4;
     @include dark-button;
@@ -438,13 +454,13 @@
     }
 }
 .c-card-section--mag-magazines {
-    @include section-background($background-color: $wild-sand);
+    @include section-background-margin($background-color: $wild-sand);
     @include common-title;
     @include column-2-4;
     @include light-button;
 }
 .c-card-section--tg-articles {
-    @include section-background($background-color: $wild-sand);
+    @include section-background-margin($background-color: $wild-sand);
     @include common-title;
     @include column-1;
     @include light-button;
@@ -457,7 +473,7 @@
 }
 .c-card-section--tg-related-tags,
 .c-card-section--v-articles {
-    @include section-background($background-color: $wild-sand);
+    @include section-background-margin($background-color: $wild-sand);
     @include common-title;
     @include column-1-2-43;
     @include light-button;
@@ -470,7 +486,7 @@
 }
 
 .c-card-section--v-related-articles {
-    @include section-background($background-color: $mine-shaft);
+    @include section-background-margin($background-color: $mine-shaft);
     @include column-1;
     @include dark-button;
 
