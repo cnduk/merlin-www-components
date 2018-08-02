@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.16.6"></a>
+## [1.16.6](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card@1.16.5...@cnbritain/merlin-www-card@1.16.6) (2018-08-02)
+
+
+### Bug Fixes
+
+* **merlin-www-card:** correct h&g styles for cover and dark ([3846d73](https://github.com/cnduk/merlin-www-components/commit/3846d73))
+
+
+
+
 <a name="1.16.3"></a>
 ## [1.16.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-card@1.16.2...@cnbritain/merlin-www-card@1.16.3) (2018-07-19)
 

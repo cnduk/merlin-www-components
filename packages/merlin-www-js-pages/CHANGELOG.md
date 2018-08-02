@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.9.12"></a>
+## [1.9.12](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.9.11...@cnbritain/merlin-www-js-pages@1.9.12) (2018-08-02)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** update native ad logic in section card lists ([f79b8d3](https://github.com/cnduk/merlin-www-components/commit/f79b8d3))
+
+
+
+
 <a name="1.9.7"></a>
 ## [1.9.7](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.9.6...@cnbritain/merlin-www-js-pages@1.9.7) (2018-07-25)
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.10.39"></a>
+## [1.10.39](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-topic-strip@1.10.38...@cnbritain/merlin-www-topic-strip@1.10.39) (2018-08-02)
+
+
+### Bug Fixes
+
+* **merlin-www-topic-strip:** update styles for wired ([404c95e](https://github.com/cnduk/merlin-www-components/commit/404c95e))
+
+
+
+
 <a name="1.10.37"></a>
 ## [1.10.37](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-topic-strip@1.10.36...@cnbritain/merlin-www-topic-strip@1.10.37) (2018-07-19)
 

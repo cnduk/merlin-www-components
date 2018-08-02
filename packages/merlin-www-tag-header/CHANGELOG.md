@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.11.15"></a>
+## [1.11.15](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.14...@cnbritain/merlin-www-tag-header@1.11.15) (2018-08-02)
+
+
+### Bug Fixes
+
+* **merlin-www-tag-header:** correct bystander colours ([2907098](https://github.com/cnduk/merlin-www-components/commit/2907098))
+
+
+
+
 <a name="1.11.10"></a>
 ## [1.11.10](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.9...@cnbritain/merlin-www-tag-header@1.11.10) (2018-07-19)
 

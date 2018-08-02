@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.16.5"></a>
+## [1.16.5](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.16.4...@cnbritain/merlin-www-bbcode@1.16.5) (2018-08-02)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** correct size mixin for brides ([ee51ab3](https://github.com/cnduk/merlin-www-components/commit/ee51ab3))
+
+
+
+
 <a name="1.16.3"></a>
 ## [1.16.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.16.2...@cnbritain/merlin-www-bbcode@1.16.3) (2018-07-25)
 
