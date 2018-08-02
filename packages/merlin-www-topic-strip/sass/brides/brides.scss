@@ -22,7 +22,7 @@
         width: 1px;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         border: 1px solid $ballet-grey;
 
         &:before {
@@ -95,7 +95,7 @@
         padding-right: $MOBILE_SIDE_GUTTER;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-left: -$TABLET_SIDE_GUTTER;
         margin-right: -$TABLET_SIDE_GUTTER;
 
@@ -108,7 +108,7 @@
         }
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin-left: 0;
         margin-right: 0;
 
@@ -165,7 +165,7 @@
         padding-right: $MOBILE_SIDE_GUTTER;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-left: -$TABLET_SIDE_GUTTER;
         margin-right: -$TABLET_SIDE_GUTTER;
 
@@ -178,7 +178,7 @@
         }
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin: 0;
 
         .c-topic-strip-wrapper {

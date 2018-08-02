@@ -41,7 +41,7 @@
 }
 
 .ad--article-rail-top {
-    @include desktop-size {
+    @include at-x-large-size {
         top: 0;
     }
 }
@@ -104,7 +104,7 @@
 }
 
 
-@include tablet-size {
+@include at-medium-size {
 
     .ad--article-inline,
     .ad--gallery-inline,
@@ -117,7 +117,7 @@
 
 }
 
-@include desktop-size {
+@include at-x-large-size {
 
     .ad__title {
         text-align: left;

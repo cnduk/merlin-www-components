@@ -44,7 +44,7 @@
     }
 }
 
-@include tablet-size {
+@include at-medium-size {
     .ad--article {
         .ad__title {
             padding-left: $TABLET_SIDE_GUTTER;
@@ -60,7 +60,7 @@
     }
 }
 
-@include desktop-size {
+@include at-x-large-size {
     .ad--article {
         .ad__title {
             display: none;

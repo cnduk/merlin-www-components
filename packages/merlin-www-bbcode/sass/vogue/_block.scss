@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h5 {
     color: $mine-shaft-333;
     margin: 1em 0;
 
-    @include text-size-large {
+    @include at-x-large-size {
         @include font-size(20px);
     }
 }
@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h5 {
     @include font("ITC CASLON", 12px);
 }
 
-@include text-size-large {
+@include at-x-large-size {
     .bb-h1 {
         @include font-size(50px);
     }
@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5, h5 {
     list-style-type: none;
     margin: 20px 0;
 
-    @include text-size-large {
+    @include at-x-large-size {
         @include font-size(20px);
         @include line-height(30px);
     }
@@ -142,7 +142,7 @@ h1, h2, h3, h4, h5, h5 {
         top: 10px;
         width: 8px;
 
-        @include text-size-large {
+        @include at-x-large-size {
             top: 11px;
         }
     }
@@ -167,7 +167,7 @@ h1, h2, h3, h4, h5, h5 {
         top: 2px;
         width: 20px;
 
-        @include text-size-large {
+        @include at-x-large-size {
             top: 3px;
         }
     }
@@ -205,7 +205,7 @@ h1, h2, h3, h4, h5, h5 {
     font-style: italic;
     margin: 1em 0;
 
-    @include text-size-large {
+    @include at-x-large-size {
         @include font-size(20px);
     }
 }
@@ -236,7 +236,7 @@ h1, h2, h3, h4, h5, h5 {
         content: '';
     }
 
-    @include text-size-large {
+    @include at-x-large-size {
         @include font-size(29px);
         @include line-height(35px);
     }
@@ -260,7 +260,7 @@ h1, h2, h3, h4, h5, h5 {
     margin: $MARGIN_LARGE 0;
     padding: $PADDING_MEDIUM $PADDING_SMALL;
 
-    @include text-size-large {
+    @include at-x-large-size {
         padding: $PADDING_LARGE;
     }
 }

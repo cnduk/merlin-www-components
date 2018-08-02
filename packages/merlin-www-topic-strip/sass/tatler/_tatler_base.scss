@@ -50,7 +50,7 @@
         }
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin: 40px auto;
     }
 }
@@ -69,7 +69,7 @@
         padding-right: $MOBILE_SIDE_GUTTER;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-left: (-$TABLET_SIDE_GUTTER);
         margin-right: (-$TABLET_SIDE_GUTTER);
 

@@ -18,7 +18,7 @@
     max-width: 100%;
 }
 
-@include desktop-size {
+@include at-x-large-size {
     .ad--gallery-side {
         display: block;
     }

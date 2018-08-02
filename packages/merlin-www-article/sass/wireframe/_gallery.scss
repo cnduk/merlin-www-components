@@ -1,15 +1,15 @@
 .a-gallery {
     box-sizing: border-box;
-    max-width: $MAXIMUM_PAGE_WIDTH;
+    max-width: $XX_LARGE_SIZE;
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
@@ -29,10 +29,10 @@
 .a-gallery__wrapper {
     box-sizing: border-box;
     margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
+    max-width: $XX_LARGE_SIZE;
     position: relative;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding-right: $ARTICLE_RIGHT_TOTAL;
     }
 }
@@ -118,7 +118,7 @@ li.a-gallery__image-listitem--image {
 .c-figure__container {
     position: relative;
 
-    @include max-screen($TABLET_SIDE_GUTTER_BREAKPOINT - 1) {
+    @include max-screen($MEDIUM_SIZE - 1) {
         margin-left: -$MOBILE_SIDE_GUTTER;
         margin-right: -$MOBILE_SIDE_GUTTER;
     }
@@ -130,7 +130,7 @@ li.a-gallery__image-listitem--image {
     transform: translateX(-100%);
     width: 30px;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         display: block;
     }
 

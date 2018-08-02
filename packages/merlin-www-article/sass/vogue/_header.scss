@@ -75,7 +75,7 @@
         top: 0;
     }
 
-    @include min-screen(800px){
+    @include min-screen(800px) {
         padding-top: 56.25%;
     }
 }
@@ -268,14 +268,14 @@
     }
 }
 
-@include card-portrait-to-landscape-size {
+@include at-x-large-size {
     .a-header__meta {
         @include font-size(11px);
         @include line-height(20px);
     }
 }
 
-@include tablet-size {
+@include at-medium-size {
     .a-header__separator--hero {
         margin-left: 0;
         margin-right: 0;
@@ -286,7 +286,7 @@
     }
 }
 
-@include desktop-size {
+@include at-x-large-size {
     .a-header__content {
         padding: 60px $ARTICLE_RIGHT_TOTAL 0 0;
     }
@@ -337,7 +337,7 @@
     }
 }
 
-@include article-large-size {
+@include min-screen($ARTICLE_TOTAL) {
     .a-header__content {
         padding: 60px $ARTICLE_RIGHT_TOTAL 0 $ARTICLE_LEFT_TOTAL;
     }

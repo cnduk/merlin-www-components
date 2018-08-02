@@ -16,14 +16,14 @@
     padding-right: $MOBILE_SIDE_GUTTER;
     width: 100%;
 
-    @include common-medium-size() {
+    @include at-medium-size {
         margin-top: $TABLET_SLICE_MARGIN - 20;
         margin-bottom: $TABLET_SLICE_MARGIN;
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include common-large-size() {
+    @include at-x-large-size {
         margin-top: $DESKTOP_SLICE_MARGIN - 20;
         margin-bottom: $DESKTOP_SLICE_MARGIN;
         padding-left: $DESKTOP_SIDE_GUTTER;
@@ -33,7 +33,7 @@
 
 .a-body--gallery {}
 .a-body--video {
-    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    max-width: $XX_LARGE_SIZE + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
     margin: 0 auto;
     padding: 0;
 
@@ -42,12 +42,12 @@
         padding-left: $MOBILE_SIDE_GUTTER;
         padding-right: $MOBILE_SIDE_GUTTER;
 
-        @include common-medium-size() {
+        @include at-medium-size {
             padding-left: $TABLET_SIDE_GUTTER;
             padding-right: $TABLET_SIDE_GUTTER;
         }
 
-        @include common-large-size() {
+        @include at-x-large-size {
             padding-left: $DESKTOP_SIDE_GUTTER;
             padding-right: $DESKTOP_SIDE_GUTTER;
         }
@@ -57,7 +57,7 @@
         margin: 0;
         max-width: none;
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             padding-right: 360px;
         }
 
@@ -79,11 +79,11 @@
     width: 100%;
     word-wrap: break-word;
 
-    @include common-large-size() {
+    @include at-x-large-size {
         padding: 0 $ARTICLE_RIGHT_TOTAL 0 0;
     }
 
-    @include article-large-size() {
+    @include min-screen($ARTICLE_TOTAL) {
         padding: 0 $ARTICLE_RIGHT_TOTAL 0 $ARTICLE_LEFT_TOTAL;
     }
 }

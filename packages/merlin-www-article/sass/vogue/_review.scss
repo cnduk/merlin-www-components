@@ -49,7 +49,7 @@ li.a-review__rating-list__item--active {
     background-color: $mine-shaft-222;
 }
 
-@include tablet-size {
+@include at-medium-size {
     .a-review {
         padding: $PADDING_LARGE;
     }

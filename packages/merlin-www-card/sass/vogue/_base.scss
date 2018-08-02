@@ -169,7 +169,7 @@ li.c-card__meta-item {
 }
 
 
-@include card-portrait-to-landscape-size {
+@include min-screen($CARD_SWITCHER_WIDTH) {
     .c-card__image__icon {
         height: 40px;
         width: 40px;

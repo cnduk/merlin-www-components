@@ -45,7 +45,7 @@ li.a-podcast__list-item {
     }
 }
 
-@include article-header-large-size {
+@include at-small-size {
     .a-podcast {
         margin: 48px 0;
     }

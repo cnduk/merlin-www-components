@@ -71,7 +71,7 @@
 
 
 
-@include text-size-medium {
+@include at-medium-size {
     .ad--show-rail,
     .ad--show-season {
         margin-left: -$TABLET_SIDE_GUTTER;
@@ -115,7 +115,7 @@
     }
 }
 
-@include tablet-size {
+@include at-medium-size {
     .ad--show,
     .ad--show-content {
         .ad__title {
@@ -130,7 +130,7 @@
     }
 }
 
-@include desktop-size {
+@include at-x-large-size {
     .ad--tag-inline,
     .ad--show-inline {
         margin-left: 0;

@@ -301,7 +301,7 @@
 
 }
 
-@include tablet-size {
+@include at-medium-size {
     .a-header__wrapper
     .a-header__image {
         padding-left: $TABLET_SIDE_GUTTER;
@@ -342,7 +342,7 @@
 }
 
 
-@include desktop-size {
+@include at-x-large-size {
 
     .a-header {}
 
@@ -393,8 +393,7 @@
 
 }
 
-@include article-large-size {
-
+@include min-screen($ARTICLE_TOTAL) {
     .a-header__content {
         padding-left: 0;
     }

@@ -15,7 +15,7 @@
         top: 8px;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         padding: 60px;
     }
 }
@@ -23,14 +23,14 @@
 .a-review__item {
     @include font('COMMUTER SANS', 14px, 'MEDIUM', 17px);
 
-    @include desktop-size {
+    @include at-x-large-size {
         @include font('COMMUTER SANS', 16px, 'MEDIUM', 20px);
     }
 
     & + & {
         margin-top: 20px;
 
-        @include desktop-size {
+        @include at-x-large-size {
             margin-top: 25px;
         }
     }
@@ -48,7 +48,7 @@
     border-width: 1px 0 0 0;
     margin: 5px 0;
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin: 7px 0;
     }
 }
@@ -59,7 +59,7 @@
 
     margin: 0;
 
-    @include desktop-size {
+    @include at-x-large-size {
         @include font('COMMUTER SANS', 16px, 'MEDIUM', 20px);
     }
 }

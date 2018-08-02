@@ -50,7 +50,9 @@
     list-style: none;
 }
 
-.bb-card__meta-item {}
+.bb-card__meta-item {
+    display: inline-block;
+}
 .bb-card__meta-item--date {}
 
 .bb-figure {}

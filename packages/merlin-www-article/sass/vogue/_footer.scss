@@ -12,7 +12,7 @@
 
 .a-related-tags__wrapper {}
 
-@include tablet-size {
+@include at-medium-size {
     .a-footer .a-share {
         margin: 30px 0 60px 0;
     }
