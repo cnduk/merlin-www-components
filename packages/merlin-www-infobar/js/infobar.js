@@ -109,6 +109,8 @@ Infobar.prototype = inherit(EventEmitter.prototype, {
 
         this.el.classList.remove(IS_HIDDEN_CLS);
         this.state.isHidden = false;
+
+        this.emit('show', events.show(this));
     },
 
     hide: function() {
@@ -116,6 +118,8 @@ Infobar.prototype = inherit(EventEmitter.prototype, {
 
         this.el.classList.add(IS_HIDDEN_CLS);
         this.state.isHidden = true;
+
+        this.emit('hide', events.hide(this));
     },
 
     fix: function() {
@@ -123,6 +127,8 @@ Infobar.prototype = inherit(EventEmitter.prototype, {
 
         this.el.classList.add(IS_FIXED_CLS);
         this.state.isFixed = true;
+
+        this.emit('fix', events.fix(this));
     },
 
     unfix: function() {
@@ -130,6 +136,8 @@ Infobar.prototype = inherit(EventEmitter.prototype, {
 
         this.el.classList.remove(IS_FIXED_CLS);
         this.state.isFixed = false;
+
+        this.emit('unfix', events.unfix(this));
     },
 
     enable: function() {
@@ -137,6 +145,8 @@ Infobar.prototype = inherit(EventEmitter.prototype, {
 
         this.el.classList.remove(IS_DISABLED_CLS);
         this.state.isEnabled = true;
+
+        this.emit('enable', events.enable(this));
     },
 
     disable: function() {
@@ -144,6 +154,8 @@ Infobar.prototype = inherit(EventEmitter.prototype, {
 
         this.el.classList.add(IS_DISABLED_CLS);
         this.state.isEnabled = false;
+
+        this.emit('disable', events.disable(this));
     },
 
     onClick: function(e) {
