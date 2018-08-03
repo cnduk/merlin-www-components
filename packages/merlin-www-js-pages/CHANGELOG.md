@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.9.13"></a>
+## [1.9.13](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.9.12...@cnbritain/merlin-www-js-pages@1.9.13) (2018-08-03)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** correct native ad variable import for infinite video ([483e8c9](https://github.com/cnduk/merlin-www-components/commit/483e8c9))
+
+
+
+
 <a name="1.9.12"></a>
 ## [1.9.12](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.9.11...@cnbritain/merlin-www-js-pages@1.9.12) (2018-08-02)
 

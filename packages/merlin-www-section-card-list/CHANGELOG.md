@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.13.1"></a>
+## [1.13.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.0...@cnbritain/merlin-www-section-card-list@1.13.1) (2018-08-03)
+
+
+### Bug Fixes
+
+* **merlin-www-section-card-list:** add missing contributors styles to vogue ([d97821c](https://github.com/cnduk/merlin-www-components/commit/d97821c))
+
+
+
+
 <a name="1.13.0"></a>
 # [1.13.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.12.7...@cnbritain/merlin-www-section-card-list@1.13.0) (2018-08-02)
 
