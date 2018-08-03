@@ -56,7 +56,7 @@ export default function init() {
             Manager.recalculate();
             articleScroller.sortChildren();
             articleScroller.update();
-        })
+        });
     }
 
     onWindowResize();

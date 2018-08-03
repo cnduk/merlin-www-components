@@ -16,7 +16,6 @@ import {
     Scroll,
     Stick
 } from '@cnbritain/merlin-www-js-sticky';
-import MainNavigation from '@cnbritain/merlin-www-main-navigation';
 import {
     toArray
 } from '../utils';
@@ -71,7 +70,7 @@ export default function init() {
             Manager.recalculate();
             stickyScroller.sortChildren();
             stickyScroller.update();
-        })
+        });
     }
 
     addEvent(window, 'resize', debounce(stickyResize, 300));
