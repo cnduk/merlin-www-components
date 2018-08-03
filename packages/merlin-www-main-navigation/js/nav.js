@@ -13,6 +13,11 @@ var IS_GALLERY_ACTIVE_CLS = 'is-gallery-active';
 
 function Nav(el) {
     this.el = el;
+
+    if (!this.el) {
+        throw new Error('Nav Element Not Found');
+    }
+
     this.state = {
         isFixed: false,
         isOpen: false,
@@ -86,6 +91,8 @@ Nav.prototype = inherit(EventEmitter.prototype, {
         this.el.classList.add(IS_FIXED_CLS);
         this.logoEl.classList.remove(IS_HIDDEN_CLS);
         this.state.isFixed = true;
+
+        this.emit('fix', events.fix(this));
     },
 
     unfix: function() {
@@ -94,6 +101,8 @@ Nav.prototype = inherit(EventEmitter.prototype, {
         this.el.classList.remove(IS_FIXED_CLS);
         this.logoEl.classList.add(IS_HIDDEN_CLS);
         this.state.isFixed = false;
+
+        this.emit('unfix', events.unfix(this));
     },
 
     togglefix: function() {
@@ -153,7 +162,7 @@ Nav.prototype = inherit(EventEmitter.prototype, {
         this.el.classList.remove(IS_HIDDEN_CLS);
         this.state.isHidden = false;
 
-        this.emit('visibilitychange', events.visibilitychange(this, 'visible'));
+        this.emit('show', events.show(this));
     },
 
     hide: function() {
@@ -162,7 +171,7 @@ Nav.prototype = inherit(EventEmitter.prototype, {
         this.el.classList.add(IS_HIDDEN_CLS);
         this.state.isHidden = true;
 
-        this.emit('visibilitychange', events.visibilitychange(this, 'hidden'));
+        this.emit('hide', events.hide(this));
     },
 
     toggleShow: function() {

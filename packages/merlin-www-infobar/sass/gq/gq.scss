@@ -3,17 +3,13 @@
 
 @import "../wireframe/wireframe";
 
-.c-infobar {
+.c-infobar {}
+.c-infobar-wrapper {
     background-color: $oslo-gray;
-    padding: 12px 0;
-
-    @include at-x-large-size {
-        padding: 0;
-    }
 }
 
-.c-infobar-wrapper {
-    padding: 0 20px;
+.c-infobar__content {
+    padding: 12px 60px 12px 20px;
 }
 
 .c-infobar__message {
@@ -22,7 +18,7 @@
     text-align: center;
 }
 
-.c-infobar__btn {
+.c-infobar__button {
     @include button-single();
     @include button-single-light();
     &:hover {
@@ -34,5 +30,15 @@
 
     @include at-x-large-size {
         margin: 0 0 0 20px;
+    }
+}
+
+.c-infobar__close-button {
+    border: 1px solid $white;
+    border-radius: 50%;
+    padding: 6px;
+
+    svg {
+        fill: $white;
     }
 }
