@@ -25,7 +25,7 @@
         @include button-single-dark-hover();
     }
 
-    margin: 12px 0 0 0;
+    margin: 10px 0 0 0;
     padding: 10px 30px;
 
     @include at-x-large-size {
@@ -34,11 +34,11 @@
 }
 
 .c-infobar__close-button {
+    background-color: $white;
     border-radius: 50%;
-    border: 1px solid $white;
     padding: 6px;
 
     svg {
-        fill: $white;
+        fill: $black;
     }
 }

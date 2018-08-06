@@ -30,11 +30,11 @@
 }
 
 .c-infobar__close-button {
+    background-color: $white;
     border-radius: 50%;
-    border: 1px solid $white;
     padding: 6px;
 
     svg {
-        fill: $white;
+        fill: $black;
     }
 }
