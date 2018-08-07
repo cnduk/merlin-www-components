@@ -185,8 +185,10 @@
     margin-top: 10px;
 
     img {
-        height: 50px;
+        height: auto;
         max-height: 50px;
+        max-width: 140px;
+        width: auto;
     }
 }
 

@@ -98,7 +98,14 @@
 .a-header__sponsor-image {
     display: block;
     margin: 0 auto;
-    max-width: 120px;
+    max-width: 140px;
+
+    img {
+        height: auto;
+        max-height: 50px;
+        max-width: 140px;
+        width: auto;
+    }
 }
 
 
@@ -211,7 +218,7 @@
 }
 
 .a-header__image-credit {
-    @include font('SOLEIL', 9px, null, 12px)
+    @include font('SOLEIL', 9px, null, 12px);
     color: rgba($candle-grey, 0.75);
     letter-spacing: 0.06em;
     margin: 6px 0 0 0;
