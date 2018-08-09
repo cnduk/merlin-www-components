@@ -389,6 +389,13 @@
     }
 }
 
+.c-nav__share-link--pinterest {
+    @include button-share-light("pinterest");
+    &:hover {
+        @include button-share-light-hover("pinterest");
+    }
+}
+
 .c-nav__share-button {
     @include button-single-two();
     @include button-single-two-light();
