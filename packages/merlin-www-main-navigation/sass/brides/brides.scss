@@ -414,28 +414,11 @@
     @include button-share();
 }
 
-.c-nav__share-link--youtube {
-    @include button-share-dark();
-    &:hover {
-        @include button-share-dark-hover();
-    }
-}
-
-.c-nav__share-link--twitter {
-    @include button-share-dark();
-    &:hover {
-        @include button-share-dark-hover();
-    }
-}
-
-.c-nav__share-link--instagram {
-    @include button-share-dark();
-    &:hover {
-        @include button-share-dark-hover();
-    }
-}
-
-.c-nav__share-link--facebook {
+.c-nav__share-link--youtube,
+.c-nav__share-link--twitter,
+.c-nav__share-link--instagram,
+.c-nav__share-link--facebook,
+.c-nav__share-link--pinterest {
     @include button-share-dark();
     &:hover {
         @include button-share-dark-hover();
