@@ -6,6 +6,10 @@
 
 @import "../wireframe/wireframe";
 
+.c-top-stories-lazy-load {
+    min-height: 106px;
+}
+
 .c-top-stories {
     background-color: $white;
     border-bottom: 1px solid $mercury;

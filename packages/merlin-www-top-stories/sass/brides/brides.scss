@@ -6,6 +6,10 @@
 
 @import "../wireframe/wireframe";
 
+.c-top-stories-lazy-load {
+    min-height: 125px;
+}
+
 .c-top-stories {
     background-color: $diamond;
     border-bottom: 1px solid $ballet-grey;
