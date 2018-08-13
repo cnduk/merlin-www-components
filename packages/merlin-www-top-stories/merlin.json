@@ -17,7 +17,8 @@
         "wired": "sass/wired/wired.scss"
     },
     "partials": {
-        "top-stories": "templates/top-stories.html"
+        "top-stories": "templates/top-stories.html",
+        "lazy-load": "templates/lazy-load.html"
     },
     "dependencies": [
         "@cnbritain/merlin-www-common",

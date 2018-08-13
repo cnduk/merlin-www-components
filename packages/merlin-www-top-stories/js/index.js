@@ -2,6 +2,9 @@
 
 import Card from '@cnbritain/merlin-www-card';
 import TopStoriesNavigation from './TopStoriesNavigation';
+import {
+    ajax
+} from '@cnbritain/merlin-www-js-utils/js/functions';
 
 var TOP_STORIES = [];
 
@@ -32,6 +35,36 @@ export default {
 
     get: function(){
         return TOP_STORIES;
-    }
+    },
 
+    lazyLoad: function() {
+        var lazyLoadEl = document.querySelector('.js-c-top-stories-lazy-load');
+
+        if (!lazyLoadEl) return;
+
+        var html = '';
+
+        ajax({
+            url: '/xhr/top-stories'
+        })
+        .then(function(data) {
+            var request = data.request;
+            var responseText = request.responseText;
+            var jsonResponseText = JSON.parse(responseText);
+
+            var html = jsonResponseText.data.template;
+
+            lazyLoadEl.innerHTML = html;
+        });
+
+        this.init({
+            scrollOffset: 30
+        });
+
+        var ts = this.get();
+        if(ts.length > 0){
+            ts[0].showNavigation();
+            ts[0].disableScroll();
+        }
+    }
 };
