@@ -7,7 +7,11 @@
 @import "../wireframe/wireframe";
 
 .c-top-stories-lazy-load {
-    min-height: 133px;
+    background-color: $CAPE-HAZE;
+
+    @include at-x-large-size {
+        min-height: 133px;
+    }
 }
 
 .c-top-stories {

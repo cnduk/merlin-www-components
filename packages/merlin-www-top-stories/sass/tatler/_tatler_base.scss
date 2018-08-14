@@ -1,5 +1,9 @@
 .c-top-stories-lazy-load {
-    min-height: 103px;
+    background-color: $wild-sand;
+
+    @include at-x-large-size {
+        min-height: 103px;
+    }
 }
 
 .c-top-stories {
