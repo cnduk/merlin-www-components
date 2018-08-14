@@ -62,6 +62,6 @@ export default {
                 ts[0].showNavigation();
                 ts[0].disableScroll();
             }
-        });
+        }.bind(this));
     }
 };
