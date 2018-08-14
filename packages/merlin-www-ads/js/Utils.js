@@ -10,6 +10,7 @@ import BRAND_CONFIG from '@cnbritain/merlin-www-common';
 import {
     createEventTemplate,
     getNamespaceKey,
+    getQueryArgs,
     hasOwnProperty,
     isDefined,
     loadScript,
@@ -951,4 +952,24 @@ export function isAdNative(adModel, nativeSize) {
     }
 
     return false;
+}
+
+/**
+ * Get the test ad values from the query string
+ * @param  {string} url
+ * @return {object}     object with the test ad keys
+ */
+export function getTestAdValues(url){
+    var _url = url;
+    if(!_url) _url = window.location.href;
+
+    var queryArgs = getQueryArgs(_url);
+
+    return {
+        TestAdKeyValue: queryArgs['TestAdKeyValue'] || null,
+        TestAdNetworkId: queryArgs['TestAdNetworkId'] || null,
+        TestAdTargeting: queryArgs['TestAdTargeting'] || null,
+        TestAdUnit: queryArgs['TestAdUnit'] || null,
+        TestAdZone: queryArgs['TestAdZone'] || null
+    };
 }
