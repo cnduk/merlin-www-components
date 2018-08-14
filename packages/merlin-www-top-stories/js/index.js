@@ -42,20 +42,18 @@ export default {
 
         if (!lazyLoadEl) return;
 
-        var html = '';
-
         ajax({
             url: '/xhr/top-stories'
         })
-        .then(function(data) {
-            var request = data.request;
-            var responseText = request.responseText;
-            var jsonResponseText = JSON.parse(responseText);
+            .then(function(data) {
+                var request = data.request;
+                var responseText = request.responseText;
+                var jsonResponseText = JSON.parse(responseText);
 
-            var html = jsonResponseText.data.template;
+                var html = jsonResponseText.data.template;
 
-            lazyLoadEl.innerHTML = html;
-        });
+                lazyLoadEl.innerHTML = html;
+            });
 
         this.init({
             scrollOffset: 30
