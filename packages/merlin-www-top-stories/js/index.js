@@ -44,25 +44,24 @@ export default {
 
         ajax({
             url: '/xhr/top-stories'
-        })
-            .then(function(data) {
-                var request = data.request;
-                var responseText = request.responseText;
-                var jsonResponseText = JSON.parse(responseText);
+        }).then(function(data) {
+            var request = data.request;
+            var responseText = request.responseText;
+            var jsonResponseText = JSON.parse(responseText);
 
-                var html = jsonResponseText.data.template;
+            var html = jsonResponseText.data.template;
 
-                lazyLoadEl.innerHTML = html;
+            lazyLoadEl.innerHTML = html;
+
+            this.init({
+                scrollOffset: 30
             });
 
-        this.init({
-            scrollOffset: 30
+            var ts = this.get();
+            if(ts.length > 0){
+                ts[0].showNavigation();
+                ts[0].disableScroll();
+            }
         });
-
-        var ts = this.get();
-        if(ts.length > 0){
-            ts[0].showNavigation();
-            ts[0].disableScroll();
-        }
     }
 };
