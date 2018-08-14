@@ -17,6 +17,7 @@
         "wired": "sass/wired/wired.scss"
     },
     "partials": {
+        "index": "templates/index.html",
         "top-stories": "templates/top-stories.html",
         "lazy-load": "templates/lazy-load.html"
     },
@@ -29,7 +30,7 @@
         "@cnbritain/merlin-www-ads"
     ],
     "currentTheme": null,
-    "main": "top-stories",
+    "main": "index",
     "data": {
         "without-nav": "data/without-nav.json",
         "brides": "data/br.json",
