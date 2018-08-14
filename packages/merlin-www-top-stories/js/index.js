@@ -1,12 +1,18 @@
 'use strict';
 
-import Card from '@cnbritain/merlin-www-card';
-import TopStoriesNavigation from './TopStoriesNavigation';
 import {
-    ajax
+    ajax,
+    updateQueryString
 } from '@cnbritain/merlin-www-js-utils/js/functions';
+import Card from '@cnbritain/merlin-www-card';
+import {getTestAdValues} from '@cnbritain/merlin-www-ads/js/Utils';
+import TopStoriesNavigation from './TopStoriesNavigation';
 
 var TOP_STORIES = [];
+
+function sanitiseArticleUid(uid){
+    return uid.replace(/[^\w\d]/gi, '');
+}
 
 export default {
 
@@ -38,30 +44,42 @@ export default {
     },
 
     lazyLoad: function() {
+
         var lazyLoadEl = document.querySelector('.js-c-top-stories-lazy-load');
 
-        if (!lazyLoadEl) return;
+        if (!lazyLoadEl) return Promise.resolve(null);
 
-        ajax({
-            url: '/xhr/top-stories'
-        }).then(function(data) {
-            var request = data.request;
-            var responseText = request.responseText;
-            var jsonResponseText = JSON.parse(responseText);
+        return new Promise(function(resolve){
+            var articleUid = lazyLoadEl.getAttribute('data-article-uid');
 
-            var html = jsonResponseText.data.template;
+            var testAdValues = getTestAdValues();
+            // Remove ad values that are null
+            var qs = Object.keys(testAdValues).reduce(function(prev, cur){
+                if(testAdValues[cur] !== null) prev[cur] = testAdValues[cur];
+                return prev;
+            }, {});
+            qs['article_uid'] = sanitiseArticleUid(articleUid);
+            var url = updateQueryString('/xhr/top-stories', qs);
 
-            lazyLoadEl.innerHTML = html;
+            ajax({url: url}).then(function(data) {
+                var request = data.request;
+                var responseText = request.responseText;
+                var jsonResponseText = JSON.parse(responseText);
 
-            this.init({
-                scrollOffset: 30
-            });
+                var html = jsonResponseText.data.template;
 
-            var ts = this.get();
-            if(ts.length > 0){
-                ts[0].showNavigation();
-                ts[0].disableScroll();
-            }
+                lazyLoadEl.innerHTML = html;
+
+                this.init({scrollOffset: 30});
+
+                var ts = this.get();
+                if(ts.length > 0){
+                    ts[0].showNavigation();
+                    ts[0].disableScroll();
+                }
+
+                resolve(ts[0]);
+            }.bind(this));
         }.bind(this));
     }
 };
