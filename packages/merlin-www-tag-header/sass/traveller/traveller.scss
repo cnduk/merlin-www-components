@@ -1,6 +1,11 @@
+
 @import "@cnbritain/merlin-www-common:traveller";
 @import "@cnbritain/merlin-www-image:traveller";
 @import "@cnbritain/merlin-www-topic-strip:traveller";
+@import "@cnbritain/merlin-www-card:traveller";
+@import "@cnbritain/merlin-www-gallery-strip:traveller";
+// NOTE: traveller does not have a show card carousel
+// @import "@cnbritain/merlin-www-show-card-carousel:traveller";
 
 @import "../wireframe/wireframe";
 
