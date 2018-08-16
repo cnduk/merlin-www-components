@@ -1,11 +1,14 @@
 {
     "type": "TagHeader",
     "state": {
-        "is_body_expandable": false,
+        "is_body_expandable": true,
         "has_hero": true
     },
+    "translation": {
+        "intro_continue_reading": "Continue reading"
+    },
     "data": {
-        "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, tempora. Obcaecati accusantium officia ea praesentium error nam dolores, doloremque asperiores laborum dicta, provident nisi, repellendus, nostrum illum at quae doloribus.",
+        "body": "<p class=\"bb-p\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, tempora. Obcaecati accusantium officia ea praesentium error nam dolores, doloremque asperiores laborum dicta, provident nisi, repellendus, nostrum illum at quae doloribus.</p><p class=\"bb-p\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, tempora. Obcaecati accusantium officia ea praesentium error nam dolores, doloremque asperiores laborum dicta, provident nisi, repellendus, nostrum illum at quae doloribus.</p><p class=\"bb-p\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, tempora. Obcaecati accusantium officia ea praesentium error nam dolores, doloremque asperiores laborum dicta, provident nisi, repellendus, nostrum illum at quae doloribus.</p>",
         "style_file": {
             "type": "GalleryStrip",
             "state": {},
