@@ -16,10 +16,10 @@ import {
     Scroll,
     Stick
 } from '@cnbritain/merlin-www-js-sticky';
-import MainNavigation from '@cnbritain/merlin-www-main-navigation/js/main-navigation';
 import {
     toArray
 } from '../utils';
+import INFOBAR from '@cnbritain/merlin-www-infobar';
 
 var stickyScroller = null;
 
@@ -33,9 +33,14 @@ export function createStickGroup(el) {
     group.addChildren(stickies, {
         'sort': false
     });
-    var navHeight = MainNavigation.el.offsetHeight;
     group.children.forEach(function(child) {
-        child.offset.top = navHeight;
+        if (INFOBAR) {
+            child.offset.top = (INFOBAR.state.isEnabled ? 120 : 60);
+        }
+
+        else {
+            child.offset.top = 60;
+        }
     });
 
     stickyScroller.addChild(group);
@@ -53,6 +58,21 @@ export default function init() {
 
     AdManager.on('render', onStickRender);
     AdManager.on('stop', onStickStop);
+
+    if (INFOBAR) {
+        INFOBAR.on('disable', function() {
+            stickyScroller.children.forEach(function(group) {
+                group.children.forEach(function(item) {
+                    item.offset.top = 60;
+                });
+            });
+
+            Manager.recalculate();
+            stickyScroller.sortChildren();
+            stickyScroller.update();
+        });
+    }
+
     addEvent(window, 'resize', debounce(stickyResize, 300));
     stickyResize();
 }

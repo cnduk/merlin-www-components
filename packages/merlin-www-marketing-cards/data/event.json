@@ -1,0 +1,202 @@
+{
+  "data": {
+    "button": {
+      "data": {
+        "title": "View Event",
+        "url": "http://localhost:3000/event/wired-smarter"
+      },
+      "state": {
+        "is_blank": false,
+        "is_nofollow": false
+      },
+      "style": {
+        "cls": "",
+        "inline": ""
+      },
+      "translation": {},
+      "type": "Link"
+    },
+    "desc": "Retail, Energy, Money and Security",
+    "title": "Curated by WIRED\u2019s award-winning editorial team, WIRED Smarter will harness the strengths of its Retail, Energy, Money and Security summits to offer delegates a wider view of the disruption shaping today\u2019s business world. The event takes place in London on October 9, 2018",
+    "link": {
+      "data": {
+        "title": "WIRED Smarter",
+        "url": "http://localhost:3000/event/wired-smarter"
+      },
+      "state": {
+        "is_blank": false,
+        "is_nofollow": false
+      },
+      "style": {
+        "cls": "",
+        "inline": ""
+      },
+      "translation": {},
+      "type": "Link"
+    },
+    "logo": {
+      "data": {
+        "image": {
+          "data": {
+            "alt_text": null,
+            "credit": null,
+            "description": null,
+            "look_number": null,
+            "title": null,
+            "width": null,
+            "image_url": "https://wi-images.condecdn.net/image/nxZBON335by/crop/400/f/wired_smarter-square.jpg"
+          },
+          "state": {
+            "is_image": false,
+            "is_picture": false,
+            "is_static": true,
+            "is_svg": false,
+            "is_linked": false,
+            "is_landscape": false,
+            "is_portrait": false,
+            "is_square": false,
+            "is_lazyload": true
+          },
+          "style": {
+            "cls": "a-marketing-card__brand__img",
+            "inline": ""
+          },
+          "translation": {},
+          "type": "StaticImage"
+        },
+        "link": {
+          "data": {
+            "title": "WIRED Smarter",
+            "url": "http://localhost:3000/event/wired-smarter"
+          },
+          "state": {
+            "is_blank": false,
+            "is_nofollow": false
+          },
+          "style": {
+            "cls": "",
+            "inline": ""
+          },
+          "translation": {},
+          "type": "Link"
+        }
+      },
+      "state": {
+        "is_linked": true
+      },
+      "style": {
+        "cls": "",
+        "inline": ""
+      },
+      "translation": {},
+      "type": "LinkedImage"
+    },
+    "tag": {
+      "data": {
+        "event_information": {
+          "data": {
+            "start_date": {
+              "data": {
+                "date": "2018-10-09 08:00:00+00:00",
+                "label": "9 October 2018",
+                "relative_time": "1 minute ago"
+              },
+              "state": {},
+              "style": {
+                "cls": "",
+                "inline": ""
+              },
+              "translation": {},
+              "type": "Date"
+            },
+            "end_date": {
+              "data": {
+                "date": "2018-10-09 19:30:00+00:00",
+                "label": "9 October 2018",
+                "relative_time": "1 minute ago"
+              },
+              "state": {},
+              "style": {
+                "cls": "",
+                "inline": ""
+              },
+              "translation": {},
+              "type": "Date"
+            },
+            "date_range_label": "9 Oct 2018",
+            "date_range_html": "<time datetime=\"2018-10-09\">9 Oct 2018</time>",
+            "location": "Kings Place, London",
+            "ticket_link": {
+              "data": {
+                "title": "Book tickets",
+                "url": "https://wired-smarter.eventbrite.co.uk"
+              },
+              "state": {
+                "is_blank": false,
+                "is_nofollow": false
+              },
+              "style": {
+                "cls": "",
+                "inline": ""
+              },
+              "translation": {},
+              "type": "Link"
+            },
+            "title": "WIRED Smarter",
+            "image": null
+          },
+          "state": {},
+          "style": {
+            "cls": "",
+            "inline": ""
+          },
+          "translation": {},
+          "type": "EventInformation"
+        },
+        "link": {
+          "data": {
+            "title": "WIRED Smarter",
+            "url": "http://localhost:3000/event/wired-smarter"
+          },
+          "state": {
+            "is_blank": false,
+            "is_nofollow": false
+          },
+          "style": {
+            "cls": "",
+            "inline": ""
+          },
+          "translation": {},
+          "type": "Link"
+        },
+        "title": "WIRED Smarter",
+        "uid": "n2geZ5KyeYL",
+        "sponsor": null
+      },
+      "state": {
+        "has_link": true,
+        "is_sponsored": false
+      },
+      "style": {
+        "cls": "",
+        "inline": ""
+      },
+      "translation": {},
+      "type": "Tag"
+    }
+  },
+  "state": {
+    "is_brand": false,
+    "is_event": true,
+    "is_magazine": false,
+    "is_topic": false,
+    "has_button": true,
+    "has_logo": true
+  },
+  "style": {
+    "cls": "a-marketing-card--event",
+    "inline": ""
+  },
+  "translation": {},
+  "type": "EventMarketingCard"
+}

@@ -1,0 +1,70 @@
+// -------------------- //
+// Abbreviation
+// -------------------- //
+.bb-abbr {
+    text-decoration: underline;
+}
+
+// -------------------- //
+// Anchor
+// -------------------- //
+.bb-a {
+    color: $mine-shaft;
+    border-bottom: 2px solid $careys-pink;
+
+    &:hover {
+        color: $mine-shaft;
+        background: $careys-pink;
+    }
+}
+
+// -------------------- //
+// Button
+// -------------------- //
+.bb-button,
+.bb-button--light {
+    @include button-single();
+    @include button-single-light();
+
+    &:hover,
+    &:focus {
+        @include button-single-light-hover();
+    }
+}
+
+.bb-button--dark {
+    @include button-single();
+    @include button-single-dark();
+
+    &:hover,
+    &:focus {
+        @include button-single-dark-hover();
+    }
+}
+
+// -------------------- //
+// Dropcap
+// -------------------- //
+.bb-dropcap {}
+.bb-dropcap--letter {
+    @include font("MILLER_DISPLAY", 80px, 400, 85px);
+    box-sizing: border-box;
+    color: $mine-shaft;
+    float: left;
+    letter-spacing: 0;
+    margin-right: 30px;
+    margin-bottom: 0;
+    text-transform: capitalize;
+
+    @include at-x-large-size {
+        @include font-size(90px);
+        @include line-height(90px);
+    }
+}
+
+// -------------------- //
+// Mark
+// -------------------- //
+.bb-mark {
+    background-color: $vanilla-ice;
+}

@@ -1,0 +1,58 @@
+
+@import '@cnbritain/merlin-www-common:wired';
+@import '../wireframe/wireframe';
+
+.c-gallery-strip {
+    margin: 40px 0;
+    padding: 0 $MOBILE_SIDE_GUTTER;
+
+    @include at-medium-size {
+        padding: 0 $TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size {
+        padding: 0 $DESKTOP_SIDE_GUTTER;
+    }
+}
+
+.c-gallery-strip__listitem {
+    background-color: $black;
+}
+
+.c-gallery-strip__remaining {
+    @include font("BRUTAL", 25px, 600, 25px);
+    background-color: rgba($black, 0.6);
+    color: $white;
+    z-index: 1;
+}
+
+.c-gallery-strip__detail {
+    position: relative;
+}
+
+.c-gallery-strip__title {
+    @include font("NEW GROTESK SQUARE", 40px, 400, 40px);
+    color: $black;
+    letter-spacing: 0;
+    margin: 20px 0 0 0;
+    text-align: center;
+
+    @include at-medium-size {
+        @include font-size(65px);
+        @include line-height(65px);
+        margin: 30px 0 0 0;
+    }
+}
+
+.c-gallery-strip__subtitle {
+    @include font("BRUTAL", 11px, 400, 11px);
+    color: $black;
+    margin: 15px 0 0 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include at-medium-size {
+      @include font-size(13px);
+      @include line-height(13px);
+    }
+}

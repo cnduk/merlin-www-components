@@ -6,7 +6,7 @@ import {
     getWindowScrollTop,
     throttle
 } from '@cnbritain/merlin-www-js-utils/js/functions';
-import MainNavigation from '@cnbritain/merlin-www-main-navigation/js/main-navigation';
+import Nav from '@cnbritain/merlin-www-main-navigation';
 import {
     ArticleManager
 } from '@cnbritain/merlin-www-article';
@@ -16,6 +16,7 @@ import {
 import {
     getStorage
 } from '../utils.js';
+import INFOBAR from '@cnbritain/merlin-www-infobar';
 
 var articleGallery = null;
 var windowHeightHalf = window.innerHeight / 2;
@@ -44,9 +45,8 @@ export default function init() {
         'simplereach': simplereachConfig
     });
 
-    if (MainNavigation.galleryNavigation !== null) {
-        MainNavigation.galleryNavigation.on(
-            'viewchange', onNavigationViewChange);
+    if (Nav.galleryNav !== null) {
+        Nav.galleryNav.on('viewchange', onNavigationViewChange);
     }
 
     addEvent(window, 'scroll', throttle(onWindowScroll, 100));
@@ -69,31 +69,47 @@ export function onArticleFocus(e) {
         var gallery = article.gallery;
 
         if (gallery.layoutView === 'list') {
-            MainNavigation.galleryNavigation.displayListView();
-        } else {
-            MainNavigation.galleryNavigation.displayGridView();
+            Nav.galleryNav.showListView();
         }
 
-        MainNavigation.galleryNavigation.setArticleTitle(
-            article.properties.title);
-        MainNavigation.galleryNavigation.setGalleryCounter(
-            1, article.gallery.imageElements.length);
+        else {
+            Nav.galleryNav.hideListView();
+        }
+
+        if (INFOBAR) {
+            gallery._imageNavigationOffset = (INFOBAR.state.isEnabled ? 120 : 60);
+            gallery.updateNavScroll();
+
+            INFOBAR.once('disable', function() {
+                gallery._imageNavigationOffset = 60;
+                gallery.updateNavScroll();
+            });
+        }
+
+        Nav.galleryNav.setTitle(article.properties.title);
+        Nav.galleryNav.setCurrent(1);
+        Nav.galleryNav.setTotal(article.gallery.imageElements.length);
+
         articleGallery = article;
     }
 
 }
 
 export function onGalleryImageFocus(e) {
-    MainNavigation.galleryNavigation.setGalleryCounter(e.imageIndex + 1);
+    Nav.galleryNav.setCurrent(e.imageIndex + 1);
 }
 
 export function onNavigationViewChange(e) {
     if (articleGallery === null) return;
+
     if (e.view === 'grid') {
         articleGallery.gallery.displayThumbnailView();
-    } else {
+    }
+
+    else {
         articleGallery.gallery.displayListView();
     }
+
     ArticleManager.resize(0);
 }
 
@@ -103,14 +119,28 @@ export function onWindowResize() {
 
 export function onWindowScroll() {
     if (articleGallery === null) return;
+
     var scrollY = getWindowScrollTop();
+
+    if (Nav.scrollDirection == 'up') {
+        Nav.hideGallery();
+        return;
+    }
+
     if (articleGallery.gallery.bounds.top > scrollY + windowHeightHalf) {
-        MainNavigation.hideGallery();
+        Nav.unpause();
+        Nav.hideGallery();
         return;
     }
+
     if (articleGallery.gallery.bounds.bottom < scrollY + windowHeightHalf) {
-        MainNavigation.hideGallery();
+        Nav.unpause();
+        Nav.hideGallery();
         return;
     }
-    MainNavigation.showGallery();
+
+    Nav.pause();
+    Nav.show();
+
+    Nav.showGallery();
 }

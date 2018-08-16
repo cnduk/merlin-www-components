@@ -1,0 +1,70 @@
+// -------------------- //
+// Abbreviation
+// -------------------- //
+.bb-abbr {
+    text-decoration: underline;
+}
+
+
+// -------------------- //
+// Anchor
+// -------------------- //
+.bb-a {
+    border-bottom: 1px solid $bright-navy-blue;
+    color: $bright-navy-blue;
+    text-decoration: none;
+
+    @include at-x-large-size {
+        border-bottom: none;
+
+        &:hover {
+            border-bottom: 1px solid $bright-navy-blue;
+        }
+    }
+}
+
+// -------------------- //
+// Button
+// -------------------- //
+.bb-button {
+    @include button-single();
+    @include button-single-light();
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
+
+// -------------------- //
+// Dropcap
+// -------------------- //
+.bb-dropcap {}
+.bb-dropcap--letter {
+    @include font("NEW GROTESK SQUARE", 88px, 700, 88px);
+    box-sizing: border-box;
+    float: left;
+    text-align: left;
+    height: 0.78em;
+    margin-right: 0.3em;
+    margin-bottom: 0.20em;
+
+    @include at-x-large-size {
+        @include font-size(137px);
+        @include line-height(137px);
+        margin-right: 0.24em;
+    }
+}
+
+// -------------------- //
+// Mark
+// -------------------- //
+.bb-mark {
+    background-color: #e6e7e8;
+    padding: 4px 0;
+}
+
+// -------------------- //
+// Small
+// -------------------- //
+.bb-small {
+    @include font("BRUTAL", 12px, 300, 12px);
+}

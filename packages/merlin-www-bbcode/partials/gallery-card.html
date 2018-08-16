@@ -1,24 +1,30 @@
-<div class="bb-gallery {{ style.cls }}">
+<div class="bb-gallery{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
 
     {{# data.link }}
         <a class="bb-gallery__link" href="{{ &data.url }}" title="{{ data.title }}">{{ data.title }}</a>
     {{/ data.link }}
 
-    {{# state.has_title }}
-        {{# state.has_icon }}
-        {{# data.icon }}<div class='bb-gallery__icon'>{{> @cnbritain/merlin-www-image }}</div>{{/ data.icon }}
-        <h4 class='bb-gallery__title'>{{ data.title }}</h4>
-        {{/ state.has_icon }}
-        {{^ state.has_icon }}
-            <h4 class='bb-gallery__title'>{{ data.title }}</h4>
-        {{/ state.has_icon }}
-    {{/ state.has_title }}
+    {{# state.has_icon }}
+        {{# data.icon }}
+            <div class='bb-gallery__icon'>
+                {{> @cnbritain/merlin-www-image }}
+            </div>
+        {{/ data.icon }}
+        {{# data.title }}
+        <h4 class='bb-gallery__title'>{{ . }}</h4>
+        {{/ data.title }}
+    {{/ state.has_icon }}
+    {{^ state.has_icon }}
+    {{# data.title }}
+    <h4 class='bb-gallery__title'>{{ . }}</h4>
+    {{/ data.title }}
+    {{/ state.has_icon }}
 
     {{# state.is_layout_3 }}
         {{# data.image_list }}
             <ul class='bb-gallery__cols bb-gallery__cols--3'>
                 {{# data.items }}
-                    <li class="bb-gallery__col {{ style.cls }}">
+                    <li class="bb-gallery__col{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
                         {{# data.item }}
                             {{> @cnbritain/merlin-www-image }}
                         {{/ data.item }}
@@ -40,7 +46,7 @@
         {{# data.image_list }}
             <ul class='bb-gallery__cols bb-gallery__cols--4'>
                 {{# data.items }}
-                    <li class="bb-gallery__col {{ style.cls }}">
+                    <li class="bb-gallery__col{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
                         {{# data.item }}
                             {{> @cnbritain/merlin-www-image }}
                         {{/ data.item }}
@@ -62,7 +68,7 @@
         {{# data.image_list }}
             <ul class='bb-gallery__cols bb-gallery__cols--5'>
                 {{# data.items }}
-                    <li class="bb-gallery__col {{ style.cls }}">
+                    <li class="bb-gallery__col{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
                         {{# data.item }}
                             {{> @cnbritain/merlin-www-image }}
                         {{/ data.item }}
@@ -84,7 +90,7 @@
         {{# data.image_list }}
             <ul class='bb-gallery__cols bb-gallery__cols--6'>
                 {{# data.items }}
-                    <li class="bb-gallery__col {{ style.cls }}">
+                    <li class="bb-gallery__col{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
                         {{# data.item }}
                             {{> @cnbritain/merlin-www-image }}
                         {{/ data.item }}

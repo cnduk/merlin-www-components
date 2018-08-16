@@ -3,14 +3,14 @@
         margin: 30px 0 40px 0;
         text-align: center;
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             margin: 40px 0 60px 0;
             text-align: left;
         }
     }
 
     .a-share__title {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             display: inline-block;
             margin: 0 10px 0 0;
             vertical-align: middle;
@@ -18,7 +18,7 @@
     }
 
     .a-share__list {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             display: inline-block;
             vertical-align: middle;
         }
@@ -37,7 +37,7 @@
     }
 
     .a-related-tags {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             margin-top: 40px;
         }
     }
@@ -48,7 +48,7 @@
 .a-related-tags {
     margin: 40px 0 30px 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin: 60px 0 40px 0;
     }
 }

@@ -1,0 +1,93 @@
+@import '@cnbritain/merlin-www-buttons:wireframe';
+@import '@cnbritain/merlin-www-common:wireframe';
+
+.c-infobar {
+    height: 100px;
+    position: relative;
+    width: 100%;
+    z-index: 5;
+
+    @include at-x-large-size {
+        height: 60px;
+    }
+
+    &.is-fixed {
+        .c-infobar-wrapper {
+            box-sizing: border-box;
+            left: 50%;
+            position: fixed;
+            top: 60px;
+            transform: translateX(-50%);
+        }
+    }
+
+    &.is-hidden {
+        @include max-screen($X_LARGE_SIZE - 1px) {
+            .c-infobar-wrapper {
+                top: 0px;
+            }
+        }
+    }
+
+    &.is-disabled {
+        display: none;
+    }
+}
+
+.c-infobar-wrapper {
+    height: 100px;
+    width: 100%;
+
+    @include max-screen($X_LARGE_SIZE - 1px) {
+        transition: top 300ms ease-in-out;
+        will-change: top;
+    }
+
+    @include at-x-large-size {
+        box-sizing: border-box;
+        height: 60px;
+    }
+}
+
+.c-infobar__content {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: $XX_LARGE_SIZE;
+    position: relative;
+
+    @include at-x-large-size {
+        box-sizing: border-box;
+        height: 60px;
+        justify-content: center;
+        flex-direction: row;
+    }
+}
+
+.c-infobar__message {}
+.c-infobar__button {}
+
+.c-infobar__close-button {
+    appearance: none;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+
+    svg {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

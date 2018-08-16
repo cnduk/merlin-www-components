@@ -42,7 +42,7 @@
     text-transform: uppercase;
 }
 
-@include text-size-large {
+@include at-x-large-size {
     .bb-dropcap--letter {
         @include font-size(116px);
         @include line-height(116px);

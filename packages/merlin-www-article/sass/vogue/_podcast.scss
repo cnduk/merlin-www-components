@@ -26,7 +26,7 @@ li.a-podcast__list-item {
     }
 }
 
-@include article-header-large-size {
+@include at-small-size {
     li.a-podcast__list-item {
         display: inline-block;
     }

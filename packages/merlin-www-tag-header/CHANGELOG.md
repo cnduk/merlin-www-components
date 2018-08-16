@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.11.15"></a>
+## [1.11.15](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.14...@cnbritain/merlin-www-tag-header@1.11.15) (2018-08-02)
+
+
+### Bug Fixes
+
+* **merlin-www-tag-header:** correct bystander colours ([2907098](https://github.com/cnduk/merlin-www-components/commit/2907098))
+
+
+
+
+<a name="1.11.10"></a>
+## [1.11.10](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.9...@cnbritain/merlin-www-tag-header@1.11.10) (2018-07-19)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-tag-header
+
+<a name="1.11.9"></a>
+## [1.11.9](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.8...@cnbritain/merlin-www-tag-header@1.11.9) (2018-07-17)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-tag-header
+
+<a name="1.11.8"></a>
+## [1.11.8](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.7...@cnbritain/merlin-www-tag-header@1.11.8) (2018-07-12)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-tag-header
+
+<a name="1.11.7"></a>
+## [1.11.7](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.6...@cnbritain/merlin-www-tag-header@1.11.7) (2018-07-03)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-tag-header
+
 <a name="1.11.5"></a>
 ## [1.11.5](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.4...@cnbritain/merlin-www-tag-header@1.11.5) (2018-06-26)
 

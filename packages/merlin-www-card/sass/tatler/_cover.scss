@@ -57,7 +57,7 @@
 .c-card--cover {
     @include card-cover;
 
-    @include card-portrait-to-landscape-size {
+    @include min-screen($CARD_SWITCHER_WIDTH) {
         .c-card__title {
             @include font('COMMUTER SANS', 15px, 'MEDIUM', 40px);
         }

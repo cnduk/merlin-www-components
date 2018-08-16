@@ -1,0 +1,677 @@
+{
+  "data": {
+    "brand_name": "British Vogue",
+    "close_button": {
+      "data": {
+        "alt_text": null,
+        "credit": null,
+        "description": null,
+        "look_number": null,
+        "title": null,
+        "width": null,
+        "svg_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18.02 17.98\"><title>close</title><path d=\"M18.02 1.42L16.61 0l-7.6 7.58L1.41 0 0 1.42l7.59 7.57L0 16.56l1.41 1.42 7.6-7.58 7.6 7.58 1.41-1.42-7.59-7.57 7.59-7.57z\"/></svg>"
+      },
+      "state": {
+        "is_image": false,
+        "is_picture": false,
+        "is_static": false,
+        "is_svg": true,
+        "is_linked": false,
+        "is_landscape": false,
+        "is_portrait": false,
+        "is_square": false,
+        "is_lazyload": false
+      },
+      "style": {
+        "cls": "",
+        "inline": ""
+      },
+      "translation": {},
+      "type": "SVG"
+    },
+    "site_links": {
+      "data": {
+        "items": [
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Australia",
+                  "url": "http://www.vogue.com.au/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 0
+            },
+            "state": {
+              "is_first": true,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Brazil",
+                  "url": "http://www.vogue.globo.com/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 1
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "China",
+                  "url": "http://www.vogue.com.cn/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 2
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "France",
+                  "url": "http://en.vogue.fr/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 3
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Germany",
+                  "url": "http://www.vogue.de/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 4
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "India",
+                  "url": "http://www.vogue.in/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 5
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Italy",
+                  "url": "http://www.vogue.it/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 6
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Japan",
+                  "url": "http://www.vogue.co.jp/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 7
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Korea",
+                  "url": "http://www.vogue.co.kr/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 8
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Mexico & Latin America",
+                  "url": "http://www.vogue.mx/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 9
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Middle East",
+                  "url": "http://www.vogue.me/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 10
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Netherlands",
+                  "url": "http://www.vogue.nl/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 11
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Portugal",
+                  "url": "http://www.vogue.pt/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 12
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Russia",
+                  "url": "http://www.vogue.ru/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 13
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Spain",
+                  "url": "http://www.vogue.es/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 14
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Taiwan",
+                  "url": "http://www.vogue.com.tw/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 15
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Thailand",
+                  "url": "http://www.vogue.co.th/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 16
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Turkey",
+                  "url": "http://www.vogue.com.tr/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 17
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "Ukraine",
+                  "url": "http://www.vogue.ua/"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 18
+            },
+            "state": {
+              "is_first": false,
+              "is_last": false
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          },
+          {
+            "data": {
+              "item": {
+                "data": {
+                  "title": "US",
+                  "url": "http://www.vogue.com/?us_site=y"
+                },
+                "state": {
+                  "is_blank": false,
+                  "is_nofollow": false
+                },
+                "style": {
+                  "cls": "",
+                  "inline": ""
+                },
+                "translation": {},
+                "type": "Link"
+              },
+              "index": 19
+            },
+            "state": {
+              "is_first": false,
+              "is_last": true
+            },
+            "style": {
+              "cls": "",
+              "inline": ""
+            },
+            "translation": {},
+            "type": "ListItem"
+          }
+        ],
+        "length": 20
+      },
+      "state": {
+        "has_multiple_items": true
+      },
+      "style": {
+        "cls": "",
+        "inline": ""
+      },
+      "translation": {},
+      "type": "List"
+    },
+    "short_name": "Vogue"
+  },
+  "state": {},
+  "style": {
+    "cls": "",
+    "inline": ""
+  },
+  "translation": {},
+  "type": "InternationalRedirect"
+}

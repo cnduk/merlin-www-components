@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.1"></a>
+## [1.8.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-pagination@1.8.0...@cnbritain/merlin-www-pagination@1.8.1) (2018-07-19)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-pagination
+
+<a name="1.8.0"></a>
+# [1.8.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-pagination@1.7.35...@cnbritain/merlin-www-pagination@1.8.0) (2018-07-03)
+
+
+### Bug Fixes
+
+* **merlin-www-pagination:** borderbottom on hover status button fixed caused by buttonreset:hover ([2df3727](https://github.com/cnduk/merlin-www-components/commit/2df3727))
+
+
+### Features
+
+* **merlin-www-pagination:** themes update ([6d7b9e1](https://github.com/cnduk/merlin-www-components/commit/6d7b9e1))
+
+
+
+
 <a name="1.7.34"></a>
 ## [1.7.34](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-pagination@1.7.33...@cnbritain/merlin-www-pagination@1.7.34) (2018-06-11)
 

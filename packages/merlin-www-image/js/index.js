@@ -8,13 +8,13 @@ window.lazySizesConfig = window.lazySizesConfig || {};
 // Make sure we dont auto trigger lazySizes instantly
 window.lazySizesConfig.init = false;
 // Marker for the lazyload image
-window.lazySizesConfig.lazyClass = 'img-lazyload';
+window.lazySizesConfig.lazyClass = 'c-image--lazyload';
 // Marker for the images to be preloaded after load
-window.lazySizesConfig.preloadClass = 'img-lazypreload';
+window.lazySizesConfig.preloadClass = 'c-image--lazypreload';
 // Class to be applied when loading
-window.lazySizesConfig.loadingClass = 'img-lazyload--loading';
+window.lazySizesConfig.loadingClass = 'c-image--lazyload-loading';
 // Class to be applied when loaded
-window.lazySizesConfig.loadedClass = 'img-lazyload--loaded';
+window.lazySizesConfig.loadedClass = 'c-image--lazyload-loaded';
 
 import lazySizes from 'lazysizes';
 

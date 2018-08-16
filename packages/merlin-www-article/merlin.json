@@ -1,68 +1,18 @@
 {
     "name": "@cnbritain/merlin-www-article",
-    "demo": {
-        "article-gallery": {
-            "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq",
-                "bystander"
-            ],
-            "main": "article",
-            "data": "article-gallery"
-        },
-        "article-video": {
-            "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq",
-                "bystander"
-            ],
-            "main": "video",
-            "data": "article-video"
-        },
-        "article-article": {
-            "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq",
-                "bystander"
-            ],
-            "main": "article",
-            "data": "article-article"
-        },
-        "article-review": {
-            "themes": [
-                "wireframe",
-                "vogue",
-                "missvogue",
-                "tatler",
-                "gq",
-                "bystander"
-            ],
-            "main": "article",
-            "data": "article-review"
-        }
-    },
     "js": {
         "demo": "demo/demo.js"
     },
     "themes": {
-        "brides": "sass/brides/brides.scss",
-        "gq": "sass/gq/gq.scss",
-        "tatler": "sass/tatler/tatler.scss",
         "wireframe": "sass/wireframe/wireframe.scss",
-        "bystander": "sass/bystander/bystander.scss",
-        "missvogue": "sass/missvogue/missvogue.scss",
-        "vogue": "sass/vogue/vogue.scss",
+        "brides": "sass/brides/brides.scss",
         "glamour": "sass/glamour/glamour.scss",
-        "traveller": "sass/traveller/traveller.scss"
+        "gq": "sass/gq/gq.scss",
+        "houseandgarden": "sass/houseandgarden/houseandgarden.scss",
+        "tatler": "sass/tatler/tatler.scss",
+        "traveller": "sass/traveller/traveller.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "wired": "sass/wired/wired.scss"
     },
     "partials": {
         "article": "partials/article.html",
@@ -87,7 +37,6 @@
         "@cnbritain/merlin-www-figure",
         "@cnbritain/merlin-www-image",
         "@cnbritain/merlin-www-marketing-cards",
-        "@cnbritain/merlin-www-card-list",
         "@cnbritain/merlin-www-topic-strip",
         "@cnbritain/merlin-www-card",
         "@cnbritain/merlin-www-bbcode",
@@ -104,7 +53,6 @@
         "article-video": "data/article-video.json",
         "article-article": "data/article-article.json",
         "article-review": "data/article-review.json",
-
         "article-podcast": "data/article-podcast.json",
         "article-author": "data/article-author.json",
         "article-event-author": "data/article-event-author.json",

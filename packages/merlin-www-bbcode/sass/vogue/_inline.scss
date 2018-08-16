@@ -40,40 +40,33 @@
 // -------------------- //
 .bb-dropcap {}
 .bb-dropcap--letter {
-    @include font('ITC CASLON');
-
+    @include font('ITC CASLON', 81px, 400, 81px);
     box-sizing: border-box;
     color: $cod-gray;
     float: left;
-    // This is all done in ems as it will adjust if the paragraph font size
-    // changes
-    font-size: 3.2em;
-    line-height: 0.5em;
-    margin-right: 0.21em;
-    padding-top: 0.28em;
-    text-align: left;
+    height: 108px;
+    margin-right: 12px;
+    text-transform: capitalize;
 
-    @include text-size-large {
-        font-size: 5.45em;
-        margin-right: 0.14em;
-        padding-top: 0.25em;
+    @include at-x-large-size {
+        @include font-size(90px);
+        @include line-height(90px);
+        height: 120px;
+        margin-right: 16px;
+    }
 
-        // Fix dropcap position in IE
-        .gt-ie8 &,
-        .is-ie10 & {
-            margin-top: -0.05em;
-        }
+    .is-macos &,
+    .is-linux & {
+        padding-top: 5px;
     }
 }
-
 
 // -------------------- //
 // Button
 // -------------------- //
-.bb-button {
-    @include button-single();
-}
+.bb-button,
 .bb-button--light {
+    @include button-single();
     @include button-single-light();
 
     &:hover,

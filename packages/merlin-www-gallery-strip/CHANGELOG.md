@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.9.2"></a>
+## [1.9.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-gallery-strip@1.9.1...@cnbritain/merlin-www-gallery-strip@1.9.2) (2018-07-19)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-gallery-strip
+
+<a name="1.9.1"></a>
+## [1.9.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-gallery-strip@1.9.0...@cnbritain/merlin-www-gallery-strip@1.9.1) (2018-07-17)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-gallery-strip
+
+<a name="1.9.0"></a>
+# [1.9.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-gallery-strip@1.8.26...@cnbritain/merlin-www-gallery-strip@1.9.0) (2018-07-12)
+
+
+### Bug Fixes
+
+* **merlin-www-gallery-strip:** removed wired theme because doens't exist ([c6bcdf7](https://github.com/cnduk/merlin-www-components/commit/c6bcdf7))
+
+
+### Features
+
+* **merlin-www-gallery-strip:** new data ([634e195](https://github.com/cnduk/merlin-www-components/commit/634e195))
+
+
+
+
+<a name="1.8.26"></a>
+## [1.8.26](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-gallery-strip@1.8.25...@cnbritain/merlin-www-gallery-strip@1.8.26) (2018-07-03)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-gallery-strip
+
 <a name="1.8.24"></a>
 ## [1.8.24](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-gallery-strip@1.8.23...@cnbritain/merlin-www-gallery-strip@1.8.24) (2018-06-11)
 

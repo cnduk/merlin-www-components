@@ -1,26 +1,433 @@
-@import "@cnbritain/merlin-www-common:houseandgarden";
 @import "@cnbritain/merlin-www-buttons:houseandgarden";
-@import "@cnbritain/merlin-www-search-header:houseandgarden";
+@import "@cnbritain/merlin-www-common:houseandgarden";
+@import "@cnbritain/merlin-www-image:houseandgarden";
 
 @import "../wireframe/wireframe";
 
-@import "_base";
-@import "_promo";
-@import "_masthead";
-@import "_dropdown";
-@import "_social";
-@import "_search";
-@import "_gallery";
+.c-masthead {
+    background-color: $white;
+}
 
-.n-vanishing-nav {
-    .n-main__sticker-child {
-        transform: translate(0, 0%);
-        transition: transform 0.2s ease-in-out;
+.c-masthead__wrapper {}
+.c-masthead__logo {
+    height: 100px;
+    padding: 20px;
+    width: 270px;
+}
+
+.c-nav {
+    box-sizing: border-box;
+
+    &:before {
+        background-color: $mercury;
+        content: "";
+        height: 1px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
+}
+
+.c-nav__search-icon {
+    border-left: 1px solid $mercury;
+    box-sizing: border-box;
+
+    @include min-screen($XX_LARGE_SIZE + -1px) {
+        border-right: 1px solid $mercury;
     }
 
-    &.is-hidden {
-        .n-main__sticker-child {
-            transform: translate(0, -100%);
+    svg {
+        width: 20px;
+    }
+}
+
+
+.c-nav__toggle-icon {
+    border-left: 1px solid $mercury;
+    box-sizing: border-box;
+
+    @include min-screen($XX_LARGE_SIZE + -1px) {
+        border-right: 1px solid $mercury;
+    }
+
+    svg {
+        width: 20px;
+    }
+}
+
+.c-nav__open-icon {
+    @include max-screen($X_LARGE_SIZE + -1px) {
+        svg {
+            width: 24px;
         }
     }
+}
+
+.c-nav__close-icon {}
+
+.c-nav__wrapper {
+    &:after {
+        background-color: $mercury;
+        content: "";
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        top: 60px;
+        transform: translateX(-50%);
+        width: 100vw;
+
+        @include at-x-large-size {
+            z-index: -1;
+        }
+    }
+}
+
+.c-nav__content {}
+.c-nav__logo {
+    background-color: $white;
+    width: 110px;
+}
+
+.c-nav__search {
+    @include at-x-large-size {
+        box-sizing: border-box;
+        padding: 60px;
+        top: 61px;
+
+        &:before {
+            background-color: rgba($ebony-clay, 0.96);
+            content: "";
+            height: 100vh;
+            position: absolute;
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+    }
+}
+
+.c-nav__search-form {
+    background-color: $ebony-clay;
+
+    @include at-x-large-size {
+        border-bottom: 1px solid $silver-chalice;
+        padding-bottom: 20px;
+
+        &:before {
+            background-color: $ebony-clay;
+            content: "";
+            height: 100%;
+            left: 50%;
+            position: absolute;
+            top: 0;
+            transform: translateX(-50%);
+            width: 100vw;
+            z-index: -1;
+        }
+    }
+}
+
+.c-nav__search-input {
+    @include font("BRANDON GROTESQUE", 14px, 700, 60px);
+    background-color: $ebony-clay;
+    color: $white;
+    padding: 0 20px;
+    text-transform: uppercase;
+
+    @include at-x-large-size {
+        @include font("MILLER_DISPLAY", 60px, 700, 60px);
+        padding: 0;
+        text-align: center;
+        text-transform: initial;
+    }
+}
+
+.c-nav__search-button {
+    background-color: $black;
+
+    svg {
+        fill: $white;
+        width: 20px;
+    }
+}
+
+.c-nav__main {}
+.c-nav__main-list {
+    padding: 0 20px 20px 20px;
+
+    @include at-x-large-size {
+        padding: 0;
+    }
+}
+
+.c-nav__main-list-item {
+    @include at-x-large-size {
+        & + .c-nav__main-list-item {
+            &:before {
+                background: $mine-shaft;
+                content: "";
+                display: block;
+                height: 3px;
+                left: 0;
+                position: absolute;
+                margin-left: -1.5px;
+                margin-top: 29px;
+                transform: rotate(45deg);
+                width: 3px;
+            }
+        }
+    }
+}
+
+.c-nav__main-list-item--more {}
+.c-nav__main-link {
+    @include font("BRANDON GROTESQUE", 17px, 700, 60px);
+    border-bottom: 1px solid $mercury;
+    box-sizing: border-box;
+    color: $mine-shaft;
+    text-transform: uppercase;
+
+    @include at-x-large-size {
+        @include font-size(13px);
+        border-bottom: none;
+        box-sizing: content-box;
+        margin: 0 16px;
+
+        &:hover {
+            color: $silver-chalice;
+        }
+    }
+}
+
+.c-nav__main-link--more {
+    @include at-x-large-size {
+        &:hover {
+            color: $mine-shaft;
+        }
+    }
+}
+
+.c-nav__alt-list {
+    padding: 15px 0 15px 0;
+
+    @include at-x-large-size {
+        border-bottom: 1px solid $mercury;
+        border-left: 1px solid $mercury;
+        border-right: 1px solid $mercury;
+        padding: 5px 48px 5px 16px;
+    }
+}
+
+.c-nav__alt-list-item {}
+.c-nav__alt-link {
+    @include font("BRANDON GROTESQUE", 13px, 700, 40px);
+    color: $mine-shaft;
+    height: 40px;
+    text-transform: uppercase;
+
+    @include at-x-large-size {
+        &:hover {
+            color: $silver-chalice;
+        }
+    }
+}
+
+.c-nav__promo {
+    background-color: $vanilla-ice;
+    padding: 20px 30px;
+
+    @include at-x-large-size {
+        background-color: transparent;
+        bottom: 50px;
+        padding: 0 0 0 60px;
+    }
+}
+
+.c-nav__promo-wrapper {}
+.c-nav__promo-images {}
+.c-nav__promo-covers {
+    padding-right: 10px;
+    text-align: right;
+}
+
+.c-nav__promo-cover {
+    @include at-x-large-size {
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+}
+
+.c-nav__promo-content {
+    padding-left: 10px;
+    text-align: left;
+
+    @include at-x-large-size {
+        vertical-align: top;
+    }
+}
+
+.c-nav__promo-message {
+    @include font("MILLER_DISPLAY", 17px, 700, 21px);
+    color: $mine-shaft;
+    margin-bottom: 10px;
+    white-space: pre-line;
+}
+
+.c-nav__promo-button {
+    @include button-single();
+    @include button-single-light();
+    padding: 10px;
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
+
+.c-nav__social {
+    margin: 50px 20px;
+
+    @include at-x-large-size {
+        margin: 0;
+    }
+}
+
+.c-nav__social-list {}
+.c-nav__social-list-item {}
+.c-nav__social-list-item--follow {}
+
+.c-nav__social-link {}
+.c-nav__social-link--follow {
+    @include font("MILLER_DISPLAY", 15px, 400, 15px);
+    color: $mine-shaft;
+    font-style: italic;
+    margin: 0 0 20px 0;
+
+    @include at-x-large-size {
+        @include line-height(60px);
+        margin: 0 16px;
+    }
+}
+
+.c-nav__social-brand {}
+
+.c-nav__share-list {
+    @include at-x-large-size {
+        border-bottom: 1px solid $mercury;
+        border-left: 1px solid $mercury;
+        border-right: 1px solid $mercury;
+        padding: 10px 20px 20px 20px;
+        right: -1px;
+    }
+}
+
+.c-nav__share-list-item {
+    margin: 0 5px;
+}
+
+.c-nav__share-list-item--newsletter {
+    margin: 0;
+}
+
+.c-nav__share-link {
+    @include button-share();
+}
+
+.c-nav__share-link--youtube {
+    @include button-share-light("youtube");
+    &:hover {
+        @include button-share-light-hover("youtube");
+    }
+}
+
+.c-nav__share-link--twitter {
+    @include button-share-light("twitter");
+    &:hover {
+        @include button-share-light-hover("twitter");
+    }
+}
+
+.c-nav__share-link--instagram {
+    @include button-share-light("instagram");
+    &:hover {
+        @include button-share-light-hover("instagram");
+    }
+}
+
+.c-nav__share-link--facebook {
+    @include button-share-light("facebook");
+    &:hover {
+        @include button-share-light-hover("facebook");
+    }
+}
+
+.c-nav__share-button {
+    @include button-single();
+    @include button-single-light();
+    margin-top: 30px;
+
+    &:hover {
+        @include button-single-light-hover();
+    }
+}
+
+.c-nav__gallery {
+    left: 140px;
+    padding-left: 40px;
+
+    @include screen($XX_LARGE_SIZE, 1500px) {
+        left: calc(110px + (30px - (100vw - #{$XX_LARGE_SIZE})/2))
+    }
+
+    @include min-screen(1500px) {
+        left: 110px;
+    }
+}
+
+.c-nav__gallery-title {
+    @include font("MILLER_DISPLAY", 18px, 600, 60px);
+    color: $mine-shaft;
+}
+
+.c-nav__gallery-count {
+    font-size: 0;
+    padding: 0 20px;
+}
+
+.c-nav__gallery-slash {
+    @include font("BRANDON GROTESQUE", 15px, 400, 60px);
+    color: $mine-shaft;
+    margin: 0 3px;
+}
+
+.c-nav__gallery-current {
+    @include font("BRANDON GROTESQUE", 15px, 700, 60px);
+    color: $mine-shaft;
+}
+
+.c-nav__gallery-total {
+    @include font("BRANDON GROTESQUE", 15px, 400, 60px);
+    color: $mine-shaft;
+}
+
+.c-nav__gallery-icon {
+    border-left: 1px solid $mercury;
+    box-sizing: border-box;
+
+    @include min-screen($XX_LARGE_SIZE + -1px) {
+        border-right: 1px solid $mercury;
+    }
+
+    svg {
+        width: 20px;
+    }
+}
+
+.c-nav__list-icon {}
+.c-nav__grid-icon {}
+
+.c-nav__down-arrow {
+    border-top-color: $mine-shaft;
 }

@@ -10,7 +10,7 @@
 }
 
 .a-share__list-item--mobile {
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         display: none;
     }
 }
@@ -24,7 +24,7 @@
         vertical-align: middle !important;
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         display: inline-block;
         vertical-align: middle;
 

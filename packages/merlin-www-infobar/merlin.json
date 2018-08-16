@@ -1,0 +1,30 @@
+{
+    "name": "@cnbritain/merlin-www-infobar",
+    "js": {
+        "demo": "demo/demo.js"
+    },
+    "themes": {
+        "wireframe": "sass/wireframe/wireframe.scss",
+        "brides": "sass/brides/brides.scss",
+        "glamour": "sass/glamour/glamour.scss",
+        "gq": "sass/gq/gq.scss",
+        "houseandgarden": "sass/houseandgarden/houseandgarden.scss",
+        "tatler": "sass/tatler/tatler.scss",
+        "traveller": "sass/traveller/traveller.scss",
+        "vogue": "sass/vogue/vogue.scss",
+        "wired": "sass/wired/wired.scss"
+    },
+    "partials": {
+        "infobar": "templates/infobar.html"
+    },
+    "dependencies": [
+        "@cnbritain/merlin-www-buttons",
+        "@cnbritain/merlin-www-common",
+        "@cnbritain/merlin-www-main-navigation"
+    ],
+    "currentTheme": null,
+    "main": "infobar",
+    "data": {
+        "all": "data/all.json"
+    }
+}

@@ -1,0 +1,330 @@
+
+/**
+ * Article card
+ */
+
+.bb-card {
+    border: 1px solid $ballet-grey;
+    border-radius: 4px;
+    margin: 32px 0;
+    padding: 12px;
+
+    &:hover {
+        .bb-card__title {
+            color: $pink-rose;
+        }
+    }
+}
+
+.bb-card__obj {
+    display: table;
+    width: 100%;
+}
+
+.bb-card__obj__header,
+.bb-card__obj__body {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.bb-card__obj__body {
+    padding-left: 16px;
+}
+
+.bb-card__image {
+    background-color: $diamond;
+    padding-top: 66.66%;
+}
+
+.bb-card__title {
+    @include font('SOLEIL', 14px, 'NORMAL', 18px);
+    color: $ascot-grey;
+    letter-spacing: 0.01em;
+}
+
+.bb-card__tag {
+    @include font('SOLEIL', 12px, null, 12px);
+    color: $candle-grey;
+    display: none;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.bb-card__footer {
+    display: none;
+}
+
+
+
+
+/**
+ * Gallery card
+ */
+
+.bb-gallery {
+    border: 1px solid $ballet-grey;
+    border-radius: 4px 4px 0 0;
+    margin: 32px 0;
+    padding-top: 12px;
+
+    &:hover {
+        .bb-gallery__title {
+            color: $pink-rose;
+        }
+    }
+}
+
+.bb-gallery__icon {
+    display: table-cell;
+    padding-left: 12px;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    vertical-align: middle;
+
+    &:before {
+        background-color: $blossom;
+        border-radius: 50%;
+        box-sizing: border-box;
+        content: "";
+        display: block;
+        left: 12px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        width: 40px;
+        z-index: 1;
+    }
+
+    svg {
+        display: block;
+        fill: $pink-rose;
+        height: 16px;
+        left: 12px + 12px;
+        margin: -8px 0 0 0;
+        position: absolute;
+        top: 50%;
+        width: 16px;
+        z-index: 2;
+    }
+}
+
+.bb-gallery__title {
+    @include font('SOLEIL', 14px, 'NORMAL', 18px);
+    color: $ascot-grey;
+    display: table-cell;
+    letter-spacing: 0.01em;
+    padding: 0 12px;
+    vertical-align: middle;
+}
+
+.bb-gallery__link {}
+.bb-gallery__cols {
+    margin-top: 12px;
+}
+.bb-gallery__col {
+    background-color: $diamond;
+}
+
+.bb-gallery__remaining {
+    background-color: rgba($black, 0.25);
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.bb-gallery__remaining-text {
+    @include font('SOLEIL', 24px, 400, 24px);
+    color: $white;
+    letter-spacing: 0.01em;
+}
+
+
+
+
+
+.bb-video {
+    border: 1px solid $ballet-grey;
+    border-radius: 4px 4px 0 0;
+    margin: 32px 0;
+    padding-top: 12px;
+
+    &:hover {
+        .bb-video__title {
+            color: $pink-rose;
+        }
+    }
+}
+
+.bb-video__icon {
+    display: table-cell;
+    padding-left: 12px;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    vertical-align: middle;
+
+    &:before {
+        background-color: $blossom;
+        border-radius: 50%;
+        box-sizing: border-box;
+        content: "";
+        display: block;
+        left: 12px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        width: 40px;
+        z-index: 1;
+    }
+
+    svg {
+        display: block;
+        fill: $pink-rose;
+        height: 16px;
+        left: 12px + 12px;
+        margin: -4px 0 0 0;
+        position: absolute;
+        top: 16px;
+        width: 16px;
+        z-index: 2;
+    }
+}
+
+.bb-video__title {
+    @include font('SOLEIL', 14px, 'NORMAL', 18px);
+    color: $ascot-grey;
+    display: table-cell;
+    letter-spacing: 0.01em;
+    padding: 0 12px;
+    vertical-align: middle;
+}
+
+.bb-video__image {
+    margin-top: 12px;
+}
+
+.bb-video__image-icon {
+    display: none;
+}
+
+
+/**
+ * Figure
+ */
+
+.bb-figure {
+    margin: 40px 0;
+}
+
+.bb-figure__wrapper {}
+.bb-figure__content {
+    border-left: 1px solid $ballet-grey;
+    margin: 12px 0 0 0;
+    padding: 0 0 0 12px;
+}
+
+.bb-figure__caption {
+    .bb-p {
+        @include font('SOLEIL', 12px, null, 16px);
+        color: $candle-grey;
+        letter-spacing: 0.03em;
+    }
+}
+
+.bb-figure__credit {
+    @include font('SOLEIL', 9px, null, 12px);
+    color: rgba($candle-grey, 0.75);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.bb-figure__caption + .bb-figure__credit {
+    margin-top: 6px;
+}
+
+/**
+ * Show gallery
+ */
+.bb-show-gallery {
+    .c-gallery-strip__list__item {
+        width: 25%;
+    }
+}
+
+
+
+@include card-portrait-to-landscape-size {
+
+    .bb-card {
+        margin: 48px 0;
+    }
+
+    .bb-card:before {
+        @include font('SOLEIL', 12px, null, 12px);
+        bottom: 16px;
+        color: rgba($candle-grey, 0.75);
+        content: "Continue Reading";
+        position: absolute;
+        right: 16px;
+    }
+
+    .bb-card__obj__header,
+    .bb-card__obj__body {
+        vertical-align: top;
+    }
+
+    .bb-card__obj__header {
+        width: 175px;
+    }
+
+    .bb-card__obj__body {
+        width: auto;
+    }
+
+    .bb-card__tag {
+        display: block;
+    }
+
+    .bb-card__title {
+        @include font-size(16px);
+        @include line-height(20px);
+        margin: 6px 0 0 0;
+    }
+
+    .bb-gallery,
+    .bb-video {
+        margin: 48px 0;
+    }
+
+    .bb-gallery__icon,
+    .bb-video__icon {
+        padding-left: 16px;
+
+        &:before {
+            left: 16px;
+        }
+
+        svg {
+            left: 16px + 12px;
+        }
+    }
+
+    .bb-gallery__title,
+    .bb-video__title {
+        @include font-size(16px);
+        @include line-height(20px);
+    }
+
+    .bb-gallery__remaining-text {
+        @include font-size(32px);
+        @include line-height(32px);
+    }
+
+}
+
+@include at-x-large-size {
+    .bb-figure {
+        margin: 48px 0;
+    }
+}

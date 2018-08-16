@@ -35,7 +35,7 @@
         .c-card__obj__body {
             background: none;
 
-            @include card-portrait-to-landscape-size {
+            @include min-screen($CARD_SWITCHER_WIDTH) {
                 background: $cod-gray;
             }
         }

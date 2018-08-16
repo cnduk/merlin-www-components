@@ -1,6 +1,6 @@
 .a-header {
     margin: 32px 0;
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin: 48px 0;
     }
 
@@ -12,7 +12,7 @@
             margin: 0 auto;
         }
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             .a-header__content {
                 padding-right: 0;
                 text-align: center;
@@ -34,14 +34,14 @@
 .a-header--gallery {}
 .a-header--video {
     margin: 30px 0;
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin: 40px 0;
     }
 
     .a-header__content {
         max-width: none;
         padding-left: 0;
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             padding-right: 350px;
         }
     }
@@ -50,20 +50,20 @@
     .a-header__about,
     .a-header__meta,
     .a-share__list {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             text-align: left;
         }
     }
 
     .a-share__list {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             display: inline-block;
             vertical-align: middle;
         }
     }
 
     .a-header__sponsor {
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             margin-left: 0;
         }
     }
@@ -72,7 +72,7 @@
 .a-header__hero {
     position: relative;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         text-align: center;
 
         .a-header__tag {
@@ -94,7 +94,7 @@
 
 .a-header__image {
     margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH;
+    max-width: $XX_LARGE_SIZE;
     position: relative;
 }
 
@@ -155,7 +155,7 @@
     right: 0;
     text-align: right;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         bottom: initial;
         margin: 10px;
         top: 0;
@@ -190,12 +190,12 @@
     padding-top: 20px;
     position: relative;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         bottom: 0;
         left: 50%;
         padding-left: 110px;
@@ -213,12 +213,12 @@
     padding-right: $MOBILE_SIDE_GUTTER;
     width: 100%;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
@@ -230,7 +230,7 @@
     max-width: $ARTICLE_TOTAL;
     position: relative;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding-right: 350px;
     }
 }
@@ -240,7 +240,7 @@
     color: $dune;
     margin: 14px 0 10px 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         @include font-size(45px);
         @include line-height(55px);
         margin: 17px 0 20px 0;
@@ -254,7 +254,7 @@
 .a-header__teaser {
     margin: 10px 0 20px 0;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin: 20px 0 40px 0;
     }
 
@@ -262,7 +262,7 @@
         @include font("GRAPHIK", 17px, 600, 21px);
         color: $dune;
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             @include font-size(19px);
             @include line-height(24px);
         }
@@ -349,7 +349,7 @@ li.a-header__meta-item {
     margin-bottom: 14px;
     text-transform: uppercase;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin-bottom: 17px;
     }
 }
@@ -411,7 +411,7 @@ li.a-header__meta-item {
         vertical-align: middle;
 
         img {
-            max-height: 48px;
+            max-height: 50px;
             margin-top: 0;
         }
     }

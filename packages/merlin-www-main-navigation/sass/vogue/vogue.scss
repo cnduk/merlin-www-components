@@ -1,19 +1,6 @@
-@import "@cnbritain/merlin-www-common:vogue";
 @import "@cnbritain/merlin-www-buttons:vogue";
-@import "@cnbritain/merlin-www-search-header:vogue";
+@import "@cnbritain/merlin-www-common:vogue";
+@import "@cnbritain/merlin-www-image:vogue";
 
 @import "../wireframe/wireframe";
 @import "./voguebase";
-
-.n-vanishing-nav {
-    .n-main__sticker-child {
-        transform: translate(0, 0%);
-        transition: transform 0.2s ease-in-out;
-    }
-
-    &.is-hidden {
-        .n-main__sticker-child {
-            transform: translate(0, -100%);
-        }
-    }
-}

@@ -4,7 +4,7 @@
     }
 }
 
-.c-int-redirect__wrapper {
+.c-int-redirect-wrapper {
     margin: 0 auto;
     position: relative;
 }
@@ -21,21 +21,7 @@
     }
 }
 
-.c-int-redirect__list {
-    display: none;
-    text-align: center;
-
-    #chkIntRedirectList:checked ~ & {
-        display: block;
-    }
-}
-li.c-int-redirect__list__item {
-    display: inline-block;
-}
-
 .c-int-redirect__msg {
-    text-align: center;
-
     label {
         cursor: pointer;
     }
@@ -43,4 +29,21 @@ li.c-int-redirect__list__item {
     #chkIntRedirectList:checked ~ & {
         display: none;
     }
+}
+
+.c-int-redirect__list {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    #chkIntRedirectList:checked ~ & {
+        display: block;
+    }
+}
+
+.c-int-redirect__listitem {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
 }

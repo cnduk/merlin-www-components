@@ -137,7 +137,7 @@ svg.c-card__image__icon--video {
     margin: 5px 0 0;
     text-transform: uppercase;
 
-    @include card-portrait-to-landscape-size {
+    @include min-screen($CARD_SWITCHER_WIDTH) {
         margin: 10px 0 0;
     }
 }
@@ -211,7 +211,7 @@ ul.c-card__rating {
     margin-bottom: 8px;
     margin-top: 5px;
 
-    @include card-portrait-to-landscape-size {
+    @include min-screen($CARD_SWITCHER_WIDTH) {
         margin-top: 0px;
     }
 }
@@ -232,7 +232,7 @@ li.c-card__rating-label {
     margin-left: 3px;
     padding-left: 3px;
 
-    @include card-portrait-to-landscape-size {
+    @include min-screen($CARD_SWITCHER_WIDTH) {
         padding-left: 5px;
     }
 

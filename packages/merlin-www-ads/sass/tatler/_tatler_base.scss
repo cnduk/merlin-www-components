@@ -26,14 +26,14 @@
         text-align: left;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         .ad__title {
             padding-left: $TABLET_SIDE_GUTTER;
             padding-right: $TABLET_SIDE_GUTTER;
         }
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         .ad__container {
             background: transparent;
             padding: 0;
@@ -62,12 +62,12 @@
 .ad--article-rail {
     margin: 30px (-$MOBILE_SIDE_GUTTER);
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-left: (-$TABLET_SIDE_GUTTER);
         margin-right: (-$TABLET_SIDE_GUTTER);
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         position: absolute;
         right: 0;
         margin: 0;
@@ -76,7 +76,7 @@
 }
 
 .ad--article-rail-top {
-    @include desktop-size {
+    @include at-x-large-size {
         position: absolute;
         right: 0;
         top: 0;
@@ -86,11 +86,11 @@
 .ad--article-inline {
     margin: 45px (-$MOBILE_SIDE_GUTTER);
 
-    @include tablet-size {
+    @include at-medium-size {
         margin: 40px (-$TABLET_SIDE_GUTTER);
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin-left: 0;
         margin-right: 0;
 
@@ -114,7 +114,7 @@
     margin: 0 auto 60px;
     width: 300px;
 
-    @include desktop-size {
+    @include at-x-large-size {
         display: block;
         margin-bottom: 0;
         position: absolute;
@@ -154,7 +154,7 @@
         text-align: left;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         .ad__title {
             padding-left: $TABLET_SIDE_GUTTER;
             padding-right: $TABLET_SIDE_GUTTER;
@@ -165,12 +165,12 @@
 .ad--tag-inline {
     margin: 40px (-$MOBILE_SIDE_GUTTER);
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-left: (-$TABLET_SIDE_GUTTER);
         margin-right: (-$TABLET_SIDE_GUTTER);
     }
 
-     @include desktop-size {
+     @include at-x-large-size {
         margin-left: -$DESKTOP_SIDE_GUTTER;
         margin-right: (-$DESKTOP_SIDE_GUTTER + -340px);
         position: relative;
@@ -197,13 +197,13 @@
     margin: 60px (-$MOBILE_SIDE_GUTTER);
     width: calc(100% + #{$MOBILE_SIDE_GUTTER*2});
 
-    @include tablet-size {
+    @include at-medium-size {
         margin-left: (-$TABLET_SIDE_GUTTER);
         margin-right: (-$TABLET_SIDE_GUTTER);
         width: calc(100% + #{$TABLET_SIDE_GUTTER*2});
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         clear: right;
         float: right;
         margin: 0 -340px 0 40px;
@@ -226,7 +226,7 @@
 }
 
 .ad--tag-rail-top {
-    @include desktop-size {
+    @include at-x-large-size {
         left: 100%;
         position: absolute;
         top: 0;
@@ -250,7 +250,7 @@
         text-align: left;
     }
 
-    @include tablet-size {
+    @include at-medium-size {
         .ad__title {
             padding-left: $TABLET_SIDE_GUTTER;
             padding-right: $TABLET_SIDE_GUTTER;

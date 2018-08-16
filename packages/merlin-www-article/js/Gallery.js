@@ -120,7 +120,9 @@ function Gallery(el, options) {
      * @type {GalleryImageNavigation}
      */
     this.imageNavigation = null;
+
     this._imageNavigationState = 'default';
+    this._imageNavigationOffset = 60;
 
     this.layoutView = 'list';
 
@@ -207,7 +209,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
 
         // NOTE: 60 is the navigation height
         var scrollY = getWindowScrollTop();
-        var top = this.bounds.top - 60;
+        var top = this.bounds.top - this._imageNavigationOffset;
         var bottom = this.bounds.bottom - 60 - this.imageNavigation.bounds.height;
 
         // Check if at bottom, set absolute
@@ -233,7 +235,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
         if (scrollY >= top) {
             if (this._imageNavigationState === 'fixed') return;
             this._imageNavigationState = 'fixed';
-            setFixed(this.imageNavigation.el, '60px');
+            setFixed(this.imageNavigation.el, (this._imageNavigationOffset + 'px'));
         }
     },
 
@@ -253,7 +255,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
         }, 300, {
             'offset': {
                 'x': 0,
-                'y': -60
+                'y': -this._imageNavigationOffset
             },
             'relative': false,
             'stopOnUserInput': false
@@ -353,7 +355,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
         var thumbnailsBound = getElementOffset(elThumbnails);
         var scrollTop = getWindowScrollTop();
         if (thumbnailsBound.top <= scrollTop) {
-            window.scrollTo(0, thumbnailsBound.top - 60);
+            window.scrollTo(0, thumbnailsBound.top - this._imageNavigationOffset);
         }
 
         this.emit(

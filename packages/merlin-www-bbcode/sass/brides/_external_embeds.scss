@@ -1,0 +1,7 @@
+.bb-embed {
+    margin: 32px 0;
+
+    @include at-x-large-size {
+        margin: 48px 0;
+    }
+}

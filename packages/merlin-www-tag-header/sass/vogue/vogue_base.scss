@@ -211,7 +211,7 @@
     display: block;
 }
 
-@include tablet-size {
+@include at-medium-size {
     .tg-header__event-meta {
         margin: 15px auto 30px auto;
     }

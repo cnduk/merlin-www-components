@@ -1,0 +1,81 @@
+// -------------------- //
+// Abbreviation
+// -------------------- //
+.bb-abbr {
+    text-decoration: underline;
+}
+
+// -------------------- //
+// Anchor
+// -------------------- //
+.bb-a {
+    color: $dune;
+    border-bottom: 2px solid rgba(44, 55, 129, .25);
+    padding-bottom: 2px;
+
+    &:hover{
+        background: rgba(44, 55, 129, 0.2);
+        border-bottom: 2px solid transparent;
+        color: $dune;
+    }
+}
+
+// -------------------- //
+// Bold
+// -------------------- //
+.bb-strong {
+    font-weight: 600;
+}
+
+// -------------------- //
+// Button
+// -------------------- //
+.bb-button,
+.bb-button--light {
+    @include button-group();
+    @include button-group-light();
+
+    &:hover,
+    &:focus {
+        @include button-group-light-hover();
+    }
+}
+
+.bb-button--dark {
+    @include button-group();
+    @include button-group-dark();
+
+    &:hover,
+    &:focus {
+        @include button-group-dark-hover();
+    }
+}
+
+// -------------------- //
+// Dropcap
+// -------------------- //
+.bb-dropcap {}
+.bb-dropcap--letter {
+    @include font("MILLER_DISPLAY", 30px, 'SEMI BOLD', 30px);
+    background-color: $white;
+    border: solid 4px $azalea;
+    color: $astronaut;
+    float: left;
+    letter-spacing: 0;
+    margin-right: 10px;
+    margin-bottom: 0;
+    padding: 26px;
+    text-transform: capitalize;
+
+    @include at-x-large-size {
+        padding: 34px;
+        margin-right: 15px;
+    }
+}
+
+// -------------------- //
+// Mark
+// -------------------- //
+.bb-mark {
+    background: $azalea;
+}

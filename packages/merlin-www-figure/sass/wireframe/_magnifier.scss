@@ -68,6 +68,7 @@
         border-top: 1px solid #3E3E3E;
     }
 }
+
 .c-figure__magnifier-button--close {
     background-color: #000;
 
@@ -77,6 +78,7 @@
         stroke: #fff;
     }
 }
+
 .c-figure__magnifier-button--zoom-in,
 .c-figure__magnifier-button--zoom-out {
     background-color: #fff;
@@ -89,6 +91,9 @@
 }
 
 .c-figure__magnifier-toolbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     position: absolute;
     right: 0;
     top: 0;

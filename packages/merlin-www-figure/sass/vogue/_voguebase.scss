@@ -2,10 +2,11 @@
     margin-bottom: 20px;
     position: relative;
 
-    @include desktop-size {
+    @include at-x-large-size {
         margin-bottom: 30px;
     }
 }
+
 .c-figure__wrapper {
     background-color: $alabaster-f9;
 }
@@ -17,7 +18,7 @@
     right: 15px;
 }
 
-li.c-figure__toolbar-listitem {
+.c-figure__toolbar-listitem {
     background-color: $white;
     height: 45px;
     transition: background 0.1s ease-in-out;
@@ -29,58 +30,29 @@ li.c-figure__toolbar-listitem {
     }
 }
 
-
-li.c-figure__toolbar-listitem--more {
+.c-figure__toolbar-listitem--more {
     svg {
         fill: $dove-gray;
     }
 }
 
-li.c-figure__toolbar-listitem--facebook {
-    svg {
-        fill: map-get($COLOUR_SOCIAL, 'facebook');
-    }
-
-    &:hover {
-        background-color: map-get($COLOUR_SOCIAL, 'facebook');
-
+.c-figure__toolbar-listitem--zoom {
+    &:hover,
+    &:focus {
+        background-color: $guardsman-red;
         svg {
             fill: #fff;
         }
     }
 }
-li.c-figure__toolbar-listitem--twitter {
-    svg {
-        fill: map-get($COLOUR_SOCIAL, 'twitter');
-    }
 
-    &:hover {
-        background-color: map-get($COLOUR_SOCIAL, 'twitter');
-
-        svg {
-            fill: #fff;
-        }
-    }
-}
-li.c-figure__toolbar-listitem--pinterest {
-    svg {
-        fill: map-get($COLOUR_SOCIAL, 'pinterest');
-    }
-
-    &:hover {
-        background-color: map-get($COLOUR_SOCIAL, 'pinterest');
-
-        svg {
-            fill: #fff;
-        }
-    }
-}
-li.c-figure__toolbar-listitem--email {
+.c-figure__toolbar-listitem--email {
     svg {
         fill: map-get($COLOUR_SOCIAL, 'email');
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: map-get($COLOUR_SOCIAL, 'email');
 
         svg {
@@ -88,12 +60,44 @@ li.c-figure__toolbar-listitem--email {
         }
     }
 }
-li.c-figure__toolbar-listitem--whatsapp {
+
+.c-figure__toolbar-listitem--twitter {
+    svg {
+        fill: map-get($COLOUR_SOCIAL, 'twitter');
+    }
+
+    &:hover,
+    &:focus {
+        background-color: map-get($COLOUR_SOCIAL, 'twitter');
+
+        svg {
+            fill: #fff;
+        }
+    }
+}
+
+.c-figure__toolbar-listitem--facebook {
+    svg {
+        fill: map-get($COLOUR_SOCIAL, 'facebook');
+    }
+
+    &:hover,
+    &:focus {
+        background-color: map-get($COLOUR_SOCIAL, 'facebook');
+
+        svg {
+            fill: #fff;
+        }
+    }
+}
+
+.c-figure__toolbar-listitem--whatsapp {
     svg {
         fill: map-get($COLOUR_SOCIAL, 'whatsapp');
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: map-get($COLOUR_SOCIAL, 'whatsapp');
 
         svg {
@@ -101,9 +105,16 @@ li.c-figure__toolbar-listitem--whatsapp {
         }
     }
 }
-li.c-figure__toolbar-listitem--zoom {
-    &:hover {
-        background-color: $guardsman-red;
+
+.c-figure__toolbar-listitem--pinterest {
+    svg {
+        fill: map-get($COLOUR_SOCIAL, 'pinterest');
+    }
+
+    &:hover,
+    &:focus {
+        background-color: map-get($COLOUR_SOCIAL, 'pinterest');
+
         svg {
             fill: #fff;
         }
@@ -115,7 +126,7 @@ li.c-figure__toolbar-listitem--zoom {
     color: $cod-gray;
     margin-bottom: 10px;
 
-    @include desktop-size {
+    @include at-x-large-size {
         @include line-height(30px);
         padding-right: 160px;
     }
@@ -130,7 +141,7 @@ li.c-figure__toolbar-listitem--zoom {
         @include font('ADOBE CASLON', 16px);
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         padding-right: 160px;
     }
 }
@@ -141,15 +152,15 @@ li.c-figure__toolbar-listitem--zoom {
 }
 
 .c-figure__credit {
-    color: $silver;
     @include font('NOBEL', 9px);
+    color: $silver;
     text-transform: uppercase;
 
     strong {
         font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         padding-right: 160px;
     }
 }

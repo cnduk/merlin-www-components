@@ -1,7 +1,9 @@
+
 @import "@cnbritain/merlin-www-common:wired";
-@import "@cnbritain/merlin-www-topic-strip:wired";
 @import "@cnbritain/merlin-www-buttons:wired";
-@import "@cnbritain/merlin-www-card-list:wired";
+@import "@cnbritain/merlin-www-image:wired";
+@import "@cnbritain/merlin-www-ads:wired";
+@import "@cnbritain/merlin-www-topic-strip:wired";
 @import "@cnbritain/merlin-www-card:wired";
 
 @import "../wireframe/wireframe";
@@ -10,203 +12,505 @@
     margin-top: $MOBILE_SLICE_MARGIN;
     margin-bottom: $MOBILE_SLICE_MARGIN;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         margin-top: $TABLET_SLICE_MARGIN;
         margin-bottom: $TABLET_SLICE_MARGIN;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin-top: $DESKTOP_SLICE_MARGIN;
         margin-bottom: $DESKTOP_SLICE_MARGIN;
     }
 }
 
-.c-card-section--c-curated,
-.c-card-section--c-tag,
-.c-card-section--tg-articles,
-.c-card-section--v-articles,
-.c-card-section--v-genre-articles,
-.c-card-section--a-recommended,
-.c-card-section--g-recommended,
-.c-card-section--mag-articles,
-.c-card-section--mag-magazines,
-.c-card-section--c-contributors {
-    .c-card-section__title {
-        @include font("BRUTAL", 15px, 700, 15px);
-        color: #000;
-        margin-bottom: 15px;
-        margin-top: 0;
-        text-transform: uppercase;
+.c-card-section-wrapper {}
 
-        a {
-            color: inherit;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-
-    .c-card-section__btn {
-        @include button-single();
-        @include button-single-light();
-        &:hover {
-            @include button-single-light-hover();
-        }
-    }
+.c-card-section__header {
+    font-size: 0;
+}
+.c-card-section__body {}
+.c-card-section__footer {
+    text-align: center;
 }
 
-.c-card-section--g-recommended {
-    background-color: $black;
-    margin-bottom: 0;
+.c-card-section__logo {
+    margin: 0 auto 20px auto;
+    text-align: center;
+    width: 150px;
+
+    svg {
+        width: 100%;
+    }
+
+    @include at-x-large-size {
+        margin-bottom: 40px;
+    }
+}
+.c-card-section__title {
+    @include font("BRUTAL", 15px, 'BOLD', 15px);
+    color: $black;
+    margin-bottom: 15px;
     margin-top: 0;
-    padding-top: $MOBILE_SLICE_MARGIN;
-    padding-bottom: $MOBILE_SLICE_MARGIN;
+    text-transform: uppercase;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding-top: $TABLET_SLICE_MARGIN;
-        padding-bottom: $TABLET_SLICE_MARGIN;
-    }
+    a {
+        color: inherit;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding-top: $DESKTOP_SLICE_MARGIN;
-        padding-bottom: $DESKTOP_SLICE_MARGIN;
-    }
-
-
-    .c-card-section__title {
-        @include font("BRUTAL", 15px, 700, 15px);
-        color: $white;
-        margin-bottom: 15px;
-        margin-top: 0;
-        text-transform: uppercase;
-
-        a {
-            color: inherit;
-            &:hover {
-                text-decoration: underline;
-            }
+        &:hover,
+        &:focus {
+            text-decoration: underline;
         }
     }
 
-    .c-card-section__btn {
-        @include button-single();
-        @include button-single-dark();
-        &:hover {
-            @include button-single-dark-hover();
-        }
+    @include at-x-large-size {
+        display: inline-block;
+        width: 30%;
+    }
+}
+.c-card-section__nav-strip {
+    font-size: initial;
+    margin: 20px (-$MOBILE_SIDE_GUTTER);
+
+    @include at-medium-size {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size {
+        display: inline-block;
+        margin: 0;
+        text-align: right;
+        width: 70%;
     }
 }
 
-.c-card-section--c-video-articles {
-    background-color: #000;
-    margin: 0;
-    max-width: none;
-    padding: 30px 20px;
+.c-card-section__card-list {}
+.c-card-section__card-listitem {}
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: $TABLET_SLICE_MARGIN;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding: $DESKTOP_SLICE_MARGIN;
-    }
-
-    .c-card-section__logo {
-        margin: 0 auto 20px auto;
-        text-align: center;
-        width: 150px;
-
-        svg {
-            width: 100%;
-        }
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            margin-bottom: 40px;
-        }
-    }
-
-    .c-card-section__btn {
-        @include button-single();
-        @include button-single-dark();
-        &:hover {
-            @include button-single-dark-hover();
-        }
-    }
-}
-
-.c-card-section--v-related-articles {
-    background-color: #000;
-    margin: 0;
-    max-width: none;
-    padding: 20px 20px 30px;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding: $TABLET_SLICE_MARGIN;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        display: none;
-        padding: $DESKTOP_SLICE_MARGIN;
-    }
-
-    .c-card-section__title {
-        @include font("BRUTAL", 15px, 700, 15px);
-        color: #fff;
-        margin-bottom: 15px;
-        margin-top: 0;
-        text-transform: uppercase;
-
-        a {
-            color: inherit;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-
-    .c-card-section__btn {
-        @include button-single();
-        @include button-single-dark();
-        &:hover {
-            @include button-single-dark-hover();
-        }
-    }
-}
-
-.c-card-section--mag-magazines,
-.c-card-section--mag-articles {
-    background-color: $white-smoke;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding-top: $MOBILE_SLICE_MARGIN;
-    padding-bottom: $MOBILE_SLICE_MARGIN;
-
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
-        padding-top: $TABLET_SLICE_MARGIN;
-        padding-bottom: $TABLET_SLICE_MARGIN;
-    }
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        padding-top: $DESKTOP_SLICE_MARGIN;
-        padding-bottom: $DESKTOP_SLICE_MARGIN;
-    }
-}
-
-.c-card-section--mag-articles + .c-card-section--mag-magazines {
-    padding-top: 0;
-}
-
-.c-card-section__constrain {}
-.c-card-section__logo {}
-.c-card-section__title {}
 .c-card-section__btn {
     box-sizing: border-box;
     margin-top: 25px;
     transition-duration: 100ms;
     width: 100%;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin-top: 40px;
         width: 170px;
+    }
+}
+
+/**
+ * ============================================================================
+ * Modifiers
+ * ============================================================================
+ */
+
+ // Not used
+ // .c-card-section--dark {}
+ // Wired has no shows
+ // .c-card-section--sh-latest-articles {}
+ // .c-card-section--sh-shows {}
+ // .c-card-section--sh-summary-articles {}
+ // .c-card-section--sh-summary-shows {}
+ // Wired is always a grid
+ // .c-card-section--tg-articles-grid {}
+
+.c-card-section--a-recommended,
+.c-card-section--c-curated,
+.c-card-section--c-tag,
+.c-card-section--s-results,
+.c-card-section--v-genre-articles {
+
+    .c-card-section__card-list {
+        margin: -15px -10px;
+    }
+
+    .c-card-section__card-listitem {
+        display: inline-block;
+        padding: 0 10px;
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    .c-card-section__btn {
+        @include button-single;
+        @include button-single-light;
+
+        &:hover,
+        &:focus {
+            @include button-single-light-hover;
+        }
+    }
+
+    .c-card {
+        border-top: 1px solid $black;
+        padding-top: 20px;
+    }
+
+    .c-card--dark {
+        border-top-color: $white;
+    }
+
+    @include at-small-size {
+        .c-card-section__card-listitem {
+            width: 50%;
+        }
+    }
+
+    @include at-x-large-size {
+        .c-card-section__card-listitem {
+            width: 25%;
+        }
+    }
+
+}
+
+.c-card-section--c-contributors {
+
+    .c-card-section__card-list {
+        margin: -15px -10px;
+        text-align: center;
+    }
+
+    .c-card-section__card-listitem {
+        display: inline-block;
+        padding: 0 10px;
+        margin: 15px 0;
+        text-align: left;
+        width: 100%;
+    }
+
+    .c-card-section__btn {
+        @include button-single;
+        @include button-single-light;
+
+        &:hover,
+        &:focus {
+            @include button-single-light-hover;
+        }
+    }
+
+    .c-card {
+        border-top: 1px solid $black;
+        padding-top: 20px;
+    }
+
+    .c-card--dark {
+        border-top-color: $white;
+    }
+
+    @include at-small-size {
+        .c-card-section__card-listitem {
+            width: 33.33333%;
+        }
+    }
+
+}
+
+.c-card-section--c-video-articles {
+    background-color: $black;
+    margin: 0 auto;
+    padding-top: $MOBILE_SLICE_MARGIN;
+    padding-bottom: $MOBILE_SLICE_MARGIN;
+
+    .c-card-section__title {
+        color: $white;
+    }
+
+    .c-card-section__card-list {
+        margin: -15px -10px;
+    }
+
+    .c-card-section__card-listitem {
+        display: inline-block;
+        padding: 0 10px;
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    .c-card-section__btn {
+        @include button-single;
+        @include button-single-dark;
+
+        &:hover,
+        &:focus {
+            @include button-single-dark-hover;
+        }
+    }
+
+    .c-card {
+        border-top: 1px solid $black;
+        padding-top: 20px;
+    }
+
+    .c-card--dark {
+        border-top-color: $white;
+    }
+
+    @include at-small-size {
+        .c-card-section__card-listitem {
+            width: 50%;
+        }
+    }
+
+    @include at-medium-size {
+        padding-top: $TABLET_SLICE_MARGIN;
+        padding-bottom: $TABLET_SLICE_MARGIN;
+    }
+
+    @include at-x-large-size {
+        padding-top: $DESKTOP_SLICE_MARGIN;
+        padding-bottom: $DESKTOP_SLICE_MARGIN;
+
+        .c-card-section__card-listitem {
+            width: 25%;
+        }
+    }
+
+}
+
+.c-card-section--mag-articles {
+    background-color: $white-smoke;
+    margin: 0 auto;
+    padding-top: $MOBILE_SLICE_MARGIN;
+    padding-bottom: $MOBILE_SLICE_MARGIN;
+
+    .c-card-section__card-list {
+        margin: -15px -10px;
+    }
+
+    .c-card-section__card-listitem {
+        display: inline-block;
+        padding: 0 10px;
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    .c-card-section__btn {
+        @include button-single;
+        @include button-single-light;
+
+        &:hover,
+        &:focus {
+            @include button-single-light-hover;
+        }
+    }
+
+    .c-card {
+        border-top: 1px solid $black;
+        padding-top: 20px;
+    }
+
+    .c-card--dark {
+        border-top-color: $white;
+    }
+
+    @include at-small-size {
+        .c-card-section__card-listitem {
+            width: 50%;
+        }
+    }
+
+    @include at-medium-size {
+        padding-top: $TABLET_SLICE_MARGIN;
+        padding-bottom: $TABLET_SLICE_MARGIN;
+    }
+
+    @include at-x-large-size {
+        padding-top: $DESKTOP_SLICE_MARGIN;
+        padding-bottom: $DESKTOP_SLICE_MARGIN;
+
+        .c-card-section__card-listitem {
+            width: 25%;
+        }
+    }
+
+}
+
+.c-card-section--mag-magazines {
+    background-color: $white-smoke;
+    margin: 0 auto;
+    padding-top: $MOBILE_SLICE_MARGIN;
+    padding-bottom: $MOBILE_SLICE_MARGIN;
+
+    .c-card-section__card-list {
+        margin: -15px -10px;
+    }
+
+    .c-card-section__card-listitem {
+        display: inline-block;
+        padding: 0 10px;
+        margin: 15px 0;
+        width: 50%;
+    }
+
+    .c-card-section__btn {
+        @include button-single;
+        @include button-single-light;
+
+        &:hover,
+        &:focus {
+            @include button-single-light-hover;
+        }
+    }
+
+    .c-card-section--mag-articles + & {
+        padding-top: 0;
+    }
+
+    @include at-medium-size {
+        padding-top: $TABLET_SLICE_MARGIN;
+        padding-bottom: $TABLET_SLICE_MARGIN;
+    }
+
+    @include at-x-large-size {
+        padding-top: $DESKTOP_SLICE_MARGIN;
+        padding-bottom: $DESKTOP_SLICE_MARGIN;
+
+        .c-card-section__card-listitem {
+            width: 25%;
+        }
+    }
+
+}
+
+.c-card-section--tg-articles,
+.c-card-section--v-articles {
+
+    .c-card-section__card-list {
+        margin: -15px -10px;
+    }
+
+    .c-card-section__card-listitem {
+        display: inline-block;
+        padding: 0 10px;
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    .c-card-section__btn {
+        @include button-single;
+        @include button-single-light;
+
+        &:hover,
+        &:focus {
+            @include button-single-light-hover;
+        }
+    }
+
+    .c-card {
+        border-top: 1px solid $black;
+        padding-top: 20px;
+    }
+
+    .c-card--dark {
+        border-top-color: $white;
+    }
+
+    @include at-small-size {
+        .c-card-section__card-listitem {
+            width: 50%;
+        }
+    }
+
+    @include at-x-large-size {
+        .c-card-section__card-list {
+            margin-right: 340px;
+        }
+
+        .c-card-section__card-listitem {
+            width: 33.33%;
+        }
+    }
+
+}
+
+.c-card-section--v-related-articles {
+    background-color: $black;
+    margin: 0;
+    padding: 20px 20px 30px;
+
+    .c-card-section__title {
+        color: $white;
+    }
+
+    .c-card-section__card-list {
+        margin: -15px -10px;
+    }
+
+    .c-card-section__card-listitem {
+        display: inline-block;
+        padding: 0 10px;
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    .c-card-section__btn {
+        @include button-single;
+        @include button-single-dark;
+
+        &:hover,
+        &:focus {
+            @include button-single-dark-hover;
+        }
+    }
+
+    .c-card {
+        border-top: 1px solid $white;
+        padding-top: 15px;
+    }
+
+    .c-card__images:after {
+        border: 1px solid $white;
+        bottom: 0;
+        box-sizing: border-box;
+        content: '';
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition-duration: 300ms;
+        width: 100%;
+    }
+
+    .c-card__image {
+        position: relative;
+
+        &:after {
+            @include font("BRUTAL", 10px, 600);
+            background-color: $white;
+            bottom: 0px;
+            color: $black;
+            content: 'Now Playing';
+            left: 0px;
+            opacity: 0;
+            padding: 5px 7px;
+            position: absolute;
+            text-transform: uppercase;
+            transition-duration: 300ms;
+            z-index: 1;
+        }
+    }
+
+    .is-active {
+        .c-card:hover {
+            .c-card__title span {
+                text-decoration: none;
+            }
+        }
+        .c-card__images:after,
+        .c-card__image:after {
+            opacity: 1;
+        }
+    }
+
+    @include at-medium-size {
+        padding: $TABLET_SLICE_MARGIN;
+    }
+
+    @include at-x-large-size {
+        display: none;
     }
 }

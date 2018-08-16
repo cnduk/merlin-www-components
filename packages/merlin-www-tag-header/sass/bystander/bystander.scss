@@ -4,5 +4,11 @@
 @import '@cnbritain/merlin-www-topic-strip:bystander';
 
 @import '../wireframe/wireframe';
-
 @import '../tatler/_tatler_base';
+
+.tg-header--bystander {
+    .tg-header__intro,
+    .tg-header__intro:before {
+        background-color: transparent;
+    }
+}

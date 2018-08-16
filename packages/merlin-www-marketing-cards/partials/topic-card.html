@@ -1,6 +1,6 @@
 <aside class="a-marketing-card a-marketing-card--topic">
-    <div class="a-marketing-card__col">
-        <div class="a-marketing-card__brand">
+    <div class="a-marketing-card__header">
+        <div class="a-marketing-card__topic">
             {{# state.has_logo }}
                 {{# state.has_button }}
                     <a href="{{ &data.button.data.url }}">
@@ -17,15 +17,15 @@
             {{/ state.has_logo }}
             {{^ state.has_logo }}
                 {{# state.has_button }}
-                    <span class="a-marketing-card__brand__name"><a href="{{ &data.button.data.url }}">{{ data.tag.data.title }}</a></span>
+                    <span class="a-marketing-card__topic-name"><a href="{{ &data.button.data.url }}">{{ data.tag.data.title }}</a></span>
                 {{/ state.has_button }}
                 {{^ state.has_button }}
-                    <span class="a-marketing-card__brand__name">{{ data.tag.data.title }}</span>
+                    <span class="a-marketing-card__topic-name">{{ data.tag.data.title }}</span>
                 {{/ state.has_button }}
             {{/ state.has_logo }}
         </div>
     </div>
-    <div class="a-marketing-card__col">
+    <div class="a-marketing-card__body">
         {{# data.title }}
             <h4 class="a-marketing-card__title">{{ . }}</h4>
         {{/ data.title }}
@@ -33,7 +33,7 @@
             <p class="a-marketing-card__desc">{{ . }}</p>
         {{/ data.desc }}
         {{# state.has_button }}
-            <a href="{{ &data.button.data.url }}" class="a-marketing-card__link {{ data.button.style.cls }}" {{# state.is_blank }}target="_blank"{{/ state.is_blank }}>{{ data.button.data.title }}</a>
+            <a href="{{ &data.button.data.url }}" class="a-marketing-card__cta {{ data.button.style.cls }}" {{# state.is_blank }}target="_blank"{{/ state.is_blank }}>{{ data.button.data.title }}</a>
         {{/ state.has_button }}
     </div>
 </aside>

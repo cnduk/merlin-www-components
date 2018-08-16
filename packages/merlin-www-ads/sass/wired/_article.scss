@@ -1,0 +1,64 @@
+.ad--article {
+    text-align: center;
+}
+
+.ad--article-header {
+    background-color: $raisin-black;
+}
+
+.ad--article-video {}
+
+.ad--article-rail {
+    background-color: $raisin-black;
+    margin-bottom: 40px;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    margin-top: 40px;
+
+    .ad__title {
+        color: $white;
+    }
+
+    @include at-medium-size {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size {
+        background-color: transparent;
+        position: absolute;
+        margin: 0;
+        right: 0;
+        width: 300px;
+
+        .ad__block {
+            background-color: transparent;
+            padding: 0;
+        }
+    }
+}
+
+.ad--article-rail-top {
+    @include at-x-large-size {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+.ad--article-inline {
+    margin-bottom: 40px;
+    margin-left: -$MOBILE_SIDE_GUTTER;
+    margin-right: -$MOBILE_SIDE_GUTTER;
+    margin-top: 40px;
+
+    @include at-medium-size {
+        margin-left: -$TABLET_SIDE_GUTTER;
+        margin-right: -$TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

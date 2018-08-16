@@ -1,63 +1,66 @@
-.c-card-section {
-    background-color: $wild-sand;
-    margin: 30px auto;
-    max-width: none;
-    padding: 0 $MOBILE_SIDE_GUTTER;
+/**
+ * Mixins
+ */
 
-    @include tablet-size {
-        padding: 20px $TABLET_SIDE_GUTTER;
-    }
+@mixin light-button {
+    .c-card-section__btn {
+        @include button-single;
+        @include button-single-light;
 
-    @include desktop-size {
-        margin: 60px auto;
-        padding: 0 60px;
-    }
-}
-
-.c-card-section__logo {
-    height: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-
-    svg {
-        display: inline-block;
-        height: 100%;
-        width: auto;
-
-        path, text {
-            fill: $white;
+        &:hover,
+        &:focus {
+            @include button-single-light-hover;
         }
     }
+}
 
-    @include tablet-size {
-        height: 40px;
-        margin-bottom: 60px;
+@mixin dark-button {
+    .c-card-section__btn {
+        @include button-single;
+        @include button-single-dark;
+
+        &:hover,
+        &:focus {
+            @include button-single-dark-hover;
+        }
     }
 }
 
-.c-card-section__title-wrapper {
-    margin-bottom: 20px;
-}
+@mixin section-background-margin($background-color){
+    background-color: $background-color;
+    margin: 30px auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
 
-.c-card-section__btn {
-    @include button-single;
-    @include button-single-light;
-
-    margin-top: 30px;
-
-    &:hover,
-    &:focus {
-        @include button-single-light-hover;
+    @include at-small-size {
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
-    @include tablet-size {
-        margin-top: 40px;
+    @include at-x-large-size {
+        margin: 60px auto;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
 
-.c-card-section--c-curated,
-.c-card-section--c-tag {
+@mixin section-background-padding($background-color){
+    background-color: $background-color;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
 
+    @include at-small-size {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include at-x-large-size {
+        margin: 0 auto;
+    }
+}
+
+@mixin slice-title {
     .c-card-section__title {
         @include font('COMMUTER SANS', 20px, 'NORMAL', 20px);
         color: $black;
@@ -65,20 +68,14 @@
         margin: 0 0 20px 0;
         position: relative;
         text-align: center;
-        text-transform: uppercase;
-
-        a {
-            color: inherit;
-            text-decoration: inherit;
-        }
 
         span {
             background-color: $wild-sand;
+            border-left: 1px solid $black;
+            border-right: 1px solid $black;
             display: inline-block;
             padding: 0 10px;
             position: relative;
-            border-left: 1px solid $black;
-            border-right: 1px solid $black;
         }
 
         &:before {
@@ -90,10 +87,9 @@
             top: 50%;
             width: 100%;
         }
-
     }
 
-    @include tablet-size {
+    @include at-small-size {
         .c-card-section__title {
             @include font-size(30px);
             @include line-height(30px);
@@ -105,109 +101,22 @@
     }
 }
 
-.c-card-section--c-video-articles {
-    background-color: $black;
-    max-width: none;
-    padding: 30px 20px;
-
-    .c-card-section__title-wrapper {
-        display: none;
-    }
-
-    .c-card-section__btn {
-        @include button-single;
-        @include button-single-dark;
-        width: auto;
-
-        &:hover {
-            @include button-single-dark-hover;
-        }
-    }
-
-    .c-card__image__icon svg {
-        height: 100%;
-        width: 15px;
-    }
-
-    @include tablet-size {
-        padding: 60px;
-    }
-
-}
-
-
-
-.c-card-section--v-related-articles {
-    background-color: $mine-shaft;
-    max-width: none;
-    padding: 20px $MOBILE_SIDE_GUTTER 0 $MOBILE_SIDE_GUTTER;
-
-    .c-card-section__title {
-        @include font('COMMUTER SANS', 13px, 'NORMAL', 13px);
-        color: $white;
-        margin: 0;
-        text-transform: uppercase;
-    }
-
-    .c-card-section__btn {
-        @include button-single;
-        @include button-single-dark;
-
-        margin-bottom: 25px;
-        min-width: 250px;
-
-        &:hover {
-            @include button-single-dark-hover;
-        }
-    }
-
-    @include tablet-size {
-        padding-left: $TABLET_SIDE_GUTTER;
-        padding-right: $TABLET_SIDE_GUTTER;
-    }
-
-    @include desktop-size {
-        display: none;
-    }
-}
-
-.c-card-section--a-recommended,
-.c-card-section--tg-articles,
-.c-card-section--v-articles,
-.c-card-section--mag-articles,
-.c-card-section--mag-magazines,
-.c-card-section--v-genre-articles  {
-    margin-bottom: 0;
-    margin-top: 0;
-    max-width: none;
-    padding-bottom: $PADDING_LARGE;
-    padding-top: $PADDING_LARGE;
-
+@mixin common-title {
     .c-card-section__title {
         @include font('COMMUTER SANS', 20px, 'NORMAL', 20px);
         color: $black;
         letter-spacing: 0;
-        margin: 0 -20px 20px -20px;
+        margin: 0 (-$MOBILE_SIDE_GUTTER) 20px (-$MOBILE_SIDE_GUTTER);
         position: relative;
         text-align: center;
-        text-transform: uppercase;
-
-        a {
-            color: inherit;
-            text-decoration: inherit;
-        }
 
         span {
             background-color: $wild-sand;
+            border-left: 1px solid $black;
+            border-right: 1px solid $black;
             display: inline-block;
             padding: 0 10px;
             position: relative;
-            border-left: 1px solid $black;
-            border-right: 1px solid $black;
-
-            @include tablet-size {
-                padding: 0 20px;
-            }
         }
 
         &:before {
@@ -221,17 +130,14 @@
         }
     }
 
-    @include tablet-size {
-        padding-bottom: $PADDING_X_LARGE;
-        padding-top: $PADDING_X_LARGE;
-
+    @include at-small-size {
         .c-card-section__title {
             margin-left: -($TABLET_SIDE_GUTTER);
             margin-right: -($TABLET_SIDE_GUTTER);
         }
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         .c-card-section__title {
             margin-left: 0;
             margin-right: 0;
@@ -245,90 +151,136 @@
     }
 }
 
-.c-card-section--tg-articles,
-.c-card-section--v-articles {
-    @include desktop-size {
-        .c-card-list {
-            margin-right: 340px;
-            position: relative;
+@mixin column-base {
+    .c-card-section__card-list {
+        flex-direction: column;
+        margin: 0 -10px;
+        text-align: center;
+    }
+    .c-card-section__card-listitem {
+        display: flex;
+        padding: 0 10px;
+        text-align: left;
+        width: 100%;
+    }
+}
+
+@mixin column-1 {
+    .c-card-section__card-list {
+        margin: -10px;
+        text-align: center;
+    }
+    .c-card-section__card-listitem {
+        display: block;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding: 0 10px;
+        text-align: left;
+        width: 100%;
+    }
+}
+
+@mixin column-1-23 {
+    @include column-base;
+
+    .c-card-section__card-list {
+        margin-bottom: -10px;
+        margin-top: -10px;
+    }
+
+    .c-card-section__card-listitem {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    @include at-small-size {
+        .c-card-section__card-list {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .c-card-section__card-listitem {
+            margin-bottom: 0;
+            width: 33.33%;
+        }
+    }
+
+    @include at-large-size {
+        .c-card-section__card-list {
+            margin: 0 auto;
+            max-width: 660px;
+            text-align: center;
         }
     }
 }
 
-.c-card-section--dark {
-    background: $black-one;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding: 30px 20px;
+@mixin column-2-4 {
+    @include column-base;
 
-    .c-card-section__title {
-        color: $white;
-
-        span {
-            background-color: $black;
-            border-left: 1px solid $white;
-            border-right: 1px solid $white;
-        }
-
-        &:before {
-            background-color: $white;
-        }
+    .c-card-section__card-list {
+        flex-direction: row;
+        justify-content: flex-start;
     }
 
-    .c-card-section__logo svg {
-        path, text {
-            fill: $white;
-        }
+    .c-card-section__card-listitem {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        width: 50%;
     }
 
-    .c-card-section__btn {
-        @include button-single;
-        @include button-single-dark;
 
-        &:hover {
-            @include button-single-dark-hover;
-        }
-    }
-
-    @include tablet-size {
-        padding-bottom: $PADDING_X_LARGE;
-        padding-top: $PADDING_X_LARGE;
-
-        .c-card-section__title {
-            margin-left: -($TABLET_SIDE_GUTTER);
-            margin-right: -($TABLET_SIDE_GUTTER);
-        }
-    }
-
-    @include desktop-size {
-        .c-card-section__title {
-            margin-left: 0;
-            margin-right: 0;
-            text-align: left;
-
-            span {
-                border-left: none;
-                padding-left: 0;
-            }
+    @include at-x-large-size {
+        .c-card-section__card-listitem {
+            width: 25%;
         }
     }
 }
 
-.c-card-section--tg-related-tags {
-    margin-bottom: 0;
-    margin-top: 0;
-    max-width: none;
-    padding-bottom: $PADDING_LARGE;
-    padding-top: $PADDING_LARGE;
+@mixin column-1-2-4 {
+    @include column-base;
 
-    .c-card-list {
+    .c-card-section__card-list {
+        margin-bottom: -10px;
+        margin-top: -10px;
+    }
+
+    .c-card-section__card-listitem {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    @include at-small-size {
+        .c-card-section__card-list {
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .c-card-section__card-listitem {
+            width: 50%;
+        }
+    }
+
+    @include at-x-large-size {
+        .c-card-section__card-listitem {
+            width: 25%;
+        }
+    }
+}
+
+@mixin column-1-2-43 {
+    @include column-base;
+
+    .c-card-section__card-list {
         display: block;
         flex-wrap: nowrap;
         font-size: 0;
         margin: -10px;
+        text-align: left;
     }
 
-    .c-card-list__item {
+    .c-card-section__card-listitem {
         box-sizing: border-box;
         display: inline-block;
         font-size: initial;
@@ -337,18 +289,228 @@
         width: 100%;
     }
 
-    @include at-medium-size {
-        .c-card-list__item {
+    @include at-small-size {
+        .c-card-section__card-listitem {
             width: 50%;
         }
     }
 
     @include at-x-large-size {
-        .c-card-list {
-            margin-right: 340px;
-        }
-        .c-card-list__item {
+        .c-card-section__card-listitem {
             width: 33.33%;
         }
+    }
+}
+
+
+/**
+ * Defaults
+ */
+.c-card-section {}
+.c-card-section-wrapper {}
+
+.c-card-section__header {}
+.c-card-section__body {}
+.c-card-section__footer {
+    text-align: center;
+}
+
+.c-card-section__logo {
+    height: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+
+    svg, img {
+        display: block;
+        height: 100%;
+        margin: 0 auto;
+        width: auto;
+
+        path, text {
+            fill: $white;
+        }
+    }
+
+    @include at-small-size {
+        height: 40px;
+        margin-bottom: 60px;
+    }
+}
+.c-card-section__title {
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+}
+.c-card-section__nav-strip {
+    margin: 20px (-$MOBILE_SIDE_GUTTER);
+
+    .c-topic-strip-wrapper {
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
+    }
+
+    @include at-small-size {
+        margin: 30px (-$TABLET_SIDE_GUTTER);
+
+        .c-topic-strip-wrapper {
+            padding-left: $TABLET_SIDE_GUTTER;
+            padding-right: $TABLET_SIDE_GUTTER;
+        }
+    }
+
+    @include at-x-large-size {
+        margin-left: -$DESKTOP_SIDE_GUTTER;
+        margin-right: -$DESKTOP_SIDE_GUTTER;
+
+        .c-topic-strip-wrapper {
+            padding-left: $DESKTOP_SIDE_GUTTER;
+            padding-right: $DESKTOP_SIDE_GUTTER;
+        }
+    }
+}
+
+.c-card-section__card-list {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.c-card-section__card-listitem {
+    .c-card__image__icon svg {
+        height: 100%;
+        width: 15px;
+    }
+}
+.c-card-section__card-listitem--ad {
+    .ad--native-medium,
+    .ad--native-medium .ad__block,
+    .ad--native-medium .ad__container {
+        display: flex;
+        width: 100%;
+    }
+}
+
+.c-card-section__btn {
+    margin-top: 30px;
+
+    @include at-small-size {
+        margin-top: 40px;
+    }
+}
+
+
+/**
+ * Modifiers
+ */
+// .c-card-section--dark {}
+// .c-card-section--sh-latest-articles {}
+// .c-card-section--sh-shows {}
+// .c-card-section--sh-summary-articles {}
+// .c-card-section--sh-summary-shows {}
+// .c-card-section--tg-articles-grid {}
+
+.c-card-section--a-recommended,
+.c-card-section--mag-articles,
+.c-card-section--s-results,
+.c-card-section--v-genre-articles {
+    @include section-background-padding($background-color: $wild-sand);
+    @include common-title;
+    @include column-1-2-4;
+    @include light-button;
+}
+.c-card-section--c-contributors {
+    @include section-background-margin($background-color: $wild-sand);
+    @include slice-title;
+    @include column-1-23;
+    @include light-button;
+}
+.c-card-section--c-curated,
+.c-card-section--c-tag {
+    @include section-background-margin($background-color: $wild-sand);
+    @include slice-title;
+    @include column-1-2-4;
+    @include light-button;
+}
+.c-card-section--c-video-articles {
+    @include section-background-margin($background-color: $black);
+    @include slice-title;
+    @include column-1-2-4;
+    @include dark-button;
+
+    margin: 0 auto;
+    padding-bottom: 30px;
+    padding-top: 30px;
+
+    @include at-small-size {
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+
+    @include at-x-large-size {
+        margin: 0 auto;
+    }
+}
+.c-card-section--mag-magazines {
+    @include section-background-margin($background-color: $wild-sand);
+    @include common-title;
+    @include column-2-4;
+    @include light-button;
+}
+.c-card-section--tg-articles {
+    @include section-background-margin($background-color: $wild-sand);
+    @include common-title;
+    @include column-1;
+    @include light-button;
+
+    @include at-x-large-size {
+        .c-card-section__card-list {
+            margin-right: 340px;
+        }
+    }
+}
+.c-card-section--tg-related-tags,
+.c-card-section--v-articles {
+    @include section-background-margin($background-color: $wild-sand);
+    @include common-title;
+    @include column-1-2-43;
+    @include light-button;
+
+    @include at-x-large-size {
+        .c-card-section__card-list {
+            margin-right: 340px;
+        }
+    }
+}
+
+.c-card-section--v-related-articles {
+    @include section-background-margin($background-color: $mine-shaft);
+    @include column-1;
+    @include dark-button;
+
+    margin: 0 auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+    .c-card-section__title {
+        @include font('COMMUTER SANS', 13px, 'NORMAL', 13px);
+        color: $white;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    .c-card-section__btn {
+        min-width: 250px;
+    }
+
+    @include at-small-size {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size {
+        display: none;
     }
 }

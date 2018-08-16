@@ -3,104 +3,11 @@
 
 @import "../wireframe/wireframe";
 
-.c-footer {
-    background-color: $mine-shaft;
-    padding: 0 20px;
-}
-
-.c-footer__wrapper {
-    margin: 0 auto;
-    max-width: 1440px;
-}
-
-.c-footer__list {}
-
-.c-footer__list-item {
-    @include font("BRANDON GROTESQUE", 14px, 'BOLD', 14px);
-
-    color: $white;
-
-    a {
-        color: inherit;
-        border-bottom: none;
-        display: block;
-        text-decoration: none;
-    }
-}
-.c-footer__list-item--logo {
-    bottom: -10px;
-    padding: 0;
-    position: absolute;
-    right: 0;
-    width: 80px;
+.c-footer__list-item--brand-logo {
+    bottom: 5px;
 
     svg {
         fill: $white;
-    }
-}
-
-.c-footer__list--left {}
-.c-footer__list--right {
-    position: relative;
-
-    .c-footer__list-item {
-        padding: 20px 0;
-    }
-}
-.c-footer__list-item--links {
-    border-bottom: 1px solid $tundora;
-
-    .c-footer__list-item {
-        border-top: 1px solid $tundora;
-    }
-}
-
-
-@include min-screen(1100px) {
-    .c-footer__list-item a:hover {
-        text-decoration: underline;
-    }
-
-    li.c-footer__list-item {
-        border-top: none;
-        position: relative;
-
-        &:before {
-            background-color: $tundora;
-            content: '';
-            display: block;
-            height: 20px;
-            left: 0;
-            position: absolute;
-            top: 17px;
-            width: 1px;
-        }
-
-        &:first-child:before {
-            display: none;
-        }
-    }
-
-    li.c-footer__list-item--logo {
-        position: relative;
-        top: -5px;
-
-        &:before {
-            display: none;
-        }
-    }
-
-    .c-footer__list--right {
-        .c-footer__list-item {
-            padding: 20px;
-        }
-    }
-
-    .c-footer__list-item--links {
-        border-bottom: none;
-
-        .c-footer__list-item {
-            border-top: none;
-        }
+        width: 80px;
     }
 }

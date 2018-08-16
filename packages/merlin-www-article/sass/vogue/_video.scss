@@ -49,6 +49,23 @@
     right: 20px;
 }
 
+.a-video__playlist {}
+.a-video__playlist-item {
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+    width: 100%;
+
+    &.is-active {
+        opacity: 0.3;
+    }
+
+    & + .a-video__playlist-item {
+        border-top: 1px solid $mine-shaft-333;
+        margin-top: 12px;
+        padding-top: 12px;
+    }
+}
+
 .a-video__related {
     background-color: $mine-shaft-222;
     color: $white;
@@ -81,7 +98,7 @@
 }
 
 
-@include tablet-size {
+@include at-medium-size {
     .a-video:before {
         top: -$TABLET_SIDE_GUTTER;
     }
@@ -91,7 +108,7 @@
     }
 }
 
-@include desktop-size {
+@include at-x-large-size {
     .a-video:before {
         top: -$DESKTOP_SIDE_GUTTER;
     }

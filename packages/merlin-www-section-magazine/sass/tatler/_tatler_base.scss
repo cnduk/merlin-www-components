@@ -19,7 +19,7 @@
         padding: 60px 60px;
     }
 
-    @include desktop-size {
+    @include at-x-large-size {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
@@ -42,7 +42,7 @@
         right: 20px;
     }
 
-     @include desktop-size {
+     @include at-x-large-size {
          img {
              border-radius: 12px;
              padding: 30px 10px;

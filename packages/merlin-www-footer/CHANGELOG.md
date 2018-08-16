@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.9.1"></a>
+## [1.9.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-footer@1.9.0...@cnbritain/merlin-www-footer@1.9.1) (2018-07-19)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-footer
+
+<a name="1.9.0"></a>
+# [1.9.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-footer@1.8.29...@cnbritain/merlin-www-footer@1.9.0) (2018-07-03)
+
+
+### Bug Fixes
+
+* **merlin-www-footer:** add missing themes ([d31123e](https://github.com/cnduk/merlin-www-components/commit/d31123e))
+* **merlin-www-footer:** correct brand logo position on mobile ([b44ce88](https://github.com/cnduk/merlin-www-components/commit/b44ce88))
+
+
+### Features
+
+* **merlin-www-footer:** update all styles ([0d70624](https://github.com/cnduk/merlin-www-components/commit/0d70624))
+* **merlin-www-footer:** update partial markup ([84cdf9f](https://github.com/cnduk/merlin-www-components/commit/84cdf9f))
+
+
+
+
 <a name="1.8.28"></a>
 ## [1.8.28](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-footer@1.8.27...@cnbritain/merlin-www-footer@1.8.28) (2018-06-11)
 

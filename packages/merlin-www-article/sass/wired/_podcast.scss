@@ -26,7 +26,7 @@
         margin-bottom: 15px;
     }
 
-    @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT) {
+    @include at-small-size {
         float: left;
 
         &:not(:last-child) {
@@ -48,7 +48,7 @@
         @include button-single-light-hover();
     }
 
-    @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT) {
+    @include at-small-size {
         width: auto;
     }
 }

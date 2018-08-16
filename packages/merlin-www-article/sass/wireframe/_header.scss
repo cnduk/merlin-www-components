@@ -1,6 +1,6 @@
 .a-header {}
 .a-header--gallery {
-    max-width: $MAXIMUM_PAGE_WIDTH;
+    max-width: $XX_LARGE_SIZE;
     margin: 0 auto;
 
     .a-header__content {
@@ -17,14 +17,14 @@
 }
 
 .a-header--video {
-    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    max-width: $XX_LARGE_SIZE + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
     margin: 0 auto;
 
     .a-header__content {
         margin: 0;
         max-width: none;
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             padding-right: 360px;
         }
 
@@ -47,7 +47,7 @@
         margin-bottom: 10px;
     }
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         .a-share__list {
             margin-bottom: 0;
         }
@@ -60,12 +60,12 @@
     padding-right: $MOBILE_SIDE_GUTTER;
     width: 100%;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
@@ -77,7 +77,7 @@
     max-width: $ARTICLE_TOTAL;
     width: 100%;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding: 0 $ARTICLE_RIGHT_TOTAL 0 0;
     }
 
@@ -93,7 +93,7 @@
 .a-header__separator {
     display: none;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         display: block;
     }
 }
@@ -116,12 +116,12 @@
     margin: 0 auto;
     max-width: $ARTICLE_TOTAL;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
@@ -173,12 +173,12 @@
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding-right: $ARTICLE_RIGHT_TOTAL;
     }
 
@@ -214,7 +214,7 @@
 .a-header__separator--sponsor {
     display: block;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         display: none;
     }
 }
@@ -235,7 +235,7 @@
     display: block;
     width: auto;
 
-    @include min-screen($ARTICLE_HEADER_LARGE_BREAKPOINT) {
+    @include at-small-size {
         display: inline-block;
         vertical-align: middle;
     }

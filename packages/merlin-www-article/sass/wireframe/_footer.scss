@@ -1,10 +1,10 @@
 .a-footer {
-    max-width: $MAXIMUM_PAGE_WIDTH;
+    max-width: $XX_LARGE_SIZE;
     margin: 0 auto;
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
@@ -13,7 +13,7 @@
 .a-footer--gallery {
     box-sizing: border-box;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
@@ -21,14 +21,14 @@
     .a-footer__wrapper {
         box-sizing: border-box;
         margin: 0 auto;
-        max-width: $MAXIMUM_PAGE_WIDTH;
+        max-width: $XX_LARGE_SIZE;
         position: relative;
 
-        @include common-large-size(){
+        @include at-x-large-size{
             padding-left: 0;
         }
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             padding-right: $ARTICLE_RIGHT_TOTAL;
         }
     }
@@ -36,9 +36,9 @@
 
 .a-footer--video {
     box-sizing: border-box;
-    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+    max-width: $XX_LARGE_SIZE + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
@@ -46,14 +46,14 @@
     .a-footer__wrapper {
         box-sizing: border-box;
         margin: 0 auto;
-        max-width: $MAXIMUM_PAGE_WIDTH;
+        max-width: $XX_LARGE_SIZE;
         position: relative;
 
         @include min-screen($ARTICLE_TOTAL) {
             padding-left: 60px;
         }
 
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+        @include at-x-large-size {
             padding-right: $ARTICLE_RIGHT_TOTAL;
         }
     }
@@ -67,11 +67,11 @@
     width: 100%;
     word-wrap: break-word;
 
-    @include common-large-size(){
+    @include at-x-large-size {
         padding: 0 $ARTICLE_RIGHT_TOTAL 0 0;
     }
 
-    @include article-large-size(){
+    @include min-screen($ARTICLE_TOTAL) {
         padding: 0 $ARTICLE_RIGHT_TOTAL 0 $ARTICLE_LEFT_TOTAL;
     }
 }

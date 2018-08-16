@@ -1,213 +1,171 @@
-<input type="checkbox" id="chkNavHamburger" class="n-main__checkbox" hidden />
-<input type="checkbox" id="chkNavSearch" class="n-main__checkbox" hidden />
+{{# data.masthead }}
+<div class="c-masthead" style="{{ style.inline }}">
+    <div class="c-masthead__wrapper">
+        <div class="c-masthead__logo">
+            {{# data.image }}
+            {{> @cnbritain/merlin-www-image }}
+            {{/ data.image }}
+        </div>
+    </div>
+</div>
+{{/ data.masthead }}
 
-<header class="n-main">
-    <div class="n-main__wrapper">
-        {{# state.has_masthead }}
-            {{# data.desktop_promo }}
-                {{> @cnbritain/merlin-www-main-navigation/main-navigation-promotion-desktop }}
-            {{/ data.desktop_promo }}
-        {{/ state.has_masthead }}
-
-        {{# data.masthead }}
-            <div class="n-main__header n-visibility--desktop" {{# style.inline }}style="{{ . }}"{{/ style.inline }}>
-                {{# data.image }}
-                    <div class="n-main__header-logo">
-                        {{> @cnbritain/merlin-www-image }}
-                    </div>
-                {{/ data.image }}
+<div class="c-nav js-c-nav">
+    <div class="c-nav__wrapper">
+        <input id="c-nav__search-checkbox" class="c-nav__search-checkbox js-c-nav__search-checkbox" type="checkbox">
+        <label for="c-nav__search-checkbox" class="c-nav__search-icon js-c-nav__search-icon">
+            <div class="js-c-nav__open-icon c-nav__open-icon">
+                {{# data.search_open_icon }}
+                {{> @cnbritain/merlin-www-image }}
+                {{/ data.search_open_icon }}
             </div>
-        {{/ data.masthead }}
+            <div class="js-c-nav__close-icon c-nav__close-icon is-hidden">
+                {{# data.search_close_icon }}
+                {{> @cnbritain/merlin-www-image }}
+                {{/ data.search_close_icon }}
+            </div>
+        </label>
+        <input id="c-nav__toggle-checkbox" class="c-nav__toggle-checkbox js-c-nav__toggle-checkbox" type="checkbox">
+        <label for="c-nav__toggle-checkbox" class="c-nav__toggle-icon js-c-nav__toggle-icon">
+            <div class="js-c-nav__open-icon c-nav__open-icon">
+                {{# data.menu_open_icon }}
+                {{> @cnbritain/merlin-www-image }}
+                {{/ data.menu_open_icon }}
+            </div>
+            <div class="js-c-nav__close-icon c-nav__close-icon is-hidden">
+                {{# data.menu_close_icon }}
+                {{> @cnbritain/merlin-www-image }}
+                {{/ data.menu_close_icon }}
+            </div>
+        </label>
+        <div class="c-nav__content">
+            <div class="c-nav__logo js-c-nav__logo {{# state.has_masthead }}is-hidden{{/ state.has_masthead }}">
+                {{# data.logo }}
+                {{> @cnbritain/merlin-www-image }}
+                {{/ data.logo }}
+            </div>
 
-        <div class="n-main__sticker">
-            <div class="n-main__sticker-child">
+            {{# state.has_search }}
+            <div class="c-nav__search js-c-nav__search is-hidden">
+                <form class="c-nav__search-form" method="GET" action="{{ &data.search_form_url }}">
+                    <input type="search" placeholder="{{ data.search_placeholder }}" class="c-nav__search-input" name="q">
+                    <button class="c-nav__search-button">
+                    {{# data.search_open_icon }}
+                    {{> @cnbritain/merlin-www-image }}
+                    {{/ data.search_open_icon }}
+                    </button>
+                </form>
+            </div>
+            {{/ state.has_search }}
 
-                <nav class="n-main__nav">
-                    <ul class="global__list-reset n-main__list n-visibility--desktop">
-
-                    {{# data.link_list }}
-                        {{! Both states are on the same model }}
-                        {{# state.is_desktop }}{{^ state.is_more }}
-                            <li class="n-main__list-item">
-                                <a class="n-main__nav-link" href="{{ data.url }}"><span>{{ data.title }}</span></a>
+            <nav class="c-nav__main">
+                <ul class="c-nav__main-list">
+                    {{# data.links }}
+                    {{! Both states are on the same model }}
+                    {{# state.is_desktop }}{{^ state.is_more }}
+                    <li class="c-nav__main-list-item">
+                        <a class="c-nav__main-link" href="{{ data.url }}" title="{{ data.title }}">{{ data.title }}</a>
+                    </li>
+                    {{/ state.is_more }}{{/ state.is_desktop }}
+                    {{/ data.links }}
+                    <li class="c-nav__main-list-item c-nav__main-list-item--more">
+                        <a class="c-nav__main-link c-nav__main-link--more">
+                            More
+                            <span class="c-nav__down-arrow"></span>
+                        </a>
+                        <ul class="c-nav__alt-list">
+                            {{# data.links }}
+                            {{! Both states are on the same model }}
+                            {{# state.is_desktop }}{{# state.is_more }}
+                            <li class="c-nav__alt-list-item">
+                                <a class="c-nav__alt-link" href="{{ data.url }}" title="{{ data.title }}">{{ data.title }}</a>
                             </li>
-                        {{/ state.is_more }}{{/ state.is_desktop }}
-                    {{/ data.link_list }}
+                            {{/ state.is_more }}{{/ state.is_desktop }}
+                            {{/ data.links }}
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
 
-                        <li class="n-main__list-item n-main__dropdown">
-                            <a href="#" class="n-main__nav-link n-main__dropdown-link"><span>More</span></a>
-                            <ul class="global__list-reset n-main__dropdown-list n-main__dropdown-list--left">
-                                {{# data.link_list }}
-                                    {{! Both states are on the same model }}
-                                    {{# state.is_desktop }}{{# state.is_more }}
-                                        <li class="n-main__dropdown-list-item">
-                                            <a class="n-main__nav-link" href="{{ data.url }}"><span>{{ data.title }}</span></a>
-                                        </li>
-                                    {{/ state.is_more }}{{/ state.is_desktop }}
-                                {{/ data.link_list }}
-                            </ul>
-                        </li>
-                    </ul>
-
-                    {{# data.signpost }}
-                        <div class="n-main__nav-signpost n-visibility--mobile">
-                            <a href="{{ data.url }}">{{ data.title }}</a>
-                        </div>
-                    {{/ data.signpost }}
-
-                    {{# data.logo }}
-                        <div class="n-main__nav-group n-main__nav-group--left">
-                            <div class="n-main__nav-logo {{# state.is_hidden }}is-hidden{{/ state.is_hidden }}">
+            {{# state.has_promo }}
+            {{# data.mobile_promo }}
+            <aside class="c-nav__promo">
+                <div class="c-nav__promo-wrapper">
+                    <div class="c-nav__promo-images">
+                        <div class="c-nav__promo-covers">
+                            {{# data.covers }}
+                            <div class='c-nav__promo-cover'>
                                 {{> @cnbritain/merlin-www-image }}
                             </div>
+                            {{/ data.covers }}
                         </div>
-                    {{/ data.logo }}
-
-                    <div class="n-main__nav-group n-main__nav-group--right">
-                        <div class="n-main__nav-hamburger n-visibility--mobile">
-                            <label for="chkNavHamburger" class='n-main__nav-hamburger__icon'>
-                                {{# data.share_menu_icon }}
-                                    {{> @cnbritain/merlin-www-image }}
-                                {{/ data.share_menu_icon }}
-                            </label>
-                            <label for="chkNavHamburger" class='n-main__nav-hamburger__close-icon global__hidden'>
-                                {{# data.nav_menu_close_icon }}
-                                    {{> @cnbritain/merlin-www-image }}
-                                {{/ data.nav_menu_close_icon }}
-                            </label>
-                        </div>
-                        <ul class="global__list-reset n-main__list n-visibility--desktop">
-
-                            {{# state.has_follow_menu }}
-                                <li class="n-main__list-item n-main__dropdown n-main__dropdown--follow">
-                                    <a href="#" class="n-main__nav-link n-main__dropdown-link"><span>Follow</span></a>
-                                    <ul class="global__list-reset n-main__dropdown-list n-main__dropdown-list--right n-main__dropdown-list--follow">
-                                        <li class="n-main__list-item n-main__dropdown-list-item">
-                                            {{# state.has_social_list }}
-                                                <div class="n-main__dropdown--follow__group">
-                                                    {{# data.social_link_list }}
-                                                        {{> @cnbritain/merlin-www-image }}
-                                                    {{/ data.social_link_list }}
-                                                </div>
-                                            {{/ state.has_social_list }}
-                                            {{# state.has_newsletter_link }}
-                                                <div class="n-main__dropdown--follow__group">
-                                                    {{# data.newsletter_link }}
-                                                        <a href="{{ data.url }}" class="n-main__dropdown__btn n-main__dropdown__btn--newsletter {{ style.cls }}">{{ data.title }}</a>
-                                                    {{/ data.newsletter_link }}
-                                                </div>
-                                            {{/ state.has_newsletter_link }}
-                                        </li>
-                                    </ul>
-                                </li>
-                            {{/ state.has_follow_menu }}
-
-                            {{# state.has_search }}
-                                <li class="n-main__list-item">
-                                    <div class="n-main__nav-search">
-                                        <label for="chkNavSearch" class="n-main__nav-search__icon">
-                                           {{# data.nav_search_open_icon }}
-                                                {{> @cnbritain/merlin-www-image }}
-                                            {{/ data.nav_search_open_icon }}
-                                        </label>
-                                        <label for="chkNavSearch" class="global__hidden n-main__nav-search__close-icon">
-                                           {{# data.nav_search_close_icon }}
-                                                {{> @cnbritain/merlin-www-image }}
-                                            {{/ data.nav_search_close_icon }}
-                                        </label>
-                                    </div>
-                                </li>
-                            {{/ state.has_search }}
-                        </ul>
                     </div>
-                </nav>
-
-                {{# data.gallery_navigation }}
-                    {{> @cnbritain/merlin-www-main-navigation/gallery-navigation }}
-                {{/ data.gallery_navigation }}
-            </div>
-        </div>
-    </div>
-
-    <div class="n-menu">
-        {{# data.top_stories }}
-            <section class="n-menu__top-stories">
-                {{> @cnbritain/merlin-www-top-stories }}
-            </section>
-        {{/ data.top_stories }}
-
-        {{# state.has_search }}
-            <div class="n-menu__search">
-                <div class="n-main__nav-search">
-                    {{# data.nav_search_open_icon }}
-                        {{> @cnbritain/merlin-www-image }}
-                    {{/ data.nav_search_open_icon }}
+                    <div class="c-nav__promo-content">
+                        {{# data.offer }}
+                        <p class="c-nav__promo-message">{{ &data.offer }}</p>
+                        {{/ data.offer }}
+                        {{# data.link }}
+                        <a href="{{ &data.url }}" class="c-nav__promo-button" title="{{ data.title }}">{{ data.title }}</a>
+                        {{/ data.link }}
+                    </div>
                 </div>
-                <div class="n-menu__search-textbox">
-                    <form method="GET" action="{{ data.search_overlay.data.form_url }}">
-                        <input type="search" placeholder="{{ data.search_overlay.data.input_placeholder }}" name="q" />
-                    </form>
-                </div>
-            </div>
-        {{/ state.has_search }}
+            </aside>
+            {{/ data.mobile_promo }}
+            {{/ state.has_promo }}
 
-        <nav class="n-menu__nav">
-            <ul class='n-menu__nav__wrapper global__list-reset'>
-                {{# data.link_list }}
-                    {{! Both states are on the same model }}
-                    {{# state.is_mobile }}{{^ state.is_more }}
-                        <a href="{{ data.url }}">
-                            <li class="n-menu__nav-item">
-                                <div class="n-menu__nav-link"> {{ data.title }}</div>
-                            </li>
+            {{# state.has_social }}
+            <div class="c-nav__social">
+                <ul class="c-nav__social-list">
+                    <li class="c-nav__social-list-item c-nav__social-list-item--follow">
+                        <a class="c-nav__social-link c-nav__social-link--follow">
+                            Follow
+                            {{# data.social_brand }}
+                            <span class="c-nav__social-brand">{{ data.social_brand }}</span>
+                            {{/ data.social_brand }}
+                            <span class="c-nav__down-arrow"></span>
                         </a>
-                    {{/ state.is_more }}{{/ state.is_mobile }}
-                {{/ data.link_list }}
-
-                {{# data.link_list }}
-                    {{! Both states are on the same model }}
-                    {{# state.is_mobile }}{{# state.is_more }}
-                        <a href="{{ data.url }}">
-                            <li class="n-menu__nav-item n-menu__nav-item--more">
-                                <div class="n-menu__nav-link"> {{ data.title }}</div>
+                        <ul class="c-nav__share-list">
+                            {{# data.social_links }}
+                            <li class="c-nav__share-list-item">
+                                {{> @cnbritain/merlin-www-image }}
                             </li>
-                        </a>
-                    {{/ state.is_more }}{{/ state.is_mobile }}
-                {{/ data.link_list }}
-            </ul>
-        </nav>
-
-        {{# data.mobile_promo }}
-            {{> @cnbritain/merlin-www-main-navigation/main-navigation-promotion-mobile }}
-        {{/ data.mobile_promo }}
-
-        <div class="n-menu__social">
-            {{# data.social_title }}
-            <h4 class="n-menu__social-title">
-                <span class='n-menu__social-brand'>{{ data.social_title }}</span>
-            </h4>
-            {{/ data.social_title }}
-            <ul class="global__list-reset">
-                {{# data.social_link_list }}
-                    <li class="n-menu__social-item">
-                        {{> @cnbritain/merlin-www-image }}
+                            {{/ data.social_links }}
+                            {{# state.has_newsletter }}{{# data.newsletter_link }}
+                            <li class="c-nav__share-list-item c-nav__share-list-item--newsletter">
+                                <a href="{{ &data.url }}" class="c-nav__share-button" title="{{ data.title }}">{{ data.title }}</a>
+                            </li>
+                            {{/ data.newsletter_link }}{{/ state.has_newsletter}}
+                        </ul>
                     </li>
-                {{/ data.social_link_list }}
-            </ul>
-        </div>
-
-        {{# data.newsletter_link }}
-            <div class="global__a--center">
-                <a href="{{ &data.url }}" class="n-menu__newsletter-btn">{{ data.title }}</a>
+                </ul>
             </div>
-        {{/ data.newsletter_link }}
-    </div>
-</header>
+            {{/ state.has_social }}
 
-{{# state.has_search }}
-    <div class="n-search">
-        {{# data.search_overlay }}
-            {{> @cnbritain/merlin-www-search-header }}
-        {{/ data.search_overlay }}
+            {{# state.has_gallery_nav }}
+            <div class="c-nav__gallery js-c-nav__gallery is-hidden">
+                <div class="c-nav__gallery-title js-c-nav__gallery-title">Loading...</div>
+                <div class="c-nav__gallery-count js-c-nav__gallery-count">
+                    <div class="c-nav__gallery-current js-c-nav__gallery-current">0</div>
+                    <div class="c-nav__gallery-slash">/</div>
+                    <div class="c-nav__gallery-total js-c-nav__gallery-total">0</div>
+                </div>
+
+                <input id="c-nav__gallery-checkbox" class="c-nav__gallery-checkbox js-c-nav__gallery-checkbox" type="checkbox">
+                <label for="c-nav__gallery-checkbox" class="c-nav__gallery-icon js-c-nav__gallery-icon">
+                    <div class="js-c-nav__list-icon c-nav__list-icon">
+                      {{# data.gallery_list_icon }}
+                      {{> @cnbritain/merlin-www-image }}
+                      {{/ data.gallery_list_icon }}
+                    </div>
+                    <div class="js-c-nav__grid-icon c-nav__grid-icon is-hidden">
+                      {{# data.gallery_grid_icon }}
+                      {{> @cnbritain/merlin-www-image }}
+                      {{/ data.gallery_grid_icon }}
+                    </div>
+                </label>
+            </div>
+            {{/ state.has_gallery_nav }}
+
+        </div>
     </div>
-{{/ state.has_search }}
+</div>

@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.28.67"></a>
+## [1.28.67](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.28.66...@cnbritain/merlin-www-article@1.28.67) (2018-08-02)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-article
+
+<a name="1.28.62"></a>
+## [1.28.62](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.28.61...@cnbritain/merlin-www-article@1.28.62) (2018-07-25)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-article
+
+<a name="1.28.60"></a>
+## [1.28.60](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.28.59...@cnbritain/merlin-www-article@1.28.60) (2018-07-19)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-article
+
+<a name="1.28.59"></a>
+## [1.28.59](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.28.58...@cnbritain/merlin-www-article@1.28.59) (2018-07-19)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-article
+
+<a name="1.28.58"></a>
+## [1.28.58](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.28.57...@cnbritain/merlin-www-article@1.28.58) (2018-07-12)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-article
+
+<a name="1.28.57"></a>
+## [1.28.57](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.28.56...@cnbritain/merlin-www-article@1.28.57) (2018-07-12)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-article
+
+<a name="1.28.56"></a>
+## [1.28.56](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.28.55...@cnbritain/merlin-www-article@1.28.56) (2018-07-03)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-article
+
 <a name="1.28.53"></a>
 ## [1.28.53](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.28.52...@cnbritain/merlin-www-article@1.28.53) (2018-06-25)
 

@@ -3,6 +3,79 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.16.5"></a>
+## [1.16.5](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.16.4...@cnbritain/merlin-www-bbcode@1.16.5) (2018-08-02)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** correct size mixin for brides ([ee51ab3](https://github.com/cnduk/merlin-www-components/commit/ee51ab3))
+
+
+
+
+<a name="1.16.3"></a>
+## [1.16.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.16.2...@cnbritain/merlin-www-bbcode@1.16.3) (2018-07-25)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** set meta items to inline block ([cf138b5](https://github.com/cnduk/merlin-www-components/commit/cf138b5))
+
+
+
+
+<a name="1.16.1"></a>
+## [1.16.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.16.0...@cnbritain/merlin-www-bbcode@1.16.1) (2018-07-19)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** add position: relative to wireframe figure image ([58c6a53](https://github.com/cnduk/merlin-www-components/commit/58c6a53))
+
+
+
+
+<a name="1.16.0"></a>
+# [1.16.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.31...@cnbritain/merlin-www-bbcode@1.16.0) (2018-07-19)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** rename embed files to embeds ([f6828b6](https://github.com/cnduk/merlin-www-components/commit/f6828b6))
+
+
+### Features
+
+* **data:** internal embeds added ([b6067fd](https://github.com/cnduk/merlin-www-components/commit/b6067fd))
+* **merlin-www-bbcode:** basic show-gallery-card template and wireframe styles ([acb3111](https://github.com/cnduk/merlin-www-components/commit/acb3111))
+* **merlin-www-bbcode:** demo data and template started ([a1eabbb](https://github.com/cnduk/merlin-www-components/commit/a1eabbb))
+* **merlin-www-bbcode:** external embeds added ([6180ee1](https://github.com/cnduk/merlin-www-components/commit/6180ee1))
+* **merlin-www-bbcode:** pre/code added to data json ([7238b2b](https://github.com/cnduk/merlin-www-components/commit/7238b2b))
+* **merlin-www-bbcode:** updates to data files ([5155135](https://github.com/cnduk/merlin-www-components/commit/5155135))
+
+
+
+
+<a name="1.15.31"></a>
+## [1.15.31](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.30...@cnbritain/merlin-www-bbcode@1.15.31) (2018-07-12)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** correct vogue show embed after gallery strip changes ([29cb86d](https://github.com/cnduk/merlin-www-components/commit/29cb86d))
+
+
+
+
+<a name="1.15.30"></a>
+## [1.15.30](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.29...@cnbritain/merlin-www-bbcode@1.15.30) (2018-07-03)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-bbcode
+
 <a name="1.15.27"></a>
 ## [1.15.27](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.15.26...@cnbritain/merlin-www-bbcode@1.15.27) (2018-06-22)
 

@@ -1,0 +1,21 @@
+// -------------------- //
+// Embed
+// -------------------- //
+.bb-embed {
+    margin: 25px 0;
+
+    @include at-x-large-size {
+        margin: 30px 0;
+    }
+}
+
+// -------------------- //
+// Interactive
+// -------------------- //
+.bb-interactive {
+    margin: 25px 0;
+
+    @include at-x-large-size {
+        margin: 30px 0;
+    }
+}

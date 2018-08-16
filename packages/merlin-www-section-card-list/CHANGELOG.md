@@ -3,6 +3,67 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.13.3"></a>
+## [1.13.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.2...@cnbritain/merlin-www-section-card-list@1.13.3) (2018-08-13)
+
+
+### Bug Fixes
+
+* **merlin-www-section-card-list:** correct vogue contributor styles ([656d563](https://github.com/cnduk/merlin-www-components/commit/656d563))
+
+
+
+
+<a name="1.13.1"></a>
+## [1.13.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.0...@cnbritain/merlin-www-section-card-list@1.13.1) (2018-08-03)
+
+
+### Bug Fixes
+
+* **merlin-www-section-card-list:** add missing contributors styles to vogue ([d97821c](https://github.com/cnduk/merlin-www-components/commit/d97821c))
+
+
+
+
+<a name="1.13.0"></a>
+# [1.13.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.12.7...@cnbritain/merlin-www-section-card-list@1.13.0) (2018-08-02)
+
+
+### Bug Fixes
+
+* **merlin-www-section-card-list:** add house and garden to merlin ([8140623](https://github.com/cnduk/merlin-www-components/commit/8140623))
+* **merlin-www-section-card-list:** add is-hidden class for ads ([12f613b](https://github.com/cnduk/merlin-www-components/commit/12f613b))
+* **merlin-www-section-card-list:** correct markup for ads and css classes ([975f860](https://github.com/cnduk/merlin-www-components/commit/975f860))
+* **merlin-www-section-card-list:** correct sass imports for themes ([a3252c7](https://github.com/cnduk/merlin-www-components/commit/a3252c7))
+* **merlin-www-section-card-list:** remove card-list dependency ([2a58357](https://github.com/cnduk/merlin-www-components/commit/2a58357))
+* **merlin-www-section-card-list:** update selectors in wireframe ([e78b607](https://github.com/cnduk/merlin-www-components/commit/e78b607))
+* **merlin-www-section-card-list:** update wired styles ([d9f58b6](https://github.com/cnduk/merlin-www-components/commit/d9f58b6))
+
+
+### Features
+
+* **merlin-www-section-card-list:** update partial ([6633c43](https://github.com/cnduk/merlin-www-components/commit/6633c43))
+* **merlin-www-section-card-list:** update template for ads ([bdb7c09](https://github.com/cnduk/merlin-www-components/commit/bdb7c09))
+
+
+
+
+<a name="1.12.3"></a>
+## [1.12.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.12.2...@cnbritain/merlin-www-section-card-list@1.12.3) (2018-07-19)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-card-list
+
+<a name="1.12.2"></a>
+## [1.12.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.12.1...@cnbritain/merlin-www-section-card-list@1.12.2) (2018-07-03)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-card-list
+
 <a name="1.12.0"></a>
 # [1.12.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.11.46...@cnbritain/merlin-www-section-card-list@1.12.0) (2018-06-25)
 

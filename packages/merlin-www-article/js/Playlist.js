@@ -19,8 +19,8 @@ import {
     setStorage
 } from './utils';
 
-var CLS_CARD_LIST = '.js-c-card-list';
-var CLS_CARD_LIST_ITEM = '.js-c-card-list__item';
+var CLS_CARD_LIST = '.js-a-video__playlist';
+var CLS_CARD_LIST_ITEM = '.js-a-video__playlist-item';
 
 function Playlist(el) {
     EventEmitter.call(this, {

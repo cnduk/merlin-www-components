@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.4"></a>
+## [1.8.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-cookie-warning@1.8.3...@cnbritain/merlin-www-cookie-warning@1.8.4) (2018-07-19)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-cookie-warning
+
+<a name="1.8.3"></a>
+## [1.8.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-cookie-warning@1.8.2...@cnbritain/merlin-www-cookie-warning@1.8.3) (2018-07-09)
+
+
+### Bug Fixes
+
+* **merlin-www-cookie-warning:** correcy gotham font reference for gq ([1643132](https://github.com/cnduk/merlin-www-components/commit/1643132))
+
+
+
+
+<a name="1.8.2"></a>
+## [1.8.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-cookie-warning@1.8.1...@cnbritain/merlin-www-cookie-warning@1.8.2) (2018-07-03)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-cookie-warning
+
 <a name="1.8.0"></a>
 # [1.8.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-cookie-warning@1.7.29...@cnbritain/merlin-www-cookie-warning@1.8.0) (2018-06-22)
 

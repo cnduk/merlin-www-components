@@ -1,0 +1,44 @@
+@import "@cnbritain/merlin-www-buttons:houseandgarden";
+@import "@cnbritain/merlin-www-common:houseandgarden";
+
+@import "../wireframe/wireframe";
+
+.c-infobar {}
+.c-infobar-wrapper {
+    background-color: $ebony-clay;
+}
+
+.c-infobar__content {
+    padding: 12px 60px 12px 20px;
+}
+
+.c-infobar__message {
+    @include font("MILLER_DISPLAY", 17px, 600, 17px);
+    color: $white;
+    text-align: center;
+}
+
+.c-infobar__button {
+    @include button-single();
+    @include button-single-dark();
+    &:hover {
+        @include button-single-dark-hover();
+    }
+
+    margin: 10px 0 0 0;
+    padding: 12px;
+
+    @include at-x-large-size {
+        margin: 0 0 0 20px;
+    }
+}
+
+.c-infobar__close-button {
+    border-radius: 50%;
+    border: 1px solid $white;
+    padding: 6px;
+
+    svg {
+        fill: $white;
+    }
+}
