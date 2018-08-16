@@ -58,7 +58,14 @@
         {{/ data.sponsor }}
 
         {{# data.event_information }}
-            {{> @cnbritain/merlin-www-tag-header/event-information }}
+            <div class="tg-header__event-meta">
+                {{# data.start_date }}
+                    <span class="tg-header__event-meta__start-date">{{ data.label }}</span>
+                {{/ data.start_date }}
+                {{# data.location }}
+                    <span class="tg-header__event-meta__location">{{ data.location }}</span>
+                {{/ data.location }}
+            </div>
         {{/ data.event_information }}
 
         {{# data.navigation_list }}
