@@ -31,6 +31,30 @@
  * Intro
  * Hero, logo and title
  */
+.tg-header__intro {
+    padding: 30px $MOBILE_SIDE_GUTTER;
+
+    @include at-medium-size {
+        padding: 60px $TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size {
+        padding: 60px 60px;
+    }
+}
+.tg-header__hero-credit {
+    @include font("GOTHAM", 9px, 400, 12px, 60);
+    color: rgba(0, 0, 0, 0.8);
+    margin-top: 8px;
+    right: 0;
+    text-transform: uppercase;
+    top: 0;
+
+    &:before {
+        content: 'Credit: ';
+    }
+}
+
 .tg-header__title {
 	@include font("GOTHAM", 24px, 700, 28px, 60);
 	color: $white;
@@ -75,6 +99,16 @@
 			@include font-size(15px);
             @include line-height(24px);
 		}
+    }
+}
+
+.tg-header__expand-btn {
+    @include button-single;
+    @include button-single-light;
+
+    &:hover,
+    &:focus {
+        @include button-single-light-hover;
     }
 }
 

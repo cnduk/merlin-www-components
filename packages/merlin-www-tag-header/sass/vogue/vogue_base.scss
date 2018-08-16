@@ -33,6 +33,18 @@
         padding: 60px 0 0 0;
     }
 }
+.tg-header__hero-credit {
+    @include font('NOBEL', 9px);
+    bottom: 0;
+    color: $silver;
+    letter-spacing: 0.05em;
+    right: 0;
+    text-transform: uppercase;
+
+    &:before {
+        content: 'Credit: ';
+    }
+}
 
 .tg-header__intro-image,
 .tg-header__intro svg {
@@ -64,6 +76,10 @@
         margin-bottom: 0;
     }
 
+    .has-hero & {
+        color: $white;
+    }
+
     @include at-x-large-size {
         @include font-size(50px);
         @include line-height(50px);
@@ -85,6 +101,16 @@
         @include font-size(20px);
         @include line-height(25px);
         margin: 15px auto 30px auto;
+    }
+}
+.tg-header__expand-btn {
+    @include button-single;
+    @include button-single-light;
+    margin-top: 30px;
+
+    &:hover,
+    &:focus {
+        @include button-single-light-hover;
     }
 }
 
@@ -114,15 +140,13 @@
  */
 .tg-header__topic-strip {
     margin: 25px 0 40px 0;
+    text-align: center;
 
     @include at-medium-size {
         margin: 30px 0 60px 0;
     }
 }
 
-.c-topic-strip__item--topic a {
-    display: inline-block;
-}
 
 /**
  * Featured cards

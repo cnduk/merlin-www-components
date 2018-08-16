@@ -42,15 +42,23 @@
     }
 }
 
-.tg-header-wrapper {
-    margin: 0 auto;
-    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
-}
+.tg-header-wrapper {}
 
 /**
  * Intro
  * Hero, logo and title
  */
+.tg-header__intro {
+    padding: 30px 0;
+
+    @include at-medium-size {
+        padding: 60px 0;
+    }
+
+    @include at-x-large-size {
+        padding: 60px 0;
+    }
+}
 .tg-header__intro-image {
     display: block;
     margin: 0 auto 20px auto;
@@ -68,6 +76,17 @@
         & + .tg-header__description {
             @include separator-line-large;
         }
+    }
+}
+.tg-header__hero-credit {
+    @include font("BRUTAL", 12px, 500, 12px);
+    bottom: 2px;
+    margin-top: 10px;
+    right: 0;
+
+    &:before {
+        @include font-weight(300);
+        content: 'Credit: ';
     }
 }
 
@@ -122,6 +141,17 @@
             @include font-size(20px);
             @include line-height(23px);
         }
+    }
+}
+
+.tg-header__expand-btn {
+    @include button-single;
+    @include button-single-dark;
+    margin-top: 30px;
+
+    &:hover,
+    &:focus {
+        @include button-single-dark-hover;
     }
 }
 

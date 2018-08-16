@@ -26,7 +26,6 @@
 }
 
 .tg-header-wrapper {
-    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -34,6 +33,25 @@
  * Intro
  * Hero, logo and title
  */
+.tg-header__intro {
+    padding: 30px 20px;
+
+    @include at-medium-size {
+        padding: 60px $TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size {
+        padding: 60px 60px;
+    }
+}
+.tg-header__hero-credit {
+    @include font('BRANDON GROTESQUE', 10px, 400, 10px);
+    bottom: 5px;
+    color: $dove-gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    right: 0;
+}
 .tg-header__title {
     @include font("MILLER_DISPLAY", 40px, 'NORMAL', 41px);
     color: $mine-shaft;
@@ -48,12 +66,14 @@
     }
 }
 
+
 /**
  * Description + expand
  */
 .tg-header__description {
     color: $mine-shaft;
     margin: 10px auto 30px auto;
+    max-width: 700px;
     text-align: center;
 
     a {

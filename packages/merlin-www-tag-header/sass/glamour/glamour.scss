@@ -34,7 +34,6 @@
 .tg-header__intro {
     background-color: #fbddde;
     padding: 30px 20px;
-    position: relative;
 
     &:before {
         background-color: #fbddde;
@@ -58,46 +57,23 @@
     }
 }
 
-.tg-header__hero {
-    height: 100%;
-    left: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    overflow: hidden;
-    position: absolute;
-    right: 50%;
-    top: 0;
-    width: 100vw;
-
-    img {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 100%;
-    }
-}
+.tg-header__hero {}
 
 .tg-header__hero-credit {
     @include font("GRAPHIK", 10px, 400, 10px);
     bottom: 10px;
     color: $white;
     letter-spacing: 1.5px;
-    position: absolute;
     right: 10px;
     text-transform: uppercase;
 }
 
-.tg-header__intro-image {
-    position: relative;
-    z-index: 1;
-}
+.tg-header__intro-image {}
 
 .tg-header__title {
     @include font("MILLER_DISPLAY", 37px, 600, 40px);
     color: $dune;
-    position: relative;
     text-align: center;
-    z-index: 1;
 
     .has-hero & {
         color: $white;
@@ -271,6 +247,7 @@
 .tg-header__cards-list {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin: -10px;
 
     .tg-header__cards-listitem {
