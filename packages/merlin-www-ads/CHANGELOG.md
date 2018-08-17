@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.16.2"></a>
+## [1.16.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.16.1...@cnbritain/merlin-www-ads@1.16.2) (2018-08-17)
+
+
+### Bug Fixes
+
+* **merlin-www-ads:** close tead ads when a certain postmessage comes in ([ebaaadf](https://github.com/cnduk/merlin-www-components/commit/ebaaadf))
+
+
+
+
 <a name="1.16.1"></a>
 ## [1.16.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.16.0...@cnbritain/merlin-www-ads@1.16.1) (2018-08-17)
 
