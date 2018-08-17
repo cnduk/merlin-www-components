@@ -1,18 +1,94 @@
+
 @import "@cnbritain/merlin-www-common:wireframe";
-@import "@cnbritain/merlin-www-card-list:wireframe";
-@import "@cnbritain/merlin-www-gallery-strip:wireframe";
 @import "@cnbritain/merlin-www-image:wireframe";
-@import "@cnbritain/merlin-www-show-card-carousel:wireframe";
 @import "@cnbritain/merlin-www-topic-strip:wireframe";
+@import "@cnbritain/merlin-www-card:wireframe";
+@import "@cnbritain/merlin-www-bbcode:wireframe";
+@import "@cnbritain/merlin-www-gallery-strip:wireframe";
+@import "@cnbritain/merlin-www-show-card-carousel:wireframe";
 
 .tg-header {}
-.tg-header__wrapper {}
-.tg-header__intro {}
-.tg-header__intro__image {}
-.tg-header__hero {}
-.tg-header__hero-credit {}
-.tg-header__title {}
+.tg-header-wrapper {
+    margin: 0 auto;
+    max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+}
 
+/**
+ * Intro
+ * Hero, logo and title
+ */
+.tg-header__intro {
+    position: relative;
+}
+.tg-header__hero {
+    height: 100%;
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+    position: absolute;
+    right: 50%;
+    top: 0;
+    width: 100vw;
+
+    img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+    }
+}
+.tg-header__hero-credit {
+    position: absolute;
+}
+.tg-header__intro-image {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 200px;
+    position: relative;
+    z-index: 1;
+}
+.tg-header__title {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/**
+ * Description + expand
+ */
+.tg-header__description {
+
+    &.is-closed {
+        > :nth-child(n+3):nth-last-child(n+2) {
+            display: none;
+        }
+
+        .tg-header__description-expand {
+            display: block;
+        }
+    }
+}
+
+.tg-header__description-expand {
+    display: none;
+}
+
+.tg-header__expand-btn {
+    -webkit-appearance: none;
+     -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    padding: 0;
+}
+
+/**
+ * Sponsor
+ */
 .tg-header__sponsor {
     margin: 0 auto;
     text-align: center;
@@ -30,23 +106,63 @@
         max-width: 140px;
     }
 }
+
 .tg-header__sponsor-name {}
 
-.tg-header__separator {}
-.tg-header__description {
-    &.is-closed {
-        > :nth-child(n+3):nth-last-child(n+2) {
-            display: none;
-        }
-
-        .tg-header__description-expand {
-            display: block;
-        }
-    }
-}
-.tg-header__description-expand {
-    display: none;
-}
-.tg-header__expand-btn {}
+/**
+ * Navigation list
+ */
 .tg-header__topic-strip {}
+
+/**
+ * Featured cards
+ */
 .tg-header__cards {}
+
+.tg-header__cards-list {
+    font-size: 0;
+    position: relative;
+    font-weight: normal;
+    line-height: normal;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tg-header__cards-listitem {
+    box-sizing: border-box;
+    font-size: initial;
+    vertical-align: top;
+    width: 100%;
+}
+
+/**
+ * Show card carousel
+ */
+.tg-header__shows{}
+
+/**
+ * Event information
+ */
+.tg-header__event-meta {
+    text-align: center;
+}
+.tg-header__event-meta__start-date{}
+.tg-header__event-meta__location{}
+
+/**
+ * Header variants
+ */
+.tg-header--video{}
+.tg-header--profile {}
+.tg-header--brand {}
+.tg-header--event {}
+.tg-header--topic {}
+.tg-header__shows {}
+.tg-header__style-file {}
+.tg-header--miss-vogue {}
+.tg-header--person {}
+
+
+
+

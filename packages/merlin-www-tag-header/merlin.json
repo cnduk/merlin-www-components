@@ -1,131 +1,33 @@
 {
     "name": "@cnbritain/merlin-www-tag-header",
-    "demo": {
-        "all": {
-            "themes": [
-                "wireframe",
-                "vogue",
-                "glamour",
-                "missvogue",
-                "wired",
-                "tatler",
-                "bystander"
-            ],
-            "main": "index",
-            "data": "all"
-        },
-        "navigation_list": {
-            "themes": [
-                "wireframe",
-                "vogue",
-                "glamour",
-                "missvogue",
-                "wired",
-                "tatler",
-                "bystander"
-            ],
-            "main": "index",
-            "data": "navigation_list"
-        },
-        "hair_file": {
-            "themes": [
-                "wireframe",
-                "vogue",
-                "glamour",
-                "missvogue",
-                "tatler",
-                "bystander"
-            ],
-            "main": "index",
-            "data": "hair_file"
-        },
-        "style_file": {
-            "themes": [
-                "wireframe",
-                "vogue",
-                "glamour",
-                "missvogue",
-                "tatler",
-                "bystander"
-            ],
-            "main": "index",
-            "data": "style_file"
-        },
-        "card_list": {
-            "themes": [
-                "wireframe",
-                "vogue",
-                "glamour",
-                "missvogue",
-                "wired",
-                "tatler",
-                "bystander"
-            ],
-            "main": "index",
-            "data": "card_list"
-        },
-        "show_list": {
-            "themes": [
-                "vogue",
-                "missvogue",
-                "tatler",
-                "bystander"
-            ],
-            "main": "index",
-            "data": "show_list"
-        },
-        "event_information": {
-            "themes": [
-                "wireframe",
-                "vogue",
-                "glamour",
-                "missvogue",
-                "wired",
-                "tatler",
-                "bystander"
-            ],
-            "main": "index",
-            "data": "event_information"
-        },
-        "image": {
-            "themes": [
-                "wireframe",
-                "vogue",
-                "glamour",
-                "missvogue",
-                "wired",
-                "tatler",
-                "bystander"
-            ],
-            "main": "index",
-            "data": "image"
-        }
-    },
     "js": {
         "demo": "demo/demo.js"
     },
     "themes": {
-        "brides": "sass/brides/brides.scss",
-        "tatler": "sass/tatler/tatler.scss",
         "wireframe": "sass/wireframe/wireframe.scss",
+        "brides": "sass/brides/brides.scss",
         "glamour": "sass/glamour/glamour.scss",
+        "gq": "sass/gq/gq.scss",
+        "house": "sass/houseandgarden/houseandgarden.scss",
+        "tatler": "sass/tatler/tatler.scss",
         "bystander": "sass/bystander/bystander.scss",
-        "wired": "sass/wired/wired.scss",
+        "traveller": "sass/traveller/traveller.scss",
+        "vogue": "sass/vogue/vogue.scss",
         "missvogue": "sass/missvogue/missvogue.scss",
-        "vogue": "sass/vogue/vogue.scss"
+        "wired": "sass/wired/wired.scss"
     },
     "partials": {
-        "event-information": "partials/event-information.html",
         "index": "partials/index.html"
     },
     "dependencies": [
-        "@cnbritain/merlin-www-card-list",
         "@cnbritain/merlin-www-common",
         "@cnbritain/merlin-www-gallery-strip",
         "@cnbritain/merlin-www-image",
         "@cnbritain/merlin-www-show-card-carousel",
         "@cnbritain/merlin-www-topic-strip",
-        "@cnbritain/merlin-www-js-utils"
+        "@cnbritain/merlin-www-js-utils",
+        "@cnbritain/merlin-www-card",
+        "@cnbritain/merlin-www-bbcode"
     ],
     "currentTheme": null,
     "main": "index",
@@ -137,7 +39,8 @@
         "card_list": "data/card_list.json",
         "show_list": "data/show_list.json",
         "event_information": "data/event_information.json",
-        "image": "data/image.json"
+        "image": "data/image.json",
+        "hero": "data/hero.json"
     },
     "description": null
 }

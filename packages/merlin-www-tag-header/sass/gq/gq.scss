@@ -1,7 +1,11 @@
+
 @import "@cnbritain/merlin-www-common:gq";
-@import "@cnbritain/merlin-www-card-list:gq";
 @import "@cnbritain/merlin-www-image:gq";
 @import "@cnbritain/merlin-www-topic-strip:gq";
+@import "@cnbritain/merlin-www-card:gq";
+@import "@cnbritain/merlin-www-bbcode:gq";
+@import "@cnbritain/merlin-www-gallery-strip:gq";
+@import "@cnbritain/merlin-www-show-card-carousel:gq";
 
 @import "../wireframe/wireframe";
 
@@ -9,90 +13,47 @@
 	background-color: $woodsmoke;
 	padding: 36px $MOBILE_SIDE_GUTTER 40px $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         padding: $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         padding: $DESKTOP_SIDE_GUTTER;
     }
 }
 
-.tg-header--video {
-	.tg-header__intro__image {
-		width: 190px;
-		height: 50px;
-		margin: 0 auto;
-
-		svg {
-			fill: $white;
-			height: 100%;
-			width: 100%;
-		}
-
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-			width: 228px;
-			height: 60px;
-		}
-	}
-}
-
-.tg-header--profile {
-	.tg-header__intro__image {
-		background-color: $bon-jour;
-		border-radius: 50%;
-		display: block;
-		height: 66px;
-		margin: 0 auto 20px auto;
-		overflow: hidden;
-		width: 66px;
-
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-			height: 108px;
-			margin-bottom: 28px;
-			width: 108px;
-		}
-
-		img {
-			border-radius: 50%;
-			height: 100%;
-			overflow: hidden;
-			width: 100%;
-		}
-	}
-}
-
-.tg-header--brand,
-.tg-header--event,
-.tg-header--topic {
-	.tg-header__intro__image {
-		margin-bottom: 24px;
-		margin-left: auto;
-		margin-right: auto;
-		width: 240px;
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-
-		img {
-			width: 100%;
-		}
-
-		@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-			margin-bottom: 32px;
-			width: 320px;
-		}
-	}
-}
-
-.tg-header__wrapper {
+.tg-header-wrapper {
 	max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER*2;
 	margin: 0 auto;
 }
 
-.tg-header__intro {}
-.tg-header__intro__image {}
+/**
+ * Intro
+ * Hero, logo and title
+ */
+.tg-header__intro {
+    padding: 30px $MOBILE_SIDE_GUTTER;
+
+    @include at-medium-size {
+        padding: 60px $TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size {
+        padding: 60px 60px;
+    }
+}
+.tg-header__hero-credit {
+    @include font("GOTHAM", 9px, 400, 12px, 60);
+    color: rgba(0, 0, 0, 0.8);
+    margin-top: 8px;
+    right: 0;
+    text-transform: uppercase;
+    top: 0;
+
+    &:before {
+        content: 'Credit: ';
+    }
+}
 
 .tg-header__title {
 	@include font("GOTHAM", 24px, 700, 28px, 60);
@@ -102,10 +63,9 @@
 	text-align: center;
 }
 
-.tg-header__separator {
-	display: none;
-}
-
+/**
+ * Description + expand
+ */
 .tg-header__description {
     color: $oslo-gray;
     margin-top: 24px;
@@ -113,9 +73,6 @@
     margin-right: auto;
     max-width: 800px;
     text-align: center;
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin-top: 32px;
-    }
 
     .bb-a {
         border-bottom: 1px solid;
@@ -125,10 +82,6 @@
     .bb-p {
         @include font("GOTHAM", 14px, null, 20px, -2);
         color: inherit;
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            @include font-size(15px);
-            @include line-height(24px);
-        }
     }
 
     > *:first-child {
@@ -138,28 +91,50 @@
     > *:last-child {
         margin-bottom: 0;
     }
+
+	@include at-x-large-size {
+        margin-top: 32px;
+
+		.bb-p {
+			@include font-size(15px);
+            @include line-height(24px);
+		}
+    }
 }
 
+.tg-header__expand-btn {
+    @include button-single;
+    @include button-single-light;
+
+    &:hover,
+    &:focus {
+        @include button-single-light-hover;
+    }
+}
+
+/**
+ * Sponsor
+ */
 .tg-header__sponsor {
     @include font('GOTHAM', 16px);
     color: $white;
     font-weight: bold;
     margin: 15px auto;
 }
+
 .tg-header__sponsor-prefix {
     @include font-size(12px);
-
 }
-.tg-header__sponsor-image {}
+
 .tg-header__sponsor-name {
     color: inherit;
 }
 
+/**
+ * Navigation list
+ */
 .tg-header__topic-strip {
 	margin-top: 24px;
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-		margin-top: 32px;
-	}
 
 	.c-topic-strip {
 		text-align: center;
@@ -173,42 +148,155 @@
 	    @include button-group();
 	    @include button-group-dark();
 
-	    &:hover {
+	    &:hover, &:focus {
 	        @include button-group-dark-hover();
 	    }
 	}
+
+	@include at-x-large-size {
+		margin-top: 32px;
+	}
 }
 
+/**
+ * Featured cards
+ */
 .tg-header__cards {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: $MOBILE_SLICE_MARGIN;
 	max-width: $MAXIMUM_PAGE_WIDTH;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	@include at-medium-size {
 	    margin-top: $TABLET_SLICE_MARGIN;
 	}
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	@include at-x-large-size {
 	    margin-top: $DESKTOP_SLICE_MARGIN;
 	}
 }
 
+.tg-header__cards-list {
+	margin: -10px;
+
+    .tg-header__cards-listitem {
+		display: inline-block;
+	    padding: 0 10px;
+	    margin: 10px 0;
+	    width: 100%;
+
+		@include one-column-size() {
+			& + .tg-header__cards-listitem {
+				.c-card {
+				    border-top: 1px solid $bon-jour;
+				    padding-top: 20px;
+
+				    &.c-card--dark {
+				        border-top-color: $mineshaft;
+				    }
+				}
+			}
+    	}
+
+        @include two-column-size() {
+		    width: 50%;
+        }
+
+        @include three-column-size() {
+		    width: 33.33333%;
+        }
+    }
+}
+
+/**
+ * Show card carousel
+ */
 .tg-header__shows {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: $MOBILE_SLICE_MARGIN;
 	max-width: $MAXIMUM_PAGE_WIDTH;
 
-	@include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+	.sh-item-carousel {
+		margin: 0;
+	}
+
+	@include at-medium-size {
 	    margin-top: $TABLET_SLICE_MARGIN;
 	}
 
-	@include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+	@include at-x-large-size {
 	    margin-top: $DESKTOP_SLICE_MARGIN;
 	}
+}
 
-	.sh-item-carousel {
-		margin: 0;
+/**
+ * Header variants
+ */
+.tg-header--video {
+	.tg-header__intro-image {
+		width: 190px;
+		height: 50px;
+		margin: 0 auto;
+
+		svg {
+			fill: $white;
+			height: 100%;
+			width: 100%;
+		}
+
+		@include at-x-large-size {
+			width: 228px;
+			height: 60px;
+		}
+	}
+}
+
+.tg-header--profile {
+	.tg-header__intro-image {
+		background-color: $bon-jour;
+		border-radius: 50%;
+		display: block;
+		height: 66px;
+		margin: 0 auto 20px auto;
+		overflow: hidden;
+		width: 66px;
+
+		img {
+			border-radius: 50%;
+			height: 100%;
+			overflow: hidden;
+			width: 100%;
+		}
+
+		@include at-x-large-size {
+			height: 108px;
+			margin-bottom: 28px;
+			width: 108px;
+		}
+	}
+}
+
+.tg-header--brand,
+.tg-header--event,
+.tg-header--topic {
+	.tg-header__intro-image {
+		margin-bottom: 24px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 240px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		@include at-x-large-size {
+			margin-bottom: 32px;
+			width: 320px;
+		}
 	}
 }

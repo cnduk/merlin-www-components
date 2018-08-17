@@ -1,5 +1,5 @@
 <header class="tg-header {{ style.cls }} {{# state.has_hero }}has-hero{{/ state.has_hero }}">
-    <div class='tg-header__wrapper'>
+    <div class='tg-header-wrapper'>
         <div class="tg-header__intro">
 
             {{# data.hero_image }}
@@ -15,7 +15,7 @@
             {{/ data.hero_image }}
 
             {{# data.image }}
-                <div class="tg-header__intro__image">
+                <div class="tg-header__intro-image">
                     {{> @cnbritain/merlin-www-image }}
                 </div>
             {{/ data.image }}
@@ -30,7 +30,7 @@
                 <div class="tg-header__description js-tg-header__description is-closed">
                     {{ &data.body }}
                     <div class="tg-header__description-expand">
-                        <button class="global__button-reset tg-header__expand-btn js-tg-header__expand-btn">{{ translation.intro_continue_reading }}</button>
+                        <button class="tg-header__expand-btn js-tg-header__expand-btn">{{ translation.intro_continue_reading }}</button>
                     </div>
                 </div>
             {{/ state.is_body_expandable }}
@@ -58,11 +58,17 @@
         {{/ data.sponsor }}
 
         {{# data.event_information }}
-            {{> @cnbritain/merlin-www-tag-header/event-information }}
+            <div class="tg-header__event-meta">
+                {{# data.start_date }}
+                    <span class="tg-header__event-meta__start-date">{{ data.label }}</span>
+                {{/ data.start_date }}
+                {{# data.location }}
+                    <span class="tg-header__event-meta__location">{{ data.location }}</span>
+                {{/ data.location }}
+            </div>
         {{/ data.event_information }}
 
         {{# data.navigation_list }}
-            <hr class="tg-header__separator" />
             <div class='tg-header__topic-strip'>
                 {{> @cnbritain/merlin-www-topic-strip }}
             </div>
@@ -70,9 +76,16 @@
     </div>
 
     {{# data.card_list }}
-        <hr class="tg-header__separator" />
         <div class="tg-header__cards">
-            {{> @cnbritain/merlin-www-card-list }}
+            <ul class="tg-header__cards-list {{ style.cls }} js-c-card-list">
+                {{# data.items }}
+                <li class="tg-header__cards-listitem js-c-card-list__item">
+                    {{# data.item }}
+                        {{> @cnbritain/merlin-www-card }}
+                    {{/ data.item }}
+                </li>
+                {{/ data.items }}
+            </ul>
         </div>
     {{/ data.card_list }}
 
