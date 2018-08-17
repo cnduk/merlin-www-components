@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.6.2"></a>
+## [1.6.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-gatracker@1.6.1...@cnbritain/merlin-www-js-gatracker@1.6.2) (2018-08-17)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-gatracker
+
 <a name="1.6.1"></a>
 ## [1.6.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-gatracker@1.6.0...@cnbritain/merlin-www-js-gatracker@1.6.1) (2018-06-06)
 
