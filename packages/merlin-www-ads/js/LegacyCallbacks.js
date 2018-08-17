@@ -114,7 +114,7 @@ window.InreadSupport = {
 function closeAdSlot(id) {
     var frame = document.getElementById(id);
     var ad = getParent(frame, '.ad__main');
-    ad.style.display = "none";
+    ad.style.display = 'none';
 }
 
 addEvent(window, 'message', function onPostMessage(e){
@@ -127,9 +127,9 @@ addEvent(window, 'message', function onPostMessage(e){
 
     if(data !== null && data.isConde && data.isTead){
         switch(data.type){
-            case 'close':
-                closeAdSlot(data.data.id);
-                break;
+        case 'close':
+            closeAdSlot(data.data.id);
+            break;
         }
     }
 });
