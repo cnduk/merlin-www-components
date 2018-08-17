@@ -48,17 +48,7 @@
  * Intro
  * Hero, logo and title
  */
-.tg-header__intro {
-    padding: 30px 0;
-
-    @include at-medium-size {
-        padding: 60px 0;
-    }
-
-    @include at-x-large-size {
-        padding: 60px 0;
-    }
-}
+.tg-header__intro {}
 .tg-header__intro-image {
     display: block;
     margin: 0 auto 20px auto;
@@ -116,6 +106,19 @@
 
         & + * {
             margin-bottom: 20px;
+        }
+    }
+}
+.has-hero {
+    .tg-header__intro {
+        padding: 30px 0;
+
+        @include at-medium-size {
+            padding: 60px 0;
+        }
+
+        @include at-x-large-size {
+            padding: 60px 0;
         }
     }
 }

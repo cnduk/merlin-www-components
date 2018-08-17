@@ -34,14 +34,14 @@
  * Hero, logo and title
  */
 .tg-header__intro {
-    padding: 30px 20px;
+    padding: 0 20px;
 
     @include at-medium-size {
-        padding: 60px $TABLET_SIDE_GUTTER;
+        padding: 0 $TABLET_SIDE_GUTTER;
     }
 
     @include at-x-large-size {
-        padding: 60px 60px;
+        padding: 0 60px;
     }
 }
 .tg-header__hero-credit {
@@ -63,6 +63,19 @@
         @include font-size(60px);
         @include line-height(65px);
         margin-bottom: 20px;
+    }
+}
+.has-hero {
+    .tg-header__intro {
+        padding: 30px 20px;
+
+        @include at-medium-size {
+            padding: 60px $TABLET_SIDE_GUTTER;
+        }
+
+        @include at-x-large-size {
+            padding: 60px 60px;
+        }
     }
 }
 

@@ -23,17 +23,17 @@
  * Intro
  * Hero, logo and title
  */
-.tg-header__intro {
-    padding: 30px $MOBILE_SIDE_GUTTER;
+ .tg-header__intro {
+     padding: 0 $MOBILE_SIDE_GUTTER;
 
-    @include at-medium-size {
-        padding: 60px $TABLET_SIDE_GUTTER;
-    }
+     @include at-medium-size {
+         padding: 0 $TABLET_SIDE_GUTTER;
+     }
 
-    @include at-x-large-size {
-        padding: 60px 60px;
-    }
-}
+     @include at-x-large-size {
+         padding: 0 60px;
+     }
+ }
 
 .tg-header__hero {}
 .tg-header__hero-credit {
@@ -87,6 +87,18 @@
 }
 
 .has-hero {
+    .tg-header__intro {
+        padding: 30px $MOBILE_SIDE_GUTTER;
+
+        @include at-medium-size {
+            padding: 60px $TABLET_SIDE_GUTTER;
+        }
+
+        @include at-x-large-size {
+            padding: 60px 60px;
+        }
+    }
+
     .tg-header__title {
         color: $white;
         text-shadow: 0 2px 16px rgba($black, 0.33);
