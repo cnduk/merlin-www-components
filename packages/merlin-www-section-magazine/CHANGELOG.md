@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.57"></a>
+## [1.8.57](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-magazine@1.8.56...@cnbritain/merlin-www-section-magazine@1.8.57) (2018-08-17)
+
+
+### Bug Fixes
+
+* **merlin-www-section-magazine:** remove card list sass import from glamour and bystander ([cf8d499](https://github.com/cnduk/merlin-www-components/commit/cf8d499))
+
+
+
+
 <a name="1.8.56"></a>
 ## [1.8.56](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-magazine@1.8.55...@cnbritain/merlin-www-section-magazine@1.8.56) (2018-08-02)
 

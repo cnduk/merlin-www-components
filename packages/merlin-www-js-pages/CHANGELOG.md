@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.9.20"></a>
+## [1.9.20](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.9.19...@cnbritain/merlin-www-js-pages@1.9.20) (2018-08-17)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** remove card-list dependency ([0829413](https://github.com/cnduk/merlin-www-components/commit/0829413))
+
+
+
+
 <a name="1.9.13"></a>
 ## [1.9.13](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.9.12...@cnbritain/merlin-www-js-pages@1.9.13) (2018-08-03)
 

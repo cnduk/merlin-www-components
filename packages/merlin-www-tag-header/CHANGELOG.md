@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.11.16"></a>
+## [1.11.16](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.15...@cnbritain/merlin-www-tag-header@1.11.16) (2018-08-17)
+
+
+### Bug Fixes
+
+* **merlin-www-tag-header:** add bbcode component ([793c588](https://github.com/cnduk/merlin-www-components/commit/793c588))
+* **merlin-www-tag-header:** fix media querie ([358c3e0](https://github.com/cnduk/merlin-www-components/commit/358c3e0))
+* **merlin-www-tag-header:** fixed JSON structure ([d842199](https://github.com/cnduk/merlin-www-components/commit/d842199))
+* **merlin-www-tag-header:** link for missvogue.scss and bystander.scss ([043c4be](https://github.com/cnduk/merlin-www-components/commit/043c4be))
+
+
+
+
 <a name="1.11.15"></a>
 ## [1.11.15](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.14...@cnbritain/merlin-www-tag-header@1.11.15) (2018-08-02)
 

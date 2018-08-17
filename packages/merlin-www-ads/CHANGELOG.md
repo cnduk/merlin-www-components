@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.16.0"></a>
+# [1.16.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.15.4...@cnbritain/merlin-www-ads@1.16.0) (2018-08-17)
+
+
+### Features
+
+* **merlin-www-ads:** add promotion-recommended ([78e4c0a](https://github.com/cnduk/merlin-www-components/commit/78e4c0a))
+
+
+
+
 <a name="1.15.4"></a>
 ## [1.15.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.15.3...@cnbritain/merlin-www-ads@1.15.4) (2018-08-02)
 
