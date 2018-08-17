@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.11.18"></a>
+## [1.11.18](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.17...@cnbritain/merlin-www-tag-header@1.11.18) (2018-08-17)
+
+
+### Bug Fixes
+
+* **merlin-www-tag-header:** correct padding on hero for brides, gq, house and wired ([8c203a2](https://github.com/cnduk/merlin-www-components/commit/8c203a2))
+
+
+
+
 <a name="1.11.17"></a>
 ## [1.11.17](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.16...@cnbritain/merlin-www-tag-header@1.11.17) (2018-08-17)
 

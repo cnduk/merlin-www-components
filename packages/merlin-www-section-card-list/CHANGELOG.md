@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.13.6"></a>
+## [1.13.6](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.5...@cnbritain/merlin-www-section-card-list@1.13.6) (2018-08-17)
+
+
+### Bug Fixes
+
+* **merlin-www-section-card-list:** set is-hidden styles to be important ([c2afe8d](https://github.com/cnduk/merlin-www-components/commit/c2afe8d))
+
+
+
+
 <a name="1.13.5"></a>
 ## [1.13.5](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.4...@cnbritain/merlin-www-section-card-list@1.13.5) (2018-08-17)
 
