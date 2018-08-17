@@ -39,13 +39,13 @@
     display: inline-block;
 }
 
-li.a-review__rating-list__item {
+.a-review__rating-list__item {
     background-color: $loot-box;
     height: 8px;
     margin-right: 4px;
     width: 8px;
 }
-li.a-review__rating-list__item--active {
+.a-review__rating-list__item--active {
     background-color: $mine-shaft-222;
 }
 

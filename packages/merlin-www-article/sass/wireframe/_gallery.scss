@@ -44,16 +44,26 @@
 }
 
 .a-gallery__message-btn {
-
+    appearance: none;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    padding: 0;
 }
 
 .a-gallery__thumbnail-list {
+    list-style: none;
+    margin: 0;
     overflow: hidden;
+    padding: 0;
 }
 
-li.a-gallery__thumbnail {
+.a-gallery__thumbnail {
     cursor: pointer;
     float: left;
+    margin: 0;
+    padding: 0;
     position: relative;
     width: 33.3333333333%;
 }
@@ -106,12 +116,21 @@ li.a-gallery__thumbnail {
     }
 }
 
-li.a-gallery__image-listitem {}
-li.a-gallery__image-listitem--ad {
+.a-gallery__image-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.a-gallery__image-listitem {
+    margin: 0;
+    padding: 0;
+}
+.a-gallery__image-listitem--ad {
     position: static;
 }
 
-li.a-gallery__image-listitem--image {
+.a-gallery__image-listitem--image {
     position: relative;
 }
 
@@ -142,9 +161,14 @@ li.a-gallery__image-listitem--image {
 
 .g-image-nav__btns {}
 .g-image-nav__btn {
+    appearance: none;
+    background: transparent;
+    border: none;
+    border-radius: 0;
     cursor: pointer;
     display: block;
     height: 40px;
+    padding: 0;
     transition: all 100ms ease-in-out;
     width: 30px;
 

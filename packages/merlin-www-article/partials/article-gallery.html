@@ -5,12 +5,12 @@
             <div class='g-image-nav {{ style.cls }} is-hidden js-g-image-nav'>
                 <div class='g-image-nav__btns'>
                     {{# data.icon_previous }}
-                        <button disabled class='global__button-reset g-image-nav__btn g-image-nav__btn--previous'>
+                        <button disabled class='g-image-nav__btn g-image-nav__btn--previous'>
                             {{> @cnbritain/merlin-www-image }}
                         </button>
                     {{/ data.icon_previous }}
                     {{# data.icon_next }}
-                        <button disabled class='global__button-reset g-image-nav__btn g-image-nav__btn--next'>
+                        <button disabled class='g-image-nav__btn g-image-nav__btn--next'>
                             {{> @cnbritain/merlin-www-image }}
                         </button>
                     {{/ data.icon_next }}
@@ -20,7 +20,7 @@
 
         <div class='a-gallery__view a-gallery__view--thumbnails is-hidden js-g-view-thumbnails'>
             {{# data.thumbnail_list }}
-                <ul class="global__list-reset a-gallery__thumbnail-list {{ style.cls }}">
+                <ul class="a-gallery__thumbnail-list {{ style.cls }}">
                     {{# data.items }}
                         <li class="a-gallery__thumbnail-listitem a-gallery__thumbnail {{ style.cls }} js-g-view-thumbnail" data-thumbnail-index='{{ data.index }}'>
                             <div class='a-gallery__thumbnail-image'>
@@ -41,7 +41,7 @@
 
         <div class="a-gallery__view a-gallery__view--list stick-group js-g-view-list">
             {{# data.image_list }}
-                <ul class="global__list-reset a-gallery__image-list {{ style.cls }}">
+                <ul class="a-gallery__image-list {{ style.cls }}">
                     {{# data.items }}
                         {{# data.item.state.is_ad }}
                             <li class="a-gallery__image-listitem a-gallery__image-listitem--ad {{ style.cls }}">
@@ -64,7 +64,7 @@
 
         {{# state.is_closed }}
             <div class="a-gallery__message">
-                <button class="global__button-reset a-gallery__message-btn js-a-gallery__message-btn">VIEW ALL {{ data.image_list.data.length }} IMAGES</button>
+                <button class="a-gallery__message-btn js-a-gallery__message-btn">VIEW ALL {{ data.image_list.data.length }} IMAGES</button>
             </div>
         {{/ state.is_closed }}
     </div>

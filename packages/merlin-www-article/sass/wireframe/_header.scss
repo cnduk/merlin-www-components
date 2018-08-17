@@ -195,11 +195,17 @@
     display: block;
 }
 
-.a-header__meta {}
+.a-header__meta {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 .a-header__meta--date {}
 .a-header__meta--tag {}
 .a-header__meta-item {
     display: inline-block;
+    margin: 0;
+    padding: 0;
 }
 
 .a-header__tag {

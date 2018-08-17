@@ -3,10 +3,16 @@
 
 .a-share__title {}
 
-.a-share__list {}
+.a-share__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
 .a-share__list-item {
     display: inline-block;
+    margin: 0;
+    padding: 0;
 }
 
 .a-share__list-item--mobile {

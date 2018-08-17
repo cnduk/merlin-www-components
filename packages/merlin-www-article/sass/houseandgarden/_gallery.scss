@@ -69,8 +69,8 @@
 
 .a-gallery__view {}
 
-ul.a-gallery__image-list {}
-li.a-gallery__image-listitem {
+.a-gallery__image-list {}
+.a-gallery__image-listitem {
     margin-bottom: 40px;
 
     @include at-x-large-size {
@@ -88,7 +88,7 @@ li.a-gallery__image-listitem {
     }
 }
 
-li.a-gallery__thumbnail {
+.a-gallery__thumbnail {
     box-sizing: border-box;
     margin: 4px 0 0 0;
     padding: 0 2px;
