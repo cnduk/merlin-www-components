@@ -11,7 +11,7 @@ export default {
     'init': function() {
         var showCarouselEl = document.querySelector('.sh-item-carousel');
         if (showCarouselEl) {
-            var showCarousel = new ShowItemCarousel(showCarouselEl);
+            var showCarousel = new ShowItemCarousel(showCarouselEl); // eslint-disable-line no-unused-vars
         }
 
         var tgHeaderExpandBtn = document.querySelector(
