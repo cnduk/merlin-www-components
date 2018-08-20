@@ -45,22 +45,11 @@ export function recalculateArticleSize() {
     }
 }
 
-export function renderTopStoriesAd(ad) {
-    var listItem = getParent(ad.el, '.js-c-card-list__item');
-    removeClass(listItem, 'is-hidden');
-}
-
 export function onAdRender(e) {
-    if (hasClass(e.ad.el.parentNode, 'js-ad-top-stories')) {
-        renderTopStoriesAd(e.ad);
-    }
     debouncedRecalculateArticleSize();
 }
 
 export function onAdStop(e) {
-    // Top stories ad
-    if (hasClass(e.ad.el.parentNode, 'js-ad-top-stories')) return;
-
     // Remove it from the page
     var ad = getParent(e.ad.el, '.ad--article');
     e.ad.destroy();
