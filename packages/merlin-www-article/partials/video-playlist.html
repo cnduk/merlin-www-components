@@ -1,0 +1,9 @@
+<ul class="a-video__playlist js-a-video__playlist{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
+    {{# data.items }}
+    <li class="a-video__playlist-item js-a-video__playlist-item{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
+        {{# data.item }}
+        {{> @cnbritain/merlin-www-card }}
+        {{/ data.item }}
+    </li>
+    {{/ data.items }}
+</ul>
