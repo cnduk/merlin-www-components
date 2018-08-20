@@ -14,6 +14,13 @@
     }
 }
 
+.c-top-stories-lazy-load__spinner {
+    border-bottom: 10px solid rgba($white-smoke, 0.2);
+    border-left: 10px solid rgba($white-smoke, 0.2);
+    border-right: 10px solid rgba($white-smoke, 0.2);
+    border-top: 10px solid $white-smoke;
+}
+
 .c-top-stories {
     border-bottom: 1px solid #ececec;
     padding: 24px 0;

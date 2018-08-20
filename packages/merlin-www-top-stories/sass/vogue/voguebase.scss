@@ -6,6 +6,13 @@
     }
 }
 
+.c-top-stories-lazy-load__spinner {
+    border-bottom: 10px solid rgba($gallery, 0.2);
+    border-left: 10px solid rgba($gallery, 0.2);
+    border-right: 10px solid rgba($gallery, 0.2);
+    border-top: 10px solid $gallery;
+}
+
 .c-top-stories {
     background-color: $wild-sand;
     border-bottom: 1px solid $gallery;
