@@ -62,10 +62,10 @@ export function insertMagazines(section) {
     var addToFragment = addHtml(docFragment);
 
     var hook = document.getElementById(ID_MAGAZINE_COVERS_HOOK);
-    hook = hook.previousElementSibling.querySelector('.c-card-section ul');
+    hook = hook.previousElementSibling.querySelector('.c-card-section--mag-magazines ul');
 
     addToFragment(section);
-    appendChildren(hook, docFragment.querySelectorAll('.c-card-list__item'));
+    appendChildren(hook, docFragment.querySelectorAll('.js-c-card-section__card-listitem'));
 }
 
 export function onInfiniteSuccess(e) {
