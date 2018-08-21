@@ -24,6 +24,7 @@ export default function init() {
     initReadNextTracking();
     initInlineEmbedTracking();
     initTopStoriesTracking();
+    initSocialShareTracking();
 }
 
 
@@ -219,4 +220,81 @@ function onTopStoriesClick(e){
 export function initTopStoriesTracking(){
     addEvent(document, 'click', delegate(
         '.c-top-stories .c-card__link', onTopStoriesClick));
+}
+
+/**
+ * Social Share event tracking
+ */
+
+function onSocialShareClick(e) {
+    var eventAction = null;
+    var eventLabel = null;
+
+        //Share: article, gallery, video or show shares
+    if (hasClass(e.delegateTarget, '.btn-share--twitter')) {
+        eventAction = 'Share';
+
+    } else if(hasClass(e.delegateTarget, '.btn-share--facebook')){
+        eventAction = 'Share';
+
+    } else if(hasClass(e.delegateTarget, '.btn-share--pinterest')){
+        eventAction = 'Share';
+
+    } else if(hasClass(e.delegateTarget, '.btn-share--instagram')){
+        eventAction = 'Share';
+
+    } else if(hasClass(e.delegateTarget, '.btn-share--whatsapp')){
+        eventAction = 'Share';
+
+    } else if(hasClass(e.delegateTarget, '.btn-share--email')){
+        eventAction = 'Share';
+
+        //Image Share: gallery image shares
+    } else if(hasClass(e.delegateTarget, '.c-figure__toolbar-listitem--facebook')){
+        eventAction = 'Image Share';
+
+    } else if(hasClass(e.delegateTarget, '.c-figure__toolbar-listitem--pinterest')){
+        eventAction = 'Image Share';
+
+    } else if(hasClass(e.delegateTarget, '.c-figure__toolbar-listitem--instagram')){
+        eventAction = 'Image Share';
+
+    } else if(hasClass(e.delegateTarget, '.c-figure__toolbar-listitem--whatsapp')){
+        eventAction = 'Image Share';
+
+    } else if(hasClass(e.delegateTarget, '.c-figure__toolbar-listitem--email')){
+        eventAction = 'Image Share';
+
+        //Follow: menu/navigation
+    } else if(hasClass(e.delegateTarget, '.c-nav__share-link--facebook')){
+        eventAction = 'Follow';
+
+    } else if(hasClass(e.delegateTarget, '.c-nav__share-link--pinterest')){
+        eventAction = 'Follow';
+
+    } else if(hasClass(e.delegateTarget, '.c-nav__share-link--instagram')){
+        eventAction = 'Follow';
+
+    } else if(hasClass(e.delegateTarget, '.c-nav__share-link--instagram')){
+        eventAction = 'Follow';
+
+    } else if(hasClass(e.delegateTarget, '.c-nav__share-link--email')){
+        eventAction = 'Follow';
+    }
+
+    var link = e.delegateTarget.querySelector('a');
+    eventLabel = link.href + ' | ' + link.innerText;
+
+    sendCustomEvent({
+        eventCategory: 'Social',
+        eventAction: eventAction,
+        eventLabel: eventLabel
+    });
+}
+
+export function initSocialShareTracking(){
+    addEvent(document, 'click', delegate(
+        '.btn-share--twitter, .btn-share--facebook, .btn-share--pinterest, .btn-share--instagram, .btn-share--whatsapp, .btn-share--email, ' +
+        '.c-figure__toolbar-listitem--facebook, .c-figure__toolbar-listitem--pinterest, .c-figure__toolbar-listitem--instagram, .c-figure__toolbar-listitem--whatsapp, .c-figure__toolbar-listitem--email' +
+        '.c-nav__share-link--facebook, .c-nav__share-link--pinterest, .c-nav__share-link--instagram, .c-nav__share-link--instagram, .c-nav__share-link--email', onSocialShareClick));
 }
