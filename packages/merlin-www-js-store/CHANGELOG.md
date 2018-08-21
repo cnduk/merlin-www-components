@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.4"></a>
+## [1.2.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-store@1.2.3...@cnbritain/merlin-www-js-store@1.2.4) (2018-08-21)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-store
+
 <a name="1.2.3"></a>
 ## [1.2.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-store@1.2.2...@cnbritain/merlin-www-js-store@1.2.3) (2018-08-17)
 

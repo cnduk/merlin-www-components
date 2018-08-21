@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.7.35"></a>
+## [1.7.35](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-buttons@1.7.34...@cnbritain/merlin-www-buttons@1.7.35) (2018-08-21)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-buttons
+
 <a name="1.7.34"></a>
 ## [1.7.34](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-buttons@1.7.33...@cnbritain/merlin-www-buttons@1.7.34) (2018-08-17)
 

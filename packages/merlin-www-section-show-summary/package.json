@@ -1,18 +1,18 @@
 {
   "name": "@cnbritain/merlin-www-section-show-summary",
-  "version": "1.5.39",
+  "version": "1.5.40",
   "description": "",
   "main": "index.js",
   "scripts": {
     "demo": "merlin-component-demo-server merlin.json"
   },
   "dependencies": {
-    "@cnbritain/merlin-www-buttons": "^1.7.34",
-    "@cnbritain/merlin-www-common": "^1.14.11",
-    "@cnbritain/merlin-www-image": "^1.10.2"
+    "@cnbritain/merlin-www-buttons": "^1.7.35",
+    "@cnbritain/merlin-www-common": "^1.14.12",
+    "@cnbritain/merlin-www-image": "^1.10.3"
   },
   "devDependencies": {
-    "@cnbritain/merlin-component-demo-server": "^3.4.3"
+    "@cnbritain/merlin-component-demo-server": "^3.4.4"
   },
   "author": "",
   "license": "ISC"
