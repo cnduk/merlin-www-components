@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.28.73"></a>
+## [1.28.73](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.28.72...@cnbritain/merlin-www-article@1.28.73) (2018-08-21)
+
+
+### Bug Fixes
+
+* **merlin-www-article:** add playlist partial ([826303a](https://github.com/cnduk/merlin-www-components/commit/826303a))
+
+
+
+
 <a name="1.28.72"></a>
 ## [1.28.72](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.28.71...@cnbritain/merlin-www-article@1.28.72) (2018-08-17)
 

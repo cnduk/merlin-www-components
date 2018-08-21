@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.9.25"></a>
+## [1.9.25](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.9.24...@cnbritain/merlin-www-js-pages@1.9.25) (2018-08-21)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** correct selectors for the magazine page ([514390c](https://github.com/cnduk/merlin-www-components/commit/514390c))
+
+
+
+
 <a name="1.9.24"></a>
 ## [1.9.24](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.9.23...@cnbritain/merlin-www-js-pages@1.9.24) (2018-08-17)
 

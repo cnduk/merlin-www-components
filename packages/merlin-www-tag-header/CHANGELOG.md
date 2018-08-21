@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.11.19"></a>
+## [1.11.19](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.18...@cnbritain/merlin-www-tag-header@1.11.19) (2018-08-21)
+
+
+### Bug Fixes
+
+* **merlin-www-tag-header:** correct selector for card list in wired ([448a473](https://github.com/cnduk/merlin-www-components/commit/448a473))
+
+
+
+
 <a name="1.11.18"></a>
 ## [1.11.18](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-tag-header@1.11.17...@cnbritain/merlin-www-tag-header@1.11.18) (2018-08-17)
 

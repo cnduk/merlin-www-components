@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.13.10"></a>
+## [1.13.10](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.9...@cnbritain/merlin-www-section-card-list@1.13.10) (2018-08-21)
+
+
+### Bug Fixes
+
+* **merlin-www-section-card-list:** move max width onto only contributors for glamour ([3ff3c45](https://github.com/cnduk/merlin-www-components/commit/3ff3c45))
+
+
+
+
 <a name="1.13.9"></a>
 ## [1.13.9](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.8...@cnbritain/merlin-www-section-card-list@1.13.9) (2018-08-20)
 
