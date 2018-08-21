@@ -1,22 +1,9 @@
 'use strict';
 
-import {
-    debounce,
-    hasClass,
-    getParent,
-    removeClass
-} from '@cnbritain/merlin-www-js-utils/js/functions';
-
-import {
-    AdManager,
-    AdUtils
-} from '@cnbritain/merlin-www-ads';
-import {
-    ArticleManager
-} from '@cnbritain/merlin-www-article';
-import {
-    ARTICLE_TYPES
-} from '@cnbritain/merlin-www-article/js/constants';
+import {debounce, getParent} from '@cnbritain/merlin-www-js-utils/js/functions';
+import {AdManager, AdUtils} from '@cnbritain/merlin-www-ads';
+import {ArticleManager} from '@cnbritain/merlin-www-article';
+import {ARTICLE_TYPES} from '@cnbritain/merlin-www-article/js/constants';
 
 var debouncedRecalculateArticleSize = debounce(recalculateArticleSize, 300);
 
@@ -45,7 +32,7 @@ export function recalculateArticleSize() {
     }
 }
 
-export function onAdRender(e) {
+export function onAdRender() {
     debouncedRecalculateArticleSize();
 }
 
