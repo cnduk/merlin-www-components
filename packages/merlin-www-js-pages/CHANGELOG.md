@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.10.0"></a>
+# [1.10.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.9.26...@cnbritain/merlin-www-js-pages@1.10.0) (2018-08-22)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** apply listener to navigation follow buttons for tracking ([0d9155b](https://github.com/cnduk/merlin-www-components/commit/0d9155b))
+
+
+### Features
+
+* **merlin-www-js-pages:** add event tracking on section newsletter ([fa273fa](https://github.com/cnduk/merlin-www-components/commit/fa273fa))
+* **merlin-www-js-pages:** Add Google Analytics event tracking to social [ch650] ([364d0c5](https://github.com/cnduk/merlin-www-components/commit/364d0c5))
+
+
+
+
 <a name="1.9.26"></a>
 ## [1.9.26](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.9.25...@cnbritain/merlin-www-js-pages@1.9.26) (2018-08-21)
 
