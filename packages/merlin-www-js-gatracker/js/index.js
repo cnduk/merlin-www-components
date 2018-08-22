@@ -76,7 +76,8 @@ function GATracker(id, _config){
             _config.cookieDomain :
             'auto',
         'name': this._name,
-        'trackingId': this._id
+        'trackingId': this._id,
+        'transport': 'beacon'
     };
     ga( 'create', config );
 
