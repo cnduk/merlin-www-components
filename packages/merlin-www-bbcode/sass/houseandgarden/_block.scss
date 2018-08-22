@@ -32,20 +32,58 @@
 .bb-callout {
     border: 1px solid $mine-shaft;
     margin: 30px 0;
-    padding: 20px 20px 30px;
-
-    > *:first-child {
-        margin-top: 0;
-    }
-
-    > *:last-child {
-        margin-bottom: 0;
-    }
+    overflow: visible;
+    padding: (20px + 11px) 20px 30px 20px;
+    position: relative;
+    text-align: center;
 
     @include at-x-large-size {
         margin: 40px 0;
-        padding: 30px 30px 40px;
+        padding: (30px + 11px) 30px 40px 30px;
     }
+}
+
+.bb-callout__title {
+    @include font("MILLER_DISPLAY", 21px, 700, 23px);
+    background: $white;
+    box-sizing: border-box;
+    color: $mine-shaft;
+    display: inline-block;
+    letter-spacing: 1px;
+    left: 50%;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    position: absolute;
+    top: -11px;
+    text-transform: uppercase;
+    transform: translateX(-50%);
+
+    @include at-x-large-size {
+        margin-bottom: 30px;
+    }
+
+    &:before,
+    &:after {
+        background-color: $black;
+        bottom: 0;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 1px;
+    }
+
+    &:before {
+        left: 0;
+    }
+    &:after {
+        right: 0;
+    }
+
+}
+
+.bb-callout__hr {
+    display: none;
 }
 
 // -------------------- //
