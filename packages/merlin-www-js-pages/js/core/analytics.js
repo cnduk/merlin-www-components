@@ -187,24 +187,20 @@ export function initInfobarTracking() {
 /**
  * Social Follow event tracking
  */
-
 export function onSocialFollowClick(e) {
-    var eventAction = null;
-    var eventLabel = null;
-
-    //Follow: menu/navigation
-    if (hasClass(e.delegateTarget, '.c-nav__share-link')) {
-        eventAction = 'Follow';
-    }
-
-    var link = e.delegateTarget.querySelector('a');
-    eventLabel = link.href + ' | ' + link.innerText;
+    var link = e.delegateTarget;
+    var eventLabel = link.href + ' | ' + link.innerText;
 
     GATracker.SendAll(GATracker.SEND_HITTYPES.EVENT, {
         eventCategory: 'Social',
-        eventAction: eventAction,
+        eventAction: 'Follow',
         eventLabel: eventLabel
     });
+}
+
+export function initFollowButtonsTracking(){
+    addEvent(document, 'click', delegate(
+        '.c-nav__share-link', onSocialFollowClick));
 }
 
 /**
@@ -213,5 +209,5 @@ export function onSocialFollowClick(e) {
 export default function initLinkTracking() {
     bindEvents();
     initInfobarTracking();
-    onSocialFollowClick();
+    initFollowButtonsTracking();
 }
