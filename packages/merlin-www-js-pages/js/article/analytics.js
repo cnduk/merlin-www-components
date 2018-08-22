@@ -230,11 +230,11 @@ function onSocialShareClick(e) {
     var eventAction = null;
     var eventLabel = null;
 
-        //Share: article, gallery, video or show shares
+    //Share: article, gallery, video or show shares
     if (hasClass(e.delegateTarget, '.btn-share')) {
         eventAction = 'Share';
 
-        //Image Share: gallery image shares
+    //Image Share: gallery image shares
     } else if(hasClass(e.delegateTarget, '.c-figure__toolbar-listitem')){
         eventAction = 'Image Share';
     }
