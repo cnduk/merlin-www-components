@@ -35,7 +35,8 @@
 }
 
 .c-top-stories__nav {
-    display: none;
+    box-sizing: border-box;
+    // display: none;
 }
 
 .c-top-stories__nav-btn {
