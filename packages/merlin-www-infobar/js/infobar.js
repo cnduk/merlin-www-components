@@ -154,6 +154,8 @@ Infobar.prototype = inherit(EventEmitter.prototype, {
 
         this.el.classList.add(IS_DISABLED_CLS);
         this.state.isEnabled = false;
+        // Set a cookie to be the page view limit so we don't open it again
+        setCookie(COOKIE_PAGE_VIEW_COUNT, this.pageviewLimit);
 
         this.emit('disable', events.disable(this));
     },
