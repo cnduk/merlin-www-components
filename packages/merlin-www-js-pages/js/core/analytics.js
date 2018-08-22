@@ -204,10 +204,29 @@ export function initFollowButtonsTracking(){
 }
 
 /**
+ * Section newsletter tracking
+ */
+export function onSectionNewsletterSubmit(){
+    GATracker.SendAll(GATracker.SEND_HITTYPES.EVENT, {
+        eventCategory: 'slice_newsletter',
+        eventAction: 'Submit',
+        eventLabel: 'Continue'
+    });
+}
+
+export function initSectionNewsletterTracking(){
+    if(!document.querySelector('.c-newsletter__form')) return;
+    addEvent(document, 'submit', delegate(
+        '.c-newsletter__form', onSectionNewsletterSubmit));
+}
+
+
+/**
  * Initialise link tracking
  */
 export default function initLinkTracking() {
     bindEvents();
     initInfobarTracking();
     initFollowButtonsTracking();
+    initSectionNewsletterTracking();
 }
