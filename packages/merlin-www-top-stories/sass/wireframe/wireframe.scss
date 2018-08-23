@@ -4,9 +4,46 @@
 @import '@cnbritain/merlin-www-ads:wireframe';
 @import "@cnbritain/merlin-www-card:wireframe";
 
+.c-top-stories-lazy-load {
+    display: none;
+    position: relative;
+
+    @include at-x-large-size {
+        display: block;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+.c-top-stories-lazy-load__spinner {
+    animation: spin 600ms linear infinite;
+    // border-bottom: 10px solid rgba(#fff, 0.2);
+    // border-left: 10px solid rgba(#fff, 0.2);
+    border-radius: 50%;
+    // border-right: 10px solid rgba(#fff, 0.2);
+    // border-top: 10px solid #fff;
+    box-sizing: border-box;
+    height: 60px;
+    left: 50%;
+    margin-left: -30px;
+    margin-top: -30px;
+    position: absolute;
+    top: 50%;
+    width: 60px;
+}
+
 .c-top-stories {
     box-sizing: border-box;
     display: none;
+    position: relative;
     width: 100%;
 
     &.has-navigation {
@@ -35,7 +72,8 @@
 }
 
 .c-top-stories__nav {
-    display: none;
+    box-sizing: border-box;
+    // display: none;
 }
 
 .c-top-stories__nav-btn {

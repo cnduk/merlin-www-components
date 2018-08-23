@@ -185,9 +185,48 @@ export function initInfobarTracking() {
 }
 
 /**
+ * Social Follow event tracking
+ */
+export function onSocialFollowClick(e) {
+    var link = e.delegateTarget;
+    var eventLabel = link.href + ' | ' + link.innerText;
+
+    GATracker.SendAll(GATracker.SEND_HITTYPES.EVENT, {
+        eventCategory: 'Social',
+        eventAction: 'Follow',
+        eventLabel: eventLabel
+    });
+}
+
+export function initFollowButtonsTracking(){
+    addEvent(document, 'click', delegate(
+        '.c-nav__share-link', onSocialFollowClick));
+}
+
+/**
+ * Section newsletter tracking
+ */
+export function onSectionNewsletterSubmit(){
+    GATracker.SendAll(GATracker.SEND_HITTYPES.EVENT, {
+        eventCategory: 'slice_newsletter',
+        eventAction: 'Submit',
+        eventLabel: 'Continue'
+    });
+}
+
+export function initSectionNewsletterTracking(){
+    if(!document.querySelector('.c-newsletter__form')) return;
+    addEvent(document, 'submit', delegate(
+        '.c-newsletter__form', onSectionNewsletterSubmit));
+}
+
+
+/**
  * Initialise link tracking
  */
 export default function initLinkTracking() {
     bindEvents();
     initInfobarTracking();
+    initFollowButtonsTracking();
+    initSectionNewsletterTracking();
 }

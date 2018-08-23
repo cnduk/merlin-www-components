@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.13.13"></a>
+## [1.13.13](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.12...@cnbritain/merlin-www-section-card-list@1.13.13) (2018-08-22)
+
+
+### Bug Fixes
+
+* **merlin-www-section-card-list:** correct vogue max width on wrapper ([758850e](https://github.com/cnduk/merlin-www-components/commit/758850e))
+
+
+
+
+<a name="1.13.12"></a>
+## [1.13.12](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.11...@cnbritain/merlin-www-section-card-list@1.13.12) (2018-08-22)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-card-list
+
 <a name="1.13.11"></a>
 ## [1.13.11](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.10...@cnbritain/merlin-www-section-card-list@1.13.11) (2018-08-21)
 

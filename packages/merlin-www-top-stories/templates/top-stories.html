@@ -1,4 +1,4 @@
-<aside class="c-top-stories">
+<aside class="c-top-stories js-c-top-stories">
     <div class="c-top-stories-wrapper">
         <div class="c-top-stories__nav">
             {{# data.left_arrow }}
@@ -19,7 +19,7 @@
                 {{# data.items }}
                 {{^ state.is_ad }}
                     {{# data.item.state.is_ad }}
-                    <li class="c-top-stories__cards-listitem c-top-stories__cards-listitem--ad is-hidden {{ style.cls }}">
+                    <li class="c-top-stories__cards-listitem c-top-stories__cards-listitem--ad is-hidden{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
                         {{# data.item }}
                         {{> @cnbritain/merlin-www-ads }}
                         {{/ data.item }}

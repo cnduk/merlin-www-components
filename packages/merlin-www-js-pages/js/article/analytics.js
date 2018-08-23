@@ -24,6 +24,7 @@ export default function init() {
     initReadNextTracking();
     initInlineEmbedTracking();
     initTopStoriesTracking();
+    initSocialShareTracking();
 }
 
 
@@ -219,4 +220,36 @@ function onTopStoriesClick(e){
 export function initTopStoriesTracking(){
     addEvent(document, 'click', delegate(
         '.c-top-stories .c-card__link', onTopStoriesClick));
+}
+
+/**
+ * Social Share event tracking
+ */
+
+function onSocialShareClick(e) {
+    var eventAction = null;
+    var eventLabel = null;
+
+    //Share: article, gallery, video or show shares
+    if (hasClass(e.delegateTarget, '.btn-share')) {
+        eventAction = 'Share';
+
+    //Image Share: gallery image shares
+    } else if(hasClass(e.delegateTarget, '.c-figure__toolbar-listitem')){
+        eventAction = 'Image Share';
+    }
+
+    var link = e.delegateTarget.querySelector('a');
+    eventLabel = link.href + ' | ' + link.innerText;
+
+    sendCustomEvent({
+        eventCategory: 'Social',
+        eventAction: eventAction,
+        eventLabel: eventLabel
+    });
+}
+
+export function initSocialShareTracking(){
+    addEvent(document, 'click', delegate(
+        '.btn-share, .c-figure__toolbar-listitem', onSocialShareClick));
 }

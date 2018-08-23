@@ -197,6 +197,7 @@
     @include at-x-large-size {
         @include font-size(14px);
         @include font-weight(600);
+        border-bottom: 1px solid $WHITE;
         margin: 0 16px;
         &:hover {
             border-bottom: 1px solid $SHERPA-BLUE;
