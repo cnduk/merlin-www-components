@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.13"></a>
+## [1.2.13](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-elementscroll@1.2.12...@cnbritain/merlin-www-js-elementscroll@1.2.13) (2018-08-21)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-elementscroll
+
+<a name="1.2.12"></a>
+## [1.2.12](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-elementscroll@1.2.11...@cnbritain/merlin-www-js-elementscroll@1.2.12) (2018-08-17)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-elementscroll
+
 <a name="1.2.11"></a>
 ## [1.2.11](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-elementscroll@1.2.10...@cnbritain/merlin-www-js-elementscroll@1.2.11) (2018-06-06)
 

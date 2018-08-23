@@ -62,7 +62,7 @@
     }
 }
 
-li.a-review__rating-list__item {
+.a-review__rating-list__item {
     background-color: $vanilla-ice;
     display: inline-block;
     float: initial;
@@ -76,7 +76,7 @@ li.a-review__rating-list__item {
     }
 }
 
-li.a-review__rating-list__item--active {
+.a-review__rating-list__item--active {
     background-color: $careys-pink;
 }
 

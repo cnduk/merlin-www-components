@@ -3,6 +3,109 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.13.13"></a>
+## [1.13.13](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.12...@cnbritain/merlin-www-section-card-list@1.13.13) (2018-08-22)
+
+
+### Bug Fixes
+
+* **merlin-www-section-card-list:** correct vogue max width on wrapper ([758850e](https://github.com/cnduk/merlin-www-components/commit/758850e))
+
+
+
+
+<a name="1.13.12"></a>
+## [1.13.12](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.11...@cnbritain/merlin-www-section-card-list@1.13.12) (2018-08-22)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-card-list
+
+<a name="1.13.11"></a>
+## [1.13.11](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.10...@cnbritain/merlin-www-section-card-list@1.13.11) (2018-08-21)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-card-list
+
+<a name="1.13.10"></a>
+## [1.13.10](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.9...@cnbritain/merlin-www-section-card-list@1.13.10) (2018-08-21)
+
+
+### Bug Fixes
+
+* **merlin-www-section-card-list:** move max width onto only contributors for glamour ([3ff3c45](https://github.com/cnduk/merlin-www-components/commit/3ff3c45))
+
+
+
+
+<a name="1.13.9"></a>
+## [1.13.9](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.8...@cnbritain/merlin-www-section-card-list@1.13.9) (2018-08-20)
+
+
+### Bug Fixes
+
+* **merlin-www-section-card-list:** fix tatler inline ads on tag page ([9f6f8d5](https://github.com/cnduk/merlin-www-components/commit/9f6f8d5))
+
+
+
+
+<a name="1.13.8"></a>
+## [1.13.8](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.7...@cnbritain/merlin-www-section-card-list@1.13.8) (2018-08-17)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-card-list
+
+<a name="1.13.7"></a>
+## [1.13.7](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.6...@cnbritain/merlin-www-section-card-list@1.13.7) (2018-08-17)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-card-list
+
+<a name="1.13.6"></a>
+## [1.13.6](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.5...@cnbritain/merlin-www-section-card-list@1.13.6) (2018-08-17)
+
+
+### Bug Fixes
+
+* **merlin-www-section-card-list:** set is-hidden styles to be important ([c2afe8d](https://github.com/cnduk/merlin-www-components/commit/c2afe8d))
+
+
+
+
+<a name="1.13.5"></a>
+## [1.13.5](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.4...@cnbritain/merlin-www-section-card-list@1.13.5) (2018-08-17)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-card-list
+
+<a name="1.13.4"></a>
+## [1.13.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.3...@cnbritain/merlin-www-section-card-list@1.13.4) (2018-08-17)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-card-list
+
+<a name="1.13.3"></a>
+## [1.13.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.2...@cnbritain/merlin-www-section-card-list@1.13.3) (2018-08-13)
+
+
+### Bug Fixes
+
+* **merlin-www-section-card-list:** correct vogue contributor styles ([656d563](https://github.com/cnduk/merlin-www-components/commit/656d563))
+
+
+
+
 <a name="1.13.1"></a>
 ## [1.13.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.0...@cnbritain/merlin-www-section-card-list@1.13.1) (2018-08-03)
 

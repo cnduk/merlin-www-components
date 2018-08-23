@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.10.13"></a>
+## [1.10.13](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-top-stories@1.10.12...@cnbritain/merlin-www-top-stories@1.10.13) (2018-08-22)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-top-stories
+
+<a name="1.10.12"></a>
+## [1.10.12](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-top-stories@1.10.11...@cnbritain/merlin-www-top-stories@1.10.12) (2018-08-21)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-top-stories
+
+<a name="1.10.11"></a>
+## [1.10.11](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-top-stories@1.10.10...@cnbritain/merlin-www-top-stories@1.10.11) (2018-08-21)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-top-stories
+
+<a name="1.10.10"></a>
+## [1.10.10](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-top-stories@1.10.9...@cnbritain/merlin-www-top-stories@1.10.10) (2018-08-17)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-top-stories
+
+<a name="1.10.9"></a>
+## [1.10.9](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-top-stories@1.10.8...@cnbritain/merlin-www-top-stories@1.10.9) (2018-08-17)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-top-stories
+
+<a name="1.10.8"></a>
+## [1.10.8](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-top-stories@1.10.7...@cnbritain/merlin-www-top-stories@1.10.8) (2018-08-17)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-top-stories
+
+<a name="1.10.7"></a>
+## [1.10.7](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-top-stories@1.10.6...@cnbritain/merlin-www-top-stories@1.10.7) (2018-08-17)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-top-stories
+
 <a name="1.10.6"></a>
 ## [1.10.6](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-top-stories@1.10.5...@cnbritain/merlin-www-top-stories@1.10.6) (2018-08-02)
 

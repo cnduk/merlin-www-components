@@ -68,7 +68,7 @@
     display: inline-block;
 }
 
-li.a-review__rating-list__item {
+.a-review__rating-list__item {
     border: 1px solid $black;
     width: 12px;
     height: 12px;
@@ -76,7 +76,7 @@ li.a-review__rating-list__item {
     margin-right: 5px;
 }
 
-li.a-review__rating-list__item--active {
+.a-review__rating-list__item--active {
     background: $black;
 }
 

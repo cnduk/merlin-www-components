@@ -1,7 +1,12 @@
+
 @import "@cnbritain/merlin-www-common:houseandgarden";
-@import "@cnbritain/merlin-www-card-list:houseandgarden";
 @import "@cnbritain/merlin-www-image:houseandgarden";
 @import "@cnbritain/merlin-www-topic-strip:houseandgarden";
+@import "@cnbritain/merlin-www-card:houseandgarden";
+@import "@cnbritain/merlin-www-bbcode:houseandgarden";
+@import "@cnbritain/merlin-www-gallery-strip:houseandgarden";
+// NOTE: houseandgarden does not have a show card carousel
+// @import "@cnbritain/merlin-www-show-card-carousel:houseandgarden";
 
 @import "../wireframe/wireframe";
 
@@ -9,84 +14,44 @@
     margin: $MOBILE_SLICE_MARGIN 0;
     padding: 0 $MOBILE_SIDE_GUTTER;
 
-    @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+    @include at-medium-size {
         margin: $TABLET_SLICE_MARGIN 0;
         padding: 0 $TABLET_SIDE_GUTTER;
     }
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin: $DESKTOP_SLICE_MARGIN 0;
         padding: 0 $DESKTOP_SIDE_GUTTER;
     }
 }
 
-.tg-header--video {
-    .tg-header__intro__image {
-        height: 38px;
-        margin: 0 auto;
-        width: 230px;
-
-        svg {
-            fill: $mine-shaft;
-        }
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            height: 45px;
-            width: 315px;
-        }
-    }
-}
-
-.tg-header--profile {
-    .tg-header__intro__image {
-        border-radius: 50%;
-        height: 85px;
-        margin: 0 auto 20px auto;
-        overflow: hidden;
-        width: 85px;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            width: 130px;
-            height: 130px;
-        }
-
-        img {
-            border-radius: 50%;
-            height: 100%;
-            overflow: hidden;
-            width: 100%;
-        }
-    }
-}
-
-.tg-header--brand,
-.tg-header--event,
-.tg-header--topic {
-    .tg-header__intro__image {
-        margin-bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 200px;
-
-        img {
-            width: 100%;
-        }
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            margin-bottom: 30px;
-            width: 250px;
-        }
-    }
-}
-
-.tg-header__wrapper {
-    max-width: 700px;
+.tg-header-wrapper {
     margin: 0 auto;
 }
 
-.tg-header__intro {}
-.tg-header__intro__image {}
+/**
+ * Intro
+ * Hero, logo and title
+ */
+.tg-header__intro {
+    padding: 0 20px;
 
+    @include at-medium-size {
+        padding: 0 $TABLET_SIDE_GUTTER;
+    }
+
+    @include at-x-large-size {
+        padding: 0 60px;
+    }
+}
+.tg-header__hero-credit {
+    @include font('BRANDON GROTESQUE', 10px, 400, 10px);
+    bottom: 5px;
+    color: $dove-gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    right: 0;
+}
 .tg-header__title {
     @include font("MILLER_DISPLAY", 40px, 'NORMAL', 41px);
     color: $mine-shaft;
@@ -94,25 +59,35 @@
     margin: 0 0 10px 0;
     text-align: center;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         @include font-size(60px);
         @include line-height(65px);
         margin-bottom: 20px;
     }
 }
+.has-hero {
+    .tg-header__intro {
+        padding: 30px 20px;
 
-.tg-header__separator {
-    display: none;
+        @include at-medium-size {
+            padding: 60px $TABLET_SIDE_GUTTER;
+        }
+
+        @include at-x-large-size {
+            padding: 60px 60px;
+        }
+    }
 }
 
+
+/**
+ * Description + expand
+ */
 .tg-header__description {
     color: $mine-shaft;
     margin: 10px auto 30px auto;
+    max-width: 700px;
     text-align: center;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin: 20px auto 40px auto;
-    }
 
     a {
         border-bottom: 2px solid $careys-pink;
@@ -125,11 +100,6 @@
         color: $mine-shaft;
         font-style: italic;
         letter-spacing: 0;
-
-        @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-            @include font-size(23px);
-            @include line-height(28px);
-        }
     }
 
     > *:first-child {
@@ -139,40 +109,62 @@
     > *:last-child {
         margin-bottom: 0;
     }
+
+    @include at-x-large-size {
+        margin: 20px auto 40px auto;
+
+        p {
+            @include font-size(23px);
+            @include line-height(28px);
+        }
+    }
 }
 
+.tg-header__expand-btn {
+	color: $silver-chalice;
+    @include font("BRANDON GROTESQUE", 15px, 700, 15px);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &:hover,
+    &:focus {
+        color: $silver;
+    }
+}
+
+/**
+ * Sponsor
+ */
 .tg-header__sponsor {
     @include font('BRANDON GROTESQUE');
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $silver;
     max-width: 200px;
     padding: 10px 0 0 0;
-}
-.tg-header__sponsor-prefix {
-    @include font-size(10px);
-    color: #262626;
-    margin-right: 10px;
-    text-transform: uppercase;
-}
-.tg-header__sponsor-image {}
-.tg-header__sponsor-name {
-    color: inherit;
-    font-weight: bold;
-}
 
-@include at-medium-size {
-    .tg-header__sponsor {
+    @include at-medium-size {
         border-top: none;
         margin: 30px auto;
         max-width: none;
     }
 }
 
+.tg-header__sponsor-prefix {
+    @include font-size(10px);
+    color: $mine-shaft;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+
+.tg-header__sponsor-name {
+    color: inherit;
+    font-weight: bold;
+}
+
+/**
+ * Navigation list
+ */
 .tg-header__topic-strip {
     margin: 20px auto;
-
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
-        margin: 30px auto;
-    }
 
     .c-topic-strip {
         text-align: center;
@@ -185,28 +177,106 @@
         @include font-size(12px);
         @include line-height(12px);
 
-        &:hover {
+        &:hover,
+        &:focus {
             @include button-group-light-hover();
         }
     }
+
+    @include at-x-large-size {
+        margin: 30px auto;
+    }
 }
 
+/**
+ * Featured cards
+ */
 .tg-header__cards {
     margin: 25px auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
 
-    @include min-screen($DESKTOP_SIDE_GUTTER_BREAKPOINT) {
+    @include at-x-large-size {
         margin: 60px auto;
     }
 }
 
-.tg-header__expand-btn {
-	color: $silver-chalice;
-    @include font("BRANDON GROTESQUE", 15px, 700, 15px);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.tg-header__cards-list {
+    margin: -10px -10px;
 
-    &:hover {
-        color: $silver;
+    .tg-header__cards-listitem {
+        display: inline-block;
+        padding: 0 10px;
+        margin: 10px 0;
+        width: 100%;
+
+        @include two-column-size() {
+            width: 50%;
+        }
+
+        @include four-column-size() {
+            width: 33.33333%;
+        }
+    }
+}
+
+/**
+ * Header variants
+ */
+.tg-header--video {
+    .tg-header__intro-image {
+        height: 38px;
+        margin: 0 auto;
+        width: 230px;
+
+        svg {
+            fill: $mine-shaft;
+        }
+
+        @include at-x-large-size {
+            height: 45px;
+            width: 315px;
+        }
+    }
+}
+
+.tg-header--profile {
+    .tg-header__intro-image {
+        border-radius: 50%;
+        height: 85px;
+        margin: 0 auto 20px auto;
+        overflow: hidden;
+        width: 85px;
+
+        img {
+            border-radius: 50%;
+            height: 100%;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        @include at-x-large-size {
+            width: 130px;
+            height: 130px;
+        }
+    }
+}
+
+.tg-header--brand,
+.tg-header--event,
+.tg-header--topic {
+    .tg-header__intro-image {
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+
+        img {
+            width: 100%;
+        }
+
+        @include at-x-large-size {
+            margin-bottom: 30px;
+            width: 250px;
+        }
     }
 }

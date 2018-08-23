@@ -1,22 +1,9 @@
 'use strict';
 
-import {
-    debounce,
-    hasClass,
-    getParent,
-    removeClass
-} from '@cnbritain/merlin-www-js-utils/js/functions';
-
-import {
-    AdManager,
-    AdUtils
-} from '@cnbritain/merlin-www-ads';
-import {
-    ArticleManager
-} from '@cnbritain/merlin-www-article';
-import {
-    ARTICLE_TYPES
-} from '@cnbritain/merlin-www-article/js/constants';
+import {debounce, getParent} from '@cnbritain/merlin-www-js-utils/js/functions';
+import {AdManager, AdUtils} from '@cnbritain/merlin-www-ads';
+import {ArticleManager} from '@cnbritain/merlin-www-article';
+import {ARTICLE_TYPES} from '@cnbritain/merlin-www-article/js/constants';
 
 var debouncedRecalculateArticleSize = debounce(recalculateArticleSize, 300);
 
@@ -45,22 +32,11 @@ export function recalculateArticleSize() {
     }
 }
 
-export function renderTopStoriesAd(ad) {
-    var listItem = getParent(ad.el, '.js-c-card-list__item');
-    removeClass(listItem, 'is-hidden');
-}
-
-export function onAdRender(e) {
-    if (hasClass(e.ad.el.parentNode, 'js-ad-top-stories')) {
-        renderTopStoriesAd(e.ad);
-    }
+export function onAdRender() {
     debouncedRecalculateArticleSize();
 }
 
 export function onAdStop(e) {
-    // Top stories ad
-    if (hasClass(e.ad.el.parentNode, 'js-ad-top-stories')) return;
-
     // Remove it from the page
     var ad = getParent(e.ad.el, '.ad--article');
     e.ad.destroy();

@@ -22,7 +22,7 @@
     margin-right: 0px;
 }
 
-li.a-gallery__thumbnail {
+.a-gallery__thumbnail {
     box-sizing: border-box;
     margin: 2px 0 0 0;
     padding: 0 1px;
@@ -48,7 +48,7 @@ li.a-gallery__thumbnail {
     }
 }
 
-li.a-gallery__image-listitem {
+.a-gallery__image-listitem {
     margin-bottom: 40px;
 
     &:last-child {
@@ -97,7 +97,7 @@ li.a-gallery__image-listitem {
         margin-left: -10px;
         margin-right: -10px;
     }
-    li.a-gallery__thumbnail {
+    .a-gallery__thumbnail {
         margin: 20px 0 0 0;
         padding: 0 10px;
     }
@@ -109,7 +109,7 @@ li.a-gallery__image-listitem {
             width: 40px;
         }
     }
-    li.a-gallery__image-listitem {
+    .a-gallery__image-listitem {
         margin-bottom: 60px;
 
         &:last-child {

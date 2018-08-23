@@ -1,10 +1,14 @@
 {
     "type": "TagHeader",
     "state": {
-        "is_body_expandable": false
+        "is_body_expandable": true,
+        "has_hero": true
+    },
+    "translation": {
+        "intro_continue_reading": "Continue reading"
     },
     "data": {
-        "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, tempora. Obcaecati accusantium officia ea praesentium error nam dolores, doloremque asperiores laborum dicta, provident nisi, repellendus, nostrum illum at quae doloribus.",
+        "body": "<p class=\"bb-p\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, tempora. Obcaecati accusantium officia ea praesentium error nam dolores, doloremque asperiores laborum dicta, provident nisi, repellendus, nostrum illum at quae doloribus.</p><p class=\"bb-p\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, tempora. Obcaecati accusantium officia ea praesentium error nam dolores, doloremque asperiores laborum dicta, provident nisi, repellendus, nostrum illum at quae doloribus.</p><p class=\"bb-p\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, tempora. Obcaecati accusantium officia ea praesentium error nam dolores, doloremque asperiores laborum dicta, provident nisi, repellendus, nostrum illum at quae doloribus.</p>",
         "style_file": {
             "type": "GalleryStrip",
             "state": {},
@@ -8367,6 +8371,30 @@
                 "title": "January 2007",
                 "srcset": "https://vg-images.condecdn.net/image/JLnGBz7r3bP/crop/405 405w",
                 "credit": null,
+                "look_number": null,
+                "orientation": "portrait"
+            },
+            "style": {
+                "cls": "img-lazyload tg-header__intro__image"
+            }
+        },
+        "hero_image":  {
+            "type": "Image",
+            "state": {
+                "is_static": false,
+                "is_image": true,
+                "is_picture": false,
+                "is_linked": false,
+                "is_svg": false
+            },
+            "data": {
+                "alt_text": null,
+                "image_url": "https://images.unsplash.com/photo-1530739013610-d03424690e4b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bf2a6fa46328c32e5772fb8da2159af8&auto=format&fit=crop&w=1049&q=80",
+                "description": "A fresh-faced Chung wore her hair long and centre-parted in a casual style.",
+                "lazyload": true,
+                "title": "January 2007",
+                "srcset": "https://images.unsplash.com/photo-1530739013610-d03424690e4b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bf2a6fa46328c32e5772fb8da2159af8&auto=format&fit=crop&w=1049&q=80 405w",
+                "credit": "Example image credit",
                 "look_number": null,
                 "orientation": "portrait"
             },

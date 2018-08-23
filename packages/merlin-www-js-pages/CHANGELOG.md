@@ -3,6 +3,88 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.10.0"></a>
+# [1.10.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.9.26...@cnbritain/merlin-www-js-pages@1.10.0) (2018-08-22)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** apply listener to navigation follow buttons for tracking ([0d9155b](https://github.com/cnduk/merlin-www-components/commit/0d9155b))
+
+
+### Features
+
+* **merlin-www-js-pages:** add event tracking on section newsletter ([fa273fa](https://github.com/cnduk/merlin-www-components/commit/fa273fa))
+* **merlin-www-js-pages:** Add Google Analytics event tracking to social [ch650] ([364d0c5](https://github.com/cnduk/merlin-www-components/commit/364d0c5))
+
+
+
+
+<a name="1.9.26"></a>
+## [1.9.26](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.9.25...@cnbritain/merlin-www-js-pages@1.9.26) (2018-08-21)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** make lint happy ([9f71287](https://github.com/cnduk/merlin-www-components/commit/9f71287))
+
+
+
+
+<a name="1.9.25"></a>
+## [1.9.25](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.9.24...@cnbritain/merlin-www-js-pages@1.9.25) (2018-08-21)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** correct selectors for the magazine page ([514390c](https://github.com/cnduk/merlin-www-components/commit/514390c))
+
+
+
+
+<a name="1.9.24"></a>
+## [1.9.24](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.9.23...@cnbritain/merlin-www-js-pages@1.9.24) (2018-08-17)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
+<a name="1.9.23"></a>
+## [1.9.23](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.9.22...@cnbritain/merlin-www-js-pages@1.9.23) (2018-08-17)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
+<a name="1.9.22"></a>
+## [1.9.22](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.9.21...@cnbritain/merlin-www-js-pages@1.9.22) (2018-08-17)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
+<a name="1.9.21"></a>
+## [1.9.21](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.9.20...@cnbritain/merlin-www-js-pages@1.9.21) (2018-08-17)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
+<a name="1.9.20"></a>
+## [1.9.20](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.9.19...@cnbritain/merlin-www-js-pages@1.9.20) (2018-08-17)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** remove card-list dependency ([0829413](https://github.com/cnduk/merlin-www-components/commit/0829413))
+
+
+
+
 <a name="1.9.13"></a>
 ## [1.9.13](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.9.12...@cnbritain/merlin-www-js-pages@1.9.13) (2018-08-03)
 

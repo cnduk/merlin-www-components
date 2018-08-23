@@ -3,6 +3,63 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.16.5"></a>
+## [1.16.5](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.16.4...@cnbritain/merlin-www-ads@1.16.5) (2018-08-22)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-ads
+
+<a name="1.16.4"></a>
+## [1.16.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.16.3...@cnbritain/merlin-www-ads@1.16.4) (2018-08-21)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-ads
+
+<a name="1.16.3"></a>
+## [1.16.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.16.2...@cnbritain/merlin-www-ads@1.16.3) (2018-08-17)
+
+
+### Bug Fixes
+
+* **merlin-www-ads:** lint ([50d4c88](https://github.com/cnduk/merlin-www-components/commit/50d4c88))
+
+
+
+
+<a name="1.16.2"></a>
+## [1.16.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.16.1...@cnbritain/merlin-www-ads@1.16.2) (2018-08-17)
+
+
+### Bug Fixes
+
+* **merlin-www-ads:** close tead ads when a certain postmessage comes in ([ebaaadf](https://github.com/cnduk/merlin-www-components/commit/ebaaadf))
+
+
+
+
+<a name="1.16.1"></a>
+## [1.16.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.16.0...@cnbritain/merlin-www-ads@1.16.1) (2018-08-17)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-ads
+
+<a name="1.16.0"></a>
+# [1.16.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.15.4...@cnbritain/merlin-www-ads@1.16.0) (2018-08-17)
+
+
+### Features
+
+* **merlin-www-ads:** add promotion-recommended ([78e4c0a](https://github.com/cnduk/merlin-www-components/commit/78e4c0a))
+
+
+
+
 <a name="1.15.4"></a>
 ## [1.15.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.15.3...@cnbritain/merlin-www-ads@1.15.4) (2018-08-02)
 

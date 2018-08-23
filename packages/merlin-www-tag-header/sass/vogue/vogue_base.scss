@@ -10,61 +10,7 @@
     }
 }
 
-.tg-header--video {
-    margin-bottom: 0;
-
-    .tg-header__intro {
-        padding: 40px 0 30px 0;
-
-        @include at-medium-size {
-            padding: 60px 0 40px 0;
-        }
-    }
-}
-
-.tg-header--miss-vogue  {
-
-    .tg-header__intro__image,
-    .tg-header__intro svg {
-        margin-bottom: 30px;
-        width: 213px;
-
-        @include at-medium-size {
-            margin-bottom: 40px;
-            width: 320px;
-        }
-    }
-}
-
-.tg-header--person {
-    .c-gallery-strip__wrapper {
-        box-sizing: border-box;
-        margin: 0 auto;
-        max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
-        padding-left: $MOBILE_SIDE_GUTTER;
-        padding-right: $MOBILE_SIDE_GUTTER;
-
-        @include at-medium-size {
-            padding-left: $TABLET_SIDE_GUTTER;
-            padding-right: $TABLET_SIDE_GUTTER;
-        }
-
-        @include at-x-large-size {
-            padding-left: $DESKTOP_SIDE_GUTTER;
-            padding-right: $DESKTOP_SIDE_GUTTER;
-        }
-    }
-}
-
-// .tg-header + [class*="-ad"] .ad-block:not(.is-hidden) {
-//     padding: 40px 0 0 0;
-
-//     @include at-medium-size {
-//         padding: 60px 0 0 0;
-//     }
-// }
-
-.tg-header__wrapper {
+.tg-header-wrapper {
     padding: 0 $MOBILE_SIDE_GUTTER;
 
     @include at-medium-size {
@@ -76,6 +22,10 @@
     }
 }
 
+/**
+ * Intro
+ * Hero, logo and title
+ */
 .tg-header__intro {
     padding: 40px 0 0 0;
 
@@ -83,12 +33,28 @@
         padding: 60px 0 0 0;
     }
 }
+.tg-header__hero-credit {
+    @include font('NOBEL', 9px);
+    bottom: 0;
+    color: $silver;
+    letter-spacing: 0.05em;
+    right: 0;
+    text-transform: uppercase;
 
-.tg-header__intro__image,
+    &:before {
+        content: 'Credit: ';
+    }
+}
+
+.tg-header__intro-image,
 .tg-header__intro svg {
     display: block;
     margin: 0 auto 20px auto;
     width: 160px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 
     @include at-medium-size {
         margin-bottom: 30px;
@@ -97,10 +63,6 @@
 
     @include at-x-large-size {
         width: 250px;
-    }
-
-    &:last-child {
-        margin-bottom: 0;
     }
 }
 
@@ -114,17 +76,20 @@
         margin-bottom: 0;
     }
 
-    @include at-x-large-size{
+    .has-hero & {
+        color: $white;
+    }
+
+    @include at-x-large-size {
         @include font-size(50px);
         @include line-height(50px);
         margin-bottom: 20px;
     }
 }
 
-.tg-header__separator {
-    display: none;
-}
-
+/**
+ * Description + expand
+ */
 .tg-header__description {
     color: $dove-gray;
     @include font('ADOBE CASLON', 16px, null, 20px);
@@ -138,35 +103,54 @@
         margin: 15px auto 30px auto;
     }
 }
+.tg-header__expand-btn {
+    @include button-single;
+    @include button-single-light;
+    margin-top: 30px;
 
+    &:hover,
+    &:focus {
+        @include button-single-light-hover;
+    }
+}
+
+/**
+ * Sponsor
+ */
 .tg-header__sponsor {
     @include font-size(11px);
     margin: 20px auto;
 }
+
 .tg-header__sponsor-prefix {
     @include font('ADOBE CASLON');
-    color: #666;
+    color: $dove-gray;
     font-style: italic;
     text-transform: lowercase;
 }
-.tg-header__sponsor-image {}
+
 .tg-header__sponsor-name {
     @include font('NOBEL');
-    color: #111;
+    color: $cod-gray;
     text-transform: uppercase;
 }
 
+/**
+ * Navigation list
+ */
 .tg-header__topic-strip {
     margin: 25px 0 40px 0;
+    text-align: center;
 
     @include at-medium-size {
         margin: 30px 0 60px 0;
     }
 }
-.c-topic-strip__item--topic a {
-    display: inline-block;
-}
 
+
+/**
+ * Featured cards
+ */
 .tg-header__cards {
     margin: 0 auto 40px auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
@@ -184,18 +168,110 @@
     }
 }
 
+.tg-header__cards-list {
+    margin: 0 -20px;
+    text-align: center;
+
+    .tg-header__cards-listitem {
+        padding: 0 20px;
+        text-align: left;
+        width: 100%;
+    }
+
+    @include one-column-size(){
+        .tg-header__cards-listitem + .tg-header__cards-listitem {
+            margin-top: 20px;
+
+            .c-card {
+                border-top: 1px solid $gallery;
+                padding-top: 20px;
+
+                &.c-card--dark {
+                    border-top: 1px solid $mine-shaft-333;
+                }
+            }
+        }
+    }
+
+
+    @include two-column-size(){
+        .tg-header__cards-listitem {
+            display: inline-block;
+            margin-bottom: 30px;
+            width: 50%;
+
+            @include last(1){
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @include three-column-size(){
+        .tg-header__cards-listitem {
+            margin-bottom: 0;
+            width: 33.33%;
+        }
+    }
+}
+
+/**
+ * Event information
+ */
+.tg-header__event-meta {
+    @include font('ADOBE CASLON', 0px, null, 20px);
+    color: $dove-gray;
+    margin: 40px 0;
+    max-width: 680px;
+    text-align: center;
+}
+
+.tg-header__event-meta__start-date {
+    @include font-size(16px);
+    display: block;
+}
+
+.tg-header__event-meta__location {
+    @include font-size(16px);
+    display: block;
+}
+
+@include at-medium-size {
+    .tg-header__event-meta {
+        margin: 15px auto 30px auto;
+    }
+
+    .tg-header__event-meta__start-date {
+        display: inline-block;
+
+        + .tg-header__event-meta__location {
+            margin-left: 8px;
+            padding-left: 8px;
+            position: relative;
+
+            &:before {
+                background: $gallery;
+                content: '';
+                display: block;
+                left: 0;
+                height: 20px;
+                position: absolute;
+                top: -2px;
+                width: 1px;
+            }
+        }
+    }
+
+    .tg-header__event-meta__location {
+        display: inline-block;
+    }
+}
+
+/**
+ * Header variants
+ */
 .tg-header__shows,
 .tg-header__style-file {
     padding: 40px $MOBILE_SIDE_GUTTER;
-
-    @include at-medium-size {
-        padding: 40px $TABLET_SIDE_GUTTER;
-    }
-
-    @include at-x-large-size {
-        padding: 40px $DESKTOP_SIDE_GUTTER;
-    }
-
     margin: 0 auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
 
@@ -224,52 +300,57 @@
             }
         }
     }
-}
 
-.tg-header__event-meta {
-    @include font('ADOBE CASLON', 0px, null, 20px);
-    color: $dove-gray;
-    margin: 40px 0;
-    max-width: 680px;
-    text-align: center;
-}
-.tg-header__event-meta__start-date {
-    @include font-size(16px);
-    display: block;
-}
-.tg-header__event-meta__separator {}
-.tg-header__event-meta__location {
-    @include font-size(16px);
-    display: block;
-}
-
-@include at-medium-size {
-    .tg-header__event-meta {
-        margin: 15px auto 30px auto;
+    @include at-medium-size {
+        padding: 40px $TABLET_SIDE_GUTTER;
     }
-    .tg-header__event-meta__start-date {
-        display: inline-block;
 
+    @include at-x-large-size {
+        padding: 40px $DESKTOP_SIDE_GUTTER;
+    }
+}
 
-        + .tg-header__event-meta__location {
-            margin-left: 8px;
-            padding-left: 8px;
-            position: relative;
+.tg-header--video {
+    margin-bottom: 0;
 
-            &:before {
-                background: $gallery;
-                content: '';
-                display: block;
-                left: 0;
-                height: 20px;
-                position: absolute;
-                top: -2px;
-                width: 1px;
-            }
+    .tg-header__intro {
+        padding: 40px 0 30px 0;
+
+        @include at-medium-size {
+            padding: 60px 0 40px 0;
         }
     }
-    .tg-header__event-meta__separator {}
-    .tg-header__event-meta__location {
-        display: inline-block;
+}
+
+.tg-header--miss-vogue  {
+    .tg-header__intro-image,
+    .tg-header__intro svg {
+        margin-bottom: 30px;
+        width: 213px;
+
+        @include at-medium-size {
+            margin-bottom: 40px;
+            width: 320px;
+        }
+    }
+}
+
+.tg-header--person {
+    .c-gallery-strip__wrapper {
+        box-sizing: border-box;
+        margin: 0 auto;
+        max-width: $MAXIMUM_PAGE_WIDTH + $DESKTOP_SIDE_GUTTER + $DESKTOP_SIDE_GUTTER;
+        padding-left: $MOBILE_SIDE_GUTTER;
+        padding-right: $MOBILE_SIDE_GUTTER;
+
+        @include at-medium-size {
+            padding-left: $TABLET_SIDE_GUTTER;
+            padding-right: $TABLET_SIDE_GUTTER;
+        }
+
+        @include at-x-large-size {
+            padding-left: $DESKTOP_SIDE_GUTTER;
+            padding-right: $DESKTOP_SIDE_GUTTER;
+        }
     }
 }

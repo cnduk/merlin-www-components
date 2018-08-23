@@ -72,6 +72,8 @@
     &:disabled {
         @include button-top-stories-disabled;
     }
+
+    width: 100%;
 }
 
 .c-top-stories__nav-btn--left {

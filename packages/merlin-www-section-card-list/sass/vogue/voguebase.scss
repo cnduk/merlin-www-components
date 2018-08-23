@@ -151,7 +151,11 @@
     @include column-base;
     @include add-card-separators;
 
-    .c-card-section__card-list {}
+    .c-card-section__card-list {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 800px;
+    }
     .c-card-section__card-listitem {
         width: 100%;
     }
@@ -297,7 +301,7 @@
 
 .c-card-section-wrapper {
     margin: 0 auto;
-    max-width: $ARTICLE_TOTAL;
+    max-width: $MAXIMUM_PAGE_WIDTH;
 }
 
 .c-card-section__header {}
@@ -407,6 +411,7 @@
 }
 
 .c-card-section--c-contributors {
+    @include bordered-title-1;
     @include column-1-2-3;
 
     .c-card-section__btn {

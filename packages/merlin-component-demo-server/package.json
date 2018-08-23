@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-component-demo-server",
-  "version": "3.4.2",
+  "version": "3.4.4",
   "description": "Mustache server used to demo merlin-www-components",
   "main": "lib/index.js",
   "bin": {
@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-sass-custom-importer": "^1.4.2",
+    "@cnbritain/merlin-sass-custom-importer": "^1.4.4",
     "chalk": "^1.1.3",
     "chokidar": "^2.0.3",
     "commander": "^2.9.0",

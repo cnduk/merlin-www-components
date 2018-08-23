@@ -96,7 +96,7 @@
     }
 }
 
-li.a-review__rating-list__item {
+.a-review__rating-list__item {
     border: solid 3px $mandy;
     display: inline-block;
     float: initial;
@@ -106,7 +106,7 @@ li.a-review__rating-list__item {
     border-radius: 50px;
 }
 
-li.a-review__rating-list__item--active {
+.a-review__rating-list__item--active {
     background-color: $mandy;
 }
 

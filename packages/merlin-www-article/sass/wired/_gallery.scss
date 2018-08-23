@@ -66,8 +66,8 @@
 .g-image-nav__btn--next {}
 
 
-ul.a-gallery__image-list {}
-li.a-gallery__image-listitem {
+.a-gallery__image-list {}
+.a-gallery__image-listitem {
     margin-bottom: 40px;
 
     @include at-x-large-size {
@@ -77,7 +77,7 @@ li.a-gallery__image-listitem {
 
 .a-gallery__thumbnail-list {}
 
-li.a-gallery__thumbnail {}
+.a-gallery__thumbnail {}
 .a-gallery__thumbnail-image {}
 .a-gallery__thumbnail-hover {}
 

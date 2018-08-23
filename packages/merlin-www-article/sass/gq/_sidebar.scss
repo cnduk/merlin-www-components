@@ -6,10 +6,8 @@
 
 }
 
-.a-sidebar-content__list-item {
-    & + .a-sidebar-content__list-item {
-        margin-top: 24px;
-    }
+.a-sidebar-content__list-item + .a-sidebar-content__list-item {
+    margin-top: 24px;
 }
 
 .a-sidebar-content__title {

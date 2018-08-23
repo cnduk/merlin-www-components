@@ -4,11 +4,16 @@
 .a-review__separator {}
 .a-review__value {}
 .a-review__rating-list {
+    list-style: none;
+    margin: 0;
     overflow: hidden;
+    padding: 0;
 }
 .a-review__rating-list__item {
     float: left;
     height: 15px;
+    margin: 0;
+    padding: 0;
     width: 15px;
 }
 .a-review__rating-list__item--active {}

@@ -153,7 +153,9 @@
 
 @mixin column-base {
     .c-card-section__card-list {
+        display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
         margin: 0 -10px;
         text-align: center;
     }
@@ -374,8 +376,6 @@
 }
 
 .c-card-section__card-list {
-    display: flex;
-    flex-wrap: wrap;
     position: relative;
 }
 .c-card-section__card-listitem {

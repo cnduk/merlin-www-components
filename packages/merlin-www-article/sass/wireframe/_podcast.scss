@@ -3,8 +3,15 @@
 .a-podcast__content {}
 .a-podcast__audio {}
 .a-podcast__player {}
-.a-podcast__list {}
-.a-podcast__list-item {}
+.a-podcast__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.a-podcast__list-item {
+    margin: 0;
+    padding: 0;
+}
 .a-podcast__btn {}
 .a-podcast__btn--itunes {}
 .a-podcast__btn--rss {}

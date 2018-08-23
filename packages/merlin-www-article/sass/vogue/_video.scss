@@ -66,33 +66,6 @@
     }
 }
 
-.a-video__related {
-    background-color: $mine-shaft-222;
-    color: $white;
-    max-width: none;
-    padding-bottom: $PADDING_SMALL;
-    padding-left: $MOBILE_SIDE_GUTTER;
-    padding-right: $MOBILE_SIDE_GUTTER;
-}
-.a-video__related__wrapper {}
-.a-video__related__title {
-    @include font("NOBEL", 15px, 'BOLD', 16px);
-    color: $white;
-    margin: 0;
-    padding: $PADDING_SMALL 0;
-    position: relative;
-    text-transform: uppercase;
-}
-.a-video__related__list {
-    .c-card-list {
-        margin: 0 (-$MARGIN_XX_SMALL);
-    }
-
-    .c-card-list__item {
-        padding: 0 $PADDING_XX_SMALL;
-    }
-}
-
 .a-video__ad {
     margin-bottom: 40px;
 }

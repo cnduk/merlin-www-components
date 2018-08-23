@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.5.78"></a>
+## [1.5.78](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.5.77...@cnbritain/merlin-www-show-summary@1.5.78) (2018-08-22)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.5.77"></a>
+## [1.5.77](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.5.76...@cnbritain/merlin-www-show-summary@1.5.77) (2018-08-21)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.5.76"></a>
+## [1.5.76](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.5.75...@cnbritain/merlin-www-show-summary@1.5.76) (2018-08-21)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.5.75"></a>
+## [1.5.75](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.5.74...@cnbritain/merlin-www-show-summary@1.5.75) (2018-08-17)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.5.74"></a>
+## [1.5.74](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.5.73...@cnbritain/merlin-www-show-summary@1.5.74) (2018-08-17)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.5.73"></a>
+## [1.5.73](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.5.72...@cnbritain/merlin-www-show-summary@1.5.73) (2018-08-17)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
+<a name="1.5.72"></a>
+## [1.5.72](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.5.71...@cnbritain/merlin-www-show-summary@1.5.72) (2018-08-17)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-summary
+
 <a name="1.5.70"></a>
 ## [1.5.70](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-summary@1.5.69...@cnbritain/merlin-www-show-summary@1.5.70) (2018-08-02)
 

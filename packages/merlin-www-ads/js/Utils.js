@@ -920,7 +920,12 @@ export function createPageImpressionElement(unit, zone, values){
     return div;
 }
 
-var _NATIVE_SIZES = ['promotion-small', 'promotion-medium', 'promotion-large'];
+var _NATIVE_SIZES = [
+    'promotion-small',
+    'promotion-medium',
+    'promotion-large',
+    'promotion-recommended'
+];
 /**
  * Check if an advert is of native type
  * @param  {Ad}  adModel

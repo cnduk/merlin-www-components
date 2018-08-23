@@ -2,6 +2,7 @@
 
 import {
     addClass,
+    addEvent,
     createEventTemplate,
     getIframeFromWindow,
     getParent
@@ -109,6 +110,30 @@ window.InreadSupport = {
         InreadAd.render(inread, json);
     }
 };
+
+function closeAdSlot(id) {
+    var frame = document.getElementById(id);
+    var ad = getParent(frame, '.ad__main');
+    ad.style.display = 'none';
+}
+
+addEvent(window, 'message', function onPostMessage(e){
+    var data = e.data;
+    try {
+        data = JSON.parse(data);
+    } catch(err){
+        data = null;
+    }
+
+    if(data !== null && data.isConde && data.isTead){
+        switch(data.type){
+        case 'close':
+            closeAdSlot(data.data.id);
+            break;
+        }
+    }
+});
+
 
 /**
  * Gallery interstitial

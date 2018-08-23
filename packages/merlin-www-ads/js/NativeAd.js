@@ -21,7 +21,8 @@ var NATIVE_AD_SIZES = {
     'UNKNOWN': -1,
     'SMALL': 0,
     'MEDIUM': 1,
-    'LARGE': 2
+    'LARGE': 2,
+    'RECOMMENDED': 3
 };
 
 /**
@@ -114,6 +115,8 @@ function getNativeAdSize(nad){
         return NATIVE_AD_SIZES.MEDIUM;
     case 'promotion-small':
         return NATIVE_AD_SIZES.SMALL;
+    case 'promotion-recommended':
+        return NATIVE_AD_SIZES.RECOMMENDED;
     default:
         return NATIVE_AD_SIZES.UNKNOWN;
     }
@@ -134,6 +137,8 @@ function getNativeAdSizeName(index){
         return 'medium';
     case NATIVE_AD_SIZES.LARGE:
         return 'large';
+    case NATIVE_AD_SIZES.RECOMMENDED:
+        return 'recommended';
     }
 }
 

@@ -1,54 +1,57 @@
-@import "@cnbritain/merlin-www-common:brides";
 
+@import "@cnbritain/merlin-www-common:brides";
 @import "@cnbritain/merlin-www-image:brides";
 @import "@cnbritain/merlin-www-topic-strip:brides";
-@import "@cnbritain/merlin-www-card-list:brides";
+@import "@cnbritain/merlin-www-bbcode:brides";
+@import "@cnbritain/merlin-www-card:brides";
 @import "@cnbritain/merlin-www-gallery-strip:brides";
+// NOTE: brides does not have a show card carousel
+// @import "@cnbritain/merlin-www-show-card-carousel:brides";
 
 @import "../wireframe/wireframe";
-
-
 
 .tg-header {
     padding: 36px 0 0 0;
     text-align: center;
-}
-.tg-header__separator {
-    display: none;
 }
 
 @include at-medium-size {
     padding-top: 48px;
 }
 
-
 /**
  * Intro
  * Hero, logo and title
  */
+ .tg-header__intro {
+     padding: 0 $MOBILE_SIDE_GUTTER;
 
-.tg-header__intro {
-    padding: 0 $MOBILE_SIDE_GUTTER;
-}
+     @include at-medium-size {
+         padding: 0 $TABLET_SIDE_GUTTER;
+     }
 
-.tg-header__hero {
-    height: 100%;
-    left: 0;
-    position: absolute;
+     @include at-x-large-size {
+         padding: 0 60px;
+     }
+ }
+
+.tg-header__hero {}
+.tg-header__hero-credit {
+    @include font('SOLEIL', 9px, null, 12px);
+    color: rgba($candle-grey, 0.75);
+    letter-spacing: 0.06em;
+    margin: 6px 0 0 0;
+    padding: 0;
+    text-shadow: 0 0 4px rgba($black, 0.08);
+    text-transform: uppercase;
+    right: 0;
     top: 0;
-    width: 100vw;
-    z-index: 1;
-
-    img {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 100%;
-    }
 }
-.tg-header__hero-credit {}
+.tg-header__hero-credit:before {
+    content: 'Credit: ';
+}
 
-.tg-header__intro__image {
+.tg-header__intro-image {
     margin: 0 auto 24px auto;
     max-width: 168px;
 
@@ -60,7 +63,6 @@
     @include at-medium-size {
         max-width: 240px;
     }
-
 }
 
 .tg-header__title {
@@ -70,6 +72,8 @@
     font-style: italic;
     margin: 0 auto;
     max-width: 800px;
+    position: relative;
+    text-align: center;
 
     span {
         box-shadow: inset 0 -0.25em 0 0 $white,
@@ -83,61 +87,51 @@
 }
 
 .has-hero {
-
     .tg-header__intro {
-        overflow: hidden;
-        padding-top: 66.875%;
-        position: relative;
+        padding: 30px $MOBILE_SIDE_GUTTER;
 
         @include at-medium-size {
-            padding-top: 30%;
+            padding: 60px $TABLET_SIDE_GUTTER;
+        }
+
+        @include at-x-large-size {
+            padding: 60px 60px;
         }
     }
 
     .tg-header__title {
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 2;
-
         color: $white;
         text-shadow: 0 2px 16px rgba($black, 0.33);
+        z-index: 2;
 
         span {
             box-shadow: none;
         }
     }
-
 }
-
 
 /**
  * Description + expand
  */
-
 .tg-header__description {
     margin: 36px auto 42px auto;
     max-width: 800px;
     padding: 0 $MOBILE_SIDE_GUTTER;
 }
-.tg-header__description-expand {}
+
 .tg-header__expand-btn {
-    @include button-single;
-    @include button-single-light;
+    @include button-single();
+    @include button-single-light();
 
     &:hover,
     &:focus {
-        @include button-single-light-hover;
+        @include button-single-light-hover();
     }
 }
-
-
 
 /**
  * Sponsor
  */
-
 .tg-header__sponsor {
     @include font('SOLEIL', 10px, null, 16px);
     border-top: 1px solid $ballet-grey;
@@ -151,57 +145,44 @@
     a {
         color: inherit;
     }
+
+    @include at-medium-size {
+        display: inline-block;
+        margin-top: 34px;
+    }
 }
-.tg-header__sponsor-prefix {}
+
 .tg-header__sponsor-image {
     display: block;
     margin: 4px auto 0 auto;
     max-width: 120px;
     vertical-align: middle;
-}
-.tg-header__sponsor-name {
-    font-weight: bold;
-}
 
-@include at-medium-size {
-    .tg-header__sponsor {
-        display: inline-block;
-        margin-top: 34px;
-    }
-    .tg-header__sponsor-image {
+    @include at-medium-size {
         display: inline-block;
         margin-left: 10px;
     }
 }
 
-
-/**
- * Event information
- */
-
-.tg-header__event-meta {
-    @include font('SOLEIL', 14px, null, 16px, 20);
-    color: $candle-grey;
-    margin: 28px auto 44px auto;
-    text-align: center;
+.tg-header__sponsor-name {
+    font-weight: bold;
 }
-.tg-header__event-meta__start-date {}
-.tg-header__event-meta__location {}
-
-
-
 
 /**
  * Navigation list
  */
-
 .tg-header__topic-strip {
     margin: 42px auto 36px auto;
     max-width: $MAXIMUM_PAGE_WIDTH;
     padding-left: $MOBILE_SIDE_GUTTER;
     padding-right: $MOBILE_SIDE_GUTTER;
 
+    .c-topic-strip {
+        text-align: center;
+    }
+
     @include at-medium-size {
+        margin-bottom: 44px;
         padding-left: $TABLET_SIDE_GUTTER;
         padding-right: $TABLET_SIDE_GUTTER;
     }
@@ -210,73 +191,63 @@
         padding-left: $DESKTOP_SIDE_GUTTER;
         padding-right: $DESKTOP_SIDE_GUTTER;
     }
-
-    .c-topic-strip {
-        text-align: center;
-    }
 }
-
-@include at-medium-size {
-    .tg-header__topic-strip {
-        margin-bottom: 44px;
-    }
-}
-
-
-
 
 /**
  * Featured cards
  */
-
 .tg-header__cards {
     margin: 36px auto 0 auto;
     padding: 0 $MOBILE_SIDE_GUTTER;
     max-width: $MAXIMUM_PAGE_WIDTH;
-}
 
-@include at-medium-size {
-    .tg-header__cards {
+    @include at-medium-size {
         padding: 0 $TABLET_SIDE_GUTTER;
     }
 }
 
+.tg-header__cards-list {
+    margin: -21px -12px;
+
+    .tg-header__cards-listitem {
+        display: inline-block;
+        padding: 0 12px;
+        margin: 21px 0;
+        width: 100%;
+
+        @include two-column-size() {
+            width: 50%;
+        }
+
+        @include four-column-size() {
+            width: 33.33333%;
+        }
+    }
+}
 
 /**
- * Show card carousel
+ * Event information
  */
-
-
-
-/**
- * Style files
- */
-
-
-
-
-
-
-
-
+.tg-header__event-meta {
+    @include font('SOLEIL', 14px, null, 16px, 20);
+    color: $candle-grey;
+    margin: 28px auto 44px auto;
+    text-align: center;
+}
 
 /**
  * Header variants
  */
-
 .tg-header--profile {
-    .tg-header__intro__image {
+    .tg-header__intro-image {
         border-radius: 50%;
         max-width: 72px;
         overflow: hidden;
     }
-}
 
-@include at-medium-size {
-    .tg-header--profile {
+    @include at-medium-size {
         .tg-header__intro__image {
             max-width: 96px;
         }
     }
 }
-
