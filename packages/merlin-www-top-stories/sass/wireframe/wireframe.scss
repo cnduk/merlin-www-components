@@ -5,7 +5,12 @@
 @import "@cnbritain/merlin-www-card:wireframe";
 
 .c-top-stories-lazy-load {
+    display: none;
     position: relative;
+
+    @include at-x-large-size {
+        display: block;
+    }
 }
 
 @keyframes spin {
