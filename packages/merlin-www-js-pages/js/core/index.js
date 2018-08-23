@@ -19,7 +19,6 @@ import Infobar from '@cnbritain/merlin-www-infobar'; // eslint-disable-line no-u
 import CommonImage from '@cnbritain/merlin-www-image';
 import store from '@cnbritain/merlin-www-js-store';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
-import TopStories from '@cnbritain/merlin-www-top-stories';
 import SectionCardList from '@cnbritain/merlin-www-section-card-list';
 import {
     AdManager,
@@ -77,14 +76,6 @@ export default function init(config) {
     });
 
     CommonImage.init();
-    TopStories.init({
-        scrollOffset: 30
-    });
-    var ts = TopStories.get();
-    if(ts.length > 0){
-        ts[0].showNavigation();
-        ts[0].disableScroll();
-    }
     SectionCardList.init();
     initInternationalRedirect();
     displayHiringMessage();

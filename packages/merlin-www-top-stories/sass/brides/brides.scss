@@ -6,6 +6,21 @@
 
 @import "../wireframe/wireframe";
 
+.c-top-stories-lazy-load {
+    background-color: $diamond;
+
+    @include at-x-large-size {
+        min-height: 125px;
+    }
+}
+
+.c-top-stories-lazy-load__spinner {
+    border-bottom: 10px solid rgba($ballet-grey, 0.2);
+    border-left: 10px solid rgba($ballet-grey, 0.2);
+    border-right: 10px solid rgba($ballet-grey, 0.2);
+    border-top: 10px solid $ballet-grey;
+}
+
 .c-top-stories {
     background-color: $diamond;
     border-bottom: 1px solid $ballet-grey;

@@ -1,3 +1,18 @@
+.c-top-stories-lazy-load {
+    background-color: $wild-sand;
+
+    @include at-x-large-size {
+        min-height: 103px;
+    }
+}
+
+.c-top-stories-lazy-load__spinner {
+    border-bottom: 10px solid rgba($black, 0.2);
+    border-left: 10px solid rgba($black, 0.2);
+    border-right: 10px solid rgba($black, 0.2);
+    border-top: 10px solid $black;
+}
+
 .c-top-stories {
     background: $wild-sand;
     padding: 16px 0;

@@ -6,6 +6,21 @@
 
 @import "../wireframe/wireframe";
 
+.c-top-stories-lazy-load {
+    background-color: $CAPE-HAZE;
+
+    @include at-x-large-size {
+        min-height: 133px;
+    }
+}
+
+.c-top-stories-lazy-load__spinner {
+    border-bottom: 10px solid rgba($ISABEL, 0.2);
+    border-left: 10px solid rgba($ISABEL, 0.2);
+    border-right: 10px solid rgba($ISABEL, 0.2);
+    border-top: 10px solid $ISABEL;
+}
+
 .c-top-stories {
     background-color: $CAPE-HAZE;
     border-bottom: 1px solid $ISABEL;

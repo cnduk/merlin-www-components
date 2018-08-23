@@ -17,7 +17,9 @@
         "wired": "sass/wired/wired.scss"
     },
     "partials": {
-        "top-stories": "templates/top-stories.html"
+        "index": "templates/index.html",
+        "top-stories": "templates/top-stories.html",
+        "lazy-load": "templates/lazy-load.html"
     },
     "dependencies": [
         "@cnbritain/merlin-www-common",
@@ -28,9 +30,10 @@
         "@cnbritain/merlin-www-ads"
     ],
     "currentTheme": null,
-    "main": "top-stories",
+    "main": "index",
     "data": {
         "without-nav": "data/without-nav.json",
+        "lazy-load": "data/lazy-load.json",
         "brides": "data/br.json",
         "glamour": "data/gl.json",
         "gq": "data/gq.json",

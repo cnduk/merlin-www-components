@@ -6,6 +6,7 @@ import {
     getWindowScrollTop,
     throttle
 } from '@cnbritain/merlin-www-js-utils/js/functions';
+import TopStories from '@cnbritain/merlin-www-top-stories';
 import Nav from '@cnbritain/merlin-www-main-navigation';
 import {
     ArticleManager
@@ -48,6 +49,8 @@ export default function init() {
     if (Nav.galleryNav !== null) {
         Nav.galleryNav.on('viewchange', onNavigationViewChange);
     }
+
+    TopStories.lazyLoad();
 
     addEvent(window, 'scroll', throttle(onWindowScroll, 100));
     addEvent(window, 'resize', debounce(onWindowResize, 200));
