@@ -43,17 +43,21 @@
     margin-bottom: 40px;
     padding: 20px;
 
-    > *:first-child {
-        margin-top: 0;
-    }
-
-    > *:last-child {
-        margin-bottom: 0;
-    }
-
     @include at-x-large-size {
         padding: 30px;
     }
+}
+
+.bb-callout__title {
+    @include font("BRUTAL", 15px, 'BOLD');
+    border-bottom: 2px solid $black;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.bb-callout__hr {
+    display: none;
 }
 
 // -------------------- //

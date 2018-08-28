@@ -257,9 +257,10 @@
 .bb-callout {
     background-color: $white;
     border: 1px solid $ballet-grey;
-    margin: 40px 0;
+    margin: 32px 0;
     padding: 34px 20px;
     position: relative;
+    text-align: center;
 
     :last-child {
         margin-bottom: 0;
@@ -274,6 +275,21 @@
     position: absolute;
     top: -16px;
     width: 1px;
+}
+.bb-callout__title {
+    @include font('FREIGHT DISPLAY PRO', 32px, 'NORMAL', 32px);
+    background-image: linear-gradient(rgba($champagne, 0.75), rgba($champagne, 0.75));
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 1px 16px;
+    color: $stroller-grey;
+    display: inline-block;
+    font-style: italic;
+    letter-spacing: 0.01em;
+    margin: 0 0 20px 0;
+}
+.bb-callout__hr {
+    display: none;
 }
 
 /**

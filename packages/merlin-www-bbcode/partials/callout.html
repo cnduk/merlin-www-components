@@ -1,3 +1,11 @@
 <div class="bb-callout has-bbcode{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
-    {{ &data.content }}
+    {{# data.items }}
+        {{# is_title }}
+            <h3 class='bb-callout__title'>{{ &value }}</h3>
+            <hr class='bb-callout__hr' />
+        {{/ is_title }}
+        {{# is_body }}
+            <div class="bb-callout__body">{{ &value }}</div>
+        {{/ is_body }}
+    {{/ data.items }}
 </div>

@@ -63,17 +63,22 @@
     margin: 40px 0;
     padding: 32px 20px;
 
-    > *:first-child {
-        margin-top:0;
-    }
-
-    > *:last-child {
-        margin-bottom:0;
-    }
-
     @include at-x-large-size {
         padding: 40px;
     }
+}
+
+.bb-callout__title {
+    @include font("ITC_FENICE", 24px, 400, 30px);
+    color: $mineshaft;
+    margin-bottom: 12px;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.bb-callout__hr {
+    margin-bottom: 36px;
+    margin-top: 0;
 }
 
 // -------------------- //

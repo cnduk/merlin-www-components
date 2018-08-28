@@ -32,32 +32,45 @@
 // -------------------- //
 .bb-callout {
     background: $black;
+    color: $white;
     margin: 30px 0;
     position: relative;
     padding: 20px;
     z-index: 1;
 
-    > *:first-child {
-        margin-top: 0;
-    }
-
-    > *:last-child {
-        margin-bottom: 0;
-    }
-
-    .bb-p {
-        color: $white;
-    }
-
-    .bb-a {
-        color: $white;
-        border-color: $white;
-    }
-
-    @include at-x-large-size {
+    @include desktop-size {
         margin: 30px 0;
         padding: 30px;
     }
+}
+
+.bb-callout__title {
+    @include font('COMMUTER SANS', 16px, 'NORMAL', 16px);
+    margin: 0;
+    text-transform: uppercase;
+
+    @include desktop-size {
+       @include font-size(19px);
+       @include line-height(23px);
+    }
+}
+
+.bb-callout__hr {
+    border-color: $silver;
+    border-width: 1px 0 0 0;
+    margin: 15px 0;
+}
+
+.bb-callout__body {
+  .bb-p {
+    color: $white;
+    margin: 0;
+  }
+
+  .bb-a {
+    color: $white;
+    border-color: $white;
+  }
 }
 
 // -------------------- //

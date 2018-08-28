@@ -306,23 +306,28 @@ h1, h2, h3, h4, h5, h5 {
     margin: $MARGIN_LARGE 0;
     padding: $PADDING_MEDIUM $PADDING_SMALL;
 
-    > *:first-child {
-        margin-top: 0;
-    }
-    > *:last-child {
-        margin-bottom: 0;
-    }
-
     @include at-x-large-size {
         padding: $PADDING_LARGE;
     }
 }
 
+.bb-callout__title {
+    @include font('NOBEL', 20px, 'NORMAL');
+    color: $cod-gray;
+    margin: 0;
+    text-transform: uppercase;
+}
 
+.bb-callout__hr {
+    background-color: $gallery;
+    border: none;
+    height: 1px;
+    margin: $MARGIN_SMALL 0;
+}
 
-/**
- * Question & Answer
- */
+// -------------------- //
+// Question & Answer
+// -------------------- //
 .bb-question,
 .bb-answer {}
 .bb-question__question,

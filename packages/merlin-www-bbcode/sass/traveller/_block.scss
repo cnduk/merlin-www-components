@@ -89,17 +89,28 @@
     margin: 40px 0;
     padding: 32px 20px;
 
-    > *:first-child {
-        margin-top: 0;
-    }
-
-    > *:last-child {
-        margin-bottom: 0;
-    }
-
     @include at-x-large-size {
         padding: 32px;
     }
+}
+
+.bb-callout__title {
+    @include font("PROXIMA NOVA", 20px, 600, 24px);
+    color: $SHERPA-BLUE;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    margin-top: 0;
+    text-transform: uppercase;
+
+    @include at-x-large-size {
+        letter-spacing: 2px;
+    }
+}
+
+.bb-callout__hr {
+    border-color: $SHERPA-BLUE;
+    margin-bottom: 24px;
+    margin-top: 4px;
 }
 
 // -------------------- //
