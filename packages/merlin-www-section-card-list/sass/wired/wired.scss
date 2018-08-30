@@ -207,7 +207,8 @@
 
 }
 
-.c-card-section--c-video-articles {
+.c-card-section--c-video-articles,
+.c-card-section--g-recommended {
     background-color: $black;
     margin: 0 auto;
     padding-top: $MOBILE_SLICE_MARGIN;
