@@ -1,6 +1,6 @@
 {
     "name": "@cnbritain/merlin-www-infobar",
-    "version": "1.0.16",
+    "version": "1.0.17",
     "description": "Infobar Component",
     "main": "js/index.js",
     "scripts": {
@@ -9,10 +9,10 @@
         "prepublish": "npm run lint"
     },
     "dependencies": {
-        "@cnbritain/merlin-www-buttons": "^1.7.35",
-        "@cnbritain/merlin-www-common": "^1.14.12",
+        "@cnbritain/merlin-www-buttons": "^1.7.36",
+        "@cnbritain/merlin-www-common": "^1.14.13",
         "@cnbritain/merlin-www-js-utils": "^1.6.4",
-        "@cnbritain/merlin-www-main-navigation": "^1.10.5",
+        "@cnbritain/merlin-www-main-navigation": "^1.10.6",
         "eventemitter2": "^4.1.0"
     },
     "devDependencies": {
