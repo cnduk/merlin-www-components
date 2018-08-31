@@ -70,7 +70,7 @@ export function isLinkNavigatingPage(domLink, event) {
  */
 export function getEventValues(domLink) {
 
-    var url = domLink.getAttribute('href');
+    var url = domLink.href;
     var isButton = isBBCodeButton(domLink);
     var isInternal = isInternalUrl(url);
 
