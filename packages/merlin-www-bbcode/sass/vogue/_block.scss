@@ -211,7 +211,7 @@ h1, h2, h3, h4, h5, h5 {
 }
 
 .bb-blockquote__credit {
-    @include font("NOBEL", 12px)
+    @include font("NOBEL", 12px);
     color: $dove-gray;
     letter-spacing: 1px;
     margin: 20px 0 0 0;
@@ -361,4 +361,15 @@ h1, h2, h3, h4, h5, h5 {
     letter-spacing: normal;
     font-style: italic;
     text-transform: lowercase;
+}
+
+// -------------------- //
+// Divider
+// -------------------- //
+.bb-hr {
+    border: 0;
+    border-top: 1px solid $gallery;
+    display: block;
+    margin-bottom: 1em;
+    margin-top: 1em;
 }

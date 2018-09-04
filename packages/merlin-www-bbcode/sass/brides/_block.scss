@@ -458,3 +458,27 @@
         margin: 48px 0;
     }
 }
+
+// -------------------- //
+// Divider
+// -------------------- //
+.bb-hr {
+    border: 0;
+    border-top: 1px solid $ballet-grey;
+    display: block;
+    margin-bottom: 26px;
+    margin-top: 26px;
+    overflow: visible;
+    position: relative;
+}
+
+.bb-hr:after {
+    background-color: $ballet-grey;
+    content: '';
+    display: block;
+    height: 32px;
+    left: 50%;
+    position: absolute;
+    top: -16px;
+    width: 1px;
+}

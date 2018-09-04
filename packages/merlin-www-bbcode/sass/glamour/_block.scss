@@ -33,9 +33,6 @@
 // -------------------- //
 // Callout
 // -------------------- //
-// -------------------- //
-// Callout
-// -------------------- //
 .bb-callout {
     border: 4px solid $mandy;
     margin: 25px 0;
@@ -455,4 +452,20 @@
 .bb-question__by,
 .bb-answer__by {
     display: none;
+}
+
+// -------------------- //
+// Divider
+// -------------------- //
+.bb-hr {
+    border: 0;
+    border-top: 1px solid $cloud;
+    display: block;
+    margin-bottom: 25px;
+    margin-top: 25px;
+
+    @include at-x-large-size {
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
 }
