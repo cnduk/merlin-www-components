@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.10.2"></a>
+## [1.10.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.10.1...@cnbritain/merlin-www-js-pages@1.10.2) (2018-09-04)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** read href property instead of getting the attribute value ([d497feb](https://github.com/cnduk/merlin-www-components/commit/d497feb))
+
+
+
+
 <a name="1.10.0"></a>
 # [1.10.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.9.26...@cnbritain/merlin-www-js-pages@1.10.0) (2018-08-22)
 
