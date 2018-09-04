@@ -70,7 +70,7 @@ export function isLinkNavigatingPage(domLink, event) {
  */
 export function getEventValues(domLink) {
 
-    var url = domLink.href;
+    var url = domLink.getAttribute('href');
     var isButton = isBBCodeButton(domLink);
     var isInternal = isInternalUrl(url);
 
@@ -159,29 +159,29 @@ export function unbindEvents() {
 }
 
 export function initInfobarTracking() {
-    if (!Infobar) return;
+    // if (!Infobar) return;
 
-    Infobar.addListener('linkClick', function(e) {
-        var category = 'Info Bar';
-        var action = null;
-        var label = null;
+    // Infobar.addListener('linkClick', function(e) {
+    //     var category = 'Info Bar';
+    //     var action = null;
+    //     var label = null;
 
-        if (e.linkType == 'message') {
-            action = 'Message Click';
-            label = e.target.href + ' | ' + e.target.innerText;
-        }
+    //     if (e.linkType == 'message') {
+    //         action = 'Message Click';
+    //         label = e.target.href + ' | ' + e.target.innerText;
+    //     }
 
-        if (e.linkType == 'button') {
-            action = 'Button Click';
-            label = e.target.href + ' | ' + e.target.innerText;
-        }
+    //     if (e.linkType == 'button') {
+    //         action = 'Button Click';
+    //         label = e.target.href + ' | ' + e.target.innerText;
+    //     }
 
-        GATracker.SendAll(GATracker.SEND_HITTYPES.EVENT, {
-            eventCategory: category,
-            eventAction: action,
-            eventLabel: label
-        });
-    });
+    //     GATracker.SendAll(GATracker.SEND_HITTYPES.EVENT, {
+    //         eventCategory: category,
+    //         eventAction: action,
+    //         eventLabel: label
+    //     });
+    // });
 }
 
 /**

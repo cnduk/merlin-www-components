@@ -30,7 +30,7 @@ import {
 import {
     toArray
 } from '../utils';
-import INFOBAR from '@cnbritain/merlin-www-infobar';
+import Infobar from '@cnbritain/merlin-www-infobar';
 
 var articleScroller = null;
 var debouncedUpdateAll = debounce(updateAll, 300);
@@ -45,8 +45,8 @@ export default function init() {
     AdManager.on('render', onAdRender);
     AdManager.on('stop', onAdStop);
 
-    if (INFOBAR) {
-        INFOBAR.on('disable', function() {
+    if (Infobar.get()) {
+        Infobar.get().on('disable', function() {
             articleScroller.children.forEach(function(group) {
                 group.children.forEach(function(item) {
                     item.offset.top = 60;
@@ -155,8 +155,8 @@ export function createStickyItems(nodeGroup, nodeStick, nodeObstacles) {
     if (nodeStick) {
         stickItems = Stick.createStick(nodeStick);
         stickItems.forEach(function eachStickItem(item, index) {
-            if (INFOBAR) {
-                item.offset.top = (INFOBAR.state.isEnabled ? 120 : 60);
+            if (Infobar.get()) {
+                item.offset.top = (Infobar.get().state.isEnabled ? 120 : 60);
             }
 
             else {

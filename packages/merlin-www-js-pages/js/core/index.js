@@ -81,6 +81,8 @@ export default function init(config) {
     displayHiringMessage();
     initLinkTracking();
 
+    Infobar.lazyLoad();
+
     // Goofs
     setupFartscroll();
     raptor();
