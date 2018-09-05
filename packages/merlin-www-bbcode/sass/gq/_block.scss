@@ -344,3 +344,14 @@
 .bb-question__by {
     display: none;
 }
+
+// -------------------- //
+// Divider
+// -------------------- //
+.bb-hr {
+    border: 0;
+    border-top: 1px solid $bon-jour;
+    display: block;
+    margin-bottom: 28px;
+    margin-top: 28px;
+}
