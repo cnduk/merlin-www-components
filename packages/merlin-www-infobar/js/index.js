@@ -6,7 +6,7 @@ import {
 
 import Infobar from './infobar';
 
-var INFOBAR;
+var INFOBAR = null;
 
 export default {
     init: function(el) {
@@ -35,6 +35,8 @@ export default {
                 lazyLoadEl.innerHTML = html;
 
                 this.init(document.querySelector('.js-c-infobar'));
+
+                resolve(INFOBAR);
             }.bind(this));
         }.bind(this));
     }

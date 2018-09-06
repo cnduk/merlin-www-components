@@ -34,7 +34,10 @@ import {
     displayHiringMessage,
     setGlobalNamespace
 } from '../utils';
-import initLinkTracking from './analytics';
+import {
+    initLinkTracking,
+    initInfobarTracking
+} from './analytics';
 
 var DEFAULT_INIT_CONFIG = {
     'OPEN_X_URL': null,
@@ -81,7 +84,14 @@ export default function init(config) {
     displayHiringMessage();
     initLinkTracking();
 
-    Infobar.lazyLoad();
+    Infobar.lazyLoad()
+        .then((INFOBAR) => {
+            initInfobarTracking(INFOBAR);
+
+            if (MainNavigation.state.isFixed) {
+                INFOBAR.fix();
+            }
+        })
 
     // Goofs
     setupFartscroll();

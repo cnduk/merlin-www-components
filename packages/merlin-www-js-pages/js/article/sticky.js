@@ -45,19 +45,19 @@ export default function init() {
     AdManager.on('render', onAdRender);
     AdManager.on('stop', onAdStop);
 
-    if (Infobar.get()) {
-        Infobar.get().on('disable', function() {
-            articleScroller.children.forEach(function(group) {
-                group.children.forEach(function(item) {
-                    item.offset.top = 60;
-                });
-            });
+    // if (Infobar.get()) {
+    //     Infobar.get().on('disable', function() {
+    //         articleScroller.children.forEach(function(group) {
+    //             group.children.forEach(function(item) {
+    //                 item.offset.top = 60;
+    //             });
+    //         });
 
-            Manager.recalculate();
-            articleScroller.sortChildren();
-            articleScroller.update();
-        });
-    }
+    //         Manager.recalculate();
+    //         articleScroller.sortChildren();
+    //         articleScroller.update();
+    //     });
+    // }
 
     onWindowResize();
 }
@@ -155,13 +155,13 @@ export function createStickyItems(nodeGroup, nodeStick, nodeObstacles) {
     if (nodeStick) {
         stickItems = Stick.createStick(nodeStick);
         stickItems.forEach(function eachStickItem(item, index) {
-            if (Infobar.get()) {
-                item.offset.top = (Infobar.get().state.isEnabled ? 120 : 60);
-            }
+            // if (Infobar.get()) {
+            //     item.offset.top = (Infobar.get().state.isEnabled ? 120 : 60);
+            // }
 
-            else {
+            // else {
                 item.offset.top = 60;
-            }
+            // }
 
             if (index !== stickItems.length - 1) {
                 item.offset.bottom = 60;

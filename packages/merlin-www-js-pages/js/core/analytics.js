@@ -158,30 +158,30 @@ export function unbindEvents() {
     }
 }
 
-export function initInfobarTracking() {
-    // if (!Infobar) return;
+export function initInfobarTracking(infobar) {
+    if (!infobar) return;
 
-    // Infobar.addListener('linkClick', function(e) {
-    //     var category = 'Info Bar';
-    //     var action = null;
-    //     var label = null;
+    infobar.addListener('linkClick', function(e) {
+        var category = 'Info Bar';
+        var action = null;
+        var label = null;
 
-    //     if (e.linkType == 'message') {
-    //         action = 'Message Click';
-    //         label = e.target.href + ' | ' + e.target.innerText;
-    //     }
+        if (e.linkType == 'message') {
+            action = 'Message Click';
+            label = e.target.href + ' | ' + e.target.innerText;
+        }
 
-    //     if (e.linkType == 'button') {
-    //         action = 'Button Click';
-    //         label = e.target.href + ' | ' + e.target.innerText;
-    //     }
+        if (e.linkType == 'button') {
+            action = 'Button Click';
+            label = e.target.href + ' | ' + e.target.innerText;
+        }
 
-    //     GATracker.SendAll(GATracker.SEND_HITTYPES.EVENT, {
-    //         eventCategory: category,
-    //         eventAction: action,
-    //         eventLabel: label
-    //     });
-    // });
+        GATracker.SendAll(GATracker.SEND_HITTYPES.EVENT, {
+            eventCategory: category,
+            eventAction: action,
+            eventLabel: label
+        });
+    });
 }
 
 /**
@@ -224,9 +224,8 @@ export function initSectionNewsletterTracking(){
 /**
  * Initialise link tracking
  */
-export default function initLinkTracking() {
+export function initLinkTracking() {
     bindEvents();
-    initInfobarTracking();
     initFollowButtonsTracking();
     initSectionNewsletterTracking();
 }
