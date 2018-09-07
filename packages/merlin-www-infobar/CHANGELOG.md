@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.18"></a>
+## [1.0.18](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-infobar@1.0.17...@cnbritain/merlin-www-infobar@1.0.18) (2018-09-07)
+
+
+### Bug Fixes
+
+* **merlin-www-infobar:** Add missing infobar styles to Miss Vogue and Bystander [ch4401] ([62abdd3](https://github.com/cnduk/merlin-www-components/commit/62abdd3))
+
+
+
+
 <a name="1.0.16"></a>
 ## [1.0.16](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-infobar@1.0.15...@cnbritain/merlin-www-infobar@1.0.16) (2018-08-22)
 
