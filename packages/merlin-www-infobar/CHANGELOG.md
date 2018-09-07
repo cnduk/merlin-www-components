@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.19"></a>
+## [1.0.19](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-infobar@1.0.18...@cnbritain/merlin-www-infobar@1.0.19) (2018-09-07)
+
+
+### Bug Fixes
+
+* **merlin-www-infobar:** correct tatler style import for bystander ([2a9ca75](https://github.com/cnduk/merlin-www-components/commit/2a9ca75))
+
+
+
+
 <a name="1.0.18"></a>
 ## [1.0.18](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-infobar@1.0.17...@cnbritain/merlin-www-infobar@1.0.18) (2018-09-07)
 
