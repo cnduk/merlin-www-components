@@ -24,6 +24,11 @@ export default {
 
         return new Promise(function(resolve) {
             var url = '/xhr/infobar';
+            var referrer = document.referrer;
+
+            if (referrer) {
+                url += `?referrer=${referrer}`;
+            }
 
             ajax({url: url}).then(function(data) {
                 var request = data.request;
