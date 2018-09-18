@@ -45,4 +45,4 @@ export default {
             }.bind(this));
         }.bind(this));
     }
-}
+};
