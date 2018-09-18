@@ -7,7 +7,7 @@ import {
     removeEvent
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
-// import Infobar from '@cnbritain/merlin-www-infobar';
+import InfobarManager from '@cnbritain/merlin-www-infobar';
 
 
 var hasBeacon = !!navigator.sendBeacon;
@@ -158,30 +158,38 @@ export function unbindEvents() {
     }
 }
 
-export function initInfobarTracking(infobar) {
-    if (!infobar) return;
+function onInfobarLoad(){
+    if(InfobarManager.infobar !== null){
+        InfobarManager.infobar.addListener('linkClick', function(e) {
+            var category = 'Info Bar';
+            var action = null;
+            var label = null;
 
-    infobar.addListener('linkClick', function(e) {
-        var category = 'Info Bar';
-        var action = null;
-        var label = null;
+            if (e.linkType == 'message') {
+                action = 'Message Click';
+                label = e.target.href + ' | ' + e.target.innerText;
+            }
 
-        if (e.linkType == 'message') {
-            action = 'Message Click';
-            label = e.target.href + ' | ' + e.target.innerText;
-        }
+            if (e.linkType == 'button') {
+                action = 'Button Click';
+                label = e.target.href + ' | ' + e.target.innerText;
+            }
 
-        if (e.linkType == 'button') {
-            action = 'Button Click';
-            label = e.target.href + ' | ' + e.target.innerText;
-        }
-
-        GATracker.SendAll(GATracker.SEND_HITTYPES.EVENT, {
-            eventCategory: category,
-            eventAction: action,
-            eventLabel: label
+            GATracker.SendAll(GATracker.SEND_HITTYPES.EVENT, {
+                eventCategory: category,
+                eventAction: action,
+                eventLabel: label
+            });
         });
-    });
+    }
+}
+
+export function initInfobarTracking() {
+    if(InfobarManager.isLoaded){
+        onInfobarLoad();
+    } else {
+        InfobarManager.once('load', onInfobarLoad);
+    }
 }
 
 /**

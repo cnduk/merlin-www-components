@@ -15,29 +15,16 @@ import {
 // Need to import MainNavigation and CookieWarning to initialise bits
 import MainNavigation from '@cnbritain/merlin-www-main-navigation'; // eslint-disable-line no-unused-vars
 import CookieWarning from '@cnbritain/merlin-www-cookie-warning'; // eslint-disable-line no-unused-vars
-import Infobar from '@cnbritain/merlin-www-infobar'; // eslint-disable-line no-unused-vars
+import InfobarManager from '@cnbritain/merlin-www-infobar'; // eslint-disable-line no-unused-vars
 import CommonImage from '@cnbritain/merlin-www-image';
 import store from '@cnbritain/merlin-www-js-store';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
 import SectionCardList from '@cnbritain/merlin-www-section-card-list';
-import {
-    AdManager,
-    AdDebugger,
-    AdUtils
-} from '@cnbritain/merlin-www-ads';
-import {
-    fartscroll,
-    raptor
-} from '@cnbritain/merlin-www-goofs';
+import {AdManager, AdDebugger, AdUtils} from '@cnbritain/merlin-www-ads';
+import {fartscroll, raptor} from '@cnbritain/merlin-www-goofs';
 import InternationalRedirect from '@cnbritain/merlin-www-international-redirect';
-import {
-    displayHiringMessage,
-    setGlobalNamespace
-} from '../utils';
-import {
-    initLinkTracking,
-    initInfobarTracking
-} from './analytics';
+import {displayHiringMessage, setGlobalNamespace} from '../utils';
+import {initLinkTracking, initInfobarTracking} from './analytics';
 
 var DEFAULT_INIT_CONFIG = {
     'OPEN_X_URL': null,
@@ -78,20 +65,19 @@ export default function init(config) {
         PREBID_SETTINGS: _config['PREBID_SETTINGS']
     });
 
+    InfobarManager.lazyload();
+    InfobarManager.once('enable', function(){
+        if (MainNavigation.state.isFixed) {
+            InfobarManager.infobar.fix();
+        }
+    });
+
     CommonImage.init();
     SectionCardList.init();
     initInternationalRedirect();
     displayHiringMessage();
     initLinkTracking();
-
-    Infobar.lazyLoad()
-        .then((INFOBAR) => {
-            initInfobarTracking(INFOBAR);
-
-            if (MainNavigation.state.isFixed) {
-                INFOBAR.fix();
-            }
-        });
+    initInfobarTracking();
 
     // Goofs
     setupFartscroll();

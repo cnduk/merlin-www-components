@@ -30,7 +30,7 @@ import {
 import {
     toArray
 } from '../utils';
-// import Infobar from '@cnbritain/merlin-www-infobar';
+import InfobarManager from '@cnbritain/merlin-www-infobar';
 
 var articleScroller = null;
 var debouncedUpdateAll = debounce(updateAll, 300);
@@ -45,19 +45,29 @@ export default function init() {
     AdManager.on('render', onAdRender);
     AdManager.on('stop', onAdStop);
 
-    // if (Infobar.get()) {
-    //     Infobar.get().on('disable', function() {
-    //         articleScroller.children.forEach(function(group) {
-    //             group.children.forEach(function(item) {
-    //                 item.offset.top = 60;
-    //             });
-    //         });
+    InfobarManager.once('disable', function(){
+        articleScroller.children.forEach(function(group) {
+            group.children.forEach(function(item) {
+                item.offset.top = 60;
+            });
+        });
 
-    //         Manager.recalculate();
-    //         articleScroller.sortChildren();
-    //         articleScroller.update();
-    //     });
-    // }
+        Manager.recalculate();
+        articleScroller.sortChildren();
+        articleScroller.update();
+    });
+
+    InfobarManager.once('enable', function(){
+        articleScroller.children.forEach(function(group) {
+            group.children.forEach(function(item) {
+                item.offset.top = 120;
+            });
+        });
+
+        Manager.recalculate();
+        articleScroller.sortChildren();
+        articleScroller.update();
+    });
 
     onWindowResize();
 }
@@ -155,13 +165,11 @@ export function createStickyItems(nodeGroup, nodeStick, nodeObstacles) {
     if (nodeStick) {
         stickItems = Stick.createStick(nodeStick);
         stickItems.forEach(function eachStickItem(item, index) {
-            // if (Infobar.get()) {
-            //     item.offset.top = (Infobar.get().state.isEnabled ? 120 : 60);
-            // }
-
-            // else {
-            item.offset.top = 60;
-            // }
+            if(InfobarManager.infobar !== null && InfobarManager.infobar.state.isEnabled){
+                item.offset.top = 120;
+            } else {
+                item.offset.top = 60;
+            }
 
             if (index !== stickItems.length - 1) {
                 item.offset.bottom = 60;

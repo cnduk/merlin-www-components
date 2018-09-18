@@ -17,7 +17,7 @@ import {
 import {
     getStorage
 } from '../utils.js';
-// import Infobar from '@cnbritain/merlin-www-Infobar';
+import InfobarManager from '@cnbritain/merlin-www-infobar';
 
 var articleGallery = null;
 var windowHeightHalf = window.innerHeight / 2;
@@ -64,7 +64,6 @@ export function onArticleBlur(e) {
 }
 
 export function onArticleFocus(e) {
-
     var article = e.target;
     var isGallery = isArticleGallery(article);
 
@@ -73,25 +72,35 @@ export function onArticleFocus(e) {
 
         if (gallery.layoutView === 'list') {
             Nav.galleryNav.showListView();
-        }
-
-        else {
+        } else {
             Nav.galleryNav.hideListView();
         }
-
-        // if (Infobar) {
-        //     gallery._imageNavigationOffset = (Infobar.state.isEnabled ? 120 : 60);
-        //     gallery.updateNavScroll();
-
-        //     Infobar.once('disable', function() {
-        //         gallery._imageNavigationOffset = 60;
-        //         gallery.updateNavScroll();
-        //     });
-        // }
 
         Nav.galleryNav.setTitle(article.properties.title);
         Nav.galleryNav.setCurrent(1);
         Nav.galleryNav.setTotal(article.gallery.imageElements.length);
+
+        // Infobar changes
+        // No bar loadded
+        if(!InfobarManager.isLoaded){
+            InfobarManager.once('enable', function(){
+                gallery._imageNavigationOffset = 120;
+                gallery.updateNavScroll(true);
+            });
+        // Bar loaded
+        } else {
+            if(InfobarManager.infobar !== null &&
+                    InfobarManager.infobar.state.isFixed){
+
+                gallery._imageNavigationOffset = 120;
+                gallery.updateNavScroll(true);
+            }
+        }
+        // Closed
+        InfobarManager.once('disable', function(){
+            gallery._imageNavigationOffset = 60;
+            gallery.updateNavScroll(true);
+        });
 
         articleGallery = article;
     }
