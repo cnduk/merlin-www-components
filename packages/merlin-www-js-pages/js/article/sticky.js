@@ -30,7 +30,7 @@ import {
 import {
     toArray
 } from '../utils';
-import Infobar from '@cnbritain/merlin-www-infobar';
+// import Infobar from '@cnbritain/merlin-www-infobar';
 
 var articleScroller = null;
 var debouncedUpdateAll = debounce(updateAll, 300);

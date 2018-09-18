@@ -17,7 +17,7 @@ import {
 import {
     getStorage
 } from '../utils.js';
-import INFOBAR from '@cnbritain/merlin-www-infobar';
+// import Infobar from '@cnbritain/merlin-www-Infobar';
 
 var articleGallery = null;
 var windowHeightHalf = window.innerHeight / 2;
@@ -79,15 +79,15 @@ export function onArticleFocus(e) {
             Nav.galleryNav.hideListView();
         }
 
-        if (INFOBAR) {
-            gallery._imageNavigationOffset = (INFOBAR.state.isEnabled ? 120 : 60);
-            gallery.updateNavScroll();
+        // if (Infobar) {
+        //     gallery._imageNavigationOffset = (Infobar.state.isEnabled ? 120 : 60);
+        //     gallery.updateNavScroll();
 
-            INFOBAR.once('disable', function() {
-                gallery._imageNavigationOffset = 60;
-                gallery.updateNavScroll();
-            });
-        }
+        //     Infobar.once('disable', function() {
+        //         gallery._imageNavigationOffset = 60;
+        //         gallery.updateNavScroll();
+        //     });
+        // }
 
         Nav.galleryNav.setTitle(article.properties.title);
         Nav.galleryNav.setCurrent(1);
