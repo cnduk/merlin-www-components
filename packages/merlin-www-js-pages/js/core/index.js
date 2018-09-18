@@ -91,7 +91,7 @@ export default function init(config) {
             if (MainNavigation.state.isFixed) {
                 INFOBAR.fix();
             }
-        })
+        });
 
     // Goofs
     setupFartscroll();

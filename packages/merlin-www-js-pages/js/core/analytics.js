@@ -7,7 +7,7 @@ import {
     removeEvent
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
-import Infobar from '@cnbritain/merlin-www-infobar';
+// import Infobar from '@cnbritain/merlin-www-infobar';
 
 
 var hasBeacon = !!navigator.sendBeacon;

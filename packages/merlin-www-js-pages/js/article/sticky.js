@@ -160,7 +160,7 @@ export function createStickyItems(nodeGroup, nodeStick, nodeObstacles) {
             // }
 
             // else {
-                item.offset.top = 60;
+            item.offset.top = 60;
             // }
 
             if (index !== stickItems.length - 1) {
