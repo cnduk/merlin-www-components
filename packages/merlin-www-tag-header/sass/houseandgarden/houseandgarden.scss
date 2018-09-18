@@ -53,7 +53,7 @@
     right: 0;
 }
 .tg-header__title {
-    @include font("MILLER_DISPLAY", 40px, 'NORMAL', 41px);
+    @include font("MILLER_DISPLAY", 35px, 'NORMAL', 38px);
     color: $mine-shaft;
     letter-spacing: 0;
     margin: 0 0 10px 0;
@@ -96,10 +96,14 @@
     }
 
     p {
-        @include font("MILLER_DISPLAY", 18px, 400, 22px);
+        @include font("MILLER_DISPLAY", 16px, 400, 22px);
         color: $mine-shaft;
         font-style: italic;
         letter-spacing: 0;
+
+        @include at-x-large-size {
+            @include font-size(18px);
+        }
     }
 
     > *:first-child {

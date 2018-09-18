@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.17.0"></a>
+# [1.17.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.16.9...@cnbritain/merlin-www-bbcode@1.17.0) (2018-09-07)
+
+
+### Features
+
+* **merlin-www-bbcode:** Add divider bbcode element styles [ch770] ([8afa117](https://github.com/cnduk/merlin-www-components/commit/8afa117))
+
+
+
+
 <a name="1.16.8"></a>
 ## [1.16.8](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.16.7...@cnbritain/merlin-www-bbcode@1.16.8) (2018-08-21)
 
