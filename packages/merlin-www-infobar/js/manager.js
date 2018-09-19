@@ -45,7 +45,6 @@ InfobarManager.prototype = inherit(EventEmitter.prototype, {
             .then(function onLazyload(data) {
                 this.isLoaded = true;
 
-                // TODO: error handling
                 var jsonResponseText = JSON.parse(data.request.responseText);
                 var html = jsonResponseText.data.template;
                 lazyLoadEl.innerHTML = html;
