@@ -1,7 +1,9 @@
 <ul class="c-pagination">
     {{# data.pagination_list.data.items }}
         <li class="{{ style.cls }}">
-            <a href="{{ data.item.data.url }}" title="{{ data.item.data.title }}" class="{{ data.item.style.cls }}">{{ data.item.data.title }}</a>
+            <a {{#data.item.state.is_previous_page}}rel="prev"{{/data.item.state.is_previous_page}} {{#data.item.state.is_next_page}}rel="next"{{/data.item.state.is_next_page}} href="{{ data.item.data.url }}" title="{{ data.item.data.title }}" class="{{ data.item.style.cls }}">
+                {{ data.item.data.title }}
+            </a>
         </li>
     {{/ data.pagination_list.data.items }}
 </ul>
