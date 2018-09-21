@@ -204,7 +204,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
         this._hooks.navScroll = null;
     },
 
-    'updateNavScroll': function() {
+    'updateNavScroll': function(forceUpdate) {
         if (this.imageNavigation === null) return;
 
         // NOTE: 60 is the navigation height
@@ -214,7 +214,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
 
         // Check if at bottom, set absolute
         if (scrollY >= bottom) {
-            if (this._imageNavigationState === 'absolute') return;
+            if (!forceUpdate && this._imageNavigationState === 'absolute') return;
             this._imageNavigationState = 'absolute';
             setAbsolute(
                 this.imageNavigation.el,
@@ -225,7 +225,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
 
         // Check if at top, recent to normal
         if (scrollY < top) {
-            if (this._imageNavigationState === 'default') return;
+            if (!forceUpdate && this._imageNavigationState === 'default') return;
             this._imageNavigationState = 'default';
             setDefault(this.imageNavigation.el);
             return;
@@ -233,7 +233,7 @@ Gallery.prototype = inherit(EventEmitter.prototype, {
 
         // Stay as fixed
         if (scrollY >= top) {
-            if (this._imageNavigationState === 'fixed') return;
+            if (!forceUpdate && this._imageNavigationState === 'fixed') return;
             this._imageNavigationState = 'fixed';
             setFixed(this.imageNavigation.el, (this._imageNavigationOffset + 'px'));
         }

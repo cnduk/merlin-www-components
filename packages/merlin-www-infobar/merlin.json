@@ -17,7 +17,9 @@
         "wired": "sass/wired/wired.scss"
     },
     "partials": {
-        "infobar": "templates/infobar.html"
+        "index": "templates/index.html",
+        "infobar": "templates/infobar.html",
+        "lazyload": "templates/lazyload.html"
     },
     "dependencies": [
         "@cnbritain/merlin-www-buttons",
@@ -25,7 +27,7 @@
         "@cnbritain/merlin-www-main-navigation"
     ],
     "currentTheme": null,
-    "main": "infobar",
+    "main": "index",
     "data": {
         "all": "data/all.json"
     }

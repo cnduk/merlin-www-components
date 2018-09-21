@@ -49,61 +49,37 @@ function Infobar(el) {
     this.previousHash = getCookie('cnd_infobar_hash');
     this.currentHash = this.config['hash'];
 
-    if (this.previousHash !== this.currentHash) {
-        setCookie(COOKIE_HASH, this.currentHash);
-
-        this.pageviewCount = 0;
-        setCookie(COOKIE_PAGE_VIEW_COUNT, this.pageviewCount);
-    }
-
-    else {
-        this.pageviewCount = parseInt(getCookie(COOKIE_PAGE_VIEW_COUNT), 10);
-    }
-
-    if (this.pageviewCount < this.pageviewLimit) {
-        this.pageviewCount += 1;
-        setCookie(COOKIE_PAGE_VIEW_COUNT, this.pageviewCount);
-
-        this.enable();
-    }
-
-    this.show = this.show.bind(this);
-    this.hide = this.hide.bind(this);
-
-    this.fix = this.fix.bind(this);
-    this.unfix = this.unfix.bind(this);
-
-    this.enable = this.enable.bind(this);
-    this.disable = this.disable.bind(this);
-
-    this.onClick = this.onClick.bind(this);
-
-    this.el.addEventListener('click', this.onClick);
-
-    this.closeButtonEl.addEventListener('click', function() {
-        this.disable();
-    }.bind(this));
+    this.el.addEventListener('click', this.onClick.bind(this));
+    this.closeButtonEl.addEventListener('click', this.disable.bind(this));
 
     if (NAV) {
-        NAV.on('show', function() {
-            this.show();
-        }.bind(this));
-
-        NAV.on('hide', function() {
-            this.hide();
-        }.bind(this));
-
-        NAV.on('fix', function() {
-            this.fix();
-        }.bind(this));
-
-        NAV.on('unfix', function() {
-            this.unfix();
-        }.bind(this));
+        NAV.on('show', this.show.bind(this));
+        NAV.on('hide', this.hide.bind(this));
+        NAV.on('fix', this.fix.bind(this));
+        NAV.on('unfix', this.unfix.bind(this));
     }
 }
 
 Infobar.prototype = inherit(EventEmitter.prototype, {
+
+    init: function(){
+        if (this.previousHash !== this.currentHash) {
+            setCookie(COOKIE_HASH, this.currentHash);
+
+            this.pageviewCount = 0;
+            setCookie(COOKIE_PAGE_VIEW_COUNT, this.pageviewCount);
+        } else {
+            this.pageviewCount = parseInt(getCookie(COOKIE_PAGE_VIEW_COUNT), 10);
+        }
+
+        if (this.pageviewCount < this.pageviewLimit) {
+            this.pageviewCount += 1;
+            setCookie(COOKIE_PAGE_VIEW_COUNT, this.pageviewCount);
+
+            this.enable();
+        }
+    },
+
     show: function() {
         if (!this.state.isHidden) return;
 
