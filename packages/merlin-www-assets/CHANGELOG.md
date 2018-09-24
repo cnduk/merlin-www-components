@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-assets@1.16.11...@cnbritain/merlin-www-assets@2.0.0) (2018-09-24)
+
+
+### Bug Fixes
+
+* **merlin-www-assets:** update gl, hg, vg and wi favicon ([7415a75](https://github.com/cnduk/merlin-www-components/commit/7415a75))
+
+
+### BREAKING CHANGES
+
+* **merlin-www-assets:** [ch375]
+
+
+
+
 <a name="1.16.10"></a>
 ## [1.16.10](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-assets@1.16.9...@cnbritain/merlin-www-assets@1.16.10) (2018-08-21)
 

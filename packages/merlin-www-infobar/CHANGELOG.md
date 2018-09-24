@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-infobar@1.0.19...@cnbritain/merlin-www-infobar@1.1.0) (2018-09-24)
+
+
+### Features
+
+* **merlin-www-infobar:** add InfobarManager, events and lazyloading template ([ed67dbd](https://github.com/cnduk/merlin-www-components/commit/ed67dbd))
+* **merlin-www-infobar:** check for document.referrer when creating infobar xhr route ([3bb4916](https://github.com/cnduk/merlin-www-components/commit/3bb4916))
+* **merlin-www-js-pages:** setup analytics for async infobar ([8093ccd](https://github.com/cnduk/merlin-www-components/commit/8093ccd))
+
+
+
+
 <a name="1.0.19"></a>
 ## [1.0.19](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-infobar@1.0.18...@cnbritain/merlin-www-infobar@1.0.19) (2018-09-07)
 

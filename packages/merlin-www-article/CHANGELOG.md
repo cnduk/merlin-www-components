@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.29.0"></a>
+# [1.29.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.28.76...@cnbritain/merlin-www-article@1.29.0) (2018-09-24)
+
+
+### Features
+
+* **merlin-www-article:** add forceUpdate to updateNavScroll in gallery ([aa94035](https://github.com/cnduk/merlin-www-components/commit/aa94035))
+
+
+
+
 <a name="1.28.76"></a>
 ## [1.28.76](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.28.75...@cnbritain/merlin-www-article@1.28.76) (2018-09-07)
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.9.0"></a>
+# [1.9.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-pagination@1.8.4...@cnbritain/merlin-www-pagination@1.9.0) (2018-09-24)
+
+
+### Features
+
+* **merlin-www-pagination:** add rel="next\prev" values to anchors ([222037d](https://github.com/cnduk/merlin-www-components/commit/222037d))
+
+
+
+
 <a name="1.8.3"></a>
 ## [1.8.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-pagination@1.8.2...@cnbritain/merlin-www-pagination@1.8.3) (2018-08-21)
 

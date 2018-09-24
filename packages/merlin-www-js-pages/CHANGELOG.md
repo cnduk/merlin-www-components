@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.11.0"></a>
+# [1.11.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.10.4...@cnbritain/merlin-www-js-pages@1.11.0) (2018-09-24)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** update offsets for ads and gallery nav and analytics tracking with infobar ([dee3302](https://github.com/cnduk/merlin-www-components/commit/dee3302))
+
+
+### Features
+
+* **merlin-www-js-pages:** comment out infobar references that currently need fixing ([8b16983](https://github.com/cnduk/merlin-www-components/commit/8b16983))
+* **merlin-www-js-pages:** setup analytics for async infobar ([8093ccd](https://github.com/cnduk/merlin-www-components/commit/8093ccd))
+
+
+
+
 <a name="1.10.4"></a>
 ## [1.10.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.10.3...@cnbritain/merlin-www-js-pages@1.10.4) (2018-09-07)
 
