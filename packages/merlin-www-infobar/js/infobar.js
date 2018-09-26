@@ -13,8 +13,8 @@ var IS_HIDDEN_CLS = 'is-hidden';
 var IS_FIXED_CLS = 'is-fixed';
 var IS_DISABLED_CLS = 'is-disabled';
 
-var COOKIE_PAGE_VIEW_COUNT = 'cnd_infobar_pageview_count';
-var COOKIE_HASH = 'cnd_infobar_hash';
+var COOKIE_PAGE_VIEW_COUNT = 'cnd_infobar_pageview_count1';
+var COOKIE_HASH = 'cnd_infobar_hash1';
 // This is the duration we want the cookie to last. Currently set to 1 day.
 var COOKIE_EXPIRES = 1;
 
