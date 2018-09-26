@@ -19,7 +19,7 @@ import {
 import {
     toArray
 } from '../utils';
-import INFOBAR from '@cnbritain/merlin-www-infobar';
+import InfobarManager from '@cnbritain/merlin-www-infobar';
 
 var stickyScroller = null;
 
@@ -30,17 +30,15 @@ export function createStickGroup(el) {
     var group = new Group(el);
     var stickies = Stick.createStick(el.querySelectorAll('.stick-wrapper'));
 
+    var offsetTop = 60;
+    if(InfobarManager.infobar !== null &&
+        InfobarManager.infobar.state.isEnabled) offsetTop = 120;
+
     group.addChildren(stickies, {
         'sort': false
     });
     group.children.forEach(function(child) {
-        if (INFOBAR) {
-            child.offset.top = (INFOBAR.state.isEnabled ? 120 : 60);
-        }
-
-        else {
-            child.offset.top = 60;
-        }
+        child.offset.top = offsetTop;
     });
 
     stickyScroller.addChild(group);
@@ -59,19 +57,26 @@ export default function init() {
     AdManager.on('render', onStickRender);
     AdManager.on('stop', onStickStop);
 
-    if (INFOBAR) {
-        INFOBAR.on('disable', function() {
-            stickyScroller.children.forEach(function(group) {
-                group.children.forEach(function(item) {
-                    item.offset.top = 60;
-                });
+    InfobarManager.once('disable', function(){
+        stickyScroller.children.forEach(function(group) {
+            group.children.forEach(function(item) {
+                item.offset.top = 60;
             });
-
-            Manager.recalculate();
-            stickyScroller.sortChildren();
-            stickyScroller.update();
         });
-    }
+        Manager.recalculate();
+        stickyScroller.sortChildren();
+        stickyScroller.update();
+    });
+    InfobarManager.once('enable', function(){
+        stickyScroller.children.forEach(function(group) {
+            group.children.forEach(function(item) {
+                item.offset.top = 120;
+            });
+        });
+        Manager.recalculate();
+        stickyScroller.sortChildren();
+        stickyScroller.update();
+    });
 
     addEvent(window, 'resize', debounce(stickyResize, 300));
     stickyResize();
