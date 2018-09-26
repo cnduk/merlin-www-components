@@ -1,0 +1,174 @@
+@import '@cnbritain/merlin-www-buttons:wireframe';
+@import '@cnbritain/merlin-www-common:wireframe';
+
+.c-subscribe-bar {
+    height: 110px;
+    position: relative;
+    width: 100%;
+    z-index: 5;
+
+    @include at-x-large-size {
+        height: 100px;
+    }
+
+    &.is-fixed {
+        .c-subscribe-bar-wrapper {
+            box-sizing: border-box;
+            left: 50%;
+            position: fixed;
+            top: 60px;
+            transform: translateX(-50%);
+        }
+    }
+
+    &.is-hidden {
+        @include max-screen($X_LARGE_SIZE - 1px) {
+            .c-subscribe-bar-wrapper {
+                top: 0px;
+            }
+        }
+    }
+
+    &.is-disabled {
+        // display: none;
+    }
+}
+
+.c-subscribe-bar-wrapper {
+    height: 110px;
+    width: 100%;
+
+    @include max-screen($X_LARGE_SIZE - 1px) {
+        transition: top 300ms ease-in-out;
+        will-change: top;
+    }
+
+    @include at-x-large-size {
+        box-sizing: border-box;
+        height: 100px;
+    }
+}
+
+.c-subscribe-bar__content {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 110px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: $XX_LARGE_SIZE;
+    padding-right: 60px;
+    position: relative;
+    z-index: 0;
+
+    @include at-x-large-size {
+        box-sizing: border-box;
+        height: 100px;
+    }
+}
+
+.c-subscribe-bar__image {
+    box-sizing: border-box;
+    display: none;
+    height: 88px;
+    max-width: 600px;
+    padding-left: 64px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+
+    img {
+        background-color: #fff;
+        border-radius: 5px;
+        border: 2px solid #000;
+        box-sizing: border-box;
+        height: 88px;
+        margin-left: -64px;
+        width: 54px;
+    }
+
+    @include at-x-large-size {
+        display: block;
+    }
+}
+
+.c-subscribe-bar__message {
+    box-sizing: border-box;
+    margin: 0;
+    max-width: $SMALL_SIZE;
+    text-align: center;
+    width: 100%;
+
+    @include at-x-large-size {
+        padding-left: 64px;
+        text-align: left;
+    }
+}
+
+.c-subscribe-bar__form {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    max-width: $SMALL_SIZE;
+    text-align: center;
+    width: 100%;
+
+    @include at-x-large-size {
+        padding-left: 64px;
+        text-align: left;
+    }
+}
+
+.c-subscribe-bar__form-text {
+    border: none;
+    flex: 1 0 auto;
+    height: 40px;
+    margin: 0 10px 0 0;
+    padding: 0;
+}
+
+.c-subscribe-bar__form-button {
+    appearance: none;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.c-subscribe-bar__legal {
+    box-sizing: border-box;
+    margin: 0;
+    max-width: $SMALL_SIZE;
+    text-align: center;
+    width: 100%;
+
+    @include at-x-large-size {
+        padding-left: 64px;
+        text-align: left;
+    }
+}
+
+.c-subscribe-bar__close-button {
+    appearance: none;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+
+    svg {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

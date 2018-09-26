@@ -1,0 +1,22 @@
+<div class="c-subscribe-bar js-c-subscribe-bar is-disabled{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
+    <div class="c-subscribe-bar-wrapper">
+        <div class="c-subscribe-bar__content">
+            <div class="c-subscribe-bar__image">
+                <img src="">
+            </div>
+            <p class="c-subscribe-bar__message js-c-subscribe-bar__message">
+                {{# data.message }}{{ . }}{{/ data.message }}
+            </p>
+            <form method="GET" action="" class="c-subscribe-bar__form">
+                <input type="email" name="email" class="c-subscribe-bar__form-text" placeholder="Enter email address"></input>
+                <input type="submit" value="Sign Up" class="c-subscribe-bar__form-button"></input>
+            </form>
+            <p class="c-subscribe-bar__legal">by entering your email address, you agree to our policy policy</p>
+            {{# data.icon_close }}
+                <button class="c-subscribe-bar__close-button js-c-subscribe-bar__close-button ">
+                    {{> @cnbritain/merlin-www-image }}
+                </button>
+            {{/ data.icon_close }}
+        </div>
+    </div>
+</div>
