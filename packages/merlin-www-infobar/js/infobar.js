@@ -15,6 +15,8 @@ var IS_DISABLED_CLS = 'is-disabled';
 
 var COOKIE_PAGE_VIEW_COUNT = 'cnd_infobar_pageview_count';
 var COOKIE_HASH = 'cnd_infobar_hash';
+// This is the duration we want the cookie to last. Currently set to 1 day.
+var COOKIE_EXPIRES = 1;
 
 function Infobar(el) {
     EventEmitter.call(this);
@@ -64,17 +66,20 @@ Infobar.prototype = inherit(EventEmitter.prototype, {
 
     init: function(){
         if (this.previousHash !== this.currentHash) {
-            setCookie(COOKIE_HASH, this.currentHash);
+            setCookie(COOKIE_HASH, this.currentHash, COOKIE_EXPIRES);
 
             this.pageviewCount = 0;
-            setCookie(COOKIE_PAGE_VIEW_COUNT, this.pageviewCount);
+            setCookie(
+                COOKIE_PAGE_VIEW_COUNT, this.pageviewCount, COOKIE_EXPIRES);
         } else {
-            this.pageviewCount = parseInt(getCookie(COOKIE_PAGE_VIEW_COUNT), 10);
+            this.pageviewCount = parseInt(
+                getCookie(COOKIE_PAGE_VIEW_COUNT), 10);
         }
 
         if (this.pageviewCount < this.pageviewLimit) {
             this.pageviewCount += 1;
-            setCookie(COOKIE_PAGE_VIEW_COUNT, this.pageviewCount);
+            setCookie(
+                COOKIE_PAGE_VIEW_COUNT, this.pageviewCount, COOKIE_EXPIRES);
 
             this.enable();
         }
@@ -131,7 +136,7 @@ Infobar.prototype = inherit(EventEmitter.prototype, {
         this.el.classList.add(IS_DISABLED_CLS);
         this.state.isEnabled = false;
         // Set a cookie to be the page view limit so we don't open it again
-        setCookie(COOKIE_PAGE_VIEW_COUNT, this.pageviewLimit);
+        setCookie(COOKIE_PAGE_VIEW_COUNT, this.pageviewLimit, COOKIE_EXPIRES);
 
         this.emit('disable', events.disable(this));
     },
