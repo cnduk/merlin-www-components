@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-infobar@1.1.0...@cnbritain/merlin-www-infobar@1.1.1) (2018-09-26)
+
+
+### Bug Fixes
+
+* **merlin-www-infobar:** amend the cookie keys to force a change ([2a17932](https://github.com/cnduk/merlin-www-components/commit/2a17932))
+* **merlin-www-infobar:** expire the cookies after one day ([7c1d329](https://github.com/cnduk/merlin-www-components/commit/7c1d329))
+
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-infobar@1.0.19...@cnbritain/merlin-www-infobar@1.1.0) (2018-09-24)
 
