@@ -48,7 +48,7 @@ function Infobar(el) {
 
     this.pageviewLimit = this.config['pageview_limit'];
 
-    this.previousHash = getCookie('cnd_infobar_hash');
+    this.previousHash = getCookie(COOKIE_HASH);
     this.currentHash = this.config['hash'];
 
     this.el.addEventListener('click', this.onClick.bind(this));
