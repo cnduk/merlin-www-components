@@ -124,6 +124,31 @@
     }
 }
 
+@mixin column-2-4-6 {
+    @include column-base;
+
+    .c-card-section__card-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .c-card-section__card-listitem {
+        width: 50%;
+    }
+
+    @include at-small-size {
+        .c-card-section__card-listitem {
+            width: 25%;
+        }
+    }
+
+    @include at-x-large-size {
+        .c-card-section__card-listitem {
+            width: 16.66%;
+        }
+    }
+}
+
 
 /**
  * Defaults
@@ -242,7 +267,7 @@
 }
 .c-card-section--mag-magazines {
     @include section-padding;
-    @include column-2-4;
+    @include column-2-4-6;
     @include light-button;
 }
 .c-card-section--tg-articles {
