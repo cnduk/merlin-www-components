@@ -205,12 +205,17 @@
 // .c-card-section--tg-articles-grid {}
 // .c-card-section--tg-related-tags {}
 .c-card-section--a-recommended,
-.c-card-section--mag-articles,
 .c-card-section--s-results,
 .c-card-section--v-genre-articles {
     @include section-padding;
     @include column-1-2-4;
     @include light-button;
+}
+.c-card-section--mag-articles {
+    @include section-padding;
+    @include column-1-2-4;
+    @include dark-button;
+    background-color: $azalea;
 }
 .c-card-section--a-recommended {
     background-color: $concrete;
