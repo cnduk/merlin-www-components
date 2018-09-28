@@ -1,9 +1,7 @@
-// import INFOBAR from '../js';
+document.querySelector('.js-c-subscribe-bar').classList.remove('is-disabled');
+document.querySelector('.js-c-subscribe-bar').classList.add('is-fixed');
 
-// INFOBAR.enable();
-// INFOBAR.fix();
-
-// INFOBAR.el.querySelector('.c-infobar-wrapper').style.top = '0';
+document.querySelector('.c-subscribe-bar-wrapper').style.top = '0';
 
 for (var i = 0; i < 10; i++) {
     var bodyCopy = document.createElement('p');

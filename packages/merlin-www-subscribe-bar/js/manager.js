@@ -1,62 +1,59 @@
-// 'use strict';
+'use strict';
 
-// import EventEmitter from 'eventemitter2';
-// import {ajax, inherit} from '@cnbritain/merlin-www-js-utils/js/functions';
-// import {load} from './events';
-// import Infobar from './infobar';
+import EventEmitter from 'eventemitter2';
+import {ajax, inherit} from '@cnbritain/merlin-www-js-utils/js/functions';
+import {load} from './events';
+import SubscribeBar from './subscribe-bar';
 
-// // Events
-// // Loaded
-// // Open
-// // Close
+// Events
+// Loaded
+// Open
+// Close
 
-// function InfobarManager() {
-//     EventEmitter.call(this, {
-//         'wildcard': true
-//     });
+function SubscribeBarManager() {
+    EventEmitter.call(this, {
+        'wildcard': true
+    });
 
-//     this.isLoaded = false;
-//     this.infobar = null;
-// }
+    this.isLoaded = false;
+    this.subscribeBar = null;
+}
 
-// InfobarManager.prototype = inherit(EventEmitter.prototype, {
+SubscribeBarManager.prototype = inherit(EventEmitter.prototype, {
 
-//     _handleInfobarEvents: function _handleInfobarEvents(eventType, e){
-//         if(e.bubbles) this.emit(eventType, e);
-//     },
+    _handleSubscribeBarEvents: function _handleSubscribeBarEvents(eventType, e) {
+        if(e.bubbles) this.emit(eventType, e);
+    },
 
-//     lazyload: function lazyload(){
-//         if(this.isLoaded) return;
+    lazyload: function lazyload() {
+        if(this.isLoaded) return;
 
-//         // Check if we have the lazyload element
-//         var lazyLoadEl = document.querySelector('.js-c-infobar-lazy-load');
-//         if (!lazyLoadEl){
-//             this.isLoaded = true;
-//             return;
-//         }
+        // Check if we have the lazyload element
+        var lazyLoadEl = document.querySelector('.js-c-subscribe-bar-lazy-load');
+        if (!lazyLoadEl) {
+            this.isLoaded = true;
+            return;
+        }
 
-//         // Build xhr url. We need to send the referrer if one is set.
-//         var url = '/xhr/infobar';
-//         if (document.referrer) {
-//             url +='?referrer=' + encodeURIComponent(document.referrer);
-//         }
+        // Build xhr url. We need to send the referrer if one is set.
+        var url = '/xhr/subscribe-bar';
 
-//         ajax({url: url})
-//             .then(function onLazyload(data) {
-//                 this.isLoaded = true;
+        ajax({url: url})
+            .then(function onLazyload(data) {
+                this.isLoaded = true;
 
-//                 var jsonResponseText = JSON.parse(data.request.responseText);
-//                 var html = jsonResponseText.data.template;
-//                 lazyLoadEl.innerHTML = html;
-//                 this.infobar = new Infobar(
-//                     document.querySelector('.js-c-infobar'));
+                var jsonResponseText = JSON.parse(data.request.responseText);
+                var html = jsonResponseText.data.template;
+                lazyLoadEl.innerHTML = html;
+                this.subscribeBar = new SubscribeBar(
+                    document.querySelector('.js-c-subscribe-bar'));
 
-//                 this.emit('load', load(this));
-//                 this.infobar.onAny(this._handleInfobarEvents.bind(this));
-//                 this.infobar.init();
-//             }.bind(this));
-//     }
+                this.emit('load', load(this));
+                this.subscribeBar.onAny(this._handleSubscribeBarEvents.bind(this));
+                this.subscribeBar.init();
+            }.bind(this));
+    }
 
-// });
+});
 
-// export default InfobarManager;
+export default SubscribeBarManager;

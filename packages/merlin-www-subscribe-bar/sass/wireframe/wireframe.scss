@@ -30,7 +30,7 @@
     }
 
     &.is-disabled {
-        // display: none;
+        display: none;
     }
 }
 
@@ -81,7 +81,7 @@
     img {
         background-color: #fff;
         border-radius: 5px;
-        border: 2px solid #000;
+        border: 5px solid #000;
         box-sizing: border-box;
         height: 88px;
         margin-left: -64px;

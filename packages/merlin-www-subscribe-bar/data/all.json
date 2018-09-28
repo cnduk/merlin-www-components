@@ -1,5 +1,33 @@
 {
     "data": {
+        "cover": {
+            "data": {
+                "alt_text": null,
+                "credit": null,
+                "description": null,
+                "look_number": null,
+                "title": null,
+                "width": null,
+                "image_url": "https://covers.condenast.co.uk/api/v1/vg/latest/image/print/300/"
+            },
+            "state": {
+                "is_image": false,
+                "is_picture": false,
+                "is_static": true,
+                "is_svg": false,
+                "is_linked": false,
+                "is_landscape": false,
+                "is_portrait": false,
+                "is_square": false,
+                "is_lazyload": true
+            },
+            "style": {
+                "cls": "",
+                "inline": ""
+            },
+            "translation": {},
+            "type": "StaticImage"
+        },
         "link": {
             "data": {
                 "title": "Sign Up",

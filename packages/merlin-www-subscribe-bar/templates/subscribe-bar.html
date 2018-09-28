@@ -1,9 +1,11 @@
 <div class="c-subscribe-bar js-c-subscribe-bar is-disabled{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
     <div class="c-subscribe-bar-wrapper">
         <div class="c-subscribe-bar__content">
-            <div class="c-subscribe-bar__image">
-                <img src="">
-            </div>
+            {{# data.cover }}
+                <div class="c-subscribe-bar__image">
+                    {{> @cnbritain/merlin-www-image }}
+                </div>
+            {{/ data.cover }}
             <p class="c-subscribe-bar__message js-c-subscribe-bar__message">
                 {{# data.message }}{{ . }}{{/ data.message }}
             </p>
@@ -19,4 +21,8 @@
             {{/ data.icon_close }}
         </div>
     </div>
+
+    {{# data.json }}
+        <script type="application/json" class="js-c-subscribe-bar-config">{{ &. }}</script>
+    {{/ data.json }}
 </div>

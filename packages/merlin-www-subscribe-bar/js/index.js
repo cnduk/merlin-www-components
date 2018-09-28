@@ -1,6 +1,6 @@
 
-// 'use strict';
+'use strict';
 
-// import InfobarManager from './manager';
-// var manager = new InfobarManager();
-// export default manager;
+import SubscribeBarManager from './manager';
+var manager = new SubscribeBarManager();
+export default manager;
