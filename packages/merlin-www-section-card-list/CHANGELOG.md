@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.13.16"></a>
+## [1.13.16](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.15...@cnbritain/merlin-www-section-card-list@1.13.16) (2018-10-02)
+
+
+### Bug Fixes
+
+* **merlin-www-section-card-list:** update styles for glamour ([7eb835d](https://github.com/cnduk/merlin-www-components/commit/7eb835d))
+* **merlin-www-section-card-list:** update styles for glamour magazine covers ([80c2bd6](https://github.com/cnduk/merlin-www-components/commit/80c2bd6))
+
+
+
+
 <a name="1.13.15"></a>
 ## [1.13.15](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.14...@cnbritain/merlin-www-section-card-list@1.13.15) (2018-09-24)
 
