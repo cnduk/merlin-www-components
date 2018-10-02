@@ -124,6 +124,31 @@
     }
 }
 
+@mixin column-2-4-6 {
+    @include column-base;
+
+    .c-card-section__card-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .c-card-section__card-listitem {
+        width: 50%;
+    }
+
+    @include at-small-size {
+        .c-card-section__card-listitem {
+            width: 25%;
+        }
+    }
+
+    @include at-x-large-size {
+        .c-card-section__card-listitem {
+            width: 16.66%;
+        }
+    }
+}
+
 
 /**
  * Defaults
@@ -205,12 +230,17 @@
 // .c-card-section--tg-articles-grid {}
 // .c-card-section--tg-related-tags {}
 .c-card-section--a-recommended,
-.c-card-section--mag-articles,
 .c-card-section--s-results,
 .c-card-section--v-genre-articles {
     @include section-padding;
     @include column-1-2-4;
     @include light-button;
+}
+.c-card-section--mag-articles {
+    @include section-padding;
+    @include column-1-2-4;
+    @include dark-button;
+    background-color: $azalea;
 }
 .c-card-section--a-recommended {
     background-color: $concrete;
@@ -237,7 +267,7 @@
 }
 .c-card-section--mag-magazines {
     @include section-padding;
-    @include column-2-4;
+    @include column-2-4-6;
     @include light-button;
 }
 .c-card-section--tg-articles {
