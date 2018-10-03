@@ -66,6 +66,10 @@
         box-sizing: border-box;
         height: 100px;
     }
+
+    &.is-hidden {
+        display: none;
+    }
 }
 
 .c-subscribe-bar__image {
@@ -127,11 +131,16 @@
 }
 
 .c-subscribe-bar__form-text {
-    border: none;
+    border: 1px solid transparent;
+    box-sizing: border-box;
     flex: 1 0 auto;
     height: 40px;
     margin: 0;
     padding: 0;
+
+    &.has-error {
+        border: 1px solid #c00000;
+    }
 }
 
 .c-subscribe-bar__form-button {
@@ -177,4 +186,34 @@
         top: 50%;
         transform: translate(-50%, -50%);
     }
+}
+
+.c-subscribe-bar__success-content {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    height: 110px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: $XX_LARGE_SIZE;
+    padding-right: 60px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+
+    @include at-x-large-size {
+        box-sizing: border-box;
+        height: 100px;
+    }
+
+    &.is-hidden {
+        display: none;
+    }
+}
+
+.c-subscribe-bar__success-message {
+
 }
