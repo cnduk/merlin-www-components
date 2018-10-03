@@ -2,7 +2,6 @@
 
 import EventEmitter from 'eventemitter2';
 import {
-    ajax,
     getCookie,
     inherit,
     setCookie
@@ -155,7 +154,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
 
         if (!email) {
             this.emailEl.classList.add('has-error');
-            return false
+            return false;
         }
 
         this.contentEl.classList.add('is-hidden');
@@ -183,7 +182,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
                     that.failureEl.classList.remove('is-hidden');
                 }
             }
-        }
+        };
         xhr.send(`email=${email}`);
     }
 });
