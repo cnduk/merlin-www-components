@@ -16,6 +16,7 @@ import {
 import MainNavigation from '@cnbritain/merlin-www-main-navigation'; // eslint-disable-line no-unused-vars
 import CookieWarning from '@cnbritain/merlin-www-cookie-warning'; // eslint-disable-line no-unused-vars
 import InfobarManager from '@cnbritain/merlin-www-infobar'; // eslint-disable-line no-unused-vars
+import SubscribeBarManager from '@cnbritain/merlin-www-subscribe-bar'; // eslint-disable-line no-unused-vars
 import CommonImage from '@cnbritain/merlin-www-image';
 import store from '@cnbritain/merlin-www-js-store';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
@@ -67,6 +68,12 @@ export default function init(config) {
 
     InfobarManager.lazyload();
     InfobarManager.once('enable', function(){
+        if (MainNavigation.state.isFixed) {
+            InfobarManager.infobar.fix();
+        }
+    });
+    SubscribeBarManager.lazyload();
+    SubscribeBarManager.once('enable', function(){
         if (MainNavigation.state.isFixed) {
             InfobarManager.infobar.fix();
         }

@@ -1,19 +1,30 @@
 <div class="c-subscribe-bar js-c-subscribe-bar is-disabled{{# style.cls }} {{ style.cls }}{{/ style.cls }}">
     <div class="c-subscribe-bar-wrapper">
-        <div class="c-subscribe-bar__content">
+        <div class="c-subscribe-bar__content js-c-subscribe-bar__content">
             {{# data.cover }}
                 <div class="c-subscribe-bar__image">
                     {{> @cnbritain/merlin-www-image }}
                 </div>
             {{/ data.cover }}
-            <p class="c-subscribe-bar__message js-c-subscribe-bar__message">
+            <p class="c-subscribe-bar__message">
                 {{# data.message }}{{ . }}{{/ data.message }}
             </p>
-            <form method="GET" action="" class="c-subscribe-bar__form">
-                <input type="email" name="email" class="c-subscribe-bar__form-text" placeholder="Enter email address"></input>
-                <input type="submit" value="Sign Up" class="c-subscribe-bar__form-button"></input>
+            <form method="POST" class="c-subscribe-bar__form">
+                <input type="email" name="email" required class="js-c-subscribe-bar__form-text c-subscribe-bar__form-text" placeholder="Enter email address"></input>
+                <input type="submit" value="Sign Up" class="js-c-subscribe-bar__form-button c-subscribe-bar__form-button"></input>
             </form>
             <p class="c-subscribe-bar__legal">by entering your email address, you agree to our policy policy</p>
+            {{# data.icon_close }}
+                <button class="c-subscribe-bar__close-button js-c-subscribe-bar__close-button ">
+                    {{> @cnbritain/merlin-www-image }}
+                </button>
+            {{/ data.icon_close }}
+        </div>
+
+        <div class="c-subscribe-bar__success-content js-c-subscribe-bar__success-content is-hidden">
+            <p class="c-subcribe-bar__success-message">
+                {{# data.success_message }}{{ . }}{{/ data.success_message }}
+            </p>
             {{# data.icon_close }}
                 <button class="c-subscribe-bar__close-button js-c-subscribe-bar__close-button ">
                     {{> @cnbritain/merlin-www-image }}

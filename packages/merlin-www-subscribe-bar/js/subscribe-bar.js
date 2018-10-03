@@ -2,6 +2,7 @@
 
 import EventEmitter from 'eventemitter2';
 import {
+    ajax,
     getCookie,
     inherit,
     setCookie
@@ -13,8 +14,8 @@ var IS_HIDDEN_CLS = 'is-hidden';
 var IS_FIXED_CLS = 'is-fixed';
 var IS_DISABLED_CLS = 'is-disabled';
 
-var COOKIE_PAGE_VIEW_COUNT = 'cnd_subscribe_bar_pageview_count';
-// var COOKIE_HASH = 'cnd_subscribe_bar_hash';
+var COOKIE_PAGE_VIEW_DATE = 'cnd_subscribe_bar_pageview_date';
+var COOKIE_HASH = 'cnd_subscribe_bar_hash';
 
 function SubscribeBar(el) {
     EventEmitter.call(this);
@@ -22,7 +23,7 @@ function SubscribeBar(el) {
     this.el = el;
 
     if (!this.el) {
-        throw new Error('Infobar Element Not Found');
+        throw new Error('Subscribe Bar Element Not Found');
     }
 
     this.state = {
@@ -31,9 +32,13 @@ function SubscribeBar(el) {
         isEnabled: false
     };
 
-    // this.messageEl = el.querySelector('.js-c-infobar__message');
-    // this.buttonEl = el.querySelector('.js-c-infobar__button');
-    // this.closeButtonEl = el.querySelector('.js-c-infobar__close-button');
+    this.emailEl = el.querySelector('.js-c-subscribe-bar__form-text');
+
+    this.contentEl = el.querySelector('.js-c-subscribe-bar__content');
+    this.successContentEl = el.querySelector('.js-c-subscribe-bar__success-content');
+
+    this.formButtonEl = el.querySelector('.js-c-subscribe-bar__form-button');
+    this.closeButtonEls = el.querySelectorAll('.js-c-subscribe-bar__close-button');
 
     this.configEl = el.querySelector('.js-c-subscribe-bar-config');
 
@@ -44,13 +49,16 @@ function SubscribeBar(el) {
     this.config = this.configEl.innerHTML;
     this.config = JSON.parse(this.config);
 
-    this.pageviewLimit = this.config['pageview_limit'];
-
     this.previousHash = getCookie('cnd_subscribe_bar_hash');
     this.currentHash = this.config['hash'];
 
-    // this.el.addEventListener('click', this.onClick.bind(this));
-    // this.closeButtonEl.addEventListener('click', this.disable.bind(this));
+    this.formButtonEl.addEventListener('click', this.onSubmit.bind(this));
+
+    for (var i = 0; i < this.closeButtonEls.length; i++) {
+        this.closeButtonEls[i].addEventListener('click', this.disable.bind(this));
+    }
+
+    this.emailEl.addEventListener('invalid', this.invalid.bind(this));
 
     if (NAV) {
         NAV.on('show', this.show.bind(this));
@@ -63,21 +71,14 @@ function SubscribeBar(el) {
 SubscribeBar.prototype = inherit(EventEmitter.prototype, {
 
     init: function() {
-        // if (this.previousHash !== this.currentHash) {
-        //     setCookie(COOKIE_HASH, this.currentHash);
+        if (this.previousHash !== this.currentHash) {
+            setCookie(COOKIE_HASH, this.currentHash);
+            setCookie(COOKIE_PAGE_VIEW_DATE, false);
+        }
 
-        //     this.pageviewCount = 0;
-        //     setCookie(COOKIE_PAGE_VIEW_COUNT, this.pageviewCount);
-        // } else {
-        //     this.pageviewCount = parseInt(getCookie(COOKIE_PAGE_VIEW_COUNT), 10);
-        // }
-
-        // if (this.pageviewCount < this.pageviewLimit) {
-        //     this.pageviewCount += 1;
-        //     setCookie(COOKIE_PAGE_VIEW_COUNT, this.pageviewCount);
-
-        //     this.enable();
-        // }
+        if (getCookie(COOKIE_PAGE_VIEW_DATE) == 'false') {
+            this.enable();
+        }
     },
 
     show: function() {
@@ -130,21 +131,53 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
 
         this.el.classList.add(IS_DISABLED_CLS);
         this.state.isEnabled = false;
-        // Set a cookie to be the page view limit so we don't open it again
-        setCookie(COOKIE_PAGE_VIEW_COUNT, this.pageviewLimit);
+
+        setCookie(COOKIE_PAGE_VIEW_DATE, true, 30);
 
         this.emit('disable', events.disable(this));
     },
 
-//     onClick: function(e) {
-//         if (e.target == this.messageEl) {
-//             this.emit('linkClick', events.linkClick(e.target, 'message'));
-//         }
+    invalid: function(e) {
+        e.preventDefault();
+        this.emailEl.classList.add('has-error');
+    },
 
-//         if (e.target == this.buttonEl) {
-//             this.emit('linkClick', events.linkClick(e.target, 'button'));
-//         }
-//     }
+    onSubmit: function(e) {
+        e.preventDefault();
+
+        this.emailEl.classList.remove('has-error');
+
+        var email = this.emailEl.value;
+
+        if (!email) {
+            this.emailEl.classList.add('has-error');
+            return false
+        }
+
+        this.contentEl.classList.add('is-hidden');
+        this.successContentEl.classList.remove('is-hidden');
+
+        var xhr = new XMLHttpRequest();
+
+        xhr.open('POST', '/xhr/newsletters', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        xhr.onreadystatechange = function() {
+            if(this.readyState == XMLHttpRequest.DONE) {
+                if (this.status == 200) {
+                    var responseText = JSON.parse(this.responseText);
+                    if (responseText.success) {
+                        // render success
+                    }
+                }
+
+                else {
+                    // render error
+                }
+            }
+        }
+        xhr.send(`email=${email}`);
+    }
 });
 
 export default SubscribeBar;
