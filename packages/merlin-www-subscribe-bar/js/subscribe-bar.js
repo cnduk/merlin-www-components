@@ -35,7 +35,11 @@ function SubscribeBar(el) {
     this.emailEl = el.querySelector('.js-c-subscribe-bar__form-text');
 
     this.contentEl = el.querySelector('.js-c-subscribe-bar__content');
-    this.successContentEl = el.querySelector('.js-c-subscribe-bar__success-content');
+
+    this.statusEl = el.querySelector('.js-c-subscribe-bar__status');
+    this.spinnerEl = el.querySelector('.js-c-subscribe-bar__spinner');
+    this.successEl = el.querySelector('.js-c-subscribe-bar__success-message');
+    this.failureEl = el.querySelector('.js-c-subscribe-bar__failure-message');
 
     this.formButtonEl = el.querySelector('.js-c-subscribe-bar__form-button');
     this.closeButtonEls = el.querySelectorAll('.js-c-subscribe-bar__close-button');
@@ -155,24 +159,28 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
         }
 
         this.contentEl.classList.add('is-hidden');
-        this.successContentEl.classList.remove('is-hidden');
+        this.statusEl.classList.remove('is-hidden');
 
         var xhr = new XMLHttpRequest();
 
         xhr.open('POST', '/xhr/newsletters', true);
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
+        var that = this;
+
         xhr.onreadystatechange = function() {
             if(this.readyState == XMLHttpRequest.DONE) {
+                that.spinnerEl.classList.add('is-hidden');
+
                 if (this.status == 200) {
                     var responseText = JSON.parse(this.responseText);
                     if (responseText.success) {
-                        // render success
+                        that.successEl.classList.remove('is-hidden');
                     }
                 }
 
                 else {
-                    // render error
+                    that.failureEl.classList.remove('is-hidden');
                 }
             }
         }

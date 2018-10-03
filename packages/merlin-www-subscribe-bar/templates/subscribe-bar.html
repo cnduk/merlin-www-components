@@ -21,12 +21,16 @@
             {{/ data.icon_close }}
         </div>
 
-        <div class="c-subscribe-bar__success-content js-c-subscribe-bar__success-content is-hidden">
-            <p class="c-subcribe-bar__success-message">
-                {{# data.success_message }}{{ . }}{{/ data.success_message }}
+        <div class="c-subscribe-bar__status js-c-subscribe-bar__status is-hidden">
+            <div class="c-subscribe-bar__spinner js-c-subscribe-bar__spinner"></div>
+            <p class="c-subscribe-bar__success-message js-c-subscribe-bar__success-message is-hidden">
+                <span>Thank You.</span> You have successfully signed up to our newsletter.
+            </p>
+            <p class="c-subscribe-bar__failure-message js-c-subscribe-bar__failure-message is-hidden">
+
             </p>
             {{# data.icon_close }}
-                <button class="c-subscribe-bar__close-button js-c-subscribe-bar__close-button ">
+                <button class="c-subscribe-bar__close-button js-c-subscribe-bar__close-button">
                     {{> @cnbritain/merlin-www-image }}
                 </button>
             {{/ data.icon_close }}
