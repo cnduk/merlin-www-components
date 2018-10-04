@@ -49,10 +49,13 @@ SubscribeBarManager.prototype = inherit(EventEmitter.prototype, {
                 this.subscribeBar = new SubscribeBar(
                     document.querySelector('.js-c-subscribe-bar'));
 
-                this.emit('load', load(this));
                 this.subscribeBar.onAny(this._handleSubscribeBarEvents.bind(this));
                 this.subscribeBar.init();
+
+                this.emit('load', load(this));
             }.bind(this), function onLazyloadFail() {
+                this.isLoaded = true;
+
                 this.emit('load', load(this));
             }.bind(this));
     }

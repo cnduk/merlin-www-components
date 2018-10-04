@@ -75,8 +75,8 @@ export default function init(config) {
 
     InfobarManager.once('load', function() {
         if (!InfobarManager.infobar || InfobarManager.infobar.state.isEnabled == false) {
-           SubscribeBarManager.lazyload();
-           SubscribeBarManager.once('enable', function() {
+            SubscribeBarManager.lazyload();
+            SubscribeBarManager.once('enable', function() {
                if (MainNavigation.state.isFixed) {
                    SubscribeBarManager.subscribeBar.fix();
                }

@@ -52,10 +52,13 @@ InfobarManager.prototype = inherit(EventEmitter.prototype, {
                 this.infobar = new Infobar(
                     document.querySelector('.js-c-infobar'));
 
-                this.emit('load', load(this));
                 this.infobar.onAny(this._handleInfobarEvents.bind(this));
                 this.infobar.init();
+
+                this.emit('load', load(this));
             }.bind(this), function onLazyloadFail() {
+                this.isLoaded = true;
+
                 this.emit('load', load(this));
             }.bind(this));
     }
