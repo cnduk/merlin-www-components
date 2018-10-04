@@ -32,6 +32,7 @@ InfobarManager.prototype = inherit(EventEmitter.prototype, {
         var lazyLoadEl = document.querySelector('.js-c-infobar-lazy-load');
         if (!lazyLoadEl){
             this.isLoaded = true;
+            this.emit('load', load(this));
             return;
         }
 
@@ -54,6 +55,8 @@ InfobarManager.prototype = inherit(EventEmitter.prototype, {
                 this.emit('load', load(this));
                 this.infobar.onAny(this._handleInfobarEvents.bind(this));
                 this.infobar.init();
+            }.bind(this), function onLazyloadFail() {
+                this.emit('load', load(this));
             }.bind(this));
     }
 

@@ -32,6 +32,7 @@ SubscribeBarManager.prototype = inherit(EventEmitter.prototype, {
         var lazyLoadEl = document.querySelector('.js-c-subscribe-bar-lazy-load');
         if (!lazyLoadEl) {
             this.isLoaded = true;
+            this.emit('load', load(this));
             return;
         }
 
@@ -51,6 +52,8 @@ SubscribeBarManager.prototype = inherit(EventEmitter.prototype, {
                 this.emit('load', load(this));
                 this.subscribeBar.onAny(this._handleSubscribeBarEvents.bind(this));
                 this.subscribeBar.init();
+            }.bind(this), function onLazyloadFail() {
+                this.emit('load', load(this));
             }.bind(this));
     }
 
