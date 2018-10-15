@@ -3,38 +3,28 @@
 
 @import "../wireframe/wireframe";
 
-.c-infobar {}
-.c-infobar-wrapper {
+.c-subscribe-bar {}
+.c-subscribe-bar-wrapper {
     background-color: $azure;
 }
 
-.c-infobar__content {
-    padding: 12px 60px 12px 20px;
+.c-subscribe-bar__content {
+    padding: 10px 60px 10px 20px;
 }
 
-.c-infobar__message {
-    @include font("SOLEIL", 14px, 400, 15px);
+.c-subscribe-bar__image {
+    img {
+        border-color: $white;
+    }
+}
+
+.c-subscribe-bar__message {
+    @include font("SOLEIL", 12px, 600, 12px);
     color: $sapphire;
-    text-align: center;
-    text-transform: uppercase;
+    margin-bottom: 8px;
 }
 
-.c-infobar__button {
-    @include button-single-three();
-    @include button-single-three-dark();
-    &:hover {
-        @include button-single-three-dark-hover();
-    }
-
-    margin: 10px 0 0 0;
-    padding: 12px 15px;
-
-    @include at-x-large-size {
-        margin: 0 0 0 20px;
-    }
-}
-
-.c-infobar__close-button {
+.c-subscribe-bar__close-button {
     border: 1px solid $sapphire;
     border-radius: 50%;
     padding: 6px;
@@ -42,4 +32,47 @@
     svg {
         fill: $sapphire;
     }
+}
+
+.c-subscribe-bar__form {}
+
+.c-subscribe-bar__form-text {
+    @include font("SOLEIL", 10px, 400, 10px);
+    background-color: $white;
+    color: $ascot-grey;
+    padding: 0 20px;
+    text-transform: uppercase;
+}
+
+.c-subscribe-bar__form-button {
+    @include button-single-three();
+    @include button-single-three-dark();
+    &:hover {
+        @include button-single-three-dark-hover();
+    }
+
+    padding: 0 15px;
+}
+
+.c-subscribe-bar__legal {
+    @include font("SOLEIL", 10px, 400, 10px);
+    color: $sapphire;
+    margin-top: 5px;
+}
+
+.c-subscribe-bar__status {
+    padding: 10px 60px 10px 20px;
+}
+
+.c-subscribe-bar__spinner {
+    border-bottom: 10px solid rgba($white, 0.2);
+    border-left: 10px solid rgba($white, 0.2);
+    border-right: 10px solid rgba($white, 0.2);
+    border-top: 10px solid $white;
+}
+
+.c-subscribe-bar__failure-message,
+.c-subscribe-bar__success-message {
+    @include font("SOLEIL", 12px, 600, 12px);
+    color: $sapphire;
 }
