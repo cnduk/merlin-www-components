@@ -12,6 +12,12 @@
     padding: 10px 60px 10px 20px;
 }
 
+.c-subscribe-bar__image {
+    img {
+        border-color: $white;
+    }
+}
+
 .c-subscribe-bar__message {
     @include font("GRAPHIK", 14px, 600, 15px);
     color: $white;

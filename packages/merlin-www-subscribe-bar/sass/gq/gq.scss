@@ -3,42 +3,69 @@
 
 @import "../wireframe/wireframe";
 
-.c-infobar {}
-.c-infobar-wrapper {
-    background-color: $pale-slate;
+.c-subscribe-bar {}
+.c-subscribe-bar-wrapper {
+    background-color: $oslo-gray;
 }
 
-.c-infobar__content {
-    padding: 12px 60px 12px 20px;
+.c-subscribe-bar__content {
+    padding: 10px 60px 10px 20px;
 }
 
-.c-infobar__message {
-    @include font("GOTHAM", 15px, 700, 16px);
+.c-subscribe-bar__message {
+    @include font("GOTHAM", 15px, 700, 15px);
     color: $woodsmoke;
-    text-align: center;
+    margin-bottom: 8px;
 }
 
-.c-infobar__button {
+.c-subscribe-bar__close-button {
+    border-radius: 50%;
+    border: 1px solid $woodsmoke;
+    padding: 6px;
+
+    svg {
+        fill: $woodsmoke;
+    }
+}
+
+.c-subscribe-bar__form {}
+
+.c-subscribe-bar__form-text {
+    @include font("GOTHAM", 12px, 500, 12px);
+    background-color: $white;
+    color: $shuttle-gray;
+    padding: 0 20px;
+}
+
+.c-subscribe-bar__form-button {
     @include button-single();
     @include button-single-light();
     &:hover {
         @include button-single-light-hover();
     }
 
-    margin: 10px 0 0 0;
-    padding: 13px 8px;
-
-    @include at-x-large-size {
-        margin: 0 0 0 20px;
-    }
+    padding: 0 15px;
 }
 
-.c-infobar__close-button {
-    border: 1px solid $woodsmoke;
-    border-radius: 50%;
-    padding: 6px;
+.c-subscribe-bar__legal {
+    @include font("GOTHAM", 10px, 400, 10px);
+    color: $woodsmoke;
+    margin-top: 5px;
+}
 
-    svg {
-        fill: $woodsmoke;
-    }
+.c-subscribe-bar__status {
+    padding: 10px 60px 10px 20px;
+}
+
+.c-subscribe-bar__spinner {
+    border-bottom: 10px solid rgba($white, 0.2);
+    border-left: 10px solid rgba($white, 0.2);
+    border-right: 10px solid rgba($white, 0.2);
+    border-top: 10px solid $white;
+}
+
+.c-subscribe-bar__failure-message,
+.c-subscribe-bar__success-message {
+    @include font("GOTHAM", 15px, 700, 15px);
+    color: $woodsmoke;
 }

@@ -3,38 +3,23 @@
 
 @import "../wireframe/wireframe";
 
-.c-infobar {}
-.c-infobar-wrapper {
+.c-subscribe-bar {}
+.c-subscribe-bar-wrapper {
     background-color: $CASPER;
 }
 
-.c-infobar__content {
-    padding: 12px 60px 12px 20px;
+.c-subscribe-bar__content {
+    padding: 10px 60px 10px 20px;
 }
 
-.c-infobar__message {
+.c-subscribe-bar__message {
     @include font("PROXIMA NOVA CONDENSED", 17px, 600, 17px);
     color: $WHITE;
-    text-align: center;
+    margin-bottom: 8px;
     text-transform: uppercase;
 }
 
-.c-infobar__button {
-    @include button-single-two();
-    @include button-single-two-light();
-    &:hover {
-        @include button-single-two-light-hover();
-    }
-
-    margin: 5px 0 0 0;
-    padding: 13px 11px;
-
-    @include at-x-large-size {
-        margin: 0 0 0 20px;
-    }
-}
-
-.c-infobar__close-button {
+.c-subscribe-bar__close-button {
     border-radius: 50%;
     border: 1px solid $WHITE;
     padding: 6px;
@@ -42,4 +27,47 @@
     svg {
         fill: $WHITE;
     }
+}
+
+.c-subscribe-bar__form {}
+
+.c-subscribe-bar__form-text {
+    @include font("PROXIMA NOVA CONDENSED", 17px, 600, 17px);
+    background-color: $WHITE;
+    color: $MUSTASAARI;
+    padding: 0 20px;
+}
+
+.c-subscribe-bar__form-button {
+    @include button-single-two();
+    @include button-single-two-light();
+    &:hover {
+        @include button-single-two-light-hover();
+    }
+
+    padding: 0 15px;
+}
+
+.c-subscribe-bar__legal {
+    @include font("PROXIMA NOVA CONDENSED", 10px, 600, 10px);
+    color: $WHITE;
+    margin-top: 5px;
+}
+
+.c-subscribe-bar__status {
+    padding: 10px 60px 10px 20px;
+}
+
+.c-subscribe-bar__spinner {
+    border-bottom: 10px solid rgba($WHITE, 0.2);
+    border-left: 10px solid rgba($WHITE, 0.2);
+    border-right: 10px solid rgba($WHITE, 0.2);
+    border-top: 10px solid $WHITE;
+}
+
+.c-subscribe-bar__failure-message,
+.c-subscribe-bar__success-message {
+    @include font("PROXIMA NOVA CONDENSED", 17px, 600, 17px);
+    color: $WHITE;
+    text-transform: uppercase;
 }
