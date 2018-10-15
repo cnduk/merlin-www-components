@@ -3,37 +3,22 @@
 
 @import "../wireframe/wireframe";
 
-.c-infobar {}
-.c-infobar-wrapper {
+.c-subscribe-bar {}
+.c-subscribe-bar-wrapper {
     background-color: $ebony-clay;
 }
 
-.c-infobar__content {
-    padding: 12px 60px 12px 20px;
+.c-subscribe-bar__content {
+    padding: 10px 60px 10px 20px;
 }
 
-.c-infobar__message {
-    @include font("MILLER_DISPLAY", 17px, 600, 17px);
+.c-subscribe-bar__message {
+    @include font("MILLER_DISPLAY", 16px, 600, 17px);
     color: $white;
-    text-align: center;
+    margin-bottom: 8px;
 }
 
-.c-infobar__button {
-    @include button-single();
-    @include button-single-dark();
-    &:hover {
-        @include button-single-dark-hover();
-    }
-
-    margin: 10px 0 0 0;
-    padding: 12px;
-
-    @include at-x-large-size {
-        margin: 0 0 0 20px;
-    }
-}
-
-.c-infobar__close-button {
+.c-subscribe-bar__close-button {
     border-radius: 50%;
     border: 1px solid $white;
     padding: 6px;
@@ -41,4 +26,48 @@
     svg {
         fill: $white;
     }
+}
+
+.c-subscribe-bar__form {}
+
+.c-subscribe-bar__form-text {
+    @include font("BRANDON GROTESQUE", 11px, 700, 11px);
+    background-color: $white;
+    color: $silver-chalice;
+    padding: 0 20px;
+    text-transform: uppercase;
+}
+
+.c-subscribe-bar__form-button {
+    @include button-single();
+    @include button-single-dark();
+    &:hover {
+        @include button-single-dark-hover();
+    }
+
+    padding: 0 15px;
+}
+
+.c-subscribe-bar__legal {
+    @include font("BRANDON GROTESQUE", 7px, 400, 9px);
+    color: $silver;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+.c-subscribe-bar__status {
+    padding: 10px 60px 10px 20px;
+}
+
+.c-subscribe-bar__spinner {
+    border-bottom: 10px solid rgba($white, 0.2);
+    border-left: 10px solid rgba($white, 0.2);
+    border-right: 10px solid rgba($white, 0.2);
+    border-top: 10px solid $white;
+}
+
+.c-subscribe-bar__failure-message,
+.c-subscribe-bar__success-message {
+    @include font("MILLER_DISPLAY", 16px, 600, 17px);
+    color: $white;
 }
