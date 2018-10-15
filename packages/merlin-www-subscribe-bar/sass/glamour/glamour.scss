@@ -3,37 +3,22 @@
 
 @import "../wireframe/wireframe";
 
-.c-infobar {}
-.c-infobar-wrapper {
+.c-subscribe-bar {}
+.c-subscribe-bar-wrapper {
     background-color: $astronaut;
 }
 
-.c-infobar__content {
-    padding: 12px 60px 12px 20px;
+.c-subscribe-bar__content {
+    padding: 10px 60px 10px 20px;
 }
 
-.c-infobar__message {
-    @include font("GRAPHIK", 15px, 600, 17px);
+.c-subscribe-bar__message {
+    @include font("GRAPHIK", 14px, 600, 15px);
     color: $white;
-    text-align: center;
+    margin-bottom: 8px;
 }
 
-.c-infobar__button {
-    @include button-group();
-    @include button-group-dark();
-    &:hover {
-        @include button-group-dark-hover();
-    }
-
-    margin: 10px 0 0 0;
-    padding: 10px 12px;
-
-    @include at-x-large-size {
-        margin: 0 0 0 20px;
-    }
-}
-
-.c-infobar__close-button {
+.c-subscribe-bar__close-button {
     background-color: $white;
     border-radius: 50%;
     padding: 6px;
@@ -41,4 +26,46 @@
     svg {
         fill: $astronaut;
     }
+}
+
+.c-subscribe-bar__form {}
+
+.c-subscribe-bar__form-text {
+    @include font("GRAPHIK", 12px, 400, 12px);
+    background-color: $white;
+    color: $dune;
+    padding: 0 20px;
+}
+
+.c-subscribe-bar__form-button {
+    @include button-group();
+    @include button-group-dark();
+    &:hover {
+        @include button-group-dark-hover();
+    }
+
+    padding: 0 15px;
+}
+
+.c-subscribe-bar__legal {
+    @include font("GRAPHIK", 10px, 400, 10px);
+    color: $white;
+    margin-top: 5px;
+}
+
+.c-subscribe-bar__status {
+    padding: 10px 60px 10px 20px;
+}
+
+.c-subscribe-bar__spinner {
+    border-bottom: 10px solid rgba($white, 0.2);
+    border-left: 10px solid rgba($white, 0.2);
+    border-right: 10px solid rgba($white, 0.2);
+    border-top: 10px solid $white;
+}
+
+.c-subscribe-bar__failure-message,
+.c-subscribe-bar__success-message {
+    @include font("GRAPHIK", 14px, 600, 15px);
+    color: $white;
 }
