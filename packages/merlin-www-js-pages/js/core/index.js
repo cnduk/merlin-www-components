@@ -66,13 +66,11 @@ export default function init(config) {
         PREBID_SETTINGS: _config['PREBID_SETTINGS']
     });
 
-    InfobarManager.lazyload();
     InfobarManager.once('enable', function() {
         if (MainNavigation.state.isFixed) {
             InfobarManager.infobar.fix();
         }
     });
-
     InfobarManager.once('load', function() {
         if (!InfobarManager.infobar || InfobarManager.infobar.state.isEnabled == false) {
             SubscribeBarManager.lazyload();
@@ -83,6 +81,7 @@ export default function init(config) {
             });
         }
     });
+    InfobarManager.lazyload();
 
     CommonImage.init();
     SectionCardList.init();
