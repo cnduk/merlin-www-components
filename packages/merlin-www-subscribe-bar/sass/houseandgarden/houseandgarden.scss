@@ -9,7 +9,11 @@
 }
 
 .c-subscribe-bar__content {
-    padding: 10px 60px 10px 20px;
+    padding: 5px 60px 5px 20px;
+
+    @include at-x-large-size {
+        padding: 10px 60px 10px 20px;
+    }
 }
 
 .c-subscribe-bar__message {
@@ -56,7 +60,11 @@
 }
 
 .c-subscribe-bar__status {
-    padding: 10px 60px 10px 20px;
+    padding: 5px 60px 5px 20px;
+
+    @include at-x-large-size {
+        padding: 10px 60px 10px 20px;
+    }
 }
 
 .c-subscribe-bar__spinner {

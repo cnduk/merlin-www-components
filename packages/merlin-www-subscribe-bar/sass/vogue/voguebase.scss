@@ -4,13 +4,23 @@
 }
 
 .c-subscribe-bar__content {
-    padding: 10px 60px 10px 20px;
+    padding: 5px 60px 5px 20px;
+
+    @include at-x-large-size {
+        padding: 10px 60px 10px 20px;
+    }
 }
 
 .c-subscribe-bar__message {
-    @include font("ADOBE CASLON", 17px, 400, 17px);
+    @include font("ADOBE CASLON", 14px, 400, 15px);
     color: $dove-gray;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
+
+    @include at-x-large-size {
+        @include font-size(15px);
+        @include line-height(16px);
+        margin-bottom: 3px;
+    }
 }
 
 .c-subscribe-bar__close-button {
@@ -26,10 +36,11 @@
 .c-subscribe-bar__form {}
 
 .c-subscribe-bar__form-text {
-    @include font("NOBEL", 14px, 400, 14px);
+    @include font("NOBEL", 13px, 400, 13px);
     background-color: $white;
     color: $dove-gray;
-    padding: 0 20px;
+    letter-spacing: 0.3px;
+    padding: 0 10px;
 }
 
 .c-subscribe-bar__form-button {
@@ -39,7 +50,13 @@
         @include button-single-light-hover();
     }
 
-    padding: 0 15px;
+    @include font-size(10px);
+
+    padding: 0 10px;
+
+    @include at-x-large-size {
+        @include font-size(12px);
+    }
 }
 
 .c-subscribe-bar__legal {
@@ -49,7 +66,11 @@
 }
 
 .c-subscribe-bar__status {
-    padding: 10px 60px 10px 20px;
+    padding: 5px 60px 5px 20px;
+
+    @include at-x-large-size {
+        padding: 10px 60px 10px 20px;
+    }
 }
 
 .c-subscribe-bar__spinner {
