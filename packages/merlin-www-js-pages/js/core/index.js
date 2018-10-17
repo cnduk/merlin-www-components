@@ -77,10 +77,10 @@ export default function init(config) {
         if (!InfobarManager.infobar || InfobarManager.infobar.state.isEnabled == false) {
             SubscribeBarManager.lazyload();
             SubscribeBarManager.once('enable', function() {
-               if (MainNavigation.state.isFixed) {
-                   SubscribeBarManager.subscribeBar.fix();
-               }
-           });
+                if (MainNavigation.state.isFixed) {
+                    SubscribeBarManager.subscribeBar.fix();
+                }
+            });
         }
     });
 
