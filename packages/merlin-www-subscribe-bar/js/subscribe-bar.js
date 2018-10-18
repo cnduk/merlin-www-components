@@ -34,6 +34,7 @@ function SubscribeBar(el) {
         isEnabled: false
     };
 
+    this.formEl = el.querySelector('.js-c-subscribe-bar__form');
     this.emailEl = el.querySelector('.js-c-subscribe-bar__form-text');
 
     this.contentEl = el.querySelector('.js-c-subscribe-bar__content');
@@ -64,7 +65,13 @@ function SubscribeBar(el) {
         addEvent(this.closeButtonEls[i], 'click', this.disable.bind(this));
     }
 
-    this.emailEl.addEventListener('invalid', this.invalid.bind(this));
+    addEvent(this.emailEl, 'blur', function(){
+        if(this.checkValidity()){
+            removeClass(this, 'has-error');
+        } else {
+            addClass(this, 'has-error');
+        }
+    });
 
     if (NAV) {
         NAV.on('show', this.show.bind(this));
@@ -77,6 +84,7 @@ function SubscribeBar(el) {
 SubscribeBar.prototype = inherit(EventEmitter.prototype, {
 
     init: function() {
+
         if (this.previousHash !== this.currentHash) {
             setCookie(COOKIE_HASH, this.currentHash);
             setCookie(COOKIE_PAGE_VIEW_DATE, false);
@@ -142,11 +150,6 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
         setCookie(COOKIE_PAGE_VIEW_DATE, true, 30);
 
         this.emit('disable', events.disable(this));
-    },
-
-    invalid: function(e) {
-        e.preventDefault();
-        this.emailEl.classList.add('has-error');
     },
 
     onSubmit: function(e) {
