@@ -44,7 +44,6 @@ function SubscribeBar(el) {
     this.successEl = el.querySelector('.js-c-subscribe-bar__success-message');
     this.failureEl = el.querySelector('.js-c-subscribe-bar__failure-message');
 
-    this.formButtonEl = el.querySelector('.js-c-subscribe-bar__form-button');
     this.closeButtonEls = el.querySelectorAll('.js-c-subscribe-bar__close-button');
 
     this.configEl = el.querySelector('.js-c-subscribe-bar-config');
@@ -59,7 +58,7 @@ function SubscribeBar(el) {
     this.previousHash = getCookie('cnd_subscribe_bar_hash');
     this.currentHash = this.config['hash'];
 
-    this.formButtonEl.addEventListener('click', this.onSubmit.bind(this));
+    addEvent(this.formEl, 'submit', this.onSubmit.bind(this));
 
     for (var i = 0; i < this.closeButtonEls.length; i++) {
         addEvent(this.closeButtonEls[i], 'click', this.disable.bind(this));
@@ -155,41 +154,27 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
     onSubmit: function(e) {
         e.preventDefault();
 
-        this.emailEl.classList.remove('has-error');
-
         var email = this.emailEl.value;
 
-        if (!email) {
-            this.emailEl.classList.add('has-error');
-            return false;
-        }
-
-        this.contentEl.classList.add('is-hidden');
-        this.statusEl.classList.remove('is-hidden');
+        addClass(this.contentEl, IS_HIDDEN_CLS);
+        removeClass(this.statusEl, IS_HIDDEN_CLS);
 
         var xhr = new XMLHttpRequest();
 
         xhr.open('POST', '/xhr/newsletters', true);
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-        var that = this;
-
         xhr.onreadystatechange = function() {
-            if(this.readyState == XMLHttpRequest.DONE) {
-                that.spinnerEl.classList.add('is-hidden');
+            if(xhr.readyState == XMLHttpRequest.DONE) {
+                addClass(this.spinnerEl, IS_HIDDEN_CLS);
 
-                if (this.status == 200) {
-                    var responseText = JSON.parse(this.responseText);
-                    if (responseText.success) {
-                        that.successEl.classList.remove('is-hidden');
-                    }
-                }
-
-                else {
-                    that.failureEl.classList.remove('is-hidden');
+                if (xhr.status === 200) {
+                    removeClass(this.successEl, IS_HIDDEN_CLS);
+                } else {
+                    removeClass(this.failureEl, IS_HIDDEN_CLS);
                 }
             }
-        };
+        }.bind(this);
         xhr.send('email=' + email);
     }
 });
