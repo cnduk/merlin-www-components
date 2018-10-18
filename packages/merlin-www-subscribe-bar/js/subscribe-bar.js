@@ -2,6 +2,9 @@
 
 import EventEmitter from 'eventemitter2';
 import {
+    addEvent,
+    addClass,
+    removeClass,
     getCookie,
     inherit,
     setCookie
@@ -58,7 +61,7 @@ function SubscribeBar(el) {
     this.formButtonEl.addEventListener('click', this.onSubmit.bind(this));
 
     for (var i = 0; i < this.closeButtonEls.length; i++) {
-        this.closeButtonEls[i].addEventListener('click', this.disable.bind(this));
+        addEvent(this.closeButtonEls[i], 'click', this.disable.bind(this));
     }
 
     this.emailEl.addEventListener('invalid', this.invalid.bind(this));
@@ -88,7 +91,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
     show: function() {
         if (!this.state.isHidden) return;
 
-        this.el.classList.remove(IS_HIDDEN_CLS);
+        removeClass(this.el, IS_HIDDEN_CLS);
         this.state.isHidden = false;
 
         this.emit('show', events.show(this));
@@ -97,7 +100,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
     hide: function() {
         if (this.state.isHidden) return;
 
-        this.el.classList.add(IS_HIDDEN_CLS);
+        addClass(this.el, IS_HIDDEN_CLS);
         this.state.isHidden = true;
 
         this.emit('hide', events.hide(this));
@@ -106,7 +109,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
     fix: function() {
         if (this.state.isFixed) return;
 
-        this.el.classList.add(IS_FIXED_CLS);
+        addClass(this.el, IS_FIXED_CLS);
         this.state.isFixed = true;
 
         this.emit('fix', events.fix(this));
@@ -115,7 +118,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
     unfix: function() {
         if (!this.state.isFixed) return;
 
-        this.el.classList.remove(IS_FIXED_CLS);
+        removeClass(this.el, IS_FIXED_CLS);
         this.state.isFixed = false;
 
         this.emit('unfix', events.unfix(this));
@@ -124,7 +127,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
     enable: function() {
         if (this.state.isEnabled) return;
 
-        this.el.classList.remove(IS_DISABLED_CLS);
+        removeClass(this.el, IS_DISABLED_CLS);
         this.state.isEnabled = true;
 
         this.emit('enable', events.enable(this));
@@ -133,7 +136,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
     disable: function() {
         if (!this.state.isEnabled) return;
 
-        this.el.classList.add(IS_DISABLED_CLS);
+        addClass(this.el, IS_DISABLED_CLS);
         this.state.isEnabled = false;
 
         setCookie(COOKIE_PAGE_VIEW_DATE, true, 30);
