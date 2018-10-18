@@ -46,14 +46,11 @@ function SubscribeBar(el) {
 
     this.closeButtonEls = el.querySelectorAll('.js-c-subscribe-bar__close-button');
 
-    this.configEl = el.querySelector('.js-c-subscribe-bar-config');
-
-    if (!this.configEl) {
+    var configEl = el.querySelector('.js-c-subscribe-bar-config');
+    if (!configEl) {
         throw new Error('Subscribe Bar Config Not Found.');
     }
-
-    this.config = this.configEl.innerHTML;
-    this.config = JSON.parse(this.config);
+    this.config = JSON.parse(configEl.innerHTML);
 
     this.previousHash = getCookie('cnd_subscribe_bar_hash');
     this.currentHash = this.config['hash'];
