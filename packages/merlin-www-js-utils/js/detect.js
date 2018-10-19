@@ -108,3 +108,15 @@ export var supportsHTML5Video = (function supportsHTML5Video(){
     var video = document.createElement('video');
     return video && video.play;
 })();
+
+/**
+ * Check is cookies are enabled
+ * @return {Boolean}
+ */
+export var hasCookiesEnabled = (function hasCookiesEnabled(){
+    if (navigator.cookieEnabled) return true;
+    document.cookie = "cnd_cookie_detect=1";
+    var hasCookie = document.cookie.indexOf("cnd_cookie_detect=") != -1;
+    document.cookie = "cnd_cookie_detect=1; expires=Thu, 01-Jan-1970 00:00:01 GMT";
+    return hasCookie;
+})();
