@@ -18,6 +18,7 @@ var IS_DISABLED_CLS = 'is-disabled';
 
 var COOKIE_PAGE_VIEW_DATE = 'cnd_subscribe_bar_pageview_date';
 var COOKIE_HASH = 'cnd_subscribe_bar_hash';
+var COOKIE_CONVERTED = 'cnd_subscribe_bar_converted';
 
 function SubscribeBar(el) {
     EventEmitter.call(this);
@@ -84,6 +85,11 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
         if (this.previousHash !== this.currentHash) {
             setCookie(COOKIE_HASH, this.currentHash);
             setCookie(COOKIE_PAGE_VIEW_DATE, false);
+        }
+
+        var convertedCookie = getCookie(COOKIE_CONVERTED);
+        if (convertedCookie) {
+            return;
         }
 
         var viewDateCookie = getCookie(COOKIE_PAGE_VIEW_DATE);
@@ -167,6 +173,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
 
                 if (xhr.status === 200) {
                     removeClass(this.successEl, IS_HIDDEN_CLS);
+                    setCookie(COOKIE_CONVERTED, true, 30);
                 } else {
                     removeClass(this.failureEl, IS_HIDDEN_CLS);
                 }
