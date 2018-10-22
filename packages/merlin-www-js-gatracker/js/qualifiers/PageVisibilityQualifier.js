@@ -6,8 +6,9 @@ import {
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import Qualifier from './Qualifier';
 
-function PageVisibilityQualifier(){
-    Qualifier.call(this);
+function PageVisibilityQualifier(settings){
+    Qualifier.call(this, settings);
+    this._name = 'PageVisibility';
 }
 PageVisibilityQualifier.prototype = inherit(Qualifier.prototype, {
     _onDocumentVisibilityChange: function _onDocumentVisibilityChange(){

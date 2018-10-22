@@ -6,23 +6,23 @@ import {
     inherit,
     removeEvent
 } from '@cnbritain/merlin-www-js-utils/js/functions';
-import CookieWarning from '@cnbritain/merlin-www-cookie-warning';
 import Qualifier from './Qualifier';
 
-function LinkClickQualifier(){
-    Qualifier.call(this);
+function LinkClickQualifier(settings){
+    Qualifier.call(this, settings);
+    this._name = 'LinkClick';
 }
 LinkClickQualifier.prototype = inherit(Qualifier.prototype, {
     _onDocumentClick: function _onDocumentClick(e){
         // Cookie warning already closed meaning they agree to terms
-        if(CookieWarning.el === null){
+        if(this._settings.cookieWarning.el === null){
             // console.log('Qualified by cookie warning being closed');
             this.qualify();
             return;
         }
 
         var cookieAnchors = cloneArray(
-            CookieWarning.el.getElementsByTagName('a'));
+            this._settings.cookieWarning.el.getElementsByTagName('a'));
         // Delegate target is not an anchor in the cookie warning
         if(cookieAnchors.indexOf(e.delegateTarget) === -1){
             // console.log('Qualified by scrolling');

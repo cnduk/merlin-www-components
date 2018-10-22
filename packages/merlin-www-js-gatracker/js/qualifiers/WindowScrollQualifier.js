@@ -7,8 +7,9 @@ import {
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import Qualifier from './Qualifier';
 
-function WindowScrollQualifier(){
-    Qualifier.call(this);
+function WindowScrollQualifier(settings){
+    Qualifier.call(this, settings);
+    this._name = 'WindowScroll';
 }
 WindowScrollQualifier.prototype = inherit(Qualifier.prototype, {
     _onWindowScroll: function _onWindowScroll(){
@@ -23,7 +24,7 @@ WindowScrollQualifier.prototype = inherit(Qualifier.prototype, {
         }
     },
     _setup: function _setup(){
-        this._SCROLL_DEPTH = 1000;
+        this._SCROLL_DEPTH = 750;
         this._lastScrollPosition = 0;
         this._totalScrollDepth = 0;
         this._handler = this._onWindowScroll.bind(this);
