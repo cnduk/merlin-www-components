@@ -19,6 +19,7 @@ import InfobarManager from '@cnbritain/merlin-www-infobar'; // eslint-disable-li
 import CommonImage from '@cnbritain/merlin-www-image';
 import store from '@cnbritain/merlin-www-js-store';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
+import ComscoreManager from '@cnbritain/merlin-www-js-gatracker/js/ComscoreManager';
 import SectionCardList from '@cnbritain/merlin-www-section-card-list';
 import {AdManager, AdDebugger, AdUtils} from '@cnbritain/merlin-www-ads';
 import {fartscroll, raptor} from '@cnbritain/merlin-www-goofs';
@@ -82,6 +83,16 @@ export default function init(config) {
     // Goofs
     setupFartscroll();
     raptor();
+
+    ComscoreManager.init({cookieWarning: CookieWarning});
+    if(ComscoreManager.consent !== null){
+        ComscoreManager.sendBeacon();
+    } else {
+        ComscoreManager.once('qualify', function(){
+            this.sendBeacon();
+        });
+    }
+
 }
 
 export function initInternationalRedirect() {
