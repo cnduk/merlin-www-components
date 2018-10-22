@@ -5,15 +5,7 @@
 
 .c-subscribe-bar {}
 .c-subscribe-bar-wrapper {
-    background-color: $oslo-gray;
-}
-
-.c-subscribe-bar__content {
-    padding: 5px 60px 5px 20px;
-
-    @include at-x-large-size {
-        padding: 10px 60px 10px 20px;
-    }
+    background-color: $pale-slate;
 }
 
 .c-subscribe-bar__message {
@@ -35,10 +27,9 @@
 .c-subscribe-bar__form {}
 
 .c-subscribe-bar__form-text {
-    @include font("GOTHAM", 12px, 500, 12px);
+    @include font("GOTHAM", 11px, 500, 11px);
     background-color: $white;
     color: $shuttle-gray;
-    padding: 0 20px;
 }
 
 .c-subscribe-bar__form-button {
@@ -54,15 +45,7 @@
 .c-subscribe-bar__legal {
     @include font("GOTHAM", 10px, 400, 10px);
     color: $woodsmoke;
-    margin-top: 5px;
-}
-
-.c-subscribe-bar__status {
-    padding: 5px 60px 5px 20px;
-
-    @include at-x-large-size {
-        padding: 10px 60px 10px 20px;
-    }
+    margin-top: 7px;
 }
 
 .c-subscribe-bar__spinner {

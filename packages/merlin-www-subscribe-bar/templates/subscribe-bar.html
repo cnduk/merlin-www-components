@@ -6,14 +6,11 @@
                     {{> @cnbritain/merlin-www-image }}
                 </div>
             {{/ data.cover }}
-            <p class="c-subscribe-bar__message">
-                {{# data.message }}{{ . }}{{/ data.message }}
-            </p>
             <form method="POST" class="c-subscribe-bar__form js-c-subscribe-bar__form">
                 <input type="email" name="email" required class="js-c-subscribe-bar__form-text c-subscribe-bar__form-text" placeholder="Get the latest news in your inbox"></input>
                 <input type="submit" value="Sign Up" class="js-c-subscribe-bar__form-button c-subscribe-bar__form-button"></input>
             </form>
-            <p class="c-subscribe-bar__legal">by entering your email address, you agree to our <a href="https://www.condenast.co.uk/privacy/"></a>privacy policy</p>
+            <p class="c-subscribe-bar__legal">by entering your email address, you agree to our <a href="https://www.condenast.co.uk/privacy/" class="c-subscribe-bar__privacy">privacy policy</a></p>
             {{# data.icon_close }}
                 <button class="c-subscribe-bar__close-button js-c-subscribe-bar__close-button ">
                     {{> @cnbritain/merlin-www-image }}

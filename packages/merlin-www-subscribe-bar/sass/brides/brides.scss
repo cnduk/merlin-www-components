@@ -8,14 +8,6 @@
     background-color: $azure;
 }
 
-.c-subscribe-bar__content {
-    padding: 5px 60px 5px 20px;
-
-    @include at-x-large-size {
-        padding: 10px 60px 10px 20px;
-    }
-}
-
 .c-subscribe-bar__image {
     img {
         border-color: $white;
@@ -41,10 +33,10 @@
 .c-subscribe-bar__form {}
 
 .c-subscribe-bar__form-text {
-    @include font("SOLEIL", 10px, 400, 10px);
+    @include font("SOLEIL", 9px, 400, 9px);
     background-color: $white;
     color: $ascot-grey;
-    padding: 0 20px;
+    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
@@ -61,15 +53,7 @@
 .c-subscribe-bar__legal {
     @include font("SOLEIL", 10px, 400, 10px);
     color: $sapphire;
-    margin-top: 5px;
-}
-
-.c-subscribe-bar__status {
-    padding: 5px 60px 5px 20px;
-
-    @include at-x-large-size {
-        padding: 10px 60px 10px 20px;
-    }
+    margin-top: 7px;
 }
 
 .c-subscribe-bar__spinner {

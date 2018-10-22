@@ -3,14 +3,6 @@
     background-color: $loot-box;
 }
 
-.c-subscribe-bar__content {
-    padding: 5px 60px 5px 20px;
-
-    @include at-x-large-size {
-        padding: 10px 60px 10px 20px;
-    }
-}
-
 .c-subscribe-bar__message {
     @include font("ADOBE CASLON", 14px, 400, 15px);
     color: $dove-gray;
@@ -40,7 +32,6 @@
     background-color: $white;
     color: $dove-gray;
     letter-spacing: 0.3px;
-    padding: 0 10px;
 }
 
 .c-subscribe-bar__form-button {
@@ -61,16 +52,8 @@
 
 .c-subscribe-bar__legal {
     @include font("NOBEL", 11px, 400, 11px);
-    color: $silver;
-    margin-top: 5px;
-}
-
-.c-subscribe-bar__status {
-    padding: 5px 60px 5px 20px;
-
-    @include at-x-large-size {
-        padding: 10px 60px 10px 20px;
-    }
+    color: $dove-gray;
+    margin-top: 7px;
 }
 
 .c-subscribe-bar__spinner {

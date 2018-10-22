@@ -8,14 +8,6 @@
     background-color: $ebony-clay;
 }
 
-.c-subscribe-bar__content {
-    padding: 5px 60px 5px 20px;
-
-    @include at-x-large-size {
-        padding: 10px 60px 10px 20px;
-    }
-}
-
 .c-subscribe-bar__message {
     @include font("MILLER_DISPLAY", 16px, 600, 17px);
     color: $white;
@@ -38,7 +30,6 @@
     @include font("BRANDON GROTESQUE", 11px, 700, 11px);
     background-color: $white;
     color: $silver-chalice;
-    padding: 0 20px;
     text-transform: uppercase;
 }
 
@@ -55,16 +46,8 @@
 .c-subscribe-bar__legal {
     @include font("BRANDON GROTESQUE", 7px, 400, 9px);
     color: $silver-chalice;
-    margin-top: 5px;
+    margin-top: 7px;
     text-transform: uppercase;
-}
-
-.c-subscribe-bar__status {
-    padding: 5px 60px 5px 20px;
-
-    @include at-x-large-size {
-        padding: 10px 60px 10px 20px;
-    }
 }
 
 .c-subscribe-bar__spinner {

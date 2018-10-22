@@ -8,14 +8,6 @@
     background-color: $CASPER;
 }
 
-.c-subscribe-bar__content {
-    padding: 5px 60px 5px 20px;
-
-    @include at-x-large-size {
-        padding: 10px 60px 10px 20px;
-    }
-}
-
 .c-subscribe-bar__message {
     @include font("PROXIMA NOVA CONDENSED", 17px, 600, 17px);
     color: $WHITE;
@@ -39,7 +31,6 @@
     @include font("PROXIMA NOVA CONDENSED", 17px, 600, 17px);
     background-color: $WHITE;
     color: $MUSTASAARI;
-    padding: 0 20px;
 }
 
 .c-subscribe-bar__form-button {
@@ -55,15 +46,7 @@
 .c-subscribe-bar__legal {
     @include font("PROXIMA NOVA CONDENSED", 10px, 600, 10px);
     color: $WHITE;
-    margin-top: 5px;
-}
-
-.c-subscribe-bar__status {
-    padding: 5px 60px 5px 20px;
-
-    @include at-x-large-size {
-        padding: 10px 60px 10px 20px;
-    }
+    margin-top: 7px;
 }
 
 .c-subscribe-bar__spinner {

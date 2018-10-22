@@ -8,14 +8,6 @@
     background-color: $astronaut;
 }
 
-.c-subscribe-bar__content {
-    padding: 5px 60px 5px 20px;
-
-    @include at-x-large-size {
-        padding: 10px 60px 10px 20px;
-    }
-}
-
 .c-subscribe-bar__image {
     img {
         border-color: $white;
@@ -41,11 +33,10 @@
 .c-subscribe-bar__form {}
 
 .c-subscribe-bar__form-text {
-    @include font("GRAPHIK", 12px, 400, 12px);
+    @include font("GRAPHIK", 11px, 400, 11px);
     background-color: $white;
     color: $dune;
-    padding: 0 20px;
-}
+ }
 
 .c-subscribe-bar__form-button {
     @include button-group();
@@ -60,15 +51,7 @@
 .c-subscribe-bar__legal {
     @include font("GRAPHIK", 10px, 400, 10px);
     color: $white;
-    margin-top: 5px;
-}
-
-.c-subscribe-bar__status {
-    padding: 5px 60px 5px 20px;
-
-    @include at-x-large-size {
-        padding: 10px 60px 10px 20px;
-    }
+    margin-top: 7px;
 }
 
 .c-subscribe-bar__spinner {
