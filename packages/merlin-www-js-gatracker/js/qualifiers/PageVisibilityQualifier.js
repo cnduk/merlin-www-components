@@ -23,7 +23,7 @@ PageVisibilityQualifier.prototype = inherit(Qualifier.prototype, {
     },
     _resumeTimer: function _resumeTimer(){
         if(this._pageTimer === null){
-            console.log('Resuming timer', this._durationLeft);
+            // console.log('Resuming timer', this._durationLeft);
             this._startTime = Date.now();
             this._pageTimer = setTimeout(
                 this._onTimeup.bind(this), this._durationLeft);
@@ -31,7 +31,7 @@ PageVisibilityQualifier.prototype = inherit(Qualifier.prototype, {
     },
     _pauseTimer: function _pauseTimer(){
         if(this._pageTimer !== null){
-            console.log('Pausing timer');
+            // console.log('Pausing timer');
             var passedTime = Date.now() - this._startTime;
             this._durationLeft = this._durationLeft - passedTime;
             clearTimeout(this._pageTimer);

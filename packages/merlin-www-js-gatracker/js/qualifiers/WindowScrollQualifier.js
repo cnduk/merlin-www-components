@@ -18,7 +18,7 @@ WindowScrollQualifier.prototype = inherit(Qualifier.prototype, {
         this._totalScrollDepth += Math.abs(scrollDiff);
 
         if(this._totalScrollDepth >= this._SCROLL_DEPTH){
-            console.log('Qualified by scrolling');
+            // console.log('Qualified by scrolling');
             this.qualify();
         }
     },

@@ -22,7 +22,7 @@ function ComscoreManager(){
 ComscoreManager.prototype = inherit(EventEmitter.prototype, {
     constructor: ComscoreManager,
     _onQualify: function _onQualify(){
-        console.log('_onQualify');
+        // console.log('_onQualify');
         this._setConsent(1);
         this._qualifiers.forEach(function(q){ q.teardown(); });
         this._qualifiers = null;
@@ -43,7 +43,7 @@ ComscoreManager.prototype = inherit(EventEmitter.prototype, {
     },
     _getConsent: function _getConsent(){
         var cookieValue = getCookie(this.COMSCORE_COOKIE);
-        console.log('_getConsent', cookieValue);
+        // console.log('_getConsent', cookieValue);
         if(cookieValue !== null){
             return cookieValue;
         } else {
@@ -51,23 +51,23 @@ ComscoreManager.prototype = inherit(EventEmitter.prototype, {
         }
     },
     _setConsent: function _setConsent(value){
-        console.log('Setting cs_ucfr=' + value);
+        // console.log('Setting cs_ucfr=' + value);
         setCookie(this.COMSCORE_COOKIE, value);
         this.consent = value;
     },
     _init: function _init(){
-        console.log('initComscore');
+        // console.log('initComscore');
 
         // Check if the comscore cookie has been set
         var comscoreConsent = this._getConsent();
         if(comscoreConsent !== false){
-            console.log('User has given Comscore consent', comscoreConsent);
+            // console.log('User has given Comscore consent', comscoreConsent);
             this.consent = parseInt(comscoreConsent, 10);
             return;
         }
 
         if(!hasCookiesEnabled){
-            console.log('Cookies are disabled');
+            // console.log('Cookies are disabled');
             this._setConsent(0);
             return;
         }
@@ -76,19 +76,19 @@ ComscoreManager.prototype = inherit(EventEmitter.prototype, {
         // There should also be a cookie set before hand so this shouldnt really
         // trigger.
         if(CookieWarning.isHidden){
-            console.log('CookieWarning is hidden');
+            // console.log('CookieWarning is hidden');
             this._setConsent(1);
             return;
         }
 
-        console.log('Applying listeners for qualifiers');
+        // console.log('Applying listeners for qualifiers');
         this._createQualifiers();
     },
     beacon: function beacon(){
         if(this.consent === null){
-            console.warn('User has not consented yet. Beacon will send value missing `cs_ucfr`.');
+            console.warn('User has not consented yet. Beacon will send value missing `cs_ucfr`.'); // eslint-disable-line no-console
         }
-        console.log('Firing a Comscore beacon');
+        // console.log('Firing a Comscore beacon');
         // TODO: this code
     }
 });

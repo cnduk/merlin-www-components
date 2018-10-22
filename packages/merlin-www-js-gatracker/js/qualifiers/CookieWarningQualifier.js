@@ -10,7 +10,7 @@ function CookieWarningQualifier(){
 CookieWarningQualifier.prototype = inherit(Qualifier.prototype, {
     _onWarningVisibilityChange: function _onWarningVisibilityChange(e){
         if(e.state === 'hidden'){
-            console.log('Qualified by closing cookie warning');
+            // console.log('Qualified by closing cookie warning');
             this.qualify();
         }
     },
