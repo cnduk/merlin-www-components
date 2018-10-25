@@ -28,12 +28,12 @@
 .c-newsletter-wrapper {
     margin: 0 auto;
     max-width: 570px;
-    padding: $MOBILE_SLICE_MARGIN $MOBILE_SIDE_GUTTER;
+    padding: 30px $MOBILE_SIDE_GUTTER;
     position: relative;
 
     @include at-x-large-size {
         max-width: 1560px;
-        padding: $DESKTOP_SIDE_GUTTER;
+        padding: 40px $DESKTOP_SIDE_GUTTER;
     }
 }
 
@@ -45,7 +45,7 @@
     @include font("MILLER_DISPLAY", 20px, 400, 20px);
     color: $white;
     letter-spacing:4px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     margin-top: 0px;
     text-align: center;
     text-transform: uppercase;
@@ -54,6 +54,7 @@
         @include font-size(26px);
         @include line-height(26px);
         letter-spacing:6px;
+        margin-bottom: 10px;
     }
 }
 
@@ -62,7 +63,7 @@
     color: $white;
     font-style: italic;
     letter-spacing: 0px;
-    margin: 10px 0 20px 0;
+    margin: 5px 0 20px 0;
 
     @include at-medium-size {
         @include font-size(16px);
@@ -88,6 +89,7 @@
     }
 
     @include at-medium-size {
+        margin-bottom: 20px;
         text-align: left;
     }
 }
@@ -96,7 +98,7 @@
     @include button-single();
     @include button-single-dark();
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-transform: uppercase;
 
     &:focus,

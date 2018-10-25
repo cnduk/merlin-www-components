@@ -5,7 +5,7 @@
 
 .c-newsletter {
     background-color: $black;
-    padding: 60px 0;
+    padding: 20px 0 30px 0;
     position: relative;
     text-align: center;
 
@@ -25,7 +25,7 @@
     }
 
     @include at-medium-size {
-        padding: 80px 0;
+        padding: 30px 0;
     }
 }
 
@@ -43,21 +43,19 @@
 .c-newsletter__title {
     @include font('GOTHAM', 24px, 700, 28px);
     color: $white;
-    margin-bottom: 14px;
-    margin-top: 0;
+    margin: 0 auto 10px auto;
 
     @include at-medium-size {
         @include font-size(32px);
         @include line-height(36px);
-        margin-bottom: 24px;
+        margin-bottom: 15px;
     }
 }
 
 .c-newsletter__description {
     @include font('GOTHAM', 14px, null, 20px, -4);
     color: $oslo-gray;
-    margin-bottom: 32px;
-    margin-top: 14px;
+    margin: 10px auto 20px auto;
 
     @include at-medium-size {
         @include font-size(15px);
@@ -68,6 +66,11 @@
 .c-newsletter__form {
     @include font("GOTHAM", 14px, normal, 14px);
     color: $bon-jour;
+    margin: 0 0 15px 0;
+
+    @include at-medium-size {
+        margin-bottom: 10px;
+    }
 }
 
 .c-newsletter__form-text {
@@ -76,12 +79,15 @@
     box-sizing: border-box;
     color: $mineshaft;
     height: 60px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     padding: 16px;
-    text-transform: uppercase;
 
     &::placeholder {
         color: $mineshaft;
+    }
+
+    @include at-medium-size {
+        margin-bottom: 0;
     }
 }
 
@@ -89,7 +95,6 @@
     @include button-single();
     @include button-single-light();
     height: 60px;
-    margin-bottom: 28px;
 
     &:focus,
     &:hover {
