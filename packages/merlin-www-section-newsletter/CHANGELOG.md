@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.7.50"></a>
+## [1.7.50](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-newsletter@1.7.49...@cnbritain/merlin-www-section-newsletter@1.7.50) (2018-10-25)
+
+
+### Bug Fixes
+
+* **merlin-www-section-newsletter:** amend wired designs ([361670b](https://github.com/cnduk/merlin-www-components/commit/361670b))
+* **merlin-www-section-newsletter:** update brides styles ([47c6351](https://github.com/cnduk/merlin-www-components/commit/47c6351))
+* **merlin-www-section-newsletter:** update glamour styles ([d5e03c2](https://github.com/cnduk/merlin-www-components/commit/d5e03c2))
+* **merlin-www-section-newsletter:** update gq styles ([00e1384](https://github.com/cnduk/merlin-www-components/commit/00e1384))
+* **merlin-www-section-newsletter:** update house and garden styles ([5d25c17](https://github.com/cnduk/merlin-www-components/commit/5d25c17))
+* **merlin-www-section-newsletter:** update tatler styles ([1430d5e](https://github.com/cnduk/merlin-www-components/commit/1430d5e))
+* **merlin-www-section-newsletter:** update traveller styles ([a07d938](https://github.com/cnduk/merlin-www-components/commit/a07d938))
+* **merlin-www-section-newsletter:** update vogue styles ([a0c112c](https://github.com/cnduk/merlin-www-components/commit/a0c112c))
+
+
+
+
 <a name="1.7.49"></a>
 ## [1.7.49](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-newsletter@1.7.48...@cnbritain/merlin-www-section-newsletter@1.7.49) (2018-09-24)
 

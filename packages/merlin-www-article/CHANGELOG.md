@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.29.1"></a>
+## [1.29.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.29.0...@cnbritain/merlin-www-article@1.29.1) (2018-10-25)
+
+
+### Bug Fixes
+
+* **merlin-www-article:** update video embed for youtube to support autoplay in player for publishers ([50566de](https://github.com/cnduk/merlin-www-components/commit/50566de))
+
+
+
+
 <a name="1.29.0"></a>
 # [1.29.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.28.76...@cnbritain/merlin-www-article@1.29.0) (2018-09-24)
 
