@@ -62,8 +62,8 @@ function SubscribeBar(el) {
         addEvent(this.closeButtonEls[i], 'click', this.disable.bind(this));
     }
 
-    addEvent(this.emailEl, 'blur', function(){
-        if(this.checkValidity()){
+    addEvent(this.emailEl, 'blur', function() {
+        if (this.checkValidity()) {
             removeClass(this, 'has-error');
         } else {
             addClass(this, 'has-error');
@@ -168,7 +168,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
         xhr.onreadystatechange = function() {
-            if(xhr.readyState == XMLHttpRequest.DONE) {
+            if (xhr.readyState == XMLHttpRequest.DONE) {
                 addClass(this.spinnerEl, IS_HIDDEN_CLS);
 
                 if (xhr.status === 200) {
