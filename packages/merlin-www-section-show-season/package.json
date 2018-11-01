@@ -1,15 +1,15 @@
 {
   "name": "@cnbritain/merlin-www-section-show-season",
-  "version": "1.7.58",
+  "version": "1.7.59",
   "description": "",
   "main": "index.js",
   "scripts": {
     "demo": "merlin-component-demo-server merlin.json"
   },
   "dependencies": {
-    "@cnbritain/merlin-www-buttons": "^1.7.37",
-    "@cnbritain/merlin-www-card": "^1.16.11",
-    "@cnbritain/merlin-www-common": "^1.14.14",
+    "@cnbritain/merlin-www-buttons": "^1.7.38",
+    "@cnbritain/merlin-www-card": "^1.16.12",
+    "@cnbritain/merlin-www-common": "^1.14.15",
     "@cnbritain/merlin-www-image": "^1.10.5"
   },
   "devDependencies": {
