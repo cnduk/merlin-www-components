@@ -33,6 +33,10 @@
     &.is-disabled {
         display: none;
     }
+
+    @include max-screen($XX_SMALL_SIZE - 1px) {
+        display: none !important;
+    }
 }
 
 .c-subscribe-bar-wrapper {
@@ -81,7 +85,7 @@
     display: none;
     height: 100%;
     max-width: 600px;
-    padding-left: 92px;
+    padding-left: 82px;
     position: absolute;
     width: 100%;
     z-index: -1;
@@ -95,11 +99,11 @@
         border-top: 5px solid #000;
         bottom: 0;
         box-sizing: border-box;
-        height: 89px;
+        height: 79px;
         left: 0;
         object-fit: cover;
         position: absolute;
-        width: 72px;
+        width: 62px;
     }
 
     @include at-x-large-size {
@@ -114,7 +118,7 @@
     width: 100%;
 
     @include at-x-large-size {
-        padding-left: 92px;
+        padding-left: 82px;
     }
 }
 
@@ -127,7 +131,7 @@
     width: 100%;
 
     @include at-x-large-size {
-        padding-left: 92px;
+        padding-left: 82px;
         text-align: left;
     }
 }
@@ -163,7 +167,7 @@
     width: 100%;
 
     @include at-x-large-size {
-        padding-left: 92px;
+        padding-left: 82px;
     }
 }
 
@@ -181,9 +185,13 @@
     height: 20px;
     position: absolute;
     right: 20px;
-    top: 50%;
+    top: 30px;
     transform: translateY(-50%);
     width: 20px;
+
+    @include at-x-large-size {
+        top: 50%;
+    }
 
     svg {
         left: 50%;
