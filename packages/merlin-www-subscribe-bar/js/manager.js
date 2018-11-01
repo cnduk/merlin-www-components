@@ -3,44 +3,41 @@
 import EventEmitter from 'eventemitter2';
 import {ajax, inherit} from '@cnbritain/merlin-www-js-utils/js/functions';
 import {load} from './events';
-import Infobar from './infobar';
+import SubscribeBar from './subscribe-bar';
 
 // Events
 // Loaded
 // Open
 // Close
 
-function InfobarManager() {
+function SubscribeBarManager() {
     EventEmitter.call(this, {
         'wildcard': true
     });
 
     this.isLoaded = false;
-    this.infobar = null;
+    this.subscribeBar = null;
 }
 
-InfobarManager.prototype = inherit(EventEmitter.prototype, {
+SubscribeBarManager.prototype = inherit(EventEmitter.prototype, {
 
-    _handleInfobarEvents: function _handleInfobarEvents(eventType, e){
+    _handleSubscribeBarEvents: function _handleSubscribeBarEvents(eventType, e) {
         if(e.bubbles) this.emit(eventType, e);
     },
 
-    lazyload: function lazyload(){
+    lazyload: function lazyload() {
         if(this.isLoaded) return;
 
         // Check if we have the lazyload element
-        var lazyLoadEl = document.querySelector('.js-c-infobar-lazy-load');
-        if (!lazyLoadEl){
+        var lazyLoadEl = document.querySelector('.js-c-subscribe-bar-lazy-load');
+        if (!lazyLoadEl) {
             this.isLoaded = true;
             this.emit('load', load(this));
             return;
         }
 
         // Build xhr url. We need to send the referrer if one is set.
-        var url = '/xhr/infobar';
-        if (document.referrer) {
-            url +='?referrer=' + encodeURIComponent(document.referrer);
-        }
+        var url = '/xhr/subscribe-bar';
 
         ajax({url: url})
             .then(function onLazyload(data) {
@@ -49,11 +46,11 @@ InfobarManager.prototype = inherit(EventEmitter.prototype, {
                 var jsonResponseText = JSON.parse(data.request.responseText);
                 var html = jsonResponseText.data.template;
                 lazyLoadEl.innerHTML = html;
-                this.infobar = new Infobar(
-                    document.querySelector('.js-c-infobar'));
+                this.subscribeBar = new SubscribeBar(
+                    document.querySelector('.js-c-subscribe-bar'));
 
-                this.infobar.onAny(this._handleInfobarEvents.bind(this));
-                this.infobar.init();
+                this.subscribeBar.onAny(this._handleSubscribeBarEvents.bind(this));
+                this.subscribeBar.init();
 
                 this.emit('load', load(this));
             }.bind(this), function onLazyloadFail() {
@@ -65,4 +62,4 @@ InfobarManager.prototype = inherit(EventEmitter.prototype, {
 
 });
 
-export default InfobarManager;
+export default SubscribeBarManager;

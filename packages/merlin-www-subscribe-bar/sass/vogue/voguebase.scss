@@ -1,0 +1,74 @@
+.c-subscribe-bar {}
+.c-subscribe-bar-wrapper {
+    background-color: $loot-box;
+}
+
+.c-subscribe-bar__message {
+    @include font("ADOBE CASLON", 14px, 400, 15px);
+    color: $dove-gray;
+    margin-bottom: 2px;
+
+    @include at-x-large-size {
+        @include font-size(15px);
+        @include line-height(16px);
+        margin-bottom: 3px;
+    }
+}
+
+.c-subscribe-bar__close-button {
+    border-radius: 50%;
+    border: 1px solid $dove-gray;
+    padding: 6px;
+
+    svg {
+        fill: $dove-gray;
+    }
+}
+
+.c-subscribe-bar__form {}
+
+.c-subscribe-bar__form-text {
+    @include font("NOBEL", 13px, 400, 13px);
+    background-color: $white;
+    color: $dove-gray;
+    letter-spacing: 0.3px;
+}
+
+.c-subscribe-bar__form-button {
+    @include button-single();
+    @include button-single-light();
+    &:hover {
+        @include button-single-light-hover();
+    }
+
+    @include font-size(10px);
+
+    padding: 0 10px;
+
+    @include at-x-large-size {
+        @include font-size(12px);
+    }
+}
+
+.c-subscribe-bar__legal {
+    @include font("NOBEL", 11px, 400, 11px);
+    color: $dove-gray;
+    margin-top: 7px;
+}
+
+.c-subscribe-bar__spinner {
+    border-bottom: 10px solid rgba($white, 0.2);
+    border-left: 10px solid rgba($white, 0.2);
+    border-right: 10px solid rgba($white, 0.2);
+    border-top: 10px solid $white;
+}
+
+.c-subscribe-bar__failure-message,
+.c-subscribe-bar__success-message {
+    @include font("ADOBE CASLON", 17px, 400, 17px);
+    color: $dove-gray;
+
+    span {
+        color: $cod-gray;
+    }
+}

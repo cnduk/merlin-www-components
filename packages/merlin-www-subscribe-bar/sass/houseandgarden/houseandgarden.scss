@@ -1,0 +1,64 @@
+@import "@cnbritain/merlin-www-buttons:houseandgarden";
+@import "@cnbritain/merlin-www-common:houseandgarden";
+
+@import "../wireframe/wireframe";
+
+.c-subscribe-bar {}
+.c-subscribe-bar-wrapper {
+    background-color: $ebony-clay;
+}
+
+.c-subscribe-bar__message {
+    @include font("MILLER_DISPLAY", 16px, 600, 17px);
+    color: $white;
+    margin-bottom: 8px;
+}
+
+.c-subscribe-bar__close-button {
+    border-radius: 50%;
+    border: 1px solid $white;
+    padding: 6px;
+
+    svg {
+        fill: $white;
+    }
+}
+
+.c-subscribe-bar__form {}
+
+.c-subscribe-bar__form-text {
+    @include font("BRANDON GROTESQUE", 11px, 700, 11px);
+    background-color: $white;
+    color: $silver-chalice;
+    text-transform: uppercase;
+}
+
+.c-subscribe-bar__form-button {
+    @include button-single();
+    @include button-single-dark();
+    &:hover {
+        @include button-single-dark-hover();
+    }
+
+    padding: 0 15px;
+}
+
+.c-subscribe-bar__legal {
+    @include font("BRANDON GROTESQUE", 7px, 400, 9px);
+    color: $silver-chalice;
+    margin-top: 7px;
+    text-transform: uppercase;
+}
+
+.c-subscribe-bar__spinner {
+    border-bottom: 10px solid rgba($white, 0.2);
+    border-left: 10px solid rgba($white, 0.2);
+    border-right: 10px solid rgba($white, 0.2);
+    border-top: 10px solid $white;
+}
+
+.c-subscribe-bar__failure-message,
+.c-subscribe-bar__success-message {
+    @include font("MILLER_DISPLAY", 16px, 600, 17px);
+    color: $white;
+}

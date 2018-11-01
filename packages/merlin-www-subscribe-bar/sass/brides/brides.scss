@@ -1,0 +1,70 @@
+@import "@cnbritain/merlin-www-buttons:brides";
+@import "@cnbritain/merlin-www-common:brides";
+
+@import "../wireframe/wireframe";
+
+.c-subscribe-bar {}
+.c-subscribe-bar-wrapper {
+    background-color: $azure;
+}
+
+.c-subscribe-bar__image {
+    img {
+        border-color: $white;
+    }
+}
+
+.c-subscribe-bar__message {
+    @include font("SOLEIL", 12px, 600, 12px);
+    color: $sapphire;
+    margin-bottom: 8px;
+}
+
+.c-subscribe-bar__close-button {
+    border: 1px solid $sapphire;
+    border-radius: 50%;
+    padding: 6px;
+
+    svg {
+        fill: $sapphire;
+    }
+}
+
+.c-subscribe-bar__form {}
+
+.c-subscribe-bar__form-text {
+    @include font("SOLEIL", 9px, 400, 9px);
+    background-color: $white;
+    color: $ascot-grey;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.c-subscribe-bar__form-button {
+    @include button-single-three();
+    @include button-single-three-dark();
+    &:hover {
+        @include button-single-three-dark-hover();
+    }
+
+    padding: 0 15px;
+}
+
+.c-subscribe-bar__legal {
+    @include font("SOLEIL", 10px, 400, 10px);
+    color: $sapphire;
+    margin-top: 7px;
+}
+
+.c-subscribe-bar__spinner {
+    border-bottom: 10px solid rgba($white, 0.2);
+    border-left: 10px solid rgba($white, 0.2);
+    border-right: 10px solid rgba($white, 0.2);
+    border-top: 10px solid $white;
+}
+
+.c-subscribe-bar__failure-message,
+.c-subscribe-bar__success-message {
+    @include font("SOLEIL", 12px, 600, 12px);
+    color: $sapphire;
+}

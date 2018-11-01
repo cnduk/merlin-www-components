@@ -1,0 +1,263 @@
+@import '@cnbritain/merlin-www-buttons:wireframe';
+@import '@cnbritain/merlin-www-common:wireframe';
+
+.c-subscribe-bar {
+    height: 77px;
+    position: relative;
+    width: 100%;
+    z-index: 5;
+
+    @include at-x-large-size {
+        box-sizing: border-box;
+        height: 100px;
+    }
+
+    &.is-fixed {
+        .c-subscribe-bar-wrapper {
+            box-sizing: border-box;
+            left: 50%;
+            position: fixed;
+            top: 60px;
+            transform: translateX(-50%);
+        }
+    }
+
+    &.is-hidden {
+        @include max-screen($X_LARGE_SIZE - 1px) {
+            .c-subscribe-bar-wrapper {
+                top: 0px;
+            }
+        }
+    }
+
+    &.is-disabled {
+        display: none;
+    }
+}
+
+.c-subscribe-bar-wrapper {
+    height: 77px;
+    width: 100%;
+
+    @include max-screen($X_LARGE_SIZE - 1px) {
+        transition: top 300ms ease-in-out;
+        will-change: top;
+    }
+
+    @include at-x-large-size {
+        box-sizing: border-box;
+        height: 100px;
+    }
+}
+
+.c-subscribe-bar__content {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 77px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: $XX_LARGE_SIZE;
+    padding: 5px 60px 5px 20px;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+
+    @include at-x-large-size {
+        box-sizing: border-box;
+        padding: 10px 60px 10px 20px;
+        height: 100px;
+    }
+
+    &.is-hidden {
+        display: none;
+    }
+}
+
+.c-subscribe-bar__image {
+    box-sizing: border-box;
+    display: none;
+    height: 100%;
+    max-width: 600px;
+    padding-left: 92px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+
+    img {
+        background-color: #fff;
+        border-left: 5px solid #000;
+        border-right: 5px solid #000;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-top: 5px solid #000;
+        bottom: 0;
+        box-sizing: border-box;
+        height: 89px;
+        left: 0;
+        object-fit: cover;
+        position: absolute;
+        width: 72px;
+    }
+
+    @include at-x-large-size {
+        display: block;
+    }
+}
+
+.c-subscribe-bar__message {
+    box-sizing: border-box;
+    margin: 0;
+    max-width: $SMALL_SIZE;
+    width: 100%;
+
+    @include at-x-large-size {
+        padding-left: 92px;
+    }
+}
+
+.c-subscribe-bar__form {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    max-width: $SMALL_SIZE;
+    text-align: center;
+    width: 100%;
+
+    @include at-x-large-size {
+        padding-left: 92px;
+        text-align: left;
+    }
+}
+
+.c-subscribe-bar__form-text {
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    flex: 1 0 auto;
+    height: 40px;
+    margin: 0;
+    padding: 0 10px;
+
+    &.has-error {
+        border: 1px solid #c00000;
+    }
+}
+
+.c-subscribe-bar__form-button {
+    appearance: none;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+
+.c-subscribe-bar__legal {
+    box-sizing: border-box;
+    margin: 0;
+    max-width: $SMALL_SIZE;
+    width: 100%;
+
+    @include at-x-large-size {
+        padding-left: 92px;
+    }
+}
+
+.c-subscribe-bar__privacy {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.c-subscribe-bar__close-button {
+    appearance: none;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+
+    svg {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.c-subscribe-bar__status {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 77px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: $XX_LARGE_SIZE;
+    padding: 5px 60px 5px 20px;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+
+    @include at-x-large-size {
+        box-sizing: border-box;
+        padding: 10px 60px 10px 20px;
+        height: 100px;
+    }
+
+    &.is-hidden {
+        display: none;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+.c-subscribe-bar__spinner {
+    animation: spin 600ms linear infinite;
+    // border-bottom: 10px solid rgba(#fff, 0.2);
+    // border-left: 10px solid rgba(#fff, 0.2);
+    border-radius: 50%;
+    // border-right: 10px solid rgba(#fff, 0.2);
+    // border-top: 10px solid #fff;
+    box-sizing: border-box;
+    height: 60px;
+    left: 50%;
+    margin-left: -30px;
+    margin-top: -30px;
+    position: absolute;
+    top: 50%;
+    width: 60px;
+
+    &.is-hidden {
+        display: none;
+    }
+}
+
+.c-subscribe-bar__success-message {
+    &.is-hidden {
+        display: none;
+    }
+}
+
+.c-subscribe-bar__failure-message {
+    &.is-hidden {
+        display: none;
+    }
+}

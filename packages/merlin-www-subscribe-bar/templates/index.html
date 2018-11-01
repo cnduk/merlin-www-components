@@ -1,0 +1,6 @@
+{{# state.is_lazyload }}
+    {{> @cnbritain/merlin-www-subscribe-bar/lazyload }}
+{{/ state.is_lazyload }}
+{{^ state.is_lazyload }}
+    {{> @cnbritain/merlin-www-subscribe-bar/subscribe-bar }}
+{{/ state.is_lazyload }}
