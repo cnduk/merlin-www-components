@@ -9,7 +9,7 @@
 
     @include at-x-large-size {
         box-sizing: border-box;
-        height: 100px;
+        height: 90px;
     }
 
     &.is-fixed {
@@ -50,7 +50,7 @@
 
     @include at-x-large-size {
         box-sizing: border-box;
-        height: 100px;
+        height: 90px;
     }
 }
 
@@ -72,7 +72,7 @@
     @include at-x-large-size {
         box-sizing: border-box;
         padding: 10px 60px 10px 20px;
-        height: 100px;
+        height: 90px;
     }
 
     &.is-hidden {
@@ -219,7 +219,7 @@
     @include at-x-large-size {
         box-sizing: border-box;
         padding: 10px 60px 10px 20px;
-        height: 100px;
+        height: 90px;
     }
 
     &.is-hidden {
