@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.12.1"></a>
+## [1.12.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.12.0...@cnbritain/merlin-www-js-pages@1.12.1) (2018-11-05)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** add subscribe bar dependency ([6b821f2](https://github.com/cnduk/merlin-www-components/commit/6b821f2))
+
+
+
+
 <a name="1.12.0"></a>
 # [1.12.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.11.6...@cnbritain/merlin-www-js-pages@1.12.0) (2018-11-05)
 
