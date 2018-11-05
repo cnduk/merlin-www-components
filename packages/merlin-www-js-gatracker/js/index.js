@@ -8,6 +8,7 @@ import {
     getUrlHost,
     isDefined
 } from '@cnbritain/merlin-www-js-utils/js/functions';
+import ComscoreManager from './ComscoreManager';
 
 /**
  * RegEx to check if the string is a dimension
@@ -213,7 +214,7 @@ GATracker.prototype = {
             // Whenever we send a pageview, send a comscore beacon
             if( hitType === GATracker.SEND_HITTYPES.PAGEVIEW && comscore &&
                 this.type === 'brand' ){
-                sendComscore( location.href );
+                ComscoreManager.sendBeacon(location.href);
             }
         }.bind(this));
     },
@@ -422,13 +423,6 @@ GATracker.TRACKING_BRAND_ID = null;
 GATracker.TRACKING_CONDE_ID = null;
 
 /**
- * Comscore id
- * @static
- * @type {Number}
- */
-GATracker.COMSCORE_PUBLISHED_ID = 15335235;
-
-/**
  * Removes custom dimension keys from an object
  * @param  {Object} data
  * @return {Object}      Filtered data
@@ -442,22 +436,6 @@ function removeCustomDimensions( data ){
         filtered[key] = data[key];
     }
     return filtered;
-}
-
-/**
- * Sends a comscore beacon
- * @param  {String} url
- * @return {Boolean}
- */
-function sendComscore( url ){
-    if( 'COMSCORE' in window && window.COMSCORE !== null ){
-        return COMSCORE.beacon({
-            'c1': '2',
-            'c2': GATracker.COMSCORE_PUBLISHED_ID,
-            'c4': url
-        });
-    }
-    return false;
 }
 
 function filterQueryParams(url){
