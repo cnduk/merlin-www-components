@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.12.0"></a>
+# [1.12.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.11.6...@cnbritain/merlin-www-js-pages@1.12.0) (2018-11-05)
+
+
+### Features
+
+* **merlin-www-js-pages:** add ComscoreManager ([4253474](https://github.com/cnduk/merlin-www-components/commit/4253474))
+
+
+
+
 <a name="1.11.5"></a>
 ## [1.11.5](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.11.4...@cnbritain/merlin-www-js-pages@1.11.5) (2018-10-25)
 

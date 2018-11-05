@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.7.39"></a>
+## [1.7.39](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-finder@1.7.38...@cnbritain/merlin-www-show-finder@1.7.39) (2018-11-05)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-show-finder
+
 <a name="1.7.37"></a>
 ## [1.7.37](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-show-finder@1.7.36...@cnbritain/merlin-www-show-finder@1.7.37) (2018-09-24)
 

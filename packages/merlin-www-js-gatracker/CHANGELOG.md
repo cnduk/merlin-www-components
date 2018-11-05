@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.7.0"></a>
+# [1.7.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-gatracker@1.6.4...@cnbritain/merlin-www-js-gatracker@1.7.0) (2018-11-05)
+
+
+### Bug Fixes
+
+* **merlin-www-js-gatracker:** remove cookie warning dependency and add sendBeacon functionality ([98430b8](https://github.com/cnduk/merlin-www-components/commit/98430b8))
+
+
+### Features
+
+* **merlin-www-js-gatracker:** add ComscoreManager ([2e1338d](https://github.com/cnduk/merlin-www-components/commit/2e1338d))
+
+
+
+
 <a name="1.6.4"></a>
 ## [1.6.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-gatracker@1.6.3...@cnbritain/merlin-www-js-gatracker@1.6.4) (2018-08-22)
 
