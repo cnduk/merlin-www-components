@@ -4,13 +4,6 @@ import {
     createEventTemplate
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 
-export function linkClick(emitter, linkType) {
-    return createEventTemplate('linkClick', emitter, {
-        bubbles: true,
-        linkType: linkType
-    });
-}
-
 export function disable(emitter) {
     return createEventTemplate('disable', emitter, {
         'bubbles': true,
@@ -49,6 +42,12 @@ export function unfix(emitter) {
 
 export function load(emitter) {
     return createEventTemplate('load', emitter, {
+        'bubbles': true
+    });
+}
+
+export function signup(emitter) {
+    return createEventTemplate('signup', emitter, {
         'bubbles': true
     });
 }
