@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.13.0"></a>
+# [1.13.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.12.1...@cnbritain/merlin-www-js-pages@1.13.0) (2018-11-06)
+
+
+### Features
+
+* **merlin-www-js-pages:** use ga to track subscribe bar signups ([1f109e2](https://github.com/cnduk/merlin-www-components/commit/1f109e2))
+
+
+
+
 <a name="1.12.1"></a>
 ## [1.12.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.12.0...@cnbritain/merlin-www-js-pages@1.12.1) (2018-11-05)
 
