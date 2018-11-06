@@ -26,7 +26,11 @@ import {AdManager, AdDebugger, AdUtils} from '@cnbritain/merlin-www-ads';
 import {fartscroll, raptor} from '@cnbritain/merlin-www-goofs';
 import InternationalRedirect from '@cnbritain/merlin-www-international-redirect';
 import {displayHiringMessage, setGlobalNamespace} from '../utils';
-import {initLinkTracking, initInfobarTracking} from './analytics';
+import {
+    initLinkTracking,
+    initInfobarTracking,
+    initSubscribebarTracking
+} from './analytics';
 
 var DEFAULT_INIT_CONFIG = {
     'OPEN_X_URL': null,
@@ -90,6 +94,7 @@ export default function init(config) {
     displayHiringMessage();
     initLinkTracking();
     initInfobarTracking();
+    initSubscribebarTracking();
 
     // Goofs
     setupFartscroll();

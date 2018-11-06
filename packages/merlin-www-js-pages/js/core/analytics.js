@@ -8,6 +8,7 @@ import {
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
 import InfobarManager from '@cnbritain/merlin-www-infobar';
+import SubscribeBarManager from '@cnbritain/merlin-www-subscribe-bar';
 
 
 var hasBeacon = !!navigator.sendBeacon;
@@ -228,6 +229,30 @@ export function initSectionNewsletterTracking(){
         '.c-newsletter__form', onSectionNewsletterSubmit));
 }
 
+
+/**
+ * Subscribe bar sign up location tracking
+ */
+
+function onSubscribeBarLoaded() {
+    if (SubscribeBarManager.subscribeBar !== null) {
+        SubscribeBarManager.subscribeBar.addListener('signup', function() {
+            GATracker.SendAll(GATracker.SEND_HITTYPES.EVENT, {
+                eventCategory: 'Subscribe bar',
+                eventAction: 'Sign up',
+                eventLabel: window.location.href
+            });
+        });
+    }
+}
+
+export function initSubscribebarTracking() {
+    if (SubscribeBarManager.isLoaded) {
+        onSubscribeBarLoaded();
+    } else {
+        SubscribeBarManager.once('load', onSubscribeBarLoaded);
+    }
+}
 
 /**
  * Initialise link tracking
