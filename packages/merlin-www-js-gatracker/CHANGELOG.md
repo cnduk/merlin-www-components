@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.7.1"></a>
+## [1.7.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-gatracker@1.7.0...@cnbritain/merlin-www-js-gatracker@1.7.1) (2018-11-08)
+
+
+### Bug Fixes
+
+* **merlin-www-js-gatracker:** protocol includes the colon ([dbe6cdb](https://github.com/cnduk/merlin-www-components/commit/dbe6cdb))
+
+
+
+
 <a name="1.7.0"></a>
 # [1.7.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-gatracker@1.6.4...@cnbritain/merlin-www-js-gatracker@1.7.0) (2018-11-05)
 
