@@ -94,7 +94,7 @@ ComscoreManager.prototype = inherit(EventEmitter.prototype, {
 
         this._loadingScript = true;
         var scriptUrl = null;
-        if(document.location.protocol === 'https'){
+        if(document.location.protocol === 'https:'){
             scriptUrl = "https://sb.scorecardresearch.com/beacon.js";
         } else {
             scriptUrl = "http://b.scorecardresearch.com/beacon.js";
