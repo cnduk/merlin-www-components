@@ -37,7 +37,8 @@ InfobarManager.prototype = inherit(EventEmitter.prototype, {
         }
 
         // Build xhr url. We need to send the referrer if one is set.
-        var url = '/xhr/infobar';
+        var url = '/xhr/infobar?location=' +
+            encodeURIComponent(window.location.href);
         if (document.referrer) {
             url +='?referrer=' + encodeURIComponent(document.referrer);
         }
