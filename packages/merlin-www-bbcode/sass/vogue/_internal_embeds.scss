@@ -392,3 +392,72 @@
     text-transform: uppercase;
     transition: opacity 0.3s ease;
 }
+
+.bb-newsletter {
+    border-bottom: 1px solid $loot-box;
+    border-left: 1px solid $loot-box;
+    border-right: 1px solid $loot-box;
+    border-top: 2px solid $black;
+    margin: 40px 0;
+    padding: 20px;
+
+    @include at-x-large-size {
+        padding: 40px;
+    }
+}
+
+.bb-newsletter-wrapper {}
+
+.bb-newsletter__cover {}
+.bb-newsletter__image {}
+
+.bb-newsletter__content {
+    text-align: center;
+
+    @include at-x-large-size {
+        padding-left: 18px;
+        text-align: left;
+    }
+}
+
+.bb-newsletter__copy {
+    @include font("ADOBE CASLON", 16px, 600, 22px);
+    color: $mine-shaft-222;
+    margin: 20px 0 10px 0px;
+}
+
+.bb-newsletter__form {}
+
+.bb-newsletter__form-text {
+    @include font("NOBEL", 13px, 400, 13px);
+    background-color: $alabaster-f9;
+    border: 1px solid $loot-box;
+    color: $dove-gray;
+}
+
+.bb-newsletter__form-button {
+    @include button-single();
+    @include button-single-light();
+    &:hover {
+        @include button-single-light-hover();
+    }
+
+    @include font-size(10px);
+
+    padding: 0 10px;
+
+    @include at-x-large-size {
+        @include font-size(12px);
+    }
+}
+
+.bb-newsletter__legal {
+    @include font("NOBEL", 11px, 400, 11px);
+    color: $silver;
+    margin-top: 10px;
+}
+
+.bb-newsletter__privacy {
+    color: $silver;
+    text-decoration: underline;
+}
