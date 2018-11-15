@@ -1,0 +1,25 @@
+<aside class="bb-newsletter">
+    <div class="bb-newsletter-wrapper">
+        <div class="bb-newsletter__cover">
+            {{# data.cover }}
+                <div class="bb-newsletter__image">
+                    {{> @cnbritain/merlin-www-image }}
+                </div>
+            {{/ data.cover }}
+
+        </div>
+        <div class="bb-newsletter__content">
+            {{# data.text }}
+                <p class="bb-newsletter__copy">
+                    {{ &. }}
+                </p>
+            {{/ data.text }}
+
+            <form method="POST" class="bb-newsletter__form js-bb-newsletter__form">
+                <input type="email" name="email" required class="js-bb-newsletter__form-text bb-newsletter__form-text" placeholder="Enter email address"></input>
+                <input type="submit" value="Sign Up" class="js-bb-newsletter__form-button bb-newsletter__form-button"></input>
+            </form>
+            <p class="bb-newsletter__legal">by entering your email address, you agree to our <a href="https://www.condenast.co.uk/privacy/" class="bb-newsletter__privacy">privacy policy</a></p>
+        </div>
+    </div>
+</aside>

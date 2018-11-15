@@ -436,3 +436,35 @@
 .bb-show-gallery__contents {}
 .bb-show-gallery__title {}
 .bb-show-gallery__subtitle {}
+
+.bb-newsletter {}
+.bb-newsletter-wrapper {
+    display: table;
+}
+
+.bb-newsletter__cover {
+    @include at-x-large-size {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+.bb-newsletter__image {
+
+}
+
+.bb-newsletter__content {
+    @include at-x-large-size {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+.bb-newsletter__copy {}
+
+.bb-newsletter__form {}
+.bb-newsletter__form-text {}
+.bb-newsletter__form-button {}
+
+.bb-newsletter__legal {}
+.bb-newsletter__privacy {}
