@@ -1,7 +1,7 @@
 'use strict';
 
 import EventEmitter from 'eventemitter2';
-import {ajax, inherit} from '@cnbritain/merlin-www-js-utils/js/functions';
+import {inherit} from '@cnbritain/merlin-www-js-utils/js/functions';
 import {loadConfig, post} from './utils';
 import {load} from './events';
 import Infobar from './infobar';

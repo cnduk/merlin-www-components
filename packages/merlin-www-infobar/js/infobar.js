@@ -3,10 +3,8 @@
 import EventEmitter from 'eventemitter2';
 import {
     addEvent,
-    removeEvent,
-    getCookie,
     inherit,
-    setCookie
+    removeEvent
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import NAV from '@cnbritain/merlin-www-main-navigation';
 import * as constants from './constants';
@@ -86,7 +84,6 @@ Infobar.prototype = inherit(EventEmitter.prototype, {
 
         // Check if the config hash has changed
         if(savedConfig.configHash !== this.currentConfigHash){
-            console.log('RESET INFOBAR CONFIG');
             savedConfig.messages = {};
             savedConfig.messages[this.currentMessageHash] = 1;
             saveConfig(this.currentConfigHash, savedConfig.messages);
