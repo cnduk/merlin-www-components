@@ -71,22 +71,7 @@ export default function init(config) {
         PREBID_SETTINGS: _config['PREBID_SETTINGS']
     });
 
-    InfobarManager.once('enable', function() {
-        if (MainNavigation.state.isFixed) {
-            InfobarManager.infobar.fix();
-        }
-    });
-    InfobarManager.once('load', function() {
-        if (!InfobarManager.infobar || InfobarManager.infobar.state.isEnabled == false) {
-            SubscribeBarManager.lazyload();
-            SubscribeBarManager.once('enable', function() {
-                if (MainNavigation.state.isFixed) {
-                    SubscribeBarManager.subscribeBar.fix();
-                }
-            });
-        }
-    });
-    InfobarManager.lazyload();
+    initChain();
 
     CommonImage.init();
     SectionCardList.init();
@@ -187,5 +172,26 @@ export function setupHtmlClasses() {
     // Removes :focus outline
     if (hasTouch) {
         addClass(html, 'has-touch');
+    }
+}
+
+export function initChain(){
+    if(!CookieWarning || CookieWarning.el === null){
+        InfobarManager.once('enable', function() {
+            if (MainNavigation.state.isFixed) {
+                InfobarManager.infobar.fix();
+            }
+        });
+        InfobarManager.once('load', function() {
+            if (!InfobarManager.infobar || InfobarManager.infobar.state.isEnabled == false) {
+                SubscribeBarManager.lazyload();
+                SubscribeBarManager.once('enable', function() {
+                    if (MainNavigation.state.isFixed) {
+                        SubscribeBarManager.subscribeBar.fix();
+                    }
+                });
+            }
+        });
+        InfobarManager.lazyload();
     }
 }
