@@ -155,6 +155,10 @@ export function getArticleUrl(el) {
     return window.location.protocol + url;
 }
 
+export function getArticleUid(el){
+    return el.getAttribute('data-article-uid');
+}
+
 /**
  * Get the type of the article
  * @param  {HTMLElement} el
