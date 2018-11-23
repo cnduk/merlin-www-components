@@ -331,15 +331,15 @@ export function initScrollDepthTracking(){
             );
             scroll.offset = windowHeight;
             depths[e.article.properties.uid] = scroll;
-        }
 
-        scroll.on('hit', function(e){
-            sendCustomEvent({
-                eventCategory: 'Article Engagement',
-                eventAction: 'Scroll Depth',
-                eventLabel: parseInt(e.marker.label.replace('%', ''), 10)
+            scroll.on('hit', function(e){
+                sendCustomEvent({
+                    eventCategory: 'Article Engagement',
+                    eventAction: 'Scroll Depth',
+                    eventLabel: parseInt(e.marker.label.replace('%', ''), 10)
+                });
             });
-        });
+        }
     }
 
     function onArtFocus(e){
