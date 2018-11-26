@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.13.2"></a>
+## [1.13.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.13.1...@cnbritain/merlin-www-js-pages@1.13.2) (2018-11-26)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** prevent infobar from showing if cookie warning is ([a05cb7f](https://github.com/cnduk/merlin-www-components/commit/a05cb7f))
+
+
+
+
 <a name="1.13.1"></a>
 ## [1.13.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.13.0...@cnbritain/merlin-www-js-pages@1.13.1) (2018-11-08)
 
