@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.14.0"></a>
+# [1.14.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.13.2...@cnbritain/merlin-www-js-pages@1.14.0) (2018-11-27)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** fix scroll listener on scrolldepth for article ([a2eeae6](https://github.com/cnduk/merlin-www-components/commit/a2eeae6))
+
+
+### Features
+
+* **merlin-www-js-pages:** add scroll depth tracking to articles ([d0b3d1a](https://github.com/cnduk/merlin-www-components/commit/d0b3d1a))
+
+
+
+
 <a name="1.13.2"></a>
 ## [1.13.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.13.1...@cnbritain/merlin-www-js-pages@1.13.2) (2018-11-26)
 

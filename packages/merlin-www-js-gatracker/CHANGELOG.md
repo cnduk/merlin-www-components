@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.8.0"></a>
+# [1.8.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-gatracker@1.7.1...@cnbritain/merlin-www-js-gatracker@1.8.0) (2018-11-27)
+
+
+### Features
+
+* **merlin-www-js-gatracker:** add ScrollDepth ([69d5216](https://github.com/cnduk/merlin-www-components/commit/69d5216))
+
+
+
+
 <a name="1.7.1"></a>
 ## [1.7.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-gatracker@1.7.0...@cnbritain/merlin-www-js-gatracker@1.7.1) (2018-11-08)
 

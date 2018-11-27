@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.30.0"></a>
+# [1.30.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.29.3...@cnbritain/merlin-www-article@1.30.0) (2018-11-27)
+
+
+### Features
+
+* **merlin-www-article:** expost article uid in properties ([8baf39d](https://github.com/cnduk/merlin-www-components/commit/8baf39d))
+
+
+
+
 <a name="1.29.3"></a>
 ## [1.29.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.29.2...@cnbritain/merlin-www-article@1.29.3) (2018-11-05)
 
