@@ -16,6 +16,7 @@ import {
     bubbleEvent,
     getArticleTitle,
     getArticleType,
+    getArticleUid,
     getArticleUrl,
     updateSocialEmbeds
 } from './utils';
@@ -56,7 +57,8 @@ Article.prototype = inherit(EventEmitter.prototype, {
     '_getArticleProperties': function _getArticleProperties() {
         this.properties = {
             'title': getArticleTitle(this.el),
-            'url': getArticleUrl(this.el)
+            'url': getArticleUrl(this.el),
+            'uid': getArticleUid(this.el)
         };
     },
 

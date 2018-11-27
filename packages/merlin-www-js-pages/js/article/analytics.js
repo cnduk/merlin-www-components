@@ -3,14 +3,17 @@
 import {
     ArticleManager
 } from '@cnbritain/merlin-www-article';
+import {AdManager} from '@cnbritain/merlin-www-ads';
 import {
     addEvent,
     debounce,
     delegate,
+    getObjectValues,
     getParent,
     hasClass
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
+import ScrollDepth from '@cnbritain/merlin-www-js-gatracker/js/ScrollDepth';
 import {toArray} from '../utils';
 
 var allowAllFocus = false;
@@ -25,6 +28,7 @@ export default function init() {
     initInlineEmbedTracking();
     initTopStoriesTracking();
     initSocialShareTracking();
+    initScrollDepthTracking();
 }
 
 
@@ -252,4 +256,109 @@ function onSocialShareClick(e) {
 export function initSocialShareTracking(){
     addEvent(document, 'click', delegate(
         '.btn-share, .c-figure__toolbar-listitem', onSocialShareClick));
+}
+
+
+/**
+ * Scrolldepth tracking
+ */
+
+export function initScrollDepthTracking(){
+
+    var windowHeight = window.innerHeight;
+    var depths = {};
+    var activeDepth = null;
+    var titleVisibleScrollDepth = null;
+
+    // Event listeners
+    addEvent(window, 'resize', debounce(onWindowResize, 300));
+    ArticleManager.on('add', onArticleAdd);
+    ArticleManager.on('focus', onArtFocus);
+    AdManager.onAny(onAnyAdEvent);
+
+    // Body scroll depth
+    var bodyScrollDepth = new ScrollDepth(null, document.body, ['10px']);
+    bodyScrollDepth.on('hit', function(){
+        sendCustomEvent({
+            eventCategory: 'Article Engagement',
+            eventAction: 'Scroll Depth',
+            eventLabel: 1
+        });
+        bodyScrollDepth.destroy();
+        bodyScrollDepth = null;
+    });
+    bodyScrollDepth.enable();
+
+    function onWindowResize(){
+        windowHeight = window.innerHeight;
+
+        // Depths
+        getObjectValues(depths).forEach(function(v){
+            v.offset = windowHeight;
+        });
+        // Title depth
+        if(titleVisibleScrollDepth !== null){
+            titleVisibleScrollDepth.offset = windowHeight;
+        }
+    }
+
+    function onArticleAdd(e){
+        // For the first article, we want to know when the user scrolled and
+        // saw the title. This might be instantly.
+        if(this.articles.length === 1){
+            titleVisibleScrollDepth = new ScrollDepth(
+                ArticleManager.articles[0], ArticleManager.articles[0].el,
+                ['.a-header__title']);
+            titleVisibleScrollDepth.on('hit', function(){
+                sendCustomEvent({
+                    eventCategory: 'Article Engagement',
+                    eventAction: 'Scroll Depth',
+                    eventLabel: 0
+                });
+                titleVisibleScrollDepth.destroy();
+                titleVisibleScrollDepth = null;
+            });
+            titleVisibleScrollDepth.offset = windowHeight;
+            titleVisibleScrollDepth.enable();
+        }
+
+        // Track body copy scroll for anything that does not have a gallery
+        if(e.article.gallery === null){
+            var scroll = new ScrollDepth(
+                e.article,
+                e.article.el.querySelector('.a-body__content'),
+                ['25%', '50%', '75%', '100%']
+            );
+            scroll.offset = windowHeight;
+            depths[e.article.properties.uid] = scroll;
+
+            scroll.on('hit', function(e){
+                sendCustomEvent({
+                    eventCategory: 'Article Engagement',
+                    eventAction: 'Scroll Depth',
+                    eventLabel: parseInt(e.marker.label.replace('%', ''), 10)
+                });
+            });
+        }
+    }
+
+    function onArtFocus(e){
+        if(activeDepth !== null){
+            activeDepth.disable();
+        }
+        var uid = e.target.properties.uid;
+        if(depths.hasOwnProperty(uid)){
+            activeDepth = depths[uid];
+            activeDepth.enable();
+        } else {
+            activeDepth = null;
+        }
+    }
+
+    function onAnyAdEvent(){
+        if(activeDepth !== null){
+            activeDepth.resize();
+            activeDepth.scroll();
+        }
+    }
 }
