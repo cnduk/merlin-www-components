@@ -1,19 +1,13 @@
 'use strict';
 
 import EventEmitter from 'eventemitter2';
-import {ajax, inherit} from '@cnbritain/merlin-www-js-utils/js/functions';
+import {inherit} from '@cnbritain/merlin-www-js-utils/js/functions';
+import {loadConfig, post} from './utils';
 import {load} from './events';
 import Infobar from './infobar';
 
-// Events
-// Loaded
-// Open
-// Close
-
 function InfobarManager() {
-    EventEmitter.call(this, {
-        'wildcard': true
-    });
+    EventEmitter.call(this, {wildcard: true});
 
     this.isLoaded = false;
     this.infobar = null;
@@ -26,6 +20,7 @@ InfobarManager.prototype = inherit(EventEmitter.prototype, {
     },
 
     lazyload: function lazyload(){
+        // Already loaded
         if(this.isLoaded) return;
 
         // Check if we have the lazyload element
@@ -36,13 +31,18 @@ InfobarManager.prototype = inherit(EventEmitter.prototype, {
             return;
         }
 
-        // Build xhr url. We need to send the referrer if one is set.
-        var url = '/xhr/infobar';
-        if (document.referrer) {
-            url +='?referrer=' + encodeURIComponent(document.referrer);
+        // Load the infobar config
+        var config = loadConfig();
+
+        var postData = {
+            location: window.location.href,
+            message_history: config.messages
+        };
+        if(document.referrer){
+            postData.referrer = document.referrer;
         }
 
-        ajax({url: url})
+        post('/xhr/infobar', postData)
             .then(function onLazyload(data) {
                 this.isLoaded = true;
 
@@ -58,7 +58,6 @@ InfobarManager.prototype = inherit(EventEmitter.prototype, {
                 this.emit('load', load(this));
             }.bind(this), function onLazyloadFail() {
                 this.isLoaded = true;
-
                 this.emit('load', load(this));
             }.bind(this));
     }

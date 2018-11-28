@@ -2,30 +2,32 @@
 
 import EventEmitter from 'eventemitter2';
 import {
-    getCookie,
+    addEvent,
     inherit,
-    setCookie
+    removeEvent
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import NAV from '@cnbritain/merlin-www-main-navigation';
+import * as constants from './constants';
 import * as events from './events';
+import {saveConfig, loadConfig} from './utils';
 
-var IS_HIDDEN_CLS = 'is-hidden';
-var IS_FIXED_CLS = 'is-fixed';
-var IS_DISABLED_CLS = 'is-disabled';
-
-var COOKIE_PAGE_VIEW_COUNT = 'cnd_infobar_pageview_count1';
-var COOKIE_HASH = 'cnd_infobar_hash1';
-// This is the duration we want the cookie to last. Currently set to 1 day.
-var COOKIE_EXPIRES = 1;
 
 function Infobar(el) {
     EventEmitter.call(this);
 
+    // Check we have the element
+    if (!el) throw new Error('Infobar Element Not Found');
     this.el = el;
 
-    if (!this.el) {
-        throw new Error('Infobar Element Not Found');
-    }
+    // Check we have a config
+    this.currentConfigHash = null;
+    this.currentMessageHash = null;
+    this.parseConfig();
+
+    // Grab other needed elements
+    this.messageEl = el.querySelector('.js-c-infobar__message');
+    this.buttonEl = el.querySelector('.js-c-infobar__button');
+    this.closeButtonEl = el.querySelector('.js-c-infobar__close-button');
 
     this.state = {
         isHidden: false,
@@ -33,26 +35,9 @@ function Infobar(el) {
         isEnabled: false
     };
 
-    this.messageEl = el.querySelector('.js-c-infobar__message');
-    this.buttonEl = el.querySelector('.js-c-infobar__button');
-    this.closeButtonEl = el.querySelector('.js-c-infobar__close-button');
-
-    this.configEl = el.querySelector('.js-c-infobar-config');
-
-    if (!this.configEl) {
-        throw new Error('Infobar Config Not Found.');
-    }
-
-    this.config = this.configEl.innerHTML;
-    this.config = JSON.parse(this.config);
-
-    this.pageviewLimit = this.config['pageview_limit'];
-
-    this.previousHash = getCookie(COOKIE_HASH);
-    this.currentHash = this.config['hash'];
-
-    this.el.addEventListener('click', this.onClick.bind(this));
-    this.closeButtonEl.addEventListener('click', this.disable.bind(this));
+    this._elementListener = null;
+    this._closeButtonListener = null;
+    this.bindListeners();
 
     if (NAV) {
         NAV.on('show', this.show.bind(this));
@@ -64,23 +49,54 @@ function Infobar(el) {
 
 Infobar.prototype = inherit(EventEmitter.prototype, {
 
-    init: function(){
-        if (this.previousHash !== this.currentHash) {
-            setCookie(COOKIE_HASH, this.currentHash, COOKIE_EXPIRES);
+    bindListeners: function bindListeners(){
+        this._elementListener = this.onClick.bind(this);
+        addEvent(this.el, 'click', this._elementListener);
 
-            this.pageviewCount = 0;
-            setCookie(
-                COOKIE_PAGE_VIEW_COUNT, this.pageviewCount, COOKIE_EXPIRES);
-        } else {
-            this.pageviewCount = parseInt(
-                getCookie(COOKIE_PAGE_VIEW_COUNT), 10);
+        this._closeButtonListener = this.disable.bind(this);
+        addEvent(this.closeButtonEl, 'click', this._closeButtonListener);
+    },
+
+    unbindListeners: function unbindListeners(){
+        removeEvent(this.el, 'click', this._elementListener);
+        this._elementListener = null;
+        removeEvent(this.closeButtonEl, 'click', this._closeButtonListener);
+        this._closeButtonListener = null;
+    },
+
+    parseConfig: function parseConfig(){
+        // Check we have a config
+        var configEl = this.el.querySelector('.js-c-infobar-config');
+        if (!configEl) throw new Error('Infobar Config Not Found.');
+        try {
+            this.config = JSON.parse(configEl.innerHTML);
+        } catch(err){
+            console.error('Error parsing infobar config!');
+            throw err;
         }
+        // Set the values
+        this.currentConfigHash = this.config.config_hash;
+        this.currentMessageHash = this.config.message_hash;
+    },
 
-        if (this.pageviewCount < this.pageviewLimit) {
-            this.pageviewCount += 1;
-            setCookie(
-                COOKIE_PAGE_VIEW_COUNT, this.pageviewCount, COOKIE_EXPIRES);
+    init: function init(){
+        var savedConfig = loadConfig();
 
+        // Check if the config hash has changed
+        if(savedConfig.configHash !== this.currentConfigHash){
+            savedConfig.messages = {};
+            savedConfig.messages[this.currentMessageHash] = 1;
+            saveConfig(this.currentConfigHash, savedConfig.messages);
+            this.enable();
+
+        // Check if the user has closed this message
+        } else if(savedConfig.messages[this.currentMessageHash] === false){
+            this.disable();
+
+        // User is seeing the infobar
+        } else {
+            savedConfig.messages[this.currentMessageHash]++;
+            saveConfig(this.currentConfigHash, savedConfig.messages);
             this.enable();
         }
     },
@@ -88,7 +104,7 @@ Infobar.prototype = inherit(EventEmitter.prototype, {
     show: function() {
         if (!this.state.isHidden) return;
 
-        this.el.classList.remove(IS_HIDDEN_CLS);
+        this.el.classList.remove(constants.IS_HIDDEN_CLS);
         this.state.isHidden = false;
 
         this.emit('show', events.show(this));
@@ -97,7 +113,7 @@ Infobar.prototype = inherit(EventEmitter.prototype, {
     hide: function() {
         if (this.state.isHidden) return;
 
-        this.el.classList.add(IS_HIDDEN_CLS);
+        this.el.classList.add(constants.IS_HIDDEN_CLS);
         this.state.isHidden = true;
 
         this.emit('hide', events.hide(this));
@@ -106,7 +122,7 @@ Infobar.prototype = inherit(EventEmitter.prototype, {
     fix: function() {
         if (this.state.isFixed) return;
 
-        this.el.classList.add(IS_FIXED_CLS);
+        this.el.classList.add(constants.IS_FIXED_CLS);
         this.state.isFixed = true;
 
         this.emit('fix', events.fix(this));
@@ -115,7 +131,7 @@ Infobar.prototype = inherit(EventEmitter.prototype, {
     unfix: function() {
         if (!this.state.isFixed) return;
 
-        this.el.classList.remove(IS_FIXED_CLS);
+        this.el.classList.remove(constants.IS_FIXED_CLS);
         this.state.isFixed = false;
 
         this.emit('unfix', events.unfix(this));
@@ -124,7 +140,7 @@ Infobar.prototype = inherit(EventEmitter.prototype, {
     enable: function() {
         if (this.state.isEnabled) return;
 
-        this.el.classList.remove(IS_DISABLED_CLS);
+        this.el.classList.remove(constants.IS_DISABLED_CLS);
         this.state.isEnabled = true;
 
         this.emit('enable', events.enable(this));
@@ -133,20 +149,24 @@ Infobar.prototype = inherit(EventEmitter.prototype, {
     disable: function() {
         if (!this.state.isEnabled) return;
 
-        this.el.classList.add(IS_DISABLED_CLS);
+        this.el.classList.add(constants.IS_DISABLED_CLS);
         this.state.isEnabled = false;
-        // Set a cookie to be the page view limit so we don't open it again
-        setCookie(COOKIE_PAGE_VIEW_COUNT, this.pageviewLimit, COOKIE_EXPIRES);
 
+        // Load the config, set the message to false so we know its been closed
+        var config = loadConfig();
+        config.messages[this.currentMessageHash] = false;
+        saveConfig(this.currentConfigHash, config.messages);
+
+        // Disable event to let other things know whats going on
         this.emit('disable', events.disable(this));
     },
 
     onClick: function(e) {
-        if (e.target == this.messageEl) {
+        if (e.target === this.messageEl) {
             this.emit('linkClick', events.linkClick(e.target, 'message'));
         }
 
-        if (e.target == this.buttonEl) {
+        if (e.target === this.buttonEl) {
             this.emit('linkClick', events.linkClick(e.target, 'button'));
         }
     }
