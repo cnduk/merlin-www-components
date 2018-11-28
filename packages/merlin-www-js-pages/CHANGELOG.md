@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.14.1"></a>
+## [1.14.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.14.0...@cnbritain/merlin-www-js-pages@1.14.1) (2018-11-28)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** change 100% to 99% for article scroll depth ([ec706d0](https://github.com/cnduk/merlin-www-components/commit/ec706d0))
+
+
+
+
 <a name="1.14.0"></a>
 # [1.14.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.13.2...@cnbritain/merlin-www-js-pages@1.14.0) (2018-11-27)
 
