@@ -276,19 +276,6 @@ export function initScrollDepthTracking(){
     ArticleManager.on('focus', onArtFocus);
     AdManager.onAny(onAnyAdEvent);
 
-    // Body scroll depth
-    var bodyScrollDepth = new ScrollDepth(null, document.body, ['10px']);
-    bodyScrollDepth.on('hit', function(){
-        sendCustomEvent({
-            eventCategory: 'Article Engagement',
-            eventAction: 'Scroll Depth',
-            eventLabel: 1
-        });
-        bodyScrollDepth.destroy();
-        bodyScrollDepth = null;
-    });
-    bodyScrollDepth.enable();
-
     function onWindowResize(){
         windowHeight = window.innerHeight;
 
