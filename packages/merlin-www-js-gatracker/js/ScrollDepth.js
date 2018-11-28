@@ -72,7 +72,8 @@ ScrollDepth.prototype = inherit(EventEmitter.prototype, {
                         throw new Error(
                             'Cannot find element from selector: ', value);
                     }
-                    var offsetTop = getElementOffset(el).top;
+                    var offsetTop = (getElementOffset(el).top -
+                        this.focusElementBounds.top);
                     this._markers[index] = new Marker(value, offsetTop);
                 }
             }.bind(this));
@@ -97,7 +98,8 @@ ScrollDepth.prototype = inherit(EventEmitter.prototype, {
                         throw new Error(
                             'Cannot find element from selector: ', value);
                     }
-                    var offsetTop = getElementOffset(el).top;
+                    var offsetTop = (getElementOffset(el).top -
+                        this.focusElementBounds.top);
                     this._markers[index].offsetTop = offsetTop;
                 }
             }.bind(this));
