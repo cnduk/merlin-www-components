@@ -266,9 +266,9 @@ export function initSocialShareTracking(){
 export function initScrollDepthTracking(){
 
     var windowHeight = window.innerHeight;
-    var depths = {};
+    var bodyDepths = {};
+    var titleDepths = {};
     var activeDepth = null;
-    var titleVisibleScrollDepth = null;
 
     // Event listeners
     addEvent(window, 'resize', debounce(onWindowResize, 300));
@@ -292,45 +292,48 @@ export function initScrollDepthTracking(){
     function onWindowResize(){
         windowHeight = window.innerHeight;
 
-        // Depths
-        getObjectValues(depths).forEach(function(v){
+        // Body depths
+        // Title depth
+        var depths = getObjectValues(bodyDepths).concat(
+            getObjectValues(titleDepths));
+        depths.forEach(function(v){
             v.offset = windowHeight;
         });
-        // Title depth
-        if(titleVisibleScrollDepth !== null){
-            titleVisibleScrollDepth.offset = windowHeight;
-        }
     }
 
     function onArticleAdd(e){
+        var scroll = null;
+        var uid = e.article.properties.uid;
+
         // For the first article, we want to know when the user scrolled and
         // saw the title. This might be instantly.
-        if(this.articles.length === 1){
-            titleVisibleScrollDepth = new ScrollDepth(
-                ArticleManager.articles[0], ArticleManager.articles[0].el,
-                ['.a-header__title']);
-            titleVisibleScrollDepth.on('hit', function(){
-                sendCustomEvent({
-                    eventCategory: 'Article Engagement',
-                    eventAction: 'Scroll Depth',
-                    eventLabel: 0
-                });
-                titleVisibleScrollDepth.destroy();
-                titleVisibleScrollDepth = null;
+        scroll = new ScrollDepth(
+            e.article, e.article.el, ['.a-header__title']);
+        scroll.on('hit', function(){
+            sendCustomEvent({
+                eventCategory: 'Article Engagement',
+                eventAction: 'Scroll Depth',
+                eventLabel: 0
             });
-            titleVisibleScrollDepth.offset = windowHeight;
-            titleVisibleScrollDepth.enable();
+            titleDepths[uid].destroy();
+            titleDepths[uid] = null;
+            delete titleDepths[uid];
+        });
+        scroll.offset = windowHeight;
+        titleDepths[uid] = scroll;
+        if(ArticleManager.articles.length === 1){
+            titleDepths[uid].enable();
         }
 
         // Track body copy scroll for anything that does not have a gallery
         if(e.article.gallery === null){
-            var scroll = new ScrollDepth(
+            scroll = new ScrollDepth(
                 e.article,
                 e.article.el.querySelector('.a-body__content'),
                 ['25%', '50%', '75%', '99%']
             );
             scroll.offset = windowHeight;
-            depths[e.article.properties.uid] = scroll;
+            bodyDepths[uid] = scroll;
 
             scroll.on('hit', function(e){
                 sendCustomEvent({
@@ -344,12 +347,18 @@ export function initScrollDepthTracking(){
 
     function onArtFocus(e){
         if(activeDepth !== null){
-            activeDepth.disable();
+            if(titleDepths.hasOwnProperty(activeDepth)){
+                titleDepths[activeDepth].disable();
+            }
+            bodyDepths[activeDepth].disable();
         }
         var uid = e.target.properties.uid;
-        if(depths.hasOwnProperty(uid)){
-            activeDepth = depths[uid];
-            activeDepth.enable();
+        if(bodyDepths.hasOwnProperty(uid)){
+            activeDepth = uid;
+            if(titleDepths.hasOwnProperty(activeDepth)){
+                titleDepths[activeDepth].enable();
+            }
+            bodyDepths[activeDepth].enable();
         } else {
             activeDepth = null;
         }
@@ -357,8 +366,12 @@ export function initScrollDepthTracking(){
 
     function onAnyAdEvent(){
         if(activeDepth !== null){
-            activeDepth.resize();
-            activeDepth.scroll();
+            if(titleDepths.hasOwnProperty(activeDepth)){
+                titleDepths[activeDepth].resize();
+                titleDepths[activeDepth].scroll();
+            }
+            bodyDepths[activeDepth].resize();
+            bodyDepths[activeDepth].scroll();
         }
     }
 }
