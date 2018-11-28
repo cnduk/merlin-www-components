@@ -327,7 +327,7 @@ export function initScrollDepthTracking(){
             var scroll = new ScrollDepth(
                 e.article,
                 e.article.el.querySelector('.a-body__content'),
-                ['25%', '50%', '75%', '100%']
+                ['25%', '50%', '75%', '99%']
             );
             scroll.offset = windowHeight;
             depths[e.article.properties.uid] = scroll;
