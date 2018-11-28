@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.15.0"></a>
+# [1.15.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.14.3...@cnbritain/merlin-www-js-pages@1.15.0) (2018-11-28)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** remove scroll depth in articles for the first 10px ([c26c8b3](https://github.com/cnduk/merlin-www-components/commit/c26c8b3))
+
+
+### Features
+
+* **merlin-www-js-pages:** add ga event for infinite scrolling between articles ([9412a47](https://github.com/cnduk/merlin-www-components/commit/9412a47))
+
+
+
+
 <a name="1.14.3"></a>
 ## [1.14.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.14.2...@cnbritain/merlin-www-js-pages@1.14.3) (2018-11-28)
 
