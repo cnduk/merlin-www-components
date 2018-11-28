@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.14.3"></a>
+## [1.14.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.14.2...@cnbritain/merlin-www-js-pages@1.14.3) (2018-11-28)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** alter scroll depth for titles in articles ([8b6477a](https://github.com/cnduk/merlin-www-components/commit/8b6477a))
+
+
+
+
 <a name="1.14.2"></a>
 ## [1.14.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.14.1...@cnbritain/merlin-www-js-pages@1.14.2) (2018-11-28)
 

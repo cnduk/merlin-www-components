@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.30.1"></a>
+## [1.30.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.30.0...@cnbritain/merlin-www-article@1.30.1) (2018-11-28)
+
+
+### Bug Fixes
+
+* **merlin-www-article:** store meta title on article element ([cbfe08c](https://github.com/cnduk/merlin-www-components/commit/cbfe08c))
+
+
+
+
 <a name="1.30.0"></a>
 # [1.30.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.29.3...@cnbritain/merlin-www-article@1.30.0) (2018-11-27)
 
