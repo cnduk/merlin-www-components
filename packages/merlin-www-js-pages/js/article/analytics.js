@@ -350,15 +350,19 @@ export function initScrollDepthTracking(){
             if(titleDepths.hasOwnProperty(activeDepth)){
                 titleDepths[activeDepth].disable();
             }
-            bodyDepths[activeDepth].disable();
+            if(bodyDepths.hasOwnProperty(activeDepth)){
+                bodyDepths[activeDepth].disable();
+            }
         }
         var uid = e.target.properties.uid;
-        if(bodyDepths.hasOwnProperty(uid)){
+        if(bodyDepths.hasOwnProperty(uid) || titleDepths.hasOwnProperty(uid)){
             activeDepth = uid;
             if(titleDepths.hasOwnProperty(activeDepth)){
                 titleDepths[activeDepth].enable();
             }
-            bodyDepths[activeDepth].enable();
+            if(bodyDepths.hasOwnProperty(activeDepth)){
+                bodyDepths[activeDepth].enable();
+            }
         } else {
             activeDepth = null;
         }
@@ -370,8 +374,10 @@ export function initScrollDepthTracking(){
                 titleDepths[activeDepth].resize();
                 titleDepths[activeDepth].scroll();
             }
-            bodyDepths[activeDepth].resize();
-            bodyDepths[activeDepth].scroll();
+            if(bodyDepths.hasOwnProperty(activeDepth)){
+                bodyDepths[activeDepth].resize();
+                bodyDepths[activeDepth].scroll();
+            }
         }
     }
 }
