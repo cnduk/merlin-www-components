@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.15.1"></a>
+## [1.15.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.15.0...@cnbritain/merlin-www-js-pages@1.15.1) (2018-11-29)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** correctly check for body depths as gallery will have title but not body ([c2f7778](https://github.com/cnduk/merlin-www-components/commit/c2f7778))
+
+
+
+
 <a name="1.15.0"></a>
 # [1.15.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.14.3...@cnbritain/merlin-www-js-pages@1.15.0) (2018-11-28)
 
