@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-subscribe-bar@1.1.1...@cnbritain/merlin-www-subscribe-bar@1.1.2) (2018-11-30)
+
+
+### Bug Fixes
+
+* **merlin-www-subscribe-bar:** pass through message and cta text ([14b1bcc](https://github.com/cnduk/merlin-www-components/commit/14b1bcc))
+
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-subscribe-bar@1.1.0...@cnbritain/merlin-www-subscribe-bar@1.1.1) (2018-11-26)
 
