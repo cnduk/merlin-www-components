@@ -484,8 +484,13 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
+    margin: 0 auto;
     max-width: $SMALL_SIZE;
     width: 100%;
+
+    @include at-x-large-size {
+        margin: 0;
+    }
 }
 
 .bb-newsletter__form-text {
