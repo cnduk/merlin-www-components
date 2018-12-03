@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.3"></a>
+## [1.1.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-subscribe-bar@1.1.2...@cnbritain/merlin-www-subscribe-bar@1.1.3) (2018-12-03)
+
+
+### Bug Fixes
+
+* **merlin-www-subscribe-bar:** adjust top and transition to hide and show with main navigation ([17ace18](https://github.com/cnduk/merlin-www-components/commit/17ace18))
+
+
+
+
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-subscribe-bar@1.1.1...@cnbritain/merlin-www-subscribe-bar@1.1.2) (2018-11-30)
 

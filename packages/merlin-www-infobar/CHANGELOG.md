@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-infobar@1.2.0...@cnbritain/merlin-www-infobar@1.2.1) (2018-12-03)
+
+
+### Bug Fixes
+
+* **merlin-www-infobar:** adjust transition and top to hide and show with the navigation ([395834c](https://github.com/cnduk/merlin-www-components/commit/395834c))
+
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-infobar@1.1.4...@cnbritain/merlin-www-infobar@1.2.0) (2018-11-28)
 
