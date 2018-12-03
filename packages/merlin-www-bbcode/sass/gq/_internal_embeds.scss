@@ -409,3 +409,73 @@
     width: 100%;
     opacity: 0;
 }
+
+.bb-newsletter {
+    border: 1px solid $bon-jour;
+}
+
+.bb-newsletter-wrapper {}
+
+.bb-newsletter__cover {
+    padding: 30px 10px 20px 10px;
+
+    @include at-x-large-size {
+        padding: 30px;
+    }
+}
+
+.bb-newsletter__image {}
+
+.bb-newsletter__content {
+    padding: 0 10px 30px 10px;
+    text-align: center;
+
+    @include at-x-large-size {
+        border-left: 1px solid $bon-jour;
+        padding: 30px;
+        text-align: left;
+    }
+}
+
+.bb-newsletter__copy {
+    @include font("GOTHAM", 14px, 500, 20px);
+    color: $woodsmoke;
+    margin: 0 0 20px 0px;
+}
+
+.bb-newsletter__form {}
+
+.bb-newsletter__form-text {
+    @include font("GOTHAM", 10px, 700, 10px);
+    background-color: $white;
+    border: 1px solid $bon-jour;
+    color: $shuttle-gray;
+    text-transform: uppercase;
+}
+
+.bb-newsletter__form-button {
+    @include button-single();
+    @include button-single-light();
+    &:hover {
+        @include button-single-light-hover();
+    }
+
+    @include font-size(10px);
+
+    padding: 0 10px;
+
+    @include at-x-large-size {
+        @include font-size(12px);
+    }
+}
+
+.bb-newsletter__legal {
+    @include font("GOTHAM", 10px, 400, 10px);
+    color: $woodsmoke;
+    margin-top: 10px;
+}
+
+.bb-newsletter__privacy {
+    color: $woodsmoke;
+    text-decoration: underline;
+}
