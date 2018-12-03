@@ -333,3 +333,81 @@
         }
     }
 }
+
+// -------------------- //
+// Newsletter
+// -------------------- //
+.bb-newsletter {
+    background-color: $white-smoke;
+    margin: 40px 0;
+    padding: 20px 10px;
+
+    @include at-x-large-size {
+        padding: 40px 20px;
+    }
+}
+
+.bb-newsletter-wrapper {}
+
+.bb-newsletter__cover {
+    @include at-x-large-size {
+        padding-right: 24px;
+    }
+}
+.bb-newsletter__image {}
+
+.bb-newsletter__content {
+    text-align: center;
+
+    @include at-x-large-size {
+        border-left: 2px solid $black;
+        padding-left: 24px;
+        text-align: left;
+    }
+}
+
+.bb-newsletter__copy {
+    @include font("BRUTAL", 14px, 700, 19px);
+    color: $black;
+    margin: 15px 0 15px 0px;
+
+    @include at-x-large-size {
+        @include font-size(17px);
+        @include line-height(23px);
+    }
+}
+
+.bb-newsletter__form {}
+
+.bb-newsletter__form-text {
+    @include font("BRUTAL", 14px, 400, 14px);
+    background-color: $white;
+    color: $black;
+}
+
+.bb-newsletter__form-button {
+    @include button-single();
+    @include button-single-light();
+    &:hover {
+        @include button-single-light-hover();
+    }
+
+    @include font-size(10px);
+
+    padding: 0 10px;
+
+    @include at-x-large-size {
+        @include font-size(12px);
+    }
+}
+
+.bb-newsletter__legal {
+    @include font("BRUTAL", 10px, 400, 10px);
+    color: $black;
+    margin-top: 10px;
+}
+
+.bb-newsletter__privacy {
+    color: $black;
+    text-decoration: underline;
+}
