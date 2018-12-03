@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.31.0"></a>
+# [1.31.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.30.1...@cnbritain/merlin-www-article@1.31.0) (2018-12-03)
+
+
+### Features
+
+* **merlin-www-article:** check for brightcove_player when constructing embed ([4135420](https://github.com/cnduk/merlin-www-components/commit/4135420))
+
+
+
+
 <a name="1.30.1"></a>
 ## [1.30.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.30.0...@cnbritain/merlin-www-article@1.30.1) (2018-11-28)
 
