@@ -374,6 +374,7 @@
     @include at-x-large-size {
         @include font-size(17px);
         @include line-height(23px);
+        margin-top: 0;
     }
 }
 
