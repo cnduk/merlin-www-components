@@ -205,7 +205,7 @@
     width: 100%;
 
     @include max-screen($X_LARGE_SIZE - 1px) {
-        transition: top 300ms ease-in-out;
+        transition: top 120ms linear;
         will-change: top;
     }
 
