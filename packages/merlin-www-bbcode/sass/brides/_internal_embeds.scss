@@ -328,3 +328,89 @@
         margin: 48px 0;
     }
 }
+
+// -------------------- //
+// Newsletter
+// -------------------- //
+.bb-newsletter {
+    background-color: $diamond;
+    padding: 20px 10px;
+
+    @include at-x-large-size {
+        padding: 20px 30px;
+    }
+}
+
+.bb-newsletter-wrapper {
+    @include at-x-large-size {
+        border-bottom: 1px solid $ballet-grey;
+        border-top: 1px solid $ballet-grey;
+    }
+}
+
+.bb-newsletter__cover {
+    @include at-x-large-size {
+        padding: 30px 60px 30px 30px;
+    }
+}
+
+.bb-newsletter__image {}
+
+.bb-newsletter__content {
+    text-align: center;
+
+    @include at-x-large-size {
+        border-left: 1px solid $ballet-grey;
+        padding: 30px 0 30px 30px;
+        text-align: left;
+    }
+}
+
+.bb-newsletter__copy {
+    @include font("FREIGHT TEXT", 16px, 400, 20px);
+    color: $ascot-grey;
+    margin: 20px 0 20px 0px;
+
+    @include at-x-large-size {
+        @include font-size(16px);
+        @include line-height(20px);
+        margin-top: 0;
+    }
+}
+
+.bb-newsletter__form {}
+
+.bb-newsletter__form-text {
+    @include font("SOLEIL", 10px, 400, 10px);
+    background-color: transparent;
+    border: 1px solid $ballet-grey;
+    color: $ascot-grey;
+    text-transform: uppercase;
+}
+
+.bb-newsletter__form-button {
+    @include button-single();
+    @include button-single-light();
+    &:hover {
+        @include button-single-light-hover();
+    }
+
+    @include font-size(10px);
+
+    padding: 0 10px;
+
+    @include at-x-large-size {
+        @include font-size(12px);
+    }
+}
+
+.bb-newsletter__legal {
+    @include font("SOLEIL", 10px, 400, 13px);
+    color: $ascot-grey;
+    margin-top: 20px;
+}
+
+.bb-newsletter__privacy {
+    color: $ascot-grey;
+    text-decoration: underline;
+}
