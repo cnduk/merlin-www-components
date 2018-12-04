@@ -355,3 +355,78 @@ li.bb-card__meta-item {
 }
 
 .bb-video__link {}
+
+// -------------------- //
+// Newsletter
+// -------------------- //
+.bb-newsletter {
+    border: 1px solid $PORCELAIN;
+    margin: 40px 0;
+    padding: 30px 20px;
+
+    @include at-x-large-size {
+        padding: 40px;
+    }
+}
+
+.bb-newsletter-wrapper {}
+
+.bb-newsletter__cover {}
+.bb-newsletter__image {}
+
+.bb-newsletter__content {
+    text-align: center;
+
+    @include at-x-large-size {
+        padding-left: 18px;
+        text-align: left;
+    }
+}
+
+.bb-newsletter__copy {
+    @include font("FREIGHT TEXT", 16px, 400, 22px);
+    color: $MUSTASAARI;
+    font-style: italic;
+    margin: 15px 0 20px 0px;
+
+    @include at-x-large-size {
+        @include font-size(23px);
+        @include line-height(26px);
+        margin-top: 0;
+    }
+}
+
+.bb-newsletter__form {}
+
+.bb-newsletter__form-text {
+    @include font("PROXIMA NOVA CONDENSED", 14px, 400, 14px);
+    border: 1px solid $PORCELAIN;
+    color: $RAVEN;
+}
+
+.bb-newsletter__form-button {
+    @include button-single-two();
+    @include button-single-two-light();
+    &:hover {
+        @include button-single-two-light-hover();
+    }
+
+    @include font-size(10px);
+
+    padding: 0 10px;
+
+    @include at-x-large-size {
+        @include font-size(12px);
+    }
+}
+
+.bb-newsletter__legal {
+    @include font("PROXIMA NOVA CONDENSED", 11px, 400, 11px);
+    color: $RAVEN;
+    margin-top: 10px;
+}
+
+.bb-newsletter__privacy {
+    color: $RAVEN;
+    text-decoration: underline;
+}
