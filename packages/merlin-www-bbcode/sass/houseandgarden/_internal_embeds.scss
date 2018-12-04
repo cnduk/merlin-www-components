@@ -331,3 +331,78 @@ ul li.bb-gallery__col {
 }
 
 .bb-video__link {}
+
+// -------------------- //
+// Newsletter
+// -------------------- //
+.bb-newsletter {
+    background-color: $vanilla-ice;
+    margin: 30px 0;
+    padding: 30px 10px;
+
+    @include at-x-large-size {
+        padding: 40px;
+    }
+}
+
+.bb-newsletter-wrapper {}
+
+.bb-newsletter__cover {}
+.bb-newsletter__image {}
+
+.bb-newsletter__content {
+    text-align: center;
+
+    @include at-x-large-size {
+        padding-left: 30px;
+        text-align: left;
+    }
+}
+
+.bb-newsletter__copy {
+    @include font("BRANDON GROTESQUE", 16px, 700, 20px);
+    color: $mine-shaft;
+    margin: 20px 0 20px 0px;
+
+    @include at-x-large-size {
+        @include font-size(21px);
+        @include line-height(26px);
+        margin-top: 0;
+    }
+}
+
+.bb-newsletter__form {}
+
+.bb-newsletter__form-text {
+    @include font("BRANDON GROTESQUE", 11px, 700, 11px);
+    background-color: $white;
+    color: $silver-chalice;
+    text-transform: uppercase;
+}
+
+.bb-newsletter__form-button {
+    @include button-single();
+    @include button-single-light();
+    &:hover {
+        @include button-single-light-hover();
+    }
+
+    @include font-size(10px);
+
+    padding: 0 10px;
+
+    @include at-x-large-size {
+        @include font-size(12px);
+    }
+}
+
+.bb-newsletter__legal {
+    @include font("BRANDON GROTESQUE", 11px, 400, 11px);
+    color: $mine-shaft;
+    margin-top: 10px;
+}
+
+.bb-newsletter__privacy {
+    color: $mine-shaft;
+    text-decoration: underline;
+}
