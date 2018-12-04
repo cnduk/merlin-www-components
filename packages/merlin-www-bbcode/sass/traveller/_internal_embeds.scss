@@ -390,8 +390,6 @@ li.bb-card__meta-item {
     margin: 15px 0 20px 0px;
 
     @include at-x-large-size {
-        @include font-size(23px);
-        @include line-height(26px);
         margin-top: 0;
     }
 }
