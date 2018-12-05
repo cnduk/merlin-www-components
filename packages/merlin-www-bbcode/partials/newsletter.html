@@ -15,7 +15,8 @@
                 </p>
             {{/ data.text }}
 
-            <form method="POST" class="bb-newsletter__form js-bb-newsletter__form">
+            <form method="POST" action="{{ data.form_url }}" class="bb-newsletter__form js-bb-newsletter__form">
+                <input type="hidden" name="newsletter" value="{{ data.newsletter_id }}">
                 <input type="email" name="email" required class="js-bb-newsletter__form-text bb-newsletter__form-text" placeholder="Enter email address"></input>
                 <input type="submit" value="Sign Up" class="js-bb-newsletter__form-button bb-newsletter__form-button"></input>
             </form>
