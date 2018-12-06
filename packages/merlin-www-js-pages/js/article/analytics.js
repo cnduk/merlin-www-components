@@ -1,19 +1,14 @@
 'use strict';
 
-import {
-    ArticleManager
-} from '@cnbritain/merlin-www-article';
-import {AdManager} from '@cnbritain/merlin-www-ads';
+import {ArticleManager} from '@cnbritain/merlin-www-article';
 import {
     addEvent,
     debounce,
     delegate,
-    getObjectValues,
     getParent,
     hasClass
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
-import ScrollDepth from '@cnbritain/merlin-www-js-gatracker/js/ScrollDepth';
 import {toArray} from '../utils';
 
 var allowAllFocus = false;
@@ -30,7 +25,6 @@ export default function init() {
     initInlineEmbedTracking();
     initTopStoriesTracking();
     initSocialShareTracking();
-    initScrollDepthTracking();
 }
 
 
@@ -269,115 +263,4 @@ function onSocialShareClick(e) {
 export function initSocialShareTracking(){
     addEvent(document, 'click', delegate(
         '.btn-share, .c-figure__toolbar-listitem', onSocialShareClick));
-}
-
-
-/**
- * Scrolldepth tracking
- */
-
-export function initScrollDepthTracking(){
-
-    var windowHeight = window.innerHeight;
-    var bodyDepths = {};
-    var titleDepths = {};
-    var activeDepth = null;
-
-    // Event listeners
-    addEvent(window, 'resize', debounce(onWindowResize, 300));
-    ArticleManager.on('add', onArticleAdd);
-    ArticleManager.on('focus', onArtFocus);
-    AdManager.onAny(onAnyAdEvent);
-
-    function onWindowResize(){
-        windowHeight = window.innerHeight;
-
-        // Body depths
-        // Title depth
-        var depths = getObjectValues(bodyDepths).concat(
-            getObjectValues(titleDepths));
-        depths.forEach(function(v){
-            v.offset = windowHeight;
-        });
-    }
-
-    function onArticleAdd(e){
-        var scroll = null;
-        var uid = e.article.properties.uid;
-
-        // For the first article, we want to know when the user scrolled and
-        // saw the title. This might be instantly.
-        scroll = new ScrollDepth(
-            e.article, e.article.el, ['.a-header__title']);
-        scroll.on('hit', function(){
-            sendCustomEvent({
-                eventCategory: 'Article Engagement',
-                eventAction: 'Scroll Depth',
-                eventLabel: 0
-            });
-            titleDepths[uid].destroy();
-            titleDepths[uid] = null;
-            delete titleDepths[uid];
-        });
-        scroll.offset = windowHeight;
-        titleDepths[uid] = scroll;
-        if(ArticleManager.articles.length === 1){
-            titleDepths[uid].enable();
-        }
-
-        // Track body copy scroll for anything that does not have a gallery
-        if(e.article.gallery === null){
-            scroll = new ScrollDepth(
-                e.article,
-                e.article.el.querySelector('.a-body__content'),
-                ['25%', '50%', '75%', '99%']
-            );
-            scroll.offset = windowHeight;
-            bodyDepths[uid] = scroll;
-
-            scroll.on('hit', function(e){
-                sendCustomEvent({
-                    eventCategory: 'Article Engagement',
-                    eventAction: 'Scroll Depth',
-                    eventLabel: parseInt(e.marker.label.replace('%', ''), 10)
-                });
-            });
-        }
-    }
-
-    function onArtFocus(e){
-        if(activeDepth !== null){
-            if(titleDepths.hasOwnProperty(activeDepth)){
-                titleDepths[activeDepth].disable();
-            }
-            if(bodyDepths.hasOwnProperty(activeDepth)){
-                bodyDepths[activeDepth].disable();
-            }
-        }
-        var uid = e.target.properties.uid;
-        if(bodyDepths.hasOwnProperty(uid) || titleDepths.hasOwnProperty(uid)){
-            activeDepth = uid;
-            if(titleDepths.hasOwnProperty(activeDepth)){
-                titleDepths[activeDepth].enable();
-            }
-            if(bodyDepths.hasOwnProperty(activeDepth)){
-                bodyDepths[activeDepth].enable();
-            }
-        } else {
-            activeDepth = null;
-        }
-    }
-
-    function onAnyAdEvent(){
-        if(activeDepth !== null){
-            if(titleDepths.hasOwnProperty(activeDepth)){
-                titleDepths[activeDepth].resize();
-                titleDepths[activeDepth].scroll();
-            }
-            if(bodyDepths.hasOwnProperty(activeDepth)){
-                bodyDepths[activeDepth].resize();
-                bodyDepths[activeDepth].scroll();
-            }
-        }
-    }
 }
