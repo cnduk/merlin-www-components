@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.16.0"></a>
+# [1.16.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.15.4...@cnbritain/merlin-www-js-pages@1.16.0) (2018-12-06)
+
+
+### Features
+
+* **merlin-www-js-pages:** remove scrolldepth tracking ([8d1d4e9](https://github.com/cnduk/merlin-www-components/commit/8d1d4e9))
+
+
+
+
 <a name="1.15.4"></a>
 ## [1.15.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.15.3...@cnbritain/merlin-www-js-pages@1.15.4) (2018-12-03)
 
