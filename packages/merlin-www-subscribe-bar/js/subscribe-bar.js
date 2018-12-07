@@ -184,7 +184,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
                 }
             }
         };
-        xhr.send(`email=${email}`);
+        xhr.send('email=' + email);
     }
 });
 
