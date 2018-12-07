@@ -79,7 +79,8 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
             setCookie(COOKIE_PAGE_VIEW_DATE, false);
         }
 
-        if (getCookie(COOKIE_PAGE_VIEW_DATE) == 'false') {
+        var viewDateCookie = getCookie(COOKIE_PAGE_VIEW_DATE);
+        if (viewDateCookie === null || viewDateCookie === 'false') {
             this.enable();
         }
     },
