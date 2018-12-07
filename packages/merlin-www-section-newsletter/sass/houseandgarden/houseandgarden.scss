@@ -4,7 +4,7 @@
 @import "../wireframe/wireframe";
 
 .c-newsletter {
-    background: $ebony-clay;
+    background: $wild-sand;
     margin-bottom: $MOBILE_SLICE_MARGIN;
     margin-left: auto;
     margin-right: auto;
@@ -43,7 +43,7 @@
 
 .c-newsletter__title {
     @include font("MILLER_DISPLAY", 20px, 400, 20px);
-    color: $white;
+    color: $mine-shaft;
     letter-spacing:4px;
     margin-bottom: 5px;
     margin-top: 0px;
@@ -60,7 +60,7 @@
 
 .c-newsletter__description {
     @include font("MILLER_DISPLAY", 14px, 400, 19px);
-    color: $white;
+    color: $mine-shaft;
     font-style: italic;
     letter-spacing: 0px;
     margin: 5px 0 20px 0;
@@ -76,7 +76,6 @@
     border-radius: 0;
     border: 1px solid $mine-shaft;
     box-sizing: border-box;
-    color: $silver-chalice;
     height: 47px;
     letter-spacing: 1px;
     margin-bottom: 10px;
@@ -96,14 +95,14 @@
 
 .c-newsletter__form-btn {
     @include button-single();
-    @include button-single-dark();
+    @include button-single-light();
     height: auto;
     margin-bottom: 10px;
     text-transform: uppercase;
 
     &:focus,
     &:hover {
-        @include button-single-dark-hover();
+        @include button-single-light-hover();
     }
 
     @include at-medium-size {
