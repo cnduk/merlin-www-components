@@ -8,12 +8,12 @@
             {{/ data.cover }}
 
         </div>
-        <div class="bb-newsletter__content">
-            {{# data.text }}
+        <div class="bb-newsletter__content js-bb-newsletter__content">
+            {{# data.cta_text }}
                 <p class="bb-newsletter__copy">
                     {{ &. }}
                 </p>
-            {{/ data.text }}
+            {{/ data.cta_text }}
 
             <form method="POST" action="{{ data.form_url }}" class="bb-newsletter__form js-bb-newsletter__form">
                 <input type="hidden" name="newsletter" value="{{ data.newsletter_id }}">
@@ -21,6 +21,19 @@
                 <input type="submit" value="Sign Up" class="js-bb-newsletter__form-button bb-newsletter__form-button"></input>
             </form>
             <p class="bb-newsletter__legal">by entering your email address, you agree to our <a href="https://www.condenast.co.uk/privacy/" class="bb-newsletter__privacy">privacy policy</a></p>
+        </div>
+
+        <div class="bb-newsletter__status js-bb-newsletter__status is-hidden">
+            <div class="bb-newsletter__success js-bb-newsletter__success is-hidden">
+                {{# data.success_text }}
+                    {{ &. }}
+                {{/ data.success_text }}
+            </div>
+            <div class="bb-newsletter__failure js-bb-newsletter__failure is-hidden">
+                {{# data.failure_text }}
+                    {{ &. }}
+                {{/ data.failure_text }}
+            </div>
         </div>
     </div>
 </aside>

@@ -477,6 +477,10 @@
         display: table-cell;
         vertical-align: middle;
     }
+
+    &.is-hidden {
+        display: none;
+    }
 }
 
 .bb-newsletter__copy {}
@@ -520,3 +524,26 @@
 
 .bb-newsletter__legal {}
 .bb-newsletter__privacy {}
+
+.bb-newsletter__status {
+    @include at-x-large-size {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    &.is-hidden {
+        display: none;
+    }
+}
+
+.bb-newsletter__success {
+    &.is-hidden {
+        display: none;
+    }
+}
+
+.bb-newsletter__failure {
+    &.is-hidden {
+        display: none;
+    }
+}

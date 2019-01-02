@@ -8,6 +8,8 @@ import {
     inherit,
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 
+var IS_HIDDEN_CLS = 'is-hidden';
+
 function Newsletter(el) {
     EventEmitter.call(this);
 
@@ -15,6 +17,12 @@ function Newsletter(el) {
 
     this.formEl = el.querySelector('.js-bb-newsletter__form');
     this.emailEl = el.querySelector('.js-bb-newsletter__form-text');
+
+    this.contentEl = el.querySelector('.js-bb-newsletter__content');
+
+    this.statusEl = el.querySelector('.js-bb-newsletter__status');
+    this.failureEl = el.querySelector('.js-bb-newsletter__failure');
+    this.successEl = el.querySelector('.js-bb-newsletter__succes');
 
     addEvent(this.formEl, 'submit', this.onSubmit.bind(this));
 
@@ -40,6 +48,9 @@ Newsletter.prototype = inherit(EventEmitter.prototype, {
 
         var formData = new FormData(e.target);
 
+        addClass(this.contentEl, IS_HIDDEN_CLS);
+        removeClass(this.statusEl, IS_HIDDEN_CLS);
+
         var xhr = new XMLHttpRequest();
 
         xhr.open('POST', '/xhr/newsletters', true);
@@ -48,15 +59,11 @@ Newsletter.prototype = inherit(EventEmitter.prototype, {
         xhr.onreadystatechange = function() {
             if (xhr.readyState == XMLHttpRequest.DONE) {
                 if (xhr.status === 200) {
-                    console.log('success');
-                    // TODO
-                    // Render Success
+                    removeClass(this.successEl, IS_HIDDEN_CLS);
                 }
 
                 else {
-                    console.log('failure');
-                    // TODO
-                    // Render Failure
+                    removeClass(this.failureEl, IS_HIDDEN_CLS);
                 }
             }
         }.bind(this);
