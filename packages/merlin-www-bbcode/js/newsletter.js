@@ -22,7 +22,7 @@ function Newsletter(el) {
 
     this.statusEl = el.querySelector('.js-bb-newsletter__status');
     this.failureEl = el.querySelector('.js-bb-newsletter__failure');
-    this.successEl = el.querySelector('.js-bb-newsletter__succes');
+    this.successEl = el.querySelector('.js-bb-newsletter__success');
 
     addEvent(this.formEl, 'submit', this.onSubmit.bind(this));
 
@@ -50,6 +50,7 @@ Newsletter.prototype = inherit(EventEmitter.prototype, {
 
         addClass(this.contentEl, IS_HIDDEN_CLS);
         removeClass(this.statusEl, IS_HIDDEN_CLS);
+        removeClass(this.successEl, IS_HIDDEN_CLS);
 
         var xhr = new XMLHttpRequest();
 
@@ -59,11 +60,11 @@ Newsletter.prototype = inherit(EventEmitter.prototype, {
         xhr.onreadystatechange = function() {
             if (xhr.readyState == XMLHttpRequest.DONE) {
                 if (xhr.status === 200) {
-                    removeClass(this.successEl, IS_HIDDEN_CLS);
+                    // removeClass(this.successEl, IS_HIDDEN_CLS);
                 }
 
                 else {
-                    removeClass(this.failureEl, IS_HIDDEN_CLS);
+                    // removeClass(this.failureEl, IS_HIDDEN_CLS);
                 }
             }
         }.bind(this);

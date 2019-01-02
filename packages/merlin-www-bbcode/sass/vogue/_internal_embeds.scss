@@ -468,3 +468,32 @@
     color: $silver;
     text-decoration: underline;
 }
+
+.bb-newsletter__status {
+    text-align: center;
+
+    @include at-x-large-size {
+        padding-left: 18px;
+        text-align: left;
+    }
+}
+
+.bb-newsletter__success {
+    @include font("ADOBE CASLON", 16px, 600, 22px);
+    color: $mine-shaft-222;
+    margin: 20px 0 10px 0px;
+
+    @include at-x-large-size {
+        margin-top: 0;
+    }
+}
+
+.bb-newsletter__failure {
+    @include font("ADOBE CASLON", 16px, 600, 22px);
+    color: $mine-shaft-222;
+    margin: 20px 0 10px 0px;
+
+    @include at-x-large-size {
+        margin-top: 0;
+    }
+}
