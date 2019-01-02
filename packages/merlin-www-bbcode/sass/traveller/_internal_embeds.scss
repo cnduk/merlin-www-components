@@ -428,3 +428,34 @@ li.bb-card__meta-item {
     color: $RAVEN;
     text-decoration: underline;
 }
+
+.bb-newsletter__status {
+    text-align: center;
+
+    @include at-x-large-size {
+        padding-left: 18px;
+        text-align: left;
+    }
+}
+
+.bb-newsletter__success {
+    @include font("FREIGHT TEXT", 16px, 400, 22px);
+    color: $MUSTASAARI;
+    font-style: italic;
+    margin: 15px 0 20px 0px;
+
+    @include at-x-large-size {
+        margin-top: 0;
+    }
+}
+
+.bb-newsletter__failure {
+    @include font("FREIGHT TEXT", 16px, 400, 22px);
+    color: $MUSTASAARI;
+    font-style: italic;
+    margin: 15px 0 20px 0px;
+
+    @include at-x-large-size {
+        margin-top: 0;
+    }
+}

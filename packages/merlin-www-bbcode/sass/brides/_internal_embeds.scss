@@ -414,3 +414,37 @@
     color: $ascot-grey;
     text-decoration: underline;
 }
+
+.bb-newsletter__status {
+    text-align: center;
+
+    @include at-x-large-size {
+        border-left: 1px solid $ballet-grey;
+        padding: 30px 0 30px 30px;
+        text-align: left;
+    }
+}
+
+.bb-newsletter__success {
+    @include font("FREIGHT TEXT", 16px, 400, 20px);
+    color: $ascot-grey;
+    margin: 20px 0 20px 0px;
+
+    @include at-x-large-size {
+        @include font-size(16px);
+        @include line-height(20px);
+        margin-top: 0;
+    }
+}
+
+.bb-newsletter__failure {
+    @include font("FREIGHT TEXT", 16px, 400, 20px);
+    color: $ascot-grey;
+    margin: 20px 0 20px 0px;
+
+    @include at-x-large-size {
+        @include font-size(16px);
+        @include line-height(20px);
+        margin-top: 0;
+    }
+}

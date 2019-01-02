@@ -482,3 +482,26 @@
     color: $woodsmoke;
     text-decoration: underline;
 }
+
+.bb-newsletter__status {
+    padding: 0 10px 30px 10px;
+    text-align: center;
+
+    @include at-x-large-size {
+        border-left: 1px solid $bon-jour;
+        padding: 30px;
+        text-align: left;
+    }
+}
+
+.bb-newsletter__success {
+    @include font("GOTHAM", 14px, 500, 20px);
+    color: $woodsmoke;
+    margin: 0 0 20px 0px;
+}
+
+.bb-newsletter__failure {
+    @include font("GOTHAM", 14px, 500, 20px);
+    color: $woodsmoke;
+    margin: 0 0 20px 0px;
+}

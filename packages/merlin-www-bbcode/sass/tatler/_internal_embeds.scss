@@ -335,3 +335,36 @@
     color: $black;
     text-decoration: underline;
 }
+
+.bb-newsletter__status {
+    text-align: center;
+
+    @include at-x-large-size {
+        padding-left: 30px;
+        text-align: left;
+    }
+}
+
+.bb-newsletter__success {
+    @include font("COMMUTER SANS", 16px, 400, 20px);
+    color: $black;
+    margin: 20px 0 20px 0px;
+
+    @include at-x-large-size {
+        @include font-size(23px);
+        @include line-height(26px);
+        margin-top: 0;
+    }
+}
+
+.bb-newsletter__failure {
+    @include font("COMMUTER SANS", 16px, 400, 20px);
+    color: $black;
+    margin: 20px 0 20px 0px;
+
+    @include at-x-large-size {
+        @include font-size(23px);
+        @include line-height(26px);
+        margin-top: 0;
+    }
+}
