@@ -18,7 +18,7 @@ import {
     getStorage
 } from '../utils.js';
 import InfobarManager from '@cnbritain/merlin-www-infobar';
-import Newsletter from '@cnbritain/merlin-www-bbcode/js/newsletter';
+import NewsletterManager from '@cnbritain/merlin-www-bbcode/js/newsletter-manager';
 
 var articleGallery = null;
 var windowHeightHalf = window.innerHeight / 2;
@@ -56,10 +56,7 @@ export default function init() {
     addEvent(window, 'scroll', throttle(onWindowScroll, 100));
     addEvent(window, 'resize', debounce(onWindowResize, 200));
 
-    var newsletterEls = document.querySelectorAll('.js-bb-newsletter');
-    for (var i = 0; i < newsletterEls.length; i++) {
-        new Newsletter(newsletterEls[i]);
-    }
+    NewsletterManager.init();
 }
 
 export function onArticleBlur(e) {

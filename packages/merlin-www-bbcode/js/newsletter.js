@@ -2,10 +2,11 @@
 
 import EventEmitter from 'eventemitter2';
 import {
-    addEvent,
     addClass,
-    removeClass,
+    addEvent,
+    createEventTemplate,
     inherit,
+    removeClass,
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 
 var IS_HIDDEN_CLS = 'is-hidden';
@@ -35,6 +36,8 @@ function Newsletter(el) {
             addClass(this, 'has-error');
         }
     });
+
+    this.el.setAttribute('data-initialised', true);
 }
 
 Newsletter.prototype = inherit(EventEmitter.prototype, {
@@ -60,16 +63,20 @@ Newsletter.prototype = inherit(EventEmitter.prototype, {
         xhr.onreadystatechange = function() {
             if (xhr.readyState == XMLHttpRequest.DONE) {
                 if (xhr.status === 200) {
-                    // removeClass(this.successEl, IS_HIDDEN_CLS);
+                    this.emit('signup', events.signup(this));
                 }
 
-                else {
-                    // removeClass(this.failureEl, IS_HIDDEN_CLS);
-                }
+                else {}
             }
         }.bind(this);
         xhr.send('email=' + formData.get('email') + '&newsletter=' + formData.get('newsletter'));
     }
 });
+
+function signup(emitter) {
+    return createEventTemplate('signup', emitter, {
+        'bubbles': true
+    });
+}
 
 export default Newsletter;
