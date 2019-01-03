@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-subscribe-bar@1.1.3...@cnbritain/merlin-www-subscribe-bar@1.2.0) (2019-01-03)
+
+
+### Features
+
+* **merlin-www-subscribe-bar:** add page view limits ([4be3cb6](https://github.com/cnduk/merlin-www-components/commit/4be3cb6))
+
+
+
+
 <a name="1.1.3"></a>
 ## [1.1.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-subscribe-bar@1.1.2...@cnbritain/merlin-www-subscribe-bar@1.1.3) (2018-12-03)
 

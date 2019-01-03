@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.16.2"></a>
+## [1.16.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.16.1...@cnbritain/merlin-www-js-pages@1.16.2) (2019-01-03)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** alter js logic for loading more magazine articles ([1208b18](https://github.com/cnduk/merlin-www-components/commit/1208b18))
+
+
+
+
 <a name="1.16.1"></a>
 ## [1.16.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.16.0...@cnbritain/merlin-www-js-pages@1.16.1) (2018-12-14)
 
