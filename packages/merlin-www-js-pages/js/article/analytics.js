@@ -256,7 +256,7 @@ export function initSocialShareTracking(){
         '.btn-share, .c-figure__toolbar-listitem', onSocialShareClick));
 }
 
-export function initNewsletterTracking(e) {
+export function initNewsletterTracking() {
     NewsletterManager.on('signup', function(e) {
 
         var formEl = e.target.formEl;
