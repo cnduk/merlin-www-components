@@ -56,7 +56,7 @@ export default function init() {
     addEvent(window, 'scroll', throttle(onWindowScroll, 100));
     addEvent(window, 'resize', debounce(onWindowResize, 200));
 
-    var newsletterEls = document.querySelectorAll('.bb-newsletter');
+    var newsletterEls = document.querySelectorAll('.js-bb-newsletter');
     for (var i = 0; i < newsletterEls.length; i++) {
         new Newsletter(newsletterEls[i]);
     }
