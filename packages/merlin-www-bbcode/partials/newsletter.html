@@ -19,7 +19,7 @@
                 <input type="hidden" name="newsletter" value="{{ data.newsletter_id }}">
                 <input type="email" name="email" required class="js-bb-newsletter__form-text bb-newsletter__form-text" placeholder="Enter email address"></input>
                 {{# data.cta_text }}
-                    <input type="submit" value="{{ &. }}" class="js-bb-newsletter__form-button bb-newsletter__form-button"></input>
+                    <input type="submit" name="submit" value="{{ &. }}" class="js-bb-newsletter__form-button bb-newsletter__form-button"></input>
                 {{/ data.cta_text }}
             </form>
             <p class="bb-newsletter__legal">by entering your email address, you agree to our <a href="https://www.condenast.co.uk/privacy/" class="bb-newsletter__privacy">privacy policy</a></p>

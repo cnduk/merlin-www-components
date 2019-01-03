@@ -30,4 +30,4 @@ NewsletterManager.prototype = inherit(EventEmitter.prototype, {
     }
 });
 
-export default NewsletterManager;
+export default new NewsletterManager();
