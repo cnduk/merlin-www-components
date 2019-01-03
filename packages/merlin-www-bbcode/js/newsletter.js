@@ -63,10 +63,12 @@ Newsletter.prototype = inherit(EventEmitter.prototype, {
         xhr.onreadystatechange = function() {
             if (xhr.readyState == XMLHttpRequest.DONE) {
                 if (xhr.status === 200) {
-                    this.emit('signup', events.signup(this));
+                    this.emit('signup', signup(this));
                 }
 
-                else {}
+                else {
+                    // console.log('signup failure');
+                }
             }
         }.bind(this);
         xhr.send('email=' + formData.get('email') + '&newsletter=' + formData.get('newsletter'));

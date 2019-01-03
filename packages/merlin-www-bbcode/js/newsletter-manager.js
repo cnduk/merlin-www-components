@@ -9,7 +9,7 @@ function NewsletterManager() {
         'wildcard': true
     });
 
-    this.newsletters = []
+    this.newsletters = [];
 }
 
 NewsletterManager.prototype = inherit(EventEmitter.prototype, {
