@@ -185,7 +185,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
     onSubmit: function(e) {
         e.preventDefault();
 
-        var email = this.emailEl.value;
+        var formData = new FormData(e.target);
 
         addClass(this.contentEl, IS_HIDDEN_CLS);
         removeClass(this.statusEl, IS_HIDDEN_CLS);
@@ -201,17 +201,15 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
 
                 if (xhr.status === 200) {
                     removeClass(this.successEl, IS_HIDDEN_CLS);
-                    var savedConfig = loadConfig();
-                    saveConfig(
-                        savedConfig.configHash, true, savedConfig.viewCount);
+                    setCookie(COOKIE_CONVERTED, true, 30);
                     this.emit('signup', events.signup(this));
                 } else {
                     removeClass(this.failureEl, IS_HIDDEN_CLS);
                 }
             }
         }.bind(this);
-        xhr.send('email=' + email);
-    },
+        xhr.send('email=' + formData.get('email') + '&newsletter=' + formData.get('newsletter'));
+    }
 
     onBlur: function(e){
         if (e.target.checkValidity()) {
