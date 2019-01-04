@@ -18,6 +18,7 @@ function Newsletter(el) {
 
     this.formEl = el.querySelector('.js-bb-newsletter__form');
     this.emailEl = el.querySelector('.js-bb-newsletter__form-text');
+    this.buttonEl = el.querySelector('.js-bb-newsletter__form-button');
 
     this.contentEl = el.querySelector('.js-bb-newsletter__content');
 
@@ -30,9 +31,7 @@ function Newsletter(el) {
     addEvent(this.emailEl, 'blur', function() {
         if (this.checkValidity()) {
             removeClass(this, 'has-error');
-        }
-
-        else {
+        } else {
             addClass(this, 'has-error');
         }
     });
@@ -41,37 +40,30 @@ function Newsletter(el) {
 }
 
 Newsletter.prototype = inherit(EventEmitter.prototype, {
-
-    init: function() {
-
-    },
-
     onSubmit: function(e) {
         e.preventDefault();
 
+        // Need to generate date before disabling as the value is not added
+        // to the FormData object
         var formData = new FormData(e.target);
-
-        addClass(this.contentEl, IS_HIDDEN_CLS);
-        removeClass(this.statusEl, IS_HIDDEN_CLS);
-        removeClass(this.successEl, IS_HIDDEN_CLS);
+        this.emailEl.setAttribute('disabled', true);
+        this.buttonEl.setAttribute('disabled', true);
 
         var xhr = new XMLHttpRequest();
-
-        xhr.open('POST', '/xhr/newsletters', true);
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
+        xhr.open('POST', e.target.getAttribute('action'), true);
         xhr.onreadystatechange = function() {
             if (xhr.readyState == XMLHttpRequest.DONE) {
+                addClass(this.contentEl, IS_HIDDEN_CLS);
+                removeClass(this.statusEl, IS_HIDDEN_CLS);
                 if (xhr.status === 200) {
+                    removeClass(this.successEl, IS_HIDDEN_CLS);
                     this.emit('signup', signup(this));
-                }
-
-                else {
-                    // console.log('signup failure');
+                } else {
+                    removeClass(this.failureEl, IS_HIDDEN_CLS);
                 }
             }
         }.bind(this);
-        xhr.send('email=' + formData.get('email') + '&newsletter=' + formData.get('newsletter'));
+        xhr.send(formData);
     }
 });
 
