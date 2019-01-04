@@ -201,7 +201,9 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
 
                 if (xhr.status === 200) {
                     removeClass(this.successEl, IS_HIDDEN_CLS);
-                    setCookie(COOKIE_CONVERTED, true, 30);
+                    var savedConfig = loadConfig();
+                    saveConfig(
+                        savedConfig.configHash, true, savedConfig.viewCount);
                     this.emit('signup', events.signup(this));
                 } else {
                     removeClass(this.failureEl, IS_HIDDEN_CLS);
@@ -209,7 +211,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
             }
         }.bind(this);
         xhr.send('email=' + formData.get('email') + '&newsletter=' + formData.get('newsletter'));
-    }
+    },
 
     onBlur: function(e){
         if (e.target.checkValidity()) {
