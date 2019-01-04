@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.13.22"></a>
+## [1.13.22](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.21...@cnbritain/merlin-www-section-card-list@1.13.22) (2018-12-14)
+
+
+### Bug Fixes
+
+* **merlin-www-section-card-list:** remove :last-child selector for rendering ads ([6ed28be](https://github.com/cnduk/merlin-www-components/commit/6ed28be))
+
+
+
+
+<a name="1.13.21"></a>
+## [1.13.21](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.20...@cnbritain/merlin-www-section-card-list@1.13.21) (2018-11-28)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-card-list
+
+<a name="1.13.20"></a>
+## [1.13.20](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.19...@cnbritain/merlin-www-section-card-list@1.13.20) (2018-11-27)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-card-list
+
 <a name="1.13.19"></a>
 ## [1.13.19](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.18...@cnbritain/merlin-www-section-card-list@1.13.19) (2018-11-08)
 

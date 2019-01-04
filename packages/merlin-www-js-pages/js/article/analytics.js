@@ -1,8 +1,6 @@
 'use strict';
 
-import {
-    ArticleManager
-} from '@cnbritain/merlin-www-article';
+import {ArticleManager} from '@cnbritain/merlin-www-article';
 import {
     addEvent,
     debounce,
@@ -15,9 +13,11 @@ import {toArray} from '../utils';
 import NewsletterManager from '@cnbritain/merlin-www-bbcode/js/newsletter-manager';
 
 var allowAllFocus = false;
+var previousArticle = null;
 
 export default function init() {
     ArticleManager.on('imagefocus', debounce(onArticleImageFocus, 300));
+    ArticleManager.on('blur', onArticleBlur);
     ArticleManager.on('focus', onArticleFocus);
     ArticleManager.on('expand', onArticleExpand);
 
@@ -32,6 +32,10 @@ export default function init() {
 
 export function onArticleImageFocus(e) {
     sendGalleryImagePageview(e.target.parentArticle, e.imageIndex);
+}
+
+export function onArticleBlur(e){
+    previousArticle = e.target;
 }
 
 export function onArticleFocus(e) {
@@ -96,6 +100,13 @@ export function sendPageview(article) {
     GATracker.ResetCustomDimensions();
     GATracker.SetAll(article.analytics);
     GATracker.SendAll(GATracker.SEND_HITTYPES.PAGEVIEW);
+
+    sendCustomEvent({
+        'eventCategory': 'Infinite scroll',
+        'eventAction': 'Next article',
+        'eventLabel': (
+            previousArticle.properties.url + ' | ' + article.properties.url)
+    });
 }
 
 /**

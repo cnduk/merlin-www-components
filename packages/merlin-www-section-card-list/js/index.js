@@ -212,7 +212,10 @@ function onAdRenderStop(e){
     var ad = e.target;
     var adEl = this.adEls[adIndex];
     if(e.type === 'render'){
-        var tmp = this.el.querySelectorAll(CLS_ITEM + ':last-child')[0];
+        // :last-child wasnt working after the first time and i have no god
+        // damm clue as to why
+        var tmp = this.el.querySelectorAll(CLS_ITEM);
+        tmp = tmp[tmp.length - 1];
         tmp.parentNode.removeChild(tmp);
         removeClass(adEl, 'is-hidden');
 

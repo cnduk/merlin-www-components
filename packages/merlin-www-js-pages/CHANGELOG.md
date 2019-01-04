@@ -3,6 +3,144 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.16.2"></a>
+## [1.16.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.16.1...@cnbritain/merlin-www-js-pages@1.16.2) (2019-01-03)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** alter js logic for loading more magazine articles ([1208b18](https://github.com/cnduk/merlin-www-components/commit/1208b18))
+
+
+
+
+<a name="1.16.1"></a>
+## [1.16.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.16.0...@cnbritain/merlin-www-js-pages@1.16.1) (2018-12-14)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
+<a name="1.16.0"></a>
+# [1.16.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.15.4...@cnbritain/merlin-www-js-pages@1.16.0) (2018-12-06)
+
+
+### Features
+
+* **merlin-www-js-pages:** remove scrolldepth tracking ([8d1d4e9](https://github.com/cnduk/merlin-www-components/commit/8d1d4e9))
+
+
+
+
+<a name="1.15.4"></a>
+## [1.15.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.15.3...@cnbritain/merlin-www-js-pages@1.15.4) (2018-12-03)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
+<a name="1.15.3"></a>
+## [1.15.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.15.2...@cnbritain/merlin-www-js-pages@1.15.3) (2018-12-03)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
+<a name="1.15.2"></a>
+## [1.15.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.15.1...@cnbritain/merlin-www-js-pages@1.15.2) (2018-11-30)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
+<a name="1.15.1"></a>
+## [1.15.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.15.0...@cnbritain/merlin-www-js-pages@1.15.1) (2018-11-29)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** correctly check for body depths as gallery will have title but not body ([c2f7778](https://github.com/cnduk/merlin-www-components/commit/c2f7778))
+
+
+
+
+<a name="1.15.0"></a>
+# [1.15.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.14.3...@cnbritain/merlin-www-js-pages@1.15.0) (2018-11-28)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** remove scroll depth in articles for the first 10px ([c26c8b3](https://github.com/cnduk/merlin-www-components/commit/c26c8b3))
+
+
+### Features
+
+* **merlin-www-js-pages:** add ga event for infinite scrolling between articles ([9412a47](https://github.com/cnduk/merlin-www-components/commit/9412a47))
+
+
+
+
+<a name="1.14.3"></a>
+## [1.14.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.14.2...@cnbritain/merlin-www-js-pages@1.14.3) (2018-11-28)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** alter scroll depth for titles in articles ([8b6477a](https://github.com/cnduk/merlin-www-components/commit/8b6477a))
+
+
+
+
+<a name="1.14.2"></a>
+## [1.14.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.14.1...@cnbritain/merlin-www-js-pages@1.14.2) (2018-11-28)
+
+
+
+
+**Note:** Version bump only for package @cnbritain/merlin-www-js-pages
+
+<a name="1.14.1"></a>
+## [1.14.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.14.0...@cnbritain/merlin-www-js-pages@1.14.1) (2018-11-28)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** change 100% to 99% for article scroll depth ([ec706d0](https://github.com/cnduk/merlin-www-components/commit/ec706d0))
+
+
+
+
+<a name="1.14.0"></a>
+# [1.14.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.13.2...@cnbritain/merlin-www-js-pages@1.14.0) (2018-11-27)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** fix scroll listener on scrolldepth for article ([a2eeae6](https://github.com/cnduk/merlin-www-components/commit/a2eeae6))
+
+
+### Features
+
+* **merlin-www-js-pages:** add scroll depth tracking to articles ([d0b3d1a](https://github.com/cnduk/merlin-www-components/commit/d0b3d1a))
+
+
+
+
+<a name="1.13.2"></a>
+## [1.13.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.13.1...@cnbritain/merlin-www-js-pages@1.13.2) (2018-11-26)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** prevent infobar from showing if cookie warning is ([a05cb7f](https://github.com/cnduk/merlin-www-components/commit/a05cb7f))
+
+
+
+
 <a name="1.13.1"></a>
 ## [1.13.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.13.0...@cnbritain/merlin-www-js-pages@1.13.1) (2018-11-08)
 

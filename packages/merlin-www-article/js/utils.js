@@ -131,7 +131,12 @@ export function updateSocialEmbeds() {
  * @return {String}    title of the article
  */
 export function getArticleTitle(el) {
-    return el.querySelector('.a-header__title').innerText;
+    var title = el.getAttribute('data-meta-title').trim();
+    if(title !== null && title !== ''){
+        return title;
+    } else {
+        return el.querySelector('.a-header__title').innerText;
+    }
 }
 
 /**
@@ -153,6 +158,10 @@ export function getArticleUrl(el) {
     }
 
     return window.location.protocol + url;
+}
+
+export function getArticleUid(el){
+    return el.getAttribute('data-article-uid');
 }
 
 /**

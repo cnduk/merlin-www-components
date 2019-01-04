@@ -2,6 +2,7 @@
 
 import EventEmitter from 'eventemitter2';
 import {ajax, inherit} from '@cnbritain/merlin-www-js-utils/js/functions';
+import {loadConfig} from './utils';
 import {load} from './events';
 import SubscribeBar from './subscribe-bar';
 
@@ -31,6 +32,15 @@ SubscribeBarManager.prototype = inherit(EventEmitter.prototype, {
         // Check if we have the lazyload element
         var lazyLoadEl = document.querySelector('.js-c-subscribe-bar-lazy-load');
         if (!lazyLoadEl) {
+            this.isLoaded = true;
+            this.emit('load', load(this));
+            return;
+        }
+
+        // Check if we have already exceeded our daily limit
+        var config = loadConfig();
+        if(config.viewExceeded || config.converted){
+            // TODO: this doesnt seem correct?
             this.isLoaded = true;
             this.emit('load', load(this));
             return;

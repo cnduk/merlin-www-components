@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.10.10"></a>
+## [1.10.10](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-main-navigation@1.10.9...@cnbritain/merlin-www-main-navigation@1.10.10) (2018-12-03)
+
+
+### Bug Fixes
+
+* **merlin-www-main-navigation:** adjust transition time for hiding and showing of infobar and subscr ([0f6f3a4](https://github.com/cnduk/merlin-www-components/commit/0f6f3a4))
+
+
+
+
 <a name="1.10.9"></a>
 ## [1.10.9](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-main-navigation@1.10.8...@cnbritain/merlin-www-main-navigation@1.10.9) (2018-11-05)
 

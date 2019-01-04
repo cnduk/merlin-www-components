@@ -25,7 +25,7 @@
     &.is-hidden {
         @include max-screen($X_LARGE_SIZE - 1px) {
             .c-subscribe-bar-wrapper {
-                top: 0px;
+                top: -77px;
             }
         }
     }
@@ -44,7 +44,7 @@
     width: 100%;
 
     @include max-screen($X_LARGE_SIZE - 1px) {
-        transition: top 300ms ease-in-out;
+        transition: top 274ms linear;
         will-change: top;
     }
 
@@ -101,7 +101,7 @@
         box-sizing: border-box;
         height: 79px;
         left: 0;
-        object-fit: cover;
+        object-fit: contain;
         position: absolute;
         width: 62px;
     }

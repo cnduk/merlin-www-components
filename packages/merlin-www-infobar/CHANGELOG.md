@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-infobar@1.2.0...@cnbritain/merlin-www-infobar@1.2.1) (2018-12-03)
+
+
+### Bug Fixes
+
+* **merlin-www-infobar:** adjust transition and top to hide and show with the navigation ([395834c](https://github.com/cnduk/merlin-www-components/commit/395834c))
+
+
+
+
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-infobar@1.1.4...@cnbritain/merlin-www-infobar@1.2.0) (2018-11-28)
+
+
+### Features
+
+* **merlin-www-infobar:** add utils file ([7cdd846](https://github.com/cnduk/merlin-www-components/commit/7cdd846))
+* **merlin-www-infobar:** pass location through as a query arg ([17b38e0](https://github.com/cnduk/merlin-www-components/commit/17b38e0))
+* **merlin-www-infobar:** update infobar to post data and store message history in cookies ([5606594](https://github.com/cnduk/merlin-www-components/commit/5606594))
+
+
+
+
 <a name="1.1.4"></a>
 ## [1.1.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-infobar@1.1.3...@cnbritain/merlin-www-infobar@1.1.4) (2018-11-05)
 
