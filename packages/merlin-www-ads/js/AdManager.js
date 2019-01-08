@@ -30,13 +30,16 @@ import {
     pushToGoogleTag,
     refreshGPT,
     refreshRubicon,
+    registerAdBlock,
     registerGPT,
     registerRubicon,
     registerPrebid,
     renderGPT,
     setAdStateToRendered,
-    setAdStateToStopped
+    setAdStateToStopped,
+    HAS_ADS_BLOCKED
 } from './Utils';
+import AdBlocked from './AdBlock';
 
 var AD_CLS = '.ad__container';
 var AD_LAZYLOAD_THRESHOLD = 100;
@@ -104,25 +107,28 @@ AdManager.prototype = inherit(EventEmitter.prototype, {
 
         this.initialised = true;
 
-        return loadAdLibraries()
-            .then(function(){
-                pushToGoogleTag(function init_googletag(res){
-                    // Doing this means we have to fire a refresh event when we want an
-                    // ad. This allows us to do SRA but also roadblocks and single
-                    // request ads like in-reads
-                    googletag.pubads().disableInitialLoad();
-                    // Single page request to allow roadblocks
-                    googletag.pubads().enableSingleRequest();
-                    googletag.pubads().enableAsyncRendering();
-                    googletag.pubads().collapseEmptyDivs( true );
-                    googletag.enableServices();
-                    // Events
-                    googletag.pubads().addEventListener(
-                        'slotRenderEnded', onSlotRenderEnded.bind(this));
-                    res();
+        if(!HAS_ADS_BLOCKED){
+            return loadAdLibraries()
+                .then(function(){
+                    pushToGoogleTag(function init_googletag(res){
+                        // Doing this means we have to fire a refresh event when we want an
+                        // ad. This allows us to do SRA but also roadblocks and single
+                        // request ads like in-reads
+                        googletag.pubads().disableInitialLoad();
+                        // Single page request to allow roadblocks
+                        googletag.pubads().enableSingleRequest();
+                        googletag.pubads().enableAsyncRendering();
+                        googletag.pubads().collapseEmptyDivs( true );
+                        googletag.enableServices();
+                        // Events
+                        googletag.pubads().addEventListener(
+                            'slotRenderEnded', onSlotRenderEnded.bind(this));
+                        res();
+                    }.bind(this));
                 }.bind(this));
-            }.bind(this));
-
+        } else {
+            return Promise.resolve();
+        }
     },
 
     'lazy': function(el){
@@ -131,44 +137,72 @@ AdManager.prototype = inherit(EventEmitter.prototype, {
     },
 
     'refresh': function(ads, changeCorrelator){
-        return refreshRubicon(ads)
-            .then(function(){
-                return refreshGPT(ads, changeCorrelator);
-            })
-            .catch(function(err){
-                console.error('There was an error refreshing the ads');
-                throw err;
+        var p = null;
+
+        if(HAS_ADS_BLOCKED){
+            p = new Promise(function(resolve, reject){
+                Promise.all(ads.map(function(ad){
+                    return new Promise(function(resolve){
+                        AdBlocked.render(ad);
+                        resolve();
+                    });
+                })).then(resolve, reject);
             });
+        } else {
+            p = refreshRubicon(ads)
+                .then(function(){ return refreshGPT(ads, changeCorrelator);});
+        }
+
+        p.catch(function(err){
+            console.error('There was an error refreshing the ads');
+            throw err;
+        });
+        return p;
     },
 
     'register': function register(ad){
+        var p = null;
+
         if(Array.isArray(ad)){
-            return Promise.all(ad.map(this.register));
+            p = Promise.all(ad.map(this.register));
+        } else {
+            if(HAS_ADS_BLOCKED){
+                p = registerAdBlock(ad);
+            } else {
+                p = registerRubicon(ad)
+                    .then(function(){ return registerPrebid(ad); })
+                    .then(function(){ return registerGPT(ad); });
+            }
         }
-        return registerRubicon(ad)
-            .then(function(){ return registerPrebid(ad); })
-            .then(function(){ return registerGPT(ad); })
-            .catch(function(err){
-                console.error('There was an error registering the ads');
-                throw err;
-            });
+
+        // Error handling
+        p.catch(function(err){
+            console.error('There was an error registering the ads');
+            throw err;
+        });
+        return p;
     },
 
     'render': function(ad){
+        var p = null;
+
         // NOTE: we don't emit a render event here as onSlotRenderEnded
         // will trigger stopped or render for us
         if(Array.isArray(ad)){
-            return Promise.all(ad.map(this.render))
-                .catch(function(err){
-                    console.error('There was an error rendering the ads');
-                    throw err;
-                });
+            p = Promise.all(ad.map(this.render));
+        } else {
+            if(HAS_ADS_BLOCKED){
+                p = Promise.resolve(ad);
+            } else {
+                p = renderGPT(ad);
+            }
         }
-        return renderGPT(ad)
-            .catch(function(err){
-                console.error('There was an error rendering the ads');
-                throw err;
-            });
+
+        p.catch(function(err){
+            console.error('There was an error rendering the ads');
+            throw err;
+        });
+        return p;
     },
 
     'update': function(){
@@ -204,9 +238,13 @@ AdManager.prototype = inherit(EventEmitter.prototype, {
      * @return {Promise}
      */
     'updateCorrelator': function updateCorrelator(){
-        return pushToGoogleTag(function updateCorrelator_googletag(){
-            googletag.pubads().updateCorrelator();
-        });
+        if(HAS_ADS_BLOCKED){
+            return Promise.resolve();
+        } else {
+            return pushToGoogleTag(function updateCorrelator_googletag(){
+                googletag.pubads().updateCorrelator();
+            });
+        }
     }
 
 });

@@ -240,6 +240,21 @@ var AD_ATTRIBUTE_MAP = {
     }
 };
 
+
+/**
+ * Are ads blocked?
+ * @readonly
+ * @type {Boolean}
+ */
+export var HAS_ADS_BLOCKED = (function(){
+    if(window.ads_not_blocked){
+        return false;
+    } else {
+        return true;
+    }
+})();
+
+
 /**
  * Creates the DFP url
  * @param  {Object} attribs
@@ -673,6 +688,23 @@ export function refreshRubicon(ads){
         rubicontag.run(res, {
             'slots': slots
         });
+    });
+}
+
+export function registerAdBlock(ad){
+    return new Promise(function(resolve){
+        // Update slot information
+        ad.slot = null;
+        ad.state = AD_STATES.REGISTERED;
+        // Events
+        ad.emit('register', createEventTemplate('register', ad, {
+            'slot': ad.slot
+        }));
+        ad.manager.emit('register', createEventTemplate('register', ad.manager, {
+            'ad': ad,
+            'slot': ad.slot
+        }));
+        resolve(ad);
     });
 }
 
