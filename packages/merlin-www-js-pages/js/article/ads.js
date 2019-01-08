@@ -76,5 +76,5 @@ export function onArticleAdd(e) {
 }
 
 export function getHeaderAd(el) {
-    return el.previousElementSibling.querySelector('.ad__container');
+    return el.previousElementSibling.querySelector('.da__container');
 }
