@@ -141,7 +141,8 @@ AdManager.prototype = inherit(EventEmitter.prototype, {
 
         if(HAS_ADS_BLOCKED){
             p = new Promise(function(resolve, reject){
-                Promise.all(ads.map(function(ad){
+                if(!Array.isArray(ads)) ads = [ads];
+                return Promise.all(ads.map(function(ad){
                     return new Promise(function(resolve){
                         AdBlocked.render(ad);
                         resolve();
