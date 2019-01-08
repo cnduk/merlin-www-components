@@ -41,7 +41,7 @@ import {
 } from './Utils';
 import AdBlocked from './AdBlock';
 
-var AD_CLS = '.ad__container';
+var AD_CLS = '.da__container';
 var AD_LAZYLOAD_THRESHOLD = 100;
 var windowHeight = window.innerHeight;
 var lazyloadInitialised = false;

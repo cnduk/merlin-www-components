@@ -1,7 +1,7 @@
 .ad--tag {
     text-align: center;
 
-    .ad__container {
+    .da__container {
         background: $alabaster-f9;
         padding: 20px 0;
     }
@@ -50,7 +50,7 @@
 
 @include three-column-size {
     .ad--tag-rail {
-        .ad__container {
+        .da__container {
             background: transparent;
             padding: 0;
         }

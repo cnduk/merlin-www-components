@@ -10,7 +10,7 @@
 .ad--article {
     text-align: center;
 
-    .ad__container {
+    .da__container {
         background: $alabaster;
         padding: 20px 0;
     }
@@ -34,7 +34,7 @@
     }
 
     @include at-x-large-size {
-        .ad__container {
+        .da__container {
             background: transparent;
             padding: 0;
         }
@@ -45,7 +45,7 @@
 }
 
 .ad--article-header {
-    .ad__container {
+    .da__container {
         background: $white;
         border-bottom: 1px solid $mercury;
         border-top: 1px solid $mercury;
@@ -54,7 +54,7 @@
 }
 
 .ad--article-video {
-    .ad__container {
+    .da__container {
         background: $cod-gray;
     }
 }
@@ -133,13 +133,13 @@
 .ad--tag {
     text-align: center;
 
-    .ad__container {
+    .da__container {
         background: $white;
         padding: 20px 0;
     }
 
     .is-hidden {
-        .ad__container {
+        .da__container {
             padding: 0;
         }
     }
@@ -213,7 +213,7 @@
             margin-right: -40px;
         }
 
-        .ad__container {
+        .da__container {
             background: transparent;
             padding: 0;
         }
@@ -236,7 +236,7 @@
 .ad--homepage {
     text-align: center;
 
-    .ad__container {
+    .da__container {
         background: $white;
         border-bottom: none;
         border-top: none;
@@ -259,18 +259,18 @@
 }
 
 .ad--dark {
-    .ad__container {
+    .da__container {
         background: $cod-gray;
     }
 
     .ad--tag {
-        .ad__container {
+        .da__container {
             background: $alabaster;
         }
     }
 
     .ad--homepage {
-        .ad__container {
+        .da__container {
             border-bottom: 1px solid $mercury;
             border-top: 1px solid $mercury;
         }
