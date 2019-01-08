@@ -7,23 +7,26 @@ import {
     getAdTypeBySize,
     setAdStateToRendered,
     setAdStateToStopped
-} from './utils';
+} from './Utils';
 
 var RENDERERS = {
 
     '728x90': function renderLeaderboard(ad){
         var renderedDom = document.createElement('div');
-        renderedDom.innerHTML = 'Custom ad here';
-        renderedDom.cssText = 'width:728px;height:90px';
-        ad.el.parentNode.appendChild(renderedDom);
+        renderedDom.innerHTML = '<img src="/static/img/adblock-LB.png" />';
+        ad.el.appendChild(renderedDom);
     },
 
     '300x250': function renderMPU(ad){
         var renderedDom = document.createElement('div');
-        renderedDom.innerHTML = 'Custom ad here';
-        renderedDom.style.height = '250px';
-        renderedDom.style.width = '300px';
-        ad.el.parentNode.appendChild(renderedDom);
+        renderedDom.innerHTML = '<img src="/static/img/adblock-MPU.png" />';
+        ad.el.appendChild(renderedDom);
+    },
+
+    '300x600': function renderMPU(ad){
+        var renderedDom = document.createElement('div');
+        renderedDom.innerHTML = '<img src="/static/img/adblock-DS.png" />';
+        ad.el.appendChild(renderedDom);
     }
 
 };
