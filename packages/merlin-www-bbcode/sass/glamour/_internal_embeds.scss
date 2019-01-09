@@ -354,12 +354,11 @@ ul li.bb-gallery__col {
 .bb-newsletter__copy {
     @include font("MILLER_DISPLAY", 18px, 600, 21px);
     color: $advert-dark;
-    margin: 20px 0 20px 0px;
+    margin: 0 0 20px 0px;
 
     @include at-x-large-size {
         @include font-size(23px);
         @include line-height(28px);
-        margin-top: 0;
     }
 }
 
@@ -410,23 +409,21 @@ ul li.bb-gallery__col {
 .bb-newsletter__success {
     @include font("MILLER_DISPLAY", 18px, 600, 21px);
     color: $advert-dark;
-    margin: 20px 0 20px 0px;
+    margin: 0 0 20px 0px;
 
     @include at-x-large-size {
         @include font-size(23px);
         @include line-height(28px);
-        margin-top: 0;
     }
 }
 
 .bb-newsletter__failure {
     @include font("MILLER_DISPLAY", 18px, 600, 21px);
     color: $advert-dark;
-    margin: 20px 0 20px 0px;
+    margin: 0 0 20px 0px;
 
     @include at-x-large-size {
         @include font-size(23px);
         @include line-height(28px);
-        margin-top: 0;
     }
 }

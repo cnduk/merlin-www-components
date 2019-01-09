@@ -292,12 +292,11 @@
 .bb-newsletter__copy {
     @include font("COMMUTER SANS", 16px, 400, 20px);
     color: $black;
-    margin: 20px 0 20px 0px;
+    margin: 0 0 20px 0px;
 
     @include at-x-large-size {
         @include font-size(23px);
         @include line-height(26px);
-        margin-top: 0;
     }
 }
 
@@ -353,7 +352,6 @@
     @include at-x-large-size {
         @include font-size(23px);
         @include line-height(26px);
-        margin-top: 0;
     }
 }
 
@@ -365,6 +363,5 @@
     @include at-x-large-size {
         @include font-size(23px);
         @include line-height(26px);
-        margin-top: 0;
     }
 }

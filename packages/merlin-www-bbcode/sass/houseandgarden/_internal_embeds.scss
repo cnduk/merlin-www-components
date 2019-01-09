@@ -362,12 +362,11 @@ ul li.bb-gallery__col {
 .bb-newsletter__copy {
     @include font("BRANDON GROTESQUE", 16px, 700, 20px);
     color: $mine-shaft;
-    margin: 20px 0 20px 0px;
+    margin: 0 0 20px 0px;
 
     @include at-x-large-size {
         @include font-size(21px);
         @include line-height(26px);
-        margin-top: 0;
     }
 }
 
@@ -419,23 +418,21 @@ ul li.bb-gallery__col {
 .bb-newsletter__success {
     @include font("BRANDON GROTESQUE", 16px, 700, 20px);
     color: $mine-shaft;
-    margin: 20px 0 20px 0px;
+    margin: 0 0 20px 0px;
 
     @include at-x-large-size {
         @include font-size(21px);
         @include line-height(26px);
-        margin-top: 0;
     }
 }
 
 .bb-newsletter__failure {
     @include font("BRANDON GROTESQUE", 16px, 700, 20px);
     color: $mine-shaft;
-    margin: 20px 0 20px 0px;
+    margin: 0 0 20px 0px;
 
     @include at-x-large-size {
         @include font-size(21px);
         @include line-height(26px);
-        margin-top: 0;
     }
 }

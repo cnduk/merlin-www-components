@@ -369,12 +369,11 @@
 .bb-newsletter__copy {
     @include font("FREIGHT TEXT", 16px, 400, 20px);
     color: $ascot-grey;
-    margin: 20px 0 20px 0px;
+    margin: 0 0 20px 0px;
 
     @include at-x-large-size {
         @include font-size(16px);
         @include line-height(20px);
-        margin-top: 0;
     }
 }
 
@@ -428,23 +427,21 @@
 .bb-newsletter__success {
     @include font("FREIGHT TEXT", 16px, 400, 20px);
     color: $ascot-grey;
-    margin: 20px 0 20px 0px;
+    margin: 0 0 20px 0px;
 
     @include at-x-large-size {
         @include font-size(16px);
         @include line-height(20px);
-        margin-top: 0;
     }
 }
 
 .bb-newsletter__failure {
     @include font("FREIGHT TEXT", 16px, 400, 20px);
     color: $ascot-grey;
-    margin: 20px 0 20px 0px;
+    margin: 0 0 20px 0px;
 
     @include at-x-large-size {
         @include font-size(16px);
         @include line-height(20px);
-        margin-top: 0;
     }
 }

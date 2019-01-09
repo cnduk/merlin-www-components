@@ -444,6 +444,8 @@
 }
 
 .bb-newsletter__cover {
+    display: none;
+
     @include at-x-large-size {
         display: table-cell;
         vertical-align: middle;

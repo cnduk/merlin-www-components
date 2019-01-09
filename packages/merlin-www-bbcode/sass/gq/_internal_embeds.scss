@@ -420,8 +420,6 @@
 .bb-newsletter-wrapper {}
 
 .bb-newsletter__cover {
-    padding: 30px 10px 20px 10px;
-
     @include at-x-large-size {
         padding: 30px;
     }
@@ -430,7 +428,7 @@
 .bb-newsletter__image {}
 
 .bb-newsletter__content {
-    padding: 0 10px 30px 10px;
+    padding: 30px 10px 30px 10px;
     text-align: center;
 
     @include at-x-large-size {

@@ -426,11 +426,7 @@
 .bb-newsletter__copy {
     @include font("ADOBE CASLON", 16px, 600, 22px);
     color: $mine-shaft-222;
-    margin: 20px 0 10px 0px;
-
-    @include at-x-large-size {
-        margin-top: 0;
-    }
+    margin: 0 0 10px 0px;
 }
 
 .bb-newsletter__form {}
@@ -481,19 +477,11 @@
 .bb-newsletter__success {
     @include font("ADOBE CASLON", 16px, 600, 22px);
     color: $mine-shaft-222;
-    margin: 20px 0 10px 0px;
-
-    @include at-x-large-size {
-        margin-top: 0;
-    }
+    margin: 0 0 10px 0px;
 }
 
 .bb-newsletter__failure {
     @include font("ADOBE CASLON", 16px, 600, 22px);
     color: $mine-shaft-222;
-    margin: 20px 0 10px 0px;
-
-    @include at-x-large-size {
-        margin-top: 0;
-    }
+    margin: 0 0 10px 0px;
 }

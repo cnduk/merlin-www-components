@@ -369,12 +369,11 @@
 .bb-newsletter__copy {
     @include font("BRUTAL", 14px, 700, 19px);
     color: $black;
-    margin: 15px 0 15px 0px;
+    margin: 0 0 15px 0px;
 
     @include at-x-large-size {
         @include font-size(17px);
         @include line-height(23px);
-        margin-top: 0;
     }
 }
 

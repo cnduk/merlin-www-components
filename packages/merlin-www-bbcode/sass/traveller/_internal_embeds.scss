@@ -387,11 +387,7 @@ li.bb-card__meta-item {
     @include font("FREIGHT TEXT", 16px, 400, 22px);
     color: $MUSTASAARI;
     font-style: italic;
-    margin: 15px 0 20px 0px;
-
-    @include at-x-large-size {
-        margin-top: 0;
-    }
+    margin: 0 0 20px 0px;
 }
 
 .bb-newsletter__form {}
@@ -442,20 +438,12 @@ li.bb-card__meta-item {
     @include font("FREIGHT TEXT", 16px, 400, 22px);
     color: $MUSTASAARI;
     font-style: italic;
-    margin: 15px 0 20px 0px;
-
-    @include at-x-large-size {
-        margin-top: 0;
-    }
+    margin: 0 0 20px 0px;
 }
 
 .bb-newsletter__failure {
     @include font("FREIGHT TEXT", 16px, 400, 22px);
     color: $MUSTASAARI;
     font-style: italic;
-    margin: 15px 0 20px 0px;
-
-    @include at-x-large-size {
-        margin-top: 0;
-    }
+    margin: 0 0 20px 0px;
 }
