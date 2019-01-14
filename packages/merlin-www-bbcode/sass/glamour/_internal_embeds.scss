@@ -319,3 +319,111 @@ ul li.bb-gallery__col {
 }
 
 .bb-video__link {}
+
+// -------------------- //
+// Newsletter
+// -------------------- //
+.bb-newsletter {
+    background-color: $white;
+    border: 4px solid $mandy;
+    margin: 40px 0;
+    padding: 20px 10px;
+
+    @include at-x-large-size {
+        padding: 30px;
+    }
+}
+
+.bb-newsletter-wrapper {}
+
+.bb-newsletter__cover {
+    @include at-x-large-size {
+        padding-right: 20px;
+    }
+}
+.bb-newsletter__image {}
+
+.bb-newsletter__content {
+    text-align: center;
+
+    @include at-x-large-size {
+        text-align: left;
+    }
+}
+
+.bb-newsletter__copy {
+    @include font("MILLER_DISPLAY", 18px, 600, 21px);
+    color: $advert-dark;
+    margin: 0 0 20px 0px;
+
+    @include at-x-large-size {
+        @include font-size(23px);
+        @include line-height(28px);
+    }
+}
+
+.bb-newsletter__form {}
+
+.bb-newsletter__form-text {
+    @include font("GRAPHIK", 14px, 600, 14px);
+    background-color: $white;
+    border: 1px solid $cloud;
+    color: $cloud;
+}
+
+.bb-newsletter__form-button {
+    @include button-group();
+    @include button-group-light();
+    &:hover {
+        @include button-group-light-hover();
+    }
+
+    @include font-size(10px);
+
+    padding: 0 10px;
+
+    @include at-x-large-size {
+        @include font-size(12px);
+    }
+}
+
+.bb-newsletter__legal {
+    @include font("GRAPHIK", 11px, 400, 11px);
+    color: $advert-dark;
+    margin-top: 10px;
+}
+
+.bb-newsletter__privacy {
+    color: $advert-dark;
+    text-decoration: underline;
+}
+
+.bb-newsletter__status {
+    text-align: center;
+
+    @include at-x-large-size {
+        text-align: left;
+    }
+}
+
+.bb-newsletter__success {
+    @include font("MILLER_DISPLAY", 18px, 600, 21px);
+    color: $advert-dark;
+    margin: 0 0 20px 0px;
+
+    @include at-x-large-size {
+        @include font-size(23px);
+        @include line-height(28px);
+    }
+}
+
+.bb-newsletter__failure {
+    @include font("MILLER_DISPLAY", 18px, 600, 21px);
+    color: $advert-dark;
+    margin: 0 0 20px 0px;
+
+    @include at-x-large-size {
+        @include font-size(23px);
+        @include line-height(28px);
+    }
+}

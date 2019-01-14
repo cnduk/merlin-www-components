@@ -2043,6 +2043,49 @@
             "style": {
                 "cls": "bb-show-gallery"
             }
+        },
+        {
+            "type": "BBCodeNewsletter",
+            "state": {
+                "is_newsletter": true
+            },
+            "data": {
+                "cta_message": "Sign up to the Vogue Daily newsletter where we most recently discussed:  What we're loving this week and 6 tips for the perfect hair from meghan's hairdresser",
+                "cta_text": "Sign Up",
+                "success_text": "Thank You. You have successfully subscribed to our newsletter. You will hear from us shortly.",
+                "failure_text": "",
+                "cover": {
+                    "data": {
+                        "alt_text": null,
+                        "credit": null,
+                        "description": null,
+                        "look_number": null,
+                        "title": null,
+                        "width": null,
+                        "image_url": "https://covers.condenast.co.uk/api/v1/vg/latest/image/print/300/"
+                    },
+                    "state": {
+                        "is_image": false,
+                        "is_picture": false,
+                        "is_static": true,
+                        "is_svg": false,
+                        "is_linked": false,
+                        "is_landscape": false,
+                        "is_portrait": false,
+                        "is_square": false,
+                        "is_lazyload": true
+                    },
+                    "style": {
+                        "cls": "",
+                        "inline": ""
+                    },
+                    "translation": {},
+                    "type": "StaticImage"
+                }
+            },
+            "style": {
+                "cls": ""
+            }
         }
     ],
     "is_external_embeds": [

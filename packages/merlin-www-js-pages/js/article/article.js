@@ -18,6 +18,7 @@ import {
     getStorage
 } from '../utils.js';
 import InfobarManager from '@cnbritain/merlin-www-infobar';
+import NewsletterManager from '@cnbritain/merlin-www-bbcode/js/newsletter-manager';
 
 var articleGallery = null;
 var windowHeightHalf = window.innerHeight / 2;
@@ -55,6 +56,7 @@ export default function init() {
     addEvent(window, 'scroll', throttle(onWindowScroll, 100));
     addEvent(window, 'resize', debounce(onWindowResize, 200));
 
+    NewsletterManager.init();
 }
 
 export function onArticleBlur(e) {

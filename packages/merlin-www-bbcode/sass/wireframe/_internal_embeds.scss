@@ -436,3 +436,117 @@
 .bb-show-gallery__contents {}
 .bb-show-gallery__title {}
 .bb-show-gallery__subtitle {}
+
+.bb-newsletter {}
+.bb-newsletter-wrapper {
+    display: table;
+    width: 100%;
+}
+
+.bb-newsletter__cover {
+    display: none;
+
+    @include at-x-large-size {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+.bb-newsletter__image {
+    background-color: #000;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 100px;
+    margin: 0 auto;
+    padding: 10px 5px;
+    position: relative;
+    width: 75px;
+
+    img {
+        background-color: #ffffff;
+        height: 100%;
+        width: 100%;
+    }
+
+    @include at-x-large-size {
+        height: 208px;
+        padding: 20px 10px;
+        width: 156px;
+    }
+}
+
+.bb-newsletter__content {
+    @include at-x-large-size {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    &.is-hidden {
+        display: none;
+    }
+}
+
+.bb-newsletter__copy {}
+
+.bb-newsletter__form {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: $SMALL_SIZE;
+    width: 100%;
+
+    @include at-x-large-size {
+        margin: 0;
+    }
+}
+
+.bb-newsletter__form-text {
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    flex: 1 0 auto;
+    height: 40px;
+    margin: 0;
+    padding: 0 10px;
+
+    &.has-error {
+        border: 1px solid #c00000;
+    }
+}
+
+.bb-newsletter__form-button {
+    appearance: none;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+
+.bb-newsletter__legal {}
+.bb-newsletter__privacy {}
+
+.bb-newsletter__status {
+    @include at-x-large-size {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    &.is-hidden {
+        display: none;
+    }
+}
+
+.bb-newsletter__success {
+    &.is-hidden {
+        display: none;
+    }
+}
+
+.bb-newsletter__failure {
+    &.is-hidden {
+        display: none;
+    }
+}

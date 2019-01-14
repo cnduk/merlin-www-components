@@ -10,6 +10,7 @@ import {
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
 import {toArray} from '../utils';
+import NewsletterManager from '@cnbritain/merlin-www-bbcode/js/newsletter-manager';
 
 var allowAllFocus = false;
 var previousArticle = null;
@@ -25,6 +26,7 @@ export default function init() {
     initInlineEmbedTracking();
     initTopStoriesTracking();
     initSocialShareTracking();
+    initNewsletterTracking();
 }
 
 
@@ -263,4 +265,21 @@ function onSocialShareClick(e) {
 export function initSocialShareTracking(){
     addEvent(document, 'click', delegate(
         '.btn-share, .c-figure__toolbar-listitem', onSocialShareClick));
+}
+
+export function initNewsletterTracking() {
+    NewsletterManager.on('signup', function(e) {
+
+        var formEl = e.target.formEl;
+        var type = formEl.querySelector('[name=newsletter]').value;
+        var ctaText = formEl.querySelector('[name=submit]').value;
+
+        var pageUrl = window.location.href;
+
+        sendCustomEvent({
+            eventCategory: 'Internal Embed',
+            eventAction: 'Internal Embed Click - Newsletter Signup',
+            eventLabel: pageUrl + ' | ' + ctaText + ' | ' + type
+        });
+    });
 }

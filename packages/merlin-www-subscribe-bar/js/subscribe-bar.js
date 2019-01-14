@@ -185,7 +185,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
     onSubmit: function(e) {
         e.preventDefault();
 
-        var email = this.emailEl.value;
+        var formData = new FormData(e.target);
 
         addClass(this.contentEl, IS_HIDDEN_CLS);
         removeClass(this.statusEl, IS_HIDDEN_CLS);
@@ -210,7 +210,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
                 }
             }
         }.bind(this);
-        xhr.send('email=' + email);
+        xhr.send('email=' + formData.get('email') + '&newsletter=' + formData.get('newsletter'));
     },
 
     onBlur: function(e){

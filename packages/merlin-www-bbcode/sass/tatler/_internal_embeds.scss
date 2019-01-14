@@ -261,3 +261,107 @@
 .bb-video__image {
     background: $alabaster;
 }
+
+// -------------------- //
+// Newsletter
+// -------------------- //
+.bb-newsletter {
+    background-color: $alabaster;
+    margin: 40px 0;
+    padding: 30px 10px;
+
+    @include at-x-large-size {
+        padding: 40px;
+    }
+}
+
+.bb-newsletter-wrapper {}
+
+.bb-newsletter__cover {}
+.bb-newsletter__image {}
+
+.bb-newsletter__content {
+    text-align: center;
+
+    @include at-x-large-size {
+        padding-left: 30px;
+        text-align: left;
+    }
+}
+
+.bb-newsletter__copy {
+    @include font("COMMUTER SANS", 16px, 400, 20px);
+    color: $black;
+    margin: 0 0 20px 0px;
+
+    @include at-x-large-size {
+        @include font-size(23px);
+        @include line-height(26px);
+    }
+}
+
+.bb-newsletter__form {}
+
+.bb-newsletter__form-text {
+    @include font("COMMUTER SANS", 12px, 400, 12px);
+    background-color: $white;
+    color: $gray;
+}
+
+.bb-newsletter__form-button {
+    @include button-single();
+    @include button-single-light();
+    &:hover {
+        @include button-single-light-hover();
+    }
+
+    @include font-size(10px);
+
+    padding: 0 10px;
+
+    @include at-x-large-size {
+        @include font-size(12px);
+    }
+}
+
+.bb-newsletter__legal {
+    @include font("STARLING", 11px, 400, 11px);
+    color: $black;
+    margin-top: 10px;
+}
+
+.bb-newsletter__privacy {
+    color: $black;
+    text-decoration: underline;
+}
+
+.bb-newsletter__status {
+    text-align: center;
+
+    @include at-x-large-size {
+        padding-left: 30px;
+        text-align: left;
+    }
+}
+
+.bb-newsletter__success {
+    @include font("COMMUTER SANS", 16px, 400, 20px);
+    color: $black;
+    margin: 20px 0 20px 0px;
+
+    @include at-x-large-size {
+        @include font-size(23px);
+        @include line-height(26px);
+    }
+}
+
+.bb-newsletter__failure {
+    @include font("COMMUTER SANS", 16px, 400, 20px);
+    color: $black;
+    margin: 20px 0 20px 0px;
+
+    @include at-x-large-size {
+        @include font-size(23px);
+        @include line-height(26px);
+    }
+}
