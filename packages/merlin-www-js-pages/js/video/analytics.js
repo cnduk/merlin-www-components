@@ -8,11 +8,9 @@ export function sendPageview(article) {
     GATracker.ResetCustomDimensions();
     GATracker.SetAll(article.analytics);
     GATracker.SendAll(GATracker.SEND_HITTYPES.PAGEVIEW);
-    console.log("SENT PAGEVIEW");
 }
 
 function onArticleFocus(e){
-    console.log("onArticleFocus", e);
     var article = e.target;
 
     // Update the analytics to include ad block changes
