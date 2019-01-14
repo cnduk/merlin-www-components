@@ -20,10 +20,7 @@ import {
     hasHistory
 } from '@cnbritain/merlin-www-js-utils/js/detect';
 import InfiniteScroll from '@cnbritain/merlin-www-js-infinitescroll';
-import {
-    CLS_ARTICLE_VIDEO_BODY,
-    CLS_ARTICLE_VIDEO_EMBED
-} from './constants';
+import {CLS_ARTICLE_VIDEO_BODY, CLS_ARTICLE_VIDEO_EMBED} from './constants';
 import {
     bubbleEvent,
     dispatchSimpleReach,
@@ -91,13 +88,14 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         var articleEl = document.querySelector('.a-main');
         articleEl.setAttribute('data-article-uid', config.data_uid);
         articleEl.setAttribute('data-article-url', config.data_url);
+        articleEl.setAttribute('data-meta-title', config.meta_title);
 
         // Create article if needs to be
         var article = this.getArticleByUid(config.data_uid);
         var index = -1;
         if (!article) {
             article = this.add(articleEl, {
-                analytics: config.config_analytics,
+                analytics: JSON.parse(config.config_analytics),
                 isInfinite: true,
                 simplereach: config.config_simplereach
             });
