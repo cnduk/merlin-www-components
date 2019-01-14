@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.14](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-figure@1.9.13...@cnbritain/merlin-www-figure@1.9.14) (2019-01-11)
+
+
+### Bug Fixes
+
+* **merlin-www-figure:** correct margin bottom on glamour paragraphs ([c5d77a5](https://github.com/cnduk/merlin-www-components/commit/c5d77a5))
+
+
+
+
+
 <a name="1.9.13"></a>
 ## [1.9.13](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-figure@1.9.12...@cnbritain/merlin-www-figure@1.9.13) (2018-11-05)
 

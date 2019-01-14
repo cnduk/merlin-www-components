@@ -7,6 +7,7 @@
                 </div>
             {{/ data.cover }}
             <form method="POST" class="c-subscribe-bar__form js-c-subscribe-bar__form">
+                <input type="hidden" name="newsletter" value="{{ data.newsletter_id }}">
                 <input type="email" name="email" required class="js-c-subscribe-bar__form-text c-subscribe-bar__form-text" placeholder="{{ data.message }}"></input>
                 <input type="submit" value="{{ data.cta_text }}" class="js-c-subscribe-bar__form-button c-subscribe-bar__form-button"></input>
             </form>
