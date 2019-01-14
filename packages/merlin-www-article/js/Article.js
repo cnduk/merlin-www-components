@@ -7,10 +7,7 @@ import {
     inherit,
     removeClass
 } from '@cnbritain/merlin-www-js-utils/js/functions';
-import {
-    CLS_INFINITE_BTN,
-    CLS_ARTICLE_GALLERY
-} from './constants';
+import {CLS_INFINITE_BTN, CLS_ARTICLE_GALLERY} from './constants';
 import Gallery from './Gallery';
 import {
     bubbleEvent,
