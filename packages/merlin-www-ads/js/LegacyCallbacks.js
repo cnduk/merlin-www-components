@@ -34,7 +34,7 @@ window.GptAdSlots = {
         if (!frame) return;
 
         // Get parent until .ad-block that stores the slots id
-        parentAd = getParent(frame, '.ad__container');
+        parentAd = getParent(frame, '.da__container');
         if (!parentAd) return;
 
         // Destroy the ad
@@ -68,7 +68,7 @@ window.PromotionButtons = {
 
         // Find the ad based on the window
         var elementFrame = getIframeFromWindow(win);
-        var adElement = getParent(elementFrame, '.ad__container');
+        var adElement = getParent(elementFrame, '.da__container');
 
         // Check we have an ad block
         if (!adElement) return;
@@ -98,7 +98,7 @@ window.InreadSupport = {
     'requestAd': function(json, win) {
         // Find the ad based on the window
         var elementFrame = getIframeFromWindow(win);
-        var adElement = getParent(elementFrame, '.ad__container');
+        var adElement = getParent(elementFrame, '.da__container');
 
         // Check we have an ad block
         if (!adElement) return;
@@ -149,7 +149,7 @@ window.INTERSTITIAL_AD = {
     'displayInterstitialAd': function(json, gptSizeInfo, win) {
         // Find the ad based on the window
         var elementFrame = getIframeFromWindow(win);
-        var adElement = getParent(elementFrame, '.ad__container');
+        var adElement = getParent(elementFrame, '.da__container');
 
         // Check we have an ad block
         if (!adElement) return;
@@ -186,7 +186,7 @@ window.cn_rubicon_resize = function(elementId, sizeString) {
     adSize[1] = parseInt(adSize[1], 10);
 
     var adEl = getParent(document.getElementById(elementId),
-        '.ad__container');
+        '.da__container');
     if (!adEl) return;
 
     AdManager.slots[adEl.getAttribute('id')].forceSizeChange(adSize[0],

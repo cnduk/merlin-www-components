@@ -29,7 +29,7 @@
 
 }
 
-.ad__container {
+.da__container {
     background: $pampas;
     padding: 20px;
 
@@ -41,7 +41,7 @@
 .ad--homepage {
     text-align: center;
 
-    .ad__container {
+    .da__container {
         background-color: transparent;
     }
 
@@ -49,7 +49,7 @@
     &.ad--native-large {
         text-align: inherit;
 
-        .ad__container {
+        .da__container {
             padding: 0;
         }
     }
@@ -71,7 +71,7 @@
 .ad--article-header {}
 
 .ad--article-video {
-    .ad__container {
+    .da__container {
         background-color: $advert-dark;
     }
 }
@@ -93,7 +93,7 @@
         right: 0;
         width: 300px;
 
-        .ad__container {
+        .da__container {
             background: transparent;
             padding: 0;
         }
@@ -133,7 +133,7 @@
 .ad--gallery-side {
     display: none;
 
-    .ad__container {
+    .da__container {
         background-color: transparent;
         padding: 0;
     }
@@ -167,7 +167,7 @@
         margin-left: 0;
         margin-right: 0;
 
-        .ad__container {
+        .da__container {
             background-color: transparent;
             padding: 0;
         }
@@ -203,7 +203,7 @@
             padding: 20px 0;
         }
 
-        .ad__container {
+        .da__container {
             background-color: transparent;
             padding: 0;
         }
@@ -247,7 +247,7 @@
 .ad--native-small,
 .ad--native-medium,
 .ad--native-large {
-    &:not(.is-hidden) .ad__container {
+    &:not(.is-hidden) .da__container {
         background-color: transparent;
         padding: 0;
     }
@@ -265,7 +265,7 @@
         height: 100%;
         width: 100%;
     }
-    .ad__container {
+    .da__container {
         width: 100%;
     }
 }

@@ -9,14 +9,14 @@
 }
 
 .ad--article-header {
-    .ad__container {
+    .da__container {
         background-color: $alabaster-f9;
         padding: 20px 0;
     }
 }
 
 .ad--article-video {
-    .ad__container {
+    .da__container {
         background-color: $mine-shaft-333;
         padding: 20px 0;
     }
@@ -28,7 +28,7 @@
     margin-right: -$MOBILE_SIDE_GUTTER;
     margin-top: 60px;
 
-    .ad__container {
+    .da__container {
         background: $alabaster-f9;
         padding: 20px 0;
     }
@@ -38,7 +38,7 @@
 .ad--article-inline {
     margin: 45px (-$MOBILE_SIDE_GUTTER);
 
-    .ad__container {
+    .da__container {
         background: $alabaster-f9;
         padding: 20px 0;
     }
@@ -72,7 +72,7 @@
         margin: 0;
         width: 300px;
 
-        .ad__container {
+        .da__container {
             background: transparent;
             padding: 0;
         }

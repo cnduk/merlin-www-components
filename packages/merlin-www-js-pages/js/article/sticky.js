@@ -112,7 +112,7 @@ export function onWindowResize() {
 
 export function itemHasId(id) {
     return function(item) {
-        var block = item.el.querySelector('.ad__container');
+        var block = item.el.querySelector('.da__container');
         return block && block.hasAttribute('id') &&
             block.getAttribute('id') === id;
     };
@@ -206,7 +206,7 @@ export function hasChildren(el) {
 
 export function filterStoppedAds(el){
     if(!hasClass(el, 'ad__main')) return true;
-    var container = el.querySelector('.ad__container');
+    var container = el.querySelector('.da__container');
     if(!container.hasAttribute('data-ad-stopped')) return true;
     return container.getAttribute('data-ad-stopped') !== 'true';
 }
