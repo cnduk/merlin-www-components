@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.8](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-gallery-strip@1.9.7...@cnbritain/merlin-www-gallery-strip@1.9.8) (2019-01-15)
+
+**Note:** Version bump only for package @cnbritain/merlin-www-gallery-strip
+
+
+
+
+
 <a name="1.9.6"></a>
 ## [1.9.6](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-gallery-strip@1.9.5...@cnbritain/merlin-www-gallery-strip@1.9.6) (2018-09-24)
 

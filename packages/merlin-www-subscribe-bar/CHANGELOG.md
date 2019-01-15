@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-subscribe-bar@1.2.0...@cnbritain/merlin-www-subscribe-bar@1.3.0) (2019-01-15)
+
+
+### Bug Fixes
+
+* **merlin-www-subscribe-bar:** update with new non cookie logic ([8d7decd](https://github.com/cnduk/merlin-www-components/commit/8d7decd))
+
+
+### Features
+
+* **merlin-www-subscribe-bar:** update to use hidden field for newsletter value, changed js to use f ([9f76664](https://github.com/cnduk/merlin-www-components/commit/9f76664))
+
+
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-subscribe-bar@1.1.3...@cnbritain/merlin-www-subscribe-bar@1.2.0) (2019-01-03)
 

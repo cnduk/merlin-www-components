@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.6](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-image@1.10.5...@cnbritain/merlin-www-image@1.10.6) (2019-01-15)
+
+**Note:** Version bump only for package @cnbritain/merlin-www-image
+
+
+
+
+
 <a name="1.10.5"></a>
 ## [1.10.5](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-image@1.10.4...@cnbritain/merlin-www-image@1.10.5) (2018-09-24)
 

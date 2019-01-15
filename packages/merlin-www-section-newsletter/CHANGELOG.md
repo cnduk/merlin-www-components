@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.53](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-newsletter@1.7.52...@cnbritain/merlin-www-section-newsletter@1.7.53) (2019-01-15)
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-newsletter
+
+
+
+
+
 <a name="1.7.52"></a>
 ## [1.7.52](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-newsletter@1.7.51...@cnbritain/merlin-www-section-newsletter@1.7.52) (2018-12-10)
 

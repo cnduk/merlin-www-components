@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.22...@cnbritain/merlin-www-section-card-list@1.14.0) (2019-01-15)
+
+
+### Features
+
+* **merlin-www-section-card-list:** rename ad__container class to da__container ([8ea29c5](https://github.com/cnduk/merlin-www-components/commit/8ea29c5))
+
+
+
+
+
 <a name="1.13.22"></a>
 ## [1.13.22](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.13.21...@cnbritain/merlin-www-section-card-list@1.13.22) (2018-12-14)
 

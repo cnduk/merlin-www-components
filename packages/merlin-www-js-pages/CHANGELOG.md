@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.17.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.16.3...@cnbritain/merlin-www-js-pages@1.17.0) (2019-01-15)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** fire pageview on video articles when focus changes ([87270df](https://github.com/cnduk/merlin-www-components/commit/87270df))
+
+
+### Features
+
+* **merlin-www-bbcode:** add GA to form submit ([7ddb282](https://github.com/cnduk/merlin-www-components/commit/7ddb282))
+* **merlin-www-bbcode:** add manager for newsletters to hook on event tracking ([43e5a9a](https://github.com/cnduk/merlin-www-components/commit/43e5a9a))
+* **merlin-www-bbcode:** update newsletter references in mustache ([265c729](https://github.com/cnduk/merlin-www-components/commit/265c729))
+* **merlin-www-js-pages:** check for bb-newsletter elements and initiate js for each ([f4c7776](https://github.com/cnduk/merlin-www-components/commit/f4c7776))
+* **merlin-www-js-pages:** rename ad__container class to da__container ([56cbe4b](https://github.com/cnduk/merlin-www-components/commit/56cbe4b))
+
+
+
+
+
 ## [1.16.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.16.2...@cnbritain/merlin-www-js-pages@1.16.3) (2019-01-11)
 
 **Note:** Version bump only for package @cnbritain/merlin-www-js-pages

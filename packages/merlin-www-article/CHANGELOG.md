@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.32.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.31.1...@cnbritain/merlin-www-article@1.32.0) (2019-01-15)
+
+
+### Bug Fixes
+
+* **merlin-www-article:** add meta title attribute to video template ([beabb59](https://github.com/cnduk/merlin-www-components/commit/beabb59))
+* **merlin-www-article:** set data meta title on video article and correctly parse analytics config ([78205dd](https://github.com/cnduk/merlin-www-components/commit/78205dd))
+
+
+### Features
+
+* **merlin-www-article:** rename ad__container to da__container ([0a564a2](https://github.com/cnduk/merlin-www-components/commit/0a564a2))
+
+
+
+
+
 ## [1.31.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-article@1.31.0...@cnbritain/merlin-www-article@1.31.1) (2019-01-11)
 
 **Note:** Version bump only for package @cnbritain/merlin-www-article

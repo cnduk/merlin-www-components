@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.18.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.17.3...@cnbritain/merlin-www-bbcode@1.18.0) (2019-01-15)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** enable error handling ([f94f6d3](https://github.com/cnduk/merlin-www-components/commit/f94f6d3))
+* **merlin-www-bbcode:** fixing lint errors ([4336d68](https://github.com/cnduk/merlin-www-components/commit/4336d68))
+
+
+### Features
+
+* **merlin-www-bbcode:** add GA to form submit ([7ddb282](https://github.com/cnduk/merlin-www-components/commit/7ddb282))
+* **merlin-www-bbcode:** add manager for newsletters to hook on event tracking ([43e5a9a](https://github.com/cnduk/merlin-www-components/commit/43e5a9a))
+* **merlin-www-bbcode:** add success/failure to logic and wireframe styles ([e2339cd](https://github.com/cnduk/merlin-www-components/commit/e2339cd))
+* **merlin-www-bbcode:** basic js implementation added to submit form to xhr/newsletters ([e7c25be](https://github.com/cnduk/merlin-www-components/commit/e7c25be))
+* **merlin-www-bbcode:** update demo data for newsletter ([8a7ee4e](https://github.com/cnduk/merlin-www-components/commit/8a7ee4e))
+* **merlin-www-bbcode:** update newsletter references in mustache ([265c729](https://github.com/cnduk/merlin-www-components/commit/265c729))
+* **merlin-www-bbcode:** update partial use to form action from model ([78d622a](https://github.com/cnduk/merlin-www-components/commit/78d622a))
+* **merlin-www-bbcode:** wireframe newsletter added ([bb2cad0](https://github.com/cnduk/merlin-www-components/commit/bb2cad0))
+
+
+
+
+
 <a name="1.17.3"></a>
 ## [1.17.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.17.2...@cnbritain/merlin-www-bbcode@1.17.3) (2018-11-05)
 

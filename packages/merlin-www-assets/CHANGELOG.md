@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-assets@2.0.0...@cnbritain/merlin-www-assets@2.1.0) (2019-01-15)
+
+
+### Bug Fixes
+
+* **merlin-www-assets:** update tatler ad block images ([2e9523c](https://github.com/cnduk/merlin-www-components/commit/2e9523c))
+
+
+### Features
+
+* **merlin-www-assets:** add adblock static images ([330f18f](https://github.com/cnduk/merlin-www-components/commit/330f18f))
+* **merlin-www-assets:** update wired ad block images ([2b31c1a](https://github.com/cnduk/merlin-www-components/commit/2b31c1a))
+
+
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-assets@1.16.11...@cnbritain/merlin-www-assets@2.0.0) (2018-09-24)
 

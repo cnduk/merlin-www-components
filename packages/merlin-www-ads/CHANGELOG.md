@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.17.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.16.12...@cnbritain/merlin-www-ads@1.17.0) (2019-01-15)
+
+
+### Bug Fixes
+
+* **merlin-www-ads:** check if ads is an array when refreshing for adblock ([230e864](https://github.com/cnduk/merlin-www-components/commit/230e864))
+
+
+### Features
+
+* **merlin-www-ads:** add ad block rendering ([bdba95d](https://github.com/cnduk/merlin-www-components/commit/bdba95d))
+* **merlin-www-ads:** correct render method for adblock ads ([439e949](https://github.com/cnduk/merlin-www-components/commit/439e949))
+* **merlin-www-ads:** rename ad__container class to da__container ([81de8b5](https://github.com/cnduk/merlin-www-components/commit/81de8b5))
+
+
+
+
+
 <a name="1.16.12"></a>
 ## [1.16.12](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.16.11...@cnbritain/merlin-www-ads@1.16.12) (2018-11-28)
 
