@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-subscribe-bar@1.3.0...@cnbritain/merlin-www-subscribe-bar@1.3.1) (2019-01-16)
+
+
+### Bug Fixes
+
+* **merlin-www-subscribe-bar:** correct svg sizing on the close button for wireframe ([6ecdc2e](https://github.com/cnduk/merlin-www-components/commit/6ecdc2e))
+
+
+
+
+
 # [1.3.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-subscribe-bar@1.2.0...@cnbritain/merlin-www-subscribe-bar@1.3.0) (2019-01-15)
 
 
