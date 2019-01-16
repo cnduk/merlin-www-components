@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-infobar@1.2.2...@cnbritain/merlin-www-infobar@1.2.3) (2019-01-16)
+
+
+### Bug Fixes
+
+* **merlin-www-infobar:** correct size for the infobar close button in chrome ([1fd4ba3](https://github.com/cnduk/merlin-www-components/commit/1fd4ba3))
+
+
+
+
+
 ## [1.2.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-infobar@1.2.1...@cnbritain/merlin-www-infobar@1.2.2) (2019-01-15)
 
 **Note:** Version bump only for package @cnbritain/merlin-www-infobar
