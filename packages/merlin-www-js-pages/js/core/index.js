@@ -121,7 +121,7 @@ export function sendInternationRedirectEvent(action, label) {
 }
 
 export function setupFartscroll() {
-    var tooterIcon = document.querySelector('.c-footer__list-item--logo svg');
+    var tooterIcon = document.querySelector('.c-footer__list-item--brand-logo svg');
 
     if (!tooterIcon) return;
 
