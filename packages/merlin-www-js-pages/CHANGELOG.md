@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.17.2...@cnbritain/merlin-www-js-pages@1.17.3) (2019-01-17)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** correct selector for goof ([579c1c7](https://github.com/cnduk/merlin-www-components/commit/579c1c7))
+
+
+
+
+
 ## [1.17.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.17.1...@cnbritain/merlin-www-js-pages@1.17.2) (2019-01-16)
 
 **Note:** Version bump only for package @cnbritain/merlin-www-js-pages
