@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-pagination@1.9.2...@cnbritain/merlin-www-pagination@1.9.3) (2019-01-30)
+
+**Note:** Version bump only for package @cnbritain/merlin-www-pagination
+
+
+
+
+
 ## [1.9.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-pagination@1.9.1...@cnbritain/merlin-www-pagination@1.9.2) (2019-01-15)
 
 **Note:** Version bump only for package @cnbritain/merlin-www-pagination

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-assets@2.1.0...@cnbritain/merlin-www-assets@2.1.1) (2019-01-30)
+
+
+### Bug Fixes
+
+* **merlin-www-assets:** correct gq adblock doublesky image ([0d1e44f](https://github.com/cnduk/merlin-www-components/commit/0d1e44f))
+
+
+
+
+
 # [2.1.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-assets@2.0.0...@cnbritain/merlin-www-assets@2.1.0) (2019-01-15)
 
 

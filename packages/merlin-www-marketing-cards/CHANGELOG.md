@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.7](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-marketing-cards@1.11.6...@cnbritain/merlin-www-marketing-cards@1.11.7) (2019-01-30)
+
+**Note:** Version bump only for package @cnbritain/merlin-www-marketing-cards
+
+
+
+
+
 ## [1.11.6](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-marketing-cards@1.11.5...@cnbritain/merlin-www-marketing-cards@1.11.6) (2019-01-15)
 
 **Note:** Version bump only for package @cnbritain/merlin-www-marketing-cards

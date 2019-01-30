@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-infobar@1.2.3...@cnbritain/merlin-www-infobar@1.2.4) (2019-01-30)
+
+**Note:** Version bump only for package @cnbritain/merlin-www-infobar
+
+
+
+
+
 ## [1.2.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-infobar@1.2.2...@cnbritain/merlin-www-infobar@1.2.3) (2019-01-16)
 
 

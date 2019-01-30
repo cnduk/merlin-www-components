@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-subscribe-bar@1.3.1...@cnbritain/merlin-www-subscribe-bar@1.3.2) (2019-01-30)
+
+**Note:** Version bump only for package @cnbritain/merlin-www-subscribe-bar
+
+
+
+
+
 ## [1.3.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-subscribe-bar@1.3.0...@cnbritain/merlin-www-subscribe-bar@1.3.1) (2019-01-16)
 
 

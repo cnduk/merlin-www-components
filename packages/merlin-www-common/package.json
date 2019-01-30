@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-common",
-  "version": "1.14.16",
+  "version": "1.14.17",
   "description": "",
   "main": "js/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "lint": "eslint -c ../../.eslintrc.json ./js/**/*"
   },
   "dependencies": {
-    "@cnbritain/merlin-www-assets": "^2.1.0"
+    "@cnbritain/merlin-www-assets": "^2.1.1"
   },
   "devDependencies": {
     "eslint": "^4.14.0",
