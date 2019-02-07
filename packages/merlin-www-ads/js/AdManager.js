@@ -10,6 +10,7 @@ import {
     assign,
     cloneArray,
     createEventTemplate,
+    getCookie,
     getWindowScrollTop,
     inherit,
     not,
@@ -119,6 +120,10 @@ AdManager.prototype = inherit(EventEmitter.prototype, {
                         googletag.pubads().enableSingleRequest();
                         googletag.pubads().enableAsyncRendering();
                         googletag.pubads().collapseEmptyDivs( true );
+
+                        var consentCookie = getCookie('cnd_one_trust_consent');
+                        googletag.pubads().setRequestNonPersonalizedAds(consentCookie ? 0 : 1);
+
                         googletag.enableServices();
                         // Events
                         googletag.pubads().addEventListener(

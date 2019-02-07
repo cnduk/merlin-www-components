@@ -18,9 +18,6 @@ import {
     default as initAds
 } from './ads';
 import {
-    default as initCookieWarning
-} from './cookie-warning';
-import {
     getGlobalNamespace
 } from '../utils';
 
@@ -30,7 +27,6 @@ export default function init() {
     initAnalytics();
     initArticle();
     initAds();
-    initCookieWarning();
 
     // Global namespace stuffs
     // Don't just use the abbreviation in case something else in the page
