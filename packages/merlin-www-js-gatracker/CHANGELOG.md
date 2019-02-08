@@ -3,17 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [1.9.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-gatracker@1.8.1...@cnbritain/merlin-www-js-gatracker@1.9.0) (2019-02-08)
-
-
-### Features
-
-* **merlin-www-js-ga-tracker:** enable one trust ([b59464e](https://github.com/cnduk/merlin-www-components/commit/b59464e))
-
-
-
-
-
 <a name="1.8.1"></a>
 ## [1.8.1](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-gatracker@1.8.0...@cnbritain/merlin-www-js-gatracker@1.8.1) (2018-11-28)
 
