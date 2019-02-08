@@ -103,6 +103,7 @@ export default function init(config) {
     } else {
         ComscoreManager.setConsent(0);
     }
+
     ComscoreManager.sendBeacon();
 }
 
