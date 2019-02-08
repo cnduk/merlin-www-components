@@ -121,7 +121,7 @@ AdManager.prototype = inherit(EventEmitter.prototype, {
                         googletag.pubads().enableAsyncRendering();
                         googletag.pubads().collapseEmptyDivs( true );
 
-                        var consentCookie = getCookie('cnd_one_trust_consent');
+                        var consentCookie = parseInt(getCookie('cnd_one_trust_consent'));
                         googletag.pubads().setRequestNonPersonalizedAds(consentCookie ? 0 : 1);
 
                         googletag.enableServices();

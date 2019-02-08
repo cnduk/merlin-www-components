@@ -97,7 +97,8 @@ export default function init(config) {
     raptor();
 
     ComscoreManager.init();
-    if (OneTrustManager.getConsent()) {
+    var consentCookie = parseInt(OneTrustManager.getConsent());
+    if (consentCookie) {
         ComscoreManager.setConsent(1);
     } else {
         ComscoreManager.setConsent(0);
