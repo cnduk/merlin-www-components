@@ -37,6 +37,19 @@ OneTrustManager.prototype = inherit(EventEmitter.prototype, {
             throw new Error('Missing script_url value');
         }
 
+        // Set the callback before trying to load the script
+        window.OptanonWrapper = function() {
+            if (window.OptanonActiveGroups) {
+                var consentToTargeting = /,4,/.test(window.OptanonActiveGroups);
+
+                if (consentToTargeting) {
+                    this.setConsent(1);
+                } else {
+                    this.setConsent(0);
+                }
+            }
+        }.bind(this);
+
         this.loadOneTrustScript(options.script_url);
 
         var oneTrustConsent = this.getConsent();
@@ -49,18 +62,6 @@ OneTrustManager.prototype = inherit(EventEmitter.prototype, {
             this.setConsent(0);
             return;
         }
-
-        window.OptanonWrapper = function() {
-            if (window.OptanonActiveGroups) {
-                var consentToTargeting = /,4,/.test(window.OptanonActiveGroups);
-
-                if (consentToTargeting) {
-                    this.setConsent(1);
-                } else {
-                    this.setConsent(0);
-                }
-            }
-        }.bind(this);
     },
     loadOneTrustScript: function loadOneTrustScript(scriptUrl) {
         if (this._loadingScript) return;
