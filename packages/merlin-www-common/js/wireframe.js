@@ -4,3 +4,4 @@ export default {
     'name': 'Wireframe',
     'promo_name': 'wireframe'
 };
+
