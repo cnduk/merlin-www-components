@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.27](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-feature@1.11.26...@cnbritain/merlin-www-section-feature@1.11.27) (2019-02-08)
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-feature
+
+
+
+
+
 ## [1.11.26](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-feature@1.11.25...@cnbritain/merlin-www-section-feature@1.11.26) (2019-01-30)
 
 **Note:** Version bump only for package @cnbritain/merlin-www-section-feature
