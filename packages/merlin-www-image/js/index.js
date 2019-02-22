@@ -19,7 +19,7 @@ window.lazySizesConfig.loadedClass = 'c-image--lazyload-loaded';
 import lazySizes from 'lazysizes';
 
 //IE Polyfill for picture element
-import 'lazysizes/plugins/respimg/ls.respimg.min.js';
+import 'lazysizes/plugins/respimg/ls.respimg.js';
 
 export default {
 
