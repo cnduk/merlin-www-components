@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.11](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.17.10...@cnbritain/merlin-www-js-pages@1.17.11) (2019-02-22)
+
+
+### Bug Fixes
+
+* **npmignore:** it has to sit in the component ([5b3f84d](https://github.com/cnduk/merlin-www-components/commit/5b3f84d))
+
+
+
+
+
 ## [1.17.10](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.17.9...@cnbritain/merlin-www-js-pages@1.17.10) (2019-02-22)
 
 **Note:** Version bump only for package @cnbritain/merlin-www-js-pages
