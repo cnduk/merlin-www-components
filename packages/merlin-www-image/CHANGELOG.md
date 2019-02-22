@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.8](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-image@1.10.7...@cnbritain/merlin-www-image@1.10.8) (2019-02-22)
+
+
+### Bug Fixes
+
+* **merlin-www-image:** import non minified lazysizes plugin ([17383e1](https://github.com/cnduk/merlin-www-components/commit/17383e1))
+
+
+
+
+
 ## [1.10.7](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-image@1.10.6...@cnbritain/merlin-www-image@1.10.7) (2019-01-30)
 
 **Note:** Version bump only for package @cnbritain/merlin-www-image
