@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.14](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.17.13...@cnbritain/merlin-www-js-pages@1.17.14) (2019-03-18)
+
+
+### Bug Fixes
+
+* **merlin-www-goofs:** make eslint happy ([0104e11](https://github.com/cnduk/merlin-www-components/commit/0104e11))
+* **merlin-www-goofs:** remove all goofs ([6703abf](https://github.com/cnduk/merlin-www-components/commit/6703abf))
+
+
+
+
+
 ## [1.17.13](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.17.12...@cnbritain/merlin-www-js-pages@1.17.13) (2019-03-18)
 
 
