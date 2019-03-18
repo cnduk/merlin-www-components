@@ -27,10 +27,6 @@ import {
     AdDebugger,
     AdUtils
 } from '@cnbritain/merlin-www-ads';
-import {
-    fartscroll,
-    raptor
-} from '@cnbritain/merlin-www-goofs';
 import InternationalRedirect from '@cnbritain/merlin-www-international-redirect';
 import {
     displayHiringMessage,
