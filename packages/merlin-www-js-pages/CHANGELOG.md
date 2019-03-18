@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.13](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.17.12...@cnbritain/merlin-www-js-pages@1.17.13) (2019-03-18)
+
+
+### Bug Fixes
+
+* **merlin-www-goofs:** turn off fartscroll and raptor ([09557c3](https://github.com/cnduk/merlin-www-components/commit/09557c3))
+
+
+
+
+
 ## [1.17.12](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.17.11...@cnbritain/merlin-www-js-pages@1.17.12) (2019-02-22)
 
 **Note:** Version bump only for package @cnbritain/merlin-www-js-pages
