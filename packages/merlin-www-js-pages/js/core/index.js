@@ -2,12 +2,7 @@
 
 import es6Promise from 'es6-promise';
 
-import {
-    addClass,
-    addEvent,
-    assign,
-    removeEvent
-} from '@cnbritain/merlin-www-js-utils/js/functions';
+import { addClass,assign} from '@cnbritain/merlin-www-js-utils/js/functions';
 import {
     getUserAgent,
     hasTouch
@@ -88,10 +83,6 @@ export default function init(config) {
     initInfobarTracking();
     initSubscribebarTracking();
 
-    // Goofs
-    // setupFartscroll();
-    // raptor();
-
     ComscoreManager.init();
     var consentCookie = parseInt(OneTrustManager.getConsent());
     if (consentCookie) {
@@ -125,26 +116,6 @@ export function sendInternationRedirectEvent(action, label) {
         'eventLabel': label,
         'transport': 'beacon'
     });
-}
-
-export function setupFartscroll() {
-    var tooterIcon = document.querySelector('.c-footer__list-item--brand-logo svg');
-
-    if (!tooterIcon) return;
-
-    // Click the footer logo 5 times to activate the toots
-    var tootCount = 0;
-
-    function onIconClick() {
-        if (++tootCount >= 5) {
-            fartscroll();
-            removeEvent(tooterIcon, 'click', onIconClick);
-            tooterIcon = null;
-            tootCount = 0;
-        }
-    }
-
-    addEvent(tooterIcon, 'click', onIconClick);
 }
 
 export function setupHtmlClasses() {
