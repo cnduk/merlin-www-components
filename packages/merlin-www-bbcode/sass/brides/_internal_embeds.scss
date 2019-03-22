@@ -367,7 +367,7 @@
 }
 
 .bb-newsletter__copy {
-    @include font("FREIGHT TEXT", 16px, 400, 20px);
+    @include font("FREIGHT DISPLAY PRO", 16px, 400, 20px);
     color: $ascot-grey;
     margin: 0 0 20px 0px;
 
@@ -425,7 +425,7 @@
 }
 
 .bb-newsletter__success {
-    @include font("FREIGHT TEXT", 16px, 400, 20px);
+    @include font("FREIGHT DISPLAY PRO", 16px, 400, 20px);
     color: $ascot-grey;
     margin: 0 0 20px 0px;
 
@@ -436,7 +436,7 @@
 }
 
 .bb-newsletter__failure {
-    @include font("FREIGHT TEXT", 16px, 400, 20px);
+    @include font("FREIGHT DISPLAY PRO", 16px, 400, 20px);
     color: $ascot-grey;
     margin: 0 0 20px 0px;
 
