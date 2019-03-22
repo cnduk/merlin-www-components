@@ -3,9 +3,7 @@
   "version": "1.7.5",
   "description": "Build tools for the www app",
   "main": "js/index.js",
-  "scripts": {
-    "lint": "eslint -c ../../.eslintrc.json ./js/**/*"
-  },
+  "scripts": {},
   "author": "",
   "license": "ISC",
   "dependencies": {
