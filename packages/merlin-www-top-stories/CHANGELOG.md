@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.26](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-top-stories@1.10.25...@cnbritain/merlin-www-top-stories@1.10.26) (2019-03-22)
+
+**Note:** Version bump only for package @cnbritain/merlin-www-top-stories
+
+
+
+
+
 ## [1.10.25](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-top-stories@1.10.24...@cnbritain/merlin-www-top-stories@1.10.25) (2019-02-22)
 
 **Note:** Version bump only for package @cnbritain/merlin-www-top-stories

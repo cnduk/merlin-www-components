@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.18.5](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.18.4...@cnbritain/merlin-www-bbcode@1.18.5) (2019-03-22)
+
+
+### Bug Fixes
+
+* **merlin-www-bbcode:** correct font choice for brides in newsletter cards ([2b25dbf](https://github.com/cnduk/merlin-www-components/commit/2b25dbf))
+
+
+
+
+
 ## [1.18.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-bbcode@1.18.3...@cnbritain/merlin-www-bbcode@1.18.4) (2019-02-22)
 
 **Note:** Version bump only for package @cnbritain/merlin-www-bbcode

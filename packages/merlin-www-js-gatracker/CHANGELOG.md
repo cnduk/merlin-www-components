@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-gatracker@1.8.3...@cnbritain/merlin-www-js-gatracker@1.8.4) (2019-03-22)
+
+
+### Bug Fixes
+
+* **merlin-www-js-gatracker:** allow names to be optional on trackers ([0494315](https://github.com/cnduk/merlin-www-components/commit/0494315))
+
+
+
+
+
 ## [1.8.3](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-gatracker@1.8.2...@cnbritain/merlin-www-js-gatracker@1.8.3) (2019-02-08)
 
 **Note:** Version bump only for package @cnbritain/merlin-www-js-gatracker
