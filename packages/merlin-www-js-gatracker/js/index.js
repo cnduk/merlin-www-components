@@ -46,8 +46,7 @@ function GATracker(id, _config){
      * a period at the end as we refer to it in all the GA events
      * @type {String}
      */
-    this._name = (_config && _config.name !== undefined ?
-        _config.name : 'TRACKER' + GATracker.TRACKERS.length);
+    this._name = (_config && _config.name !== undefined ? _config.name : null);
 
     /**
      * The tracking id
@@ -76,34 +75,37 @@ function GATracker(id, _config){
         'cookieDomain': _config && _config.cookieDomain !== undefined ?
             _config.cookieDomain :
             'auto',
-        'name': this._name,
         'trackingId': this._id,
         'transport': 'beacon'
     };
+    if(this._name !== null) config.name = this._name;
     ga( 'create', config );
 
     /**
      * See if we need to require displayfeatures
      */
     if( _config && _config.displayFeatures === true ){
-        ga( this._name + '.require', 'displayfeatures' );
+        ga( trackerPrefix(this, 'require'), 'displayfeatures' );
     }
 
     /**
      * See if we need to require autolinker
      */
     if( _config && _config.linker !== undefined ){
-        ga( this._name + '.require', 'linker' );
-        ga( this._name + '.linker:autoLink', _config.linker );
+        ga( trackerPrefix(this, 'require'), 'linker' );
+        ga( trackerPrefix(this, 'linker:autoLink'), _config.linker );
     }
 
     if(_config && _config.optimizeId !== undefined){
-        ga(this._name + '.require', _config.optimizeId);
+        ga( trackerPrefix(this, 'require'), _config.optimizeId);
     }
 
     if(this.type === 'brand'){
         ga(function gaClientId(){
-            this._clientId = ga.getByName(this._name).get('clientId');
+            // t0 is the default name if there is not one
+            var name = 't0';
+            if(this._name !== null) name = this._name;
+            this._clientId = ga.getByName(name).get('clientId');
         }.bind(this));
     }
 
@@ -209,7 +211,7 @@ GATracker.prototype = {
                 );
             }
 
-            ga( this._name + '.send', options );
+            ga( trackerPrefix(this, 'send'), options );
 
             // Whenever we send a pageview, send a comscore beacon
             if( hitType === GATracker.SEND_HITTYPES.PAGEVIEW && comscore &&
@@ -248,7 +250,7 @@ GATracker.prototype = {
                 setData = removeCustomDimensions( setData );
             }
 
-            ga( this._name + '.set', setData );
+            ga( trackerPrefix(this, 'set'), setData );
         }.bind(this));
     }
 };
@@ -454,6 +456,14 @@ function filterQueryParams(url){
         return hostUrl;
     } else {
         return hostUrl + '?' + queryString;
+    }
+}
+
+function trackerPrefix(tracker, key){
+    if(tracker._name){
+        return tracker._name + '.' + key;
+    } else {
+        return key;
     }
 }
 
