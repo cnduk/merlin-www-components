@@ -16,6 +16,10 @@ function ComscoreManager() {
     this.COMSCORE_COOKIE = 'cnd_comscore_consent';
     this.COMSCORE_PUBLISHED_ID = 15335235;
     this._loadingScript = false;
+    // Consent can be true, false or null.
+    // True - user has consented
+    // False - user has rejected
+    // null - user has not said anything
     this.consent = null;
 }
 ComscoreManager.prototype = inherit(EventEmitter.prototype, {
@@ -23,11 +27,7 @@ ComscoreManager.prototype = inherit(EventEmitter.prototype, {
     getConsent: function getConsent() {
         var cookieValue = getCookie(this.COMSCORE_COOKIE);
         // console.log('getConsent', cookieValue);
-        if (cookieValue !== null) {
-            return cookieValue;
-        } else {
-            return false;
-        }
+        return cookieValue;
     },
     setConsent: function setConsent(value) {
         // console.log('Setting cs_ucfr=' + value);
@@ -37,17 +37,18 @@ ComscoreManager.prototype = inherit(EventEmitter.prototype, {
     init: function init() {
         // Check if the comscore cookie has been set
         var comscoreConsent = this.getConsent();
-        if (comscoreConsent !== false) {
+        if (comscoreConsent !== null) {
             // console.log('User has given Comscore consent', comscoreConsent);
-            this.consent = parseInt(comscoreConsent, 10);
+            this.consent = Number(comscoreConsent);
             return;
         }
 
         if (!hasCookiesEnabled) {
             // console.log('Cookies are disabled');
-            this.setConsent(0);
+            this.setConsent(null);
             return;
         }
+
     },
     loadComscoreScript: function loadComscoreScript() {
         if (this._loadingScript) return;
@@ -74,9 +75,9 @@ ComscoreManager.prototype = inherit(EventEmitter.prototype, {
 
         var comscoreData = {
             c1: '2',
-            c2: this.COMSCORE_PUBLISHED_ID,
-            cs_ucfr: this.consent
+            c2: this.COMSCORE_PUBLISHED_ID
         };
+        if(this.consent !== null) comscoreData.cs_ucfr = this.consent;
         if (url) comscoreData['c4'] = url;
         // console.log('Firing a Comscore beacon', comscoreData);
 
