@@ -3,7 +3,8 @@ import {
     getCookie,
     inherit,
     loadScript,
-    setCookie
+    setCookie,
+    createEventTemplate
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import {
     hasCookiesEnabled
@@ -15,7 +16,7 @@ function OneTrustManager() {
     });
     this.ONETRUST_COOKIE = 'cnd_one_trust_consent';
     this._loadingScript = false;
-    this.consent = null;
+    this.consent = 0;
 }
 
 OneTrustManager.prototype = inherit(EventEmitter.prototype, {
@@ -29,8 +30,16 @@ OneTrustManager.prototype = inherit(EventEmitter.prototype, {
         }
     },
     setConsent: function setConsent(value) {
+        var beforeValue = this.consent;
+
         setCookie(this.ONETRUST_COOKIE, value);
         this.consent = value;
+
+        if(beforeValue !== this.consent){
+            this.emit('change', createEventTemplate('change', this, {
+                consentValue: this.consent
+            }));
+        }
     },
     init: function init(options) {
         if (!options.hasOwnProperty('script_url')) {
