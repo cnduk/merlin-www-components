@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.14.7](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.14.6...@cnbritain/merlin-www-section-card-list@1.14.7) (2019-03-29)
+
+**Note:** Version bump only for package @cnbritain/merlin-www-section-card-list
+
+
+
+
+
 ## [1.14.6](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-section-card-list@1.14.5...@cnbritain/merlin-www-section-card-list@1.14.6) (2019-03-29)
 
 **Note:** Version bump only for package @cnbritain/merlin-www-section-card-list

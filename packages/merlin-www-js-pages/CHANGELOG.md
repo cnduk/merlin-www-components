@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.17](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.17.16...@cnbritain/merlin-www-js-pages@1.17.17) (2019-03-29)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** alter method for sending comscore ([6dae058](https://github.com/cnduk/merlin-www-components/commit/6dae058))
+
+
+### Reverts
+
+* **merlin-www-js-pages:** set old comscore triggering back ([d8fd1df](https://github.com/cnduk/merlin-www-components/commit/d8fd1df))
+
+
+
+
+
 ## [1.17.16](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.17.15...@cnbritain/merlin-www-js-pages@1.17.16) (2019-03-29)
 
 
