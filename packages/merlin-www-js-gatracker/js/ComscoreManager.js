@@ -42,7 +42,6 @@ ComscoreManager.prototype = inherit(EventEmitter.prototype, {
             this.consent = Number(comscoreConsent);
             return;
         }
-
         if (!hasCookiesEnabled) {
             // console.log('Cookies are disabled');
             this.setConsent(null);

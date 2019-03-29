@@ -91,7 +91,6 @@ export default function init(config) {
     } else {
         ComscoreManager.setConsent(null);
     }
-
     ComscoreManager.sendBeacon();
 }
 
