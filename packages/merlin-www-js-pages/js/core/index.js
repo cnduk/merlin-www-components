@@ -88,14 +88,11 @@ export default function init(config) {
     // As you can not reject OneTrust, false is a user has not clicked Accept. It is NOT a reject.
     if (consentCookie) {
         ComscoreManager.setConsent(1);
-        ComscoreManager.sendBeacon();
     } else {
         ComscoreManager.setConsent(null);
-        OneTrustManager.addListener('change', function(e){
-            ComscoreManager.setConsent(e.consentValue);
-            ComscoreManager.sendBeacon();        
-        });
     }
+
+    ComscoreManager.sendBeacon();
 }
 
 export function initInternationalRedirect() {
