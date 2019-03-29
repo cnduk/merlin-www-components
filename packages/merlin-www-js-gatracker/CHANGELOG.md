@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.5](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-gatracker@1.8.4...@cnbritain/merlin-www-js-gatracker@1.8.5) (2019-03-29)
+
+
+### Bug Fixes
+
+* **merlin-www-js-gatracker:** correctly set comscore consent value ([b84d857](https://github.com/cnduk/merlin-www-components/commit/b84d857))
+
+
+
+
+
 ## [1.8.4](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-gatracker@1.8.3...@cnbritain/merlin-www-js-gatracker@1.8.4) (2019-03-22)
 
 

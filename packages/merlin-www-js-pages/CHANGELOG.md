@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.16](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.17.15...@cnbritain/merlin-www-js-pages@1.17.16) (2019-03-29)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** correct comscore consent setting ([271c84b](https://github.com/cnduk/merlin-www-components/commit/271c84b))
+
+
+
+
+
 ## [1.17.15](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.17.14...@cnbritain/merlin-www-js-pages@1.17.15) (2019-03-22)
 
 **Note:** Version bump only for package @cnbritain/merlin-www-js-pages
