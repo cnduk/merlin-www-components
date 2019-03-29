@@ -75,9 +75,9 @@ ComscoreManager.prototype = inherit(EventEmitter.prototype, {
 
         var comscoreData = {
             c1: '2',
-            c2: this.COMSCORE_PUBLISHED_ID
+            c2: this.COMSCORE_PUBLISHED_ID,
+            cs_ucfr: this.consent === null ? '' : this.consent
         };
-        if(this.consent !== null) comscoreData.cs_ucfr = this.consent;
         if (url) comscoreData['c4'] = url;
         // console.log('Firing a Comscore beacon', comscoreData);
 
