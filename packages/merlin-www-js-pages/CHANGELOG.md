@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.18](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.17.17...@cnbritain/merlin-www-js-pages@1.17.18) (2019-03-29)
+
+
+### Bug Fixes
+
+* **Lerna:** somehow it broke so i need a change ([bf4f853](https://github.com/cnduk/merlin-www-components/commit/bf4f853))
+
+
+
+
+
 ## [1.17.17](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.17.16...@cnbritain/merlin-www-js-pages@1.17.17) (2019-03-29)
 
 

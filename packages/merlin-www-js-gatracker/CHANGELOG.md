@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-gatracker@1.8.5...@cnbritain/merlin-www-js-gatracker@1.10.0) (2019-03-29)
+
+
+### Bug Fixes
+
+* **Lerna:** somehow it broke so i need a change ([bf4f853](https://github.com/cnduk/merlin-www-components/commit/bf4f853))
+* **merlin-www-js-gatracker:** serve a literal blank for comscore ([739ffe0](https://github.com/cnduk/merlin-www-components/commit/739ffe0))
+
+
+### Features
+
+* **merlin-www-js-gatracker:** add change event to OneTrustManager ([ff442bc](https://github.com/cnduk/merlin-www-components/commit/ff442bc))
+
+
+
+
+
 # [1.9.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-gatracker@1.8.5...@cnbritain/merlin-www-js-gatracker@1.9.0) (2019-03-29)
 
 
