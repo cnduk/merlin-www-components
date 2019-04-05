@@ -14,9 +14,12 @@ function OneTrustManager() {
     EventEmitter.call(this, {
         wildcard: true
     });
-    this.ONETRUST_COOKIE = 'cnd_one_trust_consent';
+    this.ONETRUST_COOKIE = 'cnd_one_trust_consent1';
     this._loadingScript = false;
-    this.consent = 0;
+    // -1: dialog still open so ignoring
+    // 0: dialog closed and rejected
+    // 1: dialog closed and consented
+    this.consent = -1;
 }
 
 OneTrustManager.prototype = inherit(EventEmitter.prototype, {
@@ -49,13 +52,21 @@ OneTrustManager.prototype = inherit(EventEmitter.prototype, {
         // Set the callback before trying to load the script
         window.OptanonWrapper = function() {
             if (window.OptanonActiveGroups) {
-                var consentToTargeting = /,4,/.test(window.OptanonActiveGroups);
+                // Need to wrap this in a timeout as the dialog doesnt close before this
+                // bloody function.
+                setTimeout(function(){
+                    var consentToTargeting = /,4,/.test(window.OptanonActiveGroups);
 
-                if (consentToTargeting) {
-                    this.setConsent(1);
-                } else {
-                    this.setConsent(0);
-                }
+                    if(!Optanon.IsAlertBoxClosed()){
+                        this.setConsent(-1);
+                    } else {
+                        if (consentToTargeting) {
+                            this.setConsent(1);
+                        } else {
+                            this.setConsent(0);
+                        }
+                    }
+                }.bind(this), 100);
             }
         }.bind(this);
 
