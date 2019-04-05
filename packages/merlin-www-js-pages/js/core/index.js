@@ -84,20 +84,13 @@ export default function init(config) {
     initSubscribebarTracking();
 
     ComscoreManager.init();
-    var consentCookie = parseInt(OneTrustManager.getConsent());
-    switch(consentCookie){
-        case -1:
-        case false:
-            ComscoreManager.setConsent(null);
-            break;
-
-        case 0:
-            ComscoreManager.setConsent(0);
-            break;
-
-        case 1:
-            ComscoreManager.setConsent(1);
-            break;
+    OneTrustManager.loadConsent();
+    if(!OneTrustManager.isDialogClosed){
+        ComscoreManager.setConsent(null);
+    } else if(OneTrustManager.consentedTargetingCookies){
+        ComscoreManager.setConsent(1);
+    } else {
+        ComscoreManager.setConsent(0);
     }
     ComscoreManager.sendBeacon();
 }
