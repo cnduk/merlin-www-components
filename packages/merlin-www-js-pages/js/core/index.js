@@ -85,11 +85,19 @@ export default function init(config) {
 
     ComscoreManager.init();
     var consentCookie = parseInt(OneTrustManager.getConsent());
-    // As you can not reject OneTrust, false is a user has not clicked Accept. It is NOT a reject.
-    if (consentCookie) {
-        ComscoreManager.setConsent(1);
-    } else {
-        ComscoreManager.setConsent(null);
+    switch(consentCookie){
+        case -1:
+        case false:
+            ComscoreManager.setConsent(null);
+            break;
+
+        case 0:
+            ComscoreManager.setConsent(0);
+            break;
+
+        case 1:
+            ComscoreManager.setConsent(1);
+            break;
     }
     ComscoreManager.sendBeacon();
 }
