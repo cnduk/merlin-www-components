@@ -21,6 +21,7 @@ import {
     removeEvent,
     throttle
 } from '@cnbritain/merlin-www-js-utils/js/functions';
+import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
 
 import {
     AD_STATES,
@@ -121,8 +122,11 @@ AdManager.prototype = inherit(EventEmitter.prototype, {
                         googletag.pubads().enableAsyncRendering();
                         googletag.pubads().collapseEmptyDivs( true );
 
-                        var consentCookie = parseInt(getCookie('cnd_one_trust_consent'));
-                        googletag.pubads().setRequestNonPersonalizedAds(consentCookie ? 0 : 1);
+                        if(OneTrustManager.consentedTargetingCookies){
+                            googletag.pubads().setRequestNonPersonalizedAds(false);    
+                        } else {
+                            googletag.pubads().setRequestNonPersonalizedAds(true);    
+                        }
 
                         googletag.enableServices();
                         // Events
