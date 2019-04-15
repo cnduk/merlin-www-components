@@ -87,7 +87,7 @@ export default function init(config) {
     OneTrustManager.loadConsent();
     if(!OneTrustManager.isDialogClosed){
         ComscoreManager.setConsent(null);
-    } else if(OneTrustManager.consentedTargetingCookies){
+    } else if(OneTrustManager.consentedStrictlyCookies){
         ComscoreManager.setConsent(1);
     } else {
         ComscoreManager.setConsent(0);
