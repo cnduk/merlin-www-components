@@ -10,7 +10,6 @@ import {
     assign,
     cloneArray,
     createEventTemplate,
-    getCookie,
     getWindowScrollTop,
     inherit,
     not,
