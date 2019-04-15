@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-gatracker@1.10.0...@cnbritain/merlin-www-js-gatracker@1.11.0) (2019-04-15)
+
+
+### Bug Fixes
+
+* **merlin-www-js-gatracker:** add logic to onetrust for ignore, reject and accept ([7f45207](https://github.com/cnduk/merlin-www-components/commit/7f45207))
+
+
+### Features
+
+* **merlin-www-js-gatracker:** onetrustmanager now handles different consent levels ([0fbdfb5](https://github.com/cnduk/merlin-www-components/commit/0fbdfb5))
+
+
+
+
+
 # [1.10.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-gatracker@1.8.5...@cnbritain/merlin-www-js-gatracker@1.10.0) (2019-03-29)
 
 

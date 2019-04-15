@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.8](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.17.7...@cnbritain/merlin-www-ads@1.17.8) (2019-04-15)
+
+
+### Bug Fixes
+
+* **merlin-www-ads:** update to handle new consent levels in one trust ([2e4c46a](https://github.com/cnduk/merlin-www-components/commit/2e4c46a))
+
+
+
+
+
 ## [1.17.7](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-ads@1.17.6...@cnbritain/merlin-www-ads@1.17.7) (2019-03-29)
 
 **Note:** Version bump only for package @cnbritain/merlin-www-ads
