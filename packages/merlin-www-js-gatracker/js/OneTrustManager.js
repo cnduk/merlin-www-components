@@ -66,7 +66,6 @@ OneTrustManager.prototype = inherit(EventEmitter.prototype, {
             if (window.OptanonActiveGroups) {
                 setTimeout(function(){
                     this.setConsent(window.OptanonActiveGroups);
-                    console.log(this);
                 }.bind(this), 100);
             }
         }.bind(this);
