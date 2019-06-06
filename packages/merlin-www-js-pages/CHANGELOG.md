@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.22](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.17.21...@cnbritain/merlin-www-js-pages@1.17.22) (2019-06-06)
+
+
+### Bug Fixes
+
+* **merlin-www-js-pages:** add caption word count to gallery image page views ([#105](https://github.com/cnduk/merlin-www-components/issues/105)) ([38736ad](https://github.com/cnduk/merlin-www-components/commit/38736ad))
+
+
+
+
+
 ## [1.17.21](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-js-pages@1.17.20...@cnbritain/merlin-www-js-pages@1.17.21) (2019-04-15)
 
 
