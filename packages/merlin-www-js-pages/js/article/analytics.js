@@ -65,17 +65,30 @@ export function sendCustomEvent(trackerData) {
     GATracker.SendAll(GATracker.SEND_HITTYPES.EVENT, trackerData);
 }
 
+// This is super basic just to help the lovely geoff
+function getWordCount(text){
+    return text.split(/\s/).length;
+}
+
 export function sendGalleryImagePageview(article, imageIndex) {
-    var analytics = article.analytics;
+    // Create a copy of the analytics. Its a simple object so we can use the
+    // JSON method.
+    var analytics = JSON.parse(JSON.stringify(article.analytics));
 
     var CREDIT_DIMENSION = GATracker.getDimensionByIndex(
         'GALLERY_PHOTO_CREDIT');
     var POSITION_DIMENSION = GATracker.getDimensionByIndex(
         'GALLERY_POSITION');
     var BASE_URL = GATracker.getDimensionByIndex('BASE_URL');
+    var WORD_COUNT = GATracker.getDimensionByIndex('WORD_COUNT');
 
     var image = article.gallery.imageElements[imageIndex];
     var imageUid = image.querySelector('.c-figure').getAttribute('id');
+    var caption = image.querySelector('.c-figure__caption');
+    if(caption){
+        analytics[WORD_COUNT] = String(getWordCount(caption.innerText));
+        caption = null;
+    }
     var credit = image.querySelector('.c-figure__credit');
     if (credit) {
         analytics[CREDIT_DIMENSION] = credit.innerHTML;
