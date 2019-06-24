@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-show-summary",
-  "version": "1.5.98",
+  "version": "1.5.99",
   "description": "Show summary article",
   "main": "js/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@cnbritain/merlin-www-ads": "1.17.9",
-    "@cnbritain/merlin-www-bbcode": "1.18.5",
+    "@cnbritain/merlin-www-bbcode": "^1.18.6",
     "@cnbritain/merlin-www-buttons": "^1.7.41",
     "@cnbritain/merlin-www-common": "^1.14.18",
     "@cnbritain/merlin-www-image": "^1.10.8",
