@@ -744,27 +744,33 @@ export function isWindow( win ){
  * @param  {Object} options
  * @return {Promise}
  */
-export function loadScript( url, options ){
-    return new Promise(function loadScript_promise( resolve, reject ){
+export function loadScript(url, options) {
+    return new Promise(function loadScript_promise(resolve, reject) {
         var node = null;
-        if( options && options.node ){
+        if (options && options.node) {
             node = options.node;
         } else {
-            node = document.head || document.getElementsByTagName('head')[0];
+            node = document.head || document.getElementsByTagName("head")[0];
         }
-        var script = document.createElement('script');
+        var script = document.createElement("script");
         script.async = true;
-        script.type = 'text/javascript';
+        script.type = "text/javascript";
         script.src = url;
-        script.onload = function(){
+        if (options && options.attributes) {
+            for (var key in options.attributes) {
+                if (!hasOwnProperty(options.attributes, key)) continue;
+                script.setAttribute(key, options.attributes[key]);
+            }
+        }
+        script.onload = function() {
             this.onload = this.onerror = null;
-            resolve( script );
+            resolve(script);
         };
-        script.onerror = function(){
+        script.onerror = function() {
             this.onload = this.onerror = null;
-            reject( new Error( 'Error loading script: ' + url ) );
+            reject(new Error("Error loading script: " + url));
         };
-        node.appendChild( script );
+        node.appendChild(script);
     });
 }
 
