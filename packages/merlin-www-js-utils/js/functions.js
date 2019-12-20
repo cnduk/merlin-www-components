@@ -750,11 +750,11 @@ export function loadScript(url, options) {
         if (options && options.node) {
             node = options.node;
         } else {
-            node = document.head || document.getElementsByTagName("head")[0];
+            node = document.head || document.getElementsByTagName('head')[0];
         }
-        var script = document.createElement("script");
+        var script = document.createElement('script');
         script.async = true;
-        script.type = "text/javascript";
+        script.type = 'text/javascript';
         script.src = url;
         if (options && options.attributes) {
             for (var key in options.attributes) {
@@ -768,7 +768,7 @@ export function loadScript(url, options) {
         };
         script.onerror = function() {
             this.onload = this.onerror = null;
-            reject(new Error("Error loading script: " + url));
+            reject(new Error('Error loading script: ' + url));
         };
         node.appendChild(script);
     });
