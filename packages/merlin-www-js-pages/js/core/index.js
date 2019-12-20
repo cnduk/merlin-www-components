@@ -83,16 +83,17 @@ export default function init(config) {
     initInfobarTracking();
     initSubscribebarTracking();
 
-    ComscoreManager.init();
-    OneTrustManager.loadConsent();
-    if(!OneTrustManager.isDialogClosed){
-        ComscoreManager.setConsent(null);
-    } else if(OneTrustManager.consentedStrictlyCookies){
-        ComscoreManager.setConsent(1);
-    } else {
-        ComscoreManager.setConsent(0);
-    }
-    ComscoreManager.sendBeacon();
+    // TODO: turn this back on
+    // ComscoreManager.init();
+    // OneTrustManager.loadConsent();
+    // if(!OneTrustManager.isDialogClosed){
+    //     ComscoreManager.setConsent(null);
+    // } else if(OneTrustManager.consentedStrictlyCookies){
+    //     ComscoreManager.setConsent(1);
+    // } else {
+    //     ComscoreManager.setConsent(0);
+    // }
+    // ComscoreManager.sendBeacon();
 }
 
 export function initInternationalRedirect() {
