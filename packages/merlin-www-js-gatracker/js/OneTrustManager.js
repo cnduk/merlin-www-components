@@ -169,8 +169,8 @@ OneTrustManager.prototype = inherit(EventEmitter.prototype, {
         // Set the callback before trying to load the script
         window.OptanonWrapper = VERSION_HANDLERS.oneTrustCallback.bind(this);
 
-        this.loadOneTrustScript(options.script_url, options.domain_script);
         this.loadConsent();
+        this.loadOneTrustScript(options.script_url, options.domain_script);
         if (!hasCookiesEnabled) this.setConsent("");
     }
 });
