@@ -73,6 +73,12 @@ export default function init(config) {
         PREBID_SETTINGS: _config['PREBID_SETTINGS']
     });
 
+    GATracker.init();
+    OneTrustManager.on('change', function(){
+        GATracker.setConsent(this.consentedPerformanceCookies);
+        if(this.consentedPerformanceCookies) GATracker.loadGAScript();
+    });
+
     initChain();
 
     CommonImage.init();
