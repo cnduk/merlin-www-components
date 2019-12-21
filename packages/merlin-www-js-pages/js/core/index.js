@@ -16,6 +16,7 @@ import store from '@cnbritain/merlin-www-js-store';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
 // import ComscoreManager from '@cnbritain/merlin-www-js-gatracker/js/ComscoreManager';
 import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
+import SkimlinksManager from '@cnbritain/merlin-www-js-gatracker/js/SkimlinksManager';
 import SectionCardList from '@cnbritain/merlin-www-section-card-list';
 import {
     AdManager,
@@ -52,12 +53,13 @@ export default function init(config) {
     // Don't just use the abbreviation in case something else in the page
     // overwrites it
     setGlobalNamespace({
-        'AdDebugger': AdDebugger,
-        'AdManager': AdManager,
-        'GATracker': GATracker,
-        'MainNavigation': MainNavigation,
-        'Store': store,
-        'OneTrustManager': OneTrustManager
+        AdDebugger: AdDebugger,
+        AdManager: AdManager,
+        GATracker: GATracker,
+        MainNavigation: MainNavigation,
+        Store: store,
+        OneTrustManager: OneTrustManager,
+        SkimlinksManager: SkimlinksManager
     });
 
     setupHtmlClasses();
@@ -74,9 +76,10 @@ export default function init(config) {
     });
 
     GATracker.init();
-    OneTrustManager.on('change', function(){
+    OneTrustManager.on('change', function() {
         GATracker.setConsent(this.consentedPerformanceCookies);
-        if(this.consentedPerformanceCookies) GATracker.loadGAScript();
+        if (this.consentedPerformanceCookies) GATracker.loadGAScript();
+        if (this.consentedTargetingCookies) SkimlinksManager.loadScript();
     });
 
     initChain();
