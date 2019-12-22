@@ -16,6 +16,7 @@ import {
     loadScript,
     unescapeJinjaValue
 } from '@cnbritain/merlin-www-js-utils/js/functions';
+import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
 
 /**
  * GPT Script url
@@ -473,8 +474,16 @@ export function loadGPTLibrary(){
 export function loadRubiconLibrary(){
     window.rubicontag = window.rubicontag || {};
     window.rubicontag.cmd = window.rubicontag.cmd || [];
-    if(RUBICON_URL === null){
-        console.warn('Rubicon library has no url specified to load. Ads will continue without Rubicon');
+    if (!OneTrustManager.consentedTargetingCookies) {
+        console.warn(
+            'No consent for Rubicon library. Ads will continue without Rubicon'
+        );
+        return Promise.resolve();
+    }
+    if (RUBICON_URL === null) {
+        console.warn(
+            'Rubicon library has no url specified to load. Ads will continue without Rubicon'
+        );
         return Promise.resolve();
     }
     return loadScript(RUBICON_URL)
