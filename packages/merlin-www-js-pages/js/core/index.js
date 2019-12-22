@@ -2,7 +2,7 @@
 
 import es6Promise from 'es6-promise';
 
-import { addClass,assign} from '@cnbritain/merlin-www-js-utils/js/functions';
+import { addClass, assign } from '@cnbritain/merlin-www-js-utils/js/functions';
 import {
     getUserAgent,
     hasTouch
@@ -20,16 +20,9 @@ import SkimlinksManager from '@cnbritain/merlin-www-js-gatracker/js/SkimlinksMan
 import FacebookPixelManager from '@cnbritain/merlin-www-js-gatracker/js/FacebookPixelManager';
 import TypekitManager from '@cnbritain/merlin-www-js-gatracker/js/TypekitManager';
 import SectionCardList from '@cnbritain/merlin-www-section-card-list';
-import {
-    AdManager,
-    AdDebugger,
-    AdUtils
-} from '@cnbritain/merlin-www-ads';
+import { AdManager, AdDebugger, AdUtils } from '@cnbritain/merlin-www-ads';
 import InternationalRedirect from '@cnbritain/merlin-www-international-redirect';
-import {
-    displayHiringMessage,
-    setGlobalNamespace
-} from '../utils';
+import { displayHiringMessage, setGlobalNamespace } from '../utils';
 import {
     initLinkTracking,
     initInfobarTracking,
@@ -37,15 +30,14 @@ import {
 } from './analytics';
 
 var DEFAULT_INIT_CONFIG = {
-    'OPEN_X_URL': null,
-    'RUBICON_URL': null,
-    'TEAD_URL': '//cdn.teads.tv/js/all-v2.js',
-    'PREBID_URL': null,
-    'PREBID_SETTINGS': {}
+    OPEN_X_URL: null,
+    RUBICON_URL: null,
+    TEAD_URL: '//cdn.teads.tv/js/all-v2.js',
+    PREBID_URL: null,
+    PREBID_SETTINGS: {}
 };
 
 export default function init(config) {
-
     var _config = DEFAULT_INIT_CONFIG;
     if (config !== undefined) {
         _config = assign({}, DEFAULT_INIT_CONFIG, config);
@@ -132,10 +124,10 @@ export function initInternationalRedirect() {
 
 export function sendInternationRedirectEvent(action, label) {
     GATracker.SendAll(GATracker.SEND_HITTYPES.EVENT, {
-        'eventAction': action,
-        'eventCategory': 'CountryBanner',
-        'eventLabel': label,
-        'transport': 'beacon'
+        eventAction: action,
+        eventCategory: 'CountryBanner',
+        eventLabel: label,
+        transport: 'beacon'
     });
 }
 
@@ -181,7 +173,10 @@ export function initChain() {
         }
     });
     InfobarManager.once('load', function() {
-        if (!InfobarManager.infobar || InfobarManager.infobar.state.isEnabled == false) {
+        if (
+            !InfobarManager.infobar ||
+            InfobarManager.infobar.state.isEnabled == false
+        ) {
             SubscribeBarManager.lazyload();
             SubscribeBarManager.once('enable', function() {
                 if (MainNavigation.state.isFixed) {
