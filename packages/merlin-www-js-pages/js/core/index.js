@@ -18,6 +18,7 @@ import GATracker from '@cnbritain/merlin-www-js-gatracker';
 import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
 import SkimlinksManager from '@cnbritain/merlin-www-js-gatracker/js/SkimlinksManager';
 import FacebookPixelManager from '@cnbritain/merlin-www-js-gatracker/js/FacebookPixelManager';
+import TypekitManager from '@cnbritain/merlin-www-js-gatracker/js/TypekitManager';
 import SectionCardList from '@cnbritain/merlin-www-section-card-list';
 import {
     AdManager,
@@ -61,7 +62,8 @@ export default function init(config) {
         Store: store,
         OneTrustManager: OneTrustManager,
         SkimlinksManager: SkimlinksManager,
-        FacebookPixelManager: FacebookPixelManager
+        FacebookPixelManager: FacebookPixelManager,
+        TypekitManager: TypekitManager
     });
 
     setupHtmlClasses();
@@ -80,6 +82,7 @@ export default function init(config) {
     GATracker.init();
     OneTrustManager.on('change', function() {
         GATracker.setConsent(this.consentedPerformanceCookies);
+        if (this.consentedStrictlyCookies) TypekitManager.loadScript();
         if (this.consentedPerformanceCookies) GATracker.loadGAScript();
         if (this.consentedTargetingCookies) {
             SkimlinksManager.loadScript();
