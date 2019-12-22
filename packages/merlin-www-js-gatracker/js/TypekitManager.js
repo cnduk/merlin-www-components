@@ -17,10 +17,8 @@ TypekitManager.prototype = inherit(EventEmitter.prototype, {
     },
 
     loadScript: function loadScript() {
+        if (this._typekitId === null) return;
         if (this._hasLoadedScript) return;
-        if (this._typekitId === null) {
-            throw new TypeError('Missing Typekit Id', this._typekitId);
-        }
         this._hasLoadedScript = true;
         (function(d, kitId) {
             var config = { kitId: kitId, scriptTimeout: 3000, async: true },
