@@ -26,7 +26,8 @@ import { displayHiringMessage, setGlobalNamespace } from '../utils';
 import {
     initLinkTracking,
     initInfobarTracking,
-    initSubscribebarTracking
+    initSubscribebarTracking,
+    loadSiteCensus
 } from './analytics';
 
 var DEFAULT_INIT_CONFIG = {
@@ -78,6 +79,7 @@ export default function init(config) {
         if (this.consentedPerformanceCookies) {
             GATracker.loadGAScript();
             ComscoreManager.sendBeacon();
+            loadSiteCensus();
         }
         if (this.consentedTargetingCookies) {
             SkimlinksManager.loadScript();
