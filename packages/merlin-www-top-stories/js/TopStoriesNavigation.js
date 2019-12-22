@@ -89,10 +89,8 @@ function TopStoriesNavigation(el, options) {
 
     // Check if we have any ads
     var adElements = this.el.querySelectorAll(CLS_ITEM_AD);
-    if(adElements.length > 0){
-        AdManager.init();
+    if (adElements.length > 0) {
         AdManager.on('register', onAdRegister);
-        AdManager.lazy();
     }
 
 }
