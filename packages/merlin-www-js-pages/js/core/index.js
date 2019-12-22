@@ -80,14 +80,16 @@ export default function init(config) {
     });
 
     GATracker.init();
-    OneTrustManager.on('change', function() {
-        GATracker.setConsent(this.consentedPerformanceCookies);
+    OneTrustManager.on('ready', function() {
         if (this.consentedStrictlyCookies) TypekitManager.loadScript();
         if (this.consentedPerformanceCookies) GATracker.loadGAScript();
         if (this.consentedTargetingCookies) {
             SkimlinksManager.loadScript();
             FacebookPixelManager.loadScript();
         }
+    });
+    OneTrustManager.on('change', function() {
+        GATracker.setConsent(this.consentedPerformanceCookies);
     });
 
     initChain();
