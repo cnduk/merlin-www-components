@@ -138,7 +138,7 @@ function OneTrustManager() {
     this.processConsentData = null;
     this.setConsent = null;
     this._loadingScript = false;
-    this._isReady = false;
+    this.ready = false;
     this.isDialogClosed = false;
     this.consentData = '';
     this.consentedStrictlyCookies = true;
@@ -156,9 +156,9 @@ OneTrustManager.prototype = inherit(EventEmitter.prototype, {
     },
 
     _emitReady: function _emitReady(data) {
-        if (this._isReady) return;
+        if (this.ready) return;
         this.emit('ready', createEventTemplate('ready', this, data));
-        this._isReady = true;
+        this.ready = true;
     },
 
     init: function init(options) {
