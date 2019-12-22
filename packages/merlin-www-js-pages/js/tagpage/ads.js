@@ -1,7 +1,8 @@
 'use strict';
 
-import {AdManager} from '@cnbritain/merlin-www-ads';
-import {isAdNative} from '../utils';
+import { AdManager } from '@cnbritain/merlin-www-ads';
+import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
+import { isAdNative } from '../utils';
 
 export var nativeAdsShift = 0;
 export var nativeAdsWaiting = 0;
@@ -27,7 +28,33 @@ export function onNativeAdRender() {
 }
 
 export default function init() {
+    function onChange() {
+        if (this.consentedPerformanceCookies) {
+            OneTrustManager.off('change', onChange);
+            AdManager.init();
+            AdManager.lazy();
+        }
+    }
+
+    function onReady() {
+        if (this.consentedPerformanceCookies) {
+            AdManager.init();
+            AdManager.lazy();
+        } else {
+            OneTrustManager.on('change', onChange);
+        }
+    }
+
     AdManager.on('register', onAdRegister);
-    AdManager.init();
-    AdManager.lazy();
+
+    if (OneTrustManager.ready) {
+        if (OneTrustManager.consentedPerformanceCookies) {
+            AdManager.init();
+            AdManager.lazy();
+        } else {
+            OneTrustManager.on('change', onChange);
+        }
+    } else {
+        OneTrustManager.once('ready', onReady);
+    }
 }
