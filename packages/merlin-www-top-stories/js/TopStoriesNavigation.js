@@ -11,7 +11,7 @@ import {
     throttle
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import ElementScroll from '@cnbritain/merlin-www-js-elementscroll';
-import {AdManager, AdUtils} from '@cnbritain/merlin-www-ads';
+import { AdManager, AdUtils } from '@cnbritain/merlin-www-ads';
 
 /**
  * The scroll duration
@@ -36,7 +36,6 @@ var CLS_HAS_NO_SCROLL = 'has-no-scroll';
  * @param {HTMLElement} el
  */
 function TopStoriesNavigation(el, options) {
-
     /**
      * The button elements
      * @private
@@ -92,18 +91,16 @@ function TopStoriesNavigation(el, options) {
     if (adElements.length > 0) {
         AdManager.on('register', onAdRegister);
     }
-
 }
 TopStoriesNavigation.prototype = {
-
-    'constructor': TopStoriesNavigation,
+    constructor: TopStoriesNavigation,
 
     /**
      * Scrolls the element to the next items
      * @public
      * @memberof! TopStoriesNavigation.prototype
      */
-    'nextItems': function() {
+    nextItems: function() {
         // Get the scroll group size and scrollLeft
         var scrollRect = getBoundingClientRect(this._elScroll);
 
@@ -125,7 +122,7 @@ TopStoriesNavigation.prototype = {
         if (offscreenIndex === -1) return;
 
         var offset = 0;
-        if(window.innerWidth <= scrollRect.width){
+        if (window.innerWidth <= scrollRect.width) {
             offset = -this._scrollOffset;
         }
         this.scrollTo(storyRects[offscreenIndex].left + offset);
@@ -136,7 +133,7 @@ TopStoriesNavigation.prototype = {
      * @public
      * @memberof! TopStoriesNavigation.prototype
      */
-    'previousItems': function() {
+    previousItems: function() {
         // Get the scroll group size and scrollLeft
         var scrollRect = getBoundingClientRect(this._elScroll);
 
@@ -157,11 +154,12 @@ TopStoriesNavigation.prototype = {
         if (offscreenIndex === -1) return;
 
         var offset = 0;
-        if(window.innerWidth <= scrollRect.width){
+        if (window.innerWidth <= scrollRect.width) {
             offset = this._scrollOffset;
         }
         this.scrollTo(
-            -scrollRect.width + storyRects[offscreenIndex].right + offset);
+            -scrollRect.width + storyRects[offscreenIndex].right + offset
+        );
     },
 
     /**
@@ -170,7 +168,7 @@ TopStoriesNavigation.prototype = {
      * @memberof! TopStoriesNavigation.prototype
      * @param  {Number} x
      */
-    'scrollTo': function(x) {
+    scrollTo: function(x) {
         if (this._scroller !== null) {
             this._scroller.destroy();
             this._scroller = null;
@@ -178,26 +176,32 @@ TopStoriesNavigation.prototype = {
 
         // Clamp the scroll left
         var left = clamp(
-            0, this._elScroll.scrollWidth - this._elScroll.offsetWidth,
-            this._elScroll.scrollLeft + x);
+            0,
+            this._elScroll.scrollWidth - this._elScroll.offsetWidth,
+            this._elScroll.scrollLeft + x
+        );
         left -= this._elScroll.scrollLeft;
 
         this._scroller = new ElementScroll(this._elScroll);
         this._scroller.on('complete', onElementScrollFinish.bind(this));
         this._scroller.on('stop', onElementScrollFinish.bind(this));
-        this._scroller.start({
-            'x': left,
-            'y': 0
-        }, SCROLL_DURATION, {
-            'stopOnUserInput': false
-        });
+        this._scroller.start(
+            {
+                x: left,
+                y: 0
+            },
+            SCROLL_DURATION,
+            {
+                stopOnUserInput: false
+            }
+        );
     },
 
     /**
      * Show the navigation buttons
      */
-    showNavigation: function(){
-        if(!hasClass(this.el, CLS_HAS_NAVIGATION)){
+    showNavigation: function() {
+        if (!hasClass(this.el, CLS_HAS_NAVIGATION)) {
             addClass(this.el, CLS_HAS_NAVIGATION);
         }
     },
@@ -205,8 +209,8 @@ TopStoriesNavigation.prototype = {
     /**
      * Hide the navigation buttons
      */
-    hideNavigation: function(){
-        if(hasClass(this.el, CLS_HAS_NAVIGATION)){
+    hideNavigation: function() {
+        if (hasClass(this.el, CLS_HAS_NAVIGATION)) {
             removeClass(this.el, CLS_HAS_NAVIGATION);
         }
     },
@@ -214,8 +218,8 @@ TopStoriesNavigation.prototype = {
     /**
      * Disable scrolling on the card list
      */
-    disableScroll: function(){
-        if(!hasClass(this.el, CLS_HAS_NO_SCROLL)){
+    disableScroll: function() {
+        if (!hasClass(this.el, CLS_HAS_NO_SCROLL)) {
             addClass(this.el, CLS_HAS_NO_SCROLL);
         }
     },
@@ -223,14 +227,12 @@ TopStoriesNavigation.prototype = {
     /**
      * Enable scrolling on the card list
      */
-    enableScroll: function(){
-        if(hasClass(this.el, CLS_HAS_NO_SCROLL)){
+    enableScroll: function() {
+        if (hasClass(this.el, CLS_HAS_NO_SCROLL)) {
             removeClass(this.el, CLS_HAS_NO_SCROLL);
         }
     }
-
 };
-
 
 /**
  * Disables a button
@@ -298,12 +300,12 @@ function onElementScrollFinish() {
 function normaliseToElement(elRect) {
     return function normaliseToElement_inner(rect) {
         return {
-            'bottom': rect.bottom - elRect.top,
-            'height': rect.height,
-            'left': rect.left - elRect.left,
-            'right': rect.right - elRect.left,
-            'top': rect.top - elRect.top,
-            'width': rect.width
+            bottom: rect.bottom - elRect.top,
+            height: rect.height,
+            left: rect.left - elRect.left,
+            right: rect.right - elRect.left,
+            top: rect.top - elRect.top,
+            width: rect.width
         };
     };
 }
@@ -365,4 +367,3 @@ function onNativeAdStop(e) {
 }
 
 export default TopStoriesNavigation;
-
