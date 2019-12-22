@@ -55,7 +55,7 @@ var VERSION_1 = {
         this.consentData = value;
         this.processConsentData.call(this);
 
-        if (beforeValue !== this.consent) {
+        if (beforeValue !== this.consentData) {
             this._emitChange({
                 consentValue: this.consentData
             });
@@ -113,7 +113,7 @@ var VERSION_2 = {
         this.consentData = value;
         this.processConsentData.call(this);
 
-        if (beforeValue !== this.consent) {
+        if (beforeValue !== this.consentData) {
             this._emitChange({
                 consentValue: this.consentData
             });
