@@ -14,7 +14,7 @@ import SubscribeBarManager from '@cnbritain/merlin-www-subscribe-bar'; // eslint
 import CommonImage from '@cnbritain/merlin-www-image';
 import store from '@cnbritain/merlin-www-js-store';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
-// import ComscoreManager from '@cnbritain/merlin-www-js-gatracker/js/ComscoreManager';
+import ComscoreManager from '@cnbritain/merlin-www-js-gatracker/js/ComscoreManager';
 import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
 import SkimlinksManager from '@cnbritain/merlin-www-js-gatracker/js/SkimlinksManager';
 import FacebookPixelManager from '@cnbritain/merlin-www-js-gatracker/js/FacebookPixelManager';
@@ -72,9 +72,13 @@ export default function init(config) {
     });
 
     GATracker.init();
+    ComscoreManager.init();
     OneTrustManager.on('ready', function() {
         if (this.consentedStrictlyCookies) TypekitManager.loadScript();
-        if (this.consentedPerformanceCookies) GATracker.loadGAScript();
+        if (this.consentedPerformanceCookies) {
+            GATracker.loadGAScript();
+            ComscoreManager.sendBeacon();
+        }
         if (this.consentedTargetingCookies) {
             SkimlinksManager.loadScript();
             FacebookPixelManager.loadScript();
@@ -82,6 +86,12 @@ export default function init(config) {
     });
     OneTrustManager.on('change', function() {
         GATracker.setConsent(this.consentedPerformanceCookies);
+        if (this.consentedPerformanceCookies) {
+            ComscoreManager.setConsent(1);
+        } else {
+            // this technically wont happen
+            ComscoreManager.setConsent(0);
+        }
     });
 
     initChain();
@@ -93,18 +103,6 @@ export default function init(config) {
     initLinkTracking();
     initInfobarTracking();
     initSubscribebarTracking();
-
-    // TODO: turn this back on
-    // ComscoreManager.init();
-    // OneTrustManager.loadConsent();
-    // if(!OneTrustManager.isDialogClosed){
-    //     ComscoreManager.setConsent(null);
-    // } else if(OneTrustManager.consentedStrictlyCookies){
-    //     ComscoreManager.setConsent(1);
-    // } else {
-    //     ComscoreManager.setConsent(0);
-    // }
-    // ComscoreManager.sendBeacon();
 }
 
 export function initInternationalRedirect() {
