@@ -37,6 +37,8 @@ import {
     HAS_ADS_BLOCKED
 } from './Utils';
 import AdBlocked from './AdBlock';
+import Ad from './Ad';
+import AdGroup from './AdGroup';
 
 var AD_CLS = '.da__container';
 var AD_LAZYLOAD_THRESHOLD = 100;
