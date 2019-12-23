@@ -19,6 +19,7 @@ import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManag
 import SkimlinksManager from '@cnbritain/merlin-www-js-gatracker/js/SkimlinksManager';
 import FacebookPixelManager from '@cnbritain/merlin-www-js-gatracker/js/FacebookPixelManager';
 import TypekitManager from '@cnbritain/merlin-www-js-gatracker/js/TypekitManager';
+import PermutiveManager from '@cnbritain/merlin-www-js-gatracker/js/PermutiveManager';
 import SectionCardList from '@cnbritain/merlin-www-section-card-list';
 import SiteFooter from '@cnbritain/merlin-www-footer';
 import { AdManager, AdDebugger, AdUtils } from '@cnbritain/merlin-www-ads';
@@ -57,7 +58,8 @@ export default function init(config) {
         OneTrustManager: OneTrustManager,
         SkimlinksManager: SkimlinksManager,
         FacebookPixelManager: FacebookPixelManager,
-        TypekitManager: TypekitManager
+        TypekitManager: TypekitManager,
+        PermutiveManager: PermutiveManager
     });
 
     setupHtmlClasses();
@@ -86,6 +88,7 @@ export default function init(config) {
         if (this.consentedTargetingCookies) {
             SkimlinksManager.loadScript();
             FacebookPixelManager.loadScript();
+            PermutiveManager.loadScript();
         }
     });
     OneTrustManager.on('change', function() {
