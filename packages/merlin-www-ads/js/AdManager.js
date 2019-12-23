@@ -1,10 +1,7 @@
 'use strict';
 /* globals googletag */
 
-import Ad from './Ad';
-import AdGroup from './AdGroup';
 import EventEmitter from 'eventemitter2';
-
 import {
     addEvent,
     assign,
@@ -21,7 +18,6 @@ import {
     throttle
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
-
 import {
     AD_STATES,
     getAdTypeBySize,
@@ -59,25 +55,28 @@ function AdManager(){
 }
 
 AdManager.prototype = inherit(EventEmitter.prototype, {
+    constructor: AdManager,
 
-    'constructor': AdManager,
-
-    'createAd': function(el, options){
+    createAd: function(el, options) {
         var config = options || {};
-        return new Ad(el, this,config);
+        return new Ad(el, this, config);
     },
 
-    'display': function(el){
+    display: function(el) {
         var adAttributes = parseAdAttributes(el);
         el.setAttribute('id', 'ad_' + randomUUID());
         var ad = this.createAd(el, adAttributes);
         return this.register(ad)
-            .then(function(){
-                return this.render(ad);
-            }.bind(this))
-            .then(function(){
-                return this.refresh(ad);
-            }.bind(this));
+            .then(
+                function() {
+                    return this.render(ad);
+                }.bind(this)
+            )
+            .then(
+                function() {
+                    return this.refresh(ad);
+                }.bind(this)
+            );
     },
 
     /**
@@ -88,14 +87,17 @@ AdManager.prototype = inherit(EventEmitter.prototype, {
      * @param  {Function}  options.filter  The filter functions
      * @return {Array.<HTMLElement>}
      */
-    'getSlots': function getSlots(options){
-        var _options = assign({
-            'cls': AD_CLS,
-            'el': document,
-            'filter': null
-        }, options);
+    getSlots: function getSlots(options) {
+        var _options = assign(
+            {
+                cls: AD_CLS,
+                el: document,
+                filter: null
+            },
+            options
+        );
         var arr = cloneArray(_options.el.querySelectorAll(_options.cls));
-        if(!_options.filter) return arr;
+        if (!_options.filter) return arr;
         return arr.filter(_options.filter);
     },
 
@@ -108,32 +110,62 @@ AdManager.prototype = inherit(EventEmitter.prototype, {
 
         this.initialised = true;
 
-        if(!HAS_ADS_BLOCKED){
-            return loadAdLibraries()
-                .then(function(){
-                    pushToGoogleTag(function init_googletag(res){
-                        // Doing this means we have to fire a refresh event when we want an
-                        // ad. This allows us to do SRA but also roadblocks and single
-                        // request ads like in-reads
-                        googletag.pubads().disableInitialLoad();
-                        // Single page request to allow roadblocks
-                        googletag.pubads().enableSingleRequest();
-                        googletag.pubads().enableAsyncRendering();
-                        googletag.pubads().collapseEmptyDivs( true );
+        if (!HAS_ADS_BLOCKED) {
+            return loadAdLibraries().then(
+                function() {
+                    pushToGoogleTag(
+                        function init_googletag(res) {
+                            // Doing this means we have to fire a refresh event when we want an
+                            // ad. This allows us to do SRA but also roadblocks and single
+                            // request ads like in-reads
+                            googletag.pubads().disableInitialLoad();
+                            // Single page request to allow roadblocks
+                            googletag.pubads().enableSingleRequest();
+                            googletag.pubads().enableAsyncRendering();
+                            googletag.pubads().collapseEmptyDivs(true);
 
-                        if(OneTrustManager.consentedTargetingCookies){
-                            googletag.pubads().setRequestNonPersonalizedAds(false);    
-                        } else {
-                            googletag.pubads().setRequestNonPersonalizedAds(true);    
-                        }
+                            if (OneTrustManager.consentedTargetingCookies) {
+                                googletag
+                                    .pubads()
+                                    .setRequestNonPersonalizedAds(false);
+                            } else {
+                                googletag
+                                    .pubads()
+                                    .setRequestNonPersonalizedAds(true);
+                            }
 
-                        googletag.enableServices();
-                        // Events
-                        googletag.pubads().addEventListener(
-                            'slotRenderEnded', onSlotRenderEnded.bind(this));
-                        res();
-                    }.bind(this));
-                }.bind(this));
+                            // Permutive
+                            if (OneTrustManager.consentedTargetingCookies) {
+                                if (
+                                    window.googletag
+                                        .pubads()
+                                        .getTargeting('permutive').length === 0
+                                ) {
+                                    var kvs = window.localStorage.getItem(
+                                        '_pdfps'
+                                    );
+                                    window.googletag
+                                        .pubads()
+                                        .setTargeting(
+                                            'permutive',
+                                            kvs ? JSON.parse(kvs) : []
+                                        );
+                                }
+                            }
+
+                            googletag.enableServices();
+                            // Events
+                            googletag
+                                .pubads()
+                                .addEventListener(
+                                    'slotRenderEnded',
+                                    onSlotRenderEnded.bind(this)
+                                );
+                            res();
+                        }.bind(this)
+                    );
+                }.bind(this)
+            );
         } else {
             return Promise.resolve();
         }
