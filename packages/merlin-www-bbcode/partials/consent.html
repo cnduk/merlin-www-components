@@ -1,0 +1,44 @@
+<div class="bb-embed {{# style.cls }} {{ style.cls }}{{/ style.cls }}" data-consent-type="{{ data.consent_type }}">
+  <p class="bb-p">{{ data.consent_message }}</p>
+  <template class="bb-embed__template">
+    {{# state.is_brightcove }}
+        {{> @cnbritain/merlin-www-bbcode/brightcove }}
+    {{/ state.is_brightcove }}
+    {{# state.is_facebook }}
+        {{> @cnbritain/merlin-www-bbcode/facebook }}
+    {{/ state.is_facebook }}
+    {{# state.is_twitter }}
+        {{> @cnbritain/merlin-www-bbcode/twitter }}
+    {{/ state.is_twitter }}
+    {{# state.is_instagram }}
+        {{> @cnbritain/merlin-www-bbcode/instagram }}
+    {{/ state.is_instagram }}
+    {{# state.is_vine }}
+        {{> @cnbritain/merlin-www-bbcode/vine }}
+    {{/ state.is_vine }}
+    {{# state.is_imgur }}
+        {{> @cnbritain/merlin-www-bbcode/imgur }}
+    {{/ state.is_imgur }}
+    {{# state.is_spotify }}
+        {{> @cnbritain/merlin-www-bbcode/spotify }}
+    {{/ state.is_spotify }}
+    {{# state.is_skyscanner }}
+        {{> @cnbritain/merlin-www-bbcode/skyscanner }}
+    {{/ state.is_skyscanner }}
+    {{# state.is_giphy }}
+        {{> @cnbritain/merlin-www-bbcode/giphy }}
+    {{/ state.is_giphy }}
+    {{# state.is_map }}
+        {{> @cnbritain/merlin-www-bbcode/map }}
+    {{/ state.is_map }}
+    {{# state.is_youtube }}
+        {{> @cnbritain/merlin-www-bbcode/youtube }}
+    {{/ state.is_youtube }}
+    {{# state.is_vimeo }}
+        {{> @cnbritain/merlin-www-bbcode/vimeo }}
+    {{/ state.is_vimeo }}
+    {{# state.is_interactive }}
+        {{> @cnbritain/merlin-www-bbcode/interactive }}
+    {{/ state.is_interactive }}
+  </template>
+</div>

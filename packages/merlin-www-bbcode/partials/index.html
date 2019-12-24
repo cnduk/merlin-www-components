@@ -1,3 +1,49 @@
+{{# state.is_consent }}
+    {{> @cnbritain/merlin-www-bbcode/consent }}
+{{/ state.is_consent }}
+{{! Fallback in case other things are using this template }}
+{{^ state.is_consent }}
+    {{# state.is_brightcove }}
+        {{> @cnbritain/merlin-www-bbcode/brightcove }}
+    {{/ state.is_brightcove }}
+    {{# state.is_facebook }}
+        {{> @cnbritain/merlin-www-bbcode/facebook }}
+    {{/ state.is_facebook }}
+    {{# state.is_twitter }}
+        {{> @cnbritain/merlin-www-bbcode/twitter }}
+    {{/ state.is_twitter }}
+    {{# state.is_instagram }}
+        {{> @cnbritain/merlin-www-bbcode/instagram }}
+    {{/ state.is_instagram }}
+    {{# state.is_vine }}
+        {{> @cnbritain/merlin-www-bbcode/vine }}
+    {{/ state.is_vine }}
+    {{# state.is_imgur }}
+        {{> @cnbritain/merlin-www-bbcode/imgur }}
+    {{/ state.is_imgur }}
+    {{# state.is_spotify }}
+        {{> @cnbritain/merlin-www-bbcode/spotify }}
+    {{/ state.is_spotify }}
+    {{# state.is_skyscanner }}
+        {{> @cnbritain/merlin-www-bbcode/skyscanner }}
+    {{/ state.is_skyscanner }}
+    {{# state.is_giphy }}
+        {{> @cnbritain/merlin-www-bbcode/giphy }}
+    {{/ state.is_giphy }}
+    {{# state.is_map }}
+        {{> @cnbritain/merlin-www-bbcode/map }}
+    {{/ state.is_map }}
+    {{# state.is_youtube }}
+        {{> @cnbritain/merlin-www-bbcode/youtube }}
+    {{/ state.is_youtube }}
+    {{# state.is_vimeo }}
+        {{> @cnbritain/merlin-www-bbcode/vimeo }}
+    {{/ state.is_vimeo }}
+    {{# state.is_interactive }}
+        {{> @cnbritain/merlin-www-bbcode/interactive }}
+    {{/ state.is_interactive }}
+{{/ state.is_consent }}
+
 {{# state.is_note }}
     {{> @cnbritain/merlin-www-bbcode/note }}
 {{/ state.is_note }}
@@ -29,36 +75,6 @@
     {{> @cnbritain/merlin-www-bbcode/image }}
 {{/ state.is_image }}
 
-{{# state.is_youtube }}
-    {{> @cnbritain/merlin-www-bbcode/youtube }}
-{{/ state.is_youtube }}
-{{# state.is_vimeo }}
-    {{> @cnbritain/merlin-www-bbcode/vimeo }}
-{{/ state.is_vimeo }}
-{{# state.is_brightcove }}
-    {{> @cnbritain/merlin-www-bbcode/brightcove }}
-{{/ state.is_brightcove }}
-
-{{# state.is_twitter }}
-    {{> @cnbritain/merlin-www-bbcode/twitter }}
-{{/ state.is_twitter }}
-{{# state.is_facebook }}
-    {{> @cnbritain/merlin-www-bbcode/facebook }}
-{{/ state.is_facebook }}
-{{# state.is_instagram }}
-    {{> @cnbritain/merlin-www-bbcode/instagram }}
-{{/ state.is_instagram }}
-{{# state.is_vine }}
-    {{> @cnbritain/merlin-www-bbcode/vine }}
-{{/ state.is_vine }}
-{{# state.is_imgur }}
-    {{> @cnbritain/merlin-www-bbcode/imgur }}
-{{/ state.is_imgur }}
-
-{{# state.is_interactive }}
-    {{> @cnbritain/merlin-www-bbcode/interactive }}
-{{/ state.is_interactive }}
-
 {{# state.is_show_gallery }}
     {{> @cnbritain/merlin-www-bbcode/show-gallery-card }}
 {{/ state.is_show_gallery }}
@@ -75,10 +91,6 @@
     {{> @cnbritain/merlin-www-bbcode/article-card }}
 {{/ state.is_article }}
 
-{{# state.is_spotify }}
-    {{> @cnbritain/merlin-www-bbcode/spotify }}
-{{/ state.is_spotify }}
-
 {{# state.is_timed_content }}
     {{> @cnbritain/merlin-www-bbcode/timed-content }}
 {{/ state.is_timed_content }}
@@ -86,18 +98,6 @@
 {{# state.is_callout }}
     {{> @cnbritain/merlin-www-bbcode/callout }}
 {{/ state.is_callout }}
-
-{{# state.is_skyscanner }}
-    {{> @cnbritain/merlin-www-bbcode/skyscanner }}
-{{/ state.is_skyscanner }}
-
-{{# state.is_giphy }}
-    {{> @cnbritain/merlin-www-bbcode/giphy }}
-{{/ state.is_giphy }}
-
-{{# state.is_map }}
-    {{> @cnbritain/merlin-www-bbcode/map }}
-{{/ state.is_map }}
 
 {{# state.is_newsletter }}
     {{> @cnbritain/merlin-www-bbcode/newsletter }}
