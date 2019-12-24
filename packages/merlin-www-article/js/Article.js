@@ -7,6 +7,7 @@ import {
     inherit,
     removeClass
 } from '@cnbritain/merlin-www-js-utils/js/functions';
+import bbcode from '@cnbritain/merlin-www-bbcode';
 import {CLS_INFINITE_BTN, CLS_ARTICLE_GALLERY} from './constants';
 import Gallery from './Gallery';
 import {
@@ -61,9 +62,11 @@ Article.prototype = inherit(EventEmitter.prototype, {
 
     '_init': function _init() {
 
+        bbcode.init();
+
         // Due instagram being a crap script, we stop oembeds from loading
         // in their script and load it in once and trigger instagram.t
-        updateSocialEmbeds();
+        // updateSocialEmbeds();
 
         // Check if the article contains a gallery
         var gallery = this.el.querySelector(CLS_ARTICLE_GALLERY);
