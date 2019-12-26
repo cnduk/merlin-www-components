@@ -1,4 +1,5 @@
 'use strict';
+/* globals Optanon */
 
 import EventEmitter from 'eventemitter2';
 import {

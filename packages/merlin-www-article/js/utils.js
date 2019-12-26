@@ -123,8 +123,7 @@ export function updateSocialEmbeds() {
             function updateSocialEmbeds_error() {
                 console.error('Error', arguments);
             }
-        )
-        ['catch'](function updateSocialEmbeds_catch() {
+        )['catch'](function updateSocialEmbeds_catch() {
             console.error('Error', arguments);
         });
 }
