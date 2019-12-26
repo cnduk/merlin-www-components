@@ -51,7 +51,9 @@ var VERSION_1 = {
     setConsent: function setConsent(value) {
         var beforeValue = this.consentData;
 
-        setCookie(this.ONETRUST_COOKIE, value);
+        if (this.ready && this.consentedStrictlyCookies) {
+            setCookie(this.ONETRUST_COOKIE, value);
+        }
         this.consentData = value;
         this.processConsentData.call(this);
 
@@ -109,7 +111,9 @@ var VERSION_2 = {
     setConsent: function setConsent(value) {
         var beforeValue = this.consentData;
 
-        setCookie(this.ONETRUST_COOKIE, value);
+        if (this.ready && this.consentedStrictlyCookies) {
+            setCookie(this.ONETRUST_COOKIE, value);
+        }
         this.consentData = value;
         this.processConsentData.call(this);
 
