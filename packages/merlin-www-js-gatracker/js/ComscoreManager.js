@@ -5,9 +5,8 @@ import {
     loadScript,
     setCookie
 } from '@cnbritain/merlin-www-js-utils/js/functions';
-import {
-    hasCookiesEnabled
-} from '@cnbritain/merlin-www-js-utils/js/detect';
+import { hasCookiesEnabled } from '@cnbritain/merlin-www-js-utils/js/detect';
+import OneTrustManager from './OneTrustManager';
 
 function ComscoreManager() {
     EventEmitter.call(this, {
@@ -31,7 +30,9 @@ ComscoreManager.prototype = inherit(EventEmitter.prototype, {
     },
     setConsent: function setConsent(value) {
         // console.log('Setting cs_ucfr=' + value);
-        setCookie(this.COMSCORE_COOKIE, value);
+        if (OneTrustManager.ready && OneTrustManager.consentedStrictlyCookies) {
+            setCookie(this.COMSCORE_COOKIE, value);
+        }
         this.consent = value;
     },
     init: function init() {
