@@ -623,6 +623,12 @@ export function promisifyTimeout(ms) {
  * @return {Promise}
  */
 export function pushToGoogleTag(callback) {
+    // if cookies are disabled for ads, we would not have initialised
+    // googletag. this allows things to sail smoothly whilst warning us.
+    if (!window.googletag) {
+        console.warn('googletag not found');
+        return Promise.resolve();
+    }
     return new Promise(function pushToGoogleTag_promise(resolve, reject) {
         // googletag seems to be swalling errors so we catch any errors we make
         // and reject the promise and then throw the rejection.
