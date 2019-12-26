@@ -6,10 +6,10 @@
  * @enum {Number}
  */
 export var ARTICLE_TYPES = {
-    'UNKNOWN': -1,
-    'ARTICLE': 0,
-    'GALLERY': 1,
-    'VIDEO': 2,
+    UNKNOWN: -1,
+    ARTICLE: 0,
+    GALLERY: 1,
+    VIDEO: 2,
     'SHOW-SUMMARY': 3
 };
 
@@ -25,3 +25,4 @@ export var CLS_ARTICLE_VIDEO_PLAYER_PLAYLIST = '.js-v-player-playlist';
 export var CLS_ARTICLE_VIDEO_SECTION_PLAYLIST = '.js-v-section-playlist';
 export var CLS_IMAGE_NAVIGATION = '.js-g-image-nav';
 export var CLS_INFINITE_BTN = '.js-a-gallery__message-btn';
+export var CLS_CONSENT = '.js-a-video__consent';

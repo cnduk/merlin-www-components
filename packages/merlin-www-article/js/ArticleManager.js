@@ -16,18 +16,17 @@ import {
     transferQueryArgs,
     updateQueryString
 } from '@cnbritain/merlin-www-js-utils/js/functions';
-import {
-    hasHistory
-} from '@cnbritain/merlin-www-js-utils/js/detect';
+import { hasHistory } from '@cnbritain/merlin-www-js-utils/js/detect';
 import InfiniteScroll from '@cnbritain/merlin-www-js-infinitescroll';
-import {CLS_ARTICLE_VIDEO_BODY, CLS_ARTICLE_VIDEO_EMBED} from './constants';
+import { CLS_ARTICLE_VIDEO_BODY, CLS_ARTICLE_VIDEO_EMBED } from './constants';
 import {
     bubbleEvent,
     dispatchSimpleReach,
     dispatchSimpleReachStop,
     getStorage,
     loadYoutubeSubscribe,
-    setStorage
+    setStorage,
+    loadVideoPlayerEmbed
 } from './utils';
 import * as events from './events';
 import Article from './Article';
@@ -39,12 +38,12 @@ var isFirstArticle = true;
 
 function ArticleManager() {
     EventEmitter.call(this, {
-        'wildcard': true
+        wildcard: true
     });
 
     this._hooks = {
-        'resize': null,
-        'scroll': null
+        resize: null,
+        scroll: null
     };
     this._infiniteScroll = null;
     this._pageHeight = Number.Infinity;
@@ -57,8 +56,7 @@ function ArticleManager() {
 }
 
 ArticleManager.prototype = inherit(EventEmitter.prototype, {
-
-    '_triggerFocusBlur': function(index) {
+    _triggerFocusBlur: function(index) {
         var article = null;
         var eve = null;
 
@@ -74,15 +72,16 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         article.emit('focus', eve);
     },
 
-    '_onVideoChange': function _onVideoChange(e) {
-
+    _onVideoChange: function _onVideoChange(e) {
         var config = VideoPlayer.playlist.videoConfigs[e.videoIndex];
 
         // Render video
-        document.querySelector(CLS_ARTICLE_VIDEO_EMBED).innerHTML = config.embed;
+        document.querySelector(CLS_ARTICLE_VIDEO_EMBED).innerHTML =
+            config.embed;
 
         // Render body content
-        document.querySelector(CLS_ARTICLE_VIDEO_BODY).innerHTML = config.content;
+        document.querySelector(CLS_ARTICLE_VIDEO_BODY).innerHTML =
+            config.content;
 
         // Update article data-attrs
         var articleEl = document.querySelector('.a-main');
@@ -104,6 +103,7 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
             index = this.articles.indexOf(article);
         }
 
+        loadVideoPlayerEmbed();
         loadYoutubeSubscribe();
 
         // Focus and blur events
@@ -111,8 +111,7 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         this._triggerFocusBlur(index);
     },
 
-    '_init': function _init() {
-
+    _init: function _init() {
         // Resize
         onPageLoad(this.resize.bind(this, 0));
 
@@ -121,6 +120,7 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
             bubbleEvent(VideoPlayer, this, 'videoselect');
             bubbleEvent(VideoPlayer, this, 'videochange');
             VideoPlayer.on('videochange', this._onVideoChange.bind(this));
+            loadVideoPlayerEmbed();
         } else {
             // Scroll listener for focus and blur events
             this._hooks.scroll = throttle(onWindowScroll, 33, this);
@@ -130,7 +130,7 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         this.on('focus', onArticleFocus);
     },
 
-    '_bindArticleBubbles': function _bindArticleBubbles(article) {
+    _bindArticleBubbles: function _bindArticleBubbles(article) {
         bubbleEvent(article, this, 'focus');
         bubbleEvent(article, this, 'blur');
         bubbleEvent(article, this, 'imagefocus');
@@ -139,15 +139,19 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         bubbleEvent(article, this, 'expand');
     },
 
-    'add': function add(el, _options) {
-        var config = assign({
-            'ads': null,
-            'analytics': null,
-            'infinite': false,
-            'simplereach': null
-        }, cloneObjectDeep(_options), {
-            'manager': this
-        });
+    add: function add(el, _options) {
+        var config = assign(
+            {
+                ads: null,
+                analytics: null,
+                infinite: false,
+                simplereach: null
+            },
+            cloneObjectDeep(_options),
+            {
+                manager: this
+            }
+        );
 
         var article = new Article(el, config);
         this._bindArticleBubbles(article);
@@ -159,9 +163,9 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         return article;
     },
 
-    'constructor': ArticleManager,
+    constructor: ArticleManager,
 
-    'disableInfiniteScroll': function disableInfiniteScroll() {
+    disableInfiniteScroll: function disableInfiniteScroll() {
         if (this._infiniteScroll === null) return;
 
         this._infiniteScroll.disable();
@@ -175,26 +179,31 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         this._hooks.scroll = null;
     },
 
-    'enableInfiniteScroll': function enableInfiniteScroll() {
+    enableInfiniteScroll: function enableInfiniteScroll() {
         if (this._infiniteScroll !== null) return;
 
         this._infiniteScroll = new InfiniteScroll({
-            'el': window,
-            'trigger': infiniteScrollTrigger.bind(this),
-            'url': infiniteScrollUrl
+            el: window,
+            trigger: infiniteScrollTrigger.bind(this),
+            url: infiniteScrollUrl
         });
 
         this._infiniteScroll.on('loadError', onInfiniteLoadError.bind(this));
-        this._infiniteScroll.on('loadComplete',
-            onInfiniteLoadComplete.bind(this));
+        this._infiniteScroll.on(
+            'loadComplete',
+            onInfiniteLoadComplete.bind(this)
+        );
         this._infiniteScroll.enable();
 
         this._hooks.resize = debounce(
-            this.resize, INFINITE_RESIZE_DEBOUNCE, this);
+            this.resize,
+            INFINITE_RESIZE_DEBOUNCE,
+            this
+        );
         addEvent(window, 'resize', this._hooks.resize);
     },
 
-    'getArticleByUid': function getArticleByUid(uid) {
+    getArticleByUid: function getArticleByUid(uid) {
         var length = this.articles.length;
         while (length--) {
             if (this.articles[length].uid === uid) return this.articles[length];
@@ -202,15 +211,15 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
         return false;
     },
 
-    'resize': function resize(_start, _length) {
+    resize: function resize(_start, _length) {
         if (arguments.length === 0) return;
 
         this._pageHeight = document.body.scrollHeight - window.innerHeight;
         this._windowHeight = window.innerHeight / 2;
 
         var start = _start < 0 ? 0 : parseInt(_start);
-        var length = (
-            _length === undefined ? this.articles.length : parseInt(_length));
+        var length =
+            _length === undefined ? this.articles.length : parseInt(_length);
         if (length < 1) return;
 
         var articles = this.articles.slice(start, start + length);
@@ -218,30 +227,24 @@ ArticleManager.prototype = inherit(EventEmitter.prototype, {
             article.resize();
         });
     }
-
 });
 
 var manager = new ArticleManager();
 export default manager;
 
-
 function infiniteScrollTrigger(scrollY) {
     return scrollY >= this._pageHeight - INFINITE_BOTTOM_THRESHOLD;
 }
 
-
 function infiniteScrollUrl() {
-    var referralUid = validateArticleUid(
-        getStorage('article_referral_uid'));
-    var excludeUid = validateArticleUid(
-        getStorage('article_exclude_uid'));
+    var referralUid = validateArticleUid(getStorage('article_referral_uid'));
+    var excludeUid = validateArticleUid(getStorage('article_exclude_uid'));
     var url = updateQueryString(getStorage('infinite_url'), {
         referral_uid: referralUid,
         exclude_uid: excludeUid
     });
     return location.origin + url;
 }
-
 
 /**
  * Makes sure that our article uid only contains characters we allow
@@ -277,7 +280,6 @@ function onWindowScroll() {
         this._triggerFocusBlur(i);
         break;
     }
-
 }
 
 function onInfiniteLoadError(e) {
@@ -286,7 +288,6 @@ function onInfiniteLoadError(e) {
 }
 
 function onInfiniteLoadComplete(e) {
-
     var responseText = e.originalRequest.responseText;
     var responseJSON = null;
     try {
@@ -303,7 +304,6 @@ function onInfiniteLoadComplete(e) {
     if (!responseJSON.hasOwnProperty('template')) {
         this.disableInfiniteScroll();
         return;
-
     } else if (responseJSON.stop) {
         this.disableInfiniteScroll();
     }
@@ -322,12 +322,18 @@ function onInfiniteLoadComplete(e) {
     articleEl = articleEl[articleEl.length - 1];
 
     var ads = null;
-    if (responseJSON.hasOwnProperty('config_ad') && responseJSON.config_ad !== null) {
+    if (
+        responseJSON.hasOwnProperty('config_ad') &&
+        responseJSON.config_ad !== null
+    ) {
         ads = responseJSON.config_ad.data;
     }
 
     var analytics = null;
-    if (responseJSON.hasOwnProperty('config_analytics') && responseJSON.config_analytics !== null) {
+    if (
+        responseJSON.hasOwnProperty('config_analytics') &&
+        responseJSON.config_analytics !== null
+    ) {
         analytics = responseJSON.config_analytics.data;
         // Transfer current query arguments from the current url over to the
         // new location value
@@ -335,15 +341,18 @@ function onInfiniteLoadComplete(e) {
     }
 
     var simplereach = null;
-    if (responseJSON.hasOwnProperty('config_simplereach') && responseJSON.config_simplereach !== null) {
+    if (
+        responseJSON.hasOwnProperty('config_simplereach') &&
+        responseJSON.config_simplereach !== null
+    ) {
         simplereach = responseJSON.config_simplereach.data;
     }
 
     this.add(articleEl, {
-        'ads': ads,
-        'analytics': analytics,
-        'infinite': true,
-        'simplereach': simplereach
+        ads: ads,
+        analytics: analytics,
+        infinite: true,
+        simplereach: simplereach
     });
 
     // Update any local storage values
@@ -362,7 +371,6 @@ function onInfiniteLoadComplete(e) {
 }
 
 function onArticleFocus(e) {
-
     var article = e.target;
 
     // At the moment, the first article triggers the pageview and simplereach
@@ -392,5 +400,4 @@ function onArticleFocus(e) {
         simplereachConfig['ref_url'] = lastUrl;
         dispatchSimpleReach(simplereachConfig);
     }
-
 }

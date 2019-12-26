@@ -5,12 +5,12 @@ import CONFIG_BRAND from '@cnbritain/merlin-www-common';
 import {
     getNamespaceKey,
     loadScript,
-    loadSocialScripts
+    loadSocialScripts,
+    insertBefore,
+    removeElement
 } from '@cnbritain/merlin-www-js-utils/js/functions';
-import {
-    ARTICLE_TYPES
-} from './constants';
-
+import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
+import { ARTICLE_TYPES, CLS_CONSENT } from './constants';
 
 /**
  * Bubbles an event from the src to the dest
@@ -38,8 +38,9 @@ export function hasSimpleReach() {
  * @return {Promise}
  */
 export function loadSimplereach() {
-    var url = (document.location.protocol +
-        '//d8rk54i4mohrb.cloudfront.net/js/reach.js');
+    var url =
+        document.location.protocol +
+        '//d8rk54i4mohrb.cloudfront.net/js/reach.js';
     return loadScript(url);
 }
 
@@ -73,15 +74,14 @@ export function dispatchSimpleReach(config) {
         }
         return Promise.resolve();
     } else {
-        return loadSimplereach()
-            .then(function dispatchSimpleReach_inner() {
-                if (!config) {
-                    dispatchSimpleReachStop();
-                } else {
-                    dispatchSimpleReachCollect(config);
-                }
-                return Promise.resolve();
-            });
+        return loadSimplereach().then(function dispatchSimpleReach_inner() {
+            if (!config) {
+                dispatchSimpleReachStop();
+            } else {
+                dispatchSimpleReachCollect(config);
+            }
+            return Promise.resolve();
+        });
     }
 }
 
@@ -91,36 +91,40 @@ export function dispatchSimpleReach(config) {
  */
 export function updateSocialEmbeds() {
     return loadSocialScripts()
-        .then(function updateSocialEmbeds_inner() {
-            // Instagram
-            window.instgrm.Embeds.process();
+        .then(
+            function updateSocialEmbeds_inner() {
+                // Instagram
+                window.instgrm.Embeds.process();
 
-            // Twitter
-            window.twttr.widgets.load();
+                // Twitter
+                window.twttr.widgets.load();
 
-            // Facebook
-            window.FB.init({
-                'version': 'v2.3',
-                'xfbml': true
-            });
+                // Facebook
+                window.FB.init({
+                    version: 'v2.3',
+                    xfbml: true
+                });
 
-            // Vine dont need to do anything as it uses postMessage and
-            // maintains itself
+                // Vine dont need to do anything as it uses postMessage and
+                // maintains itself
 
-            // Imgur, taken pretty much from their script
-            if (window.imgurEmbed.createIframe) {
-                window.imgurEmbed.createIframe();
-            } else {
-                window.imgurEmbed.tasks++;
+                // Imgur, taken pretty much from their script
+                if (window.imgurEmbed.createIframe) {
+                    window.imgurEmbed.createIframe();
+                } else {
+                    window.imgurEmbed.tasks++;
+                }
+
+                // Skyscanner
+                window.skyscanner.widgets.load();
+
+                return Promise.resolve();
+            },
+            function updateSocialEmbeds_error() {
+                console.error('Error', arguments);
             }
-
-            // Skyscanner
-            window.skyscanner.widgets.load();
-
-            return Promise.resolve();
-        }, function updateSocialEmbeds_error() {
-            console.error('Error', arguments);
-        })['catch'](function updateSocialEmbeds_catch() {
+        )
+        ['catch'](function updateSocialEmbeds_catch() {
             console.error('Error', arguments);
         });
 }
@@ -132,7 +136,7 @@ export function updateSocialEmbeds() {
  */
 export function getArticleTitle(el) {
     var title = el.getAttribute('data-meta-title').trim();
-    if(title !== null && title !== ''){
+    if (title !== null && title !== '') {
         return title;
     } else {
         return el.querySelector('.a-header__title').innerText;
@@ -147,20 +151,19 @@ export function getArticleTitle(el) {
  * We switch protocol to the current one for history.replaceState.
  */
 export function getArticleUrl(el) {
-
     var url = el.getAttribute('data-article-url');
     // https:
-    if(url.substr(0, 6) === 'https:'){
+    if (url.substr(0, 6) === 'https:') {
         url = url.substr(6);
-    // http:
-    } else if(url.substr(0, 5) === 'http:'){
+        // http:
+    } else if (url.substr(0, 5) === 'http:') {
         url = url.substr(5);
     }
 
     return window.location.protocol + url;
 }
 
-export function getArticleUid(el){
+export function getArticleUid(el) {
     return el.getAttribute('data-article-uid');
 }
 
@@ -215,8 +218,10 @@ export function setStorage(key, val) {
  * @return {Boolean}
  */
 export function isArticleGallery(article) {
-    return article.type === ARTICLE_TYPES.GALLERY ||
-        article.type === ARTICLE_TYPES['SHOW-SUMMARY'];
+    return (
+        article.type === ARTICLE_TYPES.GALLERY ||
+        article.type === ARTICLE_TYPES['SHOW-SUMMARY']
+    );
 }
 
 /**
@@ -224,13 +229,65 @@ export function isArticleGallery(article) {
  * buttons
  */
 export function loadYoutubeSubscribe() {
-    var promise = null;
-    if (!('gapi' in window)) {
-        promise = loadScript('https://apis.google.com/js/platform.js');
+    if (
+        OneTrustManager.ready &&
+        !OneTrustManager.consentedSocialNetworkCookies
+    ) {
+        return;
+    } else if (!OneTrustManager.ready) {
+        OneTrustManager.once('ready', loadYoutubeSubscribe);
+        return;
     } else {
-        promise = Promise.resolve();
+        var promise = null;
+        if (!('gapi' in window)) {
+            promise = loadScript('https://apis.google.com/js/platform.js');
+        } else {
+            promise = Promise.resolve();
+        }
+        promise.then(function() {
+            gapi.ytsubscribe.go();
+        });
     }
-    promise.then(function() {
-        gapi.ytsubscribe.go();
-    });
+}
+
+var isVideoPlayerEmbedListening = false;
+export function loadVideoPlayerEmbed() {
+    // console.log('loadVideoPlayerEmbed')
+
+    var hydrate = function() {
+        // console.log('hydrating the player');
+        var elConsent = document.querySelector(CLS_CONSENT);
+        if (!elConsent) return;
+        var elTemplate = elConsent.querySelector('template');
+        var embed = document.importNode(elTemplate.content.children[0], true);
+        insertBefore(embed, elConsent);
+        removeElement(elConsent);
+    };
+    var onChange = function() {
+        // console.log('onChange');
+        if (OneTrustManager.consentedSocialNetworkCookies) {
+            OneTrustManager.off('change', onChange);
+            hydrate();
+        }
+    };
+    var onReady = function() {
+        // console.log('onReady');
+        if (!OneTrustManager.consentedSocialNetworkCookies) {
+            OneTrustManager.on('change', onChange);
+        } else {
+            hydrate();
+        }
+    };
+
+    if (!OneTrustManager.ready && !isVideoPlayerEmbedListening) {
+        isVideoPlayerEmbedListening = true;
+        OneTrustManager.once('ready', onReady);
+    } else {
+        if (OneTrustManager.consentedSocialNetworkCookies) {
+            hydrate();
+        } else if (!isVideoPlayerEmbedListening) {
+            isVideoPlayerEmbedListening = true;
+            OneTrustManager.on('change', onChange);
+        }
+    }
 }
