@@ -8,24 +8,14 @@ import {
     throttle,
     updateQueryString
 } from '@cnbritain/merlin-www-js-utils/js/functions';
-import {
-    AdManager
-} from '@cnbritain/merlin-www-ads';
+import { AdManager } from '@cnbritain/merlin-www-ads';
 import InfiniteScroll from '@cnbritain/merlin-www-js-infinitescroll';
 import SectionCardList from '@cnbritain/merlin-www-section-card-list';
 import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
 
-import {
-    nativeAdShift,
-    nativeAdWaiting
-} from './ads';
-import {
-    createStickGroup
-} from './sticky';
-import {
-    getStorage,
-    setStorage
-} from '../utils';
+import { nativeAdShift, nativeAdWaiting } from './ads';
+import { createStickGroup } from './sticky';
+import { getStorage, setStorage } from '../utils';
 
 var INFINITE_BOTTOM_THRESHOLD = 1000;
 var INFINITE_SCROLL_THROTTLE = 300;
@@ -36,18 +26,17 @@ var hookInfiniteResize = null;
 
 export default function init() {
     infiniteScroller = new InfiniteScroll({
-        'el': window,
-        'throttle': INFINITE_SCROLL_THROTTLE,
-        'trigger': onInfiniteTrigger,
-        'url': onInfiniteUrl
+        el: window,
+        throttle: INFINITE_SCROLL_THROTTLE,
+        trigger: onInfiniteTrigger,
+        url: onInfiniteUrl
     });
     infiniteScroller.on('loadError', onInfiniteLoadError);
     infiniteScroller.on('loadComplete', onInfiniteLoadComplete);
 
     resize();
     onPageLoad(resize);
-    hookInfiniteResize = throttle(
-        resize, INFINITE_RESIZE_THROTTLE);
+    hookInfiniteResize = throttle(resize, INFINITE_RESIZE_THROTTLE);
     addEvent(window, 'resize', hookInfiniteResize);
 
     infiniteScroller.enable();
@@ -60,7 +49,7 @@ export function resize() {
 export function onInfiniteTrigger(scrollY) {
     return (
         nativeAdWaiting === 0 &&
-        scrollY >= (infiniteBodyScrollHeight - INFINITE_BOTTOM_THRESHOLD)
+        scrollY >= infiniteBodyScrollHeight - INFINITE_BOTTOM_THRESHOLD
     );
 }
 
@@ -77,8 +66,14 @@ export function getNextPageUrl(pageUrl, pageNumber, itemShift) {
 }
 
 export function onInfiniteUrl(pageCounter) {
-    return location.origin + getNextPageUrl(
-        getStorage('infinite_url'), pageCounter + 1, nativeAdShift);
+    return (
+        location.origin +
+        getNextPageUrl(
+            getStorage('infinite_url'),
+            pageCounter + 1,
+            nativeAdShift
+        )
+    );
 }
 
 export function destroyInfiniteScroller() {
