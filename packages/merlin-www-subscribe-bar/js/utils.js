@@ -1,8 +1,13 @@
+import {
+    getCookie,
+    setCookie
+} from '@cnbritain/merlin-www-js-utils/js/functions';
+import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
+import { COOKIE_CONFIG_HASH, COOKIE_EXPIRES, VIEW_LIMIT } from './constants';
 
-import {getCookie, setCookie} from '@cnbritain/merlin-www-js-utils/js/functions';
-import {COOKIE_CONFIG_HASH, COOKIE_EXPIRES, VIEW_LIMIT} from './constants';
-
-export function saveConfig(configHash, converted, viewCount){
+export function saveConfig(configHash, converted, viewCount) {
+    if (!OneTrustManager.ready || !OneTrustManager.consentedStrictlyCookies)
+        return;
     var config = {
         configHash: configHash,
         converted: !!converted,
