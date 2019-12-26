@@ -1,6 +1,5 @@
 export default {
   addOneTrust: function() {
-    console.log('onetrust');
     var elItem = document.createElement('li');
     elItem.className = 'c-footer__list-item';
     var elTextLink = document.createElement('a');
@@ -12,7 +11,9 @@ export default {
       return false;
     });
     elItem.appendChild(elTextLink);
-    var elCopyright = document.querySelector('.c-footer__list-item--copyright');
-    elCopyright.parentNode.insertBefore(elItem, elCopyright);
+    var elCookiePrivacy = document.querySelector(
+      '.c-footer__list-item:nth-child(3)'
+    );
+    elCookiePrivacy.parentNode.insertBefore(elItem, elCookiePrivacy);
   }
 };
