@@ -13,6 +13,7 @@ import {
 } from '@cnbritain/merlin-www-ads';
 import InfiniteScroll from '@cnbritain/merlin-www-js-infinitescroll';
 import SectionCardList from '@cnbritain/merlin-www-section-card-list';
+import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
 
 import {
     nativeAdShift,
@@ -129,7 +130,9 @@ export function onInfiniteLoadComplete(e) {
 
     SectionCardList.init();
 
-    AdManager.lazy();
+    if (OneTrustManager.ready && OneTrustManager.consentedPerformanceCookies) {
+        AdManager.lazy();
+    }
 
     // TODO: Page impression tracker
     resize();
