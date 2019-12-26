@@ -17,12 +17,12 @@ export function saveConfig(configHash, converted, viewCount) {
     setCookie(COOKIE_CONFIG_HASH, JSON.stringify(config), COOKIE_EXPIRES);
 }
 
-export function loadConfig(){
+export function loadConfig() {
     var config = getCookie(COOKIE_CONFIG_HASH);
-    if(config){
+    if (config) {
         try {
             config = JSON.parse(config);
-        } catch(err){
+        } catch (err) {
             console.error('Error parsing config!');
             console.error(err);
             config = {
