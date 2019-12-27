@@ -1,9 +1,13 @@
 'use strict';
 
-import {debounce, getParent} from '@cnbritain/merlin-www-js-utils/js/functions';
-import {AdManager, AdUtils} from '@cnbritain/merlin-www-ads';
-import {ArticleManager} from '@cnbritain/merlin-www-article';
-import {ARTICLE_TYPES} from '@cnbritain/merlin-www-article/js/constants';
+import {
+    debounce,
+    getParent
+} from '@cnbritain/merlin-www-js-utils/js/functions';
+import { AdManager, AdUtils } from '@cnbritain/merlin-www-ads';
+import { ArticleManager } from '@cnbritain/merlin-www-article';
+import { ARTICLE_TYPES } from '@cnbritain/merlin-www-article/js/constants';
+import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
 
 var debouncedRecalculateArticleSize = debounce(recalculateArticleSize, 300);
 
@@ -15,8 +19,33 @@ export default function init() {
     ArticleManager.on('add', onArticleAdd);
     ArticleManager.on('expand', onArticleExpand);
 
-    AdManager.init();
-    AdManager.lazy();
+    function onChange() {
+        if (this.consentedPerformanceCookies) {
+            OneTrustManager.off('change', onChange);
+            AdManager.init();
+            AdManager.lazy();
+        }
+    }
+
+    function onReady() {
+        if (this.consentedPerformanceCookies) {
+            AdManager.init();
+            AdManager.lazy();
+        } else {
+            OneTrustManager.on('change', onChange);
+        }
+    }
+
+    if (OneTrustManager.ready) {
+        if (OneTrustManager.consentedPerformanceCookies) {
+            AdManager.init();
+            AdManager.lazy();
+        } else {
+            OneTrustManager.on('change', onChange);
+        }
+    } else {
+        OneTrustManager.once('ready', onReady);
+    }
 }
 
 export function recalculateArticleSize() {
@@ -54,7 +83,10 @@ export function firePageImpression(e) {
     var article = e.target;
     if (article.ads === null) return;
     var impressionElement = AdUtils.createPageImpressionElement(
-        article.ads.ad_unit, article.ads.ad_zone, article.ads.key_values);
+        article.ads.ad_unit,
+        article.ads.ad_zone,
+        article.ads.key_values
+    );
     document.body.appendChild(impressionElement);
     AdManager.display(impressionElement);
 }
@@ -72,7 +104,6 @@ export function onArticleAdd(e) {
     if (e.infinite) {
         e.article.once('focus', firePageImpression);
     }
-
 }
 
 export function getHeaderAd(el) {

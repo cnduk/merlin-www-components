@@ -2,6 +2,7 @@
 
 import img from '@cnbritain/merlin-www-image';
 import initTimedContent from './timed-content';
+import initConsent, { hydrate } from './consent';
 
 export default {
     /**
@@ -10,5 +11,7 @@ export default {
     'init': function() {
         img.init();
         initTimedContent();
-    }
+        initConsent();
+    },
+    'hydrateConsent': hydrate
 };

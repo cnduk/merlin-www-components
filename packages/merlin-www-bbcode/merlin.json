@@ -46,13 +46,15 @@
         "vimeo": "partials/vimeo.html",
         "vine": "partials/vine.html",
         "youtube": "partials/youtube.html",
-        "demo": "partials/demo.html"
+        "demo": "partials/demo.html",
+        "consent": "partials/consent.html"
     },
     "dependencies": [
         "@cnbritain/merlin-www-js-utils",
         "@cnbritain/merlin-www-buttons",
         "@cnbritain/merlin-www-common",
-        "@cnbritain/merlin-www-image"
+        "@cnbritain/merlin-www-image",
+        "@cnbritain/merlin-www-js-gatracker"
     ],
     "currentTheme": null,
     "main": "index",

@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-top-stories",
-  "version": "1.10.31",
+  "version": "1.10.32-alpha.14",
   "description": "",
   "main": "js/index.js",
   "scripts": {
@@ -9,19 +9,20 @@
     "prepublish": "npm run lint"
   },
   "dependencies": {
-    "@cnbritain/merlin-www-ads": "1.17.9",
-    "@cnbritain/merlin-www-buttons": "^1.7.41",
-    "@cnbritain/merlin-www-card": "^1.16.16",
-    "@cnbritain/merlin-www-common": "^1.14.18",
-    "@cnbritain/merlin-www-image": "^1.10.8",
-    "@cnbritain/merlin-www-js-elementscroll": "^1.2.14",
-    "@cnbritain/merlin-www-js-utils": "^1.7.0"
+    "@cnbritain/merlin-www-ads": "^1.17.10-alpha.14",
+    "@cnbritain/merlin-www-buttons": "^1.7.42-alpha.0",
+    "@cnbritain/merlin-www-card": "^1.16.17-alpha.0",
+    "@cnbritain/merlin-www-common": "^1.14.19-alpha.0",
+    "@cnbritain/merlin-www-image": "^1.10.9-alpha.0",
+    "@cnbritain/merlin-www-js-elementscroll": "^1.2.15-alpha.0",
+    "@cnbritain/merlin-www-js-utils": "^1.7.1-alpha.0"
   },
   "devDependencies": {
-    "@cnbritain/merlin-component-demo-server": "^3.4.4",
+    "@cnbritain/merlin-component-demo-server": "^3.4.5-alpha.0",
     "eslint": "^4.14.0",
     "eslint-plugin-compat": "^2.2.0"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "gitHead": "e124889b55a64d439200769992a9f5d45929d396"
 }

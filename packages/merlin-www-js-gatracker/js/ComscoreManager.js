@@ -5,9 +5,8 @@ import {
     loadScript,
     setCookie
 } from '@cnbritain/merlin-www-js-utils/js/functions';
-import {
-    hasCookiesEnabled
-} from '@cnbritain/merlin-www-js-utils/js/detect';
+import { hasCookiesEnabled } from '@cnbritain/merlin-www-js-utils/js/detect';
+import OneTrustManager from './OneTrustManager';
 
 function ComscoreManager() {
     EventEmitter.call(this, {
@@ -31,7 +30,9 @@ ComscoreManager.prototype = inherit(EventEmitter.prototype, {
     },
     setConsent: function setConsent(value) {
         // console.log('Setting cs_ucfr=' + value);
-        setCookie(this.COMSCORE_COOKIE, value);
+        if (OneTrustManager.ready && OneTrustManager.consentedStrictlyCookies) {
+            setCookie(this.COMSCORE_COOKIE, value);
+        }
         this.consent = value;
     },
     init: function init() {
@@ -47,7 +48,6 @@ ComscoreManager.prototype = inherit(EventEmitter.prototype, {
             this.setConsent(null);
             return;
         }
-
     },
     loadComscoreScript: function loadComscoreScript() {
         if (this._loadingScript) return;
@@ -55,21 +55,25 @@ ComscoreManager.prototype = inherit(EventEmitter.prototype, {
         this._loadingScript = true;
         var scriptUrl = null;
         if (document.location.protocol === 'https:') {
-            scriptUrl = "https://sb.scorecardresearch.com/beacon.js";
+            scriptUrl = 'https://sb.scorecardresearch.com/beacon.js';
         } else {
-            scriptUrl = "http://b.scorecardresearch.com/beacon.js";
+            scriptUrl = 'http://b.scorecardresearch.com/beacon.js';
         }
-        loadScript(scriptUrl)
-            .then(function() {
+        loadScript(scriptUrl).then(
+            function() {
                 // console.log('Loaded Comscore script');
-            }, function() {
+            },
+            function() {
                 console.warn('Failed to load Comscore script!'); // eslint-disable-line no-console
                 this._loadingScript = false;
-            }.bind(this));
+            }.bind(this)
+        );
     },
     sendBeacon: function sendBeacon(url) {
         if (this.consent === null) {
-            console.warn('User has not consented yet. Beacon will send value missing `cs_ucfr`.'); // eslint-disable-line no-console
+            console.warn(
+                'User has not consented yet. Beacon will send value missing `cs_ucfr`.'
+            ); // eslint-disable-line no-console
         }
 
         var comscoreData = {

@@ -1,10 +1,11 @@
-.a-logo {}
-.a-logo--video {}
+.a-logo {
+}
+.a-logo--video {
+}
 
 .a-video {
     overflow: hidden;
     position: relative;
-
 
     &.has-sidebar {
         @include at-x-large-size {
@@ -35,7 +36,8 @@
     }
 }
 
-.a-video__player {}
+.a-video__player {
+}
 
 .a-video__player__wrapper {
     padding-top: 56.25%;
@@ -52,6 +54,16 @@
     }
 }
 
+.a-video__consent {
+    padding: 0 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.a-video__consent .bb-p {
+    @include font-size(14px);
+}
+
 .a-video__sidebar {
     bottom: 0;
     box-sizing: border-box;
@@ -66,9 +78,11 @@
     }
 }
 
-.a-video__sidebar__wrapper {}
+.a-video__sidebar__wrapper {
+}
 
-.a-video__sidebar__title {}
+.a-video__sidebar__title {
+}
 
 .a-video__sidebar__list {
     bottom: 0;
@@ -100,7 +114,7 @@
     margin: 0 auto;
     text-align: center;
 
-    @include at-x-large-size{
+    @include at-x-large-size {
         position: absolute;
         right: $DESKTOP_SIDE_GUTTER;
         top: 0;

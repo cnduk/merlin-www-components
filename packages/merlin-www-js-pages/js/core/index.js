@@ -2,7 +2,7 @@
 
 import es6Promise from 'es6-promise';
 
-import { addClass,assign} from '@cnbritain/merlin-www-js-utils/js/functions';
+import { addClass, assign } from '@cnbritain/merlin-www-js-utils/js/functions';
 import {
     getUserAgent,
     hasTouch
@@ -16,33 +16,31 @@ import store from '@cnbritain/merlin-www-js-store';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
 import ComscoreManager from '@cnbritain/merlin-www-js-gatracker/js/ComscoreManager';
 import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
+import SkimlinksManager from '@cnbritain/merlin-www-js-gatracker/js/SkimlinksManager';
+import FacebookPixelManager from '@cnbritain/merlin-www-js-gatracker/js/FacebookPixelManager';
+import TypekitManager from '@cnbritain/merlin-www-js-gatracker/js/TypekitManager';
+import PermutiveManager from '@cnbritain/merlin-www-js-gatracker/js/PermutiveManager';
 import SectionCardList from '@cnbritain/merlin-www-section-card-list';
-import {
-    AdManager,
-    AdDebugger,
-    AdUtils
-} from '@cnbritain/merlin-www-ads';
+import SiteFooter from '@cnbritain/merlin-www-footer';
+import { AdManager, AdDebugger, AdUtils } from '@cnbritain/merlin-www-ads';
 import InternationalRedirect from '@cnbritain/merlin-www-international-redirect';
-import {
-    displayHiringMessage,
-    setGlobalNamespace
-} from '../utils';
+import { displayHiringMessage, setGlobalNamespace } from '../utils';
 import {
     initLinkTracking,
     initInfobarTracking,
-    initSubscribebarTracking
+    initSubscribebarTracking,
+    loadSiteCensus
 } from './analytics';
 
 var DEFAULT_INIT_CONFIG = {
-    'OPEN_X_URL': null,
-    'RUBICON_URL': null,
-    'TEAD_URL': '//cdn.teads.tv/js/all-v2.js',
-    'PREBID_URL': null,
-    'PREBID_SETTINGS': {}
+    OPEN_X_URL: null,
+    RUBICON_URL: null,
+    TEAD_URL: '//cdn.teads.tv/js/all-v2.js',
+    PREBID_URL: null,
+    PREBID_SETTINGS: {}
 };
 
 export default function init(config) {
-
     var _config = DEFAULT_INIT_CONFIG;
     if (config !== undefined) {
         _config = assign({}, DEFAULT_INIT_CONFIG, config);
@@ -52,12 +50,16 @@ export default function init(config) {
     // Don't just use the abbreviation in case something else in the page
     // overwrites it
     setGlobalNamespace({
-        'AdDebugger': AdDebugger,
-        'AdManager': AdManager,
-        'GATracker': GATracker,
-        'MainNavigation': MainNavigation,
-        'Store': store,
-        'OneTrustManager': OneTrustManager
+        AdDebugger: AdDebugger,
+        AdManager: AdManager,
+        GATracker: GATracker,
+        MainNavigation: MainNavigation,
+        Store: store,
+        OneTrustManager: OneTrustManager,
+        SkimlinksManager: SkimlinksManager,
+        FacebookPixelManager: FacebookPixelManager,
+        TypekitManager: TypekitManager,
+        PermutiveManager: PermutiveManager
     });
 
     setupHtmlClasses();
@@ -73,6 +75,32 @@ export default function init(config) {
         PREBID_SETTINGS: _config['PREBID_SETTINGS']
     });
 
+    GATracker.init();
+    ComscoreManager.init();
+    OneTrustManager.on('ready', function() {
+        SiteFooter.addOneTrust();
+        if (this.consentedStrictlyCookies) TypekitManager.loadScript();
+        if (this.consentedPerformanceCookies) {
+            GATracker.loadGAScript();
+            ComscoreManager.sendBeacon();
+            loadSiteCensus();
+        }
+        if (this.consentedTargetingCookies) {
+            SkimlinksManager.loadScript();
+            FacebookPixelManager.loadScript();
+            PermutiveManager.loadScript();
+        }
+    });
+    OneTrustManager.on('change', function() {
+        GATracker.setConsent(this.consentedPerformanceCookies);
+        if (this.consentedPerformanceCookies) {
+            ComscoreManager.setConsent(1);
+        } else {
+            // this technically wont happen
+            ComscoreManager.setConsent(0);
+        }
+    });
+
     initChain();
 
     CommonImage.init();
@@ -82,17 +110,6 @@ export default function init(config) {
     initLinkTracking();
     initInfobarTracking();
     initSubscribebarTracking();
-
-    ComscoreManager.init();
-    OneTrustManager.loadConsent();
-    if(!OneTrustManager.isDialogClosed){
-        ComscoreManager.setConsent(null);
-    } else if(OneTrustManager.consentedStrictlyCookies){
-        ComscoreManager.setConsent(1);
-    } else {
-        ComscoreManager.setConsent(0);
-    }
-    ComscoreManager.sendBeacon();
 }
 
 export function initInternationalRedirect() {
@@ -112,10 +129,10 @@ export function initInternationalRedirect() {
 
 export function sendInternationRedirectEvent(action, label) {
     GATracker.SendAll(GATracker.SEND_HITTYPES.EVENT, {
-        'eventAction': action,
-        'eventCategory': 'CountryBanner',
-        'eventLabel': label,
-        'transport': 'beacon'
+        eventAction: action,
+        eventCategory: 'CountryBanner',
+        eventLabel: label,
+        transport: 'beacon'
     });
 }
 
@@ -161,7 +178,10 @@ export function initChain() {
         }
     });
     InfobarManager.once('load', function() {
-        if (!InfobarManager.infobar || InfobarManager.infobar.state.isEnabled == false) {
+        if (
+            !InfobarManager.infobar ||
+            InfobarManager.infobar.state.isEnabled == false
+        ) {
             SubscribeBarManager.lazyload();
             SubscribeBarManager.once('enable', function() {
                 if (MainNavigation.state.isFixed) {

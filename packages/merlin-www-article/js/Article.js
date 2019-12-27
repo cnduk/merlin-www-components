@@ -7,21 +7,21 @@ import {
     inherit,
     removeClass
 } from '@cnbritain/merlin-www-js-utils/js/functions';
-import {CLS_INFINITE_BTN, CLS_ARTICLE_GALLERY} from './constants';
+import bbcode from '@cnbritain/merlin-www-bbcode';
+import { CLS_INFINITE_BTN, CLS_ARTICLE_GALLERY } from './constants';
 import Gallery from './Gallery';
 import {
     bubbleEvent,
     getArticleTitle,
     getArticleType,
     getArticleUid,
-    getArticleUrl,
-    updateSocialEmbeds
+    getArticleUrl
 } from './utils';
 import * as events from './events';
 
 function Article(el, _options) {
     EventEmitter.call(this, {
-        'wildcard': true
+        wildcard: true
     });
 
     var options = _options || {};
@@ -41,8 +41,7 @@ function Article(el, _options) {
 }
 
 Article.prototype = inherit(EventEmitter.prototype, {
-
-    '_bindBubblingEvents': function _bindBubblingEvents() {
+    _bindBubblingEvents: function _bindBubblingEvents() {
         // Gallery
         if (this.gallery !== null) {
             bubbleEvent(this.gallery, this, 'viewchange');
@@ -51,19 +50,20 @@ Article.prototype = inherit(EventEmitter.prototype, {
         }
     },
 
-    '_getArticleProperties': function _getArticleProperties() {
+    _getArticleProperties: function _getArticleProperties() {
         this.properties = {
-            'title': getArticleTitle(this.el),
-            'url': getArticleUrl(this.el),
-            'uid': getArticleUid(this.el)
+            title: getArticleTitle(this.el),
+            url: getArticleUrl(this.el),
+            uid: getArticleUid(this.el)
         };
     },
 
-    '_init': function _init() {
+    _init: function _init() {
+        bbcode.init();
 
         // Due instagram being a crap script, we stop oembeds from loading
         // in their script and load it in once and trigger instagram.t
-        updateSocialEmbeds();
+        // updateSocialEmbeds();
 
         // Check if the article contains a gallery
         var gallery = this.el.querySelector(CLS_ARTICLE_GALLERY);
@@ -73,18 +73,24 @@ Article.prototype = inherit(EventEmitter.prototype, {
             });
             // Listen to when the article focuses or blurs so we can add and remove
             // the scroll listener as and when needed
-            this.on('focus', function() {
-                this.gallery.bindImageScrollListener();
-                this.gallery.bindNavScrollListener();
-                this.gallery.updateImageScroll();
-                this.gallery.updateNavScroll();
-            }.bind(this));
-            this.on('blur', function() {
-                this.gallery.unbindImageScrollListener();
-                this.gallery.unbindNavScrollListener();
-                this.gallery.updateImageScroll();
-                this.gallery.updateNavScroll();
-            }.bind(this));
+            this.on(
+                'focus',
+                function() {
+                    this.gallery.bindImageScrollListener();
+                    this.gallery.bindNavScrollListener();
+                    this.gallery.updateImageScroll();
+                    this.gallery.updateNavScroll();
+                }.bind(this)
+            );
+            this.on(
+                'blur',
+                function() {
+                    this.gallery.unbindImageScrollListener();
+                    this.gallery.unbindNavScrollListener();
+                    this.gallery.updateImageScroll();
+                    this.gallery.updateNavScroll();
+                }.bind(this)
+            );
         } else {
             if (this.gallery !== null) {
                 this.gallery.parentArticle = this;
@@ -107,19 +113,18 @@ Article.prototype = inherit(EventEmitter.prototype, {
         this._getArticleProperties();
     },
 
-    'constructor': Article,
+    constructor: Article,
 
-    'expand': function() {
+    expand: function() {
         removeClass(this.el.querySelector(CLS_ARTICLE_GALLERY), 'is-closed');
         this.resize();
         this.emit('expand', events.expand(this));
     },
 
-    'resize': function resize() {
+    resize: function resize() {
         this.bounds = getElementOffset(this.el);
         if (this.gallery !== null) this.gallery.resize();
     }
-
 });
 
 export default Article;

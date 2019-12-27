@@ -1,8 +1,13 @@
+import {
+    getCookie,
+    setCookie
+} from '@cnbritain/merlin-www-js-utils/js/functions';
+import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
+import { COOKIE_CONFIG_HASH, COOKIE_EXPIRES, VIEW_LIMIT } from './constants';
 
-import {getCookie, setCookie} from '@cnbritain/merlin-www-js-utils/js/functions';
-import {COOKIE_CONFIG_HASH, COOKIE_EXPIRES, VIEW_LIMIT} from './constants';
-
-export function saveConfig(configHash, converted, viewCount){
+export function saveConfig(configHash, converted, viewCount) {
+    if (!OneTrustManager.ready || !OneTrustManager.consentedStrictlyCookies)
+        return;
     var config = {
         configHash: configHash,
         converted: !!converted,
@@ -12,12 +17,12 @@ export function saveConfig(configHash, converted, viewCount){
     setCookie(COOKIE_CONFIG_HASH, JSON.stringify(config), COOKIE_EXPIRES);
 }
 
-export function loadConfig(){
+export function loadConfig() {
     var config = getCookie(COOKIE_CONFIG_HASH);
-    if(config){
+    if (config) {
         try {
             config = JSON.parse(config);
-        } catch(err){
+        } catch (err) {
             console.error('Error parsing config!');
             console.error(err);
             config = {

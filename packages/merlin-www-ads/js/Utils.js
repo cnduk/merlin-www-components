@@ -16,6 +16,7 @@ import {
     loadScript,
     unescapeJinjaValue
 } from '@cnbritain/merlin-www-js-utils/js/functions';
+import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
 
 /**
  * GPT Script url
@@ -24,7 +25,6 @@ import {
  * @type {String}
  */
 export var GPT_URL = '//www.googletagservices.com/tag/js/gpt.js';
-
 
 /**
  * The rubicon script url. This needs to be set in order for it to work.
@@ -103,18 +103,18 @@ var KEY_TEST_AD_ZONE = 'ad_test_zone';
  * @enum {Number}
  */
 export var AD_SIZES = {
-    'UNKNOWN': -1,
-    'NATIVE': 0,
-    'MPU': 1,
-    'DOUBLESKY': 2,
-    'LEADERBOARD': 3,
-    'SUPERLEADER': 4,
-    'BILLBOARD': 5,
-    'RESPONSIVE': 6,
-    'GALLERY_INTERSTITIAL': 7,
-    'INCONTENT': 8,
-    'INREAD': 9,
-    'TRACKING_PIXEL': 10
+    UNKNOWN: -1,
+    NATIVE: 0,
+    MPU: 1,
+    DOUBLESKY: 2,
+    LEADERBOARD: 3,
+    SUPERLEADER: 4,
+    BILLBOARD: 5,
+    RESPONSIVE: 6,
+    GALLERY_INTERSTITIAL: 7,
+    INCONTENT: 8,
+    INREAD: 9,
+    TRACKING_PIXEL: 10
 };
 
 /**
@@ -142,12 +142,12 @@ var AD_SIZES_MAP = {
  * @enum {Number}
  */
 export var AD_STATES = {
-    'UNINITIALISED': 0,
-    'INITIALISED': 1,
-    'REGISTERED': 2,
-    'RENDERED': 3,
-    'STOPPED': 4,
-    'DESTROYED': 5
+    UNINITIALISED: 0,
+    INITIALISED: 1,
+    REGISTERED: 2,
+    RENDERED: 3,
+    STOPPED: 4,
+    DESTROYED: 5
 };
 
 /**
@@ -156,19 +156,19 @@ export var AD_STATES = {
  * @type {Object}
  */
 var DEFAULT_AD_ELEMENT_ATTRIBUTES = {
-    'bidding': false,
-    'group': null,
-    'lazyload': false,
-    'nativeStyle': 0,
-    'order': Number.MAX_VALUE,
-    'placement': null,
-    'position': null,
-    'sizemap': null,
-    'sizes': null,
-    'targets': null,
-    'unit': null,
-    'values': null,
-    'zone': null
+    bidding: false,
+    group: null,
+    lazyload: false,
+    nativeStyle: 0,
+    order: Number.MAX_VALUE,
+    placement: null,
+    position: null,
+    sizemap: null,
+    sizes: null,
+    targets: null,
+    unit: null,
+    values: null,
+    zone: null
 };
 
 /**
@@ -177,90 +177,88 @@ var DEFAULT_AD_ELEMENT_ATTRIBUTES = {
  * @type {Object}
  */
 var AD_ATTRIBUTE_MAP = {
-    'bidding': {
-        'map': function toBool(value){
+    bidding: {
+        map: function toBool(value) {
             // lol
             return String(value).toLowerCase() === 'true';
         },
-        'required': true
+        required: true
     },
-    'group': {
-        'map': function toString(value){
-            if(value === null || value === 'null') return null;
+    group: {
+        map: function toString(value) {
+            if (value === null || value === 'null') return null;
             return value.toString();
         },
-        'required': false
+        required: false
     },
-    'lazyload': {
-        'map': function toBool(value){
+    lazyload: {
+        map: function toBool(value) {
             // lol
             return String(value).toLowerCase() === 'true';
         },
-        'required': false
+        required: false
     },
-    'nativeStyle': {
-        'map': Number,
-        'required': false
+    nativeStyle: {
+        map: Number,
+        required: false
     },
-    'order': {
-        'map': Number,
-        'required': false
+    order: {
+        map: Number,
+        required: false
     },
     // 'placement': null,
     // 'position': null,
-    'sizemap': {
-        'map': JSON.parse,
-        'required': false
+    sizemap: {
+        map: JSON.parse,
+        required: false
     },
-    'sizes': {
-        'map': JSON.parse,
-        'required': true
+    sizes: {
+        map: JSON.parse,
+        required: true
     },
-    'targets': {
-        'map': JSON.parse,
-        'required': false
+    targets: {
+        map: JSON.parse,
+        required: false
     },
-    'unit': {
-        'map': function(value){
-            if(TEST_AD_CONFIG.AD_UNIT === false) return value;
+    unit: {
+        map: function(value) {
+            if (TEST_AD_CONFIG.AD_UNIT === false) return value;
             return TEST_AD_CONFIG.AD_UNIT;
         },
-        'required': true
+        required: true
     },
-    'values': {
-        'map': parseAdKeyValues,
-        'required': false
+    values: {
+        map: parseAdKeyValues,
+        required: false
     },
-    'zone': {
-        'map': function(value){
-            if(TEST_AD_CONFIG.AD_ZONE === false) return value;
+    zone: {
+        map: function(value) {
+            if (TEST_AD_CONFIG.AD_ZONE === false) return value;
             return TEST_AD_CONFIG.AD_ZONE;
         },
-        'required': true
+        required: true
     }
 };
-
 
 /**
  * Are ads blocked?
  * @readonly
  * @type {Boolean}
  */
-export var HAS_ADS_BLOCKED = (function(){
-    if(window.ads_not_blocked){
+export var HAS_ADS_BLOCKED = (function() {
+    if (window.ads_not_blocked) {
         return false;
     } else {
         return true;
     }
 })();
 
-
 /**
  * Creates the DFP url
  * @param  {Object} attribs
  * @return {String}
  */
-export function buildDFPUrl(attribs){
+export function buildDFPUrl(attribs) {
     return attribs.zone + '/' + attribs.unit;
 }
 
@@ -271,13 +269,13 @@ export function buildDFPUrl(attribs){
  * @param  {Boolean} refresh Force refresh the values
  * @return {Object}         TEST_AD_CONFIG
  */
-export function checkTestAdConfig(refresh){
-    if(!refresh && TEST_AD_CONFIG !== false) return;
+export function checkTestAdConfig(refresh) {
+    if (!refresh && TEST_AD_CONFIG !== false) return;
 
     // Set empty defaults for the test
     TEST_AD_CONFIG = {
-        'AD_UNIT': false,
-        'AD_ZONE': false
+        AD_UNIT: false,
+        AD_ZONE: false
     };
 
     var key = getNamespaceKey(BRAND_CONFIG.abbr);
@@ -285,14 +283,14 @@ export function checkTestAdConfig(refresh){
 
     // Unit
     tmp = window[key].Store.get(key + '_' + KEY_TEST_AD_UNIT);
-    if(tmp){
+    if (tmp) {
         TEST_AD_CONFIG.AD_UNIT = tmp;
         window[key].Store.remove(key + '_' + KEY_TEST_AD_UNIT);
     }
 
     // Zone
     tmp = window[key].Store.get(key + '_' + KEY_TEST_AD_ZONE);
-    if(tmp){
+    if (tmp) {
         TEST_AD_CONFIG.AD_ZONE = tmp;
         window[key].Store.remove(key + '_' + KEY_TEST_AD_ZONE);
     }
@@ -300,9 +298,9 @@ export function checkTestAdConfig(refresh){
     return TEST_AD_CONFIG;
 }
 
-function createSizeMap(sizemapAttrib){
+function createSizeMap(sizemapAttrib) {
     var sizemap = googletag.sizeMapping();
-    sizemapAttrib.forEach(function eachRow(row){
+    sizemapAttrib.forEach(function eachRow(row) {
         // Row[0] - dimensions
         // Row[1] - Ad sizes
         sizemap.addSize(row[0], row[1]);
@@ -315,18 +313,20 @@ function createSizeMap(sizemapAttrib){
  * @param  {HTMLElement} el
  * @return {Object}
  */
-export function getAdElementAttributes(el){
+export function getAdElementAttributes(el) {
     // Check if there is a test ad config we're suppose to be using
     checkTestAdConfig();
 
     var value = null;
     var key = '';
     var output = {};
-    for(key in DEFAULT_AD_ELEMENT_ATTRIBUTES){
-        if(hasOwnProperty(DEFAULT_AD_ELEMENT_ATTRIBUTES, key) &&
-            el.hasAttribute('data-ad-' + key)){
+    for (key in DEFAULT_AD_ELEMENT_ATTRIBUTES) {
+        if (
+            hasOwnProperty(DEFAULT_AD_ELEMENT_ATTRIBUTES, key) &&
+            el.hasAttribute('data-ad-' + key)
+        ) {
             value = el.getAttribute('data-ad-' + key);
-            if(value) output[key] = value;
+            if (value) output[key] = value;
         } else {
             output[key] = DEFAULT_AD_ELEMENT_ATTRIBUTES[key];
         }
@@ -340,21 +340,21 @@ export function getAdElementAttributes(el){
  * @param  {Number} height
  * @return {Number}
  */
-export function getAdTypeBySize(width, height){
+export function getAdTypeBySize(width, height) {
     var key = width + 'x' + height;
-    if(AD_SIZES_MAP.hasOwnProperty(key)) return AD_SIZES_MAP[key];
+    if (AD_SIZES_MAP.hasOwnProperty(key)) return AD_SIZES_MAP[key];
     return AD_SIZES.UNKNOWN;
 }
 
-export function getPageAdConfig(refresh){
-    if(PAGE_AD_CONFIG === null || refresh){
+export function getPageAdConfig(refresh) {
+    if (PAGE_AD_CONFIG === null || refresh) {
         var key = getNamespaceKey(BRAND_CONFIG.abbr);
         PAGE_AD_CONFIG = window[key].Store.get(key + '_ad_config');
     }
     return PAGE_AD_CONFIG;
 }
 
-export function getRubiconSlot(ad){
+export function getRubiconSlot(ad) {
     return rubicontag.getSlot(ad.id);
 }
 
@@ -363,7 +363,7 @@ export function getRubiconSlot(ad){
  * @param  {Ad} ad
  * @return {googletag.Slot}
  */
-export function getSlot(ad){
+export function getSlot(ad) {
     return ad.slot;
 }
 
@@ -372,10 +372,10 @@ export function getSlot(ad){
  * @param  {googletag.Slot} slot
  * @return {Object}
  */
-export function getSlotTargeting(slot){
+export function getSlotTargeting(slot) {
     var targeting = {};
     var keys = slot.getTargetingKeys();
-    keys.forEach(function(key){
+    keys.forEach(function(key) {
         targeting[key] = slot.getTargeting(key);
     });
     return targeting;
@@ -386,7 +386,7 @@ export function getSlotTargeting(slot){
  * @param  {Ad}  ad
  * @return {Boolean}
  */
-export function hasHeaderBidding(ad){
+export function hasHeaderBidding(ad) {
     return ad.get('bidding');
 }
 
@@ -395,7 +395,7 @@ export function hasHeaderBidding(ad){
  * @param  {Ad}  ad
  * @return {Boolean}
  */
-export function hasGroup(ad){
+export function hasGroup(ad) {
     return ad.group !== null;
 }
 
@@ -404,11 +404,17 @@ export function hasGroup(ad){
  * @param  {String} key
  * @return {Boolean}
  */
-function ignoreAttributeKey(key){
-    return key === 'ad_network_id' || key === 'ad_custom_targeting' ||
-        key === 'ad_tag_prefix' || key === 'ad_unit' || key === 'ad_url' ||
-        key === 'ad_zone' || key === 'targeting_doctype' ||
-        key === 'targeting_tags';
+function ignoreAttributeKey(key) {
+    return (
+        key === 'ad_network_id' ||
+        key === 'ad_custom_targeting' ||
+        key === 'ad_tag_prefix' ||
+        key === 'ad_unit' ||
+        key === 'ad_url' ||
+        key === 'ad_zone' ||
+        key === 'targeting_doctype' ||
+        key === 'targeting_tags'
+    );
 }
 
 /**
@@ -416,7 +422,7 @@ function ignoreAttributeKey(key){
  * @param  {Ad}  ad The advert to check
  * @return {Boolean}
  */
-export function isAdDestroyed(ad){
+export function isAdDestroyed(ad) {
     return ad.state === AD_STATES.DESTROYED;
 }
 
@@ -425,7 +431,7 @@ export function isAdDestroyed(ad){
  * @param  {Ad}  ad The advert to check
  * @return {Boolean}
  */
-export function isAdInitialised(ad){
+export function isAdInitialised(ad) {
     return ad.state === AD_STATES.INITIALISED;
 }
 
@@ -434,7 +440,7 @@ export function isAdInitialised(ad){
  * @param  {Ad}  ad The advert to check
  * @return {Boolean}
  */
-export function isAdRendered(ad){
+export function isAdRendered(ad) {
     return ad.state === AD_STATES.RENDERED;
 }
 
@@ -443,56 +449,67 @@ export function isAdRendered(ad){
  * @param  {HTMLElement}  el
  * @return {Boolean}
  */
-export function isElInitialised(el){
+export function isElInitialised(el) {
     return el.hasAttribute('data-ad-initialised');
 }
 
-export function loadAdLibraries(){
+export function loadAdLibraries() {
     // Setup the googletag bits so we can start queuing things
     window.googletag = window.googletag || {};
     window.googletag.cmd = window.googletag.cmd || [];
 
-    return Promise.all([
-        loadPrebidLibrary(),
-        loadRubiconLibrary()
-    ]).then(function(){
-        return loadGPTLibrary();
-    });
+    return Promise.all([loadPrebidLibrary(), loadRubiconLibrary()]).then(
+        function() {
+            return loadGPTLibrary();
+        }
+    );
 }
 
 /**
  * Loads the GPT library
  * @return {Promise}
  */
-export function loadGPTLibrary(){
+export function loadGPTLibrary() {
     window.googletag = window.googletag || {};
     window.googletag.cmd = window.googletag.cmd || [];
     return loadScript(GPT_URL);
 }
 
-export function loadRubiconLibrary(){
+export function loadRubiconLibrary() {
     window.rubicontag = window.rubicontag || {};
     window.rubicontag.cmd = window.rubicontag.cmd || [];
-    if(RUBICON_URL === null){
-        console.warn('Rubicon library has no url specified to load. Ads will continue without Rubicon');
+    if (!OneTrustManager.consentedTargetingCookies) {
+        console.warn(
+            'No consent for Rubicon library. Ads will continue without Rubicon'
+        );
+        return Promise.resolve();
+    }
+    if (RUBICON_URL === null) {
+        console.warn(
+            'Rubicon library has no url specified to load. Ads will continue without Rubicon'
+        );
         return Promise.resolve();
     }
     return loadScript(RUBICON_URL)
-        .then(function(){
-            RUBICON_LOADED = true;
-            return Promise.resolve();
-        }, function(){
-            console.warn('Error loading rubicon library');
-            RUBICON_LOADED = false;
-            return Promise.resolve();
-        }).catch(function(){
+        .then(
+            function() {
+                RUBICON_LOADED = true;
+                return Promise.resolve();
+            },
+            function() {
+                console.warn('Error loading rubicon library');
+                RUBICON_LOADED = false;
+                return Promise.resolve();
+            }
+        )
+        .catch(function() {
             console.warn('Error loading rubicon library');
             RUBICON_LOADED = false;
             return Promise.resolve();
         });
 }
 
-export function loadTeadLibrary(){
+export function loadTeadLibrary() {
     window._ttf = window._ttf || [];
     return loadScript(TEAD_URL);
 }
@@ -502,9 +519,11 @@ export function loadTeadLibrary(){
  * too long.
  * @return {Promise}
  */
-export function loadPrebidLibrary(){
-    if(PREBID_URL === null){
-        console.warn('Prebid library has no url specified to load. Ads will continue without Prebid');
+export function loadPrebidLibrary() {
+    if (PREBID_URL === null) {
+        console.warn(
+            'Prebid library has no url specified to load. Ads will continue without Prebid'
+        );
         return Promise.resolve();
     }
 
@@ -518,14 +537,18 @@ export function loadPrebidLibrary(){
     });
 
     var prebidPromise = loadScript(PREBID_URL)
-        .then(function(){
-            PREBID_LOADED = true;
-            return Promise.resolve();
-        }, function(){
-            console.warn('Error loading prebid library');
-            PREBID_LOADED = false;
-            return Promise.resolve();
-        }).catch(function(){
+        .then(
+            function() {
+                PREBID_LOADED = true;
+                return Promise.resolve();
+            },
+            function() {
+                console.warn('Error loading prebid library');
+                PREBID_LOADED = false;
+                return Promise.resolve();
+            }
+        )
+        .catch(function() {
             console.warn('Error loading prebid library');
             PREBID_LOADED = false;
             return Promise.resolve();
@@ -542,12 +565,12 @@ export function loadPrebidLibrary(){
  * @param  {String} value
  * @return {Object}
  */
-export function parseAdKeyValues(value){
-    if( !isDefined( value ) ) return null;
+export function parseAdKeyValues(value) {
+    if (!isDefined(value)) return null;
     // Unescape the values as jinja has escaped them to shit
-    var tmp = unescapeJinjaValue( value );
-    tmp = JSON.parse( tmp );
-    if( tmp === '' ) return null;
+    var tmp = unescapeJinjaValue(value);
+    tmp = JSON.parse(tmp);
+    if (tmp === '') return null;
     return tmp;
 }
 
@@ -556,7 +579,7 @@ export function parseAdKeyValues(value){
  * @param  {HTMLElement} el
  * @return {Object}
  */
-export function parseAdAttributes(el){
+export function parseAdAttributes(el) {
     var attributes = getAdElementAttributes(el);
     attributes = mapAdElementAttributes(attributes);
     // Add in DFP
@@ -569,14 +592,14 @@ export function parseAdAttributes(el){
  * @param  {Object} attribs
  * @return {Object}
  */
-export function mapAdElementAttributes(attribs){
+export function mapAdElementAttributes(attribs) {
     var key = '';
-    for(key in AD_ATTRIBUTE_MAP){
-        if(!hasOwnProperty(AD_ATTRIBUTE_MAP, key)) continue;
-        if(AD_ATTRIBUTE_MAP[key].required && !hasOwnProperty(attribs, key)){
+    for (key in AD_ATTRIBUTE_MAP) {
+        if (!hasOwnProperty(AD_ATTRIBUTE_MAP, key)) continue;
+        if (AD_ATTRIBUTE_MAP[key].required && !hasOwnProperty(attribs, key)) {
             throw new TypeError(key + ' property is required');
         }
-        if(AD_ATTRIBUTE_MAP[key].map){
+        if (AD_ATTRIBUTE_MAP[key].map) {
             attribs[key] = AD_ATTRIBUTE_MAP[key].map(attribs[key], attribs);
         }
     }
@@ -588,8 +611,8 @@ export function mapAdElementAttributes(attribs){
  * @param  {Number} ms amount of milliseconds
  * @return {Promise}
  */
-export function promisifyTimeout(ms){
-    return new Promise(function(resolve){
+export function promisifyTimeout(ms) {
+    return new Promise(function(resolve) {
         setTimeout(resolve, ms);
     });
 }
@@ -599,49 +622,59 @@ export function promisifyTimeout(ms){
  * @param  {Function} callback
  * @return {Promise}
  */
-export function pushToGoogleTag(callback){
-    return (new Promise(function pushToGoogleTag_promise(resolve, reject){
+export function pushToGoogleTag(callback) {
+    // if cookies are disabled for ads, we would not have initialised
+    // googletag. this allows things to sail smoothly whilst warning us.
+    if (!window.googletag) {
+        console.warn('googletag not found');
+        return Promise.resolve();
+    }
+    return new Promise(function pushToGoogleTag_promise(resolve, reject) {
         // googletag seems to be swalling errors so we catch any errors we make
         // and reject the promise and then throw the rejection.
-        googletag.cmd.push(function pushToGoogleTag_callback(){
+        googletag.cmd.push(function pushToGoogleTag_callback() {
             try {
                 var result = callback(resolve);
-                if(result !== undefined) resolve(result);
-            } catch(err){
+                if (result !== undefined) resolve(result);
+            } catch (err) {
                 reject(err);
             }
         });
-    })).then(function(value){
-        return Promise.resolve(value);
-    }, function(err){
-        throw err;
-    });
+    }).then(
+        function(value) {
+            return Promise.resolve(value);
+        },
+        function(err) {
+            throw err;
+        }
+    );
 }
 
-export function refreshGPT(ads, changeCorrelator){
-    return pushToGoogleTag(function(res){
-
+export function refreshGPT(ads, changeCorrelator) {
+    return pushToGoogleTag(function(res) {
         var slots = null;
         var slotIds = null;
-        if(Array.isArray(ads)){
+        if (Array.isArray(ads)) {
             slots = ads.map(getSlot);
-            slotIds = ads.map(function(ad){ return ad.id; });
+            slotIds = ads.map(function(ad) {
+                return ad.id;
+            });
         } else {
             slots = [getSlot(ads)];
             slotIds = [ads.id];
         }
 
-        if(RUBICON_LOADED) slots.forEach(setRubiconTargeting);
+        if (RUBICON_LOADED) slots.forEach(setRubiconTargeting);
 
-        if(PREBID_LOADED){
+        if (PREBID_LOADED) {
             pbjs.que.push(function() {
                 pbjs.requestBids({
                     timeout: PREBID_TIMEOUT,
                     adUnitCodes: slotIds,
                     bidsBackHandler: function() {
                         pbjs.setTargetingForGPTAsync(slotIds);
-                        googletag.pubads().refresh(slots,{
-                            'changeCorrelator': !!changeCorrelator
+                        googletag.pubads().refresh(slots, {
+                            changeCorrelator: !!changeCorrelator
                         });
                         res();
                     }
@@ -649,94 +682,100 @@ export function refreshGPT(ads, changeCorrelator){
             });
         } else {
             googletag.pubads().refresh(slots, {
-                'changeCorrelator': !!changeCorrelator
+                changeCorrelator: !!changeCorrelator
             });
             res();
         }
-
     });
 
-    function setRubiconTargeting(slot){
+    function setRubiconTargeting(slot) {
         rubicontag.setTargetingForGPTSlot(slot);
     }
 }
 
-export function refreshRubicon(ads){
-    return pushToGoogleTag(function(res){
+export function refreshRubicon(ads) {
+    return pushToGoogleTag(function(res) {
         // If rubicon is not loaded, dont do it
-        if(!RUBICON_LOADED) return res();
+        if (!RUBICON_LOADED) return res();
 
         var slots = null;
-        if(Array.isArray(ads)){
+        if (Array.isArray(ads)) {
             slots = ads.filter(hasHeaderBidding).map(getRubiconSlot);
         } else {
-            if(hasHeaderBidding(ads)){
+            if (hasHeaderBidding(ads)) {
                 slots = [getRubiconSlot(ads)];
             } else {
                 slots = [null];
             }
         }
         // Filter any nulls
-        slots = slots.filter(function(s){ return s !== null; });
+        slots = slots.filter(function(s) {
+            return s !== null;
+        });
         // Check if we have slots. If no slots, just use null and do all
-        if(slots.length < 1) slots = null;
+        if (slots.length < 1) slots = null;
         // If there are no slots, we dont want to refresh rubicon
-        if(slots === null){
+        if (slots === null) {
             return res();
         }
         // Send off rubicon request
         rubicontag.run(res, {
-            'slots': slots
+            slots: slots
         });
     });
 }
 
-export function registerAdBlock(ad){
-    return new Promise(function(resolve){
+export function registerAdBlock(ad) {
+    return new Promise(function(resolve) {
         // Update slot information
         ad.slot = null;
         ad.state = AD_STATES.REGISTERED;
         // Events
-        ad.emit('register', createEventTemplate('register', ad, {
-            'slot': ad.slot
-        }));
-        ad.manager.emit('register', createEventTemplate('register', ad.manager, {
-            'ad': ad,
-            'slot': ad.slot
-        }));
+        ad.emit(
+            'register',
+            createEventTemplate('register', ad, {
+                slot: ad.slot
+            })
+        );
+        ad.manager.emit(
+            'register',
+            createEventTemplate('register', ad.manager, {
+                ad: ad,
+                slot: ad.slot
+            })
+        );
         resolve(ad);
     });
 }
 
-export function registerGPT(ad){
-    return pushToGoogleTag(function(){
+export function registerGPT(ad) {
+    return pushToGoogleTag(function() {
         // Create the slot
-        var slot = googletag.defineSlot(ad.get('dfp'),
-            ad.get('sizes'), ad.id);
+        var slot = googletag.defineSlot(ad.get('dfp'), ad.get('sizes'), ad.id);
         slot.addService(googletag.pubads());
         // Set the targeting
-        if(ad.get('targets') !== null){
-            var targets = ad.get('targets').filter(function(target){
+        if (ad.get('targets') !== null) {
+            var targets = ad.get('targets').filter(function(target) {
                 return target !== '';
             });
-            if(targets.length > 0){
+            if (targets.length > 0) {
                 slot.setTargeting(getPageAdConfig().ad_tag_prefix, targets);
             }
         }
         // Set the position
-        if(ad.get('position')){
+        if (ad.get('position')) {
             slot.setTargeting('position', ad.get('position'));
         }
         // Set key/values
-        if(ad.get('values')){
+        if (ad.get('values')) {
             var key = '';
             var values = ad.get('values');
-            for(key in values){
-                if(!hasOwnProperty(values, key)) continue;
-                if(ignoreAttributeKey(key)) continue;
-                if(key === 'ad_keyvalue'){
-                    for(var key2 in values[key]){
-                        if(!hasOwnProperty(values[key], key2)) continue;
+            for (key in values) {
+                if (!hasOwnProperty(values, key)) continue;
+                if (ignoreAttributeKey(key)) continue;
+                if (key === 'ad_keyvalue') {
+                    for (var key2 in values[key]) {
+                        if (!hasOwnProperty(values[key], key2)) continue;
                         slot.setTargeting(key2, values[key][key2]);
                     }
                 } else {
@@ -745,12 +784,11 @@ export function registerGPT(ad){
             }
         }
         // Set sizemapping
-        if(ad.get('sizemap')){
-            slot.defineSizeMapping(
-                createSizeMap(ad.get('sizemap')).build());
+        if (ad.get('sizemap')) {
+            slot.defineSizeMapping(createSizeMap(ad.get('sizemap')).build());
         }
         // Prebid bits
-        if(PREBID_LOADED){
+        if (PREBID_LOADED) {
             pbjs.que.push(function() {
                 pbjs.setTargetingForGPTAsync();
             });
@@ -759,13 +797,19 @@ export function registerGPT(ad){
         ad.slot = slot;
         ad.state = AD_STATES.REGISTERED;
         // Events
-        ad.emit('register', createEventTemplate('register', ad, {
-            'slot': slot
-        }));
-        ad.manager.emit('register', createEventTemplate('register', ad.manager, {
-            'ad': ad,
-            'slot': slot
-        }));
+        ad.emit(
+            'register',
+            createEventTemplate('register', ad, {
+                slot: slot
+            })
+        );
+        ad.manager.emit(
+            'register',
+            createEventTemplate('register', ad.manager, {
+                ad: ad,
+                slot: slot
+            })
+        );
         return ad;
     });
 }
@@ -775,19 +819,19 @@ export function registerGPT(ad){
  * @param  {Array.<Ad>} ads
  * @return {Array}
  */
-function getPrebidAdUnits(ads){
+function getPrebidAdUnits(ads) {
     var adUnits = [];
 
-    ads.forEach(function(ad){
-        if(!hasHeaderBidding(ad)){
+    ads.forEach(function(ad) {
+        if (!hasHeaderBidding(ad)) {
             return;
         }
 
         var bids = [];
 
         // Rubicon
-        if(PREBID_SETTINGS.hasOwnProperty('RUBICON')){
-            PREBID_SETTINGS.RUBICON.zoneId.forEach(function(zoneId){
+        if (PREBID_SETTINGS.hasOwnProperty('RUBICON')) {
+            PREBID_SETTINGS.RUBICON.zoneId.forEach(function(zoneId) {
                 bids.push({
                     bidder: 'rubicon',
                     params: {
@@ -800,29 +844,32 @@ function getPrebidAdUnits(ads){
         }
 
         // No bids to be setup, dont do anything
-        if(bids.length === 0) return;
+        if (bids.length === 0) return;
 
         var adUnit = {
             code: ad.id,
-            sizes: ad.get('sizes').filter(function(dims){
+            sizes: ad.get('sizes').filter(function(dims) {
                 return RUBICON_ALLOWED_SIZES.hasOwnProperty(dims.join('x'));
             }),
             bids: bids
         };
 
-        if(ad.get('sizemap')){
-            var sizemap = ad.get('sizemap').map(function(group){
+        if (ad.get('sizemap')) {
+            var sizemap = ad.get('sizemap').map(function(group) {
                 return {
                     minWidth: group[0][0],
-                    sizes: group[1].filter(function(dims){
-                        return RUBICON_ALLOWED_SIZES.hasOwnProperty(
-                            dims.join('x'));
-                    }).map(function(dims){
-                        return dims[0];
-                    })
+                    sizes: group[1]
+                        .filter(function(dims) {
+                            return RUBICON_ALLOWED_SIZES.hasOwnProperty(
+                                dims.join('x')
+                            );
+                        })
+                        .map(function(dims) {
+                            return dims[0];
+                        })
                 };
             });
-            if(sizemap.length > 0){
+            if (sizemap.length > 0) {
                 adUnit['sizeMapping'] = sizemap;
             }
         }
@@ -837,9 +884,9 @@ function getPrebidAdUnits(ads){
  * @param  {Ad} ad
  * @return {Promise}
  */
-export function registerPrebid(ad){
-    return pushToGoogleTag(function(res){
-        if(PREBID_LOADED && hasHeaderBidding(ad)){
+export function registerPrebid(ad) {
+    return pushToGoogleTag(function(res) {
+        if (PREBID_LOADED && hasHeaderBidding(ad)) {
             pbjs.que.push(function() {
                 var adUnits = getPrebidAdUnits([ad]);
                 pbjs.addAdUnits(adUnits);
@@ -851,30 +898,26 @@ export function registerPrebid(ad){
     });
 }
 
-export function registerRubicon(ad){
-    return pushToGoogleTag(function(res){
-        if(RUBICON_LOADED && hasHeaderBidding(ad)){
-            rubicontag.defineSlot(
-                ad.get('dfp'),
-                ad.get('sizes'),
-                ad.id
-            );
+export function registerRubicon(ad) {
+    return pushToGoogleTag(function(res) {
+        if (RUBICON_LOADED && hasHeaderBidding(ad)) {
+            rubicontag.defineSlot(ad.get('dfp'), ad.get('sizes'), ad.id);
         }
         res();
     });
 }
 
-export function renderGPT(ad){
-    return pushToGoogleTag(function(res){
+export function renderGPT(ad) {
+    return pushToGoogleTag(function(res) {
         googletag.display(ad.id);
         res();
     });
 }
 
-export function setAdUrls(config){
-    for(var key in config){
-        if(!hasOwnProperty(config, key)) continue;
-        switch(key){
+export function setAdUrls(config) {
+    for (var key in config) {
+        if (!hasOwnProperty(config, key)) continue;
+        switch (key) {
         case 'GPT_URL':
             GPT_URL = config[key];
             break;
@@ -899,7 +942,7 @@ export function setAdUrls(config){
  * @param {Ad} ad
  * @return {Ad}
  */
-export function setAdStateToDestroyed(ad){
+export function setAdStateToDestroyed(ad) {
     ad.state = AD_STATES.DESTROYED;
     ad.el.setAttribute('data-ad-destroyed', true);
     return ad;
@@ -910,7 +953,7 @@ export function setAdStateToDestroyed(ad){
  * @param {Ad} ad
  * @return {Ad}
  */
-export function setAdStateToRendered(ad){
+export function setAdStateToRendered(ad) {
     ad.state = AD_STATES.RENDERED;
     ad.el.setAttribute('data-ad-rendered', true);
     return ad;
@@ -921,7 +964,7 @@ export function setAdStateToRendered(ad){
  * @param {Ad} ad
  * @return {Ad}
  */
-export function setAdStateToStopped(ad){
+export function setAdStateToStopped(ad) {
     ad.state = AD_STATES.STOPPED;
     ad.el.setAttribute('data-ad-stopped', true);
     return ad;
@@ -934,7 +977,7 @@ export function setAdStateToStopped(ad){
  * @param  {object} values key values
  * @return {HTMLDivElement}
  */
-export function createPageImpressionElement(unit, zone, values){
+export function createPageImpressionElement(unit, zone, values) {
     var attrs = {
         unit: unit,
         zone: zone,
@@ -945,8 +988,8 @@ export function createPageImpressionElement(unit, zone, values){
         placement: 'PAGE_IMPRESSION_TRACKER'
     };
     var div = document.createElement('div');
-    for(var key in attrs){
-        if(!attrs.hasOwnProperty(key)) continue;
+    for (var key in attrs) {
+        if (!attrs.hasOwnProperty(key)) continue;
         div.setAttribute('data-ad-' + key, attrs[key]);
     }
     return div;
@@ -996,9 +1039,9 @@ export function isAdNative(adModel, nativeSize) {
  * @param  {string} url
  * @return {object}     object with the test ad keys
  */
-export function getTestAdValues(url){
+export function getTestAdValues(url) {
     var _url = url;
-    if(!_url) _url = window.location.href;
+    if (!_url) _url = window.location.href;
 
     var queryArgs = getQueryArgs(_url);
 

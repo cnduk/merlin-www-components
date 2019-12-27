@@ -6,7 +6,8 @@ import {
     getQueryArgs,
     getQueryString,
     getUrlHost,
-    isDefined
+    isDefined,
+    loadScript
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import ComscoreManager from './ComscoreManager';
 
@@ -33,6 +34,9 @@ var IGNORE_PARAMS = [
     'exclude_uid',
     'referral_uid'
 ];
+
+var hasConsent = false;
+var hasLoadedScript = false;
 
 /**
  * @class GATracker
@@ -193,6 +197,8 @@ GATracker.prototype = {
      * @param  {Object} config  Data to send along with the call
      */
     'send': function( hitType, config ){
+        // Don't send anything if we don't have consent
+        if(!hasConsent) return;
         ga(function gaSend(){
             var options = assign( {
                 'comscore': true
@@ -229,6 +235,8 @@ GATracker.prototype = {
      * @param  {String/Number} value
      */
     'set': function( fieldName, value ){
+        // Don't set anything if we don't have consent
+        if(!hasConsent) return;
         var argLength = arguments.length;
         ga(function gaSet(){
             var setData = fieldName;
@@ -279,6 +287,31 @@ GATracker.getIndexByDimension = function( dimension ){
         return GATracker.DIMENSION_BY_INDEX[ dimension ];
     }
     throw new TypeError( dimension + ' is not a valid dimension' );
+};
+
+// This initialises the wrapper but does not load of trigger any analytics
+GATracker.init = function(){
+    var queue = function(){
+        ga.q = ga.q || [];
+        ga.q.push(arguments);
+    };
+    window.ga = window.ga || queue;
+    window.ga.l = +new Date;
+};
+
+// This loads the analytics script which in turn sets all the wheels in motion
+GATracker.loadGAScript = function(){
+    if(hasLoadedScript) return;
+    // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    // })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    loadScript('https://www.google-analytics.com/analytics.js');
+    hasLoadedScript = true;
+};
+
+GATracker.setConsent = function(consent){
+    hasConsent = consent;
 };
 
 /**

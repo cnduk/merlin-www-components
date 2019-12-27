@@ -10,7 +10,6 @@ import GATracker from '@cnbritain/merlin-www-js-gatracker';
 import InfobarManager from '@cnbritain/merlin-www-infobar';
 import SubscribeBarManager from '@cnbritain/merlin-www-subscribe-bar';
 
-
 var hasBeacon = !!navigator.sendBeacon;
 var clickEvents = ['click', 'auxclick'];
 var delegateHandler = null;
@@ -22,8 +21,7 @@ var brandTracker = null;
  * @return {String}     The domain from the url
  */
 export function getDomain(str) {
-    return str.replace(/^(https|http)?(:\/\/)?(www\.)?/i, '')
-        .split(/[/?#]/)[0];
+    return str.replace(/^(https|http)?(:\/\/)?(www\.)?/i, '').split(/[/?#]/)[0];
 }
 
 /**
@@ -70,7 +68,6 @@ export function isLinkNavigatingPage(domLink, event) {
  * @return {Object}         the values for GA
  */
 export function getEventValues(domLink) {
-
     var url = domLink.getAttribute('href');
     var isButton = isBBCodeButton(domLink);
     var isInternal = isInternalUrl(url);
@@ -112,7 +109,6 @@ export function getBrandTracker() {
  * @param  {Object} e the click event object
  */
 export function onLinkClick(e) {
-
     var tracker = getBrandTracker();
     if (!tracker) return;
 
@@ -159,8 +155,8 @@ export function unbindEvents() {
     }
 }
 
-function onInfobarLoad(){
-    if(InfobarManager.infobar !== null){
+function onInfobarLoad() {
+    if (InfobarManager.infobar !== null) {
         InfobarManager.infobar.addListener('linkClick', function(e) {
             var category = 'Info Bar';
             var action = null;
@@ -186,7 +182,7 @@ function onInfobarLoad(){
 }
 
 export function initInfobarTracking() {
-    if(InfobarManager.isLoaded){
+    if (InfobarManager.isLoaded) {
         onInfobarLoad();
     } else {
         InfobarManager.once('load', onInfobarLoad);
@@ -207,15 +203,18 @@ export function onSocialFollowClick(e) {
     });
 }
 
-export function initFollowButtonsTracking(){
-    addEvent(document, 'click', delegate(
-        '.c-nav__share-link', onSocialFollowClick));
+export function initFollowButtonsTracking() {
+    addEvent(
+        document,
+        'click',
+        delegate('.c-nav__share-link', onSocialFollowClick)
+    );
 }
 
 /**
  * Section newsletter tracking
  */
-export function onSectionNewsletterSubmit(){
+export function onSectionNewsletterSubmit() {
     GATracker.SendAll(GATracker.SEND_HITTYPES.EVENT, {
         eventCategory: 'slice_newsletter',
         eventAction: 'Submit',
@@ -223,12 +222,14 @@ export function onSectionNewsletterSubmit(){
     });
 }
 
-export function initSectionNewsletterTracking(){
-    if(!document.querySelector('.c-newsletter__form')) return;
-    addEvent(document, 'submit', delegate(
-        '.c-newsletter__form', onSectionNewsletterSubmit));
+export function initSectionNewsletterTracking() {
+    if (!document.querySelector('.c-newsletter__form')) return;
+    addEvent(
+        document,
+        'submit',
+        delegate('.c-newsletter__form', onSectionNewsletterSubmit)
+    );
 }
-
 
 /**
  * Subscribe bar sign up location tracking
@@ -261,4 +262,21 @@ export function initLinkTracking() {
     bindEvents();
     initFollowButtonsTracking();
     initSectionNewsletterTracking();
+}
+
+export function loadSiteCensus() {
+    (function() {
+        var d = new Image(1, 1);
+        d.onerror = d.onload = function() {
+            d.onerror = d.onload = null;
+        };
+        d.src = [
+            '//secure-uk.imrworldwide.com/cgi-bin/m?ci=uk-405185h&cg=0&cc=1&si=',
+            escape(window.location.href),
+            '&rp=',
+            escape(document.referrer),
+            '&ts=compact&rnd=',
+            new Date().getTime()
+        ].join('');
+    })();
 }

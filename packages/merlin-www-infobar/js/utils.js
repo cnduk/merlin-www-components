@@ -1,8 +1,13 @@
+import {
+    getCookie,
+    setCookie
+} from '@cnbritain/merlin-www-js-utils/js/functions';
+import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
+import { COOKIE_CONFIG_HASH, COOKIE_EXPIRES } from './constants';
 
-import {getCookie, setCookie} from '@cnbritain/merlin-www-js-utils/js/functions';
-import {COOKIE_CONFIG_HASH, COOKIE_EXPIRES} from './constants';
-
-export function saveConfig(configHash, messages){
+export function saveConfig(configHash, messages) {
+    if (!OneTrustManager.ready || !OneTrustManager.consentedStrictlyCookies)
+        return;
     var config = {
         configHash: configHash,
         messages: messages
@@ -10,32 +15,32 @@ export function saveConfig(configHash, messages){
     setCookie(COOKIE_CONFIG_HASH, JSON.stringify(config), COOKIE_EXPIRES);
 }
 
-export function loadConfig(){
+export function loadConfig() {
     var config = getCookie(COOKIE_CONFIG_HASH);
-    if(config){
+    if (config) {
         try {
             config = JSON.parse(config);
-        } catch(err){
+        } catch (err) {
             console.error('Error parsing config!');
             console.error(err);
-            config = {configHash: null, messages: {}};
+            config = { configHash: null, messages: {} };
         }
     } else {
-        config = {configHash: null, messages: {}};
+        config = { configHash: null, messages: {} };
     }
     return config;
 }
 
-export function post(url, postData){
-    return new Promise(function( resolve, reject ){
+export function post(url, postData) {
+    return new Promise(function(resolve, reject) {
         var request = new XMLHttpRequest();
-        request.onreadystatechange = function( e ){
-            if(request.readyState === 4){
+        request.onreadystatechange = function(e) {
+            if (request.readyState === 4) {
                 request.onreadystatechange = null;
-                if(request.status === 200){
-                    resolve({'event': e, 'request': request});
+                if (request.status === 200) {
+                    resolve({ event: e, request: request });
                 } else {
-                    reject({'event': e, 'request': request});
+                    reject({ event: e, request: request });
                 }
             }
         };
@@ -43,7 +48,10 @@ export function post(url, postData){
         request.open('POST', url);
         // Add referrer as cloudfront sucks up the referrer
         request.setRequestHeader('rollbar-referrer', document.location.href);
-        request.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+        request.setRequestHeader(
+            'Content-Type',
+            'application/json;charset=UTF-8'
+        );
         request.send(JSON.stringify(postData));
     });
 }
