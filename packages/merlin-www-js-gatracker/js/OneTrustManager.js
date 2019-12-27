@@ -51,11 +51,12 @@ var VERSION_1 = {
     setConsent: function setConsent(value) {
         var beforeValue = this.consentData;
 
+        this.consentData = value;
+        this.processConsentData.call(this);
+
         if (this.ready && this.consentedStrictlyCookies) {
             setCookie(this.ONETRUST_COOKIE, value);
         }
-        this.consentData = value;
-        this.processConsentData.call(this);
 
         if (beforeValue !== this.consentData) {
             this._emitChange({
@@ -111,11 +112,12 @@ var VERSION_2 = {
     setConsent: function setConsent(value) {
         var beforeValue = this.consentData;
 
+        this.consentData = value;
+        this.processConsentData.call(this);
+
         if (this.ready && this.consentedStrictlyCookies) {
             setCookie(this.ONETRUST_COOKIE, value);
         }
-        this.consentData = value;
-        this.processConsentData.call(this);
 
         if (beforeValue !== this.consentData) {
             this._emitChange({
@@ -161,6 +163,9 @@ OneTrustManager.prototype = inherit(EventEmitter.prototype, {
 
     _emitReady: function _emitReady(data) {
         if (this.ready) return;
+        if (this.consentedStrictlyCookies) {
+            setCookie(this.ONETRUST_COOKIE, this.consentData);
+        }
         this.emit('ready', createEventTemplate('ready', this, data));
         this.ready = true;
     },
