@@ -1,4 +1,7 @@
+/* globals Optanon */
 import {
+    addEvent,
+    delegate,
     insertBefore,
     removeElement
 } from '@cnbritain/merlin-www-js-utils/js/functions';
@@ -42,7 +45,6 @@ function hasConsent(consentType) {
 }
 
 function hydrateTemplate(element) {
-    // console.log('hydrating template', element.content);
     element.setAttribute('is-hydrated', true);
     // NOTE: i thought i was going to need to do something wacky to load the
     // scripts but they just work :shrug:
@@ -74,6 +76,12 @@ function onChange() {
     hydrate();
 }
 
+function onConsentClick(e){
+    e.preventDefault();
+    Optanon.ToggleInfoDisplay();
+    return false;
+}
+
 var isInitialiased = false;
 
 export default function() {
@@ -88,6 +96,11 @@ export default function() {
     } else {
         OneTrustManager.once('ready', onReady);
     }
+
+    // Use delegation here to we don't need to constantly reapply listeners
+    // on infinite scroll
+    addEvent(window, 'click', delegate('.bb-embed__consent-preferences', onConsentClick));
+
     isInitialiased = true;
 }
 

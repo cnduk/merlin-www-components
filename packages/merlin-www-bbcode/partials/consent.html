@@ -1,5 +1,7 @@
 <div class="bb-embed {{# style.cls }} {{ style.cls }}{{/ style.cls }}" data-consent-type="{{ data.consent_type }}">
-  <p class="bb-p">{{ data.consent_message }}</p>
+  <p class="bb-p">
+    {{ data.consent_message }} Open my <a class="bb-a bb-embed__consent-preferences" href="#">cookie preferences</a>.
+  </p>
   <template class="bb-embed__template">
     {{# state.is_brightcove }}
         {{> @cnbritain/merlin-www-bbcode/brightcove }}
