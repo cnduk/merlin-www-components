@@ -22,7 +22,8 @@ SkimlinksManager.prototype = inherit(EventEmitter.prototype, {
     loadScript: function loadScript() {
         if (this._hasLoadedScript) return;
         if (this._skimlinksId === null) {
-            throw new TypeError('Missing Skimlinks Id', this._skimlinksId);
+            console.warn('Missing Skimlinks Id', this._skimlinksId);
+            return;
         }
         this._hasLoadedScript = true;
         loadScript(
