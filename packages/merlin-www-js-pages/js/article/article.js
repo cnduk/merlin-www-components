@@ -62,7 +62,7 @@ export default function init() {
     NewsletterManager.init();
 }
 
-export function onArticleAdd(e){
+export function onArticleAdd(){
     var articleDisclaimer = document.querySelector('.a-body-disclaimer');
     if(OneTrustManager.consentedTargetingCookies && articleDisclaimer){
         SkimlinksManager.loadScript();
