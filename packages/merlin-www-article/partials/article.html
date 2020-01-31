@@ -21,6 +21,9 @@
                 {{/ data.podcast }}
 
                 <div class='a-body__content has-bbcode'>
+                    {{# state.has_affiliates_disclaimer }}
+                        {{> @cnbritain/merlin-www-article/article-disclaimer }}
+                    {{/ state.has_affiliates_disclaimer }}
                     {{ &data.body }}
                     <div class="a-body__clear"></div>
                 </div>
