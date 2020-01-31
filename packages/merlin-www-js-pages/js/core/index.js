@@ -86,7 +86,6 @@ export default function init(config) {
             loadSiteCensus();
         }
         if (this.consentedTargetingCookies) {
-            SkimlinksManager.loadScript();
             FacebookPixelManager.loadScript();
             PermutiveManager.loadScript();
         }

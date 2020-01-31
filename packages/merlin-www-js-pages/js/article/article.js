@@ -6,6 +6,8 @@ import {
     getWindowScrollTop,
     throttle
 } from '@cnbritain/merlin-www-js-utils/js/functions';
+import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
+import SkimlinksManager from '@cnbritain/merlin-www-js-gatracker/js/SkimlinksManager';
 import TopStories from '@cnbritain/merlin-www-top-stories';
 import Nav from '@cnbritain/merlin-www-main-navigation';
 import {
@@ -28,6 +30,7 @@ export default function init() {
     ArticleManager.on('focus', onArticleFocus);
     ArticleManager.on('blur', onArticleBlur);
     ArticleManager.on('imagefocus', onGalleryImageFocus);
+    ArticleManager.on('add', onArticleAdd);
     if (getStorage('infinite_stop') === true) {
         ArticleManager.disableInfiniteScroll();
     } else {
@@ -57,6 +60,13 @@ export default function init() {
     addEvent(window, 'resize', debounce(onWindowResize, 200));
 
     NewsletterManager.init();
+}
+
+export function onArticleAdd(e){
+    var articleDisclaimer = document.querySelector('.a-body-disclaimer');
+    if(OneTrustManager.consentedTargetingCookies && articleDisclaimer){
+        SkimlinksManager.loadScript();
+    }
 }
 
 export function onArticleBlur(e) {
