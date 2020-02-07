@@ -30,8 +30,10 @@ SailthruManager.prototype = inherit(EventEmitter.prototype, {
         this.initSaleThrough();
     },
 
-    initSaleThrough: function() {
-        Sailthru.init({customerId: this._sailthrewId});
+    initSaleThrough: function init() {
+        if (this._hasLoadedScript && this._sailthrewId !== null) {
+            Sailthru.init({customerId: this._sailthrewId});
+        }
     }
 });
 
