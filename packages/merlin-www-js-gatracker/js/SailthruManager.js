@@ -26,8 +26,9 @@ SailthruManager.prototype = inherit(EventEmitter.prototype, {
             return;
         }
         this._hasLoadedScript = true;
-        loadScript('https://ak.sail-horizon.com/spm/spm.v1.min.js');
-        this.initSaleThrough();
+        loadScript('https://ak.sail-horizon.com/spm/spm.v1.min.js').then(function(){
+            this.initSaleThrough();
+        }.bind(this));
     },
 
     initSaleThrough: function initSaleThrough() {
