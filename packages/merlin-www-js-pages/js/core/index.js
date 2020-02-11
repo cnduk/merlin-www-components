@@ -16,6 +16,7 @@ import store from '@cnbritain/merlin-www-js-store';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
 import ComscoreManager from '@cnbritain/merlin-www-js-gatracker/js/ComscoreManager';
 import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
+import SailthruManager from '@cnbritain/merlin-www-js-gatracker/js/SailthruManager';
 import SkimlinksManager from '@cnbritain/merlin-www-js-gatracker/js/SkimlinksManager';
 import FacebookPixelManager from '@cnbritain/merlin-www-js-gatracker/js/FacebookPixelManager';
 import TypekitManager from '@cnbritain/merlin-www-js-gatracker/js/TypekitManager';
@@ -59,7 +60,8 @@ export default function init(config) {
         SkimlinksManager: SkimlinksManager,
         FacebookPixelManager: FacebookPixelManager,
         TypekitManager: TypekitManager,
-        PermutiveManager: PermutiveManager
+        PermutiveManager: PermutiveManager,
+        SailthruManager: SailthruManager,
     });
 
     setupHtmlClasses();
@@ -77,6 +79,7 @@ export default function init(config) {
 
     GATracker.init();
     ComscoreManager.init();
+    SailthruManager.init(_config['SAILTHRU_ID']);
     OneTrustManager.on('ready', function() {
         SiteFooter.addOneTrust();
         if (this.consentedStrictlyCookies) TypekitManager.loadScript();
@@ -84,6 +87,7 @@ export default function init(config) {
             GATracker.loadGAScript();
             ComscoreManager.sendBeacon();
             loadSiteCensus();
+            SailthruManager.loadScript();
         }
         if (this.consentedTargetingCookies) {
             FacebookPixelManager.loadScript();
@@ -94,6 +98,7 @@ export default function init(config) {
         GATracker.setConsent(this.consentedPerformanceCookies);
         if (this.consentedPerformanceCookies) {
             ComscoreManager.setConsent(1);
+            SailthruManager.loadScript();
         } else {
             // this technically wont happen
             ComscoreManager.setConsent(0);
