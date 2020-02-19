@@ -61,7 +61,7 @@ export default function init(config) {
         FacebookPixelManager: FacebookPixelManager,
         TypekitManager: TypekitManager,
         PermutiveManager: PermutiveManager,
-        SailthruManager: SailthruManager,
+        SailthruManager: SailthruManager
     });
 
     setupHtmlClasses();
@@ -79,8 +79,7 @@ export default function init(config) {
 
     GATracker.init();
     ComscoreManager.init();
-    SailthruManager.init(_config['SAILTHRU_ID']);
-    OneTrustManager.on('ready', function() {
+    OneTrustManager.on("ready", function() {
         SiteFooter.addOneTrust();
         if (this.consentedStrictlyCookies) TypekitManager.loadScript();
         if (this.consentedPerformanceCookies) {
