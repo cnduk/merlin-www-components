@@ -79,7 +79,7 @@ export default function init(config) {
 
     GATracker.init();
     ComscoreManager.init();
-    OneTrustManager.on("ready", function() {
+    OneTrustManager.on('ready', function() {
         SiteFooter.addOneTrust();
         if (this.consentedStrictlyCookies) TypekitManager.loadScript();
         if (this.consentedPerformanceCookies) {
