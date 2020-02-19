@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-top-stories",
-  "version": "1.12.2",
+  "version": "1.13.0",
   "description": "",
   "main": "js/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "prepublish": "npm run lint"
   },
   "dependencies": {
-    "@cnbritain/merlin-www-ads": "^1.19.2",
+    "@cnbritain/merlin-www-ads": "^1.20.0",
     "@cnbritain/merlin-www-buttons": "^1.9.0",
     "@cnbritain/merlin-www-card": "^1.18.0",
     "@cnbritain/merlin-www-common": "^1.16.0",
