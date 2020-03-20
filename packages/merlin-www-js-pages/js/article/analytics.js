@@ -9,6 +9,7 @@ import {
     hasClass
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
+import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
 import { toArray } from '../utils';
 import NewsletterManager from '@cnbritain/merlin-www-bbcode/js/newsletter-manager';
 
@@ -30,6 +31,8 @@ export default function init() {
 }
 
 export function onArticleImageFocus(e) {
+    if (!OneTrustManager.ready || !OneTrustManager.consentedPerformanceCookies)
+        return;
     sendGalleryImagePageview(e.target.parentArticle, e.imageIndex);
 }
 
@@ -38,6 +41,8 @@ export function onArticleBlur(e) {
 }
 
 export function onArticleFocus(e) {
+    if (!OneTrustManager.ready || !OneTrustManager.consentedPerformanceCookies)
+        return;
     var article = e.target;
 
     // Update the analytics to include ad block changes
