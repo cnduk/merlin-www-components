@@ -166,8 +166,8 @@ OneTrustManager.prototype = inherit(EventEmitter.prototype, {
         if (this.consentedStrictlyCookies) {
             setCookie(this.ONETRUST_COOKIE, this.consentData);
         }
-        this.emit('ready', createEventTemplate('ready', this, data));
         this.ready = true;
+        this.emit('ready', createEventTemplate('ready', this, data));
     },
 
     init: function init(options) {
