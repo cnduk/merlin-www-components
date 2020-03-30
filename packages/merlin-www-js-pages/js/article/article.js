@@ -18,6 +18,7 @@ import NewsletterManager from '@cnbritain/merlin-www-bbcode/js/newsletter-manage
 
 var articleGallery = null;
 var windowHeightHalf = window.innerHeight / 2;
+var hasSkimlinksLoaded = false;
 
 export default function init() {
     ArticleManager.on('focus', onArticleFocus);
@@ -53,13 +54,34 @@ export default function init() {
     addEvent(window, 'resize', debounce(onWindowResize, 200));
 
     NewsletterManager.init();
+
+    OneTrustManager.addListener('ready', onOneTrustChange);
+    OneTrustManager.addListener('change', onOneTrustChange);
+}
+
+export function onOneTrustChange() {
+    if (loadSkimlinks()) {
+        OneTrustManager.removeListener('ready', onOneTrustChange);
+        OneTrustManager.removeListener('change', onOneTrustChange);
+    }
+}
+
+export function loadSkimlinks() {
+    if (hasSkimlinksLoaded) return hasSkimlinksLoaded;
+    var articleDisclaimer = document.querySelector('.a-body-disclaimer');
+    if (
+        articleDisclaimer &&
+        OneTrustManager.ready &&
+        OneTrustManager.consentedTargetingCookies
+    ) {
+        SkimlinksManager.loadScript();
+        hasSkimlinksLoaded = true;
+    }
+    return hasSkimlinksLoaded;
 }
 
 export function onArticleAdd() {
-    var articleDisclaimer = document.querySelector('.a-body-disclaimer');
-    if (OneTrustManager.consentedTargetingCookies && articleDisclaimer) {
-        SkimlinksManager.loadScript();
-    }
+    loadSkimlinks();
 }
 
 export function onArticleBlur(e) {
