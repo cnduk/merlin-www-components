@@ -10,15 +10,9 @@ import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManag
 import SkimlinksManager from '@cnbritain/merlin-www-js-gatracker/js/SkimlinksManager';
 import TopStories from '@cnbritain/merlin-www-top-stories';
 import Nav from '@cnbritain/merlin-www-main-navigation';
-import {
-    ArticleManager
-} from '@cnbritain/merlin-www-article';
-import {
-    isArticleGallery
-} from '@cnbritain/merlin-www-article/js/utils';
-import {
-    getStorage
-} from '../utils.js';
+import { ArticleManager } from '@cnbritain/merlin-www-article';
+import { isArticleGallery } from '@cnbritain/merlin-www-article/js/utils';
+import { getStorage } from '../utils.js';
 import InfobarManager from '@cnbritain/merlin-www-infobar';
 import NewsletterManager from '@cnbritain/merlin-www-bbcode/js/newsletter-manager';
 
@@ -26,7 +20,6 @@ var articleGallery = null;
 var windowHeightHalf = window.innerHeight / 2;
 
 export default function init() {
-
     ArticleManager.on('focus', onArticleFocus);
     ArticleManager.on('blur', onArticleBlur);
     ArticleManager.on('imagefocus', onGalleryImageFocus);
@@ -44,10 +37,10 @@ export default function init() {
     }
 
     ArticleManager.add(articleEl, {
-        'ads': getStorage('ad_config'),
-        'analytics': getStorage('anal_config'),
-        'infinite': false,
-        'simplereach': simplereachConfig
+        ads: getStorage('ad_config'),
+        analytics: getStorage('anal_config'),
+        infinite: false,
+        simplereach: simplereachConfig
     });
 
     if (Nav.galleryNav !== null) {
@@ -62,9 +55,9 @@ export default function init() {
     NewsletterManager.init();
 }
 
-export function onArticleAdd(){
+export function onArticleAdd() {
     var articleDisclaimer = document.querySelector('.a-body-disclaimer');
-    if(OneTrustManager.consentedTargetingCookies && articleDisclaimer){
+    if (OneTrustManager.consentedTargetingCookies && articleDisclaimer) {
         SkimlinksManager.loadScript();
     }
 }
@@ -94,29 +87,29 @@ export function onArticleFocus(e) {
 
         // Infobar changes
         // No bar loadded
-        if(!InfobarManager.isLoaded){
-            InfobarManager.once('enable', function(){
+        if (!InfobarManager.isLoaded) {
+            InfobarManager.once('enable', function() {
                 gallery._imageNavigationOffset = 120;
                 gallery.updateNavScroll(true);
             });
-        // Bar loaded
+            // Bar loaded
         } else {
-            if(InfobarManager.infobar !== null &&
-                    InfobarManager.infobar.state.isFixed){
-
+            if (
+                InfobarManager.infobar !== null &&
+                InfobarManager.infobar.state.isFixed
+            ) {
                 gallery._imageNavigationOffset = 120;
                 gallery.updateNavScroll(true);
             }
         }
         // Closed
-        InfobarManager.once('disable', function(){
+        InfobarManager.once('disable', function() {
             gallery._imageNavigationOffset = 60;
             gallery.updateNavScroll(true);
         });
 
         articleGallery = article;
     }
-
 }
 
 export function onGalleryImageFocus(e) {
@@ -128,9 +121,7 @@ export function onNavigationViewChange(e) {
 
     if (e.view === 'grid') {
         articleGallery.gallery.displayThumbnailView();
-    }
-
-    else {
+    } else {
         articleGallery.gallery.displayListView();
     }
 
