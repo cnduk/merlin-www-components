@@ -2,11 +2,11 @@
 # yarn lockfile v1
 
 
-"@cnbritain/merlin-component-demo-server@^3.4.2":
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/@cnbritain/merlin-component-demo-server/-/merlin-component-demo-server-3.4.2.tgz#bbb7bc924c53ff7dabd6cbf046a39ec59aa4d25f"
+"@cnbritain/merlin-component-demo-server@^3.6.0":
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/@cnbritain/merlin-component-demo-server/-/merlin-component-demo-server-3.6.0.tgz#f29d23516e6b3a64478066f42ac0d001799188a8"
   dependencies:
-    "@cnbritain/merlin-sass-custom-importer" "^1.4.2"
+    "@cnbritain/merlin-sass-custom-importer" "^1.6.0"
     chalk "^1.1.3"
     chokidar "^2.0.3"
     commander "^2.9.0"
@@ -22,27 +22,55 @@
     socket.io "^2.1.0"
     webpack "^3.0.0"
 
-"@cnbritain/merlin-sass-custom-importer@^1.4.2":
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/@cnbritain/merlin-sass-custom-importer/-/merlin-sass-custom-importer-1.4.2.tgz#0675d04c0794dcbd9eaa4e03ac76db84b7c9163d"
+"@cnbritain/merlin-sass-custom-importer@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@cnbritain/merlin-sass-custom-importer/-/merlin-sass-custom-importer-1.6.0.tgz#18ce0fca84c8053f8445754449f469a2c2004b89"
   dependencies:
     chalk "^1.1.3"
 
-"@cnbritain/merlin-www-assets@^1.16.8":
-  version "1.16.8"
-  resolved "https://registry.yarnpkg.com/@cnbritain/merlin-www-assets/-/merlin-www-assets-1.16.8.tgz#d3b6c87b4932aa9bf074841a086f46319765f421"
+"@cnbritain/merlin-www-assets@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@cnbritain/merlin-www-assets/-/merlin-www-assets-2.2.0.tgz#d2930b8d0335f69da60ee3a83006c723b1e3d2d6"
 
-"@cnbritain/merlin-www-buttons@^1.7.33":
-  version "1.7.33"
-  resolved "https://registry.yarnpkg.com/@cnbritain/merlin-www-buttons/-/merlin-www-buttons-1.7.33.tgz#5d6c7ba88259baff00cf0cfcd4a7bccf9fbfa604"
+"@cnbritain/merlin-www-buttons@^1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@cnbritain/merlin-www-buttons/-/merlin-www-buttons-1.9.0.tgz#ea28ab7a28166621b5590b791b2111643d2054f0"
   dependencies:
-    "@cnbritain/merlin-www-common" "^1.14.10"
+    "@cnbritain/merlin-www-common" "^1.16.0"
 
-"@cnbritain/merlin-www-common@^1.14.10":
-  version "1.14.10"
-  resolved "https://registry.yarnpkg.com/@cnbritain/merlin-www-common/-/merlin-www-common-1.14.10.tgz#d106adbf09c02eeb2e8558bfdca0c538f21897d0"
+"@cnbritain/merlin-www-common@^1.16.0":
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/@cnbritain/merlin-www-common/-/merlin-www-common-1.16.0.tgz#0c52d03d7ee5f59126a814f1930cc41d64aae1f9"
   dependencies:
-    "@cnbritain/merlin-www-assets" "^1.16.8"
+    "@cnbritain/merlin-www-assets" "^2.2.0"
+
+"@cnbritain/merlin-www-image@^1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@cnbritain/merlin-www-image/-/merlin-www-image-1.12.0.tgz#39fdbbf6f3ad20035924640f9ac948428757677d"
+  dependencies:
+    "@cnbritain/merlin-www-assets" "^2.2.0"
+    lazysizes "^4.0.0"
+
+"@cnbritain/merlin-www-js-gatracker@^1.14.1":
+  version "1.14.1"
+  resolved "https://registry.yarnpkg.com/@cnbritain/merlin-www-js-gatracker/-/merlin-www-js-gatracker-1.14.1.tgz#4403b568bcb4ae33c66badd19097199cb9ac9d9b"
+  dependencies:
+    "@cnbritain/merlin-www-js-utils" "^1.9.0"
+    eventemitter2 "^4.1.0"
+
+"@cnbritain/merlin-www-js-utils@^1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@cnbritain/merlin-www-js-utils/-/merlin-www-js-utils-1.9.0.tgz#328dc18c01d753bda492809764d8ca20bd251f55"
+
+"@cnbritain/merlin-www-main-navigation@^1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@cnbritain/merlin-www-main-navigation/-/merlin-www-main-navigation-1.12.0.tgz#57b83f71a97761c99b644a84527be0e6a5c56905"
+  dependencies:
+    "@cnbritain/merlin-www-buttons" "^1.9.0"
+    "@cnbritain/merlin-www-common" "^1.16.0"
+    "@cnbritain/merlin-www-image" "^1.12.0"
+    "@cnbritain/merlin-www-js-utils" "^1.9.0"
+    eventemitter2 "^4.1.0"
 
 abbrev@1:
   version "1.1.1"
@@ -83,9 +111,9 @@ after@0.8.2:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/after/-/after-0.8.2.tgz#fedb394f9f0e02aa9768e702bda23b505fae7e1f"
 
-agent-base@^4.1.0:
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-4.2.1.tgz#d89e5999f797875674c07d87f260fc41e83e8ca9"
+agent-base@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-4.3.0.tgz#8165f01c436009bccad0b1d122f05ed770efc6ee"
   dependencies:
     es6-promisify "^5.0.0"
 
@@ -876,7 +904,13 @@ debug@2.6.9, debug@^2.1.2, debug@^2.2.0, debug@^2.3.3:
   dependencies:
     ms "2.0.0"
 
-debug@^3.1.0, debug@~3.1.0:
+debug@^3.1.0:
+  version "3.2.6"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
+  dependencies:
+    ms "^2.1.1"
+
+debug@~3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
   dependencies:
@@ -1098,8 +1132,8 @@ es6-map@^0.1.3:
     event-emitter "~0.3.5"
 
 es6-promise@^4.0.3:
-  version "4.2.4"
-  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.4.tgz#dc4221c2b16518760bd8c39a52d8f356fc00ed29"
+  version "4.2.8"
+  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.8.tgz#4eb21594c972bc40553d276e510539143db53e0a"
 
 es6-promisify@^5.0.0:
   version "5.0.0"
@@ -1255,6 +1289,10 @@ event-emitter@~0.3.5:
   dependencies:
     d "1"
     es5-ext "~0.10.14"
+
+eventemitter2@^4.1.0:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/eventemitter2/-/eventemitter2-4.1.2.tgz#0e1a8477af821a6ef3995b311bf74c23a5247f15"
 
 events@^1.0.0:
   version "1.1.1"
@@ -1805,10 +1843,10 @@ https-browserify@^1.0.0:
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
 
 https-proxy-agent@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-2.2.1.tgz#51552970fa04d723e04c56d04178c3f92592bbc0"
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-2.2.4.tgz#4ee7a737abd92678a293d9b34a1af4d0d08c787b"
   dependencies:
-    agent-base "^4.1.0"
+    agent-base "^4.3.0"
     debug "^3.1.0"
 
 iconv-lite@0.4.19:
@@ -2177,6 +2215,10 @@ lazy-cache@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
 
+lazysizes@^4.0.0:
+  version "4.1.8"
+  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-4.1.8.tgz#f1cb1e803f7a8441122ec1be6f7333bc8977f632"
+
 lcid@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/lcid/-/lcid-1.0.0.tgz#308accafa0bc483a3867b4b6f2b9506251d1b835"
@@ -2439,6 +2481,10 @@ mkdirp@0.5.1, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
+
+ms@^2.1.1:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
 
 mustache-express@^1.2.5:
   version "1.2.7"
