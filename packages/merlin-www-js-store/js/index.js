@@ -39,7 +39,7 @@ var exportedStore = {
      */
     'forEach': function(callback) {
         for (var key in exportedStoreData) {
-            if (exportedStoreData.hasOwnProperty(key)) {
+            if (Object.prototype.hasOwnProperty.call(exportedStoreData, key)) {
                 callback(key, this.get(key));
             }
         }
@@ -66,7 +66,7 @@ var exportedStore = {
     'getAll': function() {
         var ret = {};
         for (var key in exportedStoreData) {
-            if (exportedStoreData.hasOwnProperty(key)) {
+            if (Object.prototype.hasOwnProperty.call(exportedStoreData, key)) {
                 ret[key] = deserialize(exportedStoreData[key]);
             }
         }

@@ -31,7 +31,7 @@ var isHijacked = false;
 
 
 function Logger(loggerName){
-    if(LOGGERS.hasOwnProperty(loggerName)){
+    if(Object.prototype.hasOwnProperty.call(LOGGERS, loggerName)){
         throw new Error('Logger already exists with name ' + loggerName);
     }
 
@@ -127,8 +127,8 @@ function getPersistedLevel(){
     }
     var config = JSON.parse(json);
     for(var key in config){
-        if(!config.hasOwnProperty(key)) continue;
-        if(!LOGGERS.hasOwnProperty(key)) continue;
+        if(!Object.prototype.hasOwnProperty.call(config, key)) continue;
+        if(!Object.prototype.hasOwnProperty.call(LOGGERS, key)) continue;
         LOGGERS[key].setLogLevel(config[key]);
     }
 }
@@ -165,6 +165,6 @@ export function liberateConsole(){
 }
 
 function validateLevelName(levelName){
-    if(LOG_LEVELS.hasOwnProperty(levelName)) return true;
+    if(Object.prototype.hasOwnProperty.call(LOG_LEVELS, levelName)) return true;
     throw new Error(levelName + ' is not a valid log level');
 }
