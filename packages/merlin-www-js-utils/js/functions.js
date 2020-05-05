@@ -1093,7 +1093,7 @@ export function getQueryArgs(url){
         splitArg = argPieces[i].split('=');
         key = decodeURIComponent(splitArg[0]);
 
-        if(!args.hasOwnProperty(key)){
+        if(!hasOwnProperty(args, key)){
             args[key] = [];
         }
 
@@ -1113,7 +1113,7 @@ export function getQueryArgs(url){
 export function getQueryString(args){
     var qs = '';
     for(var key in args){
-        if(!args.hasOwnProperty(key)) continue;
+        if(!hasOwnProperty(args, key)) continue;
         args[key].forEach(function(value){
             qs += '&' + encodeURIComponent(key) + '=' +
                 encodeURIComponent(value);
@@ -1135,7 +1135,7 @@ export function updateQueryString(url, args){
 
     // Update args with our args
     for(var key in args){
-        if(!args.hasOwnProperty(key)) continue;
+        if(!hasOwnProperty(args, key)) continue;
         if(Array.isArray(args[key])){
             currentArgs[key] = args[key];
         } else {
