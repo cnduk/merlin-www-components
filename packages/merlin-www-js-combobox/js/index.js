@@ -534,7 +534,7 @@ function createElement(type, options) {
     if (options.cls !== undefined) container.className = options.cls;
     if (options.attrs !== undefined) {
         for(var key in options.attrs) {
-            if (hasOwnProperty(options.attrs., key)) {
+            if (hasOwnProperty(options.attrs, key)) {
                 container.setAttribute(key, options.attrs[ key ]);
             }
         }
