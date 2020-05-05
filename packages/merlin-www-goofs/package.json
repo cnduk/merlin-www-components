@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-goofs",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "STOP GOOFING AND GET SOME WORK DUN!",
   "main": "js/index.js",
   "scripts": {
@@ -10,10 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-www-js-utils": "^1.9.1"
+    "@cnbritain/merlin-www-js-utils": "^1.9.2"
   },
   "devDependencies": {
     "eslint": "^4.14.0",
     "eslint-plugin-compat": "^2.2.0"
-  }
+  },
+  "gitHead": "ce77aa229eec61a567003089b722a108931ff051"
 }

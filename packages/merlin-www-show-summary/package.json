@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-show-summary",
-  "version": "1.8.3",
+  "version": "1.8.4",
   "description": "Show summary article",
   "main": "js/index.js",
   "scripts": {
@@ -9,16 +9,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-www-ads": "^1.20.2",
-    "@cnbritain/merlin-www-bbcode": "^1.21.3",
-    "@cnbritain/merlin-www-buttons": "^1.9.2",
-    "@cnbritain/merlin-www-common": "^1.16.1",
-    "@cnbritain/merlin-www-image": "^1.12.2",
-    "@cnbritain/merlin-www-show-card-carousel": "^1.9.2",
-    "@cnbritain/merlin-www-topic-strip": "^1.12.2"
+    "@cnbritain/merlin-www-ads": "^1.20.3",
+    "@cnbritain/merlin-www-bbcode": "^1.21.4",
+    "@cnbritain/merlin-www-buttons": "^1.9.3",
+    "@cnbritain/merlin-www-common": "^1.16.2",
+    "@cnbritain/merlin-www-image": "^1.12.3",
+    "@cnbritain/merlin-www-show-card-carousel": "^1.9.3",
+    "@cnbritain/merlin-www-topic-strip": "^1.12.3"
   },
   "devDependencies": {
-    "@cnbritain/merlin-component-demo-server": "^3.6.2"
+    "@cnbritain/merlin-component-demo-server": "^3.6.3"
   },
-  "gitHead": "e124889b55a64d439200769992a9f5d45929d396"
+  "gitHead": "ce77aa229eec61a567003089b722a108931ff051"
 }

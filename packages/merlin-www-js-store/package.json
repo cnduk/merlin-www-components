@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-js-store",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "JS module that acts as data storage",
   "main": "js/index.js",
   "scripts": {
@@ -12,5 +12,6 @@
   "devDependencies": {
     "eslint": "^4.14.0",
     "eslint-plugin-compat": "^2.2.0"
-  }
+  },
+  "gitHead": "ce77aa229eec61a567003089b722a108931ff051"
 }
