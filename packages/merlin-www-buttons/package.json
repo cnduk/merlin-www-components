@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-buttons",
-  "version": "1.9.8",
+  "version": "1.9.9",
   "description": "The buttons live here",
   "main": "index.js",
   "scripts": {
@@ -9,10 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-www-common": "^1.16.7"
+    "@cnbritain/merlin-www-common": "^1.16.8"
   },
   "devDependencies": {
-    "@cnbritain/merlin-component-demo-server": "^3.6.8"
+    "@cnbritain/merlin-component-demo-server": "^3.6.9"
   },
   "gitHead": "84311537d5d20eeae9fd7097dad8bb0e8dec31ab"
 }
