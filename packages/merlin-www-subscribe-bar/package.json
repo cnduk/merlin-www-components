@@ -1,6 +1,6 @@
 {
     "name": "@cnbritain/merlin-www-subscribe-bar",
-    "version": "1.6.4",
+    "version": "1.6.5",
     "description": "Subscribe Bar Component",
     "main": "js/index.js",
     "scripts": {
@@ -9,15 +9,15 @@
         "prepublish": "npm run lint"
     },
     "dependencies": {
-        "@cnbritain/merlin-www-buttons": "^1.9.3",
-        "@cnbritain/merlin-www-common": "^1.16.2",
-        "@cnbritain/merlin-www-js-gatracker": "^1.14.3",
-        "@cnbritain/merlin-www-js-utils": "^1.9.2",
-        "@cnbritain/merlin-www-main-navigation": "^1.12.3",
+        "@cnbritain/merlin-www-buttons": "^1.9.4",
+        "@cnbritain/merlin-www-common": "^1.16.3",
+        "@cnbritain/merlin-www-js-gatracker": "^1.14.4",
+        "@cnbritain/merlin-www-js-utils": "^1.9.3",
+        "@cnbritain/merlin-www-main-navigation": "^1.12.4",
         "eventemitter2": "^4.1.0"
     },
     "devDependencies": {
-        "@cnbritain/merlin-component-demo-server": "^3.6.3",
+        "@cnbritain/merlin-component-demo-server": "^3.6.4",
         "eslint": "^4.14.0",
         "eslint-plugin-compat": "^2.2.0"
     },
