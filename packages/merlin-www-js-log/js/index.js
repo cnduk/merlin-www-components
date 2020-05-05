@@ -1,5 +1,7 @@
 'use strict';
 
+import { hasOwnProperty } from '@cnbritain/merlin-www-js-utils/js/functions';
+
 var LOG_LOCALSTORAGE_KEY = 'merlin-www-log-js';
 var LOG_LEVELS = {
     trace: 0,
@@ -31,7 +33,7 @@ var isHijacked = false;
 
 
 function Logger(loggerName){
-    if(Object.prototype.hasOwnProperty.call(LOGGERS, loggerName)){
+    if(hasOwnProperty.call(LOGGERS, loggerName)){
         throw new Error('Logger already exists with name ' + loggerName);
     }
 
@@ -127,8 +129,8 @@ function getPersistedLevel(){
     }
     var config = JSON.parse(json);
     for(var key in config){
-        if(!Object.prototype.hasOwnProperty.call(config, key)) continue;
-        if(!Object.prototype.hasOwnProperty.call(LOGGERS, key)) continue;
+        if(!hasOwnProperty.call(config, key)) continue;
+        if(!hasOwnProperty.call(LOGGERS, key)) continue;
         LOGGERS[key].setLogLevel(config[key]);
     }
 }
@@ -165,6 +167,6 @@ export function liberateConsole(){
 }
 
 function validateLevelName(levelName){
-    if(Object.prototype.hasOwnProperty.call(LOG_LEVELS, levelName)) return true;
+    if(hasOwnProperty.call(LOG_LEVELS, levelName)) return true;
     throw new Error(levelName + ' is not a valid log level');
 }

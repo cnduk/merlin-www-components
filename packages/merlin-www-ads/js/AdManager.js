@@ -15,7 +15,8 @@ import {
     randomUUID,
     removeClass,
     removeEvent,
-    throttle
+    throttle,
+    hasOwnProperty
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
 import {
@@ -380,7 +381,7 @@ function groupAds(manager, ads){
 
     // Order the groups by priority
     for(groupKey in groups){
-        if(!groups.hasOwnProperty(groupKey)) continue;
+        if(!hasOwnProperty(groups, groupKey)) continue;
         groupsArr.push(groups[groupKey]);
     }
     groupsArr.sort(function sortByOrder(a, b){ return a.order - b.order; });
@@ -389,7 +390,7 @@ function groupAds(manager, ads){
 
     function createGroup(name, order){
         // If group already exists
-        if(groups.hasOwnProperty(name)) return groups[name].group;
+        if(hasOwnProperty(groups, name)) return groups[name].group;
 
         // Create the group
         groups[name] = {

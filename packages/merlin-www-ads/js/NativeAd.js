@@ -9,7 +9,8 @@ import {
 import {
     ajax,
     createEventTemplate,
-    removeElement
+    removeElement,
+    hasOwnProperty
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 
 /**
@@ -170,7 +171,7 @@ function objectToQueryString(obj){
     var qs = [];
     var key = '';
     for(key in obj){
-        if(!obj.hasOwnProperty(key)) continue;
+        if(!hasOwnProperty(obj, key)) continue;
         qs.push(encodeURIComponent(key) + '=' + encodeValue(obj[key]));
     }
     return '?' + qs.join('&');

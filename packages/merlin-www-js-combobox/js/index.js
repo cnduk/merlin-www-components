@@ -11,7 +11,8 @@ import {
     inherit,
     isDefined,
     removeClass,
-    removeEvent
+    removeEvent,
+    hasOwnProperty
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 
 var KEYBOARD_CODES = {
@@ -533,7 +534,7 @@ function createElement(type, options) {
     if (options.cls !== undefined) container.className = options.cls;
     if (options.attrs !== undefined) {
         for(var key in options.attrs) {
-            if (options.attrs.hasOwnProperty(key)) {
+            if (hasOwnProperty(options.attrs., key)) {
                 container.setAttribute(key, options.attrs[ key ]);
             }
         }

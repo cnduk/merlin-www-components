@@ -7,7 +7,8 @@ import {
     assign,
     addClass,
     inherit,
-    removeClass
+    removeClass,
+    hasOwnProperty
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 
 function Stick( el, _options ){
@@ -213,7 +214,7 @@ function isArray(thing){
 
 function setStyles( el, styles ){
     for(var key in styles){
-        if(!styles.hasOwnProperty(key)) continue;
+        if(!hasOwnProperty(styles, key)) continue;
         assignStyle(styles[key], key);
     }
     function assignStyle( value, key ){

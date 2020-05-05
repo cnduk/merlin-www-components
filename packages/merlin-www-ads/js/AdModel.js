@@ -86,7 +86,7 @@ export default AdModel;
  * @return {Boolean}
  */
 function hasProperty(model, key){
-    if( !model._properties.hasOwnProperty(key) ){
+    if( !hasOwnProperty(model._properties, key) ){
         throw new ReferenceError(key + ' is not a valid property');
     }
     return true;

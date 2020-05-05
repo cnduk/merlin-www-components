@@ -1,5 +1,5 @@
 'use strict';
-
+import { hasOwnProperty } from '@cnbritain/merlin-www-js-utils/js/functions';
 import AdManager from './AdManager';
 import { AD_STATES } from './Utils';
 import template from '../templates/debug-ad.mustache';
@@ -10,7 +10,7 @@ AdDebugger.prototype = {
 
     'clear': function(){
         for(var key in AdManager.slots){
-            if(!AdManager.slots.hasOwnProperty(key)) continue;
+            if(!hasOwnProperty(AdManager.slots, key)) continue;
             if(!isAdDebugging(AdManager.slots[key])) continue;
             clearDebugAd(AdManager.slots[key]);
         }
@@ -20,7 +20,7 @@ AdDebugger.prototype = {
 
     'debug': function(force){
         for(var key in AdManager.slots){
-            if(!AdManager.slots.hasOwnProperty(key) || !AdManager.slots[key]){
+            if(!hasOwnProperty(AdManager.slots, key) || !AdManager.slots[key]){
                 continue;
             }
             if(!force && isAdDebugging(AdManager.slots[key])) continue;

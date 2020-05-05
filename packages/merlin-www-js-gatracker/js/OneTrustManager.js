@@ -4,7 +4,8 @@ import {
     inherit,
     loadScript,
     setCookie,
-    createEventTemplate
+    createEventTemplate,
+    hasOwnProperty
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import { hasCookiesEnabled } from '@cnbritain/merlin-www-js-utils/js/detect';
 
@@ -171,7 +172,7 @@ OneTrustManager.prototype = inherit(EventEmitter.prototype, {
     },
 
     init: function init(options) {
-        if (!options.hasOwnProperty('script_url')) {
+        if (!hasOwnProperty(options, 'script_url')) {
             throw new Error('Missing script_url value');
         }
 

@@ -14,7 +14,8 @@ import {
     removeEvent,
     throttle,
     transferQueryArgs,
-    updateQueryString
+    updateQueryString,
+    hasOwnProperty
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import { hasHistory } from '@cnbritain/merlin-www-js-utils/js/detect';
 import InfiniteScroll from '@cnbritain/merlin-www-js-infinitescroll';
@@ -296,12 +297,12 @@ function onInfiniteLoadComplete(e) {
         this.disableInfiniteScroll();
         throw new Error('Error trying to parse response JSON', err);
     }
-    if (!responseJSON.hasOwnProperty('data')) return;
+    if (!hasOwnProperty(responseJSON, 'data')) return;
     responseJSON = responseJSON.data;
 
     // Check that there is markup in the response or that we're not being told
     // to stop. There should be but just to be safe
-    if (!responseJSON.hasOwnProperty('template')) {
+    if (!hasOwnProperty(responseJSON, 'template')) {
         this.disableInfiniteScroll();
         return;
     } else if (responseJSON.stop) {
@@ -323,7 +324,7 @@ function onInfiniteLoadComplete(e) {
 
     var ads = null;
     if (
-        responseJSON.hasOwnProperty('config_ad') &&
+        hasOwnProperty(responseJSON, 'config_ad') &&
         responseJSON.config_ad !== null
     ) {
         ads = responseJSON.config_ad.data;
@@ -331,7 +332,7 @@ function onInfiniteLoadComplete(e) {
 
     var analytics = null;
     if (
-        responseJSON.hasOwnProperty('config_analytics') &&
+        hasOwnProperty(responseJSON, 'config_analytics') &&
         responseJSON.config_analytics !== null
     ) {
         analytics = responseJSON.config_analytics.data;
@@ -342,7 +343,7 @@ function onInfiniteLoadComplete(e) {
 
     var simplereach = null;
     if (
-        responseJSON.hasOwnProperty('config_simplereach') &&
+        hasOwnProperty(responseJSON, 'config_simplereach') &&
         responseJSON.config_simplereach !== null
     ) {
         simplereach = responseJSON.config_simplereach.data;

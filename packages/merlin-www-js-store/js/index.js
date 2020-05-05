@@ -1,5 +1,6 @@
 'use strict';
 
+import { hasOwnProperty } from '@cnbritain/merlin-www-js-utils/js/functions';
 
 function serialize(obj){
     return JSON.stringify(obj);
@@ -39,7 +40,7 @@ var exportedStore = {
      */
     'forEach': function(callback) {
         for (var key in exportedStoreData) {
-            if (Object.prototype.hasOwnProperty.call(exportedStoreData, key)) {
+            if (hasOwnProperty.call(exportedStoreData, key)) {
                 callback(key, this.get(key));
             }
         }
@@ -66,7 +67,7 @@ var exportedStore = {
     'getAll': function() {
         var ret = {};
         for (var key in exportedStoreData) {
-            if (Object.prototype.hasOwnProperty.call(exportedStoreData, key)) {
+            if (hasOwnProperty.call(exportedStoreData, key)) {
                 ret[key] = deserialize(exportedStoreData[key]);
             }
         }

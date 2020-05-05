@@ -342,7 +342,7 @@ export function getAdElementAttributes(el) {
  */
 export function getAdTypeBySize(width, height) {
     var key = width + 'x' + height;
-    if (AD_SIZES_MAP.hasOwnProperty(key)) return AD_SIZES_MAP[key];
+    if (hasOwnProperty(AD_SIZES_MAP, key)) return AD_SIZES_MAP[key];
     return AD_SIZES.UNKNOWN;
 }
 
@@ -830,7 +830,7 @@ function getPrebidAdUnits(ads) {
         var bids = [];
 
         // Rubicon
-        if (PREBID_SETTINGS.hasOwnProperty('RUBICON')) {
+        if (hasOwnProperty(PREBID_SETTINGS,'RUBICON')) {
             PREBID_SETTINGS.RUBICON.zoneId.forEach(function(zoneId) {
                 bids.push({
                     bidder: 'rubicon',
@@ -849,7 +849,7 @@ function getPrebidAdUnits(ads) {
         var adUnit = {
             code: ad.id,
             sizes: ad.get('sizes').filter(function(dims) {
-                return RUBICON_ALLOWED_SIZES.hasOwnProperty(dims.join('x'));
+                return hasOwnProperty(RUBICON_ALLOWED_SIZES, dims.join('x'));
             }),
             bids: bids
         };
@@ -860,7 +860,8 @@ function getPrebidAdUnits(ads) {
                     minWidth: group[0][0],
                     sizes: group[1]
                         .filter(function(dims) {
-                            return RUBICON_ALLOWED_SIZES.hasOwnProperty(
+                            return hasOwnProperty(
+                                RUBICON_ALLOWED_SIZES,
                                 dims.join('x')
                             );
                         })
@@ -989,7 +990,7 @@ export function createPageImpressionElement(unit, zone, values) {
     };
     var div = document.createElement('div');
     for (var key in attrs) {
-        if (!attrs.hasOwnProperty(key)) continue;
+        if (!hasOwnProperty(attrs, key)) continue;
         div.setAttribute('data-ad-' + key, attrs[key]);
     }
     return div;

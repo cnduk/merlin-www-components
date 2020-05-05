@@ -5,6 +5,8 @@
  * I refuse to load jquery for it.
  */
 
+import { hasOwnProperty } from '@cnbritain/merlin-www-js-utils/js/functions';
+
 var AUDIO_ID = 'elRaptorShriek';
 var RAPTOR_ID = 'imgRaptor';
 var KEYS = [38,38,40,40,37,39,37,39,66,65];
@@ -53,7 +55,7 @@ function createTag( name, attrs ){
     var node = document.createElement( name );
     if( attrs === undefined ) return node;
     for( var key in attrs ){
-        if( !attrs.hasOwnProperty( key ) ) continue;
+        if( !hasOwnProperty( attrs, key ) ) continue;
         node.setAttribute( key, attrs[ key ] );
     }
     return node;

@@ -7,7 +7,8 @@ import {
     getQueryString,
     getUrlHost,
     isDefined,
-    loadScript
+    loadScript,
+    hasOwnProperty
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import ComscoreManager from './ComscoreManager';
 
@@ -183,7 +184,7 @@ GATracker.prototype = {
     'resetCustomDimensions': function(){
         var resetValues = {};
         for(var key in GATracker.DIMENSION_BY_INDEX){
-            if(!GATracker.DIMENSION_BY_INDEX.hasOwnProperty(key)) continue;
+            if(!hasOwnProperty(GATracker.DIMENSION_BY_INDEX, key)) continue;
             resetValues[key] = null;
         }
         this.set(resetValues);
@@ -247,7 +248,7 @@ GATracker.prototype = {
             }
 
             // Update location value to remove specific query params
-            if(setData.hasOwnProperty('location') &&
+            if(hasOwnProperty(setData, 'location') &&
                 isDefined(setData['location'])){
                 setData['location'] = filterQueryParams(setData['location']);
             }
@@ -270,7 +271,7 @@ GATracker.prototype = {
  * @return {String}       The dimension label
  */
 GATracker.getDimensionByIndex = function( index ){
-    if( GATracker.INDEX_BY_DIMENSION.hasOwnProperty( index ) ){
+    if(hasOwnProperty( GATracker.INDEX_BY_DIMENSION, index ) ){
         return GATracker.INDEX_BY_DIMENSION[ index ];
     }
     throw new TypeError( index + ' is not a valid index' );
@@ -283,7 +284,7 @@ GATracker.getDimensionByIndex = function( index ){
  * @return {String}           The dimension index
  */
 GATracker.getIndexByDimension = function( dimension ){
-    if( GATracker.DIMENSION_BY_INDEX.hasOwnProperty( dimension ) ){
+    if( hasOwnProperty( GATracker.DIMENSION_BY_INDEX, dimension ) ){
         return GATracker.DIMENSION_BY_INDEX[ dimension ];
     }
     throw new TypeError( dimension + ' is not a valid dimension' );
@@ -466,7 +467,7 @@ function removeCustomDimensions( data ){
     var filtered = {};
     var key = '';
     for(key in data){
-        if(!data.hasOwnProperty(key)) continue;
+        if(!hasOwnProperty(data, key)) continue;
         if(RE_DIMENSION.test(key)) continue;
         filtered[key] = data[key];
     }
@@ -479,7 +480,7 @@ function filterQueryParams(url){
     var filteredArgs = {};
 
     for(var key in queryArgs){
-        if(!queryArgs.hasOwnProperty(key)) continue;
+        if(!hasOwnProperty(queryArgs, key)) continue;
         if(IGNORE_PARAMS.indexOf(key) !== -1) continue;
         filteredArgs[key] = queryArgs[key];
     }

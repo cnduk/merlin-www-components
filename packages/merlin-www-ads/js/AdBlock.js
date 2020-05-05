@@ -1,7 +1,8 @@
 
 import {
     createEventTemplate,
-    removeClass
+    removeClass,
+    hasOwnProperty
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import {
     getAdTypeBySize,
@@ -69,7 +70,7 @@ var AdBlock = {
         // Render the ad if we have a template set up for it. Otherwise fire
         // a stop event to remove things.
         var renderEvent = 'error';
-        if(RENDERERS.hasOwnProperty(dimensionKey)){
+        if(hasOwnProperty(RENDERERS, dimensionKey)){
             RENDERERS[dimensionKey](ad);
             renderEvent = 'render';
             setAdStateToRendered(ad);

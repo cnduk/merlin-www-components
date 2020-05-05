@@ -10,7 +10,8 @@ import {
     getElementOffset,
     inherit,
     removeClass,
-    removeEvent
+    removeEvent,
+    hasOwnProperty
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import InfiniteScroll from '@cnbritain/merlin-www-js-infinitescroll';
 import * as events from './events';
@@ -71,12 +72,12 @@ Playlist.prototype = inherit(EventEmitter.prototype, {
             this.disableInfiniteScroll();
             throw new Error('Error trying to parse response JSON', err);
         }
-        if (!responseJSON.hasOwnProperty('data')) return;
+        if (!hasOwnProperty(responseJSON, 'data')) return;
         responseJSON = responseJSON.data;
 
         // Check that there is markup in the response or that we're not being told
         // to stop. There should be but just to be safe
-        if (!responseJSON.hasOwnProperty('template')) {
+        if (!hasOwnProperty(responseJSON, 'template')) {
             this.disableInfiniteScroll();
             return;
 

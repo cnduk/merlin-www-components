@@ -7,7 +7,8 @@ import {
     loadScript,
     loadSocialScripts,
     insertBefore,
-    removeElement
+    removeElement,
+    hasOwnProperty
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
 import { ARTICLE_TYPES, CLS_CONSENT } from './constants';
@@ -175,7 +176,7 @@ export function getArticleType(el) {
     var articleType = el.getAttribute('data-article-type');
     if (!articleType) return ARTICLE_TYPES.UNKNOWN;
     articleType = articleType.toUpperCase();
-    if (ARTICLE_TYPES.hasOwnProperty(articleType)) {
+    if (hasOwnProperty(ARTICLE_TYPES, articleType)) {
         return ARTICLE_TYPES[articleType];
     }
     return ARTICLE_TYPES.UNKNOWN;
