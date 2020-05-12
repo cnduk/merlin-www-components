@@ -18,6 +18,7 @@ import ComscoreManager from '@cnbritain/merlin-www-js-gatracker/js/ComscoreManag
 import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
 import SailthruManager from '@cnbritain/merlin-www-js-gatracker/js/SailthruManager';
 import SkimlinksManager from '@cnbritain/merlin-www-js-gatracker/js/SkimlinksManager';
+import SparrowManager from '@cnbritain/merlin-www-js-gatracker/js/SparrowManager';
 import FacebookPixelManager from '@cnbritain/merlin-www-js-gatracker/js/FacebookPixelManager';
 import TypekitManager from '@cnbritain/merlin-www-js-gatracker/js/TypekitManager';
 import PermutiveManager from '@cnbritain/merlin-www-js-gatracker/js/PermutiveManager';
@@ -61,7 +62,8 @@ export default function init(config) {
         FacebookPixelManager: FacebookPixelManager,
         TypekitManager: TypekitManager,
         PermutiveManager: PermutiveManager,
-        SailthruManager: SailthruManager
+        SailthruManager: SailthruManager,
+        SparrowManager: SparrowManager
     });
 
     setupHtmlClasses();
@@ -91,6 +93,7 @@ export default function init(config) {
         if (this.consentedTargetingCookies) {
             FacebookPixelManager.loadScript();
             PermutiveManager.loadScript();
+            SparrowManager.loadScript();
         }
     });
     OneTrustManager.on('change', function() {
