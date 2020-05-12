@@ -27,7 +27,7 @@ SparrowManager.prototype = inherit(EventEmitter.prototype, {
         
         this._hasLoadedScript = true;
 
-        loadScript('https://pixel.condenastdigital.com/config/' + this.sparrowConfig + '.config.js').then(
+        loadScript('https://pixel.condenastdigital.com/config/' + this._sparrowConfig + '.config.js').then(
             function() {
                 loadScript('https://pixel.condenastdigital.com/sparrow.min.js');
             },
