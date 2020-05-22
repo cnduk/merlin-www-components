@@ -1,3 +1,22 @@
 .a-body-disclaimer {
   font-style: italic;
+  text-align: center;
+}
+
+.a-body-disclaimer__content {
+    margin: 0 auto;
+    max-width: $ARTICLE_TOTAL;
+    padding-left: $MOBILE_SIDE_GUTTER;
+    padding-right: $MOBILE_SIDE_GUTTER;
+
+    @include at-medium-size {
+        padding-left: $TABLET_SIDE_GUTTER;
+        padding-right: $TABLET_SIDE_GUTTER;
+    }
+
+    .bb-p {
+      @include font-size(16px);
+
+      margin: 1rem 0;
+  }
 }

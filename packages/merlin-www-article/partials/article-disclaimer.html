@@ -1,3 +1,5 @@
 <section class="a-body-disclaimer">
-  <p class="bb-p">{{ data.affiliates_message }}</p>
+  <div class="a-body-disclaimer__content">
+    <p class="bb-p">{{ data.affiliates_message }}{{# data.affiliates_message_link }} <a href="{{ &data.affiliates_message_link.url }}" class="a-body-disclaimer__link bb-a">{{ data.affiliates_message_link.title }}</a>{{/ data.affiliates_message_link }}</p>
+  </div>
 </section>

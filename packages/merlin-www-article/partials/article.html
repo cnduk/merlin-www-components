@@ -1,4 +1,8 @@
 <article class="a-main{{# state.is_sponsored }} is-legit-content{{/ state.is_sponsored }}{{# state.is_gallery }} a-main--gallery{{/ state.is_gallery }} {{^ state.has_body }} has-body{{/ state.has_body }} {{ style.cls }}" data-article-url="{{ data.url }}" data-article-type="{{ data.type }}" data-article-uid="{{ data.uid }}" data-meta-title="{{ data.meta_title }}">
+    {{# state.has_affiliates_disclaimer }}
+        {{> @cnbritain/merlin-www-article/article-disclaimer }}
+    {{/ state.has_affiliates_disclaimer }}
+    
     {{> @cnbritain/merlin-www-article/article-header }}
 
     {{# state.has_body }}
@@ -21,9 +25,6 @@
                 {{/ data.podcast }}
 
                 <div class='a-body__content has-bbcode'>
-                    {{# state.has_affiliates_disclaimer }}
-                        {{> @cnbritain/merlin-www-article/article-disclaimer }}
-                    {{/ state.has_affiliates_disclaimer }}
                     {{ &data.body }}
                     <div class="a-body__clear"></div>
                 </div>
