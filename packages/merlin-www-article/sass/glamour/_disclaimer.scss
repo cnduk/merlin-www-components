@@ -1,5 +1,11 @@
 .a-body-disclaimer {
     border-bottom: .5rem solid $advert-light;
 }
+
+.a-body-disclaimer__content {
+    .bb-p {
+        color: $natural-gray;
+    }
+}
   
 .a-body-disclaimer__more {}
