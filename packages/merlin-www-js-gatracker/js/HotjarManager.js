@@ -22,7 +22,7 @@ HotjarManager.prototype = inherit(EventEmitter.prototype, {
 
     loadScript: function loadScript() {
         if (this._hasLoadedScript) return;
-        if (this._hotjarId === null) return; // Don't load the script if no hotjar ID set
+        if (this._hotjarId === null) return; // Don't load the script if no hotjar ID is set
         
         this._hasLoadedScript = true;
 
