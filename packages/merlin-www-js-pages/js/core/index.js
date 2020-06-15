@@ -15,13 +15,14 @@ import CommonImage from '@cnbritain/merlin-www-image';
 import store from '@cnbritain/merlin-www-js-store';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
 import ComscoreManager from '@cnbritain/merlin-www-js-gatracker/js/ComscoreManager';
+import FacebookPixelManager from '@cnbritain/merlin-www-js-gatracker/js/FacebookPixelManager';
+import HotjarManager from '@cnbritain/merlin-www-js-gatracker/js/HotjarManager';
 import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
+import PermutiveManager from '@cnbritain/merlin-www-js-gatracker/js/PermutiveManager';
 import SailthruManager from '@cnbritain/merlin-www-js-gatracker/js/SailthruManager';
 import SkimlinksManager from '@cnbritain/merlin-www-js-gatracker/js/SkimlinksManager';
 import SparrowManager from '@cnbritain/merlin-www-js-gatracker/js/SparrowManager';
-import FacebookPixelManager from '@cnbritain/merlin-www-js-gatracker/js/FacebookPixelManager';
 import TypekitManager from '@cnbritain/merlin-www-js-gatracker/js/TypekitManager';
-import PermutiveManager from '@cnbritain/merlin-www-js-gatracker/js/PermutiveManager';
 import SectionCardList from '@cnbritain/merlin-www-section-card-list';
 import SiteFooter from '@cnbritain/merlin-www-footer';
 import { AdManager, AdDebugger, AdUtils } from '@cnbritain/merlin-www-ads';
@@ -57,6 +58,7 @@ export default function init(config) {
         GATracker: GATracker,
         MainNavigation: MainNavigation,
         Store: store,
+        HotjarManager: HotjarManager,
         OneTrustManager: OneTrustManager,
         SkimlinksManager: SkimlinksManager,
         FacebookPixelManager: FacebookPixelManager,
@@ -89,6 +91,7 @@ export default function init(config) {
             ComscoreManager.sendBeacon();
             loadSiteCensus();
             SailthruManager.loadScript();
+            HotjarManager.loadScript();
         }
         if (this.consentedTargetingCookies) {
             FacebookPixelManager.loadScript();
