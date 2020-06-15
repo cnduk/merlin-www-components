@@ -16,7 +16,7 @@ function HotjarManager() {
 HotjarManager.prototype = inherit(EventEmitter.prototype, {
     constructor: HotjarManager,
 
-    init: function init(hotjairId) {
+    init: function init(hotjarId) {
         this._hotjarId = hotjarId;
     },
 
