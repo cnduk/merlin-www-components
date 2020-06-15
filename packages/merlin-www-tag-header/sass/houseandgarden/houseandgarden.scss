@@ -92,17 +92,19 @@
     a {
         border-bottom: 2px solid $careys-pink;
         color: $mine-shaft;
-        padding-bottom: 2px;
+        padding-bottom: 0;
     }
 
     p {
-        @include font("MILLER_DISPLAY", 16px, 400, 22px);
+        @include font("MILLER_DISPLAY", 17px, 400, 25px);
+
         color: $mine-shaft;
-        font-style: italic;
+        font-style: normal;
         letter-spacing: 0;
 
         @include at-x-large-size {
-            @include font-size(18px);
+            @include font-size(14px);
+            @include line-height(20px);
         }
     }
 
@@ -125,8 +127,9 @@
 }
 
 .tg-header__expand-btn {
-	color: $silver-chalice;
     @include font("BRANDON GROTESQUE", 15px, 700, 15px);
+
+	color: $silver-chalice;
     text-transform: uppercase;
     letter-spacing: 1px;
 
