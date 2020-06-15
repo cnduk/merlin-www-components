@@ -96,16 +96,11 @@
     }
 
     p {
-        @include font("MILLER_DISPLAY", 17px, 400, 25px);
+        @include font("MILLER_DISPLAY", 14px, 400, 20px);
 
         color: $mine-shaft;
         font-style: normal;
         letter-spacing: 0;
-
-        @include at-x-large-size {
-            @include font-size(14px);
-            @include line-height(20px);
-        }
     }
 
     > *:first-child {
@@ -120,8 +115,8 @@
         margin: 20px auto 40px auto;
 
         p {
-            @include font-size(23px);
-            @include line-height(28px);
+            @include font-size(17px);
+            @include line-height(25px);
         }
     }
 }
