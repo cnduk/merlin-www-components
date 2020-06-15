@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-js-gatracker",
-  "version": "1.16.2",
+  "version": "1.16.3",
   "description": null,
   "main": "js/index.js",
   "scripts": {
@@ -10,12 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-www-js-utils": "^1.9.9",
+    "@cnbritain/merlin-www-js-utils": "^1.9.10",
     "eventemitter2": "^4.1.0"
   },
   "devDependencies": {
     "eslint": "^4.14.0",
     "eslint-plugin-compat": "^2.2.0"
   },
-  "gitHead": "fa0fa520cfebb58b3c91aa9be682f8edbdb75262"
+  "gitHead": "526281130d1fc7afb2bc77ea29030c3215906db4"
 }

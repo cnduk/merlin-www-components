@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-js-elementscroll",
-  "version": "1.4.10",
+  "version": "1.4.11",
   "description": "",
   "main": "js/index.js",
   "scripts": {
@@ -11,13 +11,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-www-js-utils": "^1.9.9",
+    "@cnbritain/merlin-www-js-utils": "^1.9.10",
     "eventemitter2": "^4.1.0"
   },
   "devDependencies": {
-    "@cnbritain/merlin-component-demo-server": "^3.6.10",
+    "@cnbritain/merlin-component-demo-server": "^3.6.11",
     "eslint": "^4.14.0",
     "eslint-plugin-compat": "^2.2.0"
   },
-  "gitHead": "84311537d5d20eeae9fd7097dad8bb0e8dec31ab"
+  "gitHead": "526281130d1fc7afb2bc77ea29030c3215906db4"
 }
