@@ -1,6 +1,5 @@
 # merlin-www-js-combobox
 
-
 ## Install
 
 ```bash
