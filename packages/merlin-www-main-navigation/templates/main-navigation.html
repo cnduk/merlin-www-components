@@ -48,7 +48,7 @@
             {{# state.has_search }}
             <div class="c-nav__search js-c-nav__search is-hidden">
                 <form class="c-nav__search-form" method="GET" action="{{ &data.search_form_url }}">
-                    <input type="search" aria-label="{{ data.search_placholder }}" placeholder="{{ data.search_placeholder }}" class="c-nav__search-input" name="q">
+                    <input type="search" aria-label="{{ data.search_placeholder }}" placeholder="{{ data.search_placeholder }}" class="c-nav__search-input" name="q">
                     <button class="c-nav__search-button">
                     {{# data.search_open_icon }}
                     {{> @cnbritain/merlin-www-image }}

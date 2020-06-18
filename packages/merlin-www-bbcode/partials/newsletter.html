@@ -17,7 +17,7 @@
 
             <form method="POST" action="{{ data.form_url }}" class="bb-newsletter__form js-bb-newsletter__form">
                 <input type="hidden" name="newsletter" value="{{ data.newsletter_id }}">
-                <input type="email" name="email" required class="js-bb-newsletter__form-text bb-newsletter__form-text" placeholder="Enter email address"></input>
+                <input type="email" name="email" required class="js-bb-newsletter__form-text bb-newsletter__form-text" placeholder="Enter email address" aria-label="Email Address"></input>
                 {{# data.cta_text }}
                     <input type="submit" name="submit" value="{{ &. }}" class="js-bb-newsletter__form-button bb-newsletter__form-button"></input>
                 {{/ data.cta_text }}
