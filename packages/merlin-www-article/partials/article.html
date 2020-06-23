@@ -4,6 +4,12 @@
     {{/ state.has_affiliates_disclaimer }}
     
     {{> @cnbritain/merlin-www-article/article-header }}
+    
+    {{# state.has_advert_in_article_header }}
+        {{# ad_slots.article_header }}
+            {{> @cnbritain/merlin-www-ads }}
+        {{/ ad_slots.article_header }}
+    {{/ state.has_advert_in_article_header}}
 
     {{# state.has_body }}
         <div class="a-body stick-group">
