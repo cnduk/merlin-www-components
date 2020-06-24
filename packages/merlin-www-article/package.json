@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-article",
-  "version": "1.43.0",
+  "version": "1.43.1",
   "description": "Article header, footer, share, content. Includes video too.",
   "main": "js/index.js",
   "scripts": {
@@ -11,19 +11,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-www-ads": "^1.24.0",
-    "@cnbritain/merlin-www-bbcode": "^1.26.1",
-    "@cnbritain/merlin-www-buttons": "^1.11.0",
-    "@cnbritain/merlin-www-card": "^1.21.1",
-    "@cnbritain/merlin-www-common": "^1.18.0",
-    "@cnbritain/merlin-www-figure": "^1.17.1",
-    "@cnbritain/merlin-www-image": "^1.15.1",
+    "@cnbritain/merlin-www-ads": "^1.24.1",
+    "@cnbritain/merlin-www-bbcode": "^1.26.2",
+    "@cnbritain/merlin-www-buttons": "^1.11.1",
+    "@cnbritain/merlin-www-card": "^1.21.2",
+    "@cnbritain/merlin-www-common": "^1.18.1",
+    "@cnbritain/merlin-www-figure": "^1.17.2",
+    "@cnbritain/merlin-www-image": "^1.15.2",
     "@cnbritain/merlin-www-js-elementscroll": "^1.5.0",
     "@cnbritain/merlin-www-js-gatracker": "^1.17.0",
     "@cnbritain/merlin-www-js-infinitescroll": "^1.4.0",
     "@cnbritain/merlin-www-js-utils": "^1.10.0",
-    "@cnbritain/merlin-www-marketing-cards": "^1.16.1",
-    "@cnbritain/merlin-www-topic-strip": "^1.14.0",
+    "@cnbritain/merlin-www-marketing-cards": "^1.16.2",
+    "@cnbritain/merlin-www-topic-strip": "^1.14.1",
     "eventemitter2": "^4.1.0"
   },
   "devDependencies": {
