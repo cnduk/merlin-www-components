@@ -78,11 +78,11 @@
                             <span class="c-nav__down-arrow"></span>
                         </a>
                         <ul class="c-nav__alt-list">
-                            {{# data.voucher_links }}
+                            {{# state.voucher_links }}
                             <li class="c-nav__alt-list-item">
-                                <a class="c-nav__alt-link" href="{{ data.url }}" title="{{ data.title }}">{{ data.title }}</a>
+                                <a class="c-nav__alt-link" href="{{ url }}" title="{{ title }}">{{ title }}</a>
                             </li>
-                            {{/ data.voucher_links }}
+                            {{/ state.voucher_links }}
                         </ul>
                     </li>
                     {{/ state.is_voucher_menu }}
