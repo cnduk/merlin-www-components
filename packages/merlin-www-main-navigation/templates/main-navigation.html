@@ -70,22 +70,6 @@
                         <a class="c-nav__main-link" href="{{ data.url }}" title="{{ data.title }}">{{ data.title }}</a>
                     </li>
                     {{/ state.is_voucher_menu }}{{/ state.is_more }}{{/ state.is_desktop }}
-                    {{! Special case for voucher code menu }}
-                    {{# state.is_voucher_menu }}
-                    <li class="c-nav__main-list-item c-nav__main-list-item--more">
-                        <a class="c-nav__main-link c-nav__main-link--more" tabindex="0">
-                            Vouchers
-                            <span class="c-nav__down-arrow"></span>
-                        </a>
-                        <ul class="c-nav__alt-list">
-                            {{# state.voucher_links }}
-                            <li class="c-nav__alt-list-item">
-                                <a class="c-nav__alt-link" href="{{ url }}" title="{{ title }}">{{ title }}</a>
-                            </li>
-                            {{/ state.voucher_links }}
-                        </ul>
-                    </li>
-                    {{/ state.is_voucher_menu }}
                     {{/ data.links }}
                     <li class="c-nav__main-list-item c-nav__main-list-item--more">
                         <a class="c-nav__main-link c-nav__main-link--more" tabindex="0">
@@ -104,6 +88,24 @@
                             {{/ data.links }}
                         </ul>
                     </li>
+                    {{! Special case for voucher code menu }}
+                    {{# data.links }}
+                    {{# state.is_voucher_menu }}
+                    <li class="c-nav__main-list-item c-nav__main-list-item--more">
+                        <a class="c-nav__main-link c-nav__main-link--more c-nav__main-link--vouchers" href="{{ data.url }}" title="{{ data.title }}" tabindex="0">
+                            Vouchers
+                            <span class="c-nav__down-arrow"></span>
+                        </a>
+                        <ul class="c-nav__alt-list">
+                            {{# state.voucher_links }}
+                            <li class="c-nav__alt-list-item">
+                                <a class="c-nav__alt-link" href="{{ url }}" title="{{ title }}">{{ title }}</a>
+                            </li>
+                            {{/ state.voucher_links }}
+                        </ul>
+                    </li>
+                    {{/ state.is_voucher_menu }}
+                    {{/ data.links }}
                 </ul>
             </nav>
 
