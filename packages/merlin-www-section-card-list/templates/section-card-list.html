@@ -10,15 +10,15 @@
                 {{> @cnbritain/merlin-www-image }}
             </div>
             {{/ data.logo }}
-
+            
             {{# state.is_linked_title }}
-            <h3 class="c-card-section__title">
+            <h3 class="c-card-section__title" id="{{ data.id }}">
                 <span><a href="{{ &data.title.data.url }}" title="{{ data.title.data.title }}">{{ data.title.data.title }}</a></span>
             </h3>
             {{/ state.is_linked_title }}
             {{^ state.is_linked_title }}
             {{# data.title }}
-            <h3 class="c-card-section__title">
+            <h3 class="c-card-section__title" id="{{ data.id }}">
                 <span>{{ . }}</span>
             </h3>
             {{/ data.title }}
@@ -63,12 +63,11 @@
 
         {{# data.link }}
         <footer class="c-card-section__footer">
-            <a title="{{ data.title }}" href="{{ &data.url }}" class="c-card-section__btn {{ style.cls }}">
+            {{ state.is_linked_title }}
+            <a title="{{ data.title }}" href="{{ &data.url }}" class="c-card-section__btn {{ style.cls }}" aria-describedby="{{ data.id }}">
                 {{ data.title }}
             </a>
         </footer>
         {{/ data.link }}
-
     </div>
-
 </section>
