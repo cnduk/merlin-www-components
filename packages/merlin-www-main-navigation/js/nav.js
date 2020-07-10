@@ -76,9 +76,11 @@ function Nav(el) {
 
     this.onScroll = this.onScroll.bind(this);
     this.onResize = this.onResize.bind(this);
+    this.onKeydown = this.onKeydown.bind(this);
 
     window.addEventListener('scroll', this.onScroll);
     window.addEventListener('resize', this.onResize);
+    window.addEventListener('keydown', this.onKeydown)
 
     this.toggleIconEl.addEventListener('click', this.toggleOpen);
     this.searchIconEl.addEventListener('click', this.toggleSearch);
@@ -310,6 +312,20 @@ Nav.prototype = inherit(EventEmitter.prototype, {
             requestAnimationFrame(this.togglefix);
             requestAnimationFrame(this.toggleShow);
         }
+    },
+
+    onKeydown: function(e) {
+        if (e.defaultPrevented) return;
+        var handled = false;
+        
+        // Close search modal on esc
+        if (e.key !== undefined && e.key === 'Escape' && this.state.isSearchOpen)  {
+            this.searchIconEl.click(); //cheating?
+            handled = true;
+        }
+
+        // If we've done a thing, do no more things
+        if (handled) e.preventDefault();
     },
 });
 
