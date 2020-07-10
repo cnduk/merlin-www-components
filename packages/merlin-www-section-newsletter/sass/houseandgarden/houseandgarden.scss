@@ -112,7 +112,7 @@
 
 .c-newsletter__legal {
     @include font("BRANDON GROTESQUE", 8px, 700, 8px);
-    color: $silver-chalice;
+    color: $mine-shaft;
     letter-spacing: 0.5px;
     text-transform: uppercase;
 
@@ -123,6 +123,6 @@
 }
 
 .c-newsletter__privacy {
-    border-bottom: 1px solid $silver-chalice;
-    color: $silver-chalice;
+    border-bottom: 1px solid $mine-shaft;
+    color: $mine-shaft;
 }
