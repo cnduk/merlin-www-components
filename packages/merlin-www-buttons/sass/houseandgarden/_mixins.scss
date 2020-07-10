@@ -95,13 +95,13 @@
 
 @mixin button-group-two-light() {
 	background-color: transparent;
-	border: 1px solid $silver;
-	color: $silver-chalice;
+	border: 1px solid $mine-shaft;
+	color: $mine-shaft;
 }
 
 @mixin button-group-two-light-hover() {
-	background-color: $silver-chalice;
-	border: 1px solid $silver-chalice;
+	background-color: $mine-shaft;
+	border: 1px solid $mine-shaft;
 	color: $white;
 }
 
