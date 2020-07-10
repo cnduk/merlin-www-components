@@ -80,7 +80,7 @@ function Nav(el) {
 
     window.addEventListener('scroll', this.onScroll);
     window.addEventListener('resize', this.onResize);
-    window.addEventListener('keydown', this.onKeydown)
+    window.addEventListener('keydown', this.onKeydown);
 
     this.toggleIconEl.addEventListener('click', this.toggleOpen);
     this.searchIconEl.addEventListener('click', this.toggleSearch);

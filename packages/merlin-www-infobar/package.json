@@ -1,6 +1,6 @@
 {
     "name": "@cnbritain/merlin-www-infobar",
-    "version": "1.12.0",
+    "version": "1.12.1",
     "description": "Infobar Component",
     "main": "js/index.js",
     "scripts": {
@@ -9,19 +9,19 @@
         "prepublish": "npm run lint"
     },
     "dependencies": {
-        "@cnbritain/merlin-www-buttons": "^1.12.0",
-        "@cnbritain/merlin-www-common": "^1.19.0",
-        "@cnbritain/merlin-www-js-gatracker": "^1.17.0",
-        "@cnbritain/merlin-www-js-utils": "^1.10.0",
-        "@cnbritain/merlin-www-main-navigation": "^1.16.0",
+        "@cnbritain/merlin-www-buttons": "^1.12.1",
+        "@cnbritain/merlin-www-common": "^1.19.1",
+        "@cnbritain/merlin-www-js-gatracker": "^1.17.1",
+        "@cnbritain/merlin-www-js-utils": "^1.10.1",
+        "@cnbritain/merlin-www-main-navigation": "^1.16.1",
         "eventemitter2": "^4.1.0"
     },
     "devDependencies": {
-        "@cnbritain/merlin-component-demo-server": "^3.7.0",
+        "@cnbritain/merlin-component-demo-server": "^3.7.1",
         "eslint": "^4.14.0",
         "eslint-plugin-compat": "^2.2.0"
     },
     "author": "",
     "license": "ISC",
-    "gitHead": "526281130d1fc7afb2bc77ea29030c3215906db4"
+    "gitHead": "f2957981efebce4d7d100c77305fcd5eac40b48c"
 }

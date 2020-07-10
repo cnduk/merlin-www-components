@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-common",
-  "version": "1.19.0",
+  "version": "1.19.1",
   "description": "",
   "main": "js/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "lint": "eslint -c ../../.eslintrc.json ./js/**/*"
   },
   "dependencies": {
-    "@cnbritain/merlin-www-assets": "^2.4.1"
+    "@cnbritain/merlin-www-assets": "^2.4.2"
   },
   "devDependencies": {
     "eslint": "^4.14.0",
@@ -16,5 +16,5 @@
   },
   "author": "",
   "license": "ISC",
-  "gitHead": "526281130d1fc7afb2bc77ea29030c3215906db4"
+  "gitHead": "f2957981efebce4d7d100c77305fcd5eac40b48c"
 }
