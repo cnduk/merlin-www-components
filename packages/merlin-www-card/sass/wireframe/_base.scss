@@ -16,11 +16,11 @@
     z-index: 1;
 }
 
-.c-card__link:focus + .c-card__obj {
+.is-hover .c-card__link:focus + .c-card__obj {
     outline: auto;
 }
 
-.c-card--top-stories .c-card__link:focus + .c-card__obj {
+.is-hover .c-card--top-stories .c-card__link:focus + .c-card__obj {
     outline-offset: -3px;
 }
 
