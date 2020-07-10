@@ -72,14 +72,15 @@
         fill: #fff;
     }
 }
+
 .c-figure__toolbar-listitem--share {
-    display: none;
+    @include accessible-hide;
 }
 
 .c-figure__toolbar-listitem--more {}
 
 .c-figure__toolbar-listitem--zoom {
-    display: none;
+    @include accessible-hide;
 }
 
 .c-figure__toolbar-listitem--email {}
@@ -94,18 +95,22 @@
 
 .is-hover .c-figure__toolbar:hover,
 .is-hover .c-figure__toolbar:focus,
+.is-hover .c-figure__toolbar:focus-within,
 .is-touch .c-figure__toolbar.is-visible {
     .c-figure__toolbar-listitem--share,
     .c-figure__toolbar-listitem--zoom {
+        @include accessible-show;
+
         display: inline-block;
+        width: 60px;
+        height: 60px;
     }
     .c-figure__toolbar-listitem--more {
-        display: none;
+        @include accessible-hide;
     }
     .c-figure__toolbar-listitem--whatsapp {
-
         @include at-x-large-size {
-            display: none;
+            @include accessible-hide;
         }
     }
 }
