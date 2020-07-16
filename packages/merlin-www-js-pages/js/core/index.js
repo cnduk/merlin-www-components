@@ -2,7 +2,10 @@
 
 import es6Promise from 'es6-promise';
 
-import { addClass, assign } from '@cnbritain/merlin-www-js-utils/js/functions';
+import {
+    addClass,
+    assign
+} from '@cnbritain/merlin-www-js-utils/js/functions';
 import {
     getUserAgent,
     hasTouch
@@ -23,11 +26,19 @@ import SailthruManager from '@cnbritain/merlin-www-js-gatracker/js/SailthruManag
 import SkimlinksManager from '@cnbritain/merlin-www-js-gatracker/js/SkimlinksManager';
 import SparrowManager from '@cnbritain/merlin-www-js-gatracker/js/SparrowManager';
 import TypekitManager from '@cnbritain/merlin-www-js-gatracker/js/TypekitManager';
+import TreasureDataManager from '@cnbritain/merlin-www-js-gatracker/js/TreasureDataManager';
 import SectionCardList from '@cnbritain/merlin-www-section-card-list';
 import SiteFooter from '@cnbritain/merlin-www-footer';
-import { AdManager, AdDebugger, AdUtils } from '@cnbritain/merlin-www-ads';
+import {
+    AdManager,
+    AdDebugger,
+    AdUtils
+} from '@cnbritain/merlin-www-ads';
 import InternationalRedirect from '@cnbritain/merlin-www-international-redirect';
-import { displayHiringMessage, setGlobalNamespace } from '../utils';
+import {
+    displayHiringMessage,
+    setGlobalNamespace
+} from '../utils';
 import {
     initLinkTracking,
     initInfobarTracking,
@@ -65,7 +76,8 @@ export default function init(config) {
         TypekitManager: TypekitManager,
         PermutiveManager: PermutiveManager,
         SailthruManager: SailthruManager,
-        SparrowManager: SparrowManager
+        SparrowManager: SparrowManager,
+        TreasureDataManager: TreasureDataManager,
     });
 
     setupHtmlClasses();
@@ -83,7 +95,7 @@ export default function init(config) {
 
     GATracker.init();
     ComscoreManager.init();
-    OneTrustManager.on('ready', function() {
+    OneTrustManager.on('ready', function () {
         SiteFooter.addOneTrust();
         if (this.consentedStrictlyCookies) TypekitManager.loadScript();
         if (this.consentedPerformanceCookies) {
@@ -96,10 +108,11 @@ export default function init(config) {
         if (this.consentedTargetingCookies) {
             FacebookPixelManager.loadScript();
             PermutiveManager.loadScript();
+            TreasureDataManager.loadScript();
             SparrowManager.loadScript();
         }
     });
-    OneTrustManager.on('change', function() {
+    OneTrustManager.on('change', function () {
         GATracker.setConsent(this.consentedPerformanceCookies);
         if (this.consentedPerformanceCookies) {
             ComscoreManager.setConsent(1);
@@ -124,13 +137,13 @@ export default function init(config) {
 export function initInternationalRedirect() {
     if (InternationalRedirect.el !== null) {
         sendInternationRedirectEvent('Shown', null);
-        InternationalRedirect.on('visibilityChange', function() {
+        InternationalRedirect.on('visibilityChange', function () {
             sendInternationRedirectEvent('Closed', null);
         });
-        InternationalRedirect.on('linkClick', function(e) {
+        InternationalRedirect.on('linkClick', function (e) {
             sendInternationRedirectEvent('Link Click', e.country);
         });
-        InternationalRedirect.on('linkHover', function(e) {
+        InternationalRedirect.on('linkHover', function (e) {
             sendInternationRedirectEvent('Link Hover', e.country);
         });
     }
@@ -181,18 +194,18 @@ export function setupHtmlClasses() {
 }
 
 export function initChain() {
-    InfobarManager.once('enable', function() {
+    InfobarManager.once('enable', function () {
         if (MainNavigation.state.isFixed) {
             InfobarManager.infobar.fix();
         }
     });
-    InfobarManager.once('load', function() {
+    InfobarManager.once('load', function () {
         if (
             !InfobarManager.infobar ||
             InfobarManager.infobar.state.isEnabled == false
         ) {
             SubscribeBarManager.lazyload();
-            SubscribeBarManager.once('enable', function() {
+            SubscribeBarManager.once('enable', function () {
                 if (MainNavigation.state.isFixed) {
                     SubscribeBarManager.subscribeBar.fix();
                 }
