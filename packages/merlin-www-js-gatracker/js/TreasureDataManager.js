@@ -68,9 +68,10 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
             if (window.permutive && window.permutive.context) {
                 this._td.set('$global', 'td_unknown_id', window.permutive.context.user_id);
             }  
-
-            // SET CUSTOM PARAMS HERE
-            // td.set("$global","td_global_id","td_global_id"); 
+            
+            if (this._config.page_data) {
+                this._td.set('$global', this._config.page_data);
+            }
 
             this._td.fetchServerCookie(
                 function (result) {
