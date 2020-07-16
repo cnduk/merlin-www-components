@@ -93,4 +93,4 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
     }
 });
 
-export default new SparrowManager();
+export default new TreasureDataManager();
