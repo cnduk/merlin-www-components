@@ -18,13 +18,11 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
 
     init: function init(config) {
         this._config = config;
-
-        this.initTreasure();
     },
 
     loadScript: function loadScript() {
         if (this._hasLoadedScript) return;
-        if (this.config === null) {
+        if (this._config === null) {
             console.warn('Missing TDP Config', this._config);
         }
 
@@ -49,6 +47,8 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
         }("Treasure", window);
 
         this._hasLoadedScript = true;
+
+        this.initTreasure();
     },
 
     initTreasure: function initTreasure() {
