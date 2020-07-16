@@ -61,7 +61,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                 sscDomain: this._config.sscDomain,
                 sscServer: this._config.sscServer,
                 useServerSideCookie: true,
-                debug: this._config.debug
+                development: this._config.development
             });
 
             // Set the Permutive ID as the TD Unknown ID
