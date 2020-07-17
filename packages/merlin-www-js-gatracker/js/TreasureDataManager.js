@@ -56,7 +56,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
             this._td = new Treasure({
                 database: this._config.database,
                 writeKey: this._config.writeKey,
-                host: 'in.treasuredata.com',
+                host: this._config.host,
                 startInSignedMode: true,
                 sscDomain: this._config.sscDomain,
                 sscServer: this._config.sscServer,
