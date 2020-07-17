@@ -66,15 +66,15 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
 
             // Set the Permutive ID as the TD Unknown ID
             if (window.permutive) {
-                window.permutive.ready(function() {
+                window.permutive.ready(function () {
                     console.log("PERMUTIVE READY");
                     console.log(window.permutive.context.user_id)
                     this._td.set('$global', 'td_unknown_id', window.permutive.context.user_id);
                 }.bind(this));
-            }  
+            }
 
-            td.set("$global","td_global_id","td_global_id"); 
-            
+            this._td.set("$global", "td_global_id", "td_global_id");
+
             if (this._config.page_data) {
                 this._td.set('$global', this._config.page_data);
             }
