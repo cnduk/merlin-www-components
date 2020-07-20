@@ -1,7 +1,8 @@
 import EventEmitter from 'eventemitter2';
 import {
     inherit,
-    loadScript
+    loadScript,
+    updateQueryString
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 
 function TreasureDataManager() {
@@ -90,6 +91,20 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                     this.fireEvents();
                 }.bind(this)
             );
+
+            // If there's any elements with the .js-tdp-link class
+            // attach the client id as a query string parameter to ensure
+            // id is forwarded on
+            var tdpLinks = document.querySelectorAll('.js-tdp-link');
+            tdpLinks.forEach(function (el) {
+                var tdp_id = this._td.getTrackValues()['td_client_id'];
+
+                if (tdp_id && el.hasAttribute('href')) {
+                    el.href = updateQueryString(el.href, {
+                        'td_user_id': tdp_id
+                    });
+                }
+            }.bind(this));
         }
     },
 
