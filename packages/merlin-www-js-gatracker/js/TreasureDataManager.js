@@ -62,7 +62,8 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                 sscDomain: this._config.sscDomain,
                 sscServer: this._config.sscServer,
                 useServerSideCookie: true,
-                development: this._config.development
+                development: this._config.development,
+                accountId: this._config.accountId
             });
 
             // Set the Permutive ID as the TD Unknown ID
@@ -110,9 +111,26 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
         }
     },
 
+    createImage: function createImage(url) {
+        var el = document.createElement('img');
+        el.src = (('https:' === document.location.protocol) ? 'https://' : 'http://') + url;
+        el.width = 1;
+        el.height = 1;
+        el.style.display = 'none';
+        document.body.appendChild(el);
+    },
+
+    googleSyncCallback: function googleSyncCallback() {
+        var gidsync_url = 'cm.g.doubleclick.net/pixel?google_nid=treasuredata_dmp&google_cm&td_write_key=8151/fcd628065149d648b80f11448b4083528c0d8a91&td_global_id=td_global_id';
+        var params = '&td_client_id=' + this._td.client.track.uuid + '&td_host=' + document.location.host + '&account=' + this._config.account_id;
+        
+        this.createImage(gidsync_url + params);
+    },
+
     fireEvents: function fireEvents() {
         if (this._hasLoadedScript && this._td != null) {
             this._td.trackPageview(this._config.pageviewTable);
+            this._td.trackPageview(this._config.pageviewTable, this.googleSyncCallback);
         }
     }
 });
