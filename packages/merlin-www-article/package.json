@@ -1,10 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-article",
-<<<<<<< HEAD
   "version": "1.48.1-alpha.0",
-=======
-  "version": "1.44.4",
->>>>>>> develop
   "description": "Article header, footer, share, content. Includes video too.",
   "main": "js/index.js",
   "scripts": {
@@ -15,7 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
     "@cnbritain/merlin-www-ads": "^1.29.1-alpha.0",
     "@cnbritain/merlin-www-bbcode": "^1.31.1-alpha.0",
     "@cnbritain/merlin-www-buttons": "^1.12.1",
@@ -27,19 +22,6 @@
     "@cnbritain/merlin-www-js-gatracker": "^1.21.1-alpha.0",
     "@cnbritain/merlin-www-js-infinitescroll": "^1.4.1",
     "@cnbritain/merlin-www-js-utils": "^1.10.1",
-=======
-    "@cnbritain/merlin-www-ads": "^1.25.2",
-    "@cnbritain/merlin-www-bbcode": "^1.27.3",
-    "@cnbritain/merlin-www-buttons": "^1.12.1",
-    "@cnbritain/merlin-www-card": "^1.22.2",
-    "@cnbritain/merlin-www-common": "^1.19.1",
-    "@cnbritain/merlin-www-figure": "^1.18.3",
-    "@cnbritain/merlin-www-image": "^1.15.3",
-    "@cnbritain/merlin-www-js-elementscroll": "^1.5.2",
-    "@cnbritain/merlin-www-js-gatracker": "^1.17.2",
-    "@cnbritain/merlin-www-js-infinitescroll": "^1.4.2",
-    "@cnbritain/merlin-www-js-utils": "^1.10.2",
->>>>>>> develop
     "@cnbritain/merlin-www-marketing-cards": "^1.17.1",
     "@cnbritain/merlin-www-topic-strip": "^1.15.1",
     "eventemitter2": "^4.1.0"
