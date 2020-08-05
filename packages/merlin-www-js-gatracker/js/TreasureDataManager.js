@@ -130,7 +130,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
     fireEvents: function fireEvents() {
         if (this._hasLoadedScript && this._td != null) {
             this._td.trackPageview(this._config.pageviewTable);
-            this._td.trackPageview(this._config.pageviewTable, this.googleSyncCallback);
+            this._td.trackPageview(this._config.pageviewTable, this.googleSyncCallback.bind(this));
         }
     }
 });
