@@ -19,6 +19,7 @@
       allowfullscreen
       webkitallowfullscreen
       mozallowfullscreen
+      title="Video from Brightcove"
     ></iframe>
     {{/ state.is_brightcove }} {{# state.is_youtube }}
     <iframe
@@ -28,6 +29,7 @@
       frameborder="0"
       allowfullscreen
       allow="fullscreen; encrypted-media; autoplay"
+      title="Video from YouTube"
     ></iframe>
     {{/ state.is_youtube }} {{# state.is_vimeo }}
     <iframe
@@ -38,6 +40,7 @@
       webkitallowfullscreen
       mozallowfullscreen
       allowfullscreen
+      title="Video from Vimeo"
     ></iframe>
     {{/ state.is_vimeo }}
   </template>
