@@ -33,7 +33,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                     e[t].clients.push(this),
                         (this._init = [Array.prototype.slice.call(arguments)]);
                 }),
-                    (e[t].clients = []);
+                (e[t].clients = []);
                 for (
                     var r = function (t) {
                             return function () {
@@ -62,21 +62,19 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                             "trackClicks",
                             "unblockEvents",
                         ],
-                        n = 0;
-                    n < s.length;
-                    n++
+                        n = 0; n < s.length; n++
                 ) {
                     var c = s[n];
                     e[t].prototype[c] = r(c);
                 }
                 var o = document.createElement("script");
                 (o.type = "text/javascript"),
-                    (o.async = !0),
-                    (o.src =
-                        ("https:" === document.location.protocol
-                            ? "https:"
-                            : "http:") +
-                        "//cdn.treasuredata.com/sdk/2.3/td.min.js");
+                (o.async = !0),
+                (o.src =
+                    ("https:" === document.location.protocol ?
+                        "https:" :
+                        "http:") +
+                    "//cdn.treasuredata.com/sdk/2.3/td.min.js");
                 var a = document.getElementsByTagName("script")[0];
                 a.parentNode.insertBefore(o, a);
             }
@@ -179,7 +177,6 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
 
     fireEvents: function fireEvents() {
         if (this._hasLoadedScript && this._td != null) {
-            this._td.trackPageview(this._config.pageviewTable);
             this._td.trackPageview(
                 this._config.pageviewTable,
                 this.googleSyncCallback.bind(this)
