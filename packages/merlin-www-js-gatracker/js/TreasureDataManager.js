@@ -110,6 +110,14 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                             window.permutive.context.user_id
                         );
 
+                        window.permutive.segments(function (segments) {
+                            this._td.set(
+                                "$global",
+                                "permutive_segment_id",
+                                segments
+                            )
+                        }.bind(this));
+
                         // If there's any elements with the .js-tdp-link class
                         // attach the client id as a query string parameter to ensure
                         // id is forwarded on
