@@ -103,6 +103,10 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
             if (window.permutive) {
                 window.permutive.ready(
                     function () {
+                        console.log("PERMUTIVE READY");
+
+                        console.log("Got ID: ", window.permutive.context.user_id);
+
                         var permutiveId = window.permutive.context.user_id;
                         this._td.set(
                             "$global",
@@ -111,6 +115,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                         );
 
                         window.permutive.segments(function (segments) {
+                            console.log("Got segments: ", segments);
                             this._td.set(
                                 "$global",
                                 "permutive_segment_id",
