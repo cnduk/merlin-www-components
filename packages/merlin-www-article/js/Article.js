@@ -118,7 +118,8 @@ Article.prototype = inherit(EventEmitter.prototype, {
 
     updateEmbeds: function updateEmbeds() {
         if (OneTrustManager.ready && !OneTrustManager.consentedSocialNetworkCookies) {
-            return;
+            OneTrustManager.on('change', this.updateEmbeds.bind(this));
+            return
         } else if (!OneTrustManager.ready) {
             OneTrustManager.once('ready', this.updateEmbeds.bind(this));
             return;
