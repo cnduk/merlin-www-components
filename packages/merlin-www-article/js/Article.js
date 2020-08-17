@@ -116,7 +116,7 @@ Article.prototype = inherit(EventEmitter.prototype, {
         this._getArticleProperties();
     },
 
-    updateEmbeds: function () {
+    updateEmbeds: function updateEmbeds() {
         if (OneTrustManager.ready && !OneTrustManager.consentedSocialNetworkCookies) {
             return;
         } else if (!OneTrustManager.ready) {
