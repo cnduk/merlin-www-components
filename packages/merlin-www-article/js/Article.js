@@ -120,7 +120,7 @@ Article.prototype = inherit(EventEmitter.prototype, {
         if (OneTrustManager.ready && !OneTrustManager.consentedSocialNetworkCookies) {
             return;
         } else if (!OneTrustManager.ready) {
-            OneTrustManager.once('ready', updateEmbeds.bind(this));
+            OneTrustManager.once('ready', this.updateEmbeds.bind(this));
             return;
         } else {
             updateSocialEmbeds();
