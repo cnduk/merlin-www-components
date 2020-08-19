@@ -7,15 +7,20 @@ import {
     inherit,
     removeClass
 } from '@cnbritain/merlin-www-js-utils/js/functions';
+import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
 import bbcode from '@cnbritain/merlin-www-bbcode';
-import { CLS_INFINITE_BTN, CLS_ARTICLE_GALLERY } from './constants';
+import {
+    CLS_INFINITE_BTN,
+    CLS_ARTICLE_GALLERY
+} from './constants';
 import Gallery from './Gallery';
 import {
     bubbleEvent,
     getArticleTitle,
     getArticleType,
     getArticleUid,
-    getArticleUrl
+    getArticleUrl,
+    updateSocialEmbeds
 } from './utils';
 import * as events from './events';
 
@@ -61,9 +66,7 @@ Article.prototype = inherit(EventEmitter.prototype, {
     _init: function _init() {
         bbcode.init();
 
-        // Due instagram being a crap script, we stop oembeds from loading
-        // in their script and load it in once and trigger instagram.t
-        // updateSocialEmbeds();
+        this.updateEmbeds();
 
         // Check if the article contains a gallery
         var gallery = this.el.querySelector(CLS_ARTICLE_GALLERY);
@@ -75,7 +78,7 @@ Article.prototype = inherit(EventEmitter.prototype, {
             // the scroll listener as and when needed
             this.on(
                 'focus',
-                function() {
+                function () {
                     this.gallery.bindImageScrollListener();
                     this.gallery.bindNavScrollListener();
                     this.gallery.updateImageScroll();
@@ -84,7 +87,7 @@ Article.prototype = inherit(EventEmitter.prototype, {
             );
             this.on(
                 'blur',
-                function() {
+                function () {
                     this.gallery.unbindImageScrollListener();
                     this.gallery.unbindNavScrollListener();
                     this.gallery.updateImageScroll();
@@ -113,9 +116,21 @@ Article.prototype = inherit(EventEmitter.prototype, {
         this._getArticleProperties();
     },
 
+    updateEmbeds: function updateEmbeds() {
+        if (OneTrustManager.ready && !OneTrustManager.consentedSocialNetworkCookies) {
+            OneTrustManager.on('change', this.updateEmbeds.bind(this));
+            return;
+        } else if (!OneTrustManager.ready) {
+            OneTrustManager.once('ready', this.updateEmbeds.bind(this));
+            return;
+        } else {
+            updateSocialEmbeds();
+        }
+    },
+
     constructor: Article,
 
-    expand: function() {
+    expand: function () {
         removeClass(this.el.querySelector(CLS_ARTICLE_GALLERY), 'is-closed');
         this.resize();
         this.emit('expand', events.expand(this));
