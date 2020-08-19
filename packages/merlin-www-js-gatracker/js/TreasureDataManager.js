@@ -85,6 +85,76 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
         this.initTreasure();
     },
 
+    _getPermutive: function _getPermutive() {
+        return new Promise(function (resolve, reject) {
+            var retry = function retry(t, r, fn) {
+                if (r > 0) {
+                    var ret = fn();
+
+                    if (!ret) {
+                        retry(t, r - 1, fn);
+                    } else {
+                        resolve();
+                    }
+                } else {
+                    reject();
+                }
+            }
+
+            // Wait for a total of one second for permutive to load...        
+            retry(100, 10, function () {
+                if (window.permutive && window.permutive.ready) {
+                    window.permutive.ready(
+                        function () {
+                            var permutiveId = window.permutive.context.user_id;
+
+                            this._td.set("$global", "td_unknown_id", permutiveId);
+
+                            window.permutive.segments(function (segments) {
+                                this._td.set("$global", "permutive_segment_id", segments)
+                            }.bind(this));
+
+                            this._attachPermutiveID(permutiveId)
+                        }.bind(this)
+                    );
+                } else {
+                    return false;
+                }
+            }.bind(this));
+        });
+    },
+
+    _attachPermutiveID: function _attachPermutiveID(id) {
+        // If there's any elements with the .js-tdp-link class
+        // attach the client id as a query string parameter to ensure
+        // id is forwarded on;
+        document.querySelectorAll(
+            ".js-tdp-link"
+        ).forEach(
+            function (el) {
+                if (el.hasAttribute("href")) {
+                    el.href = updateQueryString(el.href, {
+                        td_user_id: id,
+                    });
+                }
+            }.bind(this)
+        );
+    },
+
+    _getServerCookie: function _getServerCookie() {
+        return new Promise(function (resolve, reject) {
+            this._td.fetchServerCookie(
+                function (result) {
+                    this._td.set("$global", "td_ssc_id", result);
+                    resolve();
+                }.bind(this),
+                function () {
+                    reject();
+                }
+            );
+        }.bind(this));
+    },
+
     initTreasure: function initTreasure() {
         if (this._hasLoadedScript) {
             this._td = new Treasure({
@@ -99,67 +169,20 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                 accountId: this._config.accountId,
             });
 
-            // Set the Permutive ID as the TD Unknown ID
-            if (window.permutive) {
-                window.permutive.ready(
-                    function () {
-                        console.log("PERMUTIVE READY");
-
-                        console.log("Got ID: ", window.permutive.context.user_id);
-
-                        var permutiveId = window.permutive.context.user_id;
-                        this._td.set(
-                            "$global",
-                            "td_unknown_id",
-                            window.permutive.context.user_id
-                        );
-
-                        window.permutive.segments(function (segments) {
-                            console.log("Got segments: ", segments);
-                            this._td.set(
-                                "$global",
-                                "permutive_segment_id",
-                                segments
-                            )
-                        }.bind(this));
-
-                        // If there's any elements with the .js-tdp-link class
-                        // attach the client id as a query string parameter to ensure
-                        // id is forwarded on
-                        var tdpLinks = document.querySelectorAll(
-                            ".js-tdp-link"
-                        );
-
-                        tdpLinks.forEach(
-                            function (el) {
-                                if (el.hasAttribute("href")) {
-                                    el.href = updateQueryString(el.href, {
-                                        td_user_id: permutiveId,
-                                    });
-                                }
-                            }.bind(this)
-                        );
-                    }.bind(this)
-                );
-            }
-
             this._td.set("$global", "td_global_id", "td_global_id");
 
             if (this._config.page_data) {
                 this._td.set("$global", this._config.page_data);
             }
 
-            this._td.fetchServerCookie(
-                function (result) {
-                    this._td.set("$global", {
-                        td_ssc_id: result,
-                    });
-                    this.fireEvents();
-                }.bind(this),
-                function () {
-                    this.fireEvents();
-                }.bind(this)
-            );
+            // Track the pageview after both permutive and ssc cookie have settled
+            Promise.allSettled([
+                this._getPermutive(),
+                this._getServerCookie(),
+            ]).then(function (results) {
+                console.log(results);
+                this.fireEvents();
+            }.bind(this));
         }
     },
 
