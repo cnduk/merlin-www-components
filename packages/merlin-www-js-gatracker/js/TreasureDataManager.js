@@ -104,24 +104,28 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
             // Wait for a total of one second for permutive to load...        
             retry(100, 10, function () {
                 if (window.permutive && window.permutive.ready) {
-                    window.permutive.ready(
-                        function () {
-                            var permutiveId = window.permutive.context.user_id;
+                    return new Promise(function (resolve, reject) {
+                        window.permutive.ready(
+                            function () {
+                                var permutiveId = window.permutive.context.user_id;
 
-                            this._td.set("$global", "td_unknown_id", permutiveId);
+                                this._td.set("$global", "td_unknown_id", permutiveId);
 
-                            window.permutive.segments(function (segments) {
-                                this._td.set("$global", "permutive_segment_id", segments)
-                            }.bind(this));
+                                window.permutive.segments(function (segments) {
+                                    this._td.set("$global", "permutive_segment_id", segments)
+                                }.bind(this));
 
-                            this._attachPermutiveID(permutiveId)
-                        }.bind(this)
-                    );
+                                this._attachPermutiveID(permutiveId)
+
+                                resolve();
+                            }.bind(this)
+                        );
+                    }.bind(this));
                 } else {
                     return false;
                 }
             }.bind(this));
-        });
+        }.bind(this));
     },
 
     _attachPermutiveID: function _attachPermutiveID(id) {
@@ -180,7 +184,6 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                 this._getPermutive(),
                 this._getServerCookie(),
             ]).then(function (results) {
-                console.log(results);
                 this.fireEvents();
             }.bind(this));
         }
