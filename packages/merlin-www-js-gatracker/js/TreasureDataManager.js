@@ -7,11 +7,30 @@ import {
 
 function TreasureDataManager() {
     EventEmitter.call(this, {
-        wildcard: true,
+        wildcard: true
     });
     this._config = null;
     this._hasLoadedScript = false;
     this._td = null;
+}
+
+var promiseRetry = function promiseRetry(tries, delay, fn) {
+    return new Promise(function (resolve, reject) {
+        return fn()
+            .then(resolve)
+            .catch(function (err) {
+                if (tries > 0) {
+                    setTimeout(function () {
+                        promiseRetry(tries - 1, delay, fn)
+                            .then(resolve, reject);
+                    }, delay);
+                }
+                else {
+                    reject(err);
+                    return;
+                }
+            });
+    });
 }
 
 TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
@@ -21,64 +40,17 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
         this._config = config;
     },
 
-    loadScript: function loadScript() {
+    loadTreasureDataScript: function loadTreasureDataScript() {
         if (this._hasLoadedScript) return;
-        if (this._config === null) {
+        if (!this._config) {
             console.warn("Missing TDP Config", this._config);
         }
 
-        !(function (t, e) {
-            if (void 0 === e[t]) {
-                (e[t] = function () {
-                    e[t].clients.push(this),
-                        (this._init = [Array.prototype.slice.call(arguments)]);
-                }),
-                (e[t].clients = []);
-                for (
-                    var r = function (t) {
-                            return function () {
-                                return (
-                                    (this["_" + t] = this["_" + t] || []),
-                                    this["_" + t].push(
-                                        Array.prototype.slice.call(arguments)
-                                    ),
-                                    this
-                                );
-                            };
-                        },
-                        s = [
-                            "addRecord",
-                            "blockEvents",
-                            "fetchServerCookie",
-                            "fetchGlobalID",
-                            "fetchUserSegments",
-                            "resetUUID",
-                            "ready",
-                            "setSignedMode",
-                            "setAnonymousMode",
-                            "set",
-                            "trackEvent",
-                            "trackPageview",
-                            "trackClicks",
-                            "unblockEvents",
-                        ],
-                        n = 0; n < s.length; n++
-                ) {
-                    var c = s[n];
-                    e[t].prototype[c] = r(c);
-                }
-                var o = document.createElement("script");
-                (o.type = "text/javascript"),
-                (o.async = !0),
-                (o.src =
-                    ("https:" === document.location.protocol ?
-                        "https:" :
-                        "http:") +
-                    "//cdn.treasuredata.com/sdk/2.3/td.min.js");
-                var a = document.getElementsByTagName("script")[0];
-                a.parentNode.insertBefore(o, a);
-            }
-        })("Treasure", window);
+        /* eslint-disable */
+        !function (t, e) {
+            if (void 0 === e[t]) { e[t] = function () { e[t].clients.push(this), this._init = [Array.prototype.slice.call(arguments)] }, e[t].clients = []; for (var r = function (t) { return function () { return this["_" + t] = this["_" + t] || [], this["_" + t].push(Array.prototype.slice.call(arguments)), this } }, s = ["addRecord", "blockEvents", "fetchServerCookie", "fetchGlobalID", "fetchUserSegments", "resetUUID", "ready", "setSignedMode", "setAnonymousMode", "set", "trackEvent", "trackPageview", "trackClicks", "unblockEvents"], n = 0; n < s.length; n++) { var c = s[n]; e[t].prototype[c] = r(c) } var o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.src = ("https:" === document.location.protocol ? "https:" : "http:") + "//cdn.treasuredata.com/sdk/2.4/td.min.js"; var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(o, a) }
+        }("Treasure", window);
+        /* eslint-enable */
 
         this._hasLoadedScript = true;
 
@@ -86,46 +58,26 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
     },
 
     _getPermutive: function _getPermutive() {
-        return new Promise(function (resolve, reject) {
-            var retry = function retry(t, r, fn) {
-                if (r > 0) {
-                    var ret = fn();
+        // Wait for a total of one second for permutive to load...        
+        return promiseRetry(10, 10, new Promise(function (resolve, reject) {
+            if (window.permutive && window.permutive.ready) {
+                window.permutive.ready(function () {
+                    var permutiveId = window.permutive.context.user_id;
 
-                    if (!ret) {
-                        retry(t, r - 1, fn);
-                    } else {
-                        resolve();
-                    }
-                } else {
-                    reject();
-                }
-            }
+                    this._td.set("$global", "td_unknown_id", permutiveId);
 
-            // Wait for a total of one second for permutive to load...        
-            retry(100, 10, function () {
-                if (window.permutive && window.permutive.ready) {
-                    return new Promise(function (resolve, reject) {
-                        window.permutive.ready(
-                            function () {
-                                var permutiveId = window.permutive.context.user_id;
-
-                                this._td.set("$global", "td_unknown_id", permutiveId);
-
-                                window.permutive.segments(function (segments) {
-                                    this._td.set("$global", "permutive_segment_id", segments)
-                                }.bind(this));
-
-                                this._attachPermutiveID(permutiveId)
-
-                                resolve();
-                            }.bind(this)
-                        );
+                    window.permutive.segments(function (segments) {
+                        this._td.set("$global", "permutive_segment_id", segments)
                     }.bind(this));
-                } else {
-                    return false;
-                }
-            }.bind(this));
-        }.bind(this));
+
+                    this._attachPermutiveID(permutiveId)
+
+                    resolve();
+                }.bind(this));
+            } else {
+                reject(new Error("Permutive not ready"));
+            }
+        }.bind(this)));
     },
 
     _attachPermutiveID: function _attachPermutiveID(id) {
@@ -152,8 +104,8 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                     this._td.set("$global", "td_ssc_id", result);
                     resolve();
                 }.bind(this),
-                function () {
-                    reject();
+                function (err) {
+                    reject(err);
                 }
             );
         }.bind(this));
@@ -191,9 +143,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
 
     createImage: function createImage(url) {
         var el = document.createElement("img");
-        el.src =
-            ("https:" === document.location.protocol ? "https://" : "http://") +
-            url;
+        el.src = ("https:" === document.location.protocol ? "https://" : "http://") + url;
         el.width = 1;
         el.height = 1;
         el.style.display = "none";
@@ -201,15 +151,15 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
     },
 
     googleSyncCallback: function googleSyncCallback() {
-        var gidsync_url =
-            "cm.g.doubleclick.net/pixel?google_nid=treasuredata_dmp&google_cm&td_write_key=8151/fcd628065149d648b80f11448b4083528c0d8a91&td_global_id=td_global_id";
+        var gidsync_url = "cm.g.doubleclick.net/pixel";
         var params =
-            "&td_client_id=" +
-            this._td.client.track.uuid +
-            "&td_host=" +
-            document.location.host +
-            "&account=" +
-            this._config.accountId;
+            "?google_nid=treasuredata_dmp&" +
+            "google_cm" +
+            "&td_write_key=8151/fcd628065149d648b80f11448b4083528c0d8a91" +
+            "&td_global_id=td_global_id" +
+            "&td_client_id=" + this._td.client.track.uuid +
+            "&td_host=" + document.location.host +
+            "&account=" + this._config.accountId;
 
         this.createImage(gidsync_url + params);
     },

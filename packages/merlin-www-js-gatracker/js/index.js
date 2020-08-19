@@ -44,7 +44,7 @@ var hasLoadedScript = false;
  * @param {String} id      The GA unique id
  * @param {Object} _config
  */
-function GATracker(id, _config){
+function GATracker(id, _config) {
 
     /**
      * The name of the tracker. This will be updated after creation to contain
@@ -76,40 +76,39 @@ function GATracker(id, _config){
 
 
     var config = {
-        'allowLinker': !!( _config && _config.linker ),
+        'allowLinker': !!(_config && _config.linker),
         'cookieDomain': _config && _config.cookieDomain !== undefined ?
-            _config.cookieDomain :
-            'auto',
+            _config.cookieDomain : 'auto',
         'trackingId': this._id,
         'transport': 'beacon'
     };
-    if(this._name !== null) config.name = this._name;
-    ga( 'create', config );
+    if (this._name !== null) config.name = this._name;
+    ga('create', config);
 
     /**
      * See if we need to require displayfeatures
      */
-    if( _config && _config.displayFeatures === true ){
-        ga( trackerPrefix(this, 'require'), 'displayfeatures' );
+    if (_config && _config.displayFeatures === true) {
+        ga(trackerPrefix(this, 'require'), 'displayfeatures');
     }
 
     /**
      * See if we need to require autolinker
      */
-    if( _config && _config.linker !== undefined ){
-        ga( trackerPrefix(this, 'require'), 'linker' );
-        ga( trackerPrefix(this, 'linker:autoLink'), _config.linker );
+    if (_config && _config.linker !== undefined) {
+        ga(trackerPrefix(this, 'require'), 'linker');
+        ga(trackerPrefix(this, 'linker:autoLink'), _config.linker);
     }
 
-    if(_config && _config.optimizeId !== undefined){
-        ga( trackerPrefix(this, 'require'), _config.optimizeId);
+    if (_config && _config.optimizeId !== undefined) {
+        ga(trackerPrefix(this, 'require'), _config.optimizeId);
     }
 
-    if(this.type === 'brand'){
-        ga(function gaClientId(){
+    if (this.type === 'brand') {
+        ga(function gaClientId() {
             // t0 is the default name if there is not one
             var name = 't0';
-            if(this._name !== null) name = this._name;
+            if (this._name !== null) name = this._name;
             this._clientId = ga.getByName(name).get('clientId');
         }.bind(this));
     }
@@ -117,7 +116,7 @@ function GATracker(id, _config){
     /**
      * Add this tracker to the global tracking
      */
-    GATracker.TRACKERS.push( this );
+    GATracker.TRACKERS.push(this);
 
 }
 
@@ -133,8 +132,8 @@ GATracker.TRACKERS = [];
  * Reset all custom dimensions on all the trackers
  * @static
  */
-GATracker.ResetCustomDimensions = function ResetCustomDimensions(){
-    GATracker.TRACKERS.forEach(function ResetAll_inner( tracker ){
+GATracker.ResetCustomDimensions = function ResetCustomDimensions() {
+    GATracker.TRACKERS.forEach(function ResetAll_inner(tracker) {
         tracker.resetCustomDimensions();
     });
 };
@@ -146,9 +145,9 @@ GATracker.ResetCustomDimensions = function ResetCustomDimensions(){
  * @param {String} hitType
  * @param {Object} config
  */
-GATracker.SendAll = function SendAll( hitType, config ){
-    GATracker.TRACKERS.forEach(function SendAll_inner( tracker ){
-        tracker.send( hitType, config );
+GATracker.SendAll = function SendAll(hitType, config) {
+    GATracker.TRACKERS.forEach(function SendAll_inner(tracker) {
+        tracker.send(hitType, config);
     });
 };
 
@@ -158,13 +157,13 @@ GATracker.SendAll = function SendAll( hitType, config ){
  * @param {String/Object} fieldName
  * @param {String/Number} value
  */
-GATracker.SetAll = function SetAll( fieldName, value ){
+GATracker.SetAll = function SetAll(fieldName, value) {
     var argCount = arguments.length;
-    GATracker.TRACKERS.forEach(function SetAll_inner( tracker ){
-        if( argCount === 2 ){
-            tracker.set( fieldName, value );
+    GATracker.TRACKERS.forEach(function SetAll_inner(tracker) {
+        if (argCount === 2) {
+            tracker.set(fieldName, value);
         } else {
-            tracker.set( fieldName );
+            tracker.set(fieldName);
         }
     });
 };
@@ -181,10 +180,10 @@ GATracker.prototype = {
     /**
      * Reset all the custom dimensions on the tracker
      */
-    'resetCustomDimensions': function(){
+    'resetCustomDimensions': function () {
         var resetValues = {};
-        for(var key in GATracker.DIMENSION_BY_INDEX){
-            if(!hasOwnProperty(GATracker.DIMENSION_BY_INDEX, key)) continue;
+        for (var key in GATracker.DIMENSION_BY_INDEX) {
+            if (!hasOwnProperty(GATracker.DIMENSION_BY_INDEX, key)) continue;
             resetValues[key] = null;
         }
         this.set(resetValues);
@@ -197,32 +196,32 @@ GATracker.prototype = {
      * @param  {String} hitType
      * @param  {Object} config  Data to send along with the call
      */
-    'send': function( hitType, config ){
+    'send': function (hitType, config) {
         // Don't send anything if we don't have consent
-        if(!hasConsent) return;
-        ga(function gaSend(){
-            var options = assign( {
+        if (!hasConsent) return;
+        ga(function gaSend() {
+            var options = assign({
                 'comscore': true
             }, config, {
                 'hitType': hitType
-            } );
+            });
 
             var comscore = options.comscore;
             delete options.comscore;
 
             // Set the clientId as a custom dimension if its defined
-            if(this._clientId !== null){
+            if (this._clientId !== null) {
                 this.set(
                     GATracker.getDimensionByIndex('CLIENT_ID'),
                     this._clientId
                 );
             }
 
-            ga( trackerPrefix(this, 'send'), options );
+            ga(trackerPrefix(this, 'send'), options);
 
             // Whenever we send a pageview, send a comscore beacon
-            if( hitType === GATracker.SEND_HITTYPES.PAGEVIEW && comscore &&
-                this.type === 'brand' ){
+            if (hitType === GATracker.SEND_HITTYPES.PAGEVIEW && comscore &&
+                this.type === 'brand') {
                 ComscoreManager.sendBeacon(location.href);
             }
         }.bind(this));
@@ -235,31 +234,31 @@ GATracker.prototype = {
      * @param  {String/Object} fieldName Either a key or an object with data
      * @param  {String/Number} value
      */
-    'set': function( fieldName, value ){
+    'set': function (fieldName, value) {
         // Don't set anything if we don't have consent
-        if(!hasConsent) return;
+        if (!hasConsent) return;
         var argLength = arguments.length;
-        ga(function gaSet(){
+        ga(function gaSet() {
             var setData = fieldName;
 
-            if( argLength === 2 ){
+            if (argLength === 2) {
                 setData = {};
-                setData[ fieldName ] = value;
+                setData[fieldName] = value;
             }
 
             // Update location value to remove specific query params
-            if(hasOwnProperty(setData, 'location') &&
-                isDefined(setData['location'])){
+            if (hasOwnProperty(setData, 'location') &&
+                isDefined(setData['location'])) {
                 setData['location'] = filterQueryParams(setData['location']);
             }
 
             // If the tracker is `conde`, we need to remove custom dimensions. We
             // might not need to do this but just to be safe :)
-            if( this.type !== 'brand' ){
-                setData = removeCustomDimensions( setData );
+            if (this.type !== 'brand') {
+                setData = removeCustomDimensions(setData);
             }
 
-            ga( trackerPrefix(this, 'set'), setData );
+            ga(trackerPrefix(this, 'set'), setData);
         }.bind(this));
     }
 };
@@ -270,11 +269,11 @@ GATracker.prototype = {
  * @param  {String} index
  * @return {String}       The dimension label
  */
-GATracker.getDimensionByIndex = function( index ){
-    if(hasOwnProperty( GATracker.INDEX_BY_DIMENSION, index ) ){
-        return GATracker.INDEX_BY_DIMENSION[ index ];
+GATracker.getDimensionByIndex = function (index) {
+    if (hasOwnProperty(GATracker.INDEX_BY_DIMENSION, index)) {
+        return GATracker.INDEX_BY_DIMENSION[index];
     }
-    throw new TypeError( index + ' is not a valid index' );
+    throw new TypeError(index + ' is not a valid index');
 };
 
 /**
@@ -283,16 +282,16 @@ GATracker.getDimensionByIndex = function( index ){
  * @param  {String} dimension
  * @return {String}           The dimension index
  */
-GATracker.getIndexByDimension = function( dimension ){
-    if( hasOwnProperty( GATracker.DIMENSION_BY_INDEX, dimension ) ){
-        return GATracker.DIMENSION_BY_INDEX[ dimension ];
+GATracker.getIndexByDimension = function (dimension) {
+    if (hasOwnProperty(GATracker.DIMENSION_BY_INDEX, dimension)) {
+        return GATracker.DIMENSION_BY_INDEX[dimension];
     }
-    throw new TypeError( dimension + ' is not a valid dimension' );
+    throw new TypeError(dimension + ' is not a valid dimension');
 };
 
 // This initialises the wrapper but does not load of trigger any analytics
-GATracker.init = function(){
-    var queue = function(){
+GATracker.init = function () {
+    var queue = function () {
         ga.q = ga.q || [];
         ga.q.push(arguments);
     };
@@ -301,8 +300,8 @@ GATracker.init = function(){
 };
 
 // This loads the analytics script which in turn sets all the wheels in motion
-GATracker.loadGAScript = function(){
-    if(hasLoadedScript) return;
+GATracker.loadGAScript = function () {
+    if (hasLoadedScript) return;
     // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -311,7 +310,7 @@ GATracker.loadGAScript = function(){
     hasLoadedScript = true;
 };
 
-GATracker.setConsent = function(consent){
+GATracker.setConsent = function (consent) {
     hasConsent = consent;
 };
 
@@ -463,38 +462,38 @@ GATracker.TRACKING_CONDE_ID = null;
  * @param  {Object} data
  * @return {Object}      Filtered data
  */
-function removeCustomDimensions( data ){
+function removeCustomDimensions(data) {
     var filtered = {};
     var key = '';
-    for(key in data){
-        if(!hasOwnProperty(data, key)) continue;
-        if(RE_DIMENSION.test(key)) continue;
+    for (key in data) {
+        if (!hasOwnProperty(data, key)) continue;
+        if (RE_DIMENSION.test(key)) continue;
         filtered[key] = data[key];
     }
     return filtered;
 }
 
-function filterQueryParams(url){
+function filterQueryParams(url) {
     var hostUrl = getUrlHost(url);
     var queryArgs = getQueryArgs(url);
     var filteredArgs = {};
 
-    for(var key in queryArgs){
-        if(!hasOwnProperty(queryArgs, key)) continue;
-        if(IGNORE_PARAMS.indexOf(key) !== -1) continue;
+    for (var key in queryArgs) {
+        if (!hasOwnProperty(queryArgs, key)) continue;
+        if (IGNORE_PARAMS.indexOf(key) !== -1) continue;
         filteredArgs[key] = queryArgs[key];
     }
 
     var queryString = getQueryString(filteredArgs);
-    if(queryString === ''){
+    if (queryString === '') {
         return hostUrl;
     } else {
         return hostUrl + '?' + queryString;
     }
 }
 
-function trackerPrefix(tracker, key){
-    if(tracker._name){
+function trackerPrefix(tracker, key) {
+    if (tracker._name) {
         return tracker._name + '.' + key;
     } else {
         return key;
@@ -502,4 +501,3 @@ function trackerPrefix(tracker, key){
 }
 
 export default GATracker;
-

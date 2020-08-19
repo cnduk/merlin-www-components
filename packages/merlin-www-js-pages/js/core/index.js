@@ -108,7 +108,7 @@ export default function init(config) {
         if (this.consentedTargetingCookies) {
             FacebookPixelManager.loadScript();
             PermutiveManager.loadScript();
-            TreasureDataManager.loadScript();
+            TreasureDataManager.loadTreasureDataScript();
             SparrowManager.loadScript();
         }
     });
