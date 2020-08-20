@@ -2,6 +2,8 @@ import EventEmitter from "eventemitter2";
 import {
     inherit,
     updateQueryString,
+    addEvent,
+    delegate,
 } from "@cnbritain/merlin-www-js-utils/js/functions";
 
 function TreasureDataManager() {
@@ -32,6 +34,24 @@ var promiseRetry = function promiseRetry(tries, delay, fn) {
     });
 }
 
+var hash = function hash(text) {
+    var enc = new TextEncoder().encode(text);
+    return crypto.subtle.digest('SHA-256', enc).then(function (hashBuffer) {
+        var hashArray = Array.from(new Uint8Array(hashBuffer));
+        var hashHex = hashArray.map(function (b) {
+            return b.toString(16).padStart(2, '0');
+        }).join('');
+        return hashHex;
+    });
+};
+
+var toArray = function toArray(collection) {
+    var len = collection.length;
+    var arr = new Array(len);
+    while (len--) arr[len] = collection[len];
+    return arr;
+}
+
 TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
     constructor: TreasureDataManager,
 
@@ -56,6 +76,40 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
         this._hasLoadedScript = true;
 
         this.initTreasure();
+    },
+
+    _onNewsletterSubmit: function _onNewsletterSubmit(e) {
+        e.preventDefault();
+
+        var eml = document.getElementById('nl-form__email').value;
+        var nls = toArray(document.querySelectorAll('.nl-form__checkbox:checked')).reduce(function (el) {
+            return el.name.replace('chk_', '');
+        });
+
+        var submitForm = function submitForm() {
+            document.querySelector('.nl-form').submit();
+        };
+
+        hash(eml).then(function (hashed) {
+            this._td.trackEvent(
+                this._config.pageviewTable,
+                {
+                    "email": hashed,
+                    "newsletters": nls,
+                },
+                submitForm,
+                submitForm
+            )
+        }.bind(this));
+    },
+
+    _attachFormHandler: function _attachFormHandler() {
+        if (!document.querySelector('.nl-form')) return;
+        addEvent(
+            document,
+            'submit',
+            delegate('.nl-form', this._onNewsletterSubmit.bind(this))
+        );
     },
 
     _getPermutive: function _getPermutive() {
@@ -140,6 +194,8 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
             if (this._config.page_data) {
                 this._td.set("$global", this._config.page_data);
             }
+
+            this._attachFormHandler();
 
             // Track the pageview after both permutive and ssc cookie have settled
             Promise.allSettled([
