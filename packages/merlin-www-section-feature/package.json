@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-section-feature",
-  "version": "1.17.1",
+  "version": "1.18.0",
   "description": "",
   "main": "js/index.js",
   "scripts": {
@@ -9,11 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cnbritain/merlin-www-common": "^1.19.1",
-    "@cnbritain/merlin-www-image": "^1.15.3"
+    "@cnbritain/merlin-www-common": "^1.20.0",
+    "@cnbritain/merlin-www-image": "^1.16.0"
   },
   "devDependencies": {
-    "@cnbritain/merlin-component-demo-server": "^3.7.1"
+    "@cnbritain/merlin-component-demo-server": "^3.8.0"
   },
   "gitHead": "f2957981efebce4d7d100c77305fcd5eac40b48c"
 }
