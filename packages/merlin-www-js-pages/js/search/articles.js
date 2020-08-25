@@ -7,7 +7,8 @@ import {
     onPageLoad,
     removeEvent,
     throttle,
-    updateQueryString
+    updateQueryString,
+    locationOrigin
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import InfiniteScroll from '@cnbritain/merlin-www-js-infinitescroll';
 
@@ -46,7 +47,7 @@ export function getTrigger(scrollY) {
 }
 
 export function getUrl(pageNumber) {
-    var url = location.origin + '/xhr' + getStorage('infinite_url');
+    var url = locationOrigin() + '/xhr' + getStorage('infinite_url');
     var queryValues = {
         page: pageNumber + 1
     };
@@ -85,7 +86,7 @@ export function onInfiniteLoad(e) {
 
     // Update any local storage values
     if (responseJSON.data.local_storage) {
-        responseJSON.data.local_storage.forEach(function(item) {
+        responseJSON.data.local_storage.forEach(function (item) {
             setStorage(item.key, item.value);
         });
     }

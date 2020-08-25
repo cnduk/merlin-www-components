@@ -10,7 +10,8 @@ import {
     ajax,
     createEventTemplate,
     removeElement,
-    hasOwnProperty
+    hasOwnProperty,
+    locationOrigin
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 
 /**
@@ -31,7 +32,7 @@ var NATIVE_AD_SIZES = {
  * @constant
  * @type {String}
  */
-var TEMPLATE_NATIVE_AD_URL = location.origin + '/xhr/ads/native';
+var TEMPLATE_NATIVE_AD_URL = locationOrigin() + '/xhr/ads/native';
 
 /**
  * @module NativeAd
@@ -43,12 +44,12 @@ var NativeAd = {
      * @param  {Ad} ad
      * @return {NativeAd}
      */
-    'inheritFrom': function(ad){
+    'inheritFrom': function (ad) {
         // Add extra properties to the ad
         ad._properties.nativeSize = NATIVE_AD_SIZES.UNKNOWN;
 
         // Update state
-        switch(ad.state){
+        switch (ad.state) {
         case AD_STATES.RENDERED:
             setAdStateToRendered(ad);
             break;
@@ -67,7 +68,7 @@ var NativeAd = {
      * @param  {Ad} ad
      * @param  {Object} json
      */
-    'render': function(ad, json){
+    'render': function (ad, json) {
         // Set size
         ad.set('nativeSize', getNativeAdSize(ad));
 
@@ -76,11 +77,11 @@ var NativeAd = {
             'url': getNativeAdTemplateUrl(
                 getNativeAdSizeName(ad.get('nativeSize')),
                 ad.get('nativeStyle'), json),
-        }).then(function(e){
+        }).then(function (e) {
             var responseJson = null;
             try {
                 responseJson = JSON.parse(e.request.responseText);
-            } catch(err){
+            } catch (err) {
                 throw new SyntaxError('Error parsing native ads json', e);
             }
             this.el.innerHTML = responseJson.template;
@@ -90,7 +91,7 @@ var NativeAd = {
             this.el.querySelector('.c-card__link, .c-feature__link').setAttribute(
                 'href', json.LinkUrl);
             // Tracking pixel
-            if(json.ImpressionTrackingUrl){
+            if (json.ImpressionTrackingUrl) {
                 this.el.querySelector('.js-native-ad__pixel').setAttribute(
                     'src', json.ImpressionTrackingUrl);
             } else {
@@ -108,8 +109,8 @@ var NativeAd = {
  * @param  {NativeAd} nad
  * @return {Number}
  */
-function getNativeAdSize(nad){
-    switch(nad.get('position')){
+function getNativeAdSize(nad) {
+    switch (nad.get('position')) {
     case 'promotion-large':
         return NATIVE_AD_SIZES.LARGE;
     case 'promotion-medium':
@@ -128,8 +129,8 @@ function getNativeAdSize(nad){
  * @param  {Number} index
  * @return {String}
  */
-function getNativeAdSizeName(index){
-    switch(index){
+function getNativeAdSizeName(index) {
+    switch (index) {
     case NATIVE_AD_SIZES.UNKNOWN:
         return 'unknown';
     case NATIVE_AD_SIZES.SMALL:
@@ -149,7 +150,7 @@ function getNativeAdSizeName(index){
  * @param  {Object} json
  * @return {String}
  */
-function getNativeAdTemplateUrl(size, styleIndex, json){
+function getNativeAdTemplateUrl(size, styleIndex, json) {
     // We dont set an ad_url and tracking url as this will allow us to use
     // cloudfront cache. We dynamically set the url and tracking pixel bits
     // later on
@@ -167,17 +168,17 @@ function getNativeAdTemplateUrl(size, styleIndex, json){
  * @param  {Object} obj
  * @return {String}
  */
-function objectToQueryString(obj){
+function objectToQueryString(obj) {
     var qs = [];
     var key = '';
-    for(key in obj){
-        if(!hasOwnProperty(obj, key)) continue;
+    for (key in obj) {
+        if (!hasOwnProperty(obj, key)) continue;
         qs.push(encodeURIComponent(key) + '=' + encodeValue(obj[key]));
     }
     return '?' + qs.join('&');
 
-    function encodeValue(value){
-        if(typeof value === 'object'){
+    function encodeValue(value) {
+        if (typeof value === 'object') {
             return encodeURIComponent(JSON.stringify(value));
         }
         return encodeURIComponent(value);

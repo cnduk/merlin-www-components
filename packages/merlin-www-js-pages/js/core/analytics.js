@@ -10,7 +10,9 @@ import GATracker from '@cnbritain/merlin-www-js-gatracker';
 import InfobarManager from '@cnbritain/merlin-www-infobar';
 import SubscribeBarManager from '@cnbritain/merlin-www-subscribe-bar';
 
+/* eslint-disable */
 var hasBeacon = !!navigator.sendBeacon;
+/* eslint-enable */
 var clickEvents = ['click', 'auxclick'];
 var delegateHandler = null;
 var brandTracker = null;
@@ -92,7 +94,7 @@ export function getEventValues(domLink) {
 export function getBrandTracker() {
     if (brandTracker !== null) return brandTracker;
 
-    var tracker = GATracker.TRACKERS.filter(function(t) {
+    var tracker = GATracker.TRACKERS.filter(function (t) {
         return t.type === 'brand';
     })[0];
     if (!tracker) {
@@ -123,7 +125,7 @@ export function onLinkClick(e) {
         if (!e.defaultPrevented) {
             e.preventDefault();
         }
-        eventValues.hitCallback = function() {
+        eventValues.hitCallback = function () {
             location.href = link.getAttribute('href');
         };
     }
@@ -137,7 +139,7 @@ export function onLinkClick(e) {
 export function bindEvents() {
     if (delegateHandler === null) {
         delegateHandler = delegate('.bb-button, .bb-a', onLinkClick);
-        clickEvents.forEach(function(eventType) {
+        clickEvents.forEach(function (eventType) {
             addEvent(document, eventType, delegateHandler);
         });
     }
@@ -148,7 +150,7 @@ export function bindEvents() {
  */
 export function unbindEvents() {
     if (delegateHandler !== null) {
-        clickEvents.forEach(function(eventType) {
+        clickEvents.forEach(function (eventType) {
             removeEvent(document, eventType, delegateHandler);
         });
         delegateHandler = null;
@@ -157,7 +159,7 @@ export function unbindEvents() {
 
 function onInfobarLoad() {
     if (InfobarManager.infobar !== null) {
-        InfobarManager.infobar.addListener('linkClick', function(e) {
+        InfobarManager.infobar.addListener('linkClick', function (e) {
             var category = 'Info Bar';
             var action = null;
             var label = null;
@@ -237,7 +239,7 @@ export function initSectionNewsletterTracking() {
 
 function onSubscribeBarLoaded() {
     if (SubscribeBarManager.subscribeBar !== null) {
-        SubscribeBarManager.subscribeBar.addListener('signup', function() {
+        SubscribeBarManager.subscribeBar.addListener('signup', function () {
             GATracker.SendAll(GATracker.SEND_HITTYPES.EVENT, {
                 eventCategory: 'Subscribe bar',
                 eventAction: 'Sign up',
@@ -265,9 +267,9 @@ export function initLinkTracking() {
 }
 
 export function loadSiteCensus() {
-    (function() {
+    (function () {
         var d = new Image(1, 1);
-        d.onerror = d.onload = function() {
+        d.onerror = d.onload = function () {
             d.onerror = d.onload = null;
         };
         d.src = [

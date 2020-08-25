@@ -11,7 +11,8 @@ import {
     inherit,
     removeClass,
     removeEvent,
-    hasOwnProperty
+    hasOwnProperty,
+    locationOrigin
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import InfiniteScroll from '@cnbritain/merlin-www-js-infinitescroll';
 import * as events from './events';
@@ -44,7 +45,7 @@ function Playlist(el) {
 Playlist.prototype = inherit(EventEmitter.prototype, {
 
     _bindPlayerListeners: function _bindPlayerListeners() {
-        var delegateFn = delegate(CLS_CARD_LIST_ITEM, function(e) {
+        var delegateFn = delegate(CLS_CARD_LIST_ITEM, function (e) {
             if (this.videoConfigs.length === 0) return;
             e.preventDefault();
             var index = getElementIndex(e.delegateTarget);
@@ -95,7 +96,7 @@ Playlist.prototype = inherit(EventEmitter.prototype, {
 
         // Update any local storage values
         if (responseJSON.local_storage) {
-            responseJSON.local_storage.forEach(function(item) {
+            responseJSON.local_storage.forEach(function (item) {
                 if (/playlist_json$/.test(item.key)) {
                     this.videoConfigs = this.videoConfigs.concat(
                         item.value);
@@ -133,7 +134,7 @@ Playlist.prototype = inherit(EventEmitter.prototype, {
             },
             'url': function infiniteScrollUrl(pageCounter) {
                 var url = getStorage('playlist_infinite_url');
-                return location.origin + url + '?page=' + (pageCounter + 1);
+                return locationOrigin() + url + '?page=' + (pageCounter + 1);
             }
         });
 

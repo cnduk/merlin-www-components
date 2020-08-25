@@ -6,7 +6,8 @@ import {
     onPageLoad,
     removeEvent,
     throttle,
-    updateQueryString
+    updateQueryString,
+    locationOrigin
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import SectionCardList from '@cnbritain/merlin-www-section-card-list';
 import {
@@ -70,7 +71,7 @@ export function getNextPageUrl(tagUrl, pageNumber) {
 }
 
 export function onInfiniteUrl(pageCounter) {
-    return location.origin + getNextPageUrl(
+    return locationOrigin() + getNextPageUrl(
         getStorage('infinite_url'), pageCounter + 1);
 }
 
@@ -125,7 +126,7 @@ export function onInfiniteLoadComplete(e) {
 
     // Update any local storage values
     if (responseJSON.data.local_storage) {
-        responseJSON.data.local_storage.forEach(function(item) {
+        responseJSON.data.local_storage.forEach(function (item) {
             setStorage(item.key, item.value);
         });
     }

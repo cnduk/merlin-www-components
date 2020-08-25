@@ -6,7 +6,8 @@ import {
     onPageLoad,
     removeEvent,
     throttle,
-    updateQueryString
+    updateQueryString,
+    locationOrigin
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import { AdManager } from '@cnbritain/merlin-www-ads';
 import InfiniteScroll from '@cnbritain/merlin-www-js-infinitescroll';
@@ -67,7 +68,7 @@ export function getNextPageUrl(pageUrl, pageNumber, itemShift) {
 
 export function onInfiniteUrl(pageCounter) {
     return (
-        location.origin +
+        locationOrigin() +
         getNextPageUrl(
             getStorage('infinite_url'),
             pageCounter + 1,

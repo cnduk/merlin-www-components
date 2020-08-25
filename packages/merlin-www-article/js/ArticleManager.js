@@ -15,7 +15,8 @@ import {
     throttle,
     transferQueryArgs,
     updateQueryString,
-    hasOwnProperty
+    hasOwnProperty,
+    locationOrigin
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import { hasHistory } from '@cnbritain/merlin-www-js-utils/js/detect';
 import InfiniteScroll from '@cnbritain/merlin-www-js-infinitescroll';
@@ -57,7 +58,7 @@ function ArticleManager() {
 }
 
 ArticleManager.prototype = inherit(EventEmitter.prototype, {
-    _triggerFocusBlur: function(index) {
+    _triggerFocusBlur: function (index) {
         var article = null;
         var eve = null;
 
@@ -244,7 +245,7 @@ function infiniteScrollUrl() {
         referral_uid: referralUid,
         exclude_uid: excludeUid
     });
-    return location.origin + url;
+    return locationOrigin() + url;
 }
 
 /**
@@ -358,7 +359,7 @@ function onInfiniteLoadComplete(e) {
 
     // Update any local storage values
     if (responseJSON.local_storage) {
-        responseJSON.local_storage.forEach(function(item) {
+        responseJSON.local_storage.forEach(function (item) {
             setStorage(item.key, item.value);
         });
     }

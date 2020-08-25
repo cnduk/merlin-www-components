@@ -28,15 +28,20 @@
         "no-console": [
             "error",
             {
-                "allow": ["warn", "error"]
+                "allow": [
+                    "warn",
+                    "error"
+                ]
             }
         ],
         "compat/compat": "error"
     },
-    "plugins": ["compat"],
+    "plugins": [
+        "compat"
+    ],
     "settings": {
         "polyfills": [
-            "promises"
+            "Promise"
         ]
     }
 }

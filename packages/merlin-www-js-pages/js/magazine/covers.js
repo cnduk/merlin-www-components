@@ -6,7 +6,8 @@ import {
     onPageLoad,
     removeEvent,
     throttle,
-    updateQueryString
+    updateQueryString,
+    locationOrigin
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import InfiniteScroll from '@cnbritain/merlin-www-js-infinitescroll';
 import {
@@ -31,7 +32,7 @@ export function resizeWindow() {
 }
 
 export function getUrl(page) {
-    return location.origin + updateQueryString('/xhr/magazine', {
+    return locationOrigin() + updateQueryString('/xhr/magazine', {
         page: page + 1
     });
 }
