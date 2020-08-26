@@ -45,12 +45,7 @@ module.exports = function taskSassExport(taskConfig, browserSync) {
             const task = gulp.src(file)
                 .pipe(sourcemaps.init())
                 .pipe(sass.sync(sassConfig).on('error', sass.logError))
-                .pipe(autoprefixer({
-                    browsers: [
-                        'last 2 versions',
-                        'ie >= 10'
-                    ]
-                }));
+                .pipe(autoprefixer());
 
             if (!ENV.isDev) {
                 task.pipe(csso(cssoConfig));

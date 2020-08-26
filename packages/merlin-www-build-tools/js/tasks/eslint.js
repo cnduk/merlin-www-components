@@ -3,9 +3,9 @@
 const gulp = require('gulp');
 const eslint = require('gulp-eslint');
 /* eslint-disable no-unused-vars */
-module.exports = function taskEsLintExport(taskConfig, browserSync){
-/* eslint-enable no-unused-vars */
-    return function taskEsLint(){
+module.exports = function taskEsLintExport(taskConfig, browserSync) {
+    /* eslint-enable no-unused-vars */
+    return function taskEsLint() {
         return gulp.src(taskConfig.eslint.src)
             .pipe(eslint({
                 env: {
@@ -15,6 +15,7 @@ module.exports = function taskEsLintExport(taskConfig, browserSync){
                 },
                 extends: 'eslint:recommended',
                 parserOptions: {
+                    ecmaVersion: 2015,
                     sourceType: 'module'
                 },
                 rules: {

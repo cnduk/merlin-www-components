@@ -4,17 +4,17 @@ const fs = require('fs');
 const path = require('path');
 const minimist = require('minimist');
 
-function getAbsDir(filename, absRoot=process.cwd()){
+function getAbsDir(filename, absRoot = process.cwd()) {
     return path.join(absRoot, filename);
 }
 
 let ENV = null;
-function getEnvironment(){
-    if(ENV !== null) return ENV;
+function getEnvironment() {
+    if (ENV !== null) return ENV;
 
     const args = minimist(process.argv.slice(2));
     let label = null;
-    switch((args.env || '').toUpperCase()){
+    switch ((args.env || '').toUpperCase()) {
         case 'DEV':
             label = 'DEV';
             break;
@@ -38,7 +38,7 @@ function getEnvironment(){
     return ENV;
 }
 
-function getDefaultConfig(pkgJson, merlinJson){
+function getDefaultConfig(pkgJson, merlinJson) {
     const abbr = pkgJson.cnOptions.brandConfig;
     return {
         copy: {
@@ -111,15 +111,15 @@ function getPackageJsonVersion(packageLocation) {
     return JSON.parse(fs.readFileSync(packageLocation, 'utf8')).version;
 }
 
-function createFileNotExist(filename, done){
+function createFileNotExist(filename, done) {
     fs.stat(filename, (err, stats) => {
-        if(err){
-            if(err.code !== "ENOENT"){
+        if (err) {
+            if (err.code !== "ENOENT") {
                 console.error(err);
                 return done(err);
             }
         }
-        if(stats && stats.isFile()) return done();
+        if (stats && stats.isFile()) return done();
         fs.writeFile(filename, '', done);
     });
 }
