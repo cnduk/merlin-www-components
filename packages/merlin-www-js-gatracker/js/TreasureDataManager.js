@@ -82,7 +82,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
         e.preventDefault();
 
         var eml = document.getElementById('nl-form__email').value;
-        var nls = toArray(document.querySelectorAll('.nl-form__checkbox:checked')).reduce(function (el) {
+        var nls = toArray(document.querySelectorAll('.nl-form__checkbox:checked')).map(function (el) {
             return el.name.replace('chk_', '');
         });
 
