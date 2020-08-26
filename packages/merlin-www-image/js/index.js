@@ -7,7 +7,7 @@
 import lazySizes from 'lazysizes';
 
 //IE Polyfill for picture element
-import 'lazysizes/plugins/respimg/ls.respimg.js';
+import 'lazysizes/plugins/respimg/ls.respimg';
 
 lazySizes.cfg = window.lazySizesConfig || {};
 // Make sure we dont auto trigger lazySizes instantly
