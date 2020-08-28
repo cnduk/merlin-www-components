@@ -34,17 +34,6 @@ var promiseRetry = function promiseRetry(tries, delay, fn) {
     });
 }
 
-var hash = function hash(text) {
-    var enc = new TextEncoder().encode(text);
-    return crypto.subtle.digest('SHA-256', enc).then(function (hashBuffer) {
-        var hashArray = Array.from(new Uint8Array(hashBuffer));
-        var hashHex = hashArray.map(function (b) {
-            return b.toString(16).padStart(2, '0');
-        }).join('');
-        return hashHex;
-    });
-};
-
 var toArray = function toArray(collection) {
     var len = collection.length;
     var arr = new Array(len);
@@ -90,17 +79,15 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
             document.querySelector('.nl-form').submit();
         };
 
-        hash(eml).then(function (hashed) {
-            this._td.trackEvent(
-                this._config.pageviewTable,
-                {
-                    "email": hashed,
-                    "newsletters": nls,
-                },
-                submitForm,
-                submitForm
-            )
-        }.bind(this));
+        this._td.trackEvent(
+            this._config.pageviewTable,
+            {
+                "email": eml,
+                "newsletters": nls,
+            },
+            submitForm,
+            submitForm
+        )
     },
 
     _attachFormHandler: function _attachFormHandler() {
