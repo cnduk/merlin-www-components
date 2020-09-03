@@ -45,12 +45,10 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
     constructor: TreasureDataManager,
 
     init: function init(config) {
-        console.log("init tdp config", config);
         this._config = config;
     },
 
     loadTreasureDataScript: function loadTreasureDataScript() {
-        console.log("loading tdp script");
         if (this._hasLoadedScript) return;
         if (!this._config) {
             console.warn("Missing TDP Config", this._config);
@@ -99,32 +97,57 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
         );
     },
 
-    _getPermutive: function _getPermutive() {
-        console.log("waiting for permutive.ready");
+    _permutiveReady: function _permutiveReady() {
         // Wait for a total of one second for permutive to load...        
         return promiseRetry(10, 10, function () {
-            return new Promise(function (resolve, reject) {
-                if (window.permutive && window.permutive.ready) {
-                    window.permutive.ready(function () {
-                        console.log("permutive ready");
-                        var permutiveId = window.permutive.context.user_id;
-
-                        this._td.set("$global", "td_unknown_id", permutiveId);
-
-                        window.permutive.segments(function (segments) {
-                            this._td.set("$global", "permutive_segment_id", segments)
-                        }.bind(this));
-
-                        this._attachPermutiveID(permutiveId)
-
-                        resolve();
-                    }.bind(this));
-                } else {
-                    console.log("permutive not ready");
-                    reject(new Error("Permutive not ready"));
-                }
-            }.bind(this));
+            if (window.permutive && window.permutive.ready) {
+                window.permutive.ready(function () {
+                    resolve(window.permutive);
+                });
+            } else {
+                reject(new Error("Permutive not ready"));
+            }
         }.bind(this));
+    },
+
+    _getPermutiveSegments: function _getPermutiveSegments(permtuive) {
+        return new Promise(function (resolve, reject) {
+
+        });
+    },
+
+    _getPermutive: function _getPermutive() {
+        this._permutiveReady()
+            .then(function (permutive) {
+                var permutiveId = permutive.context.user_id;
+
+                this._td.set('$global', 'td_unknown_id', permutiveId);
+
+                this._attachPermutiveID(permutiveId);
+
+                permutive.segments(function (segments) {
+                    this._td.set('$global', 'permutive_segment_id', segments);
+                    resolve(permutive);
+                }.bind(this));
+            }.bind(this))
+            .then(function (permutive) {
+                // by this point permutive will be loaded and ready
+                this._td.fetchUserSegments({
+                    audienceToken: [this._config.writeKey],
+                    keys: { permutiveId: permutive.context.user_id }
+                },
+                    function (v) {
+                        if (v.length > 0 && v[0].attributes && v[0].attributes.email_sha256) {
+                            permutive.identify([{
+                                tag: "email_sha256",
+                                id: v[0].attributes.email_sha256,
+                                priority: 1
+                            }]);
+                        }
+                    },
+                    function error(err) { }
+                );
+            }.bind(this));
     },
 
     _attachPermutiveID: function _attachPermutiveID(id) {
@@ -145,16 +168,13 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
     },
 
     _getServerCookie: function _getServerCookie() {
-        console.log("fetching ssc cookie");
         return new Promise(function (resolve, reject) {
             this._td.fetchServerCookie(
                 function (result) {
-                    console.log("got ssc", result);
                     this._td.set("$global", "td_ssc_id", result);
-                    resolve();
+                    resolve(result);
                 }.bind(this),
                 function (err) {
-                    console.log("failed to get ssc", err);
                     reject(err);
                 }
             );
@@ -162,7 +182,6 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
     },
 
     initTreasure: function initTreasure() {
-        console.log("initialising tdp");
         if (this._hasLoadedScript) {
             this._td = new Treasure({
                 database: this._config.database,
@@ -176,7 +195,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                 accountId: this._config.accountId,
             });
 
-            this._td.set("$global", "td_global_id", "td_global_id");
+            this._td.set('$global', "td_global_id", "td_global_id");
 
             if (this._config.page_data) {
                 this._td.set("$global", this._config.page_data);
@@ -189,7 +208,6 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                 this._getPermutive(),
                 this._getServerCookie(),
             ]).then(function (results) {
-                console.log(results);
                 this.fireEvents();
             }.bind(this));
         }
