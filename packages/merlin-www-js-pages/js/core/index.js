@@ -27,6 +27,7 @@ import SkimlinksManager from '@cnbritain/merlin-www-js-gatracker/js/SkimlinksMan
 import SparrowManager from '@cnbritain/merlin-www-js-gatracker/js/SparrowManager';
 import TypekitManager from '@cnbritain/merlin-www-js-gatracker/js/TypekitManager';
 import TreasureDataManager from '@cnbritain/merlin-www-js-gatracker/js/TreasureDataManager';
+import TwitterConversionManager from '@cnbritain/merlin-www-js-gatracker/js/TwitterConversionManager';
 import SectionCardList from '@cnbritain/merlin-www-section-card-list';
 import SiteFooter from '@cnbritain/merlin-www-footer';
 import {
@@ -66,18 +67,19 @@ export default function init(config) {
     setGlobalNamespace({
         AdDebugger: AdDebugger,
         AdManager: AdManager,
-        GATracker: GATracker,
-        MainNavigation: MainNavigation,
-        Store: store,
-        HotjarManager: HotjarManager,
-        OneTrustManager: OneTrustManager,
-        SkimlinksManager: SkimlinksManager,
         FacebookPixelManager: FacebookPixelManager,
-        TypekitManager: TypekitManager,
+        GATracker: GATracker,
+        HotjarManager: HotjarManager,
+        MainNavigation: MainNavigation,
+        OneTrustManager: OneTrustManager,
         PermutiveManager: PermutiveManager,
         SailthruManager: SailthruManager,
+        SkimlinksManager: SkimlinksManager,
         SparrowManager: SparrowManager,
+        Store: store,
         TreasureDataManager: TreasureDataManager,
+        TwitterConversionManager: TwitterConversionManager,
+        TypekitManager: TypekitManager,
     });
 
     setupHtmlClasses();
@@ -110,6 +112,7 @@ export default function init(config) {
             PermutiveManager.loadScript();
             TreasureDataManager.loadTreasureDataScript();
             SparrowManager.loadScript();
+            TwitterConversionManager.loadScript();
         }
     });
     OneTrustManager.on('change', function () {
