@@ -15,6 +15,17 @@ function TreasureDataManager() {
     this._td = null;
 }
 
+var hash = function hash(text) {
+    var enc = new TextEncoder().encode(text);
+    return crypto.subtle.digest('SHA-256', enc).then(function (hashBuffer) {
+        var hashArray = Array.from(new Uint8Array(hashBuffer));
+        var hashHex = hashArray.map(function (b) {
+            return b.toString(16).padStart(2, '0');
+        }).join('');
+        return hashHex;
+    });
+};
+
 var promiseRetry = function promiseRetry(tries, delay, fn) {
     return new Promise(function (resolve, reject) {
         return fn()
@@ -77,15 +88,18 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
             document.querySelector('.nl-form').submit();
         };
 
-        this._td.trackEvent(
-            this._config.pageviewTable,
-            {
-                "email": eml,
-                "newsletters": nls,
-            },
-            submitForm,
-            submitForm
-        )
+        hash(eml).then(function (hashed) {
+            this._td.trackEvent(
+                this._config.pageviewTable,
+                {
+                    "email": eml,
+                    "hashed_email": hashed,
+                    "newsletters": nls,
+                },
+                submitForm,
+                submitForm
+            )
+        }.bind(this));
     },
 
     _attachFormHandler: function _attachFormHandler() {
