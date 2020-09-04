@@ -99,7 +99,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
 
     _permutiveReady: function _permutiveReady() {
         // Wait for a total of one second for permutive to load...        
-        return promiseRetry(10, 10, function () {
+        return promiseRetry(10, 10, new Promise(function (resolve, reject) {
             if (window.permutive && window.permutive.ready) {
                 window.permutive.ready(function () {
                     resolve(window.permutive);
@@ -107,7 +107,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
             } else {
                 reject(new Error("Permutive not ready"));
             }
-        }.bind(this));
+        }.bind(this)));
     },
 
     _getPermutive: function _getPermutive() {
