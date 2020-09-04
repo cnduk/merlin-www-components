@@ -125,7 +125,9 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
 
                 this._attachPermutiveID(permutiveId);
 
-                return p.segments()
+                return new Promise(function (resolve, reject) {
+                    return p.segments(resolve);
+                }.bind(this));
             }.bind(this))
             .then(function (segments) {
                 this._td.set('$global', 'permutive_segment_id', segments);
