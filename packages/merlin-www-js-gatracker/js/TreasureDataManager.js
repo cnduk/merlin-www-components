@@ -110,43 +110,46 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
         }.bind(this));
     },
 
-    _getPermutiveSegments: function _getPermutiveSegments(permtuive) {
-        return new Promise(function (resolve, reject) {
-
-        });
-    },
-
     _getPermutive: function _getPermutive() {
+        var permutive = null;
+
         this._permutiveReady()
-            .then(function (permutive) {
-                var permutiveId = permutive.context.user_id;
+            .then(function (p) {
+                permutive = p;
+
+                var permutiveId = p.context.user_id;
 
                 this._td.set('$global', 'td_unknown_id', permutiveId);
 
                 this._attachPermutiveID(permutiveId);
 
-                permutive.segments(function (segments) {
-                    this._td.set('$global', 'permutive_segment_id', segments);
-                    resolve(permutive);
+                return p.segments()
+            }.bind(this))
+            .then(function (segments) {
+                this._td.set('$global', 'permutive_segment_id', segments);
+
+                return new Promise(function (resolve, reject) {
+                    this._td.fetchUserSegments({
+                        audienceToken: [this._config.writeKey],
+                        keys: { permutiveId: permutive.context.user_id }
+                    },
+                        resolve,
+                        reject
+                    );
                 }.bind(this));
             }.bind(this))
-            .then(function (permutive) {
-                // by this point permutive will be loaded and ready
-                this._td.fetchUserSegments({
-                    audienceToken: [this._config.writeKey],
-                    keys: { permutiveId: permutive.context.user_id }
-                },
-                    function (v) {
-                        if (v.length > 0 && v[0].attributes && v[0].attributes.email_sha256) {
-                            permutive.identify([{
-                                tag: "email_sha256",
-                                id: v[0].attributes.email_sha256,
-                                priority: 1
-                            }]);
-                        }
-                    },
-                    function error(err) { }
-                );
+            .then(function (segments) {
+                if (
+                    segments.length > 0 &&
+                    segments[0].attributes &&
+                    segments[0].attributes.email_sha256
+                ) {
+                    permutive.identify([{
+                        tag: "email_sha256",
+                        id: v[0].attributes.email_sha256,
+                        priority: 1
+                    }]);
+                }
             }.bind(this));
     },
 
