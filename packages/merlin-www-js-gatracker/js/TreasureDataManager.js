@@ -63,6 +63,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
         if (this._hasLoadedScript) return;
         if (!this._config) {
             console.warn("Missing TDP Config", this._config);
+            return;
         }
 
         /* eslint-disable */
