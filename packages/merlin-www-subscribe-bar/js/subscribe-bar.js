@@ -9,8 +9,8 @@ import {
     removeEvent
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import NAV from '@cnbritain/merlin-www-main-navigation';
-import {VIEW_LIMIT} from './constants';
-import {loadConfig, saveConfig} from './utils';
+import { VIEW_LIMIT } from './constants';
+import { loadConfig, saveConfig } from './utils';
 import * as events from './events';
 
 var IS_HIDDEN_CLS = 'is-hidden';
@@ -21,7 +21,7 @@ function SubscribeBar(el) {
     EventEmitter.call(this);
 
     // Check we have an element
-    if(!el) throw new Error('Subscribe Bar Element Not Found');
+    if (!el) throw new Error('Subscribe Bar Element Not Found');
     this.el = el;
 
     // Check we have a config
@@ -60,7 +60,7 @@ function SubscribeBar(el) {
 
 SubscribeBar.prototype = inherit(EventEmitter.prototype, {
 
-    bindListeners: function bindListeners(){
+    bindListeners: function bindListeners() {
         this._submitListener = this.onSubmit.bind(this);
         addEvent(this.formEl, 'submit', this._submitListener);
 
@@ -73,7 +73,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
         addEvent(this.emailEl, 'blur', this._blurListener);
     },
 
-    unbindListeners: function unbindListeners(){
+    unbindListeners: function unbindListeners() {
         removeEvent(this.formEl, 'submit', this._submitListener);
         this._submitListener = null;
 
@@ -86,13 +86,13 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
         this._blurListener = null;
     },
 
-    parseConfig: function parseConfig(){
+    parseConfig: function parseConfig() {
         // Check we have a config
         var configEl = this.el.querySelector('.js-c-subscribe-bar-config');
         if (!configEl) throw new Error('Subscribe Bar Config Not Found.');
         try {
             this.config = JSON.parse(configEl.innerHTML);
-        } catch(err){
+        } catch (err) {
             console.error('Error parsing subscribe bar config!');
             throw err;
         }
@@ -100,23 +100,23 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
         this.currentConfigHash = this.config.hash;
     },
 
-    init: function() {
+    init: function () {
         var savedConfig = loadConfig();
 
         // Check if the user has converted
-        if(savedConfig.converted){
+        if (savedConfig.converted) {
             this.disable();
 
-        // Check if the config hash has changed
-        } else if(savedConfig.configHash !== this.currentConfigHash){
+            // Check if the config hash has changed
+        } else if (savedConfig.configHash !== this.currentConfigHash) {
             saveConfig(this.currentConfigHash, false, 1);
             this.enable();
 
-        // Check if the user has exceeded views
-        } else if(savedConfig.viewExceeded){
+            // Check if the user has exceeded views
+        } else if (savedConfig.viewExceeded) {
             this.disable();
 
-        // User should see the message and bump view count
+            // User should see the message and bump view count
         } else {
             saveConfig(
                 this.currentConfigHash, false, savedConfig.viewCount + 1);
@@ -124,7 +124,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
         }
     },
 
-    show: function() {
+    show: function () {
         if (!this.state.isHidden) return;
 
         removeClass(this.el, IS_HIDDEN_CLS);
@@ -133,7 +133,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
         this.emit('show', events.show(this));
     },
 
-    hide: function() {
+    hide: function () {
         if (this.state.isHidden) return;
 
         addClass(this.el, IS_HIDDEN_CLS);
@@ -142,7 +142,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
         this.emit('hide', events.hide(this));
     },
 
-    fix: function() {
+    fix: function () {
         if (this.state.isFixed) return;
 
         addClass(this.el, IS_FIXED_CLS);
@@ -151,7 +151,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
         this.emit('fix', events.fix(this));
     },
 
-    unfix: function() {
+    unfix: function () {
         if (!this.state.isFixed) return;
 
         removeClass(this.el, IS_FIXED_CLS);
@@ -160,7 +160,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
         this.emit('unfix', events.unfix(this));
     },
 
-    enable: function() {
+    enable: function () {
         if (this.state.isEnabled) return;
 
         removeClass(this.el, IS_DISABLED_CLS);
@@ -169,7 +169,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
         this.emit('enable', events.enable(this));
     },
 
-    disable: function() {
+    disable: function () {
         if (!this.state.isEnabled) return;
 
         addClass(this.el, IS_DISABLED_CLS);
@@ -182,7 +182,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
         this.emit('disable', events.disable(this));
     },
 
-    onSubmit: function(e) {
+    onSubmit: function (e) {
         e.preventDefault();
 
         var formData = new FormData(e.target);
@@ -195,7 +195,7 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
         xhr.open('POST', '/xhr/newsletters', true);
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-        xhr.onreadystatechange = function() {
+        xhr.onreadystatechange = function () {
             if (xhr.readyState == XMLHttpRequest.DONE) {
                 addClass(this.spinnerEl, IS_HIDDEN_CLS);
 
@@ -210,10 +210,13 @@ SubscribeBar.prototype = inherit(EventEmitter.prototype, {
                 }
             }
         }.bind(this);
-        xhr.send('email=' + formData.get('email') + '&newsletter=' + formData.get('newsletter'));
+        xhr.send(
+            'email=' + formData.get('email') +
+            '&newsletter=' + formData.get('newsletter') +
+            '&source=subscribe_bar');
     },
 
-    onBlur: function(e){
+    onBlur: function (e) {
         if (e.target.checkValidity()) {
             removeClass(e.target, 'has-error');
         } else {
