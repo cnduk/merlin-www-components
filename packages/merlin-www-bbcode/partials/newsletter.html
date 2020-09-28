@@ -2,38 +2,42 @@
     <div class="bb-newsletter-wrapper">
         <div class="bb-newsletter__cover">
             {{# data.cover }}
-                <div class="bb-newsletter__image">
-                    {{> @cnbritain/merlin-www-image }}
-                </div>
+            <div class="bb-newsletter__image">
+                {{> @cnbritain/merlin-www-image }}
+            </div>
             {{/ data.cover }}
 
         </div>
         <div class="bb-newsletter__content js-bb-newsletter__content">
             {{# data.cta_message }}
-                <p class="bb-newsletter__copy">
-                    {{ &. }}
-                </p>
+            <p class="bb-newsletter__copy">
+                {{ &. }}
+            </p>
             {{/ data.cta_message }}
 
             <form method="POST" action="{{ data.form_url }}" class="bb-newsletter__form js-bb-newsletter__form">
-                <input type="hidden" name="newsletter" value="{{ data.newsletter_id }}">
-                <input type="email" name="email" required class="js-bb-newsletter__form-text bb-newsletter__form-text" placeholder="Enter email address" aria-label="Email Address"></input>
+                <input type="hidden" name="source" value="in_article" />
+                <input type="hidden" name="newsletter" value="{{ data.newsletter_id }}" />
+                <input type="email" name="email" required class="js-bb-newsletter__form-text bb-newsletter__form-text"
+                    placeholder="Enter email address" aria-label="Email Address" />
                 {{# data.cta_text }}
-                    <input type="submit" name="submit" value="{{ &. }}" class="js-bb-newsletter__form-button bb-newsletter__form-button"></input>
+                <input type="submit" name="submit" value="{{ &. }}"
+                    class="js-bb-newsletter__form-button bb-newsletter__form-button" />
                 {{/ data.cta_text }}
             </form>
-            <p class="bb-newsletter__legal">by entering your email address, you agree to our <a href="https://www.condenast.co.uk/privacy/" class="bb-newsletter__privacy">privacy policy</a></p>
+            <p class="bb-newsletter__legal">by entering your email address, you agree to our <a
+                    href="https://www.condenast.co.uk/privacy/" class="bb-newsletter__privacy">privacy policy</a></p>
         </div>
 
         <div class="bb-newsletter__status js-bb-newsletter__status is-hidden">
             <div class="bb-newsletter__success js-bb-newsletter__success is-hidden">
                 {{# data.success_message }}
-                    {{ &. }}
+                {{ &. }}
                 {{/ data.success_message }}
             </div>
             <div class="bb-newsletter__failure js-bb-newsletter__failure is-hidden">
                 {{# data.failure_message }}
-                    {{ &. }}
+                {{ &. }}
                 {{/ data.failure_message }}
             </div>
         </div>
