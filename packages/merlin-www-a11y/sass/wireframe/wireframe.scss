@@ -1,0 +1,22 @@
+@import "@cnbritain/merlin-www-common:wireframe";
+
+.a11y__main-content-link {
+    @include accessible-hide;
+
+    &:focus {
+        @include accessible-show;
+        
+        background: black;
+        color: white;
+        font-size: 16px;
+        left: 0;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+    }
+}
+
+.a11y__main-content-anchor {
+    @include accessible-hide;
+}
