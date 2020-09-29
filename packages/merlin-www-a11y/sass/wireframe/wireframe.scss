@@ -5,7 +5,7 @@
 
     &:focus {
         @include accessible-show;
-        
+
         background: black;
         color: white;
         font-size: 16px;
