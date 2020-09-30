@@ -45,14 +45,17 @@
                 {{/ data.logo }}
             </div>
 
+            {{> @cnbritain/merlin-www-a11y/main-content-link }}
+
             {{# state.has_search }}
             <div class="c-nav__search js-c-nav__search is-hidden">
                 <form class="c-nav__search-form" method="GET" action="{{ &data.search_form_url }}">
-                    <input type="search" aria-label="{{ data.search_placeholder }}" placeholder="{{ data.search_placeholder }}" class="c-nav__search-input" name="q">
+                    <input type="search" aria-label="{{ data.search_placeholder }}"
+                        placeholder="{{ data.search_placeholder }}" class="c-nav__search-input" name="q">
                     <button class="c-nav__search-button">
-                    {{# data.search_open_icon }}
-                    {{> @cnbritain/merlin-www-image }}
-                    {{/ data.search_open_icon }}
+                        {{# data.search_open_icon }}
+                        {{> @cnbritain/merlin-www-image }}
+                        {{/ data.search_open_icon }}
                     </button>
                 </form>
             </div>
@@ -78,7 +81,8 @@
                             {{! Both states are on the same model }}
                             {{# state.is_desktop }}{{# state.is_more }}
                             <li class="c-nav__alt-list-item">
-                                <a class="c-nav__alt-link" href="{{ data.url }}" title="{{ data.title }}">{{ data.title }}</a>
+                                <a class="c-nav__alt-link" href="{{ data.url }}"
+                                    title="{{ data.title }}">{{ data.title }}</a>
                             </li>
                             {{/ state.is_more }}{{/ state.is_desktop }}
                             {{/ data.links }}
@@ -105,7 +109,8 @@
                         <p class="c-nav__promo-message">{{ &data.offer }}</p>
                         {{/ data.offer }}
                         {{# data.link }}
-                        <a href="{{ &data.url }}" class="c-nav__promo-button" title="{{ data.title }}">{{ data.title }}</a>
+                        <a href="{{ &data.url }}" class="c-nav__promo-button"
+                            title="{{ data.title }}">{{ data.title }}</a>
                         {{/ data.link }}
                     </div>
                 </div>
@@ -132,7 +137,8 @@
                             {{/ data.social_links }}
                             {{# state.has_newsletter }}{{# data.newsletter_link }}
                             <li class="c-nav__share-list-item c-nav__share-list-item--newsletter">
-                                <a href="{{ &data.url }}" class="c-nav__share-button" title="{{ data.title }}">{{ data.title }}</a>
+                                <a href="{{ &data.url }}" class="c-nav__share-button"
+                                    title="{{ data.title }}">{{ data.title }}</a>
                             </li>
                             {{/ data.newsletter_link }}{{/ state.has_newsletter}}
                         </ul>
@@ -150,17 +156,18 @@
                     <div class="c-nav__gallery-total js-c-nav__gallery-total">0</div>
                 </div>
 
-                <input id="c-nav__gallery-checkbox" class="c-nav__gallery-checkbox js-c-nav__gallery-checkbox" type="checkbox">
+                <input id="c-nav__gallery-checkbox" class="c-nav__gallery-checkbox js-c-nav__gallery-checkbox"
+                    type="checkbox">
                 <label for="c-nav__gallery-checkbox" class="c-nav__gallery-icon js-c-nav__gallery-icon">
                     <div class="js-c-nav__list-icon c-nav__list-icon">
-                      {{# data.gallery_list_icon }}
-                      {{> @cnbritain/merlin-www-image }}
-                      {{/ data.gallery_list_icon }}
+                        {{# data.gallery_list_icon }}
+                        {{> @cnbritain/merlin-www-image }}
+                        {{/ data.gallery_list_icon }}
                     </div>
                     <div class="js-c-nav__grid-icon c-nav__grid-icon is-hidden">
-                      {{# data.gallery_grid_icon }}
-                      {{> @cnbritain/merlin-www-image }}
-                      {{/ data.gallery_grid_icon }}
+                        {{# data.gallery_grid_icon }}
+                        {{> @cnbritain/merlin-www-image }}
+                        {{/ data.gallery_grid_icon }}
                     </div>
                 </label>
             </div>
