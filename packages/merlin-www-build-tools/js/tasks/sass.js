@@ -35,7 +35,7 @@ module.exports = function taskSassExport(taskConfig, browserSync) {
         SASS_IMPORTER.LOGGER.enabled = ENV.isDev;
 
         // Remove old css revs
-        del.sync(taskConfig.sass.dest + 'page-*.{css,map}');
+        del.sync(taskConfig.sass.dest + '*-*.{css,map}');
 
         const streams = taskConfig.sass.src.map((file) => {
 
