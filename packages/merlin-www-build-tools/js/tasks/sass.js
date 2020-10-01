@@ -1,10 +1,12 @@
 'use strict';
 
 const gulp = require('gulp');
+const del = require('del');
 const csso = require('gulp-csso');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const rename = require('gulp-rename');
+const rev = require('gulp-rev');
 const merge = require('merge-stream');
 const autoprefixer = require('gulp-autoprefixer');
 const SASS_IMPORTER = require('@cnbritain/merlin-sass-custom-importer');
@@ -32,6 +34,9 @@ module.exports = function taskSassExport(taskConfig, browserSync) {
 
         SASS_IMPORTER.LOGGER.enabled = ENV.isDev;
 
+        // Remove old css revs
+        del.sync(taskConfig.sass.dest + 'page-*.{css,map}');
+
         const streams = taskConfig.sass.src.map((file) => {
 
             // We have to create a fresh sass importer for each file as it
@@ -52,8 +57,30 @@ module.exports = function taskSassExport(taskConfig, browserSync) {
             }
 
             task.pipe(rename(renameConfig))
-                // I have a feeling I'm going to need to check this
+                .pipe(gulp.dest(taskConfig.sass.dest))
+                .pipe(rev())
                 .pipe(sourcemaps.write('./'))
+                .pipe(gulp.dest(taskConfig.sass.dest))
+                .pipe(rev.manifest({
+                    transformer: {
+                        parse: JSON.parse,
+                        stringify: function (value, replacer, space) {
+                            // Transform the manifest keys to match what is in brand
+                            // config so it can be more easily replaced in core...
+                            return JSON.stringify(
+                                /*eslint-disable */
+                                Object.entries(value).reduce(
+                                    function (result, i) {
+                                        const prefix = '/static/css/';
+                                        result[prefix + i[0]] = prefix + i[1];
+                                        return result;
+                                    }, {}),
+                                replacer,
+                                space);
+                            /*eslint-enable*/
+                        }
+                    }
+                }))
                 .pipe(gulp.dest(taskConfig.sass.dest));
 
             if (ENV.isDev) {
@@ -64,6 +91,5 @@ module.exports = function taskSassExport(taskConfig, browserSync) {
         });
 
         return merge.apply(null, streams);
-
     };
 };
