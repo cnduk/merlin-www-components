@@ -1,5 +1,8 @@
 'use strict';
 
+const path = require('path');
+const fs = require('fs');
+
 const gulp = require('gulp');
 const del = require('del');
 const csso = require('gulp-csso');
@@ -12,8 +15,34 @@ const autoprefixer = require('gulp-autoprefixer');
 const SASS_IMPORTER = require('@cnbritain/merlin-sass-custom-importer');
 
 const utils = require('../utils');
+const through2 = require('through2');
 
 const ENV = utils.getEnvironment();
+
+const manifest = {};
+
+// Gulp rev does manifests, but as we treat each css file
+// as a seperate stream and then merge them, it doesn't work gud.
+// This "plugin" uses attributes added to the file object by gulp-rev
+// to create a manifest that can be used by the cachebusting 
+// code in merlin core
+const cssManifest = (dest) => {
+    const prefix = '/static/css';
+    const manifestFile = 'rev-manifest.json';
+
+    return through2.obj((file, enc, cb) => {
+        const k = path.join(prefix, path.basename(file.revOrigPath));
+        const v = path.join(prefix, path.basename(file.path));
+        manifest[k] = v;
+        cb(null, file);
+    }, function (cb) {
+        fs.writeFile(
+            path.join(dest, manifestFile),
+            JSON.stringify(manifest, undefined, '  '),
+            cb
+        );
+    });
+};
 
 module.exports = function taskSassExport(taskConfig, browserSync) {
     return function taskSass() {
@@ -59,28 +88,8 @@ module.exports = function taskSassExport(taskConfig, browserSync) {
             task.pipe(rename(renameConfig))
                 .pipe(gulp.dest(taskConfig.sass.dest))
                 .pipe(rev())
+                .pipe(cssManifest(taskConfig.sass.dest))
                 .pipe(sourcemaps.write('./'))
-                .pipe(gulp.dest(taskConfig.sass.dest))
-                .pipe(rev.manifest({
-                    transformer: {
-                        parse: JSON.parse,
-                        stringify: function (value, replacer, space) {
-                            // Transform the manifest keys to match what is in brand
-                            // config so it can be more easily replaced in core...
-                            return JSON.stringify(
-                                /*eslint-disable */
-                                Object.entries(value).reduce(
-                                    function (result, i) {
-                                        const prefix = '/static/css/';
-                                        result[prefix + i[0]] = prefix + i[1];
-                                        return result;
-                                    }, {}),
-                                replacer,
-                                space);
-                            /*eslint-enable*/
-                        }
-                    }
-                }))
                 .pipe(gulp.dest(taskConfig.sass.dest));
 
             if (ENV.isDev) {
