@@ -1,6 +1,6 @@
 {
     "name": "@cnbritain/merlin-www-main-navigation",
-    "version": "2.0.6",
+    "version": "2.1.0",
     "description": "",
     "main": "js/index.js",
     "scripts": {
@@ -9,7 +9,7 @@
         "prepublish": "npm run lint"
     },
     "dependencies": {
-        "@cnbritain/merlin-www-a11y": "^1.1.5",
+        "@cnbritain/merlin-www-a11y": "^1.2.0",
         "@cnbritain/merlin-www-buttons": "^2.0.0",
         "@cnbritain/merlin-www-common": "^2.0.0",
         "@cnbritain/merlin-www-image": "^2.0.3",
