@@ -18,15 +18,15 @@
   },
   "homepage": "https://github.com/cnduk/merlin-www-components#readme",
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
+    "autoprefixer": "^10.0.1",
     "csso": "^4.0.3",
-    "eslint": "^7.7.0",
+    "eslint": "^7.11.0",
     "eslint-plugin-compat": "^3.8.0",
     "lerna": "^3.22.1",
-    "postcss": "^7.0.32"
+    "postcss": "^8.1.1"
   },
   "dependencies": {
-    "@cnbritain/merlin-sass-custom-importer": "^1.8.1",
+    "@cnbritain/merlin-sass-custom-importer": "^2.0.0",
     "glob": "^7.1.6",
     "node-sass": "^4.14.1"
   },

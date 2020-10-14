@@ -8,33 +8,15 @@
 @import "@cnbritain/merlin-www-marketing-cards:traveller";
 @import "@cnbritain/merlin-www-topic-strip:traveller";
 
-// @import "../wireframe/wireframe";
+@import "../wireframe/wireframe";
 
-@import "../wireframe/_author";
-@import "./_author";
-
-@import "../wireframe/_body";
-@import "./_body";
-
-@import "../wireframe/_footer";
-@import "./_footer";
-
-@import "../wireframe/_gallery";
-@import "./_gallery";
-
-@import "./_header";
-
-@import "../wireframe/_share";
-@import "./_share";
-
-@import "../wireframe/_sidebar";
-@import "./_sidebar";
-
-@import "../wireframe/_video";
-@import "./_video";
-
-@import "../wireframe/_disclaimer";
-@import "./_disclaimer";
-
-@import "../wireframe/_podcast";
-@import "./_podcast";
+@import "./author";
+@import "./body";
+@import "./disclaimer";
+@import "./footer";
+@import "./gallery";
+@import "./header";
+@import "./podcast";
+@import "./share";
+@import "./sidebar";
+@import "./video";
