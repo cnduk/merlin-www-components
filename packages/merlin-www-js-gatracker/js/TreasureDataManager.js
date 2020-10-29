@@ -138,7 +138,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
     _getPermutive: function _getPermutive() {
         var permutive = null;
 
-        this._permutiveReady()
+        return this._permutiveReady()
             .then(function (p) {
                 permutive = p;
 
@@ -213,7 +213,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                 function (result) {
                     console.debug("got SSC cookie result: %O", result);
 
-                    console.debug("setting td_ssc_id=%O");
+                    console.debug("setting td_ssc_id=%O", result);
 
                     this._td.set("$global", "td_ssc_id", result);
                     resolve(result);
@@ -240,7 +240,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                 accountId: this._config.accountId,
             });
 
-            console.debug("TD Object created: %O", this._id);
+            console.debug("TD Object created: %O", this._td);
 
             console.debug("Setting td_global_id=td_global_id");
 
