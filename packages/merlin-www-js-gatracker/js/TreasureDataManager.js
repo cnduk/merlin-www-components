@@ -247,7 +247,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
             this._td.set('$global', "td_global_id", "td_global_id");
 
             if (this._config.page_data) {
-                console.debug("page has page data: %O");
+                console.debug("page has page data: %O", this._config.page_data);
                 this._td.set("$global", this._config.page_data);
             }
 
