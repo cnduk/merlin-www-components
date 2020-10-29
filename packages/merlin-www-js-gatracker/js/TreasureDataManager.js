@@ -56,6 +56,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
     constructor: TreasureDataManager,
 
     init: function init(config) {
+        console.debug("init config: %O", config);
         this._config = config;
     },
 
@@ -66,6 +67,8 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
             return;
         }
 
+        console.debug("injecting TD script");
+
         /* eslint-disable */
         !function (t, e) {
             if (void 0 === e[t]) { e[t] = function () { e[t].clients.push(this), this._init = [Array.prototype.slice.call(arguments)] }, e[t].clients = []; for (var r = function (t) { return function () { return this["_" + t] = this["_" + t] || [], this["_" + t].push(Array.prototype.slice.call(arguments)), this } }, s = ["addRecord", "blockEvents", "fetchServerCookie", "fetchGlobalID", "fetchUserSegments", "resetUUID", "ready", "setSignedMode", "setAnonymousMode", "set", "trackEvent", "trackPageview", "trackClicks", "unblockEvents"], n = 0; n < s.length; n++) { var c = s[n]; e[t].prototype[c] = r(c) } var o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.src = ("https:" === document.location.protocol ? "https:" : "http:") + "//cdn.treasuredata.com/sdk/2.4/td.min.js"; var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(o, a) }
@@ -73,6 +76,8 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
         /* eslint-enable */
 
         this._hasLoadedScript = true;
+
+        console.debug("TD script injected");
 
         this.initTreasure();
     },
@@ -113,14 +118,17 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
     },
 
     _permutiveReady: function _permutiveReady() {
-        // Wait for a total of one second for permutive to load...        
-        return promiseRetry(10, 10, function () {
+        // Wait for a total of two seconds for permutive to load...        
+        // try 20 times with 100ms delay between each try
+        return promiseRetry(20, 100, function () {
             return new Promise(function (resolve, reject) {
                 if (window.permutive && window.permutive.ready) {
                     window.permutive.ready(function () {
+                        console.debug("permutive is ready");
                         resolve(window.permutive);
                     });
                 } else {
+                    console.debug("permutive is NOT ready");
                     reject(new Error("Permutive not ready"));
                 }
             }.bind(this));
@@ -135,6 +143,8 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                 permutive = p;
 
                 var permutiveId = p.context.user_id;
+
+                console.debug("setting td_unknown_id=%s", permutiveId);
 
                 this._td.set('$global', 'td_unknown_id', permutiveId);
 
@@ -151,19 +161,21 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                 }.bind(this));
             }.bind(this))
             .then(function (segments) {
+                console.debug("setting permutive_segment_id=%O", segments);
+
                 this._td.set('$global', 'permutive_segment_id', segments);
 
-                return new Promise(function (resolve, reject) {
-                    this._td.fetchUserSegments({
-                        audienceToken: [this._config.writeKey],
-                        keys: { permutiveId: permutive.context.user_id }
-                    },
-                        resolve,
-                        reject
-                    );
-                }.bind(this));
-            }.bind(this))
-            .then(function (segments) {
+                //     return new Promise(function (resolve, reject) {
+                //         this._td.fetchUserSegments({
+                //             audienceToken: [this._config.writeKey],
+                //             keys: { permutiveId: permutive.context.user_id }
+                //         },
+                //             resolve,
+                //             reject
+                //         );
+                //     }.bind(this));
+                // }.bind(this))
+                // .then(function (segments) {
                 if (
                     segments.length > 0 &&
                     segments[0].attributes &&
@@ -199,10 +211,15 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
         return new Promise(function (resolve, reject) {
             this._td.fetchServerCookie(
                 function (result) {
+                    console.debug("got SSC cookie result: %O", result);
+
+                    console.debug("setting td_ssc_id=%O");
+
                     this._td.set("$global", "td_ssc_id", result);
                     resolve(result);
                 }.bind(this),
                 function (err) {
+                    console.debug("error fetching ssc: %O", err);
                     reject(err);
                 }
             );
@@ -223,9 +240,14 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                 accountId: this._config.accountId,
             });
 
+            console.debug("TD Object created: %O", this._id);
+
+            console.debug("Setting td_global_id=td_global_id");
+
             this._td.set('$global', "td_global_id", "td_global_id");
 
             if (this._config.page_data) {
+                console.debug("page has page data: %O");
                 this._td.set("$global", this._config.page_data);
             }
 
@@ -266,6 +288,8 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
 
     fireEvents: function fireEvents() {
         if (this._hasLoadedScript && this._td != null) {
+            console.debug("firing pageview event");
+            console.debug("td object state: %O", this._td);
             this._td.trackPageview(
                 this._config.pageviewTable,
                 this.googleSyncCallback.bind(this)
