@@ -52,6 +52,18 @@ var toArray = function toArray(collection) {
     return arr;
 }
 
+var getcookie = function getcookie(e) {
+    if (n = document.cookie) {
+        for (var t = n.split("; "), a = 0; a < t.length; a++) {
+            var n;
+            if ((n = t[a].split("="))[0] === e) {
+                return n[1];
+            }
+        }
+    }
+    return ""
+};
+
 TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
     constructor: TreasureDataManager,
 
@@ -224,7 +236,9 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                 accountId: this._config.accountId,
             });
 
-            this._td.set('$global', "td_global_id", "td_global_id");
+            this._td.set('$global', 'td_global_id', 'td_global_id');
+
+            this._td.set('$global', 'ga_id', getcookie("_ga"));
 
             if (this._config.page_data) {
                 this._td.set("$global", this._config.page_data);
@@ -236,7 +250,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
             Promise.allSettled([
                 this._getPermutive(),
                 this._getServerCookie(),
-            ]).then(function (results) {
+            ]).then(function () {
                 this.fireEvents();
             }.bind(this));
         }
@@ -254,8 +268,8 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
     googleSyncCallback: function googleSyncCallback() {
         var gidsync_url = "cm.g.doubleclick.net/pixel";
         var params =
-            "?google_nid=treasuredata_dmp&" +
-            "google_cm" +
+            "?google_nid=treasuredata_dmp" +
+            "&google_cm" +
             "&td_write_key=8151/fcd628065149d648b80f11448b4083528c0d8a91" +
             "&td_global_id=td_global_id" +
             "&td_client_id=" + this._td.client.track.uuid +
