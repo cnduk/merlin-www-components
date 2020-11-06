@@ -238,8 +238,6 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
 
             this._td.set('$global', 'td_global_id', 'td_global_id');
 
-            this._td.set('$global', 'ga_id', getcookie("_ga"));
-
             if (this._config.page_data) {
                 this._td.set("$global", this._config.page_data);
             }
@@ -251,6 +249,8 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                 this._getPermutive(),
                 this._getServerCookie(),
             ]).then(function () {
+                this._td.set('$global', 'ga_id', getcookie("_ga"));
+
                 this.fireEvents();
             }.bind(this));
         }
