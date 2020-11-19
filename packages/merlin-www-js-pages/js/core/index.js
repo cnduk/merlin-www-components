@@ -18,6 +18,7 @@ import CommonImage from '@cnbritain/merlin-www-image';
 import store from '@cnbritain/merlin-www-js-store';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
 import ComscoreManager from '@cnbritain/merlin-www-js-gatracker/js/ComscoreManager';
+import DotmetricsManager from '@cnbritain/merlin-www-js-gatracker/js/DotmetricsManager';
 import FacebookPixelManager from '@cnbritain/merlin-www-js-gatracker/js/FacebookPixelManager';
 import HotjarManager from '@cnbritain/merlin-www-js-gatracker/js/HotjarManager';
 import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
@@ -106,6 +107,7 @@ export default function init(config) {
             loadSiteCensus();
             SailthruManager.loadScript();
             HotjarManager.loadScript();
+            DotmetricsManager.loadScript();
         }
         if (this.consentedTargetingCookies) {
             FacebookPixelManager.loadScript();
