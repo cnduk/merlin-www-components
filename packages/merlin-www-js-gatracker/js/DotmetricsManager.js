@@ -1,26 +1,38 @@
 import EventEmitter from 'eventemitter2';
-import { inherit } from '@cnbritain/merlin-www-js-utils/js/functions';
-import { ArticleManager } from '@cnbritain/merlin-www-article';
-import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
+import { inherit, assign } from '@cnbritain/merlin-www-js-utils/js/functions';
 
 function DotmetricsManager() {
     EventEmitter.call(this, {
         wildcard: true
     });
 
+    this.initialised = false;
     this.hasLoadedScript = false;
-    this.tags = {};
+
+    this.config = {
+        pageType: null,
+        pageTags: [],
+        tags: [],
+    };
 }
+
+const HOMEPAGE_TAG = 'homepage';
+const OTHER_TAG = 'other';
 
 DotmetricsManager.prototype = inherit(EventEmitter.prototype, {
     constructor: DotmetricsManager,
 
-    init: function init(tags) {
-        this.tags = tags;
+    init: function init(cfg) {
+        // merge our configs
+        this.config = assign(this.config, cfg);
+
+        this.initialised = true;
     },
 
     loadScript: function loadScript(test) {
-        if (this.hasLoadedScript) return;
+        if (!this.initialised || this.hasLoadedScript) return;
+
+        var initialTag = this.getTag(this.config.pageType);
 
         (function () {
             window.dm = window.dm || { AjaxData: [] };
@@ -34,20 +46,37 @@ DotmetricsManager.prototype = inherit(EventEmitter.prototype, {
             s.type = 'text/javascript';
             s.async = true;
             s.src = 'https://uk-script.dotmetrics.net/door.js?d=' + document.location.host;
+            s.src += '&t=' + initialTag;
             h.appendChild(s);
         }());
 
         this.hasLoadedScript = true;
-
-        ArticleManager.on('focus', this.onArticleFocus);
     },
 
-    onArticleFocus: function onArticleFocus(e) {
-        if (!OneTrustManager.ready || !OneTrustManager.consentedPerformanceCookies) return;
+    getTag: function getTag(pageType) {
+        switch (pageType) {
+            case 'homepage':
+                return HOMEPAGE_TAG;
+            case 'article': case 'gallery': case 'video':
+                return this.getTagForArticle();
+            default:
+                return OTHER_TAG;
+        }
+    },
 
-        var article = e.target;
+    getTagForArticle: function getTagForArticle() {
+        var pageTags = this.config.pageTags;
+        var tags = this.config.tags;
 
-        console.log(article);
+        for (var x = 0; x < pageTags.length; x++) {
+            for (var y = 0; y < tags.length; y++) {
+                if (pageTags[x] == tags[y]) {
+                    return tags[y];
+                }
+            }
+        }
+
+        return OTHER_TAG;
     }
 });
 

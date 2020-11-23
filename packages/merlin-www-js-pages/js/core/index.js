@@ -68,6 +68,7 @@ export default function init(config) {
     setGlobalNamespace({
         AdDebugger: AdDebugger,
         AdManager: AdManager,
+        DotmetricsManager: DotmetricsManager,
         FacebookPixelManager: FacebookPixelManager,
         GATracker: GATracker,
         HotjarManager: HotjarManager,
