@@ -354,7 +354,11 @@
         padding-right: 24px;
     }
 }
-.bb-newsletter__image {}
+.bb-newsletter__image {
+    background: none;
+    border: 0;
+    padding: 0
+}
 
 .bb-newsletter__content {
     text-align: center;
