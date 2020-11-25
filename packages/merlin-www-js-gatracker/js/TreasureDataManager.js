@@ -147,7 +147,9 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
 
                 this._attachPermutiveID(permutiveId);
 
-                return permutive.segments();
+                // permutive returns a promise, but still requires a callback method
+                // pass in a noop function so we can use the promise instead
+                return permutive.segments(function () { });
             }.bind(this))
             .then(function (segments) {
                 this._td.set('$global', 'permutive_segment_id', segments);
