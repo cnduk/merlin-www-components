@@ -52,18 +52,6 @@ var toArray = function toArray(collection) {
     return arr;
 }
 
-var getcookie = function getcookie(e) {
-    if (n = document.cookie) {
-        for (var t = n.split("; "), a = 0; a < t.length; a++) {
-            var n;
-            if ((n = t[a].split("="))[0] === e) {
-                return n[1];
-            }
-        }
-    }
-    return ""
-};
-
 TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
     constructor: TreasureDataManager,
 
@@ -147,11 +135,11 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
             .then(function (p) {
                 permutive = p;
 
-                var permutiveId = p.context.user_id;
+                var permutiveId = permutive.context.user_id;
 
                 this._td.set('$global', 'td_unknown_id', permutiveId);
 
-                p.identify([{
+                permutive.identify([{
                     tag: "td_unknown_id",
                     id: permutiveId,
                     priority: 0
@@ -159,24 +147,11 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
 
                 this._attachPermutiveID(permutiveId);
 
-                return new Promise(function (resolve, reject) {
-                    return p.segments(resolve);
-                }.bind(this));
+                return permutive.segments();
             }.bind(this))
             .then(function (segments) {
                 this._td.set('$global', 'permutive_segment_id', segments);
 
-                //     return new Promise(function (resolve, reject) {
-                //         this._td.fetchUserSegments({
-                //             audienceToken: [this._config.writeKey],
-                //             keys: { permutiveId: permutive.context.user_id }
-                //         },
-                //             resolve,
-                //             reject
-                //         );
-                //     }.bind(this));
-                // }.bind(this))
-                // .then(function (segments) {
                 if (
                     segments.length > 0 &&
                     segments[0].attributes &&
@@ -222,6 +197,23 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
         }.bind(this));
     },
 
+    _getGAClientID: function _getGAClientID() {
+        return new Promise(function (resolve, reject) {
+            if (window.ga) {
+                window.ga(function (t) {
+                    var gaID = t.get('clientId')
+
+                    this._td.set('$global', 'ga_id', gaID);
+
+                    resolve(gaID);
+                    return;
+                }.bind(this));
+            }
+
+            reject("missing ga() method");
+        }.bind(this))
+    },
+
     initTreasure: function initTreasure() {
         if (this._hasLoadedScript) {
             this._td = new Treasure({
@@ -248,45 +240,46 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
             Promise.allSettled([
                 this._getPermutive(),
                 this._getServerCookie(),
+                this._getGAClientID(),
             ]).then(function () {
-                this._td.set('$global', 'ga_id', getcookie("_ga"));
-
                 this.fireEvents();
             }.bind(this));
         }
-    },
-
-    createImage: function createImage(url) {
-        var el = document.createElement("img");
-        el.src = ("https:" === document.location.protocol ? "https://" : "http://") + url;
-        el.width = 1;
-        el.height = 1;
-        el.style.display = "none";
-        document.body.appendChild(el);
-    },
-
-    googleSyncCallback: function googleSyncCallback() {
-        var gidsync_url = "cm.g.doubleclick.net/pixel";
-        var params =
-            "?google_nid=treasuredata_dmp" +
-            "&google_cm" +
-            "&td_write_key=8151/fcd628065149d648b80f11448b4083528c0d8a91" +
-            "&td_global_id=td_global_id" +
-            "&td_client_id=" + this._td.client.track.uuid +
-            "&td_host=" + document.location.host +
-            "&account=" + this._config.accountId;
-
-        this.createImage(gidsync_url + params);
     },
 
     fireEvents: function fireEvents() {
         if (this._hasLoadedScript && this._td != null) {
             this._td.trackPageview(
                 this._config.pageviewTable,
-                this.googleSyncCallback.bind(this)
+                function () {
+                    googleSyncCallback(this._td.client.track.uuid, this._config.accountId);
+                }.bind(this)
             );
         }
     },
 });
+
+var createImage = function createImage(url) {
+    var el = document.createElement("img");
+    el.src = ("https:" === document.location.protocol ? "https://" : "http://") + url;
+    el.width = 1;
+    el.height = 1;
+    el.style.display = "none";
+    document.body.appendChild(el);
+},
+
+var googleSyncCallback = function googleSyncCallback(clientId, accountId) {
+    var gidsync_url = "cm.g.doubleclick.net/pixel";
+    var params =
+        "?google_nid=treasuredata_dmp" +
+        "&google_cm" +
+        "&td_write_key=8151/fcd628065149d648b80f11448b4083528c0d8a91" +
+        "&td_global_id=td_global_id" +
+        "&td_client_id=" + clientId +
+        "&td_host=" + document.location.host +
+        "&account=" + accountId;
+
+    createImage(gidsync_url + params);
+},
 
 export default new TreasureDataManager();
