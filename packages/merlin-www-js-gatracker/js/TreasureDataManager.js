@@ -266,7 +266,7 @@ var createImage = function createImage(url) {
     el.height = 1;
     el.style.display = "none";
     document.body.appendChild(el);
-},
+};
 
 var googleSyncCallback = function googleSyncCallback(clientId, accountId) {
     var gidsync_url = "cm.g.doubleclick.net/pixel";
@@ -280,6 +280,6 @@ var googleSyncCallback = function googleSyncCallback(clientId, accountId) {
         "&account=" + accountId;
 
     createImage(gidsync_url + params);
-},
+};
 
 export default new TreasureDataManager();
