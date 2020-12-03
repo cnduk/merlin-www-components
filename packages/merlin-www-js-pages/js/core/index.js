@@ -108,7 +108,6 @@ export default function init(config) {
             loadSiteCensus();
             SailthruManager.loadScript();
             HotjarManager.loadScript();
-            DotmetricsManager.loadScript();
         }
         if (this.consentedTargetingCookies) {
             FacebookPixelManager.loadScript();
@@ -116,6 +115,7 @@ export default function init(config) {
             TreasureDataManager.loadTreasureDataScript();
             SparrowManager.loadScript();
             TwitterConversionManager.loadScript();
+            DotmetricsManager.loadScript();
         }
     });
     OneTrustManager.on('change', function () {
