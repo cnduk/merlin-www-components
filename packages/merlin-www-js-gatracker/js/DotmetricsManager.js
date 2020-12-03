@@ -12,7 +12,7 @@ function DotmetricsManager() {
     this.config = {
         pageType: null,
         pageTags: [],
-        tags: [],
+        tags: {},
     };
 }
 
@@ -69,10 +69,8 @@ DotmetricsManager.prototype = inherit(EventEmitter.prototype, {
         var tags = this.config.tags;
 
         for (var x = 0; x < pageTags.length; x++) {
-            for (var y = 0; y < tags.length; y++) {
-                if (pageTags[x] == tags[y]) {
-                    return tags[y];
-                }
+            if (pageTags[x] in tags) {
+                return tags[pageTags[x]]
             }
         }
 
