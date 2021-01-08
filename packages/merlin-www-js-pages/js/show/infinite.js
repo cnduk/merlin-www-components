@@ -60,12 +60,11 @@ export function onInfiniteTrigger(scrollY) {
 }
 
 export function getNextPageUrl(tagUrl, pageNumber) {
-    var listCounter = getStorage('list_counter');
-    setStorage('list_counter', listCounter + 1);
+    var adInstanceCounts = getStorage("ad_instance_counts");
 
     var url = updateQueryString(tagUrl, {
         page: pageNumber,
-        list_counter: listCounter
+        ad_instance_counts: adInstanceCounts
     });
     return url;
 }

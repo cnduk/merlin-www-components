@@ -3,6 +3,7 @@
 export var LOCALSTORAGE_KEYS = {
     ad_config: 'ad_config',
     ad_list_counter: 'list_counter',
+    ad_instance_counts: 'ad_instance_counts',
     analytics_config: 'anal_config',
 
     magazine_issue_month: 'magazine_month',

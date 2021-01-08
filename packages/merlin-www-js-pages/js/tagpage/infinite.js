@@ -48,13 +48,12 @@ export function onInfiniteScrollTrigger(scrollY) {
 }
 
 export function getNextPageUrl(tagUrl, pageNumber, itemShift) {
-    var tag_list_count = getStorage('list_counter');
-    setStorage('list_counter', tag_list_count + 1);
+    var adInstanceCounts = getStorage("ad_instance_counts");
 
     var url = updateQueryString('/xhr' + tagUrl, {
         page: pageNumber,
         shift: itemShift,
-        list_counter: tag_list_count
+        ad_instance_counts: adInstanceCounts
     });
     return url;
 }
