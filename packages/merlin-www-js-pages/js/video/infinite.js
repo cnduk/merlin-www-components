@@ -60,7 +60,7 @@ export function getNextPageUrl(pageUrl, pageNumber, itemShift) {
     var url = updateQueryString(pageUrl, {
         page: pageNumber,
         shift: itemShift,
-        ad_instance_counts: adInstanceCounts
+        ad_instance_counts: JSON.stringify(adInstanceCounts),
     });
     return url;
 }

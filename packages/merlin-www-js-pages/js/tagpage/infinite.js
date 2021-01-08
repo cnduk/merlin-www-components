@@ -53,7 +53,7 @@ export function getNextPageUrl(tagUrl, pageNumber, itemShift) {
     var url = updateQueryString('/xhr' + tagUrl, {
         page: pageNumber,
         shift: itemShift,
-        ad_instance_counts: adInstanceCounts
+        ad_instance_counts: JSON.stringify(adInstanceCounts),
     });
     return url;
 }
