@@ -60,7 +60,7 @@ export function onInfiniteTrigger(scrollY) {
 }
 
 export function getNextPageUrl(tagUrl, pageNumber) {
-    var adInstanceCounts = getStorage("ad_instance_counts");
+    var adInstanceCounts = getStorage('ad_instance_counts');
 
     var url = updateQueryString(tagUrl, {
         page: pageNumber,

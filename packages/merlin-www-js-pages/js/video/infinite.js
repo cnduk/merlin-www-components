@@ -16,7 +16,7 @@ import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManag
 
 import { nativeAdShift, nativeAdWaiting } from './ads';
 import { createStickGroup } from './sticky';
-import { getStorage, setStorage } from '../utils';
+import { getStorage } from '../utils';
 
 var INFINITE_BOTTOM_THRESHOLD = 1000;
 var INFINITE_SCROLL_THROTTLE = 300;
