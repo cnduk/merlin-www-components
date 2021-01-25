@@ -50,15 +50,15 @@ var NativeAd = {
 
         // Update state
         switch (ad.state) {
-        case AD_STATES.RENDERED:
-            setAdStateToRendered(ad);
-            break;
-        case AD_STATES.DESTROYED:
-            setAdStateToDestroyed(ad);
-            break;
-        case AD_STATES.STOPPED:
-            setAdStateToStopped(ad);
-            break;
+            case AD_STATES.RENDERED:
+                setAdStateToRendered(ad);
+                break;
+            case AD_STATES.DESTROYED:
+                setAdStateToDestroyed(ad);
+                break;
+            case AD_STATES.STOPPED:
+                setAdStateToStopped(ad);
+                break;
         }
         return ad;
     },
@@ -110,17 +110,17 @@ var NativeAd = {
  * @return {Number}
  */
 function getNativeAdSize(nad) {
-    switch (nad.get('position')) {
-    case 'promotion-large':
-        return NATIVE_AD_SIZES.LARGE;
-    case 'promotion-medium':
-        return NATIVE_AD_SIZES.MEDIUM;
-    case 'promotion-small':
-        return NATIVE_AD_SIZES.SMALL;
-    case 'promotion-recommended':
-        return NATIVE_AD_SIZES.RECOMMENDED;
-    default:
-        return NATIVE_AD_SIZES.UNKNOWN;
+    switch (nad.get('placement')) {
+        case 'NATIVE_LARGE':
+            return NATIVE_AD_SIZES.LARGE;
+        case 'NATIVE_MEDIUM':
+            return NATIVE_AD_SIZES.MEDIUM;
+        case 'NATIVE_SMALL':
+            return NATIVE_AD_SIZES.SMALL;
+        case 'NATIVE_RECOMMENDED':
+            return NATIVE_AD_SIZES.RECOMMENDED;
+        default:
+            return NATIVE_AD_SIZES.UNKNOWN;
     }
 }
 
@@ -131,16 +131,16 @@ function getNativeAdSize(nad) {
  */
 function getNativeAdSizeName(index) {
     switch (index) {
-    case NATIVE_AD_SIZES.UNKNOWN:
-        return 'unknown';
-    case NATIVE_AD_SIZES.SMALL:
-        return 'small';
-    case NATIVE_AD_SIZES.MEDIUM:
-        return 'medium';
-    case NATIVE_AD_SIZES.LARGE:
-        return 'large';
-    case NATIVE_AD_SIZES.RECOMMENDED:
-        return 'recommended';
+        case NATIVE_AD_SIZES.UNKNOWN:
+            return 'unknown';
+        case NATIVE_AD_SIZES.SMALL:
+            return 'small';
+        case NATIVE_AD_SIZES.MEDIUM:
+            return 'medium';
+        case NATIVE_AD_SIZES.LARGE:
+            return 'large';
+        case NATIVE_AD_SIZES.RECOMMENDED:
+            return 'recommended';
     }
 }
 
