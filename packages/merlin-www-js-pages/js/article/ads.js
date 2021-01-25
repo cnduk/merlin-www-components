@@ -2,7 +2,8 @@
 
 import {
     debounce,
-    getParent
+    getParent,
+    assign,
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 import { AdManager, AdUtils } from '@cnbritain/merlin-www-ads';
 import { ArticleManager } from '@cnbritain/merlin-www-article';
@@ -82,13 +83,29 @@ export function onArticleExpand(e) {
 export function firePageImpression(e) {
     var article = e.target;
     if (article.ads === null) return;
+
+    if (!('PAGE_IMPRESSION_TRACKER' in AdManager.instanceCounts)) {
+        // start at 2 because there's already one on the page from before
+        // the infinite scroller. that plus this == 2
+        AdManager.instanceCounts['PAGE_IMPRESSION_TRACKER'] = 2;
+    }
+
+    var instance = AdManager.instanceCounts['PAGE_IMPRESSION_TRACKER'];
+    var ad_zone = [article.ads.ad_network_id, article.ads.ad_zone].join('/');
+    var ad_unit = ['legacy', article.ads.ad_unit, article.ads.key_values.content_type, instance].join('/');
+    var key_values = assign(article.ads.key_values.update(), {
+        'slot_position': 'legacy',
+        'slot_instance': instance,
+        'slot_name': 'legacy_' + instance,
+    });
     var impressionElement = AdUtils.createPageImpressionElement(
-        article.ads.ad_unit,
-        article.ads.ad_zone,
-        article.ads.key_values
+        ad_unit,
+        ad_zone,
+        key_values
     );
     document.body.appendChild(impressionElement);
     AdManager.display(impressionElement);
+    AdManager.instanceCounts['PAGE_IMPRESSION_TRACKER']++;
 }
 
 export function onArticleAdd(e) {

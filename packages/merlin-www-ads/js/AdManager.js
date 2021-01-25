@@ -46,7 +46,7 @@ var AD_LAZYLOAD_THRESHOLD = 100;
 var windowHeight = window.innerHeight;
 var lazyloadInitialised = false;
 
-function AdManager(){
+function AdManager() {
     EventEmitter.call(this, { 'wildcard': true });
 
     this._hooks = {};
@@ -55,28 +55,30 @@ function AdManager(){
     this.groups = {};
     this.initialised = false;
     this.slots = {};
+
+    this.instanceCounts = {};
 }
 
 AdManager.prototype = inherit(EventEmitter.prototype, {
     constructor: AdManager,
 
-    createAd: function(el, options) {
+    createAd: function (el, options) {
         var config = options || {};
         return new Ad(el, this, config);
     },
 
-    display: function(el) {
+    display: function (el) {
         var adAttributes = parseAdAttributes(el);
         el.setAttribute('id', 'ad_' + randomUUID());
         var ad = this.createAd(el, adAttributes);
         return this.register(ad)
             .then(
-                function() {
+                function () {
                     return this.render(ad);
                 }.bind(this)
             )
             .then(
-                function() {
+                function () {
                     return this.refresh(ad);
                 }.bind(this)
             );
@@ -108,14 +110,14 @@ AdManager.prototype = inherit(EventEmitter.prototype, {
      * Initialises the AdManager
      * @return {Promise}
      */
-    'init': function init(){
-        if(this.initialised) return Promise.resolve();
+    'init': function init() {
+        if (this.initialised) return Promise.resolve();
 
         this.initialised = true;
 
         if (!HAS_ADS_BLOCKED) {
             return loadAdLibraries().then(
-                function() {
+                function () {
                     pushToGoogleTag(
                         function init_googletag(res) {
                             // Doing this means we have to fire a refresh event when we want an
@@ -174,19 +176,19 @@ AdManager.prototype = inherit(EventEmitter.prototype, {
         }
     },
 
-    'lazy': function(el){
+    'lazy': function (el) {
         autoPilot.call(this, el);
         return Promise.resolve();
     },
 
-    'refresh': function(ads, changeCorrelator){
+    'refresh': function (ads, changeCorrelator) {
         var p = null;
 
-        if(HAS_ADS_BLOCKED){
-            p = new Promise(function(resolve, reject){
-                if(!Array.isArray(ads)) ads = [ads];
-                return Promise.all(ads.map(function(ad){
-                    return new Promise(function(resolve){
+        if (HAS_ADS_BLOCKED) {
+            p = new Promise(function (resolve, reject) {
+                if (!Array.isArray(ads)) ads = [ads];
+                return Promise.all(ads.map(function (ad) {
+                    return new Promise(function (resolve) {
                         AdBlocked.render(ad);
                         resolve();
                     });
@@ -194,62 +196,62 @@ AdManager.prototype = inherit(EventEmitter.prototype, {
             });
         } else {
             p = refreshRubicon(ads)
-                .then(function(){ return refreshGPT(ads, changeCorrelator);});
+                .then(function () { return refreshGPT(ads, changeCorrelator); });
         }
 
-        p.catch(function(err){
+        p.catch(function (err) {
             console.error('There was an error refreshing the ads');
             throw err;
         });
         return p;
     },
 
-    'register': function register(ad){
+    'register': function register(ad) {
         var p = null;
 
-        if(Array.isArray(ad)){
+        if (Array.isArray(ad)) {
             p = Promise.all(ad.map(this.register));
         } else {
-            if(HAS_ADS_BLOCKED){
+            if (HAS_ADS_BLOCKED) {
                 p = registerAdBlock(ad);
             } else {
                 p = registerRubicon(ad)
-                    .then(function(){ return registerPrebid(ad); })
-                    .then(function(){ return registerGPT(ad); });
+                    .then(function () { return registerPrebid(ad); })
+                    .then(function () { return registerGPT(ad); });
             }
         }
 
         // Error handling
-        p.catch(function(err){
+        p.catch(function (err) {
             console.error('There was an error registering the ads');
             throw err;
         });
         return p;
     },
 
-    'render': function(ad){
+    'render': function (ad) {
         var p = null;
 
         // NOTE: we don't emit a render event here as onSlotRenderEnded
         // will trigger stopped or render for us
-        if(Array.isArray(ad)){
+        if (Array.isArray(ad)) {
             p = Promise.all(ad.map(this.render));
         } else {
-            if(HAS_ADS_BLOCKED){
+            if (HAS_ADS_BLOCKED) {
                 p = Promise.resolve(ad);
             } else {
                 p = renderGPT(ad);
             }
         }
 
-        p.catch(function(err){
+        p.catch(function (err) {
             console.error('There was an error rendering the ads');
             throw err;
         });
         return p;
     },
 
-    'update': function(){
+    'update': function () {
         var scrollY = getWindowScrollTop();
         var winBounds = {
             'bottom': scrollY + windowHeight,
@@ -258,13 +260,13 @@ AdManager.prototype = inherit(EventEmitter.prototype, {
 
         var groupsLength = this._lazyloadGroups.length;
         var group = null;
-        while(groupsLength--){
+        while (groupsLength--) {
             group = this._lazyloadGroups[groupsLength];
 
             // Check if the group is on screen
-            if(!intersects(winBounds, group._bounds)) continue;
+            if (!intersects(winBounds, group._bounds)) continue;
             // Check the ads are registered
-            if(!hasGroupAdsRegistered(group)) continue;
+            if (!hasGroupAdsRegistered(group)) continue;
             // Load the ads
             lazyloadGroup(group);
             // Remove from list
@@ -272,7 +274,7 @@ AdManager.prototype = inherit(EventEmitter.prototype, {
         }
 
         // No lazyload groups are left so clear the events
-        if(this._lazyloadGroups.length === 0){
+        if (this._lazyloadGroups.length === 0) {
             deinitialiseLazyload.call(this);
         }
     },
@@ -281,11 +283,11 @@ AdManager.prototype = inherit(EventEmitter.prototype, {
      * Updates the correlator
      * @return {Promise}
      */
-    'updateCorrelator': function updateCorrelator(){
-        if(HAS_ADS_BLOCKED){
+    'updateCorrelator': function updateCorrelator() {
+        if (HAS_ADS_BLOCKED) {
             return Promise.resolve();
         } else {
-            return pushToGoogleTag(function updateCorrelator_googletag(){
+            return pushToGoogleTag(function updateCorrelator_googletag() {
                 googletag.pubads().updateCorrelator();
             });
         }
@@ -293,15 +295,15 @@ AdManager.prototype = inherit(EventEmitter.prototype, {
 
 });
 
-function autoPilot(_el){
+function autoPilot(_el) {
     var el = _el || document;
     var slotEls = this.getSlots({ 'el': el, 'filter': not(isElInitialised) });
     var adsAttributes = slotEls.map(parseAdAttributes);
 
-    if(slotEls.length === 0) return;
+    if (slotEls.length === 0) return;
 
     // Create the ads
-    var ads = slotEls.map(function mapElsToSlots(el, index){
+    var ads = slotEls.map(function mapElsToSlots(el, index) {
         el.setAttribute('id', 'ad_' + randomUUID());
         return this.createAd(el, adsAttributes[index]);
     }.bind(this));
@@ -324,36 +326,38 @@ function autoPilot(_el){
 
     //Register everything
     var chain = Promise.resolve()
-        .then(function(){
+        .then(function () {
             return Promise.all(adGroups.map(groupRegister));
         });
 
     // Render and refresh everything that is not lazyloading
     // The first item in the partition will be lazyload:false
-    var groupPartition = partition(adGroups, function(item){
+    var groupPartition = partition(adGroups, function (item) {
         return item.lazyload === false;
     });
-    if(groupPartition[1].length > 0){
+    if (groupPartition[1].length > 0) {
         this._lazyloadGroups = this._lazyloadGroups.concat(
             groupPartition[1].slice(0));
     }
 
     chain
-        .then(function(){
-            return Promise.all(groupPartition[0].map(groupRender));})
-        .then(function(){
-            return Promise.all(groupPartition[0].map(groupRefresh));});
+        .then(function () {
+            return Promise.all(groupPartition[0].map(groupRender));
+        })
+        .then(function () {
+            return Promise.all(groupPartition[0].map(groupRefresh));
+        });
 
     // Check if we need to initialise for lazyloading
-    if(this._lazyloadGroups.length > 0){
+    if (this._lazyloadGroups.length > 0) {
         initialiseLazyload.call(this);
         chain.then(this.update.bind(this));
     }
 
 }
 
-function deinitialiseLazyload(){
-    if(!lazyloadInitialised) return;
+function deinitialiseLazyload() {
+    if (!lazyloadInitialised) return;
     lazyloadInitialised = false;
     removeEvent(window, 'resize', this._hooks.resize);
     removeEvent(window, 'scroll', this._hooks.scroll);
@@ -361,18 +365,18 @@ function deinitialiseLazyload(){
     this._hooks.scroll = null;
 }
 
-function groupAds(manager, ads){
+function groupAds(manager, ads) {
     var groups = {};
     var groupsArr = [];
 
     // Create and add to the groups
     var groupKey = '';
     var adOrder = 0;
-    ads.forEach(function eachAdGroup(ad){
+    ads.forEach(function eachAdGroup(ad) {
         adOrder = ad.get('order');
         groupKey = ad.get('group');
 
-        if(groupKey){
+        if (groupKey) {
             createGroup(groupKey, adOrder).add(ad);
         } else {
             createGroup(randomUUID(), adOrder).add(ad);
@@ -380,17 +384,17 @@ function groupAds(manager, ads){
     });
 
     // Order the groups by priority
-    for(groupKey in groups){
-        if(!hasOwnProperty(groups, groupKey)) continue;
+    for (groupKey in groups) {
+        if (!hasOwnProperty(groups, groupKey)) continue;
         groupsArr.push(groups[groupKey]);
     }
-    groupsArr.sort(function sortByOrder(a, b){ return a.order - b.order; });
+    groupsArr.sort(function sortByOrder(a, b) { return a.order - b.order; });
 
-    return groupsArr.map(function getGroup(group){ return group.group; });
+    return groupsArr.map(function getGroup(group) { return group.group; });
 
-    function createGroup(name, order){
+    function createGroup(name, order) {
         // If group already exists
-        if(hasOwnProperty(groups, name)) return groups[name].group;
+        if (hasOwnProperty(groups, name)) return groups[name].group;
 
         // Create the group
         groups[name] = {
@@ -401,8 +405,8 @@ function groupAds(manager, ads){
     }
 }
 
-function initialiseLazyload(){
-    if(lazyloadInitialised) return;
+function initialiseLazyload() {
+    if (lazyloadInitialised) return;
     lazyloadInitialised = true;
     this._hooks.resize = throttle(onWindowResize, 500, this);
     this._hooks.scroll = throttle(this.update, 300, this);
@@ -413,16 +417,16 @@ function initialiseLazyload(){
 }
 
 
-function onSlotRenderEnded(e){
+function onSlotRenderEnded(e) {
     var ad = this.slots[e.slot.getSlotElementId()];
     var renderEvent = 'error';
 
     // Ad has already been destroyed, forget about it
-    if(ad === null) return;
+    if (ad === null) return;
 
     // If the slot is empty or we have told the ad to stop before
     // (Blank advert), fire a stop event
-    if( e.isEmpty || ad.state === AD_STATES.STOPPED ){
+    if (e.isEmpty || ad.state === AD_STATES.STOPPED) {
         setAdStateToStopped(ad, e);
         renderEvent = 'stop';
     } else {
@@ -444,65 +448,65 @@ function onSlotRenderEnded(e){
     }));
 }
 
-function groupRefresh(group){
+function groupRefresh(group) {
     return group.refresh();
 }
 
-function groupRegister(group){
+function groupRegister(group) {
     return group.register();
 }
 
-function groupRender(group){
+function groupRender(group) {
     return group.render();
 }
 
-function groupResize(group){
+function groupResize(group) {
     return group.resize();
 }
 
-function hasGroupAdsRegistered(group){
-    for(var key in group.slots){
-        if(group.slots[key].state < AD_STATES.REGISTERED) return false;
+function hasGroupAdsRegistered(group) {
+    for (var key in group.slots) {
+        if (group.slots[key].state < AD_STATES.REGISTERED) return false;
     }
     return true;
 }
 
-function intersects(winBounds, groupBounds){
+function intersects(winBounds, groupBounds) {
     var top = groupBounds.top - AD_LAZYLOAD_THRESHOLD;
     var bottom = groupBounds.bottom + AD_LAZYLOAD_THRESHOLD;
 
-    if(top < winBounds.top && bottom < winBounds.top) return false;
-    if(top > winBounds.bottom && bottom > winBounds.bottom) return false;
+    if (top < winBounds.top && bottom < winBounds.top) return false;
+    if (top > winBounds.bottom && bottom > winBounds.bottom) return false;
 
     return true;
 }
 
-function lazyloadGroup(group){
+function lazyloadGroup(group) {
     return Promise.resolve()
-        .then(function(){ return groupRender(group); })
-        .then(function(){ return groupRefresh(group); });
+        .then(function () { return groupRender(group); })
+        .then(function () { return groupRefresh(group); });
 }
 
-function onWindowResize(){
+function onWindowResize() {
     this._lazyloadGroups.forEach(groupResize);
     windowHeight = window.innerHeight;
     this.update();
 }
 
-function partition(list, fn){
+function partition(list, fn) {
     var result = new Array(2);
     result[0] = [];
     result[1] = [];
 
-    if(list.length < 1) return result;
+    if (list.length < 1) return result;
 
     var i = -1;
     var len = list.length;
     var item = null;
 
-    while(++i < len){
+    while (++i < len) {
         item = list[i];
-        if(fn(item)){
+        if (fn(item)) {
             result[0].push(item);
         } else {
             result[1].push(item);
