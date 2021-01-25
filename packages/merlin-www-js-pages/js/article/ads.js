@@ -93,7 +93,7 @@ export function firePageImpression(e) {
     var instance = AdManager.instanceCounts['PAGE_IMPRESSION_TRACKER'];
     var ad_zone = [article.ads.ad_network_id, article.ads.ad_zone].join('/');
     var ad_unit = ['legacy', article.ads.ad_unit, article.ads.key_values.content_type, instance].join('/');
-    var key_values = assign(article.ads.key_values.update(), {
+    var key_values = assign(article.ads.key_values, {
         'slot_position': 'legacy',
         'slot_instance': instance,
         'slot_name': 'legacy_' + instance,
