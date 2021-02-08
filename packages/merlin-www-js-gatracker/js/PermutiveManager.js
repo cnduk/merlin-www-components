@@ -4,8 +4,8 @@ import {
     loadScript
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 
-var PROJECT_ID = 'bd1cec50-00d1-4ce9-9572-785857419a1e';
-var API_KEY = '18d7242e-eb10-47ff-90db-f700653f5d30';
+var PROJECT_ID = '824edc40-e3ff-4d19-aa9f-43123f27e30f';
+var API_KEY = '03216d60-04fb-482f-a220-f2d58e573301';
 
 function PermutiveManager() {
     EventEmitter.call(this, {
@@ -24,7 +24,7 @@ PermutiveManager.prototype = inherit(EventEmitter.prototype, {
     },
 
     init: function init(config) {
-        !(function(n, e, o, r, i) {
+        !(function (n, e, o, r, i) {
             if (!e) {
                 (e = e || {}),
                     (window.permutive = e),
@@ -36,26 +36,26 @@ PermutiveManager.prototype = inherit(EventEmitter.prototype, {
                         e.config.environment || 'production');
                 for (
                     var t = [
-                            'addon',
-                            'identify',
-                            'track',
-                            'trigger',
-                            'query',
-                            'segment',
-                            'segments',
-                            'ready',
-                            'on',
-                            'once',
-                            'user',
-                            'consent'
-                        ],
-                        c = 0;
+                        'addon',
+                        'identify',
+                        'track',
+                        'trigger',
+                        'query',
+                        'segment',
+                        'segments',
+                        'ready',
+                        'on',
+                        'once',
+                        'user',
+                        'consent'
+                    ],
+                    c = 0;
                     c < t.length;
                     c++
                 ) {
                     var f = t[c];
-                    e[f] = (function(n) {
-                        return function() {
+                    e[f] = (function (n) {
+                        return function () {
                             var o = Array.prototype.slice.call(arguments, 0);
                             e.q.push({ functionName: n, arguments: o });
                         };
