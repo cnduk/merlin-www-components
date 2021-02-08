@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-main-navigation@3.0.0-alpha.1...@cnbritain/merlin-www-main-navigation@3.0.0) (2021-02-08)
+
+**Note:** Version bump only for package @cnbritain/merlin-www-main-navigation
+
+
+
+
+
 ## [1.10.14](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-main-navigation@1.10.13...@cnbritain/merlin-www-main-navigation@1.10.14) (2019-02-22)
 
 **Note:** Version bump only for package @cnbritain/merlin-www-main-navigation

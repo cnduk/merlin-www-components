@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-top-stories",
-  "version": "3.1.0-alpha.0",
+  "version": "3.1.0",
   "description": "",
   "main": "js/index.js",
   "scripts": {
@@ -9,13 +9,13 @@
     "prepublish": "npm run lint"
   },
   "dependencies": {
-    "@cnbritain/merlin-www-ads": "^3.1.0-alpha.0",
+    "@cnbritain/merlin-www-ads": "^3.1.0",
     "@cnbritain/merlin-www-buttons": "^2.0.0",
     "@cnbritain/merlin-www-card": "^2.0.3",
     "@cnbritain/merlin-www-common": "^2.0.0",
     "@cnbritain/merlin-www-image": "^2.0.3",
-    "@cnbritain/merlin-www-js-elementscroll": "^3.0.0-alpha.1",
-    "@cnbritain/merlin-www-js-utils": "^3.0.0-alpha.1"
+    "@cnbritain/merlin-www-js-elementscroll": "^3.0.0",
+    "@cnbritain/merlin-www-js-utils": "^3.0.0"
   },
   "devDependencies": {
     "@cnbritain/merlin-component-demo-server": "^4.0.0",

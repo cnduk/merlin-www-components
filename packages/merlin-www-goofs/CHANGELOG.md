@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-goofs@3.0.0-alpha.1...@cnbritain/merlin-www-goofs@3.0.0) (2021-02-08)
+
+**Note:** Version bump only for package @cnbritain/merlin-www-goofs
+
+
+
+
+
 <a name="1.4.5"></a>
 ## [1.4.5](https://github.com/cnduk/merlin-www-components/compare/@cnbritain/merlin-www-goofs@1.4.4...@cnbritain/merlin-www-goofs@1.4.5) (2018-11-05)
 
