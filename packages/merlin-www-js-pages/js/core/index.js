@@ -22,6 +22,7 @@ import DotmetricsManager from '@cnbritain/merlin-www-js-gatracker/js/DotmetricsM
 import FacebookPixelManager from '@cnbritain/merlin-www-js-gatracker/js/FacebookPixelManager';
 import HotjarManager from '@cnbritain/merlin-www-js-gatracker/js/HotjarManager';
 import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManager';
+import ParselyManager from '@cnbritain/merlin-www-js-gatracker/js/ParselyManager';
 import PermutiveManager from '@cnbritain/merlin-www-js-gatracker/js/PermutiveManager';
 import SailthruManager from '@cnbritain/merlin-www-js-gatracker/js/SailthruManager';
 import SkimlinksManager from '@cnbritain/merlin-www-js-gatracker/js/SkimlinksManager';
@@ -74,6 +75,7 @@ export default function init(config) {
         HotjarManager: HotjarManager,
         MainNavigation: MainNavigation,
         OneTrustManager: OneTrustManager,
+        ParselyManager: ParselyManager,
         PermutiveManager: PermutiveManager,
         SailthruManager: SailthruManager,
         SkimlinksManager: SkimlinksManager,
@@ -108,6 +110,7 @@ export default function init(config) {
             loadSiteCensus();
             SailthruManager.loadScript();
             HotjarManager.loadScript();
+            ParselyManager.loadScript();
         }
         if (this.consentedTargetingCookies) {
             FacebookPixelManager.loadScript();
