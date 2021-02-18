@@ -393,6 +393,16 @@ function onArticleFocus(e) {
     if (hasHistory) history.replaceState({}, article.properties.title, url);
     document.title = article.properties.title;
 
+    // emit a urlchange event with the old (referring) and new url
+    this.emit('urlchange', {
+        'bubbles': true,
+        'target': article,
+        'timeStamp': Date.now(),
+        'type': 'urlchange',
+        'url': url,
+        'ref_url': lastUrl,
+    });
+
     // We always want to stop if we focus into a new article. If the article
     // with focus has a simplereach config, it will then trigger a new
     // simplereach session.
