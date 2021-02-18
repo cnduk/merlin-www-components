@@ -25,7 +25,7 @@ ParselyManager.prototype = inherit(EventEmitter.prototype, {
             console.warn('Missing Parsely ID');
         }
 
-        (function () {
+        (function (id) {
             window.PARSLEY = window.PARSLEY || {
                 onload: function () {
                     ArticleManager.on('urlchange', function (e) {
@@ -44,10 +44,10 @@ ParselyManager.prototype = inherit(EventEmitter.prototype, {
 
             script.type = 'text/javascript';
             script.id = 'parsely-cfg';
-            script.src = '//cdn.parsely.com/keys/' + this.id + '/p.js';
+            script.src = '//cdn.parsely.com/keys/' + id + '/p.js';
 
             document.body.appendChild(script);
-        })();
+        })(this.id);
 
         this.hasLoadedScript = true;
     }
