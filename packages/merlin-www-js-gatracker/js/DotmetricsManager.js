@@ -1,5 +1,6 @@
 import EventEmitter from 'eventemitter2';
 import { inherit, assign } from '@cnbritain/merlin-www-js-utils/js/functions';
+import { ArticleManager } from '@cnbritain/merlin-www-article';
 
 function DotmetricsManager() {
     EventEmitter.call(this, {
@@ -29,7 +30,7 @@ DotmetricsManager.prototype = inherit(EventEmitter.prototype, {
         this.initialised = true;
     },
 
-    loadScript: function loadScript(test) {
+    loadScript: function loadScript() {
         if (!this.initialised || this.hasLoadedScript) return;
 
         var initialTag = this.getTag(this.config.pageType);
@@ -37,8 +38,8 @@ DotmetricsManager.prototype = inherit(EventEmitter.prototype, {
         (function () {
             window.dm = window.dm || { AjaxData: [] };
             window.dm.AjaxEvent = function (et, d, ssid, ad) {
-                dm.AjaxData.push({ et: et, d: d, ssid: ssid, ad: ad });
-                window.DotMetricsObj && DotMetricsObj.onAjaxDataUpdate();
+                window.dm.AjaxData.push({ et: et, d: d, ssid: ssid, ad: ad });
+                window.DotMetricsObj && window.DotMetricsObj.onAjaxDataUpdate();
             };
             var d = document,
                 h = d.getElementsByTagName('head')[0],
@@ -50,6 +51,16 @@ DotmetricsManager.prototype = inherit(EventEmitter.prototype, {
             h.appendChild(s);
         }());
 
+        ArticleManager.on('urlchange', function (e) {
+            if (e.target &&
+                e.target.ads &&
+                e.target.ads.key_values &&
+                e.target.ads.key_values.tags) {
+                var tag = this.getTagForArticle(e.target.ads.key_values.tags);
+                window.dm.AjaxEvent('pageview', null, tag);
+            }
+        }.bind(this));
+
         this.hasLoadedScript = true;
     },
 
@@ -58,19 +69,18 @@ DotmetricsManager.prototype = inherit(EventEmitter.prototype, {
             case 'homepage':
                 return HOMEPAGE_TAG;
             case 'article': case 'gallery': case 'video':
-                return this.getTagForArticle();
+                return this.getTagForArticle(this.config.pageTags);
             default:
                 return OTHER_TAG;
         }
     },
 
-    getTagForArticle: function getTagForArticle() {
-        var pageTags = this.config.pageTags;
+    getTagForArticle: function getTagForArticle(pageTags) {
         var tags = this.config.tags;
 
         for (var x = 0; x < pageTags.length; x++) {
             if (pageTags[x] in tags) {
-                return tags[pageTags[x]]
+                return tags[pageTags[x]];
             }
         }
 
