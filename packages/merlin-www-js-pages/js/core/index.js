@@ -126,6 +126,7 @@ export default function init(config) {
         if (this.consentedPerformanceCookies) {
             ComscoreManager.setConsent(1);
             SailthruManager.loadScript();
+            ParselyManager.loadScript();
         } else {
             // this technically wont happen
             ComscoreManager.setConsent(0);
