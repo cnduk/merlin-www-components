@@ -17,18 +17,19 @@ function onChangeHandler() {
 }
 
 export default {
-    'init': function() {
+    'init': function () {
         var comboboxElements = toArray(document.querySelectorAll('select'));
         var length = comboboxElements.length;
         var comboboxes = new Array(length);
 
-        comboboxElements.forEach(function(el, index) {
+        comboboxElements.forEach(function (el, index) {
             var comboSettings = {
                 'placeholder': el.getAttribute('data-placeholder') || false,
                 'searchable': false
             };
 
             if (!(isIOS || isAndroid) &&
+                el &&
                 el.hasAttribute('data-searchable') &&
                 el.getAttribute('data-searchable') === 'true') {
                 comboSettings.searchable = true;

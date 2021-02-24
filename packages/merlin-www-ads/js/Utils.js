@@ -221,7 +221,7 @@ var AD_ATTRIBUTE_MAP = {
         required: false
     },
     unit: {
-        map: function(value) {
+        map: function (value) {
             if (TEST_AD_CONFIG.AD_UNIT === false) return value;
             return TEST_AD_CONFIG.AD_UNIT;
         },
@@ -232,7 +232,7 @@ var AD_ATTRIBUTE_MAP = {
         required: false
     },
     zone: {
-        map: function(value) {
+        map: function (value) {
             if (TEST_AD_CONFIG.AD_ZONE === false) return value;
             return TEST_AD_CONFIG.AD_ZONE;
         },
@@ -245,7 +245,7 @@ var AD_ATTRIBUTE_MAP = {
  * @readonly
  * @type {Boolean}
  */
-export var HAS_ADS_BLOCKED = (function() {
+export var HAS_ADS_BLOCKED = (function () {
     if (window.ads_not_blocked) {
         return false;
     } else {
@@ -323,6 +323,7 @@ export function getAdElementAttributes(el) {
     for (key in DEFAULT_AD_ELEMENT_ATTRIBUTES) {
         if (
             hasOwnProperty(DEFAULT_AD_ELEMENT_ATTRIBUTES, key) &&
+            el &&
             el.hasAttribute('data-ad-' + key)
         ) {
             value = el.getAttribute('data-ad-' + key);
@@ -375,7 +376,7 @@ export function getSlot(ad) {
 export function getSlotTargeting(slot) {
     var targeting = {};
     var keys = slot.getTargetingKeys();
-    keys.forEach(function(key) {
+    keys.forEach(function (key) {
         targeting[key] = slot.getTargeting(key);
     });
     return targeting;
@@ -450,7 +451,7 @@ export function isAdRendered(ad) {
  * @return {Boolean}
  */
 export function isElInitialised(el) {
-    return el.hasAttribute('data-ad-initialised');
+    return el && el.hasAttribute('data-ad-initialised');
 }
 
 export function loadAdLibraries() {
@@ -459,7 +460,7 @@ export function loadAdLibraries() {
     window.googletag.cmd = window.googletag.cmd || [];
 
     return Promise.all([loadPrebidLibrary(), loadRubiconLibrary()]).then(
-        function() {
+        function () {
             return loadGPTLibrary();
         }
     );
@@ -492,17 +493,17 @@ export function loadRubiconLibrary() {
     }
     return loadScript(RUBICON_URL)
         .then(
-            function() {
+            function () {
                 RUBICON_LOADED = true;
                 return Promise.resolve();
             },
-            function() {
+            function () {
                 console.warn('Error loading rubicon library');
                 RUBICON_LOADED = false;
                 return Promise.resolve();
             }
         )
-        .catch(function() {
+        .catch(function () {
             console.warn('Error loading rubicon library');
             RUBICON_LOADED = false;
             return Promise.resolve();
@@ -529,7 +530,7 @@ export function loadPrebidLibrary() {
 
     window.pbjs = window.pbjs || {};
     window.pbjs.que = window.pbjs.que || [];
-    pbjs.que.push(function() {
+    pbjs.que.push(function () {
         pbjs.setConfig({
             // debug: true,
             enableSendAllBids: true
@@ -538,17 +539,17 @@ export function loadPrebidLibrary() {
 
     var prebidPromise = loadScript(PREBID_URL)
         .then(
-            function() {
+            function () {
                 PREBID_LOADED = true;
                 return Promise.resolve();
             },
-            function() {
+            function () {
                 console.warn('Error loading prebid library');
                 PREBID_LOADED = false;
                 return Promise.resolve();
             }
         )
-        .catch(function() {
+        .catch(function () {
             console.warn('Error loading prebid library');
             PREBID_LOADED = false;
             return Promise.resolve();
@@ -612,7 +613,7 @@ export function mapAdElementAttributes(attribs) {
  * @return {Promise}
  */
 export function promisifyTimeout(ms) {
-    return new Promise(function(resolve) {
+    return new Promise(function (resolve) {
         setTimeout(resolve, ms);
     });
 }
@@ -641,22 +642,22 @@ export function pushToGoogleTag(callback) {
             }
         });
     }).then(
-        function(value) {
+        function (value) {
             return Promise.resolve(value);
         },
-        function(err) {
+        function (err) {
             throw err;
         }
     );
 }
 
 export function refreshGPT(ads, changeCorrelator) {
-    return pushToGoogleTag(function(res) {
+    return pushToGoogleTag(function (res) {
         var slots = null;
         var slotIds = null;
         if (Array.isArray(ads)) {
             slots = ads.map(getSlot);
-            slotIds = ads.map(function(ad) {
+            slotIds = ads.map(function (ad) {
                 return ad.id;
             });
         } else {
@@ -667,11 +668,11 @@ export function refreshGPT(ads, changeCorrelator) {
         if (RUBICON_LOADED) slots.forEach(setRubiconTargeting);
 
         if (PREBID_LOADED) {
-            pbjs.que.push(function() {
+            pbjs.que.push(function () {
                 pbjs.requestBids({
                     timeout: PREBID_TIMEOUT,
                     adUnitCodes: slotIds,
-                    bidsBackHandler: function() {
+                    bidsBackHandler: function () {
                         pbjs.setTargetingForGPTAsync(slotIds);
                         googletag.pubads().refresh(slots, {
                             changeCorrelator: !!changeCorrelator
@@ -694,7 +695,7 @@ export function refreshGPT(ads, changeCorrelator) {
 }
 
 export function refreshRubicon(ads) {
-    return pushToGoogleTag(function(res) {
+    return pushToGoogleTag(function (res) {
         // If rubicon is not loaded, dont do it
         if (!RUBICON_LOADED) return res();
 
@@ -709,7 +710,7 @@ export function refreshRubicon(ads) {
             }
         }
         // Filter any nulls
-        slots = slots.filter(function(s) {
+        slots = slots.filter(function (s) {
             return s !== null;
         });
         // Check if we have slots. If no slots, just use null and do all
@@ -726,7 +727,7 @@ export function refreshRubicon(ads) {
 }
 
 export function registerAdBlock(ad) {
-    return new Promise(function(resolve) {
+    return new Promise(function (resolve) {
         // Update slot information
         ad.slot = null;
         ad.state = AD_STATES.REGISTERED;
@@ -749,13 +750,13 @@ export function registerAdBlock(ad) {
 }
 
 export function registerGPT(ad) {
-    return pushToGoogleTag(function() {
+    return pushToGoogleTag(function () {
         // Create the slot
         var slot = googletag.defineSlot(ad.get('dfp'), ad.get('sizes'), ad.id);
         slot.addService(googletag.pubads());
         // Set the targeting
         if (ad.get('targets') !== null) {
-            var targets = ad.get('targets').filter(function(target) {
+            var targets = ad.get('targets').filter(function (target) {
                 return target !== '';
             });
             if (targets.length > 0) {
@@ -789,7 +790,7 @@ export function registerGPT(ad) {
         }
         // Prebid bits
         if (PREBID_LOADED) {
-            pbjs.que.push(function() {
+            pbjs.que.push(function () {
                 pbjs.setTargetingForGPTAsync();
             });
         }
@@ -822,7 +823,7 @@ export function registerGPT(ad) {
 function getPrebidAdUnits(ads) {
     var adUnits = [];
 
-    ads.forEach(function(ad) {
+    ads.forEach(function (ad) {
         if (!hasHeaderBidding(ad)) {
             return;
         }
@@ -830,8 +831,8 @@ function getPrebidAdUnits(ads) {
         var bids = [];
 
         // Rubicon
-        if (hasOwnProperty(PREBID_SETTINGS,'RUBICON')) {
-            PREBID_SETTINGS.RUBICON.zoneId.forEach(function(zoneId) {
+        if (hasOwnProperty(PREBID_SETTINGS, 'RUBICON')) {
+            PREBID_SETTINGS.RUBICON.zoneId.forEach(function (zoneId) {
                 bids.push({
                     bidder: 'rubicon',
                     params: {
@@ -848,24 +849,24 @@ function getPrebidAdUnits(ads) {
 
         var adUnit = {
             code: ad.id,
-            sizes: ad.get('sizes').filter(function(dims) {
+            sizes: ad.get('sizes').filter(function (dims) {
                 return hasOwnProperty(RUBICON_ALLOWED_SIZES, dims.join('x'));
             }),
             bids: bids
         };
 
         if (ad.get('sizemap')) {
-            var sizemap = ad.get('sizemap').map(function(group) {
+            var sizemap = ad.get('sizemap').map(function (group) {
                 return {
                     minWidth: group[0][0],
                     sizes: group[1]
-                        .filter(function(dims) {
+                        .filter(function (dims) {
                             return hasOwnProperty(
                                 RUBICON_ALLOWED_SIZES,
                                 dims.join('x')
                             );
                         })
-                        .map(function(dims) {
+                        .map(function (dims) {
                             return dims[0];
                         })
                 };
@@ -886,9 +887,9 @@ function getPrebidAdUnits(ads) {
  * @return {Promise}
  */
 export function registerPrebid(ad) {
-    return pushToGoogleTag(function(res) {
+    return pushToGoogleTag(function (res) {
         if (PREBID_LOADED && hasHeaderBidding(ad)) {
-            pbjs.que.push(function() {
+            pbjs.que.push(function () {
                 var adUnits = getPrebidAdUnits([ad]);
                 pbjs.addAdUnits(adUnits);
                 res();
@@ -900,7 +901,7 @@ export function registerPrebid(ad) {
 }
 
 export function registerRubicon(ad) {
-    return pushToGoogleTag(function(res) {
+    return pushToGoogleTag(function (res) {
         if (RUBICON_LOADED && hasHeaderBidding(ad)) {
             rubicontag.defineSlot(ad.get('dfp'), ad.get('sizes'), ad.id);
         }
@@ -909,7 +910,7 @@ export function registerRubicon(ad) {
 }
 
 export function renderGPT(ad) {
-    return pushToGoogleTag(function(res) {
+    return pushToGoogleTag(function (res) {
         googletag.display(ad.id);
         res();
     });
@@ -919,21 +920,21 @@ export function setAdUrls(config) {
     for (var key in config) {
         if (!hasOwnProperty(config, key)) continue;
         switch (key) {
-        case 'GPT_URL':
-            GPT_URL = config[key];
-            break;
-        case 'RUBICON_URL':
-            RUBICON_URL = config[key];
-            break;
-        case 'TEAD_URL':
-            TEAD_URL = config[key];
-            break;
-        case 'PREBID_URL':
-            PREBID_URL = config[key];
-            break;
-        case 'PREBID_SETTINGS':
-            PREBID_SETTINGS = config[key];
-            break;
+            case 'GPT_URL':
+                GPT_URL = config[key];
+                break;
+            case 'RUBICON_URL':
+                RUBICON_URL = config[key];
+                break;
+            case 'TEAD_URL':
+                TEAD_URL = config[key];
+                break;
+            case 'PREBID_URL':
+                PREBID_URL = config[key];
+                break;
+            case 'PREBID_SETTINGS':
+                PREBID_SETTINGS = config[key];
+                break;
         }
     }
 }

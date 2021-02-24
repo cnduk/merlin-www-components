@@ -38,7 +38,7 @@ var SCROLL_THROTTLE = 300;
  * @param {HTMLElement} el
  * @param {Object} _options
  */
-function ShowItemCarousel(el, _options){
+function ShowItemCarousel(el, _options) {
     var options = _options || {};
 
     this._btns = getNavButtons(el);
@@ -52,7 +52,7 @@ function ShowItemCarousel(el, _options){
 }
 ShowItemCarousel.prototype = {
 
-    '_init': function(){
+    '_init': function () {
         // Show the nav buttons
         removeClass(getNavButtonsContainer(this.el), 'global__hidden');
 
@@ -67,7 +67,7 @@ ShowItemCarousel.prototype = {
                 SCROLL_THROTTLE));
 
         // Arrow buttons
-        if(this._btns.length > 0){
+        if (this._btns.length > 0) {
             addEvent(this._btns[0], 'click', this.previousItems.bind(this));
             addEvent(this._btns[1], 'click', this.nextItems.bind(this));
         }
@@ -78,7 +78,7 @@ ShowItemCarousel.prototype = {
     /**
      * Display the next items in the list
      */
-    'nextItems': function(){
+    'nextItems': function () {
         // Get the scroll group size and scrollLeft
         var scrollRect = getBoundingClientRect(this._elScroll);
 
@@ -91,21 +91,21 @@ ShowItemCarousel.prototype = {
         var offscreenIndex = -1;
         var i = -1;
         var length = storyRects.length;
-        while(++i < length){
-            if( storyRects[i].right > scrollRect.width ){
+        while (++i < length) {
+            if (storyRects[i].right > scrollRect.width) {
                 offscreenIndex = i;
                 break;
             }
         }
-        if( offscreenIndex === -1) return;
+        if (offscreenIndex === -1) return;
 
-        this.scrollTo(storyRects[ offscreenIndex ].left + (window.innerWidth > scrollRect.width ? 0 : -this._scrollOffset));
+        this.scrollTo(storyRects[offscreenIndex].left + (window.innerWidth > scrollRect.width ? 0 : -this._scrollOffset));
     },
 
     /**
      * Displays the previous items in the list
      */
-    'previousItems': function(){
+    'previousItems': function () {
         // Get the scroll group size and scrollLeft
         var scrollRect = getBoundingClientRect(this._elScroll);
 
@@ -117,13 +117,13 @@ ShowItemCarousel.prototype = {
         // Find the first element that is offscreen or partially off
         var offscreenIndex = -1;
         var length = storyRects.length;
-        while(length--){
-            if( storyRects[length].left < 0 ){
+        while (length--) {
+            if (storyRects[length].left < 0) {
                 offscreenIndex = length;
                 break;
             }
         }
-        if( offscreenIndex === -1) return;
+        if (offscreenIndex === -1) return;
 
         this.scrollTo(-scrollRect.width + storyRects[offscreenIndex].right + (window.innerWidth > scrollRect.width ? 0 : this._scrollOffset));
     },
@@ -132,8 +132,8 @@ ShowItemCarousel.prototype = {
      * Scrolls the element to x position
      * @param  {Number} x
      */
-    'scrollTo': function(x){
-        if( this._scroller !== null ){
+    'scrollTo': function (x) {
+        if (this._scroller !== null) {
             this._scroller.destroy();
             this._scroller = null;
         }
@@ -144,7 +144,7 @@ ShowItemCarousel.prototype = {
             this._elScroll.scrollLeft + x);
         left -= this._elScroll.scrollLeft;
 
-        this._scroller = new ElementScroll( this._elScroll );
+        this._scroller = new ElementScroll(this._elScroll);
         this._scroller.on('complete', onElementScrollFinish.bind(this));
         this._scroller.on('stop', onElementScrollFinish.bind(this));
         this._scroller.start({ 'x': left, 'y': 0 }, SCROLL_DURATION, {
@@ -158,8 +158,8 @@ ShowItemCarousel.prototype = {
  * Disables a button
  * @param  {HTMLElement} el
  */
-function disableButton(el){
-    if( el.hasAttribute('disabled') ) return;
+function disableButton(el) {
+    if (el.hasAttribute('disabled')) return;
     el.setAttribute('disabled', true);
     addClass(el, 'btn-disabled');
 }
@@ -168,8 +168,8 @@ function disableButton(el){
  * Enables a button
  * @param  {HTMLElement} el
  */
-function enableButton(el){
-    if( !el.hasAttribute('disabled') ) return;
+function enableButton(el) {
+    if (!el.hasAttribute('disabled')) return;
     el.removeAttribute('disabled');
     removeClass(el, 'btn-disabled');
 }
@@ -179,7 +179,7 @@ function enableButton(el){
  * @param  {HTMLElement} el
  * @return {Array.<HTMLElement>}
  */
-function getNavButtons(el){
+function getNavButtons(el) {
     return toArray(el.querySelectorAll('.sh-item-carousel__nav__btn'));
 }
 
@@ -188,7 +188,7 @@ function getNavButtons(el){
  * @param  {HTMLElement} el
  * @return {HTMLElement}
  */
-function getNavButtonsContainer(el){
+function getNavButtonsContainer(el) {
     return el.querySelector('.sh-item-carousel__nav');
 }
 
@@ -197,7 +197,7 @@ function getNavButtonsContainer(el){
  * @param  {HTMLElement} el
  * @return {HTMLElement}
  */
-function getElementScroll(el){
+function getElementScroll(el) {
     return el.querySelector('.sh-item-carousel__list');
 }
 
@@ -206,7 +206,7 @@ function getElementScroll(el){
  * @param  {HTMLElement} el
  * @return {Array.<HTMLElement>}
  */
-function getStoryElements(el){
+function getStoryElements(el) {
     return toArray(el.querySelectorAll('.sh-item-carousel__list__item'));
 }
 
@@ -215,7 +215,7 @@ function getStoryElements(el){
  * @param  {HTMLElement}  el
  * @return {Boolean}
  */
-function isScrollAtEnd(el){
+function isScrollAtEnd(el) {
     return el.scrollLeft === el.scrollWidth - el.offsetWidth;
 }
 
@@ -224,14 +224,14 @@ function isScrollAtEnd(el){
  * @param  {HTMLElement}  el
  * @return {Boolean}
  */
-function isScrollAtStart(el){
+function isScrollAtStart(el) {
     return el.scrollLeft === 0;
 }
 
 /**
  * Callback for when an element has finished scrolling
  */
-function onElementScrollFinish(){
+function onElementScrollFinish() {
     this._scroller.destroy();
     this._scroller = null;
 
@@ -244,8 +244,8 @@ function onElementScrollFinish(){
  * @param  {Object} elRect
  * @return {Object}
  */
-function normaliseToElement( elRect ){
-    return function normaliseToElement_inner( rect ){
+function normaliseToElement(elRect) {
+    return function normaliseToElement_inner(rect) {
         return {
             'bottom': rect.bottom - elRect.top,
             'height': rect.height,
@@ -260,7 +260,7 @@ function normaliseToElement( elRect ){
 /**
  * Callback for scroll event
  */
-function onScroll(){
+function onScroll() {
     if (window.innerWidth > 1024) {
         updateButtonStates(this._elScroll, this._btns);
     }
@@ -271,10 +271,10 @@ function onScroll(){
  * @param  {*} collection
  * @return {Array}
  */
-function toArray(collection){
+function toArray(collection) {
     var length = collection.length;
     var o = new Array(length);
-    while(length--) o[length] = collection[length];
+    while (length--) o[length] = collection[length];
     return o;
 }
 
@@ -283,16 +283,16 @@ function toArray(collection){
  * @param  {HTMLElement} scroll
  * @param  {Array.<HTMLElement>} btns
  */
-function updateButtonStates(scroll, btns){
-    if( isScrollAtStart( scroll ) ){
-        disableButton( btns[0] );
-        enableButton( btns[1] );
-    } else if( isScrollAtEnd( scroll ) ){
-        enableButton( btns[0] );
-        disableButton( btns[1] );
+function updateButtonStates(scroll, btns) {
+    if (isScrollAtStart(scroll)) {
+        disableButton(btns[0]);
+        enableButton(btns[1]);
+    } else if (isScrollAtEnd(scroll)) {
+        enableButton(btns[0]);
+        disableButton(btns[1]);
     } else {
-        enableButton( btns[0] );
-        enableButton( btns[1] );
+        enableButton(btns[0]);
+        enableButton(btns[1]);
     }
 }
 

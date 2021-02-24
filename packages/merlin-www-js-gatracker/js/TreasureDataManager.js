@@ -176,7 +176,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
             ".js-tdp-link"
         ).forEach(
             function (el) {
-                if (el.hasAttribute("href")) {
+                if (el && el.hasAttribute("href")) {
                     el.href = updateQueryString(el.href, {
                         td_user_id: id,
                     });

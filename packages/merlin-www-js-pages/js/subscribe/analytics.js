@@ -16,8 +16,8 @@ var analyticsEventKeys = {
 
 export function getAnalyticEventAttributes(el) {
     var attrs = {};
-    Object.keys(analyticsEventKeys).forEach(function(attrKey) {
-        if (el.hasAttribute(attrKey)) {
+    Object.keys(analyticsEventKeys).forEach(function (attrKey) {
+        if (el && el.hasAttribute(attrKey)) {
             attrs[analyticsEventKeys[attrKey]] = el.getAttribute(attrKey);
         } else {
             attrs[analyticsEventKeys[attrKey]] = null;

@@ -4,35 +4,35 @@ import AdManager from './AdManager';
 import { AD_STATES } from './Utils';
 import template from '../templates/debug-ad.mustache';
 
-function AdDebugger(){}
+function AdDebugger() { }
 
 AdDebugger.prototype = {
 
-    'clear': function(){
-        for(var key in AdManager.slots){
-            if(!hasOwnProperty(AdManager.slots, key)) continue;
-            if(!isAdDebugging(AdManager.slots[key])) continue;
+    'clear': function () {
+        for (var key in AdManager.slots) {
+            if (!hasOwnProperty(AdManager.slots, key)) continue;
+            if (!isAdDebugging(AdManager.slots[key])) continue;
             clearDebugAd(AdManager.slots[key]);
         }
     },
 
     'constructor': AdDebugger,
 
-    'debug': function(force){
-        for(var key in AdManager.slots){
-            if(!hasOwnProperty(AdManager.slots, key) || !AdManager.slots[key]){
+    'debug': function (force) {
+        for (var key in AdManager.slots) {
+            if (!hasOwnProperty(AdManager.slots, key) || !AdManager.slots[key]) {
                 continue;
             }
-            if(!force && isAdDebugging(AdManager.slots[key])) continue;
-            if(AdManager.slots[key].state !== AD_STATES.RENDERED) continue;
-            if(force) clearDebugAd(AdManager.slots[key]);
+            if (!force && isAdDebugging(AdManager.slots[key])) continue;
+            if (AdManager.slots[key].state !== AD_STATES.RENDERED) continue;
+            if (force) clearDebugAd(AdManager.slots[key]);
             renderDebugAd(AdManager.slots[key]);
         }
     }
 
 };
 
-function clearDebugAd(ad){
+function clearDebugAd(ad) {
     // Remove the debug data attribute
     ad.el.removeAttribute('data-ad-debug');
 
@@ -40,11 +40,11 @@ function clearDebugAd(ad){
     debugEl.parentNode.removeChild(debugEl);
 }
 
-function isAdDebugging(ad){
-    return ad.el.hasAttribute('data-ad-debug');
+function isAdDebugging(ad) {
+    return ad && ad.el && ad.el.hasAttribute('data-ad-debug');
 }
 
-function renderDebugAd(ad){
+function renderDebugAd(ad) {
     // Set the debug data attribute
     ad.el.setAttribute('data-ad-debug', 'true');
 
@@ -52,12 +52,12 @@ function renderDebugAd(ad){
 
     // Generate a neater sizemap for the template
     var sizeMapping = ad.get('sizemap');
-    if(sizeMapping !== null){
+    if (sizeMapping !== null) {
         sizeMapping = {
-            'values': sizeMapping.map(function(size){
+            'values': sizeMapping.map(function (size) {
                 return {
                     'key': size[0].join('x'),
-                    'values': size[1].map(function(adSize){
+                    'values': size[1].map(function (adSize) {
                         return adSize.join('x');
                     })
                 };
@@ -66,7 +66,7 @@ function renderDebugAd(ad){
     }
 
     var adValues = ad.get('values');
-    if(adValues){
+    if (adValues) {
         adValues = JSON.stringify(adValues);
     }
 
@@ -78,7 +78,7 @@ function renderDebugAd(ad){
         'renderedSize': ad.renderedSize.join('x'),
         'position': ad.get('position'),
         'sizeMapping': sizeMapping,
-        'sizes': ad.get('sizes').map(function(size){
+        'sizes': ad.get('sizes').map(function (size) {
             return size.join('x');
         }),
         'values': adValues

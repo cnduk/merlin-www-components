@@ -30,7 +30,7 @@ export default {
     /**
      * Initialises the loading of images
      */
-    'init': function() {
+    'init': function () {
         img.init();
         initialiseFigures();
     }
@@ -67,20 +67,20 @@ function initialiseMagnifier(el) {
 var hasBackgroundBlur = false;
 var focusedFigure = null;
 
-function focusFigure(elFigure){
+function focusFigure(elFigure) {
     focusedFigure = elFigure;
     elFigure.setAttribute('is-focused', true);
     addClass(elFigure.querySelector('.' + CLS_FIGURE_TOOLBAR), CLS_IS_VISIBLE);
 }
 
-function blurFigure(elFigure){
+function blurFigure(elFigure) {
     elFigure.removeAttribute('is-focused');
     removeClass(
         elFigure.querySelector('.' + CLS_FIGURE_TOOLBAR), CLS_IS_VISIBLE);
     focusedFigure = null;
 }
 
-function preventDefault(e){
+function preventDefault(e) {
     e.preventDefault();
 }
 
@@ -93,10 +93,10 @@ function initialiseToolbarToggle(el) {
     addEvent(el.querySelector('.' + CLS_FIGURE_TOOLBAR), 'focus', focusFigure);
     addEvent(el.querySelector('.' + CLS_FIGURE_TOOLBAR), 'blur', blurFigure);
 
-    addEvent(el.querySelector('.' + CLS_FIGURE_CONTAINER), 'click', function(e) {
+    addEvent(el.querySelector('.' + CLS_FIGURE_CONTAINER), 'click', function (e) {
         var isFocused = Boolean(this.getAttribute('is-focused'));
 
-        if(!isFocused) {
+        if (!isFocused) {
             focusFigure(this);
         } else {
             blurFigure(this);
@@ -112,19 +112,19 @@ function initBackgroundBlur() {
     if (hasBackgroundBlur) return;
 
     hasBackgroundBlur = true;
-    addEvent(document.body, 'touchend', function(e) {
-        if(focusedFigure !== null){
+    addEvent(document.body, 'touchend', function (e) {
+        if (focusedFigure !== null) {
             var parent = getParent(e.target, '.' + CLS_FIGURE_CONTAINER);
             // If the parent also happens to be a figure, ignore triggering
             // a blur because the figure will do it
-            if(focusedFigure === parent) return;
+            if (focusedFigure === parent) return;
             blurFigure(focusedFigure);
         }
     });
 }
 
 function isFigureInitialised(el) {
-    return el.hasAttribute('data-figure-initialised');
+    return el && el.hasAttribute('data-figure-initialised');
 }
 
 function setFigureInitialised(el) {

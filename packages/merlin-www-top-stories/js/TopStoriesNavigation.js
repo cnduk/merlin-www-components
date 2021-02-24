@@ -100,7 +100,7 @@ TopStoriesNavigation.prototype = {
      * @public
      * @memberof! TopStoriesNavigation.prototype
      */
-    nextItems: function() {
+    nextItems: function () {
         // Get the scroll group size and scrollLeft
         var scrollRect = getBoundingClientRect(this._elScroll);
 
@@ -133,7 +133,7 @@ TopStoriesNavigation.prototype = {
      * @public
      * @memberof! TopStoriesNavigation.prototype
      */
-    previousItems: function() {
+    previousItems: function () {
         // Get the scroll group size and scrollLeft
         var scrollRect = getBoundingClientRect(this._elScroll);
 
@@ -168,7 +168,7 @@ TopStoriesNavigation.prototype = {
      * @memberof! TopStoriesNavigation.prototype
      * @param  {Number} x
      */
-    scrollTo: function(x) {
+    scrollTo: function (x) {
         if (this._scroller !== null) {
             this._scroller.destroy();
             this._scroller = null;
@@ -200,7 +200,7 @@ TopStoriesNavigation.prototype = {
     /**
      * Show the navigation buttons
      */
-    showNavigation: function() {
+    showNavigation: function () {
         if (!hasClass(this.el, CLS_HAS_NAVIGATION)) {
             addClass(this.el, CLS_HAS_NAVIGATION);
         }
@@ -209,7 +209,7 @@ TopStoriesNavigation.prototype = {
     /**
      * Hide the navigation buttons
      */
-    hideNavigation: function() {
+    hideNavigation: function () {
         if (hasClass(this.el, CLS_HAS_NAVIGATION)) {
             removeClass(this.el, CLS_HAS_NAVIGATION);
         }
@@ -218,7 +218,7 @@ TopStoriesNavigation.prototype = {
     /**
      * Disable scrolling on the card list
      */
-    disableScroll: function() {
+    disableScroll: function () {
         if (!hasClass(this.el, CLS_HAS_NO_SCROLL)) {
             addClass(this.el, CLS_HAS_NO_SCROLL);
         }
@@ -227,7 +227,7 @@ TopStoriesNavigation.prototype = {
     /**
      * Enable scrolling on the card list
      */
-    enableScroll: function() {
+    enableScroll: function () {
         if (hasClass(this.el, CLS_HAS_NO_SCROLL)) {
             removeClass(this.el, CLS_HAS_NO_SCROLL);
         }

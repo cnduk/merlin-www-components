@@ -4,9 +4,9 @@
  * @module CardList
  */
 
-import {removeClass} from '@cnbritain/merlin-www-js-utils/js/functions';
+import { removeClass } from '@cnbritain/merlin-www-js-utils/js/functions';
 import Card from '@cnbritain/merlin-www-card';
-import {AdManager} from '@cnbritain/merlin-www-ads';
+import { AdManager } from '@cnbritain/merlin-www-ads';
 
 /**
  * Card list css class
@@ -46,7 +46,7 @@ export default {
     /**
      * Initialises the cards in the list
      */
-    'init': function(){
+    'init': function () {
         // Initialiases the cards
         Card.init();
 
@@ -54,9 +54,9 @@ export default {
         var cardLists = document.querySelectorAll(CLS_LIST);
         var i = -1;
         var len = cardLists.length;
-        while(++i < len){
-            if(isInitialised(cardLists[i])) continue;
-            if(hasAdSlot(cardLists[i])){
+        while (++i < len) {
+            if (isInitialised(cardLists[i])) continue;
+            if (hasAdSlot(cardLists[i])) {
                 cardListList.push(new CardList(cardLists[i]));
             }
             setInitialised(cardLists[i]);
@@ -71,7 +71,7 @@ export default {
  * @class CardList
  * @param {HTMLElement} el The card list
  */
-function CardList(el){
+function CardList(el) {
 
     /**
      * The card list item ad elements
@@ -125,7 +125,7 @@ CardList.prototype = {
      * @public
      * @memberof! CardList.prototype
      */
-    'destroy': function(){
+    'destroy': function () {
         this.adEls = null;
         this._adListeners = null;
         this.ads = null;
@@ -133,7 +133,7 @@ CardList.prototype = {
 
         var index = cardListList.indexOf(this);
         cardListList.splice(index, 1);
-        if(cardListList.length === 0) unbindAdManagerListener();
+        if (cardListList.length === 0) unbindAdManagerListener();
     },
 
     /**
@@ -142,13 +142,13 @@ CardList.prototype = {
      * @public
      * @memberof! CardList.prototype
      */
-    'listenToAd': function(ad){
+    'listenToAd': function (ad) {
         var len = this.adEls.length;
-        while(len--){
-            if(!this.adEls[len].contains(ad.el)) continue;
+        while (len--) {
+            if (!this.adEls[len].contains(ad.el)) continue;
             break;
         }
-        if(len === -1) return;
+        if (len === -1) return;
         this.ads[len] = ad;
         this._adListeners[len] = onAdRenderStop.bind(this);
         ad.once('render', this._adListeners[len]);
@@ -161,8 +161,8 @@ CardList.prototype = {
 /**
  * Binds listeners to AdManager register event
  */
-function bindAdManagerListener(){
-    if(LISTENER_REGISTERED) return;
+function bindAdManagerListener() {
+    if (LISTENER_REGISTERED) return;
     LISTENER_REGISTERED = true;
     AdManager.on('register', onManagerRegister);
 }
@@ -173,10 +173,10 @@ function bindAdManagerListener(){
  * @param  {Ad} ad
  * @return {Number}      The index
  */
-function getAdFromList(list, ad){
+function getAdFromList(list, ad) {
     var len = list.length;
-    while(len--){
-        if(list[len] === ad) return len;
+    while (len--) {
+        if (list[len] === ad) return len;
     }
     return -1;
 }
@@ -186,7 +186,7 @@ function getAdFromList(list, ad){
  * @param  {HTMLElement}  el
  * @return {Boolean}
  */
-function hasAdSlot(el){
+function hasAdSlot(el) {
     return el.querySelectorAll(CLS_AD).length > 0;
 }
 
@@ -195,8 +195,9 @@ function hasAdSlot(el){
  * @param  {HTMLElement}  el
  * @return {Boolean}
  */
-function isInitialised(el){
+function isInitialised(el) {
     return (
+        el &&
         el.hasAttribute('data-card-list-initialised') &&
         el.getAttribute('data-card-list-initialised') === 'true'
     );
@@ -206,12 +207,12 @@ function isInitialised(el){
  * Callback for when an Ad fires render or stop
  * @param  {Object} e
  */
-function onAdRenderStop(e){
+function onAdRenderStop(e) {
     // Remove last item
     var adIndex = getAdFromList(this.ads, e.target);
     var ad = e.target;
     var adEl = this.adEls[adIndex];
-    if(e.type === 'render'){
+    if (e.type === 'render') {
         // :last-child wasnt working after the first time and i have no god
         // damm clue as to why
         var tmp = this.el.querySelectorAll(CLS_ITEM);
@@ -219,8 +220,8 @@ function onAdRenderStop(e){
         tmp.parentNode.removeChild(tmp);
         removeClass(adEl, 'is-hidden');
 
-    // Remove ad slot
-    } else if(e.type === 'stop'){
+        // Remove ad slot
+    } else if (e.type === 'stop') {
         adEl.parentNode.removeChild(adEl);
     } else {
         throw new TypeError('Incorrect event type', e);
@@ -237,18 +238,18 @@ function onAdRenderStop(e){
     this.totalAdsFound--;
 
     // Check to see if we need to destroy
-    if(this.totalAdsFound === 0) this.destroy();
+    if (this.totalAdsFound === 0) this.destroy();
 }
 
 /**
  * Callback for when the AdManager emits a register event
  * @param  {Object} e
  */
-function onManagerRegister(e){
+function onManagerRegister(e) {
     var i = -1;
     var len = cardListList.length;
-    while(++i < len){
-        if(cardListList[i].totalAdsFound === cardListList[i].ads.length ||
+    while (++i < len) {
+        if (cardListList[i].totalAdsFound === cardListList[i].ads.length ||
             !cardListList[i].el.contains(e.ad.el)) continue;
         cardListList[i].listenToAd(e.ad);
         break;
@@ -259,7 +260,7 @@ function onManagerRegister(e){
  * Sets the card list element to initialised
  * @param {HTMLElement} el
  */
-function setInitialised(el){
+function setInitialised(el) {
     el.getAttribute('data-card-list-initialised', 'true');
     return el;
 }
@@ -269,17 +270,17 @@ function setInitialised(el){
  * @param  {*} collection
  * @return {Array}
  */
-function toArray(collection){
+function toArray(collection) {
     var len = collection.length;
     var o = new Array(len);
-    while(len--) o[len] = collection[len];
+    while (len--) o[len] = collection[len];
     return o;
 }
 
 /**
  * Unbinds the AdManager register listener
  */
-function unbindAdManagerListener(){
+function unbindAdManagerListener() {
     LISTENER_REGISTERED = false;
     AdManager.off('register', onManagerRegister);
 }

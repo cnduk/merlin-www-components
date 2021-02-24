@@ -10,7 +10,7 @@ import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManag
 var CLS_TEMPLATE = '.bb-embed__template';
 
 function isHydrated(el) {
-    return el.hasAttribute('is-hydrated');
+    return el && el.hasAttribute('is-hydrated');
 }
 
 function hasConsent(consentType) {
@@ -76,7 +76,7 @@ function onChange() {
     hydrate();
 }
 
-function onConsentClick(e){
+function onConsentClick(e) {
     e.preventDefault();
     Optanon.ToggleInfoDisplay();
     return false;
@@ -84,7 +84,7 @@ function onConsentClick(e){
 
 var isInitialiased = false;
 
-export default function() {
+export default function () {
     if (isInitialiased) {
         hydrate();
         return;
