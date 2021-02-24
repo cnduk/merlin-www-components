@@ -323,6 +323,14 @@ function onInfiniteLoadComplete(e) {
     var articleEl = document.querySelectorAll('.a-main');
     articleEl = articleEl[articleEl.length - 1];
 
+    // Sometimes for some reason, articleEl is null, if it is, just give up to prevent errors :/
+    if (!articleEl) {
+        // Var cleanup on aisle 3
+        docFragment = null;
+        addHtmlToFragment = null;
+        return;
+    }
+
     var ads = null;
     if (
         hasOwnProperty(responseJSON, 'config_ad') &&
