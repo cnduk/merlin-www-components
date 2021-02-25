@@ -20,16 +20,21 @@ ParselyManager.prototype = inherit(EventEmitter.prototype, {
     },
 
     loadScript: function loadScript() {
+        // don't load on preview pages
+        if (window.location.pathname.substring(0, 9) == '/preview/') return;
+
         if (this.hasLoadedScript) return;
+
         if (this.id === null) {
             console.warn('Missing Parsely ID');
+            return;
         }
 
         (function (id) {
-            window.PARSLEY = window.PARSLEY || {
+            window.PARSELY = window.PARSELY || {
                 onload: function () {
                     ArticleManager.on('urlchange', function (e) {
-                        window.PARSLEY.beacon.trackPageView({
+                        window.PARSELY.beacon.trackPageView({
                             url: e.url,
                             urlref: e.ref_url,
                             js: 1,

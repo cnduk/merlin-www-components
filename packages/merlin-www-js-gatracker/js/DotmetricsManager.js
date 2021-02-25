@@ -66,12 +66,12 @@ DotmetricsManager.prototype = inherit(EventEmitter.prototype, {
 
     getTag: function getTag(pageType) {
         switch (pageType) {
-            case 'homepage':
-                return HOMEPAGE_TAG;
-            case 'article': case 'gallery': case 'video':
-                return this.getTagForArticle(this.config.pageTags);
-            default:
-                return OTHER_TAG;
+        case 'homepage':
+            return HOMEPAGE_TAG;
+        case 'article': case 'gallery': case 'video':
+            return this.getTagForArticle(this.config.pageTags);
+        default:
+            return OTHER_TAG;
         }
     },
 
