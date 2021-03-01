@@ -157,7 +157,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                 }.bind(this));
             }.bind(this))
             .then(function (segments) {
-                this._td.set('$global', 'permutive_segment_id', segments);
+                // this._td.set('$global', 'permutive_segment_id', segments);
 
                 if (
                     segments.length > 0 &&
