@@ -1,10 +1,10 @@
-import EventEmitter from "eventemitter2";
+import EventEmitter from 'eventemitter2';
 import {
     inherit,
     updateQueryString,
     addEvent,
     delegate,
-} from "@cnbritain/merlin-www-js-utils/js/functions";
+} from '@cnbritain/merlin-www-js-utils/js/functions';
 
 function TreasureDataManager() {
     EventEmitter.call(this, {
@@ -16,8 +16,10 @@ function TreasureDataManager() {
 }
 
 var hash = function hash(text) {
+    // eslint-disable-next-line compat/compat
     var enc = new TextEncoder().encode(text);
     return crypto.subtle.digest('SHA-256', enc).then(function (hashBuffer) {
+        // eslint-disable-next-line compat/compat
         var hashArray = Array.from(new Uint8Array(hashBuffer));
         var hashHex = hashArray.map(function (b) {
             return b.toString(16).padStart(2, '0');
@@ -43,14 +45,14 @@ var promiseRetry = function promiseRetry(tries, delay, fn) {
                 }
             });
     });
-}
+};
 
 var toArray = function toArray(collection) {
     var len = collection.length;
     var arr = new Array(len);
     while (len--) arr[len] = collection[len];
     return arr;
-}
+};
 
 TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
     constructor: TreasureDataManager,
@@ -62,7 +64,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
     loadTreasureDataScript: function loadTreasureDataScript() {
         if (this._hasLoadedScript) return;
         if (!this._config) {
-            console.warn("Missing TDP Config", this._config);
+            console.warn('Missing TDP Config', this._config);
             return;
         }
 
@@ -93,13 +95,13 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
             this._td.trackEvent(
                 this._config.pageviewTable,
                 {
-                    "email": eml,
-                    "hashed_email": hashed,
-                    "newsletters": nls,
+                    'email': eml,
+                    'hashed_email': hashed,
+                    'newsletters': nls,
                 },
                 submitForm,
                 submitForm
-            )
+            );
         }.bind(this));
     },
 
@@ -122,7 +124,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                         resolve(window.permutive);
                     });
                 } else {
-                    reject(new Error("Permutive not ready"));
+                    reject(new Error('Permutive not ready'));
                 }
             }.bind(this));
         }.bind(this));
@@ -140,16 +142,19 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                 this._td.set('$global', 'td_unknown_id', permutiveId);
 
                 permutive.identify([{
-                    tag: "td_unknown_id",
+                    tag: 'td_unknown_id',
                     id: permutiveId,
                     priority: 0
                 }]);
 
                 this._attachPermutiveID(permutiveId);
 
-                // permutive returns a promise, but still requires a callback method
-                // pass in a noop function so we can use the promise instead
-                return permutive.segments(function () { });
+                return new Promise(function (resolve, reject) {
+                    this._td.fetchUserSegments({
+                        audienceToken: this._config.audienceToken,
+                        keys: { 'permutive_id': permutiveId }
+                    }, resolve, reject);
+                }.bind(this));
             }.bind(this))
             .then(function (segments) {
                 this._td.set('$global', 'permutive_segment_id', segments);
@@ -160,8 +165,8 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                     segments[0].attributes.email_sha256
                 ) {
                     permutive.identify([{
-                        tag: "email_sha256",
-                        id: v[0].attributes.email_sha256,
+                        tag: 'email_sha256',
+                        id: segments[0].attributes.email_sha256,
                         priority: 1
                     }]);
                 }
@@ -173,10 +178,10 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
         // attach the client id as a query string parameter to ensure
         // id is forwarded on;
         document.querySelectorAll(
-            ".js-tdp-link"
+            '.js-tdp-link'
         ).forEach(
             function (el) {
-                if (el && el.hasAttribute("href")) {
+                if (el && el.hasAttribute('href')) {
                     el.href = updateQueryString(el.href, {
                         td_user_id: id,
                     });
@@ -189,7 +194,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
         return new Promise(function (resolve, reject) {
             this._td.fetchServerCookie(
                 function (result) {
-                    this._td.set("$global", "td_ssc_id", result);
+                    this._td.set('$global', 'td_ssc_id', result);
                     resolve(result);
                 }.bind(this),
                 function (err) {
@@ -203,7 +208,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
         return new Promise(function (resolve, reject) {
             if (window.ga) {
                 window.ga(function (t) {
-                    var gaID = t.get('clientId')
+                    var gaID = t.get('clientId');
 
                     this._td.set('$global', 'ga_id', gaID);
 
@@ -212,13 +217,13 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                 }.bind(this));
             }
 
-            reject("missing ga() method");
-        }.bind(this))
+            reject('missing ga() method');
+        }.bind(this));
     },
 
     initTreasure: function initTreasure() {
         if (this._hasLoadedScript) {
-            this._td = new Treasure({
+            this._td = new window.Treasure({
                 database: this._config.database,
                 writeKey: this._config.writeKey,
                 host: this._config.host,
@@ -233,7 +238,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
             this._td.set('$global', 'td_global_id', 'td_global_id');
 
             if (this._config.page_data) {
-                this._td.set("$global", this._config.page_data);
+                this._td.set('$global', this._config.page_data);
             }
 
             this._attachFormHandler();
@@ -262,24 +267,24 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
 });
 
 var createImage = function createImage(url) {
-    var el = document.createElement("img");
-    el.src = ("https:" === document.location.protocol ? "https://" : "http://") + url;
+    var el = document.createElement('img');
+    el.src = ('https:' === document.location.protocol ? 'https://' : 'http://') + url;
     el.width = 1;
     el.height = 1;
-    el.style.display = "none";
+    el.style.display = 'none';
     document.body.appendChild(el);
 };
 
 var googleSyncCallback = function googleSyncCallback(clientId, accountId) {
-    var gidsync_url = "cm.g.doubleclick.net/pixel";
+    var gidsync_url = 'cm.g.doubleclick.net/pixel';
     var params =
-        "?google_nid=treasuredata_dmp" +
-        "&google_cm" +
-        "&td_write_key=8151/fcd628065149d648b80f11448b4083528c0d8a91" +
-        "&td_global_id=td_global_id" +
-        "&td_client_id=" + clientId +
-        "&td_host=" + document.location.host +
-        "&account=" + accountId;
+        '?google_nid=treasuredata_dmp' +
+        '&google_cm' +
+        '&td_write_key=8151/fcd628065149d648b80f11448b4083528c0d8a91' +
+        '&td_global_id=td_global_id' +
+        '&td_client_id=' + clientId +
+        '&td_host=' + document.location.host +
+        '&account=' + accountId;
 
     createImage(gidsync_url + params);
 };
