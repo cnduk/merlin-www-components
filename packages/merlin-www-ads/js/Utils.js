@@ -532,7 +532,7 @@ export function loadPrebidLibrary() {
     window.pbjs.que = window.pbjs.que || [];
     pbjs.que.push(function () {
         pbjs.setConfig({
-            // debug: true,
+            debug: true,
             enableSendAllBids: true
         });
     });
@@ -816,11 +816,11 @@ export function registerGPT(ad) {
 }
 
 /**
- * Create the prebid config for the specified ads
+ * Create the rubicon prebid config for the specified ads
  * @param  {Array.<Ad>} ads
  * @return {Array}
  */
-function getPrebidAdUnits(ads) {
+function getRubiconAdUnits(ads) {
     var adUnits = [];
 
     ads.forEach(function (ad) {
@@ -829,6 +829,7 @@ function getPrebidAdUnits(ads) {
         }
 
         var bids = [];
+
 
         // Rubicon
         if (hasOwnProperty(PREBID_SETTINGS, 'RUBICON')) {
@@ -875,8 +876,79 @@ function getPrebidAdUnits(ads) {
                 adUnit['sizeMapping'] = sizemap;
             }
         }
+
         adUnits.push(adUnit);
     });
+
+    return adUnits;
+}
+
+/**
+ * Create the media grid prebid config for the specified ads
+ * @param  {Array.<Ad>} ads
+ * @return {Array}
+ */
+function getMediaGridAdUnits(ads) {
+    var adUnits = [];
+    var adUnitsConf = [];
+
+    console.debug("getting themediagrid adunits")
+
+    if (hasOwnProperty(PREBID_SETTINGS, 'GRID')) {
+        adUnitsConf = PREBID_SETTINGS.GRID;
+    }
+
+    // early return if no conf found
+    if (adUnitsConf.length === 0) { return []; }
+
+    console.debug("got themediagrid adunits")
+
+    ads.forEach(function (ad) {
+        console.debug("%s has bidding: %s", ad.get("dfp"), hasHeaderBidding(ad));
+        if (!hasHeaderBidding(ad)) {
+            return;
+        }
+
+        var dfp = ad.get('dfp');
+        var unit = '';
+
+        Object.keys(adUnitsConf).forEach(function (k) {
+            if (dfp.toLowerCase().indexOf(k) !== -1) {
+                unit = k;
+            }
+        });
+
+        console.debug("unit: %s", unit);
+
+        // early return if we match nuffin
+        if (unit === '') {
+            return;
+        }
+
+        var adUnit = adUnitsConf[unit];
+        adUnit.code = ad.id;
+
+        console.debug("pushing ad unit: %o", adUnit);
+        adUnits.push(adUnit);
+    });
+
+    return adUnits;
+}
+
+
+/**
+ * Create the prebid config for the specified ads
+ * @param  {Array.<Ad>} ads
+ * @return {Array}
+ */
+function getPrebidAdUnits(ads) {
+    var adUnits = [];
+
+    // Get any RUBICON ad units
+    adUnits = adUnits.concat(getRubiconAdUnits(ads));
+
+    // Get any MEDIA GRID ad units
+    adUnits = adUnits.concat(getMediaGridAdUnits(ads));
 
     return adUnits;
 }
@@ -920,21 +992,21 @@ export function setAdUrls(config) {
     for (var key in config) {
         if (!hasOwnProperty(config, key)) continue;
         switch (key) {
-        case 'GPT_URL':
-            GPT_URL = config[key];
-            break;
-        case 'RUBICON_URL':
-            RUBICON_URL = config[key];
-            break;
-        case 'TEAD_URL':
-            TEAD_URL = config[key];
-            break;
-        case 'PREBID_URL':
-            PREBID_URL = config[key];
-            break;
-        case 'PREBID_SETTINGS':
-            PREBID_SETTINGS = config[key];
-            break;
+            case 'GPT_URL':
+                GPT_URL = config[key];
+                break;
+            case 'RUBICON_URL':
+                RUBICON_URL = config[key];
+                break;
+            case 'TEAD_URL':
+                TEAD_URL = config[key];
+                break;
+            case 'PREBID_URL':
+                PREBID_URL = config[key];
+                break;
+            case 'PREBID_SETTINGS':
+                PREBID_SETTINGS = config[key];
+                break;
         }
     }
 }
