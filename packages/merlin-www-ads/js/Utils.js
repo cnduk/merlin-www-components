@@ -36,6 +36,8 @@ var RUBICON_LOADED = false;
 
 var PAGE_AD_CONFIG = null;
 
+var DEBUG = true;
+
 /**
  * The teads script url. This needs to be set in order for it to work.
  * @type {String}
@@ -532,7 +534,7 @@ export function loadPrebidLibrary() {
     window.pbjs.que = window.pbjs.que || [];
     pbjs.que.push(function () {
         pbjs.setConfig({
-            debug: true,
+            debug: DEBUG,
             enableSendAllBids: true
         });
     });
@@ -892,7 +894,8 @@ function getMediaGridAdUnits(ads) {
     var adUnits = [];
     var adUnitsConf = [];
 
-    console.debug("getting themediagrid adunits")
+    // eslint-disable-next-line no-console
+    if (DEBUG) console.debug('getting themediagrid adunits');
 
     if (hasOwnProperty(PREBID_SETTINGS, 'GRID')) {
         adUnitsConf = PREBID_SETTINGS.GRID;
@@ -901,10 +904,13 @@ function getMediaGridAdUnits(ads) {
     // early return if no conf found
     if (adUnitsConf.length === 0) { return []; }
 
-    console.debug("got themediagrid adunits")
+    // eslint-disable-next-line no-console
+    if (DEBUG) console.debug('got themediagrid adunits');
 
     ads.forEach(function (ad) {
-        console.debug("%s has bidding: %s", ad.get("dfp"), hasHeaderBidding(ad));
+        // eslint-disable-next-line no-console
+        if (DEBUG) console.debug('%s has bidding: %s', ad.get('dfp'), hasHeaderBidding(ad));
+
         if (!hasHeaderBidding(ad)) {
             return;
         }
@@ -918,7 +924,8 @@ function getMediaGridAdUnits(ads) {
             }
         });
 
-        console.debug("unit: %s", unit);
+        // eslint-disable-next-line no-console
+        if (DEBUG) console.debug('unit: %s', unit);
 
         // early return if we match nuffin
         if (unit === '') {
@@ -928,7 +935,8 @@ function getMediaGridAdUnits(ads) {
         var adUnit = adUnitsConf[unit];
         adUnit.code = ad.id;
 
-        console.debug("pushing ad unit: %o", adUnit);
+        // eslint-disable-next-line no-console
+        if (DEBUG) console.debug('pushing ad unit: %o', adUnit);
         adUnits.push(adUnit);
     });
 
