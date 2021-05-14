@@ -988,6 +988,9 @@ function getPrebidAdUnits(ads) {
     // Get any MEDIA GRID ad units
     adUnits = adUnits.concat(getMediaGridAdUnits(ads));
 
+    // eslint-disable-next-line no-console
+    if (DEBUG) console.debug('got prebid ad units: %o', adUnits);
+
     return adUnits;
 }
 
@@ -1001,6 +1004,10 @@ export function registerPrebid(ad) {
         if (PREBID_LOADED && hasHeaderBidding(ad)) {
             pbjs.que.push(function () {
                 var adUnits = getPrebidAdUnits([ad]);
+
+                // eslint-disable-next-line no-console
+                if (DEBUG) console.debug('pbjs.addAdUnits: %o', adUnits);
+
                 pbjs.addAdUnits(adUnits);
                 res();
             });
