@@ -8,6 +8,7 @@
 import BRAND_CONFIG from '@cnbritain/merlin-www-common';
 
 import {
+    assign,
     createEventTemplate,
     getNamespaceKey,
     getQueryArgs,
@@ -960,11 +961,12 @@ function getMediaGridAdUnits(ads) {
             return;
         }
 
-        var adUnit = adUnitsConf[unit];
+        var adUnit = assign({}, adUnitsConf[unit]);
         adUnit.code = ad.id;
 
         // eslint-disable-next-line no-console
         if (DEBUG) console.debug('pushing ad unit: %o', adUnit);
+
         adUnits.push(adUnit);
     });
 
