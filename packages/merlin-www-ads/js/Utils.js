@@ -535,7 +535,35 @@ export function loadPrebidLibrary() {
     pbjs.que.push(function () {
         pbjs.setConfig({
             debug: DEBUG,
-            enableSendAllBids: true
+            enableSendAllBids: true,
+            priceGranularity: {
+                'buckets': [
+                    {
+                        'precision': 2,
+                        'min': 0.00,
+                        'max': 3.00,
+                        'increment': 0.01
+                    },
+                    {
+                        'precision': 2,
+                        'min': 3.00,
+                        'max': 8.00,
+                        'increment': 0.05
+                    },
+                    {
+                        'precision': 2,
+                        'min': 8.00,
+                        'max': 20.00,
+                        'increment': 0.5
+                    },
+                    {
+                        'precision': 2,
+                        'min': 20.00,
+                        'max': 40.00,
+                        'increment': 1.0
+                    }
+                ]
+            }
         });
     });
 
@@ -940,6 +968,8 @@ function getMediaGridAdUnits(ads) {
         adUnits.push(adUnit);
     });
 
+    // eslint-disable-next-line no-console
+    if (DEBUG) console.debug('ad units: %o', adUnits);
     return adUnits;
 }
 
@@ -1000,21 +1030,21 @@ export function setAdUrls(config) {
     for (var key in config) {
         if (!hasOwnProperty(config, key)) continue;
         switch (key) {
-        case 'GPT_URL':
-            GPT_URL = config[key];
-            break;
-        case 'RUBICON_URL':
-            RUBICON_URL = config[key];
-            break;
-        case 'TEAD_URL':
-            TEAD_URL = config[key];
-            break;
-        case 'PREBID_URL':
-            PREBID_URL = config[key];
-            break;
-        case 'PREBID_SETTINGS':
-            PREBID_SETTINGS = config[key];
-            break;
+            case 'GPT_URL':
+                GPT_URL = config[key];
+                break;
+            case 'RUBICON_URL':
+                RUBICON_URL = config[key];
+                break;
+            case 'TEAD_URL':
+                TEAD_URL = config[key];
+                break;
+            case 'PREBID_URL':
+                PREBID_URL = config[key];
+                break;
+            case 'PREBID_SETTINGS':
+                PREBID_SETTINGS = config[key];
+                break;
         }
     }
 }
