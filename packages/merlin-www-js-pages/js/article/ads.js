@@ -124,5 +124,5 @@ export function onArticleAdd(e) {
 }
 
 export function getHeaderAd(el) {
-    return el.previousElementSibling.querySelector('.da__container');
+    return el.querySelector('.da__container');
 }
