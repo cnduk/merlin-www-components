@@ -536,6 +536,16 @@ export function loadPrebidLibrary() {
     pbjs.que.push(function () {
         pbjs.setConfig({
             debug: DEBUG,
+            consentManagement: {
+                gdpr: {
+                    cmpApi: 'iab',
+                    allowAuctionWithoutConsent: false,
+                    timeout: 3000
+                },
+                usp: {
+                    timeout: 3000
+                }
+            },
             enableSendAllBids: true,
             priceGranularity: {
                 'buckets': [
