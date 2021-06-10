@@ -570,7 +570,7 @@ export function loadPrebidLibrary() {
                     {
                         'precision': 2,
                         'min': 20.00,
-                        'max': 40.00,
+                        'max': 99.00,
                         'increment': 1.0
                     }
                 ]
@@ -1049,21 +1049,21 @@ export function setAdUrls(config) {
     for (var key in config) {
         if (!hasOwnProperty(config, key)) continue;
         switch (key) {
-        case 'GPT_URL':
-            GPT_URL = config[key];
-            break;
-        case 'RUBICON_URL':
-            RUBICON_URL = config[key];
-            break;
-        case 'TEAD_URL':
-            TEAD_URL = config[key];
-            break;
-        case 'PREBID_URL':
-            PREBID_URL = config[key];
-            break;
-        case 'PREBID_SETTINGS':
-            PREBID_SETTINGS = config[key];
-            break;
+            case 'GPT_URL':
+                GPT_URL = config[key];
+                break;
+            case 'RUBICON_URL':
+                RUBICON_URL = config[key];
+                break;
+            case 'TEAD_URL':
+                TEAD_URL = config[key];
+                break;
+            case 'PREBID_URL':
+                PREBID_URL = config[key];
+                break;
+            case 'PREBID_SETTINGS':
+                PREBID_SETTINGS = config[key];
+                break;
         }
     }
 }
