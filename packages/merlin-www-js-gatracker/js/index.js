@@ -1,5 +1,5 @@
 'use strict';
-/* globals ga, COMSCORE */
+/* globals ga */
 
 import {
     assign,
@@ -10,7 +10,6 @@ import {
     loadScript,
     hasOwnProperty
 } from '@cnbritain/merlin-www-js-utils/js/functions';
-import ComscoreManager from './ComscoreManager';
 
 /**
  * RegEx to check if the string is a dimension
@@ -200,14 +199,9 @@ GATracker.prototype = {
         // Don't send anything if we don't have consent
         if (!hasConsent) return;
         ga(function gaSend() {
-            var options = assign({
-                'comscore': true
-            }, config, {
+            var options = assign({}, config, {
                 'hitType': hitType
             });
-
-            var comscore = options.comscore;
-            delete options.comscore;
 
             // Set the clientId as a custom dimension if its defined
             if (this._clientId !== null) {
@@ -218,12 +212,6 @@ GATracker.prototype = {
             }
 
             ga(trackerPrefix(this, 'send'), options);
-
-            // Whenever we send a pageview, send a comscore beacon
-            if (hitType === GATracker.SEND_HITTYPES.PAGEVIEW && comscore &&
-                this.type === 'brand') {
-                ComscoreManager.sendBeacon(location.href);
-            }
         }.bind(this));
     },
 
