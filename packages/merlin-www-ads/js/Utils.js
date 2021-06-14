@@ -34,9 +34,7 @@ export var GPT_URL = '//www.googletagservices.com/tag/js/gpt.js';
 export var RUBICON_URL = null;
 
 var RUBICON_LOADED = false;
-
 var PAGE_AD_CONFIG = null;
-
 var DEBUG = false;
 
 /**

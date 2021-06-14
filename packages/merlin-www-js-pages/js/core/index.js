@@ -100,7 +100,10 @@ export default function init(config) {
     GATracker.init();
     OneTrustManager.on('ready', function () {
         SiteFooter.addOneTrust();
-        if (this.consentedStrictlyCookies) TypekitManager.loadScript();
+        if (this.consentedStrictlyCookies) {
+            TypekitManager.loadScript();
+        }
+
         if (this.consentedPerformanceCookies) {
             GATracker.loadGAScript();
             loadSiteCensus();
@@ -108,6 +111,7 @@ export default function init(config) {
             HotjarManager.loadScript();
             ParselyManager.loadScript();
         }
+
         if (this.consentedTargetingCookies) {
             FacebookPixelManager.loadScript();
             PermutiveManager.loadScript();
