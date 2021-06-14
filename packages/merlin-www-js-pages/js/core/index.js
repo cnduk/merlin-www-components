@@ -17,7 +17,6 @@ import SubscribeBarManager from '@cnbritain/merlin-www-subscribe-bar'; // eslint
 import CommonImage from '@cnbritain/merlin-www-image';
 import store from '@cnbritain/merlin-www-js-store';
 import GATracker from '@cnbritain/merlin-www-js-gatracker';
-import ComscoreManager from '@cnbritain/merlin-www-js-gatracker/js/ComscoreManager';
 import DotmetricsManager from '@cnbritain/merlin-www-js-gatracker/js/DotmetricsManager';
 import FacebookPixelManager from '@cnbritain/merlin-www-js-gatracker/js/FacebookPixelManager';
 import HotjarManager from '@cnbritain/merlin-www-js-gatracker/js/HotjarManager';
@@ -39,7 +38,6 @@ import {
 } from '@cnbritain/merlin-www-ads';
 import InternationalRedirect from '@cnbritain/merlin-www-international-redirect';
 import {
-    displayHiringMessage,
     setGlobalNamespace
 } from '../utils';
 import {
@@ -100,14 +98,12 @@ export default function init(config) {
     });
 
     GATracker.init();
-    ComscoreManager.init();
     OneTrustManager.on('ready', function () {
         SiteFooter.addOneTrust();
         if (this.consentedStrictlyCookies) TypekitManager.loadScript();
         if (this.consentedPerformanceCookies) {
             GATracker.loadGAScript();
-            ComscoreManager.sendBeacon();
-            loadSiteCensus();
+            2();
             SailthruManager.loadScript();
             HotjarManager.loadScript();
             ParselyManager.loadScript();
@@ -124,12 +120,8 @@ export default function init(config) {
     OneTrustManager.on('change', function () {
         GATracker.setConsent(this.consentedPerformanceCookies);
         if (this.consentedPerformanceCookies) {
-            ComscoreManager.setConsent(1);
             SailthruManager.loadScript();
             ParselyManager.loadScript();
-        } else {
-            // this technically wont happen
-            ComscoreManager.setConsent(0);
         }
     });
 
@@ -138,7 +130,6 @@ export default function init(config) {
     CommonImage.init();
     SectionCardList.init();
     initInternationalRedirect();
-    displayHiringMessage();
     initLinkTracking();
     initInfobarTracking();
     initSubscribebarTracking();
