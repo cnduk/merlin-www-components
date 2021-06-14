@@ -103,7 +103,7 @@ export default function init(config) {
         if (this.consentedStrictlyCookies) TypekitManager.loadScript();
         if (this.consentedPerformanceCookies) {
             GATracker.loadGAScript();
-            2();
+            loadSiteCensus();
             SailthruManager.loadScript();
             HotjarManager.loadScript();
             ParselyManager.loadScript();
