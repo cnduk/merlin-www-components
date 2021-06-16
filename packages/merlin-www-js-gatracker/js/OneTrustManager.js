@@ -21,10 +21,10 @@ var VERSION_1 = {
         this._loadingScript = true;
 
         loadScript(scriptUrl).then(
-            function() {
+            function () {
                 // console.log('Loaded OneTrust script');
             },
-            function() {
+            function () {
                 console.warn('Failed to load OneTrust script!'); // eslint-disable-line no-console
                 this._loadingScript = false;
             }.bind(this)
@@ -33,7 +33,7 @@ var VERSION_1 = {
     oneTrustCallback: function oneTrustCallback() {
         if (window.OptanonActiveGroups) {
             setTimeout(
-                function() {
+                function () {
                     this.setConsent(window.OptanonActiveGroups);
                 }.bind(this),
                 100
@@ -52,7 +52,7 @@ var VERSION_1 = {
     setConsent: function setConsent(value) {
         var beforeValue = this.consentData;
 
-        this.consentData = value;
+        this.consentData = value || '';
         this.processConsentData.call(this);
 
         if (this.ready && this.consentedStrictlyCookies) {
@@ -81,10 +81,10 @@ var VERSION_2 = {
         loadScript(scriptUrl, {
             attributes: { 'data-domain-script': domainScript }
         }).then(
-            function() {
+            function () {
                 // console.log('Loaded OneTrust script');
             },
-            function() {
+            function () {
                 console.warn('Failed to load OneTrust script!'); // eslint-disable-line no-console
                 this._loadingScript = false;
             }.bind(this)
@@ -96,7 +96,7 @@ var VERSION_2 = {
     processConsentData: function processConsentData() {
         this.isDialogClosed = !!getCookie('OptanonAlertBoxClosed');
 
-        var cookieParts = this.consentData.split('&').filter(function(part) {
+        var cookieParts = this.consentData.split('&').filter(function (part) {
             return /^groups=/i.test(part);
         });
         if (cookieParts.length === 0) return;
@@ -113,7 +113,7 @@ var VERSION_2 = {
     setConsent: function setConsent(value) {
         var beforeValue = this.consentData;
 
-        this.consentData = value;
+        this.consentData = value || '';
         this.processConsentData.call(this);
 
         if (this.ready && this.consentedStrictlyCookies) {
