@@ -1,6 +1,6 @@
 {
   "name": "@cnbritain/merlin-www-gallery-strip",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "",
   "main": "js/index.js",
   "scripts": {
@@ -12,10 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "@cnbritain/merlin-www-common": "^2.0.1",
-    "@cnbritain/merlin-www-image": "^2.0.4"
+    "@cnbritain/merlin-www-image": "^2.0.5"
   },
   "devDependencies": {
-    "@cnbritain/merlin-component-demo-server": "^4.0.1",
+    "@cnbritain/merlin-component-demo-server": "^4.0.2",
     "eslint": "^7.7.0",
     "eslint-plugin-compat": "^3.8.0"
   },

@@ -1,6 +1,6 @@
 {
     "name": "@cnbritain/merlin-www-main-navigation",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "description": "",
     "main": "js/index.js",
     "scripts": {
@@ -10,14 +10,14 @@
     },
     "dependencies": {
         "@cnbritain/merlin-www-a11y": "^1.2.1",
-        "@cnbritain/merlin-www-buttons": "^2.0.1",
+        "@cnbritain/merlin-www-buttons": "^2.0.2",
         "@cnbritain/merlin-www-common": "^2.0.1",
-        "@cnbritain/merlin-www-image": "^2.0.4",
+        "@cnbritain/merlin-www-image": "^2.0.5",
         "@cnbritain/merlin-www-js-utils": "^3.0.1",
         "eventemitter2": "^6.4.3"
     },
     "devDependencies": {
-        "@cnbritain/merlin-component-demo-server": "^4.0.1",
+        "@cnbritain/merlin-component-demo-server": "^4.0.2",
         "eslint": "^7.7.0",
         "eslint-plugin-compat": "^3.8.0"
     },
