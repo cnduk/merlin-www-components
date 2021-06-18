@@ -1,4 +1,4 @@
-<aside class="ad__main is-hidden {{ style.cls }} {{# state.is_sticky_element }}stick-wrapper{{/ state.is_sticky_element }} {{# state.is_sticky_block }}stick-block{{/ state.is_sticky_block }}">
+<aside class="ad__main {{# state.is_hidden }}is-hidden{{/ state.is_hidden }} {{ style.cls }} {{# state.is_sticky_element }}stick-wrapper{{/ state.is_sticky_element }} {{# state.is_sticky_block }}stick-block{{/ state.is_sticky_block }}">
     <div class="ad__block {{# state.is_sticky_element }}stick-element{{/ state.is_sticky_element }}">
         {{# data.title }}
             <h5 class="ad__title">{{ data.title }}</h5>
