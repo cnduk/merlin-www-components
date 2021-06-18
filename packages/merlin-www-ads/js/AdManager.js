@@ -127,7 +127,7 @@ AdManager.prototype = inherit(EventEmitter.prototype, {
                             // Single page request to allow roadblocks
                             googletag.pubads().enableSingleRequest();
                             googletag.pubads().enableAsyncRendering();
-                            googletag.pubads().collapseEmptyDivs(true);
+                            googletag.pubads().collapseEmptyDivs();
 
                             if (OneTrustManager.consentedTargetingCookies) {
                                 googletag
