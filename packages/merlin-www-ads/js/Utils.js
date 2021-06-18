@@ -25,7 +25,7 @@ import OneTrustManager from '@cnbritain/merlin-www-js-gatracker/js/OneTrustManag
  * @constant
  * @type {String}
  */
-export var GPT_URL = '//www.googletagservices.com/tag/js/gpt.js';
+export var GPT_URL = '//securepubads.g.doubleclick.net/tag/js/gpt.js';
 
 /**
  * The rubicon script url. This needs to be set in order for it to work.
