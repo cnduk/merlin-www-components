@@ -241,3 +241,22 @@
 
     }
 }
+
+// CLS SIZING
+.ad--homepage,
+.ad--tag-header,
+.ad--article-header {
+    .ad__block {
+        .da__container {
+            min-width: 300px;
+            min-height: 250px;
+        }
+
+        @include min-screen($TABLET_SIDE_GUTTER_BREAKPOINT) {
+            .da__container {
+                min-width: 728px;
+                min-height: 90px;
+            }
+        }
+    }
+}
