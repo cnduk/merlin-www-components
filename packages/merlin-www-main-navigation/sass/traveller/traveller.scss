@@ -286,6 +286,18 @@
     }
 }
 
+.c-nav__promo-cover {
+    &:nth-child(1) {
+        width: 85px;
+        height: 106px;
+    }
+
+    &:nth-child(2) {
+        width: 56px;
+        height: 70px;
+    }
+}
+
 .c-nav__promo-content {
     padding-left: 10px;
     text-align: left;
