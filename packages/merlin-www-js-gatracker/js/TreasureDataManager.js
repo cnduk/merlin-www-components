@@ -152,7 +152,7 @@ TreasureDataManager.prototype = inherit(EventEmitter.prototype, {
                 return new Promise(function (resolve, reject) {
                     this._td.fetchUserSegments({
                         audienceToken: this._config.audienceToken,
-                        keys: { 'permutive_id': permutiveId }
+                        keys: { 'permutiveid': permutiveId }
                     }, resolve, reject);
                 }.bind(this));
             }.bind(this))
