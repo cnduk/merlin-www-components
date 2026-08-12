@@ -4,8 +4,8 @@ import {
     loadScript
 } from '@cnbritain/merlin-www-js-utils/js/functions';
 
-var PROJECT_ID = '824edc40-e3ff-4d19-aa9f-43123f27e30f';
-var API_KEY = '03216d60-04fb-482f-a220-f2d58e573301';
+var PROJECT_ID = '';
+var API_KEY = '';
 
 function PermutiveManager() {
     EventEmitter.call(this, {
